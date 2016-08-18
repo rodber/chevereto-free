@@ -1,0 +1,2856 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSION\n"
+"POT-Creation-Date: 2015-04-13 17:55+0000\n"
+"PO-Revision-Date: 2015-04-13 17:55+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: sr_RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../../app/install/installer.php:826
+#: ../../../app/install/installer.php:835
+#: ../../../app/install/installer.php:838
+#: ../../../app/routes/route.account.php:402
+#: ../../../app/routes/route.json.php:551
+#: ../../../app/routes/route.settings.php:170
+#: ../../../app/routes/route.signup.php:95
+#: ../../../app/themes/Peafowl/pages/contact.php:31
+msgid "Invalid email"
+msgstr "Neispravan email"
+
+#: ../../../app/install/installer.php:829
+#: ../../../app/routes/route.json.php:546
+#: ../../../app/routes/route.settings.php:166
+#: ../../../app/routes/route.signup.php:98
+msgid "Invalid username"
+msgstr "Pogrešno korisničko ime"
+
+#: ../../../app/install/installer.php:832
+#: ../../../app/routes/route.account.php:345
+#: ../../../app/routes/route.json.php:556
+#: ../../../app/routes/route.settings.php:300
+#: ../../../app/routes/route.signup.php:101
+msgid "Invalid password"
+msgstr "Pogrešna lozinka"
+
+#: ../../../app/install/template/ready.php:31
+#: ../../../app/themes/Peafowl/views/dashboard.php:1463
+msgid "From email address"
+msgstr "Sa email adresee"
+
+#: ../../../app/install/template/ready.php:32
+#: ../../../app/themes/Peafowl/views/dashboard.php:1466
+msgid "Sender email for emails sent to users."
+msgstr "Email pošiljaoca za emailove poslate korisnicima."
+
+#: ../../../app/install/template/ready.php:36
+#: ../../../app/themes/Peafowl/views/dashboard.php:1469
+msgid "Incoming email address"
+msgstr "Dolazeća email adresa"
+
+#: ../../../app/install/template/ready.php:37
+#: ../../../app/themes/Peafowl/views/dashboard.php:1472
+msgid "Recipient for contact form and system alerts."
+msgstr "Email adresa za sistemske i kontakt emailove."
+
+#: ../../../app/lib/classes/class.album.php:94
+msgid "Untitled"
+msgstr "Bez naslova"
+
+#: ../../../app/lib/classes/class.album.php:318
+#: ../../../app/lib/classes/class.user.php:105
+#, php-format
+msgid "%s's images"
+msgstr "%s slike"
+
+#: ../../../app/lib/classes/class.image.php:695
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:69
+msgid "Private upload"
+msgstr "Privatni upload"
+
+#: ../../../app/lib/classes/class.image.php:954
+msgid "view"
+msgid_plural "views"
+msgstr[0] "pregled"
+msgstr[1] "pregleda"
+msgstr[2] "pregleda"
+
+#: ../../../app/lib/classes/class.listing.php:238
+#: ../../../app/routes/route.album.php:169
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
+#: ../../../app/themes/Peafowl/views/album.php:34
+#: ../../../app/themes/Peafowl/views/user.php:87
+#: ../../../app/lib/chevereto.js:1866 ../../../app/lib/chevereto.min.js:88
+msgid "image"
+msgid_plural "images"
+msgstr[0] "slika"
+msgstr[1] "slika"
+msgstr[2] "slika"
+
+#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
+msgid "year"
+msgid_plural "years"
+msgstr[0] "godina"
+msgstr[1] "godina"
+msgstr[2] "godina"
+
+#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
+msgid "month"
+msgid_plural "months"
+msgstr[0] "mesec"
+msgstr[1] "meseci"
+msgstr[2] "meseci"
+
+#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "sedmica"
+msgstr[1] "sedmica"
+msgstr[2] "sedmica"
+
+#: ../../../app/lib/functions.php:40 ../../../app/lib/functions.php:52
+msgid "day"
+msgid_plural "days"
+msgstr[0] "dan"
+msgstr[1] "dana"
+msgstr[2] "dana"
+
+#: ../../../app/lib/functions.php:41 ../../../app/lib/functions.php:53
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "sat"
+msgstr[1] "sati"
+msgstr[2] "sati"
+
+#: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "minuta"
+msgstr[1] "minuta"
+msgstr[2] "minuta"
+
+#: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "sekunda"
+msgstr[1] "sekundi"
+msgstr[2] "sekundi"
+
+#: ../../../app/lib/functions.php:67
+#, php-format
+msgid "%s ago"
+msgstr "pre %s"
+
+#: ../../../app/lib/functions.php:67
+msgid "moments ago"
+msgstr "upravo"
+
+#: ../../../app/loader.php:326 ../../../app/themes/Peafowl/views/404.php:6
+msgid "That page doesn't exist"
+msgstr "Ova strana ne postoji"
+
+#: ../../../app/routes/route.account.php:73
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:8
+msgid "Reset password"
+msgstr "Resetuj lozinku"
+
+#: ../../../app/routes/route.account.php:74
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:8
+msgid "Resend account activation"
+msgstr "Pošalji aktivacijski link"
+
+#: ../../../app/routes/route.account.php:76
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:8
+msgid "Add your email address"
+msgstr "Dodajte vašu email adresu"
+
+#: ../../../app/routes/route.account.php:77
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:7
+msgid "Email changed"
+msgstr "Email promena"
+
+#: ../../../app/routes/route.account.php:95
+#: ../../../app/routes/route.login.php:71
+#: ../../../app/routes/route.settings.php:128
+#: ../../../app/routes/route.signup.php:73
+msgid "The reCAPTCHA wasn't entered correctly"
+msgstr "reCAPTCHA nije upisana tačno"
+
+#: ../../../app/routes/route.account.php:119
+#: ../../../app/routes/route.account.php:164
+#: ../../../app/routes/route.account.php:260
+msgid "Invalid Username/Email"
+msgstr "Neispravno korisničko ime/lozinka"
+
+#: ../../../app/routes/route.account.php:129
+msgid "User doesn't have an email."
+msgstr "Korisnik nema email"
+
+#: ../../../app/routes/route.account.php:140
+#: ../../../app/routes/route.account.php:287
+#: ../../../app/routes/route.account.php:309
+#: ../../../app/routes/route.account.php:376
+#: ../../../app/routes/route.json.php:24 ../../../app/routes/route.json.php:37
+#: ../../../app/routes/route.json.php:49
+#: ../../../app/routes/route.json.php:533
+#: ../../../app/routes/route.json.php:595
+#: ../../../app/routes/route.json.php:644
+#: ../../../app/routes/route.json.php:691
+#: ../../../app/themes/Peafowl/pages/contact.php:17
+#: ../../../app/themes/Peafowl/views/request-denied.php:8
+msgid "Request denied"
+msgstr "Zahtev odbijen"
+
+#: ../../../app/routes/route.account.php:145
+msgid "Account needs to be activated to use this feature"
+msgstr "Nalog treba biti aktiviran da biste koristili ovu mogućnost"
+
+#: ../../../app/routes/route.account.php:151
+msgid "Account already activated"
+msgstr "Nalog je već aktivan"
+
+#: ../../../app/routes/route.account.php:181
+msgid "Allow up to 15 minutes for the email. You can try again later."
+msgstr "Dopustite do 15 minuta da email stigne. Možete probati ponovo kasnije"
+
+#: ../../../app/routes/route.account.php:220
+#, php-format
+msgid "Reset your password at %s"
+msgstr "Resetujte vašu lozinku na %s"
+
+#: ../../../app/routes/route.account.php:222
+#: ../../../app/routes/route.account.php:442
+#: ../../../app/routes/route.settings.php:260
+#: ../../../app/routes/route.signup.php:180
+#, php-format
+msgid "Confirmation required at %s"
+msgstr "Potvrda neophodna na %s"
+
+#: ../../../app/routes/route.account.php:330
+#: ../../../app/routes/route.signup.php:203
+#, php-format
+msgid "Welcome to %s"
+msgstr "Dobrodošli %s"
+
+#: ../../../app/routes/route.account.php:348
+#: ../../../app/routes/route.settings.php:304
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
+#: ../../../app/themes/Peafowl/views/settings.php:265
+#: ../../../app/themes/Peafowl/views/settings.php:282
+#: ../../../app/lib/chevereto.js:1270 ../../../app/lib/chevereto.min.js:54
+msgid "Passwords don't match"
+msgstr "Šifre se ne poklapaju"
+
+#: ../../../app/routes/route.account.php:410
+#: ../../../app/routes/route.json.php:571
+#: ../../../app/routes/route.settings.php:220
+#: ../../../app/routes/route.signup.php:137
+msgid "Email already being used"
+msgstr "Email je već u upotrebi"
+
+#: ../../../app/routes/route.account.php:496
+#: ../../../app/routes/route.signup.php:223
+#: ../../../app/themes/Peafowl/pages/contact.php:146
+#: ../../../lib/Peafowl/peafowl.js:194 ../../../lib/Peafowl/peafowl.min.js:10
+msgid "Check the errors in the form to continue."
+msgstr "Proverite greške u formi kako biste nastavili."
+
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:663
+#: ../../../app/routes/route.dashboard.php:692
+#: ../../../app/routes/route.dashboard.php:721
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.user.php:131
+#: ../../../app/routes/route.user.php:169
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Najnovije"
+
+#: ../../../app/routes/route.album.php:88
+#: ../../../app/routes/route.category.php:56
+#: ../../../app/routes/route.dashboard.php:671
+#: ../../../app/routes/route.dashboard.php:700
+#: ../../../app/routes/route.dashboard.php:729
+#: ../../../app/routes/route.explore.php:42
+#: ../../../app/routes/route.user.php:139
+#: ../../../app/routes/route.user.php:175
+msgid "Oldest"
+msgstr "Najstarije"
+
+#: ../../../app/routes/route.album.php:96
+#: ../../../app/routes/route.category.php:64
+#: ../../../app/routes/route.dashboard.php:679
+#: ../../../app/routes/route.explore.php:50
+#: ../../../app/routes/route.user.php:147
+msgid "Most viewed"
+msgstr "Najviše pregleda"
+
+#: ../../../app/routes/route.album.php:107
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:4
+#: ../../../app/themes/Peafowl/views/album.php:36
+#: ../../../app/themes/Peafowl/views/image.php:91
+msgid "Share"
+msgstr "Podeli"
+
+#: ../../../app/routes/route.album.php:116
+#: ../../../app/routes/route.image.php:132
+msgid "Full info"
+msgstr "Detaljnije informacije"
+
+#: ../../../app/routes/route.dashboard.php:38
+msgid "Stats"
+msgstr "Statistika"
+
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:90
+#: ../../../app/routes/route.user.php:197
+#: ../../../app/themes/Peafowl/header.php:364
+#: ../../../app/themes/Peafowl/views/settings.php:77
+#: ../../../app/themes/Peafowl/views/user.php:125
+msgid "Albums"
+msgstr "Albumi"
+
+#: ../../../app/routes/route.dashboard.php:41
+#: ../../../app/routes/route.dashboard.php:222
+#: ../../../app/routes/route.search.php:97
+msgid "Users"
+msgstr "Korisnici"
+
+#: ../../../app/routes/route.dashboard.php:42
+#: ../../../app/routes/route.settings.php:442
+#: ../../../app/themes/Peafowl/header.php:365
+msgid "Settings"
+msgstr "Podešavanja"
+
+#: ../../../app/routes/route.dashboard.php:153
+msgid "Chevereto version"
+msgstr "Verzija Chevereto-a"
+
+#: ../../../app/routes/route.dashboard.php:154
+msgid "update"
+msgstr "ažuriranje"
+
+#: ../../../app/routes/route.dashboard.php:161
+msgid "PHP version"
+msgstr "Verzija PHP-a"
+
+#: ../../../app/routes/route.dashboard.php:165
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:39
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:40
+msgid "Server"
+msgstr "Server"
+
+#: ../../../app/routes/route.dashboard.php:169
+msgid "MySQL version"
+msgstr "MySQL verzija"
+
+#: ../../../app/routes/route.dashboard.php:173
+msgid "MySQL server info"
+msgstr "MySQL informacije o serveru"
+
+#: ../../../app/routes/route.dashboard.php:177
+msgid "GD Library"
+msgstr "GD Bibilioteka"
+
+#: ../../../app/routes/route.dashboard.php:181
+msgid "File uploads"
+msgstr "Fajl otpremanja"
+
+#: ../../../app/routes/route.dashboard.php:182
+#: ../../../app/themes/Peafowl/views/dashboard.php:273
+#: ../../../app/themes/Peafowl/views/dashboard.php:283
+#: ../../../app/themes/Peafowl/views/dashboard.php:293
+#: ../../../app/themes/Peafowl/views/dashboard.php:338
+#: ../../../app/themes/Peafowl/views/dashboard.php:347
+#: ../../../app/themes/Peafowl/views/dashboard.php:418
+#: ../../../app/themes/Peafowl/views/dashboard.php:438
+#: ../../../app/themes/Peafowl/views/dashboard.php:448
+#: ../../../app/themes/Peafowl/views/dashboard.php:458
+#: ../../../app/themes/Peafowl/views/dashboard.php:610
+#: ../../../app/themes/Peafowl/views/dashboard.php:623
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+#: ../../../app/themes/Peafowl/views/dashboard.php:654
+#: ../../../app/themes/Peafowl/views/dashboard.php:683
+#: ../../../app/themes/Peafowl/views/dashboard.php:693
+#: ../../../app/themes/Peafowl/views/dashboard.php:732
+#: ../../../app/themes/Peafowl/views/dashboard.php:742
+#: ../../../app/themes/Peafowl/views/dashboard.php:752
+#: ../../../app/themes/Peafowl/views/dashboard.php:898
+#: ../../../app/themes/Peafowl/views/dashboard.php:953
+#: ../../../app/themes/Peafowl/views/dashboard.php:963
+#: ../../../app/themes/Peafowl/views/dashboard.php:975
+#: ../../../app/themes/Peafowl/views/dashboard.php:987
+#: ../../../app/themes/Peafowl/views/dashboard.php:997
+#: ../../../app/themes/Peafowl/views/dashboard.php:1007
+#: ../../../app/themes/Peafowl/views/dashboard.php:1019
+#: ../../../app/themes/Peafowl/views/dashboard.php:1126
+#: ../../../app/themes/Peafowl/views/dashboard.php:1287
+#: ../../../app/themes/Peafowl/views/dashboard.php:1296
+#: ../../../app/themes/Peafowl/views/dashboard.php:1305
+#: ../../../app/themes/Peafowl/views/dashboard.php:1330
+#: ../../../app/themes/Peafowl/views/dashboard.php:1340
+#: ../../../app/themes/Peafowl/views/dashboard.php:1530
+#: ../../../app/themes/Peafowl/views/dashboard.php:1556
+#: ../../../app/themes/Peafowl/views/dashboard.php:1589
+#: ../../../app/themes/Peafowl/views/dashboard.php:1615
+#: ../../../app/themes/Peafowl/views/dashboard.php:1641
+#: ../../../app/themes/Peafowl/views/dashboard.php:1660
+#: ../../../app/themes/Peafowl/views/dashboard.php:1705
+msgid "Enabled"
+msgstr "Omogućeno"
+
+#: ../../../app/routes/route.dashboard.php:182
+#: ../../../app/themes/Peafowl/views/dashboard.php:273
+#: ../../../app/themes/Peafowl/views/dashboard.php:283
+#: ../../../app/themes/Peafowl/views/dashboard.php:293
+#: ../../../app/themes/Peafowl/views/dashboard.php:338
+#: ../../../app/themes/Peafowl/views/dashboard.php:347
+#: ../../../app/themes/Peafowl/views/dashboard.php:418
+#: ../../../app/themes/Peafowl/views/dashboard.php:438
+#: ../../../app/themes/Peafowl/views/dashboard.php:448
+#: ../../../app/themes/Peafowl/views/dashboard.php:458
+#: ../../../app/themes/Peafowl/views/dashboard.php:610
+#: ../../../app/themes/Peafowl/views/dashboard.php:623
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+#: ../../../app/themes/Peafowl/views/dashboard.php:654
+#: ../../../app/themes/Peafowl/views/dashboard.php:683
+#: ../../../app/themes/Peafowl/views/dashboard.php:693
+#: ../../../app/themes/Peafowl/views/dashboard.php:732
+#: ../../../app/themes/Peafowl/views/dashboard.php:742
+#: ../../../app/themes/Peafowl/views/dashboard.php:752
+#: ../../../app/themes/Peafowl/views/dashboard.php:898
+#: ../../../app/themes/Peafowl/views/dashboard.php:953
+#: ../../../app/themes/Peafowl/views/dashboard.php:963
+#: ../../../app/themes/Peafowl/views/dashboard.php:975
+#: ../../../app/themes/Peafowl/views/dashboard.php:987
+#: ../../../app/themes/Peafowl/views/dashboard.php:997
+#: ../../../app/themes/Peafowl/views/dashboard.php:1007
+#: ../../../app/themes/Peafowl/views/dashboard.php:1019
+#: ../../../app/themes/Peafowl/views/dashboard.php:1126
+#: ../../../app/themes/Peafowl/views/dashboard.php:1287
+#: ../../../app/themes/Peafowl/views/dashboard.php:1296
+#: ../../../app/themes/Peafowl/views/dashboard.php:1305
+#: ../../../app/themes/Peafowl/views/dashboard.php:1330
+#: ../../../app/themes/Peafowl/views/dashboard.php:1340
+#: ../../../app/themes/Peafowl/views/dashboard.php:1530
+#: ../../../app/themes/Peafowl/views/dashboard.php:1556
+#: ../../../app/themes/Peafowl/views/dashboard.php:1589
+#: ../../../app/themes/Peafowl/views/dashboard.php:1615
+#: ../../../app/themes/Peafowl/views/dashboard.php:1641
+#: ../../../app/themes/Peafowl/views/dashboard.php:1660
+#: ../../../app/themes/Peafowl/views/dashboard.php:1705
+msgid "Disabled"
+msgstr "Onemogućeno"
+
+#: ../../../app/routes/route.dashboard.php:185
+msgid "Max. upload size"
+msgstr "Maksimalna veličina otpremanja"
+
+#: ../../../app/routes/route.dashboard.php:189
+msgid "Max. post size"
+msgstr "Maksimalna veličina objave"
+
+#: ../../../app/routes/route.dashboard.php:193
+msgid "Max. execution time"
+msgstr "Maksimalno vreme izvršavanja"
+
+#: ../../../app/routes/route.dashboard.php:194
+#, php-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d sekunda"
+msgstr[1] "%d sekundi"
+msgstr[2] "%d sekundi"
+
+#: ../../../app/routes/route.dashboard.php:197
+msgid "Memory limit"
+msgstr "Ograničenje memorije"
+
+#: ../../../app/routes/route.dashboard.php:217
+#: ../../../app/themes/Peafowl/views/settings.php:322
+msgid "Website"
+msgstr "Web sajt"
+
+#: ../../../app/routes/route.dashboard.php:218
+msgid "Content"
+msgstr "Sadržaj"
+
+#: ../../../app/routes/route.dashboard.php:219
+#: ../../../app/themes/Peafowl/views/dashboard.php:1191
+msgid "Listings"
+msgstr "Listings"
+
+#: ../../../app/routes/route.dashboard.php:220
+msgid "Image upload"
+msgstr "Upload slika"
+
+#: ../../../app/routes/route.dashboard.php:221
+msgid "Categories"
+msgstr "Kategorije"
+
+#: ../../../app/routes/route.dashboard.php:223
+#: ../../../app/themes/Peafowl/views/dashboard.php:680
+msgid "Flood protection"
+msgstr "Zaštita od poplava"
+
+#: ../../../app/routes/route.dashboard.php:224
+#: ../../../app/themes/Peafowl/views/dashboard.php:820
+msgid "Theme"
+msgstr "Tema"
+
+#: ../../../app/routes/route.dashboard.php:225
+#: ../../../app/themes/Peafowl/views/dashboard.php:633
+#: ../../../app/themes/Peafowl/views/dashboard.php:1177
+msgid "Homepage"
+msgstr "Početna"
+
+#: ../../../app/routes/route.dashboard.php:226
+msgid "Banners"
+msgstr "Baneri"
+
+#: ../../../app/routes/route.dashboard.php:227
+msgid "System"
+msgstr "Sistem"
+
+#: ../../../app/routes/route.dashboard.php:230
+#: ../../../app/themes/Peafowl/views/dashboard.php:99
+msgid "Email"
+msgstr "Email"
+
+#: ../../../app/routes/route.dashboard.php:231
+#: ../../../app/themes/Peafowl/views/album.php:79
+msgid "Social networks"
+msgstr "Socijalne mreže"
+
+#: ../../../app/routes/route.dashboard.php:232
+msgid "External services"
+msgstr "Spoljni servisi"
+
+#: ../../../app/routes/route.dashboard.php:269
+#: ../../../app/themes/Peafowl/header.php:174
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:37
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:62
+msgid "All"
+msgstr "Sve"
+
+#: ../../../app/routes/route.dashboard.php:274
+#: ../../../app/routes/route.image.php:147
+#: ../../../app/themes/Peafowl/views/dashboard.php:1413
+msgid "search content"
+msgstr "pretraži sadržaj"
+
+#: ../../../app/routes/route.dashboard.php:311
+msgid "Invalid website name"
+msgstr "Neispravno ime web sajta"
+
+#: ../../../app/routes/route.dashboard.php:316
+msgid "Invalid language"
+msgstr "Neispravan jezik"
+
+#: ../../../app/routes/route.dashboard.php:321
+msgid "Invalid timezone"
+msgstr "Neispravna vremenska zona"
+
+#: ../../../app/routes/route.dashboard.php:326
+#: ../../../app/routes/route.dashboard.php:361
+#: ../../../app/routes/route.dashboard.php:471
+#: ../../../app/routes/route.dashboard.php:605
+msgid "Invalid value"
+msgstr "Neispravna vrednost"
+
+#: ../../../app/routes/route.dashboard.php:331
+msgid "Invalid upload storage mode"
+msgstr "Režim skladištenja uploada slika"
+
+#: ../../../app/routes/route.dashboard.php:336
+msgid "Invalid upload filenaming"
+msgstr "Neispravno imenovanje uploada"
+
+#: ../../../app/routes/route.dashboard.php:341
+msgid "Invalid thumb width"
+msgstr "Neispravna veličina sličice"
+
+#: ../../../app/routes/route.dashboard.php:346
+msgid "Invalid thumb height"
+msgstr "Pogrešna visina slike za pregled"
+
+#: ../../../app/routes/route.dashboard.php:351
+msgid "Invalid medium width"
+msgstr "Pogrešna srednja širina"
+
+#: ../../../app/routes/route.dashboard.php:356
+msgid "Invalid theme"
+msgstr "Neispravna tema"
+
+#: ../../../app/routes/route.dashboard.php:366
+msgid "Invalid theme tone"
+msgstr "Pogrešna vrsta teme"
+
+#: ../../../app/routes/route.dashboard.php:386
+msgid "Invalid theme image listing size"
+msgstr "Pogrešna veličina slike za listanje u temi"
+
+#: ../../../app/routes/route.dashboard.php:391
+msgid "Invalid user id"
+msgstr "Pogrešan korisnički ID"
+
+#: ../../../app/routes/route.dashboard.php:396
+msgid "Invalid email mode"
+msgstr "Neispravan email mod"
+
+#: ../../../app/routes/route.dashboard.php:401
+msgid "Invalid SMTP port"
+msgstr "Neispravan SMTP port"
+
+#: ../../../app/routes/route.dashboard.php:406
+msgid "Invalid SMTP security"
+msgstr "Pogrešna SMTP sigurnost"
+
+#: ../../../app/routes/route.dashboard.php:411
+msgid "Invalid website mode"
+msgstr "Neispravan mod sajta"
+
+#: ../../../app/routes/route.dashboard.php:416
+msgid "Invalid website content privacy mode"
+msgstr "Neispravan mod privatnosti sadržaja sajta"
+
+#: ../../../app/routes/route.dashboard.php:447
+msgid "Invalid upload image path"
+msgstr "Neispravna putanja za upload slika"
+
+#: ../../../app/routes/route.dashboard.php:474
+#, php-format
+msgid "Max. allowed %s"
+msgstr "Max. dopušteno %s"
+
+#: ../../../app/routes/route.dashboard.php:524
+msgid "Invalid SMTP server"
+msgstr "Neispravan SMTP server"
+
+#: ../../../app/routes/route.dashboard.php:525
+msgid "Invalid SMTP username"
+msgstr "Neispravno SMTP korisničko ime"
+
+#: ../../../app/routes/route.dashboard.php:587
+msgid "Invalid URL"
+msgstr "Pogrešan URL"
+
+#: ../../../app/routes/route.dashboard.php:713
+msgid "Top users"
+msgstr "Top članovi"
+
+#: ../../../app/routes/route.dashboard.php:775
+#: ../../../app/themes/Peafowl/header.php:367
+#: ../../../app/themes/Peafowl/views/dashboard.php:9
+msgid "Dashboard"
+msgstr "Panel"
+
+#: ../../../app/routes/route.explore.php:81
+#: ../../../app/themes/Peafowl/header.php:184
+#: ../../../app/themes/Peafowl/header.php:202
+#: ../../../app/themes/Peafowl/views/dashboard.php:280
+#: ../../../app/themes/Peafowl/views/explore.php:9
+msgid "Explore"
+msgstr "Istraži"
+
+#: ../../../app/routes/route.image.php:118
+#: ../../../app/themes/Peafowl/header.php:381
+msgid "About"
+msgstr "O nama"
+
+#: ../../../app/routes/route.image.php:125
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:85
+msgid "Embed codes"
+msgstr "Kodovi"
+
+#: ../../../app/routes/route.image.php:142
+msgid "Image ID"
+msgstr "ID slike"
+
+#: ../../../app/routes/route.image.php:146
+msgid "Uploader IP"
+msgstr "IP Uploadera"
+
+#: ../../../app/routes/route.image.php:150
+msgid "Upload date"
+msgstr "Datum uploada"
+
+#: ../../../app/routes/route.image.php:175
+#, php-format
+msgid "%s images"
+msgstr "%s slike"
+
+#: ../../../app/routes/route.json.php:44 ../../../app/routes/route.json.php:59
+#: ../../../app/routes/route.json.php:232
+#: ../../../app/routes/route.json.php:718
+#: ../../../app/routes/route.json.php:782
+#: ../../../app/routes/route.json.php:883
+#: ../../../app/routes/route.json.php:1026
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:4
+msgid "Login needed"
+msgstr "Neophodna prijava"
+
+#: ../../../app/routes/route.json.php:540
+#: ../../../app/routes/route.json.php:602
+msgid "Missing values"
+msgstr "Nedostaju vrijednosti"
+
+#: ../../../app/routes/route.json.php:561
+msgid "Invalid role"
+msgstr "Pogrešna uloga"
+
+#: ../../../app/routes/route.json.php:566
+msgid "Username already being used"
+msgstr "Korisničko ime je zauzeto"
+
+#: ../../../app/routes/route.json.php:1063
+#, php-format
+msgid "%s has been disconnected."
+msgstr "%s je diskonektovan."
+
+#: ../../../app/routes/route.login.php:133
+msgid "Wrong Username/Email password combination"
+msgstr "Pogrešena kombinacija korisničkog imena/email i lozinke"
+
+#: ../../../app/routes/route.login.php:148
+#: ../../../app/themes/Peafowl/header.php:265
+#: ../../../app/themes/Peafowl/header.php:271
+#: ../../../app/themes/Peafowl/views/login.php:8
+#: ../../../app/themes/Peafowl/views/login.php:52
+msgid "Sign in"
+msgstr "Prijavi se"
+
+#: ../../../app/routes/route.logout.php:29
+#: ../../../app/themes/Peafowl/views/logout.php:8
+msgid "Logged out"
+msgstr "Odjavi se"
+
+#: ../../../app/routes/route.search.php:129
+#: ../../../app/themes/Peafowl/header.php:211
+#: ../../../app/themes/Peafowl/header.php:216
+#: ../../../app/themes/Peafowl/views/dashboard.php:270
+msgid "Search"
+msgstr "Pretraga"
+
+#: ../../../app/routes/route.settings.php:58
+msgid "Account"
+msgstr "Nalog"
+
+#: ../../../app/routes/route.settings.php:59
+msgid "Profile"
+msgstr "Profil"
+
+#: ../../../app/routes/route.settings.php:60
+#: ../../../app/themes/Peafowl/header.php:288
+#: ../../../app/themes/Peafowl/header.php:336
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:51
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:104
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/login.php:39
+#: ../../../app/themes/Peafowl/views/settings.php:274
+#: ../../../app/themes/Peafowl/views/signup.php:44
+#: ../../../app/themes/Peafowl/views/signup.php:45
+msgid "Password"
+msgstr "Lozinka"
+
+#: ../../../app/routes/route.settings.php:61
+msgid "Linked accounts"
+msgstr "Povezani nalozi"
+
+#: ../../../app/routes/route.settings.php:246
+#, php-format
+msgid "An email has been sent to %s with instructions to activate this email"
+msgstr "Email je poslat na %s sa uputstvom za aktivaciju ovog email naloga"
+
+#: ../../../app/routes/route.settings.php:279
+#: ../../../app/themes/Peafowl/pages/contact.php:22
+msgid "Invalid name"
+msgstr "Pogrešno ime"
+
+#: ../../../app/routes/route.settings.php:282
+msgid "Invalid website"
+msgstr "Pogrešan vebsajt"
+
+#: ../../../app/routes/route.settings.php:290
+msgid "Wrong password"
+msgstr "Pogrešna lozinka"
+
+#: ../../../app/routes/route.settings.php:293
+msgid "Use a new password"
+msgstr "Koristi novu lozinku"
+
+#: ../../../app/routes/route.settings.php:360
+#: ../../../app/themes/Peafowl/views/dashboard.php:1751
+#: ../../../app/themes/Peafowl/views/settings.php:409
+msgid "Changes have been saved."
+msgstr "Promene su sačuvane"
+
+#: ../../../app/routes/route.settings.php:379
+msgid "Password has been changed"
+msgstr "Lozinka je promenjena"
+
+#: ../../../app/routes/route.settings.php:384
+msgid "Password has been created."
+msgstr "Lozinka je kreirana"
+
+#: ../../../app/routes/route.settings.php:399
+msgid "Wrong Username/Email values"
+msgstr "Pogrešno korisničko ime ili email"
+
+#: ../../../app/routes/route.settings.php:442
+#, php-format
+msgid "Settings for %s"
+msgstr "Podešavanja za %s"
+
+#: ../../../app/routes/route.signup.php:238
+#: ../../../app/themes/Peafowl/header.php:312
+#: ../../../app/themes/Peafowl/header.php:318
+#: ../../../app/themes/Peafowl/views/index.php:81
+#: ../../../app/themes/Peafowl/views/signup.php:8
+#: ../../../app/themes/Peafowl/views/signup.php:58
+msgid "Create account"
+msgstr "Napravi nalog"
+
+#: ../../../app/themes/Peafowl/header.php:56
+#: ../../../app/themes/Peafowl/views/index.php:46
+#: ../../../app/themes/Peafowl/views/user.php:124
+#, php-format
+msgid "%s's Images"
+msgstr "%s's Slike"
+
+#: ../../../app/themes/Peafowl/header.php:56
+#: ../../../app/themes/Peafowl/views/user.php:124
+#, php-format
+msgid "%s's Albums"
+msgstr "%s's Albume"
+
+#: ../../../app/themes/Peafowl/header.php:229
+#: ../../../app/themes/Peafowl/views/dashboard.php:290
+#: ../../../app/themes/Peafowl/views/dashboard.php:381
+msgid "Random"
+msgstr "Nasumično"
+
+#: ../../../app/themes/Peafowl/header.php:254
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:69
+msgid "Upload"
+msgstr "Upload"
+
+#: ../../../app/themes/Peafowl/header.php:277
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:34
+#: ../../../app/themes/Peafowl/views/login.php:18
+#: ../../../app/themes/Peafowl/views/login.php:65
+#: ../../../app/themes/Peafowl/views/signup.php:18
+#: ../../../app/themes/Peafowl/views/signup.php:71
+msgid "Sign in with another account"
+msgstr "Prijavite se sa drugim nalogom"
+
+#: ../../../app/themes/Peafowl/header.php:281
+#: ../../../app/themes/Peafowl/header.php:328
+#: ../../../app/themes/Peafowl/pages/contact.php:137
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:69
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:73
+#: ../../../app/themes/Peafowl/snippets/form_album.php:12
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:32
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/dashboard.php:1728
+#: ../../../app/themes/Peafowl/views/login.php:22
+#: ../../../app/themes/Peafowl/views/login.php:62
+#: ../../../app/themes/Peafowl/views/settings.php:306
+#: ../../../app/themes/Peafowl/views/settings.php:395
+#: ../../../app/themes/Peafowl/views/signup.php:22
+#: ../../../app/themes/Peafowl/views/signup.php:68
+#: ../../../lib/Peafowl/peafowl.js:480 ../../../lib/Peafowl/peafowl.js:2192
+#: ../../../lib/Peafowl/peafowl.min.js:29
+#: ../../../lib/Peafowl/peafowl.min.js:120
+msgid "or"
+msgstr "ili"
+
+#: ../../../app/themes/Peafowl/header.php:287
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
+#: ../../../app/themes/Peafowl/views/login.php:34
+#: ../../../app/themes/Peafowl/views/login.php:35
+msgid "Username or Email address"
+msgstr "Korisničko ime ili Email adresa"
+
+#: ../../../app/themes/Peafowl/header.php:290
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:23
+#: ../../../app/themes/Peafowl/views/login.php:53
+msgid "Keep me logged in"
+msgstr "Ostavi me prijavljenog"
+
+#: ../../../app/themes/Peafowl/header.php:297
+#, php-format
+msgid "Don't have an account? <a href='%s'>Sign up</a> now."
+msgstr "Nemate nalog? <a href='%s'>Registrujte se</a> odmah."
+
+#: ../../../app/themes/Peafowl/header.php:324
+msgid "Sign up with another account"
+msgstr "Registrujte se sa drugim nalogom"
+
+#: ../../../app/themes/Peafowl/header.php:334
+#: ../../../app/themes/Peafowl/pages/contact.php:106
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:100
+#: ../../../app/themes/Peafowl/views/settings.php:143
+#: ../../../app/themes/Peafowl/views/signup.php:34
+#: ../../../app/themes/Peafowl/views/signup.php:35
+msgid "Email address"
+msgstr "Email adresa"
+
+#: ../../../app/themes/Peafowl/header.php:335
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:47
+#: ../../../app/themes/Peafowl/views/dashboard.php:94
+#: ../../../app/themes/Peafowl/views/dashboard.php:95
+#: ../../../app/themes/Peafowl/views/settings.php:137
+#: ../../../app/themes/Peafowl/views/settings.php:138
+#: ../../../app/themes/Peafowl/views/signup.php:39
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "Username"
+msgstr "Korisničko ime"
+
+#: ../../../app/themes/Peafowl/header.php:337
+#: ../../../app/themes/Peafowl/views/signup.php:60
+#, php-format
+msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
+msgstr "Registracijom se slažete sa našim <a href=\"%s\">Uslovima korišćenja</a>"
+
+#: ../../../app/themes/Peafowl/header.php:363
+msgid "My Profile"
+msgstr "Moj Profil"
+
+#: ../../../app/themes/Peafowl/header.php:369
+msgid "Sign out"
+msgstr "Odjavi se"
+
+#: ../../../app/themes/Peafowl/header.php:385
+msgid "Terms of service"
+msgstr "Uslovi korišćenja"
+
+#: ../../../app/themes/Peafowl/header.php:386
+msgid "Privacy"
+msgstr "Politika privatnosti"
+
+#: ../../../app/themes/Peafowl/header.php:387
+#: ../../../app/themes/Peafowl/pages/contact.php:4
+#: ../../../app/themes/Peafowl/pages/contact.php:93
+msgid "Contact"
+msgstr "Kontakt"
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:4
+msgid "We received a request to change the email of your <a href=\"%u\">%n</a> account at %w."
+msgstr "Primi smo zahtev za promenu email adrese  <a href=\"%u\">%n</a> na %w"
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:6
+#, php-format
+msgid "To complete the process you must <a href=\"%s\">activate your email</a>."
+msgstr "Da dovršite proces morate <a href=\"%s\">aktivirati vaš email</a>."
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:8
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:8
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:8
+#, php-format
+msgid "Alternatively you can copy and paste the URL into your browser: <a href=\"%s\">%s</a>"
+msgstr "Alternativno možete kopirati i preneti URL u vaš browser <a href=\"%s\">%s</a>"
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:10
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:10
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:10
+msgid "If you didn't intend this just ignore this message."
+msgstr "Ako niste hteli ovo, samo ignorirajte ovu poruku"
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:12
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:12
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:12
+#, php-format
+msgid "This request was made from IP: %s"
+msgstr "Zahtev je urađen sa IP: %s"
+
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:4
+msgid "We received a request to register the %n account at %w."
+msgstr "Primi smo zathev za registraciju  %n naloga na%w."
+
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:6
+#, php-format
+msgid "To complete the process you must <a href=\"%s\">activate your account</a>."
+msgstr "Da dovršite proces morate <a href=\"%s\">aktivirati vaš nalog</a>."
+
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:4
+msgid "We received a request to reset the password for your <a href=\"%u\">%n</a> account."
+msgstr "Primi smo zahtev za reset vaše lozinke za vaš <a href=\"%u\">%n</a> nalog."
+
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:6
+#, php-format
+msgid "To reset your password <a href=\"%s\">follow this link</a>."
+msgstr "Da resetujte lozinku <a href=\"%s\">pratite ovaj link</a>."
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:4
+msgid "Hi %n, welcome to %w"
+msgstr "Ćao %n, dobrodošli na %w"
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:6
+msgid "Now that your account is ready you can enjoy uploading your images, creating albums and setting the privacy of your content as well as many more cool things that you will discover."
+msgstr "Sada kada imate nalog spremni ste da uživate upload-ujući slike, kreirati albume i još mnogo toga."
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:10
+msgid "Thank you for joining"
+msgstr "Hvala vam što ste se pridružili"
+
+#: ../../../app/themes/Peafowl/mails/footer.php:3
+msgid "This email was sent from %w %u"
+msgstr "Email je poslan sa %w %u"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:10
+msgid "General questions/comments"
+msgstr "Generalna pitanja/komentari"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:11
+msgid "DMCA complaint"
+msgstr "DMCA žalba"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:25
+msgid "Invalid message"
+msgstr "Neispravna poruka"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:28
+msgid "Invalid subject"
+msgstr "Neispravan naslov"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:36
+msgid "Invalid reCAPTCHA"
+msgstr "Neispravan reCAPTCHA"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:81
+msgid "Mail error"
+msgstr "Greška email-a"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:93
+msgid "Message sent"
+msgstr "Poruka poslata"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:99
+msgid "We will be in touch soon."
+msgstr "Uskoro ćemo vas kontaktirati"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:99
+msgid "If you want to send a message fill the form below."
+msgstr "Ako želite da pošaljete poruku, popunite formular ispod."
+
+#: ../../../app/themes/Peafowl/pages/contact.php:101
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:4
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:3
+#: ../../../app/themes/Peafowl/views/dashboard.php:523
+#: ../../../app/themes/Peafowl/views/dashboard.php:1396
+#: ../../../app/themes/Peafowl/views/settings.php:316
+msgid "Name"
+msgstr "Ime"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:102
+msgid "Your name"
+msgstr "Vaše ime"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:107
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:16
+#: ../../../app/themes/Peafowl/views/settings.php:144
+msgid "Your email address"
+msgstr "Vaša email adresa"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:111
+msgid "Subject"
+msgstr "Naslov"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:125
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:574
+msgid "Message"
+msgstr "Poruka"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:137
+msgid "Send message"
+msgstr "Pošalji poruku"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:137
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:69
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:73
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:85
+#: ../../../app/themes/Peafowl/views/dashboard.php:1728
+#: ../../../app/themes/Peafowl/views/settings.php:395
+#: ../../../lib/Peafowl/peafowl.js:2193
+#: ../../../lib/Peafowl/peafowl.min.js:120
+msgid "cancel"
+msgstr "otkaži"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:13
+msgid "Drag and drop images here to upload"
+msgstr "Prevuci i pusti slike ovde za upload"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:14
+msgid "Select the images to upload"
+msgstr "Izaberite slike za upload"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:15
+msgid "You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
+msgstr "Možete takođe <a data-trigger=\"anywhere-upload-input\">potražiti slike na vašem računaru</a> ili <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">dodajte URL slike</a>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:16
+msgid "You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a>."
+msgstr "Možete takođte <a data-trigger=\"anywhere-upload-input-camera\">da slika</a>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:20
+msgid "Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>"
+msgstr "Upload <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">slika</span>"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:21
+msgid "The queue is being uploaded. It will take just a few seconds to complete."
+msgstr "Upload slika koje čekaju u redu je u toku. Još nekoliko sekundi do kraja."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:25
+msgid "Upload complete"
+msgstr "Upload je završen"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
+#, php-format
+msgid "Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album."
+msgstr "Sadržaj dodat u <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">javni pregled</a>. Možete <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">kreirati album</a> ili <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">premestiti <span data-text=\"queue-objects\">slike</span></a> u postojeći album."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:28
+msgid "You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account."
+msgstr "Možete  <a href=\"%s\">kreirati nalog</a> ili <a href=\"%l\">prijaviti</a> da sačuvate buduće uploade na nalog."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:33
+msgid "No <span data-text=\"queue-objects\">images</span> have been uploaded"
+msgstr "Nema uploadovanih <span data-text=\"queue-objects\">slika</span>"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:34
+msgid "Some errors have occured and the system couldn't process your request."
+msgstr "Došlo je do greške i sistem ne može da obradi vaš zahtev."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:54
+msgid "Select category"
+msgstr "Izaberi kategoriju"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:69
+msgid "Change upload privacy"
+msgstr "Promeni privatnost uploada"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:70
+msgid "Mark this if the upload is not family safe"
+msgstr "Označi ovo ako je upload neprikladnog sadržaja"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:70
+msgid "Not family safe upload"
+msgstr "Upload neprikladnog sadržaja"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:73
+msgid "Uploading"
+msgstr "Uploadovanje"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:73
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:86
+msgid "cancel remaining"
+msgstr "otkaži preostalo"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:78
+msgid "Note: Some images couldn't be uploaded."
+msgstr "Napomena: Neke slike nije moguće uploadovati"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:78
+msgid "learn more"
+msgstr "saznaj više"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:79
+msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
+msgstr "Proveri <a data-modal=\"simple\" data-target=\"failed-upload-result\">izveštaj o greškama</a> za više informacija."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:82
+msgid "max"
+msgstr "maksimalno"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:84
+msgid "close"
+msgstr "zatvori"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:143
+msgid "Add image URLs"
+msgstr "Dodaj URL adrese slika"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:145
+msgid "Add the image URLs here"
+msgstr "Dodaj URL slika ovde"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:160
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:26
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:31
+msgid "Create album"
+msgstr "Napravi album"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:161
+msgid "The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
+msgstr "Uploadovani sadržaj biće premešten u novi album. Takođe možete premestiti sadržaj u <a class=\"modal-switch\" data-switch=\"move-existing-album\">postojeći album</a>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:172
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:27
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:46
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:70
+msgid "Move to album"
+msgstr "Premestu u album"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:173
+msgid "Select an existing album to move the uploaded content. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the content there."
+msgstr "Označi postojeći album kako bi premestio upload sadržaj. Takođe možete <a class=\"modal-switch\" data-switch=\"move-new-album\">napraviti novi album</a> i premestiti sadržaj tamo."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:189
+msgid "Error report"
+msgstr "Izveštaj o greškama"
+
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
+#: ../../../app/themes/Peafowl/views/user.php:87
+msgid "album"
+msgid_plural "albums"
+msgstr[0] "album"
+msgstr[1] "albuma"
+msgstr[2] "albumi"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
+msgid "Links"
+msgstr "Linkovi"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
+msgid "Viewer links"
+msgstr "Linkovi za pregled"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:14
+msgid "Direct links"
+msgstr "Direktni linkovi"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:21
+msgid "HTML Codes"
+msgstr "HTML kodovi"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:24
+msgid "HTML embed"
+msgstr "HTML ugradnja"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:29
+msgid "HTML original linked"
+msgstr "HTML originalno linkovano"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:34
+msgid "HTML medium linked"
+msgstr "HTML srednji link"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:39
+msgid "HTML thumbnail linked"
+msgstr "HTML link slike za pregled"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:46
+msgid "BBCodes"
+msgstr "BBKodovi"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:49
+msgid "BBCode embed"
+msgstr "BBKod ugradnja"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:54
+msgid "BBCode original linked"
+msgstr "BBKod originalno linkovano"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:59
+msgid "BBCode medium linked"
+msgstr "BBCode medij linkovan"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:64
+msgid "BBCode thumbnail linked"
+msgstr "BBKod linkovana slika za pregled"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
+#: ../../../app/themes/Peafowl/snippets/form_category.php:3
+msgid "Category"
+msgstr "Kategorija"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:7
+msgid "Album name"
+msgstr "Ime albuma"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:8
+msgid "Untitled album"
+msgstr "Neimenovani album"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:12
+msgid "move to existing album"
+msgstr "premesti u postojeći album"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:18
+msgid "Album description"
+msgstr "Opis albuma"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:18
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:12
+#: ../../../app/themes/Peafowl/snippets/form_image.php:4
+#: ../../../app/themes/Peafowl/snippets/form_image.php:28
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:1069
+#: ../../../app/themes/Peafowl/views/dashboard.php:1079
+msgid "optional"
+msgstr "opcionalno"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:19
+msgid "Brief description of this album"
+msgstr "Kratak opis ovog albuma"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:24
+msgid "Album Privacy"
+msgstr "Privatnost albuma"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:25
+msgid "Who can view this content"
+msgstr "Ko može videti sadržaj"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:26
+#: ../../../app/themes/Peafowl/views/dashboard.php:305
+msgid "Public"
+msgstr "Javno"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:27
+msgid "Private (just me)"
+msgstr "Privatno (samo ja)"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:28
+msgid "Private (anyone with the link)"
+msgstr "Privatno (samo sa linkom)"
+
+#: ../../../app/themes/Peafowl/snippets/form_category.php:9
+msgid "No category"
+msgstr "Nema kategorije"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:5
+msgid "Category name"
+msgstr "Naziv kategorije"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:8
+#: ../../../app/themes/Peafowl/views/dashboard.php:524
+msgid "URL key"
+msgstr "URL ključ"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:9
+msgid "Category URL key"
+msgstr "URL ključ kategorije"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:12
+#: ../../../app/themes/Peafowl/snippets/form_image.php:28
+#: ../../../app/themes/Peafowl/views/dashboard.php:525
+msgid "Description"
+msgstr "Opis"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:13
+msgid "Brief description of this category"
+msgstr "Kratak opis ove kategorije"
+
+#: ../../../app/themes/Peafowl/snippets/form_image.php:25
+msgid "Mark this if the image is not family safe"
+msgstr "Označi ovo ukoliko je slika neprikladnog sadržaja"
+
+#: ../../../app/themes/Peafowl/snippets/form_image.php:25
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:36
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:8
+msgid "Flag as unsafe"
+msgstr "Označi kao neprikladno"
+
+#: ../../../app/themes/Peafowl/snippets/form_image.php:29
+msgid "Brief description of this image"
+msgstr "Kratak opis ove slike"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+msgid "Existing album"
+msgstr "Postojeći album"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2341 ../../../app/lib/chevereto.js:3254
+#: ../../../app/lib/chevereto.min.js:115 ../../../app/lib/chevereto.min.js:162
+msgid "private"
+msgstr "privatno"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+msgid "create new album"
+msgstr "kreiraj novu album"
+
+#: ../../../app/themes/Peafowl/snippets/image_album_slice.php:14
+msgid "view more"
+msgstr "pogledaj više"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:22
+#: ../../../app/themes/Peafowl/snippets/templates_content_listing.php:6
+#: ../../../app/themes/Peafowl/snippets/templates_content_listing.php:9
+msgid "Load more"
+msgstr "Učitaj više"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:91
+msgid "Previous"
+msgstr "Prethodno"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:98
+msgid "Next"
+msgstr "Sledeće"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
+msgid "Select all"
+msgstr "Označi sve"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:11
+msgid "Selection"
+msgstr "Izbor"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:12
+msgid "Action"
+msgstr "Radnja"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:19
+msgid "Get embed codes"
+msgstr "Preuzmi kodove"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:35
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:9
+msgid "Flag as safe"
+msgstr "Označi kao provereno"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:40
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:532
+#: ../../../app/themes/Peafowl/views/dashboard.php:581
+msgid "Delete"
+msgstr "Obriši"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:41
+msgid "Clear selection"
+msgstr "Poništi označeno"
+
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:5
+#, php-format
+msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
+msgstr "Da biste koristili sve ove mogućnosti morate biti prijavljeni. Ukoliko nemate nalog možete se <a href=\"%s\">registrovati</a> odmah."
+
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:24
+msgid "forgot?"
+msgstr "zaboravili?"
+
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
+msgid "Link"
+msgstr "Link"
+
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:14
+#: ../../../app/themes/Peafowl/views/album.php:74
+#: ../../../app/themes/Peafowl/views/image.php:282
+msgid "Note: This content is private. Change privacy to \"public\" to share."
+msgstr "Napomena: Ovaj sadržaj je privatan. Promenite privatnost u \"javno\" da biste podelili."
+
+#: ../../../app/themes/Peafowl/snippets/template_content_empty.php:5
+#: ../../../app/themes/Peafowl/views/index.php:63
+msgid "There's nothing to show here."
+msgstr "Nema šta ovde da se pokaže."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
+#: ../../../app/themes/Peafowl/views/image.php:75
+#: ../../../app/themes/Peafowl/views/image.php:441
+msgid "Edit image details"
+msgstr "Izmeni detalje slike"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
+#: ../../../app/themes/Peafowl/views/album.php:22
+#: ../../../app/themes/Peafowl/views/album.php:118
+msgid "Edit album details"
+msgstr "Izmeni detalje albuma"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
+msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
+msgstr "Sve ove slike biće premeštene u novi napravljeni album. Takođe možete premestiti slike u <a class=\"modal-switch\" data-switch=\"move-existing-album\">postojeći album</a>."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:50
+msgid "Select an existing album to move the image. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the image there."
+msgstr "Označite postojeći album kako biste premestili sliku. Takođe možete <a class=\"modal-switch\" data-switch=\"move-new-album\">napraviti novi album</a> i premestiti sliku tamo."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:52
+msgid "Select an existing album to move the album contents. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the album contents there."
+msgstr "Izaberite postojeći album da prebacite sadržaj albuma. Takođe možete <a class=\"modal-switch\" data-switch=\"move-new-album\">kreirati novi album</a> i prebaciti saržaj tu."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:71
+msgid "Select an existing album to move the images. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the images there."
+msgstr "Označite postojeći album kako biste premestili slike. Takođe možete <a class=\"modal-switch\" data-switch=\"move-new-album\">napraviti novi album</a> i premestiti slike tamo."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:97
+msgid "Confirm flag content as safe"
+msgstr "Potvrdi oznaku oznaku sadržaja kao proverenu"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:98
+msgid "Do you really want to flag this content as safe?"
+msgstr "Da li zaista hoćete da označite ovaj sadržaj kao proveren?"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:101
+msgid "Confirm flag content as unsafe"
+msgstr "Potvrdi oznaku sadržaja kao neproverenu"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:102
+msgid "Do you really want to flag this content as unsafe?"
+msgstr "Da li zaista hoćete da označite ovaj sadržaj kao neproveren?"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:106
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:110
+msgid "Confirm deletion"
+msgstr "Potvrdite brisanje"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:107
+msgid "Do you really want to remove this content? This can't be undone."
+msgstr "Da li ste sigurni da želite da ukolnite ovaj sadržaj? Ovo je trajno."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:111
+msgid "Do you really want to remove all the selected content? This can't be undone."
+msgstr "Da li ste sigurni da želite da ukolnite ceo ovaj označeni sadržaj? Ovo je trajno."
+
+#: ../../../app/themes/Peafowl/tpl_list_item/image_description_guest.php:2
+msgid "Uploaded by guest to Public"
+msgstr "Uploaduj kao gost za javnost"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/image_description_owner.php:2
+#, php-format
+msgid "From %s"
+msgstr "Od %s"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/image_description_user.php:2
+msgid "From %a by %u"
+msgstr "Od %a po %u"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
+#: ../../../app/lib/chevereto.js:3186 ../../../app/lib/chevereto.min.js:157
+#: ../../../lib/Peafowl/peafowl.js:625 ../../../lib/Peafowl/peafowl.min.js:36
+msgid "Select"
+msgstr "Izaberi"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
+msgid "Edit"
+msgstr "Izmeni"
+
+#: ../../../app/themes/Peafowl/views/404.php:7
+msgid "The requested page was not found."
+msgstr "Tražena strana nije nađena"
+
+#: ../../../app/themes/Peafowl/views/404.php:11
+msgid "Search something else"
+msgstr "Potražite nešta drugo"
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+msgid "The user has been deleted"
+msgstr "Korisnik je obrisan"
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+#: ../../../app/themes/Peafowl/views/album.php:134
+#: ../../../app/themes/Peafowl/views/user.php:158
+#: ../../../app/lib/chevereto.js:3163 ../../../app/lib/chevereto.min.js:155
+msgid "The content has been deleted."
+msgstr "Sadržaj je obrisan"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:7
+msgid "Your account is almost ready"
+msgstr "Vaš nalog je skoro spreman"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:9
+#, php-format
+msgid "An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "Email je poslan na %s sa uputstvima za aktiviranje naloga. Aktivacijski link je valjan 48 sati."
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/logout.php:13
+#: ../../../app/themes/Peafowl/views/request-denied.php:13
+msgid "Go to homepage"
+msgstr "Idi na naslovnu"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+msgid "Resend activation"
+msgstr "Pošalji ponovo aktivaciju"
+
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:10
+#, php-format
+msgid "You have successfully changed your account email to %s"
+msgstr "Uspešno ste promenili email naloga u %s"
+
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+msgid "Go to my profile"
+msgstr "Idi na moj profil"
+
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:12
+msgid "A confirmation link will be sent to this email with details to activate your account."
+msgstr "Potvrdni link će biti poslan sa detaljima kako aktivirati nalog"
+
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:26
+msgid "Add email"
+msgstr "Dodaj email"
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
+msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "Email sa instrukcijama za resetovanje lozinke je poslat na vaš email koji ste koristili prilikom registracije. Ako niste primili email proverite vaše foldere za Junk/Spam."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+msgid "Resend instructions"
+msgstr "Ponovo pošalji instrukcije"
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:989 ../../../app/lib/chevereto.js:1065
+#: ../../../app/lib/chevereto.js:1143 ../../../app/lib/chevereto.js:1293
+#: ../../../app/lib/chevereto.min.js:44 ../../../app/lib/chevereto.min.js:48
+#: ../../../app/lib/chevereto.min.js:52 ../../../app/lib/chevereto.min.js:55
+#: ../../../lib/Peafowl/peafowl.js:2422 ../../../lib/Peafowl/peafowl.js:2937
+#: ../../../lib/Peafowl/peafowl.min.js:138
+#: ../../../lib/Peafowl/peafowl.min.js:169
+msgid "An error occurred. Please try again later."
+msgstr "Došlo je do greške. Molimo pokušajte ponovo kasnije."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
+msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
+msgstr "Prethodni email je poslan sa instrukcijama za reset, ako ga niste dobili proverite vaš folder za email smeće."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:32
+msgid "Enter your username or the email address that you used to create your account."
+msgstr "Upišite vaše korisničko ime ili email adresu koju ste koristili prilikom pravljenja naloga."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:52
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:47
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:37
+#: ../../../lib/Peafowl/peafowl.js:407 ../../../lib/Peafowl/peafowl.js:2191
+#: ../../../lib/Peafowl/peafowl.min.js:23
+#: ../../../lib/Peafowl/peafowl.min.js:120
+msgid "Submit"
+msgstr "Pošalji"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:15
+msgid "Your password has been changed. You can now try logging in using your new password."
+msgstr "Vaša lozinkia je promenjenea. Možete se sada probati prijaviti sa novom lozinkom"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+msgid "Login now"
+msgstr "Prijavi se sada"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:22
+msgid "Enter the new password that you want to use."
+msgstr "Upišite novu lozinku koju želite da koristite."
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:28
+msgid "New Password"
+msgstr "Nova lozinka"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/settings.php:258
+#: ../../../app/themes/Peafowl/views/settings.php:275
+#: ../../../app/themes/Peafowl/views/signup.php:45
+#, php-format
+msgid "%d characters min"
+msgstr "min znakova %d"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/settings.php:258
+msgid "Enter your new password"
+msgstr "Upišite vašu novu lozinku"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
+#: ../../../app/themes/Peafowl/views/settings.php:280
+msgid "Confirm password"
+msgstr "Potvrdite novu lozinku"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:35
+#: ../../../app/themes/Peafowl/views/settings.php:264
+msgid "Re-enter your new password"
+msgstr "Ponovite novu lozinku"
+
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:12
+#, php-format
+msgid "An email to %s has been sent with instructions to activate your account.n\\If you don't receive the instructions try checking your junk or spam filters."
+msgstr "Email za %s je poslat sa instrukcijama kako aktivirati vaš nalog.n\\Ako niste primili email proverite vaše foldere za Junk/Spam."
+
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:19
+msgid "Enter the email address that you used to create your account to continue."
+msgstr "Da nastavite, upišite email adresu koju ste koristili prilikom otvaranja naloga."
+
+#: ../../../app/themes/Peafowl/views/album.php:16
+#: ../../../app/themes/Peafowl/views/image.php:69
+msgid "This content is private"
+msgstr "Sadžaj je privatan"
+
+#: ../../../app/themes/Peafowl/views/album.php:25
+msgid "Do you really want to delete this album and all of its images? This can't be undone."
+msgstr "Dali stvarno želite obrisati ovaj album i sve slike? Ovo je nepovratno"
+
+#: ../../../app/themes/Peafowl/views/album.php:25
+msgid "Delete album"
+msgstr "Obriši album"
+
+#: ../../../app/themes/Peafowl/views/album.php:86
+msgid "Album link"
+msgstr "Link albuma"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:22
+msgid "Image"
+msgid_plural "Images"
+msgstr[0] "slika"
+msgstr[1] "slika"
+msgstr[2] "slika"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:34
+#: ../../../app/themes/Peafowl/views/dashboard.php:90
+#: ../../../app/themes/Peafowl/views/settings.php:120
+msgid "User"
+msgid_plural "Users"
+msgstr[0] "Član"
+msgstr[1] "Članova"
+msgstr[2] "Članova"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:40
+#: ../../../app/themes/Peafowl/views/dashboard.php:1435
+msgid "Disk used"
+msgstr "Iskorišćenost prostora"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:80
+#: ../../../app/themes/Peafowl/views/dashboard.php:84
+msgid "Add user"
+msgstr "Dodaj korisnika"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:87
+#: ../../../app/themes/Peafowl/views/settings.php:115
+msgid "Role"
+msgstr "Uloga"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:89
+#: ../../../app/themes/Peafowl/views/settings.php:119
+msgid "Administrator"
+msgstr "Administrator"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:152
+#: ../../../app/themes/Peafowl/views/dashboard.php:156
+msgid "Add category"
+msgstr "Dodaj kategoriju"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:197
+msgid "Website name"
+msgstr "Naziv vebsajta"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:202
+msgid "Website doctitle"
+msgstr "Podnaslov vebsajta"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:206
+msgid "Website description"
+msgstr "Opis vebsajta"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:211
+msgid "Website keywords"
+msgstr "Ključne riječi websajta"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:232
+msgid "Default time zone"
+msgstr "Podrazumevana vremenska zona"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:236
+#: ../../../app/themes/Peafowl/views/settings.php:202
+msgid "Select region"
+msgstr "Izaberi region"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:286
+msgid "Enable this if you want to allow the explore page."
+msgstr "Aktivirate ovo ako želite omogućiti ISTRAŽI stranicu"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:302
+msgid "Website mode"
+msgstr "Mod sajta"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:305
+msgid "Private"
+msgstr "Privatno"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:309
+msgid "Private mode will make the website only available for registered users."
+msgstr "Privatni mod će sajt prikazivati samo registrovanim korisnicima."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:315
+msgid "Content privacy mode"
+msgstr "Privatni mod sadržaja"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:319
+#: ../../../app/themes/Peafowl/views/dashboard.php:876
+#: ../../../app/themes/Peafowl/views/dashboard.php:1114
+msgid "Default"
+msgstr "Podrazumevani"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:320
+msgid "Force private (self)"
+msgstr "Forsiraj privatni (za sebe)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:321
+msgid "Force private (anyone with the link)"
+msgstr "Forsiraj privatni (za sve sa linkom)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:326
+msgid "Forced privacy modes will override user selected privacy."
+msgstr "Forsirani privatni mod će zaobići korisnički izabranu privatnost"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:335
+msgid "Enable uploads"
+msgstr "Uključi upload"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:341
+msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
+msgstr "Aktivirajte ovu opciju ako želite da omogućite uplaod. Ovo podešavanje ne utiče na administratore"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:344
+msgid "Guest uploads"
+msgstr "Upload za goste"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:350
+msgid "Enable this if you want to allow non registered users to upload."
+msgstr "Omogućite ovo ako želite da gosti uploaduju slike."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:357
+msgid "Max. filesize"
+msgstr "Maksimalna veličina"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:360
+#, php-format
+msgid "Max. allowed filesize. (Max allowed by server is %s)"
+msgstr "Maksimalna dopuštena veličina (maksimalno dopušteno od strane servera %s)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:363
+msgid "Image path"
+msgstr "Putanja slike"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:364
+msgid "Relative to Chevereto root"
+msgstr "Relativna prema Chevereto bazi"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Where to store the images? Relative to Chevereto root."
+msgstr "Gdje želite sačuvati slike? Relativno to Chevereto glavnom folderu"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:369
+msgid "Storage mode"
+msgstr "Mod čuvanja"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:372
+msgid "Datefolders"
+msgstr "Vremenski naziv foldera"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:372
+msgid "Direct"
+msgstr "Direktno"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:375
+#, php-format
+msgid "Datefolders creates %s structure"
+msgstr "Vremenski nazivi foldera kreiraju strukturu %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:378
+msgid "File naming method"
+msgstr "Metoda označavanja naziva fajla"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:381
+msgid "Original"
+msgstr "Izvorno"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:381
+msgid "Mixed"
+msgstr "Izmešano"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:384
+msgid "\"Original\" will try to keep the image source name while \"Random\" will generate a random name. \"Mixed\" is a combination of both methods."
+msgstr "\"Orginalno\" će probati da zadrži ime slike dok će \"Nasumično\" kreirati nasumično ime. \"Miješano\" je kombinacije ove dve metode."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:390
+msgid "Thumb size"
+msgstr "Veličina slike za pregled"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:401
+msgid "Thumbnails will be fixed to this size."
+msgstr "Slike za pregled biće fiksirane na ovu veličinu."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:404
+msgid "Medium size"
+msgstr "Srednja veličina"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:409
+msgid "Height will be automatic calculated."
+msgstr "Visina će automatski biti izračunata."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:422
+msgid "Enable this to put a logo or anything you want in image uploads."
+msgstr "Aktivirajte ovo ako želite dodati logo ili bilo šta drugo na stranici uploada"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:429
+#: ../../../app/themes/Peafowl/views/dashboard.php:889
+#, php-format
+msgid "Warning: Can't write in %s"
+msgstr "Upozorenje. Nemoguć upis u %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:466
+msgid "Watermark image"
+msgstr "Vodeni žig"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:472
+msgid "Watermark image to use. Must be a PNG."
+msgstr "Slika vodenog žiga za korištenje. Mora biti PNG"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:475
+msgid "Watermark position"
+msgstr "Pozicija vodenog žiga"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:479
+msgid "left top"
+msgstr "levo vrh"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:480
+msgid "left center"
+msgstr "levo centar"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:481
+msgid "left bottom"
+msgstr "levo dno"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:482
+msgid "center top"
+msgstr "centar vrh"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:483
+msgid "center center"
+msgstr "centar centar"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:484
+msgid "center bottom"
+msgstr "centar dno"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:485
+msgid "right top"
+msgstr "desno vrh"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:486
+msgid "right center"
+msgstr "desno centar"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:487
+msgid "right bottom"
+msgstr "desno dno"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:492
+msgid "Relative position of the watermark image. First horizontal align then vertical align."
+msgstr "Relativna pozicija slike vodenog žiga. Prvo horizontalno poravnanje a zatim vertikalno"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:495
+msgid "Watermark margin"
+msgstr "Margina vodenog žiga"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:500
+msgid "Margin from the border of the image to the watermark image."
+msgstr "Margina od granica slike do slike vodenog žiga"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:503
+msgid "Watermark opacity"
+msgstr "Providnost vodenog žiga"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:508
+msgid "Opacity of the watermark in the final watermarked image. Values 0 to 100."
+msgstr "Providnost vodenog žiga na finalnoj slici. Može biti od 0 do  100"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:548
+msgid "Note: Deleting a category doesn't delete the images that belongs to that category."
+msgstr "Napomena: Brisanjem kategorije se ne brišu i slike koje pripadaju toj kategoriji."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:550
+msgid "Edit category"
+msgstr "Izmeni kategoriju"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:607
+msgid "Enable signups"
+msgstr "Aktiviraj registracije"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:613
+msgid "Enable this if you want to allow users to signup."
+msgstr "Aktivirate ovo ako želite dopustiti registracije"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:678
+msgid "Block image uploads by IP if the system notice a flood  behavior based on the number of uploads per time period. This setting doesn't affect administrators."
+msgstr "Blokira upload slika po IP adresi ako sistem primjeti veliki upload slika odjednom"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:690
+msgid "Notify to email"
+msgstr "Obavesti putem email-a"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:696
+msgid "If enabled the system will send an email on flood incidents."
+msgstr "Ako je aktivno sistem će poslati obavest o velikom broju pokušaja uploada slika"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:699
+msgid "Minute limit"
+msgstr "Limit po minuti"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:704
+msgid "Hourly limit"
+msgstr "Limit po satu"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:709
+msgid "Daily limit"
+msgstr "Dnevni limit"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:714
+msgid "Weekly limit"
+msgstr "Sedmični limit"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:719
+msgid "Monthly limit"
+msgstr "Mesečni limit"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:729
+msgid "Show not safe content in listings"
+msgstr "Prikaži nesigurne sadržaje u pregledu"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:739
+msgid "Show banners in not safe content"
+msgstr "Prikaži banere u neprikladnim sadržajima"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:745
+msgid "Enable this if you want to show banners in not safe content pages."
+msgstr "Omogućite ovu opciju ukoliko želite da prikažete banere na stranama sa neprikladnim sadržajem."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:749
+msgid "Show not safe content in random mode"
+msgstr "Prikaži neprikladan sadržaj u nasumičnom modu"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:760
+msgid "List items per page"
+msgstr "Prikaži sadržaje po stranici"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:763
+msgid "How many items should be displayed per page listing."
+msgstr "Koliko sadržaja treba da bude prikazano po stranici"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:767
+msgid "List pagination mode"
+msgstr "Izlistaj mod paginacije"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:770
+msgid "Endless scrolling"
+msgstr "Beskonačno skrulovanje"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:770
+msgid "Classic pagination"
+msgstr "Klasična paginacija"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:774
+msgid "What pagination method should be used."
+msgstr "Koja metoda paginacije treba da se koristi"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:778
+msgid "Image listing size"
+msgstr "Veličina slike za listanje"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:781
+msgid "Fluid"
+msgstr "Fluidno"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:781
+msgid "Fixed"
+msgstr "Fiksno"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:785
+msgid "Both methods use a fixed width but fluid method uses automatic heights."
+msgstr "Obe metode koriste fiksnu širinu međutim fluidna metoda koristi automatski proračunatu visinu."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:818
+#, php-format
+msgid "Put your themes in the %s folder"
+msgstr "Dodajte vašu temu u %s folder"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:837
+msgid "Tone"
+msgstr "Vrsta"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:840
+msgid "Light"
+msgstr "Svetla"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:840
+msgid "Dark"
+msgstr "Tamna"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:895
+msgid "Enable vector logo"
+msgstr "Aktiviraj vektorski logo"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:902
+msgid "Enable vector logo for high quality logo in devices with high pixel density."
+msgstr "Aktiviratje vektor logo za visoko kvalitetni logo za uređjate velike rezolucije i broja piksela"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:907
+#: ../../../app/themes/Peafowl/views/dashboard.php:1069
+msgid "Vector logo image"
+msgstr "Slika vektorskog loga"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:913
+msgid "Vector version or your website logo in SVG format."
+msgstr "Vektorska verzija na vašem sajtu loga u SVG formatu"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:919
+#: ../../../app/themes/Peafowl/views/dashboard.php:1079
+msgid "Raster logo image"
+msgstr "Raster slika loga"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:925
+msgid "Bitmap version or your website logo. PNG format is recommended."
+msgstr "Bitmap verzija vašeg loga. PNG format je preporučen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:938
+msgid "Favicon image"
+msgstr "Favicon slika"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:944
+msgid "Favicon image. Image must have same width and height."
+msgstr "Favicion slika. Slika mora imati visinu i širinu."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:950
+msgid "Enable download button"
+msgstr "Aktiviraj download dugme"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:956
+msgid "Enable this if you want to show the image download button."
+msgstr "Aktivirajte ovo ako želite omogućiti download slika."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1016
+msgid "Not safe content checkbox in uploader"
+msgstr "Polje za potvrdu neprikladnog sadržaja prilikom uploada"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1022
+msgid "Enable this if you want to show a checkbox to indicate not safe content upload."
+msgstr "Omogućite ovo ukoliko želite da prikažete polje za potvrdu neprikladnog sadržaja prilikom uploada."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1028
+msgid "Custom CSS code"
+msgstr "Poseban CSS kod"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1029
+msgid "Put your custom CSS code here. It will be placed as <style> just before the closing </head> tag."
+msgstr "Dodajte vaš CSS kod, biće ubačen između <style>odmah prije  </head> taga."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1033
+msgid "Custom JS code"
+msgstr "Poseban JS kod"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1034
+msgid "Put your custom JS code here. It will be placed as <script> just before the closing </head> tag."
+msgstr "Dodajte vaš JS kod, biće ubačen između <script>odmah prije  </head> taga."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1176
+msgid "Here you can set the codes for the predefined ad spaces."
+msgstr "Ovde možete ubaciti kodove za predefinirate oglasne prostore"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1179
+msgid "Before cover (homepage)"
+msgstr "Before cover (početna)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1183
+msgid "After cover (homepage)"
+msgstr "After cover (početna)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1187
+msgid "After listing (homepage)"
+msgstr "After listing (početna)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1193
+msgid "Before pagination"
+msgstr "Pre paginacije"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1197
+msgid "After pagination"
+msgstr "Posle paginacije"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1203
+msgid "Content (image and album)"
+msgstr "Sadržaj (slika i album)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1205
+msgid "Tab about column"
+msgstr "Tab about column"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1209
+msgid "Before comments"
+msgstr "Pre komentara"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1215
+msgid "Image page"
+msgstr "Stranica slike"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1217
+msgid "Inside viewer top (image page)"
+msgstr "Inside viewer top (image page)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1219
+#: ../../../app/themes/Peafowl/views/dashboard.php:1224
+msgid "Expected banner size 728x90"
+msgstr "Očekivana veličina banera 728x90"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1222
+msgid "Inside viewer foot (image page)"
+msgstr "Inside viewer foot (image page)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1227
+msgid "After image viewer (image page)"
+msgstr "After image viewer (image page)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1231
+msgid "Before header (image page)"
+msgstr "Before header (image page)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1235
+msgid "After header (image page)"
+msgstr "After header (image page)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1239
+msgid "Footer (image page)"
+msgstr "Footer (image page)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1245
+msgid "Album page"
+msgstr "Album page"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1247
+msgid "Before header (album page)"
+msgstr "Before header (album page)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1251
+msgid "After header (album page)"
+msgstr "After header (album page)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1257
+msgid "User profile page"
+msgstr "User profile page"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1259
+msgid "After top (user profile)"
+msgstr "After top (user profile)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1263
+msgid "Before listing (user profile)"
+msgstr "Before listing (user profile)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1269
+msgid "Explore page"
+msgstr "Explore page"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1271
+msgid "After top (explore page)"
+msgstr "After top (explore page)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1279
+msgid "Crypt salt"
+msgstr "Crypt salt"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1281
+msgid "This is the salt used to convert numeric ID to alphanumeric. It was generated on install."
+msgstr "Ovo se koristi da konvertuje numerički ID u alfanumerički. Generisan je pri instalaciji."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1293
+msgid "Error reporting"
+msgstr "Izveštaj o grešakama"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1299
+msgid "Enable this if you need to debug PHP errors."
+msgstr "Omogućite ovo ukoliko vam trebaju izveštaji o PHP greškama."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1314
+msgid "Default language"
+msgstr "Podrazumevani jezik"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1323
+msgid "Default base language to use."
+msgstr "Podrazumevani osnovni jezik za korišćenje"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1327
+msgid "Auto language"
+msgstr "Automatski jezik"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1457
+msgid "From name"
+msgstr "Od"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1460
+msgid "Sender name for emails sent to users."
+msgstr "Ime pošiljaoca za emailove poslate korisnicima."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1475
+msgid "Email mode"
+msgstr "Email mod"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1482
+msgid "How to send emails? SMTP recommended."
+msgstr "Kako poslati emailove? SMTP je preporučeno."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1487
+msgid "SMTP server and port"
+msgstr "SMTP server i port"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1490
+msgid "SMTP server"
+msgstr "SMTP server"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1503
+msgid "SMTP username"
+msgstr "SMTP korisničko ime"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1508
+msgid "SMTP password"
+msgstr "SMTP lozinka"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1513
+msgid "SMTP security"
+msgstr "SMTP sigurnost"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1516
+msgid "Unsecured"
+msgstr "Bez sigurnosti"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1533
+msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
+msgstr "Treba vam <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook aplikacija</a> za ovo."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1538
+msgid "Facebook app id"
+msgstr "Facebook identifikacioni ključ"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1543
+msgid "Facebook app secret"
+msgstr "Facebook tajni ključ"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1559
+msgid "You need a <a href=\"https://apps.twitter.com\" target=\"_blank\">Twitter app</a> for this."
+msgstr "Treba vam <a href=\"https://apps.twitter.com\" target=\"_blank\">Twitter aplikacija</a> za ovo."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1564
+msgid "Twitter API key"
+msgstr "Twitter API ključ"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1569
+msgid "Twitter API secret"
+msgstr "Twitter API tajna"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1576
+msgid "Twitter account"
+msgstr "Twitter nalog"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1592
+msgid "You need a <a href=\"https://cloud.google.com/console\" target=\"_blank\">Google app</a> for this."
+msgstr "Treba vam <a href=\"https://cloud.google.com/console\" target=\"_blank\">Google aplikacija</a> za ovo."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1597
+msgid "Google client id"
+msgstr "Google ID klijenta"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1602
+msgid "Google client secret"
+msgstr "Google klijent tajna"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1644
+#, php-format
+msgid "CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s."
+msgstr "CDN ti omogućava brže učitavanje stranica sa statičnim sadržajem putem drugih servera. Ukoliko nemaš nalog kod CDN provajdera, trebalo bi da probaš %s."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1663
+#, php-format
+msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
+msgstr "Za ovo trabate <a href=\"%s\" target=\"_blank\">reCAPTCHA ključ</a>"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1669
+msgid "reCAPTCHA public key"
+msgstr "reCAPTCHA javni ključ"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1674
+msgid "reCAPTCHA private key"
+msgstr "reCAPTCHA privatni ključ"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1681
+msgid "reCAPTCHA threshold"
+msgstr "reCAPTCHA prag"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1692
+msgid "Comment code"
+msgstr "Kod za komentare"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1693
+msgid "Disqus, Facebook or anything you want. It will be used in image view."
+msgstr "Disqus, Facebook ili šta god vam treba. Biće korišćeno prilikom pregleda slika."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1697
+msgid "Analytics code"
+msgstr "Kod za statistiku"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1698
+msgid "Google Analytics or anything you want. It will be added to the theme footer."
+msgstr "Google Analitika ili šta god hoćete. Biće dodato u podnožju teme."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1708
+msgid "Enable this if you are using Cloudflare."
+msgstr "Omogućite ovo ako koristite Cloudflare."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1713
+msgid "For documentation about the API check <a href=\"http://chevereto.com/docs/api\" target=\"_blank\">docs/api</a>"
+msgstr "Dokumentacija vezana za API proveru <a href=\"http://chevereto.com/docs/api\" target=\"_blank\">docs/api</a>"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1715
+msgid "API v1 key"
+msgstr "API v1 ključ"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1718
+msgid "Use this key when using the API v1. <a href=\"https://chevereto.com/docs/api-v1\">Learn more</a>."
+msgstr "Koristite ovaj ključ kada koristite API v1. <a href=\"https://chevereto.com/docs/api-v1\">Saznaj više</a>."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1728
+#: ../../../app/themes/Peafowl/views/settings.php:395
+#: ../../../lib/Peafowl/peafowl.js:407 ../../../lib/Peafowl/peafowl.min.js:23
+msgid "Save changes"
+msgstr "Sačuvaj promene"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1751
+#: ../../../app/themes/Peafowl/views/settings.php:409
+msgid "Check the errors to proceed."
+msgstr "Proverite greške da biste nastavili"
+
+#: ../../../app/themes/Peafowl/views/image.php:63
+msgid "Guest"
+msgstr "Gost"
+
+#: ../../../app/themes/Peafowl/views/image.php:78
+msgid "Do you really want to delete this image? This can't be undone."
+msgstr "Da li zaista želite da obrišete ovu sliku? Ovo je trajno."
+
+#: ../../../app/themes/Peafowl/views/image.php:78
+msgid "Delete image"
+msgstr "Obriši sliku"
+
+#: ../../../app/themes/Peafowl/views/image.php:142
+msgid "Added to %a and categorized in %c"
+msgstr "Dodato u %a i kategorisano u %c"
+
+#: ../../../app/themes/Peafowl/views/image.php:144
+#, php-format
+msgid "Added to %s"
+msgstr "Dodato u %s"
+
+#: ../../../app/themes/Peafowl/views/image.php:149
+#, php-format
+msgid "Uploaded to %s"
+msgstr "Uploadovano u %s"
+
+#: ../../../app/themes/Peafowl/views/image.php:151
+#, php-format
+msgid "Uploaded %s"
+msgstr "Uploadovano %s"
+
+#: ../../../app/themes/Peafowl/views/image.php:188
+#: ../../../app/themes/Peafowl/views/image.php:249
+msgid "Share image"
+msgstr "Podeli sliku"
+
+#: ../../../app/themes/Peafowl/views/image.php:204
+#: ../../../app/themes/Peafowl/views/image.php:210
+msgid "Album ID"
+msgstr "ID albuma"
+
+#: ../../../app/themes/Peafowl/views/image.php:260
+msgid "In this album"
+msgstr "u ovom albumu"
+
+#: ../../../app/themes/Peafowl/views/image.php:287
+msgid "Image links"
+msgstr "Linkovi slike"
+
+#: ../../../app/themes/Peafowl/views/image.php:289
+msgid "Image URL"
+msgstr "URL slike"
+
+#: ../../../app/themes/Peafowl/views/image.php:295
+msgid "Image link"
+msgstr "Link slike"
+
+#: ../../../app/themes/Peafowl/views/image.php:301
+msgid "Thumbnail URL"
+msgstr "URL slike za pregled"
+
+#: ../../../app/themes/Peafowl/views/image.php:310
+msgid "Medium URL"
+msgstr "Srednji URL"
+
+#: ../../../app/themes/Peafowl/views/image.php:328
+#: ../../../app/themes/Peafowl/views/image.php:348
+#: ../../../app/themes/Peafowl/views/image.php:371
+#: ../../../app/themes/Peafowl/views/image.php:396
+msgid "Image embed codes"
+msgstr "Kodovi slike"
+
+#: ../../../app/themes/Peafowl/views/image.php:348
+msgid "Linked image"
+msgstr "Linked image"
+
+#: ../../../app/themes/Peafowl/views/image.php:371
+msgid "Linked medium"
+msgstr "Linked medium"
+
+#: ../../../app/themes/Peafowl/views/image.php:396
+msgid "Linked thumbnail"
+msgstr "Linked thumbnail"
+
+#: ../../../app/themes/Peafowl/views/index.php:15
+msgid "Upload and share your images."
+msgstr "Uploadujte i podelite vaše slike"
+
+#: ../../../app/themes/Peafowl/views/index.php:63
+#, php-format
+msgid "Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings."
+msgstr "Ispunite ovu sekciju uploadom slika na %s nalog.<br>Možete izmeniti ciljani korisnički ID u podešavanjama u Panelu.."
+
+#: ../../../app/themes/Peafowl/views/index.php:79
+msgid "Sign up to unlock all the features"
+msgstr "Registrujte se da otključate sve mogućnosti"
+
+#: ../../../app/themes/Peafowl/views/index.php:80
+msgid "Manage your content, create private albums, customize your profile and more."
+msgstr "Uređujte vaš sadržaj, kreirajte privatne albume, uređujte vaš profil i više"
+
+#: ../../../app/themes/Peafowl/views/login.php:40
+#: ../../../app/themes/Peafowl/views/settings.php:275
+msgid "Enter your password"
+msgstr "Upišite lozinku"
+
+#: ../../../app/themes/Peafowl/views/logout.php:12
+#, php-format
+msgid "You have been logged off %s. Hope to see you soon."
+msgstr "Odjavljeni ste sa %s. Nadamo se da ćemo vas videti uskoro."
+
+#: ../../../app/themes/Peafowl/views/request-denied.php:12
+msgid "You either don't have permission to access this page or the link has expired."
+msgstr "Nemate ovlašćenje za pristup ovoj strani ili je link istekao."
+
+#: ../../../app/themes/Peafowl/views/search.php:8
+#: ../../../app/themes/Peafowl/views/user.php:111
+msgid "Results for"
+msgstr "Rezultati za"
+
+#: ../../../app/themes/Peafowl/views/settings.php:36
+#: ../../../app/themes/Peafowl/views/user.php:68
+msgid "Do you really want to delete this user? This can't be undone."
+msgstr "Dali stvarno želite obrisati ovoga korisnika? Ovo je nepovratno"
+
+#: ../../../app/themes/Peafowl/views/settings.php:36
+#: ../../../app/themes/Peafowl/views/user.php:68
+msgid "Delete user"
+msgstr "Obriši korisnika"
+
+#: ../../../app/themes/Peafowl/views/settings.php:69
+msgid "User ID"
+msgstr "ID korisnika"
+
+#: ../../../app/themes/Peafowl/views/settings.php:81
+msgid "Register date"
+msgstr "Datum registracije"
+
+#: ../../../app/themes/Peafowl/views/settings.php:99
+msgid "Status"
+msgstr "Status"
+
+#: ../../../app/themes/Peafowl/views/settings.php:103
+msgid "Valid"
+msgstr "Validnost"
+
+#: ../../../app/themes/Peafowl/views/settings.php:104
+msgid "Banned"
+msgstr "Banovan"
+
+#: ../../../app/themes/Peafowl/views/settings.php:105
+msgid "Awaiting email"
+msgstr "Čekanja email-a"
+
+#: ../../../app/themes/Peafowl/views/settings.php:106
+msgid "Awaiting confirmation"
+msgstr "Čekanje potvrde"
+
+#: ../../../app/themes/Peafowl/views/settings.php:138
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "%i to %f characters<br>Letters, numbers and \"_\""
+msgstr "%i za %f znakova<br>Slova, brojevi i \"_\""
+
+#: ../../../app/themes/Peafowl/views/settings.php:167
+msgid "Language"
+msgstr "Jezik"
+
+#: ../../../app/themes/Peafowl/views/settings.php:197
+msgid "Timezone"
+msgstr "Vremenska zona"
+
+#: ../../../app/themes/Peafowl/views/settings.php:248
+msgid "Current password"
+msgstr "Trenutna lozinka"
+
+#: ../../../app/themes/Peafowl/views/settings.php:249
+msgid "Enter your current password"
+msgstr "Unesite vašu lozinku"
+
+#: ../../../app/themes/Peafowl/views/settings.php:257
+msgid "New password"
+msgstr "Nova lozinka"
+
+#: ../../../app/themes/Peafowl/views/settings.php:263
+msgid "Confirm new password"
+msgstr "Potvrdite novu lozinku"
+
+#: ../../../app/themes/Peafowl/views/settings.php:271
+msgid "Add a password to be able to login using your username or email."
+msgstr "Dodajte lozinku da biste se mogli prijaviti koristeći vaše korisničko ime ili email."
+
+#: ../../../app/themes/Peafowl/views/settings.php:271
+msgid "This user doesn't have a password. Add one using this form."
+msgstr "Ovaj korisnik nema lozinku. Dodajte jednu koristeći ovaj formular."
+
+#: ../../../app/themes/Peafowl/views/settings.php:281
+msgid "Re-enter your password"
+msgstr "Ponovite vašu lozinku"
+
+#: ../../../app/themes/Peafowl/views/settings.php:300
+#: ../../../lib/Peafowl/peafowl.js:3356
+#: ../../../lib/Peafowl/peafowl.min.js:207
+msgid "loading"
+msgstr "učitavanje"
+
+#: ../../../app/themes/Peafowl/views/settings.php:304
+#: ../../../app/themes/Peafowl/views/user.php:21
+msgid "Upload new image"
+msgstr "Uploaduj novu sliku"
+
+#: ../../../app/themes/Peafowl/views/settings.php:306
+msgid "Delete existing image"
+msgstr "Obrišite postojeće slike"
+
+#: ../../../app/themes/Peafowl/views/settings.php:319
+msgid "This is your real name, not your username."
+msgstr "Ovo je vaše pravo ime, ne korisničko ime"
+
+#: ../../../app/themes/Peafowl/views/settings.php:323
+msgid "http://yourwebsite.com"
+msgstr "http://vassajt.com"
+
+#: ../../../app/themes/Peafowl/views/settings.php:339
+msgid "User has no connections."
+msgstr "Korisnik nema veza."
+
+#: ../../../app/themes/Peafowl/views/settings.php:343
+msgid "Link your account to external services to be able to login and share content."
+msgstr "Link do vašeg naloga kod drugih provajdera da biste se mogli prijaviti i deliti sadržaj."
+
+#: ../../../app/themes/Peafowl/views/settings.php:350
+#, php-format
+msgid "Do you really want to disconnect %s from this account?"
+msgstr "Dali stvarno želite da se diskonektujete sa ovog naloga %s?"
+
+#: ../../../app/themes/Peafowl/views/settings.php:351
+#, php-format
+msgid "This account is connected to %s"
+msgstr "Ovaj nalog je povezan sa %s"
+
+#: ../../../app/themes/Peafowl/views/settings.php:353
+#, php-format
+msgid "Do you really want to disconnect your %s account?"
+msgstr "Dali stvarno želite da se diskonektujete vaš nalog %s?"
+
+#: ../../../app/themes/Peafowl/views/settings.php:355
+#, php-format
+msgid "You will be logged out and you won't be able to login to your account using this %s account."
+msgstr "Bićete odjavljeni i neće se moći prijaviti više koristeći ovaj nalog %s"
+
+#: ../../../app/themes/Peafowl/views/settings.php:357
+#, php-format
+msgid "Your account is connected to %s"
+msgstr "Vaš nalog je povezan sa %s"
+
+#: ../../../app/themes/Peafowl/views/settings.php:362
+msgid "disconnect"
+msgstr "diskonektu"
+
+#: ../../../app/themes/Peafowl/views/settings.php:375
+#, php-format
+msgid "Connect %s"
+msgstr "Poveži %s"
+
+#: ../../../app/themes/Peafowl/views/user.php:15
+msgid "Upload profile background"
+msgstr "Dodaj pozadinu profila"
+
+#: ../../../app/themes/Peafowl/views/user.php:17
+msgid "Change background"
+msgstr "Promeni pozadinu"
+
+#: ../../../app/themes/Peafowl/views/user.php:22
+msgid "The profile background image will be deleted. This can't be undone. Are you sure that you want to delete the profile background image?"
+msgstr "Pozadinska profilna slika će biti obrisana. Ovo je nepovratno. Dali sigurno želite obrisati?"
+
+#: ../../../app/themes/Peafowl/views/user.php:22
+msgid "Delete background"
+msgstr "Obriši pozadinu"
+
+#: ../../../app/themes/Peafowl/views/user.php:64
+msgid "Edit profile"
+msgstr "Izmeni profil"
+
+#: ../../../app/lib/chevereto.js:496 ../../../app/lib/chevereto.js:568
+#: ../../../app/lib/chevereto.js:750 ../../../app/lib/chevereto.js:2155
+#: ../../../app/lib/chevereto.js:2208 ../../../app/lib/chevereto.js:2306
+#: ../../../app/lib/chevereto.min.js:20 ../../../app/lib/chevereto.min.js:24
+#: ../../../app/lib/chevereto.min.js:30 ../../../app/lib/chevereto.min.js:107
+#: ../../../app/lib/chevereto.min.js:110 ../../../app/lib/chevereto.min.js:114
+msgid "You must enter the album name."
+msgstr "Morate uneti ime albuma."
+
+#: ../../../app/lib/chevereto.js:610 ../../../app/lib/chevereto.js:796
+#: ../../../app/lib/chevereto.js:892 ../../../app/lib/chevereto.min.js:27
+#: ../../../app/lib/chevereto.min.js:34 ../../../app/lib/chevereto.min.js:36
+#: ../../../lib/Peafowl/peafowl.js:2225
+#: ../../../lib/Peafowl/peafowl.min.js:123
+msgid "Confirm"
+msgstr "Potvrid"
+
+#: ../../../app/lib/chevereto.js:728 ../../../app/lib/chevereto.min.js:29
+msgid "Select existing album"
+msgstr "Izaberite postojeći album"
+
+#: ../../../app/lib/chevereto.js:1011 ../../../app/lib/chevereto.js:1091
+#: ../../../app/lib/chevereto.min.js:45 ../../../app/lib/chevereto.min.js:50
+msgid "Please select a valid image file type."
+msgstr "Molimo odaberite validan format slike."
+
+#: ../../../app/lib/chevereto.js:1016 ../../../app/lib/chevereto.js:1096
+#: ../../../app/lib/chevereto.min.js:46 ../../../app/lib/chevereto.min.js:51
+#, python-format, javascript-format
+msgid "Please select a picture of at most %s size."
+msgstr "Molimo označite sliku od najviše veličine od %s."
+
+#: ../../../app/lib/chevereto.js:1063 ../../../app/lib/chevereto.min.js:48
+msgid "Profile image updated."
+msgstr "Profilna slika ažurirana."
+
+#: ../../../app/lib/chevereto.js:1133 ../../../app/lib/chevereto.min.js:52
+msgid "Profile background image updated."
+msgstr "Slika pozadine profila ažurirana."
+
+#: ../../../app/lib/chevereto.js:1207 ../../../app/lib/chevereto.min.js:53
+msgid "Profile background image deleted."
+msgstr "Slika pozadine profila obrisana."
+
+#: ../../../app/lib/chevereto.js:1212 ../../../app/lib/chevereto.min.js:53
+msgid "Error deleting profile background image."
+msgstr "Došlo je do greške tokom brisanja slike pozadine profila."
+
+#: ../../../app/lib/chevereto.js:1690 ../../../app/lib/chevereto.min.js:74
+msgid "File too big."
+msgstr "Fajl je prevelik."
+
+#: ../../../app/lib/chevereto.js:1701 ../../../app/lib/chevereto.js:1849
+#: ../../../app/lib/chevereto.min.js:76 ../../../app/lib/chevereto.min.js:87
+msgid "Some files couldn't be added"
+msgstr "Neki fajlovi nisu mogli da se dodaju"
+
+#: ../../../app/lib/chevereto.js:2283 ../../../app/lib/chevereto.min.js:114
+msgid "Image edited successfully."
+msgstr "Slika izmenjena uspešno."
+
+#: ../../../app/lib/chevereto.js:2346 ../../../app/lib/chevereto.min.js:115
+msgid "Album edited successfully."
+msgstr "Album izmenjen uspešno."
+
+#: ../../../app/lib/chevereto.js:3171 ../../../app/lib/chevereto.js:3246
+#: ../../../app/lib/chevereto.js:3329 ../../../app/lib/chevereto.js:3338
+#: ../../../app/lib/chevereto.min.js:156 ../../../app/lib/chevereto.min.js:162
+#: ../../../app/lib/chevereto.min.js:164
+msgid "The content has been moved."
+msgstr "Sadržaj je premešten."
+
+#: ../../../app/lib/chevereto.js:3191 ../../../app/lib/chevereto.min.js:157
+msgid "Unselect"
+msgstr "Odselektuj"
+
+#: ../../../app/lib/chevereto.js:3246 ../../../app/lib/chevereto.min.js:162
+msgid "The content has been edited."
+msgstr "Sadržaj je izmenjen."
+
+#: ../../../lib/Peafowl/peafowl.js:25 ../../../lib/Peafowl/peafowl.js:480
+#: ../../../lib/Peafowl/peafowl.min.js:1
+#: ../../../lib/Peafowl/peafowl.min.js:29
+msgid "All the changes that you have made will be lost if you continue."
+msgstr "Sve promene koje ste uradili biće izgubljene ako nastavite"
+
+#: ../../../lib/Peafowl/peafowl.js:464 ../../../lib/Peafowl/peafowl.min.js:28
+msgid "Changes saved successfully."
+msgstr "Promene su uspešno sačuvane"
+
+#: ../../../lib/Peafowl/peafowl.js:480 ../../../lib/Peafowl/peafowl.min.js:29
+msgid "Go back to form"
+msgstr "Idi nazad na formular"
+
+#: ../../../lib/Peafowl/peafowl.js:480 ../../../lib/Peafowl/peafowl.min.js:29
+msgid "continue anyway"
+msgstr "svedno nastavi"
+
+#: ../../../lib/Peafowl/peafowl.js:2368
+#: ../../../lib/Peafowl/peafowl.min.js:135
+msgid "Saving"
+msgstr "Čuvanje"
+
+#: ../../../lib/Peafowl/peafowl.js:2373
+#: ../../../lib/Peafowl/peafowl.min.js:135
+msgid "Sending"
+msgstr "Slanje"
+
+#: ../../../lib/Peafowl/peafowl.js:2453
+#: ../../../lib/Peafowl/peafowl.min.js:138
+msgid "Confirm action"
+msgstr "Potvrdi radnju"
+

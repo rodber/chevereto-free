@@ -1,0 +1,4528 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSION\n"
+"POT-Creation-Date: 2016-07-15 17:52+0000\n"
+"PO-Revision-Date: 2016-07-15 17:52+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../../app/install/installer.php:1168
+#: ../../../app/install/installer.php:1177
+#: ../../../app/install/installer.php:1180
+#: ../../../app/routes/route.account.php:414
+#: ../../../app/routes/route.json.php:579
+#: ../../../app/routes/route.json.php:1107
+#: ../../../app/routes/route.page.php:80
+#: ../../../app/routes/route.settings.php:185
+#: ../../../app/routes/route.signup.php:97
+#: ../../../content/pages/default/contact.php:28
+msgid "Invalid email"
+msgstr "Érvénytelen e-mail"
+
+#: ../../../app/install/installer.php:1171
+#: ../../../app/routes/route.json.php:574
+#: ../../../app/routes/route.settings.php:181
+#: ../../../app/routes/route.signup.php:100
+msgid "Invalid username"
+msgstr "Érvénytelen felhasználónév"
+
+#: ../../../app/install/installer.php:1174
+#: ../../../app/routes/route.account.php:357
+#: ../../../app/routes/route.json.php:584
+#: ../../../app/routes/route.settings.php:323
+#: ../../../app/routes/route.signup.php:103
+msgid "Invalid password"
+msgstr "Érvénytelen jelszó"
+
+#: ../../../app/install/installer.php:1183
+#: ../../../app/routes/route.dashboard.php:667
+msgid "Invalid website mode"
+msgstr "Érvénytelen weboldal mód"
+
+#: ../../../app/install/template/ready.php:31
+#: ../../../app/themes/Peafowl/views/dashboard.php:1760
+msgid "From email address"
+msgstr "Küldő e-mail címe"
+
+#: ../../../app/install/template/ready.php:32
+#: ../../../app/themes/Peafowl/views/dashboard.php:1763
+msgid "Sender email for emails sent to users."
+msgstr "Küldő e-mail címe a felhasználóknak kiküldött üzenetekben."
+
+#: ../../../app/install/template/ready.php:36
+#: ../../../app/themes/Peafowl/views/dashboard.php:1766
+msgid "Incoming email address"
+msgstr "Beérkező üzenetek címe"
+
+#: ../../../app/install/template/ready.php:37
+#: ../../../app/themes/Peafowl/views/dashboard.php:1769
+msgid "Recipient for contact form and system alerts."
+msgstr "A kapcsolati űrlap és a rendszerüzenetek címzettje."
+
+#: ../../../app/install/template/ready.php:44
+#: ../../../app/themes/Peafowl/views/dashboard.php:327
+msgid "Website mode"
+msgstr "Weboldal mód"
+
+#: ../../../app/install/template/ready.php:45
+#: ../../../app/themes/Peafowl/views/dashboard.php:334
+msgid "You can switch the website mode anytime."
+msgstr "Bármikor megváltoztathatja a weboldal üzemmódját."
+
+#: ../../../app/install/template/ready.php:47
+#: ../../../app/themes/Peafowl/views/dashboard.php:330
+msgid "Community"
+msgstr "Közösségi"
+
+#: ../../../app/install/template/ready.php:47
+#: ../../../app/themes/Peafowl/views/dashboard.php:330
+msgid "Personal"
+msgstr "Személyes"
+
+#: ../../../app/install/update/template/update.php:2
+msgid "Update in progress"
+msgstr "Frissítés folyamatban"
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "Hiba történt. Kérjük próbálja újra később."
+
+#: ../../../app/install/update/updater.php:72
+#, php-format
+msgid "Missing %s file"
+msgstr "Hiányzó file: %s"
+
+#: ../../../app/install/update/updater.php:78
+msgid "Invalid license info"
+msgstr "Érvénytelen licensz info"
+
+#: ../../../app/install/update/updater.php:84
+msgid "Invalid license key"
+msgstr "Érvénytelen licensz kulcs"
+
+#: ../../../app/install/update/updater.php:87
+msgid "Can't save file"
+msgstr "A fájl mentése nem sikerült"
+
+#: ../../../app/install/update/updater.php:100
+#, php-format
+msgid "Can't download %s"
+msgstr "%s letöltése sikertelen"
+
+#: ../../../app/install/update/updater.php:126
+#, php-format
+msgid "Can't extract %s"
+msgstr "%s kicsomagolása sikertelen"
+
+#: ../../../app/lib/classes/class.album.php:100
+msgid "Untitled"
+msgstr "Névtelen"
+
+#: ../../../app/lib/classes/class.album.php:273
+#: ../../../app/lib/classes/class.user.php:114
+#, php-format
+msgid "%s's images"
+msgstr "%s képei"
+
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:14
+#: ../../../app/themes/Peafowl/views/album.php:74
+#: ../../../app/themes/Peafowl/views/image.php:272
+msgid "Note: This content is private. Change privacy to \"public\" to share."
+msgstr "Megjegyzés: Ez egy privát tartalom. Ha szeretné megosztani állítsa publikusra a láthatóságát."
+
+#: ../../../app/lib/classes/class.image.php:348
+msgid "Don't autodelete"
+msgstr "Ne töröljön automatikusan"
+
+#: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "perccel"
+msgstr[1] "perccel"
+
+#: ../../../app/lib/functions.php:41 ../../../app/lib/functions.php:53
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "órával"
+msgstr[1] "órával"
+
+#: ../../../app/lib/functions.php:40 ../../../app/lib/functions.php:52
+msgid "day"
+msgid_plural "days"
+msgstr[0] "nappal"
+msgstr[1] "nappal"
+
+#: ../../../app/lib/classes/class.image.php:636
+#: ../../../app/lib/classes/class.image.php:742
+msgid "Duplicated upload"
+msgstr "Duplikált feltöltés"
+
+#: ../../../app/lib/classes/class.image.php:955
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Private upload"
+msgstr "Privát feltöltés"
+
+#: ../../../app/lib/classes/class.image.php:1230
+msgid "view"
+msgid_plural "views"
+msgstr[0] "megtekintés"
+msgstr[1] "megtekintés"
+
+#: ../../../app/lib/classes/class.image.php:1231
+msgid "like"
+msgid_plural "likes"
+msgstr[0] "Kedvelés"
+msgstr[1] "Kedvelések"
+
+#: ../../../app/lib/classes/class.listing.php:296
+#: ../../../app/routes/route.album.php:177
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
+#: ../../../app/themes/Peafowl/views/album.php:34
+#: ../../../app/themes/Peafowl/views/user.php:98
+#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
+msgid "image"
+msgid_plural "images"
+msgstr[0] "kép"
+msgstr[1] "kép"
+
+#: ../../../app/lib/classes/class.notification.php:75
+msgid "%u liked your %t %c"
+msgstr "%u kedveli a(z) %t %c"
+
+#: ../../../app/lib/classes/class.notification.php:81
+#, php-format
+msgid "%u is now following you"
+msgstr "%u mostantól követ téged"
+
+#: ../../../app/lib/classes/class.page.php:108
+#, php-format
+msgid "Can't create %s destination dir"
+msgstr "Nem sikerült létrehozni a következő célkönyvtárat: %s"
+
+#: ../../../app/lib/classes/class.page.php:126
+#, php-format
+msgid "Can't open %s for writing"
+msgstr "%s megnyitása szerkesztésre sikertelen"
+
+#: ../../../app/lib/classes/class.page.php:136
+#: ../../../app/themes/Peafowl/views/dashboard.php:461
+msgid "Internal"
+msgstr "Belső"
+
+#: ../../../app/lib/classes/class.page.php:137
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
+#: ../../../app/themes/Peafowl/views/dashboard.php:461
+msgid "Link"
+msgstr "Link"
+
+#: ../../../app/lib/classes/class.storage.php:450
+#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
+#, php-format, javascript-format
+msgid "Storage capacity can't be lower than its current usage (%s)."
+msgstr "A tároló kapacitása nem lehet kisebb a jelenlegi kihasználtságnál (%s)."
+
+#: ../../../app/lib/classes/class.storage.php:720
+msgid "Unlimited"
+msgstr "Korlátlan"
+
+#: ../../../app/lib/classes/class.storage.php:720
+msgid "used"
+msgstr "használt"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Private"
+msgstr "Privát"
+
+#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
+msgid "year"
+msgid_plural "years"
+msgstr[0] "évvel"
+msgstr[1] "évvel"
+
+#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
+msgid "month"
+msgid_plural "months"
+msgstr[0] "hónappal"
+msgstr[1] "hónappal"
+
+#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "héttel"
+msgstr[1] "héttel"
+
+#: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "másodperccel"
+msgstr[1] "másodperccel"
+
+#: ../../../app/lib/functions.php:67
+#, php-format
+msgid "%s ago"
+msgstr "%s ezelőtt"
+
+#: ../../../app/lib/functions.php:67
+msgid "moments ago"
+msgstr "pillanatokkal ezelőtt"
+
+#: ../../../app/routes/route.dashboard.php:1223
+#: ../../../app/themes/Peafowl/header.php:407
+#: ../../../app/themes/Peafowl/views/dashboard.php:9
+msgid "Dashboard"
+msgstr "Vezérlőpult"
+
+#: ../../../app/lib/functions.php:218
+#, php-format
+msgid "System database is outdated. You need to run the <a href=\"%s\">update</a> tool."
+msgstr "Szükség van az adatbázis frissítésére. Futtassa a <a href=\"%s\">frissítő</a> eszközt."
+
+#: ../../../app/lib/functions.php:221
+#, php-format
+msgid "Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>."
+msgstr "A weboldal karbantartási módban van. Ennek kikapcsolásához navigáljon a <a href=\"%s\">Vezérlőpult > Beállítások</a> részhez."
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "The release notes for this update are:"
+msgstr "A frissítés kiadási jegyzetei:"
+
+#: ../../../app/lib/functions.render.php:303
+msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
+msgstr "A szolgáltatásaink és a böngészési élmény javításának érdekében saját (és harmadik személytől származó) \"sütiket\" használunk. Az oldal további használatával kijelenti, hogy megértette és elfogadja ezt a tényt."
+
+#: ../../../app/loader.php:180
+msgid "You have been forbidden to use this website."
+msgstr "Önnek nem engedélyezett a weboldal használata."
+
+#: ../../../app/loader.php:279
+#: ../../../app/themes/Peafowl/views/settings.php:441
+msgid "Feel free to browse and discover all my shared images and albums."
+msgstr "Fedezze fel a feltöltött képeimet és böngésszen az albumaim között."
+
+#: ../../../app/loader.php:282
+#: ../../../app/themes/Peafowl/views/settings.php:447
+msgid "View all my images"
+msgstr "Az összes képem megtekintése"
+
+#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
+msgid "That page doesn't exist"
+msgstr "Az oldal nem létezik"
+
+#: ../../../app/routes/route.account.php:72
+#: ../../../app/themes/Peafowl/header.php:295
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:24
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:8
+#: ../../../app/themes/Peafowl/views/login.php:41
+#: ../../../app/themes/Peafowl/views/settings.php:299
+msgid "Forgot password?"
+msgstr "Elfelejtette a jelszót?"
+
+#: ../../../app/routes/route.account.php:73
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:8
+msgid "Reset password"
+msgstr "Jelszó visszaállítása"
+
+#: ../../../app/routes/route.account.php:74
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:8
+msgid "Resend account activation"
+msgstr "Aktiváló e-mail újraküldése"
+
+#: ../../../app/routes/route.account.php:76
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:8
+msgid "Add your email address"
+msgstr "Adja meg az e-mail címét"
+
+#: ../../../app/routes/route.account.php:77
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:7
+msgid "Email changed"
+msgstr "E-mail megváltoztatva"
+
+#: ../../../app/routes/route.account.php:95
+#: ../../../app/routes/route.login.php:71
+#: ../../../app/routes/route.settings.php:140
+#: ../../../app/routes/route.signup.php:73
+msgid "The reCAPTCHA wasn't entered correctly"
+msgstr "A megadott reCAPTCHA érvénytelen"
+
+#: ../../../app/routes/route.account.php:119
+#: ../../../app/routes/route.account.php:164
+#: ../../../app/routes/route.account.php:271
+msgid "Invalid Username/Email"
+msgstr "Érvénytelen Felhasználónév/E-mail"
+
+#: ../../../app/routes/route.account.php:129
+msgid "User doesn't have an email."
+msgstr "A felhasználónak nincs megadott e-mail címe."
+
+#: ../../../app/routes/route.account.php:140
+#: ../../../app/routes/route.account.php:299
+#: ../../../app/routes/route.account.php:321
+#: ../../../app/routes/route.account.php:388
+#: ../../../app/routes/route.json.php:24 ../../../app/routes/route.json.php:37
+#: ../../../app/routes/route.json.php:49 ../../../app/routes/route.json.php:561
+#: ../../../app/routes/route.json.php:623
+#: ../../../app/routes/route.json.php:672
+#: ../../../app/routes/route.json.php:719 ../../../app/routes/route.page.php:66
+#: ../../../app/themes/Peafowl/views/request-denied.php:8
+#: ../../../content/pages/default/contact.php:14
+msgid "Request denied"
+msgstr "Kérés megtagadva"
+
+#: ../../../app/routes/route.account.php:145
+msgid "Account needs to be activated to use this feature"
+msgstr "A fióknak aktiválva kell lennie a szolgáltatás használatához"
+
+#: ../../../app/routes/route.account.php:151
+msgid "Account already activated"
+msgstr "A fiók már aktiválva lett"
+
+#: ../../../app/routes/route.account.php:192
+msgid "Allow up to 15 minutes for the email. You can try again later."
+msgstr "Várjon legalább 15 percet az e-mail megérkezésére. Később újrapróbálhatja."
+
+#: ../../../app/routes/route.account.php:231
+#, php-format
+msgid "Reset your password at %s"
+msgstr "Jelszó visszaállítása a következőhöz: %s"
+
+#: ../../../app/routes/route.account.php:233
+#: ../../../app/routes/route.account.php:454
+#: ../../../app/routes/route.settings.php:283
+#: ../../../app/routes/route.signup.php:193
+#, php-format
+msgid "Confirmation required at %s"
+msgstr "Megerősítés szükséges a következőhöz: %s"
+
+#: ../../../app/routes/route.account.php:342
+#: ../../../app/routes/route.signup.php:216
+#, php-format
+msgid "Welcome to %s"
+msgstr "Üdvözöljük %s oldalán"
+
+#: ../../../app/routes/route.account.php:360
+#: ../../../app/routes/route.settings.php:327
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
+#: ../../../app/themes/Peafowl/views/settings.php:313
+#: ../../../app/themes/Peafowl/views/settings.php:330
+#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
+msgid "Passwords don't match"
+msgstr "A jelszavak nem egyeznek meg"
+
+#: ../../../app/routes/route.account.php:422
+#: ../../../app/routes/route.json.php:599
+#: ../../../app/routes/route.settings.php:243
+#: ../../../app/routes/route.signup.php:141
+msgid "Email already being used"
+msgstr "Ez az e-mail cím már regsztrálva van"
+
+#: ../../../app/routes/route.account.php:508
+#: ../../../app/routes/route.signup.php:236
+#: ../../../content/pages/default/contact.php:132
+#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
+#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
+msgid "Check the errors in the form to continue."
+msgstr "Javítsa az űrlapon megjelenő hibákat a folytatáshoz."
+
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Legfrissebb"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "Legrégebbi"
+
+#: ../../../app/routes/route.album.php:96
+#: ../../../app/routes/route.category.php:64
+#: ../../../app/routes/route.dashboard.php:1121
+#: ../../../app/routes/route.explore.php:50
+#: ../../../app/routes/route.following.php:29
+#: ../../../app/routes/route.user.php:201
+msgid "Most viewed"
+msgstr "Legnépszerűbb"
+
+#: ../../../app/routes/route.album.php:104
+#: ../../../app/routes/route.category.php:72
+#: ../../../app/routes/route.dashboard.php:1129
+#: ../../../app/routes/route.explore.php:58
+#: ../../../app/routes/route.following.php:37
+#: ../../../app/routes/route.user.php:207
+msgid "Most liked"
+msgstr "Legtöbbször kedvelt"
+
+#: ../../../app/routes/route.album.php:115
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:4
+#: ../../../app/themes/Peafowl/views/album.php:36
+#: ../../../app/themes/Peafowl/views/image.php:89
+msgid "Share"
+msgstr "Megosztás"
+
+#: ../../../app/routes/route.album.php:124
+#: ../../../app/routes/route.image.php:134
+msgid "Full info"
+msgstr "Teljes infó"
+
+#: ../../../app/routes/route.album.php:159
+msgid "%a album hosted in %w"
+msgstr "%a album a következőben: %w"
+
+#: ../../../app/routes/route.dashboard.php:38
+msgid "Stats"
+msgstr "Statisztikák"
+
+#: ../../../app/routes/route.dashboard.php:39
+#: ../../../app/routes/route.search.php:85
+#: ../../../app/routes/route.user.php:85 ../../../app/routes/route.user.php:277
+#: ../../../app/themes/Peafowl/views/settings.php:73
+msgid "Images"
+msgstr "Képek"
+
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:92
+#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
+#: ../../../app/themes/Peafowl/header.php:403
+#: ../../../app/themes/Peafowl/views/settings.php:77
+msgid "Albums"
+msgstr "Albumok"
+
+#: ../../../app/routes/route.dashboard.php:41
+#: ../../../app/routes/route.dashboard.php:233
+#: ../../../app/routes/route.search.php:99
+msgid "Users"
+msgstr "Felhasználók"
+
+#: ../../../app/routes/route.dashboard.php:42
+#: ../../../app/routes/route.settings.php:498
+#: ../../../app/themes/Peafowl/header.php:363
+#: ../../../app/themes/Peafowl/header.php:405
+msgid "Settings"
+msgstr "Beállítások"
+
+#: ../../../app/routes/route.dashboard.php:161
+msgid "Chevereto version"
+msgstr "Chevereto verzió"
+
+#: ../../../app/routes/route.dashboard.php:162
+msgid "install update"
+msgstr "Frissítés telepítése"
+
+#: ../../../app/routes/route.dashboard.php:162
+msgid "check for updates"
+msgstr "frissítések keresése"
+
+#: ../../../app/routes/route.dashboard.php:169
+msgid "PHP version"
+msgstr "PHP verzió"
+
+#: ../../../app/routes/route.dashboard.php:173
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:114
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:115
+msgid "Server"
+msgstr "Szerver"
+
+#: ../../../app/routes/route.dashboard.php:177
+msgid "MySQL version"
+msgstr "MySQL verzió"
+
+#: ../../../app/routes/route.dashboard.php:181
+msgid "MySQL server info"
+msgstr "MySQL szerver infó"
+
+#: ../../../app/routes/route.dashboard.php:185
+msgid "GD Library"
+msgstr "GD könyvtár"
+
+#: ../../../app/routes/route.dashboard.php:189
+msgid "File uploads"
+msgstr "Fájlfeltöltések"
+
+#: ../../../app/routes/route.dashboard.php:190
+#: ../../../app/themes/Peafowl/views/dashboard.php:298
+#: ../../../app/themes/Peafowl/views/dashboard.php:308
+#: ../../../app/themes/Peafowl/views/dashboard.php:318
+#: ../../../app/themes/Peafowl/views/dashboard.php:633
+#: ../../../app/themes/Peafowl/views/dashboard.php:642
+#: ../../../app/themes/Peafowl/views/dashboard.php:652
+#: ../../../app/themes/Peafowl/views/dashboard.php:678
+#: ../../../app/themes/Peafowl/views/dashboard.php:750
+#: ../../../app/themes/Peafowl/views/dashboard.php:962
+#: ../../../app/themes/Peafowl/views/dashboard.php:975
+#: ../../../app/themes/Peafowl/views/dashboard.php:986
+#: ../../../app/themes/Peafowl/views/dashboard.php:995
+#: ../../../app/themes/Peafowl/views/dashboard.php:1024
+#: ../../../app/themes/Peafowl/views/dashboard.php:1034
+#: ../../../app/themes/Peafowl/views/dashboard.php:1073
+#: ../../../app/themes/Peafowl/views/dashboard.php:1082
+#: ../../../app/themes/Peafowl/views/dashboard.php:1091
+#: ../../../app/themes/Peafowl/views/dashboard.php:1101
+#: ../../../app/themes/Peafowl/views/dashboard.php:1247
+#: ../../../app/themes/Peafowl/views/dashboard.php:1302
+#: ../../../app/themes/Peafowl/views/dashboard.php:1312
+#: ../../../app/themes/Peafowl/views/dashboard.php:1324
+#: ../../../app/themes/Peafowl/views/dashboard.php:1336
+#: ../../../app/themes/Peafowl/views/dashboard.php:1346
+#: ../../../app/themes/Peafowl/views/dashboard.php:1356
+#: ../../../app/themes/Peafowl/views/dashboard.php:1368
+#: ../../../app/themes/Peafowl/views/dashboard.php:1475
+#: ../../../app/themes/Peafowl/views/dashboard.php:1573
+#: ../../../app/themes/Peafowl/views/dashboard.php:1582
+#: ../../../app/themes/Peafowl/views/dashboard.php:1592
+#: ../../../app/themes/Peafowl/views/dashboard.php:1627
+#: ../../../app/themes/Peafowl/views/dashboard.php:1637
+#: ../../../app/themes/Peafowl/views/dashboard.php:1835
+#: ../../../app/themes/Peafowl/views/dashboard.php:1861
+#: ../../../app/themes/Peafowl/views/dashboard.php:1894
+#: ../../../app/themes/Peafowl/views/dashboard.php:1920
+#: ../../../app/themes/Peafowl/views/dashboard.php:1946
+#: ../../../app/themes/Peafowl/views/dashboard.php:1965
+#: ../../../app/themes/Peafowl/views/dashboard.php:2010
+#: ../../../app/themes/Peafowl/views/dashboard.php:2031
+msgid "Enabled"
+msgstr "Engedélyezve"
+
+#: ../../../app/routes/route.dashboard.php:190
+#: ../../../app/themes/Peafowl/views/dashboard.php:298
+#: ../../../app/themes/Peafowl/views/dashboard.php:308
+#: ../../../app/themes/Peafowl/views/dashboard.php:318
+#: ../../../app/themes/Peafowl/views/dashboard.php:633
+#: ../../../app/themes/Peafowl/views/dashboard.php:642
+#: ../../../app/themes/Peafowl/views/dashboard.php:652
+#: ../../../app/themes/Peafowl/views/dashboard.php:679
+#: ../../../app/themes/Peafowl/views/dashboard.php:750
+#: ../../../app/themes/Peafowl/views/dashboard.php:962
+#: ../../../app/themes/Peafowl/views/dashboard.php:975
+#: ../../../app/themes/Peafowl/views/dashboard.php:986
+#: ../../../app/themes/Peafowl/views/dashboard.php:995
+#: ../../../app/themes/Peafowl/views/dashboard.php:1024
+#: ../../../app/themes/Peafowl/views/dashboard.php:1034
+#: ../../../app/themes/Peafowl/views/dashboard.php:1073
+#: ../../../app/themes/Peafowl/views/dashboard.php:1082
+#: ../../../app/themes/Peafowl/views/dashboard.php:1091
+#: ../../../app/themes/Peafowl/views/dashboard.php:1101
+#: ../../../app/themes/Peafowl/views/dashboard.php:1247
+#: ../../../app/themes/Peafowl/views/dashboard.php:1302
+#: ../../../app/themes/Peafowl/views/dashboard.php:1312
+#: ../../../app/themes/Peafowl/views/dashboard.php:1324
+#: ../../../app/themes/Peafowl/views/dashboard.php:1336
+#: ../../../app/themes/Peafowl/views/dashboard.php:1346
+#: ../../../app/themes/Peafowl/views/dashboard.php:1356
+#: ../../../app/themes/Peafowl/views/dashboard.php:1368
+#: ../../../app/themes/Peafowl/views/dashboard.php:1475
+#: ../../../app/themes/Peafowl/views/dashboard.php:1573
+#: ../../../app/themes/Peafowl/views/dashboard.php:1582
+#: ../../../app/themes/Peafowl/views/dashboard.php:1592
+#: ../../../app/themes/Peafowl/views/dashboard.php:1627
+#: ../../../app/themes/Peafowl/views/dashboard.php:1637
+#: ../../../app/themes/Peafowl/views/dashboard.php:1835
+#: ../../../app/themes/Peafowl/views/dashboard.php:1861
+#: ../../../app/themes/Peafowl/views/dashboard.php:1894
+#: ../../../app/themes/Peafowl/views/dashboard.php:1920
+#: ../../../app/themes/Peafowl/views/dashboard.php:1946
+#: ../../../app/themes/Peafowl/views/dashboard.php:1965
+#: ../../../app/themes/Peafowl/views/dashboard.php:2010
+#: ../../../app/themes/Peafowl/views/dashboard.php:2031
+msgid "Disabled"
+msgstr "Kikapcsolva"
+
+#: ../../../app/routes/route.dashboard.php:193
+msgid "Max. upload size"
+msgstr "Max. feltöltési korlát"
+
+#: ../../../app/routes/route.dashboard.php:197
+msgid "Max. post size"
+msgstr "Max. post méret"
+
+#: ../../../app/routes/route.dashboard.php:201
+msgid "Max. execution time"
+msgstr "Max. végrehajtási idő"
+
+#: ../../../app/routes/route.dashboard.php:202
+#, php-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d másodperc"
+msgstr[1] "%d másodperc"
+
+#: ../../../app/routes/route.dashboard.php:205
+msgid "Memory limit"
+msgstr "Memória limit"
+
+#: ../../../app/routes/route.dashboard.php:227
+#: ../../../app/themes/Peafowl/views/settings.php:370
+msgid "Website"
+msgstr "Weboldal"
+
+#: ../../../app/routes/route.dashboard.php:228
+msgid "Content"
+msgstr "Tartalom"
+
+#: ../../../app/routes/route.dashboard.php:229
+msgid "Pages"
+msgstr "Oldalak"
+
+#: ../../../app/routes/route.dashboard.php:230
+#: ../../../app/routes/route.dashboard.php:387
+msgid "Listings"
+msgstr "Feltöltések"
+
+#: ../../../app/routes/route.dashboard.php:231
+msgid "Image upload"
+msgstr "Képfeltöltés"
+
+#: ../../../app/routes/route.dashboard.php:232
+msgid "Categories"
+msgstr "Kategóriák"
+
+#: ../../../app/routes/route.dashboard.php:234
+#: ../../../app/themes/Peafowl/views/dashboard.php:1021
+msgid "Flood protection"
+msgstr "Flood védelem"
+
+#: ../../../app/routes/route.dashboard.php:235
+#: ../../../app/themes/Peafowl/views/dashboard.php:1169
+msgid "Theme"
+msgstr "Sablon"
+
+#: ../../../app/routes/route.dashboard.php:236
+#: ../../../app/routes/route.dashboard.php:373
+#: ../../../app/routes/route.settings.php:66
+msgid "Homepage"
+msgstr "Kezdőlap"
+
+#: ../../../app/routes/route.dashboard.php:237
+msgid "Banners"
+msgstr "Bannerek (reklámok)"
+
+#: ../../../app/routes/route.dashboard.php:238
+msgid "System"
+msgstr "Rendszer"
+
+#: ../../../app/routes/route.dashboard.php:239
+msgid "Languages"
+msgstr "Nyelvek"
+
+#: ../../../app/routes/route.dashboard.php:240
+msgid "External storage"
+msgstr "Külső tároló"
+
+#: ../../../app/routes/route.dashboard.php:241
+#: ../../../app/themes/Peafowl/views/dashboard.php:99
+msgid "Email"
+msgstr "E-mail"
+
+#: ../../../app/routes/route.dashboard.php:242
+#: ../../../app/themes/Peafowl/views/album.php:79
+msgid "Social networks"
+msgstr "Közösségi hálózatok"
+
+#: ../../../app/routes/route.dashboard.php:243
+msgid "External services"
+msgstr "Külső szolgáltatások"
+
+#: ../../../app/routes/route.dashboard.php:244
+msgid "IP bans"
+msgstr "IP banok"
+
+#: ../../../app/routes/route.dashboard.php:246
+msgid "Additional settings"
+msgstr "További beállítások"
+
+#: ../../../app/routes/route.dashboard.php:247
+msgid "Tools"
+msgstr "Eszközök"
+
+#: ../../../app/routes/route.dashboard.php:278
+msgid "Local"
+msgstr "Helyi"
+
+#: ../../../app/routes/route.dashboard.php:282
+msgid "External"
+msgstr "Külső"
+
+#: ../../../app/routes/route.dashboard.php:287
+#: ../../../app/themes/Peafowl/header.php:178
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:37
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:62
+msgid "All"
+msgstr "Összes kép"
+
+#: ../../../app/routes/route.dashboard.php:292
+#: ../../../app/routes/route.image.php:149
+#: ../../../app/themes/Peafowl/views/dashboard.php:1710
+msgid "search content"
+msgstr "feltöltéseinek mutatása"
+
+#: ../../../app/routes/route.dashboard.php:306
+#: ../../../app/themes/Peafowl/views/dashboard.php:201
+msgid "Add page"
+msgstr "Oldal hozzáadása"
+
+#: ../../../app/routes/route.dashboard.php:325
+#, php-format
+msgid "Edit page ID %s"
+msgstr "Oldal azonosító (ID) szerkesztése: %s"
+
+#: ../../../app/routes/route.dashboard.php:330
+msgid "The page has been added successfully."
+msgstr "Az oldal sikeresen hozzáadva."
+
+#: ../../../app/routes/route.dashboard.php:360
+msgid "The page has been deleted."
+msgstr "Az oldal törlésre került."
+
+#: ../../../app/routes/route.dashboard.php:376
+msgid "Before cover (homepage)"
+msgstr "A borító előtt (kezdőlap)"
+
+#: ../../../app/routes/route.dashboard.php:379
+msgid "After cover (homepage)"
+msgstr "A borító után (kezdőlap)"
+
+#: ../../../app/routes/route.dashboard.php:382
+msgid "After listing (homepage)"
+msgstr "A listák után (kezdőlap)"
+
+#: ../../../app/routes/route.dashboard.php:390
+msgid "Before pagination"
+msgstr "Navigáció előtt"
+
+#: ../../../app/routes/route.dashboard.php:393
+msgid "After pagination"
+msgstr "Navigáció után"
+
+#: ../../../app/routes/route.dashboard.php:398
+msgid "Content (image and album)"
+msgstr "Tartalom (kép és album)"
+
+#: ../../../app/routes/route.dashboard.php:401
+msgid "Tab about column"
+msgstr "A részletek oszlopa"
+
+#: ../../../app/routes/route.dashboard.php:404
+msgid "Before comments"
+msgstr "A kommentek előtt"
+
+#: ../../../app/routes/route.dashboard.php:409
+msgid "Image page"
+msgstr "A kép oldala"
+
+#: ../../../app/routes/route.dashboard.php:412
+msgid "Inside viewer top (image page)"
+msgstr "A képnéző teteje (kép oldal)"
+
+#: ../../../app/routes/route.dashboard.php:413
+#: ../../../app/routes/route.dashboard.php:417
+msgid "Expected banner size 728x90"
+msgstr "Az ideális banner méret 728x90"
+
+#: ../../../app/routes/route.dashboard.php:416
+msgid "Inside viewer foot (image page)"
+msgstr "A képnéző alja (kép oldal)"
+
+#: ../../../app/routes/route.dashboard.php:420
+msgid "After image viewer (image page)"
+msgstr "A képnéző után (kép oldal)"
+
+#: ../../../app/routes/route.dashboard.php:423
+msgid "Before header (image page)"
+msgstr "A fejléc előtt (kép oldal)"
+
+#: ../../../app/routes/route.dashboard.php:426
+msgid "After header (image page)"
+msgstr "A fejléc után (kép oldal)"
+
+#: ../../../app/routes/route.dashboard.php:429
+msgid "Footer (image page)"
+msgstr "Lábléc (kép oldal)"
+
+#: ../../../app/routes/route.dashboard.php:434
+msgid "Album page"
+msgstr "Album oldal"
+
+#: ../../../app/routes/route.dashboard.php:437
+msgid "Before header (album page)"
+msgstr "A fejléc előtt (album oldal)"
+
+#: ../../../app/routes/route.dashboard.php:440
+msgid "After header (album page)"
+msgstr "A fejléc előtt (album oldal)"
+
+#: ../../../app/routes/route.dashboard.php:445
+msgid "User profile page"
+msgstr "Felhasználói profiloldal"
+
+#: ../../../app/routes/route.dashboard.php:448
+msgid "After top (user profile)"
+msgstr "A felső rész után (profil)"
+
+#: ../../../app/routes/route.dashboard.php:451
+msgid "Before listing (user profile)"
+msgstr "A listák után (profil)"
+
+#: ../../../app/routes/route.dashboard.php:456
+msgid "Explore page"
+msgstr "\"Véletlen\" oldal"
+
+#: ../../../app/routes/route.dashboard.php:459
+msgid "After top (explore page)"
+msgstr "A felső rész után (\"véletlen\" oldal)"
+
+#: ../../../app/routes/route.dashboard.php:468
+msgid "NSFW"
+msgstr "Korhatáros"
+
+#: ../../../app/routes/route.dashboard.php:557
+msgid "Invalid website name"
+msgstr "Érvénytelen weboldal név"
+
+#: ../../../app/routes/route.dashboard.php:562
+msgid "Invalid language"
+msgstr "Érvénytelen nyelv"
+
+#: ../../../app/routes/route.dashboard.php:567
+msgid "Invalid timezone"
+msgstr "Érvénytelen időzóna"
+
+#: ../../../app/routes/route.dashboard.php:572
+#: ../../../app/routes/route.dashboard.php:617
+#: ../../../app/routes/route.dashboard.php:794
+#: ../../../app/routes/route.dashboard.php:940
+msgid "Invalid value"
+msgstr "Érvénytelen érték"
+
+#: ../../../app/routes/route.dashboard.php:577
+msgid "Invalid upload storage mode"
+msgstr "Érvénytelen feltöltési tároló mód"
+
+#: ../../../app/routes/route.dashboard.php:582
+msgid "Invalid upload filenaming"
+msgstr "Érvénytelen feltöltési fájlnevezés"
+
+#: ../../../app/routes/route.dashboard.php:587
+msgid "Invalid thumb width"
+msgstr "Érvénytelen miniatűr szélesség"
+
+#: ../../../app/routes/route.dashboard.php:592
+msgid "Invalid thumb height"
+msgstr "Érvénytelen miniatűr méret"
+
+#: ../../../app/routes/route.dashboard.php:602
+msgid "Invalid watermark percentage"
+msgstr "Érvénytelen vízjel százalék"
+
+#: ../../../app/routes/route.dashboard.php:607
+msgid "Invalid watermark opacity"
+msgstr "Érvénytelen vízjel átlátszóság"
+
+#: ../../../app/routes/route.dashboard.php:612
+msgid "Invalid theme"
+msgstr "Érvénytelen sablon"
+
+#: ../../../app/routes/route.dashboard.php:622
+msgid "Invalid theme tone"
+msgstr "Érvénytelen sablon séma"
+
+#: ../../../app/routes/route.dashboard.php:627
+msgid "Invalid theme main color"
+msgstr "Érvénytelen sablon alapszín"
+
+#: ../../../app/routes/route.dashboard.php:632
+msgid "Invalid theme top bar color"
+msgstr "Érvénytelen sablon felső sáv szín"
+
+#: ../../../app/routes/route.dashboard.php:637
+msgid "Invalid theme top bar button color"
+msgstr "Érvénytelen sablon felső sáv gomb szín"
+
+#: ../../../app/routes/route.dashboard.php:642
+msgid "Invalid theme image listing size"
+msgstr "Érvénytelen képlistázás méret"
+
+#: ../../../app/routes/route.dashboard.php:647
+msgid "Invalid user id"
+msgstr "Érvénytelen felhasználó azonosító"
+
+#: ../../../app/routes/route.dashboard.php:652
+msgid "Invalid email mode"
+msgstr "Érvénytelen e-mail mód"
+
+#: ../../../app/routes/route.dashboard.php:657
+msgid "Invalid SMTP port"
+msgstr "Érvénytelen SMTP port"
+
+#: ../../../app/routes/route.dashboard.php:662
+msgid "Invalid SMTP security"
+msgstr "Érvénytelen SMTP biztonság"
+
+#: ../../../app/routes/route.dashboard.php:672
+#: ../../../app/routes/route.dashboard.php:838
+msgid "Invalid personal mode user ID"
+msgstr "Érvénytelen felhasználó azonosító a személyes módhoz"
+
+#: ../../../app/routes/route.dashboard.php:677
+msgid "Invalid or reserved route"
+msgstr "Érvénytelen vagy foglalt útvonal (route)"
+
+#: ../../../app/routes/route.dashboard.php:682
+msgid "Invalid website privacy mode"
+msgstr "Érvénytelen tartalomkorlátozási mód"
+
+#: ../../../app/routes/route.dashboard.php:687
+msgid "Invalid website content privacy mode"
+msgstr "Érvénytelen weboldal tartalomkorlátozási mód"
+
+#: ../../../app/routes/route.dashboard.php:692
+msgid "Invalid homepage style"
+msgstr "Érvénytelen kezdőlap stílus"
+
+#: ../../../app/routes/route.dashboard.php:697
+msgid "Invalid homepage call to action button color"
+msgstr "Érvénytelen kezdőlapi akciógomb szín"
+
+#: ../../../app/routes/route.dashboard.php:702
+msgid "Invalid homepage call to action functionality"
+msgstr "Érvénytelen kezdőlapi akciógomb funkció"
+
+#: ../../../app/routes/route.dashboard.php:708
+msgid "Invalid title"
+msgstr "Érvénytelen cím."
+
+#: ../../../app/routes/route.dashboard.php:713
+msgid "Invalid status"
+msgstr "Érévnytelen állapot."
+
+#: ../../../app/routes/route.dashboard.php:718
+msgid "Invalid type"
+msgstr "Érvénytelen típus."
+
+#: ../../../app/routes/route.dashboard.php:723
+msgid "Invalid visibility"
+msgstr "Érvénytelen láthatóság."
+
+#: ../../../app/routes/route.dashboard.php:728
+msgid "Invalid target attribute"
+msgstr "Érvénytelen cél attribútum."
+
+#: ../../../app/routes/route.dashboard.php:733
+msgid "Invalid rel attribute"
+msgstr "Érvénytelen rel attribútum."
+
+#: ../../../app/routes/route.dashboard.php:738
+msgid "Invalid icon"
+msgstr "Érvénytelen ikon."
+
+#: ../../../app/routes/route.dashboard.php:743
+msgid "Invalid URL key"
+msgstr "Érvénytelen URL kulcs"
+
+#: ../../../app/routes/route.dashboard.php:748
+msgid "Invalid file path"
+msgstr "Érvénytelen fájl útvonal"
+
+#: ../../../app/routes/route.dashboard.php:753
+msgid "Invalid link URL"
+msgstr "Érvénytelen link URL"
+
+#: ../../../app/routes/route.dashboard.php:769
+msgid "Invalid upload image path"
+msgstr "Érvénytelen képfeltöltési útvonal"
+
+#: ../../../app/routes/route.dashboard.php:783
+msgid "Invalid call to action URL"
+msgstr "Érvénytelen akciógomb URL"
+
+#: ../../../app/routes/route.dashboard.php:797
+#, php-format
+msgid "Max. allowed %s"
+msgstr "Maximum megengedett %s"
+
+#: ../../../app/routes/route.dashboard.php:860
+msgid "Invalid SMTP server"
+msgstr "Érvénytelen SMTP szerver"
+
+#: ../../../app/routes/route.dashboard.php:861
+msgid "Invalid SMTP username"
+msgstr "Érvénytelen SMTP felhasználónév"
+
+#: ../../../app/routes/route.dashboard.php:922
+msgid "Invalid URL"
+msgstr "Érvénytelen URL"
+
+#: ../../../app/routes/route.dashboard.php:960
+#, php-format
+msgid "This URL key is already being used by another page (ID %s)"
+msgstr "Ezt az URL kulcsot már használja egy másik oldal (azonosítója: %s)"
+
+#: ../../../app/routes/route.dashboard.php:961
+#, php-format
+msgid "This file path is already being used by another page (ID %s)"
+msgstr "Ezt a fájl útvonalat más használja egy másik oldal (azonosítója: %s)"
+
+#: ../../../app/routes/route.dashboard.php:992
+#, php-format
+msgid "Can't save page contents: %s."
+msgstr "Az oldal tartalmának mentése nem sikerült: %s."
+
+#: ../../../app/routes/route.dashboard.php:1163
+msgid "Top users"
+msgstr "Legaktívabb felhasználók"
+
+#: ../../../app/routes/route.explore.php:89
+#: ../../../app/themes/Peafowl/header.php:188
+#: ../../../app/themes/Peafowl/header.php:206
+#: ../../../app/themes/Peafowl/views/dashboard.php:305
+#: ../../../app/themes/Peafowl/views/explore.php:9
+msgid "Explore"
+msgstr "Feltöltések"
+
+#: ../../../app/routes/route.following.php:73
+#: ../../../app/routes/route.user.php:104
+#: ../../../app/themes/Peafowl/views/following.php:7
+#: ../../../app/themes/Peafowl/views/user.php:74
+#: ../../../app/themes/Peafowl/views/user.php:80
+msgid "Following"
+msgstr "Követések"
+
+#: ../../../app/routes/route.image.php:120
+#: ../../../app/themes/Peafowl/header.php:424
+msgid "About"
+msgstr "Információk"
+
+#: ../../../app/routes/route.image.php:127
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
+msgid "Embed codes"
+msgstr "Beillesztő kódok"
+
+#: ../../../app/routes/route.image.php:144
+msgid "Image ID"
+msgstr "Kép azonosító"
+
+#: ../../../app/routes/route.image.php:148
+msgid "Uploader IP"
+msgstr "Feltöltő IP címe"
+
+#: ../../../app/routes/route.image.php:149
+msgid "Ban IP"
+msgstr "IP tiltása"
+
+#: ../../../app/routes/route.image.php:149
+msgid "IP already banned"
+msgstr "Az IP cím már tiltva van"
+
+#: ../../../app/routes/route.image.php:152
+msgid "Upload date"
+msgstr "Feltöltés dátuma"
+
+#: ../../../app/routes/route.image.php:177
+#, php-format
+msgid "%s images"
+msgstr "%s kép"
+
+#: ../../../app/routes/route.image.php:185
+msgid "Image %i in %a album"
+msgstr "%i kép a(z) %a albumban"
+
+#: ../../../app/routes/route.image.php:187
+msgid "Image %i in %c category"
+msgstr "%i kép a(z) %c kategóriában"
+
+#: ../../../app/routes/route.image.php:189
+msgid "Image %i hosted in %w"
+msgstr "%i kép a következőben: %w"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:14
+msgid "Direct links"
+msgstr "Direkt linkek"
+
+#: ../../../app/themes/Peafowl/views/image.php:279
+msgid "Image URL"
+msgstr "Kép URL"
+
+#: ../../../app/themes/Peafowl/views/image.php:285
+msgid "Image link"
+msgstr "Kép link"
+
+#: ../../../app/themes/Peafowl/views/image.php:291
+msgid "Thumbnail URL"
+msgstr "Miniatűr URL"
+
+#: ../../../app/themes/Peafowl/views/image.php:300
+msgid "Medium URL"
+msgstr "Középméret URL"
+
+#: ../../../app/routes/route.json.php:44 ../../../app/routes/route.json.php:59
+#: ../../../app/routes/route.json.php:260
+#: ../../../app/routes/route.json.php:746
+#: ../../../app/routes/route.json.php:810
+#: ../../../app/routes/route.json.php:911
+#: ../../../app/routes/route.json.php:1055
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:4
+msgid "Login needed"
+msgstr "Bejelentkezés szükséges"
+
+#: ../../../app/routes/route.json.php:499
+#: ../../../app/routes/route.json.php:690
+msgid "IP address already banned"
+msgstr "Az IP cím már bannolva van"
+
+#: ../../../app/routes/route.json.php:568
+#: ../../../app/routes/route.json.php:630
+msgid "Missing values"
+msgstr "Hiányzó értékek"
+
+#: ../../../app/routes/route.json.php:589
+msgid "Invalid role"
+msgstr "Érvénytelen szabály"
+
+#: ../../../app/routes/route.json.php:594
+msgid "Username already being used"
+msgstr "A felhasználónév már használatban van"
+
+#: ../../../app/routes/route.json.php:1092
+#, php-format
+msgid "%s has been disconnected."
+msgstr "%s felhasználó kilépett."
+
+#: ../../../app/routes/route.json.php:1109
+msgid "Test email from %s @ %t"
+msgstr "Teszt üzenet %s feladótól @ %t"
+
+#: ../../../app/routes/route.json.php:1109
+msgid "This is just a test"
+msgstr "Ez csak egy teszt"
+
+#: ../../../app/routes/route.json.php:1110
+#, php-format
+msgid "Test email sent to %s."
+msgstr "Teszt üzenet elküldve a(z) %s címre."
+
+#: ../../../app/routes/route.json.php:1128
+#, php-format
+msgid "User %s followed"
+msgstr "%s felhasználó követve"
+
+#: ../../../app/routes/route.json.php:1128
+#, php-format
+msgid "User %s unfollowed"
+msgstr "%s felhasználó követése törölve"
+
+#: ../../../app/routes/route.json.php:1150
+msgid "Content liked"
+msgstr "Kedvelt tartalmak"
+
+#: ../../../app/routes/route.json.php:1150
+msgid "Content disliked"
+msgstr "Nem kedvelt tartalmak"
+
+#: ../../../app/routes/route.login.php:133
+msgid "Wrong Username/Email password combination"
+msgstr "Hibás felhasználónév/ e-mail jelszó kombináció"
+
+#: ../../../app/routes/route.login.php:148
+#: ../../../app/themes/Peafowl/header.php:269
+#: ../../../app/themes/Peafowl/header.php:275
+#: ../../../app/themes/Peafowl/views/login.php:8
+#: ../../../app/themes/Peafowl/views/login.php:52
+msgid "Sign in"
+msgstr "Belépés"
+
+#: ../../../app/routes/route.logout.php:29
+#: ../../../app/themes/Peafowl/views/logout.php:8
+msgid "Logged out"
+msgstr "Kijelentkezett"
+
+#: ../../../app/routes/route.page.php:61
+#: ../../../content/pages/default/contact.php:7
+msgid "General questions/comments"
+msgstr "Általános kérdések/reakciók"
+
+#: ../../../app/routes/route.page.php:62
+#: ../../../content/pages/default/contact.php:8
+msgid "DMCA complaint"
+msgstr "Jogi bejelentés/kép törlési kérelem"
+
+#: ../../../app/routes/route.page.php:71
+#: ../../../app/routes/route.settings.php:302
+#: ../../../content/pages/default/contact.php:19
+msgid "Invalid name"
+msgstr "Érvénytelen név"
+
+#: ../../../app/routes/route.page.php:74
+#: ../../../content/pages/default/contact.php:22
+msgid "Invalid message"
+msgstr "Érvénytelen üzenet"
+
+#: ../../../app/routes/route.page.php:77
+#: ../../../content/pages/default/contact.php:25
+msgid "Invalid subject"
+msgstr "Érvénytelen tárgy"
+
+#: ../../../app/routes/route.page.php:85
+#: ../../../content/pages/default/contact.php:33
+msgid "Invalid reCAPTCHA"
+msgstr "Érvénytelen reCAPTCHA"
+
+#: ../../../app/routes/route.page.php:90
+#, php-format
+msgid "Can't submit the form: %s"
+msgstr "Az űrlap beküldése nem sikerült: %s"
+
+#: ../../../app/routes/route.page.php:119
+msgid "Message sent. We will get in contact soon."
+msgstr "Üzenet elküldve. Hamarosan válaszolni fogunk."
+
+#: ../../../app/routes/route.page.php:122
+#: ../../../content/pages/default/contact.php:69
+msgid "Mail error"
+msgstr "Üzenetküldési hiba"
+
+#: ../../../app/routes/route.search.php:120
+#, php-format
+msgid "Image search results for %s"
+msgstr "Kép keresési találatok a következőre: %s"
+
+#: ../../../app/routes/route.search.php:123
+#, php-format
+msgid "Album search results for %s"
+msgstr "Album keresési találatok a következőre: %s"
+
+#: ../../../app/routes/route.search.php:126
+#, php-format
+msgid "User search results for %s"
+msgstr "Felhasználó keresési találatok a következőre: %s"
+
+#: ../../../app/routes/route.search.php:130
+#: ../../../app/themes/Peafowl/header.php:215
+#: ../../../app/themes/Peafowl/header.php:220
+#: ../../../app/themes/Peafowl/views/dashboard.php:295
+msgid "Search"
+msgstr "Keresés"
+
+#: ../../../app/routes/route.settings.php:62
+msgid "Account"
+msgstr "Fiók"
+
+#: ../../../app/routes/route.settings.php:63
+msgid "Profile"
+msgstr "Profil"
+
+#: ../../../app/routes/route.settings.php:64
+#: ../../../app/themes/Peafowl/header.php:292
+#: ../../../app/themes/Peafowl/header.php:340
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:92
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:93
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:126
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:104
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/login.php:39
+#: ../../../app/themes/Peafowl/views/settings.php:322
+#: ../../../app/themes/Peafowl/views/signup.php:49
+#: ../../../app/themes/Peafowl/views/signup.php:50
+msgid "Password"
+msgstr "Jelszó"
+
+#: ../../../app/routes/route.settings.php:65
+msgid "Linked accounts"
+msgstr "Összekapcsolt fiókok"
+
+#: ../../../app/routes/route.settings.php:191
+msgid "Invalid image expiration"
+msgstr "Érvénytelen kép lejárati idő"
+
+#: ../../../app/routes/route.settings.php:269
+#, php-format
+msgid "An email has been sent to %s with instructions to activate this email"
+msgstr "Az aktiválás befejezéséhez szükséges üzenet kiküldésre került a következő e-mail címre: %s"
+
+#: ../../../app/routes/route.settings.php:305
+msgid "Invalid website"
+msgstr "Érvénytelen weboldal"
+
+#: ../../../app/routes/route.settings.php:313
+msgid "Wrong password"
+msgstr "Rossz jelszó"
+
+#: ../../../app/routes/route.settings.php:316
+msgid "Use a new password"
+msgstr "Használjon egy új jelszót"
+
+#: ../../../app/routes/route.settings.php:416
+#: ../../../app/themes/Peafowl/views/dashboard.php:2067
+#: ../../../app/themes/Peafowl/views/settings.php:477
+msgid "Changes have been saved."
+msgstr "A változások mentésre kerültek."
+
+#: ../../../app/routes/route.settings.php:435
+msgid "Password has been changed"
+msgstr "A jelszó megváltoztatásra került"
+
+#: ../../../app/routes/route.settings.php:440
+msgid "Password has been created."
+msgstr "Jelszó létrehozva."
+
+#: ../../../app/routes/route.settings.php:455
+msgid "Wrong Username/Email values"
+msgstr "Hibás Felhasználónév/E-mail"
+
+#: ../../../app/routes/route.settings.php:498
+#, php-format
+msgid "Settings for %s"
+msgstr "%s beállításai"
+
+#: ../../../app/routes/route.signup.php:251
+#: ../../../app/themes/Peafowl/header.php:316
+#: ../../../app/themes/Peafowl/header.php:322
+#: ../../../app/themes/Peafowl/views/index.php:81
+#: ../../../app/themes/Peafowl/views/signup.php:8
+#: ../../../app/themes/Peafowl/views/signup.php:63
+msgid "Create account"
+msgstr "Fiók létrehozása"
+
+#: ../../../app/routes/route.user.php:84
+#: ../../../app/themes/Peafowl/header.php:56
+#: ../../../app/themes/Peafowl/views/index.php:46
+#, php-format
+msgid "%s's Images"
+msgstr "%s képei"
+
+#: ../../../app/routes/route.user.php:89
+#: ../../../app/themes/Peafowl/header.php:56
+#, php-format
+msgid "%s's Albums"
+msgstr "%s albumai"
+
+#: ../../../app/routes/route.user.php:99
+#: ../../../app/themes/Peafowl/views/search.php:8
+msgid "Results for"
+msgstr "Találatok a következőre:"
+
+#: ../../../app/routes/route.user.php:94
+#, php-format
+msgid "Liked by %s"
+msgstr "%s kedvelte"
+
+#: ../../../app/routes/route.user.php:95
+#: ../../../app/themes/Peafowl/header.php:404
+msgid "Liked"
+msgstr "Kedvelve"
+
+#: ../../../app/routes/route.user.php:109
+msgid "Followers"
+msgstr "Követők"
+
+#: ../../../app/routes/route.user.php:379
+msgid "%n (%u) albums on %w"
+msgstr "%n (%u) album itt: %w"
+
+#: ../../../app/routes/route.user.php:384
+msgid "%n (%u) on %w"
+msgstr "%n (%u) itt: %w"
+
+#: ../../../app/themes/Peafowl/header.php:222
+msgid "Close"
+msgstr "Bezár"
+
+#: ../../../app/themes/Peafowl/header.php:222
+#: ../../../app/themes/Peafowl/header.php:226
+msgid "Advanced search"
+msgstr "Bővített keresés"
+
+#: ../../../app/themes/Peafowl/header.php:233
+#: ../../../app/themes/Peafowl/views/dashboard.php:315
+#: ../../../app/themes/Peafowl/views/dashboard.php:713
+msgid "Random"
+msgstr "Véletlen"
+
+#: ../../../app/themes/Peafowl/header.php:243
+#, php-format
+msgid "Notices (%s)"
+msgstr "Értesítések (%s)"
+
+#: ../../../app/themes/Peafowl/header.php:258
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Upload"
+msgstr "Feltöltés"
+
+#: ../../../app/themes/Peafowl/header.php:281
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
+#: ../../../app/themes/Peafowl/views/login.php:18
+#: ../../../app/themes/Peafowl/views/login.php:65
+#: ../../../app/themes/Peafowl/views/signup.php:18
+#: ../../../app/themes/Peafowl/views/signup.php:76
+msgid "Sign in with another account"
+msgstr "Belépés más fiókkal"
+
+#: ../../../app/themes/Peafowl/header.php:285
+#: ../../../app/themes/Peafowl/header.php:332
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/form_album.php:9
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/login.php:22
+#: ../../../app/themes/Peafowl/views/login.php:62
+#: ../../../app/themes/Peafowl/views/settings.php:354
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../app/themes/Peafowl/views/signup.php:22
+#: ../../../app/themes/Peafowl/views/signup.php:73
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
+#: ../../../lib/Peafowl/peafowl.min.js:31
+#: ../../../lib/Peafowl/peafowl.min.js:140
+msgid "or"
+msgstr "vagy"
+
+#: ../../../app/themes/Peafowl/header.php:291
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
+#: ../../../app/themes/Peafowl/views/login.php:34
+#: ../../../app/themes/Peafowl/views/login.php:35
+msgid "Username or Email address"
+msgstr "Felhasználónév vagy E-mail cím"
+
+#: ../../../app/themes/Peafowl/header.php:294
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:23
+#: ../../../app/themes/Peafowl/views/login.php:53
+msgid "Keep me logged in"
+msgstr "Emlékezzen rám"
+
+#: ../../../app/themes/Peafowl/header.php:301
+#, php-format
+msgid "Don't have an account? <a href='%s'>Sign up</a> now."
+msgstr "Nincs még fiókja? <a href='%s'>Regisztráljon</a> most."
+
+#: ../../../app/themes/Peafowl/header.php:328
+msgid "Sign up with another account"
+msgstr "Regisztráció más fiókkal"
+
+#: ../../../app/themes/Peafowl/header.php:338
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:100
+#: ../../../app/themes/Peafowl/views/settings.php:155
+#: ../../../app/themes/Peafowl/views/signup.php:34
+#: ../../../app/themes/Peafowl/views/signup.php:35
+#: ../../../content/pages/default/contact.php:92
+msgid "Email address"
+msgstr "E-mail cím"
+
+#: ../../../app/themes/Peafowl/header.php:339
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
+#: ../../../app/themes/Peafowl/views/dashboard.php:94
+#: ../../../app/themes/Peafowl/views/dashboard.php:95
+#: ../../../app/themes/Peafowl/views/settings.php:143
+#: ../../../app/themes/Peafowl/views/settings.php:144
+#: ../../../app/themes/Peafowl/views/signup.php:39
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "Username"
+msgstr "Felhasználónév"
+
+#: ../../../app/themes/Peafowl/header.php:341
+#: ../../../app/themes/Peafowl/views/signup.php:65
+#, php-format
+msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
+msgstr "A regisztrációval elfogadja a <a href=\"%s\">Felhasználási Feltételeinket</a>"
+
+#: ../../../app/themes/Peafowl/header.php:362
+msgid "Notifications"
+msgstr "Értesítések"
+
+#: ../../../app/themes/Peafowl/header.php:381
+#: ../../../app/themes/Peafowl/views/settings.php:348
+#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
+msgid "loading"
+msgstr "töltés"
+
+#: ../../../app/themes/Peafowl/header.php:384
+msgid "You don't have notifications"
+msgstr "Nincsenek értesítéseid"
+
+#: ../../../app/themes/Peafowl/header.php:402
+msgid "My Profile"
+msgstr "Profilom"
+
+#: ../../../app/themes/Peafowl/header.php:409
+msgid "Sign out"
+msgstr "Kilépés"
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:4
+msgid "We received a request to change the email of your <a href=\"%u\">%n</a> account at %w."
+msgstr "Egy e-mail cím megváltoztatására irányuló kérés érkezett hozzánk a következő fiókhoz: <a href=\"%u\">%n</a>"
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:6
+#, php-format
+msgid "To complete the process you must <a href=\"%s\">activate your email</a>."
+msgstr "A folyamat befejezéséhez <a href=\"%s\">aktiválnia kell az e-mail címét</a>."
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:8
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:8
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:8
+#, php-format
+msgid "Alternatively you can copy and paste the URL into your browser: <a href=\"%s\">%s</a>"
+msgstr "Kattintson a fenti linkre vagy másolja be a következő hivatkozást a böngészője címsorába: <a href=\"%s\">%s</a>"
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:10
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:10
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:10
+msgid "If you didn't intend this just ignore this message."
+msgstr "Amennyiben nem ön indította a regisztrációt úgy kérjük hagyja figyelmen kívül ezt az üzenetet."
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:12
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:12
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:12
+#, php-format
+msgid "This request was made from IP: %s"
+msgstr "A kérés a következő IP címről érkezett: %s"
+
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:4
+msgid "We received a request to register the %n account at %w."
+msgstr "Regisztrációt kezdeményezett %n felhasználónévvel a következő webhelyen: %w."
+
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:6
+#, php-format
+msgid "To complete the process you must <a href=\"%s\">activate your account</a>."
+msgstr "A folyamat befejezéséhez <a href=\"%s\">aktiválnia kell a fiókját</a>."
+
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:4
+msgid "We received a request to reset the password for your <a href=\"%u\">%n</a> account."
+msgstr "Egy jelszó visszaállító kérés érkezett a következő fiókjához: <a href=\"%u\">%n</a>"
+
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:6
+#, php-format
+msgid "To reset your password <a href=\"%s\">follow this link</a>."
+msgstr "A jelszó visszaállításához <a href=\"%s\">kattintson erre a linkre</a>."
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:4
+msgid "Hi %n, welcome to %w"
+msgstr "Kedves %n, üdvözöljük a %w oldalán"
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:6
+msgid "Now that your account is ready you can enjoy uploading your images, creating albums and setting the privacy of your content as well as many more cool things that you will discover."
+msgstr "Most hogy a fiókja elkészült feltölthet - privát vagy nyilvános - képeket, létrehozhat albumokat és nekiláthat a megannyi izgalmas funkció felfedezésének."
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:8
+msgid "By the way, here is you very own awesome profile page: <a href=\"%u\">%n</a>. Go ahead and customize it, its yours!."
+msgstr "Itt találhatja a nagyszerű profil oldalát: <a href=\"%u\">%n</a> Indulhat a testreszabás!"
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:10
+msgid "Thank you for joining"
+msgstr "Köszönjük, hogy csatlakozott!"
+
+#: ../../../app/themes/Peafowl/mails/footer.php:3
+msgid "This email was sent from %w %u"
+msgstr "Az e-mail innen került kiküldésre: %w %u"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:13
+msgid "Drag and drop or paste images here to upload"
+msgstr "Húzza ide vagy illessze be a képeket a vágólapról a feltöltéshez"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:14
+msgid "Select the images to upload"
+msgstr "Válassza ki a feltölteni kívánt képeket"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:15
+msgid "You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
+msgstr "Vagy <a data-trigger=\"anywhere-upload-input\">kitallózhatja őket a számítógépéről</a> esetleg feltölthet még <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">külső URL-ről is</a>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:16
+msgid "You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
+msgstr "<a data-trigger=\"anywhere-upload-input-camera\">Készíthet képet</a> vagy <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">hozzáadhatja a képek linkjeit is</a>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:20
+msgid "Edit or resize an image by clicking the image preview"
+msgstr "Kép szerkesztése vagy átméretezése az előnézetre való kattintással"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:21
+msgid "Edit or resize an image by touching the image preview"
+msgstr "Kép szerkesztése vagy átméretezése az előnézet megérintésével"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:22
+msgid "You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>."
+msgstr "Tölthet fel több képet <a data-trigger=\"anywhere-upload-input\">a számítógépéről</a> vagy <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">hozzáadhatja a képek linkjeit is</a>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:23
+msgid "You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
+msgstr "<a data-trigger=\"anywhere-upload-input\">Hozzáadhat még több képet</a> vagy <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">megadhatja a képek linkjeit</a>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
+msgid "Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>"
+msgstr "<span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">kép</span> feltöltése"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
+msgid "complete"
+msgstr "kész"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:28
+msgid "The queue is being uploaded. It will take just a few seconds to complete."
+msgstr "A hozzáadott képek feltöltése folyamatban van. Néhány pillanat és kész is."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:32
+msgid "Upload complete"
+msgstr "Feltöltés befejezve"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:34
+#, php-format
+msgid "Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album."
+msgstr "A feltöltés hozzáadva a <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">nyilvános hírfolyamhoz</a>. <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">Létrehozhat új albumot</a> vagy <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">áthelyezheti a <span data-text=\"queue-objects\">képeket</span></a> egy már létező albumba."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:35
+msgid "You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account."
+msgstr "<a href=\"%s\">Létrehozhat egy fiókot</a> vagy <a href=\"%l\">jelentkezzen be</a> hogy a feltöltései automatikusan megőrződjenek."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:40
+msgid "No <span data-text=\"queue-objects\">images</span> have been uploaded"
+msgstr "Egy <span data-text=\"queue-objects\">kép</span> sem lett feltöltve."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:41
+msgid "Some errors have occured and the system couldn't process your request."
+msgstr "Hiba történt és a rendszer nem tudta feldolgozni a kérést."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:61
+msgid "Select category"
+msgstr "Válasszon kategóriát"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Change upload privacy"
+msgstr "A feltöltési mód megváltoztatása"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "mégse"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:77
+msgid "Mark this if the upload is not family safe"
+msgstr "Jelölje be hogyha a feltöltés korhatáros (felnőtteknek szóló)"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:77
+msgid "Not family safe upload"
+msgstr "Korhatáros tartalom"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+msgid "Uploading"
+msgstr "Feltöltés"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
+msgid "cancel remaining"
+msgstr "hátralévők megszakítása"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:85
+msgid "Note: Some images couldn't be uploaded."
+msgstr "Megjegyzés: Néhány kép nem került feltöltésre."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:85
+msgid "learn more"
+msgstr "tudjon meg többet"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:86
+msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
+msgstr "További információért ellenőrizze a <a data-modal=\"simple\" data-target=\"failed-upload-result\">hibajelentést</a>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:89
+msgid "max"
+msgstr "max"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:91
+msgid "close"
+msgstr "bezárás"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:148
+#: ../../../app/themes/Peafowl/views/dashboard.php:666
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:154
+msgid "Edit image"
+msgstr "Kép szerkesztése"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
+#: ../../../app/themes/Peafowl/snippets/form_image.php:4
+#: ../../../app/themes/Peafowl/views/dashboard.php:441
+#: ../../../app/themes/Peafowl/views/dashboard.php:597
+#: ../../../app/themes/Peafowl/views/dashboard.php:1440
+#: ../../../app/themes/Peafowl/views/settings.php:434
+msgid "Title"
+msgstr "Cím"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:200
+#: ../../../app/themes/Peafowl/snippets/form_album.php:12
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:12
+#: ../../../app/themes/Peafowl/snippets/form_image.php:4
+#: ../../../app/themes/Peafowl/snippets/form_image.php:28
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:15
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:104
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:108
+#: ../../../app/themes/Peafowl/views/dashboard.php:503
+#: ../../../app/themes/Peafowl/views/dashboard.php:509
+#: ../../../app/themes/Peafowl/views/dashboard.php:566
+#: ../../../app/themes/Peafowl/views/dashboard.php:573
+#: ../../../app/themes/Peafowl/views/dashboard.php:580
+#: ../../../app/themes/Peafowl/views/dashboard.php:1418
+#: ../../../app/themes/Peafowl/views/dashboard.php:1428
+msgid "optional"
+msgstr "opcionális"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:167
+msgid "Resize image"
+msgstr "Kép átméretezése"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:170
+#: ../../../app/themes/Peafowl/views/dashboard.php:725
+#: ../../../app/themes/Peafowl/views/dashboard.php:738
+#: ../../../app/themes/Peafowl/views/dashboard.php:798
+msgid "Width"
+msgstr "Szélesség"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:173
+#: ../../../app/themes/Peafowl/views/dashboard.php:728
+#: ../../../app/themes/Peafowl/views/dashboard.php:801
+msgid "Height"
+msgstr "Magasság"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:176
+msgid "Note: Animated GIF images won't be resized."
+msgstr "Megjegyzés: Az animált GIF képek nem kerülnek átméretezésre."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:180
+msgid "Auto delete image"
+msgstr "Kép automatikus törlése"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:192
+#: ../../../app/themes/Peafowl/snippets/form_image.php:25
+msgid "Mark this if the image is not family safe"
+msgstr "Jelölje be hogyha a kép korhatáros (felnőtteknek szóló)"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:194
+#: ../../../app/themes/Peafowl/snippets/form_image.php:25
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:46
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:8
+msgid "Flag as unsafe"
+msgstr "Kép jelentése"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:200
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:12
+#: ../../../app/themes/Peafowl/snippets/form_image.php:28
+#: ../../../app/themes/Peafowl/views/dashboard.php:877
+msgid "Description"
+msgstr "Leírás"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:201
+#: ../../../app/themes/Peafowl/snippets/form_image.php:29
+msgid "Brief description of this image"
+msgstr "A kép rövid leírása."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:206
+msgid "Add image URLs"
+msgstr "Kép URL-ek hozzáadása"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:208
+msgid "Add the image URLs here"
+msgstr "Itt adja hozzá a kép URL-eket"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:223
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:27
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:31
+msgid "Create album"
+msgstr "Album létrehozása"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:224
+msgid "The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
+msgstr "A feltöltött tartalmak áthelyezésre fognak kerülni ebbe az újonnan létrehozott albumba. Áthelyezheti még őket egy már <a class=\"modal-switch\" data-switch=\"move-existing-album\">korábban létrehozott albumba</a> is."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:235
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:28
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:46
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:70
+msgid "Move to album"
+msgstr "Áthelyezés albumba"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:236
+msgid "Select an existing album to move the uploaded content. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the content there."
+msgstr "A tartalom áthelyezéséhez válasszon ki egy meglévő albumot. Ha szeretné <a class=\"modal-switch\" data-switch=\"move-new-album\">létrehozhat egy újat</a> is."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:252
+msgid "Error report"
+msgstr "Hibajelentés"
+
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
+#: ../../../app/themes/Peafowl/views/user.php:99
+msgid "album"
+msgid_plural "albums"
+msgstr[0] "album"
+msgstr[1] "album"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
+msgid "Links"
+msgstr "Linkek"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
+msgid "Viewer links"
+msgstr "Megtekintő linkek"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:21
+msgid "HTML Codes"
+msgstr "HTML kódok"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:24
+msgid "HTML image"
+msgstr "HTML kép"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:29
+msgid "HTML full linked"
+msgstr "HTML teljes link"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:34
+msgid "HTML medium linked"
+msgstr "HTML középméret"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:39
+msgid "HTML thumbnail linked"
+msgstr "HTML miniatűr"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:46
+msgid "BBCodes"
+msgstr "BBkódok"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:49
+msgid "BBCode full"
+msgstr "Teljes BBCode"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:54
+msgid "BBCode full linked"
+msgstr "BBCode teljes link"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:59
+msgid "BBCode medium linked"
+msgstr "BBCode közepes link"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:64
+msgid "BBCode thumbnail linked"
+msgstr "BBkód miniatűr"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:74
+msgid "Markdown full"
+msgstr "Teljes markdown"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:79
+msgid "Markdown full linked"
+msgstr "Teljes linkelt markdown"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:84
+msgid "Markdown medium linked"
+msgstr "Közepes linkelt markdown"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:89
+msgid "Markdown thumbnail linked"
+msgstr "Miniatűr linkelt markdown"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:6
+msgid "All these words"
+msgstr "Írja ide a keresett szót vagy kifejezést"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:7
+msgid "Type the important words: tri-colour rat terrier"
+msgstr "Például: autós háttérképek"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:10
+msgid "This exact word or phrase"
+msgstr "Pontosabb keresés"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:11
+msgid "Put exact words in quotes: \"rat terrier\""
+msgstr "Tegye idézőjelbe a teljes kifejezést: \"autós háttérképek\""
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:20
+msgid "None of these words"
+msgstr "Találatok szűrése"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:21
+msgid "Put a minus sign just before words you don't want: -rodent -\"Jack Russell\""
+msgstr "Tegyen egy minusz jelet a nem kívánt találatok elé: -ferrari -\"VW Golf\""
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
+#: ../../../app/themes/Peafowl/snippets/form_category.php:3
+msgid "Category"
+msgstr "Kategória"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:66
+msgid "Storage"
+msgstr "Tároló"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:4
+msgid "IP address"
+msgstr "IP cím"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:7
+#: ../../../app/themes/Peafowl/snippets/form_album.php:8
+msgid "Album name"
+msgstr "Album neve"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:9
+msgid "move to existing album"
+msgstr "mozgatás egy meglévő albumba"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:12
+msgid "Album description"
+msgstr "Album leírása"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:13
+msgid "Brief description of this album"
+msgstr "Az album témájának rövid és tömör leírása"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:19
+msgid "Who can view this content"
+msgstr "Ki láthatja ezt a tartalmat"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:20
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Public"
+msgstr "Publikus"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:21
+msgid "Private (just me)"
+msgstr "Privát (csak én)"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:22
+msgid "Private (anyone with the link)"
+msgstr "Privát (a linkkel rendelkező felhasználók tudják megtekinteni)"
+
+#: ../../../app/themes/Peafowl/snippets/form_category.php:9
+msgid "No category"
+msgstr "Nincs kategória"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:4
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:3
+#: ../../../app/themes/Peafowl/views/dashboard.php:875
+#: ../../../app/themes/Peafowl/views/dashboard.php:1693
+#: ../../../app/themes/Peafowl/views/settings.php:364
+#: ../../../content/pages/default/contact.php:87
+msgid "Name"
+msgstr "Név"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:5
+msgid "Category name"
+msgstr "Kategória neve"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:8
+#: ../../../app/themes/Peafowl/views/dashboard.php:486
+#: ../../../app/themes/Peafowl/views/dashboard.php:596
+#: ../../../app/themes/Peafowl/views/dashboard.php:876
+msgid "URL key"
+msgstr "Keresőbarát URL"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:9
+msgid "Category URL key"
+msgstr "Kategória keresőbarát URL-je"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:9
+msgid "Only letters, numbers, and hyphens"
+msgstr "Csak betűk, számok és kötőjelek"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:13
+msgid "Brief description of this category"
+msgstr "A kategória rövid és tömör leírása"
+
+#: ../../../app/themes/Peafowl/snippets/form_image.php:5
+msgid "Untitled image"
+msgstr "Névtelen kép"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
+msgid "Expiration date"
+msgstr "Lejárati dátum"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:10
+msgid "YYYY-MM-DD HH:MM:SS"
+msgstr "ÉÉÉÉ-HH-NN ÓÓ:PP:MM"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:10
+msgid "Example"
+msgstr "Példa"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:12
+msgid "Until which date this IP address will be banned? Leave it empty for no expiration."
+msgstr "Meddig kerüljön az IP cím bannolásra? Hagyja üresen, ha nem kíván megadni lejárati dátumot."
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:926
+#: ../../../content/pages/default/contact.php:111
+msgid "Message"
+msgstr "Üzenet"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:16
+msgid "Text message, HTML or a redirect URL"
+msgstr "Szöveges üzenet, HTML vagy átirányítási cím (URL)"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+msgid "Existing album"
+msgstr "Meglévő album"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "Album"
+msgstr[1] "Albumok"
+
+msgid "me"
+msgstr "én"
+
+msgid "link"
+msgstr "link"
+
+msgid "password"
+msgstr "jelszó"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "privát"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+msgid "create new album"
+msgstr "új album létrehozása"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:4
+msgid "Storage name"
+msgstr "Tároló neve"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:7
+msgid "API"
+msgstr "API"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:48
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:96
+msgid "Region"
+msgstr "Régió"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:58
+msgid "Storage bucket"
+msgstr "Tároló bucket"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:63
+msgid "Key"
+msgstr "Kulcs"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:64
+msgid "Storage key"
+msgstr "Tároló kulcsa"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:67
+msgid "Secret"
+msgstr "Titkos kulcs"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:68
+msgid "Storage secret"
+msgstr "Tároló titkos kulcs"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:73
+msgid "Client email"
+msgstr "Kliens e-mail"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:74
+msgid "Google Cloud client email"
+msgstr "Google Cloud kliens e-mail"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:75
+#, php-format
+msgid "You will need a <a %s>service account</a> for this."
+msgstr "Ehhez <a %s> szolgáltatás fiók</a> szükséges."
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:78
+msgid "Private key"
+msgstr "Privát kulcs"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:79
+msgid "Google Cloud JSON key"
+msgstr "Google Cloud JSON kulcs"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:84
+msgid "Identity URL"
+msgstr "Identity URL"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:85
+msgid "Identity API endpoint"
+msgstr "Identity API végpont"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:85
+msgid "API endpoint for OpenStack identity"
+msgstr "API végpont az OpenStack identityhez"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
+msgid "Storage region"
+msgstr "Tároló régió"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:100
+msgid "Container"
+msgstr "Konténer"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:101
+msgid "Storage container"
+msgstr "Tároló konténer"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:104
+msgid "Tenant id"
+msgstr "Tenant id"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:105
+msgid "Tenant id (account id)"
+msgstr "Tenant id (fiók azonosító)"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:108
+msgid "Tenant name"
+msgstr "Tenant név"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:109
+msgid "Tenant name (account name)"
+msgstr "Tenant név (fiók neve)"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:115
+msgid "Hostname or IP of the storage server"
+msgstr "A tároló szerver hostneve vagy IP címe"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
+msgid "Path"
+msgstr "Elérési út"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
+msgid "Server path"
+msgstr "Szerver útvonal"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
+msgid "Server path where the files will be stored"
+msgstr "A fájlok tárolási helyének elérési útvonala"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:123
+msgid "Server username"
+msgstr "Szerver felhasználónév"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:127
+msgid "Server password"
+msgstr "Szerver jelszó"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:132
+msgid "Storage capacity"
+msgstr "Tároló kapacitás"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:133
+msgid "Example: 20 GB, 1 TB, etc."
+msgstr "Példa: 20 GB, 1 TB, stb."
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:135
+msgid "This storage will be disabled when it reach this capacity. Leave it blank or zero for no limit."
+msgstr "A tároló inaktív lesz amint eléri ezt a mennyiséget. Hagyja üresen vagy adjon meg nullát a korlátlan értékhez."
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:139
+msgid "Storage URL"
+msgstr "Tároló URL"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:140
+msgid "The system will map the images of this storage to this URL."
+msgstr "A rendszer ehhez az URL-hez fogja rendelni a tároló képeit."
+
+#: ../../../app/themes/Peafowl/snippets/image_album_slice.php:14
+msgid "view more"
+msgstr "továbbiak megtekintése"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:22
+#: ../../../app/themes/Peafowl/snippets/templates_content_listing.php:6
+#: ../../../app/themes/Peafowl/snippets/templates_content_listing.php:9
+msgid "Load more"
+msgstr "Több betöltése"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:91
+msgid "Previous"
+msgstr "Előző"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:98
+msgid "Next"
+msgstr "Következő"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
+msgid "Select all"
+msgstr "Összes kijelölése"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:56
+msgid "Clear selection"
+msgstr "Kiválasztás megszüntetése"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:13
+msgid "Selection"
+msgstr "Kiválasztás"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:13
+msgid "Action"
+msgstr "Művelet"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:20
+msgid "Get embed codes"
+msgstr "Beillesztő kódok megjelenítése"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:38
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:85
+msgid "Assign category"
+msgstr "Kategória hozzárendelése"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:45
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:9
+msgid "Flag as safe"
+msgstr "Megjelölés mint biztonságos tartalom"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:607
+#: ../../../app/themes/Peafowl/views/dashboard.php:884
+#: ../../../app/themes/Peafowl/views/dashboard.php:933
+msgid "Delete"
+msgstr "Törlés"
+
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:5
+#, php-format
+msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
+msgstr "Az oldal szolgáltatásainak használatához be kell jelentkeznie. Ha még nincs fiókja <a href=\"%s\">létrehozhat egyet</a> most."
+
+#: ../../../app/themes/Peafowl/snippets/template_content_empty.php:5
+#: ../../../app/themes/Peafowl/views/dashboard.php:618
+#: ../../../app/themes/Peafowl/views/index.php:63
+msgid "There's nothing to show here."
+msgstr "Jelenleg nincs megjeleníthető tartalom."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
+#: ../../../app/themes/Peafowl/views/image.php:69
+#: ../../../app/themes/Peafowl/views/image.php:457
+msgid "Edit image details"
+msgstr "Képadatok szerkesztése"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
+#: ../../../app/themes/Peafowl/views/album.php:22
+#: ../../../app/themes/Peafowl/views/album.php:118
+msgid "Edit album details"
+msgstr "Album szerkesztése"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
+msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
+msgstr "Az összes kép át lesz helyezve az újonnan létrehozott albumba. Áthelyezheti még őket egy <a class=\"modal-switch\" data-switch=\"move-existing-album\">már meglévőbe</a> is."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:50
+msgid "Select an existing album to move the image. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the image there."
+msgstr "A kép áthelyezéséhez válasszon ki egy korábban létrehozott albumot. Esetleg ha szeretne, <a class=\"modal-switch\" data-switch=\"move-new-album\">készíthet egy újat</a> is."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:52
+msgid "Select an existing album to move the album contents. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the album contents there."
+msgstr "Válasszon ki egy korábban létrehozott albumot az áthelyezéshez. Ha szeretné <a class=\"modal-switch\" data-switch=\"move-new-album\">létrehozhat egy új albumot</a> is."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:71
+msgid "Select an existing album to move the images. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the images there."
+msgstr "Válasszon ki egy meglévő albumot a képek áthelyezéséhez. Esetleg ha szeretne, <a class=\"modal-switch\" data-switch=\"move-new-album\">létrehozhat egy újat</a> is."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:87
+msgid "All the selected images will be assigned to this category."
+msgstr "Az összes kiválasztott kép átkerül ebbe a kategóriába."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:92
+msgid "There is no categories."
+msgstr "Nincsenek kategóriák."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:97
+msgid "Confirm flag content as safe"
+msgstr "A megjelölés biztonságosként lépés megerősítése"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:98
+msgid "Do you really want to flag this content as safe?"
+msgstr "Biztos, hogy meg akarja jelölni, mint biztonságos tartalmat?"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:101
+msgid "Confirm flag content as unsafe"
+msgstr "A megjelölés korhatárosként lépés megerősítése"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:102
+msgid "Do you really want to flag this content as unsafe?"
+msgstr "Biztos, hogy meg akarja jelölni, mint korhatáros tartalmat?"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:106
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:110
+msgid "Confirm deletion"
+msgstr "Törlés megerősítése"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:107
+msgid "Do you really want to remove this content? This can't be undone."
+msgstr "Biztos, hogy törölni szeretné? A folyamat nem visszafordítható."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:111
+msgid "Do you really want to remove all the selected content? This can't be undone."
+msgstr "Biztos, hogy az összeset törölni szeretné? A folyamat nem visszafordítható."
+
+#: ../../../app/themes/Peafowl/tpl_list_item/image_description_owner.php:2
+#, php-format
+msgid "From %s"
+msgstr "Album: %s"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/image_description_user.php:2
+#, php-format
+msgid "by %u"
+msgstr "%u által"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
+#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
+#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
+msgid "Select"
+msgstr "Kiválasztás"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:7
+msgid "Toggle unsafe flag"
+msgstr "A nem biztonságos jelzés mutatása"
+
+#: ../../../app/themes/Peafowl/views/404.php:7
+msgid "The requested page was not found."
+msgstr "A kért oldal nem található."
+
+#: ../../../app/themes/Peafowl/views/404.php:11
+msgid "Search something else"
+msgstr "Keressen valami mást"
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+msgid "The user has been deleted"
+msgstr "A felhasználó törlésre került"
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+#: ../../../app/themes/Peafowl/views/album.php:134
+#: ../../../app/themes/Peafowl/views/user.php:171
+#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
+msgid "The content has been deleted."
+msgstr "A tartalom törlésre került."
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:7
+msgid "Your account is almost ready"
+msgstr "Az ön fiókja majdnem kész"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:9
+#, php-format
+msgid "An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "A fiókja aktiválására szolgáló üzenetet kiküldtük az e-mail címére (%s). Az aktiváló link csak 48 óráig érvényes. Amennyiben az üzenet nem érkezik meg ellenőrizze a spam szűrő beállításait."
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/logout.php:13
+#: ../../../app/themes/Peafowl/views/request-denied.php:13
+msgid "Go to homepage"
+msgstr "Ugrás a főoldalra"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+msgid "Resend activation"
+msgstr "Aktiváló üzenet újraküldése"
+
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:10
+#, php-format
+msgid "You have successfully changed your account email to %s"
+msgstr "Sikeresen megváltoztatta a fiókja e-mail címét a következőre: %s"
+
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+msgid "Go to my profile"
+msgstr "Ugrás a profilomhoz"
+
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:12
+msgid "A confirmation link will be sent to this email with details to activate your account."
+msgstr "Egy megerősítésre szolgáló hivatkozást küldünk erre az e-mail címre az aktiválás befejezéséhez szükséges lépésekkel."
+
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:16
+#: ../../../app/themes/Peafowl/views/settings.php:156
+#: ../../../content/pages/default/contact.php:93
+msgid "Your email address"
+msgstr "Az ön e-mail címe"
+
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:26
+msgid "Add email"
+msgstr "E-mail hozzáadása"
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
+msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "A jelszó visszaállítására vonatkozó instrukciókat tartalmazó üzenetet kiküldtük a regisztrációkor megadott e-mail címére. Ellenőrizze a spam mappát is."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+msgid "Resend instructions"
+msgstr "Instrukciók újraküldése"
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
+msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
+msgstr "A jelszó visszaállítási útmutatót tartalmazó üzenetet elküldtük. Ha nem érkezett meg kérjük ellenőrizze a levelezője spam mappáját."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:32
+msgid "Enter your username or the email address that you used to create your account."
+msgstr "Írja be a regisztrációkor megadott e-mail címét vagy felhasználónevét."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:52
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:47
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:37
+#: ../../../lib/Peafowl/peafowl.js:417 ../../../lib/Peafowl/peafowl.js:2324
+#: ../../../lib/Peafowl/peafowl.min.js:25
+#: ../../../lib/Peafowl/peafowl.min.js:140
+msgid "Submit"
+msgstr "Elküld"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:15
+msgid "Your password has been changed. You can now try logging in using your new password."
+msgstr "A jelszava megváltozott. A következő belépéskor az újonnan megadott jelszót használja."
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+msgid "Login now"
+msgstr "Bejelentkezés most"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:22
+msgid "Enter the new password that you want to use."
+msgstr "Írja be a használni kívánt új jelszót."
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:28
+msgid "New Password"
+msgstr "Új jelszó"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/settings.php:306
+#: ../../../app/themes/Peafowl/views/settings.php:323
+#: ../../../app/themes/Peafowl/views/signup.php:50
+#, php-format
+msgid "%d characters min"
+msgstr "Minimum %d karakter"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/settings.php:306
+msgid "Enter your new password"
+msgstr "Írja be az új jelszót"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
+#: ../../../app/themes/Peafowl/views/settings.php:328
+msgid "Confirm password"
+msgstr "Jelszó megerősítése"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:35
+#: ../../../app/themes/Peafowl/views/settings.php:312
+msgid "Re-enter your new password"
+msgstr "Az új jelszó még egyszer"
+
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:12
+#, php-format
+msgid "An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "A fiók aktiválásához szükséges instrukciókat tartalmazó üzenetet kiküldtük a következő címre: %s. n\\ Kérjük ellenőrizze a spam mappát is!"
+
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:19
+msgid "Enter the username or email address that you used to create your account to continue."
+msgstr "A folytatáshoz írja be a fiókja létrehozásakor megadott e-mail címet vagy felhasználónevet."
+
+#: ../../../app/themes/Peafowl/views/album.php:16
+#: ../../../app/themes/Peafowl/views/image.php:63
+msgid "This content is private"
+msgstr "Ez egy privát tartalom"
+
+#: ../../../app/themes/Peafowl/views/album.php:25
+msgid "Do you really want to delete this album and all of its images? This can't be undone."
+msgstr "Biztos, hogy törölni szeretné az albumot és a benne található összes képet? Ez a folyamat nem visszafordítható."
+
+#: ../../../app/themes/Peafowl/views/album.php:25
+msgid "Delete album"
+msgstr "Album Törlése"
+
+#: ../../../app/themes/Peafowl/views/album.php:86
+msgid "Album link"
+msgstr "Album link"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:22
+msgid "Image"
+msgid_plural "Images"
+msgstr[0] "Kép"
+msgstr[1] "Kép"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:34
+#: ../../../app/themes/Peafowl/views/dashboard.php:90
+#: ../../../app/themes/Peafowl/views/settings.php:126
+msgid "User"
+msgid_plural "Users"
+msgstr[0] "Felhasználó"
+msgstr[1] "Felhasználó"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:40
+#: ../../../app/themes/Peafowl/views/dashboard.php:1732
+msgid "Disk used"
+msgstr "Felhasznált tárterület"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:80
+#: ../../../app/themes/Peafowl/views/dashboard.php:84
+msgid "Add user"
+msgstr "Felhasználó hozzáadása"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:87
+#: ../../../app/themes/Peafowl/views/settings.php:121
+msgid "Role"
+msgstr "Jogosultság"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:89
+#: ../../../app/themes/Peafowl/views/settings.php:125
+msgid "Administrator"
+msgstr "Adminisztrátor"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:152
+#: ../../../app/themes/Peafowl/views/dashboard.php:156
+msgid "Add category"
+msgstr "Kategória hozzáadása"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:165
+#: ../../../app/themes/Peafowl/views/dashboard.php:169
+#: ../../../app/themes/Peafowl/views/image.php:219
+msgid "Add IP ban"
+msgstr "IP ban hozzáadása"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:178
+#: ../../../app/themes/Peafowl/views/dashboard.php:182
+msgid "Add storage"
+msgstr "Tároló hozzáadása"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:195
+msgid "Return to pages"
+msgstr "Vissza az oldalakhoz"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:222
+msgid "Website name"
+msgstr "Weboldal neve"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:227
+msgid "Website doctitle"
+msgstr "Weboldal címe (doctitle)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:231
+msgid "Website description"
+msgstr "Weboldal meta leírása"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:236
+msgid "Website keywords"
+msgstr "Weboldal kulcsszavai"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:257
+msgid "Default time zone"
+msgstr "Alapértelmezett időzóna"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:261
+#: ../../../app/themes/Peafowl/views/settings.php:250
+msgid "Select region"
+msgstr "Régió kiválasztása"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:344
+msgid "Personal mode target user"
+msgstr "Személyes mód célfelhasználója"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:345
+#: ../../../app/themes/Peafowl/views/settings.php:69
+msgid "User ID"
+msgstr "Azonosító"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:345
+#: ../../../app/themes/Peafowl/views/dashboard.php:1514
+#, php-format
+msgid "Your user id is: %s"
+msgstr "Az ön felhasználó azonosítója: %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:347
+msgid "Numeric ID of the target user for personal mode."
+msgstr "A kiválasztott felhasználó numerikus azonosítója a személyes módhoz."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:350
+msgid "Personal mode routing"
+msgstr "Személyes mód hozzárendelés"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:353
+msgid "Custom route to map /username to /something. Use \"/\" to map to homepage."
+msgstr "Egyedi hozzárendelés (/felhasználónév -> /valami). A kezdőlaphoz rendeléshez írjon perjelet \"/\"."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:363
+msgid "Website privacy mode"
+msgstr "Weboldal tartalomkorlátozási módja"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:370
+msgid "Private mode will make the website only available for registered users."
+msgstr "A privát mód csak a regisztrált felhasználók számára teszi elérhetővé a weboldalt."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:376
+msgid "Content privacy mode"
+msgstr "Privát tartalom mód"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:380
+#: ../../../app/themes/Peafowl/views/dashboard.php:1225
+#: ../../../app/themes/Peafowl/views/dashboard.php:1463
+msgid "Default"
+msgstr "Alapértelmezett"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:381
+msgid "Force private (self)"
+msgstr "Kényszerített privát"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:382
+msgid "Force private (anyone with the link)"
+msgstr "Kényszerített privát (csak a linkkel rendelkező felhasználóknak)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:387
+msgid "Forced privacy modes will override user selected privacy."
+msgstr "A kényszerített tartalom mód felülírja a felhasználó által kiválasztott módot."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:442
+msgid "Page title"
+msgstr "Oldal címe"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:447
+msgid "Page status"
+msgstr "Oldal státusza"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:450
+msgid "Active page"
+msgstr "Aktív oldal"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:450
+#, php-format
+msgid "Inactive page (%s)"
+msgstr "Inaktív oldal (%s)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:454
+msgid "Only active pages will be accessible."
+msgstr "Csak az aktív oldalak érhetőek el."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:458
+#: ../../../app/themes/Peafowl/views/dashboard.php:595
+msgid "Type"
+msgstr "Típus"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:475
+msgid "Page visibility"
+msgstr "Oldal láthatósága"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:478
+msgid "Visible page"
+msgstr "Látható oldal"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:478
+msgid "Hidden page"
+msgstr "Rejtett oldal"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:482
+msgid "Hidden pages won't be show in system menus, but anyone can access to it with the link."
+msgstr "A rejtett oldalak nem látszanak a menüben, de a linkkel rendelkezők meg tudják nyitni őket."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:487
+msgid "Only alphanumerics, hyphens and forward slash"
+msgstr "Csak betűk, számok, kötőjel és perjel (/)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:489
+#, php-format
+msgid "Page URL key relative to %s"
+msgstr "Az oldal URL kulcs relatív ehhez: %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:493
+msgid "File path"
+msgstr "Fájl útvonal"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:498
+#, php-format
+msgid "A %f file relative to %s"
+msgstr "Egy %f fájl relatív a következőhöz: %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:503
+msgid "Meta keywords"
+msgstr "Meta kulcsszavak"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:509
+msgid "Meta description"
+msgstr "Meta leírás"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:515
+msgid "Source code"
+msgstr "Forráskód"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:519
+#, php-format
+msgid "No write permission in %s path you will need to add this file using an external editor."
+msgstr "Nincs írási engedély a(z) %s útvonalhoz tehát külső szerkesztő segítségével kell hozzáadnia ezt a fájlt."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:525
+#, php-format
+msgid "No write permission in %s you will need to edit the contents of this file using an external editor."
+msgstr "Nincs írási engedély a(z) %s fájlhoz tehát külső szerkesztő segítségével kell módosítania a tartalmát."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:532
+#, php-format
+msgid "Taken from: %s"
+msgstr "Származási hely: %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:546
+msgid "Link URL"
+msgstr "Link URL"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:555
+msgid "Link target attribute"
+msgstr "Link cél attribútum (target)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:562
+#, php-format
+msgid "Select %s to open the page or link in a new window."
+msgstr "Válassza ki a(z) %s értéket az oldal vagy link új ablakban történő megnyitásához."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:566
+msgid "Link rel attribute"
+msgstr "Link rel attribútum"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:567
+#: ../../../app/themes/Peafowl/views/dashboard.php:574
+msgid "Only alphanumerics, hyphens and whitespaces"
+msgstr "Csak betűk, számok, kötőjel és szóközök"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:569
+#, php-format
+msgid "HTML &lt;a&gt; %s attribute"
+msgstr "HTML &lt;a&gt;%s attribútum"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:573
+msgid "Link icon"
+msgstr "Link ikon"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:576
+#, php-format
+msgid "Check the <a %s>icon reference</a> for the complete list of supported icons."
+msgstr "Tekintse meg a(z) <a %s> ikon útmutatót</a> a támogatott ikonok teljes listájáért."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:580
+msgid "Sort order display"
+msgstr "Megjelenítési sorrend"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:583
+msgid "Page sort order display for menus and listings. Use \"1\" for top priority."
+msgstr "Az oldalak megjelenítési sorrendje a menüben és a listákban. Adja meg az \"1\" értéket a magasabb prioritáshoz."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:607
+#, php-format
+msgid "Do you really want to delete the page ID %s? This can't be undone."
+msgstr "Biztos, hogy törölni akarja a(z) %s azonosítóval rendelkező oldalt? A művelet nem visszavonható."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:630
+msgid "Enable uploads"
+msgstr "Feltöltések engedélyezése"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:636
+msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
+msgstr "Kapcsolja be, ha szeretné engedélyezni a képfeltöltéseket. Ez az opció nem vonatkozik az adminisztrátorokra."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:639
+msgid "Guest uploads"
+msgstr "Vendég feltöltés"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+msgid "Enable this if you want to allow non registered users to upload."
+msgstr "Engedélyezze ha szeretné, hogy nem regisztrált felhasználók is tudjanak feltölteni."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:649
+msgid "Enable expirable uploads"
+msgstr "Automatikusan törlődő feltöltések engedélyezése"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:655
+msgid "Enable this if you want to allow uploads with an automatic delete option."
+msgstr "Engedélyezze, ha szeretné, hogy a feltöltésekhez megadható legyen automatikus törlési időpont."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:661
+#: ../../../app/themes/Peafowl/views/settings.php:183
+msgid "Image Exif data"
+msgstr "Kép Exif adatok"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:665
+msgid "Keep"
+msgstr "Megőriz"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:670
+#, php-format
+msgid "Select the default setting for image <a %s>Exif data</a> on upload."
+msgstr "Válassza ki az alapértelmezett beállításokat a kép <a %s>Exif adataihoz</a> feltöltéskor."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:674
+msgid "Image Exif data (user setting)"
+msgstr "Kép Exif adatai (felhasználói beállítás)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:683
+msgid "Enable this if you want to allow each user to configure how image Exif data will be handled."
+msgstr "Engedélyezze, ha szeretné, hogy a felhasználók maguk állíthassák be az Exif beállításokat."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:689
+msgid "Max. filesize"
+msgstr "Max. fájlméret"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:692
+#, php-format
+msgid "Max. allowed filesize. (Max allowed by server is %s)"
+msgstr "A maximum engedélyezett fájlméret. (A szerver által engedett maximum: %s)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:695
+msgid "Image path"
+msgstr "A képek útvonala"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:696
+msgid "Relative to Chevereto root"
+msgstr "Relatív a Chevereto gyökérkönyvtárához"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:698
+msgid "Where to store the images? Relative to Chevereto root."
+msgstr "Hol tároljuk a képeket? Az útvonal relatív kell legyen a Chevereto gyökérkönyvtárához."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:701
+msgid "Storage mode"
+msgstr "Tároló mód"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:704
+msgid "Datefolders"
+msgstr "Dátum mappák"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:704
+msgid "Direct"
+msgstr "Direkt"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:707
+#, php-format
+msgid "Datefolders creates %s structure"
+msgstr "A dátum mappák a következő struktúrát hozzák létre: %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:710
+msgid "File naming method"
+msgstr "Fájl elnevezési módszer"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:713
+msgid "Original"
+msgstr "Eredeti"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:713
+msgid "Mix original + random"
+msgstr "Az eredeti és véletlen keverése"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:716
+msgid "\"Original\" will try to keep the image source name while \"Random\" will generate a random name. \"ID\" will name the image just like the image ID."
+msgstr "Az \"eredeti\" megpróbálja megtartani a kép eredeti nevét míg a \"véletlen\" generál egy vegyes karakterekből álló nevet. Az \"ID\" elnevezi a képet egy azonosító alapján."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:722
+msgid "Thumb size"
+msgstr "Miniatűrök mérete"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:733
+msgid "Thumbnails will be fixed to this size."
+msgstr "A miniatűrök ekkora méretben fognak megjelenni."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:747
+msgid "Watermarks"
+msgstr "Vízjelek"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:754
+msgid "Enable this to put a logo or anything you want in image uploads."
+msgstr "Engedélyezze, ha szeretne logót vagy képet elhelyezni a feltöltéseken."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:761
+#: ../../../app/themes/Peafowl/views/dashboard.php:1238
+#, php-format
+msgid "Warning: Can't write in %s"
+msgstr "Figyelem: Nem sikerült írni a következőbe: %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:767
+msgid "Watermark user toggles"
+msgstr "Vízjel felhasználó beállításai"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:770
+msgid "Enable watermark on guest uploads"
+msgstr "Vízjel engedélyezése a vendég feltöltéseknél"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:775
+msgid "Enable watermark on user uploads"
+msgstr "Vízjel engedélyezése a felhasználók feltöltéseinél"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:780
+msgid "Enable watermark on admin uploads"
+msgstr "Vízjel engedélyezése az admin feltöltéseinél"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:786
+msgid "Watermark file toggles"
+msgstr "Vízjel fájl beállításai"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:789
+msgid "Enable watermark on GIF image uploads"
+msgstr "Vízjel engedélyezése a GIF feltöltéseknél"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:795
+msgid "Minimum image size needed to apply watermark"
+msgstr "A vízjelhez szükséges minimális képméret"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:806
+msgid "Images smaller than this won't be watermarked. Use zero (0) to don't set a minimum image size limit."
+msgstr "Az ennél kisebb méretű képekre nem fog kerülni vízjel. Adjon meg nullát (0), ha nem szeretne beállítani méretkorlátozást."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:810
+msgid "Watermark image"
+msgstr "Vízjel képe"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:816
+msgid "You will get best results with plain logos with drop shadow. You can use a large image if the file size is not that big (recommended max. is 16KB). Must be a PNG."
+msgstr "A legjobb eredményt az egyszerű (vetett árnyékos) logóval tudja elérni. Nagyobb képet is használhat, ha a fájlméret megfelelő (az ajánlott maximum 16KB). PNG használata kötelező."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:819
+msgid "Watermark position"
+msgstr "A vízjel pozíciója"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:823
+msgid "left top"
+msgstr "bal felül"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:824
+msgid "left center"
+msgstr "bal középen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:825
+msgid "left bottom"
+msgstr "bal alul"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:826
+msgid "center top"
+msgstr "középen felül"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:827
+msgid "center center"
+msgstr "közép közép"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:828
+msgid "center bottom"
+msgstr "közép alul"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:829
+msgid "right top"
+msgstr "jobb felül"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:830
+msgid "right center"
+msgstr "jobb középen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:831
+msgid "right bottom"
+msgstr "jobb alul"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:836
+msgid "Relative position of the watermark image. First horizontal align then vertical align."
+msgstr "A vízjel képének relatív pozíciója. Az első érték a horizontális, a második a vertikális pozíció."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:839
+msgid "Watermark percentage"
+msgstr "Vízjel mérete"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:844
+msgid "Watermark percentual size relative to the target image area. Values 1 to 100."
+msgstr "A vízjel százalékos mérete a képhez viszonyítva. Megadható érték: 1-100."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:847
+msgid "Watermark margin"
+msgstr "A vízjel margója"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:852
+msgid "Margin from the border of the image to the watermark image."
+msgstr "Margó a kép szélétől számítva a vízjelig."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:855
+msgid "Watermark opacity"
+msgstr "Vízjel átlátszósága"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:860
+msgid "Opacity of the watermark in the final watermarked image. Values 0 to 100."
+msgstr "A vízjel átlátszósága a végső vízjelezett képen. Az értéke 0 és 100 között lehet."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:884
+#, php-format
+msgid "Do you really want to delete the %s category? This can't be undone."
+msgstr "Biztos, hogy törölni akarja a(z) %s kategóriát? A művelet nem visszavonható."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:900
+msgid "Note: Deleting a category doesn't delete the images that belongs to that category."
+msgstr "Megjegyzés: A kategóriában található képek nem törlődnek a kategória törlésével."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:902
+msgid "Edit category"
+msgstr "Kategória szerkesztése"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:925
+msgid "Expires"
+msgstr "Lejár"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:933
+#, php-format
+msgid "Do you really want to remove the ban to the IP %s? This can't be undone."
+msgstr "Biztosan el szeretné távolítani a tiltást a következő IP címről? %s A folyamat nem visszafordítható."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:947
+msgid "Banned IP address will be forbidden to use the entire website."
+msgstr "A bannolt IP cím tulajdonosa képtelen lesz hozzáférni a weboldalhoz."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:949
+msgid "Edit IP ban"
+msgstr "IP ban szerkesztése"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:959
+msgid "Enable signups"
+msgstr "Regisztráció engedélyezése"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:965
+msgid "Enable this if you want to allow users to signup."
+msgstr "Engedélyezze, ha szeretné, hogy a látogatók regisztrálhassanak."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:972
+msgid "Username routing"
+msgstr "Felhasználónév útvonal"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:978
+#, php-format
+msgid "Enable this if you want to use %s/username URLs instead of %s/user/username."
+msgstr "Engedélyezze ha szeretné, hogy a felhasználó URL %s/felhasználónév legyen %s/user/felhasználónév helyett."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:983
+msgid "Require email confirmation"
+msgstr "E-mail megerősítés szükséges"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:989
+msgid "Enable this if users must validate their email address on sign up."
+msgstr "Engedélyezze, ha szeretné, hogy a felhasználóknak meg kelljen erősíteni az e-mail címüket regisztrációkor."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:992
+msgid "Require email for social signup"
+msgstr "E-mail szükséges a közösségi oldalakkal történő regisztrációhoz."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:998
+msgid "Enable this if users using social networks to register must provide an email address."
+msgstr "Engedélyezze, ha a közösségi oldalakon át érkező regisztrációkhoz szükséges legyen e-mail cím megadása."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1004
+msgid "User avatar max. filesize"
+msgstr "Felhasználó avatárjának maximális fájlmérete"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1007
+#, php-format
+msgid "Max. allowed filesize for user avatar image. (Max allowed by server is %s)"
+msgstr "A maximális engedélyezett méret a felhasználó avatárjához. (A szerver által engedélyezett maximum: %s)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1010
+msgid "User background max. filesize"
+msgstr "A felhasználó hátterének maximális fájlmérete"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1013
+#, php-format
+msgid "Max. allowed filesize for user background image. (Max allowed by server is %s)"
+msgstr "A maximális engedélyezett méret a felhasználó hátteréhez. (A szerver által engedélyezett maximum: %s)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1019
+msgid "Block image uploads by IP if the system notice a flood  behavior based on the number of uploads per time period. This setting doesn't affect administrators."
+msgstr "Tiltja a képfeltöltést (IP alapján) ha a rendszer túl sok feltöltési kérést észlel egy megadott időintervallum alatt. Ez a beállítás nem vonatkozik az adminisztrátorokra."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1031
+msgid "Notify to email"
+msgstr "Értesítés e-mailben"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1037
+msgid "If enabled the system will send an email on flood incidents."
+msgstr "Engedélyezése esetén a rendszer e-mail üzenetet fog küldeni feltöltési (flood) támadás esetén."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1040
+msgid "Minute limit"
+msgstr "Percenkénti limit"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1045
+msgid "Hourly limit"
+msgstr "Óránkénti limit"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1050
+msgid "Daily limit"
+msgstr "Napi limit"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1055
+msgid "Weekly limit"
+msgstr "Heti limit"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1060
+msgid "Monthly limit"
+msgstr "Havi limit"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1070
+msgid "Show not safe content in listings"
+msgstr "A korhatáros tartalom megjelenítése"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1076
+msgid "Enable this if you want to show not safe content in listings. This setting doesn't affect administrators and can be overridden by user own settings."
+msgstr "Engedélyezze, ha szeretné megjeleníteni a korhatáros tartalmakat a képek között. Ez a beállítás nem vonatkozik az adminisztrátorokra és a felhasználók felülírhatják a beállításaik között."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1079
+msgid "Blur NSFW content in listings"
+msgstr "A korhatáros tartalom elmosása a feltöltések között"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1085
+msgid "Enable this if you want to apply a blur effect on the NSFW images in listings."
+msgstr "Engedélyezése esetén a korhatáros képek elmosódva (kivehetetlenül) fognak látszódni a feltöltési listában."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1088
+msgid "Show banners in not safe content"
+msgstr "Mutassa a bannereket a korhatáros tartalmak között"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1094
+msgid "Enable this if you want to show banners in not safe content pages."
+msgstr "Engedélyezze, ha szeretné, hogy megjelenjenek a bannerek a korhatáros tartalmak között."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1098
+msgid "Show not safe content in random mode"
+msgstr "Mutassa a korhatáros tartalmat a \"véletlen\" módban"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1109
+msgid "List items per page"
+msgstr "Oldalak szerinti listázás"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1112
+msgid "How many items should be displayed per page listing."
+msgstr "Hány elem kerüljön megjelenítésre a listázás során."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1116
+msgid "List pagination mode"
+msgstr "Képek lapozásának módja"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1119
+msgid "Endless scrolling"
+msgstr "Végtelen görgetés"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1119
+msgid "Classic pagination"
+msgstr "Klasszikus lapozás"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1123
+msgid "What pagination method should be used."
+msgstr "Kiválaszthatja az önnek leginkább tetsző navigációs megoldást."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1127
+msgid "Image listing size"
+msgstr "Kép listázás méret"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1130
+msgid "Fluid"
+msgstr "Fluid"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1130
+msgid "Fixed"
+msgstr "Fix"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1134
+msgid "Both methods use a fixed width but fluid method uses automatic heights."
+msgstr "Mind a két opció fix szélességet használ, a \"fluid\" azonban automatán számolja ki a magasságot."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1140
+msgid "Listing columns number"
+msgstr "Képlista oszlopszáma"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1141
+msgid "Here you can set how many columns are used based on each target device."
+msgstr "Itt beállíthatja hány oszlop jelenjen meg az eszközökön."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1143
+msgid "Phone"
+msgstr "Telefon"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1147
+msgid "Phablet"
+msgstr "Phablet"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1151
+msgid "Tablet"
+msgstr "Tablet"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1155
+msgid "Laptop"
+msgstr "Laptop"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1159
+msgid "Desktop"
+msgstr "Asztali gép"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1167
+#, php-format
+msgid "Put your themes in the %s folder"
+msgstr "Helyezd a sablonokat a %s mappába"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1186
+msgid "Tone"
+msgstr "Séma"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1189
+msgid "Light"
+msgstr "Világos"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1189
+msgid "Dark"
+msgstr "Sötét"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1196
+msgid "Main color"
+msgstr "Alap szín"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1197
+msgid "Hexadecimal color value"
+msgstr "Hexadecimális színkód"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1199
+#, php-format
+msgid "Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>."
+msgstr "Ezt használhatja a téma alapszínének megadásához. Az értéknek <a href=\"%s\" target=\"_blank\">hexa formátumban</a> kell lennie."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1203
+msgid "Top bar color"
+msgstr "Felső sáv színe"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1223
+#: ../../../app/themes/Peafowl/views/dashboard.php:1461
+msgid "Black"
+msgstr "Fekete"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1224
+#: ../../../app/themes/Peafowl/views/dashboard.php:1462
+msgid "White"
+msgstr "Fehér"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1210
+msgid "If you set this to \"white\" the top bar and all the black tones will be changed to white tones."
+msgstr "Ha ezt fehér színre állítja, akkor a felső sáv és az összes sötét tónus fehérre fog váltani."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1214
+msgid "Top bar button color"
+msgstr "Felső sáv gombjainak színe"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1218
+#: ../../../app/themes/Peafowl/views/dashboard.php:1456
+msgid "Blue"
+msgstr "Kék"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1219
+#: ../../../app/themes/Peafowl/views/dashboard.php:1457
+msgid "Green"
+msgstr "Zöld"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1220
+#: ../../../app/themes/Peafowl/views/dashboard.php:1458
+msgid "Orange"
+msgstr "Narancs"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1221
+#: ../../../app/themes/Peafowl/views/dashboard.php:1459
+msgid "Red"
+msgstr "Piros"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1222
+#: ../../../app/themes/Peafowl/views/dashboard.php:1460
+msgid "Grey"
+msgstr "Szürke"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1230
+msgid "Color for the top bar buttons like the \"Create account\" button."
+msgstr "A felső sáv gombjainak színe (példa: \"Fiók létrehozása\" gomb)."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1244
+msgid "Enable vector logo"
+msgstr "A vektoros logó bekapcsolása"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1251
+msgid "Enable vector logo for high quality logo in devices with high pixel density."
+msgstr "Bekapcsolja a vektoros logót a nagyobb pixelsűrűségű eszközökön a jobb minőség érdekében."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1256
+#: ../../../app/themes/Peafowl/views/dashboard.php:1418
+msgid "Vector logo image"
+msgstr "Vektor logó"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1262
+msgid "Vector version or your website logo in SVG format."
+msgstr "A weboldal logójának vektoros változata SVG formátumban."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1268
+#: ../../../app/themes/Peafowl/views/dashboard.php:1428
+msgid "Raster logo image"
+msgstr "Sima logó"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1274
+msgid "Bitmap version or your website logo. PNG format is recommended."
+msgstr "A logó hétköznapi verziója. Az ajánlott formátum a PNG."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1278
+msgid "Logo height"
+msgstr "Logo magasság"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1279
+#: ../../../app/themes/Peafowl/views/dashboard.php:1514
+msgid "No value"
+msgstr "Nincs érték"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1281
+msgid "Use this to set the logo height if needed."
+msgstr "Itt állíthatja be a logo magasságát, ha szükséges."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1287
+msgid "Favicon image"
+msgstr "A favicon képe"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1293
+msgid "Favicon image. Image must have same width and height."
+msgstr "Favicon kép. A magasságnak és szélességnek egyeznie kell."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1299
+msgid "Enable download button"
+msgstr "A letöltés gomb engedélyezése"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1305
+msgid "Enable this if you want to show the image download button."
+msgstr "Engedélyezze, ha szeretné, hogy megjelenjen a letöltés gomb a képek mellett."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1309
+msgid "Enable right click on image"
+msgstr "Jobb kattintás engedélyezése a képeken"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1315
+msgid "Enable this if you want to allow right click on image viewer page."
+msgstr "Engedélyezze, ha szeretné, hogy engedélyezett legyen a jobb kattintás a képmegjelenítő felületen."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1321
+msgid "Enable show Exif data"
+msgstr "Exif adatok mutatásának engedélyezése"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1327
+msgid "Enable this if you want to show image Exif data."
+msgstr "Engedélyezze, ha szeretné, hogy megjelenjenek az Exif adatok."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1333
+msgid "Enable social share"
+msgstr "Közösségi megosztás engedélyezése"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1339
+msgid "Enable this if you want to show social network buttons to share content."
+msgstr "Engedélyezze, ha szeretné megjeleníteni a közösségi megosztás gombokat."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1343
+msgid "Enable embed codes (content)"
+msgstr "Beillesztő kódok engedélyezése (tartalom)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1349
+msgid "Enable this if you want to show embed codes for the content."
+msgstr "Engedélyezze, ha szeretné megjeleníteni a beillesztő kódokat a tartalomhoz."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1353
+msgid "Enable embed codes (uploader)"
+msgstr "Beillesztő kódok engedélyezése (feltöltő)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1359
+msgid "Enable this if you want to show embed codes when upload gets completed."
+msgstr "Engedélyezze, ha szeretné megjeleníttetni a beillesztő kódokat a feltöltés végén."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1365
+msgid "Not safe content checkbox in uploader"
+msgstr "Lehetőség a korhatáros tartalom megjelölésére a feltöltés során"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1371
+msgid "Enable this if you want to show a checkbox to indicate not safe content upload."
+msgstr "Engedélyezze, ha szeretne megjeleníteni egy kiválasztó gombot a korhatáros tartalom megjelölésére feltöltések esetén."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1377
+msgid "Custom CSS code"
+msgstr "Saját CSS kód"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1378
+msgid "Put your custom CSS code here. It will be placed as <style> just before the closing </head> tag."
+msgstr "Ide írja a saját CSS kódját. Ez <style> formátumban kerül beillesztésre a záró </head> tag elé."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1382
+msgid "Custom JS code"
+msgstr "Saját JS kód"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1383
+msgid "Put your custom JS code here. It will be placed as <script> just before the closing </head> tag."
+msgstr "Ide írja a saját JS kódját. Ez <script> formátumban kerül beillesztésre a záró </head> tag elé."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1390
+msgid "Style"
+msgstr "Stílus"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1394
+msgid "Landing page"
+msgstr "Kezdőoldal"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1395
+msgid "Split landing + images"
+msgstr "Kezdőoldal + képek"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1396
+msgid "Route explore"
+msgstr "Route explore"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1401
+#, php-format
+msgid "Select the homepage style. To customize it further edit app/themes/%s/views/index.php"
+msgstr "Válassza ki a kezdőlap stílusát. További módosításhoz szerkessze az app/themes/%s/views/index.php fájlt."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1406
+msgid "Cover image"
+msgstr "Borítókép"
+
+#: ../../../app/themes/Peafowl/views/image.php:72
+msgid "Do you really want to delete this image? This can't be undone."
+msgstr "Biztos, hogy törölni szeretné ezt a képet? A folyamat nem visszafordítható."
+
+#: ../../../app/themes/Peafowl/views/image.php:72
+msgid "Delete image"
+msgstr "Kép törlése"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1424
+msgid "Vector version or your website logo in SVG format (only for homepage)."
+msgstr "A weboldal logója vektoros formátumban (csak a kezdőlaphoz)."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1434
+msgid "Bitmap version or your website logo (only for homepage). PNG format is recommended."
+msgstr "A weboldal logójának bitmap verziója (csak a kezdőlaphoz). PNG formátum ajánlott."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1441
+#: ../../../app/themes/Peafowl/views/dashboard.php:1446
+#, php-format
+msgid "This will be added inside the homepage %s tag. Leave it blank to use the default contents."
+msgstr "Ez lesz hozzáadva a kezdőlap %s tagjéhez. Hagyja üresen az alapértelmezett tartalom használatához."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1445
+#: ../../../app/themes/Peafowl/views/settings.php:440
+msgid "Paragraph"
+msgstr "Bekezdés"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1452
+msgid "Call to action button color"
+msgstr "Az \"akciógomb\" színe"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1468
+msgid "Color of the homepage call to action button."
+msgstr "A kezdőlapon megjelenő \"akciógomb\" színe."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1472
+msgid "Call to action outline style button"
+msgstr "Az \"akciógomb\" külső stílua"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1479
+msgid "Enable this to use outline style for the homepage call to action button."
+msgstr "Engedélyezze, hogy külső stílust adjon meg a kezdőlapi \"akciógombnak\"."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1483
+msgid "Call to action functionality"
+msgstr "Akciógomb funkció"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1487
+msgid "Trigger uploader"
+msgstr "Feltöltő aktiválása"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1488
+msgid "Open URL"
+msgstr "Link megnyitása"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1497
+msgid "Call to action URL"
+msgstr "Akciógomb URL"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1498
+msgid "Enter an absolute or relative URL"
+msgstr "Adjon meg egy abszolút vagy relatív URL-t"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1500
+msgid "A relative URL like %r will be mapped to %l"
+msgstr "Egy relatív URL mint például %r lesz hozzárendelve a következőhöz: %l"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1506
+msgid "Call to action HTML"
+msgstr "Akciógomb HTML"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1507
+msgid "This will be added inside the call to action <a> tag. Leave it blank to use the default contents."
+msgstr "Ez lesz hozzáadva az akciógomb <a> tagjához. Hagyja üresen az alapértelmezett tartalom használatához."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1513
+msgid "User IDs"
+msgstr "Felhasználó azonosítók"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1524
+msgid "Here you can set the codes for the predefined ad spaces."
+msgstr "Itt tudja megadni a hirdetések kódjait."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1570
+msgid "Minify code"
+msgstr "Kód tömörítése"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1576
+msgid "Enable this if you want to auto minify CSS and JS code."
+msgstr "Engedélyezze, ha szeretné, hogy az oldal automatikusan tömörítse a CSS és JS kódot."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1579
+msgid "Maintenance"
+msgstr "Karbantartás"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1585
+msgid "When enabled the website will show a maintenance message. This setting doesn't affect administrators."
+msgstr "Bekapcsolása esetén a látogatók számára egy karbantartásra figyelmeztető üzenetet jelenik meg. Az admnisztrátorok továbbra is megtekinthetik az oldalt."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1565
+msgid "Crypt salt"
+msgstr "Crypt salt"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1567
+msgid "This is the salt used to convert numeric ID to alphanumeric. It was generated on install."
+msgstr "Ez a 'salt' konvertálja a numerikus azonosítót alfanumerikussá. A telepítéskor került létrehozásra."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1589
+msgid "PHP error reporting"
+msgstr "PHP hibajelentés"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1595
+#, php-format
+msgid "Enable this if you want to print errors generated by PHP <a %s>error_reporting()</a>. This should be disabled in production."
+msgstr "Engedélyezze, ha szeretné látni a PHP <a %s>error_reporting()</a> által generált hibákat. Éles oldalnál ajánlott kikapcsolva tartani."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1598
+msgid "Debug level"
+msgstr "Hibakeresési szint"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1601
+msgid "None"
+msgstr "Nincs"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1601
+msgid "Error log"
+msgstr "Hibák logolása"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1601
+msgid "Print errors without error log"
+msgstr "Hibák megjelenítése logolás nélkül"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1601
+msgid "Print and log errors"
+msgstr "Mutassa és logolja is a hibákat"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1604
+#, php-format
+msgid "To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)."
+msgstr "A hibakeresési szint beállításához olvassa el a <a %s>hibakeresési dokumentációt</a>. Az alapértelmezett beállítás a \"Hibák logolása\" (1)."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1611
+msgid "Default language"
+msgstr "Alapértelmezett nyelv"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1620
+msgid "Default base language to use."
+msgstr "Az alapértelmezetten használt nyelv."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1624
+msgid "Auto language"
+msgstr "Automata nyelvváltás"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1630
+msgid "Enable this if you want to automatically detect and set the right language for each user."
+msgstr "Engedélyezze, ha szeretné, hogy a felhasználók számára automatikusan beállításra kerüljön az oldalon használt nyelv."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1634
+msgid "Language chooser"
+msgstr "Nyelvválasztó"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1640
+msgid "Enable this if you want to allow language selection."
+msgstr "Engedélyezze, ha szeretné engedélyezni a nyelvválasztást."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1647
+msgid "Enabled languages"
+msgstr "Engedélyezett nyelvek"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1656
+msgid "Unchecked languages won't be used in your website."
+msgstr "A nem kijelölt nyelvek nem fognak megjelenni a weboldalon."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1679
+msgid "Toggle this to enable or disable HTTPS"
+msgstr "Engedélyezze, hogy be/kikapcsolja a HTTPS-t"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1680
+msgid "Toggle this to enable or disable this storage"
+msgstr "Engedélyezze, hogy be/kikapcsolja ezt a tárolót"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1696
+msgid "Quota"
+msgstr "Kvóta"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1698
+msgid "Active"
+msgstr "Aktív"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1731
+msgid "Storage method"
+msgstr "Tárolási módszer"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1742
+msgid "Local storage is used by default or when no external storage is active."
+msgstr "A helyi tároló az alapértelmezetten használt mód (abban az esetben is, ha nincs aktív külső tároló)."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1742
+#, php-format
+msgid "If you need help check the <a %s>storage documentation</a>."
+msgstr "Ha segítségre lenne szüksége olvassa el a <a %s>tároló dokumentációt</a>."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1744
+msgid "Edit storage"
+msgstr "Tároló szerkesztése"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1754
+msgid "From name"
+msgstr "Küldő neve"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1757
+msgid "Sender name for emails sent to users."
+msgstr "Ez lesz a küldő neve a felhasználóknak kiküldött üzenetekben."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1772
+msgid "Email mode"
+msgstr "E-mail mód"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1779
+msgid "How to send emails? SMTP recommended."
+msgstr "Hogyan küldjük ki az e-maileket? Ajánlott: SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1784
+msgid "SMTP server and port"
+msgstr "SMTP szerver és port"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1787
+msgid "SMTP server"
+msgstr "SMTP szerver"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1800
+msgid "SMTP username"
+msgstr "SMTP felhasználónév"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1805
+msgid "SMTP password"
+msgstr "SMTP jelszó"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1810
+msgid "SMTP security"
+msgstr "SMTP biztonság"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1813
+msgid "Unsecured"
+msgstr "Nem biztonságos"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1824
+#: ../../../app/themes/Peafowl/views/dashboard.php:1825
+msgid "Send test email"
+msgstr "Teszt e-mail küldése"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1825
+msgid "test@somedomain.com"
+msgstr "teszt@domained.hu"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1826
+#, php-format
+msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
+msgstr "Használja ezt a beépített tesztet, hogy kipróbálja a rendszerüzenetek küldését. Az ajánlott módszer: %s."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1838
+msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
+msgstr "Ehhez szükséges egy <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook alkalmazás.</a>"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1843
+msgid "Facebook app id"
+msgstr "Facebook alkalmazás azonosító (ID)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1848
+msgid "Facebook app secret"
+msgstr "Facebook alkalmazás titkos kulcs (secret)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1864
+msgid "You need a <a href=\"https://apps.twitter.com\" target=\"_blank\">Twitter app</a> for this."
+msgstr "Ehhez egy <a href=\"https://apps.twitter.com\" target=\"_blank\">Twitter alkalmazás szükséges.</a>"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1869
+msgid "Twitter API key"
+msgstr "Twitter API kulcs"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1874
+msgid "Twitter API secret"
+msgstr "Twitter API titkos kulcs (secret)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1881
+msgid "Twitter account"
+msgstr "Twitter fiók"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1897
+msgid "You need a <a href=\"https://cloud.google.com/console\" target=\"_blank\">Google app</a> for this."
+msgstr "Ehhez egy <a href=\"https://cloud.google.com/console\" target=\"_blank\">Google alkalmazás szükséges.</a>"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1902
+msgid "Google client id"
+msgstr "Google kliens id"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1907
+msgid "Google client secret"
+msgstr "Google kliens titkos kulcs (secret)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1923
+msgid "You need a <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> for this."
+msgstr "Ehhez egy<a href=\"http://vk.com/dev\" target=\"_blank\">VK alkalmazás</a> szükséges."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1928
+msgid "VK client id"
+msgstr "VK kliens azonosító (ID)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1933
+msgid "VK client secret"
+msgstr "VK kliens titkos kulcs (secret)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1949
+#, php-format
+msgid "CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s."
+msgstr "A CDN segítségével áttöltheti a weboldala statikus tartalmait több külső szerverre a sebesség növelése érdekében. Ha még nincs CDN szolgáltatója akkor próbálja ki a következőt: %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1968
+#, php-format
+msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
+msgstr "Ehhez szüksége lesz egy <a href=\"%s\" target=\"_blank\">reCAPTCHA kulcsra</a>."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1974
+msgid "reCAPTCHA public key"
+msgstr "reCAPTCHA publikus kulcs"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1979
+msgid "reCAPTCHA private key"
+msgstr "reCAPTCHA privát kulcs"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1986
+msgid "reCAPTCHA threshold"
+msgstr "reCAPTCHA tűréshatár"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1991
+msgid "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA."
+msgstr "Hány hibás próbálkozás legyen szükséges a reCAPTCHA megjelenéséhez? Nulla (0) használata esetén mindig meg fog jelenni."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1997
+msgid "Comment code"
+msgstr "Komment kód"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1998
+msgid "Disqus, Facebook or anything you want. It will be used in image view."
+msgstr "Disqus, Facebook vagy bármi más amit szeretne. A képnézetben kerül megjelenítésre."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2002
+msgid "Analytics code"
+msgstr "Analytics kód"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2003
+msgid "Google Analytics or anything you want. It will be added to the theme footer."
+msgstr "Google Analytics vagy bármi más amit szeretne. A sablon láblécébe (footer) kerül."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2017
+#, php-format
+msgid "For documentation about the API check the <a %s>API documentation</a>"
+msgstr "Az API-val kapcsolatos bővebb információkért olvassa el az <a %s>API dokumentációt</a>."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2019
+msgid "API v1 key"
+msgstr "API v1 kulcs"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2022
+#, php-format
+msgid "Use this key when using the <a %s>API v1</a>."
+msgstr "Ezt a kulcsot használja az <a %s>API v1</a> használata esetén."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2028
+msgid "Cookie law compliance"
+msgstr "Sütikre vonatkozó jogi figyelmeztetés"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2034
+msgid "Enable this to display a message that complies with the EU Cookie law requirements. Note: You only need this if your website is hosted in the EU and if you add tracking cookies."
+msgstr "Engedélyezése esetén megjelenik az EU jogszabályoknak megfelelő figyelmeztető üzenet. Megjegyzés: Bekapcsolására csak abban az esetben van szükség, ha a weboldal az EU területén belüli tárhelyen található és ha használ követő sütiket."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../lib/Peafowl/peafowl.js:417 ../../../lib/Peafowl/peafowl.min.js:25
+msgid "Save changes"
+msgstr "Változtatások mentése"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2067
+#: ../../../app/themes/Peafowl/views/settings.php:477
+msgid "Check the errors to proceed."
+msgstr "A folytatáshoz javítsa a hibákat."
+
+#: ../../../app/themes/Peafowl/views/image.php:57
+msgid "Guest"
+msgstr "Vendég"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+msgid "You like this"
+msgstr "Kedveled ezt"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Kedvelés"
+
+#: ../../../app/themes/Peafowl/views/image.php:136
+msgid "Added to %a and categorized in %c"
+msgstr "Feltöltve a %a albumba és a %c kategóriába"
+
+#: ../../../app/themes/Peafowl/views/image.php:138
+#, php-format
+msgid "Added to %s"
+msgstr "Hozzáadva a következőhöz: %s"
+
+#: ../../../app/themes/Peafowl/views/image.php:143
+#, php-format
+msgid "Uploaded to %s"
+msgstr "Feltöltve a következőbe: %s"
+
+#: ../../../app/themes/Peafowl/views/image.php:145
+#, php-format
+msgid "Uploaded %s"
+msgstr "Feltöltés ideje: %s"
+
+#: ../../../app/themes/Peafowl/views/image.php:157
+msgid "Less Exif data"
+msgstr "Kevesebb Exif adat"
+
+#: ../../../app/themes/Peafowl/views/image.php:157
+msgid "More Exif data"
+msgstr "Több Exif adat"
+
+#: ../../../app/themes/Peafowl/views/image.php:182
+#: ../../../app/themes/Peafowl/views/image.php:241
+msgid "Share image"
+msgstr "Kép megosztása"
+
+#: ../../../app/themes/Peafowl/views/image.php:198
+#: ../../../app/themes/Peafowl/views/image.php:204
+msgid "Album ID"
+msgstr "Album azonosító"
+
+#: ../../../app/themes/Peafowl/views/image.php:252
+msgid "In this album"
+msgstr "Ebben az albumban"
+
+#: ../../../app/themes/Peafowl/views/index.php:15
+msgid "Upload and share your images."
+msgstr "Töltse fel képeit és ossza meg őket a világgal."
+
+#: ../../../app/themes/Peafowl/views/index.php:17
+#, php-format
+msgid "Drag and drop anywhere you want and start uploading your images now. %s limit. Direct image links, BBCode and HTML thumbnails."
+msgstr "Húzza a képeket ahová csak szeretné és kezdje el feltölteni őket most! (Korlát: %s). Direkt linkek, BBCode-ok, HTML miniatűrök és még megannyi hasznos funkció."
+
+#: ../../../app/themes/Peafowl/views/index.php:25
+msgid "Start uploading"
+msgstr "Feltöltés megkezdése"
+
+#: ../../../app/themes/Peafowl/views/index.php:63
+#, php-format
+msgid "Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings."
+msgstr "Töltsön fel képeket %s fiókjába és jelenítse meg őket ezen az oldalon.<br>A vezérlőpulton belül módosíthatja, hogy mely felhasználó képei jelenjenek meg itt."
+
+#: ../../../app/themes/Peafowl/views/index.php:79
+msgid "Sign up to unlock all the features"
+msgstr "Regisztráljon, hogy hozzáférhessen az összes funkcióhoz"
+
+#: ../../../app/themes/Peafowl/views/index.php:80
+msgid "Manage your content, create private albums, customize your profile and more."
+msgstr "Töltse fel képeit, hozzon létre privát albumokat, szabja testre a profilját és fedezzen fel még több egyedi funkciót."
+
+#: ../../../app/themes/Peafowl/views/login.php:40
+#: ../../../app/themes/Peafowl/views/settings.php:323
+msgid "Enter your password"
+msgstr "Írja be a jelszavát"
+
+#: ../../../app/themes/Peafowl/views/logout.php:12
+#, php-format
+msgid "You have been logged off %s. Hope to see you soon."
+msgstr "Kilépett a %s oldalról. A mihamarabbi viszontlátásra!"
+
+#: ../../../app/themes/Peafowl/views/maintenance.php:7
+msgid "Website under maintenance"
+msgstr "A weboldal karbantartás alatt áll"
+
+#: ../../../app/themes/Peafowl/views/maintenance.php:8
+msgid "We're performing scheduled maintenance tasks in the website. Please come back in a few minutes."
+msgstr "Éppen változtatásokat végzünk a motorháztető alatt, frissítünk, újítunk, javítunk. Még néhány perc és újra elérhetőek leszünk."
+
+msgid "Send"
+msgstr "Küldés"
+
+#: ../../../app/themes/Peafowl/views/request-denied.php:12
+msgid "You either don't have permission to access this page or the link has expired."
+msgstr "Nincs jogosultsága az oldal megtekintéséhez vagy a link már érvénytelen."
+
+msgid "Search results"
+msgstr "Keresési eredmények"
+
+#: ../../../app/themes/Peafowl/views/settings.php:36
+#: ../../../app/themes/Peafowl/views/user.php:65
+msgid "Do you really want to delete this user? This can't be undone."
+msgstr "Biztos, hogy törölni szeretné ezt a felhasználót? A törlés végleges."
+
+#: ../../../app/themes/Peafowl/views/settings.php:36
+#: ../../../app/themes/Peafowl/views/user.php:65
+msgid "Delete user"
+msgstr "Felhasználó törlése"
+
+#: ../../../app/themes/Peafowl/views/settings.php:81
+msgid "Register date"
+msgstr "Regisztráció dátuma"
+
+#: ../../../app/themes/Peafowl/views/settings.php:91
+msgid "Registration IP"
+msgstr "Regisztrációs IP"
+
+#: ../../../app/themes/Peafowl/views/settings.php:105
+msgid "Status"
+msgstr "Állapot"
+
+#: ../../../app/themes/Peafowl/views/settings.php:109
+msgid "Valid"
+msgstr "Aktivált"
+
+#: ../../../app/themes/Peafowl/views/settings.php:110
+msgid "Banned"
+msgstr "Tiltott"
+
+#: ../../../app/themes/Peafowl/views/settings.php:111
+msgid "Awaiting email"
+msgstr "E-mail-re vár"
+
+#: ../../../app/themes/Peafowl/views/settings.php:112
+msgid "Awaiting confirmation"
+msgstr "Megerősítésre vár"
+
+#: ../../../app/themes/Peafowl/views/settings.php:144
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "%i to %f characters<br>Letters, numbers and \"_\""
+msgstr "Engedélyezett karakterek: %i - %f <br>Számok, betűk és \"_\""
+
+#: ../../../app/themes/Peafowl/views/settings.php:166
+msgid "Auto delete uploads"
+msgstr "Feltöltések automatikus törlése"
+
+#: ../../../app/themes/Peafowl/views/settings.php:174
+msgid "This setting will apply to all your image uploads by default. You can override this setting on each upload."
+msgstr "Ez a beállítás az összes feltöltésere alapértelmezetten érvényes lesz. A beállítás felülírható minden egyes feltöltés esetében."
+
+#: ../../../app/themes/Peafowl/views/settings.php:186
+#, php-format
+msgid "Keep image <a %s>Exif data</a> on upload"
+msgstr "A kép <a %s>Exif adatainak</a> megtartása feltöltéskor"
+
+#: ../../../app/themes/Peafowl/views/settings.php:193
+msgid "Newsletter"
+msgstr "Hírlevél"
+
+#: ../../../app/themes/Peafowl/views/settings.php:196
+#, php-format
+msgid "Send me emails with news about %s"
+msgstr "Szeretnék hírlevelet kapni a(z) %s újdonságaival kapcsolatban"
+
+#: ../../../app/themes/Peafowl/views/settings.php:202
+msgid "Content settings"
+msgstr "Tartalmi beállítások"
+
+#: ../../../app/themes/Peafowl/views/settings.php:205
+msgid "Show not safe content in listings (from others)"
+msgstr "Mutassa a korhatáros tartalmat a képek között (mások feltöltései esetében)"
+
+#: ../../../app/themes/Peafowl/views/settings.php:215
+msgid "Language"
+msgstr "Nyelv"
+
+#: ../../../app/themes/Peafowl/views/settings.php:245
+msgid "Timezone"
+msgstr "Időzóna"
+
+#: ../../../app/themes/Peafowl/views/settings.php:296
+msgid "Current password"
+msgstr "Jelenlegi jelszó"
+
+#: ../../../app/themes/Peafowl/views/settings.php:297
+msgid "Enter your current password"
+msgstr "Írja be a jelenlegi jelszavát"
+
+#: ../../../app/themes/Peafowl/views/settings.php:305
+msgid "New password"
+msgstr "Új jelszó"
+
+#: ../../../app/themes/Peafowl/views/settings.php:311
+msgid "Confirm new password"
+msgstr "Erősítse meg az új jelszót"
+
+#: ../../../app/themes/Peafowl/views/settings.php:319
+msgid "Add a password to be able to login using your username or email."
+msgstr "Adjon meg egy jelszót, hogy be tudjon jelentkezni a felhasználónevével vagy e-mail címével."
+
+#: ../../../app/themes/Peafowl/views/settings.php:319
+msgid "This user doesn't have a password. Add one using this form."
+msgstr "Ennek a felhasználónak nincs jelszava. Adjon meg egyet az űrlap kitöltésével."
+
+#: ../../../app/themes/Peafowl/views/settings.php:329
+msgid "Re-enter your password"
+msgstr "A jelszó még egyszer"
+
+#: ../../../app/themes/Peafowl/views/settings.php:352
+#: ../../../app/themes/Peafowl/views/user.php:21
+msgid "Upload new image"
+msgstr "Új kép feltöltése"
+
+#: ../../../app/themes/Peafowl/views/settings.php:354
+msgid "Delete existing image"
+msgstr "Feltöltött kép törlése"
+
+#: ../../../app/themes/Peafowl/views/settings.php:367
+msgid "This is your real name, not your username."
+msgstr "Ez a valódi neve, nem a felhasználóneve."
+
+#: ../../../app/themes/Peafowl/views/settings.php:371
+msgid "http://yourwebsite.com"
+msgstr "http://weboldala.hu"
+
+#: ../../../app/themes/Peafowl/views/settings.php:375
+msgid "Bio"
+msgstr "Rólam"
+
+#: ../../../app/themes/Peafowl/views/settings.php:376
+msgid "Tell us a little bit about you"
+msgstr "Mondjon egy pár szót magáról"
+
+#: ../../../app/themes/Peafowl/views/settings.php:387
+msgid "User has no connections."
+msgstr "A felhasználónak nincsenek kapcsolatai."
+
+#: ../../../app/themes/Peafowl/views/settings.php:391
+msgid "Link your account to external services to be able to login and share content."
+msgstr "Kapcsolja össze a fiókját külső szolgáltatásokkal hogy be tudjon lépni és információkat tudjon megosztani."
+
+#: ../../../app/themes/Peafowl/views/settings.php:398
+#, php-format
+msgid "Do you really want to disconnect %s from this account?"
+msgstr "Biztos benne, hogy lecsatlakoztatja %s -t erről a fiókról?"
+
+#: ../../../app/themes/Peafowl/views/settings.php:399
+#, php-format
+msgid "This account is connected to %s"
+msgstr "Ez a fiók a következőhöz van kapcsolva: %s"
+
+#: ../../../app/themes/Peafowl/views/settings.php:401
+#, php-format
+msgid "Do you really want to disconnect your %s account?"
+msgstr "Biztos, hogy lecsatlakozik az ön %s fiókjáról?"
+
+#: ../../../app/themes/Peafowl/views/settings.php:403
+#, php-format
+msgid "You will be logged out and you won't be able to login to your account using this %s account."
+msgstr "Kiléptetésre kerül és nem fog tudni bejelentkezni a fiókjába a %s fiók segítségével."
+
+#: ../../../app/themes/Peafowl/views/settings.php:405
+#, php-format
+msgid "Your account is connected to %s"
+msgstr "A fiókja csatlakoztatva van a következőhöz: %s"
+
+#: ../../../app/themes/Peafowl/views/settings.php:410
+msgid "disconnect"
+msgstr "lecsatlakozás"
+
+#: ../../../app/themes/Peafowl/views/settings.php:423
+#, php-format
+msgid "Connect %s"
+msgstr "Összekapcsolás %s"
+
+#: ../../../app/themes/Peafowl/views/settings.php:446
+msgid "Button"
+msgstr "Gomb"
+
+#: ../../../app/themes/Peafowl/views/signup.php:45
+msgid "resend account activation"
+msgstr "aktiváló e-mail újraküldése"
+
+#: ../../../app/themes/Peafowl/views/signup.php:45
+#, php-format
+msgid "If you have already signed up maybe you need to request to %s"
+msgstr "Ha már regisztrált, akkor talán megfelelő lépés lehet az %s"
+
+#: ../../../app/themes/Peafowl/views/user.php:15
+msgid "Upload profile background"
+msgstr "Profil háttérkép feltöltése"
+
+#: ../../../app/themes/Peafowl/views/user.php:17
+msgid "Change background"
+msgstr "Háttér megváltoztatása"
+
+#: ../../../app/themes/Peafowl/views/user.php:22
+msgid "The profile background image will be deleted. This can't be undone. Are you sure that you want to delete the profile background image?"
+msgstr "A profil háttérképe törölve lesz és a folyamat nem visszafordítható. Biztos benne, hogy ezt szeretné tenni?"
+
+#: ../../../app/themes/Peafowl/views/user.php:22
+msgid "Delete background"
+msgstr "Háttér törlése"
+
+#: ../../../app/themes/Peafowl/views/user.php:61
+msgid "Edit profile"
+msgstr "Profil szerkesztése"
+
+#: ../../../app/themes/Peafowl/views/user.php:75
+msgid "Follower"
+msgid_plural "Followers"
+msgstr[0] "Követő"
+msgstr[1] "Követők"
+
+#: ../../../app/themes/Peafowl/views/user.php:81
+msgid "Follow"
+msgstr "Követés"
+
+msgid "Contact"
+msgstr "Kapcsolatok"
+
+msgid "Your name"
+msgstr "A neved"
+
+msgid "Subject"
+msgstr "Tárgy"
+
+#: ../../../app/install/update/template/update.js:19
+#, javascript-format
+msgid "Installed version is v%s"
+msgstr "A telepített verzió: v%s"
+
+#: ../../../app/install/update/template/update.js:26
+#: ../../../app/install/update/template/update.js:55
+#: ../../../app/install/update/template/update.js:78
+#, javascript-format
+msgid "Can't connect to %s"
+msgstr "Nem sikerült a kapcsolódás a következőhöz: %s"
+
+#: ../../../app/install/update/template/update.js:30
+#, javascript-format
+msgid "Last available release is v%s"
+msgstr "A legutolsó elérhető kiadás: v%s"
+
+#: ../../../app/install/update/template/update.js:33
+msgid "Update needed, proceeding to download"
+msgstr "Frissítés szükséges, tovább a letöltéshez"
+
+#: ../../../app/install/update/template/update.js:40
+msgid "No update needed"
+msgstr "Nincs szükség frissítésre"
+
+#: ../../../app/install/update/template/update.js:41
+msgid "System files already up to date"
+msgstr "A rendszerfájlok naprakészek"
+
+#: ../../../app/install/update/template/update.js:49
+#, javascript-format
+msgid "Starting v%s download"
+msgstr "A v%s letöltésének megkezdése"
+
+#: ../../../app/install/update/template/update.js:60
+#, javascript-format
+msgid "Downloaded v%s, proceeding to extraction"
+msgstr "v%s letöltve, kicsomagolás megkezdése"
+
+#: ../../../app/install/update/template/update.js:72
+#, javascript-format
+msgid "Attempting to extract v%s"
+msgstr "v%s kicsomagolása"
+
+#: ../../../app/install/update/template/update.js:82
+msgid "Extraction completed"
+msgstr "Kicsomagolás befejezve"
+
+#: ../../../app/install/update/template/update.js:84
+msgid "Proceding to install the update"
+msgstr "Frissítés telepítése folyamatban"
+
+#: ../../../app/install/update/template/update.js:111
+msgid "Update failed"
+msgstr "Frissítés sikertelen"
+
+#: ../../../app/lib/chevereto.js:592 ../../../app/lib/chevereto.min.js:36
+msgid "Please provide a valid email address"
+msgstr "Kérjük adjon meg egy érvényes e-mail címet"
+
+#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
+#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
+#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
+#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
+#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
+#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
+msgid "You must enter the album name."
+msgstr "Meg kell adnia az album nevét."
+
+#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
+#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
+#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
+#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
+msgid "Confirm"
+msgstr "Megerősít"
+
+#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
+msgid "Select existing album"
+msgstr "Válasszon ki egy meglévő albumot"
+
+#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
+#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
+msgid "Please select a valid image file type."
+msgstr "Kérjük válasszon ki egy érvényes kép típust."
+
+#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
+#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
+#, javascript-format
+msgid "Please select a picture of at most %s size."
+msgstr "Kérjük válasszon ki egy képet maximum %s méretben."
+
+#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
+msgid "Profile image updated."
+msgstr "Profil kép frissítve."
+
+#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
+msgid "Profile background image updated."
+msgstr "Profil háttérkép frissítve."
+
+#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
+msgid "Profile background image deleted."
+msgstr "Profil háttérkép törölve."
+
+#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
+msgid "Error deleting profile background image."
+msgstr "Hiba történt a profil háttérkép törlése közben."
+
+#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "Update available v%s"
+msgstr "Frissítés elérhető: v%s"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
+msgstr "Egy frissítés érhető el a rendszerhez. Automatikusan letöltheti és telepítheti ezt vagy a következő linken letöltheti: %s"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "Update now"
+msgstr "Frissítés indítása"
+
+#: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
+msgid "Your website is running the latest version of Chevereto."
+msgstr "A weboldala a legfrisebb Chevereto verziót használja."
+
+#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
+msgid "Clipboard image"
+msgstr "Vágólap kép"
+
+#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
+msgid "File too big."
+msgstr "A fájl túl nagy."
+
+#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
+#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
+msgid "Some files couldn't be added"
+msgstr "Néhány fájl hozzáadása nem sikerült"
+
+#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
+msgid "Image edited successfully."
+msgstr "A kép módosítása sikeres."
+
+#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
+msgid "Album edited successfully."
+msgstr "Az album módosítása sikeres."
+
+#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
+msgid "Invalid URL key."
+msgstr "Érvénytelen URL kulcs."
+
+#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
+msgid "Category URL key already being used."
+msgstr "A kategória URL kulcs már használatban van."
+
+#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
+msgid "Category successfully deleted."
+msgstr "A kategória sikeresen törölve."
+
+#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
+#, javascript-format
+msgid "Category %s added."
+msgstr "%s kategória létrehozva."
+
+#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
+msgid "Invalid expiration date."
+msgstr "Érvénytelen lejárati dátum."
+
+#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
+#, javascript-format
+msgid "IP %s already banned."
+msgstr "Az IP (%s) már tiltva van."
+
+#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
+#, javascript-format
+msgid "IP %s banned."
+msgstr "IP (%s) tiltásra került."
+
+#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
+msgid "IP ban successfully deleted."
+msgstr "Az IP ban törlésre került."
+
+#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
+#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
+#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
+msgid "Please fill all the required fields."
+msgstr "Kérjük töltse ki az összes szükséges mezőt."
+
+#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
+msgid "Invalid storage capacity value. Make sure to use a valid format."
+msgstr "Érvénytelen tároló kapacitás érték. Használjon érvényes formátumot."
+
+#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
+msgid "Invalid URL."
+msgstr "Érvénytelen URL."
+
+#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
+msgid "Storage successfully edited."
+msgstr "Tároló sikeresen módosítva."
+
+#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
+msgid "User added successfully."
+msgstr "A felhasználó sikeresen hozzáadva."
+
+#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
+#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
+#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
+#: ../../../app/lib/chevereto.min.js:205
+msgid "The content has been moved."
+msgstr "A tartalom áthelyezésre került."
+
+#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
+msgid "Unselect"
+msgstr "Kiválasztás törlése"
+
+#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
+msgid "The content has been edited."
+msgstr "A tartalom módosítva lett."
+
+#: ../../../lib/Peafowl/peafowl.js:25 ../../../lib/Peafowl/peafowl.js:492
+#: ../../../lib/Peafowl/peafowl.min.js:1 ../../../lib/Peafowl/peafowl.min.js:31
+msgid "All the changes that you have made will be lost if you continue."
+msgstr "Hogyha folytatja az összes módosítás elvész."
+
+#: ../../../lib/Peafowl/peafowl.js:476 ../../../lib/Peafowl/peafowl.min.js:30
+msgid "Changes saved successfully."
+msgstr "A változtatások mentése sikeres."
+
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.min.js:31
+msgid "Go back to form"
+msgstr "Vissza az űrlaphoz"
+
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.min.js:31
+msgid "continue anyway"
+msgstr "folytatom"
+
+#: ../../../lib/Peafowl/peafowl.js:2506 ../../../lib/Peafowl/peafowl.min.js:155
+msgid "Saving"
+msgstr "Mentés"
+
+#: ../../../lib/Peafowl/peafowl.js:2511 ../../../lib/Peafowl/peafowl.min.js:155
+msgid "Sending"
+msgstr "Küldés"
+
+#: ../../../lib/Peafowl/peafowl.js:2591 ../../../lib/Peafowl/peafowl.min.js:158
+msgid "Confirm action"
+msgstr "Döntés megerősítése"
+
+#: ../../../lib/Peafowl/peafowl.js:2603 ../../../lib/Peafowl/peafowl.min.js:159
+msgid "information"
+msgstr "információ"
+

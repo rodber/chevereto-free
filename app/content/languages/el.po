@@ -1,0 +1,2882 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSION\n"
+"POT-Creation-Date: 2015-04-13 17:55+0000\n"
+"PO-Revision-Date: 2015-04-13 17:55+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../../app/install/installer.php:826
+#: ../../../app/install/installer.php:835
+#: ../../../app/install/installer.php:838
+#: ../../../app/routes/route.account.php:402
+#: ../../../app/routes/route.json.php:551
+#: ../../../app/routes/route.settings.php:170
+#: ../../../app/routes/route.signup.php:95
+#: ../../../app/themes/Peafowl/pages/contact.php:31
+msgid "Invalid email"
+msgstr "Λανθασμένο email"
+
+#: ../../../app/install/installer.php:829
+#: ../../../app/routes/route.json.php:546
+#: ../../../app/routes/route.settings.php:166
+#: ../../../app/routes/route.signup.php:98
+msgid "Invalid username"
+msgstr "Λανθασμένο όνομα χρήστη"
+
+#: ../../../app/install/installer.php:832
+#: ../../../app/routes/route.account.php:345
+#: ../../../app/routes/route.json.php:556
+#: ../../../app/routes/route.settings.php:300
+#: ../../../app/routes/route.signup.php:101
+msgid "Invalid password"
+msgstr "Λανθασμένος κωδικός"
+
+#: ../../../app/install/template/ready.php:31
+#: ../../../app/themes/Peafowl/views/dashboard.php:1463
+msgid "From email address"
+msgstr "Από την διεύθυνση email"
+
+#: ../../../app/install/template/ready.php:32
+#: ../../../app/themes/Peafowl/views/dashboard.php:1466
+msgid "Sender email for emails sent to users."
+msgstr "Email αποστολέα για τα email που αποστέλλονται στους χρήστες."
+
+#: ../../../app/install/template/ready.php:36
+#: ../../../app/themes/Peafowl/views/dashboard.php:1469
+msgid "Incoming email address"
+msgstr "Διεύθυνση εισερχόμενων email"
+
+#: ../../../app/install/template/ready.php:37
+#: ../../../app/themes/Peafowl/views/dashboard.php:1472
+msgid "Recipient for contact form and system alerts."
+msgstr "Παραλήπτης για την φόρμα επικοινωνίας και τις ειδοποιήσεις του συστήματος."
+
+#: ../../../app/lib/classes/class.album.php:94
+msgid "Untitled"
+msgstr "Χωρίς τίτλο"
+
+#: ../../../app/lib/classes/class.album.php:318
+#: ../../../app/lib/classes/class.user.php:105
+#, php-format
+msgid "%s's images"
+msgstr "Εικόνες του χρήστη %s"
+
+#: ../../../app/lib/classes/class.image.php:695
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:69
+msgid "Private upload"
+msgstr "Ιδιωτικό ανέβασμα"
+
+#: ../../../app/lib/classes/class.image.php:954
+msgid "view"
+msgid_plural "views"
+msgstr[0] "προβολή"
+msgstr[1] "προβολές"
+
+#: ../../../app/lib/classes/class.listing.php:238
+#: ../../../app/routes/route.album.php:169
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
+#: ../../../app/themes/Peafowl/views/album.php:34
+#: ../../../app/themes/Peafowl/views/user.php:87
+#: ../../../app/lib/chevereto.js:1866 ../../../app/lib/chevereto.min.js:88
+msgid "image"
+msgid_plural "images"
+msgstr[0] "εικόνα"
+msgstr[1] "εικόνες"
+
+#: ../../../app/lib/classes/class.storage.php:303
+#: ../../../app/lib/classes/class.storage.php:358
+msgid "Can't verify storage credentials."
+msgstr "Δεν είναι δυνατή η επαλήθευση των διαπιστευτηρίων αποθήκευσης."
+
+#: ../../../app/lib/classes/class.storage.php:339
+#: ../../../app/lib/chevereto.js:2719 ../../../app/lib/chevereto.min.js:132
+#, python-format, php-format, javascript-format
+msgid "Storage capacity can't be lower than its current usage (%s)."
+msgstr "Η χωρητικότητα αποθήκευσης δεν μπορεί να είναι μικρότερη από την τρέχουσα χρησιμοποιούμενη (%s)."
+
+#: ../../../app/lib/classes/class.storage.php:551
+msgid "Unlimited"
+msgstr "Απεριόριστα"
+
+#: ../../../app/lib/classes/class.storage.php:551
+msgid "used"
+msgstr "σε χρήση"
+
+#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
+msgid "year"
+msgid_plural "years"
+msgstr[0] "έτος"
+msgstr[1] "έτη"
+
+#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
+msgid "month"
+msgid_plural "months"
+msgstr[0] "μήνας"
+msgstr[1] "μήνες"
+
+#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "εβδομάδα"
+msgstr[1] "εβδομάδες"
+
+#: ../../../app/lib/functions.php:40 ../../../app/lib/functions.php:52
+msgid "day"
+msgid_plural "days"
+msgstr[0] "μέρα"
+msgstr[1] "μέρες"
+
+#: ../../../app/lib/functions.php:41 ../../../app/lib/functions.php:53
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "ώρα"
+msgstr[1] "ώρες"
+
+#: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "λεπτό"
+msgstr[1] "λεπτά"
+
+#: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "δευτερόλεπτο"
+msgstr[1] "δευτερόλεπτα"
+
+#: ../../../app/lib/functions.php:67
+#, php-format
+msgid "%s ago"
+msgstr "Πριν από %s"
+
+#: ../../../app/lib/functions.php:67
+msgid "moments ago"
+msgstr "πριν λίγο"
+
+#: ../../../app/lib/functions.php:195
+#, php-format
+msgid "System database is outdated. You need to run the <a href=\"%s\">update</a> tool."
+msgstr "Η βάση δεδομένων είναι παλιά. Χρειάζεται να εκτελέσετε το εργαλείο <a href=\"%s\">update</a> ."
+
+#: ../../../app/lib/functions.php:198
+#, php-format
+msgid "Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>."
+msgstr "Η ιστοσελίδα είναι υπό κατασκευή. Για να αναστρέψετε αυτή τη ρύθμιση πηγαίνετε<a href=\"%s\">Πίνακας ελέγχου > Ρυθμίσεις</a>."
+
+#: ../../../app/lib/functions.php:203
+#, php-format
+msgid "You haven't changed the default email settings. Go to <a href='%s'>Dashboard > Settings > Email</a> to fix this."
+msgstr "Δεν έχετε αλλάξει τις αρχικές ρυθμίσεις email . Go to <a href='%s'>Πίνακας ελέγχου > Ρυθμίσεις > Email</a> to fix this."
+
+#: ../../../app/loader.php:168
+msgid "You have been forbidden to use this website."
+msgstr "Απαγορεύεται να χρησιμοποιήσετε αυτή την ιστοσελίδα."
+
+#: ../../../app/loader.php:326 ../../../app/themes/Peafowl/views/404.php:6
+msgid "That page doesn't exist"
+msgstr "Αυτή η σελίδα δεν υπάρχει"
+
+#: ../../../app/routes/route.account.php:72
+#: ../../../app/themes/Peafowl/header.php:291
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:8
+#: ../../../app/themes/Peafowl/views/login.php:41
+#: ../../../app/themes/Peafowl/views/settings.php:251
+msgid "Forgot password?"
+msgstr "Ξεχάσατε τον κωδικό;"
+
+#: ../../../app/routes/route.account.php:73
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:8
+msgid "Reset password"
+msgstr "Επαναφορά κωδικού"
+
+#: ../../../app/routes/route.account.php:74
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:8
+msgid "Resend account activation"
+msgstr "Αποστολή κωδικού ενεργοποίησης ξανά"
+
+#: ../../../app/routes/route.account.php:76
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:8
+msgid "Add your email address"
+msgstr "Προσθέστε το email σας"
+
+#: ../../../app/routes/route.account.php:77
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:7
+msgid "Email changed"
+msgstr "Το email άλλαξε"
+
+#: ../../../app/routes/route.account.php:95
+#: ../../../app/routes/route.login.php:71
+#: ../../../app/routes/route.settings.php:128
+#: ../../../app/routes/route.signup.php:73
+msgid "The reCAPTCHA wasn't entered correctly"
+msgstr "Δεν εισήγατε σωστό reCAPTCHA"
+
+#: ../../../app/routes/route.account.php:119
+#: ../../../app/routes/route.account.php:164
+#: ../../../app/routes/route.account.php:260
+msgid "Invalid Username/Email"
+msgstr "Λάθος όνομα χρήστη/κωδικός"
+
+#: ../../../app/routes/route.account.php:129
+msgid "User doesn't have an email."
+msgstr "Ο χρήστης δεν έχει email."
+
+#: ../../../app/routes/route.account.php:140
+#: ../../../app/routes/route.account.php:287
+#: ../../../app/routes/route.account.php:309
+#: ../../../app/routes/route.account.php:376
+#: ../../../app/routes/route.json.php:24 ../../../app/routes/route.json.php:37
+#: ../../../app/routes/route.json.php:49
+#: ../../../app/routes/route.json.php:533
+#: ../../../app/routes/route.json.php:595
+#: ../../../app/routes/route.json.php:644
+#: ../../../app/routes/route.json.php:691
+#: ../../../app/themes/Peafowl/pages/contact.php:17
+#: ../../../app/themes/Peafowl/views/request-denied.php:8
+msgid "Request denied"
+msgstr "Το αίτημα αρνήθηκε"
+
+#: ../../../app/routes/route.account.php:145
+msgid "Account needs to be activated to use this feature"
+msgstr "Ο λογαριασμός χρειάζεται να ενεργοποιηθεί για να χρησιμοποιήσετε αυτή την δυνατότητα."
+
+#: ../../../app/routes/route.account.php:151
+msgid "Account already activated"
+msgstr "Ο λογαριασμός έχει ήδη ενεργοποιηθεί."
+
+#: ../../../app/routes/route.account.php:181
+msgid "Allow up to 15 minutes for the email. You can try again later."
+msgstr "Δώστε 15 λεπτά στο email. Μπορείτε να προσπαθήσετε ξανά αργότερα"
+
+#: ../../../app/routes/route.account.php:220
+#, php-format
+msgid "Reset your password at %s"
+msgstr "Διαγραφή κωδικού στο %s"
+
+#: ../../../app/routes/route.account.php:222
+#: ../../../app/routes/route.account.php:442
+#: ../../../app/routes/route.settings.php:260
+#: ../../../app/routes/route.signup.php:180
+#, php-format
+msgid "Confirmation required at %s"
+msgstr "Απαιτείται επιβεβαίωση στο %s"
+
+#: ../../../app/routes/route.account.php:330
+#: ../../../app/routes/route.signup.php:203
+#, php-format
+msgid "Welcome to %s"
+msgstr "Καλώς ήρθατε στο %s"
+
+#: ../../../app/routes/route.account.php:348
+#: ../../../app/routes/route.settings.php:304
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
+#: ../../../app/themes/Peafowl/views/settings.php:265
+#: ../../../app/themes/Peafowl/views/settings.php:282
+#: ../../../app/lib/chevereto.js:1270 ../../../app/lib/chevereto.min.js:54
+msgid "Passwords don't match"
+msgstr "Οι κωδικοί δεν ταιριάζουν"
+
+#: ../../../app/routes/route.account.php:410
+#: ../../../app/routes/route.json.php:571
+#: ../../../app/routes/route.settings.php:220
+#: ../../../app/routes/route.signup.php:137
+msgid "Email already being used"
+msgstr "Το email χρησιμοποιείτε ήδη"
+
+#: ../../../app/routes/route.account.php:496
+#: ../../../app/routes/route.signup.php:223
+#: ../../../app/themes/Peafowl/pages/contact.php:146
+#: ../../../lib/Peafowl/peafowl.js:194 ../../../lib/Peafowl/peafowl.min.js:10
+msgid "Check the errors in the form to continue."
+msgstr "Ελέγξτε τα λάθη στη φόρμα για να συνεχίσετε"
+
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:663
+#: ../../../app/routes/route.dashboard.php:692
+#: ../../../app/routes/route.dashboard.php:721
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.user.php:131
+#: ../../../app/routes/route.user.php:169
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Πρόσφατο"
+
+#: ../../../app/routes/route.album.php:88
+#: ../../../app/routes/route.category.php:56
+#: ../../../app/routes/route.dashboard.php:671
+#: ../../../app/routes/route.dashboard.php:700
+#: ../../../app/routes/route.dashboard.php:729
+#: ../../../app/routes/route.explore.php:42
+#: ../../../app/routes/route.user.php:139
+#: ../../../app/routes/route.user.php:175
+msgid "Oldest"
+msgstr "Παλαιότερο"
+
+#: ../../../app/routes/route.album.php:96
+#: ../../../app/routes/route.category.php:64
+#: ../../../app/routes/route.dashboard.php:679
+#: ../../../app/routes/route.explore.php:50
+#: ../../../app/routes/route.user.php:147
+msgid "Most viewed"
+msgstr "Περισσότερες προβολές"
+
+#: ../../../app/routes/route.album.php:107
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:4
+#: ../../../app/themes/Peafowl/views/album.php:36
+#: ../../../app/themes/Peafowl/views/image.php:91
+msgid "Share"
+msgstr "Μοιραστείτε το"
+
+#: ../../../app/routes/route.album.php:116
+#: ../../../app/routes/route.image.php:132
+msgid "Full info"
+msgstr "Πλήρης πληροφορίες"
+
+#: ../../../app/routes/route.dashboard.php:38
+msgid "Stats"
+msgstr "Στατιστικά"
+
+#: ../../../app/routes/route.dashboard.php:39
+#: ../../../app/routes/route.search.php:83
+#: ../../../app/routes/route.user.php:191
+#: ../../../app/themes/Peafowl/views/settings.php:73
+#: ../../../app/themes/Peafowl/views/user.php:125
+msgid "Images"
+msgstr "Εικόνες"
+
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:90
+#: ../../../app/routes/route.user.php:197
+#: ../../../app/themes/Peafowl/header.php:364
+#: ../../../app/themes/Peafowl/views/settings.php:77
+#: ../../../app/themes/Peafowl/views/user.php:125
+msgid "Albums"
+msgstr "Άλμπουμ"
+
+#: ../../../app/routes/route.dashboard.php:41
+#: ../../../app/routes/route.dashboard.php:222
+#: ../../../app/routes/route.search.php:97
+msgid "Users"
+msgstr "Χρήστες"
+
+#: ../../../app/routes/route.dashboard.php:42
+#: ../../../app/routes/route.settings.php:442
+#: ../../../app/themes/Peafowl/header.php:365
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: ../../../app/routes/route.dashboard.php:153
+msgid "Chevereto version"
+msgstr "Έκδοση Chevereto"
+
+#: ../../../app/routes/route.dashboard.php:154
+msgid "update"
+msgstr "ενημέρωση"
+
+#: ../../../app/routes/route.dashboard.php:154
+msgid "check for updates"
+msgstr "έλεγχος για ενημερώσεις"
+
+#: ../../../app/routes/route.dashboard.php:161
+msgid "PHP version"
+msgstr "Έκδοση PHP"
+
+#: ../../../app/routes/route.dashboard.php:165
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:39
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:40
+msgid "Server"
+msgstr "Διακομιστής"
+
+#: ../../../app/routes/route.dashboard.php:169
+msgid "MySQL version"
+msgstr "Έκδοση MySQL"
+
+#: ../../../app/routes/route.dashboard.php:173
+msgid "MySQL server info"
+msgstr "Πληροφορίες διακομιστή MySQL"
+
+#: ../../../app/routes/route.dashboard.php:177
+msgid "GD Library"
+msgstr "GD Library"
+
+#: ../../../app/routes/route.dashboard.php:181
+msgid "File uploads"
+msgstr "Μεταφορτώσεις αρχείων"
+
+#: ../../../app/routes/route.dashboard.php:182
+#: ../../../app/themes/Peafowl/views/dashboard.php:273
+#: ../../../app/themes/Peafowl/views/dashboard.php:283
+#: ../../../app/themes/Peafowl/views/dashboard.php:293
+#: ../../../app/themes/Peafowl/views/dashboard.php:338
+#: ../../../app/themes/Peafowl/views/dashboard.php:347
+#: ../../../app/themes/Peafowl/views/dashboard.php:418
+#: ../../../app/themes/Peafowl/views/dashboard.php:438
+#: ../../../app/themes/Peafowl/views/dashboard.php:448
+#: ../../../app/themes/Peafowl/views/dashboard.php:458
+#: ../../../app/themes/Peafowl/views/dashboard.php:610
+#: ../../../app/themes/Peafowl/views/dashboard.php:623
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+#: ../../../app/themes/Peafowl/views/dashboard.php:654
+#: ../../../app/themes/Peafowl/views/dashboard.php:683
+#: ../../../app/themes/Peafowl/views/dashboard.php:693
+#: ../../../app/themes/Peafowl/views/dashboard.php:732
+#: ../../../app/themes/Peafowl/views/dashboard.php:742
+#: ../../../app/themes/Peafowl/views/dashboard.php:752
+#: ../../../app/themes/Peafowl/views/dashboard.php:898
+#: ../../../app/themes/Peafowl/views/dashboard.php:953
+#: ../../../app/themes/Peafowl/views/dashboard.php:963
+#: ../../../app/themes/Peafowl/views/dashboard.php:975
+#: ../../../app/themes/Peafowl/views/dashboard.php:987
+#: ../../../app/themes/Peafowl/views/dashboard.php:997
+#: ../../../app/themes/Peafowl/views/dashboard.php:1007
+#: ../../../app/themes/Peafowl/views/dashboard.php:1019
+#: ../../../app/themes/Peafowl/views/dashboard.php:1126
+#: ../../../app/themes/Peafowl/views/dashboard.php:1287
+#: ../../../app/themes/Peafowl/views/dashboard.php:1296
+#: ../../../app/themes/Peafowl/views/dashboard.php:1305
+#: ../../../app/themes/Peafowl/views/dashboard.php:1330
+#: ../../../app/themes/Peafowl/views/dashboard.php:1340
+#: ../../../app/themes/Peafowl/views/dashboard.php:1530
+#: ../../../app/themes/Peafowl/views/dashboard.php:1556
+#: ../../../app/themes/Peafowl/views/dashboard.php:1589
+#: ../../../app/themes/Peafowl/views/dashboard.php:1615
+#: ../../../app/themes/Peafowl/views/dashboard.php:1641
+#: ../../../app/themes/Peafowl/views/dashboard.php:1660
+#: ../../../app/themes/Peafowl/views/dashboard.php:1705
+msgid "Enabled"
+msgstr "Ενεργοποιημένο"
+
+#: ../../../app/routes/route.dashboard.php:182
+#: ../../../app/themes/Peafowl/views/dashboard.php:273
+#: ../../../app/themes/Peafowl/views/dashboard.php:283
+#: ../../../app/themes/Peafowl/views/dashboard.php:293
+#: ../../../app/themes/Peafowl/views/dashboard.php:338
+#: ../../../app/themes/Peafowl/views/dashboard.php:347
+#: ../../../app/themes/Peafowl/views/dashboard.php:418
+#: ../../../app/themes/Peafowl/views/dashboard.php:438
+#: ../../../app/themes/Peafowl/views/dashboard.php:448
+#: ../../../app/themes/Peafowl/views/dashboard.php:458
+#: ../../../app/themes/Peafowl/views/dashboard.php:610
+#: ../../../app/themes/Peafowl/views/dashboard.php:623
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+#: ../../../app/themes/Peafowl/views/dashboard.php:654
+#: ../../../app/themes/Peafowl/views/dashboard.php:683
+#: ../../../app/themes/Peafowl/views/dashboard.php:693
+#: ../../../app/themes/Peafowl/views/dashboard.php:732
+#: ../../../app/themes/Peafowl/views/dashboard.php:742
+#: ../../../app/themes/Peafowl/views/dashboard.php:752
+#: ../../../app/themes/Peafowl/views/dashboard.php:898
+#: ../../../app/themes/Peafowl/views/dashboard.php:953
+#: ../../../app/themes/Peafowl/views/dashboard.php:963
+#: ../../../app/themes/Peafowl/views/dashboard.php:975
+#: ../../../app/themes/Peafowl/views/dashboard.php:987
+#: ../../../app/themes/Peafowl/views/dashboard.php:997
+#: ../../../app/themes/Peafowl/views/dashboard.php:1007
+#: ../../../app/themes/Peafowl/views/dashboard.php:1019
+#: ../../../app/themes/Peafowl/views/dashboard.php:1126
+#: ../../../app/themes/Peafowl/views/dashboard.php:1287
+#: ../../../app/themes/Peafowl/views/dashboard.php:1296
+#: ../../../app/themes/Peafowl/views/dashboard.php:1305
+#: ../../../app/themes/Peafowl/views/dashboard.php:1330
+#: ../../../app/themes/Peafowl/views/dashboard.php:1340
+#: ../../../app/themes/Peafowl/views/dashboard.php:1530
+#: ../../../app/themes/Peafowl/views/dashboard.php:1556
+#: ../../../app/themes/Peafowl/views/dashboard.php:1589
+#: ../../../app/themes/Peafowl/views/dashboard.php:1615
+#: ../../../app/themes/Peafowl/views/dashboard.php:1641
+#: ../../../app/themes/Peafowl/views/dashboard.php:1660
+#: ../../../app/themes/Peafowl/views/dashboard.php:1705
+msgid "Disabled"
+msgstr "Απενεργοποιημένο"
+
+#: ../../../app/routes/route.dashboard.php:185
+msgid "Max. upload size"
+msgstr "Μέγ. μέγεθος μεταφόρτωσης"
+
+#: ../../../app/routes/route.dashboard.php:189
+msgid "Max. post size"
+msgstr "Μέγ. μέγεθος ποστ"
+
+#: ../../../app/routes/route.dashboard.php:193
+msgid "Max. execution time"
+msgstr "Μεγ. χρόνος εκτέλεσης"
+
+#: ../../../app/routes/route.dashboard.php:194
+#, php-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d δευτερόλεπτο"
+msgstr[1] "%d δευτερόλεπτα"
+
+#: ../../../app/routes/route.dashboard.php:197
+msgid "Memory limit"
+msgstr "Όριο μνήμης"
+
+#: ../../../app/routes/route.dashboard.php:217
+#: ../../../app/themes/Peafowl/views/settings.php:322
+msgid "Website"
+msgstr "Ιστοσελίδα"
+
+#: ../../../app/routes/route.dashboard.php:218
+msgid "Content"
+msgstr "Περιεχόμενο"
+
+#: ../../../app/routes/route.dashboard.php:219
+#: ../../../app/themes/Peafowl/views/dashboard.php:1191
+msgid "Listings"
+msgstr "Καταχωρήσεις"
+
+#: ../../../app/routes/route.dashboard.php:220
+msgid "Image upload"
+msgstr "Μεταφόρτωση εικόνας"
+
+#: ../../../app/routes/route.dashboard.php:221
+msgid "Categories"
+msgstr "Κατηγορίες"
+
+#: ../../../app/routes/route.dashboard.php:223
+#: ../../../app/themes/Peafowl/views/dashboard.php:680
+msgid "Flood protection"
+msgstr "Προστασία υπερχείλισης"
+
+#: ../../../app/routes/route.dashboard.php:224
+#: ../../../app/themes/Peafowl/views/dashboard.php:820
+msgid "Theme"
+msgstr "Θέμα"
+
+#: ../../../app/routes/route.dashboard.php:225
+#: ../../../app/themes/Peafowl/views/dashboard.php:633
+#: ../../../app/themes/Peafowl/views/dashboard.php:1177
+msgid "Homepage"
+msgstr "Αρχική"
+
+#: ../../../app/routes/route.dashboard.php:226
+msgid "Banners"
+msgstr "Διαφημίσεις"
+
+#: ../../../app/routes/route.dashboard.php:227
+msgid "System"
+msgstr "Σύστημα"
+
+#: ../../../app/routes/route.dashboard.php:228
+msgid "Languages"
+msgstr "Γλώσσες"
+
+#: ../../../app/routes/route.dashboard.php:229
+msgid "External storage"
+msgstr "Εξωτερικός χώρος αποθήκευσης"
+
+#: ../../../app/routes/route.dashboard.php:230
+#: ../../../app/themes/Peafowl/views/dashboard.php:99
+msgid "Email"
+msgstr "Email"
+
+#: ../../../app/routes/route.dashboard.php:231
+#: ../../../app/themes/Peafowl/views/album.php:79
+msgid "Social networks"
+msgstr "Κοινωνικά δίκτυα"
+
+#: ../../../app/routes/route.dashboard.php:232
+msgid "External services"
+msgstr "Εξωτερικές υπηρεσίες"
+
+#: ../../../app/routes/route.dashboard.php:233
+msgid "IP bans"
+msgstr "Αποκλεισμένες IP"
+
+#: ../../../app/routes/route.dashboard.php:260
+msgid "Local"
+msgstr "Τοπικά"
+
+#: ../../../app/routes/route.dashboard.php:264
+msgid "External"
+msgstr "Εξωτερικά"
+
+#: ../../../app/routes/route.dashboard.php:269
+#: ../../../app/themes/Peafowl/header.php:174
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:37
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:62
+msgid "All"
+msgstr "Όλα"
+
+#: ../../../app/routes/route.dashboard.php:274
+#: ../../../app/routes/route.image.php:147
+#: ../../../app/themes/Peafowl/views/dashboard.php:1413
+msgid "search content"
+msgstr "αναζήτηση περιεχομένων"
+
+#: ../../../app/routes/route.dashboard.php:311
+msgid "Invalid website name"
+msgstr "Λανθασμένο όνομα ιστοσελίδας"
+
+#: ../../../app/routes/route.dashboard.php:316
+msgid "Invalid language"
+msgstr "Λανθασμένη γλώσσα"
+
+#: ../../../app/routes/route.dashboard.php:321
+msgid "Invalid timezone"
+msgstr "Λανθασμένη ζώνη ώρας"
+
+#: ../../../app/routes/route.dashboard.php:326
+#: ../../../app/routes/route.dashboard.php:361
+#: ../../../app/routes/route.dashboard.php:471
+#: ../../../app/routes/route.dashboard.php:605
+msgid "Invalid value"
+msgstr "Λανθασμένη τιμή"
+
+#: ../../../app/routes/route.dashboard.php:331
+msgid "Invalid upload storage mode"
+msgstr "Λανθασμένος τρόπος αποθήκευσης αρχείου μεταφόρτωσης"
+
+#: ../../../app/routes/route.dashboard.php:336
+msgid "Invalid upload filenaming"
+msgstr "Λανθασμένη ονομασία αρχείου μεταφόρτωσης"
+
+#: ../../../app/routes/route.dashboard.php:341
+msgid "Invalid thumb width"
+msgstr "Λάθος μήκος"
+
+#: ../../../app/routes/route.dashboard.php:346
+msgid "Invalid thumb height"
+msgstr "Λάθος ύψος μικρογραφίας"
+
+#: ../../../app/routes/route.dashboard.php:351
+msgid "Invalid medium width"
+msgstr "Λάθος μήκος μεσαίας"
+
+#: ../../../app/routes/route.dashboard.php:356
+msgid "Invalid theme"
+msgstr "Λάθος θέμα"
+
+#: ../../../app/routes/route.dashboard.php:366
+msgid "Invalid theme tone"
+msgstr "Λάθος τόνος θέματος"
+
+#: ../../../app/routes/route.dashboard.php:386
+msgid "Invalid theme image listing size"
+msgstr "Λάθος μέγεθος εικόνας θέματος"
+
+#: ../../../app/routes/route.dashboard.php:391
+msgid "Invalid user id"
+msgstr "Λάθος ταυτότητα χρήστη"
+
+#: ../../../app/routes/route.dashboard.php:396
+msgid "Invalid email mode"
+msgstr "Λάθος τρόπος λειτουργίας email"
+
+#: ../../../app/routes/route.dashboard.php:401
+msgid "Invalid SMTP port"
+msgstr "Λάθος θύρα SMTP"
+
+#: ../../../app/routes/route.dashboard.php:406
+msgid "Invalid SMTP security"
+msgstr "Λάθος ασφάλειας SMTP"
+
+#: ../../../app/routes/route.dashboard.php:411
+msgid "Invalid website mode"
+msgstr "Λάθος μορφή ιστοσελίδας"
+
+#: ../../../app/routes/route.dashboard.php:416
+msgid "Invalid website content privacy mode"
+msgstr "Λάθος περιεχόμενο ιδιωτικότητας ιστοσελίδας"
+
+#: ../../../app/routes/route.dashboard.php:447
+msgid "Invalid upload image path"
+msgstr "Λάθος διαδρομή ανεβάσματος εικόνας"
+
+#: ../../../app/routes/route.dashboard.php:474
+#, php-format
+msgid "Max. allowed %s"
+msgstr "Μεγ. επιτρεπόμενο %s"
+
+#: ../../../app/routes/route.dashboard.php:524
+msgid "Invalid SMTP server"
+msgstr "Λάθος διακομιστής SMTP"
+
+#: ../../../app/routes/route.dashboard.php:525
+msgid "Invalid SMTP username"
+msgstr "Λάθος όνομα χρήστη SMTP"
+
+#: ../../../app/routes/route.dashboard.php:587
+msgid "Invalid URL"
+msgstr "Λάθος λινκ"
+
+#: ../../../app/routes/route.dashboard.php:713
+msgid "Top users"
+msgstr "Κορυφαίοι χρήστες"
+
+#: ../../../app/routes/route.dashboard.php:775
+#: ../../../app/themes/Peafowl/header.php:367
+#: ../../../app/themes/Peafowl/views/dashboard.php:9
+msgid "Dashboard"
+msgstr "Πίνακας ελέγχου"
+
+#: ../../../app/routes/route.explore.php:81
+#: ../../../app/themes/Peafowl/header.php:184
+#: ../../../app/themes/Peafowl/header.php:202
+#: ../../../app/themes/Peafowl/views/dashboard.php:280
+#: ../../../app/themes/Peafowl/views/explore.php:9
+msgid "Explore"
+msgstr "Αναζήτηση"
+
+#: ../../../app/routes/route.image.php:118
+#: ../../../app/themes/Peafowl/header.php:381
+msgid "About"
+msgstr "Περί"
+
+#: ../../../app/routes/route.image.php:125
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:85
+msgid "Embed codes"
+msgstr "Επισυναπτόμενος κώδικας(embed)"
+
+#: ../../../app/routes/route.image.php:142
+msgid "Image ID"
+msgstr "Ταυτότητα εικόνας"
+
+#: ../../../app/routes/route.image.php:146
+msgid "Uploader IP"
+msgstr "Ανέβασμα από IP"
+
+#: ../../../app/routes/route.image.php:147
+msgid "Ban IP"
+msgstr "Αποκλεισμός IP"
+
+#: ../../../app/routes/route.image.php:147
+msgid "IP already banned"
+msgstr "IP ήδη αποκλεισμένη"
+
+#: ../../../app/routes/route.image.php:150
+msgid "Upload date"
+msgstr "Ημερομηνία ανεβάσματος"
+
+#: ../../../app/routes/route.image.php:175
+#, php-format
+msgid "%s images"
+msgstr "%s εικόνες"
+
+#: ../../../app/routes/route.json.php:44 ../../../app/routes/route.json.php:59
+#: ../../../app/routes/route.json.php:232
+#: ../../../app/routes/route.json.php:718
+#: ../../../app/routes/route.json.php:782
+#: ../../../app/routes/route.json.php:883
+#: ../../../app/routes/route.json.php:1026
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:4
+msgid "Login needed"
+msgstr "Χρειάζεται είσοδος"
+
+#: ../../../app/routes/route.json.php:471
+#: ../../../app/routes/route.json.php:662
+msgid "IP address already banned"
+msgstr "Η IP είναι ήδη αποκλεισμένη"
+
+#: ../../../app/routes/route.json.php:540
+#: ../../../app/routes/route.json.php:602
+msgid "Missing values"
+msgstr "Λείπουν αξίες"
+
+#: ../../../app/routes/route.json.php:561
+msgid "Invalid role"
+msgstr "Λάθος ρόλος"
+
+#: ../../../app/routes/route.json.php:566
+msgid "Username already being used"
+msgstr "Το όνομα χρήστη χρησιμποιείτε ήδη"
+
+#: ../../../app/routes/route.json.php:1063
+#, php-format
+msgid "%s has been disconnected."
+msgstr "%s αποσυνδέθηκε."
+
+#: ../../../app/routes/route.login.php:133
+msgid "Wrong Username/Email password combination"
+msgstr "Λανθασμένος συνδυασμός ονόματος χρήστη/κωδικού πρόσβασης"
+
+#: ../../../app/routes/route.login.php:148
+#: ../../../app/themes/Peafowl/header.php:265
+#: ../../../app/themes/Peafowl/header.php:271
+#: ../../../app/themes/Peafowl/views/login.php:8
+#: ../../../app/themes/Peafowl/views/login.php:52
+msgid "Sign in"
+msgstr "Είσοδος"
+
+#: ../../../app/routes/route.logout.php:29
+#: ../../../app/themes/Peafowl/views/logout.php:8
+msgid "Logged out"
+msgstr "Αποσυνδεθήκατε"
+
+#: ../../../app/routes/route.search.php:118
+#, php-format
+msgid "Image search results for %s"
+msgstr "Αποτελέσματα αναζήτησης εικόνας για %s"
+
+#: ../../../app/routes/route.search.php:129
+#: ../../../app/themes/Peafowl/header.php:211
+#: ../../../app/themes/Peafowl/header.php:216
+#: ../../../app/themes/Peafowl/views/dashboard.php:270
+msgid "Search"
+msgstr "Αναζήτηση"
+
+#: ../../../app/routes/route.settings.php:58
+msgid "Account"
+msgstr "Λογαριασμός"
+
+#: ../../../app/routes/route.settings.php:59
+msgid "Profile"
+msgstr "Προφίλ"
+
+#: ../../../app/routes/route.settings.php:60
+#: ../../../app/themes/Peafowl/header.php:288
+#: ../../../app/themes/Peafowl/header.php:336
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:51
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:104
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/login.php:39
+#: ../../../app/themes/Peafowl/views/settings.php:274
+#: ../../../app/themes/Peafowl/views/signup.php:44
+#: ../../../app/themes/Peafowl/views/signup.php:45
+msgid "Password"
+msgstr "Κωδικός"
+
+#: ../../../app/routes/route.settings.php:61
+msgid "Linked accounts"
+msgstr "Ενωμένοι λογαριασμοί"
+
+#: ../../../app/routes/route.settings.php:246
+#, php-format
+msgid "An email has been sent to %s with instructions to activate this email"
+msgstr "Αποστάλθηκε ένα email στη διεύθυνση %s με οδηγίες για την ενεργοποίηση αυτού του email"
+
+#: ../../../app/routes/route.settings.php:279
+#: ../../../app/themes/Peafowl/pages/contact.php:22
+msgid "Invalid name"
+msgstr "Λάθος όνομα"
+
+#: ../../../app/routes/route.settings.php:282
+msgid "Invalid website"
+msgstr "Λάθος ιστοσελίδα"
+
+#: ../../../app/routes/route.settings.php:290
+msgid "Wrong password"
+msgstr "Λάθος κωδικός πρόσβασης"
+
+#: ../../../app/routes/route.settings.php:293
+msgid "Use a new password"
+msgstr "Χρησιμοποιήστε ένα νέο κωδικό πρόσβασης"
+
+#: ../../../app/routes/route.settings.php:360
+#: ../../../app/themes/Peafowl/views/dashboard.php:1751
+#: ../../../app/themes/Peafowl/views/settings.php:409
+msgid "Changes have been saved."
+msgstr "Οι αλλαγές αποθηκέυτηκαν"
+
+#: ../../../app/routes/route.settings.php:379
+msgid "Password has been changed"
+msgstr "Ο κωδικός πρόσβασης άλλαξε"
+
+#: ../../../app/routes/route.settings.php:384
+msgid "Password has been created."
+msgstr "Ο κωδικός δημιουργήθηκε"
+
+#: ../../../app/routes/route.settings.php:399
+msgid "Wrong Username/Email values"
+msgstr "Λάθος τιμές για όνομα χρήστη/email"
+
+#: ../../../app/routes/route.settings.php:442
+#, php-format
+msgid "Settings for %s"
+msgstr "Ρυθμίσεις για %s"
+
+#: ../../../app/routes/route.signup.php:238
+#: ../../../app/themes/Peafowl/header.php:312
+#: ../../../app/themes/Peafowl/header.php:318
+#: ../../../app/themes/Peafowl/views/index.php:81
+#: ../../../app/themes/Peafowl/views/signup.php:8
+#: ../../../app/themes/Peafowl/views/signup.php:58
+msgid "Create account"
+msgstr "Δημιουργία λογαριασμού"
+
+#: ../../../app/themes/Peafowl/header.php:56
+#: ../../../app/themes/Peafowl/views/index.php:46
+#: ../../../app/themes/Peafowl/views/user.php:124
+#, php-format
+msgid "%s's Images"
+msgstr "Εικόνες του %s"
+
+#: ../../../app/themes/Peafowl/header.php:56
+#: ../../../app/themes/Peafowl/views/user.php:124
+#, php-format
+msgid "%s's Albums"
+msgstr "Αλμπουμ του %s"
+
+#: ../../../app/themes/Peafowl/header.php:218
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: ../../../app/themes/Peafowl/header.php:218
+#: ../../../app/themes/Peafowl/header.php:222
+msgid "Advanced search"
+msgstr "Προχωρημένη αναζήτηση"
+
+#: ../../../app/themes/Peafowl/header.php:229
+#: ../../../app/themes/Peafowl/views/dashboard.php:290
+#: ../../../app/themes/Peafowl/views/dashboard.php:381
+msgid "Random"
+msgstr "Τυχαία"
+
+#: ../../../app/themes/Peafowl/header.php:239
+#, php-format
+msgid "Notices (%s)"
+msgstr "Σημειώσεις (%s)"
+
+#: ../../../app/themes/Peafowl/header.php:254
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:69
+msgid "Upload"
+msgstr "Ανέβασμα"
+
+#: ../../../app/themes/Peafowl/header.php:277
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:34
+#: ../../../app/themes/Peafowl/views/login.php:18
+#: ../../../app/themes/Peafowl/views/login.php:65
+#: ../../../app/themes/Peafowl/views/signup.php:18
+#: ../../../app/themes/Peafowl/views/signup.php:71
+msgid "Sign in with another account"
+msgstr "Είσοδος με διαφορετικό λογαριασμό"
+
+#: ../../../app/themes/Peafowl/header.php:281
+#: ../../../app/themes/Peafowl/header.php:328
+#: ../../../app/themes/Peafowl/pages/contact.php:137
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:69
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:73
+#: ../../../app/themes/Peafowl/snippets/form_album.php:12
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:32
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/dashboard.php:1728
+#: ../../../app/themes/Peafowl/views/login.php:22
+#: ../../../app/themes/Peafowl/views/login.php:62
+#: ../../../app/themes/Peafowl/views/settings.php:306
+#: ../../../app/themes/Peafowl/views/settings.php:395
+#: ../../../app/themes/Peafowl/views/signup.php:22
+#: ../../../app/themes/Peafowl/views/signup.php:68
+#: ../../../lib/Peafowl/peafowl.js:480 ../../../lib/Peafowl/peafowl.js:2192
+#: ../../../lib/Peafowl/peafowl.min.js:29
+#: ../../../lib/Peafowl/peafowl.min.js:120
+msgid "or"
+msgstr "ή"
+
+#: ../../../app/themes/Peafowl/header.php:287
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
+#: ../../../app/themes/Peafowl/views/login.php:34
+#: ../../../app/themes/Peafowl/views/login.php:35
+msgid "Username or Email address"
+msgstr "Όνομα χρήστη ή διέυθυνση email"
+
+#: ../../../app/themes/Peafowl/header.php:290
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:23
+#: ../../../app/themes/Peafowl/views/login.php:53
+msgid "Keep me logged in"
+msgstr "Διατήρηση σύνδεσης"
+
+#: ../../../app/themes/Peafowl/header.php:297
+#, php-format
+msgid "Don't have an account? <a href='%s'>Sign up</a> now."
+msgstr "Δεν έχετε λογαριασμό;  <a href='%s'>Εγγραφείτε </a> τώρα."
+
+#: ../../../app/themes/Peafowl/header.php:324
+msgid "Sign up with another account"
+msgstr "Εγγραφείτε με άλλο λογαριασμό"
+
+#: ../../../app/themes/Peafowl/header.php:334
+#: ../../../app/themes/Peafowl/pages/contact.php:106
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:100
+#: ../../../app/themes/Peafowl/views/settings.php:143
+#: ../../../app/themes/Peafowl/views/signup.php:34
+#: ../../../app/themes/Peafowl/views/signup.php:35
+msgid "Email address"
+msgstr "Διέυθυνση email"
+
+#: ../../../app/themes/Peafowl/header.php:335
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:47
+#: ../../../app/themes/Peafowl/views/dashboard.php:94
+#: ../../../app/themes/Peafowl/views/dashboard.php:95
+#: ../../../app/themes/Peafowl/views/settings.php:137
+#: ../../../app/themes/Peafowl/views/settings.php:138
+#: ../../../app/themes/Peafowl/views/signup.php:39
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "Username"
+msgstr "Όνομα χρήστη"
+
+#: ../../../app/themes/Peafowl/header.php:337
+#: ../../../app/themes/Peafowl/views/signup.php:60
+#, php-format
+msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
+msgstr "Με την εγγραφή σας συμφωνείτε στους <a href=\"%s\">Όρους χρήσης </a> μας"
+
+#: ../../../app/themes/Peafowl/header.php:363
+msgid "My Profile"
+msgstr "Το προφίλ μου"
+
+#: ../../../app/themes/Peafowl/header.php:369
+msgid "Sign out"
+msgstr "Αποσύνδεση"
+
+#: ../../../app/themes/Peafowl/header.php:385
+msgid "Terms of service"
+msgstr "Όροι χρήσης"
+
+#: ../../../app/themes/Peafowl/header.php:386
+msgid "Privacy"
+msgstr "Ιδιωτικότητα"
+
+#: ../../../app/themes/Peafowl/header.php:387
+#: ../../../app/themes/Peafowl/pages/contact.php:4
+#: ../../../app/themes/Peafowl/pages/contact.php:93
+msgid "Contact"
+msgstr "Επικοινωνία"
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:6
+#, php-format
+msgid "To complete the process you must <a href=\"%s\">activate your email</a>."
+msgstr "Για να ολοκληρώσετε την διαδικασία πρέπει να <a href=\"%s\">ενεργοποιήσετε το email σας</a>."
+
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:6
+#, php-format
+msgid "To complete the process you must <a href=\"%s\">activate your account</a>."
+msgstr "Για να ολοκληρώσετε την διαδικασία πρέπει να <a href=\"%s\">ενεργοποιήσετε τον λογαριασμό σας</a>."
+
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:6
+#, php-format
+msgid "To reset your password <a href=\"%s\">follow this link</a>."
+msgstr "Για σβήσιμο του κωδικού <a href=\"%s\">ακολούθησε αυτό το λινκ</a>."
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:4
+msgid "Hi %n, welcome to %w"
+msgstr "Γεια %n, καλώς ήρθες στο %w"
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:6
+msgid "Now that your account is ready you can enjoy uploading your images, creating albums and setting the privacy of your content as well as many more cool things that you will discover."
+msgstr "Τώρα που ο λογαριασμός σας είναι έτοιμος μπορείτε να απολαύσετε το ανέβασμα των εικόνων σας, να δημιουργήσετε άλμπουμ και να ορίσετε την ιδιωτικότητα του περιεχομένου σας καθώς και πολλά άλλα ωραία πράγματα που θα ανακαλύψετε."
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:10
+msgid "Thank you for joining"
+msgstr "Ευχαρισστούμε για τη συμμετοχή"
+
+#: ../../../app/themes/Peafowl/mails/footer.php:3
+msgid "This email was sent from %w %u"
+msgstr "Αυτό το email αποστάλθηκε από %w %u"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:10
+msgid "General questions/comments"
+msgstr "Γενικές ερωτήσεις/σχόλια"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:11
+msgid "DMCA complaint"
+msgstr "καταγγελία DMCA"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:25
+msgid "Invalid message"
+msgstr "Λάθος μήνυμα"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:28
+msgid "Invalid subject"
+msgstr "Λάθος θέμα"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:36
+msgid "Invalid reCAPTCHA"
+msgstr "Λάθος reCAPTCHA"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:81
+msgid "Mail error"
+msgstr "Σφάλμα mail"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:93
+msgid "Message sent"
+msgstr "Το μήνυμα αποστάλθηκε"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:99
+msgid "We will be in touch soon."
+msgstr "Θα έρθουμε σε επαφή σύντομα"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:99
+msgid "If you want to send a message fill the form below."
+msgstr "Αν θέλετε να στείλετε ένα μήνυμα, χρησιμοποιήστε την παρακάτω φόρμα."
+
+#: ../../../app/themes/Peafowl/pages/contact.php:101
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:4
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:3
+#: ../../../app/themes/Peafowl/views/dashboard.php:523
+#: ../../../app/themes/Peafowl/views/dashboard.php:1396
+#: ../../../app/themes/Peafowl/views/settings.php:316
+msgid "Name"
+msgstr "Όνομα"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:102
+msgid "Your name"
+msgstr "Το όνομά σας"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:107
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:16
+#: ../../../app/themes/Peafowl/views/settings.php:144
+msgid "Your email address"
+msgstr "To email σου"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:111
+msgid "Subject"
+msgstr "Θέμα"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:125
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:574
+msgid "Message"
+msgstr "Μήνυμα"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:137
+msgid "Send message"
+msgstr "Αποστολή μηνύματος"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:137
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:69
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:73
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:85
+#: ../../../app/themes/Peafowl/views/dashboard.php:1728
+#: ../../../app/themes/Peafowl/views/settings.php:395
+#: ../../../lib/Peafowl/peafowl.js:2193
+#: ../../../lib/Peafowl/peafowl.min.js:120
+msgid "cancel"
+msgstr "ακύρωση"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:13
+msgid "Drag and drop images here to upload"
+msgstr "Σύρετε κι αφήστε εικόνες εδώ για να ανεβάσετε"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:14
+msgid "Select the images to upload"
+msgstr "Διάλεξε τις εικόνες που θες να ανεβάσεις"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:15
+msgid "You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
+msgstr "Μπορείτε επίσης να <a data-trigger=\"anywhere-upload-input\">επιλέξετε από τον υπολογιστή σας</a> ή να <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">προσθέσετε URL εικόνων</a>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:16
+msgid "You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a>."
+msgstr "Μπορείς επίσης <a data-trigger=\"anywhere-upload-input-camera\">πάρε φωτογραφία</a>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:20
+msgid "Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>"
+msgstr "Ανέβασμα <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">εικόνων</span>"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:21
+msgid "The queue is being uploaded. It will take just a few seconds to complete."
+msgstr "Η ουρά ανεβαίνει. Θα χρειαστεί μερικά δευτερόλεπτα για να ολοκληρωθεί."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:25
+msgid "Upload complete"
+msgstr "Το ανέβασμα ολοκληρώθηκε"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
+#, php-format
+msgid "Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album."
+msgstr "Το περιεχόμενο προστέθηκε στη <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">δημόσια ροή</a>. Μπορείτε να <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">δημιουργήσετε ένα άλμπουμ</a> ή να <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">μετακινήσετε τις <span data-text=\"queue-objects\">εικόνες</span></a> σε ένα υπάρχον άλμπουμ."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:28
+msgid "You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account."
+msgstr "Μπορείτε να <a href=\"%s\">δημιουργήσετε ένα λογαριασμό</a> ή να <a href=\"%l\">συνδεθείτε</a> για να αποθηκεύσετε μελλοντικά ανεβάσματα στον λογαριασμό σας."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:33
+msgid "No <span data-text=\"queue-objects\">images</span> have been uploaded"
+msgstr "Δεν ανέβηκε καμία <span data-text=\"queue-objects\">εικόνα</span>"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:34
+msgid "Some errors have occured and the system couldn't process your request."
+msgstr "Προέκυψαν κάποια λάθη και το σύστημα δε μπόρεσε να ολοκλρώσει το αίτημα."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:54
+msgid "Select category"
+msgstr "Διάλεξε κατηγορία"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:69
+msgid "Change upload privacy"
+msgstr "Άλλαξε ιδιωτικότητα ανεβάσματος"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:70
+msgid "Mark this if the upload is not family safe"
+msgstr "Επέλεξε εαν δεν είναι κατάλληλο για ανηλίκους"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:70
+msgid "Not family safe upload"
+msgstr "Δεν είναι κατάλληλο για ανηλίκους"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:73
+msgid "Uploading"
+msgstr "Ανεβαίνει"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:73
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:86
+msgid "cancel remaining"
+msgstr "Ακύρωση υπολοίπων"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:78
+msgid "Note: Some images couldn't be uploaded."
+msgstr "Σημείωση: Κάποιες εικόνες δεν μπόρεσαν να ανέβουν."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:78
+msgid "learn more"
+msgstr "μάθε περισσότερα"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:79
+msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
+msgstr "Ελέγξτε την <a data-modal=\"simple\" data-target=\"failed-upload-result\">αναφορά σφαλμάτων</a> για περισσότερες πληροφορίες."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:82
+msgid "max"
+msgstr "μέγιστο"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:84
+msgid "close"
+msgstr "κλείσιμο"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:143
+msgid "Add image URLs"
+msgstr "Προσθήκη λινκ εικόνων"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:145
+msgid "Add the image URLs here"
+msgstr "Προσθήκη των λινκ εικόνων εδώ"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:160
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:26
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:31
+msgid "Create album"
+msgstr "Δημιουργία άλμπουμ"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:161
+msgid "The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
+msgstr "Το ανεβασμένο περιεχόμενο θα μετακινηθεί σε αυτό το νέο άλμπουμ. Μπορείτε επίσης να μετακινήσετε το περιεχόμενο σε ένα <a class=\"modal-switch\" data-switch=\"move-existing-album\">υπάρχον άλμπουμ</a>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:172
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:27
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:46
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:70
+msgid "Move to album"
+msgstr "Μετακίνηση σε άλμπουμ"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:173
+msgid "Select an existing album to move the uploaded content. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the content there."
+msgstr "Επιλέξτε ένα υπάρχον άλμπουμ για να μετακινήσετε το ανεβασμένο περιεχόμενο. Μπορείτε επίσης να <a class=\"modal-switch\" data-switch=\"move-new-album\">δημιουργήσετε ένα νέο άλμπουμ</a> και να μετακινήσετε το περιεχόμενο εκεί."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:189
+msgid "Error report"
+msgstr "Λάθος αναφορά"
+
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
+#: ../../../app/themes/Peafowl/views/user.php:87
+msgid "album"
+msgid_plural "albums"
+msgstr[0] "άλμπουμ"
+msgstr[1] "άλμπουμ"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
+msgid "Links"
+msgstr "Λινκ"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
+msgid "Viewer links"
+msgstr "Προβολές Λινκ"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:14
+msgid "Direct links"
+msgstr "Απευθείας λινικ"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:21
+msgid "HTML Codes"
+msgstr "Κώδικες HTML"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:24
+msgid "HTML embed"
+msgstr "Ενσωμάτωση HTM"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:29
+msgid "HTML original linked"
+msgstr "Σύνδεσμος HTML πρωτότυπης"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:34
+msgid "HTML medium linked"
+msgstr "Σύνδεσμος HTML μεσαίας"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:39
+msgid "HTML thumbnail linked"
+msgstr "Σύνδεσμος HTML μικρογραφίας"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:46
+msgid "BBCodes"
+msgstr "BBCodes"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:49
+msgid "BBCode embed"
+msgstr "Ενσωμάτωση BBCode"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:54
+msgid "BBCode original linked"
+msgstr "Σύνδεσμος BBCode πρωτότυπης"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:59
+msgid "BBCode medium linked"
+msgstr "Σύνδεσμος BBCode μεσαίας"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:64
+msgid "BBCode thumbnail linked"
+msgstr "Σύνδεσμος BBCode μικρογραφίας"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:6
+msgid "All these words"
+msgstr "Όλες αυτές οι λέξεις"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:7
+msgid "Type the important words: tri-colour rat terrier"
+msgstr "Συμπλήρωσε τις απαραίτητες λέξεις: tri-colour rat terrier"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:10
+msgid "This exact word or phrase"
+msgstr "Η ακριβής λέξη ή φράση"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:11
+msgid "Put exact words in quotes: \"rat terrier\""
+msgstr "Βάλε τις ακριβείς λέξεις στα εισαγωγικά: \"rat terrier\""
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:20
+msgid "None of these words"
+msgstr "Καμία από αυτές τις λέξεις"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:21
+msgid "Put a minus sign just before words you don't want: -rodent -\"Jack Russell\""
+msgstr "Βάλε ένα αρνητικό πρόσημο λίγο πριν από τις λέξεις που δεν θες:  -rodent -\"Jack Russell\""
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
+#: ../../../app/themes/Peafowl/snippets/form_category.php:3
+msgid "Category"
+msgstr "Κατηγορία"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:66
+msgid "Storage"
+msgstr "Αποθήκευση"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:81
+msgid "Uploader IP address"
+msgstr "Διέυθυνση IP uploader"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:7
+msgid "Album name"
+msgstr "Όνομα άλμπουμ"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:8
+msgid "Untitled album"
+msgstr "Ανώνυμο άλμπουμ"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:12
+msgid "move to existing album"
+msgstr "μετακινηθείτε στο υπάρχον άλμπουμ"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:18
+msgid "Album description"
+msgstr "Περιγραφή του άλμπουμ"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:18
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:12
+#: ../../../app/themes/Peafowl/snippets/form_image.php:4
+#: ../../../app/themes/Peafowl/snippets/form_image.php:28
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:1069
+#: ../../../app/themes/Peafowl/views/dashboard.php:1079
+msgid "optional"
+msgstr "προαιρετικά"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:19
+msgid "Brief description of this album"
+msgstr "Σύντομη περιγραφή αυτού του άλμπουμ"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:24
+msgid "Album Privacy"
+msgstr "Ιδιωτικότητα άλμπουμ"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:25
+msgid "Who can view this content"
+msgstr "Ποιος μπορεί να δει αυτό το περιεχόμενο"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:26
+#: ../../../app/themes/Peafowl/views/dashboard.php:305
+msgid "Public"
+msgstr "Δημίσιο"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:27
+msgid "Private (just me)"
+msgstr "Ιδιωτικό (μόνο εγώ)"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:28
+msgid "Private (anyone with the link)"
+msgstr "Ιδιωτικό (ο καθένας με το σύνδεσμο)"
+
+#: ../../../app/themes/Peafowl/snippets/form_category.php:9
+msgid "No category"
+msgstr "Χωρίς κατηγορία"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:5
+msgid "Category name"
+msgstr "Όνομα κατηγορίας"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:8
+#: ../../../app/themes/Peafowl/views/dashboard.php:524
+msgid "URL key"
+msgstr "Κλειδί URL"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:9
+msgid "Category URL key"
+msgstr "Κλειδί κατηγορίας URL"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:9
+msgid "Only letters, numbers, and hyphens"
+msgstr "Μόνο γράμματα, νούμερα και απόστροφοι"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:12
+#: ../../../app/themes/Peafowl/snippets/form_image.php:28
+#: ../../../app/themes/Peafowl/views/dashboard.php:525
+msgid "Description"
+msgstr "Περιγραφή"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:13
+msgid "Brief description of this category"
+msgstr "Συνοπτική περιγραφή της κατηγορίας"
+
+#: ../../../app/themes/Peafowl/snippets/form_image.php:4
+#: ../../../app/themes/Peafowl/views/dashboard.php:1091
+msgid "Title"
+msgstr "Τίτλος"
+
+#: ../../../app/themes/Peafowl/snippets/form_image.php:5
+msgid "Untitled image"
+msgstr "Ανώνυμη Εικόνα"
+
+#: ../../../app/themes/Peafowl/snippets/form_image.php:25
+msgid "Mark this if the image is not family safe"
+msgstr "Επιλέξτε αυτό, αν η εικόνα δεν είναι κατάλληλη για ανηλίκους"
+
+#: ../../../app/themes/Peafowl/snippets/form_image.php:25
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:36
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:8
+msgid "Flag as unsafe"
+msgstr "Σημείωση ως μη ασφαλές"
+
+#: ../../../app/themes/Peafowl/snippets/form_image.php:29
+msgid "Brief description of this image"
+msgstr "Συνοπτική περιγραφή της εικόνας"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:4
+msgid "IP address"
+msgstr "Διέυθυνση IP"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
+msgid "Expiration date"
+msgstr "Ημερομηνία λήξης"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:10
+msgid "YYYY-MM-DD HH:MM:SS"
+msgstr "ΕΕΕΕ-ΜΜ-ΗΗ ΩΩ:ΛΛ:ΔΔ"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:10
+msgid "Example"
+msgstr "Παράδειγμα"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:12
+msgid "Until which date this IP address will be banned? Leave it empty for no expiration."
+msgstr "Μέχρι ποιά ημερομηνία αυτή η IP θα πρέπει να είναι απαγορευμένη;Αφήστε το κενό για να μην λήξη ποτέ."
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:16
+msgid "Text message, HTML or a redirect URL"
+msgstr "Μήνυμα κειμένου , HTML, ή απευθείας λινκ"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+msgid "Existing album"
+msgstr "Υπάρχον άλμπουμ"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "Αλμπουμ"
+msgstr[1] "Αλμπουμ"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2341 ../../../app/lib/chevereto.js:3254
+#: ../../../app/lib/chevereto.min.js:115 ../../../app/lib/chevereto.min.js:162
+msgid "private"
+msgstr "ιδιωτικό"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+msgid "create new album"
+msgstr "δημιουργία άλμπουμ"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:4
+msgid "Storage name"
+msgstr "Όνομα αποθηκευτικού χώρου"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:7
+msgid "API"
+msgstr "API"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:16
+msgid "Region"
+msgstr "περιοχή"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:26
+msgid "Storage bucket"
+msgstr "κάδος αποθήκευσης"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:29
+msgid "Key"
+msgstr "Κλειδί"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:30
+msgid "Storage key"
+msgstr "Κλειδί αποθήκευσης"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:33
+msgid "Secret"
+msgstr "Μυστικό"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:34
+msgid "Storage secret"
+msgstr "Μυστικό αποθήκευσης"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:40
+msgid "Hostname or IP of the storage server"
+msgstr "Διέυθυνση ή Ip του σέρβερ αποθήκευσης"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:43
+msgid "Path"
+msgstr "Μονοπάτι"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:44
+msgid "Server path"
+msgstr "Μονοπάτι σέρβερ"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:44
+msgid "Server path where the files will be stored"
+msgstr "Διαδρομή στον server όπου θα αποθηκεύονται τα αρχεία"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:48
+msgid "Server username"
+msgstr "Όνομα χρήστη σέρβερ"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:52
+msgid "Server password"
+msgstr "Κωδικός σέρβερ"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:57
+msgid "Storage capacity"
+msgstr "Χωρητικότητα αποθήκευσης"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:58
+msgid "Example: 20 GB, 1 TB, etc."
+msgstr "Παράδειγμα: 20 GB, 1 TB, κτλ."
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:64
+msgid "Storage URL"
+msgstr "URL αποθήκευσης"
+
+#: ../../../app/themes/Peafowl/snippets/image_album_slice.php:14
+msgid "view more"
+msgstr "δείτε περισσότερα"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:22
+#: ../../../app/themes/Peafowl/snippets/templates_content_listing.php:6
+#: ../../../app/themes/Peafowl/snippets/templates_content_listing.php:9
+msgid "Load more"
+msgstr "Φορτώστε περισσότερα"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:91
+msgid "Previous"
+msgstr "Προηγούμενο"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:98
+msgid "Next"
+msgstr "Επόμενο"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
+msgid "Select all"
+msgstr "Επιλογή όλων"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:11
+msgid "Selection"
+msgstr "Επιλογή"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:12
+msgid "Action"
+msgstr "Δράση"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:34
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:85
+msgid "Assign category"
+msgstr "Εκχώρηση κατηγορίας"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:40
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:532
+#: ../../../app/themes/Peafowl/views/dashboard.php:581
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:41
+msgid "Clear selection"
+msgstr "Απαλοιφή επιλογής"
+
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:5
+#, php-format
+msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
+msgstr "Για να χρησιμοποιήσετε όλες τις δυνατότητες αυτού του ιστότοπου πρέπει να είστε συνδεδεμένοι. Αν δεν έχετε λογαριασμό μπορείτε να <a href=\"%s\">εγγραφείτε</a> αμέσως τώρα."
+
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:24
+msgid "forgot?"
+msgstr "ξεχάσατε;"
+
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
+msgid "Link"
+msgstr "Σύνδεσμος"
+
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:14
+#: ../../../app/themes/Peafowl/views/album.php:74
+#: ../../../app/themes/Peafowl/views/image.php:282
+msgid "Note: This content is private. Change privacy to \"public\" to share."
+msgstr "Σημείωση: Αυτό το περιεχόμενο είναι ιδιωτικό. Αλλάξτε την ιδιωτικότητα σε \"δημόσιο\" για να το μοιραστείτε."
+
+#: ../../../app/themes/Peafowl/snippets/template_content_empty.php:5
+#: ../../../app/themes/Peafowl/views/index.php:63
+msgid "There's nothing to show here."
+msgstr "Δεν υπάρχει τίποτα για εμφάνιση εδώ."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
+#: ../../../app/themes/Peafowl/views/image.php:75
+#: ../../../app/themes/Peafowl/views/image.php:441
+msgid "Edit image details"
+msgstr "Επεξεργασία στοιχείων εικόνας"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
+#: ../../../app/themes/Peafowl/views/album.php:22
+#: ../../../app/themes/Peafowl/views/album.php:118
+msgid "Edit album details"
+msgstr "Διόρθωση λεπτομερειών του άλμπουμ"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:87
+msgid "All the selected images will be assigned to this category."
+msgstr "Όλες οι επιλεγμένες εικόνες θα προστεθούν σε αυτή την κατηγορία."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:92
+msgid "There is no categories."
+msgstr "Δεν υπάρχουν κατηγορίες."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:106
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:110
+msgid "Confirm deletion"
+msgstr "Επιβεβαίωση διαγραφής"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:107
+msgid "Do you really want to remove this content? This can't be undone."
+msgstr "Θέλετε πραγματικά να καταργήσετε αυτό το περιεχόμενο; Αυτό δεν μπορεί να αναιρεθεί."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:111
+msgid "Do you really want to remove all the selected content? This can't be undone."
+msgstr "Θέλετε πραγματικά να αφαιρέσετε όλο το επιλεγμένο περιεχόμενο; Αυτό δεν μπορεί να αναιρεθεί."
+
+#: ../../../app/themes/Peafowl/tpl_list_item/image_description_guest.php:2
+msgid "Uploaded by guest to Public"
+msgstr "Ανέβηκε από επισκέπτη ως Δημόσιο"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/image_description_owner.php:2
+#, php-format
+msgid "From %s"
+msgstr "Από %s"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
+#: ../../../app/lib/chevereto.js:3186 ../../../app/lib/chevereto.min.js:157
+#: ../../../lib/Peafowl/peafowl.js:625 ../../../lib/Peafowl/peafowl.min.js:36
+msgid "Select"
+msgstr "Επιλογή"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#: ../../../app/themes/Peafowl/views/404.php:7
+msgid "The requested page was not found."
+msgstr "Η σελίδα που ζητήσατε δεν βρέθηκε."
+
+#: ../../../app/themes/Peafowl/views/404.php:11
+msgid "Search something else"
+msgstr "Αναζήτηση για κάτι άλλο"
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+msgid "The user has been deleted"
+msgstr "Ο χρήστης έχει διαγραφεί"
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+#: ../../../app/themes/Peafowl/views/album.php:134
+#: ../../../app/themes/Peafowl/views/user.php:158
+#: ../../../app/lib/chevereto.js:3163 ../../../app/lib/chevereto.min.js:155
+msgid "The content has been deleted."
+msgstr "Το περιεχόμενο έχει διαγραφεί."
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:7
+msgid "Your account is almost ready"
+msgstr "Ο λογαριασμός σας είναι σχεδόν έτοιμος"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:9
+#, php-format
+msgid "An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "Ένα email αποστάλθηκε προς την διεύθυνση %s με οδηγίες για την ενεργοποίηση του λογαριασμού σας. Ο σύνδεσμος ενεργοποίησης θα είναι ενεργός μόνο για 48 ώρες. Αν δεν λάβετε τις οδηγίες ελέγξτε τα σκουπίδια ή τα φίλτρα ανεπιθύμητης αλληλογραφίας."
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/logout.php:13
+#: ../../../app/themes/Peafowl/views/request-denied.php:13
+msgid "Go to homepage"
+msgstr "Πηγαίνετε στην αρχική σελίδα"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+msgid "Resend activation"
+msgstr "Επαναποστολή ενεργοποίησης"
+
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:10
+#, php-format
+msgid "You have successfully changed your account email to %s"
+msgstr "Αλλάξατε με επιτυχία το email του λογαριασμού σας σε %s"
+
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+msgid "Go to my profile"
+msgstr "Πήγαινε στο προφίλ μου"
+
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:12
+msgid "A confirmation link will be sent to this email with details to activate your account."
+msgstr "Ένας σύνδεσμος επιβεβαίωσης θα σταλεί σε αυτό το email με λεπτομέρειες για το πως να ενεργοποιήσετε τον λογαριασμό σας."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
+msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "Ένα email με οδηγίες για την επαναφορά του μυστικού κωδικού σας αποστάλθηκε προς την εγγεγραμμένη διεύθυνση email σας. Αν δεν λάβετε τις οδηγίες ελέγξτε τα σκουπίδια ή τα φίλτρα ανεπιθύμητης αλληλογραφίας."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:989 ../../../app/lib/chevereto.js:1065
+#: ../../../app/lib/chevereto.js:1143 ../../../app/lib/chevereto.js:1293
+#: ../../../app/lib/chevereto.min.js:44 ../../../app/lib/chevereto.min.js:48
+#: ../../../app/lib/chevereto.min.js:52 ../../../app/lib/chevereto.min.js:55
+#: ../../../lib/Peafowl/peafowl.js:2422 ../../../lib/Peafowl/peafowl.js:2937
+#: ../../../lib/Peafowl/peafowl.min.js:138
+#: ../../../lib/Peafowl/peafowl.min.js:169
+msgid "An error occurred. Please try again later."
+msgstr "Συνέβη κάποιο λάθος. Παρακαλώ δοκιμάστε ξανά αργότερα."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
+msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
+msgstr "Ένα προηγούμενο email με οδηγίες για την επαναφορά του μυστικού κωδικού σας αποστάλθηκε. Αν δεν λάβετε τις οδηγίες ελέγξτε τα σκουπίδια ή τα φίλτρα ανεπιθύμητης αλληλογραφίας."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:32
+msgid "Enter your username or the email address that you used to create your account."
+msgstr "Εισάγετε το όνομα χρήστη σας ή τη διεύθυνση ηλεκτρονικού ταχυδρομείου που χρησιμοποιήσατε για να δημιουργήσετε το λογαριασμό σας."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:52
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:47
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:37
+#: ../../../lib/Peafowl/peafowl.js:407 ../../../lib/Peafowl/peafowl.js:2191
+#: ../../../lib/Peafowl/peafowl.min.js:23
+#: ../../../lib/Peafowl/peafowl.min.js:120
+msgid "Submit"
+msgstr "Αποστολή"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:15
+msgid "Your password has been changed. You can now try logging in using your new password."
+msgstr "Ο κωδικός πρόσβασής σας έχει αλλάξει. Τώρα μπορείτε να δοκιμάσετε να συνδεθείτε χρησιμοποιώντας το νέο κωδικό πρόσβασης."
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+msgid "Login now"
+msgstr "Σύνδεση"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:22
+msgid "Enter the new password that you want to use."
+msgstr "Πληκτρολογήστε το νέο κωδικό πρόσβασης που θέλετε να χρησιμοποιήσετε."
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:28
+msgid "New Password"
+msgstr "Νέος κωδικός"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/settings.php:258
+#: ../../../app/themes/Peafowl/views/settings.php:275
+#: ../../../app/themes/Peafowl/views/signup.php:45
+#, php-format
+msgid "%d characters min"
+msgstr "ελάχιστοι χαρακτήρες %d"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/settings.php:258
+msgid "Enter your new password"
+msgstr "Εισάγετε το νέο κωδικό πρόσβασής σας"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
+#: ../../../app/themes/Peafowl/views/settings.php:280
+msgid "Confirm password"
+msgstr "Επιβεβαίωση κωδικού πρόσβασης"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:35
+#: ../../../app/themes/Peafowl/views/settings.php:264
+msgid "Re-enter your new password"
+msgstr "Εισάγετε ξανά το νέο κωδικό πρόσβασής σας"
+
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:12
+#, php-format
+msgid "An email to %s has been sent with instructions to activate your account.n\\If you don't receive the instructions try checking your junk or spam filters."
+msgstr "Ένα email αποστάλθηκε προς την διεύθυνση %s με οδηγίες για την ενεργοποίηση του λογαριασμού σας.\\nΑν δεν λάβετε τις οδηγίες ελέγξτε τα σκουπίδια ή τα φίλτρα ανεπιθύμητης αλληλογραφίας."
+
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:19
+msgid "Enter the email address that you used to create your account to continue."
+msgstr "Εισάγετε τη διεύθυνση ηλεκτρονικού ταχυδρομείου που χρησιμοποιήσατε για να δημιουργήσετε τον λογαριασμό σας και να συνεχίσετε."
+
+#: ../../../app/themes/Peafowl/views/album.php:16
+#: ../../../app/themes/Peafowl/views/image.php:69
+msgid "This content is private"
+msgstr "Το περιεχόμενο είναι ιδιωτικό"
+
+#: ../../../app/themes/Peafowl/views/album.php:25
+msgid "Do you really want to delete this album and all of its images? This can't be undone."
+msgstr "Θέλετε πραγματικά να διαγράψετε αυτό το άλμπουμ και όλες τις εικόνες του; Αυτό δεν μπορεί να αναιρεθεί."
+
+#: ../../../app/themes/Peafowl/views/album.php:25
+msgid "Delete album"
+msgstr "Διαγραφή άλμπουμ"
+
+#: ../../../app/themes/Peafowl/views/album.php:86
+msgid "Album link"
+msgstr "Σύνδεσμος άλμπουμ"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:22
+msgid "Image"
+msgid_plural "Images"
+msgstr[0] "Εικόνα"
+msgstr[1] "Εικόνες"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:34
+#: ../../../app/themes/Peafowl/views/dashboard.php:90
+#: ../../../app/themes/Peafowl/views/settings.php:120
+msgid "User"
+msgid_plural "Users"
+msgstr[0] "Χρήστης"
+msgstr[1] "Χρήστες"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:40
+#: ../../../app/themes/Peafowl/views/dashboard.php:1435
+msgid "Disk used"
+msgstr "Δίσκος που χρησιμοποιήθηκε"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:80
+#: ../../../app/themes/Peafowl/views/dashboard.php:84
+msgid "Add user"
+msgstr "Προσθέστε χρήστη"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:87
+#: ../../../app/themes/Peafowl/views/settings.php:115
+msgid "Role"
+msgstr "Ρόλος"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:89
+#: ../../../app/themes/Peafowl/views/settings.php:119
+msgid "Administrator"
+msgstr "Διαχειριστής"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:152
+#: ../../../app/themes/Peafowl/views/dashboard.php:156
+msgid "Add category"
+msgstr "Προσθήκη κατηγορίας"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:197
+msgid "Website name"
+msgstr "Όνομα ιστοσελίδας"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:202
+msgid "Website doctitle"
+msgstr "Τίτλος ιστοσελίδας"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:206
+msgid "Website description"
+msgstr "Περιγραφή ιστοσελίδας"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:211
+msgid "Website keywords"
+msgstr "Keywords ιστοσελίδας"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:232
+msgid "Default time zone"
+msgstr "Προεπιλεγμένη ζώνη ώρας"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:236
+#: ../../../app/themes/Peafowl/views/settings.php:202
+msgid "Select region"
+msgstr "Επιλέξτε περιοχή"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:276
+msgid "Enable this if you want to allow the search feature."
+msgstr "Ενεργοποιήστε αυτή την επιλογή αν θέλετε να επιτρέψετε τη λειτουργία αναζήτησης."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:286
+msgid "Enable this if you want to allow the explore page."
+msgstr "Ενεργοποιήστε αυτή την επιλογή αν θέλετε να επιτρέψετε την εξερεύνηση σελίδας."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:335
+msgid "Enable uploads"
+msgstr "Ενεργοποίηση uploads"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:341
+msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
+msgstr "Ενεργοποιήστε αυτή την επιλογή αν θέλετε να επιτρέψετε το ανέβασμα εικόνων. Αυτή η ρύθμιση δεν επηρεάζει τους διαχειριστές."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:344
+msgid "Guest uploads"
+msgstr "Ανέβασμα από επισκέπτες"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:350
+msgid "Enable this if you want to allow non registered users to upload."
+msgstr "Ενεργοποιήστε αυτό αν θέλετε μη εγγεγραμμένοι χρήστες να μπορούν να ανεβάσουν."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:357
+msgid "Max. filesize"
+msgstr "Μέγ. μέγεθος αρχείου"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:360
+#, php-format
+msgid "Max. allowed filesize. (Max allowed by server is %s)"
+msgstr "Μέγιστο επιτρεπόμενο μέγεθος αρχείου. (Το μέγιστο επιτρεπόμενο από τον διακομιστή είναι %s)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:363
+msgid "Image path"
+msgstr "Διαδρομή εικόνων"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:364
+msgid "Relative to Chevereto root"
+msgstr "Σε σχέση με την θέση του Chevereto"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:369
+msgid "Storage mode"
+msgstr "Τρόπος αποθήκευσης"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:372
+msgid "Datefolders"
+msgstr "Φάκελοι δεδομένων"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:372
+msgid "Direct"
+msgstr "Απευθείας"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:375
+#, php-format
+msgid "Datefolders creates %s structure"
+msgstr "Οι φάκελοι δεδομένων δημιουργούν %s δομή"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:378
+msgid "File naming method"
+msgstr "Μέθοδος ονοματοδοσίας αρχείων"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:381
+msgid "Original"
+msgstr "Πρωτότυπο"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:381
+msgid "Mixed"
+msgstr "Ανάμεικτο"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:384
+msgid "\"Original\" will try to keep the image source name while \"Random\" will generate a random name. \"Mixed\" is a combination of both methods."
+msgstr "Το \"Πρωτότυπο\" θα προσπαθήσει να διατηρήσει το όνομα του πηγαίου αρχείου ενώ το \"Τυχαίο\" θα δημιουργήσει ένα τυχαίο όνομα. Το \"Ανάμεικτο\" είναι ένας συνδυασμός και των δύο μεθόδων."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:390
+msgid "Thumb size"
+msgstr "Μέγεθος μικρογραφίας"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:401
+msgid "Thumbnails will be fixed to this size."
+msgstr "Οι μικρογραφίες θα είναι σταθερές σε αυτό το μέγεθος."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:404
+msgid "Medium size"
+msgstr "Μέγεθος μεσαίας"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:409
+msgid "Height will be automatic calculated."
+msgstr "Το ύψος θα υπολογίζεται αυτόματα"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:422
+msgid "Enable this to put a logo or anything you want in image uploads."
+msgstr "Ενεργοποιήστε αυτό για να βάλετε ένα λογότυπο ή οτιδήποτε άλλο θέλετε στο ανέβασμα εικόνων."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:429
+#: ../../../app/themes/Peafowl/views/dashboard.php:889
+#, php-format
+msgid "Warning: Can't write in %s"
+msgstr "Προειδοποίηση: Δεν είναι δυνατή η εγγραφή στο %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:466
+msgid "Watermark image"
+msgstr "Υδατογράφημα εικόνας"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:472
+msgid "Watermark image to use. Must be a PNG."
+msgstr "Χρήση υδατογραφημένης εικόνας. Πρέπει να είναι σε .png"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:475
+msgid "Watermark position"
+msgstr "Θέση υδατογραφήματος"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:479
+msgid "left top"
+msgstr "πάνω αριστερά"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:480
+msgid "left center"
+msgstr "αριστερά στη μέση"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:481
+msgid "left bottom"
+msgstr "κάτω αριστερά"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:482
+msgid "center top"
+msgstr "πάνω κεντρικά"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:483
+msgid "center center"
+msgstr "στην μέση κεντρικά"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:484
+msgid "center bottom"
+msgstr "στην μέση κάτω"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:485
+msgid "right top"
+msgstr "πάνω δεξιά"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:486
+msgid "right center"
+msgstr "δεξιά στην μέση"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:487
+msgid "right bottom"
+msgstr "κάτω δεξιά"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:492
+msgid "Relative position of the watermark image. First horizontal align then vertical align."
+msgstr "Σχετική θέση της υδατογρφημένης εικόνας. Πρώτη οριζόντια στοίχιση και στη συνέχεια κατακόρυφη στοίχιση."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:550
+msgid "Edit category"
+msgstr "Επεξεργασία κατηγορίας"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:678
+msgid "Block image uploads by IP if the system notice a flood  behavior based on the number of uploads per time period. This setting doesn't affect administrators."
+msgstr "Μπλοκάρισμα ανεβάσματος εικόνων από IP αν το σύστημα παρατηρήσει συμπεριφορά flood βασισμένη σε ανεβάσματα ανά χρονική περίοδο. Αυτή η ρύθμιση δεν επηρεάζει τους διαχειριστές."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:690
+msgid "Notify to email"
+msgstr "Ειδοποίηση σε email"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:699
+msgid "Minute limit"
+msgstr "Όριο ανά λεπτό"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:704
+msgid "Hourly limit"
+msgstr "Ωριαίο όριο"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:709
+msgid "Daily limit"
+msgstr "Ημερήσιο όριο"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:714
+msgid "Weekly limit"
+msgstr "Εβδομαδιαίο όριο"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:719
+msgid "Monthly limit"
+msgstr "Μηνιαίο όριο"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:763
+msgid "How many items should be displayed per page listing."
+msgstr "Πόσα αντικείμενα πρέπει να εμφανίζονται ανά σελίδα λίστας."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:818
+#, php-format
+msgid "Put your themes in the %s folder"
+msgstr "Τοποθετήστε τα θέματα στο φάκελο %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1235
+msgid "After header (image page)"
+msgstr "Μετά από το  header (εικόνα σελίδας)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1239
+msgid "Footer (image page)"
+msgstr "Footer (εικόνα σελίδας)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1245
+msgid "Album page"
+msgstr "Album σελίδα"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1269
+msgid "Explore page"
+msgstr "Εξερεύνηση σελίδας"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1279
+msgid "Crypt salt"
+msgstr "Κλειδί κρυπτογράφησης"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1281
+msgid "This is the salt used to convert numeric ID to alphanumeric. It was generated on install."
+msgstr "Αυτό είναι το κλειδί που χρησιμοποιείται για την μετατροπή αριθμητικών ID σε αλφαριθμητικών. Δημιουργείται κατά την εγκατάσταση."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1293
+msgid "Error reporting"
+msgstr "Αναφορά σφαλμάτων"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1299
+msgid "Enable this if you need to debug PHP errors."
+msgstr "Ενεργοποιήστε αυτό αν θέλετε να αποσφαλματώσετε τα λάθη PHP."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1302
+msgid "Maintenance"
+msgstr "Συντήρηση"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1308
+msgid "When enabled the website will show a maintenance message. This setting doesn't affect administrators."
+msgstr "Όταν ενεργοποιηθεί η ιστοσελίδα θα εμφανιστεί ένα μήνυμα συντήρησης. Αυτή η ρύθμιση δεν επηρεάζει τους διαχειριστές."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1314
+msgid "Default language"
+msgstr "Προεπιλεγμένη γλώσσα"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1323
+msgid "Default base language to use."
+msgstr "Προεπιλεγμένη βασική γλώσσα για χρήση."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1327
+msgid "Auto language"
+msgstr "Αυτόματη γλώσσα"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1382
+msgid "Toggle this to enable or disable HTTPS"
+msgstr "Εναλλαγή για να ενεργοποιήσετε ή να απενεργοποιήσετε το HTTPS"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1399
+msgid "Quota"
+msgstr "Ποσόστωση"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1401
+msgid "Active"
+msgstr "Ενεργό"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1434
+msgid "Storage method"
+msgstr "Μέθοδος αποθήκευσης"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1445
+msgid "Local storage is used by default or when no external storage is active."
+msgstr "Η τοπική αποθήκευση χρησιμοποιείται από προεπιλογή ή όταν η εξωτερική μονάδα αποθήκευσης δεν είναι ενεργή."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1445
+#, php-format
+msgid "If you need help check the <a href=\"%s\">storage documentation</a>."
+msgstr "Αν χρειάζεστε βοήθεια για να ελέγξετε την <a href=\"%s\">τεκμηρίωση αποθήκευσης</a>"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1447
+msgid "Edit storage"
+msgstr "Επεξεργασία αποθήκευσης"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1457
+msgid "From name"
+msgstr "Από όνομα"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1460
+msgid "Sender name for emails sent to users."
+msgstr "Όνομα αποστολέα για τα email που αποστέλλονται στους χρήστες."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1475
+msgid "Email mode"
+msgstr "Τρόπος λειτουργίας email"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1487
+msgid "SMTP server and port"
+msgstr "Διακομιστής και θύρα SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1490
+msgid "SMTP server"
+msgstr "Διακομιστής SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1503
+msgid "SMTP username"
+msgstr "Όνομα χρήστη SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1508
+msgid "SMTP password"
+msgstr "Κωδικός πρόσβασης SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1513
+msgid "SMTP security"
+msgstr "Ασφάλεια SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1516
+msgid "Unsecured"
+msgstr "Ανασφαλής"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1533
+msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
+msgstr "Χρειάζεστε ένα <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> για αυτό."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1538
+msgid "Facebook app id"
+msgstr "Facebook app id"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1543
+msgid "Facebook app secret"
+msgstr "Facebook app secret"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1559
+msgid "You need a <a href=\"https://apps.twitter.com\" target=\"_blank\">Twitter app</a> for this."
+msgstr "Χρειάζεστε ένα <a href=\"https://apps.twitter.com\" target=\"_blank\">Twitter app</a> για αυτό."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1564
+msgid "Twitter API key"
+msgstr "Twitter API key"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1569
+msgid "Twitter API secret"
+msgstr "Twitter API secret"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1576
+msgid "Twitter account"
+msgstr "Twitter λογαριασμός"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1592
+msgid "You need a <a href=\"https://cloud.google.com/console\" target=\"_blank\">Google app</a> for this."
+msgstr "Χρειάζεστε ένα <a href=\"https://cloud.google.com/console\" target=\"_blank\">Google app</a> για αυτό."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1597
+msgid "Google client id"
+msgstr "Google client id"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1602
+msgid "Google client secret"
+msgstr "Google client secret"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1669
+msgid "reCAPTCHA public key"
+msgstr "reCAPTCHA public key"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1674
+msgid "reCAPTCHA private key"
+msgstr "reCAPTCHA private key"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1681
+msgid "reCAPTCHA threshold"
+msgstr "reCAPTCHA threshold"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1686
+msgid "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA."
+msgstr "Μετά από πόσες αποτυχημένες προσπάθειες να γίνει ερώτηση reCAPTCHA? Βάλε (0) για να γίνετε πάντα ερώτηση reCAPTCHA."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1692
+msgid "Comment code"
+msgstr "Κώδικας σχολίων"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1693
+msgid "Disqus, Facebook or anything you want. It will be used in image view."
+msgstr "Disqus, Facebook ή ότι άλλο θέλετε. Θα χρησιμοποιηθεί στην προβολή εικόνων."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1697
+msgid "Analytics code"
+msgstr "Κώδικας στατιστικών"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1698
+msgid "Google Analytics or anything you want. It will be added to the theme footer."
+msgstr "Google Analytics ή ότι άλλο θέλετε. Θα προστεθεί στο footer του θέματος."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1708
+msgid "Enable this if you are using Cloudflare."
+msgstr "Ενεργοποιήστε αυτό αν χρησιμοποιείτε Cloudflare."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1713
+msgid "For documentation about the API check <a href=\"http://chevereto.com/docs/api\" target=\"_blank\">docs/api</a>"
+msgstr "Για τεκμηρίωση σχετικά με τον έλεγχο API <a href=\"http://chevereto.com/docs/api\" target=\"_blank\">docs/api</a>"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1715
+msgid "API v1 key"
+msgstr "Κλειδί API v1"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1718
+msgid "Use this key when using the API v1. <a href=\"https://chevereto.com/docs/api-v1\">Learn more</a>."
+msgstr "Χρησιμοποίησε αυτό το κλειδί αν χρησιμοποιείς API v1. <a href=\"https://chevereto.com/docs/api-v1\">Μάθε περισσότερα</a>."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1728
+#: ../../../app/themes/Peafowl/views/settings.php:395
+#: ../../../lib/Peafowl/peafowl.js:407 ../../../lib/Peafowl/peafowl.min.js:23
+msgid "Save changes"
+msgstr "Αποθήκευση αλλαγών"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1751
+#: ../../../app/themes/Peafowl/views/settings.php:409
+msgid "Check the errors to proceed."
+msgstr "Έλεγξε τα λάθη για να προχωρήσεις."
+
+#: ../../../app/themes/Peafowl/views/image.php:63
+msgid "Guest"
+msgstr "Επισκέπτης"
+
+#: ../../../app/themes/Peafowl/views/image.php:78
+msgid "Do you really want to delete this image? This can't be undone."
+msgstr "Αλήθεια θες να διαγράψεις την εικόνα; Δεν μπορεί να αναιρεθεί."
+
+#: ../../../app/themes/Peafowl/views/image.php:78
+msgid "Delete image"
+msgstr "Διαγραφή εικόνας"
+
+#: ../../../app/themes/Peafowl/views/image.php:142
+msgid "Added to %a and categorized in %c"
+msgstr "Προστέθηκε στο %a και κατηγοριοποιήθηκε στην %c"
+
+#: ../../../app/themes/Peafowl/views/image.php:144
+#, php-format
+msgid "Added to %s"
+msgstr "Προστέθηκε στον %s"
+
+#: ../../../app/themes/Peafowl/views/image.php:149
+#, php-format
+msgid "Uploaded to %s"
+msgstr "Ανεβάστηκε στον %s"
+
+#: ../../../app/themes/Peafowl/views/image.php:151
+#, php-format
+msgid "Uploaded %s"
+msgstr "%s ανέβηκε"
+
+#: ../../../app/themes/Peafowl/views/image.php:188
+#: ../../../app/themes/Peafowl/views/image.php:249
+msgid "Share image"
+msgstr "Μοιράσου την εικόνα"
+
+#: ../../../app/themes/Peafowl/views/image.php:204
+#: ../../../app/themes/Peafowl/views/image.php:210
+msgid "Album ID"
+msgstr "Ταυτότητα άλμπουμ"
+
+#: ../../../app/themes/Peafowl/views/image.php:260
+msgid "In this album"
+msgstr "Μέσα στο άλμπουμ"
+
+#: ../../../app/themes/Peafowl/views/image.php:287
+msgid "Image links"
+msgstr "Λινκ εικόνας"
+
+#: ../../../app/themes/Peafowl/views/image.php:289
+msgid "Image URL"
+msgstr "Διέυθυνση εικόνας"
+
+#: ../../../app/themes/Peafowl/views/image.php:295
+msgid "Image link"
+msgstr "Λινκ εικόνας"
+
+#: ../../../app/themes/Peafowl/views/image.php:301
+msgid "Thumbnail URL"
+msgstr "Μικρογραφία εικόνας"
+
+#: ../../../app/themes/Peafowl/views/image.php:310
+msgid "Medium URL"
+msgstr "Μεσαίο URL"
+
+#: ../../../app/themes/Peafowl/views/image.php:328
+#: ../../../app/themes/Peafowl/views/image.php:348
+#: ../../../app/themes/Peafowl/views/image.php:371
+#: ../../../app/themes/Peafowl/views/image.php:396
+msgid "Image embed codes"
+msgstr "Κώδικας ενσωμάτωσης εικόνας"
+
+#: ../../../app/themes/Peafowl/views/image.php:348
+msgid "Linked image"
+msgstr "Σύνδεση εικόνας"
+
+#: ../../../app/themes/Peafowl/views/image.php:371
+msgid "Linked medium"
+msgstr "Σύνδεση μεσαίας"
+
+#: ../../../app/themes/Peafowl/views/image.php:396
+msgid "Linked thumbnail"
+msgstr "Σύνδεση μικρογραφιας"
+
+#: ../../../app/themes/Peafowl/views/index.php:15
+msgid "Upload and share your images."
+msgstr "Ανέβασε και μοιράσου τις εικόνες σου."
+
+#: ../../../app/themes/Peafowl/views/index.php:17
+#, php-format
+msgid "Drag and drop anywhere you want and start uploading your images now. %s limit. Direct image links, BBCode and HTML thumbnails."
+msgstr "Σύρετε και αφήστε το οπουδήποτε θέλετε και να ξεκινήσετε τη μεταφόρτωση των εικόνων σας τώρα. όριο %s. Απευθείας συνδέσεις εικόνας, BBCode και HTML μικρογραφίες."
+
+#: ../../../app/themes/Peafowl/views/index.php:25
+msgid "Start uploading"
+msgstr "Ξεκίνησε το ανέβασμα"
+
+#: ../../../app/themes/Peafowl/views/index.php:63
+#, php-format
+msgid "Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings."
+msgstr "Συμπλήρωσε αυτή την ενότητα ανεβάζοντας φωτογραφίες στο λογαριασμό %s .<br>Μπορείς να επεξεργαστείς τον τελικό στις ρυθμίσεις του πίνακα ελέγχου σου."
+
+#: ../../../app/themes/Peafowl/views/index.php:79
+msgid "Sign up to unlock all the features"
+msgstr "Εγγραφείτε να ξεκλειδώσετε όλες τις λειτουργίες"
+
+#: ../../../app/themes/Peafowl/views/index.php:80
+msgid "Manage your content, create private albums, customize your profile and more."
+msgstr "Διαχειρίσου τα περιεχόμενα, δημιούργησε ιδιωτικά άλμπουμ. επεξεργάσου το προφίλ σου και πολλά ακόμα."
+
+#: ../../../app/themes/Peafowl/views/login.php:40
+#: ../../../app/themes/Peafowl/views/settings.php:275
+msgid "Enter your password"
+msgstr "Βάλε το κωδικό σου"
+
+#: ../../../app/themes/Peafowl/views/logout.php:12
+#, php-format
+msgid "You have been logged off %s. Hope to see you soon."
+msgstr "Αποσυνδέθηκες %s. >Ελπίζουμε να σε δούμε σύντομα."
+
+#: ../../../app/themes/Peafowl/views/maintenance.php:7
+msgid "Website under maintenance"
+msgstr "Η Ιστοσελίδα είναι υπό συντήρηση"
+
+#: ../../../app/themes/Peafowl/views/maintenance.php:8
+msgid "We're performing scheduled maintenance tasks in the website. Please come back in a few minutes."
+msgstr "Εκτελούμε προγραμματισμένες εργασίες συντήρησης στην ιστοσελίδα. Παρακαλούμε επανέλθετε σε λίγα λεπτά."
+
+#: ../../../app/themes/Peafowl/views/request-denied.php:12
+msgid "You either don't have permission to access this page or the link has expired."
+msgstr "Ή δεν έχεις την άδεια να εισέλθεις σε αυτή τη σελίδα ή το λίνκ έληξε."
+
+#: ../../../app/themes/Peafowl/views/search.php:8
+#: ../../../app/themes/Peafowl/views/user.php:111
+msgid "Results for"
+msgstr "Αποτελέσματα για"
+
+#: ../../../app/themes/Peafowl/views/settings.php:36
+#: ../../../app/themes/Peafowl/views/user.php:68
+msgid "Do you really want to delete this user? This can't be undone."
+msgstr "Θέλετε πραγματικά να διαγράψετε αυτόν το χρήστη; Αυτό δεν μπορεί να αναιρεθεί."
+
+#: ../../../app/themes/Peafowl/views/settings.php:36
+#: ../../../app/themes/Peafowl/views/user.php:68
+msgid "Delete user"
+msgstr "Διαγραφή χρήστη"
+
+#: ../../../app/themes/Peafowl/views/settings.php:69
+msgid "User ID"
+msgstr "Ταυτότητα Χρήστη"
+
+#: ../../../app/themes/Peafowl/views/settings.php:81
+msgid "Register date"
+msgstr "Ημερ. εγγραφής"
+
+#: ../../../app/themes/Peafowl/views/settings.php:99
+msgid "Status"
+msgstr "Κατάσταση"
+
+#: ../../../app/themes/Peafowl/views/settings.php:103
+msgid "Valid"
+msgstr "Έγκυρο"
+
+#: ../../../app/themes/Peafowl/views/settings.php:104
+msgid "Banned"
+msgstr "Αποκλεισμένο"
+
+#: ../../../app/themes/Peafowl/views/settings.php:105
+msgid "Awaiting email"
+msgstr "Αναμονή email"
+
+#: ../../../app/themes/Peafowl/views/settings.php:106
+msgid "Awaiting confirmation"
+msgstr "Αναμονή επιβεβαίωσης"
+
+#: ../../../app/themes/Peafowl/views/settings.php:138
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "%i to %f characters<br>Letters, numbers and \"_\""
+msgstr "%i εως %f χαρακτήρες<br>Γράμματα, νούμερα και \"_\""
+
+#: ../../../app/themes/Peafowl/views/settings.php:153
+msgid "Newsletter"
+msgstr "Ενημερωτικό Δελτίο"
+
+#: ../../../app/themes/Peafowl/views/settings.php:158
+msgid "Content settings"
+msgstr "Ρυθμίσεις περιεχομένου"
+
+#: ../../../app/themes/Peafowl/views/settings.php:167
+msgid "Language"
+msgstr "Γλώσσα"
+
+#: ../../../app/themes/Peafowl/views/settings.php:197
+msgid "Timezone"
+msgstr "Ζώνη ώρας"
+
+#: ../../../app/themes/Peafowl/views/settings.php:248
+msgid "Current password"
+msgstr "Τρέχων κωδικός"
+
+#: ../../../app/themes/Peafowl/views/settings.php:249
+msgid "Enter your current password"
+msgstr "Εισαγωγή κωδικού"
+
+#: ../../../app/themes/Peafowl/views/settings.php:257
+msgid "New password"
+msgstr "Νέος κωδικός"
+
+#: ../../../app/themes/Peafowl/views/settings.php:263
+msgid "Confirm new password"
+msgstr "Επιβεβαίωση νέου κωδικού"
+
+#: ../../../app/themes/Peafowl/views/settings.php:271
+msgid "Add a password to be able to login using your username or email."
+msgstr "Πρόσθεσε ένα κωδικό για να μπορείς να συνδεθείς με το όνομα χρήστη ή το email σου"
+
+#: ../../../app/themes/Peafowl/views/settings.php:271
+msgid "This user doesn't have a password. Add one using this form."
+msgstr "Ο χρήστης αυτός δεν έχει κωδικό. Πρόσθεσε έναν χρησιμποιώντας αυτή την φόρμα"
+
+#: ../../../app/themes/Peafowl/views/settings.php:281
+msgid "Re-enter your password"
+msgstr "Επανάληψη κωδικού"
+
+#: ../../../app/themes/Peafowl/views/settings.php:300
+#: ../../../lib/Peafowl/peafowl.js:3356
+#: ../../../lib/Peafowl/peafowl.min.js:207
+msgid "loading"
+msgstr "Φόρτωση"
+
+#: ../../../app/themes/Peafowl/views/settings.php:304
+#: ../../../app/themes/Peafowl/views/user.php:21
+msgid "Upload new image"
+msgstr "Ανέβασε νέα εικόνα"
+
+#: ../../../app/themes/Peafowl/views/settings.php:306
+msgid "Delete existing image"
+msgstr "Διαγραφή υπάρχουσας εικόνας"
+
+#: ../../../app/themes/Peafowl/views/settings.php:319
+msgid "This is your real name, not your username."
+msgstr "Αυτό είναι το πραγματικό σου όνομα, όχι όνομα χρήστη"
+
+#: ../../../app/themes/Peafowl/views/settings.php:323
+msgid "http://yourwebsite.com"
+msgstr "http://ηιστοσελιδασου.com"
+
+#: ../../../app/themes/Peafowl/views/settings.php:328
+msgid "Tell us a little bit about you"
+msgstr "Πείτε μας λίγα λόγια για εσάς"
+
+#: ../../../app/themes/Peafowl/views/settings.php:339
+msgid "User has no connections."
+msgstr "Ο χρήστης δεν έχει συνδέσεις."
+
+#: ../../../app/themes/Peafowl/views/settings.php:343
+msgid "Link your account to external services to be able to login and share content."
+msgstr "Σύνδεσε το λογαριασμό σου σε εξωτερικές υπηρεσίες για να είσαι σε θέση να συνδεθείς και να μοιραστείς το περιεχόμενο."
+
+#: ../../../app/themes/Peafowl/views/settings.php:350
+#, php-format
+msgid "Do you really want to disconnect %s from this account?"
+msgstr "Αλήθεια θές να αποσυνδέσεις τονt %s από αυτόν το λογαριασμό?"
+
+#: ../../../app/themes/Peafowl/views/settings.php:351
+#, php-format
+msgid "This account is connected to %s"
+msgstr "Ο λογαριασμός είναι συνδεδεμένος στο %s"
+
+#: ../../../app/themes/Peafowl/views/settings.php:353
+#, php-format
+msgid "Do you really want to disconnect your %s account?"
+msgstr "Αλήθεια θες να αποσυνδέσεις τον λογαριασμό %s ;"
+
+#: ../../../app/themes/Peafowl/views/settings.php:355
+#, php-format
+msgid "You will be logged out and you won't be able to login to your account using this %s account."
+msgstr "Θα αποσυνδεθείς και δε θα μπορείς να συνδεθείς χρησιμοποιώντας αυτόν τον λογαριασμό %s"
+
+#: ../../../app/themes/Peafowl/views/settings.php:357
+#, php-format
+msgid "Your account is connected to %s"
+msgstr "Ο λογαριασμός σου είναι συνδεδεμένος στο %s"
+
+#: ../../../app/themes/Peafowl/views/settings.php:362
+msgid "disconnect"
+msgstr "αποσύνδεση"
+
+#: ../../../app/themes/Peafowl/views/settings.php:375
+#, php-format
+msgid "Connect %s"
+msgstr "Σύνδεση %s"
+
+#: ../../../app/themes/Peafowl/views/user.php:15
+msgid "Upload profile background"
+msgstr "Ανέβασε φόντο προφίλ"
+
+#: ../../../app/themes/Peafowl/views/user.php:17
+msgid "Change background"
+msgstr "Αλλαγή φόντου"
+
+#: ../../../app/themes/Peafowl/views/user.php:22
+msgid "The profile background image will be deleted. This can't be undone. Are you sure that you want to delete the profile background image?"
+msgstr "Η εικόνα φόντου προφίλ θα διαγραφεί. Αυτό δεν μπορεί να αναιρεθεί. Είσαι σίγουρος ότι θές να διαγράψεις την εικόνα φόντου προφίλ;"
+
+#: ../../../app/themes/Peafowl/views/user.php:22
+msgid "Delete background"
+msgstr "Διαγραφή φόντου"
+
+#: ../../../app/themes/Peafowl/views/user.php:64
+msgid "Edit profile"
+msgstr "Επεξεργασία προφίλ"
+
+#: ../../../app/lib/chevereto.js:496 ../../../app/lib/chevereto.js:568
+#: ../../../app/lib/chevereto.js:750 ../../../app/lib/chevereto.js:2155
+#: ../../../app/lib/chevereto.js:2208 ../../../app/lib/chevereto.js:2306
+#: ../../../app/lib/chevereto.min.js:20 ../../../app/lib/chevereto.min.js:24
+#: ../../../app/lib/chevereto.min.js:30 ../../../app/lib/chevereto.min.js:107
+#: ../../../app/lib/chevereto.min.js:110 ../../../app/lib/chevereto.min.js:114
+msgid "You must enter the album name."
+msgstr "Πρέπει να δώσετε ένα όνομα στο άλμπουμ."
+
+#: ../../../app/lib/chevereto.js:610 ../../../app/lib/chevereto.js:796
+#: ../../../app/lib/chevereto.js:892 ../../../app/lib/chevereto.min.js:27
+#: ../../../app/lib/chevereto.min.js:34 ../../../app/lib/chevereto.min.js:36
+#: ../../../lib/Peafowl/peafowl.js:2225
+#: ../../../lib/Peafowl/peafowl.min.js:123
+msgid "Confirm"
+msgstr "Επιβεβαίωση"
+
+#: ../../../app/lib/chevereto.js:728 ../../../app/lib/chevereto.min.js:29
+msgid "Select existing album"
+msgstr "Επιλογή υπάρχον άλμπουμ"
+
+#: ../../../app/lib/chevereto.js:1011 ../../../app/lib/chevereto.js:1091
+#: ../../../app/lib/chevereto.min.js:45 ../../../app/lib/chevereto.min.js:50
+msgid "Please select a valid image file type."
+msgstr "Παρακαλώ επιλέξτε έναν έγκυρο τύπο αρχείου."
+
+#: ../../../app/lib/chevereto.js:1016 ../../../app/lib/chevereto.js:1096
+#: ../../../app/lib/chevereto.min.js:46 ../../../app/lib/chevereto.min.js:51
+#, python-format, javascript-format
+msgid "Please select a picture of at most %s size."
+msgstr "Παρακαλώ επιλέξτε μια φωτογραφία με μέγιστο μέγεθος %s."
+
+#: ../../../app/lib/chevereto.js:1063 ../../../app/lib/chevereto.min.js:48
+msgid "Profile image updated."
+msgstr "Η εικόνα του προφίλ ενημερώθηκε."
+
+#: ../../../app/lib/chevereto.js:1133 ../../../app/lib/chevereto.min.js:52
+msgid "Profile background image updated."
+msgstr "Εικόνα φόντου προφίλ αλλάχτηκε."
+
+#: ../../../app/lib/chevereto.js:1207 ../../../app/lib/chevereto.min.js:53
+msgid "Profile background image deleted."
+msgstr "Η εικόνα ταπετσαρίας του προφίλ διαγράφηκε."
+
+#: ../../../app/lib/chevereto.js:1212 ../../../app/lib/chevereto.min.js:53
+msgid "Error deleting profile background image."
+msgstr "Λάθος κατά την διαγραφή εικόνας φόντου προφίλ"
+
+#: ../../../app/lib/chevereto.js:1301 ../../../app/lib/chevereto.min.js:56
+#, python-format, javascript-format
+msgid "Update available (%s)"
+msgstr "Διαθέσιμη ενημέρωση (%s)"
+
+#: ../../../app/lib/chevereto.js:1302 ../../../app/lib/chevereto.min.js:56
+#, python-format, javascript-format
+msgid "There is an update available for your system. Go to %s to proceed to download the file."
+msgstr "Υπάρχει διαθέσιμη ενημέρωση συστήματος. Πήγαινε εδώ %s για να κατεβάσεις το αρχείο."
+
+#: ../../../app/lib/chevereto.js:1302 ../../../app/lib/chevereto.min.js:56
+msgid "The release notes for the update available are:"
+msgstr "Οι σημειώσεις έκδοσης για την ενημέρωση που υπάρχουν είναι:"
+
+#: ../../../app/lib/chevereto.js:1306 ../../../app/lib/chevereto.min.js:56
+msgid "Your website is running the latest version of Chevereto."
+msgstr "Η ιστοσελίδα σας χρησιμοποιεί την τελευταία έκδοση."
+
+#: ../../../app/lib/chevereto.js:1690 ../../../app/lib/chevereto.min.js:74
+msgid "File too big."
+msgstr "Πολύ μεγάλο αρχείο."
+
+#: ../../../app/lib/chevereto.js:1701 ../../../app/lib/chevereto.js:1849
+#: ../../../app/lib/chevereto.min.js:76 ../../../app/lib/chevereto.min.js:87
+msgid "Some files couldn't be added"
+msgstr "Κάποια αρχεία δε μπορούσαν να προστεθούν"
+
+#: ../../../app/lib/chevereto.js:2283 ../../../app/lib/chevereto.min.js:114
+msgid "Image edited successfully."
+msgstr "Η εικόνα διορθώθηκε επιτυχώς."
+
+#: ../../../app/lib/chevereto.js:2346 ../../../app/lib/chevereto.min.js:115
+msgid "Album edited successfully."
+msgstr "Το άλμπουμ διορθώθηκε επιτυχώς."
+
+#: ../../../app/lib/chevereto.js:2364 ../../../app/lib/chevereto.min.js:116
+msgid "Invalid URL key."
+msgstr "Λάθος κλειδί URL."
+
+#: ../../../app/lib/chevereto.js:2379 ../../../app/lib/chevereto.min.js:118
+msgid "Category URL key already being used."
+msgstr "Το κλειδί κατηγορίας URL χρησιμοποιείτε ήδη."
+
+#: ../../../app/lib/chevereto.js:2457 ../../../app/lib/chevereto.min.js:120
+msgid "Category successfully deleted."
+msgstr "Η κατηγορία διαγράφηκε επιτυχώς."
+
+#: ../../../app/lib/chevereto.js:2503 ../../../app/lib/chevereto.min.js:122
+#, python-format, javascript-format
+msgid "Category %s added."
+msgstr "Η κατηγορία %s προστέθηκε."
+
+#: ../../../app/lib/chevereto.js:2524 ../../../app/lib/chevereto.min.js:123
+msgid "Invalid expiration date."
+msgstr "Μη έγκυρη ημερομηνία λήξης."
+
+#: ../../../app/lib/chevereto.js:2539 ../../../app/lib/chevereto.min.js:125
+#, python-format, javascript-format
+msgid "IP %s already banned."
+msgstr "Η διέυθυνση IP %s έχει ήδη αποκλειστεί."
+
+#: ../../../app/lib/chevereto.js:2590 ../../../app/lib/chevereto.min.js:129
+#, python-format, javascript-format
+msgid "IP %s banned."
+msgstr "Η διέυθυνση IP %s αποκλείστηκε."
+
+#: ../../../app/lib/chevereto.js:2670 ../../../app/lib/chevereto.min.js:130
+msgid "IP ban successfully deleted."
+msgstr "Η διέυθυνση IP διαγράφηκε επιτυχώς."
+
+#: ../../../app/lib/chevereto.js:2706 ../../../app/lib/chevereto.js:2949
+#: ../../../app/lib/chevereto.js:2978 ../../../app/lib/chevereto.min.js:131
+#: ../../../app/lib/chevereto.min.js:146 ../../../app/lib/chevereto.min.js:147
+msgid "Please fill all the required fields."
+msgstr "Παρακαλώ συμπληρώστε όλα τα απαραίτητα πεδία."
+
+#: ../../../app/lib/chevereto.js:2717 ../../../app/lib/chevereto.min.js:132
+msgid "Invalid storage capacity value. Make sure to use a valid format."
+msgstr "Μη έγκυρη τιμή χωρητικότητας αποθήκευσης. Βεβαιωθείτε ότι χρησιμοποιείτε μια έγκυρη μορφή."
+
+#: ../../../app/lib/chevereto.js:2729 ../../../app/lib/chevereto.min.js:134
+msgid "Invalid URL."
+msgstr "Μη έγκυρη διεύθυνση URL."
+
+#: ../../../app/lib/chevereto.js:2780 ../../../app/lib/chevereto.min.js:137
+msgid "Storage successfully edited."
+msgstr "Αποθήκευση επεξεργάστηκε με επιτυχία."
+
+#: ../../../app/lib/chevereto.js:2997 ../../../app/lib/chevereto.min.js:148
+msgid "User added successfully."
+msgstr "Ο χρήστης προστέθηκε επιτυχώς."
+
+#: ../../../app/lib/chevereto.js:3171 ../../../app/lib/chevereto.js:3246
+#: ../../../app/lib/chevereto.js:3329 ../../../app/lib/chevereto.js:3338
+#: ../../../app/lib/chevereto.min.js:156 ../../../app/lib/chevereto.min.js:162
+#: ../../../app/lib/chevereto.min.js:164
+msgid "The content has been moved."
+msgstr "Το περιεχόμενο μετακινήθηκε."
+
+#: ../../../app/lib/chevereto.js:3191 ../../../app/lib/chevereto.min.js:157
+msgid "Unselect"
+msgstr "Αποεπιλογή"
+
+#: ../../../app/lib/chevereto.js:3246 ../../../app/lib/chevereto.min.js:162
+msgid "The content has been edited."
+msgstr "Το περιεχόμενο επεγεργάστηκε."
+
+#: ../../../lib/Peafowl/peafowl.js:25 ../../../lib/Peafowl/peafowl.js:480
+#: ../../../lib/Peafowl/peafowl.min.js:1
+#: ../../../lib/Peafowl/peafowl.min.js:29
+msgid "All the changes that you have made will be lost if you continue."
+msgstr "Όλες οι αλλαγές που κάνατε θα χαθούν αν συνεχίσετε."
+
+#: ../../../lib/Peafowl/peafowl.js:464 ../../../lib/Peafowl/peafowl.min.js:28
+msgid "Changes saved successfully."
+msgstr "Οι αλλαγές αποθηκέυτηκαν επιτυχώς."
+
+#: ../../../lib/Peafowl/peafowl.js:480 ../../../lib/Peafowl/peafowl.min.js:29
+msgid "Go back to form"
+msgstr "Επιστροφή στην φόρμα"
+
+#: ../../../lib/Peafowl/peafowl.js:480 ../../../lib/Peafowl/peafowl.min.js:29
+msgid "continue anyway"
+msgstr "συνέχεια έτσι κι αλλιώς"
+
+#: ../../../lib/Peafowl/peafowl.js:2368
+#: ../../../lib/Peafowl/peafowl.min.js:135
+msgid "Saving"
+msgstr "Αποθήκευση"
+
+#: ../../../lib/Peafowl/peafowl.js:2373
+#: ../../../lib/Peafowl/peafowl.min.js:135
+msgid "Sending"
+msgstr "Αποστολή"
+
+#: ../../../lib/Peafowl/peafowl.js:2453
+#: ../../../lib/Peafowl/peafowl.min.js:138
+msgid "Confirm action"
+msgstr "Επιβεβαίωση ενέργειας"
+
+#: ../../../lib/Peafowl/peafowl.js:2465
+#: ../../../lib/Peafowl/peafowl.min.js:139
+msgid "information"
+msgstr "πληροφορία"
+

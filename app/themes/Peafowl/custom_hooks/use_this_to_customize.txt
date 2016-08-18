@@ -1,0 +1,8 @@
+You can use these files to inject/add any code you want in this theme.
+
+By default this file includes examples like "footer.sample.php" which must be renamed to "footer.php" to work properly.
+The same goes for "header.sample.php" -> "header.php", "style.sample.css" -> "style.css", etc.
+Basically, the structure is file.sample.ext so you must remove ".sample" from the filename
+
+footer.sample.php	-> Bundled example
+footer.php		-> Real file to be included

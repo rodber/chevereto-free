@@ -1,0 +1,9 @@
+You can quick and easy override any language string by putting lang_code.po files here.
+
+For example, en.po file whit this contents:
+#: START EXAMPLE
+msgid "Upload and share your images."
+msgstr "Upload and share your photos."
+#: END EXAMPLE
+
+Will replace the original msgid with the new msgstr.

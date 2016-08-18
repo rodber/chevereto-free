@@ -1,0 +1,3240 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSION\n"
+"POT-Creation-Date: 2015-04-13 17:55+0000\n"
+"PO-Revision-Date: 2015-04-13 17:55+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../../app/install/installer.php:826
+#: ../../../app/install/installer.php:835
+#: ../../../app/install/installer.php:838
+#: ../../../app/routes/route.account.php:402
+#: ../../../app/routes/route.json.php:551
+#: ../../../app/routes/route.settings.php:170
+#: ../../../app/routes/route.signup.php:95
+#: ../../../app/themes/Peafowl/pages/contact.php:31
+msgid "Invalid email"
+msgstr "Invalid email"
+
+#: ../../../app/install/installer.php:829
+#: ../../../app/routes/route.json.php:546
+#: ../../../app/routes/route.settings.php:166
+#: ../../../app/routes/route.signup.php:98
+msgid "Invalid username"
+msgstr "Invalid username"
+
+#: ../../../app/install/installer.php:832
+#: ../../../app/routes/route.account.php:345
+#: ../../../app/routes/route.json.php:556
+#: ../../../app/routes/route.settings.php:300
+#: ../../../app/routes/route.signup.php:101
+msgid "Invalid password"
+msgstr "Invalid password"
+
+#: ../../../app/install/template/ready.php:31
+#: ../../../app/themes/Peafowl/views/dashboard.php:1463
+msgid "From email address"
+msgstr "From email address"
+
+#: ../../../app/install/template/ready.php:32
+#: ../../../app/themes/Peafowl/views/dashboard.php:1466
+msgid "Sender email for emails sent to users."
+msgstr "Sender email for emails sent to users."
+
+#: ../../../app/install/template/ready.php:36
+#: ../../../app/themes/Peafowl/views/dashboard.php:1469
+msgid "Incoming email address"
+msgstr "Incoming email address"
+
+#: ../../../app/install/template/ready.php:37
+#: ../../../app/themes/Peafowl/views/dashboard.php:1472
+msgid "Recipient for contact form and system alerts."
+msgstr "시스템 경고 연락처 양식에서받는 사람"
+
+#: ../../../app/lib/classes/class.album.php:94
+msgid "Untitled"
+msgstr "Untitled"
+
+#: ../../../app/lib/classes/class.album.php:318
+#: ../../../app/lib/classes/class.user.php:105
+#, php-format
+msgid "%s's images"
+msgstr "%s's 이미지"
+
+#: ../../../app/lib/classes/class.image.php:695
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:69
+msgid "Private upload"
+msgstr "비공개 업로드"
+
+#: ../../../app/lib/classes/class.image.php:954
+msgid "view"
+msgid_plural "views"
+msgstr[0] "views"
+
+#: ../../../app/lib/classes/class.listing.php:238
+#: ../../../app/routes/route.album.php:169
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
+#: ../../../app/themes/Peafowl/views/album.php:34
+#: ../../../app/themes/Peafowl/views/user.php:87
+#: ../../../app/lib/chevereto.js:1866 ../../../app/lib/chevereto.min.js:88
+msgid "image"
+msgid_plural "images"
+msgstr[0] "images"
+
+#: ../../../app/lib/classes/class.storage.php:303
+#: ../../../app/lib/classes/class.storage.php:358
+msgid "Can't verify storage credentials."
+msgstr "자격 증명을 확인할 수 없습니다."
+
+#: ../../../app/lib/classes/class.storage.php:339
+#: ../../../app/lib/chevereto.js:2719 ../../../app/lib/chevereto.min.js:132
+#, python-format, php-format, javascript-format
+msgid "Storage capacity can't be lower than its current usage (%s)."
+msgstr "Storage capacity can't be lower than its current usage (%s)."
+
+#: ../../../app/lib/classes/class.storage.php:551
+msgid "Unlimited"
+msgstr "무제한"
+
+#: ../../../app/lib/classes/class.storage.php:551
+msgid "used"
+msgstr "사용"
+
+#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
+msgid "year"
+msgid_plural "years"
+msgstr[0] "years"
+
+#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
+msgid "month"
+msgid_plural "months"
+msgstr[0] "months"
+
+#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "weeks"
+
+#: ../../../app/lib/functions.php:40 ../../../app/lib/functions.php:52
+msgid "day"
+msgid_plural "days"
+msgstr[0] "한국"
+
+#: ../../../app/lib/functions.php:41 ../../../app/lib/functions.php:53
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "hours"
+
+#: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "minutes"
+
+#: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "seconds"
+
+#: ../../../app/lib/functions.php:67
+#, php-format
+msgid "%s ago"
+msgstr "%s 전"
+
+#: ../../../app/lib/functions.php:67
+msgid "moments ago"
+msgstr "moments ago"
+
+#: ../../../app/lib/functions.php:195
+#, php-format
+msgid "System database is outdated. You need to run the <a href=\"%s\">update</a> tool."
+msgstr "System database is outdated. You need to run the <a href=\"%s\">update</a> tool."
+
+#: ../../../app/lib/functions.php:198
+#, php-format
+msgid "Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>."
+msgstr "Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>."
+
+#: ../../../app/lib/functions.php:203
+#, php-format
+msgid "You haven't changed the default email settings. Go to <a href='%s'>Dashboard > Settings > Email</a> to fix this."
+msgstr "You haven't changed the default email settings. Go to <a href='%s'>Dashboard > Settings > Email</a> to fix this."
+
+#: ../../../app/loader.php:326 ../../../app/themes/Peafowl/views/404.php:6
+msgid "That page doesn't exist"
+msgstr "That page doesn't exist"
+
+#: ../../../app/routes/route.account.php:73
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:8
+msgid "Reset password"
+msgstr "Reset password"
+
+#: ../../../app/routes/route.account.php:74
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:8
+msgid "Resend account activation"
+msgstr "Resend account activation"
+
+#: ../../../app/routes/route.account.php:76
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:8
+msgid "Add your email address"
+msgstr " Add your email address"
+
+#: ../../../app/routes/route.account.php:77
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:7
+msgid "Email changed"
+msgstr "Email changed"
+
+#: ../../../app/routes/route.account.php:95
+#: ../../../app/routes/route.login.php:71
+#: ../../../app/routes/route.settings.php:128
+#: ../../../app/routes/route.signup.php:73
+msgid "The reCAPTCHA wasn't entered correctly"
+msgstr "The reCAPTCHA wasn't entered correctly"
+
+#: ../../../app/routes/route.account.php:119
+#: ../../../app/routes/route.account.php:164
+#: ../../../app/routes/route.account.php:260
+msgid "Invalid Username/Email"
+msgstr "Invalid Username/Email"
+
+#: ../../../app/routes/route.account.php:129
+msgid "User doesn't have an email."
+msgstr "User doesn't have an email."
+
+#: ../../../app/routes/route.account.php:140
+#: ../../../app/routes/route.account.php:287
+#: ../../../app/routes/route.account.php:309
+#: ../../../app/routes/route.account.php:376
+#: ../../../app/routes/route.json.php:24 ../../../app/routes/route.json.php:37
+#: ../../../app/routes/route.json.php:49
+#: ../../../app/routes/route.json.php:533
+#: ../../../app/routes/route.json.php:595
+#: ../../../app/routes/route.json.php:644
+#: ../../../app/routes/route.json.php:691
+#: ../../../app/themes/Peafowl/pages/contact.php:17
+#: ../../../app/themes/Peafowl/views/request-denied.php:8
+msgid "Request denied"
+msgstr "Request denied"
+
+#: ../../../app/routes/route.account.php:145
+msgid "Account needs to be activated to use this feature"
+msgstr "Account needs to be activated to use this feature"
+
+#: ../../../app/routes/route.account.php:151
+msgid "Account already activated"
+msgstr "Account already activated"
+
+#: ../../../app/routes/route.account.php:181
+msgid "Allow up to 15 minutes for the email. You can try again later."
+msgstr "Allow up to 15 minutes for the email. You can try again later."
+
+#: ../../../app/routes/route.account.php:220
+#, php-format
+msgid "Reset your password at %s"
+msgstr "Reset your password at %s"
+
+#: ../../../app/routes/route.account.php:222
+#: ../../../app/routes/route.account.php:442
+#: ../../../app/routes/route.settings.php:260
+#: ../../../app/routes/route.signup.php:180
+#, php-format
+msgid "Confirmation required at %s"
+msgstr "Confirmation required at %s"
+
+#: ../../../app/routes/route.account.php:330
+#: ../../../app/routes/route.signup.php:203
+#, php-format
+msgid "Welcome to %s"
+msgstr "Welcome to %s"
+
+#: ../../../app/routes/route.account.php:348
+#: ../../../app/routes/route.settings.php:304
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
+#: ../../../app/themes/Peafowl/views/settings.php:265
+#: ../../../app/themes/Peafowl/views/settings.php:282
+#: ../../../app/lib/chevereto.js:1270 ../../../app/lib/chevereto.min.js:54
+msgid "Passwords don't match"
+msgstr "Passwords don't match"
+
+#: ../../../app/routes/route.account.php:410
+#: ../../../app/routes/route.json.php:571
+#: ../../../app/routes/route.settings.php:220
+#: ../../../app/routes/route.signup.php:137
+msgid "Email already being used"
+msgstr "Email already being used"
+
+#: ../../../app/routes/route.account.php:496
+#: ../../../app/routes/route.signup.php:223
+#: ../../../app/themes/Peafowl/pages/contact.php:146
+#: ../../../lib/Peafowl/peafowl.js:194 ../../../lib/Peafowl/peafowl.min.js:10
+msgid "Check the errors in the form to continue."
+msgstr "Check the errors in the form to continue."
+
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:663
+#: ../../../app/routes/route.dashboard.php:692
+#: ../../../app/routes/route.dashboard.php:721
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.user.php:131
+#: ../../../app/routes/route.user.php:169
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Most recent"
+
+#: ../../../app/routes/route.album.php:88
+#: ../../../app/routes/route.category.php:56
+#: ../../../app/routes/route.dashboard.php:671
+#: ../../../app/routes/route.dashboard.php:700
+#: ../../../app/routes/route.dashboard.php:729
+#: ../../../app/routes/route.explore.php:42
+#: ../../../app/routes/route.user.php:139
+#: ../../../app/routes/route.user.php:175
+msgid "Oldest"
+msgstr "Oldest"
+
+#: ../../../app/routes/route.album.php:96
+#: ../../../app/routes/route.category.php:64
+#: ../../../app/routes/route.dashboard.php:679
+#: ../../../app/routes/route.explore.php:50
+#: ../../../app/routes/route.user.php:147
+msgid "Most viewed"
+msgstr "Most viewed"
+
+#: ../../../app/routes/route.album.php:107
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:4
+#: ../../../app/themes/Peafowl/views/album.php:36
+#: ../../../app/themes/Peafowl/views/image.php:91
+msgid "Share"
+msgstr "Share"
+
+#: ../../../app/routes/route.album.php:116
+#: ../../../app/routes/route.image.php:132
+msgid "Full info"
+msgstr "Full info"
+
+#: ../../../app/routes/route.dashboard.php:38
+msgid "Stats"
+msgstr "Stats"
+
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:90
+#: ../../../app/routes/route.user.php:197
+#: ../../../app/themes/Peafowl/header.php:364
+#: ../../../app/themes/Peafowl/views/settings.php:77
+#: ../../../app/themes/Peafowl/views/user.php:125
+msgid "Albums"
+msgstr "Albums"
+
+#: ../../../app/routes/route.dashboard.php:41
+#: ../../../app/routes/route.dashboard.php:222
+#: ../../../app/routes/route.search.php:97
+msgid "Users"
+msgstr "Users"
+
+#: ../../../app/routes/route.dashboard.php:42
+#: ../../../app/routes/route.settings.php:442
+#: ../../../app/themes/Peafowl/header.php:365
+msgid "Settings"
+msgstr "35\nSettings"
+
+#: ../../../app/routes/route.dashboard.php:153
+msgid "Chevereto version"
+msgstr "6\nChevereto version"
+
+#: ../../../app/routes/route.dashboard.php:154
+msgid "update"
+msgstr "\nupdate"
+
+#: ../../../app/routes/route.dashboard.php:154
+msgid "check for updates"
+msgstr "check for updates"
+
+#: ../../../app/routes/route.dashboard.php:161
+msgid "PHP version"
+msgstr "PHP version"
+
+#: ../../../app/routes/route.dashboard.php:165
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:39
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:40
+msgid "Server"
+msgstr "Server"
+
+#: ../../../app/routes/route.dashboard.php:169
+msgid "MySQL version"
+msgstr "MySQL version"
+
+#: ../../../app/routes/route.dashboard.php:173
+msgid "MySQL server info"
+msgstr "MySQL server info"
+
+#: ../../../app/routes/route.dashboard.php:177
+msgid "GD Library"
+msgstr "GD Library"
+
+#: ../../../app/routes/route.dashboard.php:181
+msgid "File uploads"
+msgstr "File uploads"
+
+#: ../../../app/routes/route.dashboard.php:182
+#: ../../../app/themes/Peafowl/views/dashboard.php:273
+#: ../../../app/themes/Peafowl/views/dashboard.php:283
+#: ../../../app/themes/Peafowl/views/dashboard.php:293
+#: ../../../app/themes/Peafowl/views/dashboard.php:338
+#: ../../../app/themes/Peafowl/views/dashboard.php:347
+#: ../../../app/themes/Peafowl/views/dashboard.php:418
+#: ../../../app/themes/Peafowl/views/dashboard.php:438
+#: ../../../app/themes/Peafowl/views/dashboard.php:448
+#: ../../../app/themes/Peafowl/views/dashboard.php:458
+#: ../../../app/themes/Peafowl/views/dashboard.php:610
+#: ../../../app/themes/Peafowl/views/dashboard.php:623
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+#: ../../../app/themes/Peafowl/views/dashboard.php:654
+#: ../../../app/themes/Peafowl/views/dashboard.php:683
+#: ../../../app/themes/Peafowl/views/dashboard.php:693
+#: ../../../app/themes/Peafowl/views/dashboard.php:732
+#: ../../../app/themes/Peafowl/views/dashboard.php:742
+#: ../../../app/themes/Peafowl/views/dashboard.php:752
+#: ../../../app/themes/Peafowl/views/dashboard.php:898
+#: ../../../app/themes/Peafowl/views/dashboard.php:953
+#: ../../../app/themes/Peafowl/views/dashboard.php:963
+#: ../../../app/themes/Peafowl/views/dashboard.php:975
+#: ../../../app/themes/Peafowl/views/dashboard.php:987
+#: ../../../app/themes/Peafowl/views/dashboard.php:997
+#: ../../../app/themes/Peafowl/views/dashboard.php:1007
+#: ../../../app/themes/Peafowl/views/dashboard.php:1019
+#: ../../../app/themes/Peafowl/views/dashboard.php:1126
+#: ../../../app/themes/Peafowl/views/dashboard.php:1287
+#: ../../../app/themes/Peafowl/views/dashboard.php:1296
+#: ../../../app/themes/Peafowl/views/dashboard.php:1305
+#: ../../../app/themes/Peafowl/views/dashboard.php:1330
+#: ../../../app/themes/Peafowl/views/dashboard.php:1340
+#: ../../../app/themes/Peafowl/views/dashboard.php:1530
+#: ../../../app/themes/Peafowl/views/dashboard.php:1556
+#: ../../../app/themes/Peafowl/views/dashboard.php:1589
+#: ../../../app/themes/Peafowl/views/dashboard.php:1615
+#: ../../../app/themes/Peafowl/views/dashboard.php:1641
+#: ../../../app/themes/Peafowl/views/dashboard.php:1660
+#: ../../../app/themes/Peafowl/views/dashboard.php:1705
+msgid "Enabled"
+msgstr "Enabled"
+
+#: ../../../app/routes/route.dashboard.php:182
+#: ../../../app/themes/Peafowl/views/dashboard.php:273
+#: ../../../app/themes/Peafowl/views/dashboard.php:283
+#: ../../../app/themes/Peafowl/views/dashboard.php:293
+#: ../../../app/themes/Peafowl/views/dashboard.php:338
+#: ../../../app/themes/Peafowl/views/dashboard.php:347
+#: ../../../app/themes/Peafowl/views/dashboard.php:418
+#: ../../../app/themes/Peafowl/views/dashboard.php:438
+#: ../../../app/themes/Peafowl/views/dashboard.php:448
+#: ../../../app/themes/Peafowl/views/dashboard.php:458
+#: ../../../app/themes/Peafowl/views/dashboard.php:610
+#: ../../../app/themes/Peafowl/views/dashboard.php:623
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+#: ../../../app/themes/Peafowl/views/dashboard.php:654
+#: ../../../app/themes/Peafowl/views/dashboard.php:683
+#: ../../../app/themes/Peafowl/views/dashboard.php:693
+#: ../../../app/themes/Peafowl/views/dashboard.php:732
+#: ../../../app/themes/Peafowl/views/dashboard.php:742
+#: ../../../app/themes/Peafowl/views/dashboard.php:752
+#: ../../../app/themes/Peafowl/views/dashboard.php:898
+#: ../../../app/themes/Peafowl/views/dashboard.php:953
+#: ../../../app/themes/Peafowl/views/dashboard.php:963
+#: ../../../app/themes/Peafowl/views/dashboard.php:975
+#: ../../../app/themes/Peafowl/views/dashboard.php:987
+#: ../../../app/themes/Peafowl/views/dashboard.php:997
+#: ../../../app/themes/Peafowl/views/dashboard.php:1007
+#: ../../../app/themes/Peafowl/views/dashboard.php:1019
+#: ../../../app/themes/Peafowl/views/dashboard.php:1126
+#: ../../../app/themes/Peafowl/views/dashboard.php:1287
+#: ../../../app/themes/Peafowl/views/dashboard.php:1296
+#: ../../../app/themes/Peafowl/views/dashboard.php:1305
+#: ../../../app/themes/Peafowl/views/dashboard.php:1330
+#: ../../../app/themes/Peafowl/views/dashboard.php:1340
+#: ../../../app/themes/Peafowl/views/dashboard.php:1530
+#: ../../../app/themes/Peafowl/views/dashboard.php:1556
+#: ../../../app/themes/Peafowl/views/dashboard.php:1589
+#: ../../../app/themes/Peafowl/views/dashboard.php:1615
+#: ../../../app/themes/Peafowl/views/dashboard.php:1641
+#: ../../../app/themes/Peafowl/views/dashboard.php:1660
+#: ../../../app/themes/Peafowl/views/dashboard.php:1705
+msgid "Disabled"
+msgstr "Disabled"
+
+#: ../../../app/routes/route.dashboard.php:185
+msgid "Max. upload size"
+msgstr "Max. upload size"
+
+#: ../../../app/routes/route.dashboard.php:189
+msgid "Max. post size"
+msgstr "Max. post size"
+
+#: ../../../app/routes/route.dashboard.php:193
+msgid "Max. execution time"
+msgstr "Max. execution time"
+
+#: ../../../app/routes/route.dashboard.php:194
+#, php-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d seconds"
+
+#: ../../../app/routes/route.dashboard.php:197
+msgid "Memory limit"
+msgstr "Memory limit"
+
+#: ../../../app/routes/route.dashboard.php:217
+#: ../../../app/themes/Peafowl/views/settings.php:322
+msgid "Website"
+msgstr "Website"
+
+#: ../../../app/routes/route.dashboard.php:218
+msgid "Content"
+msgstr "Content"
+
+#: ../../../app/routes/route.dashboard.php:219
+#: ../../../app/themes/Peafowl/views/dashboard.php:1191
+msgid "Listings"
+msgstr "목록 페이지"
+
+#: ../../../app/routes/route.dashboard.php:220
+msgid "Image upload"
+msgstr "Image upload"
+
+#: ../../../app/routes/route.dashboard.php:221
+msgid "Categories"
+msgstr "Categories"
+
+#: ../../../app/routes/route.dashboard.php:223
+#: ../../../app/themes/Peafowl/views/dashboard.php:680
+msgid "Flood protection"
+msgstr "Flood protection"
+
+#: ../../../app/routes/route.dashboard.php:224
+#: ../../../app/themes/Peafowl/views/dashboard.php:820
+msgid "Theme"
+msgstr "Theme"
+
+#: ../../../app/routes/route.dashboard.php:225
+#: ../../../app/themes/Peafowl/views/dashboard.php:633
+#: ../../../app/themes/Peafowl/views/dashboard.php:1177
+msgid "Homepage"
+msgstr "홈페이지"
+
+#: ../../../app/routes/route.dashboard.php:226
+msgid "Banners"
+msgstr "Banners"
+
+#: ../../../app/routes/route.dashboard.php:227
+msgid "System"
+msgstr "System"
+
+#: ../../../app/routes/route.dashboard.php:229
+msgid "External storage"
+msgstr "External storage"
+
+#: ../../../app/routes/route.dashboard.php:230
+#: ../../../app/themes/Peafowl/views/dashboard.php:99
+msgid "Email"
+msgstr "Email"
+
+#: ../../../app/routes/route.dashboard.php:231
+#: ../../../app/themes/Peafowl/views/album.php:79
+msgid "Social networks"
+msgstr "Social networks"
+
+#: ../../../app/routes/route.dashboard.php:232
+msgid "External services"
+msgstr "External services"
+
+#: ../../../app/routes/route.dashboard.php:260
+msgid "Local"
+msgstr "Local"
+
+#: ../../../app/routes/route.dashboard.php:264
+msgid "External"
+msgstr "External"
+
+#: ../../../app/routes/route.dashboard.php:269
+#: ../../../app/themes/Peafowl/header.php:174
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:37
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:62
+msgid "All"
+msgstr "All"
+
+#: ../../../app/routes/route.dashboard.php:274
+#: ../../../app/routes/route.image.php:147
+#: ../../../app/themes/Peafowl/views/dashboard.php:1413
+msgid "search content"
+msgstr "search content"
+
+#: ../../../app/routes/route.dashboard.php:311
+msgid "Invalid website name"
+msgstr "Invalid website name"
+
+#: ../../../app/routes/route.dashboard.php:316
+msgid "Invalid language"
+msgstr "Invalid language"
+
+#: ../../../app/routes/route.dashboard.php:321
+msgid "Invalid timezone"
+msgstr "Invalid timezone"
+
+#: ../../../app/routes/route.dashboard.php:326
+#: ../../../app/routes/route.dashboard.php:361
+#: ../../../app/routes/route.dashboard.php:471
+#: ../../../app/routes/route.dashboard.php:605
+msgid "Invalid value"
+msgstr "Invalid value"
+
+#: ../../../app/routes/route.dashboard.php:331
+msgid "Invalid upload storage mode"
+msgstr "Invalid upload storage mode"
+
+#: ../../../app/routes/route.dashboard.php:336
+msgid "Invalid upload filenaming"
+msgstr "Invalid upload filenaming"
+
+#: ../../../app/routes/route.dashboard.php:341
+msgid "Invalid thumb width"
+msgstr "Invalid thumb width"
+
+#: ../../../app/routes/route.dashboard.php:346
+msgid "Invalid thumb height"
+msgstr "Invalid thumb height"
+
+#: ../../../app/routes/route.dashboard.php:351
+msgid "Invalid medium width"
+msgstr "Invalid medium width"
+
+#: ../../../app/routes/route.dashboard.php:356
+msgid "Invalid theme"
+msgstr "Invalid theme"
+
+#: ../../../app/routes/route.dashboard.php:366
+msgid "Invalid theme tone"
+msgstr "테마 톤 (색조)가 유효하지 않습니다."
+
+#: ../../../app/routes/route.dashboard.php:386
+msgid "Invalid theme image listing size"
+msgstr "Invalid theme image listing size"
+
+#: ../../../app/routes/route.dashboard.php:391
+msgid "Invalid user id"
+msgstr "잘못된 사용자 ID"
+
+#: ../../../app/routes/route.dashboard.php:396
+msgid "Invalid email mode"
+msgstr "Invalid email mode"
+
+#: ../../../app/routes/route.dashboard.php:401
+msgid "Invalid SMTP port"
+msgstr "잘못된 SMTP 포트입니다. "
+
+#: ../../../app/routes/route.dashboard.php:406
+msgid "Invalid SMTP security"
+msgstr "Invalid SMTP security"
+
+#: ../../../app/routes/route.dashboard.php:411
+msgid "Invalid website mode"
+msgstr "잘못된 웹 사이트 모드"
+
+#: ../../../app/routes/route.dashboard.php:416
+msgid "Invalid website content privacy mode"
+msgstr "잘못된 웹 사이트 콘텐츠의 개인 정보 보호 모드"
+
+#: ../../../app/routes/route.dashboard.php:447
+msgid "Invalid upload image path"
+msgstr "잘못된 이미지 업로드 경로"
+
+#: ../../../app/routes/route.dashboard.php:474
+#, php-format
+msgid "Max. allowed %s"
+msgstr "최대.허용 %s"
+
+#: ../../../app/routes/route.dashboard.php:524
+msgid "Invalid SMTP server"
+msgstr "Invalid SMTP server"
+
+#: ../../../app/routes/route.dashboard.php:525
+msgid "Invalid SMTP username"
+msgstr "잘못된 SMTP 사용자 이름"
+
+#: ../../../app/routes/route.dashboard.php:587
+msgid "Invalid URL"
+msgstr "잘못된 URL"
+
+#: ../../../app/routes/route.dashboard.php:713
+msgid "Top users"
+msgstr "최고 사용자"
+
+#: ../../../app/routes/route.dashboard.php:775
+#: ../../../app/themes/Peafowl/header.php:367
+#: ../../../app/themes/Peafowl/views/dashboard.php:9
+msgid "Dashboard"
+msgstr "대시 보드"
+
+#: ../../../app/routes/route.explore.php:81
+#: ../../../app/themes/Peafowl/header.php:184
+#: ../../../app/themes/Peafowl/header.php:202
+#: ../../../app/themes/Peafowl/views/dashboard.php:280
+#: ../../../app/themes/Peafowl/views/explore.php:9
+msgid "Explore"
+msgstr "탐색"
+
+#: ../../../app/routes/route.image.php:118
+#: ../../../app/themes/Peafowl/header.php:381
+msgid "About"
+msgstr "약"
+
+#: ../../../app/routes/route.image.php:125
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:85
+msgid "Embed codes"
+msgstr "임베디드 코드"
+
+#: ../../../app/routes/route.image.php:142
+msgid "Image ID"
+msgstr "이미지 ID"
+
+#: ../../../app/routes/route.image.php:146
+msgid "Uploader IP"
+msgstr "업로드 IP"
+
+#: ../../../app/routes/route.image.php:150
+msgid "Upload date"
+msgstr "업로드 시간"
+
+#: ../../../app/routes/route.image.php:175
+#, php-format
+msgid "%s images"
+msgstr "%s 이미지"
+
+#: ../../../app/routes/route.json.php:44 ../../../app/routes/route.json.php:59
+#: ../../../app/routes/route.json.php:232
+#: ../../../app/routes/route.json.php:718
+#: ../../../app/routes/route.json.php:782
+#: ../../../app/routes/route.json.php:883
+#: ../../../app/routes/route.json.php:1026
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:4
+msgid "Login needed"
+msgstr "로그인이 필요합니다."
+
+#: ../../../app/routes/route.json.php:540
+#: ../../../app/routes/route.json.php:602
+msgid "Missing values"
+msgstr "값이 설정되지 않은"
+
+#: ../../../app/routes/route.json.php:561
+msgid "Invalid role"
+msgstr "잘못된 권한"
+
+#: ../../../app/routes/route.json.php:566
+msgid "Username already being used"
+msgstr "사용자 이름이 이미 사용되고 있습니다."
+
+#: ../../../app/routes/route.json.php:1063
+#, php-format
+msgid "%s has been disconnected."
+msgstr "%s 에 연결이 끊어졌습니다."
+
+#: ../../../app/routes/route.login.php:133
+msgid "Wrong Username/Email password combination"
+msgstr "Wrong Username/Email password combination"
+
+#: ../../../app/routes/route.login.php:148
+#: ../../../app/themes/Peafowl/header.php:265
+#: ../../../app/themes/Peafowl/header.php:271
+#: ../../../app/themes/Peafowl/views/login.php:8
+#: ../../../app/themes/Peafowl/views/login.php:52
+msgid "Sign in"
+msgstr "로그인"
+
+#: ../../../app/routes/route.logout.php:29
+#: ../../../app/themes/Peafowl/views/logout.php:8
+msgid "Logged out"
+msgstr "로그 아웃했습니다."
+
+#: ../../../app/routes/route.search.php:129
+#: ../../../app/themes/Peafowl/header.php:211
+#: ../../../app/themes/Peafowl/header.php:216
+#: ../../../app/themes/Peafowl/views/dashboard.php:270
+msgid "Search"
+msgstr "검색"
+
+#: ../../../app/routes/route.settings.php:58
+msgid "Account"
+msgstr "계정"
+
+#: ../../../app/routes/route.settings.php:59
+msgid "Profile"
+msgstr "프로필"
+
+#: ../../../app/routes/route.settings.php:60
+#: ../../../app/themes/Peafowl/header.php:288
+#: ../../../app/themes/Peafowl/header.php:336
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:51
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:104
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/login.php:39
+#: ../../../app/themes/Peafowl/views/settings.php:274
+#: ../../../app/themes/Peafowl/views/signup.php:44
+#: ../../../app/themes/Peafowl/views/signup.php:45
+msgid "Password"
+msgstr "비밀번호"
+
+#: ../../../app/routes/route.settings.php:61
+msgid "Linked accounts"
+msgstr "링크 된 계정"
+
+#: ../../../app/routes/route.settings.php:246
+#, php-format
+msgid "An email has been sent to %s with instructions to activate this email"
+msgstr "이메일이 전송되었습니다.%s 이메일 활성화 설명서를"
+
+#: ../../../app/routes/route.settings.php:279
+#: ../../../app/themes/Peafowl/pages/contact.php:22
+msgid "Invalid name"
+msgstr "잘못된 이름 ."
+
+#: ../../../app/routes/route.settings.php:282
+msgid "Invalid website"
+msgstr "잘못된 웹 사이트"
+
+#: ../../../app/routes/route.settings.php:290
+msgid "Wrong password"
+msgstr "비밀번호가 잘못되었습니다."
+
+#: ../../../app/routes/route.settings.php:293
+msgid "Use a new password"
+msgstr "새 암호를 사용하십시오."
+
+#: ../../../app/routes/route.settings.php:360
+#: ../../../app/themes/Peafowl/views/dashboard.php:1751
+#: ../../../app/themes/Peafowl/views/settings.php:409
+msgid "Changes have been saved."
+msgstr "변경 사항이 저장되었습니다."
+
+#: ../../../app/routes/route.settings.php:379
+msgid "Password has been changed"
+msgstr "비밀번호가 변경되었습니다."
+
+#: ../../../app/routes/route.settings.php:384
+msgid "Password has been created."
+msgstr "비밀번호가 생성되었습니다."
+
+#: ../../../app/routes/route.settings.php:399
+msgid "Wrong Username/Email values"
+msgstr "잘못된 아이디/이메일 값"
+
+#: ../../../app/routes/route.settings.php:442
+#, php-format
+msgid "Settings for %s"
+msgstr "%s설정"
+
+#: ../../../app/routes/route.signup.php:238
+#: ../../../app/themes/Peafowl/header.php:312
+#: ../../../app/themes/Peafowl/header.php:318
+#: ../../../app/themes/Peafowl/views/index.php:81
+#: ../../../app/themes/Peafowl/views/signup.php:8
+#: ../../../app/themes/Peafowl/views/signup.php:58
+msgid "Create account"
+msgstr "계정 만들기"
+
+#: ../../../app/themes/Peafowl/header.php:56
+#: ../../../app/themes/Peafowl/views/index.php:46
+#: ../../../app/themes/Peafowl/views/user.php:124
+#, php-format
+msgid "%s's Images"
+msgstr "%s이미지"
+
+#: ../../../app/themes/Peafowl/header.php:56
+#: ../../../app/themes/Peafowl/views/user.php:124
+#, php-format
+msgid "%s's Albums"
+msgstr "%s앨범"
+
+#: ../../../app/themes/Peafowl/header.php:218
+msgid "Close"
+msgstr "Close"
+
+#: ../../../app/themes/Peafowl/header.php:218
+#: ../../../app/themes/Peafowl/header.php:222
+msgid "Advanced search"
+msgstr "Advanced search"
+
+#: ../../../app/themes/Peafowl/header.php:229
+#: ../../../app/themes/Peafowl/views/dashboard.php:290
+#: ../../../app/themes/Peafowl/views/dashboard.php:381
+msgid "Random"
+msgstr "임의"
+
+#: ../../../app/themes/Peafowl/header.php:239
+#, php-format
+msgid "Notices (%s)"
+msgstr "주의사항(%s)"
+
+#: ../../../app/themes/Peafowl/header.php:254
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:69
+msgid "Upload"
+msgstr "업로드"
+
+#: ../../../app/themes/Peafowl/header.php:277
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:34
+#: ../../../app/themes/Peafowl/views/login.php:18
+#: ../../../app/themes/Peafowl/views/login.php:65
+#: ../../../app/themes/Peafowl/views/signup.php:18
+#: ../../../app/themes/Peafowl/views/signup.php:71
+msgid "Sign in with another account"
+msgstr "다른 계정으로 로그인"
+
+#: ../../../app/themes/Peafowl/header.php:281
+#: ../../../app/themes/Peafowl/header.php:328
+#: ../../../app/themes/Peafowl/pages/contact.php:137
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:69
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:73
+#: ../../../app/themes/Peafowl/snippets/form_album.php:12
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:32
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/dashboard.php:1728
+#: ../../../app/themes/Peafowl/views/login.php:22
+#: ../../../app/themes/Peafowl/views/login.php:62
+#: ../../../app/themes/Peafowl/views/settings.php:306
+#: ../../../app/themes/Peafowl/views/settings.php:395
+#: ../../../app/themes/Peafowl/views/signup.php:22
+#: ../../../app/themes/Peafowl/views/signup.php:68
+#: ../../../lib/Peafowl/peafowl.js:480 ../../../lib/Peafowl/peafowl.js:2192
+#: ../../../lib/Peafowl/peafowl.min.js:29
+#: ../../../lib/Peafowl/peafowl.min.js:120
+msgid "or"
+msgstr "또는"
+
+#: ../../../app/themes/Peafowl/header.php:287
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
+#: ../../../app/themes/Peafowl/views/login.php:34
+#: ../../../app/themes/Peafowl/views/login.php:35
+msgid "Username or Email address"
+msgstr "사용자 이름 또는 전자 메일 주소"
+
+#: ../../../app/themes/Peafowl/header.php:290
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:23
+#: ../../../app/themes/Peafowl/views/login.php:53
+msgid "Keep me logged in"
+msgstr "로그인 상태 유지하기"
+
+#: ../../../app/themes/Peafowl/header.php:297
+#, php-format
+msgid "Don't have an account? <a href='%s'>Sign up</a> now."
+msgstr "계정이 없으십니까? <a href='%s'> 지금 가입 </a>"
+
+#: ../../../app/themes/Peafowl/header.php:324
+msgid "Sign up with another account"
+msgstr "다른 계정으로 가입"
+
+#: ../../../app/themes/Peafowl/header.php:334
+#: ../../../app/themes/Peafowl/pages/contact.php:106
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:100
+#: ../../../app/themes/Peafowl/views/settings.php:143
+#: ../../../app/themes/Peafowl/views/signup.php:34
+#: ../../../app/themes/Peafowl/views/signup.php:35
+msgid "Email address"
+msgstr "이메일 주소"
+
+#: ../../../app/themes/Peafowl/header.php:335
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:47
+#: ../../../app/themes/Peafowl/views/dashboard.php:94
+#: ../../../app/themes/Peafowl/views/dashboard.php:95
+#: ../../../app/themes/Peafowl/views/settings.php:137
+#: ../../../app/themes/Peafowl/views/settings.php:138
+#: ../../../app/themes/Peafowl/views/signup.php:39
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "Username"
+msgstr "사용자 이름"
+
+#: ../../../app/themes/Peafowl/header.php:337
+#: ../../../app/themes/Peafowl/views/signup.php:60
+#, php-format
+msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
+msgstr "가입하기위해  <a href=\"%s\"> 서비스 약관 </a> 동의 필요"
+
+#: ../../../app/themes/Peafowl/header.php:363
+msgid "My Profile"
+msgstr "내 프로필"
+
+#: ../../../app/themes/Peafowl/header.php:369
+msgid "Sign out"
+msgstr "로그 아웃"
+
+#: ../../../app/themes/Peafowl/header.php:385
+msgid "Terms of service"
+msgstr "서비스 약관"
+
+#: ../../../app/themes/Peafowl/header.php:386
+msgid "Privacy"
+msgstr "개인 정보 보호"
+
+#: ../../../app/themes/Peafowl/header.php:387
+#: ../../../app/themes/Peafowl/pages/contact.php:4
+#: ../../../app/themes/Peafowl/pages/contact.php:93
+msgid "Contact"
+msgstr "연락처"
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:4
+msgid "We received a request to change the email of your <a href=\"%u\">%n</a> account at %w."
+msgstr "우링는 당신의 이메일 변경하도록 요청받은  <a href=\"%u\">%n</a>계정 %w."
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:6
+#, php-format
+msgid "To complete the process you must <a href=\"%s\">activate your email</a>."
+msgstr "과정을 완료하려면 다음을 수행해야합니다 <a href=\"%s\">이메일 활성화</a>를 클릭하십시오"
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:8
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:8
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:8
+#, php-format
+msgid "Alternatively you can copy and paste the URL into your browser: <a href=\"%s\">%s</a>"
+msgstr "또는 복사하여 브라우저에 URL을 붙여 넣을 수 있습니다 :  <a href=\"%s\">%s</a>"
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:10
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:10
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:10
+msgid "If you didn't intend this just ignore this message."
+msgstr "당신이 의도하지 않은 경우에, 다만이 메시지를 무시합니다."
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:12
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:12
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:12
+#, php-format
+msgid "This request was made from IP: %s"
+msgstr "이 요청은 IP에서 만들어졌다: %s"
+
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:4
+msgid "We received a request to register the %n account at %w."
+msgstr "우리는 등록 요청받은 %n 계정을 %w."
+
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:6
+#, php-format
+msgid "To complete the process you must <a href=\"%s\">activate your account</a>."
+msgstr "과정을 완료하려면 다음을 수행해야합니다  <a href=\"%s\">계정 활성화</a>."
+
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:4
+msgid "We received a request to reset the password for your <a href=\"%u\">%n</a> account."
+msgstr "우리는 당신의 암호를 재설정하도록 요청받은 <a href=\"%u\">%n</a> 계정"
+
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:6
+#, php-format
+msgid "To reset your password <a href=\"%s\">follow this link</a>."
+msgstr "비밀번호 재설정하려면 <a href=\"%s\"> 이 링크 </a> 를 클릭하십시오."
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:4
+msgid "Hi %n, welcome to %w"
+msgstr "안년 %n,  %w에 오신 것을 환영합니다."
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:6
+msgid "Now that your account is ready you can enjoy uploading your images, creating albums and setting the privacy of your content as well as many more cool things that you will discover."
+msgstr "이미지 업로드, 앨범 만들기, 비공개 컨텐츠의 설정 등 많은 기능을 사용하기위한 계정 등록이 완료되었습니다."
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:10
+msgid "Thank you for joining"
+msgstr "가입 주셔서 감사합니다"
+
+#: ../../../app/themes/Peafowl/mails/footer.php:3
+msgid "This email was sent from %w %u"
+msgstr "이 메일은 %w %u 보다 전송되었습니다."
+
+#: ../../../app/themes/Peafowl/pages/contact.php:10
+msgid "General questions/comments"
+msgstr "일반적인 질문 / 의견"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:11
+msgid "DMCA complaint"
+msgstr "DMCA 불만"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:25
+msgid "Invalid message"
+msgstr "잘못된 메시지"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:28
+msgid "Invalid subject"
+msgstr "잘못된 제목"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:36
+msgid "Invalid reCAPTCHA"
+msgstr "잘못된 reCAPTCHA를"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:81
+msgid "Mail error"
+msgstr "메일 에러"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:93
+msgid "Message sent"
+msgstr "보낸 메세지"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:99
+msgid "We will be in touch soon."
+msgstr "곧 연락을 드립니다."
+
+#: ../../../app/themes/Peafowl/pages/contact.php:99
+msgid "If you want to send a message fill the form below."
+msgstr "메시지를 보내려면 다음 양식을 작성하십시오."
+
+#: ../../../app/themes/Peafowl/pages/contact.php:101
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:4
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:3
+#: ../../../app/themes/Peafowl/views/dashboard.php:523
+#: ../../../app/themes/Peafowl/views/dashboard.php:1396
+#: ../../../app/themes/Peafowl/views/settings.php:316
+msgid "Name"
+msgstr "이름"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:102
+msgid "Your name"
+msgstr "귀하의 이름"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:107
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:16
+#: ../../../app/themes/Peafowl/views/settings.php:144
+msgid "Your email address"
+msgstr "이메일 주소"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:111
+msgid "Subject"
+msgstr "제목"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:125
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:574
+msgid "Message"
+msgstr "메세지"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:137
+msgid "Send message"
+msgstr "메시지 보내기"
+
+#: ../../../app/themes/Peafowl/pages/contact.php:137
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:69
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:73
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:85
+#: ../../../app/themes/Peafowl/views/dashboard.php:1728
+#: ../../../app/themes/Peafowl/views/settings.php:395
+#: ../../../lib/Peafowl/peafowl.js:2193
+#: ../../../lib/Peafowl/peafowl.min.js:120
+msgid "cancel"
+msgstr "취소"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:13
+msgid "Drag and drop images here to upload"
+msgstr "업로드 할 이미지를 여기에 드래그 앤 드롭합니다."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:14
+msgid "Select the images to upload"
+msgstr "업로드 할 이미지를 선택"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:15
+msgid "You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
+msgstr "<a data-trigger=\"anywhere-upload-input\"> 당신의 PC에있는 이미지 </a> 및 <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\"> 인터넷 이미지 URL </a> 에 이미지를 추가 할 수 있습니다."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:16
+msgid "You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a>."
+msgstr "<a data-trigger=\"anywhere-upload-input-camera\"> 사진을 찍을 </a> 수 있습니다."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:20
+msgid "Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>"
+msgstr "<span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>업로드"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:21
+msgid "The queue is being uploaded. It will take just a few seconds to complete."
+msgstr "업로드가 완료되었습니다. 내부 처리가 완료 될 때까지 조금 기다려주십시오."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:25
+msgid "Upload complete"
+msgstr "업로드 완료"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
+#, php-format
+msgid "Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album."
+msgstr "<a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">공개영상</a>에 추가되었습니다. <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">앨범 만들기</a>하거나 여러분의 앨범에<a data-modal=\"form\" data-target=\"form-uploaded-move-album\"><span data-text=\"queue-objects\">이미지</span>붙이고</a>하십시오."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:28
+msgid "You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account."
+msgstr "향후 이미지 업로드를 위해 <a href=\"%s\"> 계정 만들기 </a> 또는 <a href=\"%l\"> 로그인 </a> 하십시오."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:33
+msgid "No <span data-text=\"queue-objects\">images</span> have been uploaded"
+msgstr "0 <span data-text=\"queue-objects\">이미지</span> 업로드 된"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:34
+msgid "Some errors have occured and the system couldn't process your request."
+msgstr "일부 오류가 발생하고 시스템이 요청을 처리 할 수​​ 없습니다."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:54
+msgid "Select category"
+msgstr "카테고리 선택"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:69
+msgid "Change upload privacy"
+msgstr "변경 업로드 개인 정보 보호"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:70
+msgid "Mark this if the upload is not family safe"
+msgstr "업로드가 안전 가족이 아닌 경우이 마크"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:70
+msgid "Not family safe upload"
+msgstr "아니 가족 용 업로드"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:73
+msgid "Uploading"
+msgstr "업로드"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:73
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:86
+msgid "cancel remaining"
+msgstr "나머지도 모두 취소"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:78
+msgid "Note: Some images couldn't be uploaded."
+msgstr "참고 : 일부 이미지를 업로드 할 수 없습니다."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:78
+msgid "learn more"
+msgstr "자세히 알아보기"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:79
+msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
+msgstr "자세한 내용은<a data-modal=\"simple\" data-target=\"failed-upload-result\">오류 보고서</a>를 참고하십시오"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:82
+msgid "max"
+msgstr "최대"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:84
+msgid "close"
+msgstr "닫기"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:143
+msgid "Add image URLs"
+msgstr "이미지 URL 추가"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:145
+msgid "Add the image URLs here"
+msgstr "여기에 이​​미지 URL을 추가"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:160
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:26
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:31
+msgid "Create album"
+msgstr "앨범 만들기"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:161
+msgid "The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
+msgstr "업로드 된 콘텐츠는이 새로 만든 앨범으로 이동합니다. 신은 또한에 콘텐츠를 이동할 수 있습니다  <a class=\"modal-switch\" data-switch=\"move-existing-album\">기존앨범</a>에"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:172
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:27
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:46
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:70
+msgid "Move to album"
+msgstr "앨범에 이동"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:173
+msgid "Select an existing album to move the uploaded content. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the content there."
+msgstr "업로드 된 콘텐츠를 이동하는 기존의 앨범을 선택합니다. 또는  <a class=\"modal-switch\" data-switch=\"move-new-album\">새 앨범 만들기</a>을하고 붙여 넣을 수 있습니다."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:189
+msgid "Error report"
+msgstr "오류 보고서"
+
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
+#: ../../../app/themes/Peafowl/views/user.php:87
+msgid "album"
+msgid_plural "albums"
+msgstr[0] "앨범"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
+msgid "Links"
+msgstr "Links"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
+msgid "Viewer links"
+msgstr "Viewer links"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:14
+msgid "Direct links"
+msgstr "Direct links"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:21
+msgid "HTML Codes"
+msgstr "HTML Codes"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:24
+msgid "HTML embed"
+msgstr "HTML embed"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:29
+msgid "HTML original linked"
+msgstr "HTML original linked"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:34
+msgid "HTML medium linked"
+msgstr "HTML medium linked"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:39
+msgid "HTML thumbnail linked"
+msgstr "HTML thumbnail linked"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:46
+msgid "BBCodes"
+msgstr "BBCodes"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:49
+msgid "BBCode embed"
+msgstr "BBCode embed"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:54
+msgid "BBCode original linked"
+msgstr "BBCode original linked"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:59
+msgid "BBCode medium linked"
+msgstr "BBCode medium linked"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:64
+msgid "BBCode thumbnail linked"
+msgstr "BBCode thumbnail linked"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:6
+msgid "All these words"
+msgstr "All these words"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:7
+msgid "Type the important words: tri-colour rat terrier"
+msgstr "Type the important words: tri-colour rat terrier"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:10
+msgid "This exact word or phrase"
+msgstr "This exact word or phrase"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:11
+msgid "Put exact words in quotes: \"rat terrier\""
+msgstr "Put exact words in quotes: \"rat terrier\""
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:20
+msgid "None of these words"
+msgstr "None of these words"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:21
+msgid "Put a minus sign just before words you don't want: -rodent -\"Jack Russell\""
+msgstr "Put a minus sign just before words you don't want: -rodent -\"Jack Russell\""
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
+#: ../../../app/themes/Peafowl/snippets/form_category.php:3
+msgid "Category"
+msgstr "카테고리"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:66
+msgid "Storage"
+msgstr "Storage"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:81
+msgid "Uploader IP address"
+msgstr "Uploader IP address"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:7
+msgid "Album name"
+msgstr "앨범 이름"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:8
+msgid "Untitled album"
+msgstr "제목 없음 앨범"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:12
+msgid "move to existing album"
+msgstr "기존 앨범으로 이동"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:18
+msgid "Album description"
+msgstr "앨범 설명"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:18
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:12
+#: ../../../app/themes/Peafowl/snippets/form_image.php:4
+#: ../../../app/themes/Peafowl/snippets/form_image.php:28
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:1069
+#: ../../../app/themes/Peafowl/views/dashboard.php:1079
+msgid "optional"
+msgstr "옵션"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:19
+msgid "Brief description of this album"
+msgstr "이 앨범에 대한 간략한 설명"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:24
+msgid "Album Privacy"
+msgstr "앨범 개인 정보 보호"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:25
+msgid "Who can view this content"
+msgstr "누가 이 컨텐츠를 볼 수 있습니까?"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:26
+#: ../../../app/themes/Peafowl/views/dashboard.php:305
+msgid "Public"
+msgstr "공개"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:27
+msgid "Private (just me)"
+msgstr "비공개 (개인 만 열람 가능)"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:28
+msgid "Private (anyone with the link)"
+msgstr "비공개 (누구의 링크도)"
+
+#: ../../../app/themes/Peafowl/snippets/form_category.php:9
+msgid "No category"
+msgstr "카테고리가 없습니다"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:5
+msgid "Category name"
+msgstr "카테고리 이름"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:8
+#: ../../../app/themes/Peafowl/views/dashboard.php:524
+msgid "URL key"
+msgstr "URL 키"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:9
+msgid "Category URL key"
+msgstr "카테고리 URL 키"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:9
+msgid "Only letters, numbers, and hyphens"
+msgstr "문자, 숫자, 하이픈"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:12
+#: ../../../app/themes/Peafowl/snippets/form_image.php:28
+#: ../../../app/themes/Peafowl/views/dashboard.php:525
+msgid "Description"
+msgstr "설명"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:13
+msgid "Brief description of this category"
+msgstr "이 카테고리의 간단한 설명"
+
+#: ../../../app/themes/Peafowl/snippets/form_image.php:4
+#: ../../../app/themes/Peafowl/views/dashboard.php:1091
+msgid "Title"
+msgstr "제목"
+
+#: ../../../app/themes/Peafowl/snippets/form_image.php:5
+msgid "Untitled image"
+msgstr "사진의 제목을 입력"
+
+#: ../../../app/themes/Peafowl/snippets/form_image.php:25
+msgid "Mark this if the image is not family safe"
+msgstr "이미지가 안전한 가족이 아닌 경우이 마크"
+
+#: ../../../app/themes/Peafowl/snippets/form_image.php:25
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:36
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:8
+msgid "Flag as unsafe"
+msgstr "안전하지 않은 플래그"
+
+#: ../../../app/themes/Peafowl/snippets/form_image.php:29
+msgid "Brief description of this image"
+msgstr "이 이미지에 대한 간략한 설명"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+msgid "Existing album"
+msgstr "기존 앨범"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "앨범"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2341 ../../../app/lib/chevereto.js:3254
+#: ../../../app/lib/chevereto.min.js:115 ../../../app/lib/chevereto.min.js:162
+msgid "private"
+msgstr "private"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+msgid "create new album"
+msgstr "새 앨범을 만들기"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:4
+msgid "Storage name"
+msgstr "스토리지 이름"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:7
+msgid "API"
+msgstr "API"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:16
+msgid "Region"
+msgstr "지방"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:26
+msgid "Storage bucket"
+msgstr "스토리지 버킷"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:29
+msgid "Key"
+msgstr "키"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:30
+msgid "Storage key"
+msgstr "스토리지 키"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:33
+msgid "Secret"
+msgstr "비밀 키"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:34
+msgid "Storage secret"
+msgstr "스토리지 비밀"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:40
+msgid "Hostname or IP of the storage server"
+msgstr "외부 스토리지 서버의 호스트 이름 또는 IP 주소"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:43
+msgid "Path"
+msgstr "경로"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:44
+msgid "Server path"
+msgstr "서버의 경로"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:44
+msgid "Server path where the files will be stored"
+msgstr "파일이 저장되는 서버 경로"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:48
+msgid "Server username"
+msgstr "서버 이름"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:52
+msgid "Server password"
+msgstr "서버 비밀번호"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:57
+msgid "Storage capacity"
+msgstr "저장 용량"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:58
+msgid "Example: 20 GB, 1 TB, etc."
+msgstr "예 : 20 GB, 1 TB 등"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:60
+msgid "This storage will be disabled when it reach this capacity. Leave it blank or zero for no limit."
+msgstr "이 외장 스토리지는 용량에 도달 할 때 사용할 수 없게됩니다. 무제한은 제로 또는 비워주세요."
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:64
+msgid "Storage URL"
+msgstr "스토리지 URL"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:65
+msgid "The system will map the images of this storage to this URL."
+msgstr "이 시스템은이 URL이 저장의 이미지를 매핑합니다."
+
+#: ../../../app/themes/Peafowl/snippets/image_album_slice.php:14
+msgid "view more"
+msgstr "더보기"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:22
+#: ../../../app/themes/Peafowl/snippets/templates_content_listing.php:6
+#: ../../../app/themes/Peafowl/snippets/templates_content_listing.php:9
+msgid "Load more"
+msgstr "Load more"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:91
+msgid "Previous"
+msgstr "이전"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:98
+msgid "Next"
+msgstr "다음에"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
+msgid "Select all"
+msgstr "모두 선택"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:11
+msgid "Selection"
+msgstr "선택"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:12
+msgid "Action"
+msgstr "액션"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:19
+msgid "Get embed codes"
+msgstr "임베드 코드를 가져옵니다"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:34
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:85
+msgid "Assign category"
+msgstr "카테고리 적용"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:35
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:9
+msgid "Flag as safe"
+msgstr "안전 플래그"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:40
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:532
+#: ../../../app/themes/Peafowl/views/dashboard.php:581
+msgid "Delete"
+msgstr "삭제"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:41
+msgid "Clear selection"
+msgstr "선택 해제"
+
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:5
+#, php-format
+msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
+msgstr "이 사이트에서 제공하는 모든 기능을 사용하기 위해서는 로그인이 필요합니다. 계정이없는 경우에는 여기에서 <a href=\"%s\">계정 만들기</a> 할 수 있습니다."
+
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:24
+msgid "forgot?"
+msgstr "잊으셨습니까?"
+
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
+msgid "Link"
+msgstr "링크"
+
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:14
+#: ../../../app/themes/Peafowl/views/album.php:74
+#: ../../../app/themes/Peafowl/views/image.php:282
+msgid "Note: This content is private. Change privacy to \"public\" to share."
+msgstr "참고 :이 내용은 비공개입니다. 공유 \"공개\"에 개인 정보를 변경합니다."
+
+#: ../../../app/themes/Peafowl/snippets/template_content_empty.php:5
+#: ../../../app/themes/Peafowl/views/index.php:63
+msgid "There's nothing to show here."
+msgstr "표시할 내용이 없구만요 "
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
+#: ../../../app/themes/Peafowl/views/image.php:75
+#: ../../../app/themes/Peafowl/views/image.php:441
+msgid "Edit image details"
+msgstr "이미지 세부 사항 편집"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
+#: ../../../app/themes/Peafowl/views/album.php:22
+#: ../../../app/themes/Peafowl/views/album.php:118
+msgid "Edit album details"
+msgstr "앨범 세부 사항 편집"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
+msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
+msgstr "모든 이미지는 최근의 앨범으로 이동했습니다.  <a class=\"modal-switch\" data-switch=\"move-existing-album\">가지고있는 앨범</a>로 이동 할 수 있습니다."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:50
+msgid "Select an existing album to move the image. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the image there."
+msgstr "이미지를 이동 가지고 앨범을 선택하십시오. <a class=\"modal-switch\" data-switch=\"move-new-album\">새 앨범 만들기 </a>을하고 이동 할 수 있습니다."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:52
+msgid "Select an existing album to move the album contents. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the album contents there."
+msgstr "앨범의 콘텐츠를 이동 가지고 앨범을 선택하십시오. 또는 <a class=\"modal-switch\" data-switch=\"move-new-album\"> 앨범 만들기 </a> 을하고 이동 할 수 있습니다."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:71
+msgid "Select an existing album to move the images. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the images there."
+msgstr "이미지를 이동 가지고 앨범을 선택하십시오. <a class=\"modal-switch\" data-switch=\"move-new-album\">새 앨범 만들기</a>을하고 이동 할 수 있습니다."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:87
+msgid "All the selected images will be assigned to this category."
+msgstr "선택된 모든 이미지는이 범주가 적용됩니다."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:92
+msgid "There is no categories."
+msgstr "카테고리가 없습니다."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:97
+msgid "Confirm flag content as safe"
+msgstr "안전뿐만 플래그의 내용을 확인"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:98
+msgid "Do you really want to flag this content as safe?"
+msgstr "이 내용은 안전 플래그 당신이 정말로 하시겠습니까?"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:101
+msgid "Confirm flag content as unsafe"
+msgstr "안전하지 않은 플래그 내용을 확인"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:102
+msgid "Do you really want to flag this content as unsafe?"
+msgstr "당신은 정말 안전하지 않은 콘텐츠는 플래그 하시겠습니까?"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:106
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:110
+msgid "Confirm deletion"
+msgstr "삭제 확인"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:107
+msgid "Do you really want to remove this content? This can't be undone."
+msgstr "이 콘텐츠를 정말 삭제 하시겠습니까? 한 번 삭제하면 원래대로 되돌릴 수 없습니다."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:111
+msgid "Do you really want to remove all the selected content? This can't be undone."
+msgstr "선택된 콘텐츠를 정말 삭제 하시겠습니까? 한 번 삭제하면 원래대로 되돌릴 수 없습니다."
+
+#: ../../../app/themes/Peafowl/tpl_list_item/image_description_guest.php:2
+msgid "Uploaded by guest to Public"
+msgstr "게스트 출판 용으로 업로드"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/image_description_owner.php:2
+#, php-format
+msgid "From %s"
+msgstr "%s보다"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/image_description_user.php:2
+msgid "From %a by %u"
+msgstr "앨범이름:%a  사용자이름:%u"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
+#: ../../../app/lib/chevereto.js:3186 ../../../app/lib/chevereto.min.js:157
+#: ../../../lib/Peafowl/peafowl.js:625 ../../../lib/Peafowl/peafowl.min.js:36
+msgid "Select"
+msgstr "선택"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
+msgid "Edit"
+msgstr "편집"
+
+#: ../../../app/themes/Peafowl/views/404.php:7
+msgid "The requested page was not found."
+msgstr "요청한 페이지를 찾을 수 없습니다."
+
+#: ../../../app/themes/Peafowl/views/404.php:11
+msgid "Search something else"
+msgstr "다른 검색 무엇인가"
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+msgid "The user has been deleted"
+msgstr "사용자가 삭제되었습니다"
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+#: ../../../app/themes/Peafowl/views/album.php:134
+#: ../../../app/themes/Peafowl/views/user.php:158
+#: ../../../app/lib/chevereto.js:3163 ../../../app/lib/chevereto.min.js:155
+msgid "The content has been deleted."
+msgstr "내용이 삭제되었습니다."
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:7
+msgid "Your account is almost ready"
+msgstr "귀하의 계정은 거의 준비"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:9
+#, php-format
+msgid "An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "%s 계정 인증을 위해 이메일을 보냈습니다. 계정 인증을위한 링크는 48 시간 동안 유효합니다. 도착하지 않은 경우에는 스팸 폴더를 확인하십시오."
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/logout.php:13
+#: ../../../app/themes/Peafowl/views/request-denied.php:13
+msgid "Go to homepage"
+msgstr "홈으로 이동"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+msgid "Resend activation"
+msgstr "재전송 활성화"
+
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:10
+#, php-format
+msgid "You have successfully changed your account email to %s"
+msgstr "당신의 계정 이메일을 %s 로 변경했습니다."
+
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+msgid "Go to my profile"
+msgstr "내 프로필로 이동"
+
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:12
+msgid "A confirmation link will be sent to this email with details to activate your account."
+msgstr "확인 링크는 귀하의 계정을 활성화하기 위해 세부 사항을 이메일로 전송됩니다."
+
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:26
+msgid "Add email"
+msgstr "이메일 추가"
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
+msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "비밀번호 재설정을 위해 등록된 이메일 주소로 보냈습니다. 만약 도착하지 않은 경우에는 스팸 폴더를 확인하십시오."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+msgid "Resend instructions"
+msgstr "지침을 다시 보내기"
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:989 ../../../app/lib/chevereto.js:1065
+#: ../../../app/lib/chevereto.js:1143 ../../../app/lib/chevereto.js:1293
+#: ../../../app/lib/chevereto.min.js:44 ../../../app/lib/chevereto.min.js:48
+#: ../../../app/lib/chevereto.min.js:52 ../../../app/lib/chevereto.min.js:55
+#: ../../../lib/Peafowl/peafowl.js:2422 ../../../lib/Peafowl/peafowl.js:2937
+#: ../../../lib/Peafowl/peafowl.min.js:138
+#: ../../../lib/Peafowl/peafowl.min.js:169
+msgid "An error occurred. Please try again later."
+msgstr "오류가 발생했습니다. 나중에 다시 시도하세요"
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
+msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
+msgstr "이전의 이메일은 비밀번호를 재설정하는 지침을 보냈습니다. 당신이받지 못한 경우 지침은 정크 나 스팸 메일 필터를 확인해보십시오."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:32
+msgid "Enter your username or the email address that you used to create your account."
+msgstr "사용자 이름 또는 계정을 만들 때 사용한 이메일 주소를 입력합니다."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:52
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:47
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:37
+#: ../../../lib/Peafowl/peafowl.js:407 ../../../lib/Peafowl/peafowl.js:2191
+#: ../../../lib/Peafowl/peafowl.min.js:23
+#: ../../../lib/Peafowl/peafowl.min.js:120
+msgid "Submit"
+msgstr "전송"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:15
+msgid "Your password has been changed. You can now try logging in using your new password."
+msgstr "암호 변경이 완료되었습니다. 새로운 비밀번호로 로그인하십시오."
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+msgid "Login now"
+msgstr "지금 로그인"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:22
+msgid "Enter the new password that you want to use."
+msgstr "당신이 사용할 새 암호를 입력합니다."
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:28
+msgid "New Password"
+msgstr "새 암호"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/settings.php:258
+#: ../../../app/themes/Peafowl/views/settings.php:275
+#: ../../../app/themes/Peafowl/views/signup.php:45
+#, php-format
+msgid "%d characters min"
+msgstr "최소 %d 개의 문자"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/settings.php:258
+msgid "Enter your new password"
+msgstr "새 암호를 입력하십시오."
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
+#: ../../../app/themes/Peafowl/views/settings.php:280
+msgid "Confirm password"
+msgstr "암호 확인"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:35
+#: ../../../app/themes/Peafowl/views/settings.php:264
+msgid "Re-enter your new password"
+msgstr "새 암호를 다시 입력하십시오."
+
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:12
+#, php-format
+msgid "An email to %s has been sent with instructions to activate your account.n\\If you don't receive the instructions try checking your junk or spam filters."
+msgstr "%s 앞에 계정을 활성화하는 방법을 보냈습니다. 도착하지 않은 경우에는 스팸 폴더를 확인하십시오."
+
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:19
+msgid "Enter the email address that you used to create your account to continue."
+msgstr "계정 만들기를 계속하는 이메일 주소를 입력하십시오."
+
+#: ../../../app/themes/Peafowl/views/album.php:16
+#: ../../../app/themes/Peafowl/views/image.php:69
+msgid "This content is private"
+msgstr "이 내용은 비공개입니다"
+
+#: ../../../app/themes/Peafowl/views/album.php:25
+msgid "Do you really want to delete this album and all of its images? This can't be undone."
+msgstr "정말이 앨범과 앨범에있는 모든 이미지를 삭제 하시겠습니까? 삭제하면 원래대로 되돌릴 수 없습니다."
+
+#: ../../../app/themes/Peafowl/views/album.php:25
+msgid "Delete album"
+msgstr "앨범 삭제"
+
+#: ../../../app/themes/Peafowl/views/album.php:86
+msgid "Album link"
+msgstr "앨범 링크"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:22
+msgid "Image"
+msgid_plural "Images"
+msgstr[0] "이미지"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:34
+#: ../../../app/themes/Peafowl/views/dashboard.php:90
+#: ../../../app/themes/Peafowl/views/settings.php:120
+msgid "User"
+msgid_plural "Users"
+msgstr[0] "사용자"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:40
+#: ../../../app/themes/Peafowl/views/dashboard.php:1435
+msgid "Disk used"
+msgstr "디스크 사용량"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:80
+#: ../../../app/themes/Peafowl/views/dashboard.php:84
+msgid "Add user"
+msgstr "사용자 추가"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:87
+#: ../../../app/themes/Peafowl/views/settings.php:115
+msgid "Role"
+msgstr "권한"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:89
+#: ../../../app/themes/Peafowl/views/settings.php:119
+msgid "Administrator"
+msgstr "관리자"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:152
+#: ../../../app/themes/Peafowl/views/dashboard.php:156
+msgid "Add category"
+msgstr "카테고리 추가"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:178
+#: ../../../app/themes/Peafowl/views/dashboard.php:182
+msgid "Add storage"
+msgstr "스토리지 추가"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:197
+msgid "Website name"
+msgstr "웹 사이트 이름"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:202
+msgid "Website doctitle"
+msgstr "웹 사이트의 제목 (페이지 제목)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:206
+msgid "Website description"
+msgstr "웹 사이트 설명"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:211
+msgid "Website keywords"
+msgstr "웹 사이트 키워드"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:232
+msgid "Default time zone"
+msgstr "기본 표준 시간대"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:236
+#: ../../../app/themes/Peafowl/views/settings.php:202
+msgid "Select region"
+msgstr "지역 선택"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:276
+msgid "Enable this if you want to allow the search feature."
+msgstr "검색 기능을 허용하는 경우에 사용 가능"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:286
+msgid "Enable this if you want to allow the explore page."
+msgstr "[더보기] 기능을 활성화 / 비활성화를 선택하십시오."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:296
+msgid "Enable this if you want to allow the random feature."
+msgstr "랜덤 표시 기능을 활성화 / 비활성화를 선택하십시오."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:302
+msgid "Website mode"
+msgstr "웹 사이트 모드"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:305
+msgid "Private"
+msgstr "비공개"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:309
+msgid "Private mode will make the website only available for registered users."
+msgstr "비공개 모드는 등록 된 사용자 만 볼 수있게합니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:315
+msgid "Content privacy mode"
+msgstr "콘텐츠 비공개 모드"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:319
+#: ../../../app/themes/Peafowl/views/dashboard.php:876
+#: ../../../app/themes/Peafowl/views/dashboard.php:1114
+msgid "Default"
+msgstr "기본값"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:320
+msgid "Force private (self)"
+msgstr "강제로 비공개"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:321
+msgid "Force private (anyone with the link)"
+msgstr "강제로 비공개 (누구의 링크에서도)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:326
+msgid "Forced privacy modes will override user selected privacy."
+msgstr "사용자의 선택한 비공개 모드를 강제로 상속"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:335
+msgid "Enable uploads"
+msgstr "업로드 가능"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:341
+msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
+msgstr "당신은 이미지 업로드를 허용하고자 할 경우에 사용합니다. 이 설정은 관리자에 영향을주지 않습니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:344
+msgid "Guest uploads"
+msgstr "게스트로 업로드"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:350
+msgid "Enable this if you want to allow non registered users to upload."
+msgstr "미등록 사용자의 업로드를 허용 할 때 사용하는"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:357
+msgid "Max. filesize"
+msgstr "최대 파일 크기"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:360
+#, php-format
+msgid "Max. allowed filesize. (Max allowed by server is %s)"
+msgstr "허용 된 최대 파일 크기 (서버의 허용 용량은 %s )"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:363
+msgid "Image path"
+msgstr "이미지 경로"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:364
+msgid "Relative to Chevereto root"
+msgstr "Chevereto 루트에 상대"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Where to store the images? Relative to Chevereto root."
+msgstr "사진을 어디에 저장 하시겠습니까? 웹 사이트의 루트에 상대적인 경로 하시겠습니까?"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:369
+msgid "Storage mode"
+msgstr "저장 모드"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:372
+msgid "Datefolders"
+msgstr "날짜 폴더"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:372
+msgid "Direct"
+msgstr "직접"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:375
+#, php-format
+msgid "Datefolders creates %s structure"
+msgstr "날짜 형식을 %s 형식으로 작성"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:378
+msgid "File naming method"
+msgstr "파일 이름 지정 규칙"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:381
+msgid "Original"
+msgstr "원래"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:381
+msgid "Mixed"
+msgstr "혼합"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:384
+msgid "\"Original\" will try to keep the image source name while \"Random\" will generate a random name. \"Mixed\" is a combination of both methods."
+msgstr "무작위로 파일 이름이 설정되는 반면 원래 파일 이름을 유지하도록 노력합니다. 혼합은 쌍방의 조합입니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:390
+msgid "Thumb size"
+msgstr "썸네일의 크기"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:401
+msgid "Thumbnails will be fixed to this size."
+msgstr "썸네일이 크기로 변경됩니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:404
+msgid "Medium size"
+msgstr "중간 크기"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:409
+msgid "Height will be automatic calculated."
+msgstr "높이가 자동으로 계산됩니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:422
+msgid "Enable this to put a logo or anything you want in image uploads."
+msgstr "활성화하면, 로고 및 업로드되는 모든 이미지에 워터 마크가 들어갑니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:429
+#: ../../../app/themes/Peafowl/views/dashboard.php:889
+#, php-format
+msgid "Warning: Can't write in %s"
+msgstr "경고 : %s 에는 쓰기 수 없습니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:466
+msgid "Watermark image"
+msgstr "워터 마크"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:472
+msgid "Watermark image to use. Must be a PNG."
+msgstr "워터 마크를 사용합니다. PNG 포맷 만 가능합니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:475
+msgid "Watermark position"
+msgstr "워터 마크의 위치"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:479
+msgid "left top"
+msgstr "왼쪽 위"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:480
+msgid "left center"
+msgstr "왼쪽 센터"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:481
+msgid "left bottom"
+msgstr "왼쪽 하단"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:482
+msgid "center top"
+msgstr "중앙 상단"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:483
+msgid "center center"
+msgstr "중간"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:484
+msgid "center bottom"
+msgstr "중앙 낮은"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:485
+msgid "right top"
+msgstr "오른쪽 상단"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:486
+msgid "right center"
+msgstr "오른쪽 중앙"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:487
+msgid "right bottom"
+msgstr "오른쪽 하단"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:492
+msgid "Relative position of the watermark image. First horizontal align then vertical align."
+msgstr "워터 마크는 상대 위치입니다. 처음이 수평 다음이 수직이됩니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:495
+msgid "Watermark margin"
+msgstr "워터 마크 마진"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:500
+msgid "Margin from the border of the image to the watermark image."
+msgstr "이미지의 테두리에서 워터 마크까지의 마진"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:503
+msgid "Watermark opacity"
+msgstr "워터 마크의 투명도"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:508
+msgid "Opacity of the watermark in the final watermarked image. Values 0 to 100."
+msgstr "최종 워터 마크 이미지의 투명도. 값은 0에서 100."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:532
+#, php-format
+msgid "Do you really want to delete the %s category? This can't be undone."
+msgstr "카테고리 : %s 를 정말 삭제 하시겠습니까? 삭제하면 복구 할 수 없습니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:548
+msgid "Note: Deleting a category doesn't delete the images that belongs to that category."
+msgstr "주의 : 범주 이름을 삭제 범주에 속하는 이미지는 삭제되지 않습니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:550
+msgid "Edit category"
+msgstr "카테고리 편집"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:607
+msgid "Enable signups"
+msgstr "신규 계정 생성을 활성화"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:613
+msgid "Enable this if you want to allow users to signup."
+msgstr "사용자에게 새 계정 생성을 허용하는 경우에 사용하는"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:620
+msgid "Username routing"
+msgstr "사용자의 URL 형식의 선택"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:626
+#, php-format
+msgid "Enable this if you want to use %s/username URLs instead of %s/user/username."
+msgstr "URL을 %s/user/username 의 대신 %s/username 을 사용하고 싶은 경우에 사용 가능"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:642
+msgid "Require email confirmation"
+msgstr "이메일 확인이 필요"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:648
+msgid "Enable this if users must validate their email address on sign up."
+msgstr "계정을 만들 때 이메일 주소 확인을 요구하는 경우에 사용 가능"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:651
+msgid "Require email for social signup"
+msgstr "소셜 네트워크 사용을 위해 이메일 주소가 필요"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:657
+msgid "Enable this if users using social networks to register must provide an email address."
+msgstr "사용자가 소셜 네트워크를 사용하기 위해 메일 주소의 등록을 요구하는 경우에 사용 가능"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:678
+msgid "Block image uploads by IP if the system notice a flood  behavior based on the number of uploads per time period. This setting doesn't affect administrators."
+msgstr "정해진 시간 내에 허용 된 게시물을 초과하는 경우에 IP 주소로 이미지 업로드를 차단합니다. 얼마나 게시물 차단을 할 것인지를 설정합니다. 이 설정은 관리자에 영향을주지 않습니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:690
+msgid "Notify to email"
+msgstr "전자 메일 보내기"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:696
+msgid "If enabled the system will send an email on flood incidents."
+msgstr "활성화되어있는 경우 홍수 공격이있을 경우 이메일로 통지합니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:699
+msgid "Minute limit"
+msgstr "분당이 게시물을 초과하는 경우로 제한한다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:704
+msgid "Hourly limit"
+msgstr "1 시간 게시물을 초과하는 경우로 제한한다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:709
+msgid "Daily limit"
+msgstr "1 일 게시물을 초과하는 경우로 제한한다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:714
+msgid "Weekly limit"
+msgstr "1 주일 게시물을 초과하는 경우로 제한한다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:719
+msgid "Monthly limit"
+msgstr "1 개월 게시물을 초과하는 경우로 제한한다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:729
+msgid "Show not safe content in listings"
+msgstr "목록 중에 가족 보호에 접촉하는 컨텐츠가 포함되어있는 경우의 표시"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:739
+msgid "Show banners in not safe content"
+msgstr "배너 동안 가족 보호에 접촉하는 콘텐츠가있는 경우의 표시"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:745
+msgid "Enable this if you want to show banners in not safe content pages."
+msgstr "유효를 선택하면, 배너 동안 가족 보호에 접촉하지 마라 콘텐츠가 포함 된 경우에도 표시합니다. 이 설정은 관리자에 영향을주지 않습니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:749
+msgid "Show not safe content in random mode"
+msgstr "랜덤 모드의 컨텐츠에 가족 보호에 접촉이 포함되어있는 경우의 표시"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:760
+msgid "List items per page"
+msgstr "1 페이지에 표시 항목 수"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:763
+msgid "How many items should be displayed per page listing."
+msgstr "1 페이지에 표시되는 항목 수를 몇개로 하시겠습니까?"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:767
+msgid "List pagination mode"
+msgstr "페이지 네이션 방법의 선택"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:770
+msgid "Endless scrolling"
+msgstr "무한 스크롤"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:770
+msgid "Classic pagination"
+msgstr "일반 페이지 네이션"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:774
+msgid "What pagination method should be used."
+msgstr "어떤 페이지 네이션을 사용 하시겠습니까?"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:778
+msgid "Image listing size"
+msgstr "표시된 이미지의 크기"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:781
+msgid "Fluid"
+msgstr "유연한"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:781
+msgid "Fixed"
+msgstr "고정 된"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:785
+msgid "Both methods use a fixed width but fluid method uses automatic heights."
+msgstr "모두 고정 폭되지만, 플렉시블를 선택하면 높이 자동입니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:818
+#, php-format
+msgid "Put your themes in the %s folder"
+msgstr "테마는 %s 폴더에 넣어주세요."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:837
+msgid "Tone"
+msgstr "색조"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:840
+msgid "Light"
+msgstr "밝게"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:840
+msgid "Dark"
+msgstr "명암"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:895
+msgid "Enable vector logo"
+msgstr "벡터 로고 사용 가능"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:902
+msgid "Enable vector logo for high quality logo in devices with high pixel density."
+msgstr "장치의 고밀도 픽셀로 벡터 로고의 화질을 높이면"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:907
+#: ../../../app/themes/Peafowl/views/dashboard.php:1069
+msgid "Vector logo image"
+msgstr "벡터 로고 이미지"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:913
+msgid "Vector version or your website logo in SVG format."
+msgstr "워터 마크에 사용하는 벡터 그래픽 또는 SVG 포맷 이미지. 귀하의 사이트 로고는 어떻습니까?"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:919
+#: ../../../app/themes/Peafowl/views/dashboard.php:1079
+msgid "Raster logo image"
+msgstr "래스터 로고 이미지"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:925
+msgid "Bitmap version or your website logo. PNG format is recommended."
+msgstr "워터 마크에 사용하는 비트 맵 이미지 또는 PNG 포맷의 이미지.  사이트 로그는 어떻습니까?"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:929
+msgid "Logo height"
+msgstr "로고의 높이"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:930
+#: ../../../app/themes/Peafowl/views/dashboard.php:1165
+msgid "No value"
+msgstr "값이 없습니다"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:932
+msgid "Use this to set the logo height if needed."
+msgstr "로고의 높이가 필요한 경우 여기를 사용하십시오."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:938
+msgid "Favicon image"
+msgstr "파비콘 이미지"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:944
+msgid "Favicon image. Image must have same width and height."
+msgstr "파비콘 이미지. 이미지는 높이와 폭이 동일하지 않으면 안됩니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:950
+msgid "Enable download button"
+msgstr "다운로드 버튼을 활성화하려면"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:956
+msgid "Enable this if you want to show the image download button."
+msgstr "이미지 다운로드 버튼을 표시 할 경우에 사용하는"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:984
+msgid "Enable social share"
+msgstr "소셜 공유 사용"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:990
+msgid "Enable this if you want to show social network buttons to share content."
+msgstr "소셜 네트워크에서 콘텐츠를 공유 버튼을 표시하는 경우에 사용 가능"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:994
+msgid "Enable embed codes (content)"
+msgstr "소스 코드 (콘텐츠 링크)를 사용하는"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1000
+msgid "Enable this if you want to show embed codes for the content."
+msgstr "콘텐츠에 대한 소스 코드를 표시 할 경우에 사용합니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1004
+msgid "Enable embed codes (uploader)"
+msgstr "소스 코드 (업로드 한 사용자에게 링크)를 사용합니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1010
+msgid "Enable this if you want to show embed codes when upload gets completed."
+msgstr "업로드가 완료 할 때 이미지에 대한 소스 코드를 표시 할 때 사용합니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1016
+msgid "Not safe content checkbox in uploader"
+msgstr "가족 보호에 접촉하는 콘텐츠를 업로드하는 사람에게 확인"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1022
+msgid "Enable this if you want to show a checkbox to indicate not safe content upload."
+msgstr "가족 보호에 접촉하는 콘텐츠를 업로드 경고를 표시 할 때 사용합니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1028
+msgid "Custom CSS code"
+msgstr "사용자 정의 CSS 코드"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1029
+msgid "Put your custom CSS code here. It will be placed as <style> just before the closing </head> tag."
+msgstr "사용자 정의 CSS 코드를 여기에 입력합니다. 헤더 태그가 닫히기 직전의 </head> 앞에 <style> 태그로 삽입됩니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1033
+msgid "Custom JS code"
+msgstr "사용자 정의 JS 코드"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1034
+msgid "Put your custom JS code here. It will be placed as <script> just before the closing </head> tag."
+msgstr "사용자 정의 JS 코드를 여기에 입력합니다. 헤더 태그가 닫히기 직전의 </head> 앞에 <script> 태그로 삽입됩니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1167
+msgid "Comma-separated list of target user ids to show images on homepage. Leave it blank or zero to display all recent images."
+msgstr "톱 페이지에 표시하려는 사용자의 ID를 쉼표로 구분 입력합니다. 입력하지 않으면 최신 이미지가 표시됩니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1176
+msgid "Here you can set the codes for the predefined ad spaces."
+msgstr "광고 공간을 사전에 정의하는 코드를 여기에 세트합니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1179
+msgid "Before cover (homepage)"
+msgstr "톱 페이지 (헤더 부에)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1183
+msgid "After cover (homepage)"
+msgstr "톱 페이지 (헤더 부 아래)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1187
+msgid "After listing (homepage)"
+msgstr "톱 페이지 (게시물 사진 아래)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1193
+msgid "Before pagination"
+msgstr "페이지 네이션 전에"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1197
+msgid "After pagination"
+msgstr "페이지 네이션 후"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1203
+msgid "Content (image and album)"
+msgstr "콘텐츠 (이미지 및 앨범)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1205
+msgid "Tab about column"
+msgstr "이미지 정보 탭에서"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1209
+msgid "Before comments"
+msgstr "코멘트하기"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1215
+msgid "Image page"
+msgstr "사진 페이지"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1217
+msgid "Inside viewer top (image page)"
+msgstr "이미지 뷰어 상단 (사진 페이지)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1219
+#: ../../../app/themes/Peafowl/views/dashboard.php:1224
+msgid "Expected banner size 728x90"
+msgstr "배너 크기는 728x90 가정"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1222
+msgid "Inside viewer foot (image page)"
+msgstr "이미지 뷰어 하단 (사진 페이지)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1227
+msgid "After image viewer (image page)"
+msgstr "이미지 뷰어 아래 (사진 페이지)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1231
+msgid "Before header (image page)"
+msgstr "화상 상세 메뉴에서 (이미지 페이지)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1235
+msgid "After header (image page)"
+msgstr "이미지 고급 메뉴 (이미지 페이지)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1239
+msgid "Footer (image page)"
+msgstr "꼬리말 부 (사진 페이지)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1245
+msgid "Album page"
+msgstr "앨범 페이지"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1247
+msgid "Before header (album page)"
+msgstr "앨범 제목 앞에 (앨범 페이지)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1251
+msgid "After header (album page)"
+msgstr "앨범 상세 하 (앨범 페이지)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1257
+msgid "User profile page"
+msgstr "사용자 프로필 페이지"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1259
+msgid "After top (user profile)"
+msgstr "사용자 이름 앞에 (프로필 페이지)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1263
+msgid "Before listing (user profile)"
+msgstr "사용자 이름 뒤에 (프로필 페이지)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1269
+msgid "Explore page"
+msgstr "목록페이지 더보기"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1271
+msgid "After top (explore page)"
+msgstr "맨 아래 (더보기 페이지)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1279
+msgid "Crypt salt"
+msgstr "암호화를위한 키"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1281
+msgid "This is the salt used to convert numeric ID to alphanumeric. It was generated on install."
+msgstr "숫자 ID를 알파벳 변환 할 때 사용되는 키입니다. 설치시에 생성되어 있습니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1293
+msgid "Error reporting"
+msgstr "오류 보고서"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1299
+msgid "Enable this if you need to debug PHP errors."
+msgstr "PHP 오류를 디버깅 할 때 사용하는"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1302
+msgid "Maintenance"
+msgstr "유지"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1308
+msgid "When enabled the website will show a maintenance message. This setting doesn't affect administrators."
+msgstr "활성화되면 웹 사이트 유지 보수 메시지가 표시됩니다. 이 설정은 관리자에 영향을주지 않습니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1314
+msgid "Default language"
+msgstr "기본 언어"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1323
+msgid "Default base language to use."
+msgstr "기본 언어로 사용"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1327
+msgid "Auto language"
+msgstr "자동 언어"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1382
+msgid "Toggle this to enable or disable HTTPS"
+msgstr "HTTPS의 유효 / 무효의 전환"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1383
+msgid "Toggle this to enable or disable this storage"
+msgstr "이 스토리지의 유효 / 무효의 전환"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1399
+msgid "Quota"
+msgstr "시스템 용량 한계"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1401
+msgid "Active"
+msgstr "활성"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1434
+msgid "Storage method"
+msgstr "저장 방법"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1445
+msgid "Local storage is used by default or when no external storage is active."
+msgstr "활성 외부 스토리지가없는 경우, 로컬 스토리지가 사용됩니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1445
+#, php-format
+msgid "If you need help check the <a href=\"%s\">storage documentation</a>."
+msgstr "알 수없는 부분은 <a href=\"%s\"> 외부 스토리지에 대한 </a> 를 참조하십시오."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1447
+msgid "Edit storage"
+msgstr "저장 편집"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1457
+msgid "From name"
+msgstr "원본 이름"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1460
+msgid "Sender name for emails sent to users."
+msgstr "사용자에게 보낼 메일을 보내는 이름"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1475
+msgid "Email mode"
+msgstr "이메일 모드"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1482
+msgid "How to send emails? SMTP recommended."
+msgstr "어떻게 이메일을 보내시겠습니까? SMTP가 좋습니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1487
+msgid "SMTP server and port"
+msgstr "SMTP 서버 및 포트 번호"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1490
+msgid "SMTP server"
+msgstr "SMTP 서버"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1503
+msgid "SMTP username"
+msgstr "SMTP 사용자 이름"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1508
+msgid "SMTP password"
+msgstr "SMTP 비밀번호"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1513
+msgid "SMTP security"
+msgstr "SMTP 보안"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1516
+msgid "Unsecured"
+msgstr "보안되지 않습니다"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1533
+msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
+msgstr "<a href=\"https://developers.facebook.com/\" target=\"_blank\">페이스 북 앱</a>이 필요합니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1538
+msgid "Facebook app id"
+msgstr "페이스 북 응용 프로그램 ID"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1543
+msgid "Facebook app secret"
+msgstr "페이스 북 어플 Secret"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1559
+msgid "You need a <a href=\"https://apps.twitter.com\" target=\"_blank\">Twitter app</a> for this."
+msgstr "<a href=\"https://apps.twitter.com\" target=\"_blank\"> 트위터 앱 </a> 이 필요합니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1564
+msgid "Twitter API key"
+msgstr "Twitter API 키"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1569
+msgid "Twitter API secret"
+msgstr "트위터 API 비밀"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1576
+msgid "Twitter account"
+msgstr "Twitter 계정"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1592
+msgid "You need a <a href=\"https://cloud.google.com/console\" target=\"_blank\">Google app</a> for this."
+msgstr "<a href=\"https://cloud.google.com/console\" target=\"_blank\"> Google app </a> 이 필요합니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1597
+msgid "Google client id"
+msgstr "Google 클라이언트 ID"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1602
+msgid "Google client secret"
+msgstr "Google 클라이언트 Secret"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1618
+msgid "You need a <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> for this."
+msgstr "<a href=\"http://vk.com/dev\" target=\"_blank\"> VK app </a> 이 필요합니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1623
+msgid "VK client id"
+msgstr "VK 클라이언트 ID"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1628
+msgid "VK client secret"
+msgstr "VK 클라이언트 시크릿"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1644
+#, php-format
+msgid "CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s."
+msgstr "정적 컨텐츠는 CDN의 여러 서버에 배치하는 것이 당신의 사이트의 표시가 현격히 빨라집니다. CDN 업체를 알지 못하는 경우 %s 를 경험해보십시오."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1663
+#, php-format
+msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
+msgstr "이미지 인증 <a href=\"%s\" target=\"_blank\"> reCAPTCHA key </a> 를 사용하여 공개 키 · 비밀 열쇠의 취득이 필요합니다."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1669
+msgid "reCAPTCHA public key"
+msgstr "reCAPTCHA의 공개 키 (public key)를 입력"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1674
+msgid "reCAPTCHA private key"
+msgstr "reCAPTCHA의 비밀 키 (private key)를 입력"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1681
+msgid "reCAPTCHA threshold"
+msgstr "임계 값 (실패)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1692
+msgid "Comment code"
+msgstr "코멘트 코드"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1693
+msgid "Disqus, Facebook or anything you want. It will be used in image view."
+msgstr "Disqus, Facebook 등이 필요한 경우에는 이미지 모드를 사용하십시오."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1697
+msgid "Analytics code"
+msgstr "액세스 해석 용 코드"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1698
+msgid "Google Analytics or anything you want. It will be added to the theme footer."
+msgstr "Google Analytics와 다른 해석 코드가 필요한 경우에는 테마의 바닥 글 부분에 추가하십시오."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1708
+msgid "Enable this if you are using Cloudflare."
+msgstr "Cloudflare을 사용하는 경우에 사용하는"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1713
+msgid "For documentation about the API check <a href=\"http://chevereto.com/docs/api\" target=\"_blank\">docs/api</a>"
+msgstr "API 문서는 <a href=\"http://chevereto.com/docs/api\" target=\"_blank\"> docs / API </a> 를 참조하십시오."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1715
+msgid "API v1 key"
+msgstr "API V1이 키"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1718
+msgid "Use this key when using the API v1. <a href=\"https://chevereto.com/docs/api-v1\">Learn more</a>."
+msgstr "API v1을 사용하는 경우이 키를 사용하십시오. <a href=\"https://chevereto.com/docs/api-v1\"> 자세한 내용은 여기 </a>"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1728
+#: ../../../app/themes/Peafowl/views/settings.php:395
+#: ../../../lib/Peafowl/peafowl.js:407 ../../../lib/Peafowl/peafowl.min.js:23
+msgid "Save changes"
+msgstr "변경 사항을 저장"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1751
+#: ../../../app/themes/Peafowl/views/settings.php:409
+msgid "Check the errors to proceed."
+msgstr "다음에 진행하는 오류를 확인하십시오."
+
+#: ../../../app/themes/Peafowl/views/image.php:63
+msgid "Guest"
+msgstr "게스트"
+
+#: ../../../app/themes/Peafowl/views/image.php:78
+msgid "Do you really want to delete this image? This can't be undone."
+msgstr "이 사진을 삭제 하시겠습니까? 삭제 후에는 취소 할 수 없습니다."
+
+#: ../../../app/themes/Peafowl/views/image.php:78
+msgid "Delete image"
+msgstr "사진 삭제"
+
+#: ../../../app/themes/Peafowl/views/image.php:142
+msgid "Added to %a and categorized in %c"
+msgstr "%a 를 추가하고 카테고리 이름 : %c 로 분류"
+
+#: ../../../app/themes/Peafowl/views/image.php:144
+#, php-format
+msgid "Added to %s"
+msgstr "%s 에 의해 추가"
+
+#: ../../../app/themes/Peafowl/views/image.php:149
+#, php-format
+msgid "Uploaded to %s"
+msgstr "%s 에 업로드"
+
+#: ../../../app/themes/Peafowl/views/image.php:151
+#, php-format
+msgid "Uploaded %s"
+msgstr "%s 에 의해 업로드"
+
+#: ../../../app/themes/Peafowl/views/image.php:188
+#: ../../../app/themes/Peafowl/views/image.php:249
+msgid "Share image"
+msgstr "이미지를 공유"
+
+#: ../../../app/themes/Peafowl/views/image.php:204
+#: ../../../app/themes/Peafowl/views/image.php:210
+msgid "Album ID"
+msgstr "앨범 ID"
+
+#: ../../../app/themes/Peafowl/views/image.php:260
+msgid "In this album"
+msgstr "이 앨범"
+
+#: ../../../app/themes/Peafowl/views/image.php:287
+msgid "Image links"
+msgstr "이미지 링크"
+
+#: ../../../app/themes/Peafowl/views/image.php:289
+msgid "Image URL"
+msgstr "이미지 URL"
+
+#: ../../../app/themes/Peafowl/views/image.php:295
+msgid "Image link"
+msgstr "이미지 링크"
+
+#: ../../../app/themes/Peafowl/views/image.php:301
+msgid "Thumbnail URL"
+msgstr "썸네일 URL"
+
+#: ../../../app/themes/Peafowl/views/image.php:310
+msgid "Medium URL"
+msgstr "중간 크기 URL"
+
+#: ../../../app/themes/Peafowl/views/image.php:328
+#: ../../../app/themes/Peafowl/views/image.php:348
+#: ../../../app/themes/Peafowl/views/image.php:371
+#: ../../../app/themes/Peafowl/views/image.php:396
+msgid "Image embed codes"
+msgstr "이미지 임베디드 코드"
+
+#: ../../../app/themes/Peafowl/views/image.php:348
+msgid "Linked image"
+msgstr "이미지 링크"
+
+#: ../../../app/themes/Peafowl/views/image.php:371
+msgid "Linked medium"
+msgstr "중간 크기의 링크"
+
+#: ../../../app/themes/Peafowl/views/image.php:396
+msgid "Linked thumbnail"
+msgstr "썸네일 링크"
+
+#: ../../../app/themes/Peafowl/views/index.php:15
+msgid "Upload and share your images."
+msgstr "업로드하여 사진을 공유합니다"
+
+#: ../../../app/themes/Peafowl/views/index.php:63
+#, php-format
+msgid "Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings."
+msgstr "계정 %s 에 게시하려면이 섹션에 기입하십시오. <br> 유즈넷 사용자는 대시 보드에서 편집 할 수 있습니다."
+
+#: ../../../app/themes/Peafowl/views/index.php:79
+msgid "Sign up to unlock all the features"
+msgstr "모든 기능을 이용하기 위해서는 계정을 생성"
+
+#: ../../../app/themes/Peafowl/views/index.php:80
+msgid "Manage your content, create private albums, customize your profile and more."
+msgstr "귀하의 콘텐츠를 관리하고 비공개 앨범을 만들거나 프로필 사용자 지정이 가능합니다."
+
+#: ../../../app/themes/Peafowl/views/login.php:40
+#: ../../../app/themes/Peafowl/views/settings.php:275
+msgid "Enter your password"
+msgstr "암호를 입력하십시오."
+
+#: ../../../app/themes/Peafowl/views/logout.php:12
+#, php-format
+msgid "You have been logged off %s. Hope to see you soon."
+msgstr "%s 는 로그 오프했습니다. 또한 방문을 기다리고 있습니다."
+
+#: ../../../app/themes/Peafowl/views/maintenance.php:7
+msgid "Website under maintenance"
+msgstr "현재 점검 중입니다."
+
+#: ../../../app/themes/Peafowl/views/maintenance.php:8
+msgid "We're performing scheduled maintenance tasks in the website. Please come back in a few minutes."
+msgstr "대단히 죄송하지만, 현재 정기 점검을 실시하고 있습니다. 나중에 방문을 기다리고 있습니다."
+
+#: ../../../app/themes/Peafowl/views/request-denied.php:12
+msgid "You either don't have permission to access this page or the link has expired."
+msgstr "이 페이지에 대한 액세스 권한을 가지고 있지 않거나 링크가 만료되어 있습니다."
+
+#: ../../../app/themes/Peafowl/views/search.php:8
+#: ../../../app/themes/Peafowl/views/user.php:111
+msgid "Results for"
+msgstr "결과는"
+
+#: ../../../app/themes/Peafowl/views/settings.php:36
+#: ../../../app/themes/Peafowl/views/user.php:68
+msgid "Do you really want to delete this user? This can't be undone."
+msgstr "정말이 사용자를 삭제 하시겠습니까? 삭제하면 원래대로 되돌릴 수 없습니다."
+
+#: ../../../app/themes/Peafowl/views/settings.php:36
+#: ../../../app/themes/Peafowl/views/user.php:68
+msgid "Delete user"
+msgstr "사용자를 삭제"
+
+#: ../../../app/themes/Peafowl/views/settings.php:69
+msgid "User ID"
+msgstr "사용자 ID"
+
+#: ../../../app/themes/Peafowl/views/settings.php:81
+msgid "Register date"
+msgstr "가입"
+
+#: ../../../app/themes/Peafowl/views/settings.php:99
+msgid "Status"
+msgstr "상태"
+
+#: ../../../app/themes/Peafowl/views/settings.php:103
+msgid "Valid"
+msgstr "유효"
+
+#: ../../../app/themes/Peafowl/views/settings.php:104
+msgid "Banned"
+msgstr "정지 된"
+
+#: ../../../app/themes/Peafowl/views/settings.php:105
+msgid "Awaiting email"
+msgstr "이메일 대기"
+
+#: ../../../app/themes/Peafowl/views/settings.php:106
+msgid "Awaiting confirmation"
+msgstr "확인을 기다림"
+
+#: ../../../app/themes/Peafowl/views/settings.php:138
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "%i to %f characters<br>Letters, numbers and \"_\""
+msgstr "%i 개 이상의 문자 %f 자까지 <br> 반각 영문자, 숫자 및 \"_\"사용할 수 있습니다."
+
+#: ../../../app/themes/Peafowl/views/settings.php:167
+msgid "Language"
+msgstr "언어"
+
+#: ../../../app/themes/Peafowl/views/settings.php:197
+msgid "Timezone"
+msgstr "시간대"
+
+#: ../../../app/themes/Peafowl/views/settings.php:248
+msgid "Current password"
+msgstr "현재 암호"
+
+#: ../../../app/themes/Peafowl/views/settings.php:249
+msgid "Enter your current password"
+msgstr "현재 암호를 입력하십시오."
+
+#: ../../../app/themes/Peafowl/views/settings.php:257
+msgid "New password"
+msgstr "새 암호"
+
+#: ../../../app/themes/Peafowl/views/settings.php:263
+msgid "Confirm new password"
+msgstr "새 암호 확인"
+
+#: ../../../app/themes/Peafowl/views/settings.php:271
+msgid "Add a password to be able to login using your username or email."
+msgstr "사용자 이름 또는 이메일 주소를 사용하여 암호를 설정하십시오."
+
+#: ../../../app/themes/Peafowl/views/settings.php:271
+msgid "This user doesn't have a password. Add one using this form."
+msgstr "이 사용자는 암호를 설정하지 않습니다. 이 양식에서 설정하십시오."
+
+#: ../../../app/themes/Peafowl/views/settings.php:281
+msgid "Re-enter your password"
+msgstr "암호를 다시 입력하십시오."
+
+#: ../../../app/themes/Peafowl/views/settings.php:300
+#: ../../../lib/Peafowl/peafowl.js:3356
+#: ../../../lib/Peafowl/peafowl.min.js:207
+msgid "loading"
+msgstr "로드 중"
+
+#: ../../../app/themes/Peafowl/views/settings.php:304
+#: ../../../app/themes/Peafowl/views/user.php:21
+msgid "Upload new image"
+msgstr "새 이미지 업로드"
+
+#: ../../../app/themes/Peafowl/views/settings.php:306
+msgid "Delete existing image"
+msgstr "가지고있는 이미지 삭제"
+
+#: ../../../app/themes/Peafowl/views/settings.php:319
+msgid "This is your real name, not your username."
+msgstr "이곳은 사용자 이름 대신 본명을 부탁드립니다."
+
+#: ../../../app/themes/Peafowl/views/settings.php:323
+msgid "http://yourwebsite.com"
+msgstr "http://yourwebsite.com"
+
+#: ../../../app/themes/Peafowl/views/settings.php:339
+msgid "User has no connections."
+msgstr "사용자의 연결이 없습니다."
+
+#: ../../../app/themes/Peafowl/views/settings.php:343
+msgid "Link your account to external services to be able to login and share content."
+msgstr "당신의 계정을 다른 외부 서비스와 공유하기 위하여 연결하십시오."
+
+#: ../../../app/themes/Peafowl/views/settings.php:350
+#, php-format
+msgid "Do you really want to disconnect %s from this account?"
+msgstr "%s 계정과의 연결을 닫고 하시겠습니까?"
+
+#: ../../../app/themes/Peafowl/views/settings.php:351
+#, php-format
+msgid "This account is connected to %s"
+msgstr "이 계정은 %s 에 연결되어 있습니다."
+
+#: ../../../app/themes/Peafowl/views/settings.php:353
+#, php-format
+msgid "Do you really want to disconnect your %s account?"
+msgstr "정말 %s 계정에 대한 연결을 닫고 하시겠습니까?"
+
+#: ../../../app/themes/Peafowl/views/settings.php:355
+#, php-format
+msgid "You will be logged out and you won't be able to login to your account using this %s account."
+msgstr "로그 아웃하고 %s 계정을 사용하여 로그인 할 수 없습니다."
+
+#: ../../../app/themes/Peafowl/views/settings.php:357
+#, php-format
+msgid "Your account is connected to %s"
+msgstr "당신의 계정은 %s 에 연결되어 있습니다."
+
+#: ../../../app/themes/Peafowl/views/settings.php:362
+msgid "disconnect"
+msgstr "연결 닫기"
+
+#: ../../../app/themes/Peafowl/views/settings.php:375
+#, php-format
+msgid "Connect %s"
+msgstr "%s 에 연결"
+
+#: ../../../app/themes/Peafowl/views/user.php:15
+msgid "Upload profile background"
+msgstr "사용자 홈페이지의 배경으로 업로드"
+
+#: ../../../app/themes/Peafowl/views/user.php:17
+msgid "Change background"
+msgstr "배경 변경"
+
+#: ../../../app/themes/Peafowl/views/user.php:22
+msgid "The profile background image will be deleted. This can't be undone. Are you sure that you want to delete the profile background image?"
+msgstr "이 사용자 홈페이지의 배경 이미지는 삭제됩니다. 삭제하면 원래대로 되돌릴 수 없습니다. 정말 삭제하고 괜찮습니까?"
+
+#: ../../../app/themes/Peafowl/views/user.php:22
+msgid "Delete background"
+msgstr "배경 제거"
+
+#: ../../../app/themes/Peafowl/views/user.php:64
+msgid "Edit profile"
+msgstr "프로필 수정"
+
+#: ../../../app/lib/chevereto.js:496 ../../../app/lib/chevereto.js:568
+#: ../../../app/lib/chevereto.js:750 ../../../app/lib/chevereto.js:2155
+#: ../../../app/lib/chevereto.js:2208 ../../../app/lib/chevereto.js:2306
+#: ../../../app/lib/chevereto.min.js:20 ../../../app/lib/chevereto.min.js:24
+#: ../../../app/lib/chevereto.min.js:30 ../../../app/lib/chevereto.min.js:107
+#: ../../../app/lib/chevereto.min.js:110 ../../../app/lib/chevereto.min.js:114
+msgid "You must enter the album name."
+msgstr "앨범 이름을 입력하십시오."
+
+#: ../../../app/lib/chevereto.js:610 ../../../app/lib/chevereto.js:796
+#: ../../../app/lib/chevereto.js:892 ../../../app/lib/chevereto.min.js:27
+#: ../../../app/lib/chevereto.min.js:34 ../../../app/lib/chevereto.min.js:36
+#: ../../../lib/Peafowl/peafowl.js:2225
+#: ../../../lib/Peafowl/peafowl.min.js:123
+msgid "Confirm"
+msgstr "확인"
+
+#: ../../../app/lib/chevereto.js:728 ../../../app/lib/chevereto.min.js:29
+msgid "Select existing album"
+msgstr "가지고 계신 앨범을 선택"
+
+#: ../../../app/lib/chevereto.js:1011 ../../../app/lib/chevereto.js:1091
+#: ../../../app/lib/chevereto.min.js:45 ../../../app/lib/chevereto.min.js:50
+msgid "Please select a valid image file type."
+msgstr "올바른 이미지 파일 유형을 선택하십시오."
+
+#: ../../../app/lib/chevereto.js:1016 ../../../app/lib/chevereto.js:1096
+#: ../../../app/lib/chevereto.min.js:46 ../../../app/lib/chevereto.min.js:51
+#, python-format, javascript-format
+msgid "Please select a picture of at most %s size."
+msgstr "거의 %s 크기의 이미지를 선택하십시오."
+
+#: ../../../app/lib/chevereto.js:1063 ../../../app/lib/chevereto.min.js:48
+msgid "Profile image updated."
+msgstr "프로필 이미지 업로드"
+
+#: ../../../app/lib/chevereto.js:1133 ../../../app/lib/chevereto.min.js:52
+msgid "Profile background image updated."
+msgstr "프로필 배경 이미지 업로드"
+
+#: ../../../app/lib/chevereto.js:1207 ../../../app/lib/chevereto.min.js:53
+msgid "Profile background image deleted."
+msgstr "사용자 홈페이지 배경 이미지 삭제"
+
+#: ../../../app/lib/chevereto.js:1212 ../../../app/lib/chevereto.min.js:53
+msgid "Error deleting profile background image."
+msgstr "사용자 홈페이지 배경 이미지를 제거하는데 오류가 발생했습니다."
+
+#: ../../../app/lib/chevereto.js:1301 ../../../app/lib/chevereto.min.js:56
+#, python-format, javascript-format
+msgid "Update available (%s)"
+msgstr "%s　에 업데이트가 가능"
+
+#: ../../../app/lib/chevereto.js:1302 ../../../app/lib/chevereto.min.js:56
+#, python-format, javascript-format
+msgid "There is an update available for your system. Go to %s to proceed to download the file."
+msgstr "시스템 업데이트가 가능합니다. %s 에 액세스하여 최신 파일을 다운로드하십시오."
+
+#: ../../../app/lib/chevereto.js:1302 ../../../app/lib/chevereto.min.js:56
+msgid "The release notes for the update available are:"
+msgstr "업데이트 릴리스 노트 :"
+
+#: ../../../app/lib/chevereto.js:1306 ../../../app/lib/chevereto.min.js:56
+msgid "Your website is running the latest version of Chevereto."
+msgstr "당신의 웹 사이트는 Chevereto의 최신 버전에서 작동합니다."
+
+#: ../../../app/lib/chevereto.js:1690 ../../../app/lib/chevereto.min.js:74
+msgid "File too big."
+msgstr "파일이 너무 큽니다."
+
+#: ../../../app/lib/chevereto.js:1701 ../../../app/lib/chevereto.js:1849
+#: ../../../app/lib/chevereto.min.js:76 ../../../app/lib/chevereto.min.js:87
+msgid "Some files couldn't be added"
+msgstr "일부 파일의 추가에 실패했습니다."
+
+#: ../../../app/lib/chevereto.js:2283 ../../../app/lib/chevereto.min.js:114
+msgid "Image edited successfully."
+msgstr "이미지 편집을 완료했습니다."
+
+#: ../../../app/lib/chevereto.js:2346 ../../../app/lib/chevereto.min.js:115
+msgid "Album edited successfully."
+msgstr "앨범 편집을 완료했습니다."
+
+#: ../../../app/lib/chevereto.js:2364 ../../../app/lib/chevereto.min.js:116
+msgid "Invalid URL key."
+msgstr "부정은 URL 키입니다."
+
+#: ../../../app/lib/chevereto.js:2379 ../../../app/lib/chevereto.min.js:118
+msgid "Category URL key already being used."
+msgstr "이 카테고리 URL 키는 이미 사용되고 있습니다."
+
+#: ../../../app/lib/chevereto.js:2457 ../../../app/lib/chevereto.min.js:120
+msgid "Category successfully deleted."
+msgstr "카테고리의 삭제가 완료되었습니다."
+
+#: ../../../app/lib/chevereto.js:2706 ../../../app/lib/chevereto.js:2949
+#: ../../../app/lib/chevereto.js:2978 ../../../app/lib/chevereto.min.js:131
+#: ../../../app/lib/chevereto.min.js:146 ../../../app/lib/chevereto.min.js:147
+msgid "Please fill all the required fields."
+msgstr "필수 항목 모두에 입력하십시오."
+
+#: ../../../app/lib/chevereto.js:2717 ../../../app/lib/chevereto.min.js:132
+msgid "Invalid storage capacity value. Make sure to use a valid format."
+msgstr "저장 용량이 잘못되었습니다. 유효한 형식인지 확인하십시오."
+
+#: ../../../app/lib/chevereto.js:2729 ../../../app/lib/chevereto.min.js:134
+msgid "Invalid URL."
+msgstr "잘못된 URL"
+
+#: ../../../app/lib/chevereto.js:2780 ../../../app/lib/chevereto.min.js:137
+msgid "Storage successfully edited."
+msgstr "스토리지의 편집을 완료했습니다."
+
+#: ../../../app/lib/chevereto.js:2997 ../../../app/lib/chevereto.min.js:148
+msgid "User added successfully."
+msgstr "사용자 추가가 완료되었습니다."
+
+#: ../../../app/lib/chevereto.js:3171 ../../../app/lib/chevereto.js:3246
+#: ../../../app/lib/chevereto.js:3329 ../../../app/lib/chevereto.js:3338
+#: ../../../app/lib/chevereto.min.js:156 ../../../app/lib/chevereto.min.js:162
+#: ../../../app/lib/chevereto.min.js:164
+msgid "The content has been moved."
+msgstr "콘텐츠 이동했습니다."
+
+#: ../../../app/lib/chevereto.js:3191 ../../../app/lib/chevereto.min.js:157
+msgid "Unselect"
+msgstr "선택 해제"
+
+#: ../../../app/lib/chevereto.js:3246 ../../../app/lib/chevereto.min.js:162
+msgid "The content has been edited."
+msgstr "콘텐츠의 편집을 완료했습니다."
+
+#: ../../../lib/Peafowl/peafowl.js:25 ../../../lib/Peafowl/peafowl.js:480
+#: ../../../lib/Peafowl/peafowl.min.js:1
+#: ../../../lib/Peafowl/peafowl.min.js:29
+msgid "All the changes that you have made will be lost if you continue."
+msgstr "계속하면 한 모든 변경 내용이 삭제됩니다."
+
+#: ../../../lib/Peafowl/peafowl.js:464 ../../../lib/Peafowl/peafowl.min.js:28
+msgid "Changes saved successfully."
+msgstr "변경 내용 저장을 완료했습니다."
+
+#: ../../../lib/Peafowl/peafowl.js:480 ../../../lib/Peafowl/peafowl.min.js:29
+msgid "Go back to form"
+msgstr "폼 가기"
+
+#: ../../../lib/Peafowl/peafowl.js:480 ../../../lib/Peafowl/peafowl.min.js:29
+msgid "continue anyway"
+msgstr "어쨌든 계속"
+
+#: ../../../lib/Peafowl/peafowl.js:2368
+#: ../../../lib/Peafowl/peafowl.min.js:135
+msgid "Saving"
+msgstr "저장"
+
+#: ../../../lib/Peafowl/peafowl.js:2373
+#: ../../../lib/Peafowl/peafowl.min.js:135
+msgid "Sending"
+msgstr "전송 중"
+
+#: ../../../lib/Peafowl/peafowl.js:2453
+#: ../../../lib/Peafowl/peafowl.min.js:138
+msgid "Confirm action"
+msgstr "확인하기"
+
+#: ../../../lib/Peafowl/peafowl.js:2465
+#: ../../../lib/Peafowl/peafowl.min.js:139
+msgid "information"
+msgstr "정보"
+

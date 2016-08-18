@@ -1,0 +1,36 @@
+<div class="c24 center-box">
+	<div class="header default-margin-bottom">
+		<h1>Contact</h1>
+	</div>
+	<form method="post" class="form-content">	
+		<input type="hidden" name="chv-contact-form" value="1"><!-- don't remove this -->
+		<p>If you want to send a message fill the form below.</p>
+		<div class="input-label c9">
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name" class="text-input" placeholder="Your name" required>
+		</div>
+		<div class="input-label c9">
+			<label for="email">Email address</label>
+			<input type="email" name="email" id="email" class="text-input" placeholder="Your email address" required>
+			<div class="input-warning red-warning"></div>
+		</div>
+		<div class="input-label c9">
+			<label for="subject">Subject</label>
+			<select type="text" name="subject" id="subject" class="text-input">
+				<option value="general">General questions/comments</option>
+				<option value="dmca">DMCA complaint</option>
+			</select>
+		</div>
+		<div class="input-label c12">
+			<label for="message">Message</label>
+			<textarea name="message" id="message" class="text-input r3" required></textarea>
+		</div>
+		<div class="input-label soft-hidden-">
+			<label for="recaptcha_response_field">reCAPTCHA</label>
+			<div id="g-recaptcha"></div>
+		</div>
+		<div class="btn-container">
+			<button class="btn btn-input default" type="submit">Send message</button> <span class="btn-alt">or <a href="/">cancel</a></span>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,4868 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSION\n"
+"POT-Creation-Date: 2016-08-14 03:30+0000\n"
+"PO-Revision-Date: 2016-08-14 03:30+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+
+#: ../../../app/install/installer.php:1168
+#: ../../../app/install/installer.php:1177
+#: ../../../app/install/installer.php:1180
+#: ../../../app/routes/route.account.php:414
+#: ../../../app/routes/route.json.php:579
+#: ../../../app/routes/route.json.php:1107
+#: ../../../app/routes/route.page.php:80
+#: ../../../app/routes/route.settings.php:185
+#: ../../../app/routes/route.signup.php:97
+#: ../../../content/pages/default/contact.php:28
+msgid "Invalid email"
+msgstr "البريد الإلكتروني غير صحيح"
+
+#: ../../../app/install/installer.php:1171
+#: ../../../app/routes/route.json.php:574
+#: ../../../app/routes/route.settings.php:181
+#: ../../../app/routes/route.signup.php:100
+msgid "Invalid username"
+msgstr "إسم المستخدم غير صحيح"
+
+#: ../../../app/install/installer.php:1174
+#: ../../../app/routes/route.account.php:357
+#: ../../../app/routes/route.json.php:584
+#: ../../../app/routes/route.settings.php:323
+#: ../../../app/routes/route.signup.php:103
+msgid "Invalid password"
+msgstr "كلمة المرور غير صحيحة"
+
+#: ../../../app/install/installer.php:1183
+#: ../../../app/routes/route.dashboard.php:667
+msgid "Invalid website mode"
+msgstr "وضع الموقع غير صالح"
+
+#: ../../../app/install/template/ready.php:31
+#: ../../../app/themes/Peafowl/views/dashboard.php:1760
+msgid "From email address"
+msgstr "من البريد الإلكتروني"
+
+#: ../../../app/install/template/ready.php:32
+#: ../../../app/themes/Peafowl/views/dashboard.php:1763
+msgid "Sender email for emails sent to users."
+msgstr "مرسل البريد الإلكترونى للرسائل الموجهة للمستخدمين."
+
+#: ../../../app/install/template/ready.php:36
+#: ../../../app/themes/Peafowl/views/dashboard.php:1766
+msgid "Incoming email address"
+msgstr "البريد الإلكتروني الوارد"
+
+#: ../../../app/install/template/ready.php:37
+#: ../../../app/themes/Peafowl/views/dashboard.php:1769
+msgid "Recipient for contact form and system alerts."
+msgstr "المستقبل لنظام الإشعارات ونموذج الإتصال."
+
+#: ../../../app/install/template/ready.php:44
+#: ../../../app/themes/Peafowl/views/dashboard.php:327
+msgid "Website mode"
+msgstr "وضع الموقع"
+
+#: ../../../app/install/template/ready.php:45
+#: ../../../app/themes/Peafowl/views/dashboard.php:334
+msgid "You can switch the website mode anytime."
+msgstr "يمكنك تغير وضع الموقع في اي وقت"
+
+#: ../../../app/install/template/ready.php:47
+#: ../../../app/themes/Peafowl/views/dashboard.php:330
+msgid "Community"
+msgstr "المجتمع"
+
+#: ../../../app/install/template/ready.php:47
+#: ../../../app/themes/Peafowl/views/dashboard.php:330
+msgid "Personal"
+msgstr "شخصي"
+
+#: ../../../app/install/update/template/update.php:2
+msgid "Update in progress"
+msgstr "جاري التحديث"
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "حدث خطأ ما. يرجى المحاولة مرة أخرى."
+
+#: ../../../app/install/update/updater.php:72
+#, php-format
+msgid "Missing %s file"
+msgstr "الملف  %s  مفقود"
+
+#: ../../../app/install/update/updater.php:78
+msgid "Invalid license info"
+msgstr "معلومات الرخصة غير صالحة"
+
+#: ../../../app/install/update/updater.php:84
+msgid "Invalid license key"
+msgstr "مفتاح الرخصة غير صالح"
+
+#: ../../../app/install/update/updater.php:87
+msgid "Can't save file"
+msgstr "لا يمكن حفظ الملف\n"
+
+#: ../../../app/install/update/updater.php:100
+#, php-format
+msgid "Can't download %s"
+msgstr "لا يمكن تحميل %s"
+
+#: ../../../app/install/update/updater.php:126
+#, php-format
+msgid "Can't extract %s"
+msgstr "لا يمكن استخراج %s"
+
+msgid "Can't create %s directory - %e"
+msgstr "لا يمكن انشاء %s دليل - %e"
+
+msgid "Can't update %s file - %e"
+msgstr "لا يمكن تحديث %s ملف - %e"
+
+#: ../../../app/lib/classes/class.album.php:100
+msgid "Untitled"
+msgstr "بدون عنوان"
+
+#: ../../../app/lib/classes/class.album.php:273
+#: ../../../app/lib/classes/class.user.php:114
+#, php-format
+msgid "%s's images"
+msgstr "%s صور"
+
+msgid "Note: This content is private but anyone with the link will be able to see this."
+msgstr "ملاحظة: هذا المحتوى خاص ولكن أي شخص لديه الرابط سيكون قادرا على رؤيته."
+
+msgid "Note: This content is password protected. Remember to pass the content password to share."
+msgstr "ملاحظة: هذا المحتوى محمي . تذكر ان تجتاز كلمة المرور لهذا المحتوى للمشاركته."
+
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:14
+#: ../../../app/themes/Peafowl/views/album.php:74
+#: ../../../app/themes/Peafowl/views/image.php:272
+msgid "Note: This content is private. Change privacy to \"public\" to share."
+msgstr "تنبيه : هذا المحتوى خاص. عدل خيارات الخصوصية إلى \"عام\" لأجل مشاركته."
+
+msgid "After %n %t"
+msgstr "بعد  %n  %t"
+
+#: ../../../app/lib/classes/class.image.php:348
+msgid "Don't autodelete"
+msgstr "لا تقم بالحذف التلقائي"
+
+#: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "خانة فارغة"
+msgstr[1] "دقيقة"
+msgstr[2] "خانة فارغة"
+msgstr[3] "خانة فارغة"
+msgstr[4] "خانة فارغة"
+msgstr[5] "دقائق"
+
+#: ../../../app/lib/functions.php:41 ../../../app/lib/functions.php:53
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "خانة فارغة"
+msgstr[1] "ساعة"
+msgstr[2] "خانة فارغة"
+msgstr[3] "خانة فارغة"
+msgstr[4] "خانة فارغة"
+msgstr[5] "ساعات"
+
+#: ../../../app/lib/functions.php:40 ../../../app/lib/functions.php:52
+msgid "day"
+msgid_plural "days"
+msgstr[0] "خانة فارغة"
+msgstr[1] "يوم"
+msgstr[2] "خانة فارغة"
+msgstr[3] "خانة فارغة"
+msgstr[4] "خانة فارغة"
+msgstr[5] "أيام"
+
+#: ../../../app/lib/classes/class.image.php:636
+#: ../../../app/lib/classes/class.image.php:742
+msgid "Duplicated upload"
+msgstr "رفع مكرر"
+
+msgid "Error storing file in external storage server"
+msgstr "خطأ في تخزين الملف في خادم التخزين الخارجي"
+
+msgid "External storage has failed"
+msgstr "فشل التخزين خارجي"
+
+#: ../../../app/lib/classes/class.image.php:955
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Private upload"
+msgstr "رفع خاص"
+
+msgid "Upload switched to local storage"
+msgstr "تحول التحميل الي التخزين المحلي"
+
+msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
+msgstr "تم تحويل النظام إلى التخزين المحلى لعدم كفاية مساحة القرص (%c) فى مشغلات التخزين الخارجى. تم وضع الصورة %s فى المخزن المحلى"
+
+#: ../../../app/lib/classes/class.image.php:1230
+msgid "view"
+msgid_plural "views"
+msgstr[0] "خانة فارغة"
+msgstr[1] "مشاهدة"
+msgstr[2] "خانة فارغة"
+msgstr[3] "خانة فارغة"
+msgstr[4] "خانة فارغة"
+msgstr[5] "مشاهدات"
+
+#: ../../../app/lib/classes/class.image.php:1231
+msgid "like"
+msgid_plural "likes"
+msgstr[0] "خانة فارغة"
+msgstr[1] "إعجاب"
+msgstr[2] "خانة فارغة"
+msgstr[3] "خانة فارغة"
+msgstr[4] "خانة فارغة"
+msgstr[5] "إعجابات"
+
+#: ../../../app/lib/classes/class.listing.php:296
+#: ../../../app/routes/route.album.php:177
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
+#: ../../../app/themes/Peafowl/views/album.php:34
+#: ../../../app/themes/Peafowl/views/user.php:98
+#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
+msgid "image"
+msgid_plural "images"
+msgstr[0] "خانة فارغة"
+msgstr[1] "صورة"
+msgstr[2] "خانة فارغة"
+msgstr[3] "خانة فارغة"
+msgstr[4] "خانة فارغة"
+msgstr[5] "صور"
+
+#: ../../../app/lib/classes/class.notification.php:75
+msgid "%u liked your %t %c"
+msgstr "%u أعجب ب %t %c"
+
+#: ../../../app/lib/classes/class.notification.php:81
+#, php-format
+msgid "%u is now following you"
+msgstr "%u الأن يتابعك"
+
+#: ../../../app/lib/classes/class.page.php:108
+#, php-format
+msgid "Can't create %s destination dir"
+msgstr "لايمكن إنشاء وجهة دليل %s"
+
+#: ../../../app/lib/classes/class.page.php:126
+#, php-format
+msgid "Can't open %s for writing"
+msgstr "لا يمكن فتح %s للكتابة"
+
+#: ../../../app/lib/classes/class.page.php:136
+#: ../../../app/themes/Peafowl/views/dashboard.php:461
+msgid "Internal"
+msgstr "داخلي"
+
+#: ../../../app/lib/classes/class.page.php:137
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
+#: ../../../app/themes/Peafowl/views/dashboard.php:461
+msgid "Link"
+msgstr "رابط"
+
+msgid "Can't insert storage."
+msgstr "لا يمكن إدراج التخزين"
+
+#: ../../../app/lib/classes/class.storage.php:450
+#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
+#, php-format, javascript-format
+msgid "Storage capacity can't be lower than its current usage (%s)."
+msgstr "سعة تخزين المستخدمة لا يمكن أن يكون أقل من الاستخدام الحالى (%s)."
+
+msgid "Can't update storage details."
+msgstr "لا يمكن تحديث تفاصيل التخزين."
+
+#: ../../../app/lib/classes/class.storage.php:720
+msgid "Unlimited"
+msgstr "غير محدود"
+
+#: ../../../app/lib/classes/class.storage.php:720
+msgid "used"
+msgstr "مستخدم"
+
+msgid "Private profile"
+msgstr "ملف شخصي خاص"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Private"
+msgstr "خاص"
+
+#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
+msgid "year"
+msgid_plural "years"
+msgstr[0] "خانة فارغة"
+msgstr[1] "عام"
+msgstr[2] "خانة فارغة"
+msgstr[3] "خانة فارغة"
+msgstr[4] "خانة فارغة"
+msgstr[5] "أعوام"
+
+#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
+msgid "month"
+msgid_plural "months"
+msgstr[0] "خانة فارغة"
+msgstr[1] "شهر"
+msgstr[2] "خانة فارغة"
+msgstr[3] "خانة فارغة"
+msgstr[4] "خانة فارغة"
+msgstr[5] "شهور"
+
+#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "خانة فارغة"
+msgstr[1] "إسبوع"
+msgstr[2] "خانة فارغة"
+msgstr[3] "خانة فارغة"
+msgstr[4] "خانة فارغة"
+msgstr[5] "أسابيع"
+
+#: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "خانة فارغة"
+msgstr[1] "ثانية"
+msgstr[2] "خانة فارغة"
+msgstr[3] "خانة فارغة"
+msgstr[4] "خانة فارغة"
+msgstr[5] "ثواني"
+
+#: ../../../app/lib/functions.php:67
+#, php-format
+msgid "%s ago"
+msgstr "%s مضى"
+
+#: ../../../app/lib/functions.php:67
+msgid "moments ago"
+msgstr "لحظات مضت"
+
+msgid "System notification"
+msgstr "إعلام النظام"
+
+#: ../../../app/routes/route.dashboard.php:1223
+#: ../../../app/themes/Peafowl/header.php:407
+#: ../../../app/themes/Peafowl/views/dashboard.php:9
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+msgid "There is an update available for your system. Go to %s to download and install this update."
+msgstr "هناك تحديث متاح لنظامك. إذهب إلى %s لتحميل و تثبيت هذا التحديث"
+
+#: ../../../app/lib/functions.php:218
+#, php-format
+msgid "System database is outdated. You need to run the <a href=\"%s\">update</a> tool."
+msgstr "قاعدة بيانات النظام قديمة. تحتاج الى تشغيل <a href=\"%s\"> أداة التحديث </a>"
+
+#: ../../../app/lib/functions.php:221
+#, php-format
+msgid "Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>."
+msgstr "الموقع في طور الصيانة. للتراجع عن هذا الإعداد اذهب الى <a href=\"%s\"> لوحة التحكم > الإعدادات </a>"
+
+msgid "You should disable PHP error reporting for production enviroment. Go to <a href='%s'>System settings</a> to revert this setting."
+msgstr "يجب ان تعطل خاصية تقارير الأخطاء ل php لبيئة الإنتاج. اذهب إلى <a href='%s'>إعدادات النظام</a> لتبديل هذا الإعداد."
+
+msgid "You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this."
+msgstr "لم تغير أعدادات البريك الإلكترونى الأفتراضية. إذهب إلى <a href='%s'>إعدادات البريد الإلكترونى</a> لتصليح هذا"
+
+msgid "There is an update available for your Chevereto based website."
+msgstr "هذا تحديث متاح لموقعك القائم على Chevereto"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "The release notes for this update are:"
+msgstr "ملاحظات الإصدار لهذا التحديث هى:"
+
+msgid "admin dashboard"
+msgstr "لوحة تحكم الادمن"
+
+msgid "You can apply this update directly from your %a or download it from %s and then manually install it."
+msgstr "يمكن تطبيق هذا التحديث مباشر من %a الخاص بك أو تحميله من %s ثم تثبيته يدويا."
+
+msgid "Chevereto update available (v%s)"
+msgstr "تحديث Chevereto المتاح (v%s)"
+
+msgid "view on %s"
+msgstr "مشاهدة على  %s"
+
+#: ../../../app/lib/functions.render.php:303
+msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
+msgstr "نحن نستخدم ملفات تعريف الارتباط الخاصة بنا وأيضا ملفات تعريف الطرف الثالث  لتحسين تجربة التصفح الخاص بك في خدماتنا. إذا كنت لا تزال تستخدم موقعنا من المفهوم أن تقبل سياسة الكوكيز."
+
+#: ../../../app/loader.php:180
+msgid "You have been forbidden to use this website."
+msgstr "تم منعك من استخدام هذا الموقع."
+
+#: ../../../app/loader.php:279
+#: ../../../app/themes/Peafowl/views/settings.php:441
+msgid "Feel free to browse and discover all my shared images and albums."
+msgstr "لا تتردد في تصفح واكتشاف كل الصور وألبومات المشاركة بواسطتى."
+
+#: ../../../app/loader.php:282
+#: ../../../app/themes/Peafowl/views/settings.php:447
+msgid "View all my images"
+msgstr "عرض جميع الصور الخاصة بي"
+
+#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
+msgid "That page doesn't exist"
+msgstr "هذه الصفحة غير موجودة"
+
+#: ../../../app/routes/route.account.php:72
+#: ../../../app/themes/Peafowl/header.php:295
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:24
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:8
+#: ../../../app/themes/Peafowl/views/login.php:41
+#: ../../../app/themes/Peafowl/views/settings.php:299
+msgid "Forgot password?"
+msgstr "نسيت كلمة السر ؟"
+
+#: ../../../app/routes/route.account.php:73
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:8
+msgid "Reset password"
+msgstr "إعادة تعيين كلمة المرور"
+
+#: ../../../app/routes/route.account.php:74
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:8
+msgid "Resend account activation"
+msgstr "إعادة إرسال تفعيل الحساب"
+
+#: ../../../app/routes/route.account.php:76
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:8
+msgid "Add your email address"
+msgstr "إضافة بريدك الإلكتروني"
+
+#: ../../../app/routes/route.account.php:77
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:7
+msgid "Email changed"
+msgstr "تم تغيير البريد الإلكتروني"
+
+#: ../../../app/routes/route.account.php:95
+#: ../../../app/routes/route.login.php:71
+#: ../../../app/routes/route.settings.php:140
+#: ../../../app/routes/route.signup.php:73
+msgid "The reCAPTCHA wasn't entered correctly"
+msgstr "لم يتم كتابة حروف التحقق بشكل صحيح"
+
+#: ../../../app/routes/route.account.php:119
+#: ../../../app/routes/route.account.php:164
+#: ../../../app/routes/route.account.php:271
+msgid "Invalid Username/Email"
+msgstr "إسم المستخدم/البريد الإلكتروني غير صالح"
+
+#: ../../../app/routes/route.account.php:129
+msgid "User doesn't have an email."
+msgstr "المستخدم لا يتوفر لديه بريد إلكتروني."
+
+#: ../../../app/routes/route.account.php:140
+#: ../../../app/routes/route.account.php:299
+#: ../../../app/routes/route.account.php:321
+#: ../../../app/routes/route.account.php:388
+#: ../../../app/routes/route.json.php:24 ../../../app/routes/route.json.php:37
+#: ../../../app/routes/route.json.php:49 ../../../app/routes/route.json.php:561
+#: ../../../app/routes/route.json.php:623
+#: ../../../app/routes/route.json.php:672
+#: ../../../app/routes/route.json.php:719 ../../../app/routes/route.page.php:66
+#: ../../../app/themes/Peafowl/views/request-denied.php:8
+#: ../../../content/pages/default/contact.php:14
+msgid "Request denied"
+msgstr "الطلب مرفوض"
+
+#: ../../../app/routes/route.account.php:145
+msgid "Account needs to be activated to use this feature"
+msgstr "يتطلب تفعيل الحساب لإستخدام هذه الخاصية"
+
+#: ../../../app/routes/route.account.php:151
+msgid "Account already activated"
+msgstr "سبق وأن تم تفعيل الحساب"
+
+#: ../../../app/routes/route.account.php:192
+msgid "Allow up to 15 minutes for the email. You can try again later."
+msgstr "الرجاء الإنتظار 15 دقيقة لتلقى البريد الإلكترونى، ومن ثم يمكنك المحاولة من جديد."
+
+#: ../../../app/routes/route.account.php:231
+#, php-format
+msgid "Reset your password at %s"
+msgstr "إعادة تعيين كلمة المرور في %s"
+
+#: ../../../app/routes/route.account.php:233
+#: ../../../app/routes/route.account.php:454
+#: ../../../app/routes/route.settings.php:283
+#: ../../../app/routes/route.signup.php:193
+#, php-format
+msgid "Confirmation required at %s"
+msgstr "التأكيد مطلوب في %s"
+
+#: ../../../app/routes/route.account.php:342
+#: ../../../app/routes/route.signup.php:216
+#, php-format
+msgid "Welcome to %s"
+msgstr "أهلاً بك في %s"
+
+#: ../../../app/routes/route.account.php:360
+#: ../../../app/routes/route.settings.php:327
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
+#: ../../../app/themes/Peafowl/views/settings.php:313
+#: ../../../app/themes/Peafowl/views/settings.php:330
+#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
+msgid "Passwords don't match"
+msgstr "كلمة المرور غير متطابقة"
+
+#: ../../../app/routes/route.account.php:422
+#: ../../../app/routes/route.json.php:599
+#: ../../../app/routes/route.settings.php:243
+#: ../../../app/routes/route.signup.php:141
+msgid "Email already being used"
+msgstr "البريد الإلكتروني مستخدم بالفعل"
+
+#: ../../../app/routes/route.account.php:508
+#: ../../../app/routes/route.signup.php:236
+#: ../../../content/pages/default/contact.php:132
+#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
+#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
+msgid "Check the errors in the form to continue."
+msgstr "إفحص الخطأ أولاً حتى تتمكن من المتابعة."
+
+msgid "Password required"
+msgstr "كلمة السر مطلوبة"
+
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "الأحدث"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "الأقدم"
+
+#: ../../../app/routes/route.album.php:96
+#: ../../../app/routes/route.category.php:64
+#: ../../../app/routes/route.dashboard.php:1121
+#: ../../../app/routes/route.explore.php:50
+#: ../../../app/routes/route.following.php:29
+#: ../../../app/routes/route.user.php:201
+msgid "Most viewed"
+msgstr "الأكثر مشاهدة"
+
+#: ../../../app/routes/route.album.php:104
+#: ../../../app/routes/route.category.php:72
+#: ../../../app/routes/route.dashboard.php:1129
+#: ../../../app/routes/route.explore.php:58
+#: ../../../app/routes/route.following.php:37
+#: ../../../app/routes/route.user.php:207
+msgid "Most liked"
+msgstr "الأكثر إعجابا"
+
+#: ../../../app/routes/route.album.php:115
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:4
+#: ../../../app/themes/Peafowl/views/album.php:36
+#: ../../../app/themes/Peafowl/views/image.php:89
+msgid "Share"
+msgstr "مشاركة"
+
+#: ../../../app/routes/route.album.php:124
+#: ../../../app/routes/route.image.php:134
+msgid "Full info"
+msgstr "المعلومات الكاملة"
+
+#: ../../../app/routes/route.album.php:159
+msgid "%a album hosted in %w"
+msgstr "%a  الألبوم مستضاف فى %w"
+
+#: ../../../app/routes/route.dashboard.php:38
+msgid "Stats"
+msgstr "إحصائيات"
+
+#: ../../../app/routes/route.dashboard.php:39
+#: ../../../app/routes/route.search.php:85
+#: ../../../app/routes/route.user.php:85 ../../../app/routes/route.user.php:277
+#: ../../../app/themes/Peafowl/views/settings.php:73
+msgid "Images"
+msgstr "صور"
+
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:92
+#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
+#: ../../../app/themes/Peafowl/header.php:403
+#: ../../../app/themes/Peafowl/views/settings.php:77
+msgid "Albums"
+msgstr "الألبومات"
+
+#: ../../../app/routes/route.dashboard.php:41
+#: ../../../app/routes/route.dashboard.php:233
+#: ../../../app/routes/route.search.php:99
+msgid "Users"
+msgstr "الأعضاء"
+
+#: ../../../app/routes/route.dashboard.php:42
+#: ../../../app/routes/route.settings.php:498
+#: ../../../app/themes/Peafowl/header.php:363
+#: ../../../app/themes/Peafowl/header.php:405
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: ../../../app/routes/route.dashboard.php:161
+msgid "Chevereto version"
+msgstr "نسخة Chevereto"
+
+#: ../../../app/routes/route.dashboard.php:162
+msgid "install update"
+msgstr "ثبت التحديث"
+
+#: ../../../app/routes/route.dashboard.php:162
+msgid "check for updates"
+msgstr "التحقق من التحديث"
+
+#: ../../../app/routes/route.dashboard.php:169
+msgid "PHP version"
+msgstr "نسخة PHP"
+
+#: ../../../app/routes/route.dashboard.php:173
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:114
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:115
+msgid "Server"
+msgstr "الخادم"
+
+#: ../../../app/routes/route.dashboard.php:177
+msgid "MySQL version"
+msgstr "نسخة MYSQL"
+
+#: ../../../app/routes/route.dashboard.php:181
+msgid "MySQL server info"
+msgstr "بيانات خادم MYSQL"
+
+#: ../../../app/routes/route.dashboard.php:185
+msgid "GD Library"
+msgstr "مكتبة GD"
+
+#: ../../../app/routes/route.dashboard.php:189
+msgid "File uploads"
+msgstr "الملفات المرفوعة"
+
+#: ../../../app/routes/route.dashboard.php:190
+#: ../../../app/themes/Peafowl/views/dashboard.php:298
+#: ../../../app/themes/Peafowl/views/dashboard.php:308
+#: ../../../app/themes/Peafowl/views/dashboard.php:318
+#: ../../../app/themes/Peafowl/views/dashboard.php:633
+#: ../../../app/themes/Peafowl/views/dashboard.php:642
+#: ../../../app/themes/Peafowl/views/dashboard.php:652
+#: ../../../app/themes/Peafowl/views/dashboard.php:678
+#: ../../../app/themes/Peafowl/views/dashboard.php:750
+#: ../../../app/themes/Peafowl/views/dashboard.php:962
+#: ../../../app/themes/Peafowl/views/dashboard.php:975
+#: ../../../app/themes/Peafowl/views/dashboard.php:986
+#: ../../../app/themes/Peafowl/views/dashboard.php:995
+#: ../../../app/themes/Peafowl/views/dashboard.php:1024
+#: ../../../app/themes/Peafowl/views/dashboard.php:1034
+#: ../../../app/themes/Peafowl/views/dashboard.php:1073
+#: ../../../app/themes/Peafowl/views/dashboard.php:1082
+#: ../../../app/themes/Peafowl/views/dashboard.php:1091
+#: ../../../app/themes/Peafowl/views/dashboard.php:1101
+#: ../../../app/themes/Peafowl/views/dashboard.php:1247
+#: ../../../app/themes/Peafowl/views/dashboard.php:1302
+#: ../../../app/themes/Peafowl/views/dashboard.php:1312
+#: ../../../app/themes/Peafowl/views/dashboard.php:1324
+#: ../../../app/themes/Peafowl/views/dashboard.php:1336
+#: ../../../app/themes/Peafowl/views/dashboard.php:1346
+#: ../../../app/themes/Peafowl/views/dashboard.php:1356
+#: ../../../app/themes/Peafowl/views/dashboard.php:1368
+#: ../../../app/themes/Peafowl/views/dashboard.php:1475
+#: ../../../app/themes/Peafowl/views/dashboard.php:1573
+#: ../../../app/themes/Peafowl/views/dashboard.php:1582
+#: ../../../app/themes/Peafowl/views/dashboard.php:1592
+#: ../../../app/themes/Peafowl/views/dashboard.php:1627
+#: ../../../app/themes/Peafowl/views/dashboard.php:1637
+#: ../../../app/themes/Peafowl/views/dashboard.php:1835
+#: ../../../app/themes/Peafowl/views/dashboard.php:1861
+#: ../../../app/themes/Peafowl/views/dashboard.php:1894
+#: ../../../app/themes/Peafowl/views/dashboard.php:1920
+#: ../../../app/themes/Peafowl/views/dashboard.php:1946
+#: ../../../app/themes/Peafowl/views/dashboard.php:1965
+#: ../../../app/themes/Peafowl/views/dashboard.php:2010
+#: ../../../app/themes/Peafowl/views/dashboard.php:2031
+msgid "Enabled"
+msgstr "مفعل"
+
+#: ../../../app/routes/route.dashboard.php:190
+#: ../../../app/themes/Peafowl/views/dashboard.php:298
+#: ../../../app/themes/Peafowl/views/dashboard.php:308
+#: ../../../app/themes/Peafowl/views/dashboard.php:318
+#: ../../../app/themes/Peafowl/views/dashboard.php:633
+#: ../../../app/themes/Peafowl/views/dashboard.php:642
+#: ../../../app/themes/Peafowl/views/dashboard.php:652
+#: ../../../app/themes/Peafowl/views/dashboard.php:679
+#: ../../../app/themes/Peafowl/views/dashboard.php:750
+#: ../../../app/themes/Peafowl/views/dashboard.php:962
+#: ../../../app/themes/Peafowl/views/dashboard.php:975
+#: ../../../app/themes/Peafowl/views/dashboard.php:986
+#: ../../../app/themes/Peafowl/views/dashboard.php:995
+#: ../../../app/themes/Peafowl/views/dashboard.php:1024
+#: ../../../app/themes/Peafowl/views/dashboard.php:1034
+#: ../../../app/themes/Peafowl/views/dashboard.php:1073
+#: ../../../app/themes/Peafowl/views/dashboard.php:1082
+#: ../../../app/themes/Peafowl/views/dashboard.php:1091
+#: ../../../app/themes/Peafowl/views/dashboard.php:1101
+#: ../../../app/themes/Peafowl/views/dashboard.php:1247
+#: ../../../app/themes/Peafowl/views/dashboard.php:1302
+#: ../../../app/themes/Peafowl/views/dashboard.php:1312
+#: ../../../app/themes/Peafowl/views/dashboard.php:1324
+#: ../../../app/themes/Peafowl/views/dashboard.php:1336
+#: ../../../app/themes/Peafowl/views/dashboard.php:1346
+#: ../../../app/themes/Peafowl/views/dashboard.php:1356
+#: ../../../app/themes/Peafowl/views/dashboard.php:1368
+#: ../../../app/themes/Peafowl/views/dashboard.php:1475
+#: ../../../app/themes/Peafowl/views/dashboard.php:1573
+#: ../../../app/themes/Peafowl/views/dashboard.php:1582
+#: ../../../app/themes/Peafowl/views/dashboard.php:1592
+#: ../../../app/themes/Peafowl/views/dashboard.php:1627
+#: ../../../app/themes/Peafowl/views/dashboard.php:1637
+#: ../../../app/themes/Peafowl/views/dashboard.php:1835
+#: ../../../app/themes/Peafowl/views/dashboard.php:1861
+#: ../../../app/themes/Peafowl/views/dashboard.php:1894
+#: ../../../app/themes/Peafowl/views/dashboard.php:1920
+#: ../../../app/themes/Peafowl/views/dashboard.php:1946
+#: ../../../app/themes/Peafowl/views/dashboard.php:1965
+#: ../../../app/themes/Peafowl/views/dashboard.php:2010
+#: ../../../app/themes/Peafowl/views/dashboard.php:2031
+msgid "Disabled"
+msgstr "معطل"
+
+#: ../../../app/routes/route.dashboard.php:193
+msgid "Max. upload size"
+msgstr "الحجم الأقصى للرفع"
+
+#: ../../../app/routes/route.dashboard.php:197
+msgid "Max. post size"
+msgstr "الحجم الأقصى للتخزين"
+
+#: ../../../app/routes/route.dashboard.php:201
+msgid "Max. execution time"
+msgstr "الحد الأقصى لوقت التنفيذ"
+
+#: ../../../app/routes/route.dashboard.php:202
+#, php-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "خانة فارغة"
+msgstr[1] "%d ثانية"
+msgstr[2] "خانة فارغة"
+msgstr[3] "خانة فارغة"
+msgstr[4] "خانة فارغة"
+msgstr[5] "%d ثواني"
+
+#: ../../../app/routes/route.dashboard.php:205
+msgid "Memory limit"
+msgstr "حدود الذاكرة"
+
+#: ../../../app/routes/route.dashboard.php:227
+#: ../../../app/themes/Peafowl/views/settings.php:370
+msgid "Website"
+msgstr "الموقع"
+
+#: ../../../app/routes/route.dashboard.php:228
+msgid "Content"
+msgstr "المحتوى"
+
+#: ../../../app/routes/route.dashboard.php:229
+msgid "Pages"
+msgstr "الصفحات"
+
+#: ../../../app/routes/route.dashboard.php:230
+#: ../../../app/routes/route.dashboard.php:387
+msgid "Listings"
+msgstr "عناصر العرض"
+
+#: ../../../app/routes/route.dashboard.php:231
+msgid "Image upload"
+msgstr "رفع الصور"
+
+#: ../../../app/routes/route.dashboard.php:232
+msgid "Categories"
+msgstr "الفئات"
+
+msgid "Consent screen"
+msgstr "شاشة الموافقة"
+
+#: ../../../app/routes/route.dashboard.php:234
+#: ../../../app/themes/Peafowl/views/dashboard.php:1021
+msgid "Flood protection"
+msgstr "حماية من التدفق الإلكتروني"
+
+#: ../../../app/routes/route.dashboard.php:235
+#: ../../../app/themes/Peafowl/views/dashboard.php:1169
+msgid "Theme"
+msgstr "التصميم"
+
+#: ../../../app/routes/route.dashboard.php:236
+#: ../../../app/routes/route.dashboard.php:373
+#: ../../../app/routes/route.settings.php:66
+msgid "Homepage"
+msgstr "الرئيسية"
+
+#: ../../../app/routes/route.dashboard.php:237
+msgid "Banners"
+msgstr "البانرات"
+
+#: ../../../app/routes/route.dashboard.php:238
+msgid "System"
+msgstr "النظام"
+
+msgid "Routing"
+msgstr "التوجيه"
+
+#: ../../../app/routes/route.dashboard.php:239
+msgid "Languages"
+msgstr "اللغات"
+
+#: ../../../app/routes/route.dashboard.php:240
+msgid "External storage"
+msgstr "تخزين خارجي"
+
+#: ../../../app/routes/route.dashboard.php:241
+#: ../../../app/themes/Peafowl/views/dashboard.php:99
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: ../../../app/routes/route.dashboard.php:242
+#: ../../../app/themes/Peafowl/views/album.php:79
+msgid "Social networks"
+msgstr "شبكات التواصل الإجتماعي"
+
+#: ../../../app/routes/route.dashboard.php:243
+msgid "External services"
+msgstr "خدمات خارجية"
+
+#: ../../../app/routes/route.dashboard.php:244
+msgid "IP bans"
+msgstr "حظر IP"
+
+#: ../../../app/routes/route.dashboard.php:246
+msgid "Additional settings"
+msgstr "إعدادات اخرى"
+
+#: ../../../app/routes/route.dashboard.php:247
+msgid "Tools"
+msgstr "الأدوات"
+
+msgid "Can't delete all homepage cover images"
+msgstr "لايمكن حذف صور غلاف الصفحة الرئيسية"
+
+msgid "Homepage cover image deleted"
+msgstr "تم حذف صورة غلاف الصفحة الرئيسية"
+
+#: ../../../app/routes/route.dashboard.php:278
+msgid "Local"
+msgstr "محلي"
+
+#: ../../../app/routes/route.dashboard.php:282
+msgid "External"
+msgstr "خارجي"
+
+#: ../../../app/routes/route.dashboard.php:287
+#: ../../../app/themes/Peafowl/header.php:178
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:37
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:62
+msgid "All"
+msgstr "الكل"
+
+#: ../../../app/routes/route.dashboard.php:292
+#: ../../../app/routes/route.image.php:149
+#: ../../../app/themes/Peafowl/views/dashboard.php:1710
+msgid "search content"
+msgstr "بحث المحتوى"
+
+#: ../../../app/routes/route.dashboard.php:306
+#: ../../../app/themes/Peafowl/views/dashboard.php:201
+msgid "Add page"
+msgstr "اضف صفحة"
+
+#: ../../../app/routes/route.dashboard.php:325
+#, php-format
+msgid "Edit page ID %s"
+msgstr "تعديل معرف الصفحة %s"
+
+#: ../../../app/routes/route.dashboard.php:330
+msgid "The page has been added successfully."
+msgstr "تم اضافة الصفحة بنجاح"
+
+#: ../../../app/routes/route.dashboard.php:360
+msgid "The page has been deleted."
+msgstr "تم مسح الصفحة"
+
+#: ../../../app/routes/route.dashboard.php:376
+msgid "Before cover (homepage)"
+msgstr "قبل الغطاء (الصفحة الرئيسية)"
+
+#: ../../../app/routes/route.dashboard.php:379
+msgid "After cover (homepage)"
+msgstr "بعد الغطاء (الصفحة الرئيسية)"
+
+#: ../../../app/routes/route.dashboard.php:382
+msgid "After listing (homepage)"
+msgstr "بعد القوائم (الصفحة الرئيسية)"
+
+#: ../../../app/routes/route.dashboard.php:390
+msgid "Before pagination"
+msgstr "قبل ترقيم الصفحات"
+
+#: ../../../app/routes/route.dashboard.php:393
+msgid "After pagination"
+msgstr "بعد ترقيم الصفحات"
+
+#: ../../../app/routes/route.dashboard.php:398
+msgid "Content (image and album)"
+msgstr "المحتوى (الصور والألبوم)"
+
+#: ../../../app/routes/route.dashboard.php:401
+msgid "Tab about column"
+msgstr "تبويب عن العامود"
+
+#: ../../../app/routes/route.dashboard.php:404
+msgid "Before comments"
+msgstr "قبل التعليقات"
+
+#: ../../../app/routes/route.dashboard.php:409
+msgid "Image page"
+msgstr "صفحة الصورة"
+
+#: ../../../app/routes/route.dashboard.php:412
+msgid "Inside viewer top (image page)"
+msgstr "أعلى مستعرض الصور (صفحة الصورة)"
+
+#: ../../../app/routes/route.dashboard.php:413
+#: ../../../app/routes/route.dashboard.php:417
+msgid "Expected banner size 728x90"
+msgstr "مساحة (أبعاد) البنر 728x90"
+
+#: ../../../app/routes/route.dashboard.php:416
+msgid "Inside viewer foot (image page)"
+msgstr "بداخل ذيل مستعرض الصور (صفحة الصورة)"
+
+#: ../../../app/routes/route.dashboard.php:420
+msgid "After image viewer (image page)"
+msgstr "بعد مستعرض الصور (صفحة الصورة)"
+
+#: ../../../app/routes/route.dashboard.php:423
+msgid "Before header (image page)"
+msgstr "قبل رأس الصفحة (صفحة الصورة)"
+
+#: ../../../app/routes/route.dashboard.php:426
+msgid "After header (image page)"
+msgstr "بعد رأس الصفحة (صفحة الصورة)"
+
+#: ../../../app/routes/route.dashboard.php:429
+msgid "Footer (image page)"
+msgstr "ذيل الصفحة (صفحة الصورة)"
+
+#: ../../../app/routes/route.dashboard.php:434
+msgid "Album page"
+msgstr "صفحة الألبوم"
+
+#: ../../../app/routes/route.dashboard.php:437
+msgid "Before header (album page)"
+msgstr "قبل رأس الصفحة (صفة الألبوم)"
+
+#: ../../../app/routes/route.dashboard.php:440
+msgid "After header (album page)"
+msgstr "بعد رأس الصفحة (صفحة الألبوم)"
+
+#: ../../../app/routes/route.dashboard.php:445
+msgid "User profile page"
+msgstr "صفحة ملف المستخدم"
+
+#: ../../../app/routes/route.dashboard.php:448
+msgid "After top (user profile)"
+msgstr "أعلى الصفحة (صفحة المستخدم)"
+
+#: ../../../app/routes/route.dashboard.php:451
+msgid "Before listing (user profile)"
+msgstr "قبل عرض الصور (صفحة المستخدم)"
+
+#: ../../../app/routes/route.dashboard.php:456
+msgid "Explore page"
+msgstr "تصفح الصفحة"
+
+#: ../../../app/routes/route.dashboard.php:459
+msgid "After top (explore page)"
+msgstr "بعد أعلى الصفحة (صفحة الإستعراض)"
+
+#: ../../../app/routes/route.dashboard.php:468
+msgid "NSFW"
+msgstr "محتوى غير آمن"
+
+#: ../../../app/routes/route.dashboard.php:557
+msgid "Invalid website name"
+msgstr "إسم الموقع غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:562
+msgid "Invalid language"
+msgstr "اللغة غير صالحة"
+
+#: ../../../app/routes/route.dashboard.php:567
+msgid "Invalid timezone"
+msgstr "التوقيت غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:572
+#: ../../../app/routes/route.dashboard.php:617
+#: ../../../app/routes/route.dashboard.php:794
+#: ../../../app/routes/route.dashboard.php:940
+msgid "Invalid value"
+msgstr "القيمة غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:577
+msgid "Invalid upload storage mode"
+msgstr "وضع التخزين الخاص بالتحميل غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:582
+msgid "Invalid upload filenaming"
+msgstr "اسم الملف المرفوع غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:587
+msgid "Invalid thumb width"
+msgstr "عرض الصورة المصغرة غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:592
+msgid "Invalid thumb height"
+msgstr "ارتفاع الصورة المصغرة غير صحيح"
+
+msgid "Invalid medium size"
+msgstr "متوسط الحجم غير ضالح"
+
+#: ../../../app/routes/route.dashboard.php:602
+msgid "Invalid watermark percentage"
+msgstr "علامة مائية غير صالحة"
+
+#: ../../../app/routes/route.dashboard.php:607
+msgid "Invalid watermark opacity"
+msgstr "وضوح العلامة المائية غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:612
+msgid "Invalid theme"
+msgstr "سمة غير صحيحة"
+
+#: ../../../app/routes/route.dashboard.php:622
+msgid "Invalid theme tone"
+msgstr "اسلوب غير صحيح"
+
+#: ../../../app/routes/route.dashboard.php:627
+msgid "Invalid theme main color"
+msgstr "اللون الرئيسي للسمة غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:632
+msgid "Invalid theme top bar color"
+msgstr "لون الشريط العلوي للسمة غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:637
+msgid "Invalid theme top bar button color"
+msgstr "لون الزر في الشريط العلوي غير ضالح "
+
+#: ../../../app/routes/route.dashboard.php:642
+msgid "Invalid theme image listing size"
+msgstr "حجم عرض الصور في الاستايل غير صحيح"
+
+#: ../../../app/routes/route.dashboard.php:647
+msgid "Invalid user id"
+msgstr "رقم العضوية غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:652
+msgid "Invalid email mode"
+msgstr "بريد إلكتروني غير صحيح"
+
+#: ../../../app/routes/route.dashboard.php:657
+msgid "Invalid SMTP port"
+msgstr "منفذ خاطئ لـ STMP"
+
+#: ../../../app/routes/route.dashboard.php:662
+msgid "Invalid SMTP security"
+msgstr "درجة أمان SMTP غير صالحة"
+
+#: ../../../app/routes/route.dashboard.php:672
+#: ../../../app/routes/route.dashboard.php:838
+msgid "Invalid personal mode user ID"
+msgstr "هوية مستخدم للوضع الشخصى غير صالحة"
+
+#: ../../../app/routes/route.dashboard.php:677
+msgid "Invalid or reserved route"
+msgstr "طريق غير صالح او محجوز"
+
+#: ../../../app/routes/route.dashboard.php:682
+msgid "Invalid website privacy mode"
+msgstr "وضع خصوصية للموقع غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:687
+msgid "Invalid website content privacy mode"
+msgstr "محتوى وضع خصوصية محتوى الموقع غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:692
+msgid "Invalid homepage style"
+msgstr "طراز صفحة رئيسية غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:697
+msgid "Invalid homepage call to action button color"
+msgstr "لون زر الإجراء فى الصفحة الرئيسية غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:702
+msgid "Invalid homepage call to action functionality"
+msgstr "وظيفة إجراء للصفحة الرئيسية غير صالحة"
+
+#: ../../../app/routes/route.dashboard.php:708
+msgid "Invalid title"
+msgstr "عنوان خاطئ"
+
+#: ../../../app/routes/route.dashboard.php:713
+msgid "Invalid status"
+msgstr "حالة خاطئة"
+
+#: ../../../app/routes/route.dashboard.php:718
+msgid "Invalid type"
+msgstr "نوع خاطئ"
+
+#: ../../../app/routes/route.dashboard.php:723
+msgid "Invalid visibility"
+msgstr "خيار رؤية غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:728
+msgid "Invalid target attribute"
+msgstr "خاصية هدف غير صالحة"
+
+#: ../../../app/routes/route.dashboard.php:733
+msgid "Invalid rel attribute"
+msgstr "خاصية مرتبطة غير صالحة"
+
+#: ../../../app/routes/route.dashboard.php:738
+msgid "Invalid icon"
+msgstr "أيقونة غير صالحة"
+
+#: ../../../app/routes/route.dashboard.php:743
+msgid "Invalid URL key"
+msgstr "مفتاح رابط غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:748
+msgid "Invalid file path"
+msgstr "مسار ملف غير صالح"
+
+#: ../../../app/routes/route.dashboard.php:753
+msgid "Invalid link URL"
+msgstr "رابط غير صحيح"
+
+msgid "Invalid user minimum age"
+msgstr "سن أدنى للمستخدم غير صحيح"
+
+msgid "Only alphanumeric, hyphen and underscore characters are allowed"
+msgstr "مسموح فقط بالأبجدية الرقمية, الواصلات والرموز التحتية"
+
+msgid "Routes can't be the same"
+msgstr "لايمكن أن يكون الطريق متطابقا"
+
+#: ../../../app/routes/route.dashboard.php:769
+msgid "Invalid upload image path"
+msgstr "مسار تحميل الصورة غير صحيح"
+
+#: ../../../app/routes/route.dashboard.php:783
+msgid "Invalid call to action URL"
+msgstr "رابط إجراء غير صحيح"
+
+#: ../../../app/routes/route.dashboard.php:797
+#, php-format
+msgid "Max. allowed %s"
+msgstr "الحد الأقصى المسموح %s"
+
+msgid "Can't map %m to an existing folder (%f)"
+msgstr "لايمكن ترسيم %m للمجلد القائم (%f)"
+
+msgid "Can't map %m to an existing route (%r)"
+msgstr "لايمكن ترسيم %m للطريق القائم (%r)"
+
+msgid "Can't map %m to %r (username collision)"
+msgstr "لايمكن ترسيم %m إلى %r (تعارض المستخدمين)"
+
+#: ../../../app/routes/route.dashboard.php:860
+msgid "Invalid SMTP server"
+msgstr "سيرفر STMP غير صحيح"
+
+#: ../../../app/routes/route.dashboard.php:861
+msgid "Invalid SMTP username"
+msgstr "اسم العضوية الخاص بـ SMTP غير صحيح"
+
+#: ../../../app/routes/route.dashboard.php:922
+msgid "Invalid URL"
+msgstr "عنوان URL خاطئ"
+
+#: ../../../app/routes/route.dashboard.php:960
+#, php-format
+msgid "This URL key is already being used by another page (ID %s)"
+msgstr "عنوان URL مستخدم من قبل صفحة اخرى (معرف %s)"
+
+#: ../../../app/routes/route.dashboard.php:961
+#, php-format
+msgid "This file path is already being used by another page (ID %s)"
+msgstr "مسار الملف مستخدم من قبل صفحة اخرى (معرف %s)"
+
+#: ../../../app/routes/route.dashboard.php:992
+#, php-format
+msgid "Can't save page contents: %s."
+msgstr "لا يمكن حفظ محتوى الصفحة: %s"
+
+#: ../../../app/routes/route.dashboard.php:1163
+msgid "Top users"
+msgstr "الأعضاء الأكثر نشاطا"
+
+#: ../../../app/routes/route.explore.php:89
+#: ../../../app/themes/Peafowl/header.php:188
+#: ../../../app/themes/Peafowl/header.php:206
+#: ../../../app/themes/Peafowl/views/dashboard.php:305
+#: ../../../app/themes/Peafowl/views/explore.php:9
+msgid "Explore"
+msgstr " تصفح"
+
+#: ../../../app/routes/route.following.php:73
+#: ../../../app/routes/route.user.php:104
+#: ../../../app/themes/Peafowl/views/following.php:7
+#: ../../../app/themes/Peafowl/views/user.php:74
+#: ../../../app/themes/Peafowl/views/user.php:80
+msgid "Following"
+msgstr "متابع"
+
+#: ../../../app/routes/route.image.php:120
+#: ../../../app/themes/Peafowl/header.php:424
+msgid "About"
+msgstr "عن"
+
+#: ../../../app/routes/route.image.php:127
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
+msgid "Embed codes"
+msgstr "إضافة اكواد"
+
+#: ../../../app/routes/route.image.php:144
+msgid "Image ID"
+msgstr "رقم هوية الصورة"
+
+#: ../../../app/routes/route.image.php:148
+msgid "Uploader IP"
+msgstr "الأيبي للرافع"
+
+#: ../../../app/routes/route.image.php:149
+msgid "Ban IP"
+msgstr "احظر عنوان الـIP"
+
+#: ../../../app/routes/route.image.php:149
+msgid "IP already banned"
+msgstr "عنوان الـIP محظور بالفعل"
+
+#: ../../../app/routes/route.image.php:152
+msgid "Upload date"
+msgstr "تاريخ الرفع"
+
+#: ../../../app/routes/route.image.php:177
+#, php-format
+msgid "%s images"
+msgstr "%s صور"
+
+#: ../../../app/routes/route.image.php:185
+msgid "Image %i in %a album"
+msgstr "الصورة %i في الألبوم %a"
+
+#: ../../../app/routes/route.image.php:187
+msgid "Image %i in %c category"
+msgstr "الصورة %i في الفئة %c"
+
+#: ../../../app/routes/route.image.php:189
+msgid "Image %i hosted in %w"
+msgstr "الصورة %i مستضافة في %w"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:14
+msgid "Direct links"
+msgstr "روابط مباشرة"
+
+#: ../../../app/themes/Peafowl/views/image.php:279
+msgid "Image URL"
+msgstr "رابط الصورة"
+
+#: ../../../app/themes/Peafowl/views/image.php:285
+msgid "Image link"
+msgstr "رابط الصورة"
+
+#: ../../../app/themes/Peafowl/views/image.php:291
+msgid "Thumbnail URL"
+msgstr "رابط الصورة المصغرة"
+
+#: ../../../app/themes/Peafowl/views/image.php:300
+msgid "Medium URL"
+msgstr "رابط الصورة المتوسطة"
+
+msgid "Full image"
+msgstr "الصورة كاملة"
+
+msgid "Full image (linked)"
+msgstr "الصورة كاملة (رابط)"
+
+msgid "Medium image (linked)"
+msgstr "الصورة المتوسطة (رابط)"
+
+msgid "Thumbnail image (linked)"
+msgstr "الصورة المصغيرة (رابط)"
+
+#: ../../../app/routes/route.json.php:44 ../../../app/routes/route.json.php:59
+#: ../../../app/routes/route.json.php:260
+#: ../../../app/routes/route.json.php:746
+#: ../../../app/routes/route.json.php:810
+#: ../../../app/routes/route.json.php:911
+#: ../../../app/routes/route.json.php:1055
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:4
+msgid "Login needed"
+msgstr "تسجيل الدخول ضروري"
+
+#: ../../../app/routes/route.json.php:499
+#: ../../../app/routes/route.json.php:690
+msgid "IP address already banned"
+msgstr "عنوان الـIP محظور بالفعل"
+
+#: ../../../app/routes/route.json.php:568
+#: ../../../app/routes/route.json.php:630
+msgid "Missing values"
+msgstr "قيمة غير صالحة"
+
+#: ../../../app/routes/route.json.php:589
+msgid "Invalid role"
+msgstr "الوظيفة غير صالحة"
+
+#: ../../../app/routes/route.json.php:594
+msgid "Username already being used"
+msgstr "اسم المستخدم مأخوذ بالفعل"
+
+msgid "Add a password or another social connection before deleting %s"
+msgstr "اضف كلمة سر أو اتصال اجتماعى أخر قبل حذف%s"
+
+msgid "Add an email or another social connection before deleting %s"
+msgstr "اضف بريدا إليكترونيا أو اتصال اجتماعى أخر قبل حذف %s"
+
+#: ../../../app/routes/route.json.php:1092
+#, php-format
+msgid "%s has been disconnected."
+msgstr "تم قطع الإتصال بـ %s ."
+
+#: ../../../app/routes/route.json.php:1109
+msgid "Test email from %s @ %t"
+msgstr "بريد الكتروني تجريبي من %s@%t"
+
+#: ../../../app/routes/route.json.php:1109
+msgid "This is just a test"
+msgstr "هذه فقط تجربة"
+
+#: ../../../app/routes/route.json.php:1110
+#, php-format
+msgid "Test email sent to %s."
+msgstr "بريد الكتروني تجريبي ارسل الى %s"
+
+#: ../../../app/routes/route.json.php:1128
+#, php-format
+msgid "User %s followed"
+msgstr "تم متابعة المستخدم %s"
+
+#: ../../../app/routes/route.json.php:1128
+#, php-format
+msgid "User %s unfollowed"
+msgstr "تم إلغاء متابعة المستخدم %s"
+
+#: ../../../app/routes/route.json.php:1150
+msgid "Content liked"
+msgstr "محتوى تم الإعجاب به"
+
+#: ../../../app/routes/route.json.php:1150
+msgid "Content disliked"
+msgstr "محتوى تم إلغاء الإعجاب به"
+
+#: ../../../app/routes/route.login.php:133
+msgid "Wrong Username/Email password combination"
+msgstr "بريد إلكتروني\\اسم مستخدم  أو كلمة مرور خاطئة"
+
+#: ../../../app/routes/route.login.php:148
+#: ../../../app/themes/Peafowl/header.php:269
+#: ../../../app/themes/Peafowl/header.php:275
+#: ../../../app/themes/Peafowl/views/login.php:8
+#: ../../../app/themes/Peafowl/views/login.php:52
+msgid "Sign in"
+msgstr "تسجيل الدخول"
+
+#: ../../../app/routes/route.logout.php:29
+#: ../../../app/themes/Peafowl/views/logout.php:8
+msgid "Logged out"
+msgstr "تسجيل الخروج"
+
+#: ../../../app/routes/route.page.php:61
+#: ../../../content/pages/default/contact.php:7
+msgid "General questions/comments"
+msgstr "أسئلة عامة / تعليقات"
+
+#: ../../../app/routes/route.page.php:62
+#: ../../../content/pages/default/contact.php:8
+msgid "DMCA complaint"
+msgstr "شكوى DMCA"
+
+#: ../../../app/routes/route.page.php:71
+#: ../../../app/routes/route.settings.php:302
+#: ../../../content/pages/default/contact.php:19
+msgid "Invalid name"
+msgstr "اسم خاطئ"
+
+#: ../../../app/routes/route.page.php:74
+#: ../../../content/pages/default/contact.php:22
+msgid "Invalid message"
+msgstr "رسالة غير صالحة"
+
+#: ../../../app/routes/route.page.php:77
+#: ../../../content/pages/default/contact.php:25
+msgid "Invalid subject"
+msgstr "عنوان غير صالح"
+
+#: ../../../app/routes/route.page.php:85
+#: ../../../content/pages/default/contact.php:33
+msgid "Invalid reCAPTCHA"
+msgstr "reCAPTCHA غير صالحة"
+
+#: ../../../app/routes/route.page.php:90
+#, php-format
+msgid "Can't submit the form: %s"
+msgstr "لايمكن تقديم النموذج: %s"
+
+#: ../../../app/routes/route.page.php:119
+msgid "Message sent. We will get in contact soon."
+msgstr "تم الارسال. سوف نتصل بك قريبا ."
+
+#: ../../../app/routes/route.page.php:122
+#: ../../../content/pages/default/contact.php:69
+msgid "Mail error"
+msgstr "خطأ في البريد الإلكتروني"
+
+#: ../../../app/routes/route.search.php:120
+#, php-format
+msgid "Image search results for %s"
+msgstr "نتائج البحث عن صورة لـ%s"
+
+#: ../../../app/routes/route.search.php:123
+#, php-format
+msgid "Album search results for %s"
+msgstr "نتائج بحث الألأبومات لـ %s"
+
+#: ../../../app/routes/route.search.php:126
+#, php-format
+msgid "User search results for %s"
+msgstr "نتائج بحث المستخدمين لـ%s"
+
+#: ../../../app/routes/route.search.php:130
+#: ../../../app/themes/Peafowl/header.php:215
+#: ../../../app/themes/Peafowl/header.php:220
+#: ../../../app/themes/Peafowl/views/dashboard.php:295
+msgid "Search"
+msgstr " بحث"
+
+#: ../../../app/routes/route.settings.php:62
+msgid "Account"
+msgstr "الحساب"
+
+#: ../../../app/routes/route.settings.php:63
+msgid "Profile"
+msgstr "الملف الشخصي"
+
+#: ../../../app/routes/route.settings.php:64
+#: ../../../app/themes/Peafowl/header.php:292
+#: ../../../app/themes/Peafowl/header.php:340
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:92
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:93
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:126
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:104
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/login.php:39
+#: ../../../app/themes/Peafowl/views/settings.php:322
+#: ../../../app/themes/Peafowl/views/signup.php:49
+#: ../../../app/themes/Peafowl/views/signup.php:50
+msgid "Password"
+msgstr "كلمة المرور"
+
+#: ../../../app/routes/route.settings.php:65
+msgid "Linked accounts"
+msgstr "الحسابات المرتبطة"
+
+#: ../../../app/routes/route.settings.php:191
+msgid "Invalid image expiration"
+msgstr "تاريخ صلاحية صورة غير صالح"
+
+#: ../../../app/routes/route.settings.php:269
+#, php-format
+msgid "An email has been sent to %s with instructions to activate this email"
+msgstr "تم إرسال رسالة إلى %s تحتوي على طريقة تفعيل هذا البريد الإلكتروني"
+
+#: ../../../app/routes/route.settings.php:305
+msgid "Invalid website"
+msgstr "عنوان الموقع إلكتروني خاطئ"
+
+#: ../../../app/routes/route.settings.php:313
+msgid "Wrong password"
+msgstr "كلمة مرور خاطئة"
+
+#: ../../../app/routes/route.settings.php:316
+msgid "Use a new password"
+msgstr "استخدم كلمة مرور جديدة"
+
+#: ../../../app/routes/route.settings.php:416
+#: ../../../app/themes/Peafowl/views/dashboard.php:2067
+#: ../../../app/themes/Peafowl/views/settings.php:477
+msgid "Changes have been saved."
+msgstr "تم حفظ الاعدادات."
+
+#: ../../../app/routes/route.settings.php:435
+msgid "Password has been changed"
+msgstr "تم تعديل كلمة المرور بنجاح"
+
+#: ../../../app/routes/route.settings.php:440
+msgid "Password has been created."
+msgstr "تم إنشاء كلمة السر بنجاح."
+
+#: ../../../app/routes/route.settings.php:455
+msgid "Wrong Username/Email values"
+msgstr "بريد إلكتروني أو كلمة مرور خاطئة"
+
+#: ../../../app/routes/route.settings.php:498
+#, php-format
+msgid "Settings for %s"
+msgstr "التهيئة لـ %s"
+
+msgid "You must be at least %s years old to use this website."
+msgstr "يجب ان تكون  %s سنة لتستخدم هذا الموقع"
+
+#: ../../../app/routes/route.signup.php:251
+#: ../../../app/themes/Peafowl/header.php:316
+#: ../../../app/themes/Peafowl/header.php:322
+#: ../../../app/themes/Peafowl/views/index.php:81
+#: ../../../app/themes/Peafowl/views/signup.php:8
+#: ../../../app/themes/Peafowl/views/signup.php:63
+msgid "Create account"
+msgstr "إنشاء حساب"
+
+#: ../../../app/routes/route.user.php:84
+#: ../../../app/themes/Peafowl/header.php:56
+#: ../../../app/themes/Peafowl/views/index.php:46
+#, php-format
+msgid "%s's Images"
+msgstr "%s صور"
+
+#: ../../../app/routes/route.user.php:89
+#: ../../../app/themes/Peafowl/header.php:56
+#, php-format
+msgid "%s's Albums"
+msgstr "%s البوم"
+
+#: ../../../app/routes/route.user.php:99
+#: ../../../app/themes/Peafowl/views/search.php:8
+msgid "Results for"
+msgstr "النتائج لـ"
+
+#: ../../../app/routes/route.user.php:94
+#, php-format
+msgid "Liked by %s"
+msgstr "اعجب بواسطة ٪s"
+
+#: ../../../app/routes/route.user.php:95
+#: ../../../app/themes/Peafowl/header.php:404
+msgid "Liked"
+msgstr "اعجاب"
+
+#: ../../../app/routes/route.user.php:109
+msgid "Followers"
+msgstr "المتابعون"
+
+#: ../../../app/routes/route.user.php:379
+msgid "%n (%u) albums on %w"
+msgstr "%n (%u) البومات على %w"
+
+#: ../../../app/routes/route.user.php:384
+msgid "%n (%u) on %w"
+msgstr "%n (%u) على %w"
+
+#: ../../../app/themes/Peafowl/header.php:222
+msgid "Close"
+msgstr "إغلاق"
+
+#: ../../../app/themes/Peafowl/header.php:222
+#: ../../../app/themes/Peafowl/header.php:226
+msgid "Advanced search"
+msgstr "بحث متقدم"
+
+#: ../../../app/themes/Peafowl/header.php:233
+#: ../../../app/themes/Peafowl/views/dashboard.php:315
+#: ../../../app/themes/Peafowl/views/dashboard.php:713
+msgid "Random"
+msgstr "عشوائي"
+
+#: ../../../app/themes/Peafowl/header.php:243
+#, php-format
+msgid "Notices (%s)"
+msgstr "الملاحظات (%s)"
+
+#: ../../../app/themes/Peafowl/header.php:258
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Upload"
+msgstr "رفع"
+
+#: ../../../app/themes/Peafowl/header.php:281
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
+#: ../../../app/themes/Peafowl/views/login.php:18
+#: ../../../app/themes/Peafowl/views/login.php:65
+#: ../../../app/themes/Peafowl/views/signup.php:18
+#: ../../../app/themes/Peafowl/views/signup.php:76
+msgid "Sign in with another account"
+msgstr "تسجيل الدخول بحساب آخر"
+
+#: ../../../app/themes/Peafowl/header.php:285
+#: ../../../app/themes/Peafowl/header.php:332
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/form_album.php:9
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/login.php:22
+#: ../../../app/themes/Peafowl/views/login.php:62
+#: ../../../app/themes/Peafowl/views/settings.php:354
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../app/themes/Peafowl/views/signup.php:22
+#: ../../../app/themes/Peafowl/views/signup.php:73
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
+#: ../../../lib/Peafowl/peafowl.min.js:31
+#: ../../../lib/Peafowl/peafowl.min.js:140
+msgid "or"
+msgstr "أو"
+
+#: ../../../app/themes/Peafowl/header.php:291
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
+#: ../../../app/themes/Peafowl/views/login.php:34
+#: ../../../app/themes/Peafowl/views/login.php:35
+msgid "Username or Email address"
+msgstr "اسم المستخدم أو البريد الإلكتروني"
+
+#: ../../../app/themes/Peafowl/header.php:294
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:23
+#: ../../../app/themes/Peafowl/views/login.php:53
+msgid "Keep me logged in"
+msgstr "تذكر دخولي"
+
+#: ../../../app/themes/Peafowl/header.php:301
+#, php-format
+msgid "Don't have an account? <a href='%s'>Sign up</a> now."
+msgstr "لا يوجد لديك حساب؟ <a href='%s'>سجل الآن</a>."
+
+#: ../../../app/themes/Peafowl/header.php:328
+msgid "Sign up with another account"
+msgstr "الإشتراك بحساب آخر"
+
+#: ../../../app/themes/Peafowl/header.php:338
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:100
+#: ../../../app/themes/Peafowl/views/settings.php:155
+#: ../../../app/themes/Peafowl/views/signup.php:34
+#: ../../../app/themes/Peafowl/views/signup.php:35
+#: ../../../content/pages/default/contact.php:92
+msgid "Email address"
+msgstr "البريد الإلكتروني"
+
+#: ../../../app/themes/Peafowl/header.php:339
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
+#: ../../../app/themes/Peafowl/views/dashboard.php:94
+#: ../../../app/themes/Peafowl/views/dashboard.php:95
+#: ../../../app/themes/Peafowl/views/settings.php:143
+#: ../../../app/themes/Peafowl/views/settings.php:144
+#: ../../../app/themes/Peafowl/views/signup.php:39
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "Username"
+msgstr "إسم المستخدم"
+
+msgid "I'm at least %s years old"
+msgstr "انا بعمر  %s سنة على الأقل"
+
+#: ../../../app/themes/Peafowl/header.php:341
+#: ../../../app/themes/Peafowl/views/signup.php:65
+#, php-format
+msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
+msgstr "بمجرد إشتراكك ستكون قد وافقت على  <a href=\"%s\">شروط الخدمة</a>"
+
+#: ../../../app/themes/Peafowl/header.php:362
+msgid "Notifications"
+msgstr "الإشعارات"
+
+#: ../../../app/themes/Peafowl/header.php:381
+#: ../../../app/themes/Peafowl/views/settings.php:348
+#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
+msgid "loading"
+msgstr "جاري التحميل"
+
+#: ../../../app/themes/Peafowl/header.php:384
+msgid "You don't have notifications"
+msgstr "لا يوجد لديك اشعارات"
+
+#: ../../../app/themes/Peafowl/header.php:402
+msgid "My Profile"
+msgstr "ملفي الشخصي"
+
+#: ../../../app/themes/Peafowl/header.php:409
+msgid "Sign out"
+msgstr "تسجيل الخروج"
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:4
+msgid "We received a request to change the email of your <a href=\"%u\">%n</a> account at %w."
+msgstr "لقد وصلنا طلب لتغيير البريد الإلكتروني <a href=\"%u\">%n</a>  لحسابك في %w."
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:6
+#, php-format
+msgid "To complete the process you must <a href=\"%s\">activate your email</a>."
+msgstr "لمتابعة الإجراء يستوجب عليك <a href=\"%s\">تفعيل بريدك الإلكتروني </a>."
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:8
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:8
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:8
+#, php-format
+msgid "Alternatively you can copy and paste the URL into your browser: <a href=\"%s\">%s</a>"
+msgstr "كخيار ثاني ، يمكنك نسخ ولصق الرابط التالي في متصفحك حتى تتمكن من تفعيل بريدك الإلكتروني <a href=\"%s\">%s</a>"
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:10
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:10
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:10
+msgid "If you didn't intend this just ignore this message."
+msgstr "إذا لم تقم بتنفيذ هذا الإجراء ، برجاء تجاهل هذه الرسالة."
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:12
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:12
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:12
+#, php-format
+msgid "This request was made from IP: %s"
+msgstr "هذا الإجراء تم تنفيذه بواسطة الأي بي التالي : %s"
+
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:4
+msgid "We received a request to register the %n account at %w."
+msgstr "لقد تلقينا طلب تسجيل  %n الحساب فى %w ."
+
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:6
+#, php-format
+msgid "To complete the process you must <a href=\"%s\">activate your account</a>."
+msgstr "لإنهاء العمليه يرجى <a href=\"%s\">تفعيل عضوية حسابك </a>"
+
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:4
+msgid "We received a request to reset the password for your <a href=\"%u\">%n</a> account."
+msgstr "لقد تلقينا طلب لتغيير كلمة المرور  <a href=\"%u\">%n</a>  لحسابك"
+
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:6
+#, php-format
+msgid "To reset your password <a href=\"%s\">follow this link</a>."
+msgstr "لإعادة تعيين كلمة المرور الخاصة بك <a href=\"%s\">اضغط هنا</a>."
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:4
+msgid "Hi %n, welcome to %w"
+msgstr "مرحبا %n مرحبا بك في %w"
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:6
+msgid "Now that your account is ready you can enjoy uploading your images, creating albums and setting the privacy of your content as well as many more cool things that you will discover."
+msgstr "الآن وبعد أن قمت بانشاء حساب خاص بك بامكانك الاستمتاع برفع الصور الخاصة بك واضافة ألبومات وتعديدل الخصوصية حسب ما تريد."
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:8
+msgid "By the way, here is you very own awesome profile page: <a href=\"%u\">%n</a>. Go ahead and customize it, its yours!."
+msgstr "بالمناسبة, هاهى صفحتك الشخصية الرائعة:  <a href=\"%u\">%n</a> . هيا قم بتخصيصها حسب ماتحب, فهى ملك لك خصيصا!"
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:10
+msgid "Thank you for joining"
+msgstr "شكراً لانضمامك"
+
+#: ../../../app/themes/Peafowl/mails/footer.php:3
+msgid "This email was sent from %w %u"
+msgstr "تم ارسال البريد من %u %w"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:13
+msgid "Drag and drop or paste images here to upload"
+msgstr "اسحب و أسقط أو ألصق الصور هنا للتحميل"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:14
+msgid "Select the images to upload"
+msgstr "إختر الصور المراد رفعها"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:15
+msgid "You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
+msgstr "تستطيع <a data-trigger=\"anywhere-upload-input\"> أن تحمل من جهازك</a> أو <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\"> تضع رابط الصورة</a>"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:16
+msgid "You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
+msgstr "يمكنك أيضا <a data-trigger=\"anywhere-upload-input-camera\"> التقاط صورة </a> أو <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\"> إضافة عناوين صورة </A>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:20
+msgid "Edit or resize an image by clicking the image preview"
+msgstr "تعديل أو تغيير حجم الصورة عن طريق النقر على معاينة الصورة"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:21
+msgid "Edit or resize an image by touching the image preview"
+msgstr "تعديل أو تغيير حجم الصورة عن طريق لمس معاينة الصورة"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:22
+msgid "You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>."
+msgstr "يمكنك إضافة المزيد من الصور<a data-trigger=\"anywhere-upload-input\"> من حاسبك الشخصى </a> أو <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\"> من روابط الصور </a>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:23
+msgid "You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
+msgstr "يمكنك <a data-trigger=\"anywhere-upload-input\"> إضافة المزيد من الصور</a> أو <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\"> إضافة روابط الصور</a>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
+msgid "Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>"
+msgstr "يتم رفع <span data-text=\"queue-size\">0</span><span data-text=\"queue-objects\">صور</span>"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
+msgid "complete"
+msgstr "أكتمل"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:28
+msgid "The queue is being uploaded. It will take just a few seconds to complete."
+msgstr "يتم تحميلها على قائمة الانتظار. وسوف تستغرق بضع ثوان لإكمال العملية."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:32
+msgid "Upload complete"
+msgstr "تم الرفع"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:34
+#, php-format
+msgid "Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album."
+msgstr "تم إضافة محتوى ل <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\"> عام</a> تستطيع <a data-modal=\"form\" data-target=\"form-uploaded-create-album\"> انشاء ألبوم </a> أو <a data-modal=\"form\" data-target=\"form-uploaded-move-album\"> نقل <span data-text=\"queue-objects\"> الصور</span></a> الى هذا الألبوم"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:35
+msgid "You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account."
+msgstr "يمكنك <a href=\"%s\"> إنشاء حساب جديد</a> أو <a href=\"%l\">تسجيل دخولك </a> لكي تحتفظ بالصور التي ترفعها في حسابك الشخصي"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:40
+msgid "No <span data-text=\"queue-objects\">images</span> have been uploaded"
+msgstr "لم يتم رفع <span data-text=\"queue-objects\">صور</span>"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:41
+msgid "Some errors have occured and the system couldn't process your request."
+msgstr "حدث خطأ ما والنظام لا يستطيع الاستجابة لطلبك."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:61
+msgid "Select category"
+msgstr "تحديد الفئات"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Change upload privacy"
+msgstr "تغيير خصوصية الرفع"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "إلغاء"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:77
+msgid "Mark this if the upload is not family safe"
+msgstr "قم بتعليم المحتوى على أنه غير مناسب للأسرة"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:77
+msgid "Not family safe upload"
+msgstr "محتوى غير مناسب للأسرة"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+msgid "Uploading"
+msgstr "جاري الرفع"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
+msgid "cancel remaining"
+msgstr "إلغاء ما تبقى"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:85
+msgid "Note: Some images couldn't be uploaded."
+msgstr "ملاحظة : بعض الصور لم يتم رفعها بنجاح."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:85
+msgid "learn more"
+msgstr "إعرف المزيد"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:86
+msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
+msgstr "تحقق من <a data-modal=\"simple\" data-target=\"failed-upload-result\"> تقرير الخطأ</a>للمزيد من المعلومات"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:89
+msgid "max"
+msgstr "أقصى"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:91
+msgid "close"
+msgstr "إغلاق"
+
+msgid "copy"
+msgstr "نسخ"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
+msgid "Edit"
+msgstr "تعديل"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:148
+#: ../../../app/themes/Peafowl/views/dashboard.php:666
+msgid "Remove"
+msgstr "حذف"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:154
+msgid "Edit image"
+msgstr "تعديل الصورة"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
+#: ../../../app/themes/Peafowl/snippets/form_image.php:4
+#: ../../../app/themes/Peafowl/views/dashboard.php:441
+#: ../../../app/themes/Peafowl/views/dashboard.php:597
+#: ../../../app/themes/Peafowl/views/dashboard.php:1440
+#: ../../../app/themes/Peafowl/views/settings.php:434
+msgid "Title"
+msgstr "عنوان"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:200
+#: ../../../app/themes/Peafowl/snippets/form_album.php:12
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:12
+#: ../../../app/themes/Peafowl/snippets/form_image.php:4
+#: ../../../app/themes/Peafowl/snippets/form_image.php:28
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:15
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:104
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:108
+#: ../../../app/themes/Peafowl/views/dashboard.php:503
+#: ../../../app/themes/Peafowl/views/dashboard.php:509
+#: ../../../app/themes/Peafowl/views/dashboard.php:566
+#: ../../../app/themes/Peafowl/views/dashboard.php:573
+#: ../../../app/themes/Peafowl/views/dashboard.php:580
+#: ../../../app/themes/Peafowl/views/dashboard.php:1418
+#: ../../../app/themes/Peafowl/views/dashboard.php:1428
+msgid "optional"
+msgstr "خياري"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:167
+msgid "Resize image"
+msgstr "تغيير حجم الصورة"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:170
+#: ../../../app/themes/Peafowl/views/dashboard.php:725
+#: ../../../app/themes/Peafowl/views/dashboard.php:738
+#: ../../../app/themes/Peafowl/views/dashboard.php:798
+msgid "Width"
+msgstr "عرض"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:173
+#: ../../../app/themes/Peafowl/views/dashboard.php:728
+#: ../../../app/themes/Peafowl/views/dashboard.php:801
+msgid "Height"
+msgstr "ارتفاع"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:176
+msgid "Note: Animated GIF images won't be resized."
+msgstr "ملاحظة: لن يتم تغيير حجم الصور المتحركة ."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:180
+msgid "Auto delete image"
+msgstr "حذف تلقائي للصورة"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:192
+#: ../../../app/themes/Peafowl/snippets/form_image.php:25
+msgid "Mark this if the image is not family safe"
+msgstr "الاشارة على هذه الصورة في حال كانت غير آمنة"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:194
+#: ../../../app/themes/Peafowl/snippets/form_image.php:25
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:46
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:8
+msgid "Flag as unsafe"
+msgstr "علامة لمحتوى غير آمن"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:200
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:12
+#: ../../../app/themes/Peafowl/snippets/form_image.php:28
+#: ../../../app/themes/Peafowl/views/dashboard.php:877
+msgid "Description"
+msgstr "الوصف"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:201
+#: ../../../app/themes/Peafowl/snippets/form_image.php:29
+msgid "Brief description of this image"
+msgstr "وصف مختصر عن الصورة"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:206
+msgid "Add image URLs"
+msgstr "إضافة روابط الصورة"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:208
+msgid "Add the image URLs here"
+msgstr "إضافة روابط الصورة هنا"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:223
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:27
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:31
+msgid "Create album"
+msgstr "إنشاء ألبوم"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:224
+msgid "The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
+msgstr "سيتم نقل المحتويات التي يتم تحميلها إلى هذا الألبوم تم إنشاؤه حديثا. يمكنك أيضا نقل المحتوى إلى <a class=\"modal-switch\" data-switch=\"move-existing-album\"> الالبوم القائم</a>"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:235
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:28
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:46
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:70
+msgid "Move to album"
+msgstr "نقل إلى الألبوم"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:236
+msgid "Select an existing album to move the uploaded content. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the content there."
+msgstr "اختر الألبوم لنقل المحتوى الذي تم تحميله. يمكنك أيضا <a class=\"modal-switch\" data-switch=\"move-new-album\"> إنشاء ألبوم جديد</a>ونقل المحتوى هناك"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:252
+msgid "Error report"
+msgstr "تقرير الأخطاء"
+
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
+#: ../../../app/themes/Peafowl/views/user.php:99
+msgid "album"
+msgid_plural "albums"
+msgstr[0] "خانة فارغة"
+msgstr[1] "ألبوم"
+msgstr[2] "خانة فارغة"
+msgstr[3] "خانة فارغة"
+msgstr[4] "خانة فارغة"
+msgstr[5] "ألبومات"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
+msgid "Links"
+msgstr "روابط"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
+msgid "Viewer links"
+msgstr "روابط المشاهد"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:21
+msgid "HTML Codes"
+msgstr "رمز HTML"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:24
+msgid "HTML image"
+msgstr "صورة HTML"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:29
+msgid "HTML full linked"
+msgstr "HTML مرتبط بالكامل"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:34
+msgid "HTML medium linked"
+msgstr "رابط HTML  للصورة المتوسطة"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:39
+msgid "HTML thumbnail linked"
+msgstr "رابط HTML للصورة الصغيرة"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:46
+msgid "BBCodes"
+msgstr "رمز بي بي"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:49
+msgid "BBCode full"
+msgstr "BBCode الكامل"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:54
+msgid "BBCode full linked"
+msgstr "كود BB مرتبط بالكامل"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:59
+msgid "BBCode medium linked"
+msgstr "رابط كود BB المتوسط"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:64
+msgid "BBCode thumbnail linked"
+msgstr "رمز بي بي للصورة المصغرة"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:74
+msgid "Markdown full"
+msgstr "تخفيض كامل"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:79
+msgid "Markdown full linked"
+msgstr "رابط التخفيض بالكامل"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:84
+msgid "Markdown medium linked"
+msgstr "رابط التخفيض المتوسط"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:89
+msgid "Markdown thumbnail linked"
+msgstr "ربط صورة التخفيض المصغرة"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:6
+msgid "All these words"
+msgstr "كل الكلمات"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:7
+msgid "Type the important words: tri-colour rat terrier"
+msgstr "اكتب الكلمات المهمة: ثلاثية الألوان"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:10
+msgid "This exact word or phrase"
+msgstr "نفس الكلمة او العبارة"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:11
+msgid "Put exact words in quotes: \"rat terrier\""
+msgstr "ضع الكلمات بالضبط في الاقتباس : \"rat terrier\""
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:20
+msgid "None of these words"
+msgstr "أيا من هذه الكلمات"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:21
+msgid "Put a minus sign just before words you don't want: -rodent -\"Jack Russell\""
+msgstr "وضع علامة الطرح قبل الكلمات التي لا تريد:-rodent -\"Jack Russell\""
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
+#: ../../../app/themes/Peafowl/snippets/form_category.php:3
+msgid "Category"
+msgstr "فئة"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:66
+msgid "Storage"
+msgstr "المخزن"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:4
+msgid "IP address"
+msgstr "عنوان IP"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:7
+#: ../../../app/themes/Peafowl/snippets/form_album.php:8
+msgid "Album name"
+msgstr "اسم الألبوم"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:9
+msgid "move to existing album"
+msgstr "نقل إلى الألبوم القائم"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:12
+msgid "Album description"
+msgstr "وصف الألبوم"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:13
+msgid "Brief description of this album"
+msgstr "وصف موجز لهذا الألبوم"
+
+msgid "Album privacy"
+msgstr "خصوصية الألبوم"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:19
+msgid "Who can view this content"
+msgstr "من سيشاهد هذا المحتوى"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:20
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Public"
+msgstr "عام"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:21
+msgid "Private (just me)"
+msgstr "خاص (أنا فقط)"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:22
+msgid "Private (anyone with the link)"
+msgstr "خاص (أي شخص مع الرابط)"
+
+msgid "Private (password protected)"
+msgstr "خاص ( محمى بكلمة سر )"
+
+msgid "Album password"
+msgstr "كلمة سر الألبوم"
+
+#: ../../../app/themes/Peafowl/snippets/form_category.php:9
+msgid "No category"
+msgstr "بدون فئة"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:4
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:3
+#: ../../../app/themes/Peafowl/views/dashboard.php:875
+#: ../../../app/themes/Peafowl/views/dashboard.php:1693
+#: ../../../app/themes/Peafowl/views/settings.php:364
+#: ../../../content/pages/default/contact.php:87
+msgid "Name"
+msgstr "الإسم"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:5
+msgid "Category name"
+msgstr "اسم الفئة"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:8
+#: ../../../app/themes/Peafowl/views/dashboard.php:486
+#: ../../../app/themes/Peafowl/views/dashboard.php:596
+#: ../../../app/themes/Peafowl/views/dashboard.php:876
+msgid "URL key"
+msgstr "مفتاح الرابط"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:9
+msgid "Category URL key"
+msgstr "مفتاح رابط الفئة"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:9
+msgid "Only letters, numbers, and hyphens"
+msgstr "فقط الحروف، الأرقام، و الوصلات"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:13
+msgid "Brief description of this category"
+msgstr "وصف موجز لهذه الفئة"
+
+#: ../../../app/themes/Peafowl/snippets/form_image.php:5
+msgid "Untitled image"
+msgstr "صورة غير معنونة"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
+msgid "Expiration date"
+msgstr "تاريخ انتهاء الصلاحية"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:10
+msgid "YYYY-MM-DD HH:MM:SS"
+msgstr "سنة-شهر-يوم ساعة-دقيقة-ثانية"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:10
+msgid "Example"
+msgstr "مثال"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:12
+msgid "Until which date this IP address will be banned? Leave it empty for no expiration."
+msgstr "حتى أى تاريخ سيمنع عنوان الأى بى هذا؟ اتركه فارغا لإلغاء تاريخ الصلاحية."
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:926
+#: ../../../content/pages/default/contact.php:111
+msgid "Message"
+msgstr "الرسالة"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:16
+msgid "Text message, HTML or a redirect URL"
+msgstr "رسالة نصية, html أو رابط إعادة توجيه"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+msgid "Existing album"
+msgstr "المجلد القائم"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "خانة فارغة"
+msgstr[1] "ألبوم "
+msgstr[2] "خانة فارغة"
+msgstr[3] "خانة فارغة"
+msgstr[4] "خانة فارغة"
+msgstr[5] "الألبومات"
+
+msgid "me"
+msgstr "أنا"
+
+msgid "link"
+msgstr "الرابط"
+
+msgid "password"
+msgstr "كلمة السر"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "خاص"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+msgid "create new album"
+msgstr "إنشاء ألبوم جديد"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:4
+msgid "Storage name"
+msgstr "اسم التخزين"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:7
+msgid "API"
+msgstr "المعرف API"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:48
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:96
+msgid "Region"
+msgstr "منطقة"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:58
+msgid "Storage bucket"
+msgstr "مكان التخزين"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:63
+msgid "Key"
+msgstr "مفتاح"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:64
+msgid "Storage key"
+msgstr "مفتاح التخزين"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:67
+msgid "Secret"
+msgstr "سري"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:68
+msgid "Storage secret"
+msgstr "التخزين السري"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:73
+msgid "Client email"
+msgstr "البريد الإلكتروني للعميل"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:74
+msgid "Google Cloud client email"
+msgstr "البريد الأكتروني لمستخدم جوجل كلاود"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:75
+#, php-format
+msgid "You will need a <a %s>service account</a> for this."
+msgstr "انت تحتاج الى <a %s>حساب خدمة</a> لهذا"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:78
+msgid "Private key"
+msgstr "مفتاح خاص"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:79
+msgid "Google Cloud JSON key"
+msgstr "مفتاح JSON لجوجل كلاود"
+
+msgid "Service name"
+msgstr "اسم الخدمة"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:84
+msgid "Identity URL"
+msgstr "رابط الهوية"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:85
+msgid "Identity API endpoint"
+msgstr "نقطة نهاية هوية API"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:85
+msgid "API endpoint for OpenStack identity"
+msgstr "نقطة نهاية API لهوية أوبن ستاك "
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
+msgid "Storage region"
+msgstr "منطقة التخزين"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:100
+msgid "Container"
+msgstr "حاوية"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:101
+msgid "Storage container"
+msgstr "حاوية التخزين"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:104
+msgid "Tenant id"
+msgstr "هوية المستأجر"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:105
+msgid "Tenant id (account id)"
+msgstr "هوية المستأجر ( هوية الحساب )"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:108
+msgid "Tenant name"
+msgstr "اسم المستأجر"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:109
+msgid "Tenant name (account name)"
+msgstr "اسم المستأجر ( اسم الحساب ) "
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:115
+msgid "Hostname or IP of the storage server"
+msgstr "اسم المضيف أو IP لخادم التخزين"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
+msgid "Path"
+msgstr "مسار"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
+msgid "Server path"
+msgstr "مسار الخادم"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
+msgid "Server path where the files will be stored"
+msgstr "مسار الخادم المعتمد حيث سيتم تخزين ملفات"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:123
+msgid "Server username"
+msgstr "اسم مستخدم الخادم"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:127
+msgid "Server password"
+msgstr "كلمة مرور الخادم"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:132
+msgid "Storage capacity"
+msgstr "مساحة التخزين"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:133
+msgid "Example: 20 GB, 1 TB, etc."
+msgstr "مثال : 20 GB, 1 TB ..."
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:135
+msgid "This storage will be disabled when it reach this capacity. Leave it blank or zero for no limit."
+msgstr "سيتم تعطيل هذا التخزين عندما يصل إلى أقصى قدراته. أتركه فارغ أو \"0\" للامحدود."
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:139
+msgid "Storage URL"
+msgstr "URL التخزين"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:140
+msgid "The system will map the images of this storage to this URL."
+msgstr "سيقوم النظام بترسيم صور هذا التخزين لهذا الرابط."
+
+#: ../../../app/themes/Peafowl/snippets/image_album_slice.php:14
+msgid "view more"
+msgstr "شاهد المزيد"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:22
+#: ../../../app/themes/Peafowl/snippets/templates_content_listing.php:6
+#: ../../../app/themes/Peafowl/snippets/templates_content_listing.php:9
+msgid "Load more"
+msgstr "عرض المزيد"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:91
+msgid "Previous"
+msgstr "السابق"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:98
+msgid "Next"
+msgstr "التالي"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
+msgid "Select all"
+msgstr "تحديد الكل"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:56
+msgid "Clear selection"
+msgstr "مسح المحدد"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:13
+msgid "Selection"
+msgstr "إختيار"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:13
+msgid "Action"
+msgstr "إجراء"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:20
+msgid "Get embed codes"
+msgstr "أحصل على كود العرض"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:38
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:85
+msgid "Assign category"
+msgstr "عين فئة"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:45
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:9
+msgid "Flag as safe"
+msgstr "علم بأنه محتوى آمن"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:607
+#: ../../../app/themes/Peafowl/views/dashboard.php:884
+#: ../../../app/themes/Peafowl/views/dashboard.php:933
+msgid "Delete"
+msgstr "حذف"
+
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:5
+#, php-format
+msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
+msgstr "حتى تتمكن من إستخدام جميع المميزات يجب عليك تسجيل الدخول. إذا لم يكن لديك حساب <a href=\"%s\">اشترك</a>الان"
+
+#: ../../../app/themes/Peafowl/snippets/template_content_empty.php:5
+#: ../../../app/themes/Peafowl/views/dashboard.php:618
+#: ../../../app/themes/Peafowl/views/index.php:63
+msgid "There's nothing to show here."
+msgstr "لا يوجد شيء لإظهاره هنا."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
+#: ../../../app/themes/Peafowl/views/image.php:69
+#: ../../../app/themes/Peafowl/views/image.php:457
+msgid "Edit image details"
+msgstr "تعديل بيانات الصورة"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
+#: ../../../app/themes/Peafowl/views/album.php:22
+#: ../../../app/themes/Peafowl/views/album.php:118
+msgid "Edit album details"
+msgstr "تعديل معلومات الألبوم"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
+msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
+msgstr "جميع الصور سوف يتم نقلها إلى أحدث ألبوم تم إنشاؤه ، كما يمكنك نقل الصور إلى  <a class=\"modal-switch\" data-switch=\"move-existing-album\"> الألبومات الحالية </a>."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:50
+msgid "Select an existing album to move the image. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the image there."
+msgstr "إختر الألبوم الذي ترغب نقل الصور فيه ، كما يمكنك  <a class=\"modal-switch\" data-switch=\"move-new-album\">إنشاء ألبوم جديد </a> ونقل الصور فيه"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:52
+msgid "Select an existing album to move the album contents. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the album contents there."
+msgstr "حدد ألبوم من القائمة لنقل محتوياته. يمكنك أيضا <a class=\"modal-switch\" data-switch=\"move-new-album\"> إنشاء ألبوم جديد </a> ونقل محتويات الألبوم المحدد مسبقا إلى هناك."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:71
+msgid "Select an existing album to move the images. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the images there."
+msgstr "إختر الألبوم الذي ترغب نقل الصور فيه ، كما يمكنك  <a class=\"modal-switch\" data-switch=\"move-new-album\">إنشاء ألبوم جديد </a> ونقل الصور فيه"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:87
+msgid "All the selected images will be assigned to this category."
+msgstr "سيتم تعيين جميع الصور المختارة لهذه الفئة."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:92
+msgid "There is no categories."
+msgstr "لايوجد فئات."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:97
+msgid "Confirm flag content as safe"
+msgstr "قم بالتأكيد بأن المحتوى آمن"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:98
+msgid "Do you really want to flag this content as safe?"
+msgstr "هل أنت متأكد من أن المحتوى آمن ؟"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:101
+msgid "Confirm flag content as unsafe"
+msgstr "تأكيد بأن المحتوى غير آمن"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:102
+msgid "Do you really want to flag this content as unsafe?"
+msgstr "هل تريد حقا الإشارة الى هذا المحتوى بأنه غير آمن ؟"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:106
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:110
+msgid "Confirm deletion"
+msgstr "تأكيد الحذف"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:107
+msgid "Do you really want to remove this content? This can't be undone."
+msgstr "هل أنت متأكد من رغبتك في مسح هذا المحتوى ؟ لا يمكن التراجع عن هذا الإجراء."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:111
+msgid "Do you really want to remove all the selected content? This can't be undone."
+msgstr "هل أنت متأكد من رغبتك في مسح المحتويات المختارة ؟ لا يمكنك التراجع عن هذا الإجراء"
+
+msgid "Uploaded by guest"
+msgstr "مرفوع بواسطة ضيف"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/image_description_owner.php:2
+#, php-format
+msgid "From %s"
+msgstr "من %s"
+
+msgid "Uploaded by private"
+msgstr "مرفوع بواسطة خاص"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/image_description_user.php:2
+#, php-format
+msgid "by %u"
+msgstr "بواسطة %u"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
+#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
+#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
+msgid "Select"
+msgstr "إختيار"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:7
+msgid "Toggle unsafe flag"
+msgstr "تبديل العلم الغير أمن "
+
+#: ../../../app/themes/Peafowl/views/404.php:7
+msgid "The requested page was not found."
+msgstr "الصفحة المطلوبة غير موجودة."
+
+#: ../../../app/themes/Peafowl/views/404.php:11
+msgid "Search something else"
+msgstr "إبحث في شئ آخر"
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+msgid "The user has been deleted"
+msgstr "تم حذف المستخدم بنجاح"
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+#: ../../../app/themes/Peafowl/views/album.php:134
+#: ../../../app/themes/Peafowl/views/user.php:171
+#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
+msgid "The content has been deleted."
+msgstr "تم حذف المحتوى."
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:7
+msgid "Your account is almost ready"
+msgstr "حسابك جاهز تقريبا"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:9
+#, php-format
+msgid "An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "تم ارسال بريد الكتروني الى %s مع تعليمات لتفعيل حسابك. رابط التفعيل صالح فقط لمدة 48 ساعة. إذا لم تتلقى التعليمات في صندوق الوارد حاول البحث عنه في مجلد البريد الغير مرغوب."
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/logout.php:13
+#: ../../../app/themes/Peafowl/views/request-denied.php:13
+msgid "Go to homepage"
+msgstr "إذهب إلى الصفحة الرئيسية"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+msgid "Resend activation"
+msgstr "إعادة إرسال التفعيل"
+
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:10
+#, php-format
+msgid "You have successfully changed your account email to %s"
+msgstr "لقد قمت بنجاج بتغيير البريد الإلكتروني الخاص بحسابك إلى %s"
+
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+msgid "Go to my profile"
+msgstr "إذهب إلى ملفي الشخصي"
+
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:12
+msgid "A confirmation link will be sent to this email with details to activate your account."
+msgstr "سوف يتم إرسال رسالة تأكيد إلى هذا البريد يحتوي على تعليمات لتفعيل الحساب."
+
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:16
+#: ../../../app/themes/Peafowl/views/settings.php:156
+#: ../../../content/pages/default/contact.php:93
+msgid "Your email address"
+msgstr "بريدك الإلكتروني"
+
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:26
+msgid "Add email"
+msgstr "إضافة بريد إلكتروني"
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
+msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "تم إرسال رسالة بريد إلكتروني مع تعليمات لإعادة تعيين كلمة المرور الخاصة بك إلى عنوان البريد الإلكتروني المسجل. إذا لم تتلقى تلك التعليمات في صندوق بريدك الوارد قم بالبحث عن الرسالة في صندوق مرشحات البريد المزعج."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+msgid "Resend instructions"
+msgstr "إعادة إرسال التعليمات"
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
+msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
+msgstr "تم ارسال بريد الكتروني مع معلومات اعادة تعين كلمة المرور. اذا لم تستلم البريد برجاء مراجعة جميع المجلدات في بريدك من الممكن ان تكون في مرشحات البريد المزعج."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:32
+msgid "Enter your username or the email address that you used to create your account."
+msgstr "إدخل البريد الإلكتروني أو اسم العضوية التي قمت بتزويدهما أثناء الإشتراك."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:52
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:47
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:37
+#: ../../../lib/Peafowl/peafowl.js:417 ../../../lib/Peafowl/peafowl.js:2324
+#: ../../../lib/Peafowl/peafowl.min.js:25
+#: ../../../lib/Peafowl/peafowl.min.js:140
+msgid "Submit"
+msgstr "تقديم"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:15
+msgid "Your password has been changed. You can now try logging in using your new password."
+msgstr "تم تغيير كلمة السر.. تستطيع الان الدخول باستخدام كلمة السر الجديدة."
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+msgid "Login now"
+msgstr "سجل دخولك"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:22
+msgid "Enter the new password that you want to use."
+msgstr "إدخل كلمة المرور الجديدة التي تود إستخدامها."
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:28
+msgid "New Password"
+msgstr "كلمة المرور الجديدة"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/settings.php:306
+#: ../../../app/themes/Peafowl/views/settings.php:323
+#: ../../../app/themes/Peafowl/views/signup.php:50
+#, php-format
+msgid "%d characters min"
+msgstr "%d كحد ادنى من الحروف"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/settings.php:306
+msgid "Enter your new password"
+msgstr "إدخل كلمة المرور الجديدة"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
+#: ../../../app/themes/Peafowl/views/settings.php:328
+msgid "Confirm password"
+msgstr "تأكيد كلمة المرور"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:35
+#: ../../../app/themes/Peafowl/views/settings.php:312
+msgid "Re-enter your new password"
+msgstr "إعادة إدخال كلمة المرور"
+
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:12
+#, php-format
+msgid "An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "تم إرسال رسالة بالبريد الالكتروني إلى٪s مع تعليمات لتفعيل حسابك. إذا لم تتلقى تعليمات, يرجى التحقق من  البريد غير المرغوب فيه أو مرشحات البريد المزعج."
+
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:19
+msgid "Enter the username or email address that you used to create your account to continue."
+msgstr "أدخل اسم المستخدم أو عنوان البريد الإلكتروني الذي استخدمته لإنشاء حسابك للمتابعة."
+
+#: ../../../app/themes/Peafowl/views/album.php:16
+#: ../../../app/themes/Peafowl/views/image.php:63
+msgid "This content is private"
+msgstr "هذا المحتوى خاص"
+
+#: ../../../app/themes/Peafowl/views/album.php:25
+msgid "Do you really want to delete this album and all of its images? This can't be undone."
+msgstr "هل حقا تريد حذف هذا الألبوم وكافة الصور الموجودة بداخله ؟ لا يمكن التراجع."
+
+#: ../../../app/themes/Peafowl/views/album.php:25
+msgid "Delete album"
+msgstr "حذف الألبوم"
+
+#: ../../../app/themes/Peafowl/views/album.php:86
+msgid "Album link"
+msgstr "رابط الألبوم"
+
+msgid "Please read and comply with the following conditions before you continue:"
+msgstr "يرجى قراءة والالتزام بالشروط التالية قبل المتابعة:"
+
+msgid "This website contains information, links and images of sexually explicit material. If you are under the age of %s, if such material offends you or if it's illegal to view such material in your community please do not continue.\n\nI am at least %s years of age and I believe that as an adult it is my inalienable right to receive/view sexually explicit material. I desire to receive/view sexually explicit material. \n\nI believe that sexual acts between consenting adults are neither offensive nor obscene. The viewing, reading and downloading of sexually explicit materials does not violate the standards of my community, town, city, state or country.\n\nThe sexually explicit material I am viewing is for my own personal use and I will not expose minors to the material.\n\nI am solely responsible for any false disclosures or legal ramifications of viewing, reading or downloading any material in this site. Furthermore this website nor its affiliates will be held responsible for any legal ramifications arising from fraudulent entry into or use of this website.\n\nThis consent screen constitutes a legal agreement between this website and you and/or any business in which you have any legal or equitable interest. If any portion of this agreement is deemed unenforceable by a court of competent jurisdiction it shall not affect the enforceability of the other portions of the agreement."
+msgstr "هذا الموقع يحتوى على معلومات, روابط وصور ذات محتوى للبالغين. إذا كنت تحت سن %s. أو إذا كانت المحتوى يؤذيك أو من الغير قانونى مشاهدته فى مجتمعك, رجاء عدم الاستمرار. \n\nانا عمرى على الأقل %s وأعتقد بصفتى شخصا بالغا ان من حقى تلقى \\ مشاهدة محتوى البالغين . واريد ان اتلقى\\ اشاهد ذلك المحتوى. \n\nاعتقد أن الممارسة الجنسية بالتراضى بين البالغين ليست مسيئة أو فاضحة . و المشاهدة, القرائة أو تحميل المحتوى الصريح لاينتهك معايير المجتمع الخاص بى, المدينة أو الولاية أو الدولة .   \n\nالمحتوى الجنسى الصريح الذى أقوم بمشاهدته هو لاستخدامى الشخصى ولن أقوم بعرضه على الصغار .\n\nانا المسؤول الوحيد عن أى عواقب قانونية تتبع مشاهدة , قرائة او تحميل أى محتوى على هذا الموقع. وعلاوة على ذلك فإن الموقع وأى من الكيانات التابعة له لن تتحمل أية مسؤولية بخصوص أآ عواقب قانونية تنشأ من الدخول المزور أو استخدام هذا الموقع. \n\nشاشة الموافقة هذة تشكل اتفاقية قانونية بين هذا الموقع وبينك و \\ أو أى اعمال لديك فيها مصلحة قانونية. إذا اعتبر أى جزء من تلك الاتفاقية غير قابل للتنفيذ من قبل محكمة مختصة . فلايجب ان تؤثر على قابلية تنفيذ أى من الأجزاء الأخرى من الاتفاقية."
+
+msgid "By clicking in \"I Agree\" you declare that you have read and understood all the conditions mentioned above."
+msgstr "عن طريق النقر \"أوافق\" أنت تعلن أنك قد قرأت وفهمت كل الشروط المذكورة."
+
+msgid "I Agree"
+msgstr "أنا موافق"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:22
+msgid "Image"
+msgid_plural "Images"
+msgstr[0] "خانة فارغة"
+msgstr[1] "صورة"
+msgstr[2] "خانة فارغة"
+msgstr[3] "خانة فارغة"
+msgstr[4] "خانة فارغة"
+msgstr[5] "صور"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:34
+#: ../../../app/themes/Peafowl/views/dashboard.php:90
+#: ../../../app/themes/Peafowl/views/settings.php:126
+msgid "User"
+msgid_plural "Users"
+msgstr[0] "خانة فارغة"
+msgstr[1] "عضو"
+msgstr[2] "خانة فارغة"
+msgstr[3] "خانة فارغة"
+msgstr[4] "خانة فارغة"
+msgstr[5] "أعضاء"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:40
+#: ../../../app/themes/Peafowl/views/dashboard.php:1732
+msgid "Disk used"
+msgstr "القرص المستخدم"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:80
+#: ../../../app/themes/Peafowl/views/dashboard.php:84
+msgid "Add user"
+msgstr "إضافة عضو"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:87
+#: ../../../app/themes/Peafowl/views/settings.php:121
+msgid "Role"
+msgstr "الصلاحية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:89
+#: ../../../app/themes/Peafowl/views/settings.php:125
+msgid "Administrator"
+msgstr "المتحكم الرئيسي"
+
+msgid "This setting is always diabled when using personal website mode."
+msgstr "دائما تعطيل هذا الإعداد عند استخدام وضع موقع شخصي."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:152
+#: ../../../app/themes/Peafowl/views/dashboard.php:156
+msgid "Add category"
+msgstr "اضافة فئة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:165
+#: ../../../app/themes/Peafowl/views/dashboard.php:169
+#: ../../../app/themes/Peafowl/views/image.php:219
+msgid "Add IP ban"
+msgstr "إضافة حظر IP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:178
+#: ../../../app/themes/Peafowl/views/dashboard.php:182
+msgid "Add storage"
+msgstr "إضافة التخزين"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:195
+msgid "Return to pages"
+msgstr "العودة إلى صفحات"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:222
+msgid "Website name"
+msgstr "اسم الموقع"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:227
+msgid "Website doctitle"
+msgstr "عنوان الموقع"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:231
+msgid "Website description"
+msgstr "وصف الموقع"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:236
+msgid "Website keywords"
+msgstr "كلمات الموقع"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:257
+msgid "Default time zone"
+msgstr "المنطقة الزمنية الافتراضية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:261
+#: ../../../app/themes/Peafowl/views/settings.php:250
+msgid "Select region"
+msgstr "اختر المنطقة"
+
+msgid "Allows to search images, albums and users based on a given search query."
+msgstr "يسمح للبحث في الصور والألبومات والمستخدمين استنادا إلى استعلام بحث معين."
+
+msgid "Enables to browse public uploaded images. It also enables categories."
+msgstr "تمكين التصفح للصور العامة التي تم تحميلها . كما أنها تمكن الفئات."
+
+msgid "Enables to browse images randomly."
+msgstr "تمكين لتصفح الصور بشكل عشوائي."
+
+msgid "Likes"
+msgstr "الإعجابات"
+
+msgid "Allows users to like content and populate \"Most liked\" listings."
+msgstr "السماح للمستخدمين بالإعجاب بالمحتوى و نشر \" القوائم الأكثر إعجابا \""
+
+msgid "Followers allows users to follow each other."
+msgstr "يسمح المتابعون للمستخدمين بمتابعة بعضهم البعض."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:344
+msgid "Personal mode target user"
+msgstr "وضع المستخدم الشخصى "
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:345
+#: ../../../app/themes/Peafowl/views/settings.php:69
+msgid "User ID"
+msgstr "رقم العضو"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:345
+#: ../../../app/themes/Peafowl/views/dashboard.php:1514
+#, php-format
+msgid "Your user id is: %s"
+msgstr "رقم الهوية الخاص بك هو: %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:347
+msgid "Numeric ID of the target user for personal mode."
+msgstr "الهوية الرقمية للمستخدم المستهدف للوضع الشخصى."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:350
+msgid "Personal mode routing"
+msgstr "توجيه الوضع الشخصى"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:353
+msgid "Custom route to map /username to /something. Use \"/\" to map to homepage."
+msgstr "توجيه مخصص لترسيم / المستخدم إلى / شيئ ما. استخدم \" /\" لترسيم الصفحة الشخصية. "
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:363
+msgid "Website privacy mode"
+msgstr "وضع خصوصية الموقع"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:370
+msgid "Private mode will make the website only available for registered users."
+msgstr "الوضع الخاص سيجعل الموقع يظهر فقط للاعضاء المسجلين."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:376
+msgid "Content privacy mode"
+msgstr "وضع المحتوى الخاص"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:380
+#: ../../../app/themes/Peafowl/views/dashboard.php:1225
+#: ../../../app/themes/Peafowl/views/dashboard.php:1463
+msgid "Default"
+msgstr "الإفتراضي"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:381
+msgid "Force private (self)"
+msgstr "إجبار الوضع الخاص (الذاتي)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:382
+msgid "Force private (anyone with the link)"
+msgstr "إجبار الوضع الخاص (أي شخص لديه الرابط)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:387
+msgid "Forced privacy modes will override user selected privacy."
+msgstr "الوضع الخاص يجبر على تجاوز خيار المستخدم في اختيار الخصوصية."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:442
+msgid "Page title"
+msgstr "عنوان الصفحة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:447
+msgid "Page status"
+msgstr "حالة الصفحة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:450
+msgid "Active page"
+msgstr "الصفحة النشطة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:450
+#, php-format
+msgid "Inactive page (%s)"
+msgstr "صفحة غير نشطة (%s)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:454
+msgid "Only active pages will be accessible."
+msgstr "يمكن الوصول فقط للصفحات النشطة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:458
+#: ../../../app/themes/Peafowl/views/dashboard.php:595
+msgid "Type"
+msgstr "اكتب"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:475
+msgid "Page visibility"
+msgstr "إمكانية رؤية الصفحة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:478
+msgid "Visible page"
+msgstr "صفحة مرئية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:478
+msgid "Hidden page"
+msgstr "صفحة مخفية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:482
+msgid "Hidden pages won't be show in system menus, but anyone can access to it with the link."
+msgstr "لن تظهر الصفحات المخفية فى قوائم النظام, لكن يمكن لأى كان الوصول إليها عبر الرابط"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:487
+msgid "Only alphanumerics, hyphens and forward slash"
+msgstr "مسموح فقط فالأبجدية الرقمية والواصلات والخطوط المائلة إلى الأمام"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:489
+#, php-format
+msgid "Page URL key relative to %s"
+msgstr "مفتاح رابط الصفحة مرتبط بـ%s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:493
+msgid "File path"
+msgstr "مسار الملف"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:498
+#, php-format
+msgid "A %f file relative to %s"
+msgstr "هناك ملف %f مرتبط بـ %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:503
+msgid "Meta keywords"
+msgstr "الكلمات المفتاحية الوصفية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:509
+msgid "Meta description"
+msgstr "وصف الميتا"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:515
+msgid "Source code"
+msgstr "الكود المصدرى"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:519
+#, php-format
+msgid "No write permission in %s path you will need to add this file using an external editor."
+msgstr "لايوجد اذن كتابة فى مسار %s يجب أن تضيف هذا الملف باستخدام أداة تحرير خارجية."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:525
+#, php-format
+msgid "No write permission in %s you will need to edit the contents of this file using an external editor."
+msgstr "لايوجد اذن كتابة فى مسار %s يجب أن تعدل محتوى هذا الملف باستخدام أداة تحرير خارجية."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:532
+#, php-format
+msgid "Taken from: %s"
+msgstr "مأخوذ من: %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:546
+msgid "Link URL"
+msgstr "رابط الصفحة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:555
+msgid "Link target attribute"
+msgstr "خاصية هدف الرابط"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:562
+#, php-format
+msgid "Select %s to open the page or link in a new window."
+msgstr "اختر %s لفتح الصفحة أو الرابط فى نافذة جديدة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:566
+msgid "Link rel attribute"
+msgstr "خاصية ارتباط الرابط"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:567
+#: ../../../app/themes/Peafowl/views/dashboard.php:574
+msgid "Only alphanumerics, hyphens and whitespaces"
+msgstr "مسموح فقط بالأبجدية الرقمية والواصلات والمسافات"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:569
+#, php-format
+msgid "HTML &lt;a&gt; %s attribute"
+msgstr "خاصية  &lt;a&gt; %s HTML"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:573
+msgid "Link icon"
+msgstr "أيقونة الرابط"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:576
+#, php-format
+msgid "Check the <a %s>icon reference</a> for the complete list of supported icons."
+msgstr "اختر <a %s> مرجعية الأيقونات </a> للقائمة الكاملة للأيقونات المدعومة "
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:580
+msgid "Sort order display"
+msgstr "ترتيب العرض"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:583
+msgid "Page sort order display for menus and listings. Use \"1\" for top priority."
+msgstr "ترتيب العرض فى الصفحة للقوائم . استخدم \"1\" للأولوية الأعلى"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:607
+#, php-format
+msgid "Do you really want to delete the page ID %s? This can't be undone."
+msgstr "هل تريد حذف هوية الصورة %s ؟ لايمكن التراجع عن هذا الإجراء"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:630
+msgid "Enable uploads"
+msgstr "تفعيل الرفع"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:636
+msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
+msgstr "قم بتفعيل هذه الخاصية إذا أردت فتح ميزة الرفع ، هذه الخاصية لا تؤثر على المديرين."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:639
+msgid "Guest uploads"
+msgstr "تحميلات الزوار"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+msgid "Enable this if you want to allow non registered users to upload."
+msgstr "فعل هذا الخيار إن كنت تريد السماح لغير المسجلين برفع الصور."
+
+msgid "Redirect on single upload"
+msgstr "إعادة التوجيه عند الرفع المفرد"
+
+msgid "Enable this if you want to redirect to image page on single upload."
+msgstr "قم بتفعيل هذا لإعادة التوجيه للصفحة الرئيسية عند الرفع المفرد."
+
+msgid "Enable duplicate uploads"
+msgstr "تفعيل الرفع المزدوج"
+
+msgid "Enable this if you want to allow duplicate uploads from the same IP within 24hrs. This setting doesn't affect administrators."
+msgstr "تفعيل هذا إذا اردت السماح بالرفع المزدوج من نفس الأى بى فى خلال 24 ساعة. هذا الإعداد لايؤثر على الإداريين."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:649
+msgid "Enable expirable uploads"
+msgstr "تمكين المرفوعات القابلة للانتهاء"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:655
+msgid "Enable this if you want to allow uploads with an automatic delete option."
+msgstr "تفعيل هذا إذا اردت أن تسمح برفوعات ذات خاصية المسح التلقائى."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:661
+#: ../../../app/themes/Peafowl/views/settings.php:183
+msgid "Image Exif data"
+msgstr "بيانات وصف الصورة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:665
+msgid "Keep"
+msgstr "الاحتفاظ"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:670
+#, php-format
+msgid "Select the default setting for image <a %s>Exif data</a> on upload."
+msgstr "اختر الإعدادات الافتراضية <a %s> لبيانات وصف الصورة </a> عند الرفع."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:674
+msgid "Image Exif data (user setting)"
+msgstr "بيانات وصف الصورة ( إعداد المستخدم )"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:683
+msgid "Enable this if you want to allow each user to configure how image Exif data will be handled."
+msgstr "تفعيل هذا إذا اردت ان تسمح لكل مستخدم بضبط كيفية إدارة بيانات الصورة الوصفية."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:689
+msgid "Max. filesize"
+msgstr "الحجم الأقصى للملف"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:692
+#, php-format
+msgid "Max. allowed filesize. (Max allowed by server is %s)"
+msgstr "الحجم الأقصى المسموح للملف. (الحد الأقصى الذي يسمج به السيرفر هو %s)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:695
+msgid "Image path"
+msgstr "مسار الصورة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:696
+msgid "Relative to Chevereto root"
+msgstr "متعلق بـ Chevereto root"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:698
+msgid "Where to store the images? Relative to Chevereto root."
+msgstr "اين يتم حفظ الصور؟ المرتبطة ب Chevereto root."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:701
+msgid "Storage mode"
+msgstr "وضع التخزين"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:704
+msgid "Datefolders"
+msgstr "ملفات التواريخ"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:704
+msgid "Direct"
+msgstr "مباشر"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:707
+#, php-format
+msgid "Datefolders creates %s structure"
+msgstr "انشاء تاريخ الملفات %s الهيكلية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:710
+msgid "File naming method"
+msgstr "طريقة تسمية الملف"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:713
+msgid "Original"
+msgstr "الأصلي"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:713
+msgid "Mix original + random"
+msgstr "خلط الأصلى + العشوائى"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:716
+msgid "\"Original\" will try to keep the image source name while \"Random\" will generate a random name. \"ID\" will name the image just like the image ID."
+msgstr "\" الأصلى\" سيحاول الحفاظ على اسم الصورة من المصدر فى حين \" العشوائى\" سينتج اسما عشوائيا. \" الهوية\" ستسمى الصورة بمثل هوية الصورة."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:722
+msgid "Thumb size"
+msgstr "حجم الصورة المصغرة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:733
+msgid "Thumbnails will be fixed to this size."
+msgstr "الصورة المصغرة سوف يتم تثبيتها لهذا الحجم."
+
+msgid "Medium image fixed dimension"
+msgstr "ابعاد ثابتة للصورة المتوسطة"
+
+msgid "Medium sized images will be fixed to this dimension. For example, if you select \"width\" that dimension will be fixed and image height will be automatically calculated."
+msgstr "ستثبت الصور متوسطة الحج إلى هذة الأبعاد. على سبيل المثال, إذا اخترت \"العرض\" سيتم تثبيت هذا البعد ويتم حساب الارتفاع تلقائيا"
+
+msgid "Medium image fixed size"
+msgstr "حجم ثابت للصورة المتوسطة"
+
+msgid "Width or height will be automatically calculated."
+msgstr "سيتم حساب العرض والارتفاع تلقائيا"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:747
+msgid "Watermarks"
+msgstr "علامات مائية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:754
+msgid "Enable this to put a logo or anything you want in image uploads."
+msgstr "تفعيل هذا الخيار يسمح  بوضع شعار أو أي شيء تريده في رفع الصور."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:761
+#: ../../../app/themes/Peafowl/views/dashboard.php:1238
+#, php-format
+msgid "Warning: Can't write in %s"
+msgstr "تحذير: لا يمكن الكتابة في %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:767
+msgid "Watermark user toggles"
+msgstr "تبديلات علامات المستخدم المائية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:770
+msgid "Enable watermark on guest uploads"
+msgstr "تفعيل العلامات المائية على مرفوعات الضيوف"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:775
+msgid "Enable watermark on user uploads"
+msgstr "تفعيل العلامات المائية على مرفوعات المستخدمين"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:780
+msgid "Enable watermark on admin uploads"
+msgstr "تفعيل العلامة المائية على مرفوعات المديرين"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:786
+msgid "Watermark file toggles"
+msgstr "تبديلات ملف العلامة المائية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:789
+msgid "Enable watermark on GIF image uploads"
+msgstr "تفعيل العلامة المائية على مرفوعات صور بصيغة GIF"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:795
+msgid "Minimum image size needed to apply watermark"
+msgstr "ادنى حجم مطلوب لتطبيق العلامة المائية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:806
+msgid "Images smaller than this won't be watermarked. Use zero (0) to don't set a minimum image size limit."
+msgstr "الصور الأصغر من الحد الادنى لن تكون ذات علامة مائية . استخدم صفر (0) حتى لا يتم ضبط حدا ادنى للحجم."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:810
+msgid "Watermark image"
+msgstr "صورة بعلامة مائية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:816
+msgid "You will get best results with plain logos with drop shadow. You can use a large image if the file size is not that big (recommended max. is 16KB). Must be a PNG."
+msgstr "ستحصل على أفضل النتائج بالشعارات الواضحة مع إضافة ظل. يمكنك استخدام صور كبيرة إذا لم يكن حجم الملف كبيرا ( الحد الأقصى الموصى به هو 16كب). ويجب ان تكون فى صيغة PNG."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:819
+msgid "Watermark position"
+msgstr "موقع العلامة المائية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:823
+msgid "left top"
+msgstr "يسار/فوق"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:824
+msgid "left center"
+msgstr "يسار/وسط"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:825
+msgid "left bottom"
+msgstr "يسار/أسفل"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:826
+msgid "center top"
+msgstr "وسط/فوق"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:827
+msgid "center center"
+msgstr "وسط/وسط"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:828
+msgid "center bottom"
+msgstr "وسط/أسفل"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:829
+msgid "right top"
+msgstr "يمين/فوق"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:830
+msgid "right center"
+msgstr "يمين/وسط"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:831
+msgid "right bottom"
+msgstr "يمين/أسفل"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:836
+msgid "Relative position of the watermark image. First horizontal align then vertical align."
+msgstr "مكان وضع الصورة المائية. محاذاة أفقية أولاَ ثم محاذاة عمودية."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:839
+msgid "Watermark percentage"
+msgstr "نسبة العلامة المائية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:844
+msgid "Watermark percentual size relative to the target image area. Values 1 to 100."
+msgstr "حجم العلامة المائية التناسبى مع مساحة الصورة. القيم من 1 إلى 100"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:847
+msgid "Watermark margin"
+msgstr "هامش العلامة المائية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:852
+msgid "Margin from the border of the image to the watermark image."
+msgstr "تحديد الهامش من حدود الصورة لتظهر الصورة المائية عليها."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:855
+msgid "Watermark opacity"
+msgstr "درجة الوضوح للعلامة المائية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:860
+msgid "Opacity of the watermark in the final watermarked image. Values 0 to 100."
+msgstr "درجة وضوح العلامة المائية في الصورة النهائية. القيم 0 إلى 100."
+
+msgid "Dashboard > Settings > Website"
+msgstr "لوحة التحكم>الإعدادات>الموقع"
+
+msgid "Categories won't work when the explorer feature is turned off. To revert this setting go to %s."
+msgstr "لن تعمل الفئات عند إغلاق ميزة التصفح. لتبديل هذا الإعداد اذهب إلى %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:884
+#, php-format
+msgid "Do you really want to delete the %s category? This can't be undone."
+msgstr "هل انت متأكد من حذف مساحة %s التخزين هذه؟ لايمكن التراجع بعد الحذف."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:900
+msgid "Note: Deleting a category doesn't delete the images that belongs to that category."
+msgstr "ملاحظة: حذف الفئة لا يحذف الصور الموجودة بداخل هذه الفئة."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:902
+msgid "Edit category"
+msgstr "تعديل الفئة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:925
+msgid "Expires"
+msgstr "انتهاء الصلاحية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:933
+#, php-format
+msgid "Do you really want to remove the ban to the IP %s? This can't be undone."
+msgstr "هل تريد حذف المنع من الأى بى %s ؟ هذا الإجراء لايمكن التراجع عنه"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:947
+msgid "Banned IP address will be forbidden to use the entire website."
+msgstr "الأى بى الممنوع سيحرم من استخدام الموقع بالكامل."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:949
+msgid "Edit IP ban"
+msgstr "تعديل منع الأى بى "
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:959
+msgid "Enable signups"
+msgstr "تفعيل التسجيل"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:965
+msgid "Enable this if you want to allow users to signup."
+msgstr "قم بتنشيط هذا الخيار إذا كنت ترغب في تفعيل ميزة التسجيل."
+
+msgid "Minimum age required"
+msgstr "السن الأدنى مطلوب"
+
+msgid "Empty"
+msgstr "فارغ"
+
+msgid "Leave it empty to don't require a minimum age to use the website."
+msgstr "اتركه فارغا حتى لايطلب عمرا أدنى لاستخدام الموقع"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:972
+msgid "Username routing"
+msgstr "تحويل اسم المستخدم"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:978
+#, php-format
+msgid "Enable this if you want to use %s/username URLs instead of %s/user/username."
+msgstr "تفعيل هذا الإختيار إذا أردت إعتماد %s رابط اسم المستخدم بدلامن %s إسم المستخدم."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:983
+msgid "Require email confirmation"
+msgstr "تحتاج إلى تأكيد البريد الإلكتروني"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:989
+msgid "Enable this if users must validate their email address on sign up."
+msgstr "فعل هذا الإختيار إذا أردت من المستخدمين التحقق من صحة عنوان البريد الإلكتروني الخاصة بهم على قبل الاشتراك."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:992
+msgid "Require email for social signup"
+msgstr "طلب البريد الإلكتروني للتسجيل بإستخدام الشبكات الاجتماعية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:998
+msgid "Enable this if users using social networks to register must provide an email address."
+msgstr "تمكين هذا الإختيار إذا أردت من المستخدمين إستخدام الشبكات الاجتماعية للتسجيل وتوفير عنوان البريد الإلكتروني الخاصة بهم."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1004
+msgid "User avatar max. filesize"
+msgstr "صورة المستخدم أقصى حجم للملف"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1007
+#, php-format
+msgid "Max. allowed filesize for user avatar image. (Max allowed by server is %s)"
+msgstr "أقصى حجم ملف مسموح به لصورة الأفاتار. ( الحد الأقصى المسموح به على الخادم هو %s )"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1010
+msgid "User background max. filesize"
+msgstr "أقصى حجم لصورة خلفية المستخدم"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1013
+#, php-format
+msgid "Max. allowed filesize for user background image. (Max allowed by server is %s)"
+msgstr "أقصى حجم ملف لصورة خلفية المستخدم. ( أقصى حجم مسموح فى الخادم هو %s )"
+
+msgid "Shows a consent screen before accessing the website. Useful for adult content websites where minors shouldn't be allowed."
+msgstr "إظهار شاشة موافقة قبل الدخول إلى الموقع. فهى مفيدة بالنسبة لمواقع البالغين حيث لايسمح للصغار الدخول."
+
+msgid "Enable consent screen"
+msgstr "تفعيل شاشة الموافقة"
+
+msgid "Consent screen cover image"
+msgstr "صورة غلاف شاشة الموافقة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1019
+msgid "Block image uploads by IP if the system notice a flood  behavior based on the number of uploads per time period. This setting doesn't affect administrators."
+msgstr "هذا الخيار سوف يقوم بحجب الأي بي للمستخدم الذي يقوم برفع صور خلال وقت أكثر من الحد المسموح به ، هذا الخيار لا يؤثر على مدير الموقع."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1031
+msgid "Notify to email"
+msgstr "الإشعار عبر البريد الإلكتروني"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1037
+msgid "If enabled the system will send an email on flood incidents."
+msgstr "إذا تم تنشيط هذا الخيار سوف يقوم النظام بإرسال رسالة تحذيرية إلى البريد الإلكتروني."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1040
+msgid "Minute limit"
+msgstr "الحد دقيقة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1045
+msgid "Hourly limit"
+msgstr "الحد ساعة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1050
+msgid "Daily limit"
+msgstr "الحد يوم"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1055
+msgid "Weekly limit"
+msgstr "الحد أسبوع"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1060
+msgid "Monthly limit"
+msgstr "الحد شهر"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1070
+msgid "Show not safe content in listings"
+msgstr "إستعرض المحتويات الغير آمنة في القوائم"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1076
+msgid "Enable this if you want to show not safe content in listings. This setting doesn't affect administrators and can be overridden by user own settings."
+msgstr "تفعيل هذا عندما تريد إظهار قوائم المحتوى الغير آمن. هذا النوع من الضبط لايؤثر على الإداريين ويمكن تخطيه بواسطة إعدادات المستخدم."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1079
+msgid "Blur NSFW content in listings"
+msgstr "طمس المحتوى الغير أمن NSFW فى القوائم"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1085
+msgid "Enable this if you want to apply a blur effect on the NSFW images in listings."
+msgstr "تفعيل هذا إذا اردت أن تطبق تأثير الطمس على صور المحتوى الغير آمن فى القوائم"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1088
+msgid "Show banners in not safe content"
+msgstr "أستعرض البانر في المحتويات الغير آمنة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1094
+msgid "Enable this if you want to show banners in not safe content pages."
+msgstr "تمكين هذا الخيار إذا كنت تريد أن يظهر البانر في صفحات ذات المحتوى الغير آمن."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1098
+msgid "Show not safe content in random mode"
+msgstr "اظهار المحتوى الغير آمن في الوضع العشوائي"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1109
+msgid "List items per page"
+msgstr "العناصر القائمة لكل صفحة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1112
+msgid "How many items should be displayed per page listing."
+msgstr "كم عدد العناصر التي ستظهر في كل صفحة من القائمة."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1116
+msgid "List pagination mode"
+msgstr "نسق ترقيم الصفحات"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1119
+msgid "Endless scrolling"
+msgstr "تمرير لانهائي"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1119
+msgid "Classic pagination"
+msgstr "ترقيم تقليدي"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1123
+msgid "What pagination method should be used."
+msgstr "أي نسق ترغب في إستعراضه في ترقيم الصفحات"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1127
+msgid "Image listing size"
+msgstr "حجم عرض الصور"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1130
+msgid "Fluid"
+msgstr "سلس"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1130
+msgid "Fixed"
+msgstr "محدد"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1134
+msgid "Both methods use a fixed width but fluid method uses automatic heights."
+msgstr "كلتا الطريقتين تستخدم عرض ثابت ولكن يستخدم الأسلوب السلس ارتفاع تلقائي."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1140
+msgid "Listing columns number"
+msgstr "عرض رقم العامود"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1141
+msgid "Here you can set how many columns are used based on each target device."
+msgstr "هنا يمكنك ضبط عدد العواميد المستخدمة بناء على كل جهاز مستهدف"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1143
+msgid "Phone"
+msgstr "الهاتف"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1147
+msgid "Phablet"
+msgstr "الهاتف اللوحى"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1151
+msgid "Tablet"
+msgstr "الجهاز اللوحى"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1155
+msgid "Laptop"
+msgstr "الحاسب الشخصى"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1159
+msgid "Desktop"
+msgstr "الحاسب المكتبى"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1167
+#, php-format
+msgid "Put your themes in the %s folder"
+msgstr "ضع السمات الخاصة بك في هذا %s المجلد"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1186
+msgid "Tone"
+msgstr "اسلوب"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1189
+msgid "Light"
+msgstr "فاتح"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1189
+msgid "Dark"
+msgstr "غامق"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1196
+msgid "Main color"
+msgstr "اللون الرئيسى"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1197
+msgid "Hexadecimal color value"
+msgstr "قيمة اللون بنظام الهكسا"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1199
+#, php-format
+msgid "Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>."
+msgstr "استخدم هذا لضبط لون السمة الرئيسي. يجب ان تكون القيمة <a href=\"%s\" target=\"_blank\"> بنظام الهكسا</a>"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1203
+msgid "Top bar color"
+msgstr "لون الشريط العلوى"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1223
+#: ../../../app/themes/Peafowl/views/dashboard.php:1461
+msgid "Black"
+msgstr "أسود"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1224
+#: ../../../app/themes/Peafowl/views/dashboard.php:1462
+msgid "White"
+msgstr "أبيض"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1210
+msgid "If you set this to \"white\" the top bar and all the black tones will be changed to white tones."
+msgstr "إذا تم ضبط هذا على \" الأبيض\" فإن الشريط العلوى وكل الأساليب السوداء ستتغير إلى الأساليب البيضاء؟"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1214
+msgid "Top bar button color"
+msgstr "لون زر الشريط العلوى"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1218
+#: ../../../app/themes/Peafowl/views/dashboard.php:1456
+msgid "Blue"
+msgstr "أزرق"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1219
+#: ../../../app/themes/Peafowl/views/dashboard.php:1457
+msgid "Green"
+msgstr "أخضر"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1220
+#: ../../../app/themes/Peafowl/views/dashboard.php:1458
+msgid "Orange"
+msgstr "برتقالى"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1221
+#: ../../../app/themes/Peafowl/views/dashboard.php:1459
+msgid "Red"
+msgstr "أحمر"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1222
+#: ../../../app/themes/Peafowl/views/dashboard.php:1460
+msgid "Grey"
+msgstr "رمادى"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1230
+msgid "Color for the top bar buttons like the \"Create account\" button."
+msgstr "لون أزرار الشريط العلوى مثل زر\" إنشاء حساب\" "
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1244
+msgid "Enable vector logo"
+msgstr "تفعيل الشعار الفيكتور"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1251
+msgid "Enable vector logo for high quality logo in devices with high pixel density."
+msgstr "الموافقة على الشعارعالي الجودة في الأجهزة ذات كثافة بيكسل عالية."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1256
+#: ../../../app/themes/Peafowl/views/dashboard.php:1418
+msgid "Vector logo image"
+msgstr "شعار الفيكتور للصورة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1262
+msgid "Vector version or your website logo in SVG format."
+msgstr "الصور من نوع Vector امتدادها SVG ."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1268
+#: ../../../app/themes/Peafowl/views/dashboard.php:1428
+msgid "Raster logo image"
+msgstr "الشعار النقطي للصورة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1274
+msgid "Bitmap version or your website logo. PNG format is recommended."
+msgstr "الصور من نوع Bitmap او شعار موقعك. يوصى بامتداد PNG."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1278
+msgid "Logo height"
+msgstr "إرتفاع الشعار"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1279
+#: ../../../app/themes/Peafowl/views/dashboard.php:1514
+msgid "No value"
+msgstr "لا يوجد قيمة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1281
+msgid "Use this to set the logo height if needed."
+msgstr "إستخدام هذا لتعيين ارتفاع الشعار إذا لزم الأمر."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1287
+msgid "Favicon image"
+msgstr "أيقونة الصورة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1293
+msgid "Favicon image. Image must have same width and height."
+msgstr "صورة الشعار بجنب الرابط (Favicon) يجب أن تكون بنفس الطول والعرض."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1299
+msgid "Enable download button"
+msgstr "تفعيل أيقونة التحميل"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1305
+msgid "Enable this if you want to show the image download button."
+msgstr "قم بتنشيط هذا الخيار إذا كنت ترغب في إظهار أيقونة تحميل الصورة."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1309
+msgid "Enable right click on image"
+msgstr "تمكين الضغطة اليمنى على الصورة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1315
+msgid "Enable this if you want to allow right click on image viewer page."
+msgstr "تمكين هذا إذا اردت السماح بالضغطة اليمنى على صفحة مشاهدة الصورة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1321
+msgid "Enable show Exif data"
+msgstr "تمكين إظهار بيانات الصورة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1327
+msgid "Enable this if you want to show image Exif data."
+msgstr "تمكين هذا إذا اردت أن تظهر بيانات الصورة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1333
+msgid "Enable social share"
+msgstr "تفعيل خاصية المشاركة الإجتماعية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1339
+msgid "Enable this if you want to show social network buttons to share content."
+msgstr "قم بتفعيل هذا الخيار إذا كنت تريد أن تظهر أزرار الشبكات الاجتماعية لمشاركة المحتوى."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1343
+msgid "Enable embed codes (content)"
+msgstr "تفعيل تضمين الرموز (المحتوى)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1349
+msgid "Enable this if you want to show embed codes for the content."
+msgstr "قم بتفعيل هذا الخيار إذا كنت تريد أن تظهررموز المحتوى."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1353
+msgid "Enable embed codes (uploader)"
+msgstr "تفعيل تضمين الرموز (رافع)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1359
+msgid "Enable this if you want to show embed codes when upload gets completed."
+msgstr "قم بتفعيل هذا الخيار إذا كنت تريد أن تظهرالرموز المضمنة بعد انتهاء التحميل."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1365
+msgid "Not safe content checkbox in uploader"
+msgstr "قم بالاشارة على المربع عند الرفع اذا كان محتوى الصور غير آمن"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1371
+msgid "Enable this if you want to show a checkbox to indicate not safe content upload."
+msgstr "تمكين هذا الخيار إذا كنت تريد أن يظهر مربع للإشارة إلى ان المحتوى غير آمن عند رفع الصور."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1377
+msgid "Custom CSS code"
+msgstr "اضافة CSS مخصص"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1378
+msgid "Put your custom CSS code here. It will be placed as <style> just before the closing </head> tag."
+msgstr "ضع التعليمات البرمجية CSS المخصصة هنا. سيتم وضعها في الداخل <style> قبل علامة القفيل </head>."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1382
+msgid "Custom JS code"
+msgstr "كود JS مخصص"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1383
+msgid "Put your custom JS code here. It will be placed as <script> just before the closing </head> tag."
+msgstr "ضع التعليمات البرمجية JS المخصصة هنا. سيتم وضعها في الداخل <script> قبل علامة القفيل </head>."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1390
+msgid "Style"
+msgstr "الشكل"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1394
+msgid "Landing page"
+msgstr "صفحة البداية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1395
+msgid "Split landing + images"
+msgstr "فصل صفحة البداية + الصور"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1396
+msgid "Route explore"
+msgstr "استكشاف الطريق"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1401
+#, php-format
+msgid "Select the homepage style. To customize it further edit app/themes/%s/views/index.php"
+msgstr "اختر شكل الصفحة الرئيسية .لتخصيصها بشكل أكبر قد بتعديل app/themes/%s/views/index.php"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1406
+msgid "Cover image"
+msgstr "صورة الغلاف"
+
+#: ../../../app/themes/Peafowl/views/image.php:72
+msgid "Do you really want to delete this image? This can't be undone."
+msgstr "هل أنت متأكد من رغبتك في حذف هذه الصورة ؟ لا يمكن التراجع عن هذه العملية."
+
+#: ../../../app/themes/Peafowl/views/image.php:72
+msgid "Delete image"
+msgstr "حذف الصورة"
+
+msgid "Add new cover image"
+msgstr "إضافة صورة غلاف جديدة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1424
+msgid "Vector version or your website logo in SVG format (only for homepage)."
+msgstr "إصدار الفيكتور أو شعار الموقع فى صيغة svg (فقط للصفحة الرئيسية) "
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1434
+msgid "Bitmap version or your website logo (only for homepage). PNG format is recommended."
+msgstr "إصدار البيتماب أو شعار الموقع ( فقط للصفحة الرئيسية ) يوصى باستخدام صيغة .PNG"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1441
+#: ../../../app/themes/Peafowl/views/dashboard.php:1446
+#, php-format
+msgid "This will be added inside the homepage %s tag. Leave it blank to use the default contents."
+msgstr "سيتم إضافة هذا فى وسم الصفحة الرئيسية %s . اتركها فارغة لاستخدام المحتويات الافتراضية. "
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1445
+#: ../../../app/themes/Peafowl/views/settings.php:440
+msgid "Paragraph"
+msgstr "فقرة نصية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1452
+msgid "Call to action button color"
+msgstr "لون زر الإجراء"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1468
+msgid "Color of the homepage call to action button."
+msgstr "لون زر الإجراء فى الصفحة الرئيسية."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1472
+msgid "Call to action outline style button"
+msgstr "شكل تحديد زر الإجراء"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1479
+msgid "Enable this to use outline style for the homepage call to action button."
+msgstr "تفعيل هذا لاستخدام شكل التحديد لزر الإجراء فى الصفحة الرئيسية."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1483
+msgid "Call to action functionality"
+msgstr "وظيفة زر الإجراء"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1487
+msgid "Trigger uploader"
+msgstr "رافع المشغل "
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1488
+msgid "Open URL"
+msgstr "فتح الرابط"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1497
+msgid "Call to action URL"
+msgstr "رابط الإجراء"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1498
+msgid "Enter an absolute or relative URL"
+msgstr "إدخال رابط مطلق أو مرتبط"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1500
+msgid "A relative URL like %r will be mapped to %l"
+msgstr "الروابط المرتبطة مثل %r  ستكون مرسة إلى %l"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1506
+msgid "Call to action HTML"
+msgstr "html للإجراء"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1507
+msgid "This will be added inside the call to action <a> tag. Leave it blank to use the default contents."
+msgstr "سيضاف هذا إلى داخل وسم <a> الإجراء . اتركها فارغة لاستخدام المحتوى الافتراضى"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1513
+msgid "User IDs"
+msgstr "هويات المستخدم "
+
+msgid "Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images."
+msgstr "قائمة مفصولة بفصلة لهويات المستخدمين لإظهار الصور على الصفحة الرئيسية . اتركها فارغة لعرض كل الصور الحديثة ."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1524
+msgid "Here you can set the codes for the predefined ad spaces."
+msgstr "هنا يمكنك اضافة رموز (code) لمساحات إعلانية محددة مسبقا."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1570
+msgid "Minify code"
+msgstr "رمز التصغير"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1576
+msgid "Enable this if you want to auto minify CSS and JS code."
+msgstr "تمكين هذا إذار اردت أن تصغر تلقائيا كود CSS و JS."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1579
+msgid "Maintenance"
+msgstr "الصيانة "
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1585
+msgid "When enabled the website will show a maintenance message. This setting doesn't affect administrators."
+msgstr "عند التمكين , يقوم الموقع بإظهار رسالة الصيانة . هذا الإعداد لايؤثر على الإداريين فى الموقع"
+
+msgid "Display available updates notification"
+msgstr "عرض إشعارات التحديثات المتاحة."
+
+msgid "Enable this to show a notice on top warning you about new available system updates."
+msgstr "تمكين هذا لعرض ملحوظة فى الأعلى تنبه على التحديثات الجديدة المتاحة للنظام ."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1565
+msgid "Crypt salt"
+msgstr "التشفير المتقدم"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1567
+msgid "This is the salt used to convert numeric ID to alphanumeric. It was generated on install."
+msgstr "التشفير المتقدم سيتم إستخدامه لتحويل المعرف الرقمي إلى الأبجدية الرقمية. تم إنشاؤها على التثبيت."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1589
+msgid "PHP error reporting"
+msgstr "خطأ تقرير PHP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1595
+#, php-format
+msgid "Enable this if you want to print errors generated by PHP <a %s>error_reporting()</a>. This should be disabled in production."
+msgstr "قم بتمكين هذا إذا اردت أن تطبع الأخطاء المتولدة من PHP <a %s>error_reporting()</a>. ينبغى ان يتم تعطيل تلك الخاصية للحماية."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1598
+msgid "Debug level"
+msgstr "مستوى تصحيح الأخطاء"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1601
+msgid "None"
+msgstr "لايوجد"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1601
+msgid "Error log"
+msgstr "قائمة الخطأ "
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1601
+msgid "Print errors without error log"
+msgstr "اطبع الأخطاء دون قائمة الخطأ"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1601
+msgid "Print and log errors"
+msgstr "اطبع وادخل الأخطاء."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1604
+#, php-format
+msgid "To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)."
+msgstr "لضبط مستوى تصحيح الخطأ اختر <a %s> توثيق تصحيح الخطأ </a>. المستوى الافتراضى هو \" قائمة الخطأ\" (1)."
+
+msgid "documentation"
+msgstr "التوثيق"
+
+msgid "Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes."
+msgstr "التوجيه يسمح لك بتخصيص مسارات افتراضية سريعا. يسمح فقط بالأبجدية الرقمية, والواصلة والرموز السفلية فقط. الق نظرة على %s الخاص بنا إذا اردت تخطى أو إضافة طرق جديدة ."
+
+msgid "Image routing"
+msgstr "توجيه الصور"
+
+msgid "Routing for %s"
+msgstr "التوجيه لـ%s"
+
+msgid "Album routing"
+msgstr "توجيه الألبوم"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1611
+msgid "Default language"
+msgstr "اللغة الإفتراضية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1620
+msgid "Default base language to use."
+msgstr "اللغة الأساسية الافتراضية المستخدمة"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1624
+msgid "Auto language"
+msgstr "لغة تلقائية"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1630
+msgid "Enable this if you want to automatically detect and set the right language for each user."
+msgstr "تمكين هذا إذا اردت أن تتحقق تلقائيا وتضبط اللغة الصحيحة لكل مستخدم."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1634
+msgid "Language chooser"
+msgstr "اختيار اللغة "
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1640
+msgid "Enable this if you want to allow language selection."
+msgstr "تفعيل هذا إذا اردت السماح باختيار اللغات."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1647
+msgid "Enabled languages"
+msgstr "تفعيل اللغات"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1656
+msgid "Unchecked languages won't be used in your website."
+msgstr "اللغات الغير مختارة لن تستخدم فى موقعك."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1679
+msgid "Toggle this to enable or disable HTTPS"
+msgstr "قم بتبديل هذا الخيار إذا أردت إعتماد أو إلغاء HTTPS"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1680
+msgid "Toggle this to enable or disable this storage"
+msgstr "قم بتبديل هذا الخيار إذا أردت إعتماد أو إلغاء مساحة التخزين هذه"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1696
+msgid "Quota"
+msgstr "الحد الأقصى"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1698
+msgid "Active"
+msgstr "مفعَل"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1731
+msgid "Storage method"
+msgstr "طريقة التخزين"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1742
+msgid "Local storage is used by default or when no external storage is active."
+msgstr "يستخدم التخزين المحلي افتراضيا  أوعند عدم وجود تخزين خارجي نشط."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1742
+#, php-format
+msgid "If you need help check the <a %s>storage documentation</a>."
+msgstr "إذا احتجت للمساعدة الف نظرة على <a %s> توثيق التخزين </a>."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1744
+msgid "Edit storage"
+msgstr "تعديل التخزين"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1754
+msgid "From name"
+msgstr "إسم المرسل"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1757
+msgid "Sender name for emails sent to users."
+msgstr "إسم المرسل يظهر عند إرسال رسائل بريدية إلى الأعضاء."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1772
+msgid "Email mode"
+msgstr "وضع البريد الإلكتروني"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1779
+msgid "How to send emails? SMTP recommended."
+msgstr "ما هي الطريقة المراد استخدامها لارسال البريد الالكتروني؟ يفضل استخدام SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1784
+msgid "SMTP server and port"
+msgstr "خادم ومنفذ SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1787
+msgid "SMTP server"
+msgstr "سيرفر SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1800
+msgid "SMTP username"
+msgstr "اسم مستخدم SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1805
+msgid "SMTP password"
+msgstr "كلمة سر SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1810
+msgid "SMTP security"
+msgstr "حماية SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1813
+msgid "Unsecured"
+msgstr "غير محمي"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1824
+#: ../../../app/themes/Peafowl/views/dashboard.php:1825
+msgid "Send test email"
+msgstr "‘رسال بريد اليكترونى تجريبى"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1825
+msgid "test@somedomain.com"
+msgstr "test@somedomain.com"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1826
+#, php-format
+msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
+msgstr "استخدم هذا لإظهار رسائل البريد المستلمة. ننصح باستخدام %s."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1838
+msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
+msgstr "تحتاج إلى <a href=\"https://developers.facebook.com/\" target=\"_blank\"> برنامج الفيسبوك </a> من أجل هذا."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1843
+msgid "Facebook app id"
+msgstr "رمز التعريف لتطبيق الفيسبوك"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1848
+msgid "Facebook app secret"
+msgstr "الرمز السري لتطبيق الفيسبوك"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1864
+msgid "You need a <a href=\"https://apps.twitter.com\" target=\"_blank\">Twitter app</a> for this."
+msgstr "تحتاج إلى <a href=\"https://apps.twitter.com\" target=\"_blank\">تطبيق تويتر</a> لذلك ."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1869
+msgid "Twitter API key"
+msgstr "مفتاح الـ API للتويتر"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1874
+msgid "Twitter API secret"
+msgstr "رمز الـ API للتويتر"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1881
+msgid "Twitter account"
+msgstr "حساب تويتر"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1897
+msgid "You need a <a href=\"https://cloud.google.com/console\" target=\"_blank\">Google app</a> for this."
+msgstr "تحتاج إلى <a href=\"https://cloud.google.com/console\" target=\"_blank\">تطبيق جوجل</a> لذلك ."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1902
+msgid "Google client id"
+msgstr "رمز التعريف لعميل جوجل"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1907
+msgid "Google client secret"
+msgstr "الرمز السري لعميل جوجل"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1923
+msgid "You need a <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> for this."
+msgstr "تحتاج إلى <a href=\"http://vk.com/dev\" target=\"_blank\"> تطبيق VK </a> لهذا"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1928
+msgid "VK client id"
+msgstr "رقم هوية مستخدم VK"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1933
+msgid "VK client secret"
+msgstr "الرمز السري لمستخدم VK"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1949
+#, php-format
+msgid "CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s."
+msgstr "CDN يسمح لك بإفراغ محتوى ثابت إلى عدة خوادم لجعل موقع الويب الخاص بك أسرع. إذا لم يكن لديك CDN عليك أن تحاول %s ."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1968
+#, php-format
+msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
+msgstr "تحتاج <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> لتفعيل هذا الخيار."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1974
+msgid "reCAPTCHA public key"
+msgstr "المفتاح العام لمكون صورة التحقق"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1979
+msgid "reCAPTCHA private key"
+msgstr "المفتاح الخاص لمكون reCAPTCHA"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1986
+msgid "reCAPTCHA threshold"
+msgstr "بداية reCAPTCHA"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1991
+msgid "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA."
+msgstr "ما هي عدد المحاولات  الفاشلة التى يعدها يطلب مكون reCAPTCHA ؟ استخدم صفر (0) دائما لإظهار reCAPTCHA"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1997
+msgid "Comment code"
+msgstr "كود التعليق"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1998
+msgid "Disqus, Facebook or anything you want. It will be used in image view."
+msgstr "ديسكاس، الفيسبوك أو أي شيء تريده. سيتم استخدامه في عرض الصورة."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2002
+msgid "Analytics code"
+msgstr "كود التحليل"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2003
+msgid "Google Analytics or anything you want. It will be added to the theme footer."
+msgstr "كود تحليل جوجل أو أي شئ تريده ، سوف يتم إضافته في ذيل التصميم."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2017
+#, php-format
+msgid "For documentation about the API check the <a %s>API documentation</a>"
+msgstr "للتوثيق عن API تحقق من <a %s> توثيق API </a>"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2019
+msgid "API v1 key"
+msgstr "مفتاح API V1"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2022
+#, php-format
+msgid "Use this key when using the <a %s>API v1</a>."
+msgstr "استخدم هذا المفتاح عند استخدام <a %s>API v1</a>"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2028
+msgid "Cookie law compliance"
+msgstr "الخضوع لقانون ملفات تعريف الارتباط"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2034
+msgid "Enable this to display a message that complies with the EU Cookie law requirements. Note: You only need this if your website is hosted in the EU and if you add tracking cookies."
+msgstr "تفعيل هذا لعرض رسالة تتفق مع متطلبات قانون الاتحاد الأوروبى لملفات تعريف الارتباط \" الكوكيز\" . لاحظ: تحتاج لهذا فقط إذا تم استضافة موقعك الإلكترونى فى الاتحاد الإوروبى إذا اردت ان تضيف تتبعا لتلك الملفات "
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../lib/Peafowl/peafowl.js:417 ../../../lib/Peafowl/peafowl.min.js:25
+msgid "Save changes"
+msgstr "حفظ التغييرات"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2067
+#: ../../../app/themes/Peafowl/views/settings.php:477
+msgid "Check the errors to proceed."
+msgstr "تحقق من الأخطاء لاكمال العملية."
+
+#: ../../../app/themes/Peafowl/views/image.php:57
+msgid "Guest"
+msgstr "زائر"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+msgid "You like this"
+msgstr "انت معحب بهذا"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "إعجاب"
+
+#: ../../../app/themes/Peafowl/views/image.php:136
+msgid "Added to %a and categorized in %c"
+msgstr "مضاف الى %a ومصنف في %c"
+
+#: ../../../app/themes/Peafowl/views/image.php:138
+#, php-format
+msgid "Added to %s"
+msgstr "مضاف إلى %s"
+
+#: ../../../app/themes/Peafowl/views/image.php:143
+#, php-format
+msgid "Uploaded to %s"
+msgstr "الرفع الى %s"
+
+#: ../../../app/themes/Peafowl/views/image.php:145
+#, php-format
+msgid "Uploaded %s"
+msgstr "مرفوع %s"
+
+#: ../../../app/themes/Peafowl/views/image.php:157
+msgid "Less Exif data"
+msgstr "بيانات صورة أقل"
+
+#: ../../../app/themes/Peafowl/views/image.php:157
+msgid "More Exif data"
+msgstr "بيانات صورة أكثر"
+
+#: ../../../app/themes/Peafowl/views/image.php:182
+#: ../../../app/themes/Peafowl/views/image.php:241
+msgid "Share image"
+msgstr "مشاركة الصورة"
+
+#: ../../../app/themes/Peafowl/views/image.php:198
+#: ../../../app/themes/Peafowl/views/image.php:204
+msgid "Album ID"
+msgstr "رقم الألبوم"
+
+#: ../../../app/themes/Peafowl/views/image.php:252
+msgid "In this album"
+msgstr "في هذا الألبوم"
+
+#: ../../../app/themes/Peafowl/views/index.php:15
+msgid "Upload and share your images."
+msgstr "ارفع و شارك صورك"
+
+#: ../../../app/themes/Peafowl/views/index.php:17
+#, php-format
+msgid "Drag and drop anywhere you want and start uploading your images now. %s limit. Direct image links, BBCode and HTML thumbnails."
+msgstr "اسحب و أسقط فى أى مكان هنا وايدأ فى تحميل صورك الآن . بحد أقصى %s . روابط مباشرة للصور, كود BB و صور HTML  مصغرة."
+
+#: ../../../app/themes/Peafowl/views/index.php:25
+msgid "Start uploading"
+msgstr "بدء الرفع"
+
+#: ../../../app/themes/Peafowl/views/index.php:63
+#, php-format
+msgid "Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings."
+msgstr "قم بملء هذا القسم الخاص برفع الصور لحساب %s  <br> بإمكانك تعديل المستخدم المستهدف من صفحة  إعدادات لوحة التحكم."
+
+#: ../../../app/themes/Peafowl/views/index.php:79
+msgid "Sign up to unlock all the features"
+msgstr "قم بالتسجيل لتفعيل جميع المميزات"
+
+#: ../../../app/themes/Peafowl/views/index.php:80
+msgid "Manage your content, create private albums, customize your profile and more."
+msgstr "إدارة المحتوى الخاص بك، إنشاء ألبومات خاصة، قم بتخصيص وتنسيق ملف العضوية الخاص بك وأكثر من ذلك."
+
+#: ../../../app/themes/Peafowl/views/login.php:40
+#: ../../../app/themes/Peafowl/views/settings.php:323
+msgid "Enter your password"
+msgstr "إدخل كلمة المرور"
+
+#: ../../../app/themes/Peafowl/views/logout.php:12
+#, php-format
+msgid "You have been logged off %s. Hope to see you soon."
+msgstr "لقد تم تسجيل خروجك من %s نأمل أن نراك قريبا."
+
+#: ../../../app/themes/Peafowl/views/maintenance.php:7
+msgid "Website under maintenance"
+msgstr "الموقع تحت الصيانة"
+
+#: ../../../app/themes/Peafowl/views/maintenance.php:8
+msgid "We're performing scheduled maintenance tasks in the website. Please come back in a few minutes."
+msgstr "نقوم بأداء صيانة دورية على الموقع. من فضلك عاود المحاولة فى خلال دقائق"
+
+msgid "This content is password protected."
+msgstr "هذا المحتوى محمى بكلمة سر"
+
+msgid "Please enter your password to continue."
+msgstr "رجاء إدخال كلمةالسر الخاصة بك للمتابعة"
+
+msgid "Send"
+msgstr "إرسال"
+
+#: ../../../app/themes/Peafowl/views/request-denied.php:12
+msgid "You either don't have permission to access this page or the link has expired."
+msgstr "إما إنك لا تملك صلاحية الدخول لهذه الصفحة أو أن صلاحية الرابط قد إنتهت."
+
+msgid "Search results"
+msgstr "البحث فى النتائج"
+
+#: ../../../app/themes/Peafowl/views/settings.php:36
+#: ../../../app/themes/Peafowl/views/user.php:65
+msgid "Do you really want to delete this user? This can't be undone."
+msgstr "هل حقا تريد حذف هذا المستخدم؟ لا يمكن التراجع."
+
+#: ../../../app/themes/Peafowl/views/settings.php:36
+#: ../../../app/themes/Peafowl/views/user.php:65
+msgid "Delete user"
+msgstr "حذف المستخدم"
+
+#: ../../../app/themes/Peafowl/views/settings.php:81
+msgid "Register date"
+msgstr "تاريخ التسجيل"
+
+#: ../../../app/themes/Peafowl/views/settings.php:91
+msgid "Registration IP"
+msgstr "رقم أى بى التسجيل"
+
+#: ../../../app/themes/Peafowl/views/settings.php:105
+msgid "Status"
+msgstr "الحالة"
+
+#: ../../../app/themes/Peafowl/views/settings.php:109
+msgid "Valid"
+msgstr "صالح"
+
+#: ../../../app/themes/Peafowl/views/settings.php:110
+msgid "Banned"
+msgstr "محجوب"
+
+#: ../../../app/themes/Peafowl/views/settings.php:111
+msgid "Awaiting email"
+msgstr "بانتظار البريد الإلكتروني"
+
+#: ../../../app/themes/Peafowl/views/settings.php:112
+msgid "Awaiting confirmation"
+msgstr "بإنتظار التفعيل"
+
+#: ../../../app/themes/Peafowl/views/settings.php:144
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "%i to %f characters<br>Letters, numbers and \"_\""
+msgstr "%i إلى %f صفات <br> احرف, ارقام و \"_\""
+
+#: ../../../app/themes/Peafowl/views/settings.php:166
+msgid "Auto delete uploads"
+msgstr "حذف المرفوعات تلقائيا"
+
+#: ../../../app/themes/Peafowl/views/settings.php:174
+msgid "This setting will apply to all your image uploads by default. You can override this setting on each upload."
+msgstr "هذا الإعداد سيطبق على كل عمليات رفع الصور بشكل افتراضى. يمكنك تخطى هذا الإعداد فى كل عملية رفع."
+
+#: ../../../app/themes/Peafowl/views/settings.php:186
+#, php-format
+msgid "Keep image <a %s>Exif data</a> on upload"
+msgstr "الاحتفاظ <a %s> بيانات الصورة </a> عند الرفع"
+
+#: ../../../app/themes/Peafowl/views/settings.php:193
+msgid "Newsletter"
+msgstr "نشرة الأخبار "
+
+#: ../../../app/themes/Peafowl/views/settings.php:196
+#, php-format
+msgid "Send me emails with news about %s"
+msgstr "ارسل لى رسائل اليكترونية بأخبار عن %s"
+
+#: ../../../app/themes/Peafowl/views/settings.php:202
+msgid "Content settings"
+msgstr "إعدادات المحتوى"
+
+#: ../../../app/themes/Peafowl/views/settings.php:205
+msgid "Show not safe content in listings (from others)"
+msgstr "اظهر المحتوى الغير آمن فى القوائم ( من الآخرين) "
+
+#: ../../../app/themes/Peafowl/views/settings.php:215
+msgid "Language"
+msgstr "اللغة"
+
+#: ../../../app/themes/Peafowl/views/settings.php:245
+msgid "Timezone"
+msgstr "المنطقة الزمنية"
+
+#: ../../../app/themes/Peafowl/views/settings.php:296
+msgid "Current password"
+msgstr "كلمة المرور الحالية"
+
+#: ../../../app/themes/Peafowl/views/settings.php:297
+msgid "Enter your current password"
+msgstr "إدخل كلمة المرور الحالية"
+
+#: ../../../app/themes/Peafowl/views/settings.php:305
+msgid "New password"
+msgstr "كلمة مرور جديدة"
+
+#: ../../../app/themes/Peafowl/views/settings.php:311
+msgid "Confirm new password"
+msgstr "تأكيد كلمة المرور"
+
+#: ../../../app/themes/Peafowl/views/settings.php:319
+msgid "Add a password to be able to login using your username or email."
+msgstr "يجب عليك اضافة كلمة مرور"
+
+#: ../../../app/themes/Peafowl/views/settings.php:319
+msgid "This user doesn't have a password. Add one using this form."
+msgstr "هذا المستخدم ليس لديه كلمة مرور ، يمكنك إضافة كلمة المرور بإستخدام هذا النموذج"
+
+#: ../../../app/themes/Peafowl/views/settings.php:329
+msgid "Re-enter your password"
+msgstr "إعادة إدخال كلمة المرور"
+
+#: ../../../app/themes/Peafowl/views/settings.php:352
+#: ../../../app/themes/Peafowl/views/user.php:21
+msgid "Upload new image"
+msgstr "رفع صورة جديدة"
+
+#: ../../../app/themes/Peafowl/views/settings.php:354
+msgid "Delete existing image"
+msgstr "حذف الصورة القائمة"
+
+msgid "Privacy"
+msgstr "الخصوصية"
+
+msgid "Make my profile and identity totally private"
+msgstr "جعل صورتى الشخصية والهوية مخصوصة بالكامل"
+
+msgid "Enable this if you want to act like an anonymous user"
+msgstr "تفعيل هذا إذا اردت التصرف كمستخدم مجهول"
+
+#: ../../../app/themes/Peafowl/views/settings.php:367
+msgid "This is your real name, not your username."
+msgstr "هذا هو إسمك الحقيقي وليس إسم العضوية."
+
+#: ../../../app/themes/Peafowl/views/settings.php:371
+msgid "http://yourwebsite.com"
+msgstr "http://yourwebsite.com"
+
+#: ../../../app/themes/Peafowl/views/settings.php:375
+msgid "Bio"
+msgstr "سيرة ذاتية"
+
+#: ../../../app/themes/Peafowl/views/settings.php:376
+msgid "Tell us a little bit about you"
+msgstr "اخبرنا قليلا عن نفسك"
+
+#: ../../../app/themes/Peafowl/views/settings.php:387
+msgid "User has no connections."
+msgstr "العضو ليس لديه اتصالات"
+
+#: ../../../app/themes/Peafowl/views/settings.php:391
+msgid "Link your account to external services to be able to login and share content."
+msgstr "أربط حسابك بخدمات خارجية بحيث يمكنك مشاركة المحتويات بواسطتها."
+
+#: ../../../app/themes/Peafowl/views/settings.php:398
+#, php-format
+msgid "Do you really want to disconnect %s from this account?"
+msgstr "هل انت متأكد من رغبتك في إيقاف الإتصال بـ  %s  من هذا الحساب ؟"
+
+#: ../../../app/themes/Peafowl/views/settings.php:399
+#, php-format
+msgid "This account is connected to %s"
+msgstr "هذا الحساب مرتبط بـ %s"
+
+#: ../../../app/themes/Peafowl/views/settings.php:401
+#, php-format
+msgid "Do you really want to disconnect your %s account?"
+msgstr "هل انت متأكد من رغبتك في إيقاف الإتصال لـ %s  بحسابك ؟"
+
+#: ../../../app/themes/Peafowl/views/settings.php:403
+#, php-format
+msgid "You will be logged out and you won't be able to login to your account using this %s account."
+msgstr "سوف يتم تسجيل خروجك من %s ولن تتمكن من الدخول بهذا الحساب من جديد."
+
+#: ../../../app/themes/Peafowl/views/settings.php:405
+#, php-format
+msgid "Your account is connected to %s"
+msgstr "حسابك مرتبط بـ %s"
+
+#: ../../../app/themes/Peafowl/views/settings.php:410
+msgid "disconnect"
+msgstr "قطع الإتصال"
+
+#: ../../../app/themes/Peafowl/views/settings.php:423
+#, php-format
+msgid "Connect %s"
+msgstr "متصل بـ %s"
+
+#: ../../../app/themes/Peafowl/views/settings.php:446
+msgid "Button"
+msgstr "زر"
+
+#: ../../../app/themes/Peafowl/views/signup.php:45
+msgid "resend account activation"
+msgstr "إعادة ارسال تنشيط الحساب"
+
+#: ../../../app/themes/Peafowl/views/signup.php:45
+#, php-format
+msgid "If you have already signed up maybe you need to request to %s"
+msgstr "لو كنت سجلت بالفعل قد تحتاج لطب من %s"
+
+#: ../../../app/themes/Peafowl/views/user.php:15
+msgid "Upload profile background"
+msgstr "رفع خلفية للملف الشخصي"
+
+#: ../../../app/themes/Peafowl/views/user.php:17
+msgid "Change background"
+msgstr "تعديل الخلفية"
+
+#: ../../../app/themes/Peafowl/views/user.php:22
+msgid "The profile background image will be deleted. This can't be undone. Are you sure that you want to delete the profile background image?"
+msgstr "سوف يتم حذف صورة خلفية الملف الشخصي ، لن تتمكن من التراجع عن هذا الإجراء ، هل أنت متأكد من رغبتك في حذف خلفية الملف الشخصي ؟"
+
+#: ../../../app/themes/Peafowl/views/user.php:22
+msgid "Delete background"
+msgstr "حذف الخلفية"
+
+#: ../../../app/themes/Peafowl/views/user.php:61
+msgid "Edit profile"
+msgstr "تعديل الملف"
+
+#: ../../../app/themes/Peafowl/views/user.php:75
+msgid "Follower"
+msgid_plural "Followers"
+msgstr[0] "خانة فارغة"
+msgstr[1] "متابع"
+msgstr[2] "خانة فارغة"
+msgstr[3] "خانة فارغة"
+msgstr[4] "خانة فارغة"
+msgstr[5] "المتابعون"
+
+#: ../../../app/themes/Peafowl/views/user.php:81
+msgid "Follow"
+msgstr "متابعة"
+
+msgid "Message sent"
+msgstr "تم إرسال الرسالة "
+
+msgid "Contact"
+msgstr "اتصل بنا"
+
+msgid "If you want to send a message fill the form below."
+msgstr "إذا كنت ترغب في إرسال رسالة ، قم بإدخال البيانات فى النموذج أدناه."
+
+msgid "Your name"
+msgstr "إسمك"
+
+msgid "Subject"
+msgstr "العنوان"
+
+#: ../../../app/install/update/template/update.js:19
+#, javascript-format
+msgid "Installed version is v%s"
+msgstr "النسخة المثبتة هى %s"
+
+#: ../../../app/install/update/template/update.js:26
+#: ../../../app/install/update/template/update.js:55
+#: ../../../app/install/update/template/update.js:78
+#, javascript-format
+msgid "Can't connect to %s"
+msgstr "لايمكن الاتصال بـ %s"
+
+#: ../../../app/install/update/template/update.js:30
+#, javascript-format
+msgid "Last available release is v%s"
+msgstr "أخر اصدار متاح هو %s"
+
+#: ../../../app/install/update/template/update.js:33
+msgid "Update needed, proceeding to download"
+msgstr "التحديث مطلوب. الذ"
+
+#: ../../../app/install/update/template/update.js:40
+msgid "No update needed"
+msgstr "لايوجد تحديث مطلوب"
+
+#: ../../../app/install/update/template/update.js:41
+msgid "System files already up to date"
+msgstr "ملفات النظامم محدثة بالفعل"
+
+#: ../../../app/install/update/template/update.js:49
+#, javascript-format
+msgid "Starting v%s download"
+msgstr "بدء %s التحميل"
+
+#: ../../../app/install/update/template/update.js:60
+#, javascript-format
+msgid "Downloaded v%s, proceeding to extraction"
+msgstr "تم تحميل %s , الذهاب للإستخراج"
+
+#: ../../../app/install/update/template/update.js:72
+#, javascript-format
+msgid "Attempting to extract v%s"
+msgstr "محاولة استخراج %s"
+
+#: ../../../app/install/update/template/update.js:82
+msgid "Extraction completed"
+msgstr "تم الاستخراج"
+
+#: ../../../app/install/update/template/update.js:84
+msgid "Proceding to install the update"
+msgstr "إتمام عملية تثبيت التحديثات"
+
+#: ../../../app/install/update/template/update.js:111
+msgid "Update failed"
+msgstr "فشل التحديث"
+
+#: ../../../app/lib/chevereto.js:592 ../../../app/lib/chevereto.min.js:36
+msgid "Please provide a valid email address"
+msgstr "يرجى تقديم عنوان بريد إلكتروني صالح"
+
+#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
+#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
+#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
+#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
+#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
+#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
+msgid "You must enter the album name."
+msgstr "يجب كتابة اسم الالبوم."
+
+#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
+#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
+#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
+#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
+msgid "Confirm"
+msgstr "تأكيد"
+
+#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
+msgid "Select existing album"
+msgstr "إختر الألبوم القائم"
+
+#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
+#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
+msgid "Please select a valid image file type."
+msgstr "الرجاء إختيار صورة من النوع المسموح."
+
+#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
+#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
+#, javascript-format
+msgid "Please select a picture of at most %s size."
+msgstr "الرجاء إختيار صورة بحجم لا يتجاوز  %s ."
+
+#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
+msgid "Profile image updated."
+msgstr "تم تحديث صورة الملف الشخصي."
+
+#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
+msgid "Profile background image updated."
+msgstr "تم تحديث خلفية الملف الشخصي."
+
+#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
+msgid "Profile background image deleted."
+msgstr "تم حذف خلفية الملف الشخصي."
+
+#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
+msgid "Error deleting profile background image."
+msgstr "خطأ فى حذف صورة خلفية الملف الشخصي."
+
+#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "Update available v%s"
+msgstr "التحديثات المتاحة %s"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
+msgstr "هناك تحديث متاح للنظام الخاص بك. يمكنك تحميل وتثبيت ذلك التحديث تلقائيا أو اذهب إلى %s للاستمرار فى تحميل الملف"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "Update now"
+msgstr "تحديث الان"
+
+#: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
+msgid "Your website is running the latest version of Chevereto."
+msgstr "موقع الويب الخاص بك يعمل  بأحدث نسخة من Chevereto."
+
+#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
+msgid "Clipboard image"
+msgstr "صورة الحافظة"
+
+#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
+msgid "File too big."
+msgstr "الملف كبير."
+
+msgid "Invalid or unsupported file format."
+msgstr "نوع ملف غير صالح أو غير معتمد ."
+
+#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
+#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
+msgid "Some files couldn't be added"
+msgstr "بعض الملفات لم يتم اضافتها"
+
+#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
+msgid "Image edited successfully."
+msgstr "تم تعديل الصورة بنجاح."
+
+#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
+msgid "Album edited successfully."
+msgstr "تم تعديل الالبوم بنجاح."
+
+#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
+msgid "Invalid URL key."
+msgstr "مفتاح URL غير صالح."
+
+#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
+msgid "Category URL key already being used."
+msgstr "فئة مفتاح URL اللتي يتم إستخدامها."
+
+#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
+msgid "Category successfully deleted."
+msgstr "تم حذف الفئة بنجاح."
+
+#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
+#, javascript-format
+msgid "Category %s added."
+msgstr "تم إضافة الفئة %s"
+
+#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
+msgid "Invalid expiration date."
+msgstr "تاريخ انتهاء الصلاحية خاطئ ."
+
+#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
+#, javascript-format
+msgid "IP %s already banned."
+msgstr "الأى بى %s تم منعه بالفعل"
+
+#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
+#, javascript-format
+msgid "IP %s banned."
+msgstr "الأى بى %s تم منعه ."
+
+#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
+msgid "IP ban successfully deleted."
+msgstr "حذف حظر IP بنجاح"
+
+#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
+#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
+#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
+msgid "Please fill all the required fields."
+msgstr "يرجى تعبئة جميع الحقول المطلوبة."
+
+#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
+msgid "Invalid storage capacity value. Make sure to use a valid format."
+msgstr "قيمة سعة التخزين غير صالحة. تأكد من استخدام صيغة صالحة."
+
+#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
+msgid "Invalid URL."
+msgstr "URL غير متوفر."
+
+#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
+msgid "Storage successfully edited."
+msgstr "تم تعديل التخزين بنجاح."
+
+#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
+msgid "User added successfully."
+msgstr "تم إضافة المستخدم بنجاح."
+
+#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
+#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
+#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
+#: ../../../app/lib/chevereto.min.js:205
+msgid "The content has been moved."
+msgstr "تم نقل المحتوى."
+
+#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
+msgid "Unselect"
+msgstr "إلغاء الإختيار"
+
+#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
+msgid "The content has been edited."
+msgstr "تم تعديل المحتوى."
+
+#: ../../../lib/Peafowl/peafowl.js:25 ../../../lib/Peafowl/peafowl.js:492
+#: ../../../lib/Peafowl/peafowl.min.js:1 ../../../lib/Peafowl/peafowl.min.js:31
+msgid "All the changes that you have made will be lost if you continue."
+msgstr "كل التغييرات التي قمت بها سوف يتم إلغاؤها في حالة المتابعة."
+
+#: ../../../lib/Peafowl/peafowl.js:476 ../../../lib/Peafowl/peafowl.min.js:30
+msgid "Changes saved successfully."
+msgstr "تم حفظ التغييرات بنجاح."
+
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.min.js:31
+msgid "Go back to form"
+msgstr "العودة إلى النموذج"
+
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.min.js:31
+msgid "continue anyway"
+msgstr "متابعة على أي حال"
+
+#: ../../../lib/Peafowl/peafowl.js:2506 ../../../lib/Peafowl/peafowl.min.js:155
+msgid "Saving"
+msgstr "جاري الحفظ"
+
+#: ../../../lib/Peafowl/peafowl.js:2511 ../../../lib/Peafowl/peafowl.min.js:155
+msgid "Sending"
+msgstr "جاري الإرسال"
+
+#: ../../../lib/Peafowl/peafowl.js:2591 ../../../lib/Peafowl/peafowl.min.js:158
+msgid "Confirm action"
+msgstr "تأكيد الإجراء"
+
+#: ../../../lib/Peafowl/peafowl.js:2603 ../../../lib/Peafowl/peafowl.min.js:159
+msgid "information"
+msgstr "معلومات"
+

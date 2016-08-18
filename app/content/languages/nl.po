@@ -1,0 +1,4117 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSION\n"
+"POT-Creation-Date: 2016-01-30 17:45+0000\n"
+"PO-Revision-Date: 2016-01-30 17:45+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../../app/install/installer.php:1168
+#: ../../../app/install/installer.php:1177
+#: ../../../app/install/installer.php:1180
+#: ../../../app/routes/route.account.php:414
+#: ../../../app/routes/route.json.php:579
+#: ../../../app/routes/route.json.php:1107
+#: ../../../app/routes/route.page.php:80
+#: ../../../app/routes/route.settings.php:185
+#: ../../../app/routes/route.signup.php:97
+#: ../../../content/pages/default/contact.php:28
+msgid "Invalid email"
+msgstr "Ongeldig emailadres"
+
+#: ../../../app/install/installer.php:1171
+#: ../../../app/routes/route.json.php:574
+#: ../../../app/routes/route.settings.php:181
+#: ../../../app/routes/route.signup.php:100
+msgid "Invalid username"
+msgstr "Ongeldige gebruikersnaam"
+
+#: ../../../app/install/installer.php:1174
+#: ../../../app/routes/route.account.php:357
+#: ../../../app/routes/route.json.php:584
+#: ../../../app/routes/route.settings.php:323
+#: ../../../app/routes/route.signup.php:103
+msgid "Invalid password"
+msgstr "Ongeldig wachtwoord"
+
+#: ../../../app/install/installer.php:1183
+#: ../../../app/routes/route.dashboard.php:667
+msgid "Invalid website mode"
+msgstr "Ongeldige websitemodus"
+
+#: ../../../app/install/template/ready.php:31
+#: ../../../app/themes/Peafowl/views/dashboard.php:1760
+msgid "From email address"
+msgstr "Van e-mailadres"
+
+#: ../../../app/install/template/ready.php:32
+#: ../../../app/themes/Peafowl/views/dashboard.php:1763
+msgid "Sender email for emails sent to users."
+msgstr "Naam afzender voor e-mails verstuurd naar gebruikers."
+
+#: ../../../app/install/template/ready.php:36
+#: ../../../app/themes/Peafowl/views/dashboard.php:1766
+msgid "Incoming email address"
+msgstr "Inkomend e-mailadres"
+
+#: ../../../app/install/template/ready.php:37
+#: ../../../app/themes/Peafowl/views/dashboard.php:1769
+msgid "Recipient for contact form and system alerts."
+msgstr "Ontvanger voor contactformulier en systeem waarschuwingen."
+
+#: ../../../app/install/template/ready.php:44
+#: ../../../app/themes/Peafowl/views/dashboard.php:327
+msgid "Website mode"
+msgstr "Website mode"
+
+#: ../../../app/install/template/ready.php:47
+#: ../../../app/themes/Peafowl/views/dashboard.php:330
+msgid "Community"
+msgstr "Community"
+
+#: ../../../app/install/template/ready.php:47
+#: ../../../app/themes/Peafowl/views/dashboard.php:330
+msgid "Personal"
+msgstr "Persoonlijk"
+
+#: ../../../app/install/update/template/update.php:2
+msgid "Update in progress"
+msgstr "Bezig met bijwerken"
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "Er is een fout opgetreden. Probeer het later nog eens."
+
+#: ../../../app/install/update/updater.php:72
+#, php-format
+msgid "Missing %s file"
+msgstr "Missende %s bestand"
+
+#: ../../../app/install/update/updater.php:78
+msgid "Invalid license info"
+msgstr "Ongeldige licentie info"
+
+#: ../../../app/install/update/updater.php:84
+msgid "Invalid license key"
+msgstr "Ongeldige licentie sleutel"
+
+#: ../../../app/install/update/updater.php:87
+msgid "Can't save file"
+msgstr "Kan bestand niet opslaan"
+
+#: ../../../app/install/update/updater.php:100
+#, php-format
+msgid "Can't download %s"
+msgstr "Kan %s niet downloaden"
+
+#: ../../../app/install/update/updater.php:126
+#, php-format
+msgid "Can't extract %s"
+msgstr "Kan %s niet uitpakken"
+
+#: ../../../app/lib/classes/class.album.php:100
+msgid "Untitled"
+msgstr "Naamloos"
+
+#: ../../../app/lib/classes/class.album.php:273
+#: ../../../app/lib/classes/class.user.php:114
+#, php-format
+msgid "%s's images"
+msgstr "%s's afbeeldingen"
+
+#: ../../../app/lib/classes/class.image.php:348
+msgid "Don't autodelete"
+msgstr "Niet automatisch verwijderen"
+
+#: ../../../app/lib/classes/class.image.php:349
+#: ../../../app/lib/classes/class.image.php:350
+#, php-format
+msgid "After %s minutes"
+msgstr "Na %s minuten"
+
+#: ../../../app/lib/classes/class.image.php:351
+#, php-format
+msgid "After %s hour"
+msgstr "Na %s uur"
+
+#: ../../../app/lib/classes/class.image.php:352
+#: ../../../app/lib/classes/class.image.php:353
+#: ../../../app/lib/classes/class.image.php:354
+#, php-format
+msgid "After %s hours"
+msgstr "Na %s uren"
+
+#: ../../../app/lib/classes/class.image.php:355
+#, php-format
+msgid "After %s day"
+msgstr "Na %s dag"
+
+#: ../../../app/lib/classes/class.image.php:356
+#, php-format
+msgid "After %s days"
+msgstr "Na %s dagen"
+
+#: ../../../app/lib/classes/class.image.php:636
+#: ../../../app/lib/classes/class.image.php:742
+msgid "Duplicated upload"
+msgstr "Dubbele upload"
+
+#: ../../../app/lib/classes/class.image.php:955
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Private upload"
+msgstr "Privé-upload"
+
+#: ../../../app/lib/classes/class.image.php:1230
+msgid "view"
+msgid_plural "views"
+msgstr[0] "weergave"
+msgstr[1] "weergaven"
+
+#: ../../../app/lib/classes/class.image.php:1231
+msgid "like"
+msgid_plural "likes"
+msgstr[0] "like"
+msgstr[1] "likes"
+
+#: ../../../app/lib/classes/class.listing.php:296
+#: ../../../app/routes/route.album.php:177
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
+#: ../../../app/themes/Peafowl/views/album.php:34
+#: ../../../app/themes/Peafowl/views/user.php:98
+#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
+msgid "image"
+msgid_plural "images"
+msgstr[0] "afbeelding"
+msgstr[1] "afbeeldingen"
+
+#: ../../../app/lib/classes/class.notification.php:81
+#, php-format
+msgid "%u is now following you"
+msgstr "%u volgt je nu"
+
+#: ../../../app/lib/classes/class.page.php:108
+#, php-format
+msgid "Can't create %s destination dir"
+msgstr "Kan doelmap %s niet maken"
+
+#: ../../../app/lib/classes/class.page.php:126
+#, php-format
+msgid "Can't open %s for writing"
+msgstr "Kan %s niet openen om te schrijven"
+
+#: ../../../app/lib/classes/class.page.php:136
+#: ../../../app/themes/Peafowl/views/dashboard.php:461
+msgid "Internal"
+msgstr "Intern"
+
+#: ../../../app/lib/classes/class.page.php:137
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
+#: ../../../app/themes/Peafowl/views/dashboard.php:461
+msgid "Link"
+msgstr "Link"
+
+#: ../../../app/lib/classes/class.storage.php:450
+#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
+#, php-format, javascript-format
+msgid "Storage capacity can't be lower than its current usage (%s)."
+msgstr "Opslagcapaciteit kan niet lager zijn dan wat er nu in gebruik is (%s)."
+
+#: ../../../app/lib/classes/class.storage.php:720
+msgid "Unlimited"
+msgstr "Ongelimiteerd"
+
+#: ../../../app/lib/classes/class.storage.php:720
+msgid "used"
+msgstr "gebruikt"
+
+#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
+msgid "year"
+msgid_plural "years"
+msgstr[0] "jaar"
+msgstr[1] "jaren"
+
+#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
+msgid "month"
+msgid_plural "months"
+msgstr[0] "maand"
+msgstr[1] "maanden"
+
+#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "week"
+msgstr[1] "weken"
+
+#: ../../../app/lib/functions.php:40 ../../../app/lib/functions.php:52
+msgid "day"
+msgid_plural "days"
+msgstr[0] "dag"
+msgstr[1] "dagen"
+
+#: ../../../app/lib/functions.php:41 ../../../app/lib/functions.php:53
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "uur"
+msgstr[1] "uren"
+
+#: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "minuut"
+msgstr[1] "minuten"
+
+#: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "seconde"
+msgstr[1] "secondes"
+
+#: ../../../app/lib/functions.php:67
+#, php-format
+msgid "%s ago"
+msgstr "%s geleden"
+
+#: ../../../app/lib/functions.php:67
+msgid "moments ago"
+msgstr "zonet"
+
+#: ../../../app/lib/functions.php:218
+#, php-format
+msgid "System database is outdated. You need to run the <a href=\"%s\">update</a> tool."
+msgstr "Systeemdatabase is oud. Het is noodzakelijk om deze te <a href=\"%s\">updaten</a>."
+
+#: ../../../app/lib/functions.php:221
+#, php-format
+msgid "Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>."
+msgstr "Website is onderhoud modus. Om deze instelling ongedaan te maken, ga naar <a href=\"%s\">Dashboard > Instellingen</a>."
+
+#: ../../../app/loader.php:180
+msgid "You have been forbidden to use this website."
+msgstr "U bent verbannen van deze website."
+
+#: ../../../app/loader.php:282
+#: ../../../app/themes/Peafowl/views/settings.php:447
+msgid "View all my images"
+msgstr "Bekijk al mijn foto's"
+
+#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
+msgid "That page doesn't exist"
+msgstr "Deze pagina is niet beschikbaar"
+
+#: ../../../app/routes/route.account.php:72
+#: ../../../app/themes/Peafowl/header.php:295
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:24
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:8
+#: ../../../app/themes/Peafowl/views/login.php:41
+#: ../../../app/themes/Peafowl/views/settings.php:299
+msgid "Forgot password?"
+msgstr "Wachtwoord vergeten?"
+
+#: ../../../app/routes/route.account.php:73
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:8
+msgid "Reset password"
+msgstr "Wachtwoord opnieuw instellen"
+
+#: ../../../app/routes/route.account.php:74
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:8
+msgid "Resend account activation"
+msgstr "Activatie opnieuw verzenden"
+
+#: ../../../app/routes/route.account.php:76
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:8
+msgid "Add your email address"
+msgstr "Voeg uw e-mailadres toe"
+
+#: ../../../app/routes/route.account.php:77
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:7
+msgid "Email changed"
+msgstr "E-mailadres veranderd"
+
+#: ../../../app/routes/route.account.php:95
+#: ../../../app/routes/route.login.php:71
+#: ../../../app/routes/route.settings.php:140
+#: ../../../app/routes/route.signup.php:73
+msgid "The reCAPTCHA wasn't entered correctly"
+msgstr "reCAPTCHA is foutief ingevoerd"
+
+#: ../../../app/routes/route.account.php:119
+#: ../../../app/routes/route.account.php:164
+#: ../../../app/routes/route.account.php:271
+msgid "Invalid Username/Email"
+msgstr "Ongeldige gebruikersnaam of e-mailadres"
+
+#: ../../../app/routes/route.account.php:129
+msgid "User doesn't have an email."
+msgstr "Deze gebruiker heeft geen e-mailadres."
+
+#: ../../../app/routes/route.account.php:140
+#: ../../../app/routes/route.account.php:299
+#: ../../../app/routes/route.account.php:321
+#: ../../../app/routes/route.account.php:388
+#: ../../../app/routes/route.json.php:24 ../../../app/routes/route.json.php:37
+#: ../../../app/routes/route.json.php:49 ../../../app/routes/route.json.php:561
+#: ../../../app/routes/route.json.php:623
+#: ../../../app/routes/route.json.php:672
+#: ../../../app/routes/route.json.php:719 ../../../app/routes/route.page.php:66
+#: ../../../app/themes/Peafowl/views/request-denied.php:8
+#: ../../../content/pages/default/contact.php:14
+msgid "Request denied"
+msgstr "Aanvraag niet toegestaan"
+
+#: ../../../app/routes/route.account.php:145
+msgid "Account needs to be activated to use this feature"
+msgstr "Gebruikersaccount moet geactiveerd zijn om deze optie te gebruiken!"
+
+#: ../../../app/routes/route.account.php:151
+msgid "Account already activated"
+msgstr "Gebruikersccount is al geactiveerd"
+
+#: ../../../app/routes/route.account.php:192
+msgid "Allow up to 15 minutes for the email. You can try again later."
+msgstr "Wacht a.u.b. 15 minuten op het ontvangen van een e-mail. U kunt het later opnieuw proberen."
+
+#: ../../../app/routes/route.account.php:231
+#, php-format
+msgid "Reset your password at %s"
+msgstr "Wachtwoord resetten op %s"
+
+#: ../../../app/routes/route.account.php:233
+#: ../../../app/routes/route.account.php:454
+#: ../../../app/routes/route.settings.php:283
+#: ../../../app/routes/route.signup.php:193
+#, php-format
+msgid "Confirmation required at %s"
+msgstr "Bevestiging nodig voor %s"
+
+#: ../../../app/routes/route.account.php:342
+#: ../../../app/routes/route.signup.php:216
+#, php-format
+msgid "Welcome to %s"
+msgstr "Welkom bij %s"
+
+#: ../../../app/routes/route.account.php:360
+#: ../../../app/routes/route.settings.php:327
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
+#: ../../../app/themes/Peafowl/views/settings.php:313
+#: ../../../app/themes/Peafowl/views/settings.php:330
+#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
+msgid "Passwords don't match"
+msgstr "Wachtwoorden komen niet overeen"
+
+#: ../../../app/routes/route.account.php:422
+#: ../../../app/routes/route.json.php:599
+#: ../../../app/routes/route.settings.php:243
+#: ../../../app/routes/route.signup.php:141
+msgid "Email already being used"
+msgstr "E-mailadres wordt al gebruikt door iemand anders"
+
+#: ../../../app/routes/route.account.php:508
+#: ../../../app/routes/route.signup.php:236
+#: ../../../content/pages/default/contact.php:132
+#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
+#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
+msgid "Check the errors in the form to continue."
+msgstr "Controleer de fouten in de tekstvelden om verder te gaan."
+
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Meest recent"
+
+#: ../../../app/routes/route.album.php:96
+#: ../../../app/routes/route.category.php:64
+#: ../../../app/routes/route.dashboard.php:1121
+#: ../../../app/routes/route.explore.php:50
+#: ../../../app/routes/route.following.php:29
+#: ../../../app/routes/route.user.php:201
+msgid "Most viewed"
+msgstr "Meest bekeken"
+
+#: ../../../app/routes/route.album.php:104
+#: ../../../app/routes/route.category.php:72
+#: ../../../app/routes/route.dashboard.php:1129
+#: ../../../app/routes/route.explore.php:58
+#: ../../../app/routes/route.following.php:37
+#: ../../../app/routes/route.user.php:207
+msgid "Most liked"
+msgstr "meest geliked"
+
+#: ../../../app/routes/route.album.php:115
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:4
+#: ../../../app/themes/Peafowl/views/album.php:36
+#: ../../../app/themes/Peafowl/views/image.php:89
+msgid "Share"
+msgstr "Delen"
+
+#: ../../../app/routes/route.album.php:124
+#: ../../../app/routes/route.image.php:134
+msgid "Full info"
+msgstr "Volledige informatie"
+
+#: ../../../app/routes/route.album.php:159
+msgid "%a album hosted in %w"
+msgstr "%a album hosted in %w"
+
+#: ../../../app/routes/route.dashboard.php:38
+msgid "Stats"
+msgstr "Statistieken"
+
+#: ../../../app/routes/route.dashboard.php:39
+#: ../../../app/routes/route.search.php:85
+#: ../../../app/routes/route.user.php:85 ../../../app/routes/route.user.php:277
+#: ../../../app/themes/Peafowl/views/settings.php:73
+msgid "Images"
+msgstr "Afbeeldingen"
+
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:92
+#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
+#: ../../../app/themes/Peafowl/header.php:403
+#: ../../../app/themes/Peafowl/views/settings.php:77
+msgid "Albums"
+msgstr "Albums"
+
+#: ../../../app/routes/route.dashboard.php:41
+#: ../../../app/routes/route.dashboard.php:233
+#: ../../../app/routes/route.search.php:99
+msgid "Users"
+msgstr "Gebruikers"
+
+#: ../../../app/routes/route.dashboard.php:42
+#: ../../../app/routes/route.settings.php:498
+#: ../../../app/themes/Peafowl/header.php:363
+#: ../../../app/themes/Peafowl/header.php:405
+msgid "Settings"
+msgstr "Instellingen"
+
+#: ../../../app/routes/route.dashboard.php:161
+msgid "Chevereto version"
+msgstr "Versie"
+
+#: ../../../app/routes/route.dashboard.php:162
+msgid "install update"
+msgstr "Update installeren"
+
+#: ../../../app/routes/route.dashboard.php:162
+msgid "check for updates"
+msgstr "controleer op updates"
+
+#: ../../../app/routes/route.dashboard.php:169
+msgid "PHP version"
+msgstr "PHP versie"
+
+#: ../../../app/routes/route.dashboard.php:173
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:114
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:115
+msgid "Server"
+msgstr "Server"
+
+#: ../../../app/routes/route.dashboard.php:177
+msgid "MySQL version"
+msgstr "MySQL versie"
+
+#: ../../../app/routes/route.dashboard.php:181
+msgid "MySQL server info"
+msgstr "MySQL server informatie"
+
+#: ../../../app/routes/route.dashboard.php:185
+msgid "GD Library"
+msgstr "GD Library"
+
+#: ../../../app/routes/route.dashboard.php:189
+msgid "File uploads"
+msgstr "Uploads"
+
+#: ../../../app/routes/route.dashboard.php:190
+#: ../../../app/themes/Peafowl/views/dashboard.php:298
+#: ../../../app/themes/Peafowl/views/dashboard.php:308
+#: ../../../app/themes/Peafowl/views/dashboard.php:318
+#: ../../../app/themes/Peafowl/views/dashboard.php:633
+#: ../../../app/themes/Peafowl/views/dashboard.php:642
+#: ../../../app/themes/Peafowl/views/dashboard.php:652
+#: ../../../app/themes/Peafowl/views/dashboard.php:678
+#: ../../../app/themes/Peafowl/views/dashboard.php:750
+#: ../../../app/themes/Peafowl/views/dashboard.php:962
+#: ../../../app/themes/Peafowl/views/dashboard.php:975
+#: ../../../app/themes/Peafowl/views/dashboard.php:986
+#: ../../../app/themes/Peafowl/views/dashboard.php:995
+#: ../../../app/themes/Peafowl/views/dashboard.php:1024
+#: ../../../app/themes/Peafowl/views/dashboard.php:1034
+#: ../../../app/themes/Peafowl/views/dashboard.php:1073
+#: ../../../app/themes/Peafowl/views/dashboard.php:1082
+#: ../../../app/themes/Peafowl/views/dashboard.php:1091
+#: ../../../app/themes/Peafowl/views/dashboard.php:1101
+#: ../../../app/themes/Peafowl/views/dashboard.php:1247
+#: ../../../app/themes/Peafowl/views/dashboard.php:1302
+#: ../../../app/themes/Peafowl/views/dashboard.php:1312
+#: ../../../app/themes/Peafowl/views/dashboard.php:1324
+#: ../../../app/themes/Peafowl/views/dashboard.php:1336
+#: ../../../app/themes/Peafowl/views/dashboard.php:1346
+#: ../../../app/themes/Peafowl/views/dashboard.php:1356
+#: ../../../app/themes/Peafowl/views/dashboard.php:1368
+#: ../../../app/themes/Peafowl/views/dashboard.php:1475
+#: ../../../app/themes/Peafowl/views/dashboard.php:1573
+#: ../../../app/themes/Peafowl/views/dashboard.php:1582
+#: ../../../app/themes/Peafowl/views/dashboard.php:1592
+#: ../../../app/themes/Peafowl/views/dashboard.php:1627
+#: ../../../app/themes/Peafowl/views/dashboard.php:1637
+#: ../../../app/themes/Peafowl/views/dashboard.php:1835
+#: ../../../app/themes/Peafowl/views/dashboard.php:1861
+#: ../../../app/themes/Peafowl/views/dashboard.php:1894
+#: ../../../app/themes/Peafowl/views/dashboard.php:1920
+#: ../../../app/themes/Peafowl/views/dashboard.php:1946
+#: ../../../app/themes/Peafowl/views/dashboard.php:1965
+#: ../../../app/themes/Peafowl/views/dashboard.php:2010
+#: ../../../app/themes/Peafowl/views/dashboard.php:2031
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+#: ../../../app/routes/route.dashboard.php:190
+#: ../../../app/themes/Peafowl/views/dashboard.php:298
+#: ../../../app/themes/Peafowl/views/dashboard.php:308
+#: ../../../app/themes/Peafowl/views/dashboard.php:318
+#: ../../../app/themes/Peafowl/views/dashboard.php:633
+#: ../../../app/themes/Peafowl/views/dashboard.php:642
+#: ../../../app/themes/Peafowl/views/dashboard.php:652
+#: ../../../app/themes/Peafowl/views/dashboard.php:679
+#: ../../../app/themes/Peafowl/views/dashboard.php:750
+#: ../../../app/themes/Peafowl/views/dashboard.php:962
+#: ../../../app/themes/Peafowl/views/dashboard.php:975
+#: ../../../app/themes/Peafowl/views/dashboard.php:986
+#: ../../../app/themes/Peafowl/views/dashboard.php:995
+#: ../../../app/themes/Peafowl/views/dashboard.php:1024
+#: ../../../app/themes/Peafowl/views/dashboard.php:1034
+#: ../../../app/themes/Peafowl/views/dashboard.php:1073
+#: ../../../app/themes/Peafowl/views/dashboard.php:1082
+#: ../../../app/themes/Peafowl/views/dashboard.php:1091
+#: ../../../app/themes/Peafowl/views/dashboard.php:1101
+#: ../../../app/themes/Peafowl/views/dashboard.php:1247
+#: ../../../app/themes/Peafowl/views/dashboard.php:1302
+#: ../../../app/themes/Peafowl/views/dashboard.php:1312
+#: ../../../app/themes/Peafowl/views/dashboard.php:1324
+#: ../../../app/themes/Peafowl/views/dashboard.php:1336
+#: ../../../app/themes/Peafowl/views/dashboard.php:1346
+#: ../../../app/themes/Peafowl/views/dashboard.php:1356
+#: ../../../app/themes/Peafowl/views/dashboard.php:1368
+#: ../../../app/themes/Peafowl/views/dashboard.php:1475
+#: ../../../app/themes/Peafowl/views/dashboard.php:1573
+#: ../../../app/themes/Peafowl/views/dashboard.php:1582
+#: ../../../app/themes/Peafowl/views/dashboard.php:1592
+#: ../../../app/themes/Peafowl/views/dashboard.php:1627
+#: ../../../app/themes/Peafowl/views/dashboard.php:1637
+#: ../../../app/themes/Peafowl/views/dashboard.php:1835
+#: ../../../app/themes/Peafowl/views/dashboard.php:1861
+#: ../../../app/themes/Peafowl/views/dashboard.php:1894
+#: ../../../app/themes/Peafowl/views/dashboard.php:1920
+#: ../../../app/themes/Peafowl/views/dashboard.php:1946
+#: ../../../app/themes/Peafowl/views/dashboard.php:1965
+#: ../../../app/themes/Peafowl/views/dashboard.php:2010
+#: ../../../app/themes/Peafowl/views/dashboard.php:2031
+msgid "Disabled"
+msgstr "Uitgeschakeld"
+
+#: ../../../app/routes/route.dashboard.php:193
+msgid "Max. upload size"
+msgstr "Maximale uploadgrootte"
+
+#: ../../../app/routes/route.dashboard.php:197
+msgid "Max. post size"
+msgstr "Maximale berichtgrootte"
+
+#: ../../../app/routes/route.dashboard.php:201
+msgid "Max. execution time"
+msgstr "Maximale laadtijd uploaden"
+
+#: ../../../app/routes/route.dashboard.php:202
+#, php-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d seconde"
+msgstr[1] "%d secondes"
+
+#: ../../../app/routes/route.dashboard.php:205
+msgid "Memory limit"
+msgstr "Geheugenlimiet"
+
+#: ../../../app/routes/route.dashboard.php:227
+#: ../../../app/themes/Peafowl/views/settings.php:370
+msgid "Website"
+msgstr "Website"
+
+#: ../../../app/routes/route.dashboard.php:228
+msgid "Content"
+msgstr "Inhoud"
+
+#: ../../../app/routes/route.dashboard.php:229
+msgid "Pages"
+msgstr "Pagina's"
+
+#: ../../../app/routes/route.dashboard.php:230
+#: ../../../app/routes/route.dashboard.php:387
+msgid "Listings"
+msgstr "Inhoud"
+
+#: ../../../app/routes/route.dashboard.php:231
+msgid "Image upload"
+msgstr "Upload"
+
+#: ../../../app/routes/route.dashboard.php:232
+msgid "Categories"
+msgstr "Categorieën"
+
+#: ../../../app/routes/route.dashboard.php:234
+#: ../../../app/themes/Peafowl/views/dashboard.php:1021
+msgid "Flood protection"
+msgstr "Spambeveiliging (Flood Protection)"
+
+#: ../../../app/routes/route.dashboard.php:235
+#: ../../../app/themes/Peafowl/views/dashboard.php:1169
+msgid "Theme"
+msgstr "Thema"
+
+#: ../../../app/routes/route.dashboard.php:236
+#: ../../../app/routes/route.dashboard.php:373
+#: ../../../app/routes/route.settings.php:66
+msgid "Homepage"
+msgstr "Hoofdpagina"
+
+#: ../../../app/routes/route.dashboard.php:237
+msgid "Banners"
+msgstr "Advertenties"
+
+#: ../../../app/routes/route.dashboard.php:238
+msgid "System"
+msgstr "Systeem"
+
+#: ../../../app/routes/route.dashboard.php:239
+msgid "Languages"
+msgstr "Talen"
+
+#: ../../../app/routes/route.dashboard.php:240
+msgid "External storage"
+msgstr "Externe opslag"
+
+#: ../../../app/routes/route.dashboard.php:241
+#: ../../../app/themes/Peafowl/views/dashboard.php:99
+msgid "Email"
+msgstr "E-mail"
+
+#: ../../../app/routes/route.dashboard.php:242
+#: ../../../app/themes/Peafowl/views/album.php:79
+msgid "Social networks"
+msgstr "Social media"
+
+#: ../../../app/routes/route.dashboard.php:243
+msgid "External services"
+msgstr "Externe services"
+
+#: ../../../app/routes/route.dashboard.php:244
+msgid "IP bans"
+msgstr "IP bans"
+
+#: ../../../app/routes/route.dashboard.php:246
+msgid "Additional settings"
+msgstr "Extra instellingen"
+
+#: ../../../app/routes/route.dashboard.php:247
+msgid "Tools"
+msgstr "Gereedschappen"
+
+#: ../../../app/routes/route.dashboard.php:278
+msgid "Local"
+msgstr "Lokaal"
+
+#: ../../../app/routes/route.dashboard.php:282
+msgid "External"
+msgstr "Extern"
+
+#: ../../../app/routes/route.dashboard.php:287
+#: ../../../app/themes/Peafowl/header.php:178
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:37
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:62
+msgid "All"
+msgstr "Alles"
+
+#: ../../../app/routes/route.dashboard.php:292
+#: ../../../app/routes/route.image.php:149
+#: ../../../app/themes/Peafowl/views/dashboard.php:1710
+msgid "search content"
+msgstr "Zoek inhoud"
+
+#: ../../../app/routes/route.dashboard.php:306
+#: ../../../app/themes/Peafowl/views/dashboard.php:201
+msgid "Add page"
+msgstr "Pagina toevoegen"
+
+#: ../../../app/routes/route.dashboard.php:325
+#, php-format
+msgid "Edit page ID %s"
+msgstr "Wijzig paginanummer %s"
+
+#: ../../../app/routes/route.dashboard.php:330
+msgid "The page has been added successfully."
+msgstr "De pagina is succesvol toegevoegd."
+
+#: ../../../app/routes/route.dashboard.php:360
+msgid "The page has been deleted."
+msgstr "De pagina is verwijderd."
+
+#: ../../../app/routes/route.dashboard.php:376
+msgid "Before cover (homepage)"
+msgstr "Voor omslagartikel (hoofdpagina)"
+
+#: ../../../app/routes/route.dashboard.php:379
+msgid "After cover (homepage)"
+msgstr "Achter omslagartikel (hoofdpagina)"
+
+#: ../../../app/routes/route.dashboard.php:382
+msgid "After listing (homepage)"
+msgstr "Voor afbeeldinglijst (hoofdpagina)"
+
+#: ../../../app/routes/route.dashboard.php:390
+msgid "Before pagination"
+msgstr "Voor paginanummering"
+
+#: ../../../app/routes/route.dashboard.php:393
+msgid "After pagination"
+msgstr "Na paginanummering"
+
+#: ../../../app/routes/route.dashboard.php:398
+msgid "Content (image and album)"
+msgstr "Inhoud (afbeelding en album)"
+
+#: ../../../app/routes/route.dashboard.php:401
+msgid "Tab about column"
+msgstr "Tab over kolom"
+
+#: ../../../app/routes/route.dashboard.php:404
+msgid "Before comments"
+msgstr "Voor opmerkingen"
+
+#: ../../../app/routes/route.dashboard.php:409
+msgid "Image page"
+msgstr "Weergavepagina afbeelding"
+
+#: ../../../app/routes/route.dashboard.php:412
+msgid "Inside viewer top (image page)"
+msgstr "Vanboven in de afbeelding viewer (weergavepagina afbeelding)"
+
+#: ../../../app/routes/route.dashboard.php:413
+#: ../../../app/routes/route.dashboard.php:417
+msgid "Expected banner size 728x90"
+msgstr "Verwachte afmetingen banner: 728x90"
+
+#: ../../../app/routes/route.dashboard.php:416
+msgid "Inside viewer foot (image page)"
+msgstr "Vanonder in de afbeelding viewer (weergavepagina afbeelding)"
+
+#: ../../../app/routes/route.dashboard.php:420
+msgid "After image viewer (image page)"
+msgstr "Achter de afbeelding  (weergavepagina afbeelding)"
+
+#: ../../../app/routes/route.dashboard.php:423
+msgid "Before header (image page)"
+msgstr "Voor de header(afbeeldings pagina)"
+
+#: ../../../app/routes/route.dashboard.php:426
+msgid "After header (image page)"
+msgstr "Achter de header (weergavepagina afbeelding)"
+
+#: ../../../app/routes/route.dashboard.php:429
+msgid "Footer (image page)"
+msgstr "Footer (weergavepagina afbeelding)"
+
+#: ../../../app/routes/route.dashboard.php:434
+msgid "Album page"
+msgstr "Album pagina"
+
+#: ../../../app/routes/route.dashboard.php:437
+msgid "Before header (album page)"
+msgstr "Voor header (Album pagina)"
+
+#: ../../../app/routes/route.dashboard.php:440
+msgid "After header (album page)"
+msgstr "Achter de header (Album pagina)"
+
+#: ../../../app/routes/route.dashboard.php:445
+msgid "User profile page"
+msgstr "Profielpagina"
+
+#: ../../../app/routes/route.dashboard.php:448
+msgid "After top (user profile)"
+msgstr "Achter bovenzijde (profiel)"
+
+#: ../../../app/routes/route.dashboard.php:451
+msgid "Before listing (user profile)"
+msgstr "Achter afbeeldinglijst (hoofdpagina)"
+
+#: ../../../app/routes/route.dashboard.php:456
+msgid "Explore page"
+msgstr "Verkenningspagina"
+
+#: ../../../app/routes/route.dashboard.php:459
+msgid "After top (explore page)"
+msgstr "Achter bovenzijde (verkenning pagina)"
+
+#: ../../../app/routes/route.dashboard.php:468
+msgid "NSFW"
+msgstr "NSFW"
+
+#: ../../../app/routes/route.dashboard.php:557
+msgid "Invalid website name"
+msgstr "Ongeldige websitenaam"
+
+#: ../../../app/routes/route.dashboard.php:562
+msgid "Invalid language"
+msgstr "Ongeldige taal"
+
+#: ../../../app/routes/route.dashboard.php:567
+msgid "Invalid timezone"
+msgstr "Ongeldige tijdzone"
+
+#: ../../../app/routes/route.dashboard.php:572
+#: ../../../app/routes/route.dashboard.php:617
+#: ../../../app/routes/route.dashboard.php:794
+#: ../../../app/routes/route.dashboard.php:940
+msgid "Invalid value"
+msgstr "Ongeldige waarde"
+
+#: ../../../app/routes/route.dashboard.php:577
+msgid "Invalid upload storage mode"
+msgstr "Ongeldige opslagmodus"
+
+#: ../../../app/routes/route.dashboard.php:582
+msgid "Invalid upload filenaming"
+msgstr "Ongeldige bestandsnaam"
+
+#: ../../../app/routes/route.dashboard.php:587
+msgid "Invalid thumb width"
+msgstr "Ongeldige thumbnailbreedte"
+
+#: ../../../app/routes/route.dashboard.php:592
+msgid "Invalid thumb height"
+msgstr "Ongeldige thumbnailhoogte"
+
+#: ../../../app/routes/route.dashboard.php:597
+msgid "Invalid medium width"
+msgstr "Ongeldige breedte"
+
+#: ../../../app/routes/route.dashboard.php:602
+msgid "Invalid watermark percentage"
+msgstr "Ongeldig watermerk percentage"
+
+#: ../../../app/routes/route.dashboard.php:607
+msgid "Invalid watermark opacity"
+msgstr "Ongeldige transparantie watermerk."
+
+#: ../../../app/routes/route.dashboard.php:612
+msgid "Invalid theme"
+msgstr "Ongeldig thema"
+
+#: ../../../app/routes/route.dashboard.php:622
+msgid "Invalid theme tone"
+msgstr "Ongeldige thema toonzetting"
+
+#: ../../../app/routes/route.dashboard.php:627
+msgid "Invalid theme main color"
+msgstr "Ongeldige hoofdkleur thema"
+
+#: ../../../app/routes/route.dashboard.php:632
+msgid "Invalid theme top bar color"
+msgstr "Ongeldige topbalk thema kleur"
+
+#: ../../../app/routes/route.dashboard.php:637
+msgid "Invalid theme top bar button color"
+msgstr "Ongeldige topbalk knop kleur"
+
+#: ../../../app/routes/route.dashboard.php:642
+msgid "Invalid theme image listing size"
+msgstr "Ongeldige thema afbeelding lijstgrootte"
+
+#: ../../../app/routes/route.dashboard.php:647
+msgid "Invalid user id"
+msgstr "Ongeldige gebruikers-ID"
+
+#: ../../../app/routes/route.dashboard.php:652
+msgid "Invalid email mode"
+msgstr "Ongeldige e-mailinstellingen"
+
+#: ../../../app/routes/route.dashboard.php:657
+msgid "Invalid SMTP port"
+msgstr "Ongeldige SMTP-poort"
+
+#: ../../../app/routes/route.dashboard.php:662
+msgid "Invalid SMTP security"
+msgstr "Ongeldige SMTP-beveiliging"
+
+#: ../../../app/routes/route.dashboard.php:672
+#: ../../../app/routes/route.dashboard.php:838
+msgid "Invalid personal mode user ID"
+msgstr "Ongeldige user ID persoonlijke mode"
+
+#: ../../../app/routes/route.dashboard.php:677
+msgid "Invalid or reserved route"
+msgstr "Ongeldige of gereserveerde route"
+
+#: ../../../app/routes/route.dashboard.php:682
+msgid "Invalid website privacy mode"
+msgstr "Ongeldige website privé mode"
+
+#: ../../../app/routes/route.dashboard.php:687
+msgid "Invalid website content privacy mode"
+msgstr "Ongeldige privacy-instelling"
+
+#: ../../../app/routes/route.dashboard.php:692
+msgid "Invalid homepage style"
+msgstr "Ongeldige homepage stijl"
+
+#: ../../../app/routes/route.dashboard.php:697
+msgid "Invalid homepage call to action button color"
+msgstr "Ongeldige kleur homepagina call to action button"
+
+#: ../../../app/routes/route.dashboard.php:708
+msgid "Invalid title"
+msgstr "Ongeldige titel"
+
+#: ../../../app/routes/route.dashboard.php:713
+msgid "Invalid status"
+msgstr "Ongeldige status"
+
+#: ../../../app/routes/route.dashboard.php:718
+msgid "Invalid type"
+msgstr "Ongeldig type"
+
+#: ../../../app/routes/route.dashboard.php:723
+msgid "Invalid visibility"
+msgstr "Ongeldige zichtbaarheid"
+
+#: ../../../app/routes/route.dashboard.php:738
+msgid "Invalid icon"
+msgstr "Ongeldig icoon"
+
+#: ../../../app/routes/route.dashboard.php:743
+msgid "Invalid URL key"
+msgstr "Ongeldige URL sleutel"
+
+#: ../../../app/routes/route.dashboard.php:748
+msgid "Invalid file path"
+msgstr "Ongeldig bestandspad"
+
+#: ../../../app/routes/route.dashboard.php:753
+msgid "Invalid link URL"
+msgstr "Ongeldige link URL"
+
+#: ../../../app/routes/route.dashboard.php:769
+msgid "Invalid upload image path"
+msgstr "Ongeldig uploadpad voor afbeeldingen"
+
+#: ../../../app/routes/route.dashboard.php:783
+msgid "Invalid call to action URL"
+msgstr "Ongeldige call to action URL"
+
+#: ../../../app/routes/route.dashboard.php:797
+#, php-format
+msgid "Max. allowed %s"
+msgstr "Maximum toegestaan: %s"
+
+#: ../../../app/routes/route.dashboard.php:860
+msgid "Invalid SMTP server"
+msgstr "Ongeldige SMTP-server"
+
+#: ../../../app/routes/route.dashboard.php:861
+msgid "Invalid SMTP username"
+msgstr "Ongeldige SMTP-gebruikernaam"
+
+#: ../../../app/routes/route.dashboard.php:922
+msgid "Invalid URL"
+msgstr "Ongeldige URL"
+
+#: ../../../app/routes/route.dashboard.php:960
+#, php-format
+msgid "This URL key is already being used by another page (ID %s)"
+msgstr "Deze URL sleutel is al in gebruik door een andere pagina (ID %s)"
+
+#: ../../../app/routes/route.dashboard.php:961
+#, php-format
+msgid "This file path is already being used by another page (ID %s)"
+msgstr "Dit bestandspad is alreeds in gebruik door andere pagina (ID %s)"
+
+#: ../../../app/routes/route.dashboard.php:992
+#, php-format
+msgid "Can't save page contents: %s."
+msgstr "Kan pagina inhoud niet opslaan: %s."
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "Oudste"
+
+#: ../../../app/routes/route.dashboard.php:1163
+msgid "Top users"
+msgstr "Beste gebruikers"
+
+#: ../../../app/routes/route.dashboard.php:1223
+#: ../../../app/themes/Peafowl/header.php:407
+#: ../../../app/themes/Peafowl/views/dashboard.php:9
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: ../../../app/routes/route.explore.php:89
+#: ../../../app/themes/Peafowl/header.php:188
+#: ../../../app/themes/Peafowl/header.php:206
+#: ../../../app/themes/Peafowl/views/dashboard.php:305
+#: ../../../app/themes/Peafowl/views/explore.php:9
+msgid "Explore"
+msgstr "Verkennen"
+
+#: ../../../app/routes/route.following.php:73
+#: ../../../app/routes/route.user.php:104
+#: ../../../app/themes/Peafowl/views/following.php:7
+#: ../../../app/themes/Peafowl/views/user.php:74
+#: ../../../app/themes/Peafowl/views/user.php:80
+msgid "Following"
+msgstr "Volgend"
+
+#: ../../../app/routes/route.image.php:120
+#: ../../../app/themes/Peafowl/header.php:424
+msgid "About"
+msgstr "Over"
+
+#: ../../../app/routes/route.image.php:127
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
+msgid "Embed codes"
+msgstr "Insluitcodes"
+
+#: ../../../app/routes/route.image.php:144
+msgid "Image ID"
+msgstr "Afbeelding ID"
+
+#: ../../../app/routes/route.image.php:148
+msgid "Uploader IP"
+msgstr "Uploader IP"
+
+#: ../../../app/routes/route.image.php:149
+msgid "Ban IP"
+msgstr "Blokkeer IP"
+
+#: ../../../app/routes/route.image.php:149
+msgid "IP already banned"
+msgstr "IP reeds geblokkeerd."
+
+#: ../../../app/routes/route.image.php:152
+msgid "Upload date"
+msgstr "Upload datum"
+
+#: ../../../app/routes/route.image.php:177
+#, php-format
+msgid "%s images"
+msgstr "%s plaatjes"
+
+#: ../../../app/routes/route.image.php:185
+msgid "Image %i in %a album"
+msgstr "Afbeelding %i in %a album"
+
+#: ../../../app/routes/route.image.php:187
+msgid "Image %i in %c category"
+msgstr "Afbeelding %i in %c categorie"
+
+#: ../../../app/routes/route.image.php:189
+msgid "Image %i hosted in %w"
+msgstr "Afbeelding %i gehost in %w"
+
+#: ../../../app/routes/route.json.php:44 ../../../app/routes/route.json.php:59
+#: ../../../app/routes/route.json.php:260
+#: ../../../app/routes/route.json.php:746
+#: ../../../app/routes/route.json.php:810
+#: ../../../app/routes/route.json.php:911
+#: ../../../app/routes/route.json.php:1055
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:4
+msgid "Login needed"
+msgstr "Inloggen vereist"
+
+#: ../../../app/routes/route.json.php:499
+#: ../../../app/routes/route.json.php:690
+msgid "IP address already banned"
+msgstr "IP adres is reeds geblokkeerd."
+
+#: ../../../app/routes/route.json.php:568
+#: ../../../app/routes/route.json.php:630
+msgid "Missing values"
+msgstr "Ontbrekende waarden"
+
+#: ../../../app/routes/route.json.php:589
+msgid "Invalid role"
+msgstr "Ongeldige rol"
+
+#: ../../../app/routes/route.json.php:594
+msgid "Username already being used"
+msgstr "Gebruikersnaam is al in gebruik"
+
+#: ../../../app/routes/route.json.php:1092
+#, php-format
+msgid "%s has been disconnected."
+msgstr "%s is verbroken."
+
+#: ../../../app/routes/route.json.php:1109
+msgid "Test email from %s @ %t"
+msgstr "Test email van %s @ %t"
+
+#: ../../../app/routes/route.json.php:1109
+msgid "This is just a test"
+msgstr "Dit is slechts een test"
+
+#: ../../../app/routes/route.json.php:1110
+#, php-format
+msgid "Test email sent to %s."
+msgstr "Test email verzonden naar %s."
+
+#: ../../../app/routes/route.login.php:133
+msgid "Wrong Username/Email password combination"
+msgstr "Verkeerde inloggegevens"
+
+#: ../../../app/routes/route.login.php:148
+#: ../../../app/themes/Peafowl/header.php:269
+#: ../../../app/themes/Peafowl/header.php:275
+#: ../../../app/themes/Peafowl/views/login.php:8
+#: ../../../app/themes/Peafowl/views/login.php:52
+msgid "Sign in"
+msgstr "Inloggen"
+
+#: ../../../app/routes/route.logout.php:29
+#: ../../../app/themes/Peafowl/views/logout.php:8
+msgid "Logged out"
+msgstr "Uitgelogd "
+
+#: ../../../app/routes/route.page.php:61
+#: ../../../content/pages/default/contact.php:7
+msgid "General questions/comments"
+msgstr "Algemene vragen en opmerkingen"
+
+#: ../../../app/routes/route.page.php:62
+#: ../../../content/pages/default/contact.php:8
+msgid "DMCA complaint"
+msgstr "DMCA klacht"
+
+#: ../../../app/routes/route.page.php:71
+#: ../../../app/routes/route.settings.php:302
+#: ../../../content/pages/default/contact.php:19
+msgid "Invalid name"
+msgstr "Ongeldige naam"
+
+#: ../../../app/routes/route.page.php:74
+#: ../../../content/pages/default/contact.php:22
+msgid "Invalid message"
+msgstr "Ongeldig bericht"
+
+#: ../../../app/routes/route.page.php:77
+#: ../../../content/pages/default/contact.php:25
+msgid "Invalid subject"
+msgstr "Ongeldig onderwerp"
+
+#: ../../../app/routes/route.page.php:85
+#: ../../../content/pages/default/contact.php:33
+msgid "Invalid reCAPTCHA"
+msgstr "Ongeldige reCAPTCHA"
+
+#: ../../../app/routes/route.page.php:90
+#, php-format
+msgid "Can't submit the form: %s"
+msgstr "Kan het formulier niet verzenden: %s"
+
+#: ../../../app/routes/route.page.php:119
+msgid "Message sent. We will get in contact soon."
+msgstr "Bericht verzonden. We nemen zo spoedig mogelijk contact op."
+
+#: ../../../app/routes/route.page.php:122
+#: ../../../content/pages/default/contact.php:69
+msgid "Mail error"
+msgstr "Mail fout"
+
+#: ../../../app/routes/route.search.php:120
+#, php-format
+msgid "Image search results for %s"
+msgstr "Zoekresultaten afbeelding voor %s"
+
+#: ../../../app/routes/route.search.php:123
+#, php-format
+msgid "Album search results for %s"
+msgstr "Zoekresultaten album voor  %s"
+
+#: ../../../app/routes/route.search.php:126
+#, php-format
+msgid "User search results for %s"
+msgstr "Zoekresultaten gebruiker voor %s"
+
+#: ../../../app/routes/route.search.php:130
+#: ../../../app/themes/Peafowl/header.php:215
+#: ../../../app/themes/Peafowl/header.php:220
+#: ../../../app/themes/Peafowl/views/dashboard.php:295
+msgid "Search"
+msgstr "Zoeken"
+
+#: ../../../app/routes/route.settings.php:62
+msgid "Account"
+msgstr "Account"
+
+#: ../../../app/routes/route.settings.php:63
+msgid "Profile"
+msgstr "Profiel"
+
+#: ../../../app/routes/route.settings.php:64
+#: ../../../app/themes/Peafowl/header.php:292
+#: ../../../app/themes/Peafowl/header.php:340
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:92
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:93
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:126
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:104
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/login.php:39
+#: ../../../app/themes/Peafowl/views/settings.php:322
+#: ../../../app/themes/Peafowl/views/signup.php:49
+#: ../../../app/themes/Peafowl/views/signup.php:50
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: ../../../app/routes/route.settings.php:65
+msgid "Linked accounts"
+msgstr "Gekoppelde accounts"
+
+#: ../../../app/routes/route.settings.php:191
+msgid "Invalid image expiration"
+msgstr "Ongeldige vervaltermijn foto"
+
+#: ../../../app/routes/route.settings.php:269
+#, php-format
+msgid "An email has been sent to %s with instructions to activate this email"
+msgstr "Een e-mail is verzonden naar %s met instructies om dit e-mailadres te activeren."
+
+#: ../../../app/routes/route.settings.php:305
+msgid "Invalid website"
+msgstr "Ongeldige website"
+
+#: ../../../app/routes/route.settings.php:313
+msgid "Wrong password"
+msgstr "Verkeerd wachtwoord"
+
+#: ../../../app/routes/route.settings.php:316
+msgid "Use a new password"
+msgstr "Gebruik een nieuw wachtwoord"
+
+#: ../../../app/routes/route.settings.php:416
+#: ../../../app/themes/Peafowl/views/dashboard.php:2067
+#: ../../../app/themes/Peafowl/views/settings.php:477
+msgid "Changes have been saved."
+msgstr "Wijziging is opgeslagen"
+
+#: ../../../app/routes/route.settings.php:435
+msgid "Password has been changed"
+msgstr "Wachtwoord is gewijzigd"
+
+#: ../../../app/routes/route.settings.php:440
+msgid "Password has been created."
+msgstr "Wachtwoord is aangemaakt."
+
+#: ../../../app/routes/route.settings.php:455
+msgid "Wrong Username/Email values"
+msgstr "Verkeerde inloggegevens"
+
+#: ../../../app/routes/route.settings.php:498
+#, php-format
+msgid "Settings for %s"
+msgstr "Instellingen voor %s"
+
+#: ../../../app/routes/route.signup.php:251
+#: ../../../app/themes/Peafowl/header.php:316
+#: ../../../app/themes/Peafowl/header.php:322
+#: ../../../app/themes/Peafowl/views/index.php:81
+#: ../../../app/themes/Peafowl/views/signup.php:8
+#: ../../../app/themes/Peafowl/views/signup.php:63
+msgid "Create account"
+msgstr "Maak een account"
+
+#: ../../../app/routes/route.user.php:84
+#: ../../../app/themes/Peafowl/header.php:56
+#: ../../../app/themes/Peafowl/views/index.php:46
+#, php-format
+msgid "%s's Images"
+msgstr "%s's Afbeeldingen"
+
+#: ../../../app/routes/route.user.php:89
+#: ../../../app/themes/Peafowl/header.php:56
+#, php-format
+msgid "%s's Albums"
+msgstr "%s's albums"
+
+#: ../../../app/routes/route.user.php:94
+#, php-format
+msgid "Liked by %s"
+msgstr "Geliked door %s"
+
+#: ../../../app/routes/route.user.php:95
+#: ../../../app/themes/Peafowl/header.php:404
+msgid "Liked"
+msgstr "Liked"
+
+#: ../../../app/routes/route.user.php:99
+#: ../../../app/themes/Peafowl/views/search.php:8
+msgid "Results for"
+msgstr "Resultaten voor"
+
+#: ../../../app/routes/route.user.php:109
+msgid "Followers"
+msgstr "Volgers"
+
+#: ../../../app/routes/route.user.php:379
+msgid "%n (%u) albums on %w"
+msgstr "%n (%u) albums in %w"
+
+#: ../../../app/routes/route.user.php:384
+msgid "%n (%u) on %w"
+msgstr "%n (%u) in %w"
+
+#: ../../../app/themes/Peafowl/header.php:222
+msgid "Close"
+msgstr "Sluiten"
+
+#: ../../../app/themes/Peafowl/header.php:222
+#: ../../../app/themes/Peafowl/header.php:226
+msgid "Advanced search"
+msgstr "Geavanceerd zoeken"
+
+#: ../../../app/themes/Peafowl/header.php:233
+#: ../../../app/themes/Peafowl/views/dashboard.php:315
+#: ../../../app/themes/Peafowl/views/dashboard.php:713
+msgid "Random"
+msgstr "Willekeurig"
+
+#: ../../../app/themes/Peafowl/header.php:243
+#, php-format
+msgid "Notices (%s)"
+msgstr "Mededelingen (%s)"
+
+#: ../../../app/themes/Peafowl/header.php:258
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Upload"
+msgstr "Upload"
+
+#: ../../../app/themes/Peafowl/header.php:281
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
+#: ../../../app/themes/Peafowl/views/login.php:18
+#: ../../../app/themes/Peafowl/views/login.php:65
+#: ../../../app/themes/Peafowl/views/signup.php:18
+#: ../../../app/themes/Peafowl/views/signup.php:76
+msgid "Sign in with another account"
+msgstr "Met een ander account inloggen"
+
+#: ../../../app/themes/Peafowl/header.php:285
+#: ../../../app/themes/Peafowl/header.php:332
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/form_album.php:9
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/login.php:22
+#: ../../../app/themes/Peafowl/views/login.php:62
+#: ../../../app/themes/Peafowl/views/settings.php:354
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../app/themes/Peafowl/views/signup.php:22
+#: ../../../app/themes/Peafowl/views/signup.php:73
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
+#: ../../../lib/Peafowl/peafowl.min.js:31
+#: ../../../lib/Peafowl/peafowl.min.js:140
+msgid "or"
+msgstr "of"
+
+#: ../../../app/themes/Peafowl/header.php:291
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
+#: ../../../app/themes/Peafowl/views/login.php:34
+#: ../../../app/themes/Peafowl/views/login.php:35
+msgid "Username or Email address"
+msgstr "Gebruikersnaam of e-mailadres"
+
+#: ../../../app/themes/Peafowl/header.php:294
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:23
+#: ../../../app/themes/Peafowl/views/login.php:53
+msgid "Keep me logged in"
+msgstr "Onthoud mijn gegevens"
+
+#: ../../../app/themes/Peafowl/header.php:301
+#, php-format
+msgid "Don't have an account? <a href='%s'>Sign up</a> now."
+msgstr "Nog geen account? <a href='%s'>Registreer</a> nu."
+
+#: ../../../app/themes/Peafowl/header.php:328
+msgid "Sign up with another account"
+msgstr "Met een ander account inloggen"
+
+#: ../../../app/themes/Peafowl/header.php:338
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:100
+#: ../../../app/themes/Peafowl/views/settings.php:155
+#: ../../../app/themes/Peafowl/views/signup.php:34
+#: ../../../app/themes/Peafowl/views/signup.php:35
+#: ../../../content/pages/default/contact.php:92
+msgid "Email address"
+msgstr "E-mailadres"
+
+#: ../../../app/themes/Peafowl/header.php:339
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
+#: ../../../app/themes/Peafowl/views/dashboard.php:94
+#: ../../../app/themes/Peafowl/views/dashboard.php:95
+#: ../../../app/themes/Peafowl/views/settings.php:143
+#: ../../../app/themes/Peafowl/views/settings.php:144
+#: ../../../app/themes/Peafowl/views/signup.php:39
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+#: ../../../app/themes/Peafowl/header.php:341
+#: ../../../app/themes/Peafowl/views/signup.php:65
+#, php-format
+msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
+msgstr "Door te registreren gaat u akkoord met onze <a href=\"%s\">Algemene voorwaarden</a>"
+
+#: ../../../app/themes/Peafowl/header.php:362
+msgid "Notifications"
+msgstr "Berichten"
+
+#: ../../../app/themes/Peafowl/header.php:381
+#: ../../../app/themes/Peafowl/views/settings.php:348
+#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
+msgid "loading"
+msgstr "laden"
+
+#: ../../../app/themes/Peafowl/header.php:384
+msgid "You don't have notifications"
+msgstr "Je hebt geen berichten"
+
+#: ../../../app/themes/Peafowl/header.php:402
+msgid "My Profile"
+msgstr "Mijn profiel"
+
+#: ../../../app/themes/Peafowl/header.php:409
+msgid "Sign out"
+msgstr "Log uit"
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:4
+msgid "We received a request to change the email of your <a href=\"%u\">%n</a> account at %w."
+msgstr "Wij hebben een aanvraag ontvangen om het volgende e-mailadres <a href=\"%u\">%n</a> te wijzigen op %w."
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:6
+#, php-format
+msgid "To complete the process you must <a href=\"%s\">activate your email</a>."
+msgstr "Om uw e-mailadres te activeren klikt u op <a href=\"%s\">deze link</a>."
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:8
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:8
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:8
+#, php-format
+msgid "Alternatively you can copy and paste the URL into your browser: <a href=\"%s\">%s</a>"
+msgstr "U kunt ook deze link in uw adresbalk plakken: <a href=\"%s\">%s</a>"
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:10
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:10
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:10
+msgid "If you didn't intend this just ignore this message."
+msgstr "Heeft u niet om dit bericht gevraagd dan kun je deze negeren."
+
+#: ../../../app/themes/Peafowl/mails/account-change-email.php:12
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:12
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:12
+#, php-format
+msgid "This request was made from IP: %s"
+msgstr "Deze aanvraag is gemaakt vanaf IP adres: %s"
+
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:4
+msgid "We received a request to register the %n account at %w."
+msgstr "Wij hebben een aanvraag ontvangen om het account %n te registreren op %w."
+
+#: ../../../app/themes/Peafowl/mails/account-confirm.php:6
+#, php-format
+msgid "To complete the process you must <a href=\"%s\">activate your account</a>."
+msgstr "Om uw account te activeren klikt u op <a href=\"%s\">deze link</a>."
+
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:4
+msgid "We received a request to reset the password for your <a href=\"%u\">%n</a> account."
+msgstr "Wij hebben een aanvraag ontvangen om het wachtwoord <a href=\"%u\">%n</a> te wijzigen."
+
+#: ../../../app/themes/Peafowl/mails/account-password-reset.php:6
+#, php-format
+msgid "To reset your password <a href=\"%s\">follow this link</a>."
+msgstr "Om uw wachtwoord te wijzigen <a href=\"%s\">volgt u deze link</a>."
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:4
+msgid "Hi %n, welcome to %w"
+msgstr "Hallo %n, welkom bij %w"
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:6
+msgid "Now that your account is ready you can enjoy uploading your images, creating albums and setting the privacy of your content as well as many more cool things that you will discover."
+msgstr "Nu dat je account klaar is, kun je foto's gaan uploaden, albums aanmaken , krijg je de mogelijkheid om de privacy-instellingen te kiezen voor je foto's en kun je verder nog veel meer leuke dingen gaan ontdekken."
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:8
+msgid "By the way, here is you very own awesome profile page: <a href=\"%u\">%n</a>. Go ahead and customize it, its yours!."
+msgstr "Hier is jouw eigen profiel: <a href=\"%u\">%n</a>. Ga nu snel aan de slag en maak deze meer persoonlijk."
+
+#: ../../../app/themes/Peafowl/mails/account-welcome.php:10
+msgid "Thank you for joining"
+msgstr "Bedankt voor het registreren"
+
+#: ../../../app/themes/Peafowl/mails/footer.php:3
+msgid "This email was sent from %w %u"
+msgstr "Deze e-mail is verzonden van %w %u"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:14
+msgid "Select the images to upload"
+msgstr "Selecteer afbeeldingen om te uploaden"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:15
+msgid "You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
+msgstr "U kunt ook <a data-trigger=\"anywhere-upload-input\">bladeren van uw computer</a> of <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">URL's toevoegen</a>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:20
+msgid "Edit or resize an image by clicking the image preview"
+msgstr "Wijzig een foto of verander de grootte middels klikken op het voorbeeld"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
+msgid "Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>"
+msgstr "<span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">afbeeldingen</span> uploaden"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
+msgid "complete"
+msgstr "afgerond"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:28
+msgid "The queue is being uploaded. It will take just a few seconds to complete."
+msgstr "De wachtrij is geüpload. Het duurt nog slechts enkele seconden om het uploaden te voltooien."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:32
+msgid "Upload complete"
+msgstr "Upload voltooid"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:34
+#, php-format
+msgid "Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album."
+msgstr "Afbeeldingen toegevoegd aan <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">uw persoonlijk overzicht</a>. U kunt <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">een album maken met deze afbeeldingen</a> of <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">deze <span data-text=\"queue-objects\">afbeeldingen</span> verplaatsen naar een bestaand album</a>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:35
+msgid "You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account."
+msgstr "U kunt <a href=\"%s\">een account aanmaken</a> of <a href=\"%l\">inloggen</a> om toekomstige uploads op te slaan in uw account."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:40
+msgid "No <span data-text=\"queue-objects\">images</span> have been uploaded"
+msgstr "Er zijn geen <span data-text=\"queue-objects\">afbeeldingen</span> geüpload"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:41
+msgid "Some errors have occured and the system couldn't process your request."
+msgstr "Er zijn een aantal fouten gebeurd waardoor uw aanvraag niet verwerkt kon worden."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:61
+msgid "Select category"
+msgstr "Selecteer categorie"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Change upload privacy"
+msgstr "Wijzig privacy-instellingen"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "annuleren"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:77
+msgid "Mark this if the upload is not family safe"
+msgstr "Markeer dit wanneer de inhoud onveilige inhoud bevat (NSFW)"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:77
+msgid "Not family safe upload"
+msgstr "Onveilige (NSFW) upload"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+msgid "Uploading"
+msgstr "Uploaden"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
+msgid "cancel remaining"
+msgstr "annuleer resterende"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:85
+msgid "Note: Some images couldn't be uploaded."
+msgstr "Opmerking: bepaalde afbeeldingen kunnen niet geüpload worden."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:85
+msgid "learn more"
+msgstr "Meer informatie"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:86
+msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
+msgstr "Zie het <a data-modal=\"simple\" data-target=\"failed-upload-result\">foutrapport</a> voor meer informatie!"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:89
+msgid "max"
+msgstr "max"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:91
+msgid "close"
+msgstr "sluiten"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
+msgid "Edit"
+msgstr "Bewerken"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:148
+#: ../../../app/themes/Peafowl/views/dashboard.php:666
+msgid "Remove"
+msgstr "Verwijder"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:154
+msgid "Edit image"
+msgstr "Wijzig foto"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
+#: ../../../app/themes/Peafowl/snippets/form_image.php:4
+#: ../../../app/themes/Peafowl/views/dashboard.php:441
+#: ../../../app/themes/Peafowl/views/dashboard.php:597
+#: ../../../app/themes/Peafowl/views/dashboard.php:1440
+#: ../../../app/themes/Peafowl/views/settings.php:434
+msgid "Title"
+msgstr "Titel"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:200
+#: ../../../app/themes/Peafowl/snippets/form_album.php:12
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:12
+#: ../../../app/themes/Peafowl/snippets/form_image.php:4
+#: ../../../app/themes/Peafowl/snippets/form_image.php:28
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:15
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:104
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:108
+#: ../../../app/themes/Peafowl/views/dashboard.php:503
+#: ../../../app/themes/Peafowl/views/dashboard.php:509
+#: ../../../app/themes/Peafowl/views/dashboard.php:566
+#: ../../../app/themes/Peafowl/views/dashboard.php:573
+#: ../../../app/themes/Peafowl/views/dashboard.php:580
+#: ../../../app/themes/Peafowl/views/dashboard.php:1418
+#: ../../../app/themes/Peafowl/views/dashboard.php:1428
+msgid "optional"
+msgstr "optioneel"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:167
+msgid "Resize image"
+msgstr "Verander grootte foto"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:170
+#: ../../../app/themes/Peafowl/views/dashboard.php:725
+#: ../../../app/themes/Peafowl/views/dashboard.php:738
+#: ../../../app/themes/Peafowl/views/dashboard.php:798
+msgid "Width"
+msgstr "Breedte"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:173
+#: ../../../app/themes/Peafowl/views/dashboard.php:728
+#: ../../../app/themes/Peafowl/views/dashboard.php:801
+msgid "Height"
+msgstr "Hoogte"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:176
+msgid "Note: Animated GIF images won't be resized."
+msgstr "Opmerking: bewegende GIF foto's worden niet in grootte gewijzigd."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:180
+msgid "Auto delete image"
+msgstr "Verwijder automatisch foto"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:192
+#: ../../../app/themes/Peafowl/snippets/form_image.php:25
+msgid "Mark this if the image is not family safe"
+msgstr "Markeer dit wanneer de inhoud onveilige inhoud bevat (NSFW)"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:194
+#: ../../../app/themes/Peafowl/snippets/form_image.php:25
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:46
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:8
+msgid "Flag as unsafe"
+msgstr "Markeer als onveilig (NSFW)"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:200
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:12
+#: ../../../app/themes/Peafowl/snippets/form_image.php:28
+#: ../../../app/themes/Peafowl/views/dashboard.php:877
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:201
+#: ../../../app/themes/Peafowl/snippets/form_image.php:29
+msgid "Brief description of this image"
+msgstr "Omschrijving van deze afbeelding"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:206
+msgid "Add image URLs"
+msgstr "Afbeelding-URL's toevoegen"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:208
+msgid "Add the image URLs here"
+msgstr "Voeg hier de afbeelding-URL toe"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:223
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:27
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:31
+msgid "Create album"
+msgstr "Nieuw album"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:224
+msgid "The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
+msgstr "De geüploade inhoud wordt verplaatst naar dit nieuwe album. U kunt ook de inhoud verplaatsen naar een <a class=\"modal-switch\" data-switch=\"move-existing-album\">bestaand album</a>."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:235
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:28
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:46
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:70
+msgid "Move to album"
+msgstr "Verplaats naar album"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:236
+msgid "Select an existing album to move the uploaded content. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the content there."
+msgstr "Selecteer een bestaand album om de geüploade content naar te verplaatsen. U kunt ook <a class=\"modal-switch\" data-switch=\"move-new-album\">een nieuw album maken</a> en de inhoud daarheen verplaatsen."
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:252
+msgid "Error report"
+msgstr "Foutrapport"
+
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
+#: ../../../app/themes/Peafowl/views/user.php:99
+msgid "album"
+msgid_plural "albums"
+msgstr[0] "album"
+msgstr[1] "albums"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
+msgid "Links"
+msgstr "Links"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
+msgid "Viewer links"
+msgstr "Kijker"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:14
+msgid "Direct links"
+msgstr "Directe link"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:21
+msgid "HTML Codes"
+msgstr "HTML-codes"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:24
+msgid "HTML image"
+msgstr "HTML foto"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:29
+msgid "HTML full linked"
+msgstr "Volledige link HTML foto"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:34
+msgid "HTML medium linked"
+msgstr "HTML medium grootte"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:39
+msgid "HTML thumbnail linked"
+msgstr "HTML thumbnail grootte"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:46
+msgid "BBCodes"
+msgstr "BBCodes"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:49
+msgid "BBCode full"
+msgstr "Volledige BB code"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:54
+msgid "BBCode full linked"
+msgstr "Volledige link BB code"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:59
+msgid "BBCode medium linked"
+msgstr "BBCode medium grootte"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:64
+msgid "BBCode thumbnail linked"
+msgstr "BBCode thumbnails"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:6
+msgid "All these words"
+msgstr "Al deze woorden"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:7
+msgid "Type the important words: tri-colour rat terrier"
+msgstr "Voer de belangrijke woorden in: tri-colour rat terrier"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:10
+msgid "This exact word or phrase"
+msgstr "Precieze woord of zin"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:11
+msgid "Put exact words in quotes: \"rat terrier\""
+msgstr "Type dezelfde woorden in tussen aanhalingstekens: \"rat terrier\""
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:20
+msgid "None of these words"
+msgstr "Geen van deze woorden"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:21
+msgid "Put a minus sign just before words you don't want: -rodent -\"Jack Russell\""
+msgstr "Voer een minteken in voor de woorden die je niet wilt: -rodent - Jack Russell\"."
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
+#: ../../../app/themes/Peafowl/snippets/form_category.php:3
+msgid "Category"
+msgstr "Categorie"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:66
+msgid "Storage"
+msgstr "Opslag"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:81
+msgid "Uploader IP address"
+msgstr "Uploader IP adres"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:7
+#: ../../../app/themes/Peafowl/snippets/form_album.php:8
+msgid "Album name"
+msgstr "Album naam"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:9
+msgid "move to existing album"
+msgstr "verplaats naar bestaande album"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:12
+msgid "Album description"
+msgstr "Album omschrijving"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:13
+msgid "Brief description of this album"
+msgstr "Korte omschrijving van dit album"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:18
+msgid "Album Privacy"
+msgstr "Album privacy"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:19
+msgid "Who can view this content"
+msgstr "Wie kan deze inhoud zien?"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:20
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Public"
+msgstr "Publiek"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:21
+msgid "Private (just me)"
+msgstr "Prive (alleen ik)"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:22
+msgid "Private (anyone with the link)"
+msgstr "Privé (iedereen met link)"
+
+#: ../../../app/themes/Peafowl/snippets/form_category.php:9
+msgid "No category"
+msgstr "Geen categorie"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:4
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:3
+#: ../../../app/themes/Peafowl/views/dashboard.php:875
+#: ../../../app/themes/Peafowl/views/dashboard.php:1693
+#: ../../../app/themes/Peafowl/views/settings.php:364
+#: ../../../content/pages/default/contact.php:87
+msgid "Name"
+msgstr "Naam"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:5
+msgid "Category name"
+msgstr "Categorie naam"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:8
+#: ../../../app/themes/Peafowl/views/dashboard.php:486
+#: ../../../app/themes/Peafowl/views/dashboard.php:596
+#: ../../../app/themes/Peafowl/views/dashboard.php:876
+msgid "URL key"
+msgstr "URL sleutel"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:9
+msgid "Category URL key"
+msgstr "Categorie URL sleutel"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:9
+msgid "Only letters, numbers, and hyphens"
+msgstr "Alleen letters, cijfers en koppeltekens"
+
+#: ../../../app/themes/Peafowl/snippets/form_category_edit.php:13
+msgid "Brief description of this category"
+msgstr "Korte omschrijving van deze categorie"
+
+#: ../../../app/themes/Peafowl/snippets/form_image.php:5
+msgid "Untitled image"
+msgstr "Naamloze afbeelding"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:4
+msgid "IP address"
+msgstr "IP adres"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
+msgid "Expiration date"
+msgstr "Vervaldatum"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:10
+msgid "YYYY-MM-DD HH:MM:SS"
+msgstr "YYYY-MM-DD HH:MM:SS"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:10
+msgid "Example"
+msgstr "Voorbeeld"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:12
+msgid "Until which date this IP address will be banned? Leave it empty for no expiration."
+msgstr "Tot welke datum moet dit IP geblokkeerd worden? Leeg laten is oneindig."
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:926
+#: ../../../content/pages/default/contact.php:111
+msgid "Message"
+msgstr "Bericht"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:16
+msgid "Text message, HTML or a redirect URL"
+msgstr "Tekstbericht, HTML of verwijs URL"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+msgid "Existing album"
+msgstr "Bestaand album"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "Album"
+msgstr[1] "Albums"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "privé"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+msgid "create new album"
+msgstr "maak nieuw album"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:4
+msgid "Storage name"
+msgstr "Opslagnaam"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:7
+msgid "API"
+msgstr "API"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:48
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:96
+msgid "Region"
+msgstr "Regio"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:58
+msgid "Storage bucket"
+msgstr "Opslagvoorraad"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:63
+msgid "Key"
+msgstr "Sleutel"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:64
+msgid "Storage key"
+msgstr "Opslagsleutel"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:67
+msgid "Secret"
+msgstr "Geheim"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:68
+msgid "Storage secret"
+msgstr "Opslag secret"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:73
+msgid "Client email"
+msgstr "Klant email"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:74
+msgid "Google Cloud client email"
+msgstr "Google Cloud klant email"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:75
+#, php-format
+msgid "You will need a <a %s>service account</a> for this."
+msgstr "Je hebt hiervoor een <a %s>service abonnement</a> nodig."
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:78
+msgid "Private key"
+msgstr "Privé sleutel"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:79
+msgid "Google Cloud JSON key"
+msgstr "Google Cloud JSON sleutel"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
+msgid "Storage region"
+msgstr "Opslagregio"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:100
+msgid "Container"
+msgstr "Container"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:101
+msgid "Storage container"
+msgstr "Opslagcontainer"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:115
+msgid "Hostname or IP of the storage server"
+msgstr "Hostname of IP van de opslagserver"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
+msgid "Path"
+msgstr "Pad"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
+msgid "Server path"
+msgstr "Serverpad"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
+msgid "Server path where the files will be stored"
+msgstr "Serverpad waar de bestanden worden opgeslagen"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:123
+msgid "Server username"
+msgstr "Server gebruikersnaam"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:127
+msgid "Server password"
+msgstr "Server wachtwoord"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:132
+msgid "Storage capacity"
+msgstr "Opslagcapaciteit"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:133
+msgid "Example: 20 GB, 1 TB, etc."
+msgstr "Voorbeeld: 20 GB, 1 TB, etc."
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:135
+msgid "This storage will be disabled when it reach this capacity. Leave it blank or zero for no limit."
+msgstr "Deze opslag zal worden uitgeschakeld als de capaciteit is bereikt. Laat leeg of vul o (nul) in voor geen limiet."
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:139
+msgid "Storage URL"
+msgstr "Opslag URL"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:140
+msgid "The system will map the images of this storage to this URL."
+msgstr "Het systeem zal de afbeeldingen uit deze opslag spiegelen naar deze URL."
+
+#: ../../../app/themes/Peafowl/snippets/image_album_slice.php:14
+msgid "view more"
+msgstr "bekijk meer"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:22
+#: ../../../app/themes/Peafowl/snippets/templates_content_listing.php:6
+#: ../../../app/themes/Peafowl/snippets/templates_content_listing.php:9
+msgid "Load more"
+msgstr "Laad meer"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:91
+msgid "Previous"
+msgstr "Vorige"
+
+#: ../../../app/themes/Peafowl/snippets/listing.php:98
+msgid "Next"
+msgstr "Volgende"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
+msgid "Select all"
+msgstr "Alles selecteren"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:56
+msgid "Clear selection"
+msgstr "Selectie verwijderen"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:13
+msgid "Selection"
+msgstr "Selectie"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:13
+msgid "Action"
+msgstr "Actie"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:20
+msgid "Get embed codes"
+msgstr "Bekijk codes voor insluiten"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:38
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:85
+msgid "Assign category"
+msgstr "Categorie toewijzen"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:45
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:9
+msgid "Flag as safe"
+msgstr "Markeer als vellig"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:607
+#: ../../../app/themes/Peafowl/views/dashboard.php:884
+#: ../../../app/themes/Peafowl/views/dashboard.php:933
+msgid "Delete"
+msgstr "Verwijder"
+
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:5
+#, php-format
+msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
+msgstr "Om alle functies van deze site te gebruiken moet u ingelogd zijn. Indien u nog geen account heeft, dan kunt u zich <a href=\"%s\">registreren</a>."
+
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:14
+#: ../../../app/themes/Peafowl/views/album.php:74
+#: ../../../app/themes/Peafowl/views/image.php:272
+msgid "Note: This content is private. Change privacy to \"public\" to share."
+msgstr "Let op: deze inhoud is privé. Wijzig de privacy-instellingen naar \" publiek\" om deze te delen met buitenstaanders."
+
+#: ../../../app/themes/Peafowl/snippets/template_content_empty.php:5
+#: ../../../app/themes/Peafowl/views/dashboard.php:618
+#: ../../../app/themes/Peafowl/views/index.php:63
+msgid "There's nothing to show here."
+msgstr "Er is hier niets te zien"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
+#: ../../../app/themes/Peafowl/views/image.php:69
+#: ../../../app/themes/Peafowl/views/image.php:457
+msgid "Edit image details"
+msgstr "Afbeelding bewerken"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
+#: ../../../app/themes/Peafowl/views/album.php:22
+#: ../../../app/themes/Peafowl/views/album.php:118
+msgid "Edit album details"
+msgstr "Album bewerken"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
+msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
+msgstr "Alle afbeeldingen zullen worden verplaatst naar dit nieuwe album. U kunt de afbeeldingen ook verplaatsen naar een <a class=\"modal-switch\" data-switch=\"move-existing-album\">bestaand album</a>."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:50
+msgid "Select an existing album to move the image. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the image there."
+msgstr "Selecteer een bestaand album om de afbeelding naar te verplaatsen. U kunt ook <a class=\"modal-switch\" data-switch=\"move-new-album\">een nieuw album maken</a> en de afbeelding daarheen verplaatsen."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:52
+msgid "Select an existing album to move the album contents. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the album contents there."
+msgstr "Selecteer een bestaand album om de inhoud van dit album naar te verplaatsen. U kunt ook <a class=\"modal-switch\" data-switch=\"move-new-album\">een nieuw album maken</a>."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:71
+msgid "Select an existing album to move the images. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the images there."
+msgstr "Selecteer een bestaand album om de afbeeldingen naar te verplaatsen. U kunt ook <a class=\"modal-switch\" data-switch=\"move-new-album\">een nieuw album maken</a> en de afbeeldingen daarheen verplaatsen."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:87
+msgid "All the selected images will be assigned to this category."
+msgstr "Alle geselecteerde afbeeldingen worden toegewezen aan deze categorie."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:92
+msgid "There is no categories."
+msgstr "Er zijn geen categorieën."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:97
+msgid "Confirm flag content as safe"
+msgstr "Bevestig dat content veilig is"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:98
+msgid "Do you really want to flag this content as safe?"
+msgstr "Weet je zeker dat je deze inhoud als veilig wilt markeren?"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:101
+msgid "Confirm flag content as unsafe"
+msgstr "Bevestig dat deze content onveilig is"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:102
+msgid "Do you really want to flag this content as unsafe?"
+msgstr "Weet je zeker dat je deze inhoud als onveilig wilt markeren?"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:106
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:110
+msgid "Confirm deletion"
+msgstr "Bevestig verwijderen"
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:107
+msgid "Do you really want to remove this content? This can't be undone."
+msgstr "Wilt u deze inhoud echt verwijderen? Dit kan ongedaan gemaakt worden."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:111
+msgid "Do you really want to remove all the selected content? This can't be undone."
+msgstr "Wilt u deze selectie echt verwijderen? Dit kan niet ongedaan gemaakt worden."
+
+#: ../../../app/themes/Peafowl/tpl_list_item/image_description_guest.php:2
+msgid "Uploaded by guest to Public"
+msgstr "Geüpload door een gast naar Publiek"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/image_description_owner.php:2
+#, php-format
+msgid "From %s"
+msgstr "Van %s"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/image_description_user.php:2
+#, php-format
+msgid "by %u"
+msgstr "door %u"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
+#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
+#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
+msgid "Select"
+msgstr "Selecteer"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:7
+msgid "Toggle unsafe flag"
+msgstr "Selecteer onveilig"
+
+#: ../../../app/themes/Peafowl/views/404.php:7
+msgid "The requested page was not found."
+msgstr "De gevraagde pagina is niet gevonden"
+
+#: ../../../app/themes/Peafowl/views/404.php:11
+msgid "Search something else"
+msgstr "Zoek iets anders"
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+msgid "The user has been deleted"
+msgstr "De gebruiker is verwijderd"
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+#: ../../../app/themes/Peafowl/views/album.php:134
+#: ../../../app/themes/Peafowl/views/user.php:171
+#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
+msgid "The content has been deleted."
+msgstr "De inhoud is verwijderd"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:7
+msgid "Your account is almost ready"
+msgstr "Uw account is bijna klaar voor gebruik"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:9
+#, php-format
+msgid "An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "Een e-mail werd verstuurd naar %s met instructies om uw account te activeren. De activatielink is slechts 48 uur geldig. Indien u deze niet heeft ontvangen, controleer dan uw spam-folder."
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/logout.php:13
+#: ../../../app/themes/Peafowl/views/request-denied.php:13
+msgid "Go to homepage"
+msgstr "Naar de hoofdpagina"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+msgid "Resend activation"
+msgstr "Activatie opnieuw verzenden"
+
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:10
+#, php-format
+msgid "You have successfully changed your account email to %s"
+msgstr "U heeft met succes uw e-mailadres aangepast naar %s"
+
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+msgid "Go to my profile"
+msgstr "Naar mijn profiel"
+
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:12
+msgid "A confirmation link will be sent to this email with details to activate your account."
+msgstr "Er wordt een bevestigingslink naar dit e-mailadres gestuurd met de nodige gegevens om uw account te activeren."
+
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:16
+#: ../../../app/themes/Peafowl/views/settings.php:156
+#: ../../../content/pages/default/contact.php:93
+msgid "Your email address"
+msgstr "Uw e-mailadres"
+
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:26
+msgid "Add email"
+msgstr "Email toevoegen"
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
+msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "Een e-mail met instructies om uw wachtwoord te resetten is verstuurd naar het opgegeven e-mailadres. Indien u deze niet heeft ontvangen, controleer dan uw spam-folder."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+msgid "Resend instructions"
+msgstr "Instructies opnieuw verzenden"
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
+msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
+msgstr "Een eerdere e-mail is verstuurd met instructies om uw wachtwoord te resetten. Indien u deze niet heeft ontvangen, controleer dan uw spam-folder."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:32
+msgid "Enter your username or the email address that you used to create your account."
+msgstr "Voer je gebruikersnaam of e-mailadres in."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:52
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:47
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:37
+#: ../../../lib/Peafowl/peafowl.js:417 ../../../lib/Peafowl/peafowl.js:2324
+#: ../../../lib/Peafowl/peafowl.min.js:25
+#: ../../../lib/Peafowl/peafowl.min.js:140
+msgid "Submit"
+msgstr "Versturen"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:15
+msgid "Your password has been changed. You can now try logging in using your new password."
+msgstr "Uw wachtwoord is aangepast. U kunt vanaf nu inloggen met uw nieuw wachtwoord."
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+msgid "Login now"
+msgstr "Nu inloggen"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:22
+msgid "Enter the new password that you want to use."
+msgstr "Voer een nieuw wachtwoord in."
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:28
+msgid "New Password"
+msgstr "Nieuw wachtwoord"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/settings.php:306
+#: ../../../app/themes/Peafowl/views/settings.php:323
+#: ../../../app/themes/Peafowl/views/signup.php:50
+#, php-format
+msgid "%d characters min"
+msgstr "minimaal %d tekens"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/settings.php:306
+msgid "Enter your new password"
+msgstr "Voer een nieuw wachtwoord in"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
+#: ../../../app/themes/Peafowl/views/settings.php:328
+msgid "Confirm password"
+msgstr "Wachtwoord bevestigen"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:35
+#: ../../../app/themes/Peafowl/views/settings.php:312
+msgid "Re-enter your new password"
+msgstr "Wachtwoord nogmaals invoeren"
+
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:12
+#, php-format
+msgid "An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "Een email is verzonden naar %s met instructies om je account te activeren. Mocht je deze instructies niet ontvangen, kijk dan ook in de junk of spammail"
+
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:19
+msgid "Enter the username or email address that you used to create your account to continue."
+msgstr "Voer de gebruikersnaam of het email adres in dat je hebt gebruikt tijdens de registratie, om verder te gaan."
+
+#: ../../../app/themes/Peafowl/views/album.php:16
+#: ../../../app/themes/Peafowl/views/image.php:63
+msgid "This content is private"
+msgstr "Deze inhoud is privé"
+
+#: ../../../app/themes/Peafowl/views/album.php:25
+msgid "Do you really want to delete this album and all of its images? This can't be undone."
+msgstr "Weet u zeker dat u dit album inclusief afbeeldingen wil verwijderen? Dit kan niet ongedaan gemaakt worden."
+
+#: ../../../app/themes/Peafowl/views/album.php:25
+msgid "Delete album"
+msgstr "Verwijder album"
+
+#: ../../../app/themes/Peafowl/views/album.php:86
+msgid "Album link"
+msgstr "Album link"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:22
+msgid "Image"
+msgid_plural "Images"
+msgstr[0] "Afbeelding"
+msgstr[1] "Afbeeldingen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:34
+#: ../../../app/themes/Peafowl/views/dashboard.php:90
+#: ../../../app/themes/Peafowl/views/settings.php:126
+msgid "User"
+msgid_plural "Users"
+msgstr[0] "Gebruiker"
+msgstr[1] "Gebruikers"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:40
+#: ../../../app/themes/Peafowl/views/dashboard.php:1732
+msgid "Disk used"
+msgstr "Schijfverbruik"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:80
+#: ../../../app/themes/Peafowl/views/dashboard.php:84
+msgid "Add user"
+msgstr "Gebruiker toevoegen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:87
+#: ../../../app/themes/Peafowl/views/settings.php:121
+msgid "Role"
+msgstr "Rol"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:89
+#: ../../../app/themes/Peafowl/views/settings.php:125
+msgid "Administrator"
+msgstr "Beheerder"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:152
+#: ../../../app/themes/Peafowl/views/dashboard.php:156
+msgid "Add category"
+msgstr "Categorie toevoegen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:165
+#: ../../../app/themes/Peafowl/views/dashboard.php:169
+#: ../../../app/themes/Peafowl/views/image.php:219
+msgid "Add IP ban"
+msgstr "IP ban toevoegen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:178
+#: ../../../app/themes/Peafowl/views/dashboard.php:182
+msgid "Add storage"
+msgstr "Opslag toevoegen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:195
+msgid "Return to pages"
+msgstr "Ga terug naar pagina's"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:222
+msgid "Website name"
+msgstr "Website naam"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:227
+msgid "Website doctitle"
+msgstr "Website titel"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:231
+msgid "Website description"
+msgstr "Website omschrijving"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:236
+msgid "Website keywords"
+msgstr "Website sleutelwoorden"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:257
+msgid "Default time zone"
+msgstr "Standaard tijdzone"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:261
+#: ../../../app/themes/Peafowl/views/settings.php:250
+msgid "Select region"
+msgstr "Selecteer regio"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:301
+msgid "Enable this if you want to allow the search feature."
+msgstr "Selecteer om de zoekfunctie in te schakelen."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:311
+msgid "Enable this if you want to allow the explore page."
+msgstr "Schakel dit in om de verkenningspagina zichtbaar te maken"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:321
+msgid "Enable this if you want to allow the random feature."
+msgstr "Selecteer om de willekeur functie in te schakelen."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:345
+#: ../../../app/themes/Peafowl/views/settings.php:69
+msgid "User ID"
+msgstr "Gebruikers ID"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:345
+#: ../../../app/themes/Peafowl/views/dashboard.php:1514
+#, php-format
+msgid "Your user id is: %s"
+msgstr "Jouw gebruikersnummer is: %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:350
+msgid "Personal mode routing"
+msgstr "Persoonlijke mode route"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:363
+msgid "Website privacy mode"
+msgstr "Website privé mode"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Private"
+msgstr "Privé"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:370
+msgid "Private mode will make the website only available for registered users."
+msgstr "Privémodus zorgt ervoor dat alleen geregistreerde gebruikers de website kunnen gebruiken"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:376
+msgid "Content privacy mode"
+msgstr "Privacy-instellingen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:380
+#: ../../../app/themes/Peafowl/views/dashboard.php:1225
+#: ../../../app/themes/Peafowl/views/dashboard.php:1463
+msgid "Default"
+msgstr "Standaard"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:381
+msgid "Force private (self)"
+msgstr "Forceer privé (alleen ik)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:382
+msgid "Force private (anyone with the link)"
+msgstr "Forceer privé (iedereen met link)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:387
+msgid "Forced privacy modes will override user selected privacy."
+msgstr "Geforceerde privacy-instellingen zullen gebruikersinstellingen vervangen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:442
+msgid "Page title"
+msgstr "Titel pagina"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:447
+msgid "Page status"
+msgstr "Status pagina"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:450
+msgid "Active page"
+msgstr "Actieve pagina"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:450
+#, php-format
+msgid "Inactive page (%s)"
+msgstr "Inactieve pagina (%s)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:454
+msgid "Only active pages will be accessible."
+msgstr "Alleen actieve pagina's zijn toegankelijk."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:458
+#: ../../../app/themes/Peafowl/views/dashboard.php:595
+msgid "Type"
+msgstr "Type"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:475
+msgid "Page visibility"
+msgstr "Zichtbaarheid pagina"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:478
+msgid "Visible page"
+msgstr "Zichtbare pagina"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:478
+msgid "Hidden page"
+msgstr "Verborgen pagina"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:482
+msgid "Hidden pages won't be show in system menus, but anyone can access to it with the link."
+msgstr "Verborgen pagina's worden niet systeemmenu's getoond, maar iedereen met de link heeft toegang."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:493
+msgid "File path"
+msgstr "Bedtandspad"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:503
+msgid "Meta keywords"
+msgstr "Meta sleutelwoorden"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:509
+msgid "Meta description"
+msgstr "Meta omschrijving"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:515
+msgid "Source code"
+msgstr "Broncode"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:532
+#, php-format
+msgid "Taken from: %s"
+msgstr "Genomen van: %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:546
+msgid "Link URL"
+msgstr "Link URL"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:630
+msgid "Enable uploads"
+msgstr "Schakel uploads in"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:636
+msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
+msgstr "Schakel dit in indien u het uploaden van afbeeldingen wilt toestaan​​. Deze instelling heeft geen invloed op beheerders."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:639
+msgid "Guest uploads"
+msgstr "Gastuploads"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+msgid "Enable this if you want to allow non registered users to upload."
+msgstr "Schakel dit in om gastuploads toe te staan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:649
+msgid "Enable expirable uploads"
+msgstr "Sta tijd geboden uploads toe"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:661
+#: ../../../app/themes/Peafowl/views/settings.php:183
+msgid "Image Exif data"
+msgstr "Foto Exif gegevens"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:665
+msgid "Keep"
+msgstr "Bewaar"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:674
+msgid "Image Exif data (user setting)"
+msgstr "Foto Exif gegevens (gebruikers instelling)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:689
+msgid "Max. filesize"
+msgstr "Maximale bestandsgrootte"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:692
+#, php-format
+msgid "Max. allowed filesize. (Max allowed by server is %s)"
+msgstr "Maximale bestandsgrootte (maximale serverwaarde is %s)."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:695
+msgid "Image path"
+msgstr "Pad"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:696
+msgid "Relative to Chevereto root"
+msgstr "Relatief aan de hoofdmap van Chevereto"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:698
+msgid "Where to store the images? Relative to Chevereto root."
+msgstr "Waar wilt u de afbeeldingen opslaan? Relatief aan de Chevereto hoofdmap"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:701
+msgid "Storage mode"
+msgstr "Opslagwijze"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:704
+msgid "Datefolders"
+msgstr "Datumfolders"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:704
+msgid "Direct"
+msgstr "Direct"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:707
+#, php-format
+msgid "Datefolders creates %s structure"
+msgstr "Structuur van datummappen: %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:710
+msgid "File naming method"
+msgstr "Bestandsnaamlogica"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:713
+msgid "Original"
+msgstr "Orgineel"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:722
+msgid "Thumb size"
+msgstr "Thumbnail formaat"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:733
+msgid "Thumbnails will be fixed to this size."
+msgstr "Thumbnails worden aangepast naar dit formaat."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:736
+msgid "Medium size"
+msgstr "Medium formaat"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:741
+msgid "Height will be automatic calculated."
+msgstr "Hoogte wordt automatisch berekend."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:747
+msgid "Watermarks"
+msgstr "Watermerken"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:754
+msgid "Enable this to put a logo or anything you want in image uploads."
+msgstr "Schakel dit in om een ​​logo of dergelijke in het uploadveld te plaatsen."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:761
+#: ../../../app/themes/Peafowl/views/dashboard.php:1238
+#, php-format
+msgid "Warning: Can't write in %s"
+msgstr "Waarschuwing: kan geen data wegschrijven naar %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:770
+msgid "Enable watermark on guest uploads"
+msgstr "Schakel watermerk in bij upload van gasten"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:775
+msgid "Enable watermark on user uploads"
+msgstr "Schakel watermerk in bij upload van gebruikers"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:780
+msgid "Enable watermark on admin uploads"
+msgstr "Schakel watermerk in bij upload van beheerders"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:789
+msgid "Enable watermark on GIF image uploads"
+msgstr "Schakel watermerk in bij upload van GIF plaatjes"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:795
+msgid "Minimum image size needed to apply watermark"
+msgstr "Minimum grootte foto om watermerk toe te voegen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:806
+msgid "Images smaller than this won't be watermarked. Use zero (0) to don't set a minimum image size limit."
+msgstr "Foto's kleiner dan dit krijgen geen watermerk. Gebruik nul (0) om geen minimum limiet grootte in te stellen."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:810
+msgid "Watermark image"
+msgstr "Watermerk"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:819
+msgid "Watermark position"
+msgstr "Watermerk: positie"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:823
+msgid "left top"
+msgstr "links bovenaan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:824
+msgid "left center"
+msgstr "links midden"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:825
+msgid "left bottom"
+msgstr "links onderaan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:826
+msgid "center top"
+msgstr "midden bovenaan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:827
+msgid "center center"
+msgstr "midden midden"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:828
+msgid "center bottom"
+msgstr "midden onderaan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:829
+msgid "right top"
+msgstr "rechts bovenaan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:830
+msgid "right center"
+msgstr "rechts midden"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:831
+msgid "right bottom"
+msgstr "rechts onderaan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:836
+msgid "Relative position of the watermark image. First horizontal align then vertical align."
+msgstr "Relatieve positie van het watermerk. Eerst horizontaal uitlijnen en vervolgens verticaal uitlijnen."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:839
+msgid "Watermark percentage"
+msgstr "Watermerk percentage"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:847
+msgid "Watermark margin"
+msgstr "Watermerk: marge"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:852
+msgid "Margin from the border of the image to the watermark image."
+msgstr "Marge tussen de rand van het watermerk en de afbeelding (in pixels)."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:855
+msgid "Watermark opacity"
+msgstr "Watermerk: doorzichtigheid"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:860
+msgid "Opacity of the watermark in the final watermarked image. Values 0 to 100."
+msgstr "Doorzichtigheid van het watermerk: van 0 voor transparant tot 100 voor voorledig zichtbaar."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:884
+#, php-format
+msgid "Do you really want to delete the %s category? This can't be undone."
+msgstr "Zeker weten dat categorie %s moet worden verwijderd? Dit kan niet ongedaan worden gemaakt."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:900
+msgid "Note: Deleting a category doesn't delete the images that belongs to that category."
+msgstr "Opmerking: verwijderen van een categorie heeft geen invloed op de plaatjes die bij de categorie horen."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:902
+msgid "Edit category"
+msgstr "Wijzig categorie"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:925
+msgid "Expires"
+msgstr "Verloopt"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:933
+#, php-format
+msgid "Do you really want to remove the ban to the IP %s? This can't be undone."
+msgstr "Zeker weten dat IP ban %s ongedaan moet worden gemaakt? Dit kan niet ongedaan worden gemaakt."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:947
+msgid "Banned IP address will be forbidden to use the entire website."
+msgstr "Verbannen IP adressen kunnen de gehele website niet meer gebruiken."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:949
+msgid "Edit IP ban"
+msgstr "Wijzig IP ban"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:959
+msgid "Enable signups"
+msgstr "Schakel registraties in"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:965
+msgid "Enable this if you want to allow users to signup."
+msgstr "Schakel dit in om registraties toe te staan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:972
+msgid "Username routing"
+msgstr "Gebruikersnaam routering"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:978
+#, php-format
+msgid "Enable this if you want to use %s/username URLs instead of %s/user/username."
+msgstr "Selecteer indien je %s/gebruikersnaam wilt gebruiken in plaats van %s/gebruiker/gebruikersnaam."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:983
+msgid "Require email confirmation"
+msgstr "Verplicht email bevestiging"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:989
+msgid "Enable this if users must validate their email address on sign up."
+msgstr "Selecteer indien gebruikers hun emailadres moeten valideren bij lid worden."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:992
+msgid "Require email for social signup"
+msgstr "Email verplicht voor registeren via sociaal netwerk"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:998
+msgid "Enable this if users using social networks to register must provide an email address."
+msgstr "Selecteer indien gebruikers welke een sociaal netwerk gebruiken een emailadres moeten instellen."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1004
+msgid "User avatar max. filesize"
+msgstr "Maximale bestandsgrootte avatar gebruiker."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1007
+#, php-format
+msgid "Max. allowed filesize for user avatar image. (Max allowed by server is %s)"
+msgstr "Maximaal toegestane bestandsgrootte voor avatar gebruiker (maximaal toegestaan door server is %s)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1010
+msgid "User background max. filesize"
+msgstr "Maximale bestandsgrootte achtergrond gebruiker"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1013
+#, php-format
+msgid "Max. allowed filesize for user background image. (Max allowed by server is %s)"
+msgstr "Maximaal toegestane bestandsgrootte voor achtergrond gebruiker (maximaal toegestaan door server is %s)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1019
+msgid "Block image uploads by IP if the system notice a flood  behavior based on the number of uploads per time period. This setting doesn't affect administrators."
+msgstr "Blokkeer afbeelding uploads per IP wanneer het systeem merkt dat er een spamgolf bezig is op basis van het aantal uploads per periode. Deze instelling heeft geen invloed op beheerders."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1031
+msgid "Notify to email"
+msgstr "Stuur meldingen naar email"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1037
+msgid "If enabled the system will send an email on flood incidents."
+msgstr "Schakel dit in om een e-mail te ontvangen bij spam uploads"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1040
+msgid "Minute limit"
+msgstr "Minuutlimiet"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1045
+msgid "Hourly limit"
+msgstr "Uurlimiet"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1050
+msgid "Daily limit"
+msgstr "Dagelijks limiet"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1055
+msgid "Weekly limit"
+msgstr "Weeklimiet"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1060
+msgid "Monthly limit"
+msgstr "Maandlimiet"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1070
+msgid "Show not safe content in listings"
+msgstr "Geef onveilige (NFSW) inhoud weer"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1079
+msgid "Blur NSFW content in listings"
+msgstr "Vervaag NSFW inhoud in lijstoverzicht"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1085
+msgid "Enable this if you want to apply a blur effect on the NSFW images in listings."
+msgstr "Schakel dit in als je het vervaag effect wilt inschakelen in lijstoverzicht."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1088
+msgid "Show banners in not safe content"
+msgstr "Geef banners weer bij onveilige (NFSW) inhoud"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1094
+msgid "Enable this if you want to show banners in not safe content pages."
+msgstr "Schakel dit in om banners weer te geven bij onveilige inhoud"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1098
+msgid "Show not safe content in random mode"
+msgstr "Toon onveilige (NSFW) inhoud in willekeurige modus."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1109
+msgid "List items per page"
+msgstr "Items per pagina"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1112
+msgid "How many items should be displayed per page listing."
+msgstr "Hoeveel items moeten zichtbaar zijn per pagina ?"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1116
+msgid "List pagination mode"
+msgstr "Paginanummering"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1119
+msgid "Endless scrolling"
+msgstr "Oneindig scrollen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1119
+msgid "Classic pagination"
+msgstr "Standaard paginanummering"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1123
+msgid "What pagination method should be used."
+msgstr "Wat voor paginanummering moet er gebruikt worden?"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1127
+msgid "Image listing size"
+msgstr "Afbeeldingen lijstgrootte"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1130
+msgid "Fluid"
+msgstr "Niet vast"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1130
+msgid "Fixed"
+msgstr "Vast"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1134
+msgid "Both methods use a fixed width but fluid method uses automatic heights."
+msgstr "Beide methodes gebruiken een vaste breedte maar de niet vaste methode gebruikt automatische hoogte."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1140
+msgid "Listing columns number"
+msgstr "Toon aantal kolommen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1141
+msgid "Here you can set how many columns are used based on each target device."
+msgstr "Hier kun je instellen hoeveel kolommen er gebruikt moeten worden, gebaseerd op het gebruikte apparaat."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1143
+msgid "Phone"
+msgstr "Telefoon"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1147
+msgid "Phablet"
+msgstr "Phablet"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1151
+msgid "Tablet"
+msgstr "Tablet"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1155
+msgid "Laptop"
+msgstr "Laptop"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1159
+msgid "Desktop"
+msgstr "Desktop (PC)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1167
+#, php-format
+msgid "Put your themes in the %s folder"
+msgstr "Plaats uw thema in de map %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1186
+msgid "Tone"
+msgstr "Kleur"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1189
+msgid "Light"
+msgstr "Licht"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1189
+msgid "Dark"
+msgstr "Donker"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1196
+msgid "Main color"
+msgstr "Hoofdkleur"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1197
+msgid "Hexadecimal color value"
+msgstr "Hexadecimale kleurwaarde"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1199
+#, php-format
+msgid "Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>."
+msgstr "Gebruik dit om de hoofdkleur van het thema te kiezen. Waarde moet in <a href=\"%s\" target=\"_blank\">hex formaat</a> zijn."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1203
+msgid "Top bar color"
+msgstr "Topbalk kleur"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1223
+#: ../../../app/themes/Peafowl/views/dashboard.php:1461
+msgid "Black"
+msgstr "Zwart"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1224
+#: ../../../app/themes/Peafowl/views/dashboard.php:1462
+msgid "White"
+msgstr "Wit"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1210
+msgid "If you set this to \"white\" the top bar and all the black tones will be changed to white tones."
+msgstr "Als dit naar 'wit' gewijzigd wordt veranderd de kleur van de bovenbalk en alle zwarte kleurtonen naar witte tonen."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1214
+msgid "Top bar button color"
+msgstr "Topbalk knop kleur"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1218
+#: ../../../app/themes/Peafowl/views/dashboard.php:1456
+msgid "Blue"
+msgstr "Blauw"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1219
+#: ../../../app/themes/Peafowl/views/dashboard.php:1457
+msgid "Green"
+msgstr "Groen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1220
+#: ../../../app/themes/Peafowl/views/dashboard.php:1458
+msgid "Orange"
+msgstr "Oranje"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1221
+#: ../../../app/themes/Peafowl/views/dashboard.php:1459
+msgid "Red"
+msgstr "Rood"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1222
+#: ../../../app/themes/Peafowl/views/dashboard.php:1460
+msgid "Grey"
+msgstr "Grijs"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1244
+msgid "Enable vector logo"
+msgstr "Gebruik vectorieel logo"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1251
+msgid "Enable vector logo for high quality logo in devices with high pixel density."
+msgstr "Gebruik vectorieel logo op retinaschermen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1256
+#: ../../../app/themes/Peafowl/views/dashboard.php:1418
+msgid "Vector logo image"
+msgstr "Logo in vectorformaat"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1262
+msgid "Vector version or your website logo in SVG format."
+msgstr "Logo in vectorformaat (SVG)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1268
+#: ../../../app/themes/Peafowl/views/dashboard.php:1428
+msgid "Raster logo image"
+msgstr "Logo in rasterformaat"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1274
+msgid "Bitmap version or your website logo. PNG format is recommended."
+msgstr "Bitmap-versie van uw logo. Bij voorkeur in .png formaat."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1278
+msgid "Logo height"
+msgstr "Hoogte logo"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1279
+#: ../../../app/themes/Peafowl/views/dashboard.php:1514
+msgid "No value"
+msgstr "Geen waarde"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1281
+msgid "Use this to set the logo height if needed."
+msgstr "Gebruik dit om indien nodig de hoogte van het logo aan te geven."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1287
+msgid "Favicon image"
+msgstr "Favicon"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1293
+msgid "Favicon image. Image must have same width and height."
+msgstr "Favicon. De afbeelding moet dezelfde breedte en hoogte hebben."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1299
+msgid "Enable download button"
+msgstr "Schakel downloadknop in"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1305
+msgid "Enable this if you want to show the image download button."
+msgstr "Schakel dit in om de downloadknop wilt tonen bij afbeeldingen."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1309
+msgid "Enable right click on image"
+msgstr "Rechts klikken op afbeelding toestaan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1315
+msgid "Enable this if you want to allow right click on image viewer page."
+msgstr "Selecteer dit om rechts klikken op de afbeeldingen viewer toe te staan."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1321
+msgid "Enable show Exif data"
+msgstr "Toon Exif data."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1327
+msgid "Enable this if you want to show image Exif data."
+msgstr "Schakel dit in indien Exif data van de afbeelding getoond moet worden."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1333
+msgid "Enable social share"
+msgstr "Aanzetten sociaal delen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1339
+msgid "Enable this if you want to show social network buttons to share content."
+msgstr "Selecteer dit om knoppen voor sociale netwerken te tonen om inhoud te delen."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1343
+msgid "Enable embed codes (content)"
+msgstr "Insluitcodes inschakelen (inhoud)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1349
+msgid "Enable this if you want to show embed codes for the content."
+msgstr "Selecteer dit om de insluitcodes voor de inhoud te tonen."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1353
+msgid "Enable embed codes (uploader)"
+msgstr "Insluitcodes inschakelen (uploader)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1359
+msgid "Enable this if you want to show embed codes when upload gets completed."
+msgstr "Selecteer dit om de insluitcodes te tonen als de upload gereed is."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1365
+msgid "Not safe content checkbox in uploader"
+msgstr "Onveilige (NSFW) inhoud checkbox bij uploaden"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1371
+msgid "Enable this if you want to show a checkbox to indicate not safe content upload."
+msgstr "Schakel dit in om een checkbox te weergeven voor onveilige inhoud bij het uploaden"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1377
+msgid "Custom CSS code"
+msgstr "Eigen CSS code"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1378
+msgid "Put your custom CSS code here. It will be placed as <style> just before the closing </head> tag."
+msgstr "Zet uw aangepaste CSS-code hier. Het zal als <style> geplaatst worden net vóór de afsluitende </head>-tag."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1382
+msgid "Custom JS code"
+msgstr "Eigen JS code"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1383
+msgid "Put your custom JS code here. It will be placed as <script> just before the closing </head> tag."
+msgstr "Zet uw aangepaste JS-code hier. Het zal zo <script> geplaatst worden net vóór de afsluitende </head>-tag."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1390
+msgid "Style"
+msgstr "Stijl"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1394
+msgid "Landing page"
+msgstr "Beginpagina"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1395
+msgid "Split landing + images"
+msgstr "Opdelen beginpagina en afbeeldingen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1396
+msgid "Route explore"
+msgstr "Route verkennen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1401
+#, php-format
+msgid "Select the homepage style. To customize it further edit app/themes/%s/views/index.php"
+msgstr "Selecteer de homepage stijl. Om het verder aan te passen, wijzig app/themes/%s/views/index.php"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1406
+msgid "Cover image"
+msgstr "Omslagafbeelding"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1445
+#: ../../../app/themes/Peafowl/views/settings.php:440
+msgid "Paragraph"
+msgstr "Paragraaf"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1488
+msgid "Open URL"
+msgstr "Open URL"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1513
+msgid "User IDs"
+msgstr "Gebruikers ID's"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1524
+msgid "Here you can set the codes for the predefined ad spaces."
+msgstr "Hier kunt u de codes voor de vooraf gedefinieerde advertentieruimtes instellen."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1565
+msgid "Crypt salt"
+msgstr "Crypt salt"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1567
+msgid "This is the salt used to convert numeric ID to alphanumeric. It was generated on install."
+msgstr "Dit is de unieke code die gebruikt wordt om numerieke ID te converteren naar alfanumeriek. Het werd gegenereerd bij de installatie."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1570
+msgid "Minify code"
+msgstr "Verkleincode"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1576
+msgid "Enable this if you want to auto minify CSS and JS code."
+msgstr "Schakel dit in als je automatisch CSS en JS code wilt verkleinen."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1579
+msgid "Maintenance"
+msgstr "Onderhoud"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1585
+msgid "When enabled the website will show a maintenance message. This setting doesn't affect administrators."
+msgstr "Wanneer ingesteld is op de website een onderhoudsmelding te zien. Deze instelling is niet van toepassing voor beheerders."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1611
+msgid "Default language"
+msgstr "Standaardtaal"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1620
+msgid "Default base language to use."
+msgstr "Standaardtaal"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1624
+msgid "Auto language"
+msgstr "Automatische taalherkenning"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1630
+msgid "Enable this if you want to automatically detect and set the right language for each user."
+msgstr "Schakel dit in om de taalselectie automatisch uit te voeren en in te stellen voor elke gebruiker."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1634
+msgid "Language chooser"
+msgstr "Taalkeuze"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1640
+msgid "Enable this if you want to allow language selection."
+msgstr "Schakel dit in als je taalkeuze toe wilt staan."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1647
+msgid "Enabled languages"
+msgstr "Ingeschakelde talen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1679
+msgid "Toggle this to enable or disable HTTPS"
+msgstr "Selecteer om HTTPS in of uit te schakelen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1680
+msgid "Toggle this to enable or disable this storage"
+msgstr "Selecteer om deze opslag in of uit te schakelen"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1696
+msgid "Quota"
+msgstr "Quotum"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1698
+msgid "Active"
+msgstr "Actief"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1731
+msgid "Storage method"
+msgstr "Opslagwijze"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1742
+msgid "Local storage is used by default or when no external storage is active."
+msgstr "Standaard wordt lokale opslag gebruikt of wanneer er geen externe opslag actief is."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1744
+msgid "Edit storage"
+msgstr "Wijzig opslag"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1754
+msgid "From name"
+msgstr "Van naam"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1757
+msgid "Sender name for emails sent to users."
+msgstr "Naam afzender voor e-mails verstuurd naar gebruikers."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1772
+msgid "Email mode"
+msgstr "E-mail modus"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1779
+msgid "How to send emails? SMTP recommended."
+msgstr "Hoe wil je e-mails verzenden? SMTP wordt aangeraden."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1784
+msgid "SMTP server and port"
+msgstr "SMTP-server en -poort"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1787
+msgid "SMTP server"
+msgstr "SMTP-server"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1800
+msgid "SMTP username"
+msgstr "SMTP-gebruikersnaam"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1805
+msgid "SMTP password"
+msgstr "SMTP-wachtwoord"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1810
+msgid "SMTP security"
+msgstr "SMTP-beveiliging"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1813
+msgid "Unsecured"
+msgstr "Onbewaakt"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1838
+msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
+msgstr "Maak een <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> aan."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1843
+msgid "Facebook app id"
+msgstr "Facebook App ID"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1848
+msgid "Facebook app secret"
+msgstr "Facebook App Secret"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1864
+msgid "You need a <a href=\"https://apps.twitter.com\" target=\"_blank\">Twitter app</a> for this."
+msgstr "Maak een <a href=\"https://apps.twitter.com\" target=\"_blank\">Twitter app</a> aan."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1869
+msgid "Twitter API key"
+msgstr "Twitter API sleutel"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1874
+msgid "Twitter API secret"
+msgstr "Twitter API geheim"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1881
+msgid "Twitter account"
+msgstr "Twitteraccount"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1897
+msgid "You need a <a href=\"https://cloud.google.com/console\" target=\"_blank\">Google app</a> for this."
+msgstr "Maak een <a href=\"https://cloud.google.com/console\" target=\"_blank\">Google app</a> aan."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1902
+msgid "Google client id"
+msgstr "Google client ID"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1907
+msgid "Google client secret"
+msgstr "Google client secret"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1923
+msgid "You need a <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> for this."
+msgstr "Maak een <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> aan."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1928
+msgid "VK client id"
+msgstr "VK gebruikers ID"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1933
+msgid "VK client secret"
+msgstr "VK gebruikers secret"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1949
+#, php-format
+msgid "CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s."
+msgstr "CDN stelt je in staat om statische content te verspreiden over meerdere servers om de website sneller te maken. Als je geen CDN provider hebt, probeer %s."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1968
+#, php-format
+msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
+msgstr "Er is een <a href=\"%s\" target=\"_blank\">reCAPTCHA code</a> nodig."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1974
+msgid "reCAPTCHA public key"
+msgstr "reCAPTCHA publieke sleutel"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1979
+msgid "reCAPTCHA private key"
+msgstr "reCAPTCHA prive sleutel"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1986
+msgid "reCAPTCHA threshold"
+msgstr "reCAPTCHA drempel"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1991
+msgid "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA."
+msgstr "Hoeveel foute pogingen zijn nodig om te vragen om reCAPTCHA? Voer 0 (nul) in om er altijd om te vragen."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1997
+msgid "Comment code"
+msgstr "Opmerking code"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1998
+msgid "Disqus, Facebook or anything you want. It will be used in image view."
+msgstr "Disqus, Facebook of wat je maar wilt. Het zal worden gebruikt in de afbeelding viewer."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2002
+msgid "Analytics code"
+msgstr "Google Analytics-code"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2003
+msgid "Google Analytics or anything you want. It will be added to the theme footer."
+msgstr "Google Analytics of wat je maar wilt. Het zal worden toegevoegd aan de footer."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2019
+msgid "API v1 key"
+msgstr "API v1 key"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../lib/Peafowl/peafowl.js:417 ../../../lib/Peafowl/peafowl.min.js:25
+msgid "Save changes"
+msgstr "Wijzigingen opslaan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:2067
+#: ../../../app/themes/Peafowl/views/settings.php:477
+msgid "Check the errors to proceed."
+msgstr "Controleer de fouten om verder te gaan"
+
+#: ../../../app/themes/Peafowl/views/image.php:57
+msgid "Guest"
+msgstr "Gast"
+
+#: ../../../app/themes/Peafowl/views/image.php:72
+msgid "Do you really want to delete this image? This can't be undone."
+msgstr "Wilt u deze afbeelding echt verwijderen? Dit kan niet ongedaan gemaakt worden."
+
+#: ../../../app/themes/Peafowl/views/image.php:72
+msgid "Delete image"
+msgstr "Verwijder afbeelding"
+
+#: ../../../app/themes/Peafowl/views/image.php:136
+msgid "Added to %a and categorized in %c"
+msgstr "Toegevoegd aan %a en gecategoriseerd in %c"
+
+#: ../../../app/themes/Peafowl/views/image.php:138
+#, php-format
+msgid "Added to %s"
+msgstr "Toegevoegd aan %s"
+
+#: ../../../app/themes/Peafowl/views/image.php:143
+#, php-format
+msgid "Uploaded to %s"
+msgstr "Geupload naar %s"
+
+#: ../../../app/themes/Peafowl/views/image.php:145
+#, php-format
+msgid "Uploaded %s"
+msgstr "Geüpload: %s"
+
+#: ../../../app/themes/Peafowl/views/image.php:157
+msgid "Less Exif data"
+msgstr "Minder Exif data"
+
+#: ../../../app/themes/Peafowl/views/image.php:157
+msgid "More Exif data"
+msgstr "Meer Exif data"
+
+#: ../../../app/themes/Peafowl/views/image.php:182
+#: ../../../app/themes/Peafowl/views/image.php:241
+msgid "Share image"
+msgstr "Deel afbeelding"
+
+#: ../../../app/themes/Peafowl/views/image.php:198
+#: ../../../app/themes/Peafowl/views/image.php:204
+msgid "Album ID"
+msgstr "Album ID"
+
+#: ../../../app/themes/Peafowl/views/image.php:252
+msgid "In this album"
+msgstr "In dit album"
+
+#: ../../../app/themes/Peafowl/views/image.php:277
+msgid "Image links"
+msgstr "Afbeelding links"
+
+#: ../../../app/themes/Peafowl/views/image.php:279
+msgid "Image URL"
+msgstr "Afbeelding URL"
+
+#: ../../../app/themes/Peafowl/views/image.php:285
+msgid "Image link"
+msgstr "Afbeelding link"
+
+#: ../../../app/themes/Peafowl/views/image.php:291
+msgid "Thumbnail URL"
+msgstr "Thumbnail URL"
+
+#: ../../../app/themes/Peafowl/views/image.php:300
+msgid "Medium URL"
+msgstr "Medium URL"
+
+#: ../../../app/themes/Peafowl/views/image.php:319
+#: ../../../app/themes/Peafowl/views/image.php:346
+#: ../../../app/themes/Peafowl/views/image.php:376
+#: ../../../app/themes/Peafowl/views/image.php:408
+msgid "Image embed codes"
+msgstr "Afbeelding insluitcode"
+
+#: ../../../app/themes/Peafowl/views/image.php:346
+msgid "Linked image"
+msgstr "Gekoppelde afbeelding"
+
+#: ../../../app/themes/Peafowl/views/image.php:376
+msgid "Linked medium"
+msgstr "Gekoppeld medium"
+
+#: ../../../app/themes/Peafowl/views/image.php:408
+msgid "Linked thumbnail"
+msgstr "Gekoppelde thumbnail"
+
+#: ../../../app/themes/Peafowl/views/index.php:15
+msgid "Upload and share your images."
+msgstr "Upload en deel jouw afbeeldingen"
+
+#: ../../../app/themes/Peafowl/views/index.php:17
+#, php-format
+msgid "Drag and drop anywhere you want and start uploading your images now. %s limit. Direct image links, BBCode and HTML thumbnails."
+msgstr "Sleep en plak waar je wilt en start het uploaden van de afbeeldingen direct. %s limiet. Directe afbeeldingen links, BB code en HTML thumbnails."
+
+#: ../../../app/themes/Peafowl/views/index.php:25
+msgid "Start uploading"
+msgstr "Start uploaden"
+
+#: ../../../app/themes/Peafowl/views/index.php:63
+#, php-format
+msgid "Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings."
+msgstr "Vul deze sectie met foto's van %s account .<br>Je kan deze gebruiker ook aanpassen in het dashboard."
+
+#: ../../../app/themes/Peafowl/views/index.php:79
+msgid "Sign up to unlock all the features"
+msgstr "Registreer om gebruik te maken van de mogelijkheden van deze website."
+
+#: ../../../app/themes/Peafowl/views/index.php:80
+msgid "Manage your content, create private albums, customize your profile and more."
+msgstr "Beheer uw inhoud, maak privé-albums, personaliseer je profiel en nog veel meer."
+
+#: ../../../app/themes/Peafowl/views/login.php:40
+#: ../../../app/themes/Peafowl/views/settings.php:323
+msgid "Enter your password"
+msgstr "Voer uw wachtwoord in"
+
+#: ../../../app/themes/Peafowl/views/logout.php:12
+#, php-format
+msgid "You have been logged off %s. Hope to see you soon."
+msgstr "U bent nu uitgelogd van %s."
+
+#: ../../../app/themes/Peafowl/views/maintenance.php:7
+msgid "Website under maintenance"
+msgstr "Website in onderhoud."
+
+#: ../../../app/themes/Peafowl/views/maintenance.php:8
+msgid "We're performing scheduled maintenance tasks in the website. Please come back in a few minutes."
+msgstr "We hebben op dit moment gepland onderhoud aan de website. Kijk over een paar minuten nog eens."
+
+#: ../../../app/themes/Peafowl/views/request-denied.php:12
+msgid "You either don't have permission to access this page or the link has expired."
+msgstr "U heeft geen toegang tot deze pagina of de link is verlopen."
+
+#: ../../../app/themes/Peafowl/views/settings.php:36
+#: ../../../app/themes/Peafowl/views/user.php:65
+msgid "Do you really want to delete this user? This can't be undone."
+msgstr "Wilt u deze gebruiker echt verwijderen? Dit kan niet ongedaan gemaakt worden."
+
+#: ../../../app/themes/Peafowl/views/settings.php:36
+#: ../../../app/themes/Peafowl/views/user.php:65
+msgid "Delete user"
+msgstr "Verwijder gebruiker"
+
+#: ../../../app/themes/Peafowl/views/settings.php:81
+msgid "Register date"
+msgstr "Datum van registratie"
+
+#: ../../../app/themes/Peafowl/views/settings.php:105
+msgid "Status"
+msgstr "Status"
+
+#: ../../../app/themes/Peafowl/views/settings.php:109
+msgid "Valid"
+msgstr "Geldig"
+
+#: ../../../app/themes/Peafowl/views/settings.php:110
+msgid "Banned"
+msgstr "Geblokkeerd"
+
+#: ../../../app/themes/Peafowl/views/settings.php:111
+msgid "Awaiting email"
+msgstr "E-mail afwachten"
+
+#: ../../../app/themes/Peafowl/views/settings.php:112
+msgid "Awaiting confirmation"
+msgstr "Wachtend op bevestiging"
+
+#: ../../../app/themes/Peafowl/views/settings.php:144
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "%i to %f characters<br>Letters, numbers and \"_\""
+msgstr "%i tot %f tekens<br>Letters, nummers en \"_\""
+
+#: ../../../app/themes/Peafowl/views/settings.php:193
+msgid "Newsletter"
+msgstr "Nieuwsbrief"
+
+#: ../../../app/themes/Peafowl/views/settings.php:196
+#, php-format
+msgid "Send me emails with news about %s"
+msgstr "Stuur mij emails met nieuws over %s"
+
+#: ../../../app/themes/Peafowl/views/settings.php:202
+msgid "Content settings"
+msgstr "Instellingen inhoud"
+
+#: ../../../app/themes/Peafowl/views/settings.php:205
+msgid "Show not safe content in listings (from others)"
+msgstr "Geef onveilige (NFSW) inhoud weer in overzichten (van anderen)"
+
+#: ../../../app/themes/Peafowl/views/settings.php:215
+msgid "Language"
+msgstr "Taal"
+
+#: ../../../app/themes/Peafowl/views/settings.php:245
+msgid "Timezone"
+msgstr "Tijdzone"
+
+#: ../../../app/themes/Peafowl/views/settings.php:296
+msgid "Current password"
+msgstr "Huidig wachtwoord"
+
+#: ../../../app/themes/Peafowl/views/settings.php:297
+msgid "Enter your current password"
+msgstr "Voer uw huidig wachtwoord in"
+
+#: ../../../app/themes/Peafowl/views/settings.php:305
+msgid "New password"
+msgstr "Nieuw wachtwoord"
+
+#: ../../../app/themes/Peafowl/views/settings.php:311
+msgid "Confirm new password"
+msgstr "Bevestig nieuw wachtwoord"
+
+#: ../../../app/themes/Peafowl/views/settings.php:319
+msgid "Add a password to be able to login using your username or email."
+msgstr "Voeg een wachtwoord toe om in te loggen met gebruikersnaam of email."
+
+#: ../../../app/themes/Peafowl/views/settings.php:319
+msgid "This user doesn't have a password. Add one using this form."
+msgstr "Deze gebruiker heeft geen wachtwoord. Gebruik dit tekstveld om een wachtwoord aan te maken."
+
+#: ../../../app/themes/Peafowl/views/settings.php:329
+msgid "Re-enter your password"
+msgstr "Wachtwoord opnieuw invoeren"
+
+#: ../../../app/themes/Peafowl/views/settings.php:352
+#: ../../../app/themes/Peafowl/views/user.php:21
+msgid "Upload new image"
+msgstr "Upload nieuwe afbeelding"
+
+#: ../../../app/themes/Peafowl/views/settings.php:354
+msgid "Delete existing image"
+msgstr "Verwijder bestaande afbeelding"
+
+#: ../../../app/themes/Peafowl/views/settings.php:367
+msgid "This is your real name, not your username."
+msgstr "Dit is je echte naam, niet je gebruikersnaam."
+
+#: ../../../app/themes/Peafowl/views/settings.php:371
+msgid "http://yourwebsite.com"
+msgstr "http://uwwebsite.be"
+
+#: ../../../app/themes/Peafowl/views/settings.php:375
+msgid "Bio"
+msgstr "Biografie"
+
+#: ../../../app/themes/Peafowl/views/settings.php:376
+msgid "Tell us a little bit about you"
+msgstr "Vertel meer over jezelf"
+
+#: ../../../app/themes/Peafowl/views/settings.php:387
+msgid "User has no connections."
+msgstr "Deze gebruiker heeft geen connecties."
+
+#: ../../../app/themes/Peafowl/views/settings.php:391
+msgid "Link your account to external services to be able to login and share content."
+msgstr "Koppel uw account aan externe diensten. Zo kunt u gemakkelijk inhoud delen."
+
+#: ../../../app/themes/Peafowl/views/settings.php:398
+#, php-format
+msgid "Do you really want to disconnect %s from this account?"
+msgstr "Wilt u %s echt van dit account ontkoppelen?"
+
+#: ../../../app/themes/Peafowl/views/settings.php:399
+#, php-format
+msgid "This account is connected to %s"
+msgstr "Dit account is gekoppeld aan %s"
+
+#: ../../../app/themes/Peafowl/views/settings.php:401
+#, php-format
+msgid "Do you really want to disconnect your %s account?"
+msgstr "Wilt u uw %s-account echt ontkoppelen?"
+
+#: ../../../app/themes/Peafowl/views/settings.php:403
+#, php-format
+msgid "You will be logged out and you won't be able to login to your account using this %s account."
+msgstr "U wordt afgemeld en u zult niet meer kunnen inloggen via %s."
+
+#: ../../../app/themes/Peafowl/views/settings.php:405
+#, php-format
+msgid "Your account is connected to %s"
+msgstr "Deze account is gekoppeld aan %s"
+
+#: ../../../app/themes/Peafowl/views/settings.php:410
+msgid "disconnect"
+msgstr "ontkoppelen"
+
+#: ../../../app/themes/Peafowl/views/settings.php:423
+#, php-format
+msgid "Connect %s"
+msgstr "Verbind %s"
+
+#: ../../../app/themes/Peafowl/views/user.php:15
+msgid "Upload profile background"
+msgstr "Upload een achtergrondafbeelding"
+
+#: ../../../app/themes/Peafowl/views/user.php:17
+msgid "Change background"
+msgstr "Verander achtergrond"
+
+#: ../../../app/themes/Peafowl/views/user.php:22
+msgid "The profile background image will be deleted. This can't be undone. Are you sure that you want to delete the profile background image?"
+msgstr "Uw achtergrondafbeelding zal worden verwijderd. Dit kan niet ongedaan gemaakt worden. Weet u zeker dat u uw achtergrondafbeelding wilt verwijderen?"
+
+#: ../../../app/themes/Peafowl/views/user.php:22
+msgid "Delete background"
+msgstr "Verwijder achtergrond"
+
+#: ../../../app/themes/Peafowl/views/user.php:61
+msgid "Edit profile"
+msgstr "Profiel bewerken"
+
+#: ../../../content/pages/default/contact.php:79
+msgid "Message sent"
+msgstr "Bericht verzonden"
+
+#: ../../../content/pages/default/contact.php:79
+msgid "Contact"
+msgstr "Contact"
+
+#: ../../../content/pages/default/contact.php:85
+msgid "We will be in touch soon."
+msgstr "We zullen zo spoedig mogelijk contact opnemen."
+
+#: ../../../content/pages/default/contact.php:85
+msgid "If you want to send a message fill the form below."
+msgstr "Indien u een bericht wilt versturen, vul dan het formulier in."
+
+#: ../../../content/pages/default/contact.php:88
+msgid "Your name"
+msgstr "Uw naam"
+
+#: ../../../content/pages/default/contact.php:97
+msgid "Subject"
+msgstr "Onderwerp"
+
+#: ../../../content/pages/default/contact.php:123
+msgid "Send message"
+msgstr "Verzend bericht"
+
+#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
+#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
+#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
+#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
+#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
+#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
+msgid "You must enter the album name."
+msgstr "U moet nog een albumnaam invoeren."
+
+#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
+#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
+#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
+#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
+msgid "Confirm"
+msgstr "Bevestigen"
+
+#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
+msgid "Select existing album"
+msgstr "Selecteer bestaand album"
+
+#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
+#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
+msgid "Please select a valid image file type."
+msgstr "Selecteer a.u.b. een geldig afbeeldingformaat"
+
+#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
+#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
+#, javascript-format
+msgid "Please select a picture of at most %s size."
+msgstr "Selecteer a.u.b. een foto met maximale grootte %s."
+
+#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
+msgid "Profile image updated."
+msgstr "Profielfoto is geüpdatet."
+
+#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
+msgid "Profile background image updated."
+msgstr "Achtergrondafbeelding is geüpdatet."
+
+#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
+msgid "Profile background image deleted."
+msgstr "Achtergrondafbeelding is verwijderd."
+
+#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
+msgid "Error deleting profile background image."
+msgstr "Fout bij het verwijderen van je profielachtergrond."
+
+#: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
+msgid "Your website is running the latest version of Chevereto."
+msgstr "Jouw website draait op de nieuwste versie van Chevereto."
+
+#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
+msgid "File too big."
+msgstr "Bestand is te groot."
+
+#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
+#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
+msgid "Some files couldn't be added"
+msgstr "Sommige bestanden kunnen niet toegevoegd worden"
+
+#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
+msgid "Image edited successfully."
+msgstr "Afbeelding is aangepast"
+
+#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
+msgid "Album edited successfully."
+msgstr "Album is aangepast"
+
+#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
+msgid "Invalid URL key."
+msgstr "Ongeldige URL sleutel."
+
+#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
+msgid "Category URL key already being used."
+msgstr "Categorie URL sleutel is al in gebruik."
+
+#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
+msgid "Category successfully deleted."
+msgstr "Categorie succesvol verwijderd."
+
+#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
+#, javascript-format
+msgid "Category %s added."
+msgstr "Categorie %s is toegevoegd."
+
+#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
+msgid "Invalid expiration date."
+msgstr "Ongeldige vervaldatum."
+
+#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
+#, javascript-format
+msgid "IP %s already banned."
+msgstr "IP %s is reeds geblokkeerd."
+
+#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
+#, javascript-format
+msgid "IP %s banned."
+msgstr "IP %s is geblokkeerd."
+
+#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
+msgid "IP ban successfully deleted."
+msgstr "IP blokkering is verwijderd."
+
+#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
+#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
+#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
+msgid "Please fill all the required fields."
+msgstr "Vul alsjeblieft de gevraagde velden in."
+
+#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
+msgid "Invalid storage capacity value. Make sure to use a valid format."
+msgstr "Ongeldige waarde voor de opslagcapaciteit. Controleer op juistheid formaat."
+
+#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
+msgid "Invalid URL."
+msgstr "Ongeldige URL."
+
+#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
+msgid "Storage successfully edited."
+msgstr "Opslag succesvol gewijzigd."
+
+#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
+msgid "User added successfully."
+msgstr "Gebruiker is toegevoegd."
+
+#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
+#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
+#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
+#: ../../../app/lib/chevereto.min.js:205
+msgid "The content has been moved."
+msgstr "De inhoud is verplaatst"
+
+#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
+msgid "Unselect"
+msgstr "Deselecteer"
+
+#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
+msgid "The content has been edited."
+msgstr "De inhoud is aangepast"
+
+#: ../../../lib/Peafowl/peafowl.js:25 ../../../lib/Peafowl/peafowl.js:492
+#: ../../../lib/Peafowl/peafowl.min.js:1 ../../../lib/Peafowl/peafowl.min.js:31
+msgid "All the changes that you have made will be lost if you continue."
+msgstr "De wijzigingen gaan verloren als je verder gaat."
+
+#: ../../../lib/Peafowl/peafowl.js:476 ../../../lib/Peafowl/peafowl.min.js:30
+msgid "Changes saved successfully."
+msgstr "De wijzigingen zijn opgeslagen."
+
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.min.js:31
+msgid "Go back to form"
+msgstr "Terug naar het formulier"
+
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.min.js:31
+msgid "continue anyway"
+msgstr "toch doorgaan"
+
+#: ../../../lib/Peafowl/peafowl.js:2506 ../../../lib/Peafowl/peafowl.min.js:155
+msgid "Saving"
+msgstr "Opslaan"
+
+#: ../../../lib/Peafowl/peafowl.js:2511 ../../../lib/Peafowl/peafowl.min.js:155
+msgid "Sending"
+msgstr "Verzenden"
+
+#: ../../../lib/Peafowl/peafowl.js:2591 ../../../lib/Peafowl/peafowl.min.js:158
+msgid "Confirm action"
+msgstr "Bevestig actie"
+
+#: ../../../lib/Peafowl/peafowl.js:2603 ../../../lib/Peafowl/peafowl.min.js:159
+msgid "information"
+msgstr "informatie"
+
