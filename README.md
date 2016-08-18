@@ -12,7 +12,7 @@ Chevereto Free
 <a href="https://chevereto.com/free" title="♫♪ Ha llegado tu tiempo, es el momento de Freeeeeeeeeeeeeeee"><img src="https://chevereto.com/app/themes/v3/img/chevereto-free-cover.jpg" alt="Chevereto Sugar Free Cola"></a>
 
 ###About this repo
-This is the repository of Chevereto Free which has been forked from Chevereto 3.X series. Chevereto Free has the same look, feel and taste of our [paid version](https://chevereto.com/pricing) but it comes in a free package which includes all the basic image hosting functionalities. Free to use, foverer.
+This is the repository of Chevereto Free which has been forked from Chevereto 3.X series. Chevereto Free has the same look, feel and taste of our [paid version](https://chevereto.com/pricing) but it comes in a free package which includes all the basic image hosting functionalities. Free to use, forever.
 
 ###Free vs paid Chevereto
 Chevereto Free includes all the basic image hosting stuff but it comes without dedicated support. Paid Chevereto comes with all features, updates and support. The following table summarizes the differences between paid vs free.
