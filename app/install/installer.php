@@ -206,6 +206,7 @@ try {
 			'update_check_notified_release'		=> NULL,
 			'update_check_display_notification'	=> 1,
 		],
+		'1.0.1' => NULL,
 	];
 	
 	// Settings that must be renamed from NAME to NEW NAME and DELETE old NAME

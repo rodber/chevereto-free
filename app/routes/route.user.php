@@ -127,8 +127,8 @@ $route = function($handler) {
 			$user_views['images']['current'] = TRUE;
 		}
 		
-		$user['followed'] = $user['id'] == $logged_user['id'] ? FALSE : CHV\Follow::doesFollow($logged_user['id'], $user['id']);
-		$show_follow_button = $user['id'] !== $logged_user['id'] && !$logged_user['is_private'];
+		$user['followed'] = FALSE;
+		$show_follow_button = FALSE;
 		
 		$handler::setCond('show_follow_button', $show_follow_button);
 

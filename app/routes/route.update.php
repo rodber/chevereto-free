@@ -3,10 +3,6 @@ $route = function($handler) {
     try {
 		// Detect if Chevereto is installed
 		if(CHV\Settings::get('chevereto_version_installed')) {
-			// Must be an admin
-			if(!CHV\Login::getUser()['is_admin']) {
-				G\redirect();
-			}
 			$update_script = CHV_APP_PATH_INSTALL . 'update/updater.php';
 			if(!file_exists($update_script)) {
 				throw new Exception('Missing ' . G\absolute_to_relative($update_script), 100);
