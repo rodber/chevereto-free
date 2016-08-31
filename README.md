@@ -20,7 +20,6 @@ Chevereto Free includes all the basic image hosting stuff but it comes without d
 | Item                                         	| Free            	| Paid                   	|
 |----------------------------------------------	|-----------------	|------------------------	|
 | Contribution to Chevereto                    	| ☆                 |   ★★★★              	|
-| Access to latest features                    	| Delayed         	| Always                 	|
 | Tech support                                 	| No 	            | Direct from developers 	|
 | One click system update                       | No              	| Yes                    	|
 | External storage support                     	| No              	| Yes                    	|
