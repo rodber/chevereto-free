@@ -1,5 +1,5 @@
 <?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
-<div id="powered-by" class="footer">Powered by <a href="http://chevereto.com">Chevereto image upload script</a></div>
+<div id="powered-by" class="footer">Powered by <a href="http://chevereto.com">Chevereto image hosting</a></div>
 
 <?php if(!is_maintenance()) { ?>
 <?php G\Render\include_theme_file('snippets/embed_tpl'); ?>

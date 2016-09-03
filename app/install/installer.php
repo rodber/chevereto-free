@@ -203,19 +203,18 @@ try {
 			'route_album'					=> 'album',
 			'enable_duplicate_uploads'			=> 0,
 			'update_check_datetimegmt'			=> NULL,
-			'update_check_notified_release'		=> NULL,
+			'update_check_notified_release'		=> G_APP_VERSION,
 			'update_check_display_notification'	=> 1,
 		],
 		'1.0.1' => NULL,
+		'1.0.2' => NULL,
 	];
 	
 	// Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
-	$settings_rename = [
-	];
+	$settings_rename = [];
 	
 	// Settings that must be renamed from NAME to NEW NAME and doesn't delete old NAME
-	$settings_switch = [
-	];
+	$settings_switch = [];
 	
 	$chv_initial_settings = [];
 	foreach($settings_updates as $k => $v) {

@@ -57,31 +57,14 @@ $route = function($handler) {
 		}
 		
 		// Test remote image
-		if($image['file_resource']['type'] == 'url') {
-			$url = preg_replace('/^https:/i', 'http:', $image['file_resource']['chain']['image']);
-			$headers = G\getUrlHeaders($url, [CURLOPT_REFERER => G\get_current_url()]); // Add referrer for some CDN restrictions
-			$error_tpl = "Can't fetch file header from external storage server: %url (%e)";
-			if($headers['http_code'] == 500) { // Internal (curl) error
-				$error_e = $headers['error'];
-			} else if($headers['http_code'] !== 200) {
-				$error_e = $headers['http_code'];
-			}
-			if($error_e) {
-				error_log(strtr($error_tpl, ['%url' => $url, '%e' => $error_e]));
-				if($headers['http_code'] !== 200) {
-					return $handler->issue404();
-				}
-			}
-		} else {
-			if(!$image['file_resource']['chain']['image'] || !file_exists($image['file_resource']['chain']['image'])) {
-				//CHV\Image::delete($id);
-				return $handler->issue404();
-			}
-			// Update is_animated flag
-			if($image['extension'] == 'gif' && !$image['is_animated'] && G\is_animated_image($image['file_resource']['chain']['image'])) {
-				CHV\Image::update($id, ['is_animated' => 1]);
-				$image['is_animated'] = 1;
-			}
+		if(!$image['file_resource']['chain']['image'] || !file_exists($image['file_resource']['chain']['image'])) {
+			//CHV\Image::delete($id);
+			return $handler->issue404();
+		}
+		// Update is_animated flag
+		if($image['extension'] == 'gif' && !$image['is_animated'] && G\is_animated_image($image['file_resource']['chain']['image'])) {
+			CHV\Image::update($id, ['is_animated' => 1]);
+			$image['is_animated'] = 1;
 		}
 
 		$is_owner = $image['user']['id'] !== NULL ? ($image['user']['id'] == $logged_user['id']) : false;

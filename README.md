@@ -20,8 +20,12 @@ Chevereto Free includes all the basic image hosting stuff but it comes without d
 | Item                                         	| Free            	| Paid                   	|
 |----------------------------------------------	|-----------------	|------------------------	|
 | Contribution to Chevereto                    	| ☆                 |   ★★★★              	|
+<<<<<<< HEAD
+| Access to latest features                    	| Delayed         	| Always                 	|
+| One click system update                       | Yes              	| Yes                    	|
+=======
+>>>>>>> 0cba3b880f6c7de8489399f73159b78e3699160a
 | Tech support                                 	| No 	            | Direct from developers 	|
-| One click system update                       | No              	| Yes                    	|
 | External storage support                     	| No              	| Yes                    	|
 | Manage banners                               	| No              	| Yes                    	|
 | Likes + Followers                            	| No              	| Yes                    	|

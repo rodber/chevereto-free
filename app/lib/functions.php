@@ -682,25 +682,24 @@ function checkUpdates() {
 			@set_time_limit(180); // Don't run forever
 			$safe_time = 5;
 			$max_execution_time = ini_get('max_execution_time'); // Store the limit
-			$update = G\fetch_url('http://chevereto.com/api/get/info');
+			$update = G\fetch_url('http://chevereto.com/api/get/info/free');
 			if(isSafeToExecute() && $update) {
 				$json = json_decode($update);
-				$release_notes = $json->software->release_notes;
-				$pos = strpos($release_notes, 'Affected files and folders');
-				$release_notes = trim(substr($release_notes, 0, $pos));
+				$release_notes = trim($json->software->release_notes);
 				$latest_release = $json->software->current_version;
 				// Notify only if not notified and if latest release is newer
 				if(is_null(getSetting('update_check_notified_release')) || version_compare($latest_release, getSetting('update_check_notified_release'), '>')) {
 					// Email notify
 					$message = _s('There is an update available for your Chevereto based website.') . ' ' . _s('The release notes for this update are:') ;
 					$message .= "\n\n";
-					$firstBreak = strpos($release_notes, "\n");
-					$release_notes = '<b>' . rtrim(substr($release_notes, 0, $firstBreak)) . '</b>' . substr($release_notes, $firstBreak);
 					$message .= $release_notes . "\n\n";
-					$message .= _s('You can apply this update directly from your %a or download it from %s and then manually install it.', ['%a' => '<a href="' . G\get_base_url('dashboard?checkUpdates') . '" target="_blank">'._s('admin dashboard').'</a>', '%s' => '<a href="http://chevereto.com/panel/downloads" target="_blank">chevereto.com</a>']) . "\n\n";
+					$message .= _s('You can apply this update directly from your %a or download it from %s and then manually install it.', ['%a' => '<a href="' . G\get_base_url('dashboard?checkUpdates') . '" target="_blank">'._s('admin dashboard').'</a>', '%s' => '<a href="'.G_APP_GITHUB_REPO_URL.'" target="_blank">GitHub</a>']) . "\n\n";
 					$message .= '--' . "\n" . 'Chevereto' . "\n" . G\get_base_url();
 					$message = nl2br($message);
-					system_notification_email(['subject' => _s('Chevereto update available (v%s)', $latest_release), $latest_release, 'message' => $message]);
+					system_notification_email([
+						'subject' => str_replace('Chevereto', G_APP_NAME, _s('Chevereto update available (v%s)', $latest_release)), 
+						'message' => $message
+					]);
 					$settings_update = [
 						'update_check_notified_release'	=> $latest_release,
 						'update_check_datetimegmt'		=> G\datetimegmt(),

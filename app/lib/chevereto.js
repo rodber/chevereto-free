@@ -1578,11 +1578,11 @@ $(function(){
 			if(PF.fn.versionCompare(CHV.obj.system_info.version, data.current_version) == -1) {
 				PF.fn.modal.simple({
 					title: PF.fn._s("Update available v%s", data.current_version),
-					message: '<p>' + PF.fn._s('There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file.', '<a href="http://chevereto.com/panel/downloads" target="_blank">chevereto.com</a>') + '<p>' + PF.fn._s('The release notes for this update are:') + '</p>' + '<textarea class="r4 resize-vertical">' + data.release_notes + '</textarea>' + '<div class="btn-container margin-bottom-0"><a href="' + PF.obj.config.base_url + '/update' + '" class="btn btn-input default">' + PF.fn._s('Update now') + '</a> <span class="btn-alt">' + PF.fn._s('or') + ' <a data-action="cancel">' + PF.fn._s('cancel') + '</a></span></div>',
+					message: '<p>' + PF.fn._s('There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file.', '<a href="' + PF.obj.config.github_url + '" target="_blank">GitHub</a>') + '<p>' + PF.fn._s('The release notes for this update are:') + '</p>' + '<textarea class="r4 resize-vertical">' + data.release_notes + '</textarea>' + '<div class="btn-container margin-bottom-0"><a href="' + PF.obj.config.base_url + '/update' + '" class="btn btn-input default">' + PF.fn._s('Update now') + '</a> <span class="btn-alt">' + PF.fn._s('or') + ' <a data-action="cancel">' + PF.fn._s('cancel') + '</a></span></div>',
 					html: true
 				});
 			} else {
-				PF.fn.growl.call(PF.fn._s("Your website is running the latest version of Chevereto."));
+				PF.fn.growl.call(PF.fn._s("Your website is running the latest version of Chevereto.").replace("Chevereto", "Chevereto Free"));
 			}
 			
 		});
@@ -1853,7 +1853,7 @@ CHV.obj.image_viewer.$loading = $(CHV.obj.image_viewer.loading);
 CHV.fn.system = {
 	checkUpdates: function(callback) {
 		$.ajax({
-			url: "https://chevereto.com/api/get/info/",
+			url: "https://chevereto.com/api/get/info/free/",
 			data: null,
 			cache: false
 		})

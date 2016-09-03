@@ -122,8 +122,8 @@ $route = function($handler) {
 						'content' =>  (version_compare($chv_version['files'], $chv_version['db'], '<=') ? $chv_version['files'] : $chv_version['files'] . ' ('.$chv_version['db'].' DB) <a href="'.G\get_base_url('install').'">'._s('install update').'</a>') . ' – <a data-action="check-for-updates">' . _s("check for updates") . '</a>' 
 					],
 					'chv_free' => [
-						'label'	=> 'Upgrade to paid',
-						'content' => '<a href="https://chevereto.com/pricing" target="_blank">Upgrade to paid version</a> to contribute with Chevereto development and to get tech support plus all features.',
+						'label'	=> 'Get more',
+						'content' => '<a href="https://chevereto.com/pricing" target="_blank">Upgrade</a> to contribute with Chevereto development and to get more <a href="https://chevereto.com/features" target="_blank">features</a>',
 					],
 					'g_version' => [
 						'label' => 'G\\',
