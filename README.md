@@ -44,9 +44,11 @@ In most servers that's all you need. The system has a built-in system check that
 
 For additional install instructions refer to our [official documentation](https://chevereto.com/docs/install).
 
+##Updates
+Chevereto Free has a built-in system that everyday pings the [Chevereto API](https://chevereto.com/api/get/info/free) for new updates available for your website. To update your website simply go to `/update` and the system will download and install the update for you. For manual update just follow the install procedure.
+
 ##Support
 Chevereto Free doesn't include dedicated support. However, feel free to browse current and previous solved [support topics](https://chevereto.com/community/forums/tech-support.16/?prefix_id=2). If you need more help please consider to purchase a Chevereto license.
-
 
 ##License
 Copyright 2016 [Rodolfo Berríos](http://rodolfoberrios.com)
