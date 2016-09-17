@@ -37,7 +37,12 @@ Make sure your server meets the minimum system requirements which are:
 
 In most servers that's all you need. The system has a built-in system check that it will tell you right away when you have to fix some stuff in your server.
 
-##Install
+##Install via web installer
+1. Download the [Chevereto Free web installer](https://cdn.rawgit.com/Chevereto/php-repo-installer/master/index.php)
+2. Upload this file to your target destination (usually the `public_html` folder)
+3. Open your website target destination URL and follow the install process
+
+##Install via zip/tarball
  1. Download the [latest release](https://github.com/Chevereto/Chevereto-Free/releases/latest) of Chevereto Free
  2. Upload the contents of your download to your server (usually the `public_html` folder)
  3. Go to your website and follow the instructions
