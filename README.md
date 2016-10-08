@@ -61,6 +61,6 @@ Chevereto Free doesn't include dedicated support. However, feel free to browse c
 ##License
 Copyright 2016 [Rodolfo Berríos](http://rodolfoberrios.com)
 
-Permission is granted to anyone to use this software for **any purpose** except for distribution or re-distribution in its modified form. This license does NOT grant you trademark, brand or any derivate rights. Any third-party distribution or re-distribution in the scoope of hosted applications based in the software must be approved by the copyright owner.
+Permission is granted to anyone to use this software for **any purpose** except for distribution or re-distribution in its modified form. This license does NOT grant you trademark, brand or any derivate rights. Any third-party distribution or re-distribution in the scope of hosted applications based in the software must be approved by the copyright owner.
 
 The software is offered on an “as-is” basis and no warranty, either expressed or implied, is given.
