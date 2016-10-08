@@ -22,7 +22,7 @@ Chevereto Free includes all the basic image hosting stuff but it comes without d
 | Contribution to Chevereto                    	| ☆                 |   ★★★★              	|
 | Access to latest features                    	| Delayed         	| Always                 	|
 | One click system update                       | Yes              	| Yes                    	|
-| Tech support                                 	| No 	            | Direct from developers 	|
+| Tech support                                 	| No 	            | Yes 	|
 | External storage support                     	| No              	| Yes                    	|
 | Manage banners                               	| No              	| Yes                    	|
 | Likes + Followers                            	| No              	| Yes                    	|
@@ -36,6 +36,9 @@ Make sure your server meets the minimum system requirements which are:
  - MySQL 5.0 (ALL PRIVILEGES)
 
 In most servers that's all you need. The system has a built-in system check that it will tell you right away when you have to fix some stuff in your server.
+
+##Installation service
+We will be happy to install Chevereto for you. Just send us an [installation request](https://chevereto.com/panel/request-installation) and we will do all the installation job for you. For free.
 
 ##Install via web installer
 1. Download the [Chevereto Free web installer](https://cdn.rawgit.com/Chevereto/php-repo-installer/master/index.php)
@@ -53,7 +56,7 @@ For additional install instructions refer to our [official documentation](https:
 Chevereto Free has a built-in system that everyday pings the [Chevereto API](https://chevereto.com/api/get/info/free) for new updates available for your website. To update your website simply go to `/update` and the system will download and install the update for you. For manual update just follow the install procedure.
 
 ##Support
-Chevereto Free doesn't include dedicated support. However, feel free to browse current and previous solved [support topics](https://chevereto.com/community/forums/tech-support.16/?prefix_id=2). If you need more help please consider to purchase a Chevereto license.
+Chevereto Free doesn't include dedicated support. However, feel free to browse current and previous [support tickets](https://chevereto.com/tech-support). If you need further assistance please consider buying a license. By purchasing a license you get same-day support, all features and it makes you a supporter of Chevereto development.
 
 ##License
 Copyright 2016 [Rodolfo Berríos](http://rodolfoberrios.com)
