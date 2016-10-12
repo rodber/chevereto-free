@@ -125,6 +125,12 @@
 						echo '<div class="input-below"><span class="icon icon-info color-red"></span> ' . _s('This setting is always diabled when using personal website mode.') . '</div>';
 					}
 				}
+				function read_the_docs($args=[]) {
+					return _s('Learn more about %s at our %d.', [
+						'%s' => $args['%s'],
+						'%d' => '<a href="https://chevereto.com/docs/'.$args['%k'].'" target="_blank">'._s('documentation').'</a>'
+					]);
+				}
 				function free_version_waring($wrap=TRUE) {
 					$message = _s("This functionality is not part of Chevereto Free. %s to obtain this feature.", ['%s' => '<a href="https://chevereto.com/pricing" target="_blank">' . _s('Upgrade to paid version') . '</a>']);
 					echo ($wrap ? ('<div class="input-below">' . $message . '</div>') : $message);
@@ -608,6 +614,7 @@
 					if(get_pages() and count(get_pages()) > 0) {
 						$auth_token = G\Handler::getAuthToken();
 			?>
+			<p><?php echo read_the_docs(['%s' => _s('pages'), '%k' => 'pages']); ?></p>
 			<ul data-content="dashboard-categories-list" class="tabbed-content-list table-li-hover table-li margin-top-20 margin-bottom-20">
 				<li class="table-li-header phone-hide">
 					<span class="c2 display-table-cell padding-right-10"><?php echo 'ID'; ?></span>
@@ -646,6 +653,23 @@
 			
 			<?php if(get_settings()['key'] == 'image-upload') { ?>
 			<div class="input-label">
+				<label>Enabled image formats</label>
+				<div class="checkbox-label">
+					<ul class="c20 phablet-c1">
+						<?php
+							foreach(CHV\Upload::getAvailableImageFormats() as $k) {
+								echo '<li class="c5 display-inline-block"><label class="display-block" for="image_format_enable['.$k.']"> <input type="checkbox" name="image_format_enable[]" id="image_format_enable['.$k.']" value="'.$k.'"'.(in_array($k, CHV\Upload::getEnabledImageFormats()) ? ' checked' : NULL).'>'.strtoupper($k).'</label></li>';
+							}
+						?>
+					</ul>
+					<div class="input-below input-warning red-warning"><?php echo get_input_errors()['upload_enabled_image_formats']; ?></div>
+					<p class="margin-top-20"><?php _se("Unchecked image formats won't be allowed to be uploaded."); ?></p>
+				</div>              
+			</div>
+
+			<hr class="line-separator"></hr>
+			
+			<div class="input-label">
 				<label for="enable_uploads"><?php _se('Enable uploads'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="enable_uploads" id="enable_uploads" class="text-input">
 					<?php
@@ -666,6 +690,13 @@
 			</div>
 			
 			<hr class="line-separator"></hr>
+			
+			<div class="input-label">
+				<label for="upload_threads">Upload threads</label>
+				<div class="c2"><input type="number" min="1" max="5" pattern="\d+" name="upload_threads" id="upload_threads" class="text-input" value="<?php echo CHV\Settings::get('upload_threads'); ?>" placeholder="2" required></div>
+				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['upload_threads']; ?></div>
+				<div class="input-below"><?php _se('Number of simultaneous upload threads (parallel uploads)'); ?></div>
+			</div>
 			
 			<div class="input-label">
 				<label for="enable_redirect_single_upload"><?php _se('Redirect on single upload'); ?></label>
@@ -1251,8 +1282,9 @@
 			<?php } ?>
 			
 			<?php if(get_settings()['key'] == 'theme') { ?>
-			<p><?php echo _se('Put your themes in the %s folder', G_APP_PATH_THEMES); ?></p>
-			<div class="input-label c5 phablet-c1">
+			<p><?php echo read_the_docs(['%s' => _s('theme editing'), '%k' => 'theme']); ?></p>
+			<hr class="line-separator"></hr>
+			<div class="input-label">
 				<label for="theme"><?php _se("Theme"); ?></label>
 				<?php
 					$themes = [];
@@ -1262,13 +1294,16 @@
 						}
 					}
 				?>
-				<select type="text" name="theme" id="theme" class="text-input">
-					<?php
-						echo CHV\Render\get_select_options_html($themes, CHV\Settings::get('theme'));
-					?>
-				</select>
+				<div class="c5 phablet-c1">
+					<select type="text" name="theme" id="theme" class="text-input">
+						<?php
+							echo CHV\Render\get_select_options_html($themes, CHV\Settings::get('theme'));
+						?>
+					</select>
+				</div>
+				<div class="input-below"><?php echo _se('Put your themes in the %s folder', G_APP_PATH_THEMES); ?></div>
 			</div>
-			
+			<hr class="line-separator"></hr>
 			<div class="input-label">
 				<label for="theme_tone"><?php _se('Tone'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="theme_tone" id="theme_tone" class="text-input">
@@ -1628,6 +1663,27 @@
 			
 			<?php if(get_settings()['key'] == 'system') { ?>
 			<div class="input-label">
+				<label for="enable_automatic_updates_check"><?php _se('Automatic updates check'); ?></label>
+				<div class="c5 phablet-c1"><select type="text" name="enable_automatic_updates_check" id="enable_automatic_updates_check" class="text-input">
+					<?php
+						echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('enable_automatic_updates_check'));
+					?>
+				</select></div>
+				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['enable_automatic_updates_check']; ?></div>
+				<div class="input-below"><?php _se('When enabled the system will automatically check for new updates.'); ?></div>
+			</div>
+			<div class="input-label">
+				<label for="update_check_display_notification"><?php _se('Display available updates notification'); ?></label>
+				<div class="c5 phablet-c1"><select type="text" name="update_check_display_notification" id="update_check_display_notification" class="text-input">
+					<?php
+						echo CHV\Render\get_select_options_html([0 => _s('Disabled'), 1 => _s('Enabled')], CHV\Settings::get('update_check_display_notification'));
+					?>
+				</select></div>
+				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['update_check_display_notification']; ?></div>
+				<div class="input-below"><?php _se("Enable this to show a notice on top warning you about new available system updates."); ?></div>
+			</div>
+			<hr class="line-separator"></hr>
+			<div class="input-label">
 				<label for="minify_enable"><?php _se('Minify code'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="minify_enable" id="minify_enable" class="text-input">
 					<?php
@@ -1645,15 +1701,7 @@
 				</select></div>
 				<div class="input-below"><?php _se("When enabled the website will show a maintenance message. This setting doesn't affect administrators."); ?></div>
 			</div>
-			<div class="input-label">
-				<label for="update_check_display_notification"><?php _se('Display available updates notification'); ?></label>
-				<div class="c5 phablet-c1"><select type="text" name="update_check_display_notification" id="update_check_display_notification" class="text-input">
-					<?php
-						echo CHV\Render\get_select_options_html([0 => _s('Disabled'), 1 => _s('Enabled')], CHV\Settings::get('update_check_display_notification'));
-					?>
-				</select></div>
-				<div class="input-below"><?php _se("Enable this to show a notice on top warning you about new available system updates."); ?></div>
-			</div>
+			<hr class="line-separator"></hr>
 			<div class="input-label">
 				<label for="crypt_salt"><?php _se('Crypt salt'); ?></label>
 				<div class="c5 phablet-c1"><input type="text" name="crypt_salt" id="crypt_salt" class="text-input" value="<?php echo CHV\Settings::get('crypt_salt'); ?>" disabled></div>
@@ -1702,6 +1750,10 @@
 			<?php } ?>
 			
 			<?php if(get_settings()['key'] == 'languages') { ?>
+			<div class="input-label">
+				<label><?php _se('Custom language strings'); ?></label>
+				<p><?php echo read_the_docs(['%s' => _s('language strings'), '%k' => 'language-strings']); ?></p>
+			</div>
 			<div class="input-label">
 				<label for="default_language"><?php _se('Default language'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="default_language" id="default_language" class="text-input">
@@ -1847,7 +1899,7 @@
 						echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], get_safe_post() ? get_safe_post()['cdn'] : CHV\Settings::get('cdn'));
 					?>
 				</select></div>
-				<div class="input-below"><?php _se("CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s.", '<a href="https://chevereto.com/go/maxcdn" target="_blank">MaxCDN</a>'); ?></div>
+				<div class="input-below"><?php echo read_the_docs(['%s' => 'CDN', '%k' => 'cdn']); ?></div>
 			</div>
 			<div id="cdn-combo" class="c9 phablet-c1">
 				<div data-combo-value="1" class="switch-combo<?php if(!(get_safe_post() ? get_safe_post()['cdn'] : CHV\Settings::get('cdn'))) echo ' soft-hidden'; ?>">
@@ -1911,6 +1963,7 @@
 						echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('cloudflare'));
 					?>
 				</select></div>
+				<div class="input-below"><?php echo read_the_docs(['%s' => 'CloudFlare', '%k' => 'cloudflare']); ?></div>
 			</div>
 			<?php } ?>
 			

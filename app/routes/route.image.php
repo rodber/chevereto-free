@@ -56,16 +56,23 @@ $route = function($handler) {
 			return $handler->issue404();
 		}
 		
-		// Test remote image
-		if(!$image['file_resource']['chain']['image'] || !file_exists($image['file_resource']['chain']['image'])) {
-			//CHV\Image::delete($id);
-			return $handler->issue404();
+		// Test local images
+		if($image['file_resource']['type'] == 'path') {
+			if(!$image['file_resource']['chain']['image'] || !file_exists($image['file_resource']['chain']['image'])) {
+				return $handler->issue404();
+			}
+			// Update is_animated flag
+			if($image['extension'] == 'gif' && !$image['is_animated'] && G\is_animated_image($image['file_resource']['chain']['image'])) {
+				CHV\Image::update($id, ['is_animated' => 1]);
+				$image['is_animated'] = 1;
+			}
 		}
-		// Update is_animated flag
-		if($image['extension'] == 'gif' && !$image['is_animated'] && G\is_animated_image($image['file_resource']['chain']['image'])) {
-			CHV\Image::update($id, ['is_animated' => 1]);
-			$image['is_animated'] = 1;
-		}
+		
+		/*
+			Note: Remote image testing was removed because of the HUGE number of websites running external containers unaccesible via HTTP.
+			Remote image test works only if the website can fetch the image URI headers.
+			Check Chevereto < 3.8.4 for the old remote image tester code
+		*/
 
 		$is_owner = $image['user']['id'] !== NULL ? ($image['user']['id'] == $logged_user['id']) : false;
 		

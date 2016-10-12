@@ -144,12 +144,6 @@ if(Settings::get('chevereto_version_installed')) {
 // Language localization
 (file_exists(G_APP_PATH_LIB . 'l10n.php')) ? require_once(G_APP_PATH_LIB . 'l10n.php') : die("Can't find app/lib/l10n.php");
 
-// Process ping update
-if(array_key_exists('ping', $_REQUEST) && $_REQUEST['r']) {
-	L10n::setLocale(Settings::get('default_language')); // Force system language
-	checkUpdates();
-}
-
 // Not installed
 if(!Settings::get('chevereto_version_installed')) {
 	new G\Handler([
@@ -161,10 +155,18 @@ if(!Settings::get('chevereto_version_installed')) {
 	]);
 }
 
+// Process ping update
+if(Settings::get('enable_automatic_updates_check') && array_key_exists('ping', $_REQUEST) && $_REQUEST['r']) {
+	L10n::setLocale(Settings::get('default_language')); // Force system language
+	checkUpdates();
+}
+
 // Delete expired images
-try {
-	Image::deleteExpired();
-} catch(Exception $e) {} // Silence
+if(method_exists('CHV\Image','deleteExpired')) {
+    try {
+		Image::deleteExpired();
+	} catch(Exception $e) {}
+}
 
 // Translate logged user count labels
 if(Login::isLoggedUser()) {
@@ -174,13 +176,22 @@ if(Login::isLoggedUser()) {
 }
 
 // Handle banned IP address
-$banned_ip = Ip_ban::getSingle();
-if($banned_ip) {
-	if(G\is_url($banned_ip['message'])) {
-		G\redirect($banned_ip['message']);
-	} else {
-		die(empty($banned_ip['message']) ? _s('You have been forbidden to use this website.') : $banned_ip['message']);
+if(method_exists('CHV\Ip_ban','getSingle')) {
+	$banned_ip = Ip_ban::getSingle();
+	if($banned_ip) {
+		if(G\is_url($banned_ip['message'])) {
+			G\redirect($banned_ip['message']);
+		} else {
+			die(empty($banned_ip['message']) ? _s('You have been forbidden to use this website.') : $banned_ip['message']);
+		}
 	}
+}
+
+// Handle invalid user accounts
+if(method_exists('CHV\User','cleanup')) {
+	try {
+		User::cleanup();
+	} catch(Exception $e) {}
 }
 
 // Append any app loader hook (user own hooks)
@@ -274,7 +285,7 @@ try {
 			$handler::setVar('header_logo_link', G\get_base_url());
 			$handler::setCond('admin', $is_admin);
 			$handler::setCond('maintenance', getSetting('maintenance') AND !Login::getUser()['is_admin']);
-			$handler::setCond('show_consent_screen', getSetting('enable_consent_screen') ? !(Login::getUser() OR isset($_SESSION['agree-consent']) OR isset($_COOKIE['AGREE_CONSENT'])) : FALSE);
+			$handler::setCond('show_consent_screen', $base !== 'api' && (getSetting('enable_consent_screen') ? !(Login::getUser() OR isset($_SESSION['agree-consent']) OR isset($_COOKIE['AGREE_CONSENT'])) : FALSE));
 			$handler::setCond('captcha_needed', getSetting('recaptcha') AND getSetting('recaptcha_threshold') == 0);
 			$handler::setCond('show_header', !($handler::getCond('maintenance') OR $handler::getCond('show_consent_screen')));
 			$handler::setCond('show_notifications', FALSE);
@@ -288,10 +299,10 @@ try {
 			if($handler::getCond('show_consent_screen')) {
 				$handler::setVar('consent_accept_url', G\get_current_url() . (parse_url(G\get_current_url(), PHP_URL_QUERY) ? '&' : '/?')  . 'agree-consent');
 			}
-			
-			// reCaptcha thing (only non logged users)
+
 			if(!Login::getUser()) {
 				$failed_access_requests = Requestlog::getCounts(['login', 'signup'], 'fail');
+				// reCaptcha thing (only non logged users)
 				if(getSetting('recaptcha') && $failed_access_requests['day'] > getSetting('recaptcha_threshold')) {
 					$handler::setCond('captcha_needed', TRUE);
 				}

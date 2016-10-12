@@ -1,5 +1,5 @@
-<?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?><!DOCTYPE HTML>
-<html <?php echo CHV\Render\get_html_tags(); ?>>
+<?php if(!defined('access') or !access) die('This file cannot be directly accessed.');?><!DOCTYPE HTML>
+<html <?php echo CHV\Render\get_html_tags(); ?> prefix="og: http://ogp.me/ns#">
 <head>
 <meta charset="utf-8">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -24,6 +24,8 @@
 
 <?php
 
+if(!is_maintenance()) { G\Render\include_theme_file('snippets/embed'); }
+
 if(CHV\getSetting('theme_logo_height') > 0) {
 	$logo_height = CHV\getSetting('theme_logo_height');
 	echo '<style type="text/css">.top-bar-logo, .top-bar-logo img { height: '.CHV\getSetting('theme_logo_height').'px; } .top-bar-logo { margin-top: -'.(CHV\getSetting('theme_logo_height')/2).'px; } </style>';
@@ -41,6 +43,7 @@ $open_graph = [
 switch(true) {
 	case function_exists('get_image') and G\is_route('image'):
 		$open_graph_extend = [
+			'type'			=> 'article',
 			'title'			=> get_pre_doctitle(),
 			'description'	=> get_image()['description'],
 			'image'			=> get_image()['url'],
@@ -72,7 +75,7 @@ if($open_graph_extend) {
 }
 foreach($open_graph  as $k => $v) {
 	if(!$v) continue;
-	echo '<meta property="og:'.$k.'" content="'.G\safe_html($v, ENT_COMPAT).'">' . "\n";
+	echo '<meta property="og:'.$k.'" content="'.G\safe_html($v, ENT_COMPAT).'" />' . "\n";
 }
 
 // Set twitter card
@@ -243,7 +246,7 @@ foreach($twitter_card as $k => $v) {
                 <span class="top-btn-text"><span class="icon icon-notification color-red"></span><span class="btn-text phone-hide phablet-hide"><?php _se('Notices (%s)', count(get_system_notices())); ?></span></span>
 				<div class="pop-box anchor-center c8 arrow-box arrow-box-top anchor-center">
 					<div class="pop-box-inner padding-20">
-						<ul class="list-style-type-disc list-style-position-inside">
+						<ul class="list-style-type-decimal list-style-position-inside">
 						<?php foreach(get_system_notices() as $notice) { ?>
 							<li><?php echo $notice; ?></li>
 						<?php } ?>

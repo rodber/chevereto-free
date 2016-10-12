@@ -60,13 +60,6 @@ class Image {
 			'LEFT JOIN '.$tables['users'].' ON '.$tables['images'].'.image_user_id = '.$tables['users'].'.user_id',
 			'LEFT JOIN '.$tables['albums'].' ON '.$tables['images'].'.image_album_id = '.$tables['albums'].'.album_id'
 		];
-		
-		if($requester) {
-			if(!is_array($requester)) {
-				$requester = User::getSingle($requester, 'id');
-			}
-			$joins[] = 'LEFT JOIN '.$tables['likes'].' ON '.$tables['likes'].'.like_content_type = "image" AND '.$tables['images'].'.image_id = '.$tables['likes'].'.like_content_id AND '.$tables['likes'].'.like_user_id = ' . $requester['id'];
-		}
 
 		$query .=  implode("\n", $joins) . "\n";
 		$query .= 'WHERE image_id=:image_id;'."\n";
@@ -452,6 +445,12 @@ class Image {
 			// Resizable watermark image
 			try {
 				$watermark_tempnam = @tempnam(sys_get_temp_dir(), 'chvtemp');
+				if(!$watermark_tempnam) {
+					$watermark_tempnam = @tempnam(dirname($image_path), 'chvtemp');
+				}
+				if(!$watermark_tempnam) {
+					throw new Exception("Can't tempnam a watermak file", 400);
+				}
 				self::resize($options['file'], dirname($watermark_tempnam), basename($watermark_tempnam), ['width' => $watermark_new_width]);
 				$watermark_temp = $watermark_tempnam . '.png';
 				$watermark_src = imagecreatefrompng($watermark_temp);
@@ -888,17 +887,23 @@ class Image {
                 // From Exif
                 $title_from_exif = $image_upload['source']['image_exif']['ImageDescription'] ? trim($image_upload['source']['image_exif']['ImageDescription']) : NULL;
                 if($title_from_exif) {
-                    $image_insert_values['title'] = $title_from_exif;
+					// Get rid of any unicode stuff
+					$title_from_exif = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $title_from_exif);
+                    $image_title = $title_from_exif;
                 } else {
                     // From filename
-                    $title_from_filename = mb_substr(preg_replace('/[-_\s]+/', ' ', trim($image_upload['source']['name'])), 0, 100, 'UTF-8');
-                    $image_insert_values['title'] = ucfirst($title_from_filename);
+                    $title_from_filename = preg_replace('/[-_\s]+/', ' ', trim($image_upload['source']['name']));
+                    $image_title = $title_from_filename;
                 }
+				$image_insert_values['title'] = $image_title;
 			}
 			
 			if($filenaming == 'id' and $target_id) { // Insert as a reserved ID
 				$image_insert_values['id'] = $target_id;
 			}
+			
+			// Trim image_title to the actual DB limit
+			$image_insert_values['title'] = mb_substr($image_insert_values['title'], 0, 100, 'UTF-8');
 			
 			$uploaded_id = self::insert($image_upload, $image_insert_values);
 			
@@ -1045,7 +1050,7 @@ class Image {
 					unset($values[$k]);
 				}
 			}
-						
+
 			// Insert image
 			$insert = DB::insert('images', $values);
 			
@@ -1068,7 +1073,7 @@ class Image {
 			return $insert;
 
 		} catch(Exception $e) {
-			throw new ImageException($e->getMessage(), 400);
+			throw new ImageException($e->getMessage(), $e->getCode());
 		}
 	}
 	
@@ -1106,7 +1111,6 @@ class Image {
 	
 	public static function delete($id, $update_user=TRUE) {
 		try {
-			
 			$image = self::getSingle($id, FALSE, TRUE);
 			$disk_space_used = $image['size'] + $image['thumb']['size'] + $image['medium']['size'];
 			
@@ -1134,9 +1138,9 @@ class Image {
 				'disk_sum'	=> $disk_space_used,
 				'likes'		=> $image['likes'],
 			]);
-			
+
 			// Remove "liked" counter for each user who liked this image
-			DB::queryExec('UPDATE '.DB::getTable('users').' INNER JOIN '.DB::getTable('likes').' ON user_id = like_user_id AND like_content_type = "image" AND like_content_id = '.$image['id'].' SET user_liked = GREATEST(user_liked - 1, 0);');
+			DB::queryExec('UPDATE '.DB::getTable('users').' INNER JOIN '.DB::getTable('likes').' ON user_id = like_user_id AND like_content_type = "image" AND like_content_id = '.$image['id'].' SET user_liked = GREATEST(cast(user_liked AS SIGNED) - 1, 0);');
 			
 			if(isset($image['user']['id'])) {
 				// Detect autolike
@@ -1154,10 +1158,10 @@ class Image {
 					'user_id'	=> $image['user']['id'],
 				]);
 			}
-			
+
 			// Remove image likes
 			DB::delete('likes', ['content_type' => 'image', 'content_id' => $image['id']]);
-			
+
 			// Log image deletion
 			DB::insert('deletions', [
 				'date_gmt'			=> G\datetimegmt(),

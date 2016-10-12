@@ -679,7 +679,7 @@ function isSafeToExecute($max_execution_time=NULL, $options=[]) {
 function checkUpdates() {
 	try {
 		if(is_null(getSetting('update_check_datetimegmt')) || G\datetime_add(getSetting('update_check_datetimegmt'), 'P1D') < G\datetimegmt()) {
-			@set_time_limit(180); // Don't run forever
+			@set_time_limit(60); // Don't run forever
 			$safe_time = 5;
 			$max_execution_time = ini_get('max_execution_time'); // Store the limit
 			$update = G\fetch_url('http://chevereto.com/api/get/info/free');

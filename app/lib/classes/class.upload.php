@@ -169,6 +169,18 @@ class Upload {
 		
 	}
 	
+	public static function getAvailableImageFormats() {
+		return explode(',', Settings::get('upload_available_image_formats'));
+	}
+	
+	public static function getEnabledImageFormats() {
+		$formats = explode(',', Settings::get('upload_enabled_image_formats'));
+		if(in_array('jpg', $formats)) {
+			$formats[] = 'jpeg';
+		}
+		return $formats;
+	}
+	
 	/**
 	 * validate_input aka "first stage validation"
 	 * This checks for valid input source data
@@ -185,33 +197,20 @@ class Upload {
 		}
 		
 		// Handle flood
-		$flood = $this->handleFlood();
+		$flood = self::handleFlood();
 		if($flood) {
 			throw new UploadException(strtr('Flood detected. You can only upload %limit% images per %time%', ['%limit%' => $flood['limit'], '%time%' => $flood['by']]), 130);
 		}
 		
 		// Validate $source
 		if($this->type == 'file') {
-			
 			if(count($this->source) < 5) { // Valid $_FILES ?
 				throw new UploadException("Invalid file source", 120);
 			}
-			/*
-			if(!$this->isValidImageExtension($this->source["name"])) { // Basic .extension filter
-				throw new UploadException("Invalid file extension", 121);
-			}
-			*/
 		} else if($this->type == "url") {
-			
 			if(!G\is_image_url($this->source) && !G\is_url($this->source)) {
 				throw new UploadException("Invalid image URL", 122);
 			}
-			
-			// Removing this saves like 1 second
-			/*if(!G\is_valid_url($this->source)) {
-				throw new UploadException("can't reach target image URL", 123);
-			}*/
-
 		}
 		
 		// Validate $destination
@@ -353,6 +352,11 @@ class Upload {
 			throw new UploadException("Invalid image", 311);
 		}
 		
+		// Allowed image format?
+		if(!in_array($this->source_image_fileinfo['extension'], self::getEnabledImageFormats())) {
+			throw new UploadException("Invalid image format", 313);
+		}
+		
 		// Mime
 		if(!$this->isValidImageMime($this->source_image_fileinfo["mime"])) {
 			throw new UploadException("Invalid image mimetype", 312);
@@ -376,12 +380,12 @@ class Upload {
 	}
 	
 	// Handle flood uploads
-	protected function handleFlood() {
+	protected static function handleFlood() {
 		
 		$logged_user = Login::getUser();
 		
-		if(!getSetting('flood_uploads_protection') or $logged_user['is_admin']) {
-			return false;
+		if(!getSetting('flood_uploads_protection') || $logged_user['is_admin']) {
+			return FALSE;
 		}
 
 		$flood_limit = [];
@@ -391,14 +395,14 @@ class Upload {
 
 		try {
 			$db = DB::getInstance();
-			$flood_db = $db->queryFetchSingle("
-				SELECT
-					COUNT(IF(image_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 MINUTE), 1, NULL)) AS minute,
-					COUNT(IF(image_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 HOUR), 1, NULL)) AS hour,
-					COUNT(IF(image_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), 1, NULL)) AS day,
-					COUNT(IF(image_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 WEEK), 1, NULL)) AS week,
-					COUNT(IF(image_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 MONTH), 1, NULL)) AS month
-				FROM ".DB::getTable('images')." WHERE image_uploader_ip='".G\get_client_ip()."' AND image_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 MONTH)");
+			$flood_db = $db->queryFetchSingle(
+			"SELECT
+				COUNT(IF(image_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 MINUTE), 1, NULL)) AS minute,
+				COUNT(IF(image_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 HOUR), 1, NULL)) AS hour,
+				COUNT(IF(image_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), 1, NULL)) AS day,
+				COUNT(IF(image_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 WEEK), 1, NULL)) AS week,
+				COUNT(IF(image_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 MONTH), 1, NULL)) AS month
+			FROM ".DB::getTable('images')." WHERE image_uploader_ip='".G\get_client_ip()."' AND image_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 MONTH)");
 		} catch(Exception $e) {} // Silence
 		
 		$is_flood = FALSE;
@@ -431,11 +435,8 @@ class Upload {
 			
 			return ['flood' => TRUE, 'limit' => $flood_limit[$flood_by], 'count' => $flood_db[$flood_by], 'by' => $flood_by];
 		}
-
-	}
-	
-	protected function isValidImageExtension($filename) {
-		return preg_match('/^.*\.(?:jpe?g|gif|png|bmp)$/i', $filename);
+		
+		return FALSE;
 	}
 	
 	protected function isValidImageMime($mime) {

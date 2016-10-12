@@ -411,14 +411,14 @@ class Album {
         ];
         try {
 			$db = DB::getInstance();
-			$flood_db = $db->queryFetchSingle("
-				SELECT
-					COUNT(IF(album_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 MINUTE), 1, NULL)) AS minute,
-					COUNT(IF(album_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 HOUR), 1, NULL)) AS hour,
-					COUNT(IF(album_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), 1, NULL)) AS day,
-					COUNT(IF(album_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 WEEK), 1, NULL)) AS week,
-					COUNT(IF(album_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 MONTH), 1, NULL)) AS month
-				FROM ".DB::getTable('albums')." WHERE album_user_id='" . $logged_user['id'] . "' AND album_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 MONTH)");
+			$flood_db = $db->queryFetchSingle(
+			"SELECT
+				COUNT(IF(album_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 MINUTE), 1, NULL)) AS minute,
+				COUNT(IF(album_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 HOUR), 1, NULL)) AS hour,
+				COUNT(IF(album_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), 1, NULL)) AS day,
+				COUNT(IF(album_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 WEEK), 1, NULL)) AS week,
+				COUNT(IF(album_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 MONTH), 1, NULL)) AS month
+			FROM ".DB::getTable('albums')." WHERE album_user_id='" . $logged_user['id'] . "' AND album_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 MONTH)");
 		} catch(Exception $e) {} // Silence
 		
 		$is_flood = FALSE;
@@ -449,6 +449,8 @@ class Album {
             }
             return ['flood' => TRUE, 'limit' => $flood_limit[$flood_by], 'count' => $flood_db[$flood_by], 'by' => $flood_by];
         }
+		
+		return FALSE;
 
     }
 

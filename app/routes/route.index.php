@@ -17,7 +17,7 @@
 
 $route = function($handler) {
 	try {
-		
+
         // Parse the current query string
 		parse_str($_SERVER['QUERY_STRING'], $querystr);
 		

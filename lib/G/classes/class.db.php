@@ -33,7 +33,7 @@ class DB {
 	private $pass = G_APP_DB_PASS;
 	private $driver = G_APP_DB_DRIVER;
 	
-	private $pdo_attrs;
+	private $pdo_attrs = G_APP_DB_PDO_ATTRS;
 
 	static $dbh;
 	public $query;
@@ -50,24 +50,16 @@ class DB {
 			if(empty($conn) and isset(self::$dbh) and get_class(self::$dbh) == 'PDO') {
 				return TRUE;
 			}
-			
-			if(empty($conn)) {
-				// Handle default conn values (from settings)
-				foreach(['host', 'port', 'name', 'user', 'pass', 'driver'] as $k) {
-					$define = 'G_APP_DB_' . strtoupper($k);
-					$this->{$k} = defined($define) ? constant($define) : NULL;				
-				};
-			} else {
+				
+			if(!empty($conn)) {
 				// Inject connection info
-				$this->host = $conn['host'];
-				$this->user = $conn['user'];
-				$this->name = $conn['name'];
-				$this->pass = $conn['pass'];
-				$this->port = $conn['port'];
-				$this->driver = $conn['driver'];
+				foreach(['host', 'user', 'name', 'pass', 'port', 'driver'] as $k) {
+					$this->{$k} = $conn[$k];
+				}
 			}
-			
-			$this->pdo_attrs = $pdo_attrs;
+			if(!empty($pdo_attrs)) {
+				$this->pdo_attrs = $pdo_attrs;
+			}
 
 			$pdo_connect = $this->driver . ':host=' . $this->host . ';dbname=' . $this->name;
 			if($this->port) {
@@ -470,24 +462,28 @@ class DB {
 	/**
 	 * Update target numecic table row(s) with and increment (positive or negative)
 	 * Returns the number of affected rows or false
-	 * Note: this should add a BASE value (like "0" to avoid negative values if set)
+	 * Note: Minimum value to be set is zero, no negative values here
 	 */
 	public static function increment($table, $values, $wheres, $clause='AND') {
 		
-		if(!is_array($values)) {
-			throw new DBException('Expecting array values, '.gettype($values).' given in '. __METHOD__, 100);
-		}
-		
-		if(!is_array($wheres)) {
-			throw new DBException('Expecting array values, '.gettype($wheres).' given in '. __METHOD__, 100);
+		foreach(['values', 'wheres'] as $k) {
+			if(!is_array(${$k})) {
+				throw new DBException('Expecting array values, '.gettype(${$k}).' given in '. __METHOD__, 100);
+			}
 		}
 		
 		$table = DB::getTable($table);
 		$query = 'UPDATE `'.$table.'` SET ';
 		
 		foreach($values as $k => $v) {
-			if(preg_match('/^([+-]{1})\s*([\d]+)$/', $v, $matches)) {
-				$query .= '`' . $k . '`=`' . $k . '`' . $matches[1] . $matches[2] . ',';
+			if(preg_match('/^([+-]{1})\s*([\d]+)$/', $v, $matches)) { // 1-> op 2-> number
+				$query .= '`' . $k . '`=';
+				if($matches[1] == '+') {
+					$query .= '`' . $k . '`' . $matches[1] . $matches[2] . ','; 
+				}
+				if($matches[1] == '-') {
+					$query .= 'GREATEST(cast(`'.$k.'` AS SIGNED) - '.$matches[2].', 0)';
+				}
 			}
 		}
 		
@@ -499,7 +495,6 @@ class DB {
 		}			
 		$query = rtrim($query, $clause.' ');
 		
-
 		try {
 			$db = self::getInstance();
 			$db->query($query);

@@ -16,7 +16,7 @@ foreach($tabs as $tab) {
 			$echo = [
 				'<li class="' . (isset($tab['class']) ? $tab['class'] : '') . ' ' .($tab["current"] ? 'current' : '') . '">',
 				'<a ',
-				$tab['id'] ? ('id="' .  $tab['id'] . '-link" data-tab="' . $tab["id"] . '"' ) : '',
+				$tab['id'] ? ('id="' .  $tab['id'] . '-link" data-tab="' . $tab["id"] . '" ' ) : '',
 				'href="' . $tab['url'] . '">',
 				$tab["label"],
 				'</a></li>'."\n"

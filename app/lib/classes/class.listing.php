@@ -233,7 +233,8 @@ class Listing {
 			}
 					
 			$query = 'SELECT * FROM (SELECT * FROM ' . $base_table . $join . $this->where . $order_by . $limit . ') ' . $base_table . ' ' . "\n";
-			$query .=  implode("\n", $joins[$this->type]) . "\n";
+			$query .=  implode("\n", $joins[$this->type]);
+			$query .= $order_by;
 		}
 		
 		try {

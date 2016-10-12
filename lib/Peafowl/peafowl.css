@@ -5068,6 +5068,8 @@ img.user-image.size-40 , .default-user-image.size-40 {
 .copy-hover-display button.copy-input[data-action=copy] {
 	visibility: hidden;
 }
+.phone button.copy-input[data-action=copy],
+.pablet button.copy-input[data-action=copy],
 .copy-hover-display:hover button.copy-input[data-action=copy] {
 	visibility: visible;
 }

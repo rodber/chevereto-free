@@ -34,6 +34,7 @@ class Settings {
 					$v = DB::formatRow($v);
 					$value = $v['value'];
 					$default = $v['default'];
+					// Fix those booleans!
 					if($v['typeset'] == 'bool') {
 						$value = (bool) $value == 1;
 						$default = (bool) $default == 1;
@@ -53,8 +54,13 @@ class Settings {
 				//throw new Exception("Can't find any DB setting. Table seems to be empty.", 400);
 			}
 			
-			// Inject the missing settings
-			$injected = [];
+			// Inject the missing settings (hooks since v3.8.3)
+			$injected = [
+				// 1.0.3
+				'upload_enabled_image_formats'	=> 'jpg,png,bmp,gif',
+				'upload_threads'				=> '2',
+				'enable_automatic_updates_check'=> 1,
+			];
 			
 			// Default listing thing
 			$device_to_columns = [
@@ -121,8 +127,10 @@ class Settings {
 				// 3.6.5
 				'image_title_max_length'	=> 100,
 				'album_name_max_length'		=> 100,
+				// 3.8.4
+				'upload_available_image_formats' => 'jpg,png,bmp,gif'
 			]);
-			
+
 			if(!$settings['active_storage']) {
 				$settings['active_storage'] = NULL;
 			}

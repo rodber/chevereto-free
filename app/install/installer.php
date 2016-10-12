@@ -208,6 +208,11 @@ try {
 		],
 		'1.0.1' => NULL,
 		'1.0.2' => NULL,
+		'1.0.3' => [
+			'upload_enabled_image_formats'	=> 'jpg,png,bmp,gif',
+			'upload_threads'				=> '2',
+			'enable_automatic_updates_check'=> 1,
+		]
 	];
 	
 	// Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
@@ -629,6 +634,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 						foreach($db_details as $k => $v) {
 							$settings_php[] = '$settings[\'db_'.$k.'\'] = \''.$v.'\';';
 						}
+						$settings_php[] = '$settings[\'db_pdo_attrs\'] = [];';
 						$settings_php[] = '$settings[\'debug_level\'] = 1;';
 						$settings_php = implode("\n", $settings_php);
 						$settings_file = G_APP_PATH . 'settings.php';
@@ -735,7 +741,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 								ADD `image_thumb_size` int(11) NOT NULL,
 								ADD `image_medium_size` int(11) NOT NULL DEFAULT '0',
 								ADD `image_expiration_date_gmt` datetime DEFAULT NULL,
-								ADD `image_likes` bigint(32) NOT NULL DEFAULT '0',
+								ADD `image_is_animated` tinyint(1) NOT NULL DEFAULT '0',
 								ADD INDEX `image_name` (`image_name`),
 								ADD INDEX `image_size` (`image_size`),
 								ADD INDEX `image_width` (`image_width`),
@@ -750,6 +756,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 								ADD INDEX `image_views` (`image_views`),
 								ADD INDEX `image_category_id` (`image_category_id`),
 								ADD INDEX `image_expiration_date_gmt` (`image_expiration_date_gmt`),
+								ADD INDEX `image_is_animated` (`image_is_animated`),
 								ENGINE=".$fulltext_engine.";
 							
 							UPDATE `chv_images`

@@ -104,15 +104,15 @@ $(function(){
 	});
 	
 	// Close upload box
-	$("[data-action=close-upload], [data-action=cancel-upload]", $anywhere_upload).click(function() {
+	$("[data-action=close-upload]", $anywhere_upload).click(function() {
 		if($anywhere_upload.is(":animated")) return;
 		$("[data-action=top-bar-upload]", "#top-bar").click();
 	});
-	
+
 	// Cancel remaining uploads
-	$("[data-action=cancel-upload-remaining]", $anywhere_upload).click(function() {
+	$("[data-action=cancel-upload-remaining], [data-action=cancel-upload]", $anywhere_upload).click(function() {
 		$("[data-action=cancel]", $anywhere_upload_queue).click();
-		CHV.fn.uploader.is_uploading = false;
+		CHV.fn.uploader.isUploading = false;
 		if(CHV.fn.uploader.results.success.length > 0) {
 			CHV.fn.uploader.displayResults();
 			return;
@@ -413,7 +413,7 @@ $(function(){
 		$("[data-group=uploading]", $anywhere_upload).show();
 		
 		CHV.fn.uploader.queueSize();
-		CHV.fn.uploader.can_add = false;
+		CHV.fn.uploader.canAdd = false;
 		
 		$queue_items = $("li", $anywhere_upload_queue);
 		$queue_items.addClass("uploading waiting");
@@ -1876,7 +1876,7 @@ CHV.fn.bindSelectableItems = function() {
 	}
 	$("#content-listing-wrapper").selectable({
 		filter: PF.obj.listing.selectors.list_item,
-		cancel: ".content-empty, .header, #tab-share, #tab-full-info, .viewer-title, .header-link, .top-bar, .content-listing-pagination *, #fullscreen-modal, #top-user, #background-cover, .list-item-desc, .list-item-image-tools, [data-action=load-image]",
+		cancel: ".content-empty, .header, #tab-share, #tab-full-info, .viewer-title, .header-link, .top-bar, .content-listing-pagination *, #fullscreen-modal, #top-user, #background-cover, .list-item-desc, .list-item-image-tools, [data-action=load-image], #tab-codes",
 		delay: 5, // Avoids unattended click reset
 		selecting: function(event, ui) {
 			var $this = $(ui.selecting);
@@ -1988,12 +1988,7 @@ CHV.obj.topBar = {
 };
 
 CHV.fn.uploader = {
-	
-	options: {
-		image_types: ["png", "jpg", "jpeg", "gif", "bmp"],
-		max_filesize: "2 MB"
-	},
-	
+
 	selectors: {
 		root: "#anywhere-upload",
 		queue: "#anywhere-upload-queue",
@@ -2011,9 +2006,9 @@ CHV.fn.uploader = {
 		paste: "#anywhere-upload-paste",
 	},
 	
-	is_uploading: false,
-	can_add: true,
-	queue_status : "ready",
+	isUploading: false,
+	canAdd: true,
+	queueStatus : "ready",
 	
 	files: {},
 	results: {success: [], error: []},
@@ -2030,7 +2025,7 @@ CHV.fn.uploader = {
 		PF.fn.growl.close(true);
 		PF.fn.close_pops();
 		
-		if(this.toggleWorking == 1 || $(CHV.fn.uploader.selectors.root).is(":animated") || CHV.fn.uploader.is_uploading || ($switch.data('login-needed') && !PF.fn.is_user_logged())) return;
+		if(this.toggleWorking == 1 || $(CHV.fn.uploader.selectors.root).is(":animated") || CHV.fn.uploader.isUploading || ($switch.data('login-needed') && !PF.fn.is_user_logged())) return;
 		
 		this.toggleWorking = 1;
 		
@@ -2182,10 +2177,10 @@ CHV.fn.uploader = {
 	reset: function() {
 		
 		this.files = {};
-		this.is_uploading = false;
-		this.can_add = true;
+		this.isUploading = false;
+		this.canAdd = true;
 		this.results = {success: [], error: []};
-		this.queue_status = "ready";
+		this.queueStatus = "ready";
 		
 		$("li", this.selectors.queue).remove();
 		$(this.selectors.anywhere).height("").css({"overflow-y": "", "overflow-x": ""});
@@ -2310,18 +2305,14 @@ CHV.fn.uploader = {
 		}
 	},
 	
-	item_add_id : 0,
+	filesAddId : 0,
 	clipboardImages : [],
 	add: function(e, urls) {
 		
 		var md5;
 		
-		if(typeof CHV.obj.config !== "undefined" && typeof CHV.obj.config.image !== "undefined" && CHV.obj.config.image.max_filesize !== "undefined") {
-			this.options.max_filesize = CHV.obj.config.image.max_filesize;
-		}
-		
 		// Prevent add items ?
-		if(!this.can_add) {
+		if(!this.canAdd) {
 			var e = e.originalEvent;
 			e.preventDefault();
 			e.stopPropagation();
@@ -2365,8 +2356,8 @@ CHV.fn.uploader = {
 					failed_files.push({uid: i, name: file.name.truncate_middle() + " - " + PF.fn._s("File too big.")});
 					continue;
 				}
-				// Android can output shit like image:10 as the full file name so ignore this filter
-				if(CHV.fn.uploader.options.image_types.indexOf(image_type_str) == -1 && /android/i.test(navigator.userAgent) == false) {
+				// Android can output something like image:10 as the full file name so ignore this filter
+				if(CHV.obj.config.upload.image_types.indexOf(image_type_str) == -1 && /android/i.test(navigator.userAgent) == false) {
 					failed_files.push({uid: i, name: file.name.truncate_middle() + " - " + PF.fn._s("Invalid or unsupported file format.")});
 					continue;
 				}
@@ -2396,6 +2387,8 @@ CHV.fn.uploader = {
 				return;
 			}
 		} else { // Remote files
+			// Strip HTML + BBCode
+			urls = urls.replace(/(<([^>]+)>)/g, '').replace(/(\[([^\]]+)\])/g, '');
 			files = urls.match_urls();
 			if(!files) return;
 			files = files.array_unique();
@@ -2408,7 +2401,7 @@ CHV.fn.uploader = {
 		if($.isEmptyObject(this.files)) {
 			for(var i=0; i<files.length; i++) {
 				this.files[files[i].uid] = files[i];
-				this.item_add_id++;
+				this.filesAddId++;
 			}
 		} else {
 			/**
@@ -2425,8 +2418,8 @@ CHV.fn.uploader = {
 				if($.inArray(encodeURI(file.name), currentfiles) != -1) {
 					return null;
 				}
-				file.uid = CHV.fn.uploader.item_add_id + i;
-				CHV.fn.uploader.item_add_id++;
+				file.uid = CHV.fn.uploader.filesAddId + i;
+				CHV.fn.uploader.filesAddId++;
 				return file;
 			});
 			for(var i = 0; i < files.length; i++){
@@ -2448,7 +2441,7 @@ CHV.fn.uploader = {
 			j = 0,
 			default_options = {
 				canvas: true,
-				//maxWidth: 600
+				maxWidth: 600
 			};
 		
 		function CHVLoadImage(i) {
@@ -2517,7 +2510,6 @@ CHV.fn.uploader = {
 							title: title,
 							width: img.width,
 							height: img.height,
-							canvas: img, // store source canvas (for client side resizing) - huge memory leak
 							mimetype: mimetype,
 						};
 						
@@ -2611,19 +2603,39 @@ CHV.fn.uploader = {
 		$("[data-text=queue-size]", this.selectors.root).text(Object.size(this.files));
 	},
 	
-	queueProgress: function(e) {
-		var total_queue_items_done = $("> .completed, > .failed", this.selectors.queue).length,
-			total_queue_items = $(this.selectors.queue).children().length,
-			total_queueProgress = parseInt(100 * (parseFloat(total_queue_items_done/total_queue_items) + parseFloat((e.loaded / e.total)/total_queue_items)));
-		$("[data-text=queue-progress]", this.selectors.root).text(total_queueProgress);
+	queueProgress: function(e, id) {
+		var	queue_size = Object.keys(this.files).length;
+		this.files[id].progress = e.loaded / e.total;
+		var progress = 0;
+		for(var i=0; i < queue_size; i++) {
+			if(typeof this.files[i] == typeof undefined || !('progress' in this.files[i])) continue;
+			progress += this.files[i].progress;
+		}
+		$("[data-text=queue-progress]", this.selectors.root).text(parseInt(100 * progress / queue_size));
 	},
+	
+	uploadThreads: 0,
+	uploadParsedIds: [],
 	
 	upload: function($queue_item) {
 		
-		var id = $queue_item.data("id"),
-			f = this.files[id],
-			queue_is_url = typeof f.url !== "undefined";
+		var id = $queue_item.data("id");
+		var nextId = $queue_item.next().exists() ? $queue_item.next().data("id") : false;
 		
+		// Already working on this?
+		if($.inArray(id, this.uploadParsedIds) !== -1) {
+			if($queue_item.next().exists()) {
+				this.upload($queue_item.next());
+			}
+			return;
+		}
+		
+		var self = this;
+		
+		this.uploadParsedIds.push(id);
+
+		var	f = this.files[id];
+		var	queue_is_url = typeof f.url !== "undefined";
 		var source = queue_is_url ? f.url : f;
 		var hasForm = typeof f.formValues !== typeof undefined;
 		
@@ -2637,19 +2649,14 @@ CHV.fn.uploader = {
 		$(this.selectors.close_cancel, this.selectors.root).hide().each(function() {
 			if($(this).data("action") == "cancel-upload") $(this).show();
 		});
-
-		this.is_uploading = true;
 		
-		// Client side resizing
-		if(!queue_is_url && f.parsedMeta.mimetype !== "image/gif" && typeof f.formValues !== typeof undefined && f.formValues.width != f.parsedMeta.width) {
-			isBlob = true;
-			var canvas = $("<canvas />")[0];
-			canvas.width = f.formValues.width;
-			canvas.height = f.formValues.height;
-			var ctx = canvas.getContext("2d");
-			ctx.drawImage(f.parsedMeta.canvas, 0, 0, canvas.width, canvas.height);
-			source = PF.fn.dataURItoBlob(canvas.toDataURL(f.parsedMeta.mimetype));
-		};
+		this.uploadThreads += 1;
+		
+		if(this.uploadThreads < CHV.obj.config.upload.threads && nextId !== false) {
+			this.upload($queue_item.next());
+		}
+
+		this.isUploading = true;
 		
 		// HTML5 form
 		var form = new FormData();
@@ -2688,7 +2695,7 @@ CHV.fn.uploader = {
 			
 				if(e.lengthComputable) {
 
-					CHV.fn.uploader.queueProgress(e);
+					CHV.fn.uploader.queueProgress(e, id);
 					
 					percentComplete = parseInt((e.loaded / e.total) * 100);
 					
@@ -2704,7 +2711,7 @@ CHV.fn.uploader = {
 			}
 		} else {
 			this.queueSize();
-			this.queueProgress({loaded: 1, total: 1});
+			this.queueProgress({loaded: 1, total: 1}, id);
 			this.itemLoading($queue_item);
 		}
 		
@@ -2713,6 +2720,8 @@ CHV.fn.uploader = {
 			var is_error = false;
 			
 			if(this.readyState == 4 && typeof CHV.fn.uploader.files[id].xhr !== "undefined" && CHV.fn.uploader.files[id].xhr.status !== 0) {
+				
+				self.uploadThreads -= 1;
 				
 				$(".loading-indicator", $queue_item).remove();
 				$queue_item.removeClass("waiting uploading");
@@ -2735,7 +2744,7 @@ CHV.fn.uploader = {
 					
 					if(this.status !== 200) is_error = true;
 					
-				} catch(err) {		
+				} catch(err) {
 					
 					is_error = true;
 					
@@ -2776,13 +2785,15 @@ CHV.fn.uploader = {
 					PF.fn.bindtipTip($queue_item);
 				}
 				
-				if($queue_item.next().exists()) {
+				if(self.uploadThreads < CHV.obj.config.upload.threads && nextId !== false) {
 					CHV.fn.uploader.upload($queue_item.next());
 					$(CHV.fn.uploader.selectors.close_cancel, CHV.fn.uploader.selectors.root).hide().each(function() {
-						if($(this).data("action") == "cancel-upload-remaining") $(this).show();
+						if($(this).data("action") == "cancel-upload-remaining") {
+							$(this).show();
+						}
 					});
 				} else {
-					CHV.fn.uploader.is_uploading = false;
+					CHV.fn.uploader.isUploading = false;
 					CHV.fn.uploader.displayResults();
 				}		
 				$(".done", $queue_item).fadeOut();
@@ -2859,7 +2870,7 @@ CHV.fn.uploader = {
 		}
 		
 		this.boxSizer();
-		this.queue_status = "done";
+		this.queueStatus = "done";
 
 	}
 	

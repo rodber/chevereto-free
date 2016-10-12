@@ -43,7 +43,7 @@
 				</div>
             </div>
 			
-			<input id="anywhere-upload-input" data-action="anywhere-upload-input"<?php if(!CHV\getSetting('guest_uploads')) { ?> data-login-needed="true"<?php } ?> class="hidden-visibility" type="file" accept="image/*" multiple>
+			<input id="anywhere-upload-input" data-action="anywhere-upload-input"<?php if(!CHV\getSetting('guest_uploads')) { ?> data-login-needed="true"<?php } ?> class="hidden-visibility" type="file" accept="<?php echo '.' . implode(',.', CHV\Upload::getEnabledImageFormats()); ?>" multiple>
 			<input id="anywhere-upload-input-camera" data-action="anywhere-upload-input"<?php if(!CHV\getSetting('guest_uploads')) { ?> data-login-needed="true"<?php } ?> class="hidden-visibility" type="file" capture="camera" accept="image/*">
 			<ul id="anywhere-upload-queue" class="upload-box-queue content-width soft-hidden" data-group="upload-queue"></ul>
 			
@@ -86,7 +86,7 @@
 				<div data-group="upload-result" data-result="error" class="soft-hidden margin-top-10 text-align-center upload-box-status-text"><?php _se('Check the <a data-modal="simple" data-target="failed-upload-result">error report</a> for more information.'); ?></div>
 			</div>
 
-        	<div class="upload-box-allowed-files position-absolute"><span class="phone-hide">jpg png bmp gif</span> <span><?php _se('max'); ?> <?php echo G\format_bytes(G\get_bytes(CHV\getSetting('upload_max_filesize_mb').'MB')); ?></span></div>
+        	<div class="upload-box-allowed-files position-absolute"><span class="phone-hide"><?php echo str_replace(',', ' ', strtoupper(CHV\getSetting('upload_enabled_image_formats'))); ?></span> <span><?php _se('max'); ?> <?php echo G\format_bytes(G\get_bytes(CHV\getSetting('upload_max_filesize_mb').'MB')); ?></span></div>
 			<div class="upload-box-close position-absolute">
 				<a data-action="close-upload" data-button="close-cancel"><span class="btn-icon icon-close"></span><span class="btn-text"><?php _se('close'); ?></span></a>
 				<a data-action="cancel-upload" data-button="close-cancel" class="soft-hidden"><span class="btn-icon icon-close"></span><span class="btn-text"><?php _se('cancel'); ?></span></a>

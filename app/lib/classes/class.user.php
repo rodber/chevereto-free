@@ -179,6 +179,17 @@ class User {
 			if(empty($values['registration_ip'])) {
 				$values['registration_ip'] = G\get_client_ip();
 			}
+
+			// Detect flood (son 48 horas que hay que aprovechar)
+			if(!Login::getUser()['is_admin']) {
+				$db = DB::getInstance();
+				$db->query('SELECT COUNT(*) c FROM ' . DB::getTable('users') . ' WHERE user_registration_ip=:ip AND user_status != "valid" AND user_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 2 DAY)');
+				$db->bind(':ip', $values['registration_ip']);
+				if($db->fetchSingle()['c'] > 5) {
+					throw new Exception('Flood detected', 666); // I left alone, my mind was blank...
+				}
+			}
+
 			$user_id = DB::insert('users', $values);
 			// Track stats
 			Stat::track([
@@ -189,7 +200,7 @@ class User {
 			]);
             if(isset($_SESSION['guest_uploads']) and count($_SESSION['guest_uploads']) > 0) {
                 try {
-                    $db = G\DB::getInstance();
+                    $db = DB::getInstance();
                     $db->query('UPDATE ' . DB::getTable('images') . ' SET image_user_id=' . $user_id . ' WHERE image_id IN (' . implode(',', $_SESSION['guest_uploads']) . ')');
                     $db->exec();
                     // Get user actual image count
@@ -340,10 +351,10 @@ class User {
 	public static function delete($user) {
 		try {
 			if(!is_array($user)) {
-				$user = self::getSingle($user, 'id', true);
+				$user = self::getSingle($user, 'id', TRUE);
 			}
 			// Delete content user image folder
-			$user_images_path = CHV_PATH_CONTENT_IMAGES_USERS.$user['id_encoded'];
+			$user_images_path = CHV_PATH_CONTENT_IMAGES_USERS . $user['id_encoded'];
 			if(!@unlink($user_images_path)) {
 				$files = glob($user_images_path.'/{,.}*', GLOB_BRACE);
 				foreach($files as $file){
@@ -362,7 +373,7 @@ class User {
 			foreach($user_images as $user_image) {
 				Image::delete($user_image['image_id']);
 			}
-			
+
 			// Remove related notifications tied to this user (follows)
 			Notification::delete([
 				'table'		=> 'users',
@@ -385,7 +396,7 @@ class User {
 				'%user_id'		=> $user['id'],
 			]);
 			DB::queryExec($sql);
-			
+
 			// Update affected user_liked count (users who liked content owner by this user)
 			// --> Should happen in Image::delete()
 			
@@ -403,6 +414,7 @@ class User {
 				'%table_follows'=> DB::getTable('follows'),
 				'%user_id'		=> $user['id'],
 			]);
+
 			DB::queryExec($sql);
 			
 			DB::delete('albums', ['user_id' => $user['id']]); // Delete albums DB
@@ -419,6 +431,7 @@ class User {
 	
 	public static function statusRedirect($status) {
 		if(isset($status) and $status != NULL and $status !== 'valid') {
+			if($status == 'awaiting-email') $status = 'email-needed';
 			G\redirect('account/'.$status);
 		}
 	}
@@ -563,6 +576,17 @@ class User {
 	
 	public static function sanitizeUserName($name) {
 		return preg_replace('#<|>#', '', $name);
+	}
+	
+	// Clean unconfirmed accounts
+	public static function cleanup() {
+		$db = DB::getInstance();
+		$db->query('SELECT * FROM ' . DB::getTable('users') . ' WHERE user_status IN ("awaiting-confirmation", "awaiting-email") AND user_date_gmt <= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 2 DAY) ORDER BY user_id DESC LIMIT 5'); // Only 5 entries per round, this is an expensive job
+		$users = $db->fetchAll();
+		foreach($users as $user) {
+			$user = self::formatArray($user);
+			self::delete($user);
+		}
 	}
 	
 }

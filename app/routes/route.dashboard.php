@@ -117,59 +117,78 @@ $route = function($handler) {
 				];
 				
 				$system_values = [
-					'chv_version' => [
-						'label' => _s('Chevereto Free'),
-						'content' =>  (version_compare($chv_version['files'], $chv_version['db'], '<=') ? $chv_version['files'] : $chv_version['files'] . ' ('.$chv_version['db'].' DB) <a href="'.G\get_base_url('install').'">'._s('install update').'</a>') . ' – <a data-action="check-for-updates">' . _s("check for updates") . '</a>' 
+					'chv_version'	=> [
+						'label'		=> _s('Chevereto Free'),
+						'content'	=>  (version_compare($chv_version['files'], $chv_version['db'], '<=') ? $chv_version['files'] : $chv_version['files'] . ' ('.$chv_version['db'].' DB) <a href="'.G\get_base_url('install').'">'._s('install update').'</a>') . ' – <a data-action="check-for-updates">' . _s("check for updates") . '</a>' 
 					],
-					'chv_free' => [
-						'label'	=> 'Get more',
-						'content' => '<a href="https://chevereto.com/pricing" target="_blank">Upgrade</a> to contribute with Chevereto development and to get more <a href="https://chevereto.com/features" target="_blank">features</a>',
+					'chv_free'		=> [
+						'label'		=> 'Get more',
+						'content'	=> '<a href="https://chevereto.com/pricing" target="_blank">Upgrade</a> to contribute with Chevereto development and to get more <a href="https://chevereto.com/features" target="_blank">features</a> and support.',
 					],
-					'g_version' => [
-						'label' => 'G\\',
-						'content' => '<a href="http://gbackslash.com" target="_blank">G\\ Library '.G\get_version().'</a>'
+					'g_version'		=> [
+						'label'		=> 'G\\',
+						'content'	=> '<a href="http://gbackslash.com" target="_blank">G\\ Library '.G\get_version().'</a>'
 					],
 					'php_version' => [
-						'label' => _s('PHP version'),
-						'content' => PHP_VERSION
+						'label'		=> _s('PHP version'),
+						'content'	=> PHP_VERSION
 					],
 					'server' => [
-						'label' => _s('Server'),
-						'content' => gethostname() . ' ' . PHP_OS . '/' . PHP_SAPI 
+						'label'		=> _s('Server'),
+						'content'	=> gethostname() . ' ' . PHP_OS . '/' . PHP_SAPI 
 					],
 					'mysql_version' => [
-						'label' => _s('MySQL version'),
-						'content' => $db->getAttr(PDO::ATTR_SERVER_VERSION)
+						'label'		=> _s('MySQL version'),
+						'content'	=> $db->getAttr(PDO::ATTR_SERVER_VERSION)
 					],
 					'mysql_server_info' => [
-						'label' => _s('MySQL server info'),
-						'content' => $db->getAttr(PDO::ATTR_SERVER_INFO)
+						'label'		=> _s('MySQL server info'),
+						'content'	=> $db->getAttr(PDO::ATTR_SERVER_INFO)
 					],
 					'gdversion' => [
-						'label' => _s('GD Library'),
-						'content' => 'Version ' . gd_info()['GD Version'] . ' JPEG:'.gd_info()['JPEG Support'].' GIF:'.gd_info()['GIF Read Support'].'/'.gd_info()['GIF Create Support'].' PNG:'.gd_info()['PNG Support'].' WBMP:'.gd_info()['WBMP Support'].' XBM:'.gd_info()['XBM Support']
+						'label'		=> _s('GD Library'),
+						'content'	=> 'Version ' . gd_info()['GD Version'] . ' JPEG:'.gd_info()['JPEG Support'].' GIF:'.gd_info()['GIF Read Support'].'/'.gd_info()['GIF Create Support'].' PNG:'.gd_info()['PNG Support'].' WBMP:'.gd_info()['WBMP Support'].' XBM:'.gd_info()['XBM Support']
 					],
 					'file_uploads' => [
-						'label' => _s('File uploads'),
-						'content' => ini_get('file_uploads') == 1 ? _s('Enabled') : _s('Disabled')
+						'label'		=> _s('File uploads'),
+						'content'	=> ini_get('file_uploads') == 1 ? _s('Enabled') : _s('Disabled')
 					],
 					'max_upload_size' => [
-						'label' => _s('Max. upload size'),
-						'content' => G\format_bytes(G\get_ini_bytes(ini_get('upload_max_filesize')))
+						'label'		=> _s('Max. upload size'),
+						'content'	=> G\format_bytes(G\get_ini_bytes(ini_get('upload_max_filesize')))
 					],
 					'max_post_size' => [
-						'label' => _s('Max. post size'),
-						'content' => G\format_bytes(G\get_ini_bytes(ini_get('post_max_size')))
+						'label'		=> _s('Max. post size'),
+						'content'	=> G\format_bytes(G\get_ini_bytes(ini_get('post_max_size')))
 					],
 					'max_execution_time' => [
-						'label' => _s('Max. execution time'),
-						'content' => strtr(_n('%d second', '%d seconds', ini_get('max_execution_time')), ['%d' => ini_get('max_execution_time')])
+						'label'		=> _s('Max. execution time'),
+						'content'	=> strtr(_n('%d second', '%d seconds', ini_get('max_execution_time')), ['%d' => ini_get('max_execution_time')])
 					],
 					'memory_limit' => [
-						'label' => _s('Memory limit'),
-						'content' => G\format_bytes(G\get_ini_bytes(ini_get('memory_limit')))
+						'label'		=> _s('Memory limit'),
+						'content'	=> G\format_bytes(G\get_ini_bytes(ini_get('memory_limit')))
+					],
+					'links' => [
+						'label'		=> _s('Links'),
 					],
 				];
+				
+				$chevereto_urls = [
+					_s('Documentation')			=> 'https://chevereto.com/docs',
+					_s('Changelog')				=> 'https://chevereto.com/changelog',
+					_s('Request new features')	=> 'https://chevereto.com/request-new-features',
+					_s('Bug tracking')			=> 'https://chevereto.com/bug-tracking',
+					_s('Blog')					=> 'https://chevereto.com/blog',
+					_s('Community')				=> 'https://chevereto.com/community',
+					'GitHub' 					=> 'https://github.com/Chevereto',
+				];
+				$chevereto_links = [];
+				foreach($chevereto_urls as $k => $v) {
+					$chevereto_links[] = '<a href="'.$v.'" target="_blank">'.$k.'</a>';
+				}
+				
+				$system_values['links']['content'] = implode(' – ', $chevereto_links);
 				
 				$handler::setVar('system_values', $system_values);
 				$handler::setVar('totals', $totals);
@@ -228,7 +247,13 @@ $route = function($handler) {
 						}
 					}
 					
-				}			
+				}
+				
+				// Reject non-existing settings sections
+				if(!empty($handler->request[1]) && !array_key_exists($handler->request[1], $settings_sections)) {
+					return $handler->issue404();
+				}
+				
 				$handler::setVar('settings_menu', $settings_sections);
 				//$handler::setVar('tabs', $settings_sections);
 				
@@ -443,6 +468,11 @@ $route = function($handler) {
 								'validate'	=> is_numeric($_POST['listing_items_per_page']) and $_POST['listing_items_per_page'] > 0,
 								'error_msg'	=> _s('Invalid value')
 							],
+						'upload_threads' =>
+							[
+								'validate'	=> filter_var($_POST['upload_threads'], FILTER_VALIDATE_INT) && $_POST['upload_threads'] > 0 && $_POST['upload_threads'] <= 5,
+								'error_msg'	=> _s('Invalid value')
+							],
 						'upload_storage_mode'	=>
 							[
 								'validate'	=> in_array($_POST['upload_storage_mode'], ['datefolder', 'direct']),
@@ -455,27 +485,27 @@ $route = function($handler) {
 							],
 						'upload_thumb_width'=>
 							[
-								'validate'	=> is_numeric($_POST['upload_thumb_width']),
+								'validate'	=> filter_var($_POST['upload_thumb_width'], FILTER_VALIDATE_INT),
 								'error_msg'	=> _s('Invalid thumb width')
 							],
 						'upload_thumb_height'=>
 							[
-								'validate'	=> is_numeric($_POST['upload_thumb_height']),
+								'validate'	=> filter_var($_POST['upload_thumb_height'], FILTER_VALIDATE_INT),
 								'error_msg'	=> _s('Invalid thumb height')
 							],
 						'upload_medium_size'=>
 							[
-								'validate'	=> is_numeric($_POST['upload_medium_size']),
+								'validate'	=> filter_var($_POST['upload_medium_size'], FILTER_VALIDATE_INT),
 								'error_msg'	=> _s('Invalid medium size')
 							],
 						'watermark_percentage' =>
 							[
-								'validate' 	=> is_numeric($_POST['watermark_percentage']) and (1 <= $_POST['watermark_percentage'] && $_POST['watermark_percentage'] <= 100),
+								'validate' 	=> filter_var($_POST['watermark_percentage'], FILTER_VALIDATE_INT) and (1 <= $_POST['watermark_percentage'] && $_POST['watermark_percentage'] <= 100),
 								'error_msg'	=> _s('Invalid watermark percentage')
 							],
 						'watermark_opacity' =>
 							[
-								'validate' 	=> is_numeric($_POST['watermark_opacity']) and (1 <= $_POST['watermark_opacity'] && $_POST['watermark_opacity'] <= 100),
+								'validate' 	=> filter_var($_POST['watermark_opacity'], FILTER_VALIDATE_INT) and (1 <= $_POST['watermark_opacity'] && $_POST['watermark_opacity'] <= 100),
 								'error_msg'	=> _s('Invalid watermark opacity')
 							],
 						'theme'	=>
@@ -485,7 +515,7 @@ $route = function($handler) {
 							],
 						'theme_logo_height' =>
 							[
-								'validate'	=> G\check_value($_POST['theme_logo_height']) ? is_numeric($_POST['theme_logo_height']) : true,
+								'validate'	=> G\check_value($_POST['theme_logo_height']) ? filter_var($_POST['theme_logo_height'], FILTER_VALIDATE_INT) : true,
 								'error_msg'	=> _s('Invalid value')
 							],
 						'theme_tone' =>
@@ -540,7 +570,7 @@ $route = function($handler) {
 							],
 						'website_mode_personal_uid' =>
 							[
-								'validate'	=> $_POST['website_mode'] == 'personal' ? is_numeric($_POST['website_mode_personal_uid']) : TRUE,
+								'validate'	=> $_POST['website_mode'] == 'personal' ? filter_var($_POST['website_mode_personal_uid'], FILTER_VALIDATE_INT) : TRUE,
 								'error_msg'	=> _s('Invalid personal mode user ID')
 							],
 						'website_mode_personal_routing' =>
@@ -650,11 +680,6 @@ $route = function($handler) {
 						$validations['route_album'] = $validations['route_image'];
 					}
 
-					$bool_validations = ['auto_language', 'guest_uploads', 'error_reporting', 'maintenance', 'cloudflare', 'recaptcha', 'cdn'];
-					foreach($bool_validations as $v) {
-						$validations[$v] = ['validate' => in_array($_POST[$v], [0,1]) ? true : false];
-					}
-					
 					// Validate image path
 					if($_POST['upload_image_path']) {
 						$safe_upload_image_path = rtrim(G\sanitize_relative_path($_POST['upload_image_path']), '/');
@@ -730,8 +755,20 @@ $route = function($handler) {
 					// 1. No pueden mappear una ruta ya existente, excepto self (no puden mapear /dashboard, pero si /image)
 					// 2. No pueden mapear a un username
 					
+					// Handle disabled image formats
+					if($_POST['image_format_enable'] && is_array($_POST['image_format_enable'])) {
+						// Validate each entry
+						$image_format_enable = [];
+						foreach($_POST['image_format_enable'] as $v) {
+							if(in_array($v, CHV\Upload::getAvailableImageFormats())) {
+								$image_format_enable[] = $v;
+							}
+						}
+						$_POST['upload_enabled_image_formats'] = implode(',', $image_format_enable);
+					}
+					
 					// Handle disabled languages
-					if($_POST['languages_enable']) {
+					if($_POST['languages_enable'] && is_array($_POST['image_format_enable'])) {
 						
 						// Push default language
 						if(!in_array($_POST['default_language'], $_POST['languages_enable'])) {

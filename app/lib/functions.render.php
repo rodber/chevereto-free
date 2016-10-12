@@ -289,7 +289,7 @@ function get_share_links($share_element) {
 function include_peafowl_head() {
 	$peafowl_css = get_static_url(CHV_PATH_PEAFOWL . 'peafowl.css');
 	$opensans_css = get_static_url(CHV_PATH_PEAFOWL . 'fonts/opensans/opensans.css');
-	echo	'<meta name="generator" content="Chevereto ' . CHV\get_chevereto_version() . '">' . "\n" . 
+	echo	'<meta name="generator" content="' . G_APP_NAME . ' ' . CHV\get_chevereto_version() . '">' . "\n" . 
 			'<link rel="stylesheet" href="' . $peafowl_css . '">' . "\n" .
 			'<link rel="stylesheet" href="' . $opensans_css . '">' . "\n\n" .
 			'<script>document.documentElement.className += " js";(function(w,d,u){w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}})(window,document);var devices=["phone","phablet","tablet","laptop","desktop","largescreen"];window_to_device=function(){for(var e=[480,768,992,1200,1880,2180],n=[],t="",d=document.documentElement.clientWidth||document.getElementsByTagName("body")[0].clientWidth||window.innerWidth,o=0;o<devices.length;++o)d>=e[o]&&n.push(devices[o]);0==n.length&&n.push(devices[0]),t=n[n.length-1];for(var o=0;o<devices.length;++o)document.documentElement.className=document.documentElement.className.replace(devices[o],""),o==devices.length-1&&(document.documentElement.className+=" "+t),document.documentElement.className=document.documentElement.className.replace(/\s+/g," ");if("laptop"==t||"desktop"==t){var c=document.getElementById("pop-box-mask");null!==c&&c.parentNode.removeChild(c)}},window_to_device(),window.onresize=window_to_device,$(document).ready(function(){PF.obj.devices=window.devices,PF.fn.window_to_device=window.window_to_device});</script>' . "\n\n";
@@ -577,7 +577,7 @@ function chevereto_die($error_msg, $paragraph=NULL, $title=NULL) {
 	if(!is_array($error_msg) && G\check_value($error_msg)) $error_msg = array($error_msg);
 	
 	if(is_null($paragraph)) {
-		$paragraph = "The system has encountered errors or missettings that must be fixed to allow proper Chevereto functionality. Chevereto won't run until the following issues are solved:";
+		$paragraph = "The system has encountered errors that must be fixed to allow proper Chevereto functionality. Chevereto won't work until the following issues are solved:";
 	}
 	$solution = "Need help or questions about this? Go to <a href='http://chevereto.com/support' target='_blank'>Chevereto support<a/>.";
 	$title = (!is_null($title)) ? $title : 'System error';
@@ -929,7 +929,7 @@ function show_queue_img() {
 }
 
 function showPingPixel() {
-	if(is_null(CHV\getSetting('update_check_datetimegmt')) || G\datetime_add(CHV\getSetting('update_check_datetimegmt'), 'P1D') < G\datetimegmt()) {
+	if(CHV\getSetting('enable_automatic_updates_check') && (is_null(CHV\getSetting('update_check_datetimegmt')) || G\datetime_add(CHV\getSetting('update_check_datetimegmt'), 'P1D') < G\datetimegmt())) {
 		echo getPixel('ping');
 	}
 }

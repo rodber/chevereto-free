@@ -1,9 +1,11 @@
 html, body {
-	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #F4F4F4;
 }
 
 body {
-	background: #F4F4F4;
+	
 	color: #333;
 }
 
@@ -58,7 +60,7 @@ ul.errors {
 	color: #BBB;
 	text-shadow: 0 1px 0 #FFF;
 	text-align: center;
-	margin: 10px;
+	padding: 10px;
 }
 	#powered a {
 		color: #BBB;

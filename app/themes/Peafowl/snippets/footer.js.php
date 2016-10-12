@@ -42,7 +42,9 @@ CHV.obj.config = {
 		right_click: <?php echo json_encode(CHV\getSetting('theme_image_right_click')); ?>,
 	},
 	upload: {
-		redirect_single_upload: <?php echo json_encode(CHV\getSetting('enable_redirect_single_upload')); ?>
+		redirect_single_upload: <?php echo json_encode(CHV\getSetting('enable_redirect_single_upload')); ?>,
+		threads: <?php echo json_encode(CHV\getSetting('upload_threads')); ?>,
+		image_types: <?php echo json_encode(CHV\Upload::getEnabledImageFormats()); ?>
 	},
 	user: {
 		avatar_max_filesize: "<?php echo CHV\getSetting('user_image_avatar_max_filesize_mb') . ' MB'; ?>",

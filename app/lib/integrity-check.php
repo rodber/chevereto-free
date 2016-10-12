@@ -32,23 +32,21 @@ function check_system_integrity() {
 	
 	/*** Check server requirements ***/
 	
-	// Try to fix the sessions in crap setups (OVH)
+	// Try to fix sessions in crap setups (OVH)
 	@ini_set('session.gc_divisor', 100);
-	@ini_set('session.gc_probability', true);
-	@ini_set('session.use_trans_sid', false);
-	@ini_set('session.use_only_cookies', true);
+	@ini_set('session.gc_probability', TRUE);
+	@ini_set('session.use_trans_sid', FALSE);
+	@ini_set('session.use_only_cookies', TRUE);
 	@ini_set('session.hash_bits_per_character', 4);
 	
 	$missng_fn_tpl = '%n (<a href="http://php.net/manual/en/function.%u.php">%f</a>) function is disabled in this server. This function must be enabled in your PHP configuration (php.ini) and/or you must add this missing function.';
 	
-	if(version_compare(PHP_VERSION, '5.4.0', '<'))
-		$install_errors[] = 'This server is currently running PHP version '.PHP_VERSION.' and Chevereto needs at least PHP 5.4.0 to run. You need to update PHP in this server.';
+	if(version_compare(PHP_VERSION, '5.5.0', '<'))
+		$install_errors[] = 'This server is currently running PHP version '.PHP_VERSION.' and Chevereto needs at least PHP 5.5.0 to run. You need to update PHP in this server.';
 	
-	if(!extension_loaded('curl') && !function_exists('curl_init'))
-		$install_errors[] = 'Client URL library (<a href="http://curl.haxx.se/" target="_blank">cURL</a>) is not enabled in this server. cURL is needed to perform URL fetching.';
-	
-	if(!function_exists('curl_exec'))
-		$install_errors[] = strtr($missng_fn_tpl, ['%n' => 'Curl exec', '%f' => 'curl_exec', '%u' => 'curl-exec']);
+	if(ini_get('allow_url_fopen') !== 1 && !function_exists('curl_init')) {
+		$install_errors[] = "cURL isn't installed and allow_url_fopen is disabled. Chevereto needs one of these to perform HTTP requests to remote servers.";
+	}
 		
 	if(preg_match('/apache/i', $_SERVER['SERVER_SOFTWARE']) && function_exists('apache_get_modules') && !in_array('mod_rewrite', apache_get_modules())) {
 		$install_errors[] = 'Apache <a href="http://httpd.apache.org/docs/2.1/rewrite/rewrite_intro.html" target="_blank">mod_rewrite</a> is not enabled in this server. This must be enabled to run Chevereto.';

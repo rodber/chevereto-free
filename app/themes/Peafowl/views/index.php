@@ -29,8 +29,6 @@
 	</div>
 </div>
 
-<?php CHV\Render\show_banner('home_after_cover'); ?>
-
 <?php if (CHV\Settings::get('homepage_style') == 'split') { ?>
 <div class="content-width">
 	

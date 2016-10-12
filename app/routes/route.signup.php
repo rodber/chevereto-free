@@ -43,9 +43,8 @@ $route = function($handler) {
 			G\redirect(CHV\User::getUrl($logged_user));
 		}
 	
-		// Request log
+		// Failed access requests filter
 		$failed_access_requests = $handler::getVar('failed_access_requests');
-		
 		if(CHV\is_max_invalid_request($failed_access_requests['day'])) {
 			G\set_status_header(403);
 			$handler->template = 'request-denied';
@@ -56,7 +55,7 @@ $route = function($handler) {
 		$SAFE_POST = $handler::getVar('safe_post');
 			
 		// Conds
-		$is_error = false;
+		$is_error = FALSE;
 		
 		// Vars
 		$input_errors = NULL;
@@ -69,7 +68,7 @@ $route = function($handler) {
 			if($_POST) {
 				$captcha = CHV\recaptcha_check();
 				if(!$captcha->is_valid) {
-					$is_error = true;
+					$is_error = TRUE;
 					$error_message = _s("The reCAPTCHA wasn't entered correctly");
 				}
 			}
@@ -77,7 +76,7 @@ $route = function($handler) {
 		
 		$handler::setCond('show_resend_activation', false);
 		
-		if($_POST and !$is_error and !$_SESSION['signup']) {
+		if($_POST && !$is_error && !$_SESSION['signup']) {
 			
 			$__post = [];
 			$__safe_post = [];
@@ -166,13 +165,24 @@ $route = function($handler) {
 					];
 					
 					// Ready to go, insert the new user
-					$inserted_user = CHV\User::insert($user_array);
+					try {
+						$inserted_user = CHV\User::insert($user_array);
+					} catch(Exception $e) {
+						if($e->getCode() == 666) { // Flood detected!
+							G\set_status_header(403);
+							$handler->template = 'request-denied';
+							return;
+						} else {
+							throw new Exception($e);
+						}
+					}
+					
 					
 					if($inserted_user) {
 						$insert_password = CHV\Login::addPassword($inserted_user, $_POST['password']);
 					}
 
-					if(!$inserted_user or !$insert_password) {
+					if(!$inserted_user || !$insert_password) {
 						throw new Exception("Can't insert user to the DB", 400);
 					} else {
 						if(CHV\getSetting('require_user_email_confirmation')) {
@@ -236,10 +246,10 @@ $route = function($handler) {
 			}
 			
 			if($is_error) {
-				CHV\Requestlog::insert(array('type' => 'signup', 'result' => 'fail'));
+				CHV\Requestlog::insert(['type' => 'signup', 'result' => 'fail']);
 				$error_message = _s('Check the errors in the form to continue.');
-				if(CHV\getSettings()['recaptcha'] and CHV\must_use_recaptcha($failed_access_requests['day'] + 1)) {
-					$captcha_needed = true;
+				if(CHV\getSettings()['recaptcha'] && CHV\must_use_recaptcha($failed_access_requests['day'] + 1)) {
+					$captcha_needed = TRUE;
 				}
 			}
 			
@@ -248,7 +258,7 @@ $route = function($handler) {
 		$handler::setCond('error', $is_error);
 		$handler::setCond('captcha_needed', $captcha_needed);
 		
-		if($captcha_needed and !$handler::getVar('recaptcha_html')) {
+		if($captcha_needed && !$handler::getVar('recaptcha_html')) {
 			$handler::setVar('recaptcha_html', CHV\Render\get_recaptcha_html('clean'));
 		}
 		

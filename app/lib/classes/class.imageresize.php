@@ -210,7 +210,7 @@ class Imageresize {
 			@copy($this->source, $this->resized_file);
 			return;
 		}
-		
+		@ini_set('gd.jpeg_ignore_warning', 1);
 		switch($this->file_extension) {
 			case 'gif':
 				$src = imagecreatefromgif($this->source);

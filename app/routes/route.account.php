@@ -38,10 +38,6 @@ $route = function($handler) {
 					G\redirect($logged_user['url']);
 				}
 			break;
-			case 'awaiting-confirmation':
-				if(!$logged_user or $logged_user['status'] !== 'awaiting-confirmation') {
-				}
-			break;
 		}
 			
 		// reCaptcha thing
