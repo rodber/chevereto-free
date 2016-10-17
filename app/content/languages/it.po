@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-07-15 17:52+0000\n"
-"PO-Revision-Date: 2016-07-15 17:52+0000\n"
+"POT-Creation-Date: 2016-10-17 20:52+0000\n"
+"PO-Revision-Date: 2016-10-17 20:52+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -22,14 +22,14 @@ msgstr ""
 #: ../../../app/routes/route.signup.php:97
 #: ../../../content/pages/default/contact.php:28
 msgid "Invalid email"
-msgstr "Indirizzo e-mail non valido"
+msgstr "Indirizzo email non valido"
 
 #: ../../../app/install/installer.php:1171
 #: ../../../app/routes/route.json.php:574
 #: ../../../app/routes/route.settings.php:181
 #: ../../../app/routes/route.signup.php:100
 msgid "Invalid username"
-msgstr "Il nome utente non è valido"
+msgstr "Username non valido"
 
 #: ../../../app/install/installer.php:1174
 #: ../../../app/routes/route.account.php:357
@@ -37,12 +37,12 @@ msgstr "Il nome utente non è valido"
 #: ../../../app/routes/route.settings.php:323
 #: ../../../app/routes/route.signup.php:103
 msgid "Invalid password"
-msgstr "Password sbagliata"
+msgstr "Password non valida"
 
 #: ../../../app/install/installer.php:1183
 #: ../../../app/routes/route.dashboard.php:667
 msgid "Invalid website mode"
-msgstr "Modo sito non valido"
+msgstr "Modalità sito non valida"
 
 #: ../../../app/install/template/ready.php:31
 #: ../../../app/themes/Peafowl/views/dashboard.php:1760
@@ -52,12 +52,12 @@ msgstr "Dall'indirizzo email"
 #: ../../../app/install/template/ready.php:32
 #: ../../../app/themes/Peafowl/views/dashboard.php:1763
 msgid "Sender email for emails sent to users."
-msgstr "Email che riceveranno gli utenti"
+msgstr "Indirizzo email nelle comunicazioni agli utenti"
 
 #: ../../../app/install/template/ready.php:36
 #: ../../../app/themes/Peafowl/views/dashboard.php:1766
 msgid "Incoming email address"
-msgstr "Indirizzo di posta elettronica in arrivo"
+msgstr "Indirizzo email per le comunicazioni in ingresso"
 
 #: ../../../app/install/template/ready.php:37
 #: ../../../app/themes/Peafowl/views/dashboard.php:1769
@@ -67,12 +67,12 @@ msgstr "Destinatari per gli avvisi del modulo di contatto del sito sistema."
 #: ../../../app/install/template/ready.php:44
 #: ../../../app/themes/Peafowl/views/dashboard.php:327
 msgid "Website mode"
-msgstr "Modalità del Sito"
+msgstr "Modalità sito"
 
 #: ../../../app/install/template/ready.php:45
 #: ../../../app/themes/Peafowl/views/dashboard.php:334
 msgid "You can switch the website mode anytime."
-msgstr "È possibile passare in qualsiasi momento in modalità web."
+msgstr "È possibile modificare la modalità sito in ogni momento."
 
 #: ../../../app/install/template/ready.php:47
 #: ../../../app/themes/Peafowl/views/dashboard.php:330
@@ -105,7 +105,7 @@ msgstr "Si è verificato un errore. Riprova più tardi."
 #: ../../../app/install/update/updater.php:72
 #, php-format
 msgid "Missing %s file"
-msgstr "Manca %s file"
+msgstr "File %s non trovato"
 
 #: ../../../app/install/update/updater.php:78
 msgid "Invalid license info"
@@ -113,7 +113,7 @@ msgstr "Info licenza non valida"
 
 #: ../../../app/install/update/updater.php:84
 msgid "Invalid license key"
-msgstr "Codice di licenza non valida"
+msgstr "Codice licenza non valido"
 
 #: ../../../app/install/update/updater.php:87
 msgid "Can't save file"
@@ -130,10 +130,10 @@ msgid "Can't extract %s"
 msgstr "Impossibile estrarre %s"
 
 msgid "Can't create %s directory - %e"
-msgstr "Non è possibile  %s creare una  directory - %e"
+msgstr "Impossibile creare la cartella %s - %e"
 
 msgid "Can't update %s file - %e"
-msgstr "Non è possibile aggiornare il %s file - %e"
+msgstr "Impossibile aggiornare il file %s - %e"
 
 #: ../../../app/lib/classes/class.album.php:100
 msgid "Untitled"
@@ -145,24 +145,30 @@ msgstr "Senza titolo"
 msgid "%s's images"
 msgstr "Immagini di %s"
 
+msgid "Note: This content is private but anyone with the link will be able to see this."
+msgstr "Nota: Questo contenuto è privato, ma consultabile da chiunque abbia il link."
+
+msgid "Note: This content is password protected. Remember to pass the content password to share."
+msgstr "Nota: Questo contenuto è protetto da password. Ricorda di comunicarla per consentire l'accesso."
+
 #: ../../../app/themes/Peafowl/snippets/modal_share.php:14
 #: ../../../app/themes/Peafowl/views/album.php:74
 #: ../../../app/themes/Peafowl/views/image.php:272
 msgid "Note: This content is private. Change privacy to \"public\" to share."
-msgstr "Nota: Questo contenuto è privato.Devi modificare la tua  privacy su \"pubblico\" per condividere le tue foto"
+msgstr "Nota: Questo contenuto è privato. Per condividerlo imposta la privacy a livello \"pubblico\"."
 
 msgid "After %n %t"
-msgstr "Dopo  %n %t"
+msgstr "Dopo %n %t"
 
 #: ../../../app/lib/classes/class.image.php:348
 msgid "Don't autodelete"
-msgstr "No  Auto cancellazione"
+msgstr "No"
 
 #: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] "Minuto"
-msgstr[1] "Minuti"
+msgstr[0] "minuto"
+msgstr[1] "minuti"
 
 #: ../../../app/lib/functions.php:41 ../../../app/lib/functions.php:53
 msgid "hour"
@@ -173,19 +179,19 @@ msgstr[1] "ore"
 #: ../../../app/lib/functions.php:40 ../../../app/lib/functions.php:52
 msgid "day"
 msgid_plural "days"
-msgstr[0] "Giorno"
-msgstr[1] "Giorni"
+msgstr[0] "giorno"
+msgstr[1] "giorni"
 
 #: ../../../app/lib/classes/class.image.php:636
 #: ../../../app/lib/classes/class.image.php:742
 msgid "Duplicated upload"
-msgstr "Caricamento doppio"
+msgstr "Contenuto duplicato"
 
 msgid "Error storing file in external storage server"
-msgstr "Errore di memorizzazione di file  nel  server di storage esterno"
+msgstr "Errore salvataggio file sui server di archiviazione esterna"
 
 msgid "External storage has failed"
-msgstr "Storage esterno ha fallito"
+msgstr "Errore archiviazione esterna"
 
 #: ../../../app/lib/classes/class.image.php:955
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
@@ -193,16 +199,16 @@ msgid "Private upload"
 msgstr "Caricamento privato"
 
 msgid "Upload switched to local storage"
-msgstr "Il file p passato allo  storage locale"
+msgstr "Impostato caricamento sullo spazio di archiviazione locale"
 
 msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
-msgstr "Sistema è passato a storage locale a causa di non capacità su disco sufficiente (%c) nel server di archiviazione esterni(s). L'immagine %s è stato assegnato alla memoria locale."
+msgstr "Il sistema ha impostato l'utilizzo dell'archiviazione locale causa quota disco insufficiente (%c) sui server di archiviazione esterna. L'immagine %s è stata salvata in locale."
 
 #: ../../../app/lib/classes/class.image.php:1230
 msgid "view"
 msgid_plural "views"
-msgstr[0] "vista"
-msgstr[1] "viste"
+msgstr[0] "visualizzazione"
+msgstr[1] "visualizzazioni"
 
 #: ../../../app/lib/classes/class.image.php:1231
 msgid "like"
@@ -223,22 +229,22 @@ msgstr[1] "Immagini"
 
 #: ../../../app/lib/classes/class.notification.php:75
 msgid "%u liked your %t %c"
-msgstr "%u piace il tuo %t %c"
+msgstr "A %u piace il tuo %t %c"
 
 #: ../../../app/lib/classes/class.notification.php:81
 #, php-format
 msgid "%u is now following you"
-msgstr "%u ora ti sta  seguendo"
+msgstr "%u ora ti sta seguendo"
 
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
 msgid "Can't create %s destination dir"
-msgstr "Impossibile creare %s destinazione dir"
+msgstr "Impossibile creare la cartella di destinazione %s"
 
 #: ../../../app/lib/classes/class.page.php:126
 #, php-format
 msgid "Can't open %s for writing"
-msgstr "Impossibile aprire %s per la scrittura"
+msgstr "Impossibile aprire %s in scrittura"
 
 #: ../../../app/lib/classes/class.page.php:136
 #: ../../../app/themes/Peafowl/views/dashboard.php:461
@@ -252,16 +258,16 @@ msgid "Link"
 msgstr "Link"
 
 msgid "Can't insert storage."
-msgstr "Impossibile inserirlo storage."
+msgstr "Impossibile aggiungere spazio di archiviazione"
 
 #: ../../../app/lib/classes/class.storage.php:450
 #: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
 #, php-format, javascript-format
 msgid "Storage capacity can't be lower than its current usage (%s)."
-msgstr "La capacità dello storage non può essere inferiore al suo uso corrente (%s)."
+msgstr "Lo spazio di archiviazione non può essere inferiore a quello attualmente in uso (%s)."
 
 msgid "Can't update storage details."
-msgstr "Impossibile aggiornare i dettagli dello storage."
+msgstr "Impossibile aggiornare i dettagli dello spazio di archiviazione."
 
 #: ../../../app/lib/classes/class.storage.php:720
 msgid "Unlimited"
@@ -281,26 +287,26 @@ msgstr "Privato"
 #: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
 msgid "year"
 msgid_plural "years"
-msgstr[0] "Anno"
-msgstr[1] "Anni"
+msgstr[0] "anno"
+msgstr[1] "anni"
 
 #: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
 msgid "month"
 msgid_plural "months"
-msgstr[0] "Mese"
-msgstr[1] "Mesi"
+msgstr[0] "mese"
+msgstr[1] "mesi"
 
 #: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
 msgid "week"
 msgid_plural "weeks"
-msgstr[0] "Settimana"
-msgstr[1] "Settimane"
+msgstr[0] "settimana"
+msgstr[1] "settimane"
 
 #: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
 msgid "second"
 msgid_plural "seconds"
-msgstr[0] "Secondo"
-msgstr[1] "Secondi"
+msgstr[0] "secondo"
+msgstr[1] "secondi"
 
 #: ../../../app/lib/functions.php:67
 #, php-format
@@ -309,52 +315,67 @@ msgstr "%s fa"
 
 #: ../../../app/lib/functions.php:67
 msgid "moments ago"
-msgstr "istanti fa"
+msgstr "poco fa"
 
 msgid "System notification"
-msgstr "Sistema di notifica"
+msgstr "Notifica di sistema"
 
 #: ../../../app/routes/route.dashboard.php:1223
 #: ../../../app/themes/Peafowl/header.php:407
 #: ../../../app/themes/Peafowl/views/dashboard.php:9
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "Cruscotto"
+
+msgid "There is an update available for your system. Go to %s to download and install this update."
+msgstr "Aggiornamento di sistema disponibile. Vai a %s per scaricarlo ed installarlo."
 
 #: ../../../app/lib/functions.php:218
 #, php-format
 msgid "System database is outdated. You need to run the <a href=\"%s\">update</a> tool."
-msgstr "Database di sistema è obsoleto. È necessario eseguire il <a href=\"%s\">aggiornamento</a> strumento"
+msgstr "Database di sistema obsoleto. È necessario eseguire lo strumento di <a href=\"%s\">aggiornamento</a>."
 
 #: ../../../app/lib/functions.php:221
 #, php-format
 msgid "Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>."
-msgstr "Sito web è in modalità di manutenzione. Per ripristinare questa impostazione andare a <a href=\"%s\"> Dashboard> Impostazioni </a>."
+msgstr "Il sito è in modalità di manutenzione. Per annullare questa impostazione andare al menu <a href=\"%s\"> Cruscotto > Impostazioni </a>."
 
 msgid "You should disable PHP error reporting for production enviroment. Go to <a href='%s'>System settings</a> to revert this setting."
-msgstr "È necessario disattivare errore PHP reporting per ambienti di produzione. Vai a <a href='%s'> Impostazioni di sistema </a> per ripristinare questa impostazione."
+msgstr "È consigliabile disattivare il rapporto errori PHP in ambienti di produzione. Vai a <a href='%s'> Impostazioni di sistema </a> per annullare questa impostazione."
 
 msgid "You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this."
-msgstr "Non sono state modificate le impostazioni di posta elettronica predefinito. Vai a <a href='%s'>  Impostazioni e-mail </a> per risolvere questo problema."
+msgstr "Le impostazioni email predefinite non sono state modificate. Vai a <a href='%s'>  Impostazioni email </a> per gestirle."
+
+msgid "There is an update available for your Chevereto based website."
+msgstr "Aggiornamento disponibile per il tuo sito by Chevereto."
 
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 msgid "The release notes for this update are:"
-msgstr "Le note di rilascio di questo aggiornamento sono:"
+msgstr "Note di rilascio di questo aggiornamento:"
+
+msgid "admin dashboard"
+msgstr "Cruscotto amministratore"
+
+msgid "You can apply this update directly from your %a or download it from %s and then manually install it."
+msgstr "È possibile applicare questo aggiornamento direttamente dal vostro %a  o scaricarlo dal %s  e poi installarlo manualmente"
+
+msgid "Chevereto update available (v%s)"
+msgstr "Chevereto aggiornamento disponibile (v%s)"
 
 msgid "view on %s"
-msgstr "visualizzare su %s"
+msgstr "visualizza su %s"
 
 #: ../../../app/lib/functions.render.php:303
 msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
-msgstr "Questo sito usa cookie, anche di terzi, per migliorare l’esperienza di navigazione e adeguare la pubblicità alle tue preferenze. Chiudendo questo banner o proseguendo nella navigazione acconsenti all'utilizzo di cookie."
+msgstr "Questo sito usa cookie, anche di terzi, per migliorare l’esperienza di navigazione ed adeguare i nostri servizi alle tue preferenze. Chiudendo questo banner o proseguendo nella navigazione acconsenti al loro utilizzo."
 
 #: ../../../app/loader.php:180
 msgid "You have been forbidden to use this website."
-msgstr "Sei stato proibito ad utilizzare questo sito."
+msgstr "Ti è stato proibito l'utilizzo di questo sito."
 
 #: ../../../app/loader.php:279
 #: ../../../app/themes/Peafowl/views/settings.php:441
 msgid "Feel free to browse and discover all my shared images and albums."
-msgstr "Sentitevi liberi di navigare e scoprire tutte le mie immagini e gli album condivisi."
+msgstr "Divertiti a sfogliare e scoprire tutte le mie immagini ed i miei album condivisi!"
 
 #: ../../../app/loader.php:282
 #: ../../../app/themes/Peafowl/views/settings.php:447
@@ -364,6 +385,36 @@ msgstr "Visualizza tutte le mie immagini"
 #: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
 msgid "That page doesn't exist"
 msgstr "La pagina non esiste"
+
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Più recenti"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "Più vecchi"
+
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:92
+#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
+#: ../../../app/themes/Peafowl/header.php:403
+#: ../../../app/themes/Peafowl/views/settings.php:77
+msgid "Albums"
+msgstr "Album"
 
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
@@ -382,7 +433,7 @@ msgstr "Reimpostazione della password"
 #: ../../../app/routes/route.account.php:74
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:8
 msgid "Resend account activation"
-msgstr "Invia di nuovo la richiesta di attivazione"
+msgstr "Reinvia la richiesta di attivazione account"
 
 #: ../../../app/routes/route.account.php:76
 #: ../../../app/themes/Peafowl/views/account/email-needed.php:8
@@ -399,17 +450,17 @@ msgstr "Email cambiata"
 #: ../../../app/routes/route.settings.php:140
 #: ../../../app/routes/route.signup.php:73
 msgid "The reCAPTCHA wasn't entered correctly"
-msgstr "Il reCAPTCHA non è stato inserito correttamente"
+msgstr "Il codice reCAPTCHA non è stato inserito correttamente"
 
 #: ../../../app/routes/route.account.php:119
 #: ../../../app/routes/route.account.php:164
 #: ../../../app/routes/route.account.php:271
 msgid "Invalid Username/Email"
-msgstr "Invalido Username/Email"
+msgstr "Username/Email non validi"
 
 #: ../../../app/routes/route.account.php:129
 msgid "User doesn't have an email."
-msgstr "L'utente non dispone di un e-mail."
+msgstr "L'utente non dispone di email."
 
 #: ../../../app/routes/route.account.php:140
 #: ../../../app/routes/route.account.php:299
@@ -423,11 +474,11 @@ msgstr "L'utente non dispone di un e-mail."
 #: ../../../app/themes/Peafowl/views/request-denied.php:8
 #: ../../../content/pages/default/contact.php:14
 msgid "Request denied"
-msgstr "Richiesta negata"
+msgstr "Richiesta rifiutata"
 
 #: ../../../app/routes/route.account.php:145
 msgid "Account needs to be activated to use this feature"
-msgstr "Il tuo account deve essere attivato per utilizzare questa funzione"
+msgstr "Per poter utilizzare questa funzione il tuo account deve essere attivato"
 
 #: ../../../app/routes/route.account.php:151
 msgid "Account already activated"
@@ -435,7 +486,7 @@ msgstr "Account già attivato"
 
 #: ../../../app/routes/route.account.php:192
 msgid "Allow up to 15 minutes for the email. You can try again later."
-msgstr "Attendere fino a 15 minuti per l'e-mail. Puoi riprovare più tardi."
+msgstr "Attendere fino a 15 minuti per l'email. Puoi riprovare più tardi."
 
 #: ../../../app/routes/route.account.php:231
 #, php-format
@@ -448,7 +499,7 @@ msgstr "Cambia la tua password %s"
 #: ../../../app/routes/route.signup.php:193
 #, php-format
 msgid "Confirmation required at %s"
-msgstr "Conferma richiesto a %s"
+msgstr "Conferma obbligatoria a %s"
 
 #: ../../../app/routes/route.account.php:342
 #: ../../../app/routes/route.signup.php:216
@@ -478,32 +529,10 @@ msgstr "Email già in uso"
 #: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
 #: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
 msgid "Check the errors in the form to continue."
-msgstr "Controllare gli errori per continuare."
+msgstr "Per proseguire verifica gli errori di compilazione."
 
 msgid "Password required"
-msgstr "Password richiesta"
-
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "Più recenti"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "Più vecchi"
+msgstr "Password obbligatoria"
 
 #: ../../../app/routes/route.album.php:96
 #: ../../../app/routes/route.category.php:64
@@ -530,14 +559,20 @@ msgstr "Piace a molti"
 msgid "Share"
 msgstr "Condividi"
 
+#: ../../../app/routes/route.image.php:127
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
+msgid "Embed codes"
+msgstr "Codici"
+
 #: ../../../app/routes/route.album.php:124
 #: ../../../app/routes/route.image.php:134
 msgid "Full info"
-msgstr "Informazione completa"
+msgstr "Informazioni complete"
 
 #: ../../../app/routes/route.album.php:159
 msgid "%a album hosted in %w"
-msgstr "%a un album ospitato in %w"
+msgstr "Album %a ospitato in %w"
 
 #: ../../../app/routes/route.dashboard.php:38
 msgid "Stats"
@@ -549,14 +584,6 @@ msgstr "Statistiche"
 #: ../../../app/themes/Peafowl/views/settings.php:73
 msgid "Images"
 msgstr "Immagini"
-
-#: ../../../app/routes/route.dashboard.php:40
-#: ../../../app/routes/route.search.php:92
-#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
-#: ../../../app/themes/Peafowl/header.php:403
-#: ../../../app/themes/Peafowl/views/settings.php:77
-msgid "Albums"
-msgstr "Album"
 
 #: ../../../app/routes/route.dashboard.php:41
 #: ../../../app/routes/route.dashboard.php:233
@@ -573,15 +600,21 @@ msgstr "Impostazioni"
 
 #: ../../../app/routes/route.dashboard.php:161
 msgid "Chevereto version"
-msgstr "versione Chevereto"
+msgstr "Versione Chevereto"
 
 #: ../../../app/routes/route.dashboard.php:162
 msgid "install update"
-msgstr "installare l'aggiornamento"
+msgstr "installa l'aggiornamento"
 
 #: ../../../app/routes/route.dashboard.php:162
 msgid "check for updates"
 msgstr "controlla gli aggiornamenti"
+
+msgid "Chevereto support"
+msgstr "Supporto Chevereto"
+
+msgid "Need help? Go to %s and you will get help quickly."
+msgstr "Hai bisogno di aiuto? Vai a %s e si otterrà un aiuto rapido."
 
 #: ../../../app/routes/route.dashboard.php:169
 msgid "PHP version"
@@ -603,7 +636,7 @@ msgstr "Info server MySQL"
 
 #: ../../../app/routes/route.dashboard.php:185
 msgid "GD Library"
-msgstr "GD libreria"
+msgstr "Libreria GD"
 
 #: ../../../app/routes/route.dashboard.php:189
 msgid "File uploads"
@@ -699,11 +732,11 @@ msgstr "Disabilitato"
 
 #: ../../../app/routes/route.dashboard.php:193
 msgid "Max. upload size"
-msgstr "Dimensione massima del caricamento"
+msgstr "Max. dimensione immagine"
 
 #: ../../../app/routes/route.dashboard.php:197
 msgid "Max. post size"
-msgstr "Max. misura assegnata"
+msgstr "Max. valore POST"
 
 #: ../../../app/routes/route.dashboard.php:201
 msgid "Max. execution time"
@@ -720,10 +753,29 @@ msgstr[1] "%d secondi"
 msgid "Memory limit"
 msgstr "Limite memoria"
 
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
+msgid "Links"
+msgstr "Links"
+
+msgid "Documentation"
+msgstr "Documentazione"
+
+msgid "Changelog"
+msgstr "Log  di cambio di registro"
+
+msgid "Request new features"
+msgstr "Richiedere nuove funzionalità"
+
+msgid "Bug tracking"
+msgstr "Bug tracking"
+
+msgid "Blog"
+msgstr "Blog"
+
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
 msgid "Website"
-msgstr "Sito web"
+msgstr "Sito"
 
 #: ../../../app/routes/route.dashboard.php:228
 msgid "Content"
@@ -736,7 +788,7 @@ msgstr "Pagine"
 #: ../../../app/routes/route.dashboard.php:230
 #: ../../../app/routes/route.dashboard.php:387
 msgid "Listings"
-msgstr "Annunci"
+msgstr "Gallerie"
 
 #: ../../../app/routes/route.dashboard.php:231
 msgid "Image upload"
@@ -747,12 +799,12 @@ msgid "Categories"
 msgstr "Categorie"
 
 msgid "Consent screen"
-msgstr "schermo  di consenso"
+msgstr "Pagina di consenso"
 
 #: ../../../app/routes/route.dashboard.php:234
 #: ../../../app/themes/Peafowl/views/dashboard.php:1021
 msgid "Flood protection"
-msgstr "Protezione Flood"
+msgstr "Protezione da flood"
 
 #: ../../../app/routes/route.dashboard.php:235
 #: ../../../app/themes/Peafowl/views/dashboard.php:1169
@@ -767,7 +819,7 @@ msgstr "Homepage"
 
 #: ../../../app/routes/route.dashboard.php:237
 msgid "Banners"
-msgstr "Banners"
+msgstr "Annunci"
 
 #: ../../../app/routes/route.dashboard.php:238
 msgid "System"
@@ -782,7 +834,7 @@ msgstr "Lingue"
 
 #: ../../../app/routes/route.dashboard.php:240
 msgid "External storage"
-msgstr "Storage esterno"
+msgstr "Archiviazione esterna"
 
 #: ../../../app/routes/route.dashboard.php:241
 #: ../../../app/themes/Peafowl/views/dashboard.php:99
@@ -792,7 +844,7 @@ msgstr "Email"
 #: ../../../app/routes/route.dashboard.php:242
 #: ../../../app/themes/Peafowl/views/album.php:79
 msgid "Social networks"
-msgstr "Social networks"
+msgstr "Social network"
 
 #: ../../../app/routes/route.dashboard.php:243
 msgid "External services"
@@ -800,7 +852,7 @@ msgstr "Servizi esterni"
 
 #: ../../../app/routes/route.dashboard.php:244
 msgid "IP bans"
-msgstr "IP bans"
+msgstr "Blocco IP"
 
 #: ../../../app/routes/route.dashboard.php:246
 msgid "Additional settings"
@@ -809,6 +861,12 @@ msgstr "Altre impostazioni"
 #: ../../../app/routes/route.dashboard.php:247
 msgid "Tools"
 msgstr "Strumenti"
+
+msgid "Can't delete all homepage cover images"
+msgstr "Impossibile cancellare tutte le immagini di copertina"
+
+msgid "Homepage cover image deleted"
+msgstr "Immagine di copertina cancellata"
 
 #: ../../../app/routes/route.dashboard.php:278
 msgid "Local"
@@ -829,7 +887,7 @@ msgstr "Tutto"
 #: ../../../app/routes/route.image.php:149
 #: ../../../app/themes/Peafowl/views/dashboard.php:1710
 msgid "search content"
-msgstr "Ricerca di contenuti"
+msgstr "Ricerca contenuti"
 
 #: ../../../app/routes/route.dashboard.php:306
 #: ../../../app/themes/Peafowl/views/dashboard.php:201
@@ -839,47 +897,50 @@ msgstr "Aggiungi pagina"
 #: ../../../app/routes/route.dashboard.php:325
 #, php-format
 msgid "Edit page ID %s"
-msgstr "Edita pagina ID %s"
+msgstr "Modifica pagina ID %s"
 
 #: ../../../app/routes/route.dashboard.php:330
 msgid "The page has been added successfully."
-msgstr "La pagina è stata aggiunta con successo."
+msgstr "La pagina è stata aggiunta correttamente."
 
 #: ../../../app/routes/route.dashboard.php:360
 msgid "The page has been deleted."
 msgstr "La pagina è stata cancellata."
 
-#: ../../../app/routes/route.dashboard.php:376
-msgid "Before cover (homepage)"
-msgstr "Prima di copertina (homepage)"
+msgid "homepage"
+msgstr "homepage"
 
-#: ../../../app/routes/route.dashboard.php:379
-msgid "After cover (homepage)"
-msgstr "Dopo copertina (homepage)"
+msgid "Before main title (%s)"
+msgstr "Prima i titoli principali (%s)"
 
-#: ../../../app/routes/route.dashboard.php:382
-msgid "After listing (homepage)"
-msgstr "Dopo aver elencato (homepage)"
+msgid "After call to action (%s)"
+msgstr "Dopo invito all'azione (%s)"
+
+msgid "After cover (%s)"
+msgstr "Dopo la copertura (%s)"
+
+msgid "After listing (%s)"
+msgstr "Dopo aver elencato  (%s)"
 
 #: ../../../app/routes/route.dashboard.php:390
 msgid "Before pagination"
-msgstr "Prima  impaginazione"
+msgstr "Prima dell'impaginazione"
 
 #: ../../../app/routes/route.dashboard.php:393
 msgid "After pagination"
-msgstr "Dopo impaginazione"
+msgstr "Dopo l'impaginazione"
 
 #: ../../../app/routes/route.dashboard.php:398
 msgid "Content (image and album)"
-msgstr "Contenuti (immagini e album)"
+msgstr "Contenuti (immagini ed album)"
 
 #: ../../../app/routes/route.dashboard.php:401
 msgid "Tab about column"
-msgstr "Scheda su colonna"
+msgstr "Colonna scheda informazioni"
 
 #: ../../../app/routes/route.dashboard.php:404
 msgid "Before comments"
-msgstr "Prima i commenti"
+msgstr "Prima dei commenti"
 
 #: ../../../app/routes/route.dashboard.php:409
 msgid "Image page"
@@ -887,56 +948,56 @@ msgstr "Pagina Immagine"
 
 #: ../../../app/routes/route.dashboard.php:412
 msgid "Inside viewer top (image page)"
-msgstr "Parte interna ispettore superiore  (Pagina immagine)"
+msgstr "Visualizzatore interno superiore (pagina immagine)"
 
 #: ../../../app/routes/route.dashboard.php:413
 #: ../../../app/routes/route.dashboard.php:417
 msgid "Expected banner size 728x90"
-msgstr "Dimensioni del banner 728x90"
+msgstr "Dimensioni previste dell'annuncio 728x90"
 
 #: ../../../app/routes/route.dashboard.php:416
 msgid "Inside viewer foot (image page)"
-msgstr "Piede viewer interno (pagina immagine)"
+msgstr "Visualizzatore interno inferiore (pagina immagine)"
 
 #: ../../../app/routes/route.dashboard.php:420
 msgid "After image viewer (image page)"
-msgstr "Dopo il visualizzatore di immagini (pagina immagine)"
+msgstr "Dopo il visualizzatore immagine (pagina immagine)"
 
 #: ../../../app/routes/route.dashboard.php:423
 msgid "Before header (image page)"
-msgstr "Prima di intestazione (pagina immagine)"
+msgstr "Prima dell'intestazione (pagina immagine)"
 
 #: ../../../app/routes/route.dashboard.php:426
 msgid "After header (image page)"
-msgstr "Dopo intestazione (pagina immagine)"
+msgstr "Dopo l'intestazione (pagina immagine)"
 
 #: ../../../app/routes/route.dashboard.php:429
 msgid "Footer (image page)"
-msgstr "Piè di pagina (pagina di immagini)"
+msgstr "Piè di pagina (pagina immagine)"
 
 #: ../../../app/routes/route.dashboard.php:434
 msgid "Album page"
-msgstr "Pagina dell'album"
+msgstr "Pagina album"
 
 #: ../../../app/routes/route.dashboard.php:437
 msgid "Before header (album page)"
-msgstr "Prima di intestazione (pagina dell'album)"
+msgstr "Prima dell'intestazione (pagina album)"
 
 #: ../../../app/routes/route.dashboard.php:440
 msgid "After header (album page)"
-msgstr "Dopo intestazione (pagina dell'album)"
+msgstr "Dopo l'intestazione (pagina album)"
 
 #: ../../../app/routes/route.dashboard.php:445
 msgid "User profile page"
-msgstr "Pagina Profilo utente"
+msgstr "Pagina profilo utente"
 
 #: ../../../app/routes/route.dashboard.php:448
 msgid "After top (user profile)"
-msgstr "Dopo superiore (profilo utente)"
+msgstr "Dopo il top (profilo utente)"
 
 #: ../../../app/routes/route.dashboard.php:451
 msgid "Before listing (user profile)"
-msgstr "Prima di elencare (profilo utente)"
+msgstr "Prima della galleria (profilo utente)"
 
 #: ../../../app/routes/route.dashboard.php:456
 msgid "Explore page"
@@ -952,11 +1013,11 @@ msgstr "NSFW"
 
 #: ../../../app/routes/route.dashboard.php:557
 msgid "Invalid website name"
-msgstr "Nome del sito non valido"
+msgstr "Nome sito non valido"
 
 #: ../../../app/routes/route.dashboard.php:562
 msgid "Invalid language"
-msgstr "Lingua invalida"
+msgstr "Lingua non valida"
 
 #: ../../../app/routes/route.dashboard.php:567
 msgid "Invalid timezone"
@@ -971,7 +1032,7 @@ msgstr "Valore non valido"
 
 #: ../../../app/routes/route.dashboard.php:577
 msgid "Invalid upload storage mode"
-msgstr "Modalità di archiviazione di upload non valido"
+msgstr "Modalità di archiviazione non valida"
 
 #: ../../../app/routes/route.dashboard.php:582
 msgid "Invalid upload filenaming"
@@ -983,18 +1044,18 @@ msgstr "Larghezza miniatura non valida"
 
 #: ../../../app/routes/route.dashboard.php:592
 msgid "Invalid thumb height"
-msgstr "Altezza invalida"
+msgstr "Altezza miniatura non valida"
 
 msgid "Invalid medium size"
-msgstr "Non valido di dimensioni medie"
+msgstr "Dimensione media non valida"
 
 #: ../../../app/routes/route.dashboard.php:602
 msgid "Invalid watermark percentage"
-msgstr "Percentuale filigrana non valido"
+msgstr "Percentuale filigrana non valida"
 
 #: ../../../app/routes/route.dashboard.php:607
 msgid "Invalid watermark opacity"
-msgstr "Invalida opacità nella  filigrana"
+msgstr "Opacità filigrana non valida"
 
 #: ../../../app/routes/route.dashboard.php:612
 msgid "Invalid theme"
@@ -1006,19 +1067,19 @@ msgstr "Tono tema non valido"
 
 #: ../../../app/routes/route.dashboard.php:627
 msgid "Invalid theme main color"
-msgstr "Colore principale tema non valido"
+msgstr "Colore principale del tema non valido"
 
 #: ../../../app/routes/route.dashboard.php:632
 msgid "Invalid theme top bar color"
-msgstr "Tema non valido top bar colore"
+msgstr "Colore top bar del tema non valido"
 
 #: ../../../app/routes/route.dashboard.php:637
 msgid "Invalid theme top bar button color"
-msgstr "Tema non valido pulsante in alto barra di colore"
+msgstr "Colore pulsante top bar del tema non valido"
 
 #: ../../../app/routes/route.dashboard.php:642
 msgid "Invalid theme image listing size"
-msgstr "Tema non valido dimensione dell'immagine non valida"
+msgstr "Dimensione galleria immagini del tema non valida"
 
 #: ../../../app/routes/route.dashboard.php:647
 msgid "Invalid user id"
@@ -1034,12 +1095,12 @@ msgstr "Porta SMTP non valida"
 
 #: ../../../app/routes/route.dashboard.php:662
 msgid "Invalid SMTP security"
-msgstr "Sicurezza SMTP non valido"
+msgstr "Tipo sicurezza SMTP non valido"
 
 #: ../../../app/routes/route.dashboard.php:672
 #: ../../../app/routes/route.dashboard.php:838
 msgid "Invalid personal mode user ID"
-msgstr "Percorso non valido modalità personale ID utente"
+msgstr "ID utente modalità personale non valido"
 
 #: ../../../app/routes/route.dashboard.php:677
 msgid "Invalid or reserved route"
@@ -1047,39 +1108,39 @@ msgstr "Percorso non valido o riservato"
 
 #: ../../../app/routes/route.dashboard.php:682
 msgid "Invalid website privacy mode"
-msgstr "Modalità contenuto non valido  website privacy modo"
+msgstr "Modalità sito privato non valida"
 
 #: ../../../app/routes/route.dashboard.php:687
 msgid "Invalid website content privacy mode"
-msgstr "Modalità contenuto non valido per il sito"
+msgstr "Modalità contenuto privato sito non valido"
 
 #: ../../../app/routes/route.dashboard.php:692
 msgid "Invalid homepage style"
-msgstr "Homepage  stile non valido"
+msgstr "Stile homepage non valido"
 
 #: ../../../app/routes/route.dashboard.php:697
 msgid "Invalid homepage call to action button color"
-msgstr "Homepage pulsante di invito all'azione colore non valido"
+msgstr "Colore pulsante invito all'azione in homepage non valido"
 
 #: ../../../app/routes/route.dashboard.php:702
 msgid "Invalid homepage call to action functionality"
-msgstr "Homepage non  valido invito alla funzionalità all'azione"
+msgstr "Funzionalità invito all'azione in homepage non valida"
 
 #: ../../../app/routes/route.dashboard.php:708
 msgid "Invalid title"
-msgstr "Titolo invalido"
+msgstr "Titolo non valido"
 
 #: ../../../app/routes/route.dashboard.php:713
 msgid "Invalid status"
-msgstr "Stato invalido"
+msgstr "Stato non valido"
 
 #: ../../../app/routes/route.dashboard.php:718
 msgid "Invalid type"
-msgstr "Tipo invalido"
+msgstr "Tipo non valido"
 
 #: ../../../app/routes/route.dashboard.php:723
 msgid "Invalid visibility"
-msgstr "Visibilità invalida"
+msgstr "Visibilità non valida"
 
 #: ../../../app/routes/route.dashboard.php:728
 msgid "Invalid target attribute"
@@ -1087,7 +1148,7 @@ msgstr "Attributo target non valido"
 
 #: ../../../app/routes/route.dashboard.php:733
 msgid "Invalid rel attribute"
-msgstr "Attributo non valido"
+msgstr "Attributo rel non valido"
 
 #: ../../../app/routes/route.dashboard.php:738
 msgid "Invalid icon"
@@ -1099,28 +1160,28 @@ msgstr "Chiave URL non valida"
 
 #: ../../../app/routes/route.dashboard.php:748
 msgid "Invalid file path"
-msgstr "Percorso invalido"
+msgstr "Percorso file non valido"
 
 #: ../../../app/routes/route.dashboard.php:753
 msgid "Invalid link URL"
-msgstr "URL invalida"
+msgstr "Link URL non valido"
 
 msgid "Invalid user minimum age"
-msgstr "utente non valido età minima"
+msgstr "Età minima utente non valida"
 
 msgid "Only alphanumeric, hyphen and underscore characters are allowed"
-msgstr "Solo alfanumerici, trattini e caratteri di sottolineatura sono consentiti"
+msgstr "Sono consentiti soltanto caratteri alfanumerici, compresi trattini basso ed alto"
 
 msgid "Routes can't be the same"
-msgstr "Percorsi non possono essere uguali"
+msgstr "I percorsi non possono essere uguali"
 
 #: ../../../app/routes/route.dashboard.php:769
 msgid "Invalid upload image path"
-msgstr "Percorso di caricamento dell'immagine non valido"
+msgstr "Percorso caricamento immagine non valido"
 
 #: ../../../app/routes/route.dashboard.php:783
 msgid "Invalid call to action URL"
-msgstr "Invito non valido per l'azione dell' URL"
+msgstr "URL invito all'azione non valido"
 
 #: ../../../app/routes/route.dashboard.php:797
 #, php-format
@@ -1128,13 +1189,13 @@ msgid "Max. allowed %s"
 msgstr "Massimo consentito %s"
 
 msgid "Can't map %m to an existing folder (%f)"
-msgstr "Non è possibile mappare %m a un esistente cartella (%f)"
+msgstr "Non è possibile mappare %m ad una cartella esistente (%f)"
 
 msgid "Can't map %m to an existing route (%r)"
-msgstr "Non è possibile mappare %m a un router esistente (%r)"
+msgstr "Non è possibile mappare %m ad un percorso esistente (%r)"
 
 msgid "Can't map %m to %r (username collision)"
-msgstr "Non è possibile mappare %m per %r (username collisione)"
+msgstr "Non è possibile mappare %m a %r (conflitto username)"
 
 #: ../../../app/routes/route.dashboard.php:860
 msgid "Invalid SMTP server"
@@ -1151,7 +1212,7 @@ msgstr "URL non valido"
 #: ../../../app/routes/route.dashboard.php:960
 #, php-format
 msgid "This URL key is already being used by another page (ID %s)"
-msgstr "Questa chiave URL viene già utilizzato da un'altra pagina (ID %s)"
+msgstr "Questa chiave URL è già utilizzata da un'altra pagina (ID %s)"
 
 #: ../../../app/routes/route.dashboard.php:961
 #, php-format
@@ -1165,7 +1226,7 @@ msgstr "Impossibile salvare il contenuto della pagina: %s."
 
 #: ../../../app/routes/route.dashboard.php:1163
 msgid "Top users"
-msgstr "Top utenti"
+msgstr "Utenti top"
 
 #: ../../../app/routes/route.explore.php:89
 #: ../../../app/themes/Peafowl/header.php:188
@@ -1173,7 +1234,7 @@ msgstr "Top utenti"
 #: ../../../app/themes/Peafowl/views/dashboard.php:305
 #: ../../../app/themes/Peafowl/views/explore.php:9
 msgid "Explore"
-msgstr "Esplorare"
+msgstr "Esplora"
 
 #: ../../../app/routes/route.following.php:73
 #: ../../../app/routes/route.user.php:104
@@ -1188,27 +1249,21 @@ msgstr "Seguire"
 msgid "About"
 msgstr "Informazioni"
 
-#: ../../../app/routes/route.image.php:127
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
-msgid "Embed codes"
-msgstr "Codice Embed"
-
 #: ../../../app/routes/route.image.php:144
 msgid "Image ID"
 msgstr "ID immagine"
 
 #: ../../../app/routes/route.image.php:148
 msgid "Uploader IP"
-msgstr "Uploader IP"
+msgstr "IP caricamento"
 
 #: ../../../app/routes/route.image.php:149
 msgid "Ban IP"
-msgstr "Ban IP"
+msgstr "Blocca IP"
 
 #: ../../../app/routes/route.image.php:149
 msgid "IP already banned"
-msgstr "IP già vietato"
+msgstr "IP già bloccato"
 
 #: ../../../app/routes/route.image.php:152
 msgid "Upload date"
@@ -1221,11 +1276,11 @@ msgstr "%s immagini"
 
 #: ../../../app/routes/route.image.php:185
 msgid "Image %i in %a album"
-msgstr "Immagine %i in %a album"
+msgstr "Immagine %i in album %a"
 
 #: ../../../app/routes/route.image.php:187
 msgid "Image %i in %c category"
-msgstr "Immagine %i in %c categoria"
+msgstr "Immagine %i in categoria %c"
 
 #: ../../../app/routes/route.image.php:189
 msgid "Image %i hosted in %w"
@@ -1233,11 +1288,11 @@ msgstr "Immagine %i ospitata in %w"
 
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:14
 msgid "Direct links"
-msgstr "Collegamenti diretti"
+msgstr "Link diretti"
 
 #: ../../../app/themes/Peafowl/views/image.php:279
 msgid "Image URL"
-msgstr "Url immagine"
+msgstr "URL immagine"
 
 #: ../../../app/themes/Peafowl/views/image.php:285
 msgid "Image link"
@@ -2010,10 +2065,6 @@ msgid_plural "albums"
 msgstr[0] "album"
 msgstr[1] "albums"
 
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
-msgid "Links"
-msgstr "Links"
-
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
 msgstr "Links di visione"
@@ -2405,14 +2456,6 @@ msgstr "vedere più"
 msgid "Load more"
 msgstr "Caricare più"
 
-#: ../../../app/themes/Peafowl/snippets/listing.php:91
-msgid "Previous"
-msgstr "Precedente"
-
-#: ../../../app/themes/Peafowl/snippets/listing.php:98
-msgid "Next"
-msgstr "Prossimo"
-
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
 msgid "Select all"
 msgstr "Seleziona tutto"
@@ -2780,6 +2823,12 @@ msgstr "Amministratore"
 msgid "This setting is always diabled when using personal website mode."
 msgstr "Questa impostazione è sempre disabilitata quando si utilizza la modalità sito personale."
 
+msgid "documentation"
+msgstr "documentazione"
+
+msgid "Learn more about %s at our %d."
+msgstr "Ulteriori informazioni su %s noi al nostro %d."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
 msgid "Add category"
@@ -3031,10 +3080,16 @@ msgstr "Visione ordinamento"
 msgid "Page sort order display for menus and listings. Use \"1\" for top priority."
 msgstr "Display ordine pagina ordina per i menu ed elenchi. Usare \"1\" per la massima priorità."
 
+msgid "pages"
+msgstr "pagine"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:607
 #, php-format
 msgid "Do you really want to delete the page ID %s? This can't be undone."
 msgstr "Vuoi davvero eliminare la pagina con  ID %s? Questo non può essere annullata."
+
+msgid "Unchecked image formats won't be allowed to be uploaded."
+msgstr "Formati di immagine non selezionati non potranno essere caricati."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:630
 msgid "Enable uploads"
@@ -3051,6 +3106,9 @@ msgstr "Anonimi possono inviare le foto"
 #: ../../../app/themes/Peafowl/views/dashboard.php:645
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "Abilitare questa opzione se si desidera consentire agli utenti non registrati di caricare le foto"
+
+msgid "Number of simultaneous upload threads (parallel uploads)"
+msgstr "Numero di thread di upload simultanei (upload paralleli)"
 
 msgid "Redirect on single upload"
 msgstr "Redirect sul singolo di upload"
@@ -3320,7 +3378,7 @@ msgstr "Vuoi davvero eliminare il divieto alla IP %s? Questa azione  non può es
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:947
 msgid "Banned IP address will be forbidden to use the entire website."
-msgstr "Indirizzo IP del  Bannato sarà vietato usare l'intero sito web."
+msgstr "Agli indirizzi IP bloccati è inibito l'utilizzo dell'intero sito."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:949
 msgid "Edit IP ban"
@@ -3522,6 +3580,9 @@ msgstr "Laptop"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1159
 msgid "Desktop"
 msgstr "Desktop"
+
+msgid "theme editing"
+msgstr "edita tema"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1167
 #, php-format
@@ -3758,6 +3819,9 @@ msgstr "Vuoi davvero eliminare questa immagine? Questaazione non può essere ann
 msgid "Delete image"
 msgstr "Cancella immagine"
 
+msgid "Add new cover image"
+msgstr "Aggiungere un'immagine nuova di copertina"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1424
 msgid "Vector version or your website logo in SVG format (only for homepage)."
 msgstr "Vector versione del tuo sito web logo in formato SVG (solo per homepage)."
@@ -3832,9 +3896,20 @@ msgstr "Utente IDs"
 msgid "Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images."
 msgstr "elenco di ID utente di destinazione separati da virgola per mostrare le immagini sulla homepage. Lascia vuoto per visualizzare tutte le immagini recenti."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1524
-msgid "Here you can set the codes for the predefined ad spaces."
-msgstr "Qui è possibile inserire il codice degli annunci pubblicitari"
+msgid "banners"
+msgstr "banners"
+
+msgid "Automatic updates check"
+msgstr "controllare gli aggiornamenti automatici"
+
+msgid "When enabled the system will automatically check for new updates."
+msgstr "Quando si consente al sistema controllerà automaticamente i nuovi aggiornamenti."
+
+msgid "Display available updates notification"
+msgstr "Mostra aggiornamenti disponibili in notifica"
+
+msgid "Enable this to show a notice on top warning you about new available system updates."
+msgstr "Abilita questo per mostrare un avviso in alto che avvisa sui nuovi aggiornamenti di sistema disponibili."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1570
 msgid "Minify code"
@@ -3894,9 +3969,6 @@ msgstr "Errori di stampa e di registro"
 msgid "To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)."
 msgstr "Per configurare il controllo del livello di debug <a %s> documentazione di debug </a>. Il livello di default è \"Protocollo errori\" (1)."
 
-msgid "documentation"
-msgstr "documentazione"
-
 msgid "Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes."
 msgstr "Routing consente di personalizzare percorso di default si lega al volo. Solo alfanumerici, trattini e caratteri di sottolineatura sono ammessi. Controlla il nostro %s se si desidera sovrascrivere o aggiungere nuove rotte."
 
@@ -3908,6 +3980,12 @@ msgstr "Routing per %s"
 
 msgid "Album routing"
 msgstr "Album routing"
+
+msgid "Custom language strings"
+msgstr "stringhe lingua personalizzata"
+
+msgid "language strings"
+msgstr "stringhe di lingua"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1611
 msgid "Default language"
@@ -3963,7 +4041,7 @@ msgstr "Metodo di memorizzazione"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1742
 msgid "Local storage is used by default or when no external storage is active."
-msgstr "Memorizzazione locale viene utilizzato per impostazione predefinita o quando non di memorizzazione esterna è attiva."
+msgstr "L'archiviazione locale è utilizzata per impostazione predefinita o quando non è attiva quella esterna."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1742
 #, php-format
@@ -4028,6 +4106,9 @@ msgstr "test@somedomain.com"
 msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
 msgstr "Utilizzare questo per verificare come vengono consegnate le vostre email. Si consiglia di utilizzare %s."
 
+msgid "social networks"
+msgstr "social networks"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1838
 msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
 msgstr "Hai bisogno di un <a href=\"https://developers.facebook.com/\" target=\"_blank\"> Facebook app </a> per questo."
@@ -4079,11 +4160,6 @@ msgstr "VK id cliente "
 #: ../../../app/themes/Peafowl/views/dashboard.php:1933
 msgid "VK client secret"
 msgstr "VK  cliente  segreta"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1949
-#, php-format
-msgid "CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s."
-msgstr "CDN consente di scaricare contenuti statici per diversi server edge rendere il vostro sito più veloce. Se non si dispone di un provider CDN si dovrebbe provare %s"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1968
 #, php-format

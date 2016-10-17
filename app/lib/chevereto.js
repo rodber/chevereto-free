@@ -951,8 +951,9 @@ $(function(){
 				
 				// Prepare the HTML
 				var template = "[data-modal=form-embed-codes]";
-				$("textarea", template).html(""),
-					objects = [];
+				var objects = [];
+				
+				$("textarea", template).html("");
 				
 				// Build the object
 				$targets.each(function() {
@@ -1987,6 +1988,20 @@ CHV.obj.topBar = {
 	}
 };
 
+CHV.obj.uploaderReset = {
+	isUploading: false,
+	canAdd: true,
+	queueStatus : "ready",
+	uploadThreads: 0,
+	uploadParsedIds: [],
+	uploadProcessedIds: [],
+	files: {},
+	results: {success: [], error: []},
+	toggleWorking: 0,
+	filesAddId : 0,
+	clipboardImages : [],
+};
+
 CHV.fn.uploader = {
 
 	selectors: {
@@ -2005,16 +2020,7 @@ CHV.fn.uploader = {
 		dropzone: "#uploader-dropzone",
 		paste: "#anywhere-upload-paste",
 	},
-	
-	isUploading: false,
-	canAdd: true,
-	queueStatus : "ready",
-	
-	files: {},
-	results: {success: [], error: []},
-	
-	toggleWorking: 0,
-	
+
 	toggle: function(options, args) {
 		
 		var $switch = $("[data-action=top-bar-upload]", ".top-bar");
@@ -2176,11 +2182,7 @@ CHV.fn.uploader = {
 	
 	reset: function() {
 		
-		this.files = {};
-		this.isUploading = false;
-		this.canAdd = true;
-		this.results = {success: [], error: []};
-		this.queueStatus = "ready";
+		$.extend(this, $.extend(true, {}, CHV.obj.uploaderReset));
 		
 		$("li", this.selectors.queue).remove();
 		$(this.selectors.anywhere).height("").css({"overflow-y": "", "overflow-x": ""});
@@ -2304,9 +2306,7 @@ CHV.fn.uploader = {
 			 }
 		}
 	},
-	
-	filesAddId : 0,
-	clipboardImages : [],
+
 	add: function(e, urls) {
 		
 		var md5;
@@ -2604,7 +2604,7 @@ CHV.fn.uploader = {
 	},
 	
 	queueProgress: function(e, id) {
-		var	queue_size = Object.keys(this.files).length;
+		var	queue_size = Object.size(this.files);
 		this.files[id].progress = e.loaded / e.total;
 		var progress = 0;
 		for(var i=0; i < queue_size; i++) {
@@ -2613,10 +2613,7 @@ CHV.fn.uploader = {
 		}
 		$("[data-text=queue-progress]", this.selectors.root).text(parseInt(100 * progress / queue_size));
 	},
-	
-	uploadThreads: 0,
-	uploadParsedIds: [],
-	
+
 	upload: function($queue_item) {
 		
 		var id = $queue_item.data("id");
@@ -2652,7 +2649,7 @@ CHV.fn.uploader = {
 		
 		this.uploadThreads += 1;
 		
-		if(this.uploadThreads < CHV.obj.config.upload.threads && nextId !== false) {
+		if(this.uploadThreads < CHV.obj.config.upload.threads && nextId) {
 			this.upload($queue_item.next());
 		}
 
@@ -2721,6 +2718,7 @@ CHV.fn.uploader = {
 			
 			if(this.readyState == 4 && typeof CHV.fn.uploader.files[id].xhr !== "undefined" && CHV.fn.uploader.files[id].xhr.status !== 0) {
 				
+				self.uploadProcessedIds.push(id);
 				self.uploadThreads -= 1;
 				
 				$(".loading-indicator", $queue_item).remove();
@@ -2739,8 +2737,8 @@ CHV.fn.uploader = {
 						JSONresponse.error.message = CHV.fn.uploader.files[id].name.truncate_middle() + " - " + JSONresponse.error.message;
 					}
 					
-					// Save the server responses
-					CHV.fn.uploader.results[this.status == 200 ? "success" : "error"].push(JSONresponse);
+					// Save the server response (keeping indexing for results)
+					CHV.fn.uploader.results[this.status == 200 ? "success" : "error"][id] = JSONresponse;
 					
 					if(this.status !== 200) is_error = true;
 					
@@ -2785,17 +2783,19 @@ CHV.fn.uploader = {
 					PF.fn.bindtipTip($queue_item);
 				}
 				
-				if(self.uploadThreads < CHV.obj.config.upload.threads && nextId !== false) {
+				if(self.uploadThreads < CHV.obj.config.upload.threads && nextId) {
 					CHV.fn.uploader.upload($queue_item.next());
 					$(CHV.fn.uploader.selectors.close_cancel, CHV.fn.uploader.selectors.root).hide().each(function() {
 						if($(this).data("action") == "cancel-upload-remaining") {
 							$(this).show();
 						}
 					});
-				} else {
-					CHV.fn.uploader.isUploading = false;
+				}
+				
+				if(self.uploadProcessedIds.length == Object.size(self.files)) {
 					CHV.fn.uploader.displayResults();
-				}		
+				}
+
 				$(".done", $queue_item).fadeOut();
 			}
 			
@@ -2812,7 +2812,9 @@ CHV.fn.uploader = {
 	},
 	
 	displayResults: function() {
-
+	
+		CHV.fn.uploader.isUploading = false;
+		
 		var group_result = "[data-group=upload-result][data-result=%RESULT%]",
 			result_types = ["error", "mixed", "success"],
 			results = {};
@@ -2826,7 +2828,7 @@ CHV.fn.uploader = {
 			for(var i = 0; i < this.results.error.length; i++) {
 				error_files.push(this.results.error[i].error.message);
 			}
-			if(Object.size(error_files) > 0) {
+			if(error_files.length > 0) {
 				$(this.selectors.failed_result).html("<li>" + error_files.join("</li><li>") + "</li>");
 			}
 		} else {
@@ -2876,6 +2878,8 @@ CHV.fn.uploader = {
 	
 };
 
+$.extend(CHV.fn.uploader, $.extend(true, {}, CHV.obj.uploaderReset));
+
 CHV.fn.fillEmbedCodes = function(elements, parent, fn) {
 	
 	if(typeof fn == "undefined") {
@@ -2884,7 +2888,7 @@ CHV.fn.fillEmbedCodes = function(elements, parent, fn) {
 	
 	$.each(elements, function(key, value) {
 				
-		var image = value.image;
+		var image = ("id_encoded" in value) ? value : value.image;
 		
 		if(!image.medium) { // Medium doesn't exists
 			image.medium = {};

@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-07-15 17:52+0000',
-  'PO-Revision-Date' => '2016-07-15 17:52+0000',
+  'POT-Creation-Date' => '2016-10-17 20:52+0000',
+  'PO-Revision-Date' => '2016-10-17 20:52+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'cs',
@@ -98,6 +98,9 @@ $translation_table = [
 	],
 	"Note: This content is private. Change privacy to \"public\" to share." => [
 		0 => "Poznámka: Tento obsah je soukromý. Pro umožnění sdílení je potřeba změnit soukromí na \"veřejné\".",
+	],
+	"After %n %t" => [
+		0 => "Po %n %t",
 	],
 	"Don't autodelete" => [
 		0 => "Automaticky nemazat",
@@ -231,6 +234,9 @@ $translation_table = [
 	"Dashboard" => [
 		0 => "Administrace",
 	],
+	"There is an update available for your system. Go to %s to download and install this update." => [
+		0 => "Je k dispozici nová aktualizace pro Váš systém. Klikněte na následující odkaz %s pro stažení a instalaci této aktualizace.",
+	],
 	"System database is outdated. You need to run the <a href=\"%s\">update</a> tool." => [
 		0 => "Systémová databáze je zastaralá. Je potřeba spustit <a href=\"%s\">aktualizační</a> nástroj.",
 	],
@@ -245,6 +251,9 @@ $translation_table = [
 	],
 	"The release notes for this update are:" => [
 		0 => "Poznámky k verzi této aktualizace:",
+	],
+	"You can apply this update directly from your %a or download it from %s and then manually install it." => [
+		0 => "Tuto aktualizaci můžete nainstalovat automaticky přímo ze svého %a nebo si ji stáhnout z %s a nainstalovat manuálně.",
 	],
 	"Chevereto update available (v%s)" => [
 		0 => "Je k dispozici aktualizace Chevereta (v%s)",
@@ -263,6 +272,15 @@ $translation_table = [
 	],
 	"That page doesn't exist" => [
 		0 => "Tato stránka neexistuje",
+	],
+	"Most recent" => [
+		0 => "Nejnovější",
+	],
+	"Oldest" => [
+		0 => "Nejstarší",
+	],
+	"Albums" => [
+		0 => "Alba",
 	],
 	"Forgot password?" => [
 		0 => "Zapoměli jste heslo?",
@@ -321,12 +339,6 @@ $translation_table = [
 	"Password required" => [
 		0 => "Je vyžadováno heslo",
 	],
-	"Most recent" => [
-		0 => "Nejnovější",
-	],
-	"Oldest" => [
-		0 => "Nejstarší",
-	],
 	"Most viewed" => [
 		0 => "Nejprohlíženější",
 	],
@@ -335,6 +347,9 @@ $translation_table = [
 	],
 	"Share" => [
 		0 => "Sdílet",
+	],
+	"Embed codes" => [
+		0 => "Kódy pro vložení",
 	],
 	"Full info" => [
 		0 => "Kompletní informace",
@@ -347,9 +362,6 @@ $translation_table = [
 	],
 	"Images" => [
 		0 => "Obrázky",
-	],
-	"Albums" => [
-		0 => "Alba",
 	],
 	"Users" => [
 		0 => "Uživatelé",
@@ -365,6 +377,9 @@ $translation_table = [
 	],
 	"check for updates" => [
 		0 => "Zkontrolovat aktualizace",
+	],
+	"Chevereto support" => [
+		0 => "Chevereto podpora",
 	],
 	"PHP version" => [
 		0 => "PHP verze",
@@ -407,6 +422,18 @@ $translation_table = [
 	],
 	"Memory limit" => [
 		0 => "Limit paměti (mem. limit)",
+	],
+	"Links" => [
+		0 => "Odkazy",
+	],
+	"Documentation" => [
+		0 => "Dokumentace",
+	],
+	"Changelog" => [
+		0 => "Seznam změn",
+	],
+	"Request new features" => [
+		0 => "Požádat o nové funkce",
 	],
 	"Website" => [
 		0 => "Webová stránka",
@@ -500,15 +527,6 @@ $translation_table = [
 	],
 	"The page has been deleted." => [
 		0 => "Stránka byla odstraněna.",
-	],
-	"Before cover (homepage)" => [
-		0 => "Před coverem (titulka).",
-	],
-	"After cover (homepage)" => [
-		0 => "Za coverem (titulka).",
-	],
-	"After listing (homepage)" => [
-		0 => "Za výpisem (titulka)",
 	],
 	"Before pagination" => [
 		0 => "Před stránkováním",
@@ -731,9 +749,6 @@ $translation_table = [
 	],
 	"About" => [
 		0 => "O webu",
-	],
-	"Embed codes" => [
-		0 => "Kódy pro vložení",
 	],
 	"Image ID" => [
 		0 => "ID obrázku",
@@ -1206,9 +1221,6 @@ $translation_table = [
 		2 => "alba",
 		3 => "alba",
 	],
-	"Links" => [
-		0 => "Odkazy",
-	],
 	"Viewer links" => [
 		0 => "Odkaz s náhledem",
 	],
@@ -1437,12 +1449,6 @@ $translation_table = [
 	"Load more" => [
 		0 => "Načíst více",
 	],
-	"Previous" => [
-		0 => "Předchozí",
-	],
-	"Next" => [
-		0 => "Další",
-	],
 	"Select all" => [
 		0 => "Vybrat vše",
 	],
@@ -1667,6 +1673,9 @@ $translation_table = [
 	],
 	"This setting is always diabled when using personal website mode." => [
 		0 => "Toto nastavení je vždy zakázáno při použití režimu osobní webové stránky.",
+	],
+	"documentation" => [
+		0 => "dokumentace",
 	],
 	"Add category" => [
 		0 => "Přidat kategorii",
@@ -2352,6 +2361,9 @@ $translation_table = [
 	"Delete image" => [
 		0 => "Smazat obrázek",
 	],
+	"Add new cover image" => [
+		0 => "Přidat nový titulní obrázek",
+	],
 	"Vector version or your website logo in SVG format (only for homepage)." => [
 		0 => "Vektorová verze nebo logo vaší webové stránky v SVG formátu (pouze pro domovskou stránku)",
 	],
@@ -2382,8 +2394,17 @@ $translation_table = [
 	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
 		0 => "Čárkami oddělený seznam cílových uživatelských ID, kteří mohou prohlížet obrázky na domovské stránce. Ponechte pole prázdné pro zobrazování všech nedávných obrázků.",
 	],
-	"Here you can set the codes for the predefined ad spaces." => [
-		0 => "Zde můžete nastavit kódy pro předdefinované pozice reklam.",
+	"Automatic updates check" => [
+		0 => "Automatická kontrola aktualizací",
+	],
+	"When enabled the system will automatically check for new updates." => [
+		0 => "Když je tato volba povolena, umožňuje systému automaticky kontrolovat nové aktualizace.",
+	],
+	"Display available updates notification" => [
+		0 => "Zobrazení oznámení o dostupné aktualizaci Chevereta",
+	],
+	"Enable this to show a notice on top warning you about new available system updates." => [
+		0 => "Povolte, pokud chcete zobrazit oznámení při dostupné aktualizaci Chevereta.",
 	],
 	"Maintenance" => [
 		0 => "Mód údržby",
@@ -2517,6 +2538,9 @@ $translation_table = [
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "Pomocí této funkce lze otestovat, jak jsou vaše e-maily doručovány. Doporučujeme použít %s.",
 	],
+	"social networks" => [
+		0 => "sociální sítě",
+	],
 	"You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this." => [
 		0 => "Potřebujete <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook aplikaci</a>.",
 	],
@@ -2555,9 +2579,6 @@ $translation_table = [
 	],
 	"VK client secret" => [
 		0 => "VK client secret",
-	],
-	"CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s." => [
-		0 => "CDN umožňuje rychlejší načítání obsahu díky používání částečně statického obsahu na některých edgeServerech. Pokud nemáte CDN poskytovatele, měli by jste to zkusit %s.",
 	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Potřebujete <a href=\"%s\" target=\"_blank\">reCAPTCHA klíč</a>.",

@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-08-14 03:30+0000',
-  'PO-Revision-Date' => '2016-08-14 03:30+0000',
+  'POT-Creation-Date' => '2016-10-17 20:52+0000',
+  'PO-Revision-Date' => '2016-10-17 20:52+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'zh_CN',
@@ -91,7 +91,7 @@ $translation_table = [
 		0 => "%s 的图片",
 	],
 	"Note: This content is private but anyone with the link will be able to see this." => [
-		0 => "注: 此内容是加密的, 但任何人通过链接将能够看到它.",
+		0 => "注: 此内容是私密的, 但任何人通过链接将能够看到它.",
 	],
 	"Note: This content is password protected. Remember to pass the content password to share." => [
 		0 => "注意: 此内容已使用密码保护. 请通过密码来共享使用.",
@@ -252,6 +252,15 @@ $translation_table = [
 	"That page doesn't exist" => [
 		0 => "该页面不存在",
 	],
+	"Most recent" => [
+		0 => "最新的",
+	],
+	"Oldest" => [
+		0 => "最旧的",
+	],
+	"Albums" => [
+		0 => "相册",
+	],
 	"Forgot password?" => [
 		0 => "忘记密码?",
 	],
@@ -309,12 +318,6 @@ $translation_table = [
 	"Password required" => [
 		0 => "需要密码",
 	],
-	"Most recent" => [
-		0 => "最新的",
-	],
-	"Oldest" => [
-		0 => "最旧的",
-	],
 	"Most viewed" => [
 		0 => "最热门的",
 	],
@@ -323,6 +326,9 @@ $translation_table = [
 	],
 	"Share" => [
 		0 => "分享",
+	],
+	"Embed codes" => [
+		0 => "嵌入代码",
 	],
 	"Full info" => [
 		0 => "详细信息",
@@ -335,9 +341,6 @@ $translation_table = [
 	],
 	"Images" => [
 		0 => "图片",
-	],
-	"Albums" => [
-		0 => "相册",
 	],
 	"Users" => [
 		0 => "用户",
@@ -353,6 +356,12 @@ $translation_table = [
 	],
 	"check for updates" => [
 		0 => "检查更新",
+	],
+	"Chevereto support" => [
+		0 => "Chevereto支持",
+	],
+	"Need help? Go to %s and you will get help quickly." => [
+		0 => "需要帮助?  转到%s, 您将快速获得帮助.",
 	],
 	"PHP version" => [
 		0 => "PHP版本",
@@ -392,6 +401,24 @@ $translation_table = [
 	],
 	"Memory limit" => [
 		0 => "内存限制",
+	],
+	"Links" => [
+		0 => "链接",
+	],
+	"Documentation" => [
+		0 => "文档",
+	],
+	"Changelog" => [
+		0 => "更新日志",
+	],
+	"Request new features" => [
+		0 => "请求新功能",
+	],
+	"Bug tracking" => [
+		0 => "错误跟踪",
+	],
+	"Blog" => [
+		0 => "博客",
 	],
 	"Website" => [
 		0 => "网站",
@@ -486,14 +513,20 @@ $translation_table = [
 	"The page has been deleted." => [
 		0 => "该页面已被删除.",
 	],
-	"Before cover (homepage)" => [
-		0 => "页头（主页）",
+	"homepage" => [
+		0 => "主页",
 	],
-	"After cover (homepage)" => [
-		0 => "页尾（主页）",
+	"Before main title (%s)" => [
+		0 => "之前的主标题(%s)",
 	],
-	"After listing (homepage)" => [
-		0 => "列表（主页）",
+	"After call to action (%s)" => [
+		0 => "呼吁行动后(%s)",
+	],
+	"After cover (%s)" => [
+		0 => "封面后(%s)",
+	],
+	"After listing (%s)" => [
+		0 => "上市后(%s)",
 	],
 	"Before pagination" => [
 		0 => "分页前",
@@ -731,9 +764,6 @@ $translation_table = [
 	],
 	"About" => [
 		0 => "关于",
-	],
-	"Embed codes" => [
-		0 => "嵌入代码",
 	],
 	"Image ID" => [
 		0 => "图片ID",
@@ -1209,9 +1239,6 @@ $translation_table = [
 	"album" => [
 		0 => "相册",
 	],
-	"Links" => [
-		0 => "链接",
-	],
 	"Viewer links" => [
 		0 => "查看链接",
 	],
@@ -1393,13 +1420,13 @@ $translation_table = [
 		0 => "储存桶",
 	],
 	"Key" => [
-		0 => "钥匙",
+		0 => "访问密钥 ID",
 	],
 	"Storage key" => [
 		0 => "储存钥匙",
 	],
 	"Secret" => [
-		0 => "秘密",
+		0 => "私有访问密钥",
 	],
 	"Storage secret" => [
 		0 => "存储秘密",
@@ -1414,7 +1441,7 @@ $translation_table = [
 		0 => "您需要一个 <a %s>服务帐户</a> .",
 	],
 	"Private key" => [
-		0 => "Private key",
+		0 => "密钥",
 	],
 	"Google Cloud JSON key" => [
 		0 => "Google Cloud JSON key",
@@ -1490,12 +1517,6 @@ $translation_table = [
 	],
 	"Load more" => [
 		0 => "载入更多",
-	],
-	"Previous" => [
-		0 => "上一页",
-	],
-	"Next" => [
-		0 => "下一页",
 	],
 	"Select all" => [
 		0 => "选择所有",
@@ -1719,6 +1740,12 @@ $translation_table = [
 	"This setting is always diabled when using personal website mode." => [
 		0 => "开启个人网站模式时, 该设置始终禁用.",
 	],
+	"documentation" => [
+		0 => "文档",
+	],
+	"Learn more about %s at our %d." => [
+		0 => "在 %d 处了解 %s 的详情.",
+	],
 	"Add category" => [
 		0 => "添加类别",
 	],
@@ -1896,8 +1923,14 @@ $translation_table = [
 	"Page sort order display for menus and listings. Use \"1\" for top priority." => [
 		0 => "菜单和列表页面排序顺序显示. 使用\"1\"为最优先的.",
 	],
+	"pages" => [
+		0 => "页面",
+	],
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "你真的要删除的页面ID %s? 这将不能撤消.",
+	],
+	"Unchecked image formats won't be allowed to be uploaded." => [
+		0 => "不允许上传未经检查的图片格式.",
 	],
 	"Enable uploads" => [
 		0 => "启动上传",
@@ -1910,6 +1943,9 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "启用它则允许非注册用户上传",
+	],
+	"Number of simultaneous upload threads (parallel uploads)" => [
+		0 => "同时上传的线程数(并行上传)",
 	],
 	"Redirect on single upload" => [
 		0 => "单张图片上传跳转",
@@ -2268,6 +2304,9 @@ $translation_table = [
 	"Desktop" => [
 		0 => "桌面台式电脑",
 	],
+	"theme editing" => [
+		0 => "主题编辑",
+	],
 	"Put your themes in the %s folder" => [
 		0 => "把你的主题上传到 %s 文件夹",
 	],
@@ -2490,8 +2529,20 @@ $translation_table = [
 	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
 		0 => "在网站主页显示指定多个用户的最新图片, 请用逗号分隔开. 留空则显示全站最新图片（不含隐私图片）.",
 	],
-	"Here you can set the codes for the predefined ad spaces." => [
-		0 => "在这里, 您可以设置为默认的广告代码.",
+	"banners" => [
+		0 => "横幅",
+	],
+	"Automatic updates check" => [
+		0 => "自动更新检查",
+	],
+	"When enabled the system will automatically check for new updates." => [
+		0 => "启用时, 系统将自动检查新更新.",
+	],
+	"Display available updates notification" => [
+		0 => "显示可用的更新通知",
+	],
+	"Enable this to show a notice on top warning you about new available system updates." => [
+		0 => "启用此则显示一个通知, 提示你关于新的可用系统更新.",
 	],
 	"Minify code" => [
 		0 => "优化代码",
@@ -2504,12 +2555,6 @@ $translation_table = [
 	],
 	"When enabled the website will show a maintenance message. This setting doesn't affect administrators." => [
 		0 => "当启用该设置网站将重定向到维修页面. 此设置不影响管理员。",
-	],
-	"Display available updates notification" => [
-		0 => "显示可用的更新通知",
-	],
-	"Enable this to show a notice on top warning you about new available system updates." => [
-		0 => "启用此则显示一个通知, 提示你关于新的可用系统更新.",
 	],
 	"Crypt salt" => [
 		0 => "Crypt salt 特殊码",
@@ -2541,9 +2586,6 @@ $translation_table = [
 	"To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)." => [
 		0 => "要配置调试级别请查看<a %s>调试文档</a>. 默认级别为\"错误日志\"(1).",
 	],
-	"documentation" => [
-		0 => "文档",
-	],
 	"Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes." => [
 		0 => "路径允许您自定义默认路径. 只允许字母, 连字符和下划线字符. 如果你想覆盖或添加新的路线请看我们的 %s.",
 	],
@@ -2555,6 +2597,12 @@ $translation_table = [
 	],
 	"Album routing" => [
 		0 => "相册路径",
+	],
+	"Custom language strings" => [
+		0 => "自定义语言字符串",
+	],
+	"language strings" => [
+		0 => "语言字符串",
 	],
 	"Default language" => [
 		0 => "默认语言",
@@ -2643,6 +2691,9 @@ $translation_table = [
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "使用此来测试你的电子邮件是否已发送. 我们建议您使用 %s.",
 	],
+	"social networks" => [
+		0 => "社交网络",
+	],
 	"You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this." => [
 		0 => "完成此您需要一个 <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> ",
 	],
@@ -2681,9 +2732,6 @@ $translation_table = [
 	],
 	"VK client secret" => [
 		0 => "VK client secret",
-	],
-	"CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s." => [
-		0 => "CDN允许你卸载静态内容的几个边缘服务器，使您的网站的速度。如果你没有一个CDN提供商你应该试试 %s.",
 	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "您需要一个 <a href=\"%s\" target=\"_blank\">验证码Key</a> 来完成此项设置.",

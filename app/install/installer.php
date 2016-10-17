@@ -212,7 +212,8 @@ try {
 			'upload_enabled_image_formats'	=> 'jpg,png,bmp,gif',
 			'upload_threads'				=> '2',
 			'enable_automatic_updates_check'=> 1,
-		]
+		],
+		'1.0.4' => NULL,
 	];
 	
 	// Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
@@ -741,6 +742,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 								ADD `image_thumb_size` int(11) NOT NULL,
 								ADD `image_medium_size` int(11) NOT NULL DEFAULT '0',
 								ADD `image_expiration_date_gmt` datetime DEFAULT NULL,
+								ADD `image_likes` bigint(32) NOT NULL DEFAULT '0',
 								ADD `image_is_animated` tinyint(1) NOT NULL DEFAULT '0',
 								ADD INDEX `image_name` (`image_name`),
 								ADD INDEX `image_size` (`image_size`),

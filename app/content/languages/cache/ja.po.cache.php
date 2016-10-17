@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-07-15 17:52+0000',
-  'PO-Revision-Date' => '2016-07-15 17:52+0000',
+  'POT-Creation-Date' => '2016-10-17 20:52+0000',
+  'PO-Revision-Date' => '2016-10-17 20:52+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ja',
@@ -252,6 +252,15 @@ $translation_table = [
 	"That page doesn't exist" => [
 		0 => "ページが存在しません。",
 	],
+	"Most recent" => [
+		0 => "新しい順",
+	],
+	"Oldest" => [
+		0 => "古い順",
+	],
+	"Albums" => [
+		0 => "アルバム",
+	],
 	"Forgot password?" => [
 		0 => "パスワードを忘れてしまいましたか？",
 	],
@@ -309,12 +318,6 @@ $translation_table = [
 	"Password required" => [
 		0 => "パスワードが必要です。",
 	],
-	"Most recent" => [
-		0 => "新しい順",
-	],
-	"Oldest" => [
-		0 => "古い順",
-	],
 	"Most viewed" => [
 		0 => "閲覧順",
 	],
@@ -323,6 +326,9 @@ $translation_table = [
 	],
 	"Share" => [
 		0 => "共有",
+	],
+	"Embed codes" => [
+		0 => "埋め込みコード",
 	],
 	"Full info" => [
 		0 => "詳細情報",
@@ -335,9 +341,6 @@ $translation_table = [
 	],
 	"Images" => [
 		0 => "画像",
-	],
-	"Albums" => [
-		0 => "アルバム",
 	],
 	"Users" => [
 		0 => "ユーザ",
@@ -353,6 +356,12 @@ $translation_table = [
 	],
 	"check for updates" => [
 		0 => "アップデートのチェック",
+	],
+	"Chevereto support" => [
+		0 => "Cheveretoサポート",
+	],
+	"Need help? Go to %s and you will get help quickly." => [
+		0 => "ヘルプが必要な方は、 %s まで。",
 	],
 	"PHP version" => [
 		0 => "PHPバージョン",
@@ -392,6 +401,24 @@ $translation_table = [
 	],
 	"Memory limit" => [
 		0 => "メモリ制限",
+	],
+	"Links" => [
+		0 => "リンク",
+	],
+	"Documentation" => [
+		0 => "ドキュメント",
+	],
+	"Changelog" => [
+		0 => "変更履歴",
+	],
+	"Request new features" => [
+		0 => "新機能のリクエスト",
+	],
+	"Bug tracking" => [
+		0 => "バグ修正過程",
+	],
+	"Blog" => [
+		0 => "ブログ",
 	],
 	"Website" => [
 		0 => "ウェブサイト",
@@ -459,6 +486,9 @@ $translation_table = [
 	"Can't delete all homepage cover images" => [
 		0 => "すべてのホームページのヘッダ画像は削除できません。",
 	],
+	"Homepage cover image deleted" => [
+		0 => "ホームページのトップ画像を削除しました。",
+	],
 	"Local" => [
 		0 => "ローカル",
 	],
@@ -483,14 +513,14 @@ $translation_table = [
 	"The page has been deleted." => [
 		0 => "ページは削除されました。",
 	],
-	"Before cover (homepage)" => [
-		0 => "カバー画像の前 (ホームページ)",
+	"homepage" => [
+		0 => "ホームページ",
 	],
-	"After cover (homepage)" => [
-		0 => "カバー画像の後 (ホームページ)",
+	"After call to action (%s)" => [
+		0 => "アクション呼び出し後 (%s)",
 	],
-	"After listing (homepage)" => [
-		0 => "リストの後 (ホームページ)",
+	"After cover (%s)" => [
+		0 => "カバーの後 (%s)",
 	],
 	"Before pagination" => [
 		0 => "ページネーションの前",
@@ -696,6 +726,9 @@ $translation_table = [
 	"Can't map %m to an existing route (%r)" => [
 		0 => "既にあるルート (%r) と %m は紐付けできません。",
 	],
+	"Can't map %m to %r (username collision)" => [
+		0 => "マップを作成できません。 %m%r (ユーザ名の不一致により)",
+	],
 	"Invalid SMTP server" => [
 		0 => "有効なSMTPサーバーではありません。",
 	],
@@ -725,9 +758,6 @@ $translation_table = [
 	],
 	"About" => [
 		0 => "詳細",
-	],
-	"Embed codes" => [
-		0 => "埋め込みコード",
 	],
 	"Image ID" => [
 		0 => "画像ID",
@@ -1203,9 +1233,6 @@ $translation_table = [
 	"album" => [
 		0 => "アルバム",
 	],
-	"Links" => [
-		0 => "リンク",
-	],
 	"Viewer links" => [
 		0 => "閲覧用リンク",
 	],
@@ -1485,12 +1512,6 @@ $translation_table = [
 	"Load more" => [
 		0 => "さらに表示",
 	],
-	"Previous" => [
-		0 => "前へ",
-	],
-	"Next" => [
-		0 => "次へ",
-	],
 	"Select all" => [
 		0 => "全て選択",
 	],
@@ -1713,6 +1734,12 @@ $translation_table = [
 	"This setting is always diabled when using personal website mode." => [
 		0 => "この設定は個人Webサイトモードを利用している時は常に無効です。",
 	],
+	"documentation" => [
+		0 => "ドキュメント",
+	],
+	"Learn more about %s at our %d." => [
+		0 => "%sについての詳細は、 %dから。",
+	],
 	"Add category" => [
 		0 => "カテゴリの追加",
 	],
@@ -1890,8 +1917,14 @@ $translation_table = [
 	"Page sort order display for menus and listings. Use \"1\" for top priority." => [
 		0 => "ページの並び順をメニューやリスティングに表示するために、プライオリティに1を使用してください。",
 	],
+	"pages" => [
+		0 => "ページ",
+	],
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "ページID %s を本当に削除しますか？削除すると元に戻せません。",
+	],
+	"Unchecked image formats won't be allowed to be uploaded." => [
+		0 => "未確認の画像フォーマットでは、アップロードが行えません。",
 	],
 	"Enable uploads" => [
 		0 => "アップロード",
@@ -1904,6 +1937,9 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "未登録ユーザのアップロードを許可するときに有効にしてください。",
+	],
+	"Number of simultaneous upload threads (parallel uploads)" => [
+		0 => "同時アップロードのスレッド数(平行して動じにアップロード)",
 	],
 	"Redirect on single upload" => [
 		0 => "ファイル毎のアップロードへリダイレクト",
@@ -2262,6 +2298,9 @@ $translation_table = [
 	"Desktop" => [
 		0 => "デスクトップ",
 	],
+	"theme editing" => [
+		0 => "テーマ編集",
+	],
 	"Put your themes in the %s folder" => [
 		0 => "テーマは%sフォルダへ入れて下さい。",
 	],
@@ -2484,8 +2523,20 @@ $translation_table = [
 	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
 		0 => "ホームページに表示したい画像のユーザーIDをコンマで区切って入力してください。空白の情愛で全ての最近の画像を表示します。",
 	],
-	"Here you can set the codes for the predefined ad spaces." => [
-		0 => "広告スペースを事前に定義するためのコードをここへセットします。",
+	"banners" => [
+		0 => "広告バナー",
+	],
+	"Automatic updates check" => [
+		0 => "アップデートを自動でチェック",
+	],
+	"When enabled the system will automatically check for new updates." => [
+		0 => "システムが自動でアップデートをチェックします。",
+	],
+	"Display available updates notification" => [
+		0 => "アップデートの通知を有効化",
+	],
+	"Enable this to show a notice on top warning you about new available system updates." => [
+		0 => "システムアップデートがリリースされた場合に歳重用通知として表示を有効化",
 	],
 	"Minify code" => [
 		0 => "コードを圧縮",
@@ -2498,12 +2549,6 @@ $translation_table = [
 	],
 	"When enabled the website will show a maintenance message. This setting doesn't affect administrators." => [
 		0 => "有効にされている場合、メンテナンスモードと表示されます。この設定は管理者には影響しません。",
-	],
-	"Display available updates notification" => [
-		0 => "アップデートの通知を有効化",
-	],
-	"Enable this to show a notice on top warning you about new available system updates." => [
-		0 => "システムアップデートがリリースされた場合に歳重用通知として表示を有効化",
 	],
 	"Crypt salt" => [
 		0 => "暗号化のためのキー",
@@ -2535,9 +2580,6 @@ $translation_table = [
 	"To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)." => [
 		0 => "デバッグレベルの設定は <a %s>debug documentation</a>を確認してください。 ディフォルトは \"Error log\" (1)です。",
 	],
-	"documentation" => [
-		0 => "ドキュメント",
-	],
 	"Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes." => [
 		0 => "ルーティングは、既定のルートに直ちに反映されます。英数字、ハイフン、アンダースコアのみ有効です。ルートの新規追加、更新は、%sを確認してください。",
 	],
@@ -2549,6 +2591,12 @@ $translation_table = [
 	],
 	"Album routing" => [
 		0 => "アルバムへのルーティング",
+	],
+	"Custom language strings" => [
+		0 => "個別の言語文字列",
+	],
+	"language strings" => [
+		0 => "言語",
 	],
 	"Default language" => [
 		0 => "既定の言語",
@@ -2637,6 +2685,9 @@ $translation_table = [
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "メールアドレスにどのように送信されるかをテストする場合にこちらを利用してください。%sを使用することをお勧めします。",
 	],
+	"social networks" => [
+		0 => "ソーシャル・ネットワーク",
+	],
 	"You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this." => [
 		0 => "この機能を使用するためには、<a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebookアプリ</a>が必要です。",
 	],
@@ -2675,9 +2726,6 @@ $translation_table = [
 	],
 	"VK client secret" => [
 		0 => "VKクライアントシークレットキー",
-	],
-	"CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s." => [
-		0 => "CDNは、静的コンテンツを複数のサーバへ保存するため、あなたのサイトの表示が格段に速くなります。CDN提供会社をご存じない場合、%sをお試し下さい。",
 	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "画像認証を使用するためには、<a href=\"%s\" target=\"_blank\">reCAPTCHA キー</a>が必要です。",

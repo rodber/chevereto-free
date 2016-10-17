@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-07-15 17:52+0000\n"
-"PO-Revision-Date: 2016-07-15 17:52+0000\n"
+"POT-Creation-Date: 2016-10-17 20:52+0000\n"
+"PO-Revision-Date: 2016-10-17 20:52+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -386,6 +386,36 @@ msgstr "Ver todas mis imágenes"
 msgid "That page doesn't exist"
 msgstr "Esa página no existe"
 
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Más reciente"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "Más antiguo"
+
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:92
+#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
+#: ../../../app/themes/Peafowl/header.php:403
+#: ../../../app/themes/Peafowl/views/settings.php:77
+msgid "Albums"
+msgstr "Álbumes"
+
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:24
@@ -504,28 +534,6 @@ msgstr "Comprueba los errores en el formulario para continuar."
 msgid "Password required"
 msgstr "Contraseña requerida"
 
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "Más reciente"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "Más antiguo"
-
 #: ../../../app/routes/route.album.php:96
 #: ../../../app/routes/route.category.php:64
 #: ../../../app/routes/route.dashboard.php:1121
@@ -551,6 +559,12 @@ msgstr "Más me gusta"
 msgid "Share"
 msgstr "Compartir"
 
+#: ../../../app/routes/route.image.php:127
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
+msgid "Embed codes"
+msgstr "Insertar"
+
 #: ../../../app/routes/route.album.php:124
 #: ../../../app/routes/route.image.php:134
 msgid "Full info"
@@ -570,14 +584,6 @@ msgstr "Estadísticas"
 #: ../../../app/themes/Peafowl/views/settings.php:73
 msgid "Images"
 msgstr "Imágenes"
-
-#: ../../../app/routes/route.dashboard.php:40
-#: ../../../app/routes/route.search.php:92
-#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
-#: ../../../app/themes/Peafowl/header.php:403
-#: ../../../app/themes/Peafowl/views/settings.php:77
-msgid "Albums"
-msgstr "Álbumes"
 
 #: ../../../app/routes/route.dashboard.php:41
 #: ../../../app/routes/route.dashboard.php:233
@@ -603,6 +609,12 @@ msgstr "instalar actualización"
 #: ../../../app/routes/route.dashboard.php:162
 msgid "check for updates"
 msgstr "comprobar actualizaciones"
+
+msgid "Chevereto support"
+msgstr "soporte de Chevereto"
+
+msgid "Need help? Go to %s and you will get help quickly."
+msgstr "¿Necesitas ayuda? Ve a %s y obtendrás ayuda rápidamente."
 
 #: ../../../app/routes/route.dashboard.php:169
 msgid "PHP version"
@@ -741,6 +753,25 @@ msgstr[1] "%d segundos"
 msgid "Memory limit"
 msgstr "Límite de memoria"
 
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
+msgid "Links"
+msgstr "Enlaces"
+
+msgid "Documentation"
+msgstr "Documentación"
+
+msgid "Changelog"
+msgstr "Cambios"
+
+msgid "Request new features"
+msgstr "Solicitar nuevas funciones"
+
+msgid "Bug tracking"
+msgstr "Seguimiento de errores"
+
+msgid "Blog"
+msgstr "Blog"
+
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
 msgid "Website"
@@ -876,17 +907,20 @@ msgstr "La página ha sido añadida exitosamente."
 msgid "The page has been deleted."
 msgstr "La página ha sido eliminada."
 
-#: ../../../app/routes/route.dashboard.php:376
-msgid "Before cover (homepage)"
-msgstr "Antes del cover (página principal)"
+msgid "homepage"
+msgstr "pagina principal"
 
-#: ../../../app/routes/route.dashboard.php:379
-msgid "After cover (homepage)"
-msgstr "Despues del cover (página principal)"
+msgid "Before main title (%s)"
+msgstr "Antes del título principal (%s)"
 
-#: ../../../app/routes/route.dashboard.php:382
-msgid "After listing (homepage)"
-msgstr "Después del listado (página principal)"
+msgid "After call to action (%s)"
+msgstr "Después de la llamada de acción (%s)"
+
+msgid "After cover (%s)"
+msgstr "Después del cover (%s)"
+
+msgid "After listing (%s)"
+msgstr "Después del listado (%s)"
 
 #: ../../../app/routes/route.dashboard.php:390
 msgid "Before pagination"
@@ -1214,12 +1248,6 @@ msgstr "Siguiendo"
 #: ../../../app/themes/Peafowl/header.php:424
 msgid "About"
 msgstr "Acerca"
-
-#: ../../../app/routes/route.image.php:127
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
-msgid "Embed codes"
-msgstr "Insertar"
 
 #: ../../../app/routes/route.image.php:144
 msgid "Image ID"
@@ -2037,10 +2065,6 @@ msgid_plural "albums"
 msgstr[0] "álbum"
 msgstr[1] "álbumes"
 
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
-msgid "Links"
-msgstr "Enlaces"
-
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
 msgstr "Enlaces de visualizador"
@@ -2432,14 +2456,6 @@ msgstr "ver más"
 msgid "Load more"
 msgstr "Cargar más"
 
-#: ../../../app/themes/Peafowl/snippets/listing.php:91
-msgid "Previous"
-msgstr "Anterior"
-
-#: ../../../app/themes/Peafowl/snippets/listing.php:98
-msgid "Next"
-msgstr "Siguiente"
-
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
 msgid "Select all"
 msgstr "Seleccionar todo"
@@ -2807,6 +2823,12 @@ msgstr "Administrador"
 msgid "This setting is always diabled when using personal website mode."
 msgstr "Esta configuración siempre está inhabilitada cuando se usa el modo de sitio web personal."
 
+msgid "documentation"
+msgstr "documentación"
+
+msgid "Learn more about %s at our %d."
+msgstr "Aprende más sobre %s en nuestra %d."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
 msgid "Add category"
@@ -3058,10 +3080,16 @@ msgstr "Orden de visualización"
 msgid "Page sort order display for menus and listings. Use \"1\" for top priority."
 msgstr "Orden de visualización de la página para menús y listados. Usa \"1\" para mayor prioridad."
 
+msgid "pages"
+msgstr "páginas"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:607
 #, php-format
 msgid "Do you really want to delete the page ID %s? This can't be undone."
 msgstr "¿Realmente quieres eliminar la página ID %s? Esto no de podrá deshacer."
+
+msgid "Unchecked image formats won't be allowed to be uploaded."
+msgstr "No se permitirá subir los formatos no marcados."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:630
 msgid "Enable uploads"
@@ -3078,6 +3106,9 @@ msgstr "Subidas de invitados"
 #: ../../../app/themes/Peafowl/views/dashboard.php:645
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "Habilita esto si deseas permitir permitir que usuarios no registrados suban imágenes"
+
+msgid "Number of simultaneous upload threads (parallel uploads)"
+msgstr "Numero de hilos de subida simultáneos (subidas paralelas)"
 
 msgid "Redirect on single upload"
 msgstr "Redireccionar en subida única"
@@ -3550,6 +3581,9 @@ msgstr "Laptop"
 msgid "Desktop"
 msgstr "Escritorio"
 
+msgid "theme editing"
+msgstr "edición de tema"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1167
 #, php-format
 msgid "Put your themes in the %s folder"
@@ -3862,9 +3896,20 @@ msgstr "IDs de usuario"
 msgid "Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images."
 msgstr "Lista separada por comas de las ids de usuario a mostrar en la página principal. Dejar vacío para mostrar todas las imágenes recientes."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1524
-msgid "Here you can set the codes for the predefined ad spaces."
-msgstr "Aquí puedes establecer los códigos de los espacios publicitarios predefinidos."
+msgid "banners"
+msgstr "avisos"
+
+msgid "Automatic updates check"
+msgstr "Comprobar actualizaciones automáticamente"
+
+msgid "When enabled the system will automatically check for new updates."
+msgstr "Cuando esta habilitado el sistema comprobara automáticamente por nuevas actualizaciones."
+
+msgid "Display available updates notification"
+msgstr "Mostrar notificación de nuevas actualizaciones disponibles"
+
+msgid "Enable this to show a notice on top warning you about new available system updates."
+msgstr "Habilita esto para mostrar una notificación en la parte superior advirtiéndote de nuevas actualizaciones de sistema disponibles."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1570
 msgid "Minify code"
@@ -3881,12 +3926,6 @@ msgstr "Mantención"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1585
 msgid "When enabled the website will show a maintenance message. This setting doesn't affect administrators."
 msgstr "Cuando esta habilitado la página web mostrará un mensaje de mantenimiento. Esta configuración no afecta a los administradores."
-
-msgid "Display available updates notification"
-msgstr "Mostrar notificación de nuevas actualizaciones disponibles"
-
-msgid "Enable this to show a notice on top warning you about new available system updates."
-msgstr "Habilita esto para mostrar una notificación en la parte superior advirtiéndote de nuevas actualizaciones de sistema disponibles."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1565
 msgid "Crypt salt"
@@ -3930,9 +3969,6 @@ msgstr "Mostrar y registrar errores"
 msgid "To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)."
 msgstr "Para configurar el nivel de depuración comprueba la <a %s>documentación de depuración</a>. El nivel predeterminado es \"Registro de error\" (1)."
 
-msgid "documentation"
-msgstr "documentación"
-
 msgid "Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes."
 msgstr "El enrutamiento te permite personalizar las rutas de manera inmediata. Solamente se permiten caracteres alfanuméricos, guiones y guiones bajos. Revisa nuestra %s si necesitas sobre escribir o agregar nuevas rutas."
 
@@ -3944,6 +3980,12 @@ msgstr "Enrutamiento para %s"
 
 msgid "Album routing"
 msgstr "Enrutamiento de album"
+
+msgid "Custom language strings"
+msgstr "Cadenas de idioma personalizadas"
+
+msgid "language strings"
+msgstr "cadenas de idioma"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1611
 msgid "Default language"
@@ -4064,6 +4106,9 @@ msgstr "prueba@algundominio.com"
 msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
 msgstr "Usa esto para corroborar la entrega de email. Recomendamos usar %s."
 
+msgid "social networks"
+msgstr "redes sociales"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1838
 msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
 msgstr "Necesitaras una <a href=\"https://developers.facebook.com/\" target=\"_blank\">App de Facebook</a> para esto."
@@ -4115,11 +4160,6 @@ msgstr "Client id de VK"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1933
 msgid "VK client secret"
 msgstr "Client id de VK"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1949
-#, php-format
-msgid "CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s."
-msgstr "CDN permite la descarga de contenido estático en varios servidores edge haciendo tu sitio web más rápido. Si no tienes un proveedor CDN deberias probar %s."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1968
 #, php-format

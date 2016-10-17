@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-07-15 17:52+0000\n"
-"PO-Revision-Date: 2016-07-15 17:52+0000\n"
+"POT-Creation-Date: 2016-10-17 20:52+0000\n"
+"PO-Revision-Date: 2016-10-17 20:52+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: fi\n"
@@ -366,7 +366,7 @@ msgstr "näyttöä %s"
 
 #: ../../../app/lib/functions.render.php:303
 msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
-msgstr "Käytämme omia ja kolmannenosapuolen evästeitä parantaaksemme palveluamme ja sen käyttöä. Käyttämällä palvelujamme hyväksyt evästeiden käytön."
+msgstr "Käytämme omia ja kolmannen osapuolen evästeitä parantaaksemme palveluamme ja sen käytettävyyttä. Käyttämällä palvelujamme hyväksyt evästeiden käytön."
 
 #: ../../../app/loader.php:180
 msgid "You have been forbidden to use this website."
@@ -385,6 +385,36 @@ msgstr "Näytä kaikki kuvani"
 #: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
 msgid "That page doesn't exist"
 msgstr "Sivua ei ole olemassa"
+
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Viimeisimmät"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "Vanhimmat"
+
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:92
+#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
+#: ../../../app/themes/Peafowl/header.php:403
+#: ../../../app/themes/Peafowl/views/settings.php:77
+msgid "Albums"
+msgstr "Albumit"
 
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
@@ -504,28 +534,6 @@ msgstr "Tarkista virheet jatkaaksesi."
 msgid "Password required"
 msgstr "Salasana vaaditaan"
 
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "Viimeisimmät"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "Vanhimmat"
-
 #: ../../../app/routes/route.album.php:96
 #: ../../../app/routes/route.category.php:64
 #: ../../../app/routes/route.dashboard.php:1121
@@ -551,6 +559,12 @@ msgstr "Suosituimmat"
 msgid "Share"
 msgstr "Jaa"
 
+#: ../../../app/routes/route.image.php:127
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
+msgid "Embed codes"
+msgstr "Upotuskoodit"
+
 #: ../../../app/routes/route.album.php:124
 #: ../../../app/routes/route.image.php:134
 msgid "Full info"
@@ -570,14 +584,6 @@ msgstr "Tilastot"
 #: ../../../app/themes/Peafowl/views/settings.php:73
 msgid "Images"
 msgstr "Kuvat"
-
-#: ../../../app/routes/route.dashboard.php:40
-#: ../../../app/routes/route.search.php:92
-#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
-#: ../../../app/themes/Peafowl/header.php:403
-#: ../../../app/themes/Peafowl/views/settings.php:77
-msgid "Albums"
-msgstr "Albumit"
 
 #: ../../../app/routes/route.dashboard.php:41
 #: ../../../app/routes/route.dashboard.php:233
@@ -603,6 +609,12 @@ msgstr "asenna päivitys"
 #: ../../../app/routes/route.dashboard.php:162
 msgid "check for updates"
 msgstr "tarkista päivitykset"
+
+msgid "Chevereto support"
+msgstr "Cheverto tuki"
+
+msgid "Need help? Go to %s and you will get help quickly."
+msgstr "Tarvitsetko apua? Mene %s ja saat apua nopeasti."
 
 #: ../../../app/routes/route.dashboard.php:169
 msgid "PHP version"
@@ -741,6 +753,25 @@ msgstr[1] "%d sekuntia"
 msgid "Memory limit"
 msgstr "Muistirajoitus"
 
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
+msgid "Links"
+msgstr "Linkit"
+
+msgid "Documentation"
+msgstr "Dokumentaatio"
+
+msgid "Changelog"
+msgstr "Muutoslogi"
+
+msgid "Request new features"
+msgstr "Toivo uutta ominaisuutta"
+
+msgid "Bug tracking"
+msgstr "Virheenseuranta"
+
+msgid "Blog"
+msgstr "Blogi"
+
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
 msgid "Website"
@@ -876,17 +907,20 @@ msgstr "Sivu lisätty onnistuneesti."
 msgid "The page has been deleted."
 msgstr "Sivu on poistettu."
 
-#: ../../../app/routes/route.dashboard.php:376
-msgid "Before cover (homepage)"
-msgstr "Ennen kansikuvaa (etusivu)"
+msgid "homepage"
+msgstr "kotisivu"
 
-#: ../../../app/routes/route.dashboard.php:379
-msgid "After cover (homepage)"
-msgstr "Kansikuvan jälkee (etusivu)"
+msgid "Before main title (%s)"
+msgstr "Ennen pääotsikkoa (%s)"
 
-#: ../../../app/routes/route.dashboard.php:382
-msgid "After listing (homepage)"
-msgstr "Listauksen jälkeen (etusivu)"
+msgid "After call to action (%s)"
+msgstr "Toimintapainikkeen jälkeen (%s)"
+
+msgid "After cover (%s)"
+msgstr "Kannen jälkeen (%s)"
+
+msgid "After listing (%s)"
+msgstr "Listauksen jälkeen (%s)"
 
 #: ../../../app/routes/route.dashboard.php:390
 msgid "Before pagination"
@@ -1214,12 +1248,6 @@ msgstr "Seurataan"
 #: ../../../app/themes/Peafowl/header.php:424
 msgid "About"
 msgstr "Tietoa"
-
-#: ../../../app/routes/route.image.php:127
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
-msgid "Embed codes"
-msgstr "Upotuskoodit"
 
 #: ../../../app/routes/route.image.php:144
 msgid "Image ID"
@@ -2037,10 +2065,6 @@ msgid_plural "albums"
 msgstr[0] "albumi"
 msgstr[1] "albumia"
 
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
-msgid "Links"
-msgstr "Linkit"
-
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
 msgstr "Katselijan linkit"
@@ -2432,14 +2456,6 @@ msgstr "näytä lisää"
 msgid "Load more"
 msgstr "Lataa lisää"
 
-#: ../../../app/themes/Peafowl/snippets/listing.php:91
-msgid "Previous"
-msgstr "Edellinen"
-
-#: ../../../app/themes/Peafowl/snippets/listing.php:98
-msgid "Next"
-msgstr "Seuraava"
-
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
 msgid "Select all"
 msgstr "Valitse kaikki"
@@ -2807,6 +2823,12 @@ msgstr "Ylläpitäjä"
 msgid "This setting is always diabled when using personal website mode."
 msgstr "Tämä asetus on aina pois käytöstä käytettäessä henkilökohtainen verkkosivu tilaa."
 
+msgid "documentation"
+msgstr "dokumentit"
+
+msgid "Learn more about %s at our %d."
+msgstr "Tutustu tarkemmin %s täällä %d."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
 msgid "Add category"
@@ -3058,10 +3080,16 @@ msgstr "Lajittelujärjestys"
 msgid "Page sort order display for menus and listings. Use \"1\" for top priority."
 msgstr "Sivun lajittelujärjestys valikoissa ja listoissa. Käytä \"1\" ensisijaisesti."
 
+msgid "pages"
+msgstr "sivut"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:607
 #, php-format
 msgid "Do you really want to delete the page ID %s? This can't be undone."
 msgstr "Haluatko varmasti poistaa sivun ID %s? Toimintoa ei voi perua."
+
+msgid "Unchecked image formats won't be allowed to be uploaded."
+msgstr "Valitse ladattavaksi sallitut kuvaformaatit."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:630
 msgid "Enable uploads"
@@ -3078,6 +3106,9 @@ msgstr "Vieraiden kuvien lataus"
 #: ../../../app/themes/Peafowl/views/dashboard.php:645
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "Salli vieraiden ladata kuvia."
+
+msgid "Number of simultaneous upload threads (parallel uploads)"
+msgstr "Yhtäaikaisten latausten määrä (rinnakkaiset lataukset)"
 
 msgid "Redirect on single upload"
 msgstr "Uudelleenohjaa yksittäiseen lataukseen"
@@ -3550,6 +3581,9 @@ msgstr "Kannettava"
 msgid "Desktop"
 msgstr "Työpöytä"
 
+msgid "theme editing"
+msgstr "teeman muokkaus"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1167
 #, php-format
 msgid "Put your themes in the %s folder"
@@ -3862,9 +3896,20 @@ msgstr "Käyttäjä ID:t"
 msgid "Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images."
 msgstr "Erota pilkulla käyttäjien ID:stä, joiden kuvia haluat näyttää etusivulla. Jätä tyhjäksi näyttääksesi kaikki viimeiset kuvat."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1524
-msgid "Here you can set the codes for the predefined ad spaces."
-msgstr "Täällä voit lisätä koodia valmiiksi määritellyihin mainospaikkoihin."
+msgid "banners"
+msgstr "bannerit"
+
+msgid "Automatic updates check"
+msgstr "Automaattinen päivitysten tarkistus"
+
+msgid "When enabled the system will automatically check for new updates."
+msgstr "Kun otettu käyttöön, järjestelmä tarkistaa automaattisesti uudet päivitykset."
+
+msgid "Display available updates notification"
+msgstr "Näytä ilmoitus päivityksistä"
+
+msgid "Enable this to show a notice on top warning you about new available system updates."
+msgstr "Ota käyttöön ilmoitus uusista päivityksistä järjestelmään."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1570
 msgid "Minify code"
@@ -3881,12 +3926,6 @@ msgstr "Huolto"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1585
 msgid "When enabled the website will show a maintenance message. This setting doesn't affect administrators."
 msgstr "Kun otettu käyttöön, sivustolla näkyy huoltotila ilmoitus. Tämä asetus ei vaikuta pääkäyttäjille."
-
-msgid "Display available updates notification"
-msgstr "Näytä ilmoitus päivityksistä"
-
-msgid "Enable this to show a notice on top warning you about new available system updates."
-msgstr "Ota käyttöön ilmoitus uusista päivityksistä järjestelmään."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1565
 msgid "Crypt salt"
@@ -3930,9 +3969,6 @@ msgstr "Näytä ja kirjaa virheet"
 msgid "To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)."
 msgstr "Katso <a %s>debug ohjeet</a> konfiguroidaksesi sen. Oletusarvoisesti taso on \"Virheen kirjaus\" (1)."
 
-msgid "documentation"
-msgstr "dokumentit"
-
 msgid "Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes."
 msgstr "Ohjauksen avulla voit muokata oletusohjauksen lennosta. Vain aakkosnumeerisia, tavuviiva ja alaviivat ovat sallittuja. Tutustu %s, jos haluat ylikirjoittaa tai lisätä uusia ohjauksia."
 
@@ -3944,6 +3980,12 @@ msgstr "%s ohjaus"
 
 msgid "Album routing"
 msgstr "Albumin ohjaus"
+
+msgid "Custom language strings"
+msgstr "Muokatut kielikäännökset"
+
+msgid "language strings"
+msgstr "kielikäännökset"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1611
 msgid "Default language"
@@ -4064,6 +4106,9 @@ msgstr "testi@jokudomain.com"
 msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
 msgstr "Käytä tätä nähdäksesi kuinka sähköpostit lähetetään. Suosittelemme käyttämään %s."
 
+msgid "social networks"
+msgstr "sosiaaliset verkostot"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1838
 msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
 msgstr "Tarvitset <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> sovelluksen tätä varten."
@@ -4115,11 +4160,6 @@ msgstr "CK asiakas id"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1933
 msgid "VK client secret"
 msgstr "VK asiakas salaisuus"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1949
-#, php-format
-msgid "CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s."
-msgstr "CDN hajauttaa sisällön usealle sivupalvelimelle, joka tekee verkkosivustosta nopeamman. Jos sinulla ei ole CDN palvelua, sinun kannattaa kokeilla %s."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1968
 #, php-format

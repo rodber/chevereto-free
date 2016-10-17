@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-07-15 17:52+0000',
-  'PO-Revision-Date' => '2016-07-15 17:52+0000',
+  'POT-Creation-Date' => '2016-10-17 20:52+0000',
+  'PO-Revision-Date' => '2016-10-17 20:52+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'es',
@@ -262,6 +262,15 @@ $translation_table = [
 	"That page doesn't exist" => [
 		0 => "Esa página no existe",
 	],
+	"Most recent" => [
+		0 => "Más reciente",
+	],
+	"Oldest" => [
+		0 => "Más antiguo",
+	],
+	"Albums" => [
+		0 => "Álbumes",
+	],
 	"Forgot password?" => [
 		0 => "Recuperar constraseña",
 	],
@@ -319,12 +328,6 @@ $translation_table = [
 	"Password required" => [
 		0 => "Contraseña requerida",
 	],
-	"Most recent" => [
-		0 => "Más reciente",
-	],
-	"Oldest" => [
-		0 => "Más antiguo",
-	],
 	"Most viewed" => [
 		0 => "Más visto",
 	],
@@ -333,6 +336,9 @@ $translation_table = [
 	],
 	"Share" => [
 		0 => "Compartir",
+	],
+	"Embed codes" => [
+		0 => "Insertar",
 	],
 	"Full info" => [
 		0 => "Info completa",
@@ -345,9 +351,6 @@ $translation_table = [
 	],
 	"Images" => [
 		0 => "Imágenes",
-	],
-	"Albums" => [
-		0 => "Álbumes",
 	],
 	"Users" => [
 		0 => "Usuarios",
@@ -363,6 +366,12 @@ $translation_table = [
 	],
 	"check for updates" => [
 		0 => "comprobar actualizaciones",
+	],
+	"Chevereto support" => [
+		0 => "soporte de Chevereto",
+	],
+	"Need help? Go to %s and you will get help quickly." => [
+		0 => "¿Necesitas ayuda? Ve a %s y obtendrás ayuda rápidamente.",
 	],
 	"PHP version" => [
 		0 => "Versión de PHP",
@@ -403,6 +412,24 @@ $translation_table = [
 	],
 	"Memory limit" => [
 		0 => "Límite de memoria",
+	],
+	"Links" => [
+		0 => "Enlaces",
+	],
+	"Documentation" => [
+		0 => "Documentación",
+	],
+	"Changelog" => [
+		0 => "Cambios",
+	],
+	"Request new features" => [
+		0 => "Solicitar nuevas funciones",
+	],
+	"Bug tracking" => [
+		0 => "Seguimiento de errores",
+	],
+	"Blog" => [
+		0 => "Blog",
 	],
 	"Website" => [
 		0 => "Sitio web",
@@ -497,14 +524,20 @@ $translation_table = [
 	"The page has been deleted." => [
 		0 => "La página ha sido eliminada.",
 	],
-	"Before cover (homepage)" => [
-		0 => "Antes del cover (página principal)",
+	"homepage" => [
+		0 => "pagina principal",
 	],
-	"After cover (homepage)" => [
-		0 => "Despues del cover (página principal)",
+	"Before main title (%s)" => [
+		0 => "Antes del título principal (%s)",
 	],
-	"After listing (homepage)" => [
-		0 => "Después del listado (página principal)",
+	"After call to action (%s)" => [
+		0 => "Después de la llamada de acción (%s)",
+	],
+	"After cover (%s)" => [
+		0 => "Después del cover (%s)",
+	],
+	"After listing (%s)" => [
+		0 => "Después del listado (%s)",
 	],
 	"Before pagination" => [
 		0 => "Antes de la paginación",
@@ -742,9 +775,6 @@ $translation_table = [
 	],
 	"About" => [
 		0 => "Acerca",
-	],
-	"Embed codes" => [
-		0 => "Insertar",
 	],
 	"Image ID" => [
 		0 => "ID de imagen",
@@ -1221,9 +1251,6 @@ $translation_table = [
 		0 => "álbum",
 		1 => "álbumes",
 	],
-	"Links" => [
-		0 => "Enlaces",
-	],
 	"Viewer links" => [
 		0 => "Enlaces de visualizador",
 	],
@@ -1504,12 +1531,6 @@ $translation_table = [
 	"Load more" => [
 		0 => "Cargar más",
 	],
-	"Previous" => [
-		0 => "Anterior",
-	],
-	"Next" => [
-		0 => "Siguiente",
-	],
 	"Select all" => [
 		0 => "Seleccionar todo",
 	],
@@ -1734,6 +1755,12 @@ $translation_table = [
 	"This setting is always diabled when using personal website mode." => [
 		0 => "Esta configuración siempre está inhabilitada cuando se usa el modo de sitio web personal.",
 	],
+	"documentation" => [
+		0 => "documentación",
+	],
+	"Learn more about %s at our %d." => [
+		0 => "Aprende más sobre %s en nuestra %d.",
+	],
 	"Add category" => [
 		0 => "Agregar categoría",
 	],
@@ -1911,8 +1938,14 @@ $translation_table = [
 	"Page sort order display for menus and listings. Use \"1\" for top priority." => [
 		0 => "Orden de visualización de la página para menús y listados. Usa \"1\" para mayor prioridad.",
 	],
+	"pages" => [
+		0 => "páginas",
+	],
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "¿Realmente quieres eliminar la página ID %s? Esto no de podrá deshacer.",
+	],
+	"Unchecked image formats won't be allowed to be uploaded." => [
+		0 => "No se permitirá subir los formatos no marcados.",
 	],
 	"Enable uploads" => [
 		0 => "Habilitar subidas",
@@ -1925,6 +1958,9 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Habilita esto si deseas permitir permitir que usuarios no registrados suban imágenes",
+	],
+	"Number of simultaneous upload threads (parallel uploads)" => [
+		0 => "Numero de hilos de subida simultáneos (subidas paralelas)",
 	],
 	"Redirect on single upload" => [
 		0 => "Redireccionar en subida única",
@@ -2283,6 +2319,9 @@ $translation_table = [
 	"Desktop" => [
 		0 => "Escritorio",
 	],
+	"theme editing" => [
+		0 => "edición de tema",
+	],
 	"Put your themes in the %s folder" => [
 		0 => "Pon tus temas en la carpeta %s",
 	],
@@ -2505,8 +2544,20 @@ $translation_table = [
 	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
 		0 => "Lista separada por comas de las ids de usuario a mostrar en la página principal. Dejar vacío para mostrar todas las imágenes recientes.",
 	],
-	"Here you can set the codes for the predefined ad spaces." => [
-		0 => "Aquí puedes establecer los códigos de los espacios publicitarios predefinidos.",
+	"banners" => [
+		0 => "avisos",
+	],
+	"Automatic updates check" => [
+		0 => "Comprobar actualizaciones automáticamente",
+	],
+	"When enabled the system will automatically check for new updates." => [
+		0 => "Cuando esta habilitado el sistema comprobara automáticamente por nuevas actualizaciones.",
+	],
+	"Display available updates notification" => [
+		0 => "Mostrar notificación de nuevas actualizaciones disponibles",
+	],
+	"Enable this to show a notice on top warning you about new available system updates." => [
+		0 => "Habilita esto para mostrar una notificación en la parte superior advirtiéndote de nuevas actualizaciones de sistema disponibles.",
 	],
 	"Minify code" => [
 		0 => "Minificar código",
@@ -2519,12 +2570,6 @@ $translation_table = [
 	],
 	"When enabled the website will show a maintenance message. This setting doesn't affect administrators." => [
 		0 => "Cuando esta habilitado la página web mostrará un mensaje de mantenimiento. Esta configuración no afecta a los administradores.",
-	],
-	"Display available updates notification" => [
-		0 => "Mostrar notificación de nuevas actualizaciones disponibles",
-	],
-	"Enable this to show a notice on top warning you about new available system updates." => [
-		0 => "Habilita esto para mostrar una notificación en la parte superior advirtiéndote de nuevas actualizaciones de sistema disponibles.",
 	],
 	"Crypt salt" => [
 		0 => "Salto criptográfico",
@@ -2556,9 +2601,6 @@ $translation_table = [
 	"To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)." => [
 		0 => "Para configurar el nivel de depuración comprueba la <a %s>documentación de depuración</a>. El nivel predeterminado es \"Registro de error\" (1).",
 	],
-	"documentation" => [
-		0 => "documentación",
-	],
 	"Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes." => [
 		0 => "El enrutamiento te permite personalizar las rutas de manera inmediata. Solamente se permiten caracteres alfanuméricos, guiones y guiones bajos. Revisa nuestra %s si necesitas sobre escribir o agregar nuevas rutas.",
 	],
@@ -2570,6 +2612,12 @@ $translation_table = [
 	],
 	"Album routing" => [
 		0 => "Enrutamiento de album",
+	],
+	"Custom language strings" => [
+		0 => "Cadenas de idioma personalizadas",
+	],
+	"language strings" => [
+		0 => "cadenas de idioma",
 	],
 	"Default language" => [
 		0 => "Idioma predeterminado",
@@ -2658,6 +2706,9 @@ $translation_table = [
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "Usa esto para corroborar la entrega de email. Recomendamos usar %s.",
 	],
+	"social networks" => [
+		0 => "redes sociales",
+	],
 	"You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this." => [
 		0 => "Necesitaras una <a href=\"https://developers.facebook.com/\" target=\"_blank\">App de Facebook</a> para esto.",
 	],
@@ -2696,9 +2747,6 @@ $translation_table = [
 	],
 	"VK client secret" => [
 		0 => "Client id de VK",
-	],
-	"CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s." => [
-		0 => "CDN permite la descarga de contenido estático en varios servidores edge haciendo tu sitio web más rápido. Si no tienes un proveedor CDN deberias probar %s.",
 	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Necesitas una cuenta de <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> para esto.",

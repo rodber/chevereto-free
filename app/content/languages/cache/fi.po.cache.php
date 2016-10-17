@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-07-15 17:52+0000',
-  'PO-Revision-Date' => '2016-07-15 17:52+0000',
+  'POT-Creation-Date' => '2016-10-17 20:52+0000',
+  'PO-Revision-Date' => '2016-10-17 20:52+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'fi',
@@ -248,7 +248,7 @@ $translation_table = [
 		0 => "näyttöä %s",
 	],
 	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy." => [
-		0 => "Käytämme omia ja kolmannenosapuolen evästeitä parantaaksemme palveluamme ja sen käyttöä. Käyttämällä palvelujamme hyväksyt evästeiden käytön.",
+		0 => "Käytämme omia ja kolmannen osapuolen evästeitä parantaaksemme palveluamme ja sen käytettävyyttä. Käyttämällä palvelujamme hyväksyt evästeiden käytön.",
 	],
 	"You have been forbidden to use this website." => [
 		0 => "Sinulla ei ole oikeuksia käyttää tätä sivustoa.",
@@ -261,6 +261,15 @@ $translation_table = [
 	],
 	"That page doesn't exist" => [
 		0 => "Sivua ei ole olemassa",
+	],
+	"Most recent" => [
+		0 => "Viimeisimmät",
+	],
+	"Oldest" => [
+		0 => "Vanhimmat",
+	],
+	"Albums" => [
+		0 => "Albumit",
 	],
 	"Forgot password?" => [
 		0 => "Salasana unohtunut?",
@@ -319,12 +328,6 @@ $translation_table = [
 	"Password required" => [
 		0 => "Salasana vaaditaan",
 	],
-	"Most recent" => [
-		0 => "Viimeisimmät",
-	],
-	"Oldest" => [
-		0 => "Vanhimmat",
-	],
 	"Most viewed" => [
 		0 => "Katsotuimmat",
 	],
@@ -333,6 +336,9 @@ $translation_table = [
 	],
 	"Share" => [
 		0 => "Jaa",
+	],
+	"Embed codes" => [
+		0 => "Upotuskoodit",
 	],
 	"Full info" => [
 		0 => "Kaikki tiedot",
@@ -345,9 +351,6 @@ $translation_table = [
 	],
 	"Images" => [
 		0 => "Kuvat",
-	],
-	"Albums" => [
-		0 => "Albumit",
 	],
 	"Users" => [
 		0 => "Käyttäjät",
@@ -363,6 +366,12 @@ $translation_table = [
 	],
 	"check for updates" => [
 		0 => "tarkista päivitykset",
+	],
+	"Chevereto support" => [
+		0 => "Cheverto tuki",
+	],
+	"Need help? Go to %s and you will get help quickly." => [
+		0 => "Tarvitsetko apua? Mene %s ja saat apua nopeasti.",
 	],
 	"PHP version" => [
 		0 => "PHP-versio",
@@ -403,6 +412,24 @@ $translation_table = [
 	],
 	"Memory limit" => [
 		0 => "Muistirajoitus",
+	],
+	"Links" => [
+		0 => "Linkit",
+	],
+	"Documentation" => [
+		0 => "Dokumentaatio",
+	],
+	"Changelog" => [
+		0 => "Muutoslogi",
+	],
+	"Request new features" => [
+		0 => "Toivo uutta ominaisuutta",
+	],
+	"Bug tracking" => [
+		0 => "Virheenseuranta",
+	],
+	"Blog" => [
+		0 => "Blogi",
 	],
 	"Website" => [
 		0 => "Verkkosivusto",
@@ -497,14 +524,20 @@ $translation_table = [
 	"The page has been deleted." => [
 		0 => "Sivu on poistettu.",
 	],
-	"Before cover (homepage)" => [
-		0 => "Ennen kansikuvaa (etusivu)",
+	"homepage" => [
+		0 => "kotisivu",
 	],
-	"After cover (homepage)" => [
-		0 => "Kansikuvan jälkee (etusivu)",
+	"Before main title (%s)" => [
+		0 => "Ennen pääotsikkoa (%s)",
 	],
-	"After listing (homepage)" => [
-		0 => "Listauksen jälkeen (etusivu)",
+	"After call to action (%s)" => [
+		0 => "Toimintapainikkeen jälkeen (%s)",
+	],
+	"After cover (%s)" => [
+		0 => "Kannen jälkeen (%s)",
+	],
+	"After listing (%s)" => [
+		0 => "Listauksen jälkeen (%s)",
 	],
 	"Before pagination" => [
 		0 => "Ennen sivunumerointia",
@@ -742,9 +775,6 @@ $translation_table = [
 	],
 	"About" => [
 		0 => "Tietoa",
-	],
-	"Embed codes" => [
-		0 => "Upotuskoodit",
 	],
 	"Image ID" => [
 		0 => "Kuvan tunniste",
@@ -1221,9 +1251,6 @@ $translation_table = [
 		0 => "albumi",
 		1 => "albumia",
 	],
-	"Links" => [
-		0 => "Linkit",
-	],
 	"Viewer links" => [
 		0 => "Katselijan linkit",
 	],
@@ -1504,12 +1531,6 @@ $translation_table = [
 	"Load more" => [
 		0 => "Lataa lisää",
 	],
-	"Previous" => [
-		0 => "Edellinen",
-	],
-	"Next" => [
-		0 => "Seuraava",
-	],
 	"Select all" => [
 		0 => "Valitse kaikki",
 	],
@@ -1734,6 +1755,12 @@ $translation_table = [
 	"This setting is always diabled when using personal website mode." => [
 		0 => "Tämä asetus on aina pois käytöstä käytettäessä henkilökohtainen verkkosivu tilaa.",
 	],
+	"documentation" => [
+		0 => "dokumentit",
+	],
+	"Learn more about %s at our %d." => [
+		0 => "Tutustu tarkemmin %s täällä %d.",
+	],
 	"Add category" => [
 		0 => "Lisää kategoria",
 	],
@@ -1911,8 +1938,14 @@ $translation_table = [
 	"Page sort order display for menus and listings. Use \"1\" for top priority." => [
 		0 => "Sivun lajittelujärjestys valikoissa ja listoissa. Käytä \"1\" ensisijaisesti.",
 	],
+	"pages" => [
+		0 => "sivut",
+	],
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "Haluatko varmasti poistaa sivun ID %s? Toimintoa ei voi perua.",
+	],
+	"Unchecked image formats won't be allowed to be uploaded." => [
+		0 => "Valitse ladattavaksi sallitut kuvaformaatit.",
 	],
 	"Enable uploads" => [
 		0 => "Salli kuvien lataus",
@@ -1925,6 +1958,9 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Salli vieraiden ladata kuvia.",
+	],
+	"Number of simultaneous upload threads (parallel uploads)" => [
+		0 => "Yhtäaikaisten latausten määrä (rinnakkaiset lataukset)",
 	],
 	"Redirect on single upload" => [
 		0 => "Uudelleenohjaa yksittäiseen lataukseen",
@@ -2283,6 +2319,9 @@ $translation_table = [
 	"Desktop" => [
 		0 => "Työpöytä",
 	],
+	"theme editing" => [
+		0 => "teeman muokkaus",
+	],
 	"Put your themes in the %s folder" => [
 		0 => "Siirrä teemat kansioon %s",
 	],
@@ -2505,8 +2544,20 @@ $translation_table = [
 	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
 		0 => "Erota pilkulla käyttäjien ID:stä, joiden kuvia haluat näyttää etusivulla. Jätä tyhjäksi näyttääksesi kaikki viimeiset kuvat.",
 	],
-	"Here you can set the codes for the predefined ad spaces." => [
-		0 => "Täällä voit lisätä koodia valmiiksi määritellyihin mainospaikkoihin.",
+	"banners" => [
+		0 => "bannerit",
+	],
+	"Automatic updates check" => [
+		0 => "Automaattinen päivitysten tarkistus",
+	],
+	"When enabled the system will automatically check for new updates." => [
+		0 => "Kun otettu käyttöön, järjestelmä tarkistaa automaattisesti uudet päivitykset.",
+	],
+	"Display available updates notification" => [
+		0 => "Näytä ilmoitus päivityksistä",
+	],
+	"Enable this to show a notice on top warning you about new available system updates." => [
+		0 => "Ota käyttöön ilmoitus uusista päivityksistä järjestelmään.",
 	],
 	"Minify code" => [
 		0 => "Pakkaa koodi",
@@ -2519,12 +2570,6 @@ $translation_table = [
 	],
 	"When enabled the website will show a maintenance message. This setting doesn't affect administrators." => [
 		0 => "Kun otettu käyttöön, sivustolla näkyy huoltotila ilmoitus. Tämä asetus ei vaikuta pääkäyttäjille.",
-	],
-	"Display available updates notification" => [
-		0 => "Näytä ilmoitus päivityksistä",
-	],
-	"Enable this to show a notice on top warning you about new available system updates." => [
-		0 => "Ota käyttöön ilmoitus uusista päivityksistä järjestelmään.",
 	],
 	"Crypt salt" => [
 		0 => "Kryptauksen avain",
@@ -2556,9 +2601,6 @@ $translation_table = [
 	"To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)." => [
 		0 => "Katso <a %s>debug ohjeet</a> konfiguroidaksesi sen. Oletusarvoisesti taso on \"Virheen kirjaus\" (1).",
 	],
-	"documentation" => [
-		0 => "dokumentit",
-	],
 	"Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes." => [
 		0 => "Ohjauksen avulla voit muokata oletusohjauksen lennosta. Vain aakkosnumeerisia, tavuviiva ja alaviivat ovat sallittuja. Tutustu %s, jos haluat ylikirjoittaa tai lisätä uusia ohjauksia.",
 	],
@@ -2570,6 +2612,12 @@ $translation_table = [
 	],
 	"Album routing" => [
 		0 => "Albumin ohjaus",
+	],
+	"Custom language strings" => [
+		0 => "Muokatut kielikäännökset",
+	],
+	"language strings" => [
+		0 => "kielikäännökset",
 	],
 	"Default language" => [
 		0 => "Oletuskieli",
@@ -2658,6 +2706,9 @@ $translation_table = [
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "Käytä tätä nähdäksesi kuinka sähköpostit lähetetään. Suosittelemme käyttämään %s.",
 	],
+	"social networks" => [
+		0 => "sosiaaliset verkostot",
+	],
 	"You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this." => [
 		0 => "Tarvitset <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> sovelluksen tätä varten.",
 	],
@@ -2696,9 +2747,6 @@ $translation_table = [
 	],
 	"VK client secret" => [
 		0 => "VK asiakas salaisuus",
-	],
-	"CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s." => [
-		0 => "CDN hajauttaa sisällön usealle sivupalvelimelle, joka tekee verkkosivustosta nopeamman. Jos sinulla ei ole CDN palvelua, sinun kannattaa kokeilla %s.",
 	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Tarvitset <a href=\"%s\" target=\"_blank\">reCAPTCHA avaimen</a> tätä varten.",

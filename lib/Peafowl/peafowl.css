@@ -3654,12 +3654,14 @@ body.upload-box-visible .upload-box {
 	.tone-dark .content-empty .icon {
 		color: #444;
 	}
-	.content-empty h2 {
+	.content-empty h2,
+	.content-empty .message {
 		font-size: 16px;
 		margin-top: 10px;
 		line-height: 160%;
 	}
-	.tone-dark .content-empty h2 {
+	.tone-dark .content-empty h2,
+	.tone-dark .content-empty .message {
 		color: #444;
 	}
 

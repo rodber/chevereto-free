@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-07-15 17:52+0000',
-  'PO-Revision-Date' => '2016-07-15 17:52+0000',
+  'POT-Creation-Date' => '2016-10-17 20:52+0000',
+  'PO-Revision-Date' => '2016-10-17 20:52+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'it',
@@ -19,34 +19,34 @@ $translation_plural = array (
 );
 $translation_table = [
 	"Invalid email" => [
-		0 => "Indirizzo e-mail non valido",
+		0 => "Indirizzo email non valido",
 	],
 	"Invalid username" => [
-		0 => "Il nome utente non è valido",
+		0 => "Username non valido",
 	],
 	"Invalid password" => [
-		0 => "Password sbagliata",
+		0 => "Password non valida",
 	],
 	"Invalid website mode" => [
-		0 => "Modo sito non valido",
+		0 => "Modalità sito non valida",
 	],
 	"From email address" => [
 		0 => "Dall'indirizzo email",
 	],
 	"Sender email for emails sent to users." => [
-		0 => "Email che riceveranno gli utenti",
+		0 => "Indirizzo email nelle comunicazioni agli utenti",
 	],
 	"Incoming email address" => [
-		0 => "Indirizzo di posta elettronica in arrivo",
+		0 => "Indirizzo email per le comunicazioni in ingresso",
 	],
 	"Recipient for contact form and system alerts." => [
 		0 => "Destinatari per gli avvisi del modulo di contatto del sito sistema.",
 	],
 	"Website mode" => [
-		0 => "Modalità del Sito",
+		0 => "Modalità sito",
 	],
 	"You can switch the website mode anytime." => [
-		0 => "È possibile passare in qualsiasi momento in modalità web.",
+		0 => "È possibile modificare la modalità sito in ogni momento.",
 	],
 	"Community" => [
 		0 => "Comunità",
@@ -61,13 +61,13 @@ $translation_table = [
 		0 => "Si è verificato un errore. Riprova più tardi.",
 	],
 	"Missing %s file" => [
-		0 => "Manca %s file",
+		0 => "File %s non trovato",
 	],
 	"Invalid license info" => [
 		0 => "Info licenza non valida",
 	],
 	"Invalid license key" => [
-		0 => "Codice di licenza non valida",
+		0 => "Codice licenza non valido",
 	],
 	"Can't save file" => [
 		0 => "Impossibile salvare il file",
@@ -79,10 +79,10 @@ $translation_table = [
 		0 => "Impossibile estrarre %s",
 	],
 	"Can't create %s directory - %e" => [
-		0 => "Non è possibile  %s creare una  directory - %e",
+		0 => "Impossibile creare la cartella %s - %e",
 	],
 	"Can't update %s file - %e" => [
-		0 => "Non è possibile aggiornare il %s file - %e",
+		0 => "Impossibile aggiornare il file %s - %e",
 	],
 	"Untitled" => [
 		0 => "Senza titolo",
@@ -90,48 +90,54 @@ $translation_table = [
 	"%s's images" => [
 		0 => "Immagini di %s",
 	],
+	"Note: This content is private but anyone with the link will be able to see this." => [
+		0 => "Nota: Questo contenuto è privato, ma consultabile da chiunque abbia il link.",
+	],
+	"Note: This content is password protected. Remember to pass the content password to share." => [
+		0 => "Nota: Questo contenuto è protetto da password. Ricorda di comunicarla per consentire l'accesso.",
+	],
 	"Note: This content is private. Change privacy to \"public\" to share." => [
-		0 => "Nota: Questo contenuto è privato.Devi modificare la tua  privacy su \"pubblico\" per condividere le tue foto",
+		0 => "Nota: Questo contenuto è privato. Per condividerlo imposta la privacy a livello \"pubblico\".",
 	],
 	"After %n %t" => [
-		0 => "Dopo  %n %t",
+		0 => "Dopo %n %t",
 	],
 	"Don't autodelete" => [
-		0 => "No  Auto cancellazione",
+		0 => "No",
 	],
 	"minute" => [
-		0 => "Minuto",
-		1 => "Minuti",
+		0 => "minuto",
+		1 => "minuti",
 	],
 	"hour" => [
 		0 => "ora",
 		1 => "ore",
 	],
 	"day" => [
-		0 => "Giorno",
-		1 => "Giorni",
+		0 => "giorno",
+		1 => "giorni",
 	],
 	"Duplicated upload" => [
-		0 => "Caricamento doppio",
+		0 => "Contenuto duplicato",
 	],
 	"Error storing file in external storage server" => [
-		0 => "Errore di memorizzazione di file  nel  server di storage esterno",
+		0 => "Errore salvataggio file sui server di archiviazione esterna",
 	],
 	"External storage has failed" => [
-		0 => "Storage esterno ha fallito",
+		0 => "Errore archiviazione esterna",
 	],
 	"Private upload" => [
 		0 => "Caricamento privato",
 	],
 	"Upload switched to local storage" => [
-		0 => "Il file p passato allo  storage locale",
+		0 => "Impostato caricamento sullo spazio di archiviazione locale",
 	],
 	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
-		0 => "Sistema è passato a storage locale a causa di non capacità su disco sufficiente (%c) nel server di archiviazione esterni(s). L'immagine %s è stato assegnato alla memoria locale.",
+		0 => "Il sistema ha impostato l'utilizzo dell'archiviazione locale causa quota disco insufficiente (%c) sui server di archiviazione esterna. L'immagine %s è stata salvata in locale.",
 	],
 	"view" => [
-		0 => "vista",
-		1 => "viste",
+		0 => "visualizzazione",
+		1 => "visualizzazioni",
 	],
 	"like" => [
 		0 => "mi piace",
@@ -142,16 +148,16 @@ $translation_table = [
 		1 => "Immagini",
 	],
 	"%u liked your %t %c" => [
-		0 => "%u piace il tuo %t %c",
+		0 => "A %u piace il tuo %t %c",
 	],
 	"%u is now following you" => [
-		0 => "%u ora ti sta  seguendo",
+		0 => "%u ora ti sta seguendo",
 	],
 	"Can't create %s destination dir" => [
-		0 => "Impossibile creare %s destinazione dir",
+		0 => "Impossibile creare la cartella di destinazione %s",
 	],
 	"Can't open %s for writing" => [
-		0 => "Impossibile aprire %s per la scrittura",
+		0 => "Impossibile aprire %s in scrittura",
 	],
 	"Internal" => [
 		0 => "interno",
@@ -160,13 +166,13 @@ $translation_table = [
 		0 => "Link",
 	],
 	"Can't insert storage." => [
-		0 => "Impossibile inserirlo storage.",
+		0 => "Impossibile aggiungere spazio di archiviazione",
 	],
 	"Storage capacity can't be lower than its current usage (%s)." => [
-		0 => "La capacità dello storage non può essere inferiore al suo uso corrente (%s).",
+		0 => "Lo spazio di archiviazione non può essere inferiore a quello attualmente in uso (%s).",
 	],
 	"Can't update storage details." => [
-		0 => "Impossibile aggiornare i dettagli dello storage.",
+		0 => "Impossibile aggiornare i dettagli dello spazio di archiviazione.",
 	],
 	"Unlimited" => [
 		0 => "Illimitato",
@@ -181,65 +187,89 @@ $translation_table = [
 		0 => "Privato",
 	],
 	"year" => [
-		0 => "Anno",
-		1 => "Anni",
+		0 => "anno",
+		1 => "anni",
 	],
 	"month" => [
-		0 => "Mese",
-		1 => "Mesi",
+		0 => "mese",
+		1 => "mesi",
 	],
 	"week" => [
-		0 => "Settimana",
-		1 => "Settimane",
+		0 => "settimana",
+		1 => "settimane",
 	],
 	"second" => [
-		0 => "Secondo",
-		1 => "Secondi",
+		0 => "secondo",
+		1 => "secondi",
 	],
 	"%s ago" => [
 		0 => "%s fa",
 	],
 	"moments ago" => [
-		0 => "istanti fa",
+		0 => "poco fa",
 	],
 	"System notification" => [
-		0 => "Sistema di notifica",
+		0 => "Notifica di sistema",
 	],
 	"Dashboard" => [
-		0 => "Dashboard",
+		0 => "Cruscotto",
+	],
+	"There is an update available for your system. Go to %s to download and install this update." => [
+		0 => "Aggiornamento di sistema disponibile. Vai a %s per scaricarlo ed installarlo.",
 	],
 	"System database is outdated. You need to run the <a href=\"%s\">update</a> tool." => [
-		0 => "Database di sistema è obsoleto. È necessario eseguire il <a href=\"%s\">aggiornamento</a> strumento",
+		0 => "Database di sistema obsoleto. È necessario eseguire lo strumento di <a href=\"%s\">aggiornamento</a>.",
 	],
 	"Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>." => [
-		0 => "Sito web è in modalità di manutenzione. Per ripristinare questa impostazione andare a <a href=\"%s\"> Dashboard> Impostazioni </a>.",
+		0 => "Il sito è in modalità di manutenzione. Per annullare questa impostazione andare al menu <a href=\"%s\"> Cruscotto > Impostazioni </a>.",
 	],
 	"You should disable PHP error reporting for production enviroment. Go to <a href='%s'>System settings</a> to revert this setting." => [
-		0 => "È necessario disattivare errore PHP reporting per ambienti di produzione. Vai a <a href='%s'> Impostazioni di sistema </a> per ripristinare questa impostazione.",
+		0 => "È consigliabile disattivare il rapporto errori PHP in ambienti di produzione. Vai a <a href='%s'> Impostazioni di sistema </a> per annullare questa impostazione.",
 	],
 	"You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this." => [
-		0 => "Non sono state modificate le impostazioni di posta elettronica predefinito. Vai a <a href='%s'>  Impostazioni e-mail </a> per risolvere questo problema.",
+		0 => "Le impostazioni email predefinite non sono state modificate. Vai a <a href='%s'>  Impostazioni email </a> per gestirle.",
+	],
+	"There is an update available for your Chevereto based website." => [
+		0 => "Aggiornamento disponibile per il tuo sito by Chevereto.",
 	],
 	"The release notes for this update are:" => [
-		0 => "Le note di rilascio di questo aggiornamento sono:",
+		0 => "Note di rilascio di questo aggiornamento:",
+	],
+	"admin dashboard" => [
+		0 => "Cruscotto amministratore",
+	],
+	"You can apply this update directly from your %a or download it from %s and then manually install it." => [
+		0 => "È possibile applicare questo aggiornamento direttamente dal vostro %a  o scaricarlo dal %s  e poi installarlo manualmente",
+	],
+	"Chevereto update available (v%s)" => [
+		0 => "Chevereto aggiornamento disponibile (v%s)",
 	],
 	"view on %s" => [
-		0 => "visualizzare su %s",
+		0 => "visualizza su %s",
 	],
 	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy." => [
-		0 => "Questo sito usa cookie, anche di terzi, per migliorare l’esperienza di navigazione e adeguare la pubblicità alle tue preferenze. Chiudendo questo banner o proseguendo nella navigazione acconsenti all'utilizzo di cookie.",
+		0 => "Questo sito usa cookie, anche di terzi, per migliorare l’esperienza di navigazione ed adeguare i nostri servizi alle tue preferenze. Chiudendo questo banner o proseguendo nella navigazione acconsenti al loro utilizzo.",
 	],
 	"You have been forbidden to use this website." => [
-		0 => "Sei stato proibito ad utilizzare questo sito.",
+		0 => "Ti è stato proibito l'utilizzo di questo sito.",
 	],
 	"Feel free to browse and discover all my shared images and albums." => [
-		0 => "Sentitevi liberi di navigare e scoprire tutte le mie immagini e gli album condivisi.",
+		0 => "Divertiti a sfogliare e scoprire tutte le mie immagini ed i miei album condivisi!",
 	],
 	"View all my images" => [
 		0 => "Visualizza tutte le mie immagini",
 	],
 	"That page doesn't exist" => [
 		0 => "La pagina non esiste",
+	],
+	"Most recent" => [
+		0 => "Più recenti",
+	],
+	"Oldest" => [
+		0 => "Più vecchi",
+	],
+	"Albums" => [
+		0 => "Album",
 	],
 	"Forgot password?" => [
 		0 => "Password dimenticata?",
@@ -248,7 +278,7 @@ $translation_table = [
 		0 => "Reimpostazione della password",
 	],
 	"Resend account activation" => [
-		0 => "Invia di nuovo la richiesta di attivazione",
+		0 => "Reinvia la richiesta di attivazione account",
 	],
 	"Add your email address" => [
 		0 => "Aggiungi il tuo indirizzo email",
@@ -257,31 +287,31 @@ $translation_table = [
 		0 => "Email cambiata",
 	],
 	"The reCAPTCHA wasn't entered correctly" => [
-		0 => "Il reCAPTCHA non è stato inserito correttamente",
+		0 => "Il codice reCAPTCHA non è stato inserito correttamente",
 	],
 	"Invalid Username/Email" => [
-		0 => "Invalido Username/Email",
+		0 => "Username/Email non validi",
 	],
 	"User doesn't have an email." => [
-		0 => "L'utente non dispone di un e-mail.",
+		0 => "L'utente non dispone di email.",
 	],
 	"Request denied" => [
-		0 => "Richiesta negata",
+		0 => "Richiesta rifiutata",
 	],
 	"Account needs to be activated to use this feature" => [
-		0 => "Il tuo account deve essere attivato per utilizzare questa funzione",
+		0 => "Per poter utilizzare questa funzione il tuo account deve essere attivato",
 	],
 	"Account already activated" => [
 		0 => "Account già attivato",
 	],
 	"Allow up to 15 minutes for the email. You can try again later." => [
-		0 => "Attendere fino a 15 minuti per l'e-mail. Puoi riprovare più tardi.",
+		0 => "Attendere fino a 15 minuti per l'email. Puoi riprovare più tardi.",
 	],
 	"Reset your password at %s" => [
 		0 => "Cambia la tua password %s",
 	],
 	"Confirmation required at %s" => [
-		0 => "Conferma richiesto a %s",
+		0 => "Conferma obbligatoria a %s",
 	],
 	"Welcome to %s" => [
 		0 => "Benvenuti in %s",
@@ -293,16 +323,10 @@ $translation_table = [
 		0 => "Email già in uso",
 	],
 	"Check the errors in the form to continue." => [
-		0 => "Controllare gli errori per continuare.",
+		0 => "Per proseguire verifica gli errori di compilazione.",
 	],
 	"Password required" => [
-		0 => "Password richiesta",
-	],
-	"Most recent" => [
-		0 => "Più recenti",
-	],
-	"Oldest" => [
-		0 => "Più vecchi",
+		0 => "Password obbligatoria",
 	],
 	"Most viewed" => [
 		0 => "Più visti",
@@ -313,20 +337,20 @@ $translation_table = [
 	"Share" => [
 		0 => "Condividi",
 	],
+	"Embed codes" => [
+		0 => "Codici",
+	],
 	"Full info" => [
-		0 => "Informazione completa",
+		0 => "Informazioni complete",
 	],
 	"%a album hosted in %w" => [
-		0 => "%a un album ospitato in %w",
+		0 => "Album %a ospitato in %w",
 	],
 	"Stats" => [
 		0 => "Statistiche",
 	],
 	"Images" => [
 		0 => "Immagini",
-	],
-	"Albums" => [
-		0 => "Album",
 	],
 	"Users" => [
 		0 => "Utenti",
@@ -335,13 +359,19 @@ $translation_table = [
 		0 => "Impostazioni",
 	],
 	"Chevereto version" => [
-		0 => "versione Chevereto",
+		0 => "Versione Chevereto",
 	],
 	"install update" => [
-		0 => "installare l'aggiornamento",
+		0 => "installa l'aggiornamento",
 	],
 	"check for updates" => [
 		0 => "controlla gli aggiornamenti",
+	],
+	"Chevereto support" => [
+		0 => "Supporto Chevereto",
+	],
+	"Need help? Go to %s and you will get help quickly." => [
+		0 => "Hai bisogno di aiuto? Vai a %s e si otterrà un aiuto rapido.",
 	],
 	"PHP version" => [
 		0 => "Versione PHP",
@@ -356,7 +386,7 @@ $translation_table = [
 		0 => "Info server MySQL",
 	],
 	"GD Library" => [
-		0 => "GD libreria",
+		0 => "Libreria GD",
 	],
 	"File uploads" => [
 		0 => "File caricati",
@@ -368,10 +398,10 @@ $translation_table = [
 		0 => "Disabilitato",
 	],
 	"Max. upload size" => [
-		0 => "Dimensione massima del caricamento",
+		0 => "Max. dimensione immagine",
 	],
 	"Max. post size" => [
-		0 => "Max. misura assegnata",
+		0 => "Max. valore POST",
 	],
 	"Max. execution time" => [
 		0 => "Max. tempo di esecuzione",
@@ -383,8 +413,26 @@ $translation_table = [
 	"Memory limit" => [
 		0 => "Limite memoria",
 	],
+	"Links" => [
+		0 => "Links",
+	],
+	"Documentation" => [
+		0 => "Documentazione",
+	],
+	"Changelog" => [
+		0 => "Log  di cambio di registro",
+	],
+	"Request new features" => [
+		0 => "Richiedere nuove funzionalità",
+	],
+	"Bug tracking" => [
+		0 => "Bug tracking",
+	],
+	"Blog" => [
+		0 => "Blog",
+	],
 	"Website" => [
-		0 => "Sito web",
+		0 => "Sito",
 	],
 	"Content" => [
 		0 => "Contenuto",
@@ -393,7 +441,7 @@ $translation_table = [
 		0 => "Pagine",
 	],
 	"Listings" => [
-		0 => "Annunci",
+		0 => "Gallerie",
 	],
 	"Image upload" => [
 		0 => "Carica Immagine",
@@ -402,10 +450,10 @@ $translation_table = [
 		0 => "Categorie",
 	],
 	"Consent screen" => [
-		0 => "schermo  di consenso",
+		0 => "Pagina di consenso",
 	],
 	"Flood protection" => [
-		0 => "Protezione Flood",
+		0 => "Protezione da flood",
 	],
 	"Theme" => [
 		0 => "Tema",
@@ -414,7 +462,7 @@ $translation_table = [
 		0 => "Homepage",
 	],
 	"Banners" => [
-		0 => "Banners",
+		0 => "Annunci",
 	],
 	"System" => [
 		0 => "Sistema",
@@ -426,25 +474,31 @@ $translation_table = [
 		0 => "Lingue",
 	],
 	"External storage" => [
-		0 => "Storage esterno",
+		0 => "Archiviazione esterna",
 	],
 	"Email" => [
 		0 => "Email",
 	],
 	"Social networks" => [
-		0 => "Social networks",
+		0 => "Social network",
 	],
 	"External services" => [
 		0 => "Servizi esterni",
 	],
 	"IP bans" => [
-		0 => "IP bans",
+		0 => "Blocco IP",
 	],
 	"Additional settings" => [
 		0 => "Altre impostazioni",
 	],
 	"Tools" => [
 		0 => "Strumenti",
+	],
+	"Can't delete all homepage cover images" => [
+		0 => "Impossibile cancellare tutte le immagini di copertina",
+	],
+	"Homepage cover image deleted" => [
+		0 => "Immagine di copertina cancellata",
 	],
 	"Local" => [
 		0 => "Locale",
@@ -456,85 +510,91 @@ $translation_table = [
 		0 => "Tutto",
 	],
 	"search content" => [
-		0 => "Ricerca di contenuti",
+		0 => "Ricerca contenuti",
 	],
 	"Add page" => [
 		0 => "Aggiungi pagina",
 	],
 	"Edit page ID %s" => [
-		0 => "Edita pagina ID %s",
+		0 => "Modifica pagina ID %s",
 	],
 	"The page has been added successfully." => [
-		0 => "La pagina è stata aggiunta con successo.",
+		0 => "La pagina è stata aggiunta correttamente.",
 	],
 	"The page has been deleted." => [
 		0 => "La pagina è stata cancellata.",
 	],
-	"Before cover (homepage)" => [
-		0 => "Prima di copertina (homepage)",
+	"homepage" => [
+		0 => "homepage",
 	],
-	"After cover (homepage)" => [
-		0 => "Dopo copertina (homepage)",
+	"Before main title (%s)" => [
+		0 => "Prima i titoli principali (%s)",
 	],
-	"After listing (homepage)" => [
-		0 => "Dopo aver elencato (homepage)",
+	"After call to action (%s)" => [
+		0 => "Dopo invito all'azione (%s)",
+	],
+	"After cover (%s)" => [
+		0 => "Dopo la copertura (%s)",
+	],
+	"After listing (%s)" => [
+		0 => "Dopo aver elencato  (%s)",
 	],
 	"Before pagination" => [
-		0 => "Prima  impaginazione",
+		0 => "Prima dell'impaginazione",
 	],
 	"After pagination" => [
-		0 => "Dopo impaginazione",
+		0 => "Dopo l'impaginazione",
 	],
 	"Content (image and album)" => [
-		0 => "Contenuti (immagini e album)",
+		0 => "Contenuti (immagini ed album)",
 	],
 	"Tab about column" => [
-		0 => "Scheda su colonna",
+		0 => "Colonna scheda informazioni",
 	],
 	"Before comments" => [
-		0 => "Prima i commenti",
+		0 => "Prima dei commenti",
 	],
 	"Image page" => [
 		0 => "Pagina Immagine",
 	],
 	"Inside viewer top (image page)" => [
-		0 => "Parte interna ispettore superiore  (Pagina immagine)",
+		0 => "Visualizzatore interno superiore (pagina immagine)",
 	],
 	"Expected banner size 728x90" => [
-		0 => "Dimensioni del banner 728x90",
+		0 => "Dimensioni previste dell'annuncio 728x90",
 	],
 	"Inside viewer foot (image page)" => [
-		0 => "Piede viewer interno (pagina immagine)",
+		0 => "Visualizzatore interno inferiore (pagina immagine)",
 	],
 	"After image viewer (image page)" => [
-		0 => "Dopo il visualizzatore di immagini (pagina immagine)",
+		0 => "Dopo il visualizzatore immagine (pagina immagine)",
 	],
 	"Before header (image page)" => [
-		0 => "Prima di intestazione (pagina immagine)",
+		0 => "Prima dell'intestazione (pagina immagine)",
 	],
 	"After header (image page)" => [
-		0 => "Dopo intestazione (pagina immagine)",
+		0 => "Dopo l'intestazione (pagina immagine)",
 	],
 	"Footer (image page)" => [
-		0 => "Piè di pagina (pagina di immagini)",
+		0 => "Piè di pagina (pagina immagine)",
 	],
 	"Album page" => [
-		0 => "Pagina dell'album",
+		0 => "Pagina album",
 	],
 	"Before header (album page)" => [
-		0 => "Prima di intestazione (pagina dell'album)",
+		0 => "Prima dell'intestazione (pagina album)",
 	],
 	"After header (album page)" => [
-		0 => "Dopo intestazione (pagina dell'album)",
+		0 => "Dopo l'intestazione (pagina album)",
 	],
 	"User profile page" => [
-		0 => "Pagina Profilo utente",
+		0 => "Pagina profilo utente",
 	],
 	"After top (user profile)" => [
-		0 => "Dopo superiore (profilo utente)",
+		0 => "Dopo il top (profilo utente)",
 	],
 	"Before listing (user profile)" => [
-		0 => "Prima di elencare (profilo utente)",
+		0 => "Prima della galleria (profilo utente)",
 	],
 	"Explore page" => [
 		0 => "Esplora pagina",
@@ -546,10 +606,10 @@ $translation_table = [
 		0 => "NSFW",
 	],
 	"Invalid website name" => [
-		0 => "Nome del sito non valido",
+		0 => "Nome sito non valido",
 	],
 	"Invalid language" => [
-		0 => "Lingua invalida",
+		0 => "Lingua non valida",
 	],
 	"Invalid timezone" => [
 		0 => "Fuso orario non valido",
@@ -558,7 +618,7 @@ $translation_table = [
 		0 => "Valore non valido",
 	],
 	"Invalid upload storage mode" => [
-		0 => "Modalità di archiviazione di upload non valido",
+		0 => "Modalità di archiviazione non valida",
 	],
 	"Invalid upload filenaming" => [
 		0 => "Denominazione dei file non valida",
@@ -567,16 +627,16 @@ $translation_table = [
 		0 => "Larghezza miniatura non valida",
 	],
 	"Invalid thumb height" => [
-		0 => "Altezza invalida",
+		0 => "Altezza miniatura non valida",
 	],
 	"Invalid medium size" => [
-		0 => "Non valido di dimensioni medie",
+		0 => "Dimensione media non valida",
 	],
 	"Invalid watermark percentage" => [
-		0 => "Percentuale filigrana non valido",
+		0 => "Percentuale filigrana non valida",
 	],
 	"Invalid watermark opacity" => [
-		0 => "Invalida opacità nella  filigrana",
+		0 => "Opacità filigrana non valida",
 	],
 	"Invalid theme" => [
 		0 => "Tema non valido",
@@ -585,16 +645,16 @@ $translation_table = [
 		0 => "Tono tema non valido",
 	],
 	"Invalid theme main color" => [
-		0 => "Colore principale tema non valido",
+		0 => "Colore principale del tema non valido",
 	],
 	"Invalid theme top bar color" => [
-		0 => "Tema non valido top bar colore",
+		0 => "Colore top bar del tema non valido",
 	],
 	"Invalid theme top bar button color" => [
-		0 => "Tema non valido pulsante in alto barra di colore",
+		0 => "Colore pulsante top bar del tema non valido",
 	],
 	"Invalid theme image listing size" => [
-		0 => "Tema non valido dimensione dell'immagine non valida",
+		0 => "Dimensione galleria immagini del tema non valida",
 	],
 	"Invalid user id" => [
 		0 => "ID utente non valido",
@@ -606,46 +666,46 @@ $translation_table = [
 		0 => "Porta SMTP non valida",
 	],
 	"Invalid SMTP security" => [
-		0 => "Sicurezza SMTP non valido",
+		0 => "Tipo sicurezza SMTP non valido",
 	],
 	"Invalid personal mode user ID" => [
-		0 => "Percorso non valido modalità personale ID utente",
+		0 => "ID utente modalità personale non valido",
 	],
 	"Invalid or reserved route" => [
 		0 => "Percorso non valido o riservato",
 	],
 	"Invalid website privacy mode" => [
-		0 => "Modalità contenuto non valido  website privacy modo",
+		0 => "Modalità sito privato non valida",
 	],
 	"Invalid website content privacy mode" => [
-		0 => "Modalità contenuto non valido per il sito",
+		0 => "Modalità contenuto privato sito non valido",
 	],
 	"Invalid homepage style" => [
-		0 => "Homepage  stile non valido",
+		0 => "Stile homepage non valido",
 	],
 	"Invalid homepage call to action button color" => [
-		0 => "Homepage pulsante di invito all'azione colore non valido",
+		0 => "Colore pulsante invito all'azione in homepage non valido",
 	],
 	"Invalid homepage call to action functionality" => [
-		0 => "Homepage non  valido invito alla funzionalità all'azione",
+		0 => "Funzionalità invito all'azione in homepage non valida",
 	],
 	"Invalid title" => [
-		0 => "Titolo invalido",
+		0 => "Titolo non valido",
 	],
 	"Invalid status" => [
-		0 => "Stato invalido",
+		0 => "Stato non valido",
 	],
 	"Invalid type" => [
-		0 => "Tipo invalido",
+		0 => "Tipo non valido",
 	],
 	"Invalid visibility" => [
-		0 => "Visibilità invalida",
+		0 => "Visibilità non valida",
 	],
 	"Invalid target attribute" => [
 		0 => "Attributo target non valido",
 	],
 	"Invalid rel attribute" => [
-		0 => "Attributo non valido",
+		0 => "Attributo rel non valido",
 	],
 	"Invalid icon" => [
 		0 => "Icona non valida",
@@ -654,37 +714,37 @@ $translation_table = [
 		0 => "Chiave URL non valida",
 	],
 	"Invalid file path" => [
-		0 => "Percorso invalido",
+		0 => "Percorso file non valido",
 	],
 	"Invalid link URL" => [
-		0 => "URL invalida",
+		0 => "Link URL non valido",
 	],
 	"Invalid user minimum age" => [
-		0 => "utente non valido età minima",
+		0 => "Età minima utente non valida",
 	],
 	"Only alphanumeric, hyphen and underscore characters are allowed" => [
-		0 => "Solo alfanumerici, trattini e caratteri di sottolineatura sono consentiti",
+		0 => "Sono consentiti soltanto caratteri alfanumerici, compresi trattini basso ed alto",
 	],
 	"Routes can't be the same" => [
-		0 => "Percorsi non possono essere uguali",
+		0 => "I percorsi non possono essere uguali",
 	],
 	"Invalid upload image path" => [
-		0 => "Percorso di caricamento dell'immagine non valido",
+		0 => "Percorso caricamento immagine non valido",
 	],
 	"Invalid call to action URL" => [
-		0 => "Invito non valido per l'azione dell' URL",
+		0 => "URL invito all'azione non valido",
 	],
 	"Max. allowed %s" => [
 		0 => "Massimo consentito %s",
 	],
 	"Can't map %m to an existing folder (%f)" => [
-		0 => "Non è possibile mappare %m a un esistente cartella (%f)",
+		0 => "Non è possibile mappare %m ad una cartella esistente (%f)",
 	],
 	"Can't map %m to an existing route (%r)" => [
-		0 => "Non è possibile mappare %m a un router esistente (%r)",
+		0 => "Non è possibile mappare %m ad un percorso esistente (%r)",
 	],
 	"Can't map %m to %r (username collision)" => [
-		0 => "Non è possibile mappare %m per %r (username collisione)",
+		0 => "Non è possibile mappare %m a %r (conflitto username)",
 	],
 	"Invalid SMTP server" => [
 		0 => "Server SMTP non valido",
@@ -696,7 +756,7 @@ $translation_table = [
 		0 => "URL non valido",
 	],
 	"This URL key is already being used by another page (ID %s)" => [
-		0 => "Questa chiave URL viene già utilizzato da un'altra pagina (ID %s)",
+		0 => "Questa chiave URL è già utilizzata da un'altra pagina (ID %s)",
 	],
 	"This file path is already being used by another page (ID %s)" => [
 		0 => "Questo percorso file è già utilizzato da un'altra pagina (ID %s)",
@@ -705,10 +765,10 @@ $translation_table = [
 		0 => "Impossibile salvare il contenuto della pagina: %s.",
 	],
 	"Top users" => [
-		0 => "Top utenti",
+		0 => "Utenti top",
 	],
 	"Explore" => [
-		0 => "Esplorare",
+		0 => "Esplora",
 	],
 	"Following" => [
 		0 => "Seguire",
@@ -716,20 +776,17 @@ $translation_table = [
 	"About" => [
 		0 => "Informazioni",
 	],
-	"Embed codes" => [
-		0 => "Codice Embed",
-	],
 	"Image ID" => [
 		0 => "ID immagine",
 	],
 	"Uploader IP" => [
-		0 => "Uploader IP",
+		0 => "IP caricamento",
 	],
 	"Ban IP" => [
-		0 => "Ban IP",
+		0 => "Blocca IP",
 	],
 	"IP already banned" => [
-		0 => "IP già vietato",
+		0 => "IP già bloccato",
 	],
 	"Upload date" => [
 		0 => "Caricato in data",
@@ -738,19 +795,19 @@ $translation_table = [
 		0 => "%s immagini",
 	],
 	"Image %i in %a album" => [
-		0 => "Immagine %i in %a album",
+		0 => "Immagine %i in album %a",
 	],
 	"Image %i in %c category" => [
-		0 => "Immagine %i in %c categoria",
+		0 => "Immagine %i in categoria %c",
 	],
 	"Image %i hosted in %w" => [
 		0 => "Immagine %i ospitata in %w",
 	],
 	"Direct links" => [
-		0 => "Collegamenti diretti",
+		0 => "Link diretti",
 	],
 	"Image URL" => [
-		0 => "Url immagine",
+		0 => "URL immagine",
 	],
 	"Image link" => [
 		0 => "Links immagine",
@@ -1194,9 +1251,6 @@ $translation_table = [
 		0 => "album",
 		1 => "albums",
 	],
-	"Links" => [
-		0 => "Links",
-	],
 	"Viewer links" => [
 		0 => "Links di visione",
 	],
@@ -1477,12 +1531,6 @@ $translation_table = [
 	"Load more" => [
 		0 => "Caricare più",
 	],
-	"Previous" => [
-		0 => "Precedente",
-	],
-	"Next" => [
-		0 => "Prossimo",
-	],
 	"Select all" => [
 		0 => "Seleziona tutto",
 	],
@@ -1707,6 +1755,12 @@ $translation_table = [
 	"This setting is always diabled when using personal website mode." => [
 		0 => "Questa impostazione è sempre disabilitata quando si utilizza la modalità sito personale.",
 	],
+	"documentation" => [
+		0 => "documentazione",
+	],
+	"Learn more about %s at our %d." => [
+		0 => "Ulteriori informazioni su %s noi al nostro %d.",
+	],
 	"Add category" => [
 		0 => "Aggiungi categoria",
 	],
@@ -1884,8 +1938,14 @@ $translation_table = [
 	"Page sort order display for menus and listings. Use \"1\" for top priority." => [
 		0 => "Display ordine pagina ordina per i menu ed elenchi. Usare \"1\" per la massima priorità.",
 	],
+	"pages" => [
+		0 => "pagine",
+	],
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "Vuoi davvero eliminare la pagina con  ID %s? Questo non può essere annullata.",
+	],
+	"Unchecked image formats won't be allowed to be uploaded." => [
+		0 => "Formati di immagine non selezionati non potranno essere caricati.",
 	],
 	"Enable uploads" => [
 		0 => "Abilita caricamenti",
@@ -1898,6 +1958,9 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Abilitare questa opzione se si desidera consentire agli utenti non registrati di caricare le foto",
+	],
+	"Number of simultaneous upload threads (parallel uploads)" => [
+		0 => "Numero di thread di upload simultanei (upload paralleli)",
 	],
 	"Redirect on single upload" => [
 		0 => "Redirect sul singolo di upload",
@@ -2101,7 +2164,7 @@ $translation_table = [
 		0 => "Vuoi davvero eliminare il divieto alla IP %s? Questa azione  non può essere annullata.",
 	],
 	"Banned IP address will be forbidden to use the entire website." => [
-		0 => "Indirizzo IP del  Bannato sarà vietato usare l'intero sito web.",
+		0 => "Agli indirizzi IP bloccati è inibito l'utilizzo dell'intero sito.",
 	],
 	"Edit IP ban" => [
 		0 => "Edita l'indirizzo  IP del ban",
@@ -2255,6 +2318,9 @@ $translation_table = [
 	],
 	"Desktop" => [
 		0 => "Desktop",
+	],
+	"theme editing" => [
+		0 => "edita tema",
 	],
 	"Put your themes in the %s folder" => [
 		0 => "Mettere i temi nella cartella %s",
@@ -2421,6 +2487,9 @@ $translation_table = [
 	"Delete image" => [
 		0 => "Cancella immagine",
 	],
+	"Add new cover image" => [
+		0 => "Aggiungere un'immagine nuova di copertina",
+	],
 	"Vector version or your website logo in SVG format (only for homepage)." => [
 		0 => "Vector versione del tuo sito web logo in formato SVG (solo per homepage).",
 	],
@@ -2475,8 +2544,20 @@ $translation_table = [
 	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
 		0 => "elenco di ID utente di destinazione separati da virgola per mostrare le immagini sulla homepage. Lascia vuoto per visualizzare tutte le immagini recenti.",
 	],
-	"Here you can set the codes for the predefined ad spaces." => [
-		0 => "Qui è possibile inserire il codice degli annunci pubblicitari",
+	"banners" => [
+		0 => "banners",
+	],
+	"Automatic updates check" => [
+		0 => "controllare gli aggiornamenti automatici",
+	],
+	"When enabled the system will automatically check for new updates." => [
+		0 => "Quando si consente al sistema controllerà automaticamente i nuovi aggiornamenti.",
+	],
+	"Display available updates notification" => [
+		0 => "Mostra aggiornamenti disponibili in notifica",
+	],
+	"Enable this to show a notice on top warning you about new available system updates." => [
+		0 => "Abilita questo per mostrare un avviso in alto che avvisa sui nuovi aggiornamenti di sistema disponibili.",
 	],
 	"Minify code" => [
 		0 => "Codice minify",
@@ -2520,9 +2601,6 @@ $translation_table = [
 	"To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)." => [
 		0 => "Per configurare il controllo del livello di debug <a %s> documentazione di debug </a>. Il livello di default è \"Protocollo errori\" (1).",
 	],
-	"documentation" => [
-		0 => "documentazione",
-	],
 	"Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes." => [
 		0 => "Routing consente di personalizzare percorso di default si lega al volo. Solo alfanumerici, trattini e caratteri di sottolineatura sono ammessi. Controlla il nostro %s se si desidera sovrascrivere o aggiungere nuove rotte.",
 	],
@@ -2534,6 +2612,12 @@ $translation_table = [
 	],
 	"Album routing" => [
 		0 => "Album routing",
+	],
+	"Custom language strings" => [
+		0 => "stringhe lingua personalizzata",
+	],
+	"language strings" => [
+		0 => "stringhe di lingua",
 	],
 	"Default language" => [
 		0 => "Lingua del sito",
@@ -2575,7 +2659,7 @@ $translation_table = [
 		0 => "Metodo di memorizzazione",
 	],
 	"Local storage is used by default or when no external storage is active." => [
-		0 => "Memorizzazione locale viene utilizzato per impostazione predefinita o quando non di memorizzazione esterna è attiva.",
+		0 => "L'archiviazione locale è utilizzata per impostazione predefinita o quando non è attiva quella esterna.",
 	],
 	"If you need help check the <a %s>storage documentation</a>." => [
 		0 => "Se hai bisogno di aiuto controllare la <a %s> documentazione di stoccaggio </a>.",
@@ -2622,6 +2706,9 @@ $translation_table = [
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "Utilizzare questo per verificare come vengono consegnate le vostre email. Si consiglia di utilizzare %s.",
 	],
+	"social networks" => [
+		0 => "social networks",
+	],
 	"You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this." => [
 		0 => "Hai bisogno di un <a href=\"https://developers.facebook.com/\" target=\"_blank\"> Facebook app </a> per questo.",
 	],
@@ -2660,9 +2747,6 @@ $translation_table = [
 	],
 	"VK client secret" => [
 		0 => "VK  cliente  segreta",
-	],
-	"CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s." => [
-		0 => "CDN consente di scaricare contenuti statici per diversi server edge rendere il vostro sito più veloce. Se non si dispone di un provider CDN si dovrebbe provare %s",
 	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Avete bisogno di un <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> per questo.",

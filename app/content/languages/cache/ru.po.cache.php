@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-07-15 17:52+0000',
-  'PO-Revision-Date' => '2016-07-15 17:52+0000',
+  'POT-Creation-Date' => '2016-10-17 20:52+0000',
+  'PO-Revision-Date' => '2016-10-17 20:52+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ru',
@@ -100,7 +100,7 @@ $translation_table = [
 		0 => "Внимание: Это скрытое содержимое. Чтобы поделиться им, измените настройки видимости на \"Публичное\".",
 	],
 	"After %n %t" => [
-		0 => "После %n %t",
+		0 => "Через %n %t",
 	],
 	"Don't autodelete" => [
 		0 => "Никогда не удалять",
@@ -272,6 +272,15 @@ $translation_table = [
 	"That page doesn't exist" => [
 		0 => "Эта страница не существует",
 	],
+	"Most recent" => [
+		0 => "Новые",
+	],
+	"Oldest" => [
+		0 => "Старые",
+	],
+	"Albums" => [
+		0 => "Альбомы",
+	],
 	"Forgot password?" => [
 		0 => "Забыли пароль?",
 	],
@@ -329,12 +338,6 @@ $translation_table = [
 	"Password required" => [
 		0 => "Требуется указать пароль",
 	],
-	"Most recent" => [
-		0 => "Новые",
-	],
-	"Oldest" => [
-		0 => "Старые",
-	],
 	"Most viewed" => [
 		0 => "Популярные",
 	],
@@ -343,6 +346,9 @@ $translation_table = [
 	],
 	"Share" => [
 		0 => "Поделиться",
+	],
+	"Embed codes" => [
+		0 => "Коды для встраивания",
 	],
 	"Full info" => [
 		0 => "Подробная информация",
@@ -355,9 +361,6 @@ $translation_table = [
 	],
 	"Images" => [
 		0 => "Изображения",
-	],
-	"Albums" => [
-		0 => "Альбомы",
 	],
 	"Users" => [
 		0 => "Пользователи",
@@ -373,6 +376,12 @@ $translation_table = [
 	],
 	"check for updates" => [
 		0 => "проверить обновления",
+	],
+	"Chevereto support" => [
+		0 => "Тех поддержка Chevereto",
+	],
+	"Need help? Go to %s and you will get help quickly." => [
+		0 => "Нужна помощь? Посетите %s и мы быстро поможем вам.",
 	],
 	"PHP version" => [
 		0 => "Версия PHP",
@@ -414,6 +423,24 @@ $translation_table = [
 	],
 	"Memory limit" => [
 		0 => "Ограничение памяти",
+	],
+	"Links" => [
+		0 => "Ссылки",
+	],
+	"Documentation" => [
+		0 => "Документация",
+	],
+	"Changelog" => [
+		0 => "Список изменений",
+	],
+	"Request new features" => [
+		0 => "Запрос на новые функции",
+	],
+	"Bug tracking" => [
+		0 => "Баг трекер",
+	],
+	"Blog" => [
+		0 => "Блог",
 	],
 	"Website" => [
 		0 => "Сайт",
@@ -508,14 +535,20 @@ $translation_table = [
 	"The page has been deleted." => [
 		0 => "Страница удалена.",
 	],
-	"Before cover (homepage)" => [
-		0 => "До обложки (на главной)",
+	"homepage" => [
+		0 => "главная страница",
 	],
-	"After cover (homepage)" => [
-		0 => "После обложки (на главной)",
+	"Before main title (%s)" => [
+		0 => "Перед главным заголовком (%s)",
 	],
-	"After listing (homepage)" => [
-		0 => "После списка изображений (на главной)",
+	"After call to action (%s)" => [
+		0 => "После кнопки призыва к действию (%s)",
+	],
+	"After cover (%s)" => [
+		0 => "После обложки (%s)",
+	],
+	"After listing (%s)" => [
+		0 => "После списка изображений (%s)",
 	],
 	"Before pagination" => [
 		0 => "Перед разделителем страниц",
@@ -753,9 +786,6 @@ $translation_table = [
 	],
 	"About" => [
 		0 => "Информация",
-	],
-	"Embed codes" => [
-		0 => "Коды для встраивания",
 	],
 	"Image ID" => [
 		0 => "ID изображения",
@@ -1233,9 +1263,6 @@ $translation_table = [
 		1 => "альбома",
 		2 => "альбомов",
 	],
-	"Links" => [
-		0 => "Ссылки",
-	],
 	"Viewer links" => [
 		0 => "Ссылки на просмотр",
 	],
@@ -1517,12 +1544,6 @@ $translation_table = [
 	"Load more" => [
 		0 => "Загрузить ещё",
 	],
-	"Previous" => [
-		0 => "Предыдущая",
-	],
-	"Next" => [
-		0 => "Следующая",
-	],
 	"Select all" => [
 		0 => "Выделить все",
 	],
@@ -1749,6 +1770,12 @@ $translation_table = [
 	"This setting is always diabled when using personal website mode." => [
 		0 => "Данная настройка всегда выключена, если вы используете персональный режим.",
 	],
+	"documentation" => [
+		0 => "документацию",
+	],
+	"Learn more about %s at our %d." => [
+		0 => "Узнайте больше о %s на %d.",
+	],
 	"Add category" => [
 		0 => "Добавить категорию",
 	],
@@ -1926,8 +1953,14 @@ $translation_table = [
 	"Page sort order display for menus and listings. Use \"1\" for top priority." => [
 		0 => "Порядок отображения в меню и списках. Используйте \"1\" как вершину списка.",
 	],
+	"pages" => [
+		0 => "страницы",
+	],
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "Вы действительно хотите удалить страницу с ID %s? Это действие необратимо.",
+	],
+	"Unchecked image formats won't be allowed to be uploaded." => [
+		0 => "Только отмеченные форматы будут доступны для загрузки.",
 	],
 	"Enable uploads" => [
 		0 => "Включить загрузку",
@@ -1940,6 +1973,9 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Включите, если хотите позволить загружать изображения незарегистрированным пользователям.",
+	],
+	"Number of simultaneous upload threads (parallel uploads)" => [
+		0 => "Количество одновременных (параллельных) загрузок",
 	],
 	"Redirect on single upload" => [
 		0 => "Переадресация при одиночной загрузке",
@@ -2298,6 +2334,9 @@ $translation_table = [
 	"Desktop" => [
 		0 => "ПК",
 	],
+	"theme editing" => [
+		0 => "редактирование темы",
+	],
 	"Put your themes in the %s folder" => [
 		0 => "Поместите свои темы в папку %s",
 	],
@@ -2428,13 +2467,13 @@ $translation_table = [
 		0 => "Включите, чтобы дать пользователям возможность указывать безопасность изображения при загрузке.",
 	],
 	"Custom CSS code" => [
-		0 => "Собственный CSS",
+		0 => "Дополнительный CSS",
 	],
 	"Put your custom CSS code here. It will be placed as <style> just before the closing </head> tag." => [
 		0 => "Вставьте сюда ваш собственный CSS код. Он будет вставлен с помощью тега <style> перед закрывающим тегом </head>.",
 	],
 	"Custom JS code" => [
-		0 => "Собственный JS",
+		0 => "Дополнительный JS",
 	],
 	"Put your custom JS code here. It will be placed as <script> just before the closing </head> tag." => [
 		0 => "Вставьте сюда ваш собственный JS код. Он будет вставлен с помощью тега <script> перед закрывающим тегом </head>.",
@@ -2520,8 +2559,20 @@ $translation_table = [
 	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
 		0 => "Список числовых идентификаторов пользователей (через запятую), изображения которых, будут показываться на главной странице. Оставьте поле пустым, чтобы показывать все новые изображения.",
 	],
-	"Here you can set the codes for the predefined ad spaces." => [
-		0 => "Здесь вы можете ввести коды для заданных мест размещения рекламы.",
+	"banners" => [
+		0 => "баннеры",
+	],
+	"Automatic updates check" => [
+		0 => "Автоматическая проверка обновлений",
+	],
+	"When enabled the system will automatically check for new updates." => [
+		0 => "Если включить данную настройку то система будет автоматически проверять обновления",
+	],
+	"Display available updates notification" => [
+		0 => "Показывать уведомление об обновлении",
+	],
+	"Enable this to show a notice on top warning you about new available system updates." => [
+		0 => "Включите, чтобы показывать уведомления об обновлении в верхней части экрана.",
 	],
 	"Minify code" => [
 		0 => "Сжимать код",
@@ -2534,12 +2585,6 @@ $translation_table = [
 	],
 	"When enabled the website will show a maintenance message. This setting doesn't affect administrators." => [
 		0 => "При включении, отображает на сайте сообщение о техническом обслуживании. Эта настройка не влияет на администраторов.",
-	],
-	"Display available updates notification" => [
-		0 => "Показывать уведомление об обновлении",
-	],
-	"Enable this to show a notice on top warning you about new available system updates." => [
-		0 => "Включите, чтобы показывать уведомления об обновлении в верхней части экрана.",
 	],
 	"Crypt salt" => [
 		0 => "Криптографическая соль",
@@ -2571,9 +2616,6 @@ $translation_table = [
 	"To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)." => [
 		0 => "Подробнее об уровнях отладки можно узнать в <a %s>документации</a>. Значение по-умолчанию: \"Записывать в журнал\" (1).",
 	],
-	"documentation" => [
-		0 => "документацию",
-	],
 	"Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes." => [
 		0 => "Маршрутизация позволяет изменять адреса ресурсов. В качестве имени маршрута можно использовать только цифры, латинские буквы, дефис и нижнее подчеркивание. Посмотрите нашу %s если вы хотите изменить маршрут или добавить новый.",
 	],
@@ -2585,6 +2627,12 @@ $translation_table = [
 	],
 	"Album routing" => [
 		0 => "Маршрутизация альбомов",
+	],
+	"Custom language strings" => [
+		0 => "Дополнительные строки перевода",
+	],
+	"language strings" => [
+		0 => "строки перевода",
 	],
 	"Default language" => [
 		0 => "Язык по-умолчанию",
@@ -2673,6 +2721,9 @@ $translation_table = [
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "Используйте эту форму для проверки доставки сообщений. Мы рекомендуем Вам использовать %s.",
 	],
+	"social networks" => [
+		0 => "социальные сети",
+	],
 	"You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this." => [
 		0 => "Для этого вам необходимы <a href=\"https://developers.facebook.com/\" target=\"_blank\">инструменты разработчика Facebook</a>.",
 	],
@@ -2711,9 +2762,6 @@ $translation_table = [
 	],
 	"VK client secret" => [
 		0 => "Секретный ключ клиента ВКонтакте",
-	],
-	"CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s." => [
-		0 => "CDN позволяет увеличить скорость работы сайта и снизить нагрузку на сервер путем переноса статичного содержимого на несколько переферейных серверов. Если вы еще не используете CDN, попробуйте %s.",
 	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Для этого вам необходим <a href=\"%s\" target=\"_blank\">ключ reCAPTCHA</a>.",

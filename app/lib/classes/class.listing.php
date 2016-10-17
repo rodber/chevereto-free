@@ -231,8 +231,11 @@ class Listing {
 					unset($joins[$this->type][$join_table]);
 				}
 			}
-					
-			$query = 'SELECT * FROM (SELECT * FROM ' . $base_table . $join . $this->where . $order_by . $limit . ') ' . $base_table . ' ' . "\n";
+			
+			// Get rid of the original Exif data (for listings)
+			$null_db = $this->type == 'images' ? ', NULL as image_original_exifdata ' : NULL;
+			
+			$query = 'SELECT *' . $null_db . 'FROM (SELECT * FROM ' . $base_table . $join . $this->where . $order_by . $limit . ') ' . $base_table . ' ' . "\n";
 			$query .=  implode("\n", $joins[$this->type]);
 			$query .= $order_by;
 		}

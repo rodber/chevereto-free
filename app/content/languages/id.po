@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-04-16 16:12+0000\n"
-"PO-Revision-Date: 2016-04-16 16:12+0000\n"
+"POT-Creation-Date: 2016-10-17 20:52+0000\n"
+"PO-Revision-Date: 2016-10-17 20:52+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: id\n"
@@ -145,37 +145,36 @@ msgstr "Tidak berjudul"
 msgid "%s's images"
 msgstr "%s foto"
 
+msgid "Note: This content is private but anyone with the link will be able to see this."
+msgstr "Catatan: Konten ini bersifat pribadi namun siapapun yang memiliki tautan dapat melihat ini."
+
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:14
+#: ../../../app/themes/Peafowl/views/album.php:74
+#: ../../../app/themes/Peafowl/views/image.php:272
+msgid "Note: This content is private. Change privacy to \"public\" to share."
+msgstr "Catatan: Ini konten pribadi. Ubah privasi ke \"Umum\" untuk membagikan."
+
+msgid "After %n %t"
+msgstr "Setelah %n %t"
+
 #: ../../../app/lib/classes/class.image.php:348
 msgid "Don't autodelete"
 msgstr "Jangan hapus otomatis"
 
-#: ../../../app/lib/classes/class.image.php:349
-#: ../../../app/lib/classes/class.image.php:350
-#, php-format
-msgid "After %s minutes"
-msgstr "Setelah %s menit"
+#: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "menit"
 
-#: ../../../app/lib/classes/class.image.php:351
-#, php-format
-msgid "After %s hour"
-msgstr "Setelah %s jam"
+#: ../../../app/lib/functions.php:41 ../../../app/lib/functions.php:53
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "jam"
 
-#: ../../../app/lib/classes/class.image.php:352
-#: ../../../app/lib/classes/class.image.php:353
-#: ../../../app/lib/classes/class.image.php:354
-#, php-format
-msgid "After %s hours"
-msgstr "Setelah %s jam"
-
-#: ../../../app/lib/classes/class.image.php:355
-#, php-format
-msgid "After %s day"
-msgstr "Setelah %s hari"
-
-#: ../../../app/lib/classes/class.image.php:356
-#, php-format
-msgid "After %s days"
-msgstr "Setelah %s hari"
+#: ../../../app/lib/functions.php:40 ../../../app/lib/functions.php:52
+msgid "day"
+msgid_plural "days"
+msgstr[0] "hari"
 
 #: ../../../app/lib/classes/class.image.php:636
 #: ../../../app/lib/classes/class.image.php:742
@@ -269,6 +268,13 @@ msgstr "Tanpa batasan"
 msgid "used"
 msgstr "digunakan"
 
+msgid "Private profile"
+msgstr "Profil pribadi"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Private"
+msgstr "Pribadi"
+
 #: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
 msgid "year"
 msgid_plural "years"
@@ -283,21 +289,6 @@ msgstr[0] "bulan"
 msgid "week"
 msgid_plural "weeks"
 msgstr[0] "minggu"
-
-#: ../../../app/lib/functions.php:40 ../../../app/lib/functions.php:52
-msgid "day"
-msgid_plural "days"
-msgstr[0] "hari"
-
-#: ../../../app/lib/functions.php:41 ../../../app/lib/functions.php:53
-msgid "hour"
-msgid_plural "hours"
-msgstr[0] "jam"
-
-#: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
-msgid "minute"
-msgid_plural "minutes"
-msgstr[0] "menit"
 
 #: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
 msgid "second"
@@ -316,6 +307,15 @@ msgstr "beberapa waktu lalu"
 msgid "System notification"
 msgstr "Notifikasi sistem"
 
+#: ../../../app/routes/route.dashboard.php:1223
+#: ../../../app/themes/Peafowl/header.php:407
+#: ../../../app/themes/Peafowl/views/dashboard.php:9
+msgid "Dashboard"
+msgstr "Beranda"
+
+msgid "There is an update available for your system. Go to %s to download and install this update."
+msgstr "Terdapat pembaruan untuk sistem anda. Pergi ke %s untuk mengunduh dan memasang pembaruan ini."
+
 #: ../../../app/lib/functions.php:218
 #, php-format
 msgid "System database is outdated. You need to run the <a href=\"%s\">update</a> tool."
@@ -331,6 +331,22 @@ msgstr "Anda harus menonaktifkan pelaporan kesalahan PHP untuk lingkungan produk
 
 msgid "You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this."
 msgstr "Anda belum mengubah pengaturan email bawaan. Pergi ke <a href='%s'>Pengaturan Email</a> untuk memperbaiki hal ini."
+
+msgid "There is an update available for your Chevereto based website."
+msgstr "Terdapat pembaruan untuk website berbasis Chevereto anda."
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "The release notes for this update are:"
+msgstr "Catatan rilis untuk pembaruan ini diantaranya:"
+
+msgid "admin dashboard"
+msgstr "dasbor admin"
+
+msgid "You can apply this update directly from your %a or download it from %s and then manually install it."
+msgstr "Anda dapat menerapkan pembaruan ini secara langsung dari %a anda atau mengunduhnya dari %s dan kemudian secara manual memasangnya."
+
+msgid "Chevereto update available (v%s)"
+msgstr "Pembaruan Chevereto tersedia (v%s)"
 
 #: ../../../app/lib/functions.render.php:303
 msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
@@ -353,6 +369,36 @@ msgstr "Tampilkan semua gambarku"
 #: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
 msgid "That page doesn't exist"
 msgstr "Halaman tersebut tidak tersedia."
+
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Terbaru"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "Terlama"
+
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:92
+#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
+#: ../../../app/themes/Peafowl/header.php:403
+#: ../../../app/themes/Peafowl/views/settings.php:77
+msgid "Albums"
+msgstr "Album"
 
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
@@ -469,27 +515,8 @@ msgstr "Email telah digunakan"
 msgid "Check the errors in the form to continue."
 msgstr "Periksa kesalahan pada kotak isian untuk melanjutkan"
 
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "Terbaru"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "Terlama"
+msgid "Password required"
+msgstr "Kata sandi diperlukan"
 
 #: ../../../app/routes/route.album.php:96
 #: ../../../app/routes/route.category.php:64
@@ -516,6 +543,12 @@ msgstr "Paling disukai"
 msgid "Share"
 msgstr "Bagikan"
 
+#: ../../../app/routes/route.image.php:127
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
+msgid "Embed codes"
+msgstr "Kode cantumkan"
+
 #: ../../../app/routes/route.album.php:124
 #: ../../../app/routes/route.image.php:134
 msgid "Full info"
@@ -535,14 +568,6 @@ msgstr "Status"
 #: ../../../app/themes/Peafowl/views/settings.php:73
 msgid "Images"
 msgstr "Foto"
-
-#: ../../../app/routes/route.dashboard.php:40
-#: ../../../app/routes/route.search.php:92
-#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
-#: ../../../app/themes/Peafowl/header.php:403
-#: ../../../app/themes/Peafowl/views/settings.php:77
-msgid "Albums"
-msgstr "Album"
 
 #: ../../../app/routes/route.dashboard.php:41
 #: ../../../app/routes/route.dashboard.php:233
@@ -568,6 +593,12 @@ msgstr "Pasang pembaharuan"
 #: ../../../app/routes/route.dashboard.php:162
 msgid "check for updates"
 msgstr "Cek pembaharuan"
+
+msgid "Chevereto support"
+msgstr "Dukungan Chevereto"
+
+msgid "Need help? Go to %s and you will get help quickly."
+msgstr "Butuh bantuan? Pergi ke %s dan anda akan mendapatkan bantuan segera."
 
 #: ../../../app/routes/route.dashboard.php:169
 msgid "PHP version"
@@ -681,7 +712,7 @@ msgstr "Diaktifkan"
 #: ../../../app/themes/Peafowl/views/dashboard.php:2010
 #: ../../../app/themes/Peafowl/views/dashboard.php:2031
 msgid "Disabled"
-msgstr "Dipasifkan"
+msgstr "Dinonaktifkan"
 
 #: ../../../app/routes/route.dashboard.php:193
 msgid "Max. upload size"
@@ -704,6 +735,19 @@ msgstr[0] "%d detik"
 #: ../../../app/routes/route.dashboard.php:205
 msgid "Memory limit"
 msgstr "Batas memori"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
+msgid "Links"
+msgstr "Tautan"
+
+msgid "Documentation"
+msgstr "Dokumentasi"
+
+msgid "Request new features"
+msgstr "Minta fitur baru"
+
+msgid "Blog"
+msgstr "Blog"
 
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
@@ -792,6 +836,12 @@ msgstr "Pengaturan tambahan"
 msgid "Tools"
 msgstr "Alat-alat"
 
+msgid "Can't delete all homepage cover images"
+msgstr "Tidak dapat menghapus semua gambar sampul halaman muka."
+
+msgid "Homepage cover image deleted"
+msgstr "Gambar halaman muka dihapus"
+
 #: ../../../app/routes/route.dashboard.php:278
 msgid "Local"
 msgstr "Lokal"
@@ -831,17 +881,11 @@ msgstr "Halaman telah berhasil ditambahkan."
 msgid "The page has been deleted."
 msgstr "Halaman telah dihapus."
 
-#: ../../../app/routes/route.dashboard.php:376
-msgid "Before cover (homepage)"
-msgstr "Sampul sebelumnya (halaman muka)"
+msgid "Before main title (%s)"
+msgstr "Sebelum judul utama (%s)"
 
-#: ../../../app/routes/route.dashboard.php:379
-msgid "After cover (homepage)"
-msgstr "Setelah sampul(halaman depan)"
-
-#: ../../../app/routes/route.dashboard.php:382
-msgid "After listing (homepage)"
-msgstr "Setelah pendaftaran (beranda)"
+msgid "After cover (%s)"
+msgstr "Setelah sampul (%s)"
 
 #: ../../../app/routes/route.dashboard.php:390
 msgid "Before pagination"
@@ -1086,6 +1130,9 @@ msgstr "Link URL tidak valid"
 msgid "Invalid user minimum age"
 msgstr "Usia minimal pengguna tidak valid"
 
+msgid "Only alphanumeric, hyphen and underscore characters are allowed"
+msgstr "Hanya karakter alfanumerik, tanda hubung dan garis bawah yang diperbolehkan"
+
 #: ../../../app/routes/route.dashboard.php:769
 msgid "Invalid upload image path"
 msgstr "Jalur upload gambar tidak valid"
@@ -1130,12 +1177,6 @@ msgstr "Tidak dapat menyimpan isi halaman: %s"
 msgid "Top users"
 msgstr "Pengguna teratas"
 
-#: ../../../app/routes/route.dashboard.php:1223
-#: ../../../app/themes/Peafowl/header.php:407
-#: ../../../app/themes/Peafowl/views/dashboard.php:9
-msgid "Dashboard"
-msgstr "Beranda"
-
 #: ../../../app/routes/route.explore.php:89
 #: ../../../app/themes/Peafowl/header.php:188
 #: ../../../app/themes/Peafowl/header.php:206
@@ -1156,12 +1197,6 @@ msgstr "Mengikuti"
 #: ../../../app/themes/Peafowl/header.php:424
 msgid "About"
 msgstr "Tentang"
-
-#: ../../../app/routes/route.image.php:127
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
-msgid "Embed codes"
-msgstr "Kode cantumkan"
 
 #: ../../../app/routes/route.image.php:144
 msgid "Image ID"
@@ -1978,10 +2013,6 @@ msgid "album"
 msgid_plural "albums"
 msgstr[0] "album"
 
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
-msgid "Links"
-msgstr "Tautan"
-
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
 msgstr "Penonton tautan"
@@ -2096,9 +2127,8 @@ msgstr "Deskripsi Album"
 msgid "Brief description of this album"
 msgstr "Deskripsi singkat album ini"
 
-#: ../../../app/themes/Peafowl/snippets/form_album.php:18
-msgid "Album Privacy"
-msgstr "Privasi Album"
+msgid "Album privacy"
+msgstr "Privasi album"
 
 #: ../../../app/themes/Peafowl/snippets/form_album.php:19
 msgid "Who can view this content"
@@ -2116,6 +2146,12 @@ msgstr "Pribadi (hanya saya)"
 #: ../../../app/themes/Peafowl/snippets/form_album.php:22
 msgid "Private (anyone with the link)"
 msgstr "Pribadi (siapapun yang memiliki tautan)"
+
+msgid "Private (password protected)"
+msgstr "Privat (dilindungi kata sandi)"
+
+msgid "Album password"
+msgstr "Kata sandi album"
 
 #: ../../../app/themes/Peafowl/snippets/form_category.php:9
 msgid "No category"
@@ -2197,6 +2233,12 @@ msgid "Album"
 msgid_plural "Albums"
 msgstr[0] "Album"
 
+msgid "link"
+msgstr "tautan"
+
+msgid "password"
+msgstr "kata sandi"
+
 #: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
 #: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
 #: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
@@ -2260,6 +2302,9 @@ msgstr "Kunci pribadi"
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:79
 msgid "Google Cloud JSON key"
 msgstr "Kunci JSON Google Cloud"
+
+msgid "Service name"
+msgstr "Nama layanan"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:84
 msgid "Identity URL"
@@ -2347,14 +2392,6 @@ msgstr "tampilkan lebih banyak"
 msgid "Load more"
 msgstr "Muat lebih banyak"
 
-#: ../../../app/themes/Peafowl/snippets/listing.php:91
-msgid "Previous"
-msgstr "Sebelumnya"
-
-#: ../../../app/themes/Peafowl/snippets/listing.php:98
-msgid "Next"
-msgstr "Berikutnya"
-
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
 msgid "Select all"
 msgstr "Pilih Semua"
@@ -2406,12 +2443,6 @@ msgstr "Hapus"
 #, php-format
 msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
 msgstr "Untuk menggunakan semua fitur dari situs ini anda harus masuk. Jika tidak memiliki akun anda dapat <a href=\"%s\">mendaftar</a> sekarang."
-
-#: ../../../app/themes/Peafowl/snippets/modal_share.php:14
-#: ../../../app/themes/Peafowl/views/album.php:74
-#: ../../../app/themes/Peafowl/views/image.php:272
-msgid "Note: This content is private. Change privacy to \"public\" to share."
-msgstr "Catatan: Ini konten pribadi. Ubah privasi ke \"Umum\" untuk membagikan."
 
 #: ../../../app/themes/Peafowl/snippets/template_content_empty.php:5
 #: ../../../app/themes/Peafowl/views/dashboard.php:618
@@ -2468,9 +2499,8 @@ msgstr "Apakah anda benar-benar ingin menghapus konten ini? Hal ini tidak dapat 
 msgid "Do you really want to remove all the selected content? This can't be undone."
 msgstr "Apakah anda benar-benar ingin menghapus semua konten yang dipilih? Hal ini tidak dapat dibatalkan"
 
-#: ../../../app/themes/Peafowl/tpl_list_item/image_description_guest.php:2
-msgid "Uploaded by guest to Public"
-msgstr "Diunggah oleh pengunjung ke Publik"
+msgid "Uploaded by guest"
+msgstr "Diunggah oleh pengunjung"
 
 #: ../../../app/themes/Peafowl/tpl_list_item/image_description_owner.php:2
 #, php-format
@@ -2700,10 +2730,22 @@ msgstr "Administrator"
 msgid "This setting is always diabled when using personal website mode."
 msgstr "Pengaturan ini akan selalu dinonaktifkan ketika menggunakan mode website pribadi."
 
+msgid "documentation"
+msgstr "dokumentasi"
+
+msgid "Learn more about %s at our %d."
+msgstr "Pelajari lebih lanjut tentang %s di %d kami."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
 msgid "Add category"
 msgstr "Tambah kategori"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:165
+#: ../../../app/themes/Peafowl/views/dashboard.php:169
+#: ../../../app/themes/Peafowl/views/image.php:219
+msgid "Add IP ban"
+msgstr "Tambah IP di blokir"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:178
 #: ../../../app/themes/Peafowl/views/dashboard.php:182
@@ -2739,16 +2781,266 @@ msgstr "Zona waktu default"
 msgid "Select region"
 msgstr "Pilih region"
 
+msgid "Allows to search images, albums and users based on a given search query."
+msgstr "Bolehkan pencarian gambar, album dan pengguna berdasarkan permintaan pencarian yang diberikan."
+
 msgid "Enables to browse images randomly."
 msgstr "Aktifkan mencari gambar secara acak."
 
 msgid "Likes"
 msgstr "Suka"
 
+msgid "Allows users to like content and populate \"Most liked\" listings."
+msgstr "Memungkinkan pengguna menyukai konten dan mengisi daftar \"Paling disukai\"."
+
+msgid "Followers allows users to follow each other."
+msgstr "Pengikut membolehkan pengguna untuk saling mengikuti."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:345
 #: ../../../app/themes/Peafowl/views/settings.php:69
 msgid "User ID"
 msgstr "ID pengguna"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:345
+#: ../../../app/themes/Peafowl/views/dashboard.php:1514
+#, php-format
+msgid "Your user id is: %s"
+msgstr "Id pengguna anda adalah: %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:350
+msgid "Personal mode routing"
+msgstr "Pengarahan mode personal"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:363
+msgid "Website privacy mode"
+msgstr "Mode privasi website"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:370
+msgid "Private mode will make the website only available for registered users."
+msgstr "Mode pribadi akan menjadikan website hanya tersedia untuk pengguna terdaftar."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:376
+msgid "Content privacy mode"
+msgstr "Mode privasi konten"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:380
+#: ../../../app/themes/Peafowl/views/dashboard.php:1225
+#: ../../../app/themes/Peafowl/views/dashboard.php:1463
+msgid "Default"
+msgstr "Default"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:381
+msgid "Force private (self)"
+msgstr "Paksa pribadi (sendiri)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:382
+msgid "Force private (anyone with the link)"
+msgstr "Paksa pribadi (semua orang dengan tautan)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:442
+msgid "Page title"
+msgstr "Judul halaman"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:447
+msgid "Page status"
+msgstr "Status halaman"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:450
+msgid "Active page"
+msgstr "Halaman aktif"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:450
+#, php-format
+msgid "Inactive page (%s)"
+msgstr "Halaman tidak aktif (%s)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:454
+msgid "Only active pages will be accessible."
+msgstr "Hanya halaman aktif yang dapat diakses."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:458
+#: ../../../app/themes/Peafowl/views/dashboard.php:595
+msgid "Type"
+msgstr "Tipe"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:475
+msgid "Page visibility"
+msgstr "Keterlihatan halaman"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:478
+msgid "Visible page"
+msgstr "Halaman terlihat"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:478
+msgid "Hidden page"
+msgstr "Halaman tersembunyi"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:482
+msgid "Hidden pages won't be show in system menus, but anyone can access to it with the link."
+msgstr "Halaman tersembunyi tidak akan ditampilkan di menu sistem, tetapi semua orang dapat mengakses nya melalui tautan."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:487
+msgid "Only alphanumerics, hyphens and forward slash"
+msgstr "Hanya alfanumerik, tanda hubung dan garis miring"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:493
+msgid "File path"
+msgstr "Jalur berkas"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:498
+#, php-format
+msgid "A %f file relative to %s"
+msgstr "Sebuah berkas %f berhubungan dengan %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:503
+msgid "Meta keywords"
+msgstr "Kata kunci meta"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:509
+msgid "Meta description"
+msgstr "Deskripsi meta"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:515
+msgid "Source code"
+msgstr "Kode sumber"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:519
+#, php-format
+msgid "No write permission in %s path you will need to add this file using an external editor."
+msgstr "Tidak ada izin menulis di jalur %s anda perlu menambahkan berkas ini menggunakan editor eksternal."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:525
+#, php-format
+msgid "No write permission in %s you will need to edit the contents of this file using an external editor."
+msgstr "Tidak ada izin menulis di jalur %s anda perlu mengedit konten dari berkas ini menggunakan editor eksternal."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:532
+#, php-format
+msgid "Taken from: %s"
+msgstr "Diambil dari: %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:546
+msgid "Link URL"
+msgstr "Tautan URL"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:562
+#, php-format
+msgid "Select %s to open the page or link in a new window."
+msgstr "Pilih %s untuk membuka halaman atau tautan di jendela baru."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:567
+#: ../../../app/themes/Peafowl/views/dashboard.php:574
+msgid "Only alphanumerics, hyphens and whitespaces"
+msgstr "Hanya alfanumerik, tanda hubung dan spasi"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:569
+#, php-format
+msgid "HTML &lt;a&gt; %s attribute"
+msgstr "Atribut HTML &lt;a&gt; %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:573
+msgid "Link icon"
+msgstr "Ikon tautan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:576
+#, php-format
+msgid "Check the <a %s>icon reference</a> for the complete list of supported icons."
+msgstr "Periksa <a %s>referensi ikon</a> untuk daftar lengkap ikon yang didukung."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:580
+msgid "Sort order display"
+msgstr "Urutan tampilan"
+
+msgid "pages"
+msgstr "halaman"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:630
+msgid "Enable uploads"
+msgstr "Aktifkan upload"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:636
+msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
+msgstr "Aktifkan ini jika anda ingin memperbolehkan upload gambar. Pengaturan ini tidak berdampak pada administrator"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:639
+msgid "Guest uploads"
+msgstr "Unggahan pengunjung"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+msgid "Enable this if you want to allow non registered users to upload."
+msgstr "Aktifkan ini jika anda mengizinkan pengguna tidak terdaftar menunggah."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:649
+msgid "Enable expirable uploads"
+msgstr "Aktifkan upload berkadaluarsa"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:661
+#: ../../../app/themes/Peafowl/views/settings.php:183
+msgid "Image Exif data"
+msgstr "Data Exif gambar"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:665
+msgid "Keep"
+msgstr "Biarkan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:674
+msgid "Image Exif data (user setting)"
+msgstr "Data Exif gambar (pengaturan pengguna)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:683
+msgid "Enable this if you want to allow each user to configure how image Exif data will be handled."
+msgstr "Aktifkan ini jika anda ingin membolehkan setiap pengguna mengatur bagaimana data Exif gambar akan ditangani."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:689
+msgid "Max. filesize"
+msgstr "Ukuran berkas Maks."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:692
+#, php-format
+msgid "Max. allowed filesize. (Max allowed by server is %s)"
+msgstr "Ukuran berkas Maks. (Maksimal yang dibolehkan server ialah %s)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:695
+msgid "Image path"
+msgstr "Jalur gambar"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:701
+msgid "Storage mode"
+msgstr "Mode penyimpanan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:704
+msgid "Direct"
+msgstr "Langsung"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:710
+msgid "File naming method"
+msgstr "Metode penamaan berkas"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:713
+msgid "Original"
+msgstr "Asli"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:713
+msgid "Mix original + random"
+msgstr "Campur asli + acak"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:716
+msgid "\"Original\" will try to keep the image source name while \"Random\" will generate a random name. \"ID\" will name the image just like the image ID."
+msgstr "\"Asli\" akan mencoba menjaga nama sumber gambar sedangkan \"Acak\" akan menghasilkan sebuah nama acak. \"ID\" akan menamakan gambar seperti halnya ID gambar."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:747
+msgid "Watermarks"
+msgstr "Tanda air"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:754
+msgid "Enable this to put a logo or anything you want in image uploads."
+msgstr "Aktifkan ini untuk menempatkan sebuah logo atau apapun yang anda inginkan di upload gambar."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:761
+#: ../../../app/themes/Peafowl/views/dashboard.php:1238
+#, php-format
+msgid "Warning: Can't write in %s"
+msgstr "Peringatan: Tidak dapat menulis di %s"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:810
 msgid "Watermark image"
@@ -2802,6 +3094,41 @@ msgstr "Penyesuaian posisi stempel. Pertama mendatar selanjutnya tegak lurus."
 msgid "Watermark margin"
 msgstr "Jarak stempel"
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:925
+msgid "Expires"
+msgstr "Kadaluarsa"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:959
+msgid "Enable signups"
+msgstr "Aktifkan mendaftar"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:965
+msgid "Enable this if you want to allow users to signup."
+msgstr "Aktifkan ini jika anda ingin membolehkan pengguna untuk mendaftar."
+
+msgid "Minimum age required"
+msgstr "Usia minimum dibutuhkan"
+
+msgid "Empty"
+msgstr "Kosong"
+
+msgid "Leave it empty to don't require a minimum age to use the website."
+msgstr "Biarkan kosong jika anda tidak memerlukan usia minimum untuk bisa menggunakan website."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:983
+msgid "Require email confirmation"
+msgstr "Konfirmasi email dibutuhkan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:989
+msgid "Enable this if users must validate their email address on sign up."
+msgstr "Aktifkan ini jika pengguna harus memvalidasi alamat email mereka untuk mendaftar."
+
+msgid "Shows a consent screen before accessing the website. Useful for adult content websites where minors shouldn't be allowed."
+msgstr "Menampilkan sebuah layar persetujuan sebelum mengakses website. Sangat berguna untuk website konten dewasa dimana anak dibawah umur harusnya tidak diperbolehkan."
+
+msgid "Enable consent screen"
+msgstr "Aktifkan layar persetujuan"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1031
 msgid "Notify to email"
 msgstr "Beritahu lewat surel"
@@ -2829,6 +3156,279 @@ msgstr "Batas bulanan"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1070
 msgid "Show not safe content in listings"
 msgstr "Perlihatkan isi yang tidak aman"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1143
+msgid "Phone"
+msgstr "Selular"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1147
+msgid "Phablet"
+msgstr "Phapblet"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1151
+msgid "Tablet"
+msgstr "Tablet"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1155
+msgid "Laptop"
+msgstr "Laptop"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1159
+msgid "Desktop"
+msgstr "Desktop"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1167
+#, php-format
+msgid "Put your themes in the %s folder"
+msgstr "Tempatkan tema anda di folder %s"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1186
+msgid "Tone"
+msgstr "Suasana"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1189
+msgid "Light"
+msgstr "Menyala"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1278
+msgid "Logo height"
+msgstr "Tinggi logo"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1287
+msgid "Favicon image"
+msgstr "Gambar favicon"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1293
+msgid "Favicon image. Image must have same width and height."
+msgstr "Gambar favicon. Gambar harus memiliki lebar dan tinggi yang sama."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1299
+msgid "Enable download button"
+msgstr "Aktifkan tombol unduh"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1305
+msgid "Enable this if you want to show the image download button."
+msgstr "Aktifkan ini jika anda ingin menampilkan gambar dengan tombol unduh."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1309
+msgid "Enable right click on image"
+msgstr "Aktifkan klik kanan pada gambar"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1315
+msgid "Enable this if you want to allow right click on image viewer page."
+msgstr "Aktifkan ini jika anda ingin membolehkan klik kanan pada halaman penampil gambar."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1321
+msgid "Enable show Exif data"
+msgstr "Aktifkan untuk menampilkan data Exif"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1327
+msgid "Enable this if you want to show image Exif data."
+msgstr "Aktifkan ini jika anda ingin menampilkan data Exif gambar."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1333
+msgid "Enable social share"
+msgstr "Aktifkan berbagi sosial"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1339
+msgid "Enable this if you want to show social network buttons to share content."
+msgstr "Aktifkan ini jika anda ingin menampilkan tombol jaringan sosial untuk membagikan konten."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1343
+msgid "Enable embed codes (content)"
+msgstr "Aktifkan kode sematkan (konten)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1349
+msgid "Enable this if you want to show embed codes for the content."
+msgstr "Aktifkan ini jika anda ingin menampilkan kode sematkan untuk konten."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1365
+msgid "Not safe content checkbox in uploader"
+msgstr "Kotak centang konten tidak aman di pengunggah"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1377
+msgid "Custom CSS code"
+msgstr "Kode CSS kustom"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1382
+msgid "Custom JS code"
+msgstr "Kode JS kustom"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1390
+msgid "Style"
+msgstr "Gaya"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1406
+msgid "Cover image"
+msgstr "Gambar sampul"
+
+#: ../../../app/themes/Peafowl/views/image.php:72
+msgid "Do you really want to delete this image? This can't be undone."
+msgstr "Apakah anda yakin ingin menghapus gambar ini? Hal ini tidak dapat dimundurkan."
+
+#: ../../../app/themes/Peafowl/views/image.php:72
+msgid "Delete image"
+msgstr "Menghapus gambar"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1445
+#: ../../../app/themes/Peafowl/views/settings.php:440
+msgid "Paragraph"
+msgstr "Paragraf"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1488
+msgid "Open URL"
+msgstr "Buka URL"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1513
+msgid "User IDs"
+msgstr "ID Pengguna"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1570
+msgid "Minify code"
+msgstr "Sederhanakan koed"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1579
+msgid "Maintenance"
+msgstr "Perawatan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1585
+msgid "When enabled the website will show a maintenance message. This setting doesn't affect administrators."
+msgstr "Ketika anda mengaktifkan website akan muncul sebuah pesan perawatan. Pengaturan ini tidak berpengaruh terhadap administrator."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1601
+msgid "None"
+msgstr "Tidaka ada"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1611
+msgid "Default language"
+msgstr "Bahasa default"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1624
+msgid "Auto language"
+msgstr "Bahasa otomatis"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1634
+msgid "Language chooser"
+msgstr "Pemilih bahasa"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1640
+msgid "Enable this if you want to allow language selection."
+msgstr "Mengatifkan ini jika anda ingin memperbolehkan pemilihan bahasa."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1647
+msgid "Enabled languages"
+msgstr "Bahasa diaktifkan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1656
+msgid "Unchecked languages won't be used in your website."
+msgstr "Bahasa yang tidak dicentang tidak akan digunakan di website anda."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1680
+msgid "Toggle this to enable or disable this storage"
+msgstr "Alihkan ini jika ingin mengaktifkan atau menonaktifkan penyimpanan ini"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1696
+msgid "Quota"
+msgstr "Kuota"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1698
+msgid "Active"
+msgstr "Aktif"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1731
+msgid "Storage method"
+msgstr "Metode penyimpanan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1742
+msgid "Local storage is used by default or when no external storage is active."
+msgstr "Penyimpanan lokal akan digunakan secara default atau ketika tidak ada penyimpanan eksternal yang aktif."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1742
+#, php-format
+msgid "If you need help check the <a %s>storage documentation</a>."
+msgstr "Jika anda memerlukan bantuan periksa <a %s>dokumentasi penyimpanan</a>."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1744
+msgid "Edit storage"
+msgstr "Edit penyimpanan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1754
+msgid "From name"
+msgstr "Nama dari"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1757
+msgid "Sender name for emails sent to users."
+msgstr "Nama pengirim untuk email yang dikirim kepada pengguna."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1772
+msgid "Email mode"
+msgstr "Mode email"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1779
+msgid "How to send emails? SMTP recommended."
+msgstr "Bagaimana cara pengiriman email? SMTP direkomendasikan."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1784
+msgid "SMTP server and port"
+msgstr "Server dan port SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1787
+msgid "SMTP server"
+msgstr "Server SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1800
+msgid "SMTP username"
+msgstr "Username SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1805
+msgid "SMTP password"
+msgstr "Password SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1810
+msgid "SMTP security"
+msgstr "Keamanan SMTP"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1813
+msgid "Unsecured"
+msgstr "Tidak aman"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1824
+#: ../../../app/themes/Peafowl/views/dashboard.php:1825
+msgid "Send test email"
+msgstr "Kirim email percobaan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1826
+#, php-format
+msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
+msgstr "Gunakan ini untuk memeriksa apakan email sedang dikirimkan. Kami merekomendasikan anda untuk menggunakan %s."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1838
+msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
+msgstr "Anda memerlukan sebuah <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> untuk hal ini."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1897
+msgid "You need a <a href=\"https://cloud.google.com/console\" target=\"_blank\">Google app</a> for this."
+msgstr "Anda membutuhkan sebuah<a href=\"https://cloud.google.com/console\" target=\"_blank\">Google app</a> untuk hal ini."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1902
+msgid "Google client id"
+msgstr "Id klien Google"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1907
+msgid "Google client secret"
+msgstr "Rahasia klien Google"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1923
+msgid "You need a <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> for this."
+msgstr "Anda membutuhkan sebuah <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> untuk hal ini."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1928
+msgid "VK client id"
+msgstr "id klien VK"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1933
+msgid "VK client secret"
+msgstr "rahasia klien VK"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1968
 #, php-format
@@ -2904,13 +3504,14 @@ msgstr "Periksa kesalahan untuk meneruskan proses."
 msgid "Guest"
 msgstr "Tamu"
 
-#: ../../../app/themes/Peafowl/views/image.php:72
-msgid "Do you really want to delete this image? This can't be undone."
-msgstr "Apakah anda yakin ingin menghapus gambar ini? Hal ini tidak dapat dimundurkan."
+#: ../../../app/themes/Peafowl/views/image.php:85
+msgid "You like this"
+msgstr "Anda menyukai ini"
 
-#: ../../../app/themes/Peafowl/views/image.php:72
-msgid "Delete image"
-msgstr "Menghapus gambar"
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Suka"
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -3001,6 +3602,9 @@ msgstr "Kami sedang melakukan perawatan rutin. Silakan kembali dalam beberapa me
 msgid "You either don't have permission to access this page or the link has expired."
 msgstr "Anda tidak diperkenankan memasuki halaman ini atau tautan telah tidak berlaku."
 
+msgid "Search results"
+msgstr "Hasil pencarian"
+
 #: ../../../app/themes/Peafowl/views/settings.php:36
 #: ../../../app/themes/Peafowl/views/user.php:65
 msgid "Do you really want to delete this user? This can't be undone."
@@ -3021,7 +3625,7 @@ msgstr "Status"
 
 #: ../../../app/themes/Peafowl/views/settings.php:109
 msgid "Valid"
-msgstr "Benar"
+msgstr "Sah"
 
 #: ../../../app/themes/Peafowl/views/settings.php:110
 msgid "Banned"
@@ -3206,33 +3810,14 @@ msgstr "Menghapus latar belakang"
 msgid "Edit profile"
 msgstr "Ubah profil"
 
-#: ../../../content/pages/default/contact.php:79
-msgid "Message sent"
-msgstr "Pesan terkirim"
+#: ../../../app/themes/Peafowl/views/user.php:75
+msgid "Follower"
+msgid_plural "Followers"
+msgstr[0] "Pengikut"
 
-#: ../../../content/pages/default/contact.php:79
-msgid "Contact"
-msgstr "Kontak"
-
-#: ../../../content/pages/default/contact.php:85
-msgid "We will be in touch soon."
-msgstr "Akan kami hubungi segera."
-
-#: ../../../content/pages/default/contact.php:85
-msgid "If you want to send a message fill the form below."
-msgstr "Jika anda ingin mengirimkan sebuah pesan, isilah formulir dibawah ini."
-
-#: ../../../content/pages/default/contact.php:88
-msgid "Your name"
-msgstr "Nama anda"
-
-#: ../../../content/pages/default/contact.php:97
-msgid "Subject"
-msgstr "Judul"
-
-#: ../../../content/pages/default/contact.php:123
-msgid "Send message"
-msgstr "Kirim pesan"
+#: ../../../app/themes/Peafowl/views/user.php:81
+msgid "Follow"
+msgstr "Ikuti"
 
 #: ../../../app/install/update/template/update.js:19
 #, javascript-format
@@ -3350,10 +3935,6 @@ msgstr "Pembaruan yang tersedia v%s"
 #, javascript-format
 msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
 msgstr "Terdapat pembaruan untuk sistem anda. Anda dapat mengunduh otomatis dan memasang pembaruan ini atau pergi ke %s untuk melanjutkan mengunduh file."
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "The release notes for this update are:"
-msgstr "Catatan rilis untuk pembaruan ini diantaranya:"
 
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 msgid "Update now"

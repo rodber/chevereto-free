@@ -482,7 +482,7 @@ class DB {
 					$query .= '`' . $k . '`' . $matches[1] . $matches[2] . ','; 
 				}
 				if($matches[1] == '-') {
-					$query .= 'GREATEST(cast(`'.$k.'` AS SIGNED) - '.$matches[2].', 0)';
+					$query .= 'GREATEST(cast(`'.$k.'` AS SIGNED) - '.$matches[2].', 0),';
 				}
 			}
 		}
@@ -494,7 +494,7 @@ class DB {
 			$query .= '`'.$k.'`=:where_'.$k.' '.$clause.' '; 
 		}			
 		$query = rtrim($query, $clause.' ');
-		
+
 		try {
 			$db = self::getInstance();
 			$db->query($query);

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-07-15 17:52+0000\n"
-"PO-Revision-Date: 2016-07-15 17:52+0000\n"
+"POT-Creation-Date: 2016-10-17 20:52+0000\n"
+"PO-Revision-Date: 2016-10-17 20:52+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -376,6 +376,36 @@ msgstr "全ての画像を見る"
 msgid "That page doesn't exist"
 msgstr "ページが存在しません。"
 
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "新しい順"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "古い順"
+
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:92
+#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
+#: ../../../app/themes/Peafowl/header.php:403
+#: ../../../app/themes/Peafowl/views/settings.php:77
+msgid "Albums"
+msgstr "アルバム"
+
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:24
@@ -494,28 +524,6 @@ msgstr "先に進むためには、フォーム内のエラーを修正してく
 msgid "Password required"
 msgstr "パスワードが必要です。"
 
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "新しい順"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "古い順"
-
 #: ../../../app/routes/route.album.php:96
 #: ../../../app/routes/route.category.php:64
 #: ../../../app/routes/route.dashboard.php:1121
@@ -541,6 +549,12 @@ msgstr "もっともいいね！されている"
 msgid "Share"
 msgstr "共有"
 
+#: ../../../app/routes/route.image.php:127
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
+msgid "Embed codes"
+msgstr "埋め込みコード"
+
 #: ../../../app/routes/route.album.php:124
 #: ../../../app/routes/route.image.php:134
 msgid "Full info"
@@ -560,14 +574,6 @@ msgstr "最新状況"
 #: ../../../app/themes/Peafowl/views/settings.php:73
 msgid "Images"
 msgstr "画像"
-
-#: ../../../app/routes/route.dashboard.php:40
-#: ../../../app/routes/route.search.php:92
-#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
-#: ../../../app/themes/Peafowl/header.php:403
-#: ../../../app/themes/Peafowl/views/settings.php:77
-msgid "Albums"
-msgstr "アルバム"
 
 #: ../../../app/routes/route.dashboard.php:41
 #: ../../../app/routes/route.dashboard.php:233
@@ -593,6 +599,12 @@ msgstr "更新をインストール"
 #: ../../../app/routes/route.dashboard.php:162
 msgid "check for updates"
 msgstr "アップデートのチェック"
+
+msgid "Chevereto support"
+msgstr "Cheveretoサポート"
+
+msgid "Need help? Go to %s and you will get help quickly."
+msgstr "ヘルプが必要な方は、 %s まで。"
 
 #: ../../../app/routes/route.dashboard.php:169
 msgid "PHP version"
@@ -730,6 +742,25 @@ msgstr[0] "%d 秒"
 msgid "Memory limit"
 msgstr "メモリ制限"
 
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
+msgid "Links"
+msgstr "リンク"
+
+msgid "Documentation"
+msgstr "ドキュメント"
+
+msgid "Changelog"
+msgstr "変更履歴"
+
+msgid "Request new features"
+msgstr "新機能のリクエスト"
+
+msgid "Bug tracking"
+msgstr "バグ修正過程"
+
+msgid "Blog"
+msgstr "ブログ"
+
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
 msgid "Website"
@@ -823,6 +854,9 @@ msgstr "ツール"
 msgid "Can't delete all homepage cover images"
 msgstr "すべてのホームページのヘッダ画像は削除できません。"
 
+msgid "Homepage cover image deleted"
+msgstr "ホームページのトップ画像を削除しました。"
+
 #: ../../../app/routes/route.dashboard.php:278
 msgid "Local"
 msgstr "ローカル"
@@ -862,17 +896,14 @@ msgstr "ページは正常に追加されました。"
 msgid "The page has been deleted."
 msgstr "ページは削除されました。"
 
-#: ../../../app/routes/route.dashboard.php:376
-msgid "Before cover (homepage)"
-msgstr "カバー画像の前 (ホームページ)"
+msgid "homepage"
+msgstr "ホームページ"
 
-#: ../../../app/routes/route.dashboard.php:379
-msgid "After cover (homepage)"
-msgstr "カバー画像の後 (ホームページ)"
+msgid "After call to action (%s)"
+msgstr "アクション呼び出し後 (%s)"
 
-#: ../../../app/routes/route.dashboard.php:382
-msgid "After listing (homepage)"
-msgstr "リストの後 (ホームページ)"
+msgid "After cover (%s)"
+msgstr "カバーの後 (%s)"
 
 #: ../../../app/routes/route.dashboard.php:390
 msgid "Before pagination"
@@ -1146,6 +1177,9 @@ msgstr "既にあるフォルダ (%f) と %m は紐付けできません。"
 msgid "Can't map %m to an existing route (%r)"
 msgstr "既にあるルート (%r) と %m は紐付けできません。"
 
+msgid "Can't map %m to %r (username collision)"
+msgstr "マップを作成できません。 %m%r (ユーザ名の不一致により)"
+
 #: ../../../app/routes/route.dashboard.php:860
 msgid "Invalid SMTP server"
 msgstr "有効なSMTPサーバーではありません。"
@@ -1197,12 +1231,6 @@ msgstr "フォロー中"
 #: ../../../app/themes/Peafowl/header.php:424
 msgid "About"
 msgstr "詳細"
-
-#: ../../../app/routes/route.image.php:127
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
-msgid "Embed codes"
-msgstr "埋め込みコード"
 
 #: ../../../app/routes/route.image.php:144
 msgid "Image ID"
@@ -2019,10 +2047,6 @@ msgid "album"
 msgid_plural "albums"
 msgstr[0] "アルバム"
 
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
-msgid "Links"
-msgstr "リンク"
-
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
 msgstr "閲覧用リンク"
@@ -2413,14 +2437,6 @@ msgstr "もっと見る"
 msgid "Load more"
 msgstr "さらに表示"
 
-#: ../../../app/themes/Peafowl/snippets/listing.php:91
-msgid "Previous"
-msgstr "前へ"
-
-#: ../../../app/themes/Peafowl/snippets/listing.php:98
-msgid "Next"
-msgstr "次へ"
-
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
 msgid "Select all"
 msgstr "全て選択"
@@ -2786,6 +2802,12 @@ msgstr "管理者"
 msgid "This setting is always diabled when using personal website mode."
 msgstr "この設定は個人Webサイトモードを利用している時は常に無効です。"
 
+msgid "documentation"
+msgstr "ドキュメント"
+
+msgid "Learn more about %s at our %d."
+msgstr "%sについての詳細は、 %dから。"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
 msgid "Add category"
@@ -3037,10 +3059,16 @@ msgstr "並び順を表示"
 msgid "Page sort order display for menus and listings. Use \"1\" for top priority."
 msgstr "ページの並び順をメニューやリスティングに表示するために、プライオリティに1を使用してください。"
 
+msgid "pages"
+msgstr "ページ"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:607
 #, php-format
 msgid "Do you really want to delete the page ID %s? This can't be undone."
 msgstr "ページID %s を本当に削除しますか？削除すると元に戻せません。"
+
+msgid "Unchecked image formats won't be allowed to be uploaded."
+msgstr "未確認の画像フォーマットでは、アップロードが行えません。"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:630
 msgid "Enable uploads"
@@ -3057,6 +3085,9 @@ msgstr "ゲストとしてアップロード"
 #: ../../../app/themes/Peafowl/views/dashboard.php:645
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "未登録ユーザのアップロードを許可するときに有効にしてください。"
+
+msgid "Number of simultaneous upload threads (parallel uploads)"
+msgstr "同時アップロードのスレッド数(平行して動じにアップロード)"
 
 msgid "Redirect on single upload"
 msgstr "ファイル毎のアップロードへリダイレクト"
@@ -3529,6 +3560,9 @@ msgstr "ラップトップ"
 msgid "Desktop"
 msgstr "デスクトップ"
 
+msgid "theme editing"
+msgstr "テーマ編集"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1167
 #, php-format
 msgid "Put your themes in the %s folder"
@@ -3841,9 +3875,20 @@ msgstr "ユーザID"
 msgid "Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images."
 msgstr "ホームページに表示したい画像のユーザーIDをコンマで区切って入力してください。空白の情愛で全ての最近の画像を表示します。"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1524
-msgid "Here you can set the codes for the predefined ad spaces."
-msgstr "広告スペースを事前に定義するためのコードをここへセットします。"
+msgid "banners"
+msgstr "広告バナー"
+
+msgid "Automatic updates check"
+msgstr "アップデートを自動でチェック"
+
+msgid "When enabled the system will automatically check for new updates."
+msgstr "システムが自動でアップデートをチェックします。"
+
+msgid "Display available updates notification"
+msgstr "アップデートの通知を有効化"
+
+msgid "Enable this to show a notice on top warning you about new available system updates."
+msgstr "システムアップデートがリリースされた場合に歳重用通知として表示を有効化"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1570
 msgid "Minify code"
@@ -3860,12 +3905,6 @@ msgstr "メンテナンスモード"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1585
 msgid "When enabled the website will show a maintenance message. This setting doesn't affect administrators."
 msgstr "有効にされている場合、メンテナンスモードと表示されます。この設定は管理者には影響しません。"
-
-msgid "Display available updates notification"
-msgstr "アップデートの通知を有効化"
-
-msgid "Enable this to show a notice on top warning you about new available system updates."
-msgstr "システムアップデートがリリースされた場合に歳重用通知として表示を有効化"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1565
 msgid "Crypt salt"
@@ -3909,9 +3948,6 @@ msgstr "エラー表示(ログを含む)"
 msgid "To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)."
 msgstr "デバッグレベルの設定は <a %s>debug documentation</a>を確認してください。 ディフォルトは \"Error log\" (1)です。"
 
-msgid "documentation"
-msgstr "ドキュメント"
-
 msgid "Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes."
 msgstr "ルーティングは、既定のルートに直ちに反映されます。英数字、ハイフン、アンダースコアのみ有効です。ルートの新規追加、更新は、%sを確認してください。"
 
@@ -3923,6 +3959,12 @@ msgstr "%sへのルート"
 
 msgid "Album routing"
 msgstr "アルバムへのルーティング"
+
+msgid "Custom language strings"
+msgstr "個別の言語文字列"
+
+msgid "language strings"
+msgstr "言語"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1611
 msgid "Default language"
@@ -4043,6 +4085,9 @@ msgstr "test@somedomain.com"
 msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
 msgstr "メールアドレスにどのように送信されるかをテストする場合にこちらを利用してください。%sを使用することをお勧めします。"
 
+msgid "social networks"
+msgstr "ソーシャル・ネットワーク"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1838
 msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
 msgstr "この機能を使用するためには、<a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebookアプリ</a>が必要です。"
@@ -4094,11 +4139,6 @@ msgstr "VKクライアントID"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1933
 msgid "VK client secret"
 msgstr "VKクライアントシークレットキー"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1949
-#, php-format
-msgid "CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s."
-msgstr "CDNは、静的コンテンツを複数のサーバへ保存するため、あなたのサイトの表示が格段に速くなります。CDN提供会社をご存じない場合、%sをお試し下さい。"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1968
 #, php-format

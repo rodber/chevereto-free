@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-07-15 17:52+0000\n"
-"PO-Revision-Date: 2016-07-15 17:52+0000\n"
+"POT-Creation-Date: 2016-10-17 20:52+0000\n"
+"PO-Revision-Date: 2016-10-17 20:52+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: cs\n"
@@ -156,6 +156,9 @@ msgstr "Poznámka: Tento obsah je chráněn heslem. Pokud jej hodláte sdílet, 
 #: ../../../app/themes/Peafowl/views/image.php:272
 msgid "Note: This content is private. Change privacy to \"public\" to share."
 msgstr "Poznámka: Tento obsah je soukromý. Pro umožnění sdílení je potřeba změnit soukromí na \"veřejné\"."
+
+msgid "After %n %t"
+msgstr "Po %n %t"
 
 #: ../../../app/lib/classes/class.image.php:348
 msgid "Don't autodelete"
@@ -343,6 +346,9 @@ msgstr "Systémová oznámení"
 msgid "Dashboard"
 msgstr "Administrace"
 
+msgid "There is an update available for your system. Go to %s to download and install this update."
+msgstr "Je k dispozici nová aktualizace pro Váš systém. Klikněte na následující odkaz %s pro stažení a instalaci této aktualizace."
+
 #: ../../../app/lib/functions.php:218
 #, php-format
 msgid "System database is outdated. You need to run the <a href=\"%s\">update</a> tool."
@@ -362,6 +368,9 @@ msgstr "Dosud jste nezměnili výchozí nastavení e-mailu. Pro změnu tohoto na
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 msgid "The release notes for this update are:"
 msgstr "Poznámky k verzi této aktualizace:"
+
+msgid "You can apply this update directly from your %a or download it from %s and then manually install it."
+msgstr "Tuto aktualizaci můžete nainstalovat automaticky přímo ze svého %a nebo si ji stáhnout z %s a nainstalovat manuálně."
 
 msgid "Chevereto update available (v%s)"
 msgstr "Je k dispozici aktualizace Chevereta (v%s)"
@@ -387,6 +396,36 @@ msgstr "Zobrazit všechny mé obrázky"
 #: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
 msgid "That page doesn't exist"
 msgstr "Tato stránka neexistuje"
+
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Nejnovější"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "Nejstarší"
+
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:92
+#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
+#: ../../../app/themes/Peafowl/header.php:403
+#: ../../../app/themes/Peafowl/views/settings.php:77
+msgid "Albums"
+msgstr "Alba"
 
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
@@ -506,28 +545,6 @@ msgstr "Aby jste mohli pokračovat, zkontrolujte chyby ve formuláři."
 msgid "Password required"
 msgstr "Je vyžadováno heslo"
 
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "Nejnovější"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "Nejstarší"
-
 #: ../../../app/routes/route.album.php:96
 #: ../../../app/routes/route.category.php:64
 #: ../../../app/routes/route.dashboard.php:1121
@@ -553,6 +570,12 @@ msgstr "Nejoblíbenější"
 msgid "Share"
 msgstr "Sdílet"
 
+#: ../../../app/routes/route.image.php:127
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
+msgid "Embed codes"
+msgstr "Kódy pro vložení"
+
 #: ../../../app/routes/route.album.php:124
 #: ../../../app/routes/route.image.php:134
 msgid "Full info"
@@ -572,14 +595,6 @@ msgstr "Statistiky"
 #: ../../../app/themes/Peafowl/views/settings.php:73
 msgid "Images"
 msgstr "Obrázky"
-
-#: ../../../app/routes/route.dashboard.php:40
-#: ../../../app/routes/route.search.php:92
-#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
-#: ../../../app/themes/Peafowl/header.php:403
-#: ../../../app/themes/Peafowl/views/settings.php:77
-msgid "Albums"
-msgstr "Alba"
 
 #: ../../../app/routes/route.dashboard.php:41
 #: ../../../app/routes/route.dashboard.php:233
@@ -605,6 +620,9 @@ msgstr "Instalovat aktualizaci"
 #: ../../../app/routes/route.dashboard.php:162
 msgid "check for updates"
 msgstr "Zkontrolovat aktualizace"
+
+msgid "Chevereto support"
+msgstr "Chevereto podpora"
 
 #: ../../../app/routes/route.dashboard.php:169
 msgid "PHP version"
@@ -745,6 +763,19 @@ msgstr[3] "%d sekundy"
 msgid "Memory limit"
 msgstr "Limit paměti (mem. limit)"
 
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
+msgid "Links"
+msgstr "Odkazy"
+
+msgid "Documentation"
+msgstr "Dokumentace"
+
+msgid "Changelog"
+msgstr "Seznam změn"
+
+msgid "Request new features"
+msgstr "Požádat o nové funkce"
+
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
 msgid "Website"
@@ -879,18 +910,6 @@ msgstr "Stránka byla úspěšně přidána."
 #: ../../../app/routes/route.dashboard.php:360
 msgid "The page has been deleted."
 msgstr "Stránka byla odstraněna."
-
-#: ../../../app/routes/route.dashboard.php:376
-msgid "Before cover (homepage)"
-msgstr "Před coverem (titulka)."
-
-#: ../../../app/routes/route.dashboard.php:379
-msgid "After cover (homepage)"
-msgstr "Za coverem (titulka)."
-
-#: ../../../app/routes/route.dashboard.php:382
-msgid "After listing (homepage)"
-msgstr "Za výpisem (titulka)"
 
 #: ../../../app/routes/route.dashboard.php:390
 msgid "Before pagination"
@@ -1200,12 +1219,6 @@ msgstr "Sledující"
 #: ../../../app/themes/Peafowl/header.php:424
 msgid "About"
 msgstr "O webu"
-
-#: ../../../app/routes/route.image.php:127
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
-msgid "Embed codes"
-msgstr "Kódy pro vložení"
 
 #: ../../../app/routes/route.image.php:144
 msgid "Image ID"
@@ -2015,10 +2028,6 @@ msgstr[1] "alba"
 msgstr[2] "alba"
 msgstr[3] "alba"
 
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
-msgid "Links"
-msgstr "Odkazy"
-
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
 msgstr "Odkaz s náhledem"
@@ -2341,14 +2350,6 @@ msgstr "zobrazit více"
 #: ../../../app/themes/Peafowl/snippets/templates_content_listing.php:9
 msgid "Load more"
 msgstr "Načíst více"
-
-#: ../../../app/themes/Peafowl/snippets/listing.php:91
-msgid "Previous"
-msgstr "Předchozí"
-
-#: ../../../app/themes/Peafowl/snippets/listing.php:98
-msgid "Next"
-msgstr "Další"
 
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
 msgid "Select all"
@@ -2715,6 +2716,9 @@ msgstr "Administrátor"
 
 msgid "This setting is always diabled when using personal website mode."
 msgstr "Toto nastavení je vždy zakázáno při použití režimu osobní webové stránky."
+
+msgid "documentation"
+msgstr "dokumentace"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
@@ -3659,6 +3663,9 @@ msgstr "Opravdu chcete obrázek vymazat? Tuto akci nelze vzít zpět."
 msgid "Delete image"
 msgstr "Smazat obrázek"
 
+msgid "Add new cover image"
+msgstr "Přidat nový titulní obrázek"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1424
 msgid "Vector version or your website logo in SVG format (only for homepage)."
 msgstr "Vektorová verze nebo logo vaší webové stránky v SVG formátu (pouze pro domovskou stránku)"
@@ -3701,9 +3708,17 @@ msgstr "ID uživatele(ů)"
 msgid "Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images."
 msgstr "Čárkami oddělený seznam cílových uživatelských ID, kteří mohou prohlížet obrázky na domovské stránce. Ponechte pole prázdné pro zobrazování všech nedávných obrázků."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1524
-msgid "Here you can set the codes for the predefined ad spaces."
-msgstr "Zde můžete nastavit kódy pro předdefinované pozice reklam."
+msgid "Automatic updates check"
+msgstr "Automatická kontrola aktualizací"
+
+msgid "When enabled the system will automatically check for new updates."
+msgstr "Když je tato volba povolena, umožňuje systému automaticky kontrolovat nové aktualizace."
+
+msgid "Display available updates notification"
+msgstr "Zobrazení oznámení o dostupné aktualizaci Chevereta"
+
+msgid "Enable this to show a notice on top warning you about new available system updates."
+msgstr "Povolte, pokud chcete zobrazit oznámení při dostupné aktualizaci Chevereta."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1579
 msgid "Maintenance"
@@ -3883,6 +3898,9 @@ msgstr "test@vasedomena.cz"
 msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
 msgstr "Pomocí této funkce lze otestovat, jak jsou vaše e-maily doručovány. Doporučujeme použít %s."
 
+msgid "social networks"
+msgstr "sociální sítě"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1838
 msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
 msgstr "Potřebujete <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook aplikaci</a>."
@@ -3934,11 +3952,6 @@ msgstr "VK client id"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1933
 msgid "VK client secret"
 msgstr "VK client secret"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1949
-#, php-format
-msgid "CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s."
-msgstr "CDN umožňuje rychlejší načítání obsahu díky používání částečně statického obsahu na některých edgeServerech. Pokud nemáte CDN poskytovatele, měli by jste to zkusit %s."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1968
 #, php-format

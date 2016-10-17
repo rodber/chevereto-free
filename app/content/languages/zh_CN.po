@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-08-14 03:30+0000\n"
-"PO-Revision-Date: 2016-08-14 03:30+0000\n"
+"POT-Creation-Date: 2016-10-17 20:52+0000\n"
+"PO-Revision-Date: 2016-10-17 20:52+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -146,7 +146,7 @@ msgid "%s's images"
 msgstr "%s 的图片"
 
 msgid "Note: This content is private but anyone with the link will be able to see this."
-msgstr "注: 此内容是加密的, 但任何人通过链接将能够看到它."
+msgstr "注: 此内容是私密的, 但任何人通过链接将能够看到它."
 
 msgid "Note: This content is password protected. Remember to pass the content password to share."
 msgstr "注意: 此内容已使用密码保护. 请通过密码来共享使用."
@@ -376,6 +376,36 @@ msgstr "查看我的所有图片"
 msgid "That page doesn't exist"
 msgstr "该页面不存在"
 
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "最新的"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "最旧的"
+
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:92
+#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
+#: ../../../app/themes/Peafowl/header.php:403
+#: ../../../app/themes/Peafowl/views/settings.php:77
+msgid "Albums"
+msgstr "相册"
+
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:24
@@ -494,28 +524,6 @@ msgstr "请检查错误并继续."
 msgid "Password required"
 msgstr "需要密码"
 
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "最新的"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "最旧的"
-
 #: ../../../app/routes/route.album.php:96
 #: ../../../app/routes/route.category.php:64
 #: ../../../app/routes/route.dashboard.php:1121
@@ -541,6 +549,12 @@ msgstr "最喜欢的"
 msgid "Share"
 msgstr "分享"
 
+#: ../../../app/routes/route.image.php:127
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
+msgid "Embed codes"
+msgstr "嵌入代码"
+
 #: ../../../app/routes/route.album.php:124
 #: ../../../app/routes/route.image.php:134
 msgid "Full info"
@@ -560,14 +574,6 @@ msgstr "统计"
 #: ../../../app/themes/Peafowl/views/settings.php:73
 msgid "Images"
 msgstr "图片"
-
-#: ../../../app/routes/route.dashboard.php:40
-#: ../../../app/routes/route.search.php:92
-#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
-#: ../../../app/themes/Peafowl/header.php:403
-#: ../../../app/themes/Peafowl/views/settings.php:77
-msgid "Albums"
-msgstr "相册"
 
 #: ../../../app/routes/route.dashboard.php:41
 #: ../../../app/routes/route.dashboard.php:233
@@ -593,6 +599,12 @@ msgstr "安装更新"
 #: ../../../app/routes/route.dashboard.php:162
 msgid "check for updates"
 msgstr "检查更新"
+
+msgid "Chevereto support"
+msgstr "Chevereto支持"
+
+msgid "Need help? Go to %s and you will get help quickly."
+msgstr "需要帮助?  转到%s, 您将快速获得帮助."
 
 #: ../../../app/routes/route.dashboard.php:169
 msgid "PHP version"
@@ -730,6 +742,25 @@ msgstr[0] "%d 秒"
 msgid "Memory limit"
 msgstr "内存限制"
 
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
+msgid "Links"
+msgstr "链接"
+
+msgid "Documentation"
+msgstr "文档"
+
+msgid "Changelog"
+msgstr "更新日志"
+
+msgid "Request new features"
+msgstr "请求新功能"
+
+msgid "Bug tracking"
+msgstr "错误跟踪"
+
+msgid "Blog"
+msgstr "博客"
+
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
 msgid "Website"
@@ -865,17 +896,20 @@ msgstr "该页面已成功添加."
 msgid "The page has been deleted."
 msgstr "该页面已被删除."
 
-#: ../../../app/routes/route.dashboard.php:376
-msgid "Before cover (homepage)"
-msgstr "页头（主页）"
+msgid "homepage"
+msgstr "主页"
 
-#: ../../../app/routes/route.dashboard.php:379
-msgid "After cover (homepage)"
-msgstr "页尾（主页）"
+msgid "Before main title (%s)"
+msgstr "之前的主标题(%s)"
 
-#: ../../../app/routes/route.dashboard.php:382
-msgid "After listing (homepage)"
-msgstr "列表（主页）"
+msgid "After call to action (%s)"
+msgstr "呼吁行动后(%s)"
+
+msgid "After cover (%s)"
+msgstr "封面后(%s)"
+
+msgid "After listing (%s)"
+msgstr "上市后(%s)"
 
 #: ../../../app/routes/route.dashboard.php:390
 msgid "Before pagination"
@@ -1203,12 +1237,6 @@ msgstr "已关注"
 #: ../../../app/themes/Peafowl/header.php:424
 msgid "About"
 msgstr "关于"
-
-#: ../../../app/routes/route.image.php:127
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
-msgid "Embed codes"
-msgstr "嵌入代码"
 
 #: ../../../app/routes/route.image.php:144
 msgid "Image ID"
@@ -2025,10 +2053,6 @@ msgid "album"
 msgid_plural "albums"
 msgstr[0] "相册"
 
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
-msgid "Links"
-msgstr "链接"
-
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
 msgstr "查看链接"
@@ -2287,7 +2311,7 @@ msgstr "储存桶"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:63
 msgid "Key"
-msgstr "钥匙"
+msgstr "访问密钥 ID"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:64
 msgid "Storage key"
@@ -2295,7 +2319,7 @@ msgstr "储存钥匙"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:67
 msgid "Secret"
-msgstr "秘密"
+msgstr "私有访问密钥"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:68
 msgid "Storage secret"
@@ -2316,7 +2340,7 @@ msgstr "您需要一个 <a %s>服务帐户</a> ."
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:78
 msgid "Private key"
-msgstr "Private key"
+msgstr "密钥"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:79
 msgid "Google Cloud JSON key"
@@ -2418,14 +2442,6 @@ msgstr "查看更多"
 #: ../../../app/themes/Peafowl/snippets/templates_content_listing.php:9
 msgid "Load more"
 msgstr "载入更多"
-
-#: ../../../app/themes/Peafowl/snippets/listing.php:91
-msgid "Previous"
-msgstr "上一页"
-
-#: ../../../app/themes/Peafowl/snippets/listing.php:98
-msgid "Next"
-msgstr "下一页"
 
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
 msgid "Select all"
@@ -2792,6 +2808,12 @@ msgstr "管理员"
 msgid "This setting is always diabled when using personal website mode."
 msgstr "开启个人网站模式时, 该设置始终禁用."
 
+msgid "documentation"
+msgstr "文档"
+
+msgid "Learn more about %s at our %d."
+msgstr "在 %d 处了解 %s 的详情."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
 msgid "Add category"
@@ -3043,10 +3065,16 @@ msgstr "排序顺序显示"
 msgid "Page sort order display for menus and listings. Use \"1\" for top priority."
 msgstr "菜单和列表页面排序顺序显示. 使用\"1\"为最优先的."
 
+msgid "pages"
+msgstr "页面"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:607
 #, php-format
 msgid "Do you really want to delete the page ID %s? This can't be undone."
 msgstr "你真的要删除的页面ID %s? 这将不能撤消."
+
+msgid "Unchecked image formats won't be allowed to be uploaded."
+msgstr "不允许上传未经检查的图片格式."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:630
 msgid "Enable uploads"
@@ -3063,6 +3091,9 @@ msgstr "访客（不需注册）上传"
 #: ../../../app/themes/Peafowl/views/dashboard.php:645
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "启用它则允许非注册用户上传"
+
+msgid "Number of simultaneous upload threads (parallel uploads)"
+msgstr "同时上传的线程数(并行上传)"
 
 msgid "Redirect on single upload"
 msgstr "单张图片上传跳转"
@@ -3535,6 +3566,9 @@ msgstr "笔记本电脑"
 msgid "Desktop"
 msgstr "桌面台式电脑"
 
+msgid "theme editing"
+msgstr "主题编辑"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1167
 #, php-format
 msgid "Put your themes in the %s folder"
@@ -3847,9 +3881,20 @@ msgstr "用户IDs"
 msgid "Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images."
 msgstr "在网站主页显示指定多个用户的最新图片, 请用逗号分隔开. 留空则显示全站最新图片（不含隐私图片）."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1524
-msgid "Here you can set the codes for the predefined ad spaces."
-msgstr "在这里, 您可以设置为默认的广告代码."
+msgid "banners"
+msgstr "横幅"
+
+msgid "Automatic updates check"
+msgstr "自动更新检查"
+
+msgid "When enabled the system will automatically check for new updates."
+msgstr "启用时, 系统将自动检查新更新."
+
+msgid "Display available updates notification"
+msgstr "显示可用的更新通知"
+
+msgid "Enable this to show a notice on top warning you about new available system updates."
+msgstr "启用此则显示一个通知, 提示你关于新的可用系统更新."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1570
 msgid "Minify code"
@@ -3866,12 +3911,6 @@ msgstr "维护模式"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1585
 msgid "When enabled the website will show a maintenance message. This setting doesn't affect administrators."
 msgstr "当启用该设置网站将重定向到维修页面. 此设置不影响管理员。"
-
-msgid "Display available updates notification"
-msgstr "显示可用的更新通知"
-
-msgid "Enable this to show a notice on top warning you about new available system updates."
-msgstr "启用此则显示一个通知, 提示你关于新的可用系统更新."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1565
 msgid "Crypt salt"
@@ -3915,9 +3954,6 @@ msgstr "列出错误日志"
 msgid "To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)."
 msgstr "要配置调试级别请查看<a %s>调试文档</a>. 默认级别为\"错误日志\"(1)."
 
-msgid "documentation"
-msgstr "文档"
-
 msgid "Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes."
 msgstr "路径允许您自定义默认路径. 只允许字母, 连字符和下划线字符. 如果你想覆盖或添加新的路线请看我们的 %s."
 
@@ -3929,6 +3965,12 @@ msgstr "对于路径 %s"
 
 msgid "Album routing"
 msgstr "相册路径"
+
+msgid "Custom language strings"
+msgstr "自定义语言字符串"
+
+msgid "language strings"
+msgstr "语言字符串"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1611
 msgid "Default language"
@@ -4049,6 +4091,9 @@ msgstr "test@somedomain.com"
 msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
 msgstr "使用此来测试你的电子邮件是否已发送. 我们建议您使用 %s."
 
+msgid "social networks"
+msgstr "社交网络"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1838
 msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
 msgstr "完成此您需要一个 <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> "
@@ -4100,11 +4145,6 @@ msgstr "VK client id"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1933
 msgid "VK client secret"
 msgstr "VK client secret"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1949
-#, php-format
-msgid "CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s."
-msgstr "CDN允许你卸载静态内容的几个边缘服务器，使您的网站的速度。如果你没有一个CDN提供商你应该试试 %s."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1968
 #, php-format
