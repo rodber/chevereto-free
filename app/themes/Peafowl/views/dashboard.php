@@ -509,14 +509,14 @@
 					
 					<div class="input-label">
 						<label for="page_url_key"><?php _se('URL key'); ?></label>
-						<div class="c9 phablet-c1"><input type="text" name="page_url_key" id="page_url_key" class="text-input" value="<?php echo get_page_val('page_url_key'); ?>" pattern="[\w\-\_\/]+" rel="tooltip" data-tiptip="right" title="<?php _se('Only alphanumerics, hyphens and forward slash'); ?>" <?php echo $page_internal_combo_visible ? 'required' : 'data-required'; ?>></div>
+						<div class="c9 phablet-c1"><input type="text" name="page_url_key" id="page_url_key" class="text-input" value="<?php echo get_page_val('page_url_key'); ?>" pattern="^[\w]([\w-]*[\w])?(\/[\w]([\w-]*[\w])?)*$" rel="tooltip" data-tiptip="right" placeholder="url-key" title="<?php _se('Only alphanumerics, hyphens and forward slash'); ?>" <?php echo $page_internal_combo_visible ? 'required' : 'data-required'; ?>></div>
 						<div class="input-below input-warning red-warning"><?php echo get_input_errors()['page_url_key']; ?></div>
-						<div class="input-below"><?php _se('Page URL key relative to %s', G\get_base_url('pages')); ?></div>
+						<div class="input-below"><?php echo G\get_base_url('pages/url-key'); ?></div>
 					</div>
 					
 					<div class="input-label">
 						<label for="page_file_path"><?php _se('File path'); ?></label>
-						<div class="c9 phablet-c1"><input type="text" name="page_file_path" id="page_file_path" class="text-input" value="<?php echo get_page_val('page_file_path'); ?>" pattern="[\w\-\_\/]+\.<?php echo G\get_app_setting('disable_php_pages') ? 'html' : 'php'; ?>" <?php echo $page_internal_combo_visible ? 'required' : 'data-required'; ?> placeholder="page.<?php echo G\get_app_setting('disable_php_pages') ? 'html' : 'php'; ?>"></div>
+						<div class="c9 phablet-c1"><input type="text" name="page_file_path" id="page_file_path" class="text-input" value="<?php echo get_page_val('page_file_path'); ?>" pattern="^[\w]([\w-]*[\w])?(\/[\w]([\w-]*[\w])?)*\.<?php echo G\get_app_setting('disable_php_pages') ? 'html' : 'php'; ?>$" <?php echo $page_internal_combo_visible ? 'required' : 'data-required'; ?> placeholder="page.<?php echo G\get_app_setting('disable_php_pages') ? 'html' : 'php'; ?>"></div>
 						<div class="input-below input-warning red-warning"><?php echo get_input_errors()['page_file_path']; ?></div>
 						<div class="input-below"><?php 
 							$pages_visible_path = G\absolute_to_relative(CHV_PATH_CONTENT_PAGES);
@@ -1398,7 +1398,7 @@
 			
 			<div class="input-label">
 				<label for="theme_logo_height"><?php _se('Logo height'); ?></label>
-				<div class="c4"><input type="text" name="theme_logo_height" id="theme_logo_height" class="text-input" value="<?php echo CHV\Settings::get('theme_logo_height', true); ?>" placeholder="<?php _se('No value'); ?>"></div>
+				<div class="c4"><input type="number" min="0" pattern="\d+" name="theme_logo_height" id="theme_logo_height" class="text-input" value="<?php echo CHV\Settings::get('theme_logo_height'); ?>" placeholder="<?php _se('No value'); ?>"></div>
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['theme_logo_height']; ?></div>
 				<div class="input-below"><?php _se('Use this to set the logo height if needed.'); ?></div>
 			</div>
@@ -1734,7 +1734,7 @@
 			<div class="input-label">
 				<label for="route_image"><?php _se('Image routing'); ?></label>
 				<div class="c9 phablet-c1">
-					<input type="text" name="route_image" id="route_image" class="text-input" value="<?php echo CHV\Settings::get('route_image', true); ?>" required pattern="[\w\d-_]+" placeholder="image">
+					<input type="text" name="route_image" id="route_image" class="text-input" value="<?php echo CHV\Settings::get('route_image', true); ?>" required pattern="^[a-z0-9]+(?:-[a-z0-9]+)*$" placeholder="image">
 				</div>
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['route_image']; ?></div>
 				<div class="input-below"><?php _se('Routing for %s', G\get_base_url('image/&lt;id&gt;')); ?></div>
@@ -1742,7 +1742,7 @@
 			<div class="input-label">
 				<label for="route_album"><?php _se('Album routing'); ?></label>
 				<div class="c9 phablet-c1">
-					<input type="text" name="route_album" id="route_album" class="text-input" value="<?php echo CHV\Settings::get('route_album', true); ?>" required pattern="[\w\d-_]+" placeholder="album">
+					<input type="text" name="route_album" id="route_album" class="text-input" value="<?php echo CHV\Settings::get('route_album', true); ?>" required pattern="^[a-z0-9]+(?:-[a-z0-9]+)*$" placeholder="album">
 				</div>
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['route_album']; ?></div>
 				<div class="input-below"><?php _se('Routing for %s', G\get_base_url('album/&lt;id&gt;')); ?></div>
@@ -1796,7 +1796,7 @@
 							<?php
 								foreach(CHV\get_available_languages() as $k => $v) {
 									$lang_flag = array_key_exists($k, CHV\get_enabled_languages()) ? ' checked' : NULL;
-									echo '<li class="c5 display-inline-block"><label class="display-block" for="languages_enable['.$k.']"> <input type="checkbox" name="languages_enable[]" id="languages_enable['.$k.']" value="'.$k.'"'.$lang_flag.'>'.$v['name'].'</label></li>';
+									echo '<li class="c5 phone-c1 display-inline-block"><label class="display-block" for="languages_enable['.$k.']"> <input type="checkbox" name="languages_enable[]" id="languages_enable['.$k.']" value="'.$k.'"'.$lang_flag.'>'.$v['name'].'</label></li>';
 								}
 							?>
 						</ul>
@@ -1924,14 +1924,14 @@
 				<div data-combo-value="1" class="switch-combo<?php if(!(get_safe_post() ? get_safe_post()['recaptcha'] : CHV\Settings::get('recaptcha'))) echo ' soft-hidden'; ?>">
 					<div class="c9 phablet-c1">
 						<div class="input-label">
-							<label for="recaptcha_public_key"><?php _se('reCAPTCHA public key'); ?></label>
+							<label for="recaptcha_public_key"><?php _se('%s site key', 'reCAPTCHA'); ?></label>
 							<input type="text" name="recaptcha_public_key" id="recaptcha_public_key" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['recaptcha_public_key'] : CHV\Settings::get('recaptcha_public_key', true); ?>">
 							<div class="input-warning red-warning"><?php echo get_input_errors()['recaptcha_public_key']; ?></div>
 						</div>
 						<div class="input-label">
-							<label for="recaptcha_private_key"><?php _se('reCAPTCHA private key'); ?></label>
+							<label for="recaptcha_private_key"><?php _se('%s secret key', 'reCAPTCHA'); ?></label>
 							<input type="text" name="recaptcha_private_key" id="recaptcha_private_key" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['recaptcha_private_key'] : CHV\Settings::get('recaptcha_private_key', true); ?>">
-							<div class="input-warning red-warning"><?php echo get_input_errors()['recaptcha_private_key']; ?></div></div>
+							<div class="input-warning red-warning"><?php echo get_input_errors()['recaptcha_private_key']; ?></div>
 						</div>
 					</div>
 					<div class="input-label">
@@ -1947,8 +1947,43 @@
 			</div>
 			<hr class="line-separator"></hr>
 			<div class="input-label">
-				<label for="comment_code"><?php _se('Comment code'); ?></label>
-				<div class="c12 phablet-c1"><textarea type="text" name="comment_code" id="comment_code" class="text-input r4" value="" placeholder="<?php _se('Disqus, Facebook or anything you want. It will be used in image view.'); ?>"><?php echo CHV\Settings::get('comment_code', true); ?></textarea></div>
+				<label for="comments_api"><?php _se('Comments API'); ?></label>
+				<div class="c5 phablet-c1"><select type="text" name="comments_api" id="comments_api" class="text-input" data-combo="comments_api-combo">
+					<?php
+						echo CHV\Render\get_select_options_html([
+							'disqus'=> 'Disqus',
+							'js'	=> 'JavaScript/HTML',
+						], get_safe_post() ? get_safe_post()['comments_api'] : CHV\Settings::get('comments_api'));
+					?>
+				</select></div>
+				<div class="input-below"><?php _se('Disqus API works with %s.', '<a href="https://help.disqus.com/customer/portal/articles/236206" target="_blank">Single Sing-On</a> (SSO)'); ?></div>
+			</div>
+			<div id="comments_api-combo">
+				<div data-combo-value="disqus" class="switch-combo<?php if((get_safe_post() ? get_safe_post()['comments_api'] : CHV\Settings::get('comments_api')) !== 'disqus') echo ' soft-hidden'; ?>">
+					<div class="c9 phablet-c1">
+						<div class="input-label">
+							<label for="disqus_shortname"><?php _se('Disqus shortname'); ?></label>
+							<input type="text" name="disqus_shortname" id="disqus_shortname" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['disqus_shortname'] : CHV\Settings::get('disqus_shortname', true); ?>">
+							<div class="input-warning red-warning"><?php echo get_input_errors()['disqus_shortname']; ?></div>
+						</div>
+						<div class="input-label">
+							<label for="disqus_secret_key"><?php _se('%s secret key', 'Disqus'); ?></label>
+							<input type="text" name="disqus_secret_key" id="disqus_secret_key" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['disqus_secret_key'] : CHV\Settings::get('disqus_secret_key', true); ?>">
+							<div class="input-warning red-warning"><?php echo get_input_errors()['disqus_secret_key']; ?></div>
+						</div>
+						<div class="input-label">
+							<label for="disqus_public_key"><?php _se('%s public key', 'Disqus'); ?></label>
+							<input type="text" name="disqus_public_key" id="disqus_public_key" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['disqus_public_key'] : CHV\Settings::get('disqus_public_key', true); ?>">
+							<div class="input-warning red-warning"><?php echo get_input_errors()['disqus_public_key']; ?></div>
+						</div>
+					</div>
+				</div>
+				<div data-combo-value="js" class="switch-combo<?php if((get_safe_post() ? get_safe_post()['comments_api'] : CHV\Settings::get('comments_api')) !== 'js') echo ' soft-hidden'; ?>">
+					<div class="input-label">
+						<label for="comment_code"><?php _se('Comment code'); ?></label>
+						<div class="c12 phablet-c1"><textarea type="text" name="comment_code" id="comment_code" class="text-input r4" value="" placeholder="<?php _se('Disqus, Facebook or anything you want. It will be used in image view.'); ?>"><?php echo CHV\Settings::get('comment_code', true); ?></textarea></div>
+					</div>
+				</div>
 			</div>
 			<hr class="line-separator"></hr>
 			<div class="input-label">

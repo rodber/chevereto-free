@@ -21,12 +21,6 @@ use G, Exception;
 class Login {
 
 	static $logged_user;
-	static $social_services = [
-		'facebook' => 'Facebook',
-		'twitter' => 'Twitter',
-		'google' => 'Google',
-		'vk' => 'VK'
-	];
 	
 	public static function get($values, $sort=array(), $limit=NULL) {
 		try {

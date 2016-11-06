@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-10-17 20:52+0000',
-  'PO-Revision-Date' => '2016-10-17 20:52+0000',
+  'POT-Creation-Date' => '2016-10-27 18:49+0000',
+  'PO-Revision-Date' => '2016-10-27 18:49+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ja',
@@ -141,12 +141,6 @@ $translation_table = [
 	"image" => [
 		0 => "画像",
 	],
-	"%u liked your %t %c" => [
-		0 => "%uさんがあなたの%t%cをいいねしました。",
-	],
-	"%u is now following you" => [
-		0 => "%uさんがあなたをフォローしました。",
-	],
 	"Can't create %s destination dir" => [
 		0 => "転送先ディレクトリ %s が作成できません。",
 	],
@@ -252,15 +246,6 @@ $translation_table = [
 	"That page doesn't exist" => [
 		0 => "ページが存在しません。",
 	],
-	"Most recent" => [
-		0 => "新しい順",
-	],
-	"Oldest" => [
-		0 => "古い順",
-	],
-	"Albums" => [
-		0 => "アルバム",
-	],
 	"Forgot password?" => [
 		0 => "パスワードを忘れてしまいましたか？",
 	],
@@ -318,6 +303,12 @@ $translation_table = [
 	"Password required" => [
 		0 => "パスワードが必要です。",
 	],
+	"Most recent" => [
+		0 => "新しい順",
+	],
+	"Oldest" => [
+		0 => "古い順",
+	],
 	"Most viewed" => [
 		0 => "閲覧順",
 	],
@@ -342,6 +333,9 @@ $translation_table = [
 	"Images" => [
 		0 => "画像",
 	],
+	"Albums" => [
+		0 => "アルバム",
+	],
 	"Users" => [
 		0 => "ユーザ",
 	],
@@ -356,6 +350,9 @@ $translation_table = [
 	],
 	"check for updates" => [
 		0 => "アップデートのチェック",
+	],
+	"Support" => [
+		0 => "サポート",
 	],
 	"Chevereto support" => [
 		0 => "Cheveretoサポート",
@@ -516,11 +513,17 @@ $translation_table = [
 	"homepage" => [
 		0 => "ホームページ",
 	],
+	"Before main title (%s)" => [
+		0 => "メインタイトル前 (%s)",
+	],
 	"After call to action (%s)" => [
 		0 => "アクション呼び出し後 (%s)",
 	],
 	"After cover (%s)" => [
 		0 => "カバーの後 (%s)",
+	],
+	"After listing (%s)" => [
+		0 => "リストの後 (%s)",
 	],
 	"Before pagination" => [
 		0 => "ページネーションの前",
@@ -857,6 +860,15 @@ $translation_table = [
 	],
 	"Content disliked" => [
 		0 => "ざんねん",
+	],
+	"%u liked your %t %c" => [
+		0 => "%uさんがあなたの%t%cをいいねしました。",
+	],
+	"%u is now following you" => [
+		0 => "%uさんがあなたをフォローしました。",
+	],
+	"A private user" => [
+		0 => "プライベートユーザ",
 	],
 	"Wrong Username/Email password combination" => [
 		0 => "ユーザ名/電子メールアドレスとパスワードの組合せが間違っています。",
@@ -2730,6 +2742,12 @@ $translation_table = [
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "画像認証を使用するためには、<a href=\"%s\" target=\"_blank\">reCAPTCHA キー</a>が必要です。",
 	],
+	"%s site key" => [
+		0 => "%s サイトキー",
+	],
+	"%s secret key" => [
+		0 => "%s シークレットキー",
+	],
 	"reCAPTCHA public key" => [
 		0 => "reCAPTCHAの公開鍵(public key)を入力",
 	],
@@ -2741,6 +2759,18 @@ $translation_table = [
 	],
 	"How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA." => [
 		0 => "何回の失敗でreCAPTCHAを有効にしますか？ゼロ(0)だと常にreCAPTCHAが表示されます。",
+	],
+	"Comments API" => [
+		0 => "コメントAPI",
+	],
+	"Disqus API works with %s." => [
+		0 => "%s　でDisqus APIが動作しあｍす。",
+	],
+	"Disqus shortname" => [
+		0 => "Disqus shortname",
+	],
+	"%s public key" => [
+		0 => "%s パブリックキー",
 	],
 	"Comment code" => [
 		0 => "コメントコード",
@@ -2774,6 +2804,12 @@ $translation_table = [
 	],
 	"Check the errors to proceed." => [
 		0 => "次へ進むためにエラーをチェックして下さい。",
+	],
+	"Play GIF" => [
+		0 => "GIF再生",
+	],
+	"Load full resolution" => [
+		0 => "最大解像度で表示",
 	],
 	"Guest" => [
 		0 => "ゲスト",
@@ -3107,6 +3143,9 @@ $translation_table = [
 	],
 	"Update now" => [
 		0 => "今すぐ更新する",
+	],
+	"Your website is running the latest version of %s" => [
+		0 => "あなたのサイトは、バージョン:%sで最新版です。",
 	],
 	"Your website is running the latest version of Chevereto." => [
 		0 => "あなたのウェブサイトは、Cheveretoの最新版で動作しています。",

@@ -233,7 +233,7 @@ $route = function($handler) {
 									$input_errors['username'] = 'Username already being used';
 								}
 								// Email taken?
-								if(G\timing_safe_compare($row['user_email'], $_POST['email']) and
+								if(!empty($_POST['email']) && G\timing_safe_compare($row['user_email'], $_POST['email']) &&
 								   $user['email'] !== $row['user_email']) {
 									$input_errors['email'] = _s('Email already being used');
 								}
@@ -246,7 +246,7 @@ $route = function($handler) {
 					}
 
 					// Email MUST be validated (two steps)
-					if(!$is_error and !G\timing_safe_compare($user['email'], $_POST['email'])) {
+					if(!$is_error && !empty($_POST['email']) && !G\timing_safe_compare($user['email'], $_POST['email'])) {
 						
 						// Delete any old confirmation
 						CHV\Confirmation::delete(['type' => 'account-change-email', 'user_id' => $user['id']]);
@@ -397,7 +397,11 @@ $route = function($handler) {
 								unset($_POST['role']);
 							}
 						}
-						
+
+						if(empty($_POST['email'])) {
+							unset($editing_array['email']);
+						}
+
 						if(CHV\User::update($user['id'], $editing_array)) {
 							$user = array_merge($user, $editing_array);
 							$handler::updateVar('safe_post', ['name' => CHV\User::sanitizeUserName($_POST['name'])]);

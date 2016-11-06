@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-10-17 20:52+0000\n"
-"PO-Revision-Date: 2016-10-17 20:52+0000\n"
+"POT-Creation-Date: 2016-10-27 18:49+0000\n"
+"PO-Revision-Date: 2016-10-27 18:49+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: cs\n"
@@ -239,15 +239,6 @@ msgstr[1] "obrázků"
 msgstr[2] "obrázků"
 msgstr[3] "obrázky"
 
-#: ../../../app/lib/classes/class.notification.php:75
-msgid "%u liked your %t %c"
-msgstr "%u se líbí váš %t %c"
-
-#: ../../../app/lib/classes/class.notification.php:81
-#, php-format
-msgid "%u is now following you"
-msgstr "%u vás nyní sleduje"
-
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
 msgid "Can't create %s destination dir"
@@ -365,6 +356,9 @@ msgstr "Měl by jste vypnout zobrazování PHP chyb pro přehlednější prostř
 msgid "You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this."
 msgstr "Dosud jste nezměnili výchozí nastavení e-mailu. Pro změnu tohoto nastavení jděte do <a href='%s'>Nastavení e-mailu</a>."
 
+msgid "There is an update available for your Chevereto based website."
+msgstr "Je zde dostupná aktualizace pro vaši Chevereto webovou stránku."
+
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 msgid "The release notes for this update are:"
 msgstr "Poznámky k verzi této aktualizace:"
@@ -396,36 +390,6 @@ msgstr "Zobrazit všechny mé obrázky"
 #: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
 msgid "That page doesn't exist"
 msgstr "Tato stránka neexistuje"
-
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "Nejnovější"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "Nejstarší"
-
-#: ../../../app/routes/route.dashboard.php:40
-#: ../../../app/routes/route.search.php:92
-#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
-#: ../../../app/themes/Peafowl/header.php:403
-#: ../../../app/themes/Peafowl/views/settings.php:77
-msgid "Albums"
-msgstr "Alba"
 
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
@@ -545,6 +509,28 @@ msgstr "Aby jste mohli pokračovat, zkontrolujte chyby ve formuláři."
 msgid "Password required"
 msgstr "Je vyžadováno heslo"
 
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Nejnovější"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "Nejstarší"
+
 #: ../../../app/routes/route.album.php:96
 #: ../../../app/routes/route.category.php:64
 #: ../../../app/routes/route.dashboard.php:1121
@@ -596,6 +582,14 @@ msgstr "Statistiky"
 msgid "Images"
 msgstr "Obrázky"
 
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:92
+#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
+#: ../../../app/themes/Peafowl/header.php:403
+#: ../../../app/themes/Peafowl/views/settings.php:77
+msgid "Albums"
+msgstr "Alba"
+
 #: ../../../app/routes/route.dashboard.php:41
 #: ../../../app/routes/route.dashboard.php:233
 #: ../../../app/routes/route.search.php:99
@@ -621,8 +615,14 @@ msgstr "Instalovat aktualizaci"
 msgid "check for updates"
 msgstr "Zkontrolovat aktualizace"
 
+msgid "Support"
+msgstr "Podpora"
+
 msgid "Chevereto support"
 msgstr "Chevereto podpora"
+
+msgid "Need help? Go to %s and you will get help quickly."
+msgstr "Potřebujete pomoc? Navštivte %s a získejte rychle pomoc nebo radu."
 
 #: ../../../app/routes/route.dashboard.php:169
 msgid "PHP version"
@@ -776,6 +776,12 @@ msgstr "Seznam změn"
 msgid "Request new features"
 msgstr "Požádat o nové funkce"
 
+msgid "Bug tracking"
+msgstr "Nachlášení chyb"
+
+msgid "Blog"
+msgstr "Blog"
+
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
 msgid "Website"
@@ -910,6 +916,18 @@ msgstr "Stránka byla úspěšně přidána."
 #: ../../../app/routes/route.dashboard.php:360
 msgid "The page has been deleted."
 msgstr "Stránka byla odstraněna."
+
+msgid "homepage"
+msgstr "domovská stránka"
+
+msgid "Before main title (%s)"
+msgstr "Před hlavním názvem (%s)"
+
+msgid "After cover (%s)"
+msgstr "Po titulním obrázku (%s)"
+
+msgid "After listing (%s)"
+msgstr "Po výpisu (%s)"
 
 #: ../../../app/routes/route.dashboard.php:390
 msgid "Before pagination"
@@ -1348,6 +1366,18 @@ msgstr "Obsah se líbí"
 #: ../../../app/routes/route.json.php:1150
 msgid "Content disliked"
 msgstr "Obsah se nelíbí"
+
+#: ../../../app/lib/classes/class.notification.php:75
+msgid "%u liked your %t %c"
+msgstr "%u se líbí váš %t %c"
+
+#: ../../../app/lib/classes/class.notification.php:81
+#, php-format
+msgid "%u is now following you"
+msgstr "%u vás nyní sleduje"
+
+msgid "A private user"
+msgstr "Soukromý uživatel"
 
 #: ../../../app/routes/route.login.php:133
 msgid "Wrong Username/Email password combination"
@@ -2227,6 +2257,9 @@ msgstr[1] "Alb"
 msgstr[2] "Alb"
 msgstr[3] "Alba"
 
+msgid "me"
+msgstr "mě"
+
 msgid "link"
 msgstr "odkaz"
 
@@ -2780,6 +2813,9 @@ msgstr "Líbí se"
 msgid "Allows users to like content and populate \"Most liked\" listings."
 msgstr "Umožňuje uživatelům \"lajkovat\" obsah a šířit výpisy \"Nejoblíbenějších\"."
 
+msgid "Followers allows users to follow each other."
+msgstr "Odběratelé uživatelům umožňují se navzájem sledovat."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:344
 msgid "Personal mode target user"
 msgstr "Cílový uživatel osobního režimu"
@@ -2964,10 +3000,16 @@ msgstr "Pořadí řazení zobrazení"
 msgid "Page sort order display for menus and listings. Use \"1\" for top priority."
 msgstr "Pořadí zobrazení stránky pro menu a výpisy. Použijte \"1\" pro nejvyšší prioritu."
 
+msgid "pages"
+msgstr "stránky"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:607
 #, php-format
 msgid "Do you really want to delete the page ID %s? This can't be undone."
 msgstr "Opravdu chcete smazat stránku ID %s? Tato akce nelze vrátit zpátky."
+
+msgid "Unchecked image formats won't be allowed to be uploaded."
+msgstr "Nezaškrtnuté formáty obrázkových souborů nebudou moci být nahrány."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:630
 msgid "Enable uploads"
@@ -2984,6 +3026,9 @@ msgstr "Nahráno hostem"
 #: ../../../app/themes/Peafowl/views/dashboard.php:645
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "Povol pokud chceš umožnit neregistrovaným uživatelům nahrávání."
+
+msgid "Number of simultaneous upload threads (parallel uploads)"
+msgstr "Počet vláken použitých při nahrávání (souběžné nahrávání více souborů)"
 
 msgid "Enable duplicate uploads"
 msgstr "Povolit duplicitní nahrávání"
@@ -3434,7 +3479,10 @@ msgstr "Notebook"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1159
 msgid "Desktop"
-msgstr "Domácí PC"
+msgstr "Počítač"
+
+msgid "theme editing"
+msgstr "úprava šablony"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1167
 #, php-format
@@ -3708,6 +3756,9 @@ msgstr "ID uživatele(ů)"
 msgid "Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images."
 msgstr "Čárkami oddělený seznam cílových uživatelských ID, kteří mohou prohlížet obrázky na domovské stránce. Ponechte pole prázdné pro zobrazování všech nedávných obrázků."
 
+msgid "banners"
+msgstr "bannery"
+
 msgid "Automatic updates check"
 msgstr "Automatická kontrola aktualizací"
 
@@ -3778,6 +3829,12 @@ msgstr "Směrování pro %s"
 
 msgid "Album routing"
 msgstr "Směrování alba"
+
+msgid "Custom language strings"
+msgstr "Vlastní jazykové řetězce"
+
+msgid "language strings"
+msgstr "jazykové řetězce"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1611
 msgid "Default language"
@@ -4023,6 +4080,12 @@ msgstr "Uložit změny"
 msgid "Check the errors to proceed."
 msgstr "Před pokračováním zkontrolujte chyby"
 
+msgid "Play GIF"
+msgstr "Přehrát GIF"
+
+msgid "Load full resolution"
+msgstr "Načíst v plném rozlišení"
+
 #: ../../../app/themes/Peafowl/views/image.php:57
 msgid "Guest"
 msgstr "Host"
@@ -4043,12 +4106,12 @@ msgstr "Přidáno do %a a zakategorizováno v %c"
 #: ../../../app/themes/Peafowl/views/image.php:138
 #, php-format
 msgid "Added to %s"
-msgstr "Přidáno do %s"
+msgstr "Přidáno do alba %s"
 
 #: ../../../app/themes/Peafowl/views/image.php:143
 #, php-format
 msgid "Uploaded to %s"
-msgstr "Nahráno do %s"
+msgstr "Nahráno do alba %s"
 
 #: ../../../app/themes/Peafowl/views/image.php:145
 #, php-format
@@ -4409,7 +4472,7 @@ msgstr "Aktualizace není nutná"
 
 #: ../../../app/install/update/template/update.js:41
 msgid "System files already up to date"
-msgstr "Systémévé soubory jsou již aktuální"
+msgstr "Systémové soubory jsou již aktuální"
 
 #: ../../../app/install/update/template/update.js:49
 #, javascript-format
@@ -4497,11 +4560,14 @@ msgstr "Je dostupná aktualizace v%s"
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 #, javascript-format
 msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
-msgstr "Je k dispozici aktualizace pro váš systém. Můžete ji automaticky stáhnout a instalovat, nebo běžte do% s a stáhněte si instalační soubor."
+msgstr "Je k dispozici aktualizace pro váš systém. Můžete ji automaticky stáhnout a instalovat, nebo běžte na %s a stáhněte si instalační soubor."
 
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 msgid "Update now"
 msgstr "Aktualizovat nyní"
+
+msgid "Your website is running the latest version of %s"
+msgstr "Vaše webové stránky běží nejnovější verzi %s"
 
 #: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
 msgid "Your website is running the latest version of Chevereto."
@@ -4586,7 +4652,7 @@ msgstr "Úložiště bylo úspěšně upraveno."
 
 #: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
 msgid "User added successfully."
-msgstr "Uživatel byl přidán úspěšně."
+msgstr "Uživatel byl úspěšně přidán."
 
 #: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
 #: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947

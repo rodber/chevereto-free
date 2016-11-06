@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-10-17 20:52+0000',
-  'PO-Revision-Date' => '2016-10-17 20:52+0000',
+  'POT-Creation-Date' => '2016-11-01 14:37+0000',
+  'PO-Revision-Date' => '2016-11-01 14:37+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'de',
@@ -147,12 +147,6 @@ $translation_table = [
 		0 => "Bild",
 		1 => "Bilder",
 	],
-	"%u liked your %t %c" => [
-		0 => "%u hat Ihren %t %c gelikt",
-	],
-	"%u is now following you" => [
-		0 => "%u folgt Ihnen nun",
-	],
 	"Can't create %s destination dir" => [
 		0 => "%s Zielverzeichnis kann nicht erstellt werden",
 	],
@@ -262,15 +256,6 @@ $translation_table = [
 	"That page doesn't exist" => [
 		0 => "Diese Seite existiert nicht",
 	],
-	"Most recent" => [
-		0 => "Neueste",
-	],
-	"Oldest" => [
-		0 => "Älteste",
-	],
-	"Albums" => [
-		0 => "Alben",
-	],
 	"Forgot password?" => [
 		0 => "Passwort vergessen?",
 	],
@@ -328,6 +313,12 @@ $translation_table = [
 	"Password required" => [
 		0 => "Passwort erforderlich",
 	],
+	"Most recent" => [
+		0 => "Neueste",
+	],
+	"Oldest" => [
+		0 => "Älteste",
+	],
 	"Most viewed" => [
 		0 => "Meistgesehen",
 	],
@@ -352,6 +343,9 @@ $translation_table = [
 	"Images" => [
 		0 => "Bilder",
 	],
+	"Albums" => [
+		0 => "Alben",
+	],
 	"Users" => [
 		0 => "Benutzer",
 	],
@@ -366,6 +360,9 @@ $translation_table = [
 	],
 	"check for updates" => [
 		0 => "Suche nach Aktualisierungen",
+	],
+	"Support" => [
+		0 => "Support",
 	],
 	"Chevereto support" => [
 		0 => "Chevereto Support",
@@ -426,7 +423,7 @@ $translation_table = [
 		0 => "Neue Features vorschlagen",
 	],
 	"Bug tracking" => [
-		0 => "Bug tracking",
+		0 => "Bug-Tracking",
 	],
 	"Blog" => [
 		0 => "Blog",
@@ -525,10 +522,19 @@ $translation_table = [
 		0 => "Die Seite wurde gelöscht.",
 	],
 	"homepage" => [
-		0 => "Homepage",
+		0 => "Internetseite",
 	],
 	"Before main title (%s)" => [
 		0 => "Vor Haupttitel (%s)",
+	],
+	"After call to action (%s)" => [
+		0 => "Nach \"Call to Action\" (%s)",
+	],
+	"After cover (%s)" => [
+		0 => "Nach Titelbild (%s)",
+	],
+	"After listing (%s)" => [
+		0 => "Nach Auflistung (%s)",
 	],
 	"Before pagination" => [
 		0 => "Vor Seitennummerierung",
@@ -585,7 +591,7 @@ $translation_table = [
 		0 => "Nach Kopfzeile",
 	],
 	"Before listing (user profile)" => [
-		0 => "Vor Bilderwand",
+		0 => "Vor Auflistung",
 	],
 	"Explore page" => [
 		0 => "Entdecken-Seite",
@@ -865,6 +871,15 @@ $translation_table = [
 	],
 	"Content disliked" => [
 		0 => "Inhalt gefällt dir nicht mehr",
+	],
+	"%u liked your %t %c" => [
+		0 => "%u hat Ihren %t %c gelikt",
+	],
+	"%u is now following you" => [
+		0 => "%u folgt Ihnen nun",
+	],
+	"A private user" => [
+		0 => "Privater Nutzer",
 	],
 	"Wrong Username/Email password combination" => [
 		0 => "Falsche Kombination aus Benutzername / E-Mail und Passwort",
@@ -1749,6 +1764,9 @@ $translation_table = [
 	"documentation" => [
 		0 => "Dokumentation",
 	],
+	"Learn more about %s at our %d." => [
+		0 => "Lernen Sie mehr über %s in unserer %d.",
+	],
 	"Add category" => [
 		0 => "Kategorie hinzufügen",
 	],
@@ -1932,6 +1950,9 @@ $translation_table = [
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "Wollen Sie wirklich die Seite mit der ID %s löschen? Dies kann nicht rückgängig gemacht werden.",
 	],
+	"Unchecked image formats won't be allowed to be uploaded." => [
+		0 => "Nicht markierte Bildformate sind nicht für das Hochladen zugelassen.",
+	],
 	"Enable uploads" => [
 		0 => "Uploads aktivieren",
 	],
@@ -1943,6 +1964,9 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Aktivieren, falls nicht registrierten Benutzern das Hochladen von Bildern erlaubt sein soll.",
+	],
+	"Number of simultaneous upload threads (parallel uploads)" => [
+		0 => "Anzahl der maximal möglichen gleichzeitigen Uploads (Threads)",
 	],
 	"Redirect on single upload" => [
 		0 => "Direkte Weiterleitung bei einzelnen Upload",
@@ -2301,6 +2325,9 @@ $translation_table = [
 	"Desktop" => [
 		0 => "Desktop",
 	],
+	"theme editing" => [
+		0 => "Theme-Bearbeitung",
+	],
 	"Put your themes in the %s folder" => [
 		0 => "Platzieren Sie Ihre Themes in das Verzeichnis \"%s\".",
 	],
@@ -2523,8 +2550,14 @@ $translation_table = [
 	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
 		0 => "Kommagetrennte Liste der Zielbenutzer-IDs, deren Bilder auf der Startseite angezeigt werden sollen. Lassen Sie dieses Feld leer oder auf Null, um die zuletzt hinzugefügten Bilder anzuzeigen.",
 	],
+	"banners" => [
+		0 => "Banner",
+	],
 	"Automatic updates check" => [
 		0 => "Automatisch nach Updates suchen",
+	],
+	"When enabled the system will automatically check for new updates." => [
+		0 => "Falls aktiviert, wird das System automatisch auf neue Aktualisierungen hinweisen.",
 	],
 	"Display available updates notification" => [
 		0 => "Anzeigen der verfügbaren Update-Benachrichtigungen",
@@ -2586,8 +2619,11 @@ $translation_table = [
 	"Album routing" => [
 		0 => "Album-Routing",
 	],
+	"Custom language strings" => [
+		0 => "Eigene Sprachen-Strings",
+	],
 	"language strings" => [
-		0 => "Sprach String",
+		0 => "Sprachen-String",
 	],
 	"Default language" => [
 		0 => "Standardsprache",
@@ -2721,6 +2757,12 @@ $translation_table = [
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Sie benötigen einen <a href=\"%s\" target=\"_blank\">reCAPTCHA Schlüssel</a> für diese Funktion.",
 	],
+	"%s site key" => [
+		0 => "%s Seiten-Schlüssel",
+	],
+	"%s secret key" => [
+		0 => "%s Geheimer Schlüssel",
+	],
 	"reCAPTCHA public key" => [
 		0 => "reCAPTCHA Public-Schlüssel",
 	],
@@ -2732,6 +2774,18 @@ $translation_table = [
 	],
 	"How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA." => [
 		0 => "Ab wie vielen Fehlversuchen beim Login soll eine reCAPTCHA-Abfrage notwendig werden? Bei Null (0) wird immer eine reCAPTCHA-Eingabe verlangt.",
+	],
+	"Comments API" => [
+		0 => "Kommentare-API",
+	],
+	"Disqus API works with %s." => [
+		0 => "Disqus API unterstützt %s.",
+	],
+	"Disqus shortname" => [
+		0 => "Disqus Name",
+	],
+	"%s public key" => [
+		0 => "%s Öffentlicher Schlüssel",
 	],
 	"Comment code" => [
 		0 => "Kommentarfunktion",
@@ -2765,6 +2819,12 @@ $translation_table = [
 	],
 	"Check the errors to proceed." => [
 		0 => "Überprüfen Sie die angezeigten Fehler um fortfahren zu können.",
+	],
+	"Play GIF" => [
+		0 => "GIF abspielen",
+	],
+	"Load full resolution" => [
+		0 => "Volle Auflösung laden",
 	],
 	"Guest" => [
 		0 => "Gast",
@@ -3099,6 +3159,9 @@ $translation_table = [
 	],
 	"Update now" => [
 		0 => "Jetzt updaten",
+	],
+	"Your website is running the latest version of %s" => [
+		0 => "Diese Internetseite läuft mit der aktuellsten Version von %s",
 	],
 	"Your website is running the latest version of Chevereto." => [
 		0 => "Die verwendete Chevereto-Version ist auf dem aktuellsten Stand.",

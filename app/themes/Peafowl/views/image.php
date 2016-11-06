@@ -31,7 +31,7 @@
 	<?php
 		}
 	?>
-	<div id="image-viewer-loader" data-size="<?php echo get_image()['size']; ?>"><span class="btn-icon icon icon-arrow-down"></span><span class="btn-text"><?php echo get_image()['size_formatted']; ?></span></div>
+	<div id="image-viewer-loader" data-size="<?php echo get_image()['size']; ?>"><?php if(get_image()['is_animated']) { ?><span class="btn-icon icon icon-play3"></span><?php } ?><span class="btn-text"><?php get_image()['is_animated'] ? _se('Play GIF') : _se('Load full resolution'); ?> - <?php echo get_image()['size_formatted']; ?></span></div>
 	<?php
 		CHV\Render\show_banner('image_image-viewer_foot', !get_image()['nsfw']);
 	?>
@@ -234,10 +234,9 @@
 					CHV\Render\show_banner('content_before_comments', !get_image()['nsfw']);
 				?>
 				
-				<div class="default-margin-bottom">
-					<?php echo CHV\getSetting('comment_code'); ?>
+				<div class="comments">
+					<?php CHV\Render\showComments(); ?>
 				</div>
-				
             </div>
 			
 			<?php if(CHV\getSetting('theme_show_social_share')) { ?>

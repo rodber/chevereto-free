@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-10-17 20:52+0000\n"
-"PO-Revision-Date: 2016-10-17 20:52+0000\n"
+"POT-Creation-Date: 2016-11-01 14:37+0000\n"
+"PO-Revision-Date: 2016-11-01 14:37+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: zh_TW\n"
@@ -221,15 +221,6 @@ msgid "image"
 msgid_plural "images"
 msgstr[0] "圖片"
 
-#: ../../../app/lib/classes/class.notification.php:75
-msgid "%u liked your %t %c"
-msgstr "%u 喜歡你的 %t %c"
-
-#: ../../../app/lib/classes/class.notification.php:81
-#, php-format
-msgid "%u is now following you"
-msgstr "%u 關註了你"
-
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
 msgid "Can't create %s destination dir"
@@ -376,36 +367,6 @@ msgstr "查看我所有的圖片"
 msgid "That page doesn't exist"
 msgstr "該網頁不存在"
 
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "最新的"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "最舊的"
-
-#: ../../../app/routes/route.dashboard.php:40
-#: ../../../app/routes/route.search.php:92
-#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
-#: ../../../app/themes/Peafowl/header.php:403
-#: ../../../app/themes/Peafowl/views/settings.php:77
-msgid "Albums"
-msgstr "相簿"
-
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:24
@@ -524,6 +485,28 @@ msgstr "請檢查表單中的錯誤以繼續"
 msgid "Password required"
 msgstr "需要密碼"
 
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "最新的"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "最舊的"
+
 #: ../../../app/routes/route.album.php:96
 #: ../../../app/routes/route.category.php:64
 #: ../../../app/routes/route.dashboard.php:1121
@@ -575,6 +558,14 @@ msgstr "統計"
 msgid "Images"
 msgstr "圖片"
 
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:92
+#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
+#: ../../../app/themes/Peafowl/header.php:403
+#: ../../../app/themes/Peafowl/views/settings.php:77
+msgid "Albums"
+msgstr "相簿"
+
 #: ../../../app/routes/route.dashboard.php:41
 #: ../../../app/routes/route.dashboard.php:233
 #: ../../../app/routes/route.search.php:99
@@ -599,6 +590,9 @@ msgstr "安裝更新"
 #: ../../../app/routes/route.dashboard.php:162
 msgid "check for updates"
 msgstr "檢查更新"
+
+msgid "Support"
+msgstr "支援"
 
 msgid "Chevereto support"
 msgstr "Chevereto支援"
@@ -749,6 +743,15 @@ msgstr "連結"
 msgid "Documentation"
 msgstr "文件"
 
+msgid "Changelog"
+msgstr "改版日誌"
+
+msgid "Request new features"
+msgstr "請求新功能"
+
+msgid "Bug tracking"
+msgstr "錯誤跟踪"
+
 msgid "Blog"
 msgstr "部落格"
 
@@ -890,6 +893,18 @@ msgstr "該頁面已被刪除."
 msgid "homepage"
 msgstr "首頁"
 
+msgid "Before main title (%s)"
+msgstr "在主標題前 %s"
+
+msgid "After call to action (%s)"
+msgstr "在按鈕後 %s"
+
+msgid "After cover (%s)"
+msgstr "在封面後 %s"
+
+msgid "After listing (%s)"
+msgstr "在列表後 %s"
+
 #: ../../../app/routes/route.dashboard.php:390
 msgid "Before pagination"
 msgstr "分頁前"
@@ -977,7 +992,7 @@ msgstr "頭後（探索頁面）"
 
 #: ../../../app/routes/route.dashboard.php:468
 msgid "NSFW"
-msgstr "NSFW"
+msgstr "非闔家皆宜"
 
 #: ../../../app/routes/route.dashboard.php:557
 msgid "Invalid website name"
@@ -1336,7 +1351,7 @@ msgstr "這只是壹個測試"
 #: ../../../app/routes/route.json.php:1110
 #, php-format
 msgid "Test email sent to %s."
-msgstr "Test email sent to %s."
+msgstr "測試電子郵件發送到 %s."
 
 #: ../../../app/routes/route.json.php:1128
 #, php-format
@@ -1355,6 +1370,18 @@ msgstr "喜歡的內容"
 #: ../../../app/routes/route.json.php:1150
 msgid "Content disliked"
 msgstr "不喜歡的內容"
+
+#: ../../../app/lib/classes/class.notification.php:75
+msgid "%u liked your %t %c"
+msgstr "%u 喜歡你的 %t %c"
+
+#: ../../../app/lib/classes/class.notification.php:81
+#, php-format
+msgid "%u is now following you"
+msgstr "%u 關註了你"
+
+msgid "A private user"
+msgstr "私人用戶"
 
 #: ../../../app/routes/route.login.php:133
 msgid "Wrong Username/Email password combination"
@@ -1860,11 +1887,11 @@ msgstr "取消"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:77
 msgid "Mark this if the upload is not family safe"
-msgstr "標記這個上傳內容為不健康"
+msgstr "標記這個上傳內容為非闔家皆宜"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:77
 msgid "Not family safe upload"
-msgstr "不健康的上傳"
+msgstr "非闔家皆宜的上傳"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 msgid "Uploading"
@@ -1971,7 +1998,7 @@ msgstr "自動刪除圖像"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:192
 #: ../../../app/themes/Peafowl/snippets/form_image.php:25
 msgid "Mark this if the image is not family safe"
-msgstr "標記這個圖片為不健康內容"
+msgstr "標記這個圖片為非闔家皆宜內容"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:194
 #: ../../../app/themes/Peafowl/snippets/form_image.php:25
@@ -2790,6 +2817,9 @@ msgstr "個人網站模式被開啟時, 該設置始終禁用."
 msgid "documentation"
 msgstr "文件"
 
+msgid "Learn more about %s at our %d."
+msgstr "在我們的 %d 知道更多關於 %s 的資料"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
 msgid "Add category"
@@ -3049,6 +3079,9 @@ msgstr "頁面"
 msgid "Do you really want to delete the page ID %s? This can't be undone."
 msgstr "你真的要刪除頁面 ID %s ? 這動作不能被復原"
 
+msgid "Unchecked image formats won't be allowed to be uploaded."
+msgstr "不允許上傳未經檢查的圖片格式。"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:630
 msgid "Enable uploads"
 msgstr "啟動上傳"
@@ -3064,6 +3097,9 @@ msgstr "訪客上傳"
 #: ../../../app/themes/Peafowl/views/dashboard.php:645
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "允許非註冊用戶上傳"
+
+msgid "Number of simultaneous upload threads (parallel uploads)"
+msgstr "同時上傳連線數量（並行上傳）"
 
 msgid "Redirect on single upload"
 msgstr "跳轉單張上傳"
@@ -3450,11 +3486,11 @@ msgstr "如果要在列表中顯示不安全內容請啟用此功能. 此設置�
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1079
 msgid "Blur NSFW content in listings"
-msgstr "模糊NSFW（標記為不安全）的內容顯示在列表"
+msgstr "模糊非闔家皆宜（標記為不安全）的內容顯示在列表"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1085
 msgid "Enable this if you want to apply a blur effect on the NSFW images in listings."
-msgstr "如果您想申請一個模糊效果的NSFW圖像列表請啟用它."
+msgstr "如果您想為非闔家皆宜圖像列表開啟模糊效果，請啟用它."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1088
 msgid "Show banners in not safe content"
@@ -3851,8 +3887,14 @@ msgstr "用户IDs"
 msgid "Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images."
 msgstr "在網站主頁顯示指定多個用戶的最新圖片, 請用逗號分隔開. 留空則顯示全站最新圖片（不含隱私圖像）."
 
+msgid "banners"
+msgstr "橫幅"
+
 msgid "Automatic updates check"
 msgstr "自動檢查升級"
+
+msgid "When enabled the system will automatically check for new updates."
+msgstr "啟用時，系統將自動檢查新更新。"
 
 msgid "Display available updates notification"
 msgstr "顯示可用的更新通知"
@@ -4055,6 +4097,9 @@ msgstr "test@somedomain.com"
 msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
 msgstr "使用這個來測試您的電子郵件是否已寄出. 我們建議您使用 %s."
 
+msgid "social networks"
+msgstr "社交網絡"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1838
 msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
 msgstr "你需要一個<a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a>"
@@ -4112,6 +4157,12 @@ msgstr "VK client secret"
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "你需要一個 <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a>"
 
+msgid "%s site key"
+msgstr "%s 網站鑰匙"
+
+msgid "%s secret key"
+msgstr "%s 秘密鑰匙"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1974
 msgid "reCAPTCHA public key"
 msgstr "reCAPTCHA public key"
@@ -4127,6 +4178,18 @@ msgstr "reCAPTCHA threshold"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1991
 msgid "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA."
 msgstr "登入失敗多少次後顯示驗證碼? 鍵入\"0\"零則始終顯示驗證碼."
+
+msgid "Comments API"
+msgstr "評論 API"
+
+msgid "Disqus API works with %s."
+msgstr "與 %s 工作的Disqus API"
+
+msgid "Disqus shortname"
+msgstr "Disqus 短名"
+
+msgid "%s public key"
+msgstr "%s 公開鑰匙"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1997
 msgid "Comment code"
@@ -4160,11 +4223,11 @@ msgstr "欲使用 <a %s>API v1</a>請用這個金鑰"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:2028
 msgid "Cookie law compliance"
-msgstr "餅乾的法規"
+msgstr "Cookie的法規"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:2034
 msgid "Enable this to display a message that complies with the EU Cookie law requirements. Note: You only need this if your website is hosted in the EU and if you add tracking cookies."
-msgstr "啟用它, 顯示一條消息, 符合歐盟的餅乾法規. 注意: 您僅需要這個, 假如您的網站託管在歐盟, 您必須增加餅乾跟蹤."
+msgstr "啟用它以顯示一條消息來符合歐盟的Cookie法規. 注意: 假如您的網站託管在歐盟又需要增加Cookie跟蹤, 您必須啟用它."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:2044
 #: ../../../app/themes/Peafowl/views/settings.php:463
@@ -4176,6 +4239,12 @@ msgstr "儲存變更"
 #: ../../../app/themes/Peafowl/views/settings.php:477
 msgid "Check the errors to proceed."
 msgstr "請檢查錯誤後繼續"
+
+msgid "Play GIF"
+msgstr "播放 GIF"
+
+msgid "Load full resolution"
+msgstr "讀取全等解像度"
 
 #: ../../../app/themes/Peafowl/views/image.php:57
 msgid "Guest"
@@ -4653,6 +4722,9 @@ msgstr "有可用的系統更新. 您可以自動下載並安裝此更新或者�
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 msgid "Update now"
 msgstr "立刻更新"
+
+msgid "Your website is running the latest version of %s"
+msgstr "你的網站正在運行最新版本的 %s"
 
 #: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
 msgid "Your website is running the latest version of Chevereto."

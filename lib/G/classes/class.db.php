@@ -32,7 +32,6 @@ class DB {
 	private $user = G_APP_DB_USER;
 	private $pass = G_APP_DB_PASS;
 	private $driver = G_APP_DB_DRIVER;
-	
 	private $pdo_attrs = G_APP_DB_PDO_ATTRS;
 
 	static $dbh;
@@ -40,25 +39,21 @@ class DB {
 	
 	/**
 	 * Connect to the DB server
-	 * Throws an Exception on error
+	 * Throws an Exception on error (tay weando? en serio?)
 	 */
-	public function __construct($conn=[], $pdo_attrs=[]) {
+	public function __construct($conn=[]) {
 		
 		try {
-			
 			// PDO already connected
 			if(empty($conn) and isset(self::$dbh) and get_class(self::$dbh) == 'PDO') {
 				return TRUE;
 			}
-				
+
 			if(!empty($conn)) {
 				// Inject connection info
-				foreach(['host', 'user', 'name', 'pass', 'port', 'driver'] as $k) {
+				foreach(['host', 'user', 'name', 'pass', 'port', 'driver', 'pdo_attrs'] as $k) {
 					$this->{$k} = $conn[$k];
 				}
-			}
-			if(!empty($pdo_attrs)) {
-				$this->pdo_attrs = $pdo_attrs;
 			}
 
 			$pdo_connect = $this->driver . ':host=' . $this->host . ';dbname=' . $this->name;
@@ -66,29 +61,21 @@ class DB {
 				$pdo_connect .= ';port=' . $this->port;
 			}
 			
+			$this->pdo_attrs = @unserialize($this->pdo_attrs) ?: $this->pdo_attrs;
+			
 			// PDO defaults
 			$this->pdo_default_attrs = [
 				PDO::ATTR_TIMEOUT		=> 30,
-				//PDO::ATTR_PERSISTENT	=> false
+				//PDO::ATTR_PERSISTENT	=> FALSE
 			];
-			
-			// Override the PDO defaults ?
-			if(!is_null($this->pdo_attrs)) {
-				foreach($this->pdo_default_attrs as $key => $value) {
-					if($this->pdo_attrs[$key]) {
-						$this->pdo_default_attrs[$key] = $this->pdo_attrs[$key];
-						unset($this->pdo_attrs[$key]);
-					}
-				}
-				$this->pdo_attrs = $this->pdo_default_attrs + $this->pdo_attrs;
-			} else {
-				$this->pdo_attrs = $this->pdo_default_attrs;
-			}
+
+			// Override PDO defaults ?
+			$this->pdo_attrs = (is_array($this->pdo_attrs) ? $this->pdo_attrs : []) + $this->pdo_default_attrs;
 			
 			// PDO hard overrides
 			$this->pdo_attrs[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
 			$this->pdo_attrs[PDO::MYSQL_ATTR_INIT_COMMAND] = "SET NAMES 'UTF8'";
-			
+
 			// Turn off PHP error reporting just for the connection here (invalid host names will trigger a PHP warning)
 			$error_reporting = error_reporting();
 			error_reporting(0);

@@ -3,7 +3,7 @@ Theme Name: Peafowl
 Theme URL: http://chevereto.com/
 Version: 3
 Author: Rodolfo Berrios
-@Chevereto: 3.8.1
+@Chevereto: 3.8.9
 @requires peafowl.css
 */
 
@@ -12,14 +12,20 @@ Author: Rodolfo Berrios
  * ---------------------------------------------
  */
 body {
-	margin-top: 65px;
-	padding-bottom: 15px;
+	padding-top: 65px;
+	padding-bottom: 20px;
+	min-height: 100%;
 	background: #FEFEFE;
+	position: relative;
 }
 body.landing {
+	min-height: 500px;
 	height: 100%;
-	padding-bottom: 0;
+	padding: 0;
 	margin: 0;
+}
+.phone body.landing {
+	min-height: auto;
 }
 .js body.landing {
     overflow: hidden;
@@ -115,13 +121,13 @@ body.split {
 	}
 	#image-viewer-loader {
 		position: absolute;
-		background: rgba(0,0,0,.4);
+		background: rgba(0,0,0,.5);
 		border: 2px solid rgba(255,255,255,.7);
-		color: #FFF;
+		color: rgba(255,255,255,.9);
 		font-size: 13px;
 		left: 50%;
 		top: 50%;
-		padding: 10px 14px;
+		padding: 8px 14px;
 		border-radius: 100px;
 		transform: translate(-50%, -50%);
 		cursor: pointer;
@@ -130,6 +136,7 @@ body.split {
 	#image-viewer-loader:hover {
 		background: rgba(0,0,0,.6);
 		border-color: rgba(255,255,255,.8);
+		color: #FFF;
 	}
 		#image-viewer-loader .btn-icon {
 			position: relative;
@@ -1296,3 +1303,33 @@ body#consent-screen {
 	}
 }
 
+.form-content, #dashboard-settings {
+	overflow: auto;
+}
+
+.footer {
+	color: #CCC;
+	font-size: 10px;
+	line-height: 20px;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+.tone-dark .footer {
+	color: #444;
+}
+.js #powered-by.footer {
+	display: none;
+}
+
+body.landing .footer {
+	color: #FFF;
+	text-shadow: 2px 2px 6px rgba(0,0,0,.4);
+}
+	body.landing .footer a {
+		color: rgba(255,255,255,.7);
+	}
+	body.landing .footer, body.landing .footer a:hover {
+		color: #FFF;	
+	}

@@ -28,6 +28,10 @@ try {
     
     set_time_limit(600); // This could take up to 10 minutes...
 	
+	if(function_exists('opcache_reset')) { 
+		opcache_reset(); // Try to flush OPCache
+	}
+	
 	$doctitles = [
 		'connect' 	=> 'Connect to the database',
 		'ready'		=> 'Ready to install',
@@ -214,8 +218,13 @@ try {
 			'enable_automatic_updates_check'=> 1,
 		],
 		'1.0.4' => NULL,
+		'1.0.5' => [
+			'comments_api'					=> 'js',
+			'disqus_shortname'				=> NULL,
+			'disqus_public_key'				=> NULL,
+			'disqus_secret_key'				=> NULL,
+		],
 	];
-	
 	// Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
 	$settings_rename = [];
 	
@@ -248,7 +257,9 @@ stat_disk_used = (SELECT IFNULL(SUM(image_size) + SUM(image_thumb_size) + SUM(im
 WHERE stat_type = "total";
 
 INSERT INTO `%table_prefix%stats` (stat_type, stat_date_gmt, stat_images, stat_image_views, stat_disk_used)
-SELECT "date", DATE(image_date_gmt) AS date_gmt, COUNT(*) AS images, SUM(image_views) AS image_views, SUM(image_size + image_thumb_size + image_medium_size) AS disk_used FROM `%table_prefix%images` GROUP BY DATE(image_date_gmt);
+SELECT sb.stat_type, sb.stat_date_gmt, sb.stat_images, sb.stat_image_views, sb.stat_disk_used
+FROM (SELECT "date" AS stat_type, DATE(image_date_gmt) AS stat_date_gmt, COUNT(*) AS stat_images, SUM(image_views) AS stat_image_views, SUM(image_size + image_thumb_size + image_medium_size) AS stat_disk_used FROM `%table_prefix%images` GROUP BY DATE(image_date_gmt)) AS sb
+ON DUPLICATE KEY UPDATE stat_images = sb.stat_images;
 
 INSERT INTO `%table_prefix%stats` (stat_type, stat_date_gmt, stat_users)
 SELECT sb.stat_type, sb.stat_date_gmt, sb.stat_users
@@ -382,7 +393,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 			
 			// Turn ON maintenance mode (if needed)
 			if(!$maintenance) {
-				$sql_update[] = "UPDATE `%table_prefix%settings` SET `setting_value` = 1 WHERE `setting_name` = 'maintenance'; \n";
+				$sql_update[] = "UPDATE `%table_prefix%settings` SET `setting_value` = 1 WHERE `setting_name` = 'maintenance';";
 			}
 			
 			// SQLize the $update_table
@@ -797,7 +808,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 						}
 						
 						// id padding for long faked public IDs
-						$chv_initial_settings['id_padding'] = 5000;
+						$chv_initial_settings['id_padding'] = $is_2X ? 0 : 5000;
 						
 						if($_POST['website_mode'] == 'personal') {
 							$chv_initial_settings['website_mode'] = 'personal';

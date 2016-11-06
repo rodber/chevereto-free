@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#<?php echo CHV\getSetting('theme_top_bar_color') == 'black' ? '000000' : 'FFFFFF'; ?>">
 <?php if(get_meta_description()) { ?>
 <meta name="description" content="<?php echo get_meta_description(); ?>">
 <?php } ?>
@@ -26,7 +27,7 @@
 
 if(!is_maintenance()) { G\Render\include_theme_file('snippets/embed'); }
 
-if(CHV\getSetting('theme_logo_height') > 0) {
+if(CHV\getSetting('theme_logo_height') !== NULL) {
 	$logo_height = CHV\getSetting('theme_logo_height');
 	echo '<style type="text/css">.top-bar-logo, .top-bar-logo img { height: '.CHV\getSetting('theme_logo_height').'px; } .top-bar-logo { margin-top: -'.(CHV\getSetting('theme_logo_height')/2).'px; } </style>';
 }

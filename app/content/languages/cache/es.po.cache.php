@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-10-17 20:52+0000',
-  'PO-Revision-Date' => '2016-10-17 20:52+0000',
+  'POT-Creation-Date' => '2016-10-25 22:28+0000',
+  'PO-Revision-Date' => '2016-10-25 22:28+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'es',
@@ -147,12 +147,6 @@ $translation_table = [
 		0 => "imagen",
 		1 => "imágenes",
 	],
-	"%u liked your %t %c" => [
-		0 => "A %u le gusta tu %t %c",
-	],
-	"%u is now following you" => [
-		0 => "%u ahora te está siguiendo",
-	],
 	"Can't create %s destination dir" => [
 		0 => "No se puede crear el directorio %s de destino",
 	],
@@ -262,15 +256,6 @@ $translation_table = [
 	"That page doesn't exist" => [
 		0 => "Esa página no existe",
 	],
-	"Most recent" => [
-		0 => "Más reciente",
-	],
-	"Oldest" => [
-		0 => "Más antiguo",
-	],
-	"Albums" => [
-		0 => "Álbumes",
-	],
 	"Forgot password?" => [
 		0 => "Recuperar constraseña",
 	],
@@ -328,6 +313,12 @@ $translation_table = [
 	"Password required" => [
 		0 => "Contraseña requerida",
 	],
+	"Most recent" => [
+		0 => "Más reciente",
+	],
+	"Oldest" => [
+		0 => "Más antiguo",
+	],
 	"Most viewed" => [
 		0 => "Más visto",
 	],
@@ -352,6 +343,9 @@ $translation_table = [
 	"Images" => [
 		0 => "Imágenes",
 	],
+	"Albums" => [
+		0 => "Álbumes",
+	],
 	"Users" => [
 		0 => "Usuarios",
 	],
@@ -366,6 +360,9 @@ $translation_table = [
 	],
 	"check for updates" => [
 		0 => "comprobar actualizaciones",
+	],
+	"Support" => [
+		0 => "Soporte",
 	],
 	"Chevereto support" => [
 		0 => "soporte de Chevereto",
@@ -874,6 +871,15 @@ $translation_table = [
 	],
 	"Content disliked" => [
 		0 => "Contenido ya no gustado",
+	],
+	"%u liked your %t %c" => [
+		0 => "A %u le gusta tu %t %c",
+	],
+	"%u is now following you" => [
+		0 => "%u ahora te está siguiendo",
+	],
+	"A private user" => [
+		0 => "Un usuario privado",
 	],
 	"Wrong Username/Email password combination" => [
 		0 => "Combinación Usuario/Email incorrecta",
@@ -2751,6 +2757,12 @@ $translation_table = [
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Necesitas una cuenta de <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> para esto.",
 	],
+	"%s site key" => [
+		0 => "Llave de sitio %s",
+	],
+	"%s secret key" => [
+		0 => "Llave secreta %s",
+	],
 	"reCAPTCHA public key" => [
 		0 => "Llave pública de reCAPTCHA",
 	],
@@ -2762,6 +2774,18 @@ $translation_table = [
 	],
 	"How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA." => [
 		0 => "¿Cuántos intentos fallidos son necesarios para solicitar reCAPTCHA? Usa cero (0) para siempre mostrar el reCAPTCHA.",
+	],
+	"Comments API" => [
+		0 => "API de comentarios",
+	],
+	"Disqus API works with %s." => [
+		0 => "La API de Disqus funciona con %s.",
+	],
+	"Disqus shortname" => [
+		0 => "Nombre corto en Disqus",
+	],
+	"%s public key" => [
+		0 => "Llave pública de %s",
 	],
 	"Comment code" => [
 		0 => "Código de comentarios",
@@ -2795,6 +2819,12 @@ $translation_table = [
 	],
 	"Check the errors to proceed." => [
 		0 => "Comprueba los errores para proceder.",
+	],
+	"Play GIF" => [
+		0 => "Reproducir GIF",
+	],
+	"Load full resolution" => [
+		0 => "Cargar tamaño completo",
 	],
 	"Guest" => [
 		0 => "Invitado",
@@ -3129,6 +3159,9 @@ $translation_table = [
 	],
 	"Update now" => [
 		0 => "Actualizar ahora",
+	],
+	"Your website is running the latest version of %s" => [
+		0 => "Tu sitio está corriendo la última version de %s",
 	],
 	"Your website is running the latest version of Chevereto." => [
 		0 => "Tu sitio está corriendo la última versión de Chevereto.",

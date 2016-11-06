@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-10-17 20:52+0000',
-  'PO-Revision-Date' => '2016-10-17 20:52+0000',
+  'POT-Creation-Date' => '2016-11-01 14:37+0000',
+  'PO-Revision-Date' => '2016-11-01 14:37+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ru',
@@ -153,12 +153,6 @@ $translation_table = [
 		1 => "изображения",
 		2 => "изображений",
 	],
-	"%u liked your %t %c" => [
-		0 => "Пользователю %u понравилось %t %c",
-	],
-	"%u is now following you" => [
-		0 => "%u подписался на Вашу ленту",
-	],
 	"Can't create %s destination dir" => [
 		0 => "Невозможно создать каталог %s",
 	],
@@ -272,15 +266,6 @@ $translation_table = [
 	"That page doesn't exist" => [
 		0 => "Эта страница не существует",
 	],
-	"Most recent" => [
-		0 => "Новые",
-	],
-	"Oldest" => [
-		0 => "Старые",
-	],
-	"Albums" => [
-		0 => "Альбомы",
-	],
 	"Forgot password?" => [
 		0 => "Забыли пароль?",
 	],
@@ -338,6 +323,12 @@ $translation_table = [
 	"Password required" => [
 		0 => "Требуется указать пароль",
 	],
+	"Most recent" => [
+		0 => "Новые",
+	],
+	"Oldest" => [
+		0 => "Старые",
+	],
 	"Most viewed" => [
 		0 => "Популярные",
 	],
@@ -362,6 +353,9 @@ $translation_table = [
 	"Images" => [
 		0 => "Изображения",
 	],
+	"Albums" => [
+		0 => "Альбомы",
+	],
 	"Users" => [
 		0 => "Пользователи",
 	],
@@ -377,8 +371,11 @@ $translation_table = [
 	"check for updates" => [
 		0 => "проверить обновления",
 	],
+	"Support" => [
+		0 => "Поддержка",
+	],
 	"Chevereto support" => [
-		0 => "Тех поддержка Chevereto",
+		0 => "службу поддержки Chevereto",
 	],
 	"Need help? Go to %s and you will get help quickly." => [
 		0 => "Нужна помощь? Посетите %s и мы быстро поможем вам.",
@@ -885,6 +882,15 @@ $translation_table = [
 	],
 	"Content disliked" => [
 		0 => "Содержимое не понравилось",
+	],
+	"%u liked your %t %c" => [
+		0 => "Пользователю %u понравилось %t %c",
+	],
+	"%u is now following you" => [
+		0 => "%u подписался на Вашу ленту",
+	],
+	"A private user" => [
+		0 => "Скрытый пользователь",
 	],
 	"Wrong Username/Email password combination" => [
 		0 => "Неверное имя пользователя или пароль",
@@ -1771,10 +1777,10 @@ $translation_table = [
 		0 => "Данная настройка всегда выключена, если вы используете персональный режим.",
 	],
 	"documentation" => [
-		0 => "документацию",
+		0 => "документации",
 	],
 	"Learn more about %s at our %d." => [
-		0 => "Узнайте больше о %s на %d.",
+		0 => "Узнайте больше о %s в %d.",
 	],
 	"Add category" => [
 		0 => "Добавить категорию",
@@ -2632,7 +2638,7 @@ $translation_table = [
 		0 => "Дополнительные строки перевода",
 	],
 	"language strings" => [
-		0 => "строки перевода",
+		0 => "переводе",
 	],
 	"Default language" => [
 		0 => "Язык по-умолчанию",
@@ -2766,6 +2772,12 @@ $translation_table = [
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Для этого вам необходим <a href=\"%s\" target=\"_blank\">ключ reCAPTCHA</a>.",
 	],
+	"%s site key" => [
+		0 => "%s ключ сайта",
+	],
+	"%s secret key" => [
+		0 => "%s секретный ключ",
+	],
 	"reCAPTCHA public key" => [
 		0 => "Публичный ключ reCAPTCHA",
 	],
@@ -2777,6 +2789,18 @@ $translation_table = [
 	],
 	"How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA." => [
 		0 => "Через сколько неудачных попыток показывать reCAPTCHA? Укажите ноль(0), чтобы всегда показывать reCAPTCHA.",
+	],
+	"Comments API" => [
+		0 => "API системы комментариев",
+	],
+	"Disqus API works with %s." => [
+		0 => "Disqus API работает с %s.",
+	],
+	"Disqus shortname" => [
+		0 => "Идентификатор Disqus",
+	],
+	"%s public key" => [
+		0 => "%s публичный ключ",
 	],
 	"Comment code" => [
 		0 => "Код для системы комментариев",
@@ -2810,6 +2834,12 @@ $translation_table = [
 	],
 	"Check the errors to proceed." => [
 		0 => "Перед тем как продолжить, проверьте правильность заполнения.",
+	],
+	"Play GIF" => [
+		0 => "Воспроизвести GIF",
+	],
+	"Load full resolution" => [
+		0 => "Загрузить полную версию",
 	],
 	"Guest" => [
 		0 => "Гость",
@@ -3145,6 +3175,9 @@ $translation_table = [
 	],
 	"Update now" => [
 		0 => "Обновить",
+	],
+	"Your website is running the latest version of %s" => [
+		0 => "Вы используете последнюю версию Chevereto - %s",
 	],
 	"Your website is running the latest version of Chevereto." => [
 		0 => "Вы используете последнюю версию Chevereto.",

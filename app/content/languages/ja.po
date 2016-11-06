@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-10-17 20:52+0000\n"
-"PO-Revision-Date: 2016-10-17 20:52+0000\n"
+"POT-Creation-Date: 2016-10-27 18:49+0000\n"
+"PO-Revision-Date: 2016-10-27 18:49+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -221,15 +221,6 @@ msgid "image"
 msgid_plural "images"
 msgstr[0] "画像"
 
-#: ../../../app/lib/classes/class.notification.php:75
-msgid "%u liked your %t %c"
-msgstr "%uさんがあなたの%t%cをいいねしました。"
-
-#: ../../../app/lib/classes/class.notification.php:81
-#, php-format
-msgid "%u is now following you"
-msgstr "%uさんがあなたをフォローしました。"
-
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
 msgid "Can't create %s destination dir"
@@ -376,36 +367,6 @@ msgstr "全ての画像を見る"
 msgid "That page doesn't exist"
 msgstr "ページが存在しません。"
 
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "新しい順"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "古い順"
-
-#: ../../../app/routes/route.dashboard.php:40
-#: ../../../app/routes/route.search.php:92
-#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
-#: ../../../app/themes/Peafowl/header.php:403
-#: ../../../app/themes/Peafowl/views/settings.php:77
-msgid "Albums"
-msgstr "アルバム"
-
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:24
@@ -524,6 +485,28 @@ msgstr "先に進むためには、フォーム内のエラーを修正してく
 msgid "Password required"
 msgstr "パスワードが必要です。"
 
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "新しい順"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "古い順"
+
 #: ../../../app/routes/route.album.php:96
 #: ../../../app/routes/route.category.php:64
 #: ../../../app/routes/route.dashboard.php:1121
@@ -575,6 +558,14 @@ msgstr "最新状況"
 msgid "Images"
 msgstr "画像"
 
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:92
+#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
+#: ../../../app/themes/Peafowl/header.php:403
+#: ../../../app/themes/Peafowl/views/settings.php:77
+msgid "Albums"
+msgstr "アルバム"
+
 #: ../../../app/routes/route.dashboard.php:41
 #: ../../../app/routes/route.dashboard.php:233
 #: ../../../app/routes/route.search.php:99
@@ -599,6 +590,9 @@ msgstr "更新をインストール"
 #: ../../../app/routes/route.dashboard.php:162
 msgid "check for updates"
 msgstr "アップデートのチェック"
+
+msgid "Support"
+msgstr "サポート"
 
 msgid "Chevereto support"
 msgstr "Cheveretoサポート"
@@ -899,11 +893,17 @@ msgstr "ページは削除されました。"
 msgid "homepage"
 msgstr "ホームページ"
 
+msgid "Before main title (%s)"
+msgstr "メインタイトル前 (%s)"
+
 msgid "After call to action (%s)"
 msgstr "アクション呼び出し後 (%s)"
 
 msgid "After cover (%s)"
 msgstr "カバーの後 (%s)"
+
+msgid "After listing (%s)"
+msgstr "リストの後 (%s)"
 
 #: ../../../app/routes/route.dashboard.php:390
 msgid "Before pagination"
@@ -1370,6 +1370,18 @@ msgstr "いいね！"
 #: ../../../app/routes/route.json.php:1150
 msgid "Content disliked"
 msgstr "ざんねん"
+
+#: ../../../app/lib/classes/class.notification.php:75
+msgid "%u liked your %t %c"
+msgstr "%uさんがあなたの%t%cをいいねしました。"
+
+#: ../../../app/lib/classes/class.notification.php:81
+#, php-format
+msgid "%u is now following you"
+msgstr "%uさんがあなたをフォローしました。"
+
+msgid "A private user"
+msgstr "プライベートユーザ"
 
 #: ../../../app/routes/route.login.php:133
 msgid "Wrong Username/Email password combination"
@@ -4145,6 +4157,12 @@ msgstr "VKクライアントシークレットキー"
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "画像認証を使用するためには、<a href=\"%s\" target=\"_blank\">reCAPTCHA キー</a>が必要です。"
 
+msgid "%s site key"
+msgstr "%s サイトキー"
+
+msgid "%s secret key"
+msgstr "%s シークレットキー"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1974
 msgid "reCAPTCHA public key"
 msgstr "reCAPTCHAの公開鍵(public key)を入力"
@@ -4160,6 +4178,18 @@ msgstr "閾値(失敗)"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1991
 msgid "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA."
 msgstr "何回の失敗でreCAPTCHAを有効にしますか？ゼロ(0)だと常にreCAPTCHAが表示されます。"
+
+msgid "Comments API"
+msgstr "コメントAPI"
+
+msgid "Disqus API works with %s."
+msgstr "%s　でDisqus APIが動作しあｍす。"
+
+msgid "Disqus shortname"
+msgstr "Disqus shortname"
+
+msgid "%s public key"
+msgstr "%s パブリックキー"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1997
 msgid "Comment code"
@@ -4209,6 +4239,12 @@ msgstr "変更を保存"
 #: ../../../app/themes/Peafowl/views/settings.php:477
 msgid "Check the errors to proceed."
 msgstr "次へ進むためにエラーをチェックして下さい。"
+
+msgid "Play GIF"
+msgstr "GIF再生"
+
+msgid "Load full resolution"
+msgstr "最大解像度で表示"
 
 #: ../../../app/themes/Peafowl/views/image.php:57
 msgid "Guest"
@@ -4686,6 +4722,9 @@ msgstr "このシステムで利用可能な更新が存在します。このア
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 msgid "Update now"
 msgstr "今すぐ更新する"
+
+msgid "Your website is running the latest version of %s"
+msgstr "あなたのサイトは、バージョン:%sで最新版です。"
 
 #: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
 msgid "Your website is running the latest version of Chevereto."

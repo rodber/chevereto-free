@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-10-17 20:52+0000',
-  'PO-Revision-Date' => '2016-10-17 20:52+0000',
+  'POT-Creation-Date' => '2016-04-16 16:12+0000',
+  'PO-Revision-Date' => '2016-04-16 16:12+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'id',
@@ -90,26 +90,23 @@ $translation_table = [
 	"%s's images" => [
 		0 => "%s foto",
 	],
-	"Note: This content is private but anyone with the link will be able to see this." => [
-		0 => "Catatan: Konten ini bersifat pribadi namun siapapun yang memiliki tautan dapat melihat ini.",
-	],
-	"Note: This content is private. Change privacy to \"public\" to share." => [
-		0 => "Catatan: Ini konten pribadi. Ubah privasi ke \"Umum\" untuk membagikan.",
-	],
-	"After %n %t" => [
-		0 => "Setelah %n %t",
-	],
 	"Don't autodelete" => [
 		0 => "Jangan hapus otomatis",
 	],
-	"minute" => [
-		0 => "menit",
+	"After %s minutes" => [
+		0 => "Setelah %s menit",
 	],
-	"hour" => [
-		0 => "jam",
+	"After %s hour" => [
+		0 => "Setelah %s jam",
 	],
-	"day" => [
-		0 => "hari",
+	"After %s hours" => [
+		0 => "Setelah %s jam",
+	],
+	"After %s day" => [
+		0 => "Setelah %s hari",
+	],
+	"After %s days" => [
+		0 => "Setelah %s hari",
 	],
 	"Duplicated upload" => [
 		0 => "Gandakan unggahan",
@@ -171,12 +168,6 @@ $translation_table = [
 	"used" => [
 		0 => "digunakan",
 	],
-	"Private profile" => [
-		0 => "Profil pribadi",
-	],
-	"Private" => [
-		0 => "Pribadi",
-	],
 	"year" => [
 		0 => "tahun",
 	],
@@ -185,6 +176,15 @@ $translation_table = [
 	],
 	"week" => [
 		0 => "minggu",
+	],
+	"day" => [
+		0 => "hari",
+	],
+	"hour" => [
+		0 => "jam",
+	],
+	"minute" => [
+		0 => "menit",
 	],
 	"second" => [
 		0 => "detik",
@@ -198,12 +198,6 @@ $translation_table = [
 	"System notification" => [
 		0 => "Notifikasi sistem",
 	],
-	"Dashboard" => [
-		0 => "Beranda",
-	],
-	"There is an update available for your system. Go to %s to download and install this update." => [
-		0 => "Terdapat pembaruan untuk sistem anda. Pergi ke %s untuk mengunduh dan memasang pembaruan ini.",
-	],
 	"System database is outdated. You need to run the <a href=\"%s\">update</a> tool." => [
 		0 => "Sistem database sudah kadaluarsa. Anda perlu untuk menjalankan menu <a href=\"%s\">update</a>",
 	],
@@ -215,21 +209,6 @@ $translation_table = [
 	],
 	"You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this." => [
 		0 => "Anda belum mengubah pengaturan email bawaan. Pergi ke <a href='%s'>Pengaturan Email</a> untuk memperbaiki hal ini.",
-	],
-	"There is an update available for your Chevereto based website." => [
-		0 => "Terdapat pembaruan untuk website berbasis Chevereto anda.",
-	],
-	"The release notes for this update are:" => [
-		0 => "Catatan rilis untuk pembaruan ini diantaranya:",
-	],
-	"admin dashboard" => [
-		0 => "dasbor admin",
-	],
-	"You can apply this update directly from your %a or download it from %s and then manually install it." => [
-		0 => "Anda dapat menerapkan pembaruan ini secara langsung dari %a anda atau mengunduhnya dari %s dan kemudian secara manual memasangnya.",
-	],
-	"Chevereto update available (v%s)" => [
-		0 => "Pembaruan Chevereto tersedia (v%s)",
 	],
 	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy." => [
 		0 => "Kami menggunakan kuki sendiri dan pihak ke tiga untuk meningkatkan pengalaman pencarian dan layanan kami. Jika anda melanjutkan menggunakan website kami, berarti anda menyetujui kebijakan kuki ini.",
@@ -245,15 +224,6 @@ $translation_table = [
 	],
 	"That page doesn't exist" => [
 		0 => "Halaman tersebut tidak tersedia.",
-	],
-	"Most recent" => [
-		0 => "Terbaru",
-	],
-	"Oldest" => [
-		0 => "Terlama",
-	],
-	"Albums" => [
-		0 => "Album",
 	],
 	"Forgot password?" => [
 		0 => "Lupa password anda?",
@@ -309,8 +279,11 @@ $translation_table = [
 	"Check the errors in the form to continue." => [
 		0 => "Periksa kesalahan pada kotak isian untuk melanjutkan",
 	],
-	"Password required" => [
-		0 => "Kata sandi diperlukan",
+	"Most recent" => [
+		0 => "Terbaru",
+	],
+	"Oldest" => [
+		0 => "Terlama",
 	],
 	"Most viewed" => [
 		0 => "Paling dilihat",
@@ -320,9 +293,6 @@ $translation_table = [
 	],
 	"Share" => [
 		0 => "Bagikan",
-	],
-	"Embed codes" => [
-		0 => "Kode cantumkan",
 	],
 	"Full info" => [
 		0 => "Informasi lengkap",
@@ -335,6 +305,9 @@ $translation_table = [
 	],
 	"Images" => [
 		0 => "Foto",
+	],
+	"Albums" => [
+		0 => "Album",
 	],
 	"Users" => [
 		0 => "Pengguna",
@@ -350,12 +323,6 @@ $translation_table = [
 	],
 	"check for updates" => [
 		0 => "Cek pembaharuan",
-	],
-	"Chevereto support" => [
-		0 => "Dukungan Chevereto",
-	],
-	"Need help? Go to %s and you will get help quickly." => [
-		0 => "Butuh bantuan? Pergi ke %s dan anda akan mendapatkan bantuan segera.",
 	],
 	"PHP version" => [
 		0 => "Versi PHP",
@@ -379,7 +346,7 @@ $translation_table = [
 		0 => "Diaktifkan",
 	],
 	"Disabled" => [
-		0 => "Dinonaktifkan",
+		0 => "Dipasifkan",
 	],
 	"Max. upload size" => [
 		0 => "Ukuran maks. pengunggahan",
@@ -395,18 +362,6 @@ $translation_table = [
 	],
 	"Memory limit" => [
 		0 => "Batas memori",
-	],
-	"Links" => [
-		0 => "Tautan",
-	],
-	"Documentation" => [
-		0 => "Dokumentasi",
-	],
-	"Request new features" => [
-		0 => "Minta fitur baru",
-	],
-	"Blog" => [
-		0 => "Blog",
 	],
 	"Website" => [
 		0 => "Website",
@@ -468,12 +423,6 @@ $translation_table = [
 	"Tools" => [
 		0 => "Alat-alat",
 	],
-	"Can't delete all homepage cover images" => [
-		0 => "Tidak dapat menghapus semua gambar sampul halaman muka.",
-	],
-	"Homepage cover image deleted" => [
-		0 => "Gambar halaman muka dihapus",
-	],
 	"Local" => [
 		0 => "Lokal",
 	],
@@ -498,11 +447,14 @@ $translation_table = [
 	"The page has been deleted." => [
 		0 => "Halaman telah dihapus.",
 	],
-	"Before main title (%s)" => [
-		0 => "Sebelum judul utama (%s)",
+	"Before cover (homepage)" => [
+		0 => "Sampul sebelumnya (halaman muka)",
 	],
-	"After cover (%s)" => [
-		0 => "Setelah sampul (%s)",
+	"After cover (homepage)" => [
+		0 => "Setelah sampul(halaman depan)",
+	],
+	"After listing (homepage)" => [
+		0 => "Setelah pendaftaran (beranda)",
 	],
 	"Before pagination" => [
 		0 => "Sebelum nomor halaman",
@@ -684,9 +636,6 @@ $translation_table = [
 	"Invalid user minimum age" => [
 		0 => "Usia minimal pengguna tidak valid",
 	],
-	"Only alphanumeric, hyphen and underscore characters are allowed" => [
-		0 => "Hanya karakter alfanumerik, tanda hubung dan garis bawah yang diperbolehkan",
-	],
 	"Invalid upload image path" => [
 		0 => "Jalur upload gambar tidak valid",
 	],
@@ -717,6 +666,9 @@ $translation_table = [
 	"Top users" => [
 		0 => "Pengguna teratas",
 	],
+	"Dashboard" => [
+		0 => "Beranda",
+	],
 	"Explore" => [
 		0 => "Jelajahi",
 	],
@@ -725,6 +677,9 @@ $translation_table = [
 	],
 	"About" => [
 		0 => "Tentang",
+	],
+	"Embed codes" => [
+		0 => "Kode cantumkan",
 	],
 	"Image ID" => [
 		0 => "ID Gambar",
@@ -1200,6 +1155,9 @@ $translation_table = [
 	"album" => [
 		0 => "album",
 	],
+	"Links" => [
+		0 => "Tautan",
+	],
 	"Viewer links" => [
 		0 => "Penonton tautan",
 	],
@@ -1284,8 +1242,8 @@ $translation_table = [
 	"Brief description of this album" => [
 		0 => "Deskripsi singkat album ini",
 	],
-	"Album privacy" => [
-		0 => "Privasi album",
+	"Album Privacy" => [
+		0 => "Privasi Album",
 	],
 	"Who can view this content" => [
 		0 => "Siapa yang bisa melihat konten ini",
@@ -1298,12 +1256,6 @@ $translation_table = [
 	],
 	"Private (anyone with the link)" => [
 		0 => "Pribadi (siapapun yang memiliki tautan)",
-	],
-	"Private (password protected)" => [
-		0 => "Privat (dilindungi kata sandi)",
-	],
-	"Album password" => [
-		0 => "Kata sandi album",
 	],
 	"No category" => [
 		0 => "Tidak ada kategori",
@@ -1353,12 +1305,6 @@ $translation_table = [
 	"Album" => [
 		0 => "Album",
 	],
-	"link" => [
-		0 => "tautan",
-	],
-	"password" => [
-		0 => "kata sandi",
-	],
 	"private" => [
 		0 => "pribadi",
 	],
@@ -1403,9 +1349,6 @@ $translation_table = [
 	],
 	"Google Cloud JSON key" => [
 		0 => "Kunci JSON Google Cloud",
-	],
-	"Service name" => [
-		0 => "Nama layanan",
 	],
 	"Identity URL" => [
 		0 => "Identitas URL",
@@ -1470,6 +1413,12 @@ $translation_table = [
 	"Load more" => [
 		0 => "Muat lebih banyak",
 	],
+	"Previous" => [
+		0 => "Sebelumnya",
+	],
+	"Next" => [
+		0 => "Berikutnya",
+	],
 	"Select all" => [
 		0 => "Pilih Semua",
 	],
@@ -1496,6 +1445,9 @@ $translation_table = [
 	],
 	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
 		0 => "Untuk menggunakan semua fitur dari situs ini anda harus masuk. Jika tidak memiliki akun anda dapat <a href=\"%s\">mendaftar</a> sekarang.",
+	],
+	"Note: This content is private. Change privacy to \"public\" to share." => [
+		0 => "Catatan: Ini konten pribadi. Ubah privasi ke \"Umum\" untuk membagikan.",
 	],
 	"There's nothing to show here." => [
 		0 => "Tidak ada yang ditampilkan disini.",
@@ -1533,8 +1485,8 @@ $translation_table = [
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "Apakah anda benar-benar ingin menghapus semua konten yang dipilih? Hal ini tidak dapat dibatalkan",
 	],
-	"Uploaded by guest" => [
-		0 => "Diunggah oleh pengunjung",
+	"Uploaded by guest to Public" => [
+		0 => "Diunggah oleh pengunjung ke Publik",
 	],
 	"From %s" => [
 		0 => "Dari %s",
@@ -1671,17 +1623,8 @@ $translation_table = [
 	"This setting is always diabled when using personal website mode." => [
 		0 => "Pengaturan ini akan selalu dinonaktifkan ketika menggunakan mode website pribadi.",
 	],
-	"documentation" => [
-		0 => "dokumentasi",
-	],
-	"Learn more about %s at our %d." => [
-		0 => "Pelajari lebih lanjut tentang %s di %d kami.",
-	],
 	"Add category" => [
 		0 => "Tambah kategori",
-	],
-	"Add IP ban" => [
-		0 => "Tambah IP di blokir",
 	],
 	"Add storage" => [
 		0 => "Tambahkan penyimpanan",
@@ -1707,191 +1650,14 @@ $translation_table = [
 	"Select region" => [
 		0 => "Pilih region",
 	],
-	"Allows to search images, albums and users based on a given search query." => [
-		0 => "Bolehkan pencarian gambar, album dan pengguna berdasarkan permintaan pencarian yang diberikan.",
-	],
 	"Enables to browse images randomly." => [
 		0 => "Aktifkan mencari gambar secara acak.",
 	],
 	"Likes" => [
 		0 => "Suka",
 	],
-	"Allows users to like content and populate \"Most liked\" listings." => [
-		0 => "Memungkinkan pengguna menyukai konten dan mengisi daftar \"Paling disukai\".",
-	],
-	"Followers allows users to follow each other." => [
-		0 => "Pengikut membolehkan pengguna untuk saling mengikuti.",
-	],
 	"User ID" => [
 		0 => "ID pengguna",
-	],
-	"Your user id is: %s" => [
-		0 => "Id pengguna anda adalah: %s",
-	],
-	"Personal mode routing" => [
-		0 => "Pengarahan mode personal",
-	],
-	"Website privacy mode" => [
-		0 => "Mode privasi website",
-	],
-	"Private mode will make the website only available for registered users." => [
-		0 => "Mode pribadi akan menjadikan website hanya tersedia untuk pengguna terdaftar.",
-	],
-	"Content privacy mode" => [
-		0 => "Mode privasi konten",
-	],
-	"Default" => [
-		0 => "Default",
-	],
-	"Force private (self)" => [
-		0 => "Paksa pribadi (sendiri)",
-	],
-	"Force private (anyone with the link)" => [
-		0 => "Paksa pribadi (semua orang dengan tautan)",
-	],
-	"Page title" => [
-		0 => "Judul halaman",
-	],
-	"Page status" => [
-		0 => "Status halaman",
-	],
-	"Active page" => [
-		0 => "Halaman aktif",
-	],
-	"Inactive page (%s)" => [
-		0 => "Halaman tidak aktif (%s)",
-	],
-	"Only active pages will be accessible." => [
-		0 => "Hanya halaman aktif yang dapat diakses.",
-	],
-	"Type" => [
-		0 => "Tipe",
-	],
-	"Page visibility" => [
-		0 => "Keterlihatan halaman",
-	],
-	"Visible page" => [
-		0 => "Halaman terlihat",
-	],
-	"Hidden page" => [
-		0 => "Halaman tersembunyi",
-	],
-	"Hidden pages won't be show in system menus, but anyone can access to it with the link." => [
-		0 => "Halaman tersembunyi tidak akan ditampilkan di menu sistem, tetapi semua orang dapat mengakses nya melalui tautan.",
-	],
-	"Only alphanumerics, hyphens and forward slash" => [
-		0 => "Hanya alfanumerik, tanda hubung dan garis miring",
-	],
-	"File path" => [
-		0 => "Jalur berkas",
-	],
-	"A %f file relative to %s" => [
-		0 => "Sebuah berkas %f berhubungan dengan %s",
-	],
-	"Meta keywords" => [
-		0 => "Kata kunci meta",
-	],
-	"Meta description" => [
-		0 => "Deskripsi meta",
-	],
-	"Source code" => [
-		0 => "Kode sumber",
-	],
-	"No write permission in %s path you will need to add this file using an external editor." => [
-		0 => "Tidak ada izin menulis di jalur %s anda perlu menambahkan berkas ini menggunakan editor eksternal.",
-	],
-	"No write permission in %s you will need to edit the contents of this file using an external editor." => [
-		0 => "Tidak ada izin menulis di jalur %s anda perlu mengedit konten dari berkas ini menggunakan editor eksternal.",
-	],
-	"Taken from: %s" => [
-		0 => "Diambil dari: %s",
-	],
-	"Link URL" => [
-		0 => "Tautan URL",
-	],
-	"Select %s to open the page or link in a new window." => [
-		0 => "Pilih %s untuk membuka halaman atau tautan di jendela baru.",
-	],
-	"Only alphanumerics, hyphens and whitespaces" => [
-		0 => "Hanya alfanumerik, tanda hubung dan spasi",
-	],
-	"HTML &lt;a&gt; %s attribute" => [
-		0 => "Atribut HTML &lt;a&gt; %s",
-	],
-	"Link icon" => [
-		0 => "Ikon tautan",
-	],
-	"Check the <a %s>icon reference</a> for the complete list of supported icons." => [
-		0 => "Periksa <a %s>referensi ikon</a> untuk daftar lengkap ikon yang didukung.",
-	],
-	"Sort order display" => [
-		0 => "Urutan tampilan",
-	],
-	"pages" => [
-		0 => "halaman",
-	],
-	"Enable uploads" => [
-		0 => "Aktifkan upload",
-	],
-	"Enable this if you want to allow image uploads. This setting doesn't affect administrators." => [
-		0 => "Aktifkan ini jika anda ingin memperbolehkan upload gambar. Pengaturan ini tidak berdampak pada administrator",
-	],
-	"Guest uploads" => [
-		0 => "Unggahan pengunjung",
-	],
-	"Enable this if you want to allow non registered users to upload." => [
-		0 => "Aktifkan ini jika anda mengizinkan pengguna tidak terdaftar menunggah.",
-	],
-	"Enable expirable uploads" => [
-		0 => "Aktifkan upload berkadaluarsa",
-	],
-	"Image Exif data" => [
-		0 => "Data Exif gambar",
-	],
-	"Keep" => [
-		0 => "Biarkan",
-	],
-	"Image Exif data (user setting)" => [
-		0 => "Data Exif gambar (pengaturan pengguna)",
-	],
-	"Enable this if you want to allow each user to configure how image Exif data will be handled." => [
-		0 => "Aktifkan ini jika anda ingin membolehkan setiap pengguna mengatur bagaimana data Exif gambar akan ditangani.",
-	],
-	"Max. filesize" => [
-		0 => "Ukuran berkas Maks.",
-	],
-	"Max. allowed filesize. (Max allowed by server is %s)" => [
-		0 => "Ukuran berkas Maks. (Maksimal yang dibolehkan server ialah %s)",
-	],
-	"Image path" => [
-		0 => "Jalur gambar",
-	],
-	"Storage mode" => [
-		0 => "Mode penyimpanan",
-	],
-	"Direct" => [
-		0 => "Langsung",
-	],
-	"File naming method" => [
-		0 => "Metode penamaan berkas",
-	],
-	"Original" => [
-		0 => "Asli",
-	],
-	"Mix original + random" => [
-		0 => "Campur asli + acak",
-	],
-	"\"Original\" will try to keep the image source name while \"Random\" will generate a random name. \"ID\" will name the image just like the image ID." => [
-		0 => "\"Asli\" akan mencoba menjaga nama sumber gambar sedangkan \"Acak\" akan menghasilkan sebuah nama acak. \"ID\" akan menamakan gambar seperti halnya ID gambar.",
-	],
-	"Watermarks" => [
-		0 => "Tanda air",
-	],
-	"Enable this to put a logo or anything you want in image uploads." => [
-		0 => "Aktifkan ini untuk menempatkan sebuah logo atau apapun yang anda inginkan di upload gambar.",
-	],
-	"Warning: Can't write in %s" => [
-		0 => "Peringatan: Tidak dapat menulis di %s",
 	],
 	"Watermark image" => [
 		0 => "Gambar stempel",
@@ -1932,36 +1698,6 @@ $translation_table = [
 	"Watermark margin" => [
 		0 => "Jarak stempel",
 	],
-	"Expires" => [
-		0 => "Kadaluarsa",
-	],
-	"Enable signups" => [
-		0 => "Aktifkan mendaftar",
-	],
-	"Enable this if you want to allow users to signup." => [
-		0 => "Aktifkan ini jika anda ingin membolehkan pengguna untuk mendaftar.",
-	],
-	"Minimum age required" => [
-		0 => "Usia minimum dibutuhkan",
-	],
-	"Empty" => [
-		0 => "Kosong",
-	],
-	"Leave it empty to don't require a minimum age to use the website." => [
-		0 => "Biarkan kosong jika anda tidak memerlukan usia minimum untuk bisa menggunakan website.",
-	],
-	"Require email confirmation" => [
-		0 => "Konfirmasi email dibutuhkan",
-	],
-	"Enable this if users must validate their email address on sign up." => [
-		0 => "Aktifkan ini jika pengguna harus memvalidasi alamat email mereka untuk mendaftar.",
-	],
-	"Shows a consent screen before accessing the website. Useful for adult content websites where minors shouldn't be allowed." => [
-		0 => "Menampilkan sebuah layar persetujuan sebelum mengakses website. Sangat berguna untuk website konten dewasa dimana anak dibawah umur harusnya tidak diperbolehkan.",
-	],
-	"Enable consent screen" => [
-		0 => "Aktifkan layar persetujuan",
-	],
 	"Notify to email" => [
 		0 => "Beritahu lewat surel",
 	],
@@ -1982,207 +1718,6 @@ $translation_table = [
 	],
 	"Show not safe content in listings" => [
 		0 => "Perlihatkan isi yang tidak aman",
-	],
-	"Phone" => [
-		0 => "Selular",
-	],
-	"Phablet" => [
-		0 => "Phapblet",
-	],
-	"Tablet" => [
-		0 => "Tablet",
-	],
-	"Laptop" => [
-		0 => "Laptop",
-	],
-	"Desktop" => [
-		0 => "Desktop",
-	],
-	"Put your themes in the %s folder" => [
-		0 => "Tempatkan tema anda di folder %s",
-	],
-	"Tone" => [
-		0 => "Suasana",
-	],
-	"Light" => [
-		0 => "Menyala",
-	],
-	"Logo height" => [
-		0 => "Tinggi logo",
-	],
-	"Favicon image" => [
-		0 => "Gambar favicon",
-	],
-	"Favicon image. Image must have same width and height." => [
-		0 => "Gambar favicon. Gambar harus memiliki lebar dan tinggi yang sama.",
-	],
-	"Enable download button" => [
-		0 => "Aktifkan tombol unduh",
-	],
-	"Enable this if you want to show the image download button." => [
-		0 => "Aktifkan ini jika anda ingin menampilkan gambar dengan tombol unduh.",
-	],
-	"Enable right click on image" => [
-		0 => "Aktifkan klik kanan pada gambar",
-	],
-	"Enable this if you want to allow right click on image viewer page." => [
-		0 => "Aktifkan ini jika anda ingin membolehkan klik kanan pada halaman penampil gambar.",
-	],
-	"Enable show Exif data" => [
-		0 => "Aktifkan untuk menampilkan data Exif",
-	],
-	"Enable this if you want to show image Exif data." => [
-		0 => "Aktifkan ini jika anda ingin menampilkan data Exif gambar.",
-	],
-	"Enable social share" => [
-		0 => "Aktifkan berbagi sosial",
-	],
-	"Enable this if you want to show social network buttons to share content." => [
-		0 => "Aktifkan ini jika anda ingin menampilkan tombol jaringan sosial untuk membagikan konten.",
-	],
-	"Enable embed codes (content)" => [
-		0 => "Aktifkan kode sematkan (konten)",
-	],
-	"Enable this if you want to show embed codes for the content." => [
-		0 => "Aktifkan ini jika anda ingin menampilkan kode sematkan untuk konten.",
-	],
-	"Not safe content checkbox in uploader" => [
-		0 => "Kotak centang konten tidak aman di pengunggah",
-	],
-	"Custom CSS code" => [
-		0 => "Kode CSS kustom",
-	],
-	"Custom JS code" => [
-		0 => "Kode JS kustom",
-	],
-	"Style" => [
-		0 => "Gaya",
-	],
-	"Cover image" => [
-		0 => "Gambar sampul",
-	],
-	"Do you really want to delete this image? This can't be undone." => [
-		0 => "Apakah anda yakin ingin menghapus gambar ini? Hal ini tidak dapat dimundurkan.",
-	],
-	"Delete image" => [
-		0 => "Menghapus gambar",
-	],
-	"Paragraph" => [
-		0 => "Paragraf",
-	],
-	"Open URL" => [
-		0 => "Buka URL",
-	],
-	"User IDs" => [
-		0 => "ID Pengguna",
-	],
-	"Minify code" => [
-		0 => "Sederhanakan koed",
-	],
-	"Maintenance" => [
-		0 => "Perawatan",
-	],
-	"When enabled the website will show a maintenance message. This setting doesn't affect administrators." => [
-		0 => "Ketika anda mengaktifkan website akan muncul sebuah pesan perawatan. Pengaturan ini tidak berpengaruh terhadap administrator.",
-	],
-	"None" => [
-		0 => "Tidaka ada",
-	],
-	"Default language" => [
-		0 => "Bahasa default",
-	],
-	"Auto language" => [
-		0 => "Bahasa otomatis",
-	],
-	"Language chooser" => [
-		0 => "Pemilih bahasa",
-	],
-	"Enable this if you want to allow language selection." => [
-		0 => "Mengatifkan ini jika anda ingin memperbolehkan pemilihan bahasa.",
-	],
-	"Enabled languages" => [
-		0 => "Bahasa diaktifkan",
-	],
-	"Unchecked languages won't be used in your website." => [
-		0 => "Bahasa yang tidak dicentang tidak akan digunakan di website anda.",
-	],
-	"Toggle this to enable or disable this storage" => [
-		0 => "Alihkan ini jika ingin mengaktifkan atau menonaktifkan penyimpanan ini",
-	],
-	"Quota" => [
-		0 => "Kuota",
-	],
-	"Active" => [
-		0 => "Aktif",
-	],
-	"Storage method" => [
-		0 => "Metode penyimpanan",
-	],
-	"Local storage is used by default or when no external storage is active." => [
-		0 => "Penyimpanan lokal akan digunakan secara default atau ketika tidak ada penyimpanan eksternal yang aktif.",
-	],
-	"If you need help check the <a %s>storage documentation</a>." => [
-		0 => "Jika anda memerlukan bantuan periksa <a %s>dokumentasi penyimpanan</a>.",
-	],
-	"Edit storage" => [
-		0 => "Edit penyimpanan",
-	],
-	"From name" => [
-		0 => "Nama dari",
-	],
-	"Sender name for emails sent to users." => [
-		0 => "Nama pengirim untuk email yang dikirim kepada pengguna.",
-	],
-	"Email mode" => [
-		0 => "Mode email",
-	],
-	"How to send emails? SMTP recommended." => [
-		0 => "Bagaimana cara pengiriman email? SMTP direkomendasikan.",
-	],
-	"SMTP server and port" => [
-		0 => "Server dan port SMTP",
-	],
-	"SMTP server" => [
-		0 => "Server SMTP",
-	],
-	"SMTP username" => [
-		0 => "Username SMTP",
-	],
-	"SMTP password" => [
-		0 => "Password SMTP",
-	],
-	"SMTP security" => [
-		0 => "Keamanan SMTP",
-	],
-	"Unsecured" => [
-		0 => "Tidak aman",
-	],
-	"Send test email" => [
-		0 => "Kirim email percobaan",
-	],
-	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
-		0 => "Gunakan ini untuk memeriksa apakan email sedang dikirimkan. Kami merekomendasikan anda untuk menggunakan %s.",
-	],
-	"You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this." => [
-		0 => "Anda memerlukan sebuah <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> untuk hal ini.",
-	],
-	"You need a <a href=\"https://cloud.google.com/console\" target=\"_blank\">Google app</a> for this." => [
-		0 => "Anda membutuhkan sebuah<a href=\"https://cloud.google.com/console\" target=\"_blank\">Google app</a> untuk hal ini.",
-	],
-	"Google client id" => [
-		0 => "Id klien Google",
-	],
-	"Google client secret" => [
-		0 => "Rahasia klien Google",
-	],
-	"You need a <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> for this." => [
-		0 => "Anda membutuhkan sebuah <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> untuk hal ini.",
-	],
-	"VK client id" => [
-		0 => "id klien VK",
-	],
-	"VK client secret" => [
-		0 => "rahasia klien VK",
 	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Anda memerlukan sebuah <a href=\"%s\" target=\"_blank\"> kunci reCAPTCHA</a> untuk hal ini.",
@@ -2235,11 +1770,11 @@ $translation_table = [
 	"Guest" => [
 		0 => "Tamu",
 	],
-	"You like this" => [
-		0 => "Anda menyukai ini",
+	"Do you really want to delete this image? This can't be undone." => [
+		0 => "Apakah anda yakin ingin menghapus gambar ini? Hal ini tidak dapat dimundurkan.",
 	],
-	"Like" => [
-		0 => "Suka",
+	"Delete image" => [
+		0 => "Menghapus gambar",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "Ditambahkan ke %a dan dikategorikan kedalam %c",
@@ -2301,9 +1836,6 @@ $translation_table = [
 	"You either don't have permission to access this page or the link has expired." => [
 		0 => "Anda tidak diperkenankan memasuki halaman ini atau tautan telah tidak berlaku.",
 	],
-	"Search results" => [
-		0 => "Hasil pencarian",
-	],
 	"Do you really want to delete this user? This can't be undone." => [
 		0 => "Apakah anda yakin akan menghapus pengguna ini? Hal ini tidak dapat dimundurkan.",
 	],
@@ -2317,7 +1849,7 @@ $translation_table = [
 		0 => "Status",
 	],
 	"Valid" => [
-		0 => "Sah",
+		0 => "Benar",
 	],
 	"Banned" => [
 		0 => "Diblokir",
@@ -2448,11 +1980,26 @@ $translation_table = [
 	"Edit profile" => [
 		0 => "Ubah profil",
 	],
-	"Follower" => [
-		0 => "Pengikut",
+	"Message sent" => [
+		0 => "Pesan terkirim",
 	],
-	"Follow" => [
-		0 => "Ikuti",
+	"Contact" => [
+		0 => "Kontak",
+	],
+	"We will be in touch soon." => [
+		0 => "Akan kami hubungi segera.",
+	],
+	"If you want to send a message fill the form below." => [
+		0 => "Jika anda ingin mengirimkan sebuah pesan, isilah formulir dibawah ini.",
+	],
+	"Your name" => [
+		0 => "Nama anda",
+	],
+	"Subject" => [
+		0 => "Judul",
+	],
+	"Send message" => [
+		0 => "Kirim pesan",
 	],
 	"Installed version is v%s" => [
 		0 => "Versi terpasang ialah v%s",
@@ -2525,6 +2072,9 @@ $translation_table = [
 	],
 	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
 		0 => "Terdapat pembaruan untuk sistem anda. Anda dapat mengunduh otomatis dan memasang pembaruan ini atau pergi ke %s untuk melanjutkan mengunduh file.",
+	],
+	"The release notes for this update are:" => [
+		0 => "Catatan rilis untuk pembaruan ini diantaranya:",
 	],
 	"Update now" => [
 		0 => "Perbarui sekarang",

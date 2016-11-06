@@ -175,6 +175,7 @@ $route = function($handler) {
 				];
 				
 				$chevereto_urls = [
+					_s('Support')				=> 'https://chevereto.com/support',
 					_s('Documentation')			=> 'https://chevereto.com/docs',
 					_s('Changelog')				=> 'https://chevereto.com/changelog',
 					_s('Request new features')	=> 'https://chevereto.com/request-new-features',
@@ -188,7 +189,7 @@ $route = function($handler) {
 					$chevereto_links[] = '<a href="'.$v.'" target="_blank">'.$k.'</a>';
 				}
 				
-				$system_values['links']['content'] = implode(' – ', $chevereto_links);
+				$system_values['links']['content'] = implode(' · ', $chevereto_links);
 				
 				$handler::setVar('system_values', $system_values);
 				$handler::setVar('totals', $totals);
@@ -515,7 +516,7 @@ $route = function($handler) {
 							],
 						'theme_logo_height' =>
 							[
-								'validate'	=> G\check_value($_POST['theme_logo_height']) ? filter_var($_POST['theme_logo_height'], FILTER_VALIDATE_INT) : true,
+								'validate'	=> !empty($_POST['theme_logo_height']) ? filter_var($_POST['theme_logo_height'], FILTER_VALIDATE_INT) : TRUE,
 								'error_msg'	=> _s('Invalid value')
 							],
 						'theme_tone' =>
@@ -525,7 +526,7 @@ $route = function($handler) {
 							],
 						'theme_main_color' =>
 							[
-								'validate'	=> G\check_value($_POST['theme_main_color']) ? G\is_valid_hex_color($_POST['theme_main_color']) : true,
+								'validate'	=> G\check_value($_POST['theme_main_color']) ? G\is_valid_hex_color($_POST['theme_main_color']) : TRUE,
 								'error_msg'	=> _s('Invalid theme main color')
 							],
 						'theme_top_bar_color' =>
@@ -768,7 +769,7 @@ $route = function($handler) {
 					}
 					
 					// Handle disabled languages
-					if($_POST['languages_enable'] && is_array($_POST['image_format_enable'])) {
+					if($_POST['languages_enable'] && is_array($_POST['languages_enable'])) {
 						
 						// Push default language
 						if(!in_array($_POST['default_language'], $_POST['languages_enable'])) {
@@ -849,6 +850,7 @@ $route = function($handler) {
 								$mail = new Mailer(true);
 								$mail->SMTPAuth = true;
 								$mail->SMTPSecure = $_POST['email_smtp_server_security'];
+								$mail->SMTPAutoTLS = in_array($_POST['email_smtp_server_security'], ['ssl', 'tls']);
 								$mail->Username = $_POST['email_smtp_server_username'];
 								$mail->Password = $_POST['email_smtp_server_password'];
 								$mail->Host = $_POST['email_smtp_server'];
@@ -1037,7 +1039,7 @@ $route = function($handler) {
 							$db->query('UPDATE ' . CHV\DB::getTable('settings') . ' SET setting_value = :value WHERE setting_name = :name');
 							foreach($update_settings as $k => $v) {
 								$db->bind(':name', $v['name']);
-								$db->bind(':value', $v['value']);
+								$db->bind(':value', $v['value'] ?: NULL);
 								$db->exec();
 							}
 							if($db->endTransaction()) {

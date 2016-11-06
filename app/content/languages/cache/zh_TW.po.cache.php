@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-10-17 20:52+0000',
-  'PO-Revision-Date' => '2016-10-17 20:52+0000',
+  'POT-Creation-Date' => '2016-11-01 14:37+0000',
+  'PO-Revision-Date' => '2016-11-01 14:37+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'zh_TW',
@@ -141,12 +141,6 @@ $translation_table = [
 	"image" => [
 		0 => "圖片",
 	],
-	"%u liked your %t %c" => [
-		0 => "%u 喜歡你的 %t %c",
-	],
-	"%u is now following you" => [
-		0 => "%u 關註了你",
-	],
 	"Can't create %s destination dir" => [
 		0 => "無法創建 %s 目標目錄",
 	],
@@ -252,15 +246,6 @@ $translation_table = [
 	"That page doesn't exist" => [
 		0 => "該網頁不存在",
 	],
-	"Most recent" => [
-		0 => "最新的",
-	],
-	"Oldest" => [
-		0 => "最舊的",
-	],
-	"Albums" => [
-		0 => "相簿",
-	],
 	"Forgot password?" => [
 		0 => "忘記密碼?",
 	],
@@ -318,6 +303,12 @@ $translation_table = [
 	"Password required" => [
 		0 => "需要密碼",
 	],
+	"Most recent" => [
+		0 => "最新的",
+	],
+	"Oldest" => [
+		0 => "最舊的",
+	],
 	"Most viewed" => [
 		0 => "最熱門的",
 	],
@@ -342,6 +333,9 @@ $translation_table = [
 	"Images" => [
 		0 => "圖片",
 	],
+	"Albums" => [
+		0 => "相簿",
+	],
 	"Users" => [
 		0 => "使用者",
 	],
@@ -356,6 +350,9 @@ $translation_table = [
 	],
 	"check for updates" => [
 		0 => "檢查更新",
+	],
+	"Support" => [
+		0 => "支援",
 	],
 	"Chevereto support" => [
 		0 => "Chevereto支援",
@@ -407,6 +404,15 @@ $translation_table = [
 	],
 	"Documentation" => [
 		0 => "文件",
+	],
+	"Changelog" => [
+		0 => "改版日誌",
+	],
+	"Request new features" => [
+		0 => "請求新功能",
+	],
+	"Bug tracking" => [
+		0 => "錯誤跟踪",
 	],
 	"Blog" => [
 		0 => "部落格",
@@ -507,6 +513,18 @@ $translation_table = [
 	"homepage" => [
 		0 => "首頁",
 	],
+	"Before main title (%s)" => [
+		0 => "在主標題前 %s",
+	],
+	"After call to action (%s)" => [
+		0 => "在按鈕後 %s",
+	],
+	"After cover (%s)" => [
+		0 => "在封面後 %s",
+	],
+	"After listing (%s)" => [
+		0 => "在列表後 %s",
+	],
 	"Before pagination" => [
 		0 => "分頁前",
 	],
@@ -571,7 +589,7 @@ $translation_table = [
 		0 => "頭後（探索頁面）",
 	],
 	"NSFW" => [
-		0 => "NSFW",
+		0 => "非闔家皆宜",
 	],
 	"Invalid website name" => [
 		0 => "無效的網站名稱",
@@ -829,7 +847,7 @@ $translation_table = [
 		0 => "這只是壹個測試",
 	],
 	"Test email sent to %s." => [
-		0 => "Test email sent to %s.",
+		0 => "測試電子郵件發送到 %s.",
 	],
 	"User %s followed" => [
 		0 => "使用者 %s 已跟隨",
@@ -842,6 +860,15 @@ $translation_table = [
 	],
 	"Content disliked" => [
 		0 => "不喜歡的內容",
+	],
+	"%u liked your %t %c" => [
+		0 => "%u 喜歡你的 %t %c",
+	],
+	"%u is now following you" => [
+		0 => "%u 關註了你",
+	],
+	"A private user" => [
+		0 => "私人用戶",
 	],
 	"Wrong Username/Email password combination" => [
 		0 => "錯誤的用戶名或密碼",
@@ -1123,10 +1150,10 @@ $translation_table = [
 		0 => "取消",
 	],
 	"Mark this if the upload is not family safe" => [
-		0 => "標記這個上傳內容為不健康",
+		0 => "標記這個上傳內容為非闔家皆宜",
 	],
 	"Not family safe upload" => [
-		0 => "不健康的上傳",
+		0 => "非闔家皆宜的上傳",
 	],
 	"Uploading" => [
 		0 => "上傳中",
@@ -1183,7 +1210,7 @@ $translation_table = [
 		0 => "自動刪除圖像",
 	],
 	"Mark this if the image is not family safe" => [
-		0 => "標記這個圖片為不健康內容",
+		0 => "標記這個圖片為非闔家皆宜內容",
 	],
 	"Flag as unsafe" => [
 		0 => "標記為不安全",
@@ -1722,6 +1749,9 @@ $translation_table = [
 	"documentation" => [
 		0 => "文件",
 	],
+	"Learn more about %s at our %d." => [
+		0 => "在我們的 %d 知道更多關於 %s 的資料",
+	],
 	"Add category" => [
 		0 => "新增分類",
 	],
@@ -1905,6 +1935,9 @@ $translation_table = [
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "你真的要刪除頁面 ID %s ? 這動作不能被復原",
 	],
+	"Unchecked image formats won't be allowed to be uploaded." => [
+		0 => "不允許上傳未經檢查的圖片格式。",
+	],
 	"Enable uploads" => [
 		0 => "啟動上傳",
 	],
@@ -1916,6 +1949,9 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "允許非註冊用戶上傳",
+	],
+	"Number of simultaneous upload threads (parallel uploads)" => [
+		0 => "同時上傳連線數量（並行上傳）",
 	],
 	"Redirect on single upload" => [
 		0 => "跳轉單張上傳",
@@ -2209,10 +2245,10 @@ $translation_table = [
 		0 => "如果要在列表中顯示不安全內容請啟用此功能. 此設置不會影響管理員, 並且可以由用戶自己的設置覆蓋.",
 	],
 	"Blur NSFW content in listings" => [
-		0 => "模糊NSFW（標記為不安全）的內容顯示在列表",
+		0 => "模糊非闔家皆宜（標記為不安全）的內容顯示在列表",
 	],
 	"Enable this if you want to apply a blur effect on the NSFW images in listings." => [
-		0 => "如果您想申請一個模糊效果的NSFW圖像列表請啟用它.",
+		0 => "如果您想為非闔家皆宜圖像列表開啟模糊效果，請啟用它.",
 	],
 	"Show banners in not safe content" => [
 		0 => "在不安全的內容顯示廣告橫幅",
@@ -2499,8 +2535,14 @@ $translation_table = [
 	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
 		0 => "在網站主頁顯示指定多個用戶的最新圖片, 請用逗號分隔開. 留空則顯示全站最新圖片（不含隱私圖像）.",
 	],
+	"banners" => [
+		0 => "橫幅",
+	],
 	"Automatic updates check" => [
 		0 => "自動檢查升級",
+	],
+	"When enabled the system will automatically check for new updates." => [
+		0 => "啟用時，系統將自動檢查新更新。",
 	],
 	"Display available updates notification" => [
 		0 => "顯示可用的更新通知",
@@ -2655,6 +2697,9 @@ $translation_table = [
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "使用這個來測試您的電子郵件是否已寄出. 我們建議您使用 %s.",
 	],
+	"social networks" => [
+		0 => "社交網絡",
+	],
 	"You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this." => [
 		0 => "你需要一個<a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a>",
 	],
@@ -2697,6 +2742,12 @@ $translation_table = [
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "你需要一個 <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a>",
 	],
+	"%s site key" => [
+		0 => "%s 網站鑰匙",
+	],
+	"%s secret key" => [
+		0 => "%s 秘密鑰匙",
+	],
 	"reCAPTCHA public key" => [
 		0 => "reCAPTCHA public key",
 	],
@@ -2708,6 +2759,18 @@ $translation_table = [
 	],
 	"How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA." => [
 		0 => "登入失敗多少次後顯示驗證碼? 鍵入\"0\"零則始終顯示驗證碼.",
+	],
+	"Comments API" => [
+		0 => "評論 API",
+	],
+	"Disqus API works with %s." => [
+		0 => "與 %s 工作的Disqus API",
+	],
+	"Disqus shortname" => [
+		0 => "Disqus 短名",
+	],
+	"%s public key" => [
+		0 => "%s 公開鑰匙",
 	],
 	"Comment code" => [
 		0 => "社群評論代碼",
@@ -2731,16 +2794,22 @@ $translation_table = [
 		0 => "欲使用 <a %s>API v1</a>請用這個金鑰",
 	],
 	"Cookie law compliance" => [
-		0 => "餅乾的法規",
+		0 => "Cookie的法規",
 	],
 	"Enable this to display a message that complies with the EU Cookie law requirements. Note: You only need this if your website is hosted in the EU and if you add tracking cookies." => [
-		0 => "啟用它, 顯示一條消息, 符合歐盟的餅乾法規. 注意: 您僅需要這個, 假如您的網站託管在歐盟, 您必須增加餅乾跟蹤.",
+		0 => "啟用它以顯示一條消息來符合歐盟的Cookie法規. 注意: 假如您的網站託管在歐盟又需要增加Cookie跟蹤, 您必須啟用它.",
 	],
 	"Save changes" => [
 		0 => "儲存變更",
 	],
 	"Check the errors to proceed." => [
 		0 => "請檢查錯誤後繼續",
+	],
+	"Play GIF" => [
+		0 => "播放 GIF",
+	],
+	"Load full resolution" => [
+		0 => "讀取全等解像度",
 	],
 	"Guest" => [
 		0 => "訪客",
@@ -3074,6 +3143,9 @@ $translation_table = [
 	],
 	"Update now" => [
 		0 => "立刻更新",
+	],
+	"Your website is running the latest version of %s" => [
+		0 => "你的網站正在運行最新版本的 %s",
 	],
 	"Your website is running the latest version of Chevereto." => [
 		0 => "您的網站正在執行Chevereto的最新版本.",

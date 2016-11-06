@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-01-30 17:45+0000',
-  'PO-Revision-Date' => '2016-01-30 17:45+0000',
+  'POT-Creation-Date' => '2016-11-01 14:37+0000',
+  'PO-Revision-Date' => '2016-11-01 14:37+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'nl',
@@ -19,7 +19,7 @@ $translation_plural = array (
 );
 $translation_table = [
 	"Invalid email" => [
-		0 => "Ongeldig emailadres",
+		0 => "Ongeldig e-mailadres",
 	],
 	"Invalid username" => [
 		0 => "Ongeldige gebruikersnaam",
@@ -43,7 +43,10 @@ $translation_table = [
 		0 => "Ontvanger voor contactformulier en systeem waarschuwingen.",
 	],
 	"Website mode" => [
-		0 => "Website mode",
+		0 => "Websitemodus",
+	],
+	"You can switch the website mode anytime." => [
+		0 => "U kunt de websitemodus altijd wijzigen.",
 	],
 	"Community" => [
 		0 => "Community",
@@ -64,7 +67,7 @@ $translation_table = [
 		0 => "Ongeldige licentie info",
 	],
 	"Invalid license key" => [
-		0 => "Ongeldige licentie sleutel",
+		0 => "Ongeldige licentiesleutel",
 	],
 	"Can't save file" => [
 		0 => "Kan bestand niet opslaan",
@@ -75,35 +78,53 @@ $translation_table = [
 	"Can't extract %s" => [
 		0 => "Kan %s niet uitpakken",
 	],
+	"Can't create %s directory - %e" => [
+		0 => "Kan directory %s niet aanmaken - %e",
+	],
+	"Can't update %s file - %e" => [
+		0 => "Kan bestand %s niet updaten - %e",
+	],
 	"Untitled" => [
 		0 => "Naamloos",
 	],
 	"%s's images" => [
 		0 => "%s's afbeeldingen",
 	],
+	"Note: This content is private but anyone with the link will be able to see this." => [
+		0 => "Let op: deze inhoud is privé, maar is zichtbaar voor iedereen met de link.",
+	],
+	"Note: This content is private. Change privacy to \"public\" to share." => [
+		0 => "Let op: deze inhoud is privé. Wijzig de privacy-instellingen naar \" publiek\" om deze te delen met buitenstaanders.",
+	],
+	"After %n %t" => [
+		0 => "Na %n %t",
+	],
 	"Don't autodelete" => [
 		0 => "Niet automatisch verwijderen",
 	],
-	"After %s minutes" => [
-		0 => "Na %s minuten",
+	"minute" => [
+		0 => "minuut",
+		1 => "minuten",
 	],
-	"After %s hour" => [
-		0 => "Na %s uur",
+	"hour" => [
+		0 => "uur",
+		1 => "uren",
 	],
-	"After %s hours" => [
-		0 => "Na %s uren",
-	],
-	"After %s day" => [
-		0 => "Na %s dag",
-	],
-	"After %s days" => [
-		0 => "Na %s dagen",
+	"day" => [
+		0 => "dag",
+		1 => "dagen",
 	],
 	"Duplicated upload" => [
 		0 => "Dubbele upload",
 	],
+	"External storage has failed" => [
+		0 => "Externe opslag mislukt",
+	],
 	"Private upload" => [
 		0 => "Privé-upload",
+	],
+	"Upload switched to local storage" => [
+		0 => "Upload overgeschakeld naar lokale opslag",
 	],
 	"view" => [
 		0 => "weergave",
@@ -116,9 +137,6 @@ $translation_table = [
 	"image" => [
 		0 => "afbeelding",
 		1 => "afbeeldingen",
-	],
-	"%u is now following you" => [
-		0 => "%u volgt je nu",
 	],
 	"Can't create %s destination dir" => [
 		0 => "Kan doelmap %s niet maken",
@@ -141,6 +159,12 @@ $translation_table = [
 	"used" => [
 		0 => "gebruikt",
 	],
+	"Private profile" => [
+		0 => "Privéprofiel",
+	],
+	"Private" => [
+		0 => "Privé",
+	],
 	"year" => [
 		0 => "jaar",
 		1 => "jaren",
@@ -153,33 +177,36 @@ $translation_table = [
 		0 => "week",
 		1 => "weken",
 	],
-	"day" => [
-		0 => "dag",
-		1 => "dagen",
-	],
-	"hour" => [
-		0 => "uur",
-		1 => "uren",
-	],
-	"minute" => [
-		0 => "minuut",
-		1 => "minuten",
-	],
 	"second" => [
 		0 => "seconde",
-		1 => "secondes",
+		1 => "seconden",
 	],
 	"%s ago" => [
 		0 => "%s geleden",
 	],
 	"moments ago" => [
-		0 => "zonet",
+		0 => "zojuist",
+	],
+	"System notification" => [
+		0 => "Systeemmelding",
+	],
+	"Dashboard" => [
+		0 => "Dashboard",
+	],
+	"There is an update available for your system. Go to %s to download and install this update." => [
+		0 => "Er is een update beschikbaar voor uw systeem. Ga naar %s om deze update te downloaden en te installeren.",
 	],
 	"System database is outdated. You need to run the <a href=\"%s\">update</a> tool." => [
-		0 => "Systeemdatabase is oud. Het is noodzakelijk om deze te <a href=\"%s\">updaten</a>.",
+		0 => "Systeemdatabase is verouderd. Het is noodzakelijk om deze te <a href=\"%s\">updaten</a>.",
 	],
 	"Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>." => [
-		0 => "Website is onderhoud modus. Om deze instelling ongedaan te maken, ga naar <a href=\"%s\">Dashboard > Instellingen</a>.",
+		0 => "Website is in onderhoudsmodus. Om deze instelling ongedaan te maken, ga naar <a href=\"%s\">Dashboard > Instellingen</a>.",
+	],
+	"There is an update available for your Chevereto based website." => [
+		0 => "Er is een update beschikbaar voor uw Chevereto website.",
+	],
+	"Chevereto update available (v%s)" => [
+		0 => "Chevereto update beschikbaar (v%s)",
 	],
 	"You have been forbidden to use this website." => [
 		0 => "U bent verbannen van deze website.",
@@ -244,8 +271,14 @@ $translation_table = [
 	"Check the errors in the form to continue." => [
 		0 => "Controleer de fouten in de tekstvelden om verder te gaan.",
 	],
+	"Password required" => [
+		0 => "Wachtwoord vereist",
+	],
 	"Most recent" => [
 		0 => "Meest recent",
+	],
+	"Oldest" => [
+		0 => "Oudste",
 	],
 	"Most viewed" => [
 		0 => "Meest bekeken",
@@ -255,6 +288,9 @@ $translation_table = [
 	],
 	"Share" => [
 		0 => "Delen",
+	],
+	"Embed codes" => [
+		0 => "Insluitcodes",
 	],
 	"Full info" => [
 		0 => "Volledige informatie",
@@ -325,6 +361,15 @@ $translation_table = [
 	],
 	"Memory limit" => [
 		0 => "Geheugenlimiet",
+	],
+	"Links" => [
+		0 => "Links",
+	],
+	"Documentation" => [
+		0 => "Documentatie",
+	],
+	"Blog" => [
+		0 => "Blog",
 	],
 	"Website" => [
 		0 => "Website",
@@ -406,15 +451,6 @@ $translation_table = [
 	],
 	"The page has been deleted." => [
 		0 => "De pagina is verwijderd.",
-	],
-	"Before cover (homepage)" => [
-		0 => "Voor omslagartikel (hoofdpagina)",
-	],
-	"After cover (homepage)" => [
-		0 => "Achter omslagartikel (hoofdpagina)",
-	],
-	"After listing (homepage)" => [
-		0 => "Voor afbeeldinglijst (hoofdpagina)",
 	],
 	"Before pagination" => [
 		0 => "Voor paginanummering",
@@ -505,9 +541,6 @@ $translation_table = [
 	],
 	"Invalid thumb height" => [
 		0 => "Ongeldige thumbnailhoogte",
-	],
-	"Invalid medium width" => [
-		0 => "Ongeldige breedte",
 	],
 	"Invalid watermark percentage" => [
 		0 => "Ongeldig watermerk percentage",
@@ -614,14 +647,8 @@ $translation_table = [
 	"Can't save page contents: %s." => [
 		0 => "Kan pagina inhoud niet opslaan: %s.",
 	],
-	"Oldest" => [
-		0 => "Oudste",
-	],
 	"Top users" => [
-		0 => "Beste gebruikers",
-	],
-	"Dashboard" => [
-		0 => "Dashboard",
+		0 => "Topgebruikers",
 	],
 	"Explore" => [
 		0 => "Verkennen",
@@ -631,9 +658,6 @@ $translation_table = [
 	],
 	"About" => [
 		0 => "Over",
-	],
-	"Embed codes" => [
-		0 => "Insluitcodes",
 	],
 	"Image ID" => [
 		0 => "Afbeelding ID",
@@ -662,6 +686,21 @@ $translation_table = [
 	"Image %i hosted in %w" => [
 		0 => "Afbeelding %i gehost in %w",
 	],
+	"Direct links" => [
+		0 => "Directe link",
+	],
+	"Image URL" => [
+		0 => "Afbeelding URL",
+	],
+	"Image link" => [
+		0 => "Afbeelding link",
+	],
+	"Thumbnail URL" => [
+		0 => "Thumbnail URL",
+	],
+	"Medium URL" => [
+		0 => "Medium URL",
+	],
 	"Login needed" => [
 		0 => "Inloggen vereist",
 	],
@@ -688,6 +727,9 @@ $translation_table = [
 	],
 	"Test email sent to %s." => [
 		0 => "Test email verzonden naar %s.",
+	],
+	"%u is now following you" => [
+		0 => "%u volgt je nu",
 	],
 	"Wrong Username/Email password combination" => [
 		0 => "Verkeerde inloggegevens",
@@ -788,14 +830,14 @@ $translation_table = [
 	"%s's Albums" => [
 		0 => "%s's albums",
 	],
+	"Results for" => [
+		0 => "Resultaten voor",
+	],
 	"Liked by %s" => [
 		0 => "Geliked door %s",
 	],
 	"Liked" => [
 		0 => "Liked",
-	],
-	"Results for" => [
-		0 => "Resultaten voor",
 	],
 	"Followers" => [
 		0 => "Volgers",
@@ -1041,14 +1083,8 @@ $translation_table = [
 		0 => "album",
 		1 => "albums",
 	],
-	"Links" => [
-		0 => "Links",
-	],
 	"Viewer links" => [
 		0 => "Kijker",
-	],
-	"Direct links" => [
-		0 => "Directe link",
 	],
 	"HTML Codes" => [
 		0 => "HTML-codes",
@@ -1104,8 +1140,8 @@ $translation_table = [
 	"Storage" => [
 		0 => "Opslag",
 	],
-	"Uploader IP address" => [
-		0 => "Uploader IP adres",
+	"IP address" => [
+		0 => "IP adres",
 	],
 	"Album name" => [
 		0 => "Album naam",
@@ -1118,9 +1154,6 @@ $translation_table = [
 	],
 	"Brief description of this album" => [
 		0 => "Korte omschrijving van dit album",
-	],
-	"Album Privacy" => [
-		0 => "Album privacy",
 	],
 	"Who can view this content" => [
 		0 => "Wie kan deze inhoud zien?",
@@ -1157,9 +1190,6 @@ $translation_table = [
 	],
 	"Untitled image" => [
 		0 => "Naamloze afbeelding",
-	],
-	"IP address" => [
-		0 => "IP adres",
 	],
 	"Expiration date" => [
 		0 => "Vervaldatum",
@@ -1279,12 +1309,6 @@ $translation_table = [
 	"Load more" => [
 		0 => "Laad meer",
 	],
-	"Previous" => [
-		0 => "Vorige",
-	],
-	"Next" => [
-		0 => "Volgende",
-	],
 	"Select all" => [
 		0 => "Alles selecteren",
 	],
@@ -1311,9 +1335,6 @@ $translation_table = [
 	],
 	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
 		0 => "Om alle functies van deze site te gebruiken moet u ingelogd zijn. Indien u nog geen account heeft, dan kunt u zich <a href=\"%s\">registreren</a>.",
-	],
-	"Note: This content is private. Change privacy to \"public\" to share." => [
-		0 => "Let op: deze inhoud is privé. Wijzig de privacy-instellingen naar \" publiek\" om deze te delen met buitenstaanders.",
 	],
 	"There's nothing to show here." => [
 		0 => "Er is hier niets te zien",
@@ -1362,9 +1383,6 @@ $translation_table = [
 	],
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "Wilt u deze selectie echt verwijderen? Dit kan niet ongedaan gemaakt worden.",
-	],
-	"Uploaded by guest to Public" => [
-		0 => "Geüpload door een gast naar Publiek",
 	],
 	"From %s" => [
 		0 => "Van %s",
@@ -1524,15 +1542,6 @@ $translation_table = [
 	"Select region" => [
 		0 => "Selecteer regio",
 	],
-	"Enable this if you want to allow the search feature." => [
-		0 => "Selecteer om de zoekfunctie in te schakelen.",
-	],
-	"Enable this if you want to allow the explore page." => [
-		0 => "Schakel dit in om de verkenningspagina zichtbaar te maken",
-	],
-	"Enable this if you want to allow the random feature." => [
-		0 => "Selecteer om de willekeur functie in te schakelen.",
-	],
 	"User ID" => [
 		0 => "Gebruikers ID",
 	],
@@ -1544,9 +1553,6 @@ $translation_table = [
 	],
 	"Website privacy mode" => [
 		0 => "Website privé mode",
-	],
-	"Private" => [
-		0 => "Privé",
 	],
 	"Private mode will make the website only available for registered users." => [
 		0 => "Privémodus zorgt ervoor dat alleen geregistreerde gebruikers de website kunnen gebruiken",
@@ -1676,12 +1682,6 @@ $translation_table = [
 	],
 	"Thumbnails will be fixed to this size." => [
 		0 => "Thumbnails worden aangepast naar dit formaat.",
-	],
-	"Medium size" => [
-		0 => "Medium formaat",
-	],
-	"Height will be automatic calculated." => [
-		0 => "Hoogte wordt automatisch berekend.",
 	],
 	"Watermarks" => [
 		0 => "Watermerken",
@@ -2067,6 +2067,12 @@ $translation_table = [
 	"Cover image" => [
 		0 => "Omslagafbeelding",
 	],
+	"Do you really want to delete this image? This can't be undone." => [
+		0 => "Wilt u deze afbeelding echt verwijderen? Dit kan niet ongedaan gemaakt worden.",
+	],
+	"Delete image" => [
+		0 => "Verwijder afbeelding",
+	],
 	"Paragraph" => [
 		0 => "Paragraaf",
 	],
@@ -2075,15 +2081,6 @@ $translation_table = [
 	],
 	"User IDs" => [
 		0 => "Gebruikers ID's",
-	],
-	"Here you can set the codes for the predefined ad spaces." => [
-		0 => "Hier kunt u de codes voor de vooraf gedefinieerde advertentieruimtes instellen.",
-	],
-	"Crypt salt" => [
-		0 => "Crypt salt",
-	],
-	"This is the salt used to convert numeric ID to alphanumeric. It was generated on install." => [
-		0 => "Dit is de unieke code die gebruikt wordt om numerieke ID te converteren naar alfanumeriek. Het werd gegenereerd bij de installatie.",
 	],
 	"Minify code" => [
 		0 => "Verkleincode",
@@ -2096,6 +2093,12 @@ $translation_table = [
 	],
 	"When enabled the website will show a maintenance message. This setting doesn't affect administrators." => [
 		0 => "Wanneer ingesteld is op de website een onderhoudsmelding te zien. Deze instelling is niet van toepassing voor beheerders.",
+	],
+	"Crypt salt" => [
+		0 => "Crypt salt",
+	],
+	"This is the salt used to convert numeric ID to alphanumeric. It was generated on install." => [
+		0 => "Dit is de unieke code die gebruikt wordt om numerieke ID te converteren naar alfanumeriek. Het werd gegenereerd bij de installatie.",
 	],
 	"Default language" => [
 		0 => "Standaardtaal",
@@ -2208,9 +2211,6 @@ $translation_table = [
 	"VK client secret" => [
 		0 => "VK gebruikers secret",
 	],
-	"CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s." => [
-		0 => "CDN stelt je in staat om statische content te verspreiden over meerdere servers om de website sneller te maken. Als je geen CDN provider hebt, probeer %s.",
-	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Er is een <a href=\"%s\" target=\"_blank\">reCAPTCHA code</a> nodig.",
 	],
@@ -2250,12 +2250,6 @@ $translation_table = [
 	"Guest" => [
 		0 => "Gast",
 	],
-	"Do you really want to delete this image? This can't be undone." => [
-		0 => "Wilt u deze afbeelding echt verwijderen? Dit kan niet ongedaan gemaakt worden.",
-	],
-	"Delete image" => [
-		0 => "Verwijder afbeelding",
-	],
 	"Added to %a and categorized in %c" => [
 		0 => "Toegevoegd aan %a en gecategoriseerd in %c",
 	],
@@ -2282,33 +2276,6 @@ $translation_table = [
 	],
 	"In this album" => [
 		0 => "In dit album",
-	],
-	"Image links" => [
-		0 => "Afbeelding links",
-	],
-	"Image URL" => [
-		0 => "Afbeelding URL",
-	],
-	"Image link" => [
-		0 => "Afbeelding link",
-	],
-	"Thumbnail URL" => [
-		0 => "Thumbnail URL",
-	],
-	"Medium URL" => [
-		0 => "Medium URL",
-	],
-	"Image embed codes" => [
-		0 => "Afbeelding insluitcode",
-	],
-	"Linked image" => [
-		0 => "Gekoppelde afbeelding",
-	],
-	"Linked medium" => [
-		0 => "Gekoppeld medium",
-	],
-	"Linked thumbnail" => [
-		0 => "Gekoppelde thumbnail",
 	],
 	"Upload and share your images." => [
 		0 => "Upload en deel jouw afbeeldingen",
@@ -2468,27 +2435,6 @@ $translation_table = [
 	],
 	"Edit profile" => [
 		0 => "Profiel bewerken",
-	],
-	"Message sent" => [
-		0 => "Bericht verzonden",
-	],
-	"Contact" => [
-		0 => "Contact",
-	],
-	"We will be in touch soon." => [
-		0 => "We zullen zo spoedig mogelijk contact opnemen.",
-	],
-	"If you want to send a message fill the form below." => [
-		0 => "Indien u een bericht wilt versturen, vul dan het formulier in.",
-	],
-	"Your name" => [
-		0 => "Uw naam",
-	],
-	"Subject" => [
-		0 => "Onderwerp",
-	],
-	"Send message" => [
-		0 => "Verzend bericht",
 	],
 	"You must enter the album name." => [
 		0 => "U moet nog een albumnaam invoeren.",

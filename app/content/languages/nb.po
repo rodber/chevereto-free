@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-08-14 03:30+0000\n"
-"PO-Revision-Date: 2016-08-14 03:30+0000\n"
+"POT-Creation-Date: 2016-11-01 14:37+0000\n"
+"PO-Revision-Date: 2016-11-01 14:37+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: nb\n"
@@ -174,7 +174,7 @@ msgstr[1] "minutter"
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] "time"
-msgstr[1] "timers"
+msgstr[1] "timer"
 
 #: ../../../app/lib/functions.php:40 ../../../app/lib/functions.php:52
 msgid "day"
@@ -226,15 +226,6 @@ msgid "image"
 msgid_plural "images"
 msgstr[0] "bilde"
 msgstr[1] "bilder"
-
-#: ../../../app/lib/classes/class.notification.php:75
-msgid "%u liked your %t %c"
-msgstr "%u liker ditt %t %c"
-
-#: ../../../app/lib/classes/class.notification.php:81
-#, php-format
-msgid "%u is now following you"
-msgstr "%u har begynt å følge deg"
 
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
@@ -375,7 +366,7 @@ msgstr "Du har blitt sperret fra å benytte denne siden."
 #: ../../../app/loader.php:279
 #: ../../../app/themes/Peafowl/views/settings.php:441
 msgid "Feel free to browse and discover all my shared images and albums."
-msgstr "Bildeopplastningstjeneste for medlemmer i Volvo Car Club Norway\nMer info på http://forum.vccn.no"
+msgstr "Føl deg fri til å bla gjennom og oppdage alle mine delte bilder og album"
 
 #: ../../../app/loader.php:282
 #: ../../../app/themes/Peafowl/views/settings.php:447
@@ -384,7 +375,7 @@ msgstr "Vis alle mine bilder"
 
 #: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
 msgid "That page doesn't exist"
-msgstr "Den siden eksisterer ikke"
+msgstr "Denne siden eksisterer ikke"
 
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
@@ -393,7 +384,7 @@ msgstr "Den siden eksisterer ikke"
 #: ../../../app/themes/Peafowl/views/login.php:41
 #: ../../../app/themes/Peafowl/views/settings.php:299
 msgid "Forgot password?"
-msgstr "Glemt ditt passord?"
+msgstr "Glemt passord?"
 
 #: ../../../app/routes/route.account.php:73
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:8
@@ -551,6 +542,12 @@ msgstr "Mest likt"
 msgid "Share"
 msgstr "Del"
 
+#: ../../../app/routes/route.image.php:127
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
+msgid "Embed codes"
+msgstr "Link til bilde/bygg inn"
+
 #: ../../../app/routes/route.album.php:124
 #: ../../../app/routes/route.image.php:134
 msgid "Full info"
@@ -603,6 +600,15 @@ msgstr "installere oppdatering"
 #: ../../../app/routes/route.dashboard.php:162
 msgid "check for updates"
 msgstr "se etter oppdateringer"
+
+msgid "Support"
+msgstr "Støtte"
+
+msgid "Chevereto support"
+msgstr "Chevereto støtte"
+
+msgid "Need help? Go to %s and you will get help quickly."
+msgstr "Trenger du hjelp? Gå til %s for å få rask hjelp."
 
 #: ../../../app/routes/route.dashboard.php:169
 msgid "PHP version"
@@ -741,10 +747,29 @@ msgstr[1] "%d sekunder"
 msgid "Memory limit"
 msgstr "Minnebegrensning"
 
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
+msgid "Links"
+msgstr "Lenker"
+
+msgid "Documentation"
+msgstr "Dokumentasjon"
+
+msgid "Changelog"
+msgstr "Endringslogg"
+
+msgid "Request new features"
+msgstr "Foreslå nye funksjoner"
+
+msgid "Bug tracking"
+msgstr "Bugg sporing"
+
+msgid "Blog"
+msgstr "Blogg"
+
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
 msgid "Website"
-msgstr "Webside"
+msgstr "Nettside"
 
 #: ../../../app/routes/route.dashboard.php:228
 msgid "Content"
@@ -876,17 +901,20 @@ msgstr "Siden har blitt lagt til."
 msgid "The page has been deleted."
 msgstr "Denne siden har blitt slettet."
 
-#: ../../../app/routes/route.dashboard.php:376
-msgid "Before cover (homepage)"
-msgstr "Før hovedbilde (hjemmeside)"
+msgid "homepage"
+msgstr "hjemmeside"
 
-#: ../../../app/routes/route.dashboard.php:379
-msgid "After cover (homepage)"
-msgstr "Etter hovedbilde (hjemmeside)"
+msgid "Before main title (%s)"
+msgstr "Før hovedtittel (%s)"
 
-#: ../../../app/routes/route.dashboard.php:382
-msgid "After listing (homepage)"
-msgstr "Etter bilde (hjemmeside)"
+msgid "After call to action (%s)"
+msgstr "Etter forespørsel om handling (%s)"
+
+msgid "After cover (%s)"
+msgstr "Etter cover (%s)"
+
+msgid "After listing (%s)"
+msgstr "Etter oppføring (%s)"
 
 #: ../../../app/routes/route.dashboard.php:390
 msgid "Before pagination"
@@ -1208,18 +1236,12 @@ msgstr "Utforsk"
 #: ../../../app/themes/Peafowl/views/user.php:74
 #: ../../../app/themes/Peafowl/views/user.php:80
 msgid "Following"
-msgstr "Personer du følger."
+msgstr "Følger"
 
 #: ../../../app/routes/route.image.php:120
 #: ../../../app/themes/Peafowl/header.php:424
 msgid "About"
-msgstr "Mer info"
-
-#: ../../../app/routes/route.image.php:127
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
-msgid "Embed codes"
-msgstr "Link til bilde/bygg inn"
+msgstr "Om oss"
 
 #: ../../../app/routes/route.image.php:144
 msgid "Image ID"
@@ -1260,7 +1282,7 @@ msgstr "Bilde %i lagret i %w"
 
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:14
 msgid "Direct links"
-msgstr "Direkelenker (Benytt denne for VCCN)"
+msgstr "Direkelenker"
 
 #: ../../../app/themes/Peafowl/views/image.php:279
 msgid "Image URL"
@@ -1359,6 +1381,18 @@ msgstr "Innhold likt"
 #: ../../../app/routes/route.json.php:1150
 msgid "Content disliked"
 msgstr "Innhold mislikt"
+
+#: ../../../app/lib/classes/class.notification.php:75
+msgid "%u liked your %t %c"
+msgstr "%u liker ditt %t %c"
+
+#: ../../../app/lib/classes/class.notification.php:81
+#, php-format
+msgid "%u is now following you"
+msgstr "%u har begynt å følge deg"
+
+msgid "A private user"
+msgstr "En privat bruker"
 
 #: ../../../app/routes/route.login.php:133
 msgid "Wrong Username/Email password combination"
@@ -1539,7 +1573,7 @@ msgstr "%s's Bilder"
 #: ../../../app/themes/Peafowl/header.php:56
 #, php-format
 msgid "%s's Albums"
-msgstr "%s' album"
+msgstr "%s sitt album"
 
 #: ../../../app/routes/route.user.php:99
 #: ../../../app/themes/Peafowl/views/search.php:8
@@ -1554,7 +1588,7 @@ msgstr "%s liker"
 #: ../../../app/routes/route.user.php:95
 #: ../../../app/themes/Peafowl/header.php:404
 msgid "Liked"
-msgstr "Dine Like's"
+msgstr "Mine liker"
 
 #: ../../../app/routes/route.user.php:109
 msgid "Followers"
@@ -1687,7 +1721,7 @@ msgstr "Jeg er minst %s år gammel"
 #: ../../../app/themes/Peafowl/views/signup.php:65
 #, php-format
 msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
-msgstr "Ved å registrere deg akspeterer du våre<a href=\"%s\"> betingelser</a>"
+msgstr "Ved å registrere deg akspeterer du våre <a href=\"%s\">betingelser</a>"
 
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
@@ -1751,7 +1785,7 @@ msgstr "For å fullføre registreringen må du <a href=\"%s\">aktivere din konto
 
 #: ../../../app/themes/Peafowl/mails/account-password-reset.php:4
 msgid "We received a request to reset the password for your <a href=\"%u\">%n</a> account."
-msgstr "Vi har mottatt en forespørsel for å endre passord på konto <a href=\"%u\">%n</a>"
+msgstr "Vi har mottatt en forespørsel om å endre passord på konto <a href=\"%u\">%n</a>"
 
 #: ../../../app/themes/Peafowl/mails/account-password-reset.php:6
 #, php-format
@@ -1760,19 +1794,19 @@ msgstr "For å nullstille passordet ditt, <a href=\"%s\">trykk på denne lenken<
 
 #: ../../../app/themes/Peafowl/mails/account-welcome.php:4
 msgid "Hi %n, welcome to %w"
-msgstr "Hei %n, velkommen til VCCN Bildeopplastning"
+msgstr "Hei %n. Velkommen til %w"
 
 #: ../../../app/themes/Peafowl/mails/account-welcome.php:6
 msgid "Now that your account is ready you can enjoy uploading your images, creating albums and setting the privacy of your content as well as many more cool things that you will discover."
-msgstr "Så fort du har trykket på lenken over er din konto aktivert. Du kan umiddelbart laste opp bilder."
+msgstr "Nå som kontoen din er klar kan du kose deg med alle fordelene. Lage album, laste opp bilder, dele med venner og mye mer du vil oppdage."
 
 #: ../../../app/themes/Peafowl/mails/account-welcome.php:8
 msgid "By the way, here is you very own awesome profile page: <a href=\"%u\">%n</a>. Go ahead and customize it, its yours!."
-msgstr "Du har også fått din personlige side; <a href=\"%u\">%n</a>. Her kan du se alle bildene dine samt opprette album."
+msgstr "Forresten, vi har også gitt deg din egen profil: <a href=\"%u\">%n</a>. Tilpass den og gjør som du vil!"
 
 #: ../../../app/themes/Peafowl/mails/account-welcome.php:10
 msgid "Thank you for joining"
-msgstr "Takk for at du benytter deg av bildetjenesten til VCCN"
+msgstr "Takk for at du registrerte deg"
 
 #: ../../../app/themes/Peafowl/mails/footer.php:3
 msgid "This email was sent from %w %u"
@@ -1804,7 +1838,7 @@ msgstr "Rediger eller endre størrelse på bildet ved å trykke på forhåndsvis
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:22
 msgid "You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>."
-msgstr "Du kan legge til flere bilder <a data-trigger=\"anywhere-upload-input\"> fra PCen din</a> eller<a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">fra bildeadresse</a>."
+msgstr "Du kan legge til flere bilder <a data-trigger=\"anywhere-upload-input\"> fra PCen din</a> eller <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">fra bildeadresse</a>."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:23
 msgid "You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
@@ -1829,7 +1863,7 @@ msgstr "Opplastning fullført"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:34
 #, php-format
 msgid "Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album."
-msgstr "Innhold lagt til i <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">offentlig visning</a>. Du kan <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">opprette et album</a> eller <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">flytte<span data-text=\"queue-objects\">bildene</span></a> til et eksisterende album."
+msgstr "Innhold lagt til i <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">offentlig visning</a>. Du kan <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">opprette et album</a> eller <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">flytte <span data-text=\"queue-objects\">bildene</span></a> til et eksisterende album."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:35
 msgid "You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account."
@@ -1860,7 +1894,7 @@ msgstr "Endre opplasting personvern"
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 #: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
 msgid "cancel"
-msgstr "Avbryt"
+msgstr "avbryt"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:77
 msgid "Mark this if the upload is not family safe"
@@ -2036,10 +2070,6 @@ msgid "album"
 msgid_plural "albums"
 msgstr[0] "album"
 msgstr[1] "album"
-
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
-msgid "Links"
-msgstr "Lenker"
 
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
@@ -2432,14 +2462,6 @@ msgstr "Se mer"
 msgid "Load more"
 msgstr "Last inn mer"
 
-#: ../../../app/themes/Peafowl/snippets/listing.php:91
-msgid "Previous"
-msgstr "Tidligere"
-
-#: ../../../app/themes/Peafowl/snippets/listing.php:98
-msgid "Next"
-msgstr "Neste"
-
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
 msgid "Select all"
 msgstr "Velg alle"
@@ -2601,7 +2623,7 @@ msgstr "Merk som seksuelt innhold"
 
 #: ../../../app/themes/Peafowl/views/404.php:7
 msgid "The requested page was not found."
-msgstr "Den etterspurte siden var ikke funnet."
+msgstr "Den etterspurte siden ble ikke funnet."
 
 #: ../../../app/themes/Peafowl/views/404.php:11
 msgid "Search something else"
@@ -2690,7 +2712,7 @@ msgstr "Skriv inn ditt brukernavn eller e-postadresse som du valgte når du regi
 #: ../../../lib/Peafowl/peafowl.min.js:25
 #: ../../../lib/Peafowl/peafowl.min.js:140
 msgid "Submit"
-msgstr "Lagre/send"
+msgstr "Utfør"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:15
 msgid "Your password has been changed. You can now try logging in using your new password."
@@ -2715,12 +2737,12 @@ msgstr "Nytt passord"
 #: ../../../app/themes/Peafowl/views/signup.php:50
 #, php-format
 msgid "%d characters min"
-msgstr "%d tegn min"
+msgstr "%d tegn minimum"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:29
 #: ../../../app/themes/Peafowl/views/settings.php:306
 msgid "Enter your new password"
-msgstr "Skriv inn ditt passord"
+msgstr "Skriv inn ditt nye passord"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:34
 #: ../../../app/themes/Peafowl/views/settings.php:328
@@ -2730,7 +2752,7 @@ msgstr "Bekreft passord"
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:35
 #: ../../../app/themes/Peafowl/views/settings.php:312
 msgid "Re-enter your new password"
-msgstr "Skriv inn ditt passord igjen"
+msgstr "Skriv inn ditt nye passord igjen"
 
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:12
 #, php-format
@@ -2806,6 +2828,12 @@ msgstr "Administrator"
 
 msgid "This setting is always diabled when using personal website mode."
 msgstr "Denne innstillingen er deaktivert når det benyttes personlig webside modus."
+
+msgid "documentation"
+msgstr "dokumentasjon"
+
+msgid "Learn more about %s at our %d."
+msgstr "Lær mer om %s på vårt %d."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
@@ -3058,10 +3086,16 @@ msgstr "Sortering skjerm"
 msgid "Page sort order display for menus and listings. Use \"1\" for top priority."
 msgstr "Side sorteringsrekkefølge skjerm for menyer og oppføringer. Bruk \"1\" for topp prioritet."
 
+msgid "pages"
+msgstr "sider"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:607
 #, php-format
 msgid "Do you really want to delete the page ID %s? This can't be undone."
 msgstr "Er du sikker på at du vil slette sideID %s? Dette kan ikke angres."
+
+msgid "Unchecked image formats won't be allowed to be uploaded."
+msgstr "Ukryssede bildeformat vil ikke bli lastet opp."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:630
 msgid "Enable uploads"
@@ -3078,6 +3112,9 @@ msgstr "Gjesteopplasting"
 #: ../../../app/themes/Peafowl/views/dashboard.php:645
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "Aktiver denne dersom du vil at ikke-registrerte brukere kan laste opp."
+
+msgid "Number of simultaneous upload threads (parallel uploads)"
+msgstr "Antall samtidige opplasting tråder (parallelle opplastinger)"
 
 msgid "Redirect on single upload"
 msgstr "Omdirigere på enkel opplasting"
@@ -3550,6 +3587,9 @@ msgstr "Bærbar PC"
 msgid "Desktop"
 msgstr "Desktop"
 
+msgid "theme editing"
+msgstr "tema redigering"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1167
 #, php-format
 msgid "Put your themes in the %s folder"
@@ -3862,9 +3902,20 @@ msgstr "BrukerID"
 msgid "Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images."
 msgstr "Komma-separert liste for målbrukerID for å vise bilder på hjemmesiden. La den være blank for å vise alle nylige bilder."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1524
-msgid "Here you can set the codes for the predefined ad spaces."
-msgstr "Her kan du sette kodene for de forhåndsdefinerte annonseplassene."
+msgid "banners"
+msgstr "bannere"
+
+msgid "Automatic updates check"
+msgstr "Automatisk oppdateringssjekk"
+
+msgid "When enabled the system will automatically check for new updates."
+msgstr "Når aktivert vil systemet automatisk se etter nye oppdateringer."
+
+msgid "Display available updates notification"
+msgstr "Skjerm tilgjengelige oppdateringer varsling"
+
+msgid "Enable this to show a notice on top warning you about new available system updates."
+msgstr "Aktiver dette for å vise en melding på toppen advarer deg om nye tilgjengelige systemoppdateringer."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1570
 msgid "Minify code"
@@ -3881,12 +3932,6 @@ msgstr "Vedlikehold"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1585
 msgid "When enabled the website will show a maintenance message. This setting doesn't affect administrators."
 msgstr "Når vedlikeholdsmodus er aktivert vil denne meldingen vises for vanlige brukere. (Berører ikke admins)"
-
-msgid "Display available updates notification"
-msgstr "Skjerm tilgjengelige oppdateringer varsling"
-
-msgid "Enable this to show a notice on top warning you about new available system updates."
-msgstr "Aktiver dette for å vise en melding på toppen advarer deg om nye tilgjengelige systemoppdateringer."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1565
 msgid "Crypt salt"
@@ -3930,9 +3975,6 @@ msgstr "Skriv ut og logg feil"
 msgid "To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)."
 msgstr "konfigurere feilsøking nivå sjekk <a %s>feilsøking dokumentasjon</a>.  Standardnivået er \"Feil log\" (1)."
 
-msgid "documentation"
-msgstr "dokumentasjon"
-
 msgid "Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes."
 msgstr "Ruting lar deg tilpasse standardruten, Bare alfanumerisk , bindestrek og understrek tegn er tillatt. Sjekk ut %s  dersom du ønsker å overstyre eller legge til nye ruter."
 
@@ -3944,6 +3986,12 @@ msgstr "Rute for %s"
 
 msgid "Album routing"
 msgstr "Album rute"
+
+msgid "Custom language strings"
+msgstr "Egendefinerte språk strenger"
+
+msgid "language strings"
+msgstr "språk strenger"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1611
 msgid "Default language"
@@ -4064,6 +4112,9 @@ msgstr "test@tattooalbum.com"
 msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
 msgstr "Bruk denne for å teste hvordan din e-post blir levert. Vi anbefaler deg å bruke %s."
 
+msgid "social networks"
+msgstr "sosiale nettverk"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1838
 msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
 msgstr "Du trenger en <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for dette."
@@ -4116,15 +4167,16 @@ msgstr "VK klient id"
 msgid "VK client secret"
 msgstr "VK klient hemmelig"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1949
-#, php-format
-msgid "CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s."
-msgstr "CDN tillater deg å avlaste statisk innhold til flere servere, dette gjør nettstedet ditt raskere. Hvis du ikke har en CDN leverandør bør du prøve %s."
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1968
 #, php-format
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "Du trenger en <a href=\"%s\" target=\"_blank\">reCAPTCHA nøkkel</a> for dette."
+
+msgid "%s site key"
+msgstr "%s sidenøkkel"
+
+msgid "%s secret key"
+msgstr "%s hemmelig nøkkel"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1974
 msgid "reCAPTCHA public key"
@@ -4141,6 +4193,18 @@ msgstr "reCAPTCHA terskel"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1991
 msgid "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA."
 msgstr "Hvor mange mislykkede forsøk er nødvendig før reCAPTCHA? Bruk null (0) til alltid vise reCAPTCHA."
+
+msgid "Comments API"
+msgstr "Kommentar API"
+
+msgid "Disqus API works with %s."
+msgstr "Disqus API virker med %s."
+
+msgid "Disqus shortname"
+msgstr "Disqus kort navn"
+
+msgid "%s public key"
+msgstr "%s offentlig nøkkel"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1997
 msgid "Comment code"
@@ -4190,6 +4254,12 @@ msgstr "Lagre endringer"
 #: ../../../app/themes/Peafowl/views/settings.php:477
 msgid "Check the errors to proceed."
 msgstr "Sjekk feilene for å fortsette."
+
+msgid "Play GIF"
+msgstr "Spill GIF"
+
+msgid "Load full resolution"
+msgstr "Last full oppløsning"
 
 #: ../../../app/themes/Peafowl/views/image.php:57
 msgid "Guest"
@@ -4252,7 +4322,7 @@ msgstr "Last opp og del bildene dine."
 #: ../../../app/themes/Peafowl/views/index.php:17
 #, php-format
 msgid "Drag and drop anywhere you want and start uploading your images now. %s limit. Direct image links, BBCode and HTML thumbnails."
-msgstr "Dra og slipp bildene hvor som helst og start opplastning med en gang. Begrensning: %s. Direkte bildelink, BBcode og HTML-miniatyrbilder."
+msgstr "Dra og slipp bildene hvor som helst og start opplastning med en gang. Begrensning: %s. Direkte bildelink, BBkode og HTML-miniatyrbilder."
 
 #: ../../../app/themes/Peafowl/views/index.php:25
 msgid "Start uploading"
@@ -4346,7 +4416,7 @@ msgstr "Venter på bekreftelse"
 #: ../../../app/themes/Peafowl/views/settings.php:144
 #: ../../../app/themes/Peafowl/views/signup.php:40
 msgid "%i to %f characters<br>Letters, numbers and \"_\""
-msgstr "%i to %f tegn<br>Bokstaver, nummer og \"_\""
+msgstr "%i til %f tegn<br>Bokstaver, nummer og \"_\""
 
 #: ../../../app/themes/Peafowl/views/settings.php:166
 msgid "Auto delete uploads"
@@ -4354,12 +4424,12 @@ msgstr "Slett opplastninger automatisk"
 
 #: ../../../app/themes/Peafowl/views/settings.php:174
 msgid "This setting will apply to all your image uploads by default. You can override this setting on each upload."
-msgstr "Denne innstillingen vil gjelde for alle bilder lastet opp som standard. Du kan overstyre denne innstillingen på hver enkel opplasting ."
+msgstr "Denne innstillingen vil gjelde for alle bilder du har lastet opp. Du kan overstyre denne innstillingen på hver enkel opplasting."
 
 #: ../../../app/themes/Peafowl/views/settings.php:186
 #, php-format
 msgid "Keep image <a %s>Exif data</a> on upload"
-msgstr "Behold <a %s>Exif-data</a> når bilder lastes opp."
+msgstr "Behold <a %s>Exif-data</a> når bilder lastes opp"
 
 #: ../../../app/themes/Peafowl/views/settings.php:193
 msgid "Newsletter"
@@ -4438,7 +4508,7 @@ msgstr "Dette er ditt ekte navn, ikke brukernavn."
 
 #: ../../../app/themes/Peafowl/views/settings.php:371
 msgid "http://yourwebsite.com"
-msgstr "http://dinwebside.com"
+msgstr "http://nettside.com"
 
 #: ../../../app/themes/Peafowl/views/settings.php:375
 msgid "Bio"
@@ -4446,7 +4516,7 @@ msgstr "Biografi"
 
 #: ../../../app/themes/Peafowl/views/settings.php:376
 msgid "Tell us a little bit about you"
-msgstr "Skriv en kort presentasjon av deg selv (valgfritt)"
+msgstr "Skriv en kort presentasjon om deg selv"
 
 #: ../../../app/themes/Peafowl/views/settings.php:387
 msgid "User has no connections."
@@ -4668,6 +4738,9 @@ msgstr "Det er en oppdatering tilgjengelig for systemet. Du kan automatisk laste
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 msgid "Update now"
 msgstr "Oppdater nå"
+
+msgid "Your website is running the latest version of %s"
+msgstr "Din nettside kjører siste versjon av %s"
 
 #: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
 msgid "Your website is running the latest version of Chevereto."

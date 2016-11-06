@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-10-17 20:52+0000',
-  'PO-Revision-Date' => '2016-10-17 20:52+0000',
+  'POT-Creation-Date' => '2016-10-26 06:19+0000',
+  'PO-Revision-Date' => '2016-10-26 06:19+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'fr',
@@ -147,12 +147,6 @@ $translation_table = [
 		0 => "image",
 		1 => "images",
 	],
-	"%u liked your %t %c" => [
-		0 => "%u a aimé votre %t %c",
-	],
-	"%u is now following you" => [
-		0 => "%u vous suit désormais",
-	],
 	"Can't create %s destination dir" => [
 		0 => "Impossible de créer le dossier de destination %s",
 	],
@@ -262,15 +256,6 @@ $translation_table = [
 	"That page doesn't exist" => [
 		0 => "Cette page n'existe pas",
 	],
-	"Most recent" => [
-		0 => "Plus récentes",
-	],
-	"Oldest" => [
-		0 => "Plus anciennes",
-	],
-	"Albums" => [
-		0 => "Albums",
-	],
 	"Forgot password?" => [
 		0 => "Mot de passe oublié ?",
 	],
@@ -328,6 +313,12 @@ $translation_table = [
 	"Password required" => [
 		0 => "Mot de passe requis",
 	],
+	"Most recent" => [
+		0 => "Plus récentes",
+	],
+	"Oldest" => [
+		0 => "Plus anciennes",
+	],
 	"Most viewed" => [
 		0 => "Plus vues",
 	],
@@ -352,6 +343,9 @@ $translation_table = [
 	"Images" => [
 		0 => "Images",
 	],
+	"Albums" => [
+		0 => "Albums",
+	],
 	"Users" => [
 		0 => "Utilisateurs",
 	],
@@ -367,11 +361,14 @@ $translation_table = [
 	"check for updates" => [
 		0 => "rechercher les mises à jour",
 	],
+	"Support" => [
+		0 => "Support",
+	],
 	"Chevereto support" => [
 		0 => "Support Chevereto",
 	],
 	"Need help? Go to %s and you will get help quickly." => [
-		0 => "Besoin d'aide ? Aller ici : %s pour en obtenir rapidement.",
+		0 => "Besoin d'aide ? Rendez-vous sur le %s !",
 	],
 	"PHP version" => [
 		0 => "Version de PHP",
@@ -526,6 +523,18 @@ $translation_table = [
 	],
 	"homepage" => [
 		0 => "Page d'accueil",
+	],
+	"Before main title (%s)" => [
+		0 => "Avant le titre (%s)",
+	],
+	"After call to action (%s)" => [
+		0 => "Après le bouton (%s)",
+	],
+	"After cover (%s)" => [
+		0 => "Après la photo (%s)",
+	],
+	"After listing (%s)" => [
+		0 => "Après la liste d'images (%s)",
 	],
 	"Before pagination" => [
 		0 => "Avant pagination",
@@ -862,6 +871,15 @@ $translation_table = [
 	],
 	"Content disliked" => [
 		0 => "Contenus non aimés",
+	],
+	"%u liked your %t %c" => [
+		0 => "%u a aimé votre %t %c",
+	],
+	"%u is now following you" => [
+		0 => "%u vous suit désormais",
+	],
+	"A private user" => [
+		0 => "Utilisateur privé",
 	],
 	"Wrong Username/Email password combination" => [
 		0 => "L'identifiant ou le mot de passe est incorrect",
@@ -1746,6 +1764,9 @@ $translation_table = [
 	"documentation" => [
 		0 => "documentation",
 	],
+	"Learn more about %s at our %d." => [
+		0 => "Pour en savoir plus sur %s consulter notre %d.",
+	],
 	"Add category" => [
 		0 => "Ajouter catégorie",
 	],
@@ -1929,6 +1950,9 @@ $translation_table = [
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "Souhaitez-vous vraiment supprimer la page ID %s ? Cette action est irréversible.",
 	],
+	"Unchecked image formats won't be allowed to be uploaded." => [
+		0 => "Cochez les extensions de fichiers autorisés sur votre site.",
+	],
 	"Enable uploads" => [
 		0 => "Activer les envois",
 	],
@@ -1940,6 +1964,9 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Activez ceci si vous voulez autoriser les utilisateurs non enregistrés à envoyer des images.",
+	],
+	"Number of simultaneous upload threads (parallel uploads)" => [
+		0 => "Nombre de mise en ligne simultanées (Mise en ligne parallèle)",
 	],
 	"Redirect on single upload" => [
 		0 => "Rediriger après l'envoi d'une seule image.",
@@ -2526,6 +2553,12 @@ $translation_table = [
 	"banners" => [
 		0 => "bannières",
 	],
+	"Automatic updates check" => [
+		0 => "Vérification automatique des mises à jour",
+	],
+	"When enabled the system will automatically check for new updates." => [
+		0 => "Quand l'option est activée le système vérifie automatiquement la présence de nouvelles mises à jour.",
+	],
 	"Display available updates notification" => [
 		0 => "Afficher les mises à jour disponibles par notification",
 	],
@@ -2585,6 +2618,12 @@ $translation_table = [
 	],
 	"Album routing" => [
 		0 => "Adressage de l'album",
+	],
+	"Custom language strings" => [
+		0 => "Texte personnalisé",
+	],
+	"language strings" => [
+		0 => "textes personnalisés",
 	],
 	"Default language" => [
 		0 => "Langue par défaut",
@@ -2718,6 +2757,12 @@ $translation_table = [
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Vous avez besoin d'une <a href=\"%s\" target=\"_blank\">clé reCAPTCHA</a> pour ceci.",
 	],
+	"%s site key" => [
+		0 => "Clé du site %s",
+	],
+	"%s secret key" => [
+		0 => "Clé secrète %s",
+	],
 	"reCAPTCHA public key" => [
 		0 => "Clé publique reCAPTCHA",
 	],
@@ -2729,6 +2774,18 @@ $translation_table = [
 	],
 	"How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA." => [
 		0 => "Combien d'échecs sont nécessaires pour demander un reCAPTCHA ? Mettez (0) pour toujours afficher reCAPTCHA.",
+	],
+	"Comments API" => [
+		0 => "API des commentaires",
+	],
+	"Disqus API works with %s." => [
+		0 => "Disqus API fonctionne avec %s",
+	],
+	"Disqus shortname" => [
+		0 => "Identifiant Disqus",
+	],
+	"%s public key" => [
+		0 => "Clé publique %s",
 	],
 	"Comment code" => [
 		0 => "Code des commentaires",
@@ -2762,6 +2819,12 @@ $translation_table = [
 	],
 	"Check the errors to proceed." => [
 		0 => "Vérifiez les erreurs pour continuer.",
+	],
+	"Play GIF" => [
+		0 => "Lire le GIF",
+	],
+	"Load full resolution" => [
+		0 => "Afficher en haute définition",
 	],
 	"Guest" => [
 		0 => "Invité",
@@ -3096,6 +3159,9 @@ $translation_table = [
 	],
 	"Update now" => [
 		0 => "Mettre à jour maintenant",
+	],
+	"Your website is running the latest version of %s" => [
+		0 => "Votre site web est en cours d'exécution sur la dernière version de %s",
 	],
 	"Your website is running the latest version of Chevereto." => [
 		0 => "Votre site web dispose de la dernière version de Chevereto.",

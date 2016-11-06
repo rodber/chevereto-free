@@ -21,7 +21,6 @@ PF.obj.config.json_api = "<?php echo G\get_base_url('json'); ?>";
 PF.obj.config.listing.items_per_page = "<?php echo CHV\getSetting('listing_items_per_page'); ?>";
 PF.obj.config.listing.device_to_columns = <?php echo json_encode(CHV\getSetting('listing_device_to_columns')); ?>;
 PF.obj.config.auth_token = "<?php echo get_auth_token(); ?>";
-PF.obj.config.github_url = "<?php echo G_APP_GITHUB_REPO_URL; ?>";
 
 PF.obj.l10n = <?php echo json_encode(CHV\get_translation_table()) ;?>;
 

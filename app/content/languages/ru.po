@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-10-17 20:52+0000\n"
-"PO-Revision-Date: 2016-10-17 20:52+0000\n"
+"POT-Creation-Date: 2016-11-01 14:37+0000\n"
+"PO-Revision-Date: 2016-11-01 14:37+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -233,15 +233,6 @@ msgstr[0] "изображение"
 msgstr[1] "изображения"
 msgstr[2] "изображений"
 
-#: ../../../app/lib/classes/class.notification.php:75
-msgid "%u liked your %t %c"
-msgstr "Пользователю %u понравилось %t %c"
-
-#: ../../../app/lib/classes/class.notification.php:81
-#, php-format
-msgid "%u is now following you"
-msgstr "%u подписался на Вашу ленту"
-
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
 msgid "Can't create %s destination dir"
@@ -396,36 +387,6 @@ msgstr "Показать мои изображения"
 msgid "That page doesn't exist"
 msgstr "Эта страница не существует"
 
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "Новые"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "Старые"
-
-#: ../../../app/routes/route.dashboard.php:40
-#: ../../../app/routes/route.search.php:92
-#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
-#: ../../../app/themes/Peafowl/header.php:403
-#: ../../../app/themes/Peafowl/views/settings.php:77
-msgid "Albums"
-msgstr "Альбомы"
-
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:24
@@ -544,6 +505,28 @@ msgstr "Перед тем как продолжить, проверьте пра
 msgid "Password required"
 msgstr "Требуется указать пароль"
 
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Новые"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "Старые"
+
 #: ../../../app/routes/route.album.php:96
 #: ../../../app/routes/route.category.php:64
 #: ../../../app/routes/route.dashboard.php:1121
@@ -595,6 +578,14 @@ msgstr "Статистика"
 msgid "Images"
 msgstr "Изображения"
 
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:92
+#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
+#: ../../../app/themes/Peafowl/header.php:403
+#: ../../../app/themes/Peafowl/views/settings.php:77
+msgid "Albums"
+msgstr "Альбомы"
+
 #: ../../../app/routes/route.dashboard.php:41
 #: ../../../app/routes/route.dashboard.php:233
 #: ../../../app/routes/route.search.php:99
@@ -620,8 +611,11 @@ msgstr "установить обновление"
 msgid "check for updates"
 msgstr "проверить обновления"
 
+msgid "Support"
+msgstr "Поддержка"
+
 msgid "Chevereto support"
-msgstr "Тех поддержка Chevereto"
+msgstr "службу поддержки Chevereto"
 
 msgid "Need help? Go to %s and you will get help quickly."
 msgstr "Нужна помощь? Посетите %s и мы быстро поможем вам."
@@ -1398,6 +1392,18 @@ msgstr "Содержимое понравилось"
 #: ../../../app/routes/route.json.php:1150
 msgid "Content disliked"
 msgstr "Содержимое не понравилось"
+
+#: ../../../app/lib/classes/class.notification.php:75
+msgid "%u liked your %t %c"
+msgstr "Пользователю %u понравилось %t %c"
+
+#: ../../../app/lib/classes/class.notification.php:81
+#, php-format
+msgid "%u is now following you"
+msgstr "%u подписался на Вашу ленту"
+
+msgid "A private user"
+msgstr "Скрытый пользователь"
 
 #: ../../../app/routes/route.login.php:133
 msgid "Wrong Username/Email password combination"
@@ -2839,10 +2845,10 @@ msgid "This setting is always diabled when using personal website mode."
 msgstr "Данная настройка всегда выключена, если вы используете персональный режим."
 
 msgid "documentation"
-msgstr "документацию"
+msgstr "документации"
 
 msgid "Learn more about %s at our %d."
-msgstr "Узнайте больше о %s на %d."
+msgstr "Узнайте больше о %s в %d."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
@@ -4000,7 +4006,7 @@ msgid "Custom language strings"
 msgstr "Дополнительные строки перевода"
 
 msgid "language strings"
-msgstr "строки перевода"
+msgstr "переводе"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1611
 msgid "Default language"
@@ -4181,6 +4187,12 @@ msgstr "Секретный ключ клиента ВКонтакте"
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "Для этого вам необходим <a href=\"%s\" target=\"_blank\">ключ reCAPTCHA</a>."
 
+msgid "%s site key"
+msgstr "%s ключ сайта"
+
+msgid "%s secret key"
+msgstr "%s секретный ключ"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1974
 msgid "reCAPTCHA public key"
 msgstr "Публичный ключ reCAPTCHA"
@@ -4196,6 +4208,18 @@ msgstr "Порог срабатывания reCAPTCHA"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1991
 msgid "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA."
 msgstr "Через сколько неудачных попыток показывать reCAPTCHA? Укажите ноль(0), чтобы всегда показывать reCAPTCHA."
+
+msgid "Comments API"
+msgstr "API системы комментариев"
+
+msgid "Disqus API works with %s."
+msgstr "Disqus API работает с %s."
+
+msgid "Disqus shortname"
+msgstr "Идентификатор Disqus"
+
+msgid "%s public key"
+msgstr "%s публичный ключ"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1997
 msgid "Comment code"
@@ -4245,6 +4269,12 @@ msgstr "Сохранить изменения"
 #: ../../../app/themes/Peafowl/views/settings.php:477
 msgid "Check the errors to proceed."
 msgstr "Перед тем как продолжить, проверьте правильность заполнения."
+
+msgid "Play GIF"
+msgstr "Воспроизвести GIF"
+
+msgid "Load full resolution"
+msgstr "Загрузить полную версию"
 
 #: ../../../app/themes/Peafowl/views/image.php:57
 msgid "Guest"
@@ -4724,6 +4754,9 @@ msgstr "Для Вашей системы доступно обновление. 
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 msgid "Update now"
 msgstr "Обновить"
+
+msgid "Your website is running the latest version of %s"
+msgstr "Вы используете последнюю версию Chevereto - %s"
 
 #: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
 msgid "Your website is running the latest version of Chevereto."

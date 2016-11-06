@@ -318,9 +318,7 @@ function display_cookie_law_banner() {
 }
 
 function include_peafowl_foot() {
-	
 	display_cookie_law_banner();
-	
 	$resources = [
 		'peafowl'	=> CHV_PATH_PEAFOWL . 'peafowl.js',
 		'chevereto' => G_APP_PATH_LIB . 'chevereto.js'
@@ -328,13 +326,16 @@ function include_peafowl_foot() {
 	foreach($resources as $k => &$v) {
 		$v = get_static_url($v);
 	}
-	//$resources['jquery'] = get_static_url(CHV_PATH_PEAFOWL . 'js/jquery.min.js', ['minify' => false]);
-	$resources['scripts'] = get_static_url(CHV_PATH_PEAFOWL . 'js/scripts.js');	
-	echo //'<script src="' . $resources['jquery'] . '"></script>' . "\n" .
+	$resources['scripts'] = get_static_url(CHV_PATH_PEAFOWL . 'js/scripts.js');
+	$echo =
 		 '<script src="' . $resources['scripts'] . '"></script>' . "\n" .
 		 '<script>(function($,d){$.each(readyQ,function(i,f){$(f)});$.each(bindReadyQ,function(i,f){$(d).bind("ready",f)})})(jQuery,document)</script>' . "\n" .
 		 '<script src="' . $resources['peafowl'] . '"></script>' . "\n" .
-		 '<script src="' . $resources['chevereto'] . '"></script>';
+		 '<script src="' . $resources['chevereto'] . '"></script>' . "\n\n";
+	if(method_exists('CHV\Settings','getChevereto')) {
+		$echo .= '<script>var CHEVERETO = ' . json_encode(CHV\Settings::getChevereto()) . '</script>';
+	}
+	echo $echo;
 }
  
 function get_peafowl_item_list($tpl="image", $item, $template, $requester=NULL, $tools) {
@@ -384,7 +385,9 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=NULL, 
 	// Missing template file cause uncaught error
 	$tpl_replacements = $template;
 	
-	$conditional_replaces['tpl_list_item/item_like'] = NULL;
+	if(!CHV\getSetting('enable_likes') || $requester['is_private'] || $item['user']['is_private']) {
+		$conditional_replaces['tpl_list_item/item_like'] = NULL;
+	}
 	
 	if($item['user']['is_private'] && !$requester['is_admin'] && $item["user"]["id"] !== $requester['id']) {
 		unset($item['user']);
@@ -939,4 +942,69 @@ function displayEmptyPixel() {
 	Header('Content-Length: 43');
 	echo base64_decode('R0lGODlhAQABAIAAAAAAAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
 	die();
+}
+
+function showComments() {
+	switch(CHV\getSetting('comments_api')) {
+		case 'js':
+			$html = CHV\getSetting('comment_code');
+		break;
+		case 'disqus':
+			$disqus_secret = CHV\getSetting('disqus_secret_key');
+			$disqus_public = CHV\getSetting('disqus_public_key');
+			if(!empty($disqus_secret) && !empty($disqus_public)) {
+				$logged_user = CHV\Login::getuser();
+				$data = [
+					'id'		=> $logged_user['id_encoded'],
+					'username'	=> $logged_user['name'],
+					'email'		=> $logged_user['email'],
+					'avatar'	=> $logged_user['avatar']['url'],
+					'url'		=> $logged_user['url']
+				];
+				function dsq_hmacsha1($data, $key) {
+					$blocksize = 64;
+					$hashfunc = 'sha1';
+					if (strlen($key)>$blocksize) {
+						$key = pack('H*', $hashfunc($key));
+					}
+					$key = str_pad($key, $blocksize,chr(0x00));
+					$ipad = str_repeat(chr(0x36), $blocksize);
+					$opad = str_repeat(chr(0x5c), $blocksize);
+					$hmac = pack('H*', $hashfunc(($key^$opad).pack('H*', $hashfunc(($key^$ipad).$data))));
+					return bin2hex($hmac);
+				}
+				$message = base64_encode(json_encode($data));
+				$timestamp = time();
+				$hmac = dsq_hmacsha1($message . ' ' . $timestamp, $disqus_secret);
+				$auth = $message . ' ' . $hmac . ' ' . $timestamp;
+			}
+			$html = strtr('<div id="disqus_thread"></div>
+<script>
+var disqus_config = function() {
+	this.page.url = "%page_url";
+	this.page.identifier = "%page_id";
+};
+(function() {
+	var d = document, s = d.createElement("script");
+	s.src = "//%shortname.disqus.com/embed.js";
+	s.setAttribute("data-timestamp", +new Date());
+	(d.head || d.body).appendChild(s);
+})();
+var disqus_config = function () { 
+	this.language = "%language_code";
+	this.page.remote_auth_s3 = "%auth";
+	this.page.api_key = "%api_key";
+};
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>', [
+	'%page_url'		=> G\get_current_url(),
+	'%page_id'		=> G\str_replace_first(G\get_route_path(), G\get_route_name(), G\get_route_path(TRUE)), // image.ID
+	'%shortname'	=> CHV\getSetting('disqus_shortname'),
+	'%language_code'=> CHV\get_language_used()['base'],
+	'%auth'			=> isset($auth) ? $auth : NULL,
+	'%api_key'		=> $disqus_public,
+]);
+		break;
+	}
+	echo $html;
 }

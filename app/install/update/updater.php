@@ -35,7 +35,7 @@ try {
         throw new Exception(sprintf("Can't write into %s path", G\absolute_to_relative($update_temp_dir)));
     }
     if(!isset($_REQUEST['action'])) {
-        $doctitle = 'Update in progress';
+        $doctitle = _s('Update in progress');
         $system_template = CHV_APP_PATH_SYSTEM . 'template.php';
         $update_template = dirname($update_temp_dir) . '/template/update.php';
         if(file_exists($update_template)) {
@@ -50,13 +50,15 @@ try {
             throw new Exception("Can't find " . G\absolute_to_relative($system_template));
         }
     } else {
-        
+
+		$CHEVERETO = Settings::getChevereto();
+
         set_time_limit(300); // Allow up to five minutes...
         
         switch($_REQUEST['action']) {
             case 'ask':
                 try {
-                    $json_array = json_decode(G\fetch_url('https://chevereto.com/api/get/info/free'), TRUE);
+                    $json_array = json_decode(G\fetch_url($CHEVERETO['api']['get']['info']), TRUE);
                     $json_array['success'] = ['message' => 'OK']; // "success" is a Chevereto internal thing
                 } catch(Exception $e) {
                     throw new Exception(_s("An error occurred. Please try again later."), 400);
@@ -103,11 +105,11 @@ try {
                         ];
                     }
                 } catch (Exception $e) {
-                    throw new Exception(_s("Can't download %s", 'v' . $version) . ' (' . $e->getMessage() . ')');
+                    throw new Exception(_s("Can't download %s", $version == 'latest' ? 'Chevereto' : ('v' . $version)) . ' (' . $e->getMessage() . ')');
                 }
+
             break;
             case 'extract':
-
                 $zip_file = $update_temp_dir . $_REQUEST['file'];
 				
 				if(FALSE === preg_match('/^Chevereto-Chevereto-Free-([\d.]+)-\d+-g(.*)_.*$/', $_REQUEST['file'], $matches)) {
@@ -124,6 +126,7 @@ try {
                 // Unzip .zip
                 $zip = new \ZipArchive;
                 if ($zip->open($zip_file) === TRUE) {
+
                     // At this point we will enter the website in maintenance mode (if needed)
                     try {
                         $toggle_maintenance = !getSetting('maintenance');
@@ -131,17 +134,17 @@ try {
                             DB::update('settings', ['value' => $toggle_maintenance], ['name' => 'maintenance']);
                         }
                     } catch (Exception $e) {}
+
                     $zip->extractTo($update_temp_dir);
                     $zip->close();
                     @unlink($zip_file);
                 } else {
                     throw new Exception(_s("Can't extract %s", G\absolute_to_relative($zip_file)), 401);
                 }
-				
+
                 // Recursive copy UPDATE -> CURRENT
                 $source = $update_temp_dir . G_APP_GITHUB_OWNER . '-' . G_APP_GITHUB_REPO . '-' . $etag_short . '/';
                 $dest = G_ROOT_PATH;
-				
                 foreach ($iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($source, \RecursiveDirectoryIterator::SKIP_DOTS), \RecursiveIteratorIterator::SELF_FIRST) as $item) {
 							
 						$target = $dest . $iterator->getSubPathName();
@@ -168,7 +171,6 @@ try {
 							}
 							unlink($item); // Save some valuable seconds...
 						}
-
                 }
                 
                 // Remove working copy (UPDATE)

@@ -47,6 +47,11 @@ if(!defined('access') or !access) die('This file cannot be directly accessed.');
 PF.obj.config.base_url = "<?php echo G\get_base_url(); ?>";
 PF.obj.l10n = <?php echo json_encode(CHV\get_translation_table()) ;?>;
 </script>
+<?php
+if(method_exists('CHV\Settings','getChevereto')) {
+	echo '<script>var CHEVERETO = ' . json_encode(CHV\Settings::getChevereto()) . '</script>';
+}
+?>
 <script src="<?php echo CHV\Render\versionize_src(G\Render\get_app_lib_file_url('chevereto.js')); ?>"></script>
 
 </html>

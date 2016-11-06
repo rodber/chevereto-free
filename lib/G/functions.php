@@ -1444,7 +1444,7 @@ namespace G {
 			curl_setopt($ch, CURLOPT_HEADER, 0);
 			curl_setopt($ch, CURLOPT_FAILONERROR, 0);
 			curl_setopt($ch, CURLOPT_ENCODING, 'gzip'); // this needs zlib output compression enabled (php)
-			curl_setopt($ch, CURLOPT_VERBOSE, 1);
+			curl_setopt($ch, CURLOPT_VERBOSE, 0);
 			
 			if($file) {
 				// Save the file to $file destination

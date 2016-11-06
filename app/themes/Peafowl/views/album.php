@@ -103,6 +103,47 @@
 				
 			</div>
 			
+			<div id="tab-codes" class="tabbed-content margin-top-30">
+				<?php if(CHV\Login::getUser()) { ?>
+				<div class="content-listing-loading"></div>
+				<div id="embed-codes" class="input-label margin-bottom-0 margin-top-0 copy-hover-display soft-hidden">
+					<label for="album-embed-toggle"><?php _se('Embed codes'); ?></label>
+					<div class="c7 margin-bottom-10">
+						<select name="album-embed-toggle" id="album-embed-toggle" class="text-input" data-combo="album-embed-toggle-combo">
+							<?php
+								foreach(G\get_global('embed_tpl') as $key => $value) {
+									echo '<optgroup label="'.$value['label'].'">'."\n";
+									foreach($value['options'] as $k => $v) {
+										echo '	<option value="'.$k.'" data-size="'.$v["size"].'">'.$v["label"].'</option>'."\n";
+									}
+									echo '</optgroup>';
+								}
+							?>
+						</select>
+					</div>
+					<div id="album-embed-toggle-combo" class="position-relative">
+						<?php
+							$i=0;
+							foreach(G\get_global('embed_tpl') as $key => $value) {
+								foreach($value['options'] as $k => $v) {
+									echo '<div data-combo-value="'.$k.'" class="switch-combo'.($i>0 ? " soft-hidden" : "").'">
+										<textarea id="album-embed-code-'.$i.'" class="r8 resize-vertical" name="'.$k.'" data-size="'.$v["size"].'" data-focus="select-all"></textarea>
+										<button class="copy-input" data-action="copy" data-action-target="#album-embed-code-'.$i.'">'._s('copy').'</button>
+									</div>'."\n";
+									$i++;
+								}
+							}
+						?>
+					</div>
+				</div>
+				<?php } else { ?>
+				<div class="content-empty">
+					<span class="icon icon-users"></span>
+					<p class="message">This feature is available only for registered users.</p>
+				</div>
+				<?php } ?>
+			</div>
+			
 			<?php
 				if(is_admin()) {
 			?>

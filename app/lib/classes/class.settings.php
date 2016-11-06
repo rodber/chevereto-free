@@ -143,9 +143,11 @@ class Settings {
 			foreach($defaults as $k => &$v) {
 				G\nullify_string($v);
 			}
-			unset($v); // break reference
+			unset($v);
 			
-			$settings['theme_logo_height'] = (int) $settings['theme_logo_height'];
+			if($settings['theme_logo_height'] !== NULL) {
+				$settings['theme_logo_height'] = (int) $settings['theme_logo_height'];
+			}
 
 			// Injected things due to single user mode on
 			if($settings['website_mode'] == 'personal') {
@@ -239,7 +241,7 @@ class Settings {
 	
 	public static function setValue($key, $value) {
 		$settings = self::getStatic('settings');
-		self::$settings[$key] = $value;
+		self::$settings[$key] = $value ?: NULL;
 	}
 	
 	public static function update($name_values) {
@@ -269,6 +271,24 @@ class Settings {
 		} catch(Exception $e) {
 			throw new SettingsException($e->getMessage(), 400);
 		}
+	}
+	
+	public static function getChevereto() {
+		$api = 'https://chevereto.com/api/';
+		return [
+			'edition'	=> G_APP_NAME,
+			'version'	=> G_APP_VERSION,
+			'source'	=> [
+				'label'	=> !defined('G_APP_GITHUB_REPO_URL') ? 'Chevereto.com/panel/downloads' : (G_APP_GITHUB_OWNER . '/' . G_APP_GITHUB_REPO),
+				'url'	=> !defined('G_APP_GITHUB_REPO_URL') ? 'https://chevereto.com/panel/downloads' : G_APP_GITHUB_REPO_URL,
+			],
+			'api'	=> [
+				'download' => $api . 'download',
+				'get' => [
+					'info' => ($api . 'get/info') . (defined('G_APP_GITHUB_REPO_URL') ? '/free' : NULL),
+				]
+			]
+		];
 	}
 
 }

@@ -74,15 +74,17 @@ if(Settings::get('cdn')) {
 }
 define('CHV_ROOT_URL_STATIC', defined('CHV_ROOT_CDN_URL') ? CHV_ROOT_CDN_URL : G_ROOT_URL);
 
-// Define app repo URL
-define('G_APP_GITHUB_REPO_URL', 'https://github.com/' . G_APP_GITHUB_OWNER . '/' . G_APP_GITHUB_REPO);
-
 // Define the app theme
 if(!defined('G_APP_PATH_THEME')) {
-	$theme_path = G_APP_PATH_THEMES . Settings::get('theme') . '/';
-	if(file_exists($theme_path)) {
+	$theme_path = G_APP_PATH_THEMES;
+	if(Settings::get('chevereto_version_installed')) {
+		$theme_path .= Settings::get('theme') . '/';
+	}
+	if(is_dir($theme_path)) {
 		define('G_APP_PATH_THEME', $theme_path);
 		define('BASE_URL_THEME', G\absolute_to_url(G_APP_PATH_THEME, CHV_ROOT_URL_STATIC));
+	} else {
+		die(sprintf("Theme path %s doesn't exists.", G\absolute_to_relative($theme_path)));
 	}
 }
 

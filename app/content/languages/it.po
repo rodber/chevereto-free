@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-10-17 20:52+0000\n"
-"PO-Revision-Date: 2016-10-17 20:52+0000\n"
+"POT-Creation-Date: 2016-10-27 18:49+0000\n"
+"PO-Revision-Date: 2016-10-27 18:49+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -227,15 +227,6 @@ msgid_plural "images"
 msgstr[0] "Immagine"
 msgstr[1] "Immagini"
 
-#: ../../../app/lib/classes/class.notification.php:75
-msgid "%u liked your %t %c"
-msgstr "A %u piace il tuo %t %c"
-
-#: ../../../app/lib/classes/class.notification.php:81
-#, php-format
-msgid "%u is now following you"
-msgstr "%u ora ti sta seguendo"
-
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
 msgid "Can't create %s destination dir"
@@ -386,36 +377,6 @@ msgstr "Visualizza tutte le mie immagini"
 msgid "That page doesn't exist"
 msgstr "La pagina non esiste"
 
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "Più recenti"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "Più vecchi"
-
-#: ../../../app/routes/route.dashboard.php:40
-#: ../../../app/routes/route.search.php:92
-#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
-#: ../../../app/themes/Peafowl/header.php:403
-#: ../../../app/themes/Peafowl/views/settings.php:77
-msgid "Albums"
-msgstr "Album"
-
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:24
@@ -534,6 +495,28 @@ msgstr "Per proseguire verifica gli errori di compilazione."
 msgid "Password required"
 msgstr "Password obbligatoria"
 
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Più recenti"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "Più vecchi"
+
 #: ../../../app/routes/route.album.php:96
 #: ../../../app/routes/route.category.php:64
 #: ../../../app/routes/route.dashboard.php:1121
@@ -585,6 +568,14 @@ msgstr "Statistiche"
 msgid "Images"
 msgstr "Immagini"
 
+#: ../../../app/routes/route.dashboard.php:40
+#: ../../../app/routes/route.search.php:92
+#: ../../../app/routes/route.user.php:90 ../../../app/routes/route.user.php:283
+#: ../../../app/themes/Peafowl/header.php:403
+#: ../../../app/themes/Peafowl/views/settings.php:77
+msgid "Albums"
+msgstr "Album"
+
 #: ../../../app/routes/route.dashboard.php:41
 #: ../../../app/routes/route.dashboard.php:233
 #: ../../../app/routes/route.search.php:99
@@ -609,6 +600,9 @@ msgstr "installa l'aggiornamento"
 #: ../../../app/routes/route.dashboard.php:162
 msgid "check for updates"
 msgstr "controlla gli aggiornamenti"
+
+msgid "Support"
+msgstr "Supporto"
 
 msgid "Chevereto support"
 msgstr "Supporto Chevereto"
@@ -1387,6 +1381,18 @@ msgstr "contenuti piaciuti"
 #: ../../../app/routes/route.json.php:1150
 msgid "Content disliked"
 msgstr "contenuti non piaciuti"
+
+#: ../../../app/lib/classes/class.notification.php:75
+msgid "%u liked your %t %c"
+msgstr "A %u piace il tuo %t %c"
+
+#: ../../../app/lib/classes/class.notification.php:81
+#, php-format
+msgid "%u is now following you"
+msgstr "%u ora ti sta seguendo"
+
+msgid "A private user"
+msgstr "Utente privato"
 
 #: ../../../app/routes/route.login.php:133
 msgid "Wrong Username/Email password combination"
@@ -4166,6 +4172,12 @@ msgstr "VK  cliente  segreta"
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "Avete bisogno di un <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> per questo."
 
+msgid "%s site key"
+msgstr "%s chiave del sito"
+
+msgid "%s secret key"
+msgstr "%s chiave segreta"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1974
 msgid "reCAPTCHA public key"
 msgstr "chiave pubblica reCAPTCHA"
@@ -4181,6 +4193,18 @@ msgstr "reCAPTCHA soglia"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1991
 msgid "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA."
 msgstr "Quanti tentativi falliti sono necessarie per chiedere reCAPTCHA? Usare zero (0) per mostrare sempre reCAPTCHA."
+
+msgid "Comments API"
+msgstr "Commenti API"
+
+msgid "Disqus API works with %s."
+msgstr "Disqus API lavora con %s"
+
+msgid "Disqus shortname"
+msgstr "Disqus nomecorto"
+
+msgid "%s public key"
+msgstr "%s chiave pubblica"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1997
 msgid "Comment code"
@@ -4230,6 +4254,12 @@ msgstr "Salva cambiamenti"
 #: ../../../app/themes/Peafowl/views/settings.php:477
 msgid "Check the errors to proceed."
 msgstr "Controllare gli errori per procedere."
+
+msgid "Play GIF"
+msgstr "Play GIF"
+
+msgid "Load full resolution"
+msgstr "Caricare con una piena risoluzione"
 
 #: ../../../app/themes/Peafowl/views/image.php:57
 msgid "Guest"
@@ -4708,6 +4738,9 @@ msgstr "Vi è disponibile un aggiornamento per il sistema. È possibile scaricar
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 msgid "Update now"
 msgstr "Aggiorna ora"
+
+msgid "Your website is running the latest version of %s"
+msgstr "Il tuo sito web è in esecuzione la versione più recente di %s"
 
 #: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
 msgid "Your website is running the latest version of Chevereto."

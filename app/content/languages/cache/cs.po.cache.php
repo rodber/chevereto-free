@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-10-17 20:52+0000',
-  'PO-Revision-Date' => '2016-10-17 20:52+0000',
+  'POT-Creation-Date' => '2016-10-27 18:49+0000',
+  'PO-Revision-Date' => '2016-10-27 18:49+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'cs',
@@ -159,12 +159,6 @@ $translation_table = [
 		2 => "obrázků",
 		3 => "obrázky",
 	],
-	"%u liked your %t %c" => [
-		0 => "%u se líbí váš %t %c",
-	],
-	"%u is now following you" => [
-		0 => "%u vás nyní sleduje",
-	],
 	"Can't create %s destination dir" => [
 		0 => "Nelze vytvořit %s cílový adresář",
 	],
@@ -249,6 +243,9 @@ $translation_table = [
 	"You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this." => [
 		0 => "Dosud jste nezměnili výchozí nastavení e-mailu. Pro změnu tohoto nastavení jděte do <a href='%s'>Nastavení e-mailu</a>.",
 	],
+	"There is an update available for your Chevereto based website." => [
+		0 => "Je zde dostupná aktualizace pro vaši Chevereto webovou stránku.",
+	],
 	"The release notes for this update are:" => [
 		0 => "Poznámky k verzi této aktualizace:",
 	],
@@ -272,15 +269,6 @@ $translation_table = [
 	],
 	"That page doesn't exist" => [
 		0 => "Tato stránka neexistuje",
-	],
-	"Most recent" => [
-		0 => "Nejnovější",
-	],
-	"Oldest" => [
-		0 => "Nejstarší",
-	],
-	"Albums" => [
-		0 => "Alba",
 	],
 	"Forgot password?" => [
 		0 => "Zapoměli jste heslo?",
@@ -339,6 +327,12 @@ $translation_table = [
 	"Password required" => [
 		0 => "Je vyžadováno heslo",
 	],
+	"Most recent" => [
+		0 => "Nejnovější",
+	],
+	"Oldest" => [
+		0 => "Nejstarší",
+	],
 	"Most viewed" => [
 		0 => "Nejprohlíženější",
 	],
@@ -363,6 +357,9 @@ $translation_table = [
 	"Images" => [
 		0 => "Obrázky",
 	],
+	"Albums" => [
+		0 => "Alba",
+	],
 	"Users" => [
 		0 => "Uživatelé",
 	],
@@ -378,8 +375,14 @@ $translation_table = [
 	"check for updates" => [
 		0 => "Zkontrolovat aktualizace",
 	],
+	"Support" => [
+		0 => "Podpora",
+	],
 	"Chevereto support" => [
 		0 => "Chevereto podpora",
+	],
+	"Need help? Go to %s and you will get help quickly." => [
+		0 => "Potřebujete pomoc? Navštivte %s a získejte rychle pomoc nebo radu.",
 	],
 	"PHP version" => [
 		0 => "PHP verze",
@@ -434,6 +437,12 @@ $translation_table = [
 	],
 	"Request new features" => [
 		0 => "Požádat o nové funkce",
+	],
+	"Bug tracking" => [
+		0 => "Nachlášení chyb",
+	],
+	"Blog" => [
+		0 => "Blog",
 	],
 	"Website" => [
 		0 => "Webová stránka",
@@ -527,6 +536,18 @@ $translation_table = [
 	],
 	"The page has been deleted." => [
 		0 => "Stránka byla odstraněna.",
+	],
+	"homepage" => [
+		0 => "domovská stránka",
+	],
+	"Before main title (%s)" => [
+		0 => "Před hlavním názvem (%s)",
+	],
+	"After cover (%s)" => [
+		0 => "Po titulním obrázku (%s)",
+	],
+	"After listing (%s)" => [
+		0 => "Po výpisu (%s)",
 	],
 	"Before pagination" => [
 		0 => "Před stránkováním",
@@ -842,6 +863,15 @@ $translation_table = [
 	],
 	"Content disliked" => [
 		0 => "Obsah se nelíbí",
+	],
+	"%u liked your %t %c" => [
+		0 => "%u se líbí váš %t %c",
+	],
+	"%u is now following you" => [
+		0 => "%u vás nyní sleduje",
+	],
+	"A private user" => [
+		0 => "Soukromý uživatel",
 	],
 	"Wrong Username/Email password combination" => [
 		0 => "Špatná kombinace přihlašovacího jména nebo e-mailu a hesla",
@@ -1359,6 +1389,9 @@ $translation_table = [
 		2 => "Alb",
 		3 => "Alba",
 	],
+	"me" => [
+		0 => "mě",
+	],
 	"link" => [
 		0 => "odkaz",
 	],
@@ -1722,6 +1755,9 @@ $translation_table = [
 	"Allows users to like content and populate \"Most liked\" listings." => [
 		0 => "Umožňuje uživatelům \"lajkovat\" obsah a šířit výpisy \"Nejoblíbenějších\".",
 	],
+	"Followers allows users to follow each other." => [
+		0 => "Odběratelé uživatelům umožňují se navzájem sledovat.",
+	],
 	"Personal mode target user" => [
 		0 => "Cílový uživatel osobního režimu",
 	],
@@ -1848,8 +1884,14 @@ $translation_table = [
 	"Page sort order display for menus and listings. Use \"1\" for top priority." => [
 		0 => "Pořadí zobrazení stránky pro menu a výpisy. Použijte \"1\" pro nejvyšší prioritu.",
 	],
+	"pages" => [
+		0 => "stránky",
+	],
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "Opravdu chcete smazat stránku ID %s? Tato akce nelze vrátit zpátky.",
+	],
+	"Unchecked image formats won't be allowed to be uploaded." => [
+		0 => "Nezaškrtnuté formáty obrázkových souborů nebudou moci být nahrány.",
 	],
 	"Enable uploads" => [
 		0 => "Povolit nahrávání",
@@ -1862,6 +1904,9 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Povol pokud chceš umožnit neregistrovaným uživatelům nahrávání.",
+	],
+	"Number of simultaneous upload threads (parallel uploads)" => [
+		0 => "Počet vláken použitých při nahrávání (souběžné nahrávání více souborů)",
 	],
 	"Enable duplicate uploads" => [
 		0 => "Povolit duplicitní nahrávání",
@@ -2200,7 +2245,10 @@ $translation_table = [
 		0 => "Notebook",
 	],
 	"Desktop" => [
-		0 => "Domácí PC",
+		0 => "Počítač",
+	],
+	"theme editing" => [
+		0 => "úprava šablony",
 	],
 	"Put your themes in the %s folder" => [
 		0 => "Vlož svoje téma (šablonu) do složky %s",
@@ -2394,6 +2442,9 @@ $translation_table = [
 	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
 		0 => "Čárkami oddělený seznam cílových uživatelských ID, kteří mohou prohlížet obrázky na domovské stránce. Ponechte pole prázdné pro zobrazování všech nedávných obrázků.",
 	],
+	"banners" => [
+		0 => "bannery",
+	],
 	"Automatic updates check" => [
 		0 => "Automatická kontrola aktualizací",
 	],
@@ -2450,6 +2501,12 @@ $translation_table = [
 	],
 	"Album routing" => [
 		0 => "Směrování alba",
+	],
+	"Custom language strings" => [
+		0 => "Vlastní jazykové řetězce",
+	],
+	"language strings" => [
+		0 => "jazykové řetězce",
 	],
 	"Default language" => [
 		0 => "Výchozí jazyk",
@@ -2628,6 +2685,12 @@ $translation_table = [
 	"Check the errors to proceed." => [
 		0 => "Před pokračováním zkontrolujte chyby",
 	],
+	"Play GIF" => [
+		0 => "Přehrát GIF",
+	],
+	"Load full resolution" => [
+		0 => "Načíst v plném rozlišení",
+	],
 	"Guest" => [
 		0 => "Host",
 	],
@@ -2641,10 +2704,10 @@ $translation_table = [
 		0 => "Přidáno do %a a zakategorizováno v %c",
 	],
 	"Added to %s" => [
-		0 => "Přidáno do %s",
+		0 => "Přidáno do alba %s",
 	],
 	"Uploaded to %s" => [
-		0 => "Nahráno do %s",
+		0 => "Nahráno do alba %s",
 	],
 	"Uploaded %s" => [
 		0 => "Nahráno %s",
@@ -2905,7 +2968,7 @@ $translation_table = [
 		0 => "Aktualizace není nutná",
 	],
 	"System files already up to date" => [
-		0 => "Systémévé soubory jsou již aktuální",
+		0 => "Systémové soubory jsou již aktuální",
 	],
 	"Starting v%s download" => [
 		0 => "Začínám stahovat v%s",
@@ -2959,10 +3022,13 @@ $translation_table = [
 		0 => "Je dostupná aktualizace v%s",
 	],
 	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
-		0 => "Je k dispozici aktualizace pro váš systém. Můžete ji automaticky stáhnout a instalovat, nebo běžte do% s a stáhněte si instalační soubor.",
+		0 => "Je k dispozici aktualizace pro váš systém. Můžete ji automaticky stáhnout a instalovat, nebo běžte na %s a stáhněte si instalační soubor.",
 	],
 	"Update now" => [
 		0 => "Aktualizovat nyní",
+	],
+	"Your website is running the latest version of %s" => [
+		0 => "Vaše webové stránky běží nejnovější verzi %s",
 	],
 	"Your website is running the latest version of Chevereto." => [
 		0 => "Vaše stránka běží na aktuální verzi Chevereta.",
@@ -3022,7 +3088,7 @@ $translation_table = [
 		0 => "Úložiště bylo úspěšně upraveno.",
 	],
 	"User added successfully." => [
-		0 => "Uživatel byl přidán úspěšně.",
+		0 => "Uživatel byl úspěšně přidán.",
 	],
 	"The content has been moved." => [
 		0 => "Obsah byl přesunut.",

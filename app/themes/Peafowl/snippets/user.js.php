@@ -53,7 +53,5 @@
 		}
 	
 	}
-	
 	user_background_full_fix();
-
 </script>

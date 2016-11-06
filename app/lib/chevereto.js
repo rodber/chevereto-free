@@ -113,7 +113,7 @@ $(function(){
 	$("[data-action=cancel-upload-remaining], [data-action=cancel-upload]", $anywhere_upload).click(function() {
 		$("[data-action=cancel]", $anywhere_upload_queue).click();
 		CHV.fn.uploader.isUploading = false;
-		if(CHV.fn.uploader.results.success.length > 0) {
+		if(Object.size(CHV.fn.uploader.success.error) > 0) {
 			CHV.fn.uploader.displayResults();
 			return;
 		} else {
@@ -383,12 +383,11 @@ $(function(){
 		
 		delete CHV.fn.uploader.files[id];
 		
-		
 		CHV.fn.uploader.queueSize();
 		
 		if(Object.size(CHV.fn.uploader.files) == 0) { // No queue left
 			// Null result ?
-			if(CHV.fn.uploader.results.success.length == 0 && CHV.fn.uploader.results.error.length == 0) {
+			if(Object.size(CHV.fn.uploader.success.error) == 0 && Object.size(CHV.fn.uploader.results.error) == 0) {
 				CHV.fn.uploader.reset();
 			}
 		} else {
@@ -397,7 +396,7 @@ $(function(){
 			if(item_xhr_cancel) {
 				if($("li.waiting", $queue).first().length !== 0) {
 					CHV.fn.uploader.upload($("li.waiting", $queue).first());
-				} else if(CHV.fn.uploader.results.success.length !== 0 || CHV.fn.uploader.results.error.length !== 0) {
+				} else if(Object.size(CHV.fn.uploader.success.error) !== 0 || Object.size(CHV.fn.uploader.results.error) !== 0) {
 					CHV.fn.uploader.displayResults();
 				}		
 			}
@@ -444,7 +443,6 @@ $(function(){
 	if($("body#user").exists()) {
 		if(PF.obj.listing.query_string.page > 1) {
 			var State = History.getState();
-			console.log(State.data)
 			if(State.data && typeof State.data.scrollTop !== "undefined") {
 				if($(window).scrollTop() !== State.data.scrollTop) {
 					$(window).scrollTop(State.data.scrollTop);
@@ -457,41 +455,39 @@ $(function(){
 		}
 		
 	}
-
-	if(!PF.fn.isDevice('phone')) {
-		if($("#top-bar-shade").exists()) {
-			if($("#top-bar-shade").css("opacity")) {
-				$("#top-bar-shade").data("initial-opacity", Number($("#top-bar-shade").css("opacity")));
-			}
-		}
-		$(window).scroll(function(){
-			var Y = $(window).scrollTop();
-			var is_slim_shady = $("#top-bar-shade").exists() && !$("html").hasClass("top-bar-box-shadow-none");
-			
-			if(Y < 0) return;
-			
-			var $top_bar = $("#top-bar");
-			var	rate = Number(Y / ($("#background-cover, [data-content=follow-scroll-opacity]").height() - $top_bar.height()));
-			
-			if(rate > 1) rate = 1;
-			
-			if(is_slim_shady) {
-				if($("#top-bar-shade").data("initial-opacity")) {
-					rate += $("#top-bar-shade").data("initial-opacity");
-				}
-				$("#top-bar-shade").css({opacity: rate});
-			}
-			
-			if(rate == 1) return;
-			
-			$("#background-cover-src").css({
-				transform: "translate(0, "+ Y*0.8 + "px"+")"
-				//transform: "scale("+(1+rate/16)+") translate(0, "+ Y*0.8 + "px"+")",
-				//transition: "all 1s"
-			});
-			
-		});
+	
+	if($("#top-bar-shade").exists() && $("#top-bar-shade").css("opacity")) {
+		$("#top-bar-shade").data("initial-opacity", Number($("#top-bar-shade").css("opacity")));
 	}
+	
+	if(PF.fn.isDevice('phone')) {
+		$("#top-bar-shade").css("opacity", 1);
+	}
+	
+	$(window).on("scroll resize", function(){
+		if(PF.fn.isDevice('phone')) {
+			$("#background-cover-src").css("transform", "");
+			$("#top-bar-shade").css("opacity", 1);
+			return;
+		};
+		var Y = $(window).scrollTop();
+		var is_slim_shady = $("#top-bar-shade").exists() && !$("html").hasClass("top-bar-box-shadow-none");
+		if(Y < 0) return;
+		var $top_bar = $("#top-bar");
+		var	rate = Number(Y / ($("#background-cover, [data-content=follow-scroll-opacity]").height() - $top_bar.height()));
+		if(rate > 1) rate = 1;
+		if(is_slim_shady) {
+			if($("#top-bar-shade").data("initial-opacity")) {
+				rate += $("#top-bar-shade").data("initial-opacity");
+			}
+			$("#top-bar-shade").css({opacity: rate});
+		}
+		if(rate == 1) return;
+		$("#background-cover-src").css({
+			transform: "translate(0, "+ Y*0.8 + "px"+")"
+		});
+		
+	});
 	
 	// Selectable list items 
 	CHV.fn.bindSelectableItems();	
@@ -1579,11 +1575,11 @@ $(function(){
 			if(PF.fn.versionCompare(CHV.obj.system_info.version, data.current_version) == -1) {
 				PF.fn.modal.simple({
 					title: PF.fn._s("Update available v%s", data.current_version),
-					message: '<p>' + PF.fn._s('There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file.', '<a href="' + PF.obj.config.github_url + '" target="_blank">GitHub</a>') + '<p>' + PF.fn._s('The release notes for this update are:') + '</p>' + '<textarea class="r4 resize-vertical">' + data.release_notes + '</textarea>' + '<div class="btn-container margin-bottom-0"><a href="' + PF.obj.config.base_url + '/update' + '" class="btn btn-input default">' + PF.fn._s('Update now') + '</a> <span class="btn-alt">' + PF.fn._s('or') + ' <a data-action="cancel">' + PF.fn._s('cancel') + '</a></span></div>',
+					message: '<p>' + PF.fn._s('There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file.', '<a href="' + CHEVERETO.source.url + '" target="_blank">' + CHEVERETO.source.label + '</a>') + '<p>' + PF.fn._s('The release notes for this update are:') + '</p>' + '<textarea class="r4 resize-vertical">' + data.release_notes + '</textarea>' + '<div class="btn-container margin-bottom-0"><a href="' + PF.obj.config.base_url + '/update' + '" class="btn btn-input default">' + PF.fn._s('Update now') + '</a> <span class="btn-alt">' + PF.fn._s('or') + ' <a data-action="cancel">' + PF.fn._s('cancel') + '</a></span></div>',
 					html: true
 				});
 			} else {
-				PF.fn.growl.call(PF.fn._s("Your website is running the latest version of Chevereto.").replace("Chevereto", "Chevereto Free"));
+				PF.fn.growl.call(PF.fn._s("Your website is running the latest version of %s", CHEVERETO.edition));
 			}
 			
 		});
@@ -1815,11 +1811,9 @@ $(function(){
 	});
 	
 	function loadImageListing($this) {
-		console.log("a")
 		$this.addClass("list-item-play-gif--loading");
 		var $parent = $this.closest(".list-item");
 		var $imageContainer = $(".image-container", $parent);
-		console.log( $imageContainer)
 		var $image = $("img", $imageContainer);
 		var md = ".md";
 		var imageSrc = $image.attr("src");
@@ -1833,6 +1827,26 @@ $(function(){
 			$(this.elements).removeClass("hidden");
 		});
 	}
+	
+	$(document).on("click", "#album [data-tab=tab-codes]", function() {
+		if(!PF.fn.is_user_logged()) {
+			return;
+		}
+		var $loading = $(".content-listing-loading", "#tab-codes");
+		if(!$loading.exists()) {
+			return;
+		}
+		var $embed_codes = $("#embed-codes");
+		$.ajax({
+			data: {action: "get-album-contents", albumid: CHV.obj.resource.id},
+			cache: false
+		})
+		.always(function(XHR) {
+			PF.fn.loading.destroy($loading);
+			CHV.fn.fillEmbedCodes(XHR.contents, "#tab-codes");
+			$embed_codes.removeClass("soft-hidden");
+		});
+	});
 	
 });
 
@@ -1854,7 +1868,7 @@ CHV.obj.image_viewer.$loading = $(CHV.obj.image_viewer.loading);
 CHV.fn.system = {
 	checkUpdates: function(callback) {
 		$.ajax({
-			url: "https://chevereto.com/api/get/info/free/",
+			url: CHEVERETO.api.get.info + '/',
 			data: null,
 			cache: false
 		})
@@ -1996,7 +2010,7 @@ CHV.obj.uploaderReset = {
 	uploadParsedIds: [],
 	uploadProcessedIds: [],
 	files: {},
-	results: {success: [], error: []},
+	results: {success: {}, error: {}},
 	toggleWorking: 0,
 	filesAddId : 0,
 	clipboardImages : [],
@@ -2441,7 +2455,7 @@ CHV.fn.uploader = {
 			j = 0,
 			default_options = {
 				canvas: true,
-				maxWidth: 600
+				maxWidth: 590
 			};
 		
 		function CHVLoadImage(i) {
@@ -2459,7 +2473,7 @@ CHV.fn.uploader = {
 			$(CHV.fn.uploader.selectors.queue_item + ":not([data-id]) .load-url", CHV.fn.uploader.selectors.queue)[typeof file.url !== "undefined" ? "show" : "remove"]();
 			
 			loadImage.parseMetaData(file.url ? file.url : file, function(data) {
-				
+
 				// Set the queue item placeholder ids
 				$(CHV.fn.uploader.selectors.queue_item + ":not([data-id]) .preview:empty", CHV.fn.uploader.selectors.queue).first().closest("li").attr("data-id", file.uid);
 				
@@ -2508,13 +2522,10 @@ CHV.fn.uploader = {
 						// Set source image data						
 						CHV.fn.uploader.files[file.uid].parsedMeta = {
 							title: title,
-							width: img.width,
-							height: img.height,
+							width: img.originalWidth,
+							height: img.originalHeight,
 							mimetype: mimetype,
 						};
-						
-						// Resize canvas for better thumb display
-						var img = loadImage.scale(img, {maxWidth: 600});
 
 						$queue_item.show();
 						
@@ -2712,7 +2723,7 @@ CHV.fn.uploader = {
 			this.itemLoading($queue_item);
 		}
 		
-		this.files[id].xhr.onreadystatechange = function(){
+		this.files[id].xhr.onreadystatechange = function() {
 			
 			var is_error = false;
 			
@@ -2771,7 +2782,8 @@ CHV.fn.uploader = {
 						status_txt: err_handle.statusText
 					};
 					
-					CHV.fn.uploader.results.error.push(JSONresponse);
+					CHV.fn.uploader.results.error[Object.size(CHV.fn.uploader.results.error) + 1] = JSONresponse;
+					//CHV.fn.uploader.results.error.push(JSONresponse);
 					console.log("server error", JSONresponse);
 					
 				}
@@ -2823,10 +2835,12 @@ CHV.fn.uploader = {
 			results[result_types[i]] = group_result.replace("%RESULT%", result_types[i]);
 		}
 	
-		if(this.results.error.length > 0) {
+		if(Object.size(this.results.error) > 0) {
 			var error_files = [];
-			for(var i = 0; i < this.results.error.length; i++) {
-				error_files.push(this.results.error[i].error.message);
+			for(var i in this.results.error) {
+				if(typeof this.results.error[i] !== typeof object) continue;
+				error_files[i] = this.results.error[i].error.message;
+				//error_files.push(this.results.error[i].error.message);
 			}
 			if(error_files.length > 0) {
 				$(this.selectors.failed_result).html("<li>" + error_files.join("</li><li>") + "</li>");
@@ -2835,7 +2849,7 @@ CHV.fn.uploader = {
 			$(results.error, this.selectors.root).hide();
 		}
 		
-		if(CHV.obj.config.upload.redirect_single_upload && this.results.success.length == 1 && this.results.error.length == 0) {
+		if(CHV.obj.config.upload.redirect_single_upload && Object.size(this.results.success) == 1 && Object.size(this.results.error) == 0) {
 			window.location.href = this.results.success[0].image.url_viewer;
 			return false;
 		}
@@ -2850,22 +2864,23 @@ CHV.fn.uploader = {
 		$(this.selectors.queue).addClass(this.selectors.queue_complete.substring(1));
 		
 		// Append the embed codes
-		if(this.results.success.length > 0 && $("[data-group=upload-result] textarea", this.selectors.root).exists()) {
+		if(Object.size(this.results.success) > 0 && $("[data-group=upload-result] textarea", this.selectors.root).exists()) {
 			CHV.fn.fillEmbedCodes(this.results.success, CHV.fn.uploader.selectors.root, "val");	
 		}
 		
-		if(this.results.success.length > 0 && this.results.error.length > 0) {
+		if(Object.size(this.results.success) > 0 && Object.size(this.results.error) > 0) {
 			$(results.mixed+", "+results.success, this.selectors.root).show();
-		} else if(this.results.success.length > 0) {
+		} else if(Object.size(this.results.success) > 0) {
 			$(results.success, this.selectors.root).show();
-		} else if(this.results.error.length > 0) {
+		} else if(Object.size(this.results.error) > 0) {
 			$(results.error, this.selectors.root).show();
 		}
 		
 		if($(results.success, this.selectors.root).is(":visible")) {
 			$(results.success, this.selectors.root).find("[data-group=user], [data-group=guest]").hide();
 			$(results.success, this.selectors.root).find("[data-group=" + (PF.fn.is_user_logged() ? "user" : "guest") + "]").show();
-			if(typeof this.results.success[0].image.album !== "undefined") {
+			var firstKey = Object.keys(this.results.success)[0];
+			if(typeof this.results.success[firstKey].image.album !== "undefined") {
 				$("[data-text=upload-target]").text(this.results.success[0].image.album.name);
 				$("[data-link=upload-target]").attr("href", this.results.success[0].image.album.url);
 			}
@@ -2887,6 +2902,8 @@ CHV.fn.fillEmbedCodes = function(elements, parent, fn) {
 	}
 	
 	$.each(elements, function(key, value) {
+
+		if(typeof value == typeof undefined) return;
 				
 		var image = ("id_encoded" in value) ? value : value.image;
 		

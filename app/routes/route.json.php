@@ -93,10 +93,21 @@ $route = function($handler) {
 
 			break;
 
+			case 'get-album-contents':
 			case 'list': // EX 200
-
-				$list_request = $_REQUEST["list"];
-
+				
+				if($doing == 'get-album-contents') {
+					if(!$logged_user) {
+						throw new Exception(_s('Login needed'), 403);
+					}
+					$list_request = 'images';
+					$aux = $_REQUEST['albumid'];
+					$_REQUEST = NULL; // We don't need anything else
+					$_REQUEST['albumid'] = $aux;
+				} else {
+					$list_request = $_REQUEST["list"];
+				}
+				
 				if(!in_array($list_request, array('images', 'albums', 'users'))) {
 					throw new Exception('Invalid list request', 100);
 				}
@@ -111,7 +122,6 @@ $route = function($handler) {
 						$where = '';
 						
 						if(!empty($_REQUEST['like_user_id'])) {
-
 							$where .= ($where == '' ? 'WHERE' : ' AND') . ' like_user_id=:image_user_id';
 							$binds[] = [
 								'param' => ':image_user_id',
@@ -216,10 +226,21 @@ $route = function($handler) {
 					
 				}
 				
-				$list_params = CHV\Listing::getParams(true);
+				$list_params = CHV\Listing::getParams(TRUE);
 				
 				if($list_params['sort'][0] == 'likes') {
 					throw new Exception(_s('Request denied'), 403);
+				}
+				
+				if($doing == 'get-album-contents') {
+					$album_fetch = min(1000, $album['image_count']);
+					$list_params = [
+						'items_per_page' => $album_fetch,
+						'page'		=> 0,
+						'limit'		=> $album_fetch,
+						'offset'	=> 0,
+						'sort'		=> ['date', 'desc'],
+					];
 				}
 				
 				$list = new CHV\Listing;
@@ -235,12 +256,11 @@ $route = function($handler) {
 				$list->setOwner($owner_id);
 				$list->setRequester($logged_user);
 				
-				if($list_request == 'images' and !empty($_REQUEST['albumid'])) {
-					$get_album = CHV\Album::getSingle(CHV\decodeID($_REQUEST['albumid']));
+				if($list_request == 'images' && !empty($_REQUEST['albumid'])) {
 					if($handler::getCond('forced_private_mode')) { // Remeber this override...
-						$get_album['privacy'] = CHV\getSetting('website_content_privacy_mode');
+						$album['privacy'] = CHV\getSetting('website_content_privacy_mode');
 					}
-					$list->setPrivacy($get_album['privacy']);
+					$list->setPrivacy($album['privacy']);
 				}
 
 				if(is_array($binds)) {
@@ -251,7 +271,19 @@ $route = function($handler) {
 				$list->exec();
 				
 				$json_array['status_code'] = 200;
-				$json_array['html'] = $list->htmlOutput($output_tpl);
+
+				if($doing == 'get-album-contents') {
+					$json_array['album'] = G\array_filter_array($album, ['id', 'creation_ip', 'password', 'user', 'privacy_extra', 'privacy_notes'], 'rest');
+					$contents = [];
+					foreach($list->output_assoc as $v) {
+						$contents[] = G\array_filter_array($v, ['id_encoded', 'url', 'url_viewer', 'filename', 'medium', 'thumb'], 'exclusion');
+					}
+					$json_array['is_output_truncated'] = $album['image_count'] > $album_fetch ? 1 : 0;
+					$json_array['contents'] = $contents;
+					
+				} else {
+					$json_array['html'] = $list->htmlOutput($output_tpl);
+				}
 
 			break;
 
@@ -1027,19 +1059,45 @@ $route = function($handler) {
 				$json_array['status_code'] = 200;
 				if($notifications) {
 					$json_array['html'] = '';
-					$template = '<li%class><a href="%user_url">%user_avatar</a><span class="notification-text">%message</span><span class="how-long-ago">%how_long_ago</span></li>';
-					$avatar_tpl = [
+					$template = '<li%class>%avatar<span class="notification-text">%message</span><span class="how-long-ago">%how_long_ago</span></li>';
+					$avatar_src_tpl = [
 						0 => '<span class="user-image default-user-image"><span class="icon icon-user"></span></span>',
 						1 => '<img class="user-image" src="%user_avatar_url" alt="%user_name_short_html">'
 					];
+					$avatar_tpl = [
+						0 => $avatar_src_tpl[0],
+						1 => '<a href="%user_url">%user_avatar</a>'
+					];
 					foreach($notifications as $k => $v) {
-						$json_array['html'] .= strtr($template, [
-							'%class'		=> !$v['is_read'] ? ' class="new"' : NULL,
-							'%user_url'		=> $v['user']['url'],
-							'%user_avatar'	=> strtr($avatar_tpl[isset($v['user']['avatar']) ? 1 : 0], [
+						switch($v['type']) {
+							case 'like':
+								$message = _s('%u liked your %t %c', [
+									'%t' => _s($v['content_type']),
+									'%c' => '<a href="'.$v['image']['url_viewer'].'">'.$v['image']['title_truncated_html'].'</a>'
+								]);
+							break;
+							case 'follow':
+								$message = _s('%u is now following you');
+							break;
+						}
+						$v['message'] = strtr($message, [
+							'%u' => $v['user']['is_private'] ? _s('A private user') : ('<a href="'.$v['user']['url'].'">'.$v['user']['name_short_html'].'</a>'),
+						]);
+						if($v['user']['is_private']) {
+							$avatar = $avatar_tpl[0];
+						} else {
+							$avatar = strtr($avatar_tpl[1], [
+								'%user_url'		=> $v['user']['url'],
+								'%user_avatar'	=> strtr($avatar_src_tpl[isset($v['user']['avatar']) ? 1 : 0], [
 									'%user_avatar_url' 		=> $v['user']['avatar']['url'],
 									'%user_name_short_html' => $v['user']['name_short_html'],
 								]),
+							]);
+						}
+						$json_array['html'] .= strtr($template, [
+							'%class'		=> !$v['is_read'] ? ' class="new"' : NULL,
+							'%avatar'		=> $avatar,
+							'%user_url'		=> $v['user']['url'],
 							'%message'		=> $v['message'],
 							'%how_long_ago'	=> CHV\time_elapsed_string($v['date_gmt']),
 						]);

@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-10-17 20:52+0000',
-  'PO-Revision-Date' => '2016-10-17 20:52+0000',
+  'POT-Creation-Date' => '2016-10-19 15:26+0000',
+  'PO-Revision-Date' => '2016-10-19 15:26+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'it',
@@ -18,6 +18,27 @@ $translation_plural = array (
   'function' => '$index = (int)(($n != 1)); return ($index < 2) ? $index : 2 - 1;',
 );
 $translation_table = [
+	"A private user" => [
+		0 => "Utente privato",
+	],
+	"%s site key" => [
+		0 => "%s chiave del sito",
+	],
+	"%s secret key" => [
+		0 => "%s chiave segreta",
+	],
+	"Disqus shortname" => [
+		0 => "Disqus nomecorto",
+	],
+	"Comments API" => [
+		0 => "Commenti API",
+	],
+	"Disqus API works with %s." => [
+		0 => "Disqus API lavora con %s",
+	],
+	"%s public key" => [
+		0 => "%s chiave pubblica",
+	],
 	"Invalid email" => [
 		0 => "Indirizzo email non valido",
 	],

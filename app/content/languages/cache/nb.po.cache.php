@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-08-14 03:30+0000',
-  'PO-Revision-Date' => '2016-08-14 03:30+0000',
+  'POT-Creation-Date' => '2016-11-01 14:37+0000',
+  'PO-Revision-Date' => '2016-11-01 14:37+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'nb',
@@ -111,7 +111,7 @@ $translation_table = [
 	],
 	"hour" => [
 		0 => "time",
-		1 => "timers",
+		1 => "timer",
 	],
 	"day" => [
 		0 => "dag",
@@ -146,12 +146,6 @@ $translation_table = [
 	"image" => [
 		0 => "bilde",
 		1 => "bilder",
-	],
-	"%u liked your %t %c" => [
-		0 => "%u liker ditt %t %c",
-	],
-	"%u is now following you" => [
-		0 => "%u har begynt å følge deg",
 	],
 	"Can't create %s destination dir" => [
 		0 => "Kan ikke opprette %s mappe målet",
@@ -254,16 +248,16 @@ $translation_table = [
 		0 => "Du har blitt sperret fra å benytte denne siden.",
 	],
 	"Feel free to browse and discover all my shared images and albums." => [
-		0 => "Bildeopplastningstjeneste for medlemmer i Volvo Car Club Norway\nMer info på http://forum.vccn.no",
+		0 => "Føl deg fri til å bla gjennom og oppdage alle mine delte bilder og album",
 	],
 	"View all my images" => [
 		0 => "Vis alle mine bilder",
 	],
 	"That page doesn't exist" => [
-		0 => "Den siden eksisterer ikke",
+		0 => "Denne siden eksisterer ikke",
 	],
 	"Forgot password?" => [
-		0 => "Glemt ditt passord?",
+		0 => "Glemt passord?",
 	],
 	"Reset password" => [
 		0 => "Nullstill passord",
@@ -334,6 +328,9 @@ $translation_table = [
 	"Share" => [
 		0 => "Del",
 	],
+	"Embed codes" => [
+		0 => "Link til bilde/bygg inn",
+	],
 	"Full info" => [
 		0 => "Detaljer",
 	],
@@ -363,6 +360,15 @@ $translation_table = [
 	],
 	"check for updates" => [
 		0 => "se etter oppdateringer",
+	],
+	"Support" => [
+		0 => "Støtte",
+	],
+	"Chevereto support" => [
+		0 => "Chevereto støtte",
+	],
+	"Need help? Go to %s and you will get help quickly." => [
+		0 => "Trenger du hjelp? Gå til %s for å få rask hjelp.",
 	],
 	"PHP version" => [
 		0 => "PHP versjon",
@@ -404,8 +410,26 @@ $translation_table = [
 	"Memory limit" => [
 		0 => "Minnebegrensning",
 	],
+	"Links" => [
+		0 => "Lenker",
+	],
+	"Documentation" => [
+		0 => "Dokumentasjon",
+	],
+	"Changelog" => [
+		0 => "Endringslogg",
+	],
+	"Request new features" => [
+		0 => "Foreslå nye funksjoner",
+	],
+	"Bug tracking" => [
+		0 => "Bugg sporing",
+	],
+	"Blog" => [
+		0 => "Blogg",
+	],
 	"Website" => [
-		0 => "Webside",
+		0 => "Nettside",
 	],
 	"Content" => [
 		0 => "Innhold",
@@ -497,14 +521,20 @@ $translation_table = [
 	"The page has been deleted." => [
 		0 => "Denne siden har blitt slettet.",
 	],
-	"Before cover (homepage)" => [
-		0 => "Før hovedbilde (hjemmeside)",
+	"homepage" => [
+		0 => "hjemmeside",
 	],
-	"After cover (homepage)" => [
-		0 => "Etter hovedbilde (hjemmeside)",
+	"Before main title (%s)" => [
+		0 => "Før hovedtittel (%s)",
 	],
-	"After listing (homepage)" => [
-		0 => "Etter bilde (hjemmeside)",
+	"After call to action (%s)" => [
+		0 => "Etter forespørsel om handling (%s)",
+	],
+	"After cover (%s)" => [
+		0 => "Etter cover (%s)",
+	],
+	"After listing (%s)" => [
+		0 => "Etter oppføring (%s)",
 	],
 	"Before pagination" => [
 		0 => "Før sideinndelingen",
@@ -738,13 +768,10 @@ $translation_table = [
 		0 => "Utforsk",
 	],
 	"Following" => [
-		0 => "Personer du følger.",
+		0 => "Følger",
 	],
 	"About" => [
-		0 => "Mer info",
-	],
-	"Embed codes" => [
-		0 => "Link til bilde/bygg inn",
+		0 => "Om oss",
 	],
 	"Image ID" => [
 		0 => "Bilde id",
@@ -774,7 +801,7 @@ $translation_table = [
 		0 => "Bilde %i lagret i %w",
 	],
 	"Direct links" => [
-		0 => "Direkelenker (Benytt denne for VCCN)",
+		0 => "Direkelenker",
 	],
 	"Image URL" => [
 		0 => "Bildeadresse",
@@ -844,6 +871,15 @@ $translation_table = [
 	],
 	"Content disliked" => [
 		0 => "Innhold mislikt",
+	],
+	"%u liked your %t %c" => [
+		0 => "%u liker ditt %t %c",
+	],
+	"%u is now following you" => [
+		0 => "%u har begynt å følge deg",
+	],
+	"A private user" => [
+		0 => "En privat bruker",
 	],
 	"Wrong Username/Email password combination" => [
 		0 => "Feil kombinasjon av brukernavn/e-postadresse og passord",
@@ -945,7 +981,7 @@ $translation_table = [
 		0 => "%s's Bilder",
 	],
 	"%s's Albums" => [
-		0 => "%s' album",
+		0 => "%s sitt album",
 	],
 	"Results for" => [
 		0 => "Resultater for",
@@ -954,7 +990,7 @@ $translation_table = [
 		0 => "%s liker",
 	],
 	"Liked" => [
-		0 => "Dine Like's",
+		0 => "Mine liker",
 	],
 	"Followers" => [
 		0 => "Følgere",
@@ -1008,7 +1044,7 @@ $translation_table = [
 		0 => "Jeg er minst %s år gammel",
 	],
 	"By signing up you agree to our <a href=\"%s\">Terms of service</a>" => [
-		0 => "Ved å registrere deg akspeterer du våre<a href=\"%s\"> betingelser</a>",
+		0 => "Ved å registrere deg akspeterer du våre <a href=\"%s\">betingelser</a>",
 	],
 	"Notifications" => [
 		0 => "Varsler",
@@ -1047,22 +1083,22 @@ $translation_table = [
 		0 => "For å fullføre registreringen må du <a href=\"%s\">aktivere din konto</a>.",
 	],
 	"We received a request to reset the password for your <a href=\"%u\">%n</a> account." => [
-		0 => "Vi har mottatt en forespørsel for å endre passord på konto <a href=\"%u\">%n</a>",
+		0 => "Vi har mottatt en forespørsel om å endre passord på konto <a href=\"%u\">%n</a>",
 	],
 	"To reset your password <a href=\"%s\">follow this link</a>." => [
 		0 => "For å nullstille passordet ditt, <a href=\"%s\">trykk på denne lenken</a>.",
 	],
 	"Hi %n, welcome to %w" => [
-		0 => "Hei %n, velkommen til VCCN Bildeopplastning",
+		0 => "Hei %n. Velkommen til %w",
 	],
 	"Now that your account is ready you can enjoy uploading your images, creating albums and setting the privacy of your content as well as many more cool things that you will discover." => [
-		0 => "Så fort du har trykket på lenken over er din konto aktivert. Du kan umiddelbart laste opp bilder.",
+		0 => "Nå som kontoen din er klar kan du kose deg med alle fordelene. Lage album, laste opp bilder, dele med venner og mye mer du vil oppdage.",
 	],
 	"By the way, here is you very own awesome profile page: <a href=\"%u\">%n</a>. Go ahead and customize it, its yours!." => [
-		0 => "Du har også fått din personlige side; <a href=\"%u\">%n</a>. Her kan du se alle bildene dine samt opprette album.",
+		0 => "Forresten, vi har også gitt deg din egen profil: <a href=\"%u\">%n</a>. Tilpass den og gjør som du vil!",
 	],
 	"Thank you for joining" => [
-		0 => "Takk for at du benytter deg av bildetjenesten til VCCN",
+		0 => "Takk for at du registrerte deg",
 	],
 	"This email was sent from %w %u" => [
 		0 => "Denne e-posten er sendt fra %w %u",
@@ -1086,7 +1122,7 @@ $translation_table = [
 		0 => "Rediger eller endre størrelse på bildet ved å trykke på forhåndsvisning",
 	],
 	"You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>." => [
-		0 => "Du kan legge til flere bilder <a data-trigger=\"anywhere-upload-input\"> fra PCen din</a> eller<a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">fra bildeadresse</a>.",
+		0 => "Du kan legge til flere bilder <a data-trigger=\"anywhere-upload-input\"> fra PCen din</a> eller <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">fra bildeadresse</a>.",
 	],
 	"You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
 		0 => "Du kan <a data-trigger=\"anywhere-upload-input\">legge til flere bilder</a> eller <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\"> legge til bilde-URL</a>.",
@@ -1104,7 +1140,7 @@ $translation_table = [
 		0 => "Opplastning fullført",
 	],
 	"Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album." => [
-		0 => "Innhold lagt til i <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">offentlig visning</a>. Du kan <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">opprette et album</a> eller <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">flytte<span data-text=\"queue-objects\">bildene</span></a> til et eksisterende album.",
+		0 => "Innhold lagt til i <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">offentlig visning</a>. Du kan <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">opprette et album</a> eller <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">flytte <span data-text=\"queue-objects\">bildene</span></a> til et eksisterende album.",
 	],
 	"You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account." => [
 		0 => "Du kan <a href=\"%s\">opprette en konto</a> eller <a href=\"%l\">logge inn</a> for å lagre fremtidige opplastninger på din konto.",
@@ -1122,7 +1158,7 @@ $translation_table = [
 		0 => "Endre opplasting personvern",
 	],
 	"cancel" => [
-		0 => "Avbryt",
+		0 => "avbryt",
 	],
 	"Mark this if the upload is not family safe" => [
 		0 => "Trykk her dersom bildet er uegnet for personer under 18 år",
@@ -1220,9 +1256,6 @@ $translation_table = [
 	"album" => [
 		0 => "album",
 		1 => "album",
-	],
-	"Links" => [
-		0 => "Lenker",
 	],
 	"Viewer links" => [
 		0 => "Visningslenker",
@@ -1504,12 +1537,6 @@ $translation_table = [
 	"Load more" => [
 		0 => "Last inn mer",
 	],
-	"Previous" => [
-		0 => "Tidligere",
-	],
-	"Next" => [
-		0 => "Neste",
-	],
 	"Select all" => [
 		0 => "Velg alle",
 	],
@@ -1604,7 +1631,7 @@ $translation_table = [
 		0 => "Merk som seksuelt innhold",
 	],
 	"The requested page was not found." => [
-		0 => "Den etterspurte siden var ikke funnet.",
+		0 => "Den etterspurte siden ble ikke funnet.",
 	],
 	"Search something else" => [
 		0 => "Søk på noe annet",
@@ -1655,7 +1682,7 @@ $translation_table = [
 		0 => "Skriv inn ditt brukernavn eller e-postadresse som du valgte når du registrerte deg.",
 	],
 	"Submit" => [
-		0 => "Lagre/send",
+		0 => "Utfør",
 	],
 	"Your password has been changed. You can now try logging in using your new password." => [
 		0 => "Passordet ditt er endret. Du kan nå logge inn med det nye du har valgt.",
@@ -1670,16 +1697,16 @@ $translation_table = [
 		0 => "Nytt passord",
 	],
 	"%d characters min" => [
-		0 => "%d tegn min",
+		0 => "%d tegn minimum",
 	],
 	"Enter your new password" => [
-		0 => "Skriv inn ditt passord",
+		0 => "Skriv inn ditt nye passord",
 	],
 	"Confirm password" => [
 		0 => "Bekreft passord",
 	],
 	"Re-enter your new password" => [
-		0 => "Skriv inn ditt passord igjen",
+		0 => "Skriv inn ditt nye passord igjen",
 	],
 	"An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "En e-post til %s har blitt sendt med instruksjoner for å aktivere kontoen din. Hvis du ikke mottar instruksjonene prøve å sjekke søppelpost eller spam-filtre.",
@@ -1733,6 +1760,12 @@ $translation_table = [
 	],
 	"This setting is always diabled when using personal website mode." => [
 		0 => "Denne innstillingen er deaktivert når det benyttes personlig webside modus.",
+	],
+	"documentation" => [
+		0 => "dokumentasjon",
+	],
+	"Learn more about %s at our %d." => [
+		0 => "Lær mer om %s på vårt %d.",
 	],
 	"Add category" => [
 		0 => "Legg til kategori",
@@ -1911,8 +1944,14 @@ $translation_table = [
 	"Page sort order display for menus and listings. Use \"1\" for top priority." => [
 		0 => "Side sorteringsrekkefølge skjerm for menyer og oppføringer. Bruk \"1\" for topp prioritet.",
 	],
+	"pages" => [
+		0 => "sider",
+	],
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "Er du sikker på at du vil slette sideID %s? Dette kan ikke angres.",
+	],
+	"Unchecked image formats won't be allowed to be uploaded." => [
+		0 => "Ukryssede bildeformat vil ikke bli lastet opp.",
 	],
 	"Enable uploads" => [
 		0 => "Aktiver opplastninger.",
@@ -1925,6 +1964,9 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Aktiver denne dersom du vil at ikke-registrerte brukere kan laste opp.",
+	],
+	"Number of simultaneous upload threads (parallel uploads)" => [
+		0 => "Antall samtidige opplasting tråder (parallelle opplastinger)",
 	],
 	"Redirect on single upload" => [
 		0 => "Omdirigere på enkel opplasting",
@@ -2283,6 +2325,9 @@ $translation_table = [
 	"Desktop" => [
 		0 => "Desktop",
 	],
+	"theme editing" => [
+		0 => "tema redigering",
+	],
 	"Put your themes in the %s folder" => [
 		0 => "Last opp temaer i %s mappen",
 	],
@@ -2505,8 +2550,20 @@ $translation_table = [
 	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
 		0 => "Komma-separert liste for målbrukerID for å vise bilder på hjemmesiden. La den være blank for å vise alle nylige bilder.",
 	],
-	"Here you can set the codes for the predefined ad spaces." => [
-		0 => "Her kan du sette kodene for de forhåndsdefinerte annonseplassene.",
+	"banners" => [
+		0 => "bannere",
+	],
+	"Automatic updates check" => [
+		0 => "Automatisk oppdateringssjekk",
+	],
+	"When enabled the system will automatically check for new updates." => [
+		0 => "Når aktivert vil systemet automatisk se etter nye oppdateringer.",
+	],
+	"Display available updates notification" => [
+		0 => "Skjerm tilgjengelige oppdateringer varsling",
+	],
+	"Enable this to show a notice on top warning you about new available system updates." => [
+		0 => "Aktiver dette for å vise en melding på toppen advarer deg om nye tilgjengelige systemoppdateringer.",
 	],
 	"Minify code" => [
 		0 => "Minify kode",
@@ -2519,12 +2576,6 @@ $translation_table = [
 	],
 	"When enabled the website will show a maintenance message. This setting doesn't affect administrators." => [
 		0 => "Når vedlikeholdsmodus er aktivert vil denne meldingen vises for vanlige brukere. (Berører ikke admins)",
-	],
-	"Display available updates notification" => [
-		0 => "Skjerm tilgjengelige oppdateringer varsling",
-	],
-	"Enable this to show a notice on top warning you about new available system updates." => [
-		0 => "Aktiver dette for å vise en melding på toppen advarer deg om nye tilgjengelige systemoppdateringer.",
 	],
 	"Crypt salt" => [
 		0 => "krypt salt",
@@ -2556,9 +2607,6 @@ $translation_table = [
 	"To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)." => [
 		0 => "konfigurere feilsøking nivå sjekk <a %s>feilsøking dokumentasjon</a>.  Standardnivået er \"Feil log\" (1).",
 	],
-	"documentation" => [
-		0 => "dokumentasjon",
-	],
 	"Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes." => [
 		0 => "Ruting lar deg tilpasse standardruten, Bare alfanumerisk , bindestrek og understrek tegn er tillatt. Sjekk ut %s  dersom du ønsker å overstyre eller legge til nye ruter.",
 	],
@@ -2570,6 +2618,12 @@ $translation_table = [
 	],
 	"Album routing" => [
 		0 => "Album rute",
+	],
+	"Custom language strings" => [
+		0 => "Egendefinerte språk strenger",
+	],
+	"language strings" => [
+		0 => "språk strenger",
 	],
 	"Default language" => [
 		0 => "Standard språk",
@@ -2658,6 +2712,9 @@ $translation_table = [
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "Bruk denne for å teste hvordan din e-post blir levert. Vi anbefaler deg å bruke %s.",
 	],
+	"social networks" => [
+		0 => "sosiale nettverk",
+	],
 	"You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this." => [
 		0 => "Du trenger en <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for dette.",
 	],
@@ -2697,11 +2754,14 @@ $translation_table = [
 	"VK client secret" => [
 		0 => "VK klient hemmelig",
 	],
-	"CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s." => [
-		0 => "CDN tillater deg å avlaste statisk innhold til flere servere, dette gjør nettstedet ditt raskere. Hvis du ikke har en CDN leverandør bør du prøve %s.",
-	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Du trenger en <a href=\"%s\" target=\"_blank\">reCAPTCHA nøkkel</a> for dette.",
+	],
+	"%s site key" => [
+		0 => "%s sidenøkkel",
+	],
+	"%s secret key" => [
+		0 => "%s hemmelig nøkkel",
 	],
 	"reCAPTCHA public key" => [
 		0 => "reCAPTCHA offentlig nøkkel",
@@ -2714,6 +2774,18 @@ $translation_table = [
 	],
 	"How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA." => [
 		0 => "Hvor mange mislykkede forsøk er nødvendig før reCAPTCHA? Bruk null (0) til alltid vise reCAPTCHA.",
+	],
+	"Comments API" => [
+		0 => "Kommentar API",
+	],
+	"Disqus API works with %s." => [
+		0 => "Disqus API virker med %s.",
+	],
+	"Disqus shortname" => [
+		0 => "Disqus kort navn",
+	],
+	"%s public key" => [
+		0 => "%s offentlig nøkkel",
 	],
 	"Comment code" => [
 		0 => "kommentar kode",
@@ -2747,6 +2819,12 @@ $translation_table = [
 	],
 	"Check the errors to proceed." => [
 		0 => "Sjekk feilene for å fortsette.",
+	],
+	"Play GIF" => [
+		0 => "Spill GIF",
+	],
+	"Load full resolution" => [
+		0 => "Last full oppløsning",
 	],
 	"Guest" => [
 		0 => "Gjest",
@@ -2788,7 +2866,7 @@ $translation_table = [
 		0 => "Last opp og del bildene dine.",
 	],
 	"Drag and drop anywhere you want and start uploading your images now. %s limit. Direct image links, BBCode and HTML thumbnails." => [
-		0 => "Dra og slipp bildene hvor som helst og start opplastning med en gang. Begrensning: %s. Direkte bildelink, BBcode og HTML-miniatyrbilder.",
+		0 => "Dra og slipp bildene hvor som helst og start opplastning med en gang. Begrensning: %s. Direkte bildelink, BBkode og HTML-miniatyrbilder.",
 	],
 	"Start uploading" => [
 		0 => "Start opplasting",
@@ -2857,16 +2935,16 @@ $translation_table = [
 		0 => "Venter på bekreftelse",
 	],
 	"%i to %f characters<br>Letters, numbers and \"_\"" => [
-		0 => "%i to %f tegn<br>Bokstaver, nummer og \"_\"",
+		0 => "%i til %f tegn<br>Bokstaver, nummer og \"_\"",
 	],
 	"Auto delete uploads" => [
 		0 => "Slett opplastninger automatisk",
 	],
 	"This setting will apply to all your image uploads by default. You can override this setting on each upload." => [
-		0 => "Denne innstillingen vil gjelde for alle bilder lastet opp som standard. Du kan overstyre denne innstillingen på hver enkel opplasting .",
+		0 => "Denne innstillingen vil gjelde for alle bilder du har lastet opp. Du kan overstyre denne innstillingen på hver enkel opplasting.",
 	],
 	"Keep image <a %s>Exif data</a> on upload" => [
-		0 => "Behold <a %s>Exif-data</a> når bilder lastes opp.",
+		0 => "Behold <a %s>Exif-data</a> når bilder lastes opp",
 	],
 	"Newsletter" => [
 		0 => "Nyhetsbrev",
@@ -2926,13 +3004,13 @@ $translation_table = [
 		0 => "Dette er ditt ekte navn, ikke brukernavn.",
 	],
 	"http://yourwebsite.com" => [
-		0 => "http://dinwebside.com",
+		0 => "http://nettside.com",
 	],
 	"Bio" => [
 		0 => "Biografi",
 	],
 	"Tell us a little bit about you" => [
-		0 => "Skriv en kort presentasjon av deg selv (valgfritt)",
+		0 => "Skriv en kort presentasjon om deg selv",
 	],
 	"User has no connections." => [
 		0 => "Bruker har ingen tilkoblinger.",
@@ -3081,6 +3159,9 @@ $translation_table = [
 	],
 	"Update now" => [
 		0 => "Oppdater nå",
+	],
+	"Your website is running the latest version of %s" => [
+		0 => "Din nettside kjører siste versjon av %s",
 	],
 	"Your website is running the latest version of Chevereto." => [
 		0 => "Websiden din kjører siste versjon av Chevereto.",

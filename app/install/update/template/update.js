@@ -16,7 +16,7 @@ var update = {
     vars: {},
     process: function(callback) { // S0: Check if update is needed
         var _this = this;
-        _this.addLog(PF.fn._s("Installed version is v%s", vars.current_version) + " (Chevereto Free)");
+        _this.addLog(PF.fn._s("Installed version is v%s", vars.current_version));
         $.ajax({
             url: vars.url,
             data: {action: "ask"}

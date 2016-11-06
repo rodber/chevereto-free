@@ -12,7 +12,7 @@ Chevereto Free
 <a href="https://chevereto.com/free" title="♫♪ Ha llegado tu tiempo, es el momento de Freeeeeeeeeeeeeeee"><img src="https://chevereto.com/app/themes/v3/img/chevereto-free-cover.jpg" alt="Chevereto Sugar Free Cola"></a>
 
 ###About this repo
-This is the repository of Chevereto Free which has been forked from Chevereto 3.X series. Chevereto Free has the same look, feel and taste of our [paid version](https://chevereto.com/pricing) but it comes in a free package which includes all the basic image hosting functionalities. Free to use, forever.
+This is the repository of Chevereto Free which has been forked from Chevereto 3.X series. Chevereto Free has the same look, feel and taste of our [paid version](https://chevereto.com/pricing) but it comes in a free and Open Source package which includes all the basic image hosting functionalities. Free to use, forever.
 
 ###Free vs paid Chevereto
 Chevereto Free includes all the basic image hosting stuff but it comes without dedicated support. Paid Chevereto comes with all features, updates and support. The following table summarizes the differences between paid vs free.
@@ -59,8 +59,4 @@ Chevereto Free has a built-in system that everyday pings the [Chevereto API](htt
 Chevereto Free doesn't include dedicated support. However, feel free to browse current and previous [support tickets](https://chevereto.com/tech-support). If you need further assistance please consider buying a license. By purchasing a license you get same-day support, all features and it makes you a supporter of Chevereto development.
 
 ##License
-Copyright 2016 [Rodolfo Berríos](http://rodolfoberrios.com)
-
-Permission is granted to anyone to use this software for **any purpose** except for distribution or re-distribution in its modified form. This license does NOT grant you trademark, brand or any derivate rights. Any third-party distribution or re-distribution in the scope of hosted applications based in the software must be approved by the copyright owner.
-
-The software is offered on an “as-is” basis and no warranty, either expressed or implied, is given.
+Copyright 2016 [Rodolfo Berríos](http://rodolfoberrios.com) - Released under the AGPLv3 license. The software is offered on an “as-is” basis and no warranty, either expressed or implied, is given.

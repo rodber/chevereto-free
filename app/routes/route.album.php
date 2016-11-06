@@ -174,6 +174,13 @@ $route = function($handler) {
 			);
 		}
 		
+		$tabs[] = array(
+				"list"		=> false,
+				"tools"		=> false,
+				"label"		=> _s('Embed codes'),
+				"id"		=> "tab-codes",
+			);
+		
 		if($logged_user['is_admin']) {
 			$tabs[] = [
 				"list"		=> false,
