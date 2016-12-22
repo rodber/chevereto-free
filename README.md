@@ -37,8 +37,8 @@ Make sure your server meets the minimum system requirements which are:
 
 In most servers that's all you need. The system has a built-in system check that it will tell you right away when you have to fix some stuff in your server.
 
-##Installation service
-We will be happy to install Chevereto for you. Just send us an [installation request](https://chevereto.com/panel/request-installation) and we will do all the installation job for you. For free.
+##We install it for you (free of charges)
+We will be happy to install Chevereto for you, just send us an [installation request](https://chevereto.com/panel/request-installation) and we will do all the installation job for you. For free.
 
 ##Install via web installer
 1. Download the [Chevereto Free web installer](https://cdn.rawgit.com/Chevereto/php-repo-installer/master/index.php)
@@ -53,7 +53,19 @@ We will be happy to install Chevereto for you. Just send us an [installation req
 For additional install instructions refer to our [official documentation](https://chevereto.com/docs/install).
 
 ##Updates
-Chevereto Free has a built-in system that everyday pings the [Chevereto API](https://chevereto.com/api/get/info/free) for new updates available for your website. To update your website simply go to `/update` and the system will download and install the update for you. For manual update just follow the install procedure.
+Chevereto Free has a built-in system that everyday pings the [Chevereto API](https://chevereto.com/api/get/info/free) for new updates available for your website. To update your website go to `/update` and the system will download and install the update for you. For manual update just follow the install procedure.
+
+##Upgrade to paid edition
+To upgrade Chevereto Free to paid Chevereto you need to [get a license](https://chevereto.com/pricing) and then do the following:
+ 1. Download the [paid edition web installer](https://chevereto.com/panel/downloads/?get=web-installer)
+ 2. Follow steps (2) and (3) from the "[install via web installer](#install-via-web-installer)" instructions.
+ 3. Go to `/update` to complete the process.
+ 
+###Alternative method
+ 1. Download latest Chevereto paid edition from [Chevereto.com/panel/downloads](http://chevereto.com/panel/downloads)
+ 2. Upload `app/license` and `app/install` folders
+ 3. Open your current website `app/app.php` file and remove this line: `define('G_APP_GITHUB_REPO_URL', 'https://github.com/' . G_APP_GITHUB_OWNER . '/' . G_APP_GITHUB_REPO);`
+ 4. Go to `/update` to complete the process
 
 ##Support
 Chevereto Free doesn't include dedicated support. However, feel free to browse current and previous [support tickets](https://chevereto.com/tech-support). If you need further assistance please consider buying a license. By purchasing a license you get same-day support, all features and it makes you a supporter of Chevereto development.
