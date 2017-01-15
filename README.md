@@ -71,4 +71,4 @@ To upgrade Chevereto Free to paid Chevereto you need to [get a license](https://
 Chevereto Free doesn't include dedicated support. However, feel free to browse current and previous [support tickets](https://chevereto.com/tech-support). If you need further assistance please consider buying a license. By purchasing a license you get same-day support, all features and it makes you a supporter of Chevereto development.
 
 ##License
-Copyright 2016 [Rodolfo Berríos](http://rodolfoberrios.com) - Released under the AGPLv3 license. The software is offered on an “as-is” basis and no warranty, either expressed or implied, is given.
+Copyright 2017 [Rodolfo Berríos](http://rodolfoberrios.com) - Released under the AGPLv3 license. The software is offered on an “as-is” basis and no warranty, either expressed or implied, is given.
