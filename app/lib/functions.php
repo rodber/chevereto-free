@@ -445,6 +445,17 @@ function decodeID($var) {
 	return cheveretoID($var, "decode");
 }
 
+// Linkify stuff to the internal redirector
+function linkify_redirector($text) {
+	return G\linkify_safe($text, ['callback' => function($url, $caption, $options) {
+		return '<a href="' . get_redirect_url($url) . '" '. $options['attr']. '>' . $caption . '</a>';
+	}]);
+}
+
+// A simple base64 encode, perfect to avoid SEO bitches
+function get_redirect_url($url) {
+	return G\get_base_url('redirect/' . base64_encode($url));
+}
 
 /**
  * Get some URLs

@@ -491,9 +491,11 @@ class User {
 		// Do some safe cleaning
 		if(isset($user['website'])) {
 			$user['website_safe_html'] = G\safe_html($user['website']);
+			$user['website_display'] = $user['is_admin'] ? $user['website_safe_html'] : get_redirect_url($user['website_safe_html']);
 		}
 		if(isset($user['bio'])) {
 			$user['bio_safe_html'] = G\safe_html($user['bio']);
+			$user['bio_linkify'] = $user['is_admin'] ? G\linkify($user['bio'], ['attr' => ['target' => '_blank']]) : linkify_redirector($user['bio']);
 		}
 		
 		if(empty($user['name'])) {

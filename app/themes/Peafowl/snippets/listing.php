@@ -118,6 +118,4 @@ foreach($tabs as $tab) {
 } // for
 ?>
 
-<!--googleoff: index-->
 <?php G\Render\include_theme_file("snippets/templates_content_listing"); ?>
-<!--googleon: index-->

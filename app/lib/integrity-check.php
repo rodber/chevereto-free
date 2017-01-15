@@ -38,11 +38,11 @@ function check_system_integrity() {
 	@ini_set('session.use_trans_sid', FALSE);
 	@ini_set('session.use_only_cookies', TRUE);
 	@ini_set('session.hash_bits_per_character', 4);
-	
-	$missng_fn_tpl = '%n (<a href="http://php.net/manual/en/function.%u.php">%f</a>) function is disabled in this server. This function must be enabled in your PHP configuration (php.ini) and/or you must add this missing function.';
+
+	$missing_tpl = '%n (<a href="http://php.net/manual/en/%t.%u.php" target="_blank">%f</a>) %t is disabled in this server. This %t must be enabled in your PHP configuration (php.ini) and/or you must add this missing %t.';
 	
 	if(version_compare(PHP_VERSION, '5.4.0', '<')) {
-		$install_errors[] = 'This server is currently running PHP version '.PHP_VERSION.' and Chevereto needs at least PHP 5.5.0 to run. You need to update PHP in this server.';
+		$install_errors[] = 'This server is currently running PHP version '.PHP_VERSION.' and Chevereto needs at least PHP 5.4.0 to run. You need to update PHP in this server.';
 	}
 	if(ini_get('allow_url_fopen') !== 1 && !function_exists('curl_init')) {
 		$install_errors[] = "cURL isn't installed and allow_url_fopen is disabled. Chevereto needs one of these to perform HTTP requests to remote servers.";
@@ -62,20 +62,49 @@ function check_system_integrity() {
 		if(!imagetypes() & IMG_WBMP) $install_errors[] = 'BMP ' . $imagetype_fail;
 	}
 	
-	if(!extension_loaded('pdo')) {
-		$install_errors[] = 'PHP Data Objects (<a href="http://www.php.net/manual/book.pdo.php">PDO</a>) is not loaded in this server. PDO is needed to perform database operations.';
+	foreach([
+		'pdo'		=> [
+			'%label'=> 'PDO',
+			'%name' => 'PHP Data Objects',
+			'%slug' => 'book.pdo',
+			'%desc' => 'PDO is needed to perform database operations'
+		],
+		'pdo_mysql' => [
+			'%label'=> 'PDO_MYSQL',
+			'%name' => 'PDO MySQL Functions',
+			'%slug' => 'ref.pdo-mysql',
+			'%desc' => 'PDO_MYSQL is needed to work with a MySQL database',
+		],
+		'mbstring' => [
+			'%label'=> 'mbstring',
+			'%name' => 'Multibyte string',
+			'%slug' => 'book.mbstring',
+			'%desc' => 'Mbstring is needed to handle multibyte strings',
+		]
+	] as $k => $v) {
+		if(!extension_loaded($k)) {
+			$install_errors[] = strtr('%name (<a href="http://www.php.net/manual/%slug.php">%label</a>) is not loaded in this server. %desc.', $v);
+		}
 	}
-	if(!extension_loaded('pdo_mysql')) {
-		$install_errors[] = 'PDO MySQL Functions (<a href="http://www.php.net/manual/ref.pdo-mysql.php" target="_blank">PDO_MYSQL</a>) is not loaded in this server. PDO_MYSQL is needed to work with a MySQL database.';
+	
+	// Check those bundled classes
+	$disabled_classes = explode(',', preg_replace('/\s+/', '', @ini_get('disable_classes')));
+	if(!empty($disabled_classes)) {
+		foreach(['DirectoryIterator', 'RegexIterator', 'Pdo', 'Exception'] as $k) {
+			if(in_array($k, $disabled_classes)) {
+				$install_errors[] = strtr(str_replace('%t', 'class', $missing_tpl), ['%n' => $k, '%f' => $k, '%u' => str_replace('_', '-', strtolower($k))]);
+			}
+		}
 	}
-    if(!extension_loaded('mbstring')) {
-		$install_errors[] = 'Multibyte string (<a href="http://php.net/manual/en/book.mbstring.php" target="_blank">mbstring</a>) is not loaded in this server. mbstring is needed to handle multibyte strings.';
-	}
-	if(!function_exists('utf8_encode')) {
-		$install_errors[] = strtr($missng_fn_tpl, ['%n' => 'UTF-8 encode', '%f' => 'utf8_encode', '%u' => 'utf8-encode']);
-	}
-	if(!function_exists('utf8_decode')) {
-		$install_errors[] = strtr($missng_fn_tpl, ['%n' => 'UTF-8 decode', '%f' => 'utf8_decode', '%u' => 'utf8-decode']);
+	
+	// Check those missing functions
+	foreach([
+		'utf8_encode' => 'UTF-8 encode',
+		'utf8_decode' => 'UTF-8 decode'
+	] as $k => $v) {
+		if(!function_exists($k)) {
+			$install_errors[] = strtr(str_replace('%t', 'function', $missing_tpl), ['%n' => $v, '%f' => $k, '%u' => str_replace('_', '-', $k)]);
+		}
 	}
 	
 	/*** Folders check ***/

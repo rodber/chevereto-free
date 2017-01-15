@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-10-27 18:49+0000\n"
-"PO-Revision-Date: 2016-10-27 18:49+0000\n"
+"POT-Creation-Date: 2017-01-07 17:18+0000\n"
+"PO-Revision-Date: 2017-01-07 17:18+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: cs\n"
@@ -363,11 +363,17 @@ msgstr "Je zde dostupná aktualizace pro vaši Chevereto webovou stránku."
 msgid "The release notes for this update are:"
 msgstr "Poznámky k verzi této aktualizace:"
 
+msgid "admin dashboard"
+msgstr "Nástěnka admina"
+
 msgid "You can apply this update directly from your %a or download it from %s and then manually install it."
 msgstr "Tuto aktualizaci můžete nainstalovat automaticky přímo ze svého %a nebo si ji stáhnout z %s a nainstalovat manuálně."
 
 msgid "Chevereto update available (v%s)"
 msgstr "Je k dispozici aktualizace Chevereta (v%s)"
+
+msgid "view on %s"
+msgstr "zobrazit na %s"
 
 #: ../../../app/lib/functions.render.php:303
 msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
@@ -617,9 +623,6 @@ msgstr "Zkontrolovat aktualizace"
 
 msgid "Support"
 msgstr "Podpora"
-
-msgid "Chevereto support"
-msgstr "Chevereto podpora"
 
 msgid "Need help? Go to %s and you will get help quickly."
 msgstr "Potřebujete pomoc? Navštivte %s a získejte rychle pomoc nebo radu."
@@ -1144,6 +1147,10 @@ msgstr "Neplatná viditelnost"
 #: ../../../app/routes/route.dashboard.php:728
 msgid "Invalid target attribute"
 msgstr "Neplatný cílový atribut"
+
+#: ../../../app/routes/route.dashboard.php:733
+msgid "Invalid rel attribute"
+msgstr "Neplatný rel atribut"
 
 #: ../../../app/routes/route.dashboard.php:738
 msgid "Invalid icon"
@@ -2118,6 +2125,10 @@ msgstr "Zadejte přesná slova v uvozovkách: \"rat terrier\""
 msgid "None of these words"
 msgstr "Žádné z těchto slov"
 
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:21
+msgid "Put a minus sign just before words you don't want: -rodent -\"Jack Russell\""
+msgstr "Vložte znaménko mínus před slova, která nechcete povolit: -rodent - \"Jack Russell\""
+
 #: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
 #: ../../../app/themes/Peafowl/snippets/form_category.php:3
 msgid "Category"
@@ -2753,6 +2764,9 @@ msgstr "Toto nastavení je vždy zakázáno při použití režimu osobní webov
 msgid "documentation"
 msgstr "dokumentace"
 
+msgid "Learn more about %s at our %d."
+msgstr "Přečtěte si více o %s na našich stránkách %d."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
 msgid "Add category"
@@ -2918,11 +2932,6 @@ msgstr "Skryté stránky se nebudou zobrazovat v systémových nabídkách, ale 
 #: ../../../app/themes/Peafowl/views/dashboard.php:487
 msgid "Only alphanumerics, hyphens and forward slash"
 msgstr "Pouze alfanumerické znaky, pomlčky a lomítko"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:489
-#, php-format
-msgid "Page URL key relative to %s"
-msgstr "URL klíč stránky relativní k %s"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:493
 msgid "File path"
@@ -3128,8 +3137,14 @@ msgstr "Velikost miniatury"
 msgid "Thumbnails will be fixed to this size."
 msgstr "MIniatury budou nastaveny na tuto velikost"
 
+msgid "Medium image fixed dimension"
+msgstr "Střední velikost obrázku - pevný rozměr"
+
 msgid "Medium sized images will be fixed to this dimension. For example, if you select \"width\" that dimension will be fixed and image height will be automatically calculated."
 msgstr "Střední velikost obrázku bude mít tyto rozměry. Například, pokud zvolíte \"šířku\", tento rozměr bude opraven a výška obrázku bude automaticky vypočítána."
+
+msgid "Medium image fixed size"
+msgstr "Střední velikost obrázku - pevná velikost"
 
 msgid "Width or height will be automatically calculated."
 msgstr "Šířka nebo výška bude automaticky vypočítána."
@@ -3614,6 +3629,12 @@ msgstr "Favicon (ikonka webu)"
 msgid "Favicon image. Image must have same width and height."
 msgstr "Favicon musí mít stejnou šířku a výšku."
 
+msgid "Image load max. filesize"
+msgstr "Max. velikost obrázku"
+
+msgid "Images greater than this size will show a button to load full resolution image"
+msgstr "U obrázků větších, než je tento rozměr, se zobrazí tlačítko pro načtení obrázku v plném rozlišení"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1299
 msgid "Enable download button"
 msgstr "Aktivovat tlačítko Stáhnout"
@@ -4015,14 +4036,6 @@ msgstr "VK client secret"
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "Potřebujete <a href=\"%s\" target=\"_blank\">reCAPTCHA klíč</a>."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1974
-msgid "reCAPTCHA public key"
-msgstr "reCAPTCHA public key (veřejný klíč)"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1979
-msgid "reCAPTCHA private key"
-msgstr "reCAPTCHA private key (soukromý klíč)"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1986
 msgid "reCAPTCHA threshold"
 msgstr "reCAPTCHA threshold (práh)"
@@ -4030,6 +4043,12 @@ msgstr "reCAPTCHA threshold (práh)"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1991
 msgid "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA."
 msgstr "Kolik neúspěšných pokusů je zapotřebí k vyžadování reCAPTCHA? Zadejte nula (0), aby se reCAPTCHA zobrazovala vždy."
+
+msgid "Comments API"
+msgstr "API komentářů"
+
+msgid "Disqus API works with %s."
+msgstr "Disqus API pracuje s %s."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1997
 msgid "Comment code"
@@ -4101,7 +4120,7 @@ msgstr "Líbí se"
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
-msgstr "Přidáno do %a a zakategorizováno v %c"
+msgstr "Přidáno do alba %a a zařazeno do kategorie %c"
 
 #: ../../../app/themes/Peafowl/views/image.php:138
 #, php-format
@@ -4568,10 +4587,6 @@ msgstr "Aktualizovat nyní"
 
 msgid "Your website is running the latest version of %s"
 msgstr "Vaše webové stránky běží nejnovější verzi %s"
-
-#: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
-msgid "Your website is running the latest version of Chevereto."
-msgstr "Vaše stránka běží na aktuální verzi Chevereta."
 
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"

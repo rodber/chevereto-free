@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-10-27 18:49+0000',
-  'PO-Revision-Date' => '2016-10-27 18:49+0000',
+  'POT-Creation-Date' => '2017-01-10 20:48+0000',
+  'PO-Revision-Date' => '2017-01-10 20:48+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ja',
@@ -18,6 +18,9 @@ $translation_plural = array (
   'function' => '$index = (int)(0); return ($index < 1) ? $index : 1 - 1;',
 );
 $translation_table = [
+	"Images greater than this size will show a button to load full resolution image." => [
+		0 => "このファイルサイズを超えたものは、オリジナル画像表示用のボタンが表示されます。",
+	],
 	"Invalid email" => [
 		0 => "有効なメールアドレスではありません。",
 	],
@@ -353,9 +356,6 @@ $translation_table = [
 	],
 	"Support" => [
 		0 => "サポート",
-	],
-	"Chevereto support" => [
-		0 => "Cheveretoサポート",
 	],
 	"Need help? Go to %s and you will get help quickly." => [
 		0 => "ヘルプが必要な方は、 %s まで。",
@@ -1872,9 +1872,6 @@ $translation_table = [
 	"Only alphanumerics, hyphens and forward slash" => [
 		0 => "半角英数字、ハイフンとスラッシュのみ",
 	],
-	"Page URL key relative to %s" => [
-		0 => "ページURLは相対です %s。",
-	],
 	"File path" => [
 		0 => "ファイルパス",
 	],
@@ -2400,6 +2397,9 @@ $translation_table = [
 	"Favicon image. Image must have same width and height." => [
 		0 => "faviconは高さと幅が同じでないといけません。",
 	],
+	"Image load max. filesize" => [
+		0 => "画像の最大ファイルサイズ",
+	],
 	"Enable download button" => [
 		0 => "ダウンロードボタンを有効にする",
 	],
@@ -2747,12 +2747,6 @@ $translation_table = [
 	],
 	"%s secret key" => [
 		0 => "%s シークレットキー",
-	],
-	"reCAPTCHA public key" => [
-		0 => "reCAPTCHAの公開鍵(public key)を入力",
-	],
-	"reCAPTCHA private key" => [
-		0 => "reCAPTCHAの秘密鍵(private key)を入力",
 	],
 	"reCAPTCHA threshold" => [
 		0 => "閾値(失敗)",
@@ -3146,9 +3140,6 @@ $translation_table = [
 	],
 	"Your website is running the latest version of %s" => [
 		0 => "あなたのサイトは、バージョン:%sで最新版です。",
-	],
-	"Your website is running the latest version of Chevereto." => [
-		0 => "あなたのウェブサイトは、Cheveretoの最新版で動作しています。",
 	],
 	"Clipboard image" => [
 		0 => "クリップボードの画像",

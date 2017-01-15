@@ -42,7 +42,7 @@ $route = function($handler) {
 		$is_owner = $album['user']['id'] == $logged_user['id'];
 		
 		// Password protected content		
-		if((!$handler::getCond('admin') || !$is_owner) && $album['privacy'] == 'password' && isset($album['password'])) {
+		if(!($handler::getCond('admin') || $is_owner) && $album['privacy'] == 'password' && isset($album['password'])) {
 			
 			$is_error = FALSE;
 			$error_message = NULL;

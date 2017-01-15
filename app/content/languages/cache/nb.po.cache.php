@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-11-01 14:37+0000',
-  'PO-Revision-Date' => '2016-11-01 14:37+0000',
+  'POT-Creation-Date' => '2017-01-07 17:18+0000',
+  'PO-Revision-Date' => '2017-01-07 17:18+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'nb',
@@ -350,7 +350,7 @@ $translation_table = [
 		0 => "Brukere",
 	],
 	"Settings" => [
-		0 => "Min konto",
+		0 => "Innstillinger",
 	],
 	"Chevereto version" => [
 		0 => "Chevereto versjon",
@@ -362,10 +362,7 @@ $translation_table = [
 		0 => "se etter oppdateringer",
 	],
 	"Support" => [
-		0 => "Støtte",
-	],
-	"Chevereto support" => [
-		0 => "Chevereto støtte",
+		0 => "Support",
 	],
 	"Need help? Go to %s and you will get help quickly." => [
 		0 => "Trenger du hjelp? Gå til %s for å få rask hjelp.",
@@ -450,10 +447,10 @@ $translation_table = [
 		0 => "Samtykke skjema",
 	],
 	"Flood protection" => [
-		0 => "Flombeskyttelse (autoposting)",
+		0 => "Spambeskyttelse",
 	],
 	"Theme" => [
-		0 => "Design",
+		0 => "Utseende",
 	],
 	"Homepage" => [
 		0 => "Hjemmeside",
@@ -465,7 +462,7 @@ $translation_table = [
 		0 => "System",
 	],
 	"Routing" => [
-		0 => "Rute sti",
+		0 => "Ruting",
 	],
 	"Languages" => [
 		0 => "Språk",
@@ -1887,9 +1884,6 @@ $translation_table = [
 	"Only alphanumerics, hyphens and forward slash" => [
 		0 => "Bare alfanumeriske tegn, bindestrek og skråstrek",
 	],
-	"Page URL key relative to %s" => [
-		0 => "Side URL nøkkel i forhold til %s",
-	],
 	"File path" => [
 		0 => "Filsti",
 	],
@@ -2191,7 +2185,7 @@ $translation_table = [
 		0 => "La denne være blank dersom det ikke er noen aldersbegrensning for å benytte siden.",
 	],
 	"Username routing" => [
-		0 => "Brukernavn føring",
+		0 => "Brukernavn ruting",
 	],
 	"Enable this if you want to use %s/username URLs instead of %s/user/username." => [
 		0 => "Aktiver denne hvis du vil benytte %s/brukernavn URL istedenfor %s/bruker/brukernavn.",
@@ -2763,12 +2757,6 @@ $translation_table = [
 	"%s secret key" => [
 		0 => "%s hemmelig nøkkel",
 	],
-	"reCAPTCHA public key" => [
-		0 => "reCAPTCHA offentlig nøkkel",
-	],
-	"reCAPTCHA private key" => [
-		0 => "reCAPTCHA privat nøkkel",
-	],
 	"reCAPTCHA threshold" => [
 		0 => "reCAPTCHA terskel",
 	],
@@ -3162,9 +3150,6 @@ $translation_table = [
 	],
 	"Your website is running the latest version of %s" => [
 		0 => "Din nettside kjører siste versjon av %s",
-	],
-	"Your website is running the latest version of Chevereto." => [
-		0 => "Websiden din kjører siste versjon av Chevereto.",
 	],
 	"Clipboard image" => [
 		0 => "Utklippstavle bilde",

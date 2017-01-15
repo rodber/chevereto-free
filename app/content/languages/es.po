@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-10-25 22:28+0000\n"
-"PO-Revision-Date: 2016-10-25 22:28+0000\n"
+"POT-Creation-Date: 2017-01-10 20:49+0000\n"
+"PO-Revision-Date: 2017-01-10 20:49+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -10,6 +10,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Images greater than this size will show a button to load full resolution image."
+msgstr "Imágenes de tamaño superior a este mostrarán un botón para cargar la imagen a resolución completa."
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -603,9 +606,6 @@ msgstr "comprobar actualizaciones"
 
 msgid "Support"
 msgstr "Soporte"
-
-msgid "Chevereto support"
-msgstr "soporte de Chevereto"
 
 msgid "Need help? Go to %s and you will get help quickly."
 msgstr "¿Necesitas ayuda? Ve a %s y obtendrás ayuda rápidamente."
@@ -3001,11 +3001,6 @@ msgstr "Las páginas ocultas no se mostraran en menús del sistema, pero cualqui
 msgid "Only alphanumerics, hyphens and forward slash"
 msgstr "Solo alfanuméricos, guiones y barra inclinada"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:489
-#, php-format
-msgid "Page URL key relative to %s"
-msgstr "Llave URL de página relativa a %s"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:493
 msgid "File path"
 msgstr "Ruta de archivo"
@@ -3720,6 +3715,9 @@ msgstr "Imagen favicon"
 msgid "Favicon image. Image must have same width and height."
 msgstr "Imagen favicon. La imagen debe tener el mismo alto y ancho."
 
+msgid "Image load max. filesize"
+msgstr "Tamaño máx. de carga"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1299
 msgid "Enable download button"
 msgstr "Habilitar botón de descarga"
@@ -4177,14 +4175,6 @@ msgstr "Llave de sitio %s"
 
 msgid "%s secret key"
 msgstr "Llave secreta %s"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1974
-msgid "reCAPTCHA public key"
-msgstr "Llave pública de reCAPTCHA"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1979
-msgid "reCAPTCHA private key"
-msgstr "Llave privada de reCAPTCHA"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1986
 msgid "reCAPTCHA threshold"
@@ -4741,10 +4731,6 @@ msgstr "Actualizar ahora"
 
 msgid "Your website is running the latest version of %s"
 msgstr "Tu sitio está corriendo la última version de %s"
-
-#: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
-msgid "Your website is running the latest version of Chevereto."
-msgstr "Tu sitio está corriendo la última versión de Chevereto."
 
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"

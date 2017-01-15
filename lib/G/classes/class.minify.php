@@ -312,18 +312,15 @@ class Minify {
             $this->minifyDirectToOutput($js, $options);
             // Sometimes there's a leading new line, so we trim that out here.
             $js = ltrim(ob_get_clean());
+			//$js = str_replace("\n", NULL, $js);
             $js = $this->unlock($js);
-            unset($this);
             return $js;
         } catch (Exception $e) {
-
             if (isset($this)) {
                 // Since the breakdownScript function probably wasn't finished
                 // we clean it out before discarding it.
                 $this->clean();
-                unset($this);
             }
-
             // without this call things get weird, with partially outputted js.
             ob_end_clean();
             throw $e;

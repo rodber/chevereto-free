@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Chevereto V3\n"
-"POT-Creation-Date: 2016-10-25 16:52-0300\n"
-"PO-Revision-Date: 2016-10-25 16:52-0300\n"
+"POT-Creation-Date: 2017-01-09 16:00-0300\n"
+"PO-Revision-Date: 2017-01-09 16:00-0300\n"
 "Last-Translator: Rodolfo Berríos <inbox@rodolfoberrios.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -17,57 +17,57 @@ msgstr ""
 "X-Poedit-SearchPath-0: ../../..\n"
 "X-Poedit-SearchPathExcluded-0: ../../../app/vendor\n"
 
-#: ../../../app/install/installer.php:1264
-#: ../../../app/install/installer.php:1273
 #: ../../../app/install/installer.php:1276
+#: ../../../app/install/installer.php:1285
+#: ../../../app/install/installer.php:1288
 #: ../../../app/routes/route.account.php:410
-#: ../../../app/routes/route.json.php:620
-#: ../../../app/routes/route.json.php:1163
+#: ../../../app/routes/route.json.php:621
+#: ../../../app/routes/route.json.php:1164
 #: ../../../app/routes/route.page.php:80
-#: ../../../app/routes/route.settings.php:195
+#: ../../../app/routes/route.settings.php:180
 #: ../../../app/routes/route.signup.php:96
 #: ../../../content/pages/default/contact.php:28
 msgid "Invalid email"
 msgstr ""
 
-#: ../../../app/install/installer.php:1267
-#: ../../../app/routes/route.json.php:615
-#: ../../../app/routes/route.settings.php:191
+#: ../../../app/install/installer.php:1279
+#: ../../../app/routes/route.json.php:616
+#: ../../../app/routes/route.settings.php:176
 #: ../../../app/routes/route.signup.php:99
 msgid "Invalid username"
 msgstr ""
 
-#: ../../../app/install/installer.php:1270
+#: ../../../app/install/installer.php:1282
 #: ../../../app/routes/route.account.php:353
 #: ../../../app/routes/route.album.php:76
-#: ../../../app/routes/route.json.php:625
-#: ../../../app/routes/route.settings.php:333
+#: ../../../app/routes/route.json.php:626
+#: ../../../app/routes/route.settings.php:318
 #: ../../../app/routes/route.signup.php:102
 msgid "Invalid password"
 msgstr ""
 
-#: ../../../app/install/installer.php:1279
+#: ../../../app/install/installer.php:1291
 #: ../../../app/routes/route.dashboard.php:712
 msgid "Invalid website mode"
 msgstr ""
 
 #: ../../../app/install/template/ready.php:31
-#: ../../../app/themes/Peafowl/views/dashboard.php:1954
+#: ../../../app/themes/Peafowl/views/dashboard.php:1961
 msgid "From email address"
 msgstr ""
 
 #: ../../../app/install/template/ready.php:32
-#: ../../../app/themes/Peafowl/views/dashboard.php:1957
+#: ../../../app/themes/Peafowl/views/dashboard.php:1964
 msgid "Sender email for emails sent to users."
 msgstr ""
 
 #: ../../../app/install/template/ready.php:36
-#: ../../../app/themes/Peafowl/views/dashboard.php:1960
+#: ../../../app/themes/Peafowl/views/dashboard.php:1967
 msgid "Incoming email address"
 msgstr ""
 
 #: ../../../app/install/template/ready.php:37
-#: ../../../app/themes/Peafowl/views/dashboard.php:1963
+#: ../../../app/themes/Peafowl/views/dashboard.php:1970
 msgid "Recipient for contact form and system alerts."
 msgstr ""
 
@@ -93,18 +93,19 @@ msgid "Personal"
 msgstr ""
 
 #: ../../../app/install/update/template/update.php:2
+#: ../../../app/install/update/updater.php:38
 msgid "Update in progress"
 msgstr ""
 
 #: ../../../app/install/update/updater.php:64
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1271 ../../../app/lib/chevereto.js:1347
-#: ../../../app/lib/chevereto.js:1425 ../../../app/lib/chevereto.js:1573
-#: ../../../app/lib/chevereto.js:1661 ../../../app/lib/chevereto.js:1706
-#: ../../../app/lib/chevereto.js:1761 ../../../app/lib/chevereto.min.js:66
-#: ../../../app/lib/chevereto.min.js:70 ../../../app/lib/chevereto.min.js:74
-#: ../../../app/lib/chevereto.min.js:77 ../../../app/lib/chevereto.min.js:82
-#: ../../../app/lib/chevereto.min.js:85 ../../../app/lib/chevereto.min.js:89
+#: ../../../app/lib/chevereto.js:1252 ../../../app/lib/chevereto.js:1328
+#: ../../../app/lib/chevereto.js:1406 ../../../app/lib/chevereto.js:1554
+#: ../../../app/lib/chevereto.js:1642 ../../../app/lib/chevereto.js:1687
+#: ../../../app/lib/chevereto.js:1742 ../../../app/lib/chevereto.min.js:64
+#: ../../../app/lib/chevereto.min.js:68 ../../../app/lib/chevereto.min.js:72
+#: ../../../app/lib/chevereto.min.js:75 ../../../app/lib/chevereto.min.js:80
+#: ../../../app/lib/chevereto.min.js:83 ../../../app/lib/chevereto.min.js:87
 #: ../../../lib/Peafowl/peafowl.js:2582 ../../../lib/Peafowl/peafowl.js:3123
 #: ../../../lib/Peafowl/peafowl.min.js:158
 #: ../../../lib/Peafowl/peafowl.min.js:195
@@ -256,7 +257,7 @@ msgstr[1] ""
 #: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
 #: ../../../app/themes/Peafowl/views/album.php:45
 #: ../../../app/themes/Peafowl/views/user.php:103
-#: ../../../app/lib/chevereto.js:2619 ../../../app/lib/chevereto.min.js:151
+#: ../../../app/lib/chevereto.js:2596 ../../../app/lib/chevereto.min.js:143
 msgid "image"
 msgid_plural "images"
 msgstr[0] ""
@@ -288,7 +289,7 @@ msgid "Can't insert storage."
 msgstr ""
 
 #: ../../../app/lib/classes/class.storage.php:452
-#: ../../../app/lib/chevereto.js:3556 ../../../app/lib/chevereto.min.js:204
+#: ../../../app/lib/chevereto.js:3539 ../../../app/lib/chevereto.min.js:197
 #, php-format, javascript-format
 msgid "Storage capacity can't be lower than its current usage (%s)."
 msgstr ""
@@ -314,7 +315,7 @@ msgstr ""
 #: ../../../app/lib/classes/class.user.php:68
 #: ../../../app/themes/Peafowl/views/album.php:20
 #: ../../../app/themes/Peafowl/views/dashboard.php:399
-#: ../../../app/themes/Peafowl/views/image.php:58
+#: ../../../app/themes/Peafowl/views/image.php:60
 msgid "Private"
 msgstr ""
 
@@ -355,21 +356,21 @@ msgstr ""
 msgid "System notification"
 msgstr ""
 
-#: ../../../app/lib/functions.php:218
-#: ../../../app/routes/route.dashboard.php:1352
-#: ../../../app/themes/Peafowl/header.php:412
+#: ../../../app/lib/functions.php:219
+#: ../../../app/routes/route.dashboard.php:1358
+#: ../../../app/themes/Peafowl/header.php:413
 #: ../../../app/themes/Peafowl/views/dashboard.php:9
 msgid "Dashboard"
 msgstr ""
 
-#: ../../../app/lib/functions.php:218
+#: ../../../app/lib/functions.php:219
 #, php-format
 msgid ""
 "There is an update available for your system. Go to %s to download and "
 "install this update."
 msgstr ""
 
-#: ../../../app/lib/functions.php:221
+#: ../../../app/lib/functions.php:222
 #, php-format
 msgid ""
 "System database is outdated. You need to run the <a href=\"%s\">update</a> "
@@ -378,7 +379,7 @@ msgstr ""
 "System database is outdated. You need to run the <a href=\"%s\">update</a> "
 "tool."
 
-#: ../../../app/lib/functions.php:224
+#: ../../../app/lib/functions.php:225
 #, php-format
 msgid ""
 "Website is in maintenance mode. To revert this setting go to <a href=\"%s"
@@ -387,40 +388,40 @@ msgstr ""
 "Website is in maintenance mode. To revert this setting go to <a href=\"%s"
 "\">Dashboard > Settings</a>."
 
-#: ../../../app/lib/functions.php:229
+#: ../../../app/lib/functions.php:230
 #, php-format
 msgid ""
 "You should disable PHP error reporting for production enviroment. Go to <a "
 "href='%s'>System settings</a> to revert this setting."
 msgstr ""
 
-#: ../../../app/lib/functions.php:232
+#: ../../../app/lib/functions.php:233
 #, php-format
 msgid ""
 "You haven't changed the default email settings. Go to <a href='%s'>Email "
 "settings</a> to fix this."
 msgstr ""
 
-#: ../../../app/lib/functions.php:696
+#: ../../../app/lib/functions.php:708
 msgid "There is an update available for your Chevereto based website."
 msgstr ""
 
-#: ../../../app/lib/functions.php:696 ../../../app/lib/chevereto.js:1582
-#: ../../../app/lib/chevereto.min.js:78
+#: ../../../app/lib/functions.php:708 ../../../app/lib/chevereto.js:1563
+#: ../../../app/lib/chevereto.min.js:76
 msgid "The release notes for this update are:"
 msgstr ""
 
-#: ../../../app/lib/functions.php:701
+#: ../../../app/lib/functions.php:713
 msgid "admin dashboard"
 msgstr ""
 
-#: ../../../app/lib/functions.php:701
+#: ../../../app/lib/functions.php:713
 msgid ""
 "You can apply this update directly from your %a or download it from %s and "
 "then manually install it."
 msgstr ""
 
-#: ../../../app/lib/functions.php:704
+#: ../../../app/lib/functions.php:716
 #, php-format
 msgid "Chevereto update available (v%s)"
 msgstr ""
@@ -440,26 +441,26 @@ msgstr ""
 "and our services. If you continue using our website is understood that you "
 "accept this cookie policy."
 
-#: ../../../app/loader.php:182
+#: ../../../app/loader.php:187
 msgid "You have been forbidden to use this website."
 msgstr ""
 
-#: ../../../app/loader.php:342
+#: ../../../app/loader.php:347
 #: ../../../app/themes/Peafowl/views/settings.php:451
 msgid "Feel free to browse and discover all my shared images and albums."
 msgstr ""
 
-#: ../../../app/loader.php:345
+#: ../../../app/loader.php:350
 #: ../../../app/themes/Peafowl/views/settings.php:457
 msgid "View all my images"
 msgstr ""
 
-#: ../../../app/loader.php:482 ../../../app/themes/Peafowl/views/404.php:6
+#: ../../../app/loader.php:487 ../../../app/themes/Peafowl/views/404.php:6
 msgid "That page doesn't exist"
 msgstr ""
 
 #: ../../../app/routes/route.account.php:68
-#: ../../../app/themes/Peafowl/header.php:298
+#: ../../../app/themes/Peafowl/header.php:299
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:24
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:8
 #: ../../../app/themes/Peafowl/views/login.php:41
@@ -490,7 +491,6 @@ msgstr ""
 #: ../../../app/routes/route.account.php:91
 #: ../../../app/routes/route.album.php:64
 #: ../../../app/routes/route.login.php:61
-#: ../../../app/routes/route.settings.php:148
 #: ../../../app/routes/route.signup.php:72
 msgid "The reCAPTCHA wasn't entered correctly"
 msgstr ""
@@ -512,11 +512,11 @@ msgstr ""
 #: ../../../app/routes/route.dashboard.php:274
 #: ../../../app/routes/route.json.php:24 ../../../app/routes/route.json.php:37
 #: ../../../app/routes/route.json.php:49 ../../../app/routes/route.json.php:161
-#: ../../../app/routes/route.json.php:240
-#: ../../../app/routes/route.json.php:602
-#: ../../../app/routes/route.json.php:664
-#: ../../../app/routes/route.json.php:713
-#: ../../../app/routes/route.json.php:760 ../../../app/routes/route.page.php:66
+#: ../../../app/routes/route.json.php:241
+#: ../../../app/routes/route.json.php:603
+#: ../../../app/routes/route.json.php:665
+#: ../../../app/routes/route.json.php:714
+#: ../../../app/routes/route.json.php:761 ../../../app/routes/route.page.php:66
 #: ../../../app/themes/Peafowl/views/request-denied.php:8
 #: ../../../content/pages/default/contact.php:14
 msgid "Request denied"
@@ -541,7 +541,7 @@ msgstr ""
 
 #: ../../../app/routes/route.account.php:229
 #: ../../../app/routes/route.account.php:450
-#: ../../../app/routes/route.settings.php:293
+#: ../../../app/routes/route.settings.php:278
 #: ../../../app/routes/route.signup.php:207
 #, php-format
 msgid "Confirmation required at %s"
@@ -554,17 +554,17 @@ msgid "Welcome to %s"
 msgstr ""
 
 #: ../../../app/routes/route.account.php:356
-#: ../../../app/routes/route.settings.php:337
+#: ../../../app/routes/route.settings.php:322
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:36
 #: ../../../app/themes/Peafowl/views/settings.php:313
 #: ../../../app/themes/Peafowl/views/settings.php:330
-#: ../../../app/lib/chevereto.js:1550 ../../../app/lib/chevereto.min.js:76
+#: ../../../app/lib/chevereto.js:1531 ../../../app/lib/chevereto.min.js:74
 msgid "Passwords don't match"
 msgstr ""
 
 #: ../../../app/routes/route.account.php:418
-#: ../../../app/routes/route.json.php:640
-#: ../../../app/routes/route.settings.php:253
+#: ../../../app/routes/route.json.php:641
+#: ../../../app/routes/route.settings.php:238
 #: ../../../app/routes/route.signup.php:144
 msgid "Email already being used"
 msgstr ""
@@ -572,7 +572,7 @@ msgstr ""
 #: ../../../app/routes/route.account.php:504
 #: ../../../app/routes/route.signup.php:250
 #: ../../../content/pages/default/contact.php:132
-#: ../../../app/lib/chevereto.js:317 ../../../app/lib/chevereto.min.js:19
+#: ../../../app/lib/chevereto.js:308 ../../../app/lib/chevereto.min.js:17
 #: ../../../lib/Peafowl/peafowl.js:195 ../../../lib/Peafowl/peafowl.min.js:10
 msgid "Check the errors in the form to continue."
 msgstr ""
@@ -583,9 +583,9 @@ msgstr ""
 
 #: ../../../app/routes/route.album.php:145
 #: ../../../app/routes/route.category.php:52
-#: ../../../app/routes/route.dashboard.php:1232
-#: ../../../app/routes/route.dashboard.php:1271
-#: ../../../app/routes/route.dashboard.php:1300
+#: ../../../app/routes/route.dashboard.php:1238
+#: ../../../app/routes/route.dashboard.php:1277
+#: ../../../app/routes/route.dashboard.php:1306
 #: ../../../app/routes/route.explore.php:34
 #: ../../../app/routes/route.following.php:21
 #: ../../../app/routes/route.user.php:203
@@ -597,9 +597,9 @@ msgstr ""
 
 #: ../../../app/routes/route.album.php:153
 #: ../../../app/routes/route.category.php:60
-#: ../../../app/routes/route.dashboard.php:1240
-#: ../../../app/routes/route.dashboard.php:1279
-#: ../../../app/routes/route.dashboard.php:1308
+#: ../../../app/routes/route.dashboard.php:1246
+#: ../../../app/routes/route.dashboard.php:1285
+#: ../../../app/routes/route.dashboard.php:1314
 #: ../../../app/routes/route.explore.php:42
 #: ../../../app/routes/route.user.php:209
 #: ../../../app/routes/route.user.php:254
@@ -609,7 +609,7 @@ msgstr ""
 
 #: ../../../app/routes/route.album.php:161
 #: ../../../app/routes/route.category.php:68
-#: ../../../app/routes/route.dashboard.php:1248
+#: ../../../app/routes/route.dashboard.php:1254
 #: ../../../app/routes/route.explore.php:50
 #: ../../../app/routes/route.following.php:29
 #: ../../../app/routes/route.user.php:215
@@ -618,7 +618,7 @@ msgstr ""
 
 #: ../../../app/routes/route.album.php:172
 #: ../../../app/routes/route.category.php:78
-#: ../../../app/routes/route.dashboard.php:1258
+#: ../../../app/routes/route.dashboard.php:1264
 #: ../../../app/routes/route.explore.php:60
 #: ../../../app/routes/route.following.php:39
 #: ../../../app/routes/route.user.php:223
@@ -628,7 +628,7 @@ msgstr ""
 #: ../../../app/routes/route.album.php:183
 #: ../../../app/themes/Peafowl/snippets/modal_share.php:4
 #: ../../../app/themes/Peafowl/views/album.php:47
-#: ../../../app/themes/Peafowl/views/image.php:92
+#: ../../../app/themes/Peafowl/views/image.php:94
 msgid "Share"
 msgstr ""
 
@@ -663,7 +663,7 @@ msgstr ""
 #: ../../../app/routes/route.dashboard.php:40
 #: ../../../app/routes/route.search.php:92
 #: ../../../app/routes/route.user.php:88 ../../../app/routes/route.user.php:300
-#: ../../../app/themes/Peafowl/header.php:406
+#: ../../../app/themes/Peafowl/header.php:407
 #: ../../../app/themes/Peafowl/views/settings.php:77
 msgid "Albums"
 msgstr ""
@@ -675,9 +675,9 @@ msgid "Users"
 msgstr ""
 
 #: ../../../app/routes/route.dashboard.php:42
-#: ../../../app/routes/route.settings.php:508
-#: ../../../app/themes/Peafowl/header.php:373
-#: ../../../app/themes/Peafowl/header.php:410
+#: ../../../app/routes/route.settings.php:494
+#: ../../../app/themes/Peafowl/header.php:374
+#: ../../../app/themes/Peafowl/header.php:411
 msgid "Settings"
 msgstr ""
 
@@ -754,29 +754,29 @@ msgstr ""
 #: ../../../app/themes/Peafowl/views/dashboard.php:1217
 #: ../../../app/themes/Peafowl/views/dashboard.php:1227
 #: ../../../app/themes/Peafowl/views/dashboard.php:1377
-#: ../../../app/themes/Peafowl/views/dashboard.php:1432
-#: ../../../app/themes/Peafowl/views/dashboard.php:1442
-#: ../../../app/themes/Peafowl/views/dashboard.php:1454
-#: ../../../app/themes/Peafowl/views/dashboard.php:1466
-#: ../../../app/themes/Peafowl/views/dashboard.php:1476
-#: ../../../app/themes/Peafowl/views/dashboard.php:1486
-#: ../../../app/themes/Peafowl/views/dashboard.php:1498
-#: ../../../app/themes/Peafowl/views/dashboard.php:1624
-#: ../../../app/themes/Peafowl/views/dashboard.php:1716
-#: ../../../app/themes/Peafowl/views/dashboard.php:1726
-#: ../../../app/themes/Peafowl/views/dashboard.php:1737
-#: ../../../app/themes/Peafowl/views/dashboard.php:1746
-#: ../../../app/themes/Peafowl/views/dashboard.php:1762
-#: ../../../app/themes/Peafowl/views/dashboard.php:1821
-#: ../../../app/themes/Peafowl/views/dashboard.php:1831
-#: ../../../app/themes/Peafowl/views/dashboard.php:2035
-#: ../../../app/themes/Peafowl/views/dashboard.php:2059
-#: ../../../app/themes/Peafowl/views/dashboard.php:2090
-#: ../../../app/themes/Peafowl/views/dashboard.php:2114
-#: ../../../app/themes/Peafowl/views/dashboard.php:2140
-#: ../../../app/themes/Peafowl/views/dashboard.php:2159
-#: ../../../app/themes/Peafowl/views/dashboard.php:2239
-#: ../../../app/themes/Peafowl/views/dashboard.php:2261
+#: ../../../app/themes/Peafowl/views/dashboard.php:1439
+#: ../../../app/themes/Peafowl/views/dashboard.php:1449
+#: ../../../app/themes/Peafowl/views/dashboard.php:1461
+#: ../../../app/themes/Peafowl/views/dashboard.php:1473
+#: ../../../app/themes/Peafowl/views/dashboard.php:1483
+#: ../../../app/themes/Peafowl/views/dashboard.php:1493
+#: ../../../app/themes/Peafowl/views/dashboard.php:1505
+#: ../../../app/themes/Peafowl/views/dashboard.php:1631
+#: ../../../app/themes/Peafowl/views/dashboard.php:1723
+#: ../../../app/themes/Peafowl/views/dashboard.php:1733
+#: ../../../app/themes/Peafowl/views/dashboard.php:1744
+#: ../../../app/themes/Peafowl/views/dashboard.php:1753
+#: ../../../app/themes/Peafowl/views/dashboard.php:1769
+#: ../../../app/themes/Peafowl/views/dashboard.php:1828
+#: ../../../app/themes/Peafowl/views/dashboard.php:1838
+#: ../../../app/themes/Peafowl/views/dashboard.php:2042
+#: ../../../app/themes/Peafowl/views/dashboard.php:2066
+#: ../../../app/themes/Peafowl/views/dashboard.php:2097
+#: ../../../app/themes/Peafowl/views/dashboard.php:2121
+#: ../../../app/themes/Peafowl/views/dashboard.php:2147
+#: ../../../app/themes/Peafowl/views/dashboard.php:2166
+#: ../../../app/themes/Peafowl/views/dashboard.php:2246
+#: ../../../app/themes/Peafowl/views/dashboard.php:2268
 msgid "Enabled"
 msgstr ""
 
@@ -805,29 +805,29 @@ msgstr ""
 #: ../../../app/themes/Peafowl/views/dashboard.php:1217
 #: ../../../app/themes/Peafowl/views/dashboard.php:1227
 #: ../../../app/themes/Peafowl/views/dashboard.php:1377
-#: ../../../app/themes/Peafowl/views/dashboard.php:1432
-#: ../../../app/themes/Peafowl/views/dashboard.php:1442
-#: ../../../app/themes/Peafowl/views/dashboard.php:1454
-#: ../../../app/themes/Peafowl/views/dashboard.php:1466
-#: ../../../app/themes/Peafowl/views/dashboard.php:1476
-#: ../../../app/themes/Peafowl/views/dashboard.php:1486
-#: ../../../app/themes/Peafowl/views/dashboard.php:1498
-#: ../../../app/themes/Peafowl/views/dashboard.php:1624
-#: ../../../app/themes/Peafowl/views/dashboard.php:1716
-#: ../../../app/themes/Peafowl/views/dashboard.php:1726
-#: ../../../app/themes/Peafowl/views/dashboard.php:1737
-#: ../../../app/themes/Peafowl/views/dashboard.php:1746
-#: ../../../app/themes/Peafowl/views/dashboard.php:1762
-#: ../../../app/themes/Peafowl/views/dashboard.php:1821
-#: ../../../app/themes/Peafowl/views/dashboard.php:1831
-#: ../../../app/themes/Peafowl/views/dashboard.php:2035
-#: ../../../app/themes/Peafowl/views/dashboard.php:2059
-#: ../../../app/themes/Peafowl/views/dashboard.php:2090
-#: ../../../app/themes/Peafowl/views/dashboard.php:2114
-#: ../../../app/themes/Peafowl/views/dashboard.php:2140
-#: ../../../app/themes/Peafowl/views/dashboard.php:2159
-#: ../../../app/themes/Peafowl/views/dashboard.php:2239
-#: ../../../app/themes/Peafowl/views/dashboard.php:2261
+#: ../../../app/themes/Peafowl/views/dashboard.php:1439
+#: ../../../app/themes/Peafowl/views/dashboard.php:1449
+#: ../../../app/themes/Peafowl/views/dashboard.php:1461
+#: ../../../app/themes/Peafowl/views/dashboard.php:1473
+#: ../../../app/themes/Peafowl/views/dashboard.php:1483
+#: ../../../app/themes/Peafowl/views/dashboard.php:1493
+#: ../../../app/themes/Peafowl/views/dashboard.php:1505
+#: ../../../app/themes/Peafowl/views/dashboard.php:1631
+#: ../../../app/themes/Peafowl/views/dashboard.php:1723
+#: ../../../app/themes/Peafowl/views/dashboard.php:1733
+#: ../../../app/themes/Peafowl/views/dashboard.php:1744
+#: ../../../app/themes/Peafowl/views/dashboard.php:1753
+#: ../../../app/themes/Peafowl/views/dashboard.php:1769
+#: ../../../app/themes/Peafowl/views/dashboard.php:1828
+#: ../../../app/themes/Peafowl/views/dashboard.php:1838
+#: ../../../app/themes/Peafowl/views/dashboard.php:2042
+#: ../../../app/themes/Peafowl/views/dashboard.php:2066
+#: ../../../app/themes/Peafowl/views/dashboard.php:2097
+#: ../../../app/themes/Peafowl/views/dashboard.php:2121
+#: ../../../app/themes/Peafowl/views/dashboard.php:2147
+#: ../../../app/themes/Peafowl/views/dashboard.php:2166
+#: ../../../app/themes/Peafowl/views/dashboard.php:2246
+#: ../../../app/themes/Peafowl/views/dashboard.php:2268
 msgid "Disabled"
 msgstr ""
 
@@ -988,7 +988,7 @@ msgid "External"
 msgstr ""
 
 #: ../../../app/routes/route.dashboard.php:322
-#: ../../../app/themes/Peafowl/header.php:181
+#: ../../../app/themes/Peafowl/header.php:182
 #: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:37
 #: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:62
 msgid "All"
@@ -996,7 +996,7 @@ msgstr ""
 
 #: ../../../app/routes/route.dashboard.php:327
 #: ../../../app/routes/route.image.php:164
-#: ../../../app/themes/Peafowl/views/dashboard.php:1904
+#: ../../../app/themes/Peafowl/views/dashboard.php:1911
 msgid "search content"
 msgstr ""
 
@@ -1149,8 +1149,9 @@ msgstr ""
 #: ../../../app/routes/route.dashboard.php:612
 #: ../../../app/routes/route.dashboard.php:617
 #: ../../../app/routes/route.dashboard.php:662
-#: ../../../app/routes/route.dashboard.php:862
-#: ../../../app/routes/route.dashboard.php:1067
+#: ../../../app/routes/route.dashboard.php:818
+#: ../../../app/routes/route.dashboard.php:867
+#: ../../../app/routes/route.dashboard.php:1073
 msgid "Invalid value"
 msgstr ""
 
@@ -1223,7 +1224,7 @@ msgid "Invalid SMTP security"
 msgstr ""
 
 #: ../../../app/routes/route.dashboard.php:717
-#: ../../../app/routes/route.dashboard.php:951
+#: ../../../app/routes/route.dashboard.php:956
 msgid "Invalid personal mode user ID"
 msgstr ""
 
@@ -1300,69 +1301,69 @@ msgstr ""
 msgid "Only alphanumeric, hyphen and underscore characters are allowed"
 msgstr ""
 
-#: ../../../app/routes/route.dashboard.php:821
+#: ../../../app/routes/route.dashboard.php:826
 msgid "Routes can't be the same"
 msgstr ""
 
-#: ../../../app/routes/route.dashboard.php:837
+#: ../../../app/routes/route.dashboard.php:842
 msgid "Invalid upload image path"
 msgstr ""
 
-#: ../../../app/routes/route.dashboard.php:851
+#: ../../../app/routes/route.dashboard.php:856
 msgid "Invalid call to action URL"
 msgstr ""
 
-#: ../../../app/routes/route.dashboard.php:865
+#: ../../../app/routes/route.dashboard.php:870
 #, php-format
 msgid "Max. allowed %s"
 msgstr ""
 
-#: ../../../app/routes/route.dashboard.php:879
+#: ../../../app/routes/route.dashboard.php:884
 msgid "Can't map %m to an existing folder (%f)"
 msgstr ""
 
-#: ../../../app/routes/route.dashboard.php:887
+#: ../../../app/routes/route.dashboard.php:892
 msgid "Can't map %m to an existing route (%r)"
 msgstr ""
 
-#: ../../../app/routes/route.dashboard.php:895
+#: ../../../app/routes/route.dashboard.php:900
 msgid "Can't map %m to %r (username collision)"
 msgstr ""
 
-#: ../../../app/routes/route.dashboard.php:978
+#: ../../../app/routes/route.dashboard.php:983
 msgid "Invalid SMTP server"
 msgstr ""
 
-#: ../../../app/routes/route.dashboard.php:979
+#: ../../../app/routes/route.dashboard.php:984
 msgid "Invalid SMTP username"
 msgstr ""
 
-#: ../../../app/routes/route.dashboard.php:1049
+#: ../../../app/routes/route.dashboard.php:1055
 msgid "Invalid URL"
 msgstr ""
 
-#: ../../../app/routes/route.dashboard.php:1087
+#: ../../../app/routes/route.dashboard.php:1093
 #, php-format
 msgid "This URL key is already being used by another page (ID %s)"
 msgstr ""
 
-#: ../../../app/routes/route.dashboard.php:1088
+#: ../../../app/routes/route.dashboard.php:1094
 #, php-format
 msgid "This file path is already being used by another page (ID %s)"
 msgstr ""
 
-#: ../../../app/routes/route.dashboard.php:1119
+#: ../../../app/routes/route.dashboard.php:1125
 #, php-format
 msgid "Can't save page contents: %s."
 msgstr ""
 
-#: ../../../app/routes/route.dashboard.php:1292
+#: ../../../app/routes/route.dashboard.php:1298
 msgid "Top users"
 msgstr ""
 
 #: ../../../app/routes/route.explore.php:91
-#: ../../../app/themes/Peafowl/header.php:191
-#: ../../../app/themes/Peafowl/header.php:209
+#: ../../../app/themes/Peafowl/header.php:192
+#: ../../../app/themes/Peafowl/header.php:210
 #: ../../../app/themes/Peafowl/views/dashboard.php:316
 #: ../../../app/themes/Peafowl/views/explore.php:9
 msgid "Explore"
@@ -1370,7 +1371,7 @@ msgstr ""
 
 #: ../../../app/routes/route.following.php:75
 #: ../../../app/routes/route.user.php:113
-#: ../../../app/themes/Peafowl/header.php:405
+#: ../../../app/themes/Peafowl/header.php:406
 #: ../../../app/themes/Peafowl/views/following.php:7
 #: ../../../app/themes/Peafowl/views/user.php:78
 #: ../../../app/themes/Peafowl/views/user.php:84
@@ -1378,7 +1379,7 @@ msgid "Following"
 msgstr ""
 
 #: ../../../app/routes/route.image.php:135
-#: ../../../app/themes/Peafowl/header.php:429
+#: ../../../app/themes/Peafowl/header.php:430
 msgid "About"
 msgstr ""
 
@@ -1407,140 +1408,140 @@ msgstr ""
 msgid "%s images"
 msgstr ""
 
-#: ../../../app/routes/route.image.php:206
+#: ../../../app/routes/route.image.php:212
 msgid "Image %i in %a album"
 msgstr ""
 
-#: ../../../app/routes/route.image.php:208
+#: ../../../app/routes/route.image.php:214
 msgid "Image %i in %c category"
 msgstr ""
 
-#: ../../../app/routes/route.image.php:210
+#: ../../../app/routes/route.image.php:216
 msgid "Image %i hosted in %w"
 msgstr ""
 
-#: ../../../app/routes/route.image.php:247
+#: ../../../app/routes/route.image.php:253
 #: ../../../app/themes/Peafowl/snippets/embed.php:13
 msgid "Direct links"
 msgstr ""
 
-#: ../../../app/routes/route.image.php:250
+#: ../../../app/routes/route.image.php:256
 msgid "Image URL"
 msgstr ""
 
-#: ../../../app/routes/route.image.php:254
+#: ../../../app/routes/route.image.php:260
 msgid "Image link"
 msgstr ""
 
-#: ../../../app/routes/route.image.php:258
+#: ../../../app/routes/route.image.php:264
 msgid "Thumbnail URL"
 msgstr ""
 
-#: ../../../app/routes/route.image.php:265
+#: ../../../app/routes/route.image.php:271
 msgid "Medium URL"
 msgstr ""
 
-#: ../../../app/routes/route.image.php:277
+#: ../../../app/routes/route.image.php:283
 msgid "Full image"
 msgstr ""
 
-#: ../../../app/routes/route.image.php:299
+#: ../../../app/routes/route.image.php:305
 msgid "Full image (linked)"
 msgstr ""
 
-#: ../../../app/routes/route.image.php:323
+#: ../../../app/routes/route.image.php:329
 msgid "Medium image (linked)"
 msgstr ""
 
-#: ../../../app/routes/route.image.php:348
+#: ../../../app/routes/route.image.php:354
 msgid "Thumbnail image (linked)"
 msgstr ""
 
 #: ../../../app/routes/route.json.php:44 ../../../app/routes/route.json.php:59
 #: ../../../app/routes/route.json.php:101
-#: ../../../app/routes/route.json.php:301
-#: ../../../app/routes/route.json.php:787
-#: ../../../app/routes/route.json.php:851
-#: ../../../app/routes/route.json.php:952
-#: ../../../app/routes/route.json.php:1096
+#: ../../../app/routes/route.json.php:302
+#: ../../../app/routes/route.json.php:788
+#: ../../../app/routes/route.json.php:852
+#: ../../../app/routes/route.json.php:953
+#: ../../../app/routes/route.json.php:1097
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:4
 msgid "Login needed"
 msgstr ""
 
-#: ../../../app/routes/route.json.php:540
-#: ../../../app/routes/route.json.php:731
+#: ../../../app/routes/route.json.php:541
+#: ../../../app/routes/route.json.php:732
 msgid "IP address already banned"
 msgstr ""
 
-#: ../../../app/routes/route.json.php:609
-#: ../../../app/routes/route.json.php:671
+#: ../../../app/routes/route.json.php:610
+#: ../../../app/routes/route.json.php:672
 msgid "Missing values"
 msgstr ""
 
-#: ../../../app/routes/route.json.php:630
+#: ../../../app/routes/route.json.php:631
 msgid "Invalid role"
 msgstr ""
 
-#: ../../../app/routes/route.json.php:635
+#: ../../../app/routes/route.json.php:636
 msgid "Username already being used"
 msgstr ""
 
-#: ../../../app/routes/route.json.php:1123
+#: ../../../app/routes/route.json.php:1124
 #, php-format
 msgid "Add a password or another social connection before deleting %s"
 msgstr ""
 
-#: ../../../app/routes/route.json.php:1137
+#: ../../../app/routes/route.json.php:1138
 #, php-format
 msgid "Add an email or another social connection before deleting %s"
 msgstr ""
 
-#: ../../../app/routes/route.json.php:1148
+#: ../../../app/routes/route.json.php:1149
 #, php-format
 msgid "%s has been disconnected."
 msgstr ""
 
-#: ../../../app/routes/route.json.php:1165
+#: ../../../app/routes/route.json.php:1166
 msgid "Test email from %s @ %t"
 msgstr ""
 
-#: ../../../app/routes/route.json.php:1165
+#: ../../../app/routes/route.json.php:1166
 msgid "This is just a test"
 msgstr ""
 
-#: ../../../app/routes/route.json.php:1166
+#: ../../../app/routes/route.json.php:1167
 #, php-format
 msgid "Test email sent to %s."
 msgstr ""
 
-#: ../../../app/routes/route.json.php:1184
+#: ../../../app/routes/route.json.php:1185
 #, php-format
 msgid "User %s followed"
 msgstr ""
 
-#: ../../../app/routes/route.json.php:1184
+#: ../../../app/routes/route.json.php:1185
 #, php-format
 msgid "User %s unfollowed"
 msgstr ""
 
-#: ../../../app/routes/route.json.php:1206
+#: ../../../app/routes/route.json.php:1207
 msgid "Content liked"
 msgstr ""
 
-#: ../../../app/routes/route.json.php:1206
+#: ../../../app/routes/route.json.php:1207
 msgid "Content disliked"
 msgstr ""
 
-#: ../../../app/routes/route.json.php:1237
+#: ../../../app/routes/route.json.php:1238
 msgid "%u liked your %t %c"
 msgstr ""
 
-#: ../../../app/routes/route.json.php:1243
+#: ../../../app/routes/route.json.php:1244
 #, php-format
 msgid "%u is now following you"
 msgstr ""
 
-#: ../../../app/routes/route.json.php:1247
+#: ../../../app/routes/route.json.php:1248
 msgid "A private user"
 msgstr ""
 
@@ -1549,8 +1550,8 @@ msgid "Wrong Username/Email password combination"
 msgstr ""
 
 #: ../../../app/routes/route.login.php:137
-#: ../../../app/themes/Peafowl/header.php:272
-#: ../../../app/themes/Peafowl/header.php:278
+#: ../../../app/themes/Peafowl/header.php:273
+#: ../../../app/themes/Peafowl/header.php:279
 #: ../../../app/themes/Peafowl/views/login.php:8
 #: ../../../app/themes/Peafowl/views/login.php:52
 msgid "Sign in"
@@ -1572,7 +1573,7 @@ msgid "DMCA complaint"
 msgstr ""
 
 #: ../../../app/routes/route.page.php:71
-#: ../../../app/routes/route.settings.php:312
+#: ../../../app/routes/route.settings.php:297
 #: ../../../content/pages/default/contact.php:19
 msgid "Invalid name"
 msgstr ""
@@ -1623,8 +1624,8 @@ msgid "User search results for %s"
 msgstr ""
 
 #: ../../../app/routes/route.search.php:130
-#: ../../../app/themes/Peafowl/header.php:218
-#: ../../../app/themes/Peafowl/header.php:223
+#: ../../../app/themes/Peafowl/header.php:219
+#: ../../../app/themes/Peafowl/header.php:224
 #: ../../../app/themes/Peafowl/views/dashboard.php:306
 msgid "Search"
 msgstr ""
@@ -1638,8 +1639,8 @@ msgid "Profile"
 msgstr ""
 
 #: ../../../app/routes/route.settings.php:64
-#: ../../../app/themes/Peafowl/header.php:295
-#: ../../../app/themes/Peafowl/header.php:343
+#: ../../../app/themes/Peafowl/header.php:296
+#: ../../../app/themes/Peafowl/header.php:344
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:96
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:130
@@ -1658,46 +1659,46 @@ msgstr ""
 msgid "Linked accounts"
 msgstr ""
 
-#: ../../../app/routes/route.settings.php:201
+#: ../../../app/routes/route.settings.php:186
 msgid "Invalid image expiration"
 msgstr ""
 
-#: ../../../app/routes/route.settings.php:279
+#: ../../../app/routes/route.settings.php:264
 #, php-format
 msgid "An email has been sent to %s with instructions to activate this email"
 msgstr ""
 
-#: ../../../app/routes/route.settings.php:315
+#: ../../../app/routes/route.settings.php:300
 msgid "Invalid website"
 msgstr ""
 
-#: ../../../app/routes/route.settings.php:323
+#: ../../../app/routes/route.settings.php:308
 msgid "Wrong password"
 msgstr ""
 
-#: ../../../app/routes/route.settings.php:326
+#: ../../../app/routes/route.settings.php:311
 msgid "Use a new password"
 msgstr ""
 
-#: ../../../app/routes/route.settings.php:426
-#: ../../../app/themes/Peafowl/views/dashboard.php:2297
+#: ../../../app/routes/route.settings.php:415
+#: ../../../app/themes/Peafowl/views/dashboard.php:2304
 #: ../../../app/themes/Peafowl/views/settings.php:487
 msgid "Changes have been saved."
 msgstr ""
 
-#: ../../../app/routes/route.settings.php:445
+#: ../../../app/routes/route.settings.php:434
 msgid "Password has been changed"
 msgstr ""
 
-#: ../../../app/routes/route.settings.php:450
+#: ../../../app/routes/route.settings.php:439
 msgid "Password has been created."
 msgstr ""
 
-#: ../../../app/routes/route.settings.php:465
+#: ../../../app/routes/route.settings.php:454
 msgid "Wrong Username/Email values"
 msgstr ""
 
-#: ../../../app/routes/route.settings.php:508
+#: ../../../app/routes/route.settings.php:494
 #, php-format
 msgid "Settings for %s"
 msgstr ""
@@ -1708,8 +1709,8 @@ msgid "You must be at least %s years old to use this website."
 msgstr ""
 
 #: ../../../app/routes/route.signup.php:265
-#: ../../../app/themes/Peafowl/header.php:319
-#: ../../../app/themes/Peafowl/header.php:325
+#: ../../../app/themes/Peafowl/header.php:320
+#: ../../../app/themes/Peafowl/header.php:326
 #: ../../../app/themes/Peafowl/views/index.php:86
 #: ../../../app/themes/Peafowl/views/signup.php:8
 #: ../../../app/themes/Peafowl/views/signup.php:70
@@ -1717,14 +1718,14 @@ msgid "Create account"
 msgstr ""
 
 #: ../../../app/routes/route.user.php:82
-#: ../../../app/themes/Peafowl/header.php:62
+#: ../../../app/themes/Peafowl/header.php:63
 #: ../../../app/themes/Peafowl/views/index.php:51
 #, php-format
 msgid "%s's Images"
 msgstr ""
 
 #: ../../../app/routes/route.user.php:87
-#: ../../../app/themes/Peafowl/header.php:62
+#: ../../../app/themes/Peafowl/header.php:63
 #, php-format
 msgid "%s's Albums"
 msgstr ""
@@ -1740,8 +1741,8 @@ msgid "Liked by %s"
 msgstr ""
 
 #: ../../../app/routes/route.user.php:105
-#: ../../../app/themes/Peafowl/header.php:408
-#: ../../../app/themes/Peafowl/views/image.php:87
+#: ../../../app/themes/Peafowl/header.php:409
+#: ../../../app/themes/Peafowl/views/image.php:89
 msgid "Liked"
 msgstr ""
 
@@ -1758,32 +1759,32 @@ msgstr ""
 msgid "%n (%u) on %w"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:225
+#: ../../../app/themes/Peafowl/header.php:226
 msgid "Close"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:225
-#: ../../../app/themes/Peafowl/header.php:229
+#: ../../../app/themes/Peafowl/header.php:226
+#: ../../../app/themes/Peafowl/header.php:230
 msgid "Advanced search"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:236
+#: ../../../app/themes/Peafowl/header.php:237
 #: ../../../app/themes/Peafowl/views/dashboard.php:326
 #: ../../../app/themes/Peafowl/views/dashboard.php:794
 msgid "Random"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:246
+#: ../../../app/themes/Peafowl/header.php:247
 #, php-format
 msgid "Notices (%s)"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:261
+#: ../../../app/themes/Peafowl/header.php:262
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
 msgid "Upload"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:284
+#: ../../../app/themes/Peafowl/header.php:285
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:11
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:40
 #: ../../../app/themes/Peafowl/views/login.php:18
@@ -1793,8 +1794,8 @@ msgstr ""
 msgid "Sign in with another account"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:288
-#: ../../../app/themes/Peafowl/header.php:335
+#: ../../../app/themes/Peafowl/header.php:289
+#: ../../../app/themes/Peafowl/header.php:336
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 #: ../../../app/themes/Peafowl/snippets/form_album.php:9
@@ -1807,7 +1808,7 @@ msgstr ""
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:16
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/dashboard.php:2274
+#: ../../../app/themes/Peafowl/views/dashboard.php:2281
 #: ../../../app/themes/Peafowl/views/login.php:22
 #: ../../../app/themes/Peafowl/views/login.php:62
 #: ../../../app/themes/Peafowl/views/password-gate.php:21
@@ -1816,14 +1817,14 @@ msgstr ""
 #: ../../../app/themes/Peafowl/views/signup.php:22
 #: ../../../app/themes/Peafowl/views/signup.php:80
 #: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1582 ../../../app/lib/chevereto.min.js:78
+#: ../../../app/lib/chevereto.js:1563 ../../../app/lib/chevereto.min.js:76
 #: ../../../lib/Peafowl/peafowl.js:491 ../../../lib/Peafowl/peafowl.js:2347
 #: ../../../lib/Peafowl/peafowl.min.js:31
 #: ../../../lib/Peafowl/peafowl.min.js:140
 msgid "or"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:294
+#: ../../../app/themes/Peafowl/header.php:295
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:20
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
@@ -1833,22 +1834,22 @@ msgstr ""
 msgid "Username or Email address"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:297
+#: ../../../app/themes/Peafowl/header.php:298
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:23
 #: ../../../app/themes/Peafowl/views/login.php:53
 msgid "Keep me logged in"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:304
+#: ../../../app/themes/Peafowl/header.php:305
 #, php-format
 msgid "Don't have an account? <a href='%s'>Sign up</a> now."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:331
+#: ../../../app/themes/Peafowl/header.php:332
 msgid "Sign up with another account"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:341
+#: ../../../app/themes/Peafowl/header.php:342
 #: ../../../app/themes/Peafowl/views/account/email-needed.php:15
 #: ../../../app/themes/Peafowl/views/dashboard.php:100
 #: ../../../app/themes/Peafowl/views/settings.php:155
@@ -1858,7 +1859,7 @@ msgstr ""
 msgid "Email address"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:342
+#: ../../../app/themes/Peafowl/header.php:343
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:92
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:93
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:126
@@ -1871,39 +1872,39 @@ msgstr ""
 msgid "Username"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:345
+#: ../../../app/themes/Peafowl/header.php:346
 #: ../../../app/themes/Peafowl/views/signup.php:57
 #, php-format
 msgid "I'm at least %s years old"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:347
+#: ../../../app/themes/Peafowl/header.php:348
 #: ../../../app/themes/Peafowl/views/signup.php:72
 #, php-format
 msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:366
-#: ../../../app/themes/Peafowl/header.php:372
+#: ../../../app/themes/Peafowl/header.php:367
+#: ../../../app/themes/Peafowl/header.php:373
 msgid "Notifications"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:380
+#: ../../../app/themes/Peafowl/header.php:381
 #: ../../../app/themes/Peafowl/views/settings.php:348
-#: ../../../app/lib/chevereto.js:1754 ../../../app/lib/chevereto.min.js:88
-#: ../../../lib/Peafowl/peafowl.js:3549 ../../../lib/Peafowl/peafowl.min.js:235
+#: ../../../app/lib/chevereto.js:1735 ../../../app/lib/chevereto.min.js:86
+#: ../../../lib/Peafowl/peafowl.js:3551 ../../../lib/Peafowl/peafowl.min.js:235
 msgid "loading"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:383
+#: ../../../app/themes/Peafowl/header.php:384
 msgid "You don't have notifications"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:404
+#: ../../../app/themes/Peafowl/header.php:405
 msgid "My Profile"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/header.php:414
+#: ../../../app/themes/Peafowl/header.php:415
 msgid "Sign out"
 msgstr ""
 
@@ -2120,11 +2121,11 @@ msgstr ""
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
-#: ../../../app/themes/Peafowl/views/dashboard.php:2274
+#: ../../../app/themes/Peafowl/views/dashboard.php:2281
 #: ../../../app/themes/Peafowl/views/password-gate.php:21
 #: ../../../app/themes/Peafowl/views/settings.php:473
 #: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1582 ../../../app/lib/chevereto.min.js:78
+#: ../../../app/lib/chevereto.js:1563 ../../../app/lib/chevereto.min.js:76
 #: ../../../lib/Peafowl/peafowl.js:2348 ../../../lib/Peafowl/peafowl.min.js:140
 msgid "cancel"
 msgstr ""
@@ -2197,7 +2198,7 @@ msgstr ""
 #: ../../../app/themes/Peafowl/snippets/form_image.php:4
 #: ../../../app/themes/Peafowl/views/dashboard.php:474
 #: ../../../app/themes/Peafowl/views/dashboard.php:631
-#: ../../../app/themes/Peafowl/views/dashboard.php:1589
+#: ../../../app/themes/Peafowl/views/dashboard.php:1596
 #: ../../../app/themes/Peafowl/views/settings.php:444
 msgid "Title"
 msgstr ""
@@ -2217,8 +2218,8 @@ msgstr ""
 #: ../../../app/themes/Peafowl/views/dashboard.php:599
 #: ../../../app/themes/Peafowl/views/dashboard.php:606
 #: ../../../app/themes/Peafowl/views/dashboard.php:613
-#: ../../../app/themes/Peafowl/views/dashboard.php:1567
-#: ../../../app/themes/Peafowl/views/dashboard.php:1577
+#: ../../../app/themes/Peafowl/views/dashboard.php:1574
+#: ../../../app/themes/Peafowl/views/dashboard.php:1584
 msgid "optional"
 msgstr ""
 
@@ -2478,7 +2479,7 @@ msgstr ""
 #: ../../../app/themes/Peafowl/snippets/form_category_edit.php:4
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:3
 #: ../../../app/themes/Peafowl/views/dashboard.php:968
-#: ../../../app/themes/Peafowl/views/dashboard.php:1887
+#: ../../../app/themes/Peafowl/views/dashboard.php:1894
 #: ../../../app/themes/Peafowl/views/settings.php:374
 #: ../../../content/pages/default/contact.php:87
 msgid "Name"
@@ -2569,8 +2570,8 @@ msgid "password"
 msgstr ""
 
 #: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
-#: ../../../app/lib/chevereto.js:3177 ../../../app/lib/chevereto.js:4121
-#: ../../../app/lib/chevereto.min.js:187 ../../../app/lib/chevereto.min.js:238
+#: ../../../app/lib/chevereto.js:3160 ../../../app/lib/chevereto.js:4104
+#: ../../../app/lib/chevereto.min.js:180 ../../../app/lib/chevereto.min.js:231
 msgid "private"
 msgstr ""
 
@@ -2797,8 +2798,8 @@ msgid "There's nothing to show here."
 msgstr ""
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
-#: ../../../app/themes/Peafowl/views/image.php:70
-#: ../../../app/themes/Peafowl/views/image.php:324
+#: ../../../app/themes/Peafowl/views/image.php:72
+#: ../../../app/themes/Peafowl/views/image.php:326
 msgid "Edit image details"
 msgstr ""
 
@@ -2915,7 +2916,7 @@ msgstr ""
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
-#: ../../../app/lib/chevereto.js:4032 ../../../app/lib/chevereto.min.js:230
+#: ../../../app/lib/chevereto.js:4015 ../../../app/lib/chevereto.min.js:223
 #: ../../../lib/Peafowl/peafowl.js:638 ../../../lib/Peafowl/peafowl.min.js:38
 msgid "Select"
 msgstr ""
@@ -2940,7 +2941,7 @@ msgstr ""
 #: ../../../app/themes/Peafowl/views/404.php:22
 #: ../../../app/themes/Peafowl/views/album.php:185
 #: ../../../app/themes/Peafowl/views/user.php:178
-#: ../../../app/lib/chevereto.js:4010 ../../../app/lib/chevereto.min.js:228
+#: ../../../app/lib/chevereto.js:3993 ../../../app/lib/chevereto.min.js:221
 msgid "The content has been deleted."
 msgstr ""
 
@@ -3104,7 +3105,7 @@ msgstr ""
 "continue."
 
 #: ../../../app/themes/Peafowl/views/album.php:27
-#: ../../../app/themes/Peafowl/views/image.php:64
+#: ../../../app/themes/Peafowl/views/image.php:66
 msgid "This content is private"
 msgstr ""
 
@@ -3186,7 +3187,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:40
-#: ../../../app/themes/Peafowl/views/dashboard.php:1926
+#: ../../../app/themes/Peafowl/views/dashboard.php:1933
 msgid "Disk used"
 msgstr ""
 
@@ -3210,7 +3211,7 @@ msgid "This setting is always diabled when using personal website mode."
 msgstr ""
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:131
-#: ../../../app/themes/Peafowl/views/dashboard.php:1780
+#: ../../../app/themes/Peafowl/views/dashboard.php:1787
 msgid "documentation"
 msgstr ""
 
@@ -3226,7 +3227,7 @@ msgstr ""
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:176
 #: ../../../app/themes/Peafowl/views/dashboard.php:180
-#: ../../../app/themes/Peafowl/views/image.php:223
+#: ../../../app/themes/Peafowl/views/image.php:225
 msgid "Add IP ban"
 msgstr ""
 
@@ -3299,7 +3300,7 @@ msgid "User ID"
 msgstr ""
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:378
-#: ../../../app/themes/Peafowl/views/dashboard.php:1663
+#: ../../../app/themes/Peafowl/views/dashboard.php:1670
 #, php-format
 msgid "Your user id is: %s"
 msgstr ""
@@ -3333,7 +3334,7 @@ msgstr ""
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:413
 #: ../../../app/themes/Peafowl/views/dashboard.php:1355
-#: ../../../app/themes/Peafowl/views/dashboard.php:1612
+#: ../../../app/themes/Peafowl/views/dashboard.php:1619
 msgid "Default"
 msgstr ""
 
@@ -3867,7 +3868,7 @@ msgid "Minimum age required"
 msgstr ""
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1063
-#: ../../../app/themes/Peafowl/views/dashboard.php:1663
+#: ../../../app/themes/Peafowl/views/dashboard.php:1670
 msgid "Empty"
 msgstr ""
 
@@ -4132,13 +4133,13 @@ msgstr ""
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1336
 #: ../../../app/themes/Peafowl/views/dashboard.php:1353
-#: ../../../app/themes/Peafowl/views/dashboard.php:1610
+#: ../../../app/themes/Peafowl/views/dashboard.php:1617
 msgid "Black"
 msgstr ""
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1336
 #: ../../../app/themes/Peafowl/views/dashboard.php:1354
-#: ../../../app/themes/Peafowl/views/dashboard.php:1611
+#: ../../../app/themes/Peafowl/views/dashboard.php:1618
 msgid "White"
 msgstr ""
 
@@ -4155,27 +4156,27 @@ msgid "Top bar button color"
 msgstr ""
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1348
-#: ../../../app/themes/Peafowl/views/dashboard.php:1605
+#: ../../../app/themes/Peafowl/views/dashboard.php:1612
 msgid "Blue"
 msgstr ""
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1349
-#: ../../../app/themes/Peafowl/views/dashboard.php:1606
+#: ../../../app/themes/Peafowl/views/dashboard.php:1613
 msgid "Green"
 msgstr ""
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1350
-#: ../../../app/themes/Peafowl/views/dashboard.php:1607
+#: ../../../app/themes/Peafowl/views/dashboard.php:1614
 msgid "Orange"
 msgstr ""
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1351
-#: ../../../app/themes/Peafowl/views/dashboard.php:1608
+#: ../../../app/themes/Peafowl/views/dashboard.php:1615
 msgid "Red"
 msgstr ""
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1352
-#: ../../../app/themes/Peafowl/views/dashboard.php:1609
+#: ../../../app/themes/Peafowl/views/dashboard.php:1616
 msgid "Grey"
 msgstr ""
 
@@ -4194,7 +4195,7 @@ msgstr ""
 "Enable vector logo for high quality logo in devices with high pixel density."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1386
-#: ../../../app/themes/Peafowl/views/dashboard.php:1567
+#: ../../../app/themes/Peafowl/views/dashboard.php:1574
 msgid "Vector logo image"
 msgstr ""
 
@@ -4203,7 +4204,7 @@ msgid "Vector version or your website logo in SVG format."
 msgstr ""
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1398
-#: ../../../app/themes/Peafowl/views/dashboard.php:1577
+#: ../../../app/themes/Peafowl/views/dashboard.php:1584
 msgid "Raster logo image"
 msgstr ""
 
@@ -4232,85 +4233,95 @@ msgid "Favicon image. Image must have same width and height."
 msgstr ""
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1429
+msgid "Image load max. filesize"
+msgstr ""
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1432
+msgid ""
+"Images greater than this size will show a button to load full resolution "
+"image."
+msgstr ""
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1436
 msgid "Enable download button"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1435
+#: ../../../app/themes/Peafowl/views/dashboard.php:1442
 msgid "Enable this if you want to show the image download button."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1439
+#: ../../../app/themes/Peafowl/views/dashboard.php:1446
 msgid "Enable right click on image"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1445
+#: ../../../app/themes/Peafowl/views/dashboard.php:1452
 msgid "Enable this if you want to allow right click on image viewer page."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1451
+#: ../../../app/themes/Peafowl/views/dashboard.php:1458
 msgid "Enable show Exif data"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1457
+#: ../../../app/themes/Peafowl/views/dashboard.php:1464
 msgid "Enable this if you want to show image Exif data."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1463
+#: ../../../app/themes/Peafowl/views/dashboard.php:1470
 msgid "Enable social share"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1469
+#: ../../../app/themes/Peafowl/views/dashboard.php:1476
 msgid ""
 "Enable this if you want to show social network buttons to share content."
 msgstr ""
 "Enable this if you want to show social network buttons to share content."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1473
+#: ../../../app/themes/Peafowl/views/dashboard.php:1480
 msgid "Enable embed codes (content)"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1479
+#: ../../../app/themes/Peafowl/views/dashboard.php:1486
 msgid "Enable this if you want to show embed codes for the content."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1483
+#: ../../../app/themes/Peafowl/views/dashboard.php:1490
 msgid "Enable embed codes (uploader)"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1489
+#: ../../../app/themes/Peafowl/views/dashboard.php:1496
 msgid "Enable this if you want to show embed codes when upload gets completed."
 msgstr ""
 "Enable this if you want to show embed codes when upload gets completed."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1495
+#: ../../../app/themes/Peafowl/views/dashboard.php:1502
 msgid "Not safe content checkbox in uploader"
-msgstr ""
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1501
-msgid ""
-"Enable this if you want to show a checkbox to indicate not safe content "
-"upload."
-msgstr ""
-"Enable this if you want to show a checkbox to indicate not safe content "
-"upload."
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1507
-msgid "Custom CSS code"
 msgstr ""
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1508
 msgid ""
+"Enable this if you want to show a checkbox to indicate not safe content "
+"upload."
+msgstr ""
+"Enable this if you want to show a checkbox to indicate not safe content "
+"upload."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1514
+msgid "Custom CSS code"
+msgstr ""
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1515
+msgid ""
 "Put your custom CSS code here. It will be placed as <style> just before the "
 "closing </head> tag."
 msgstr ""
 "Put your custom CSS code here. It will be placed as <style> just before the "
 "closing </head> tag."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1512
+#: ../../../app/themes/Peafowl/views/dashboard.php:1519
 msgid "Custom JS code"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1513
+#: ../../../app/themes/Peafowl/views/dashboard.php:1520
 msgid ""
 "Put your custom JS code here. It will be placed as <script> just before the "
 "closing </head> tag."
@@ -4318,23 +4329,23 @@ msgstr ""
 "Put your custom JS code here. It will be placed as <script> just before the "
 "closing </head> tag."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1520
+#: ../../../app/themes/Peafowl/views/dashboard.php:1527
 msgid "Style"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1524
+#: ../../../app/themes/Peafowl/views/dashboard.php:1531
 msgid "Landing page"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1525
+#: ../../../app/themes/Peafowl/views/dashboard.php:1532
 msgid "Split landing + images"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1526
+#: ../../../app/themes/Peafowl/views/dashboard.php:1533
 msgid "Route explore"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1531
+#: ../../../app/themes/Peafowl/views/dashboard.php:1538
 #, php-format
 msgid ""
 "Select the homepage style. To customize it further edit app/themes/%s/views/"
@@ -4343,29 +4354,29 @@ msgstr ""
 "Select the homepage style. To customize it further edit app/themes/%s/views/"
 "index.php"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1541
+#: ../../../app/themes/Peafowl/views/dashboard.php:1548
 msgid "Cover image"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1545
-#: ../../../app/themes/Peafowl/views/image.php:73
+#: ../../../app/themes/Peafowl/views/dashboard.php:1552
+#: ../../../app/themes/Peafowl/views/image.php:75
 msgid "Do you really want to delete this image? This can't be undone."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1545
-#: ../../../app/themes/Peafowl/views/image.php:73
+#: ../../../app/themes/Peafowl/views/dashboard.php:1552
+#: ../../../app/themes/Peafowl/views/image.php:75
 msgid "Delete image"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1555
+#: ../../../app/themes/Peafowl/views/dashboard.php:1562
 msgid "Add new cover image"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1573
+#: ../../../app/themes/Peafowl/views/dashboard.php:1580
 msgid "Vector version or your website logo in SVG format (only for homepage)."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1583
+#: ../../../app/themes/Peafowl/views/dashboard.php:1590
 msgid ""
 "Bitmap version or your website logo (only for homepage). PNG format is "
 "recommended."
@@ -4373,8 +4384,8 @@ msgstr ""
 "Bitmap version or your website logo (only for homepage). PNG format is "
 "recommended."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1590
-#: ../../../app/themes/Peafowl/views/dashboard.php:1595
+#: ../../../app/themes/Peafowl/views/dashboard.php:1597
+#: ../../../app/themes/Peafowl/views/dashboard.php:1602
 #, php-format
 msgid ""
 "This will be added inside the homepage %s tag. Leave it blank to use the "
@@ -4383,58 +4394,58 @@ msgstr ""
 "This will be added inside the homepage %s tag. Leave it blank to use the "
 "default contents."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1594
+#: ../../../app/themes/Peafowl/views/dashboard.php:1601
 #: ../../../app/themes/Peafowl/views/settings.php:450
 msgid "Paragraph"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1601
+#: ../../../app/themes/Peafowl/views/dashboard.php:1608
 msgid "Call to action button color"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1617
+#: ../../../app/themes/Peafowl/views/dashboard.php:1624
 msgid "Color of the homepage call to action button."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1621
+#: ../../../app/themes/Peafowl/views/dashboard.php:1628
 msgid "Call to action outline style button"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1628
+#: ../../../app/themes/Peafowl/views/dashboard.php:1635
 msgid ""
 "Enable this to use outline style for the homepage call to action button."
 msgstr ""
 "Enable this to use outline style for the homepage call to action button."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1632
+#: ../../../app/themes/Peafowl/views/dashboard.php:1639
 msgid "Call to action functionality"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1636
+#: ../../../app/themes/Peafowl/views/dashboard.php:1643
 msgid "Trigger uploader"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1637
+#: ../../../app/themes/Peafowl/views/dashboard.php:1644
 msgid "Open URL"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1646
+#: ../../../app/themes/Peafowl/views/dashboard.php:1653
 msgid "Call to action URL"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1647
+#: ../../../app/themes/Peafowl/views/dashboard.php:1654
 msgid "Enter an absolute or relative URL"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1649
+#: ../../../app/themes/Peafowl/views/dashboard.php:1656
 msgid "A relative URL like %r will be mapped to %l"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1655
+#: ../../../app/themes/Peafowl/views/dashboard.php:1662
 msgid "Call to action HTML"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1656
+#: ../../../app/themes/Peafowl/views/dashboard.php:1663
 msgid ""
 "This will be added inside the call to action <a> tag. Leave it blank to use "
 "the default contents."
@@ -4442,51 +4453,51 @@ msgstr ""
 "This will be added inside the call to action <a> tag. Leave it blank to use "
 "the default contents."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1662
+#: ../../../app/themes/Peafowl/views/dashboard.php:1669
 msgid "User IDs"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1665
+#: ../../../app/themes/Peafowl/views/dashboard.php:1672
 msgid ""
 "Comma-separated list of target user IDs to show images on homepage. Leave it "
 "empty to display all recent images."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1673
+#: ../../../app/themes/Peafowl/views/dashboard.php:1680
 msgid "banners"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1713
+#: ../../../app/themes/Peafowl/views/dashboard.php:1720
 msgid "Automatic updates check"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1720
+#: ../../../app/themes/Peafowl/views/dashboard.php:1727
 msgid "When enabled the system will automatically check for new updates."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1723
+#: ../../../app/themes/Peafowl/views/dashboard.php:1730
 msgid "Display available updates notification"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1730
+#: ../../../app/themes/Peafowl/views/dashboard.php:1737
 msgid ""
 "Enable this to show a notice on top warning you about new available system "
 "updates."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1734
+#: ../../../app/themes/Peafowl/views/dashboard.php:1741
 msgid "Minify code"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1740
+#: ../../../app/themes/Peafowl/views/dashboard.php:1747
 msgid "Enable this if you want to auto minify CSS and JS code."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1743
+#: ../../../app/themes/Peafowl/views/dashboard.php:1750
 msgid "Maintenance"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1749
+#: ../../../app/themes/Peafowl/views/dashboard.php:1756
 msgid ""
 "When enabled the website will show a maintenance message. This setting "
 "doesn't affect administrators."
@@ -4494,11 +4505,11 @@ msgstr ""
 "When enabled the website will show a maintenance message. This setting "
 "doesn't affect administrators."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1753
+#: ../../../app/themes/Peafowl/views/dashboard.php:1760
 msgid "Crypt salt"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1755
+#: ../../../app/themes/Peafowl/views/dashboard.php:1762
 msgid ""
 "This is the salt used to convert numeric ID to alphanumeric. It was "
 "generated on install."
@@ -4506,11 +4517,11 @@ msgstr ""
 "This is the salt used to convert numeric ID to alphanumeric. It was "
 "generated on install."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1759
+#: ../../../app/themes/Peafowl/views/dashboard.php:1766
 msgid "PHP error reporting"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1765
+#: ../../../app/themes/Peafowl/views/dashboard.php:1772
 #, php-format
 msgid ""
 "Enable this if you want to print errors generated by PHP <a "
@@ -4519,27 +4530,27 @@ msgstr ""
 "Enable this if you want to print errors generated by PHP <a "
 "%s>error_reporting()</a>. This should be disabled in production."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1768
+#: ../../../app/themes/Peafowl/views/dashboard.php:1775
 msgid "Debug level"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1771
+#: ../../../app/themes/Peafowl/views/dashboard.php:1778
 msgid "None"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1771
+#: ../../../app/themes/Peafowl/views/dashboard.php:1778
 msgid "Error log"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1771
+#: ../../../app/themes/Peafowl/views/dashboard.php:1778
 msgid "Print errors without error log"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1771
+#: ../../../app/themes/Peafowl/views/dashboard.php:1778
 msgid "Print and log errors"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1774
+#: ../../../app/themes/Peafowl/views/dashboard.php:1781
 #, php-format
 msgid ""
 "To configure the debug level check the <a %s>debug documentation</a>. "
@@ -4548,7 +4559,7 @@ msgstr ""
 "To configure the debug level check the <a %s>debug documentation</a>. "
 "Default level is \"Error log\" (1)."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1780
+#: ../../../app/themes/Peafowl/views/dashboard.php:1787
 #, php-format
 msgid ""
 "Routing allows you to customize default route binds on the fly. Only "
@@ -4556,41 +4567,41 @@ msgid ""
 "if you want to override or add new routes."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1782
+#: ../../../app/themes/Peafowl/views/dashboard.php:1789
 msgid "Image routing"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1787
-#: ../../../app/themes/Peafowl/views/dashboard.php:1795
+#: ../../../app/themes/Peafowl/views/dashboard.php:1794
+#: ../../../app/themes/Peafowl/views/dashboard.php:1802
 #, php-format
 msgid "Routing for %s"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1790
+#: ../../../app/themes/Peafowl/views/dashboard.php:1797
 msgid "Album routing"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1801
+#: ../../../app/themes/Peafowl/views/dashboard.php:1808
 msgid "Custom language strings"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1802
+#: ../../../app/themes/Peafowl/views/dashboard.php:1809
 msgid "language strings"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1805
+#: ../../../app/themes/Peafowl/views/dashboard.php:1812
 msgid "Default language"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1814
+#: ../../../app/themes/Peafowl/views/dashboard.php:1821
 msgid "Default base language to use."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1818
+#: ../../../app/themes/Peafowl/views/dashboard.php:1825
 msgid "Auto language"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1824
+#: ../../../app/themes/Peafowl/views/dashboard.php:1831
 msgid ""
 "Enable this if you want to automatically detect and set the right language "
 "for each user."
@@ -4598,106 +4609,106 @@ msgstr ""
 "Enable this if you want to automatically detect and set the right language "
 "for each user."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1828
+#: ../../../app/themes/Peafowl/views/dashboard.php:1835
 msgid "Language chooser"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1834
+#: ../../../app/themes/Peafowl/views/dashboard.php:1841
 msgid "Enable this if you want to allow language selection."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1841
+#: ../../../app/themes/Peafowl/views/dashboard.php:1848
 msgid "Enabled languages"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1850
+#: ../../../app/themes/Peafowl/views/dashboard.php:1857
 msgid "Unchecked languages won't be used in your website."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1873
+#: ../../../app/themes/Peafowl/views/dashboard.php:1880
 msgid "Toggle this to enable or disable HTTPS"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1874
+#: ../../../app/themes/Peafowl/views/dashboard.php:1881
 msgid "Toggle this to enable or disable this storage"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1890
+#: ../../../app/themes/Peafowl/views/dashboard.php:1897
 msgid "Quota"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1892
+#: ../../../app/themes/Peafowl/views/dashboard.php:1899
 msgid "Active"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1925
+#: ../../../app/themes/Peafowl/views/dashboard.php:1932
 msgid "Storage method"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1936
+#: ../../../app/themes/Peafowl/views/dashboard.php:1943
 msgid "Local storage is used by default or when no external storage is active."
 msgstr ""
 "Local storage is used by default or when no external storage is active."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1936
+#: ../../../app/themes/Peafowl/views/dashboard.php:1943
 #, php-format
 msgid "If you need help check the <a %s>storage documentation</a>."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1938
+#: ../../../app/themes/Peafowl/views/dashboard.php:1945
 msgid "Edit storage"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1948
+#: ../../../app/themes/Peafowl/views/dashboard.php:1955
 msgid "From name"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1951
+#: ../../../app/themes/Peafowl/views/dashboard.php:1958
 msgid "Sender name for emails sent to users."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1966
+#: ../../../app/themes/Peafowl/views/dashboard.php:1973
 msgid "Email mode"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1973
+#: ../../../app/themes/Peafowl/views/dashboard.php:1980
 msgid "How to send emails? SMTP recommended."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1983
+#: ../../../app/themes/Peafowl/views/dashboard.php:1990
 msgid "SMTP server and port"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1986
+#: ../../../app/themes/Peafowl/views/dashboard.php:1993
 msgid "SMTP server"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1999
+#: ../../../app/themes/Peafowl/views/dashboard.php:2006
 msgid "SMTP username"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2004
+#: ../../../app/themes/Peafowl/views/dashboard.php:2011
 msgid "SMTP password"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2009
+#: ../../../app/themes/Peafowl/views/dashboard.php:2016
 msgid "SMTP security"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2012
+#: ../../../app/themes/Peafowl/views/dashboard.php:2019
 msgid "Unsecured"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2023
-#: ../../../app/themes/Peafowl/views/dashboard.php:2024
+#: ../../../app/themes/Peafowl/views/dashboard.php:2030
+#: ../../../app/themes/Peafowl/views/dashboard.php:2031
 msgid "Send test email"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2024
+#: ../../../app/themes/Peafowl/views/dashboard.php:2031
 msgid "test@somedomain.com"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2025
+#: ../../../app/themes/Peafowl/views/dashboard.php:2032
 #, php-format
 msgid ""
 "Use this to test how your emails are being delivered. We recommend you to "
@@ -4706,11 +4717,11 @@ msgstr ""
 "Use this to test how your emails are being delivered. We recommend you to "
 "use %s."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2030
+#: ../../../app/themes/Peafowl/views/dashboard.php:2037
 msgid "social networks"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2038
+#: ../../../app/themes/Peafowl/views/dashboard.php:2045
 msgid ""
 "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank"
 "\">Facebook app</a> for this."
@@ -4718,15 +4729,15 @@ msgstr ""
 "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank"
 "\">Facebook app</a> for this."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2043
+#: ../../../app/themes/Peafowl/views/dashboard.php:2050
 msgid "Facebook app id"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2048
+#: ../../../app/themes/Peafowl/views/dashboard.php:2055
 msgid "Facebook app secret"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2062
+#: ../../../app/themes/Peafowl/views/dashboard.php:2069
 msgid ""
 "You need a <a href=\"https://apps.twitter.com\" target=\"_blank\">Twitter "
 "app</a> for this."
@@ -4734,19 +4745,19 @@ msgstr ""
 "You need a <a href=\"https://apps.twitter.com\" target=\"_blank\">Twitter "
 "app</a> for this."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2067
+#: ../../../app/themes/Peafowl/views/dashboard.php:2074
 msgid "Twitter API key"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2072
+#: ../../../app/themes/Peafowl/views/dashboard.php:2079
 msgid "Twitter API secret"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2079
+#: ../../../app/themes/Peafowl/views/dashboard.php:2086
 msgid "Twitter account"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2093
+#: ../../../app/themes/Peafowl/views/dashboard.php:2100
 msgid ""
 "You need a <a href=\"https://cloud.google.com/console\" target=\"_blank"
 "\">Google app</a> for this."
@@ -4754,15 +4765,15 @@ msgstr ""
 "You need a <a href=\"https://cloud.google.com/console\" target=\"_blank"
 "\">Google app</a> for this."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2098
+#: ../../../app/themes/Peafowl/views/dashboard.php:2105
 msgid "Google client id"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2103
+#: ../../../app/themes/Peafowl/views/dashboard.php:2110
 msgid "Google client secret"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2117
+#: ../../../app/themes/Peafowl/views/dashboard.php:2124
 msgid ""
 "You need a <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> for "
 "this."
@@ -4770,36 +4781,36 @@ msgstr ""
 "You need a <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> for "
 "this."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2122
+#: ../../../app/themes/Peafowl/views/dashboard.php:2129
 msgid "VK client id"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2127
+#: ../../../app/themes/Peafowl/views/dashboard.php:2134
 msgid "VK client secret"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2162
+#: ../../../app/themes/Peafowl/views/dashboard.php:2169
 #, php-format
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr ""
 "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2168
+#: ../../../app/themes/Peafowl/views/dashboard.php:2175
 #, php-format
 msgid "%s site key"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2173
-#: ../../../app/themes/Peafowl/views/dashboard.php:2211
+#: ../../../app/themes/Peafowl/views/dashboard.php:2180
+#: ../../../app/themes/Peafowl/views/dashboard.php:2218
 #, php-format
 msgid "%s secret key"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2180
+#: ../../../app/themes/Peafowl/views/dashboard.php:2187
 msgid "reCAPTCHA threshold"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2185
+#: ../../../app/themes/Peafowl/views/dashboard.php:2192
 msgid ""
 "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to "
 "always show reCAPTCHA."
@@ -4807,61 +4818,61 @@ msgstr ""
 "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to "
 "always show reCAPTCHA."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2191
+#: ../../../app/themes/Peafowl/views/dashboard.php:2198
 msgid "Comments API"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2200
+#: ../../../app/themes/Peafowl/views/dashboard.php:2207
 #, php-format
 msgid "Disqus API works with %s."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2206
+#: ../../../app/themes/Peafowl/views/dashboard.php:2213
 msgid "Disqus shortname"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2216
+#: ../../../app/themes/Peafowl/views/dashboard.php:2223
 #, php-format
 msgid "%s public key"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2224
+#: ../../../app/themes/Peafowl/views/dashboard.php:2231
 msgid "Comment code"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2225
+#: ../../../app/themes/Peafowl/views/dashboard.php:2232
 msgid "Disqus, Facebook or anything you want. It will be used in image view."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2231
+#: ../../../app/themes/Peafowl/views/dashboard.php:2238
 msgid "Analytics code"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2232
+#: ../../../app/themes/Peafowl/views/dashboard.php:2239
 msgid ""
 "Google Analytics or anything you want. It will be added to the theme footer."
 msgstr ""
 "Google Analytics or anything you want. It will be added to the theme footer."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2247
+#: ../../../app/themes/Peafowl/views/dashboard.php:2254
 #, php-format
 msgid "For documentation about the API check the <a %s>API documentation</a>"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2249
+#: ../../../app/themes/Peafowl/views/dashboard.php:2256
 msgid "API v1 key"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2252
+#: ../../../app/themes/Peafowl/views/dashboard.php:2259
 #, php-format
 msgid "Use this key when using the <a %s>API v1</a>."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2258
+#: ../../../app/themes/Peafowl/views/dashboard.php:2265
 msgid "Cookie law compliance"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2264
+#: ../../../app/themes/Peafowl/views/dashboard.php:2271
 msgid ""
 "Enable this to display a message that complies with the EU Cookie law "
 "requirements. Note: You only need this if your website is hosted in the EU "
@@ -4871,75 +4882,75 @@ msgstr ""
 "requirements. Note: You only need this if your website is hosted in the EU "
 "and if you add tracking cookies."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2274
+#: ../../../app/themes/Peafowl/views/dashboard.php:2281
 #: ../../../app/themes/Peafowl/views/settings.php:473
 #: ../../../lib/Peafowl/peafowl.js:416 ../../../lib/Peafowl/peafowl.min.js:25
 msgid "Save changes"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2297
+#: ../../../app/themes/Peafowl/views/dashboard.php:2304
 #: ../../../app/themes/Peafowl/views/settings.php:487
 msgid "Check the errors to proceed."
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/image.php:34
+#: ../../../app/themes/Peafowl/views/image.php:35
 msgid "Play GIF"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/image.php:34
+#: ../../../app/themes/Peafowl/views/image.php:35
 msgid "Load full resolution"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/image.php:58
+#: ../../../app/themes/Peafowl/views/image.php:60
 msgid "Guest"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/image.php:87
+#: ../../../app/themes/Peafowl/views/image.php:89
 msgid "You like this"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/image.php:88
+#: ../../../app/themes/Peafowl/views/image.php:90
 msgid "Like"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/image.php:140
+#: ../../../app/themes/Peafowl/views/image.php:142
 msgid "Added to %a and categorized in %c"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/image.php:142
+#: ../../../app/themes/Peafowl/views/image.php:144
 #, php-format
 msgid "Added to %s"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/image.php:147
+#: ../../../app/themes/Peafowl/views/image.php:149
 #, php-format
 msgid "Uploaded to %s"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/image.php:149
+#: ../../../app/themes/Peafowl/views/image.php:151
 #, php-format
 msgid "Uploaded %s"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/image.php:161
+#: ../../../app/themes/Peafowl/views/image.php:163
 msgid "Less Exif data"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/image.php:161
+#: ../../../app/themes/Peafowl/views/image.php:163
 msgid "More Exif data"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/image.php:186
-#: ../../../app/themes/Peafowl/views/image.php:244
+#: ../../../app/themes/Peafowl/views/image.php:188
+#: ../../../app/themes/Peafowl/views/image.php:246
 msgid "Share image"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/image.php:202
-#: ../../../app/themes/Peafowl/views/image.php:208
+#: ../../../app/themes/Peafowl/views/image.php:204
+#: ../../../app/themes/Peafowl/views/image.php:210
 msgid "Album ID"
 msgstr ""
 
-#: ../../../app/themes/Peafowl/views/image.php:255
+#: ../../../app/themes/Peafowl/views/image.php:257
 msgid "In this album"
 msgstr ""
 
@@ -5345,63 +5356,63 @@ msgstr ""
 msgid "Update failed"
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:606 ../../../app/lib/chevereto.min.js:38
+#: ../../../app/lib/chevereto.js:587 ../../../app/lib/chevereto.min.js:36
 msgid "Please provide a valid email address"
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:753 ../../../app/lib/chevereto.js:836
-#: ../../../app/lib/chevereto.js:1029 ../../../app/lib/chevereto.js:2967
-#: ../../../app/lib/chevereto.js:3023 ../../../app/lib/chevereto.js:3139
-#: ../../../app/lib/chevereto.min.js:42 ../../../app/lib/chevereto.min.js:48
-#: ../../../app/lib/chevereto.min.js:55 ../../../app/lib/chevereto.min.js:177
-#: ../../../app/lib/chevereto.min.js:180 ../../../app/lib/chevereto.min.js:185
+#: ../../../app/lib/chevereto.js:734 ../../../app/lib/chevereto.js:817
+#: ../../../app/lib/chevereto.js:1010 ../../../app/lib/chevereto.js:2950
+#: ../../../app/lib/chevereto.js:3006 ../../../app/lib/chevereto.js:3122
+#: ../../../app/lib/chevereto.min.js:40 ../../../app/lib/chevereto.min.js:46
+#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:170
+#: ../../../app/lib/chevereto.min.js:173 ../../../app/lib/chevereto.min.js:178
 msgid "You must enter the album name."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:881 ../../../app/lib/chevereto.js:1078
-#: ../../../app/lib/chevereto.js:1174 ../../../app/lib/chevereto.min.js:52
-#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:62
+#: ../../../app/lib/chevereto.js:862 ../../../app/lib/chevereto.js:1059
+#: ../../../app/lib/chevereto.js:1155 ../../../app/lib/chevereto.min.js:50
+#: ../../../app/lib/chevereto.min.js:58 ../../../app/lib/chevereto.min.js:60
 #: ../../../lib/Peafowl/peafowl.js:2380 ../../../lib/Peafowl/peafowl.min.js:143
 msgid "Confirm"
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:1007 ../../../app/lib/chevereto.min.js:54
+#: ../../../app/lib/chevereto.js:988 ../../../app/lib/chevereto.min.js:52
 msgid "Select existing album"
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:1293 ../../../app/lib/chevereto.js:1373
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:72
+#: ../../../app/lib/chevereto.js:1274 ../../../app/lib/chevereto.js:1354
+#: ../../../app/lib/chevereto.min.js:65 ../../../app/lib/chevereto.min.js:70
 msgid "Please select a valid image file type."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:1298 ../../../app/lib/chevereto.js:1378
-#: ../../../app/lib/chevereto.min.js:68 ../../../app/lib/chevereto.min.js:73
+#: ../../../app/lib/chevereto.js:1279 ../../../app/lib/chevereto.js:1359
+#: ../../../app/lib/chevereto.min.js:66 ../../../app/lib/chevereto.min.js:71
 #, javascript-format
 msgid "Please select a picture of at most %s size."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:1345 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.js:1326 ../../../app/lib/chevereto.min.js:68
 msgid "Profile image updated."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:1415 ../../../app/lib/chevereto.min.js:74
+#: ../../../app/lib/chevereto.js:1396 ../../../app/lib/chevereto.min.js:72
 msgid "Profile background image updated."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:1487 ../../../app/lib/chevereto.min.js:75
+#: ../../../app/lib/chevereto.js:1468 ../../../app/lib/chevereto.min.js:73
 msgid "Profile background image deleted."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:1492 ../../../app/lib/chevereto.min.js:75
+#: ../../../app/lib/chevereto.js:1473 ../../../app/lib/chevereto.min.js:73
 msgid "Error deleting profile background image."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:1581 ../../../app/lib/chevereto.min.js:78
+#: ../../../app/lib/chevereto.js:1562 ../../../app/lib/chevereto.min.js:76
 #, javascript-format
 msgid "Update available v%s"
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:1582 ../../../app/lib/chevereto.min.js:78
+#: ../../../app/lib/chevereto.js:1563 ../../../app/lib/chevereto.min.js:76
 #, javascript-format
 msgid ""
 "There is an update available for your system. You can automatic download and "
@@ -5410,109 +5421,109 @@ msgstr ""
 "There is an update available for your system. You can automatic download and "
 "install this update or go to %s to proceed to download the file."
 
-#: ../../../app/lib/chevereto.js:1582 ../../../app/lib/chevereto.min.js:78
+#: ../../../app/lib/chevereto.js:1563 ../../../app/lib/chevereto.min.js:76
 msgid "Update now"
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:1586 ../../../app/lib/chevereto.min.js:78
+#: ../../../app/lib/chevereto.js:1567 ../../../app/lib/chevereto.min.js:76
 #, javascript-format
 msgid "Your website is running the latest version of %s"
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:2304 ../../../app/lib/chevereto.min.js:122
+#: ../../../app/lib/chevereto.js:2281 ../../../app/lib/chevereto.min.js:114
 msgid "Clipboard image"
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:2376 ../../../app/lib/chevereto.min.js:125
+#: ../../../app/lib/chevereto.js:2353 ../../../app/lib/chevereto.min.js:118
 msgid "File too big."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:2381 ../../../app/lib/chevereto.min.js:126
+#: ../../../app/lib/chevereto.js:2358 ../../../app/lib/chevereto.min.js:119
 msgid "Invalid or unsupported file format."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:2401 ../../../app/lib/chevereto.js:2594
-#: ../../../app/lib/chevereto.min.js:131 ../../../app/lib/chevereto.min.js:149
+#: ../../../app/lib/chevereto.js:2378 ../../../app/lib/chevereto.js:2571
+#: ../../../app/lib/chevereto.min.js:124 ../../../app/lib/chevereto.min.js:141
 msgid "Some files couldn't be added"
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:3101 ../../../app/lib/chevereto.min.js:185
+#: ../../../app/lib/chevereto.js:3084 ../../../app/lib/chevereto.min.js:178
 msgid "Image edited successfully."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:3182 ../../../app/lib/chevereto.min.js:187
+#: ../../../app/lib/chevereto.js:3165 ../../../app/lib/chevereto.min.js:180
 msgid "Album edited successfully."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:3200 ../../../app/lib/chevereto.min.js:188
+#: ../../../app/lib/chevereto.js:3183 ../../../app/lib/chevereto.min.js:181
 msgid "Invalid URL key."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:3215 ../../../app/lib/chevereto.min.js:190
+#: ../../../app/lib/chevereto.js:3198 ../../../app/lib/chevereto.min.js:183
 msgid "Category URL key already being used."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:3293 ../../../app/lib/chevereto.min.js:192
+#: ../../../app/lib/chevereto.js:3276 ../../../app/lib/chevereto.min.js:185
 msgid "Category successfully deleted."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:3339 ../../../app/lib/chevereto.min.js:194
+#: ../../../app/lib/chevereto.js:3322 ../../../app/lib/chevereto.min.js:187
 #, javascript-format
 msgid "Category %s added."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:3360 ../../../app/lib/chevereto.min.js:195
+#: ../../../app/lib/chevereto.js:3343 ../../../app/lib/chevereto.min.js:188
 msgid "Invalid expiration date."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:3375 ../../../app/lib/chevereto.min.js:197
+#: ../../../app/lib/chevereto.js:3358 ../../../app/lib/chevereto.min.js:190
 #, javascript-format
 msgid "IP %s already banned."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:3426 ../../../app/lib/chevereto.min.js:201
+#: ../../../app/lib/chevereto.js:3409 ../../../app/lib/chevereto.min.js:194
 #, javascript-format
 msgid "IP %s banned."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:3506 ../../../app/lib/chevereto.min.js:202
+#: ../../../app/lib/chevereto.js:3489 ../../../app/lib/chevereto.min.js:195
 msgid "IP ban successfully deleted."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:3543 ../../../app/lib/chevereto.js:3793
-#: ../../../app/lib/chevereto.js:3822 ../../../app/lib/chevereto.min.js:203
-#: ../../../app/lib/chevereto.min.js:218 ../../../app/lib/chevereto.min.js:219
+#: ../../../app/lib/chevereto.js:3526 ../../../app/lib/chevereto.js:3776
+#: ../../../app/lib/chevereto.js:3805 ../../../app/lib/chevereto.min.js:196
+#: ../../../app/lib/chevereto.min.js:211 ../../../app/lib/chevereto.min.js:212
 msgid "Please fill all the required fields."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:3554 ../../../app/lib/chevereto.min.js:204
+#: ../../../app/lib/chevereto.js:3537 ../../../app/lib/chevereto.min.js:197
 msgid "Invalid storage capacity value. Make sure to use a valid format."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:3566 ../../../app/lib/chevereto.min.js:206
+#: ../../../app/lib/chevereto.js:3549 ../../../app/lib/chevereto.min.js:199
 msgid "Invalid URL."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:3617 ../../../app/lib/chevereto.min.js:209
+#: ../../../app/lib/chevereto.js:3600 ../../../app/lib/chevereto.min.js:202
 msgid "Storage successfully edited."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:3841 ../../../app/lib/chevereto.min.js:220
+#: ../../../app/lib/chevereto.js:3824 ../../../app/lib/chevereto.min.js:213
 msgid "User added successfully."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:4018 ../../../app/lib/chevereto.js:4113
-#: ../../../app/lib/chevereto.js:4196 ../../../app/lib/chevereto.js:4205
-#: ../../../app/lib/chevereto.min.js:229 ../../../app/lib/chevereto.min.js:238
-#: ../../../app/lib/chevereto.min.js:240
+#: ../../../app/lib/chevereto.js:4001 ../../../app/lib/chevereto.js:4096
+#: ../../../app/lib/chevereto.js:4179 ../../../app/lib/chevereto.js:4188
+#: ../../../app/lib/chevereto.min.js:222 ../../../app/lib/chevereto.min.js:231
+#: ../../../app/lib/chevereto.min.js:233
 msgid "The content has been moved."
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:4040 ../../../app/lib/chevereto.min.js:230
+#: ../../../app/lib/chevereto.js:4023 ../../../app/lib/chevereto.min.js:223
 msgid "Unselect"
 msgstr ""
 
-#: ../../../app/lib/chevereto.js:4113 ../../../app/lib/chevereto.min.js:238
+#: ../../../app/lib/chevereto.js:4096 ../../../app/lib/chevereto.min.js:231
 msgid "The content has been edited."
 msgstr ""
 

@@ -31,7 +31,9 @@
 	<?php
 		}
 	?>
+	<?php if(get_image()['is_use_loader']) { ?>
 	<div id="image-viewer-loader" data-size="<?php echo get_image()['size']; ?>"><?php if(get_image()['is_animated']) { ?><span class="btn-icon icon icon-play3"></span><?php } ?><span class="btn-text"><?php get_image()['is_animated'] ? _se('Play GIF') : _se('Load full resolution'); ?> - <?php echo get_image()['size_formatted']; ?></span></div>
+	<?php } ?>
 	<?php
 		CHV\Render\show_banner('image_image-viewer_foot', !get_image()['nsfw']);
 	?>

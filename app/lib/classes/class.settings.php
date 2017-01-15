@@ -60,6 +60,9 @@ class Settings {
 				'upload_enabled_image_formats'	=> 'jpg,png,bmp,gif',
 				'upload_threads'				=> '2',
 				'enable_automatic_updates_check'=> 1,
+				// 1.0.6
+				'comments_api'					=> 'js',
+				'image_load_max_filesize_mb'	=> '3',
 			];
 			
 			// Default listing thing
@@ -118,7 +121,7 @@ class Settings {
 				'user_password_max_length'	=> 32,
 				'user_password_pattern'		=> '^.{6,32}$',
 				'maintenance_image'			=> 'default/maintenance_cover.jpg',
-				'ip_whois_url'				=> 'https://who.is/whois-ip/ip-address/%IP',
+				'ip_whois_url'				=> 'https://ipinfo.io/%IP',
 				'available_button_colors'	=> ['blue', 'green', 'orange', 'red', 'grey', 'black', 'white', 'default'],
 				'routing_regex'				=> '([\w_-]+)',
 				'routing_regex_path'		=> '([\w\/_-]+)',

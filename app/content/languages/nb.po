@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-11-01 14:37+0000\n"
-"PO-Revision-Date: 2016-11-01 14:37+0000\n"
+"POT-Creation-Date: 2017-01-07 17:18+0000\n"
+"PO-Revision-Date: 2017-01-07 17:18+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: nb\n"
@@ -587,7 +587,7 @@ msgstr "Brukere"
 #: ../../../app/themes/Peafowl/header.php:363
 #: ../../../app/themes/Peafowl/header.php:405
 msgid "Settings"
-msgstr "Min konto"
+msgstr "Innstillinger"
 
 #: ../../../app/routes/route.dashboard.php:161
 msgid "Chevereto version"
@@ -602,10 +602,7 @@ msgid "check for updates"
 msgstr "se etter oppdateringer"
 
 msgid "Support"
-msgstr "Støtte"
-
-msgid "Chevereto support"
-msgstr "Chevereto støtte"
+msgstr "Support"
 
 msgid "Need help? Go to %s and you will get help quickly."
 msgstr "Trenger du hjelp? Gå til %s for å få rask hjelp."
@@ -798,12 +795,12 @@ msgstr "Samtykke skjema"
 #: ../../../app/routes/route.dashboard.php:234
 #: ../../../app/themes/Peafowl/views/dashboard.php:1021
 msgid "Flood protection"
-msgstr "Flombeskyttelse (autoposting)"
+msgstr "Spambeskyttelse"
 
 #: ../../../app/routes/route.dashboard.php:235
 #: ../../../app/themes/Peafowl/views/dashboard.php:1169
 msgid "Theme"
-msgstr "Design"
+msgstr "Utseende"
 
 #: ../../../app/routes/route.dashboard.php:236
 #: ../../../app/routes/route.dashboard.php:373
@@ -820,7 +817,7 @@ msgid "System"
 msgstr "System"
 
 msgid "Routing"
-msgstr "Rute sti"
+msgstr "Ruting"
 
 #: ../../../app/routes/route.dashboard.php:239
 msgid "Languages"
@@ -3001,11 +2998,6 @@ msgstr "Skjulte sider blir ikke vist i systemmenyer, men alle kan få tilgang ti
 msgid "Only alphanumerics, hyphens and forward slash"
 msgstr "Bare alfanumeriske tegn, bindestrek og skråstrek"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:489
-#, php-format
-msgid "Page URL key relative to %s"
-msgstr "Side URL nøkkel i forhold til %s"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:493
 msgid "File path"
 msgstr "Filsti"
@@ -3409,7 +3401,7 @@ msgstr "La denne være blank dersom det ikke er noen aldersbegrensning for å be
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:972
 msgid "Username routing"
-msgstr "Brukernavn føring"
+msgstr "Brukernavn ruting"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:978
 #, php-format
@@ -4178,14 +4170,6 @@ msgstr "%s sidenøkkel"
 msgid "%s secret key"
 msgstr "%s hemmelig nøkkel"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1974
-msgid "reCAPTCHA public key"
-msgstr "reCAPTCHA offentlig nøkkel"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1979
-msgid "reCAPTCHA private key"
-msgstr "reCAPTCHA privat nøkkel"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1986
 msgid "reCAPTCHA threshold"
 msgstr "reCAPTCHA terskel"
@@ -4741,10 +4725,6 @@ msgstr "Oppdater nå"
 
 msgid "Your website is running the latest version of %s"
 msgstr "Din nettside kjører siste versjon av %s"
-
-#: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
-msgid "Your website is running the latest version of Chevereto."
-msgstr "Websiden din kjører siste versjon av Chevereto."
 
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"

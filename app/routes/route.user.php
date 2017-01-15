@@ -380,7 +380,6 @@ $route = function($handler) {
 			} else {
 				$meta_description = _s('%n (%u) on %w');
 			}
-			
 		}
 		$handler::setVar('meta_description', strtr($meta_description, ['%n' => $user['name'], '%u' => $user['username'], '%w' => CHV\getSetting('website_name')]));
 		

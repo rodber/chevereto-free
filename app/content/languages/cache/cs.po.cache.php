@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-10-27 18:49+0000',
-  'PO-Revision-Date' => '2016-10-27 18:49+0000',
+  'POT-Creation-Date' => '2017-01-07 17:18+0000',
+  'PO-Revision-Date' => '2017-01-07 17:18+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'cs',
@@ -249,11 +249,17 @@ $translation_table = [
 	"The release notes for this update are:" => [
 		0 => "Poznámky k verzi této aktualizace:",
 	],
+	"admin dashboard" => [
+		0 => "Nástěnka admina",
+	],
 	"You can apply this update directly from your %a or download it from %s and then manually install it." => [
 		0 => "Tuto aktualizaci můžete nainstalovat automaticky přímo ze svého %a nebo si ji stáhnout z %s a nainstalovat manuálně.",
 	],
 	"Chevereto update available (v%s)" => [
 		0 => "Je k dispozici aktualizace Chevereta (v%s)",
+	],
+	"view on %s" => [
+		0 => "zobrazit na %s",
 	],
 	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy." => [
 		0 => "Používáme vlastní a cookie třetích stran s cílem zlepšit váš komfort při prohlížení a používání našich služeb. Chcete-li pokračovat v používání našich webových stránek, je nutné, že přijmete tuto cookie politiku.",
@@ -377,9 +383,6 @@ $translation_table = [
 	],
 	"Support" => [
 		0 => "Podpora",
-	],
-	"Chevereto support" => [
-		0 => "Chevereto podpora",
 	],
 	"Need help? Go to %s and you will get help quickly." => [
 		0 => "Potřebujete pomoc? Navštivte %s a získejte rychle pomoc nebo radu.",
@@ -707,6 +710,9 @@ $translation_table = [
 	],
 	"Invalid target attribute" => [
 		0 => "Neplatný cílový atribut",
+	],
+	"Invalid rel attribute" => [
+		0 => "Neplatný rel atribut",
 	],
 	"Invalid icon" => [
 		0 => "Neplatná ikona",
@@ -1296,6 +1302,9 @@ $translation_table = [
 	"None of these words" => [
 		0 => "Žádné z těchto slov",
 	],
+	"Put a minus sign just before words you don't want: -rodent -\"Jack Russell\"" => [
+		0 => "Vložte znaménko mínus před slova, která nechcete povolit: -rodent - \"Jack Russell\"",
+	],
 	"Category" => [
 		0 => "Kategorie",
 	],
@@ -1710,6 +1719,9 @@ $translation_table = [
 	"documentation" => [
 		0 => "dokumentace",
 	],
+	"Learn more about %s at our %d." => [
+		0 => "Přečtěte si více o %s na našich stránkách %d.",
+	],
 	"Add category" => [
 		0 => "Přidat kategorii",
 	],
@@ -1829,9 +1841,6 @@ $translation_table = [
 	],
 	"Only alphanumerics, hyphens and forward slash" => [
 		0 => "Pouze alfanumerické znaky, pomlčky a lomítko",
-	],
-	"Page URL key relative to %s" => [
-		0 => "URL klíč stránky relativní k %s",
 	],
 	"File path" => [
 		0 => "Cesta k souboru",
@@ -1980,8 +1989,14 @@ $translation_table = [
 	"Thumbnails will be fixed to this size." => [
 		0 => "MIniatury budou nastaveny na tuto velikost",
 	],
+	"Medium image fixed dimension" => [
+		0 => "Střední velikost obrázku - pevný rozměr",
+	],
 	"Medium sized images will be fixed to this dimension. For example, if you select \"width\" that dimension will be fixed and image height will be automatically calculated." => [
 		0 => "Střední velikost obrázku bude mít tyto rozměry. Například, pokud zvolíte \"šířku\", tento rozměr bude opraven a výška obrázku bude automaticky vypočítána.",
+	],
+	"Medium image fixed size" => [
+		0 => "Střední velikost obrázku - pevná velikost",
 	],
 	"Width or height will be automatically calculated." => [
 		0 => "Šířka nebo výška bude automaticky vypočítána.",
@@ -2337,6 +2352,12 @@ $translation_table = [
 	"Favicon image. Image must have same width and height." => [
 		0 => "Favicon musí mít stejnou šířku a výšku.",
 	],
+	"Image load max. filesize" => [
+		0 => "Max. velikost obrázku",
+	],
+	"Images greater than this size will show a button to load full resolution image" => [
+		0 => "U obrázků větších, než je tento rozměr, se zobrazí tlačítko pro načtení obrázku v plném rozlišení",
+	],
 	"Enable download button" => [
 		0 => "Aktivovat tlačítko Stáhnout",
 	],
@@ -2640,17 +2661,17 @@ $translation_table = [
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Potřebujete <a href=\"%s\" target=\"_blank\">reCAPTCHA klíč</a>.",
 	],
-	"reCAPTCHA public key" => [
-		0 => "reCAPTCHA public key (veřejný klíč)",
-	],
-	"reCAPTCHA private key" => [
-		0 => "reCAPTCHA private key (soukromý klíč)",
-	],
 	"reCAPTCHA threshold" => [
 		0 => "reCAPTCHA threshold (práh)",
 	],
 	"How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA." => [
 		0 => "Kolik neúspěšných pokusů je zapotřebí k vyžadování reCAPTCHA? Zadejte nula (0), aby se reCAPTCHA zobrazovala vždy.",
+	],
+	"Comments API" => [
+		0 => "API komentářů",
+	],
+	"Disqus API works with %s." => [
+		0 => "Disqus API pracuje s %s.",
 	],
 	"Comment code" => [
 		0 => "Kód komentáře",
@@ -2701,7 +2722,7 @@ $translation_table = [
 		0 => "Líbí se",
 	],
 	"Added to %a and categorized in %c" => [
-		0 => "Přidáno do %a a zakategorizováno v %c",
+		0 => "Přidáno do alba %a a zařazeno do kategorie %c",
 	],
 	"Added to %s" => [
 		0 => "Přidáno do alba %s",
@@ -3029,9 +3050,6 @@ $translation_table = [
 	],
 	"Your website is running the latest version of %s" => [
 		0 => "Vaše webové stránky běží nejnovější verzi %s",
-	],
-	"Your website is running the latest version of Chevereto." => [
-		0 => "Vaše stránka běží na aktuální verzi Chevereta.",
 	],
 	"Clipboard image" => [
 		0 => "Kopírovat obrázek do schránky",

@@ -670,6 +670,11 @@ $route = function($handler) {
 								'validate'	=> preg_match('/^[\w\d-_]+$/', $_POST['route_album']),
 								'error_msg'	=> _s('Only alphanumeric, hyphen and underscore characters are allowed')
 							],
+						'image_load_max_filesize_mb' =>
+							[
+								'validate'	=> filter_var($_POST['image_load_max_filesize_mb'], FILTER_VALIDATE_INT),
+								'error_msg'	=> _s('Invalid value')
+							]
 					];
 					
 					// Detect funny stuff					

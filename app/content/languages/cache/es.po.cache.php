@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-10-25 22:28+0000',
-  'PO-Revision-Date' => '2016-10-25 22:28+0000',
+  'POT-Creation-Date' => '2017-01-10 20:49+0000',
+  'PO-Revision-Date' => '2017-01-10 20:49+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'es',
@@ -18,6 +18,9 @@ $translation_plural = array (
   'function' => '$index = (int)(($n != 1)); return ($index < 2) ? $index : 2 - 1;',
 );
 $translation_table = [
+	"Images greater than this size will show a button to load full resolution image." => [
+		0 => "Imágenes de tamaño superior a este mostrarán un botón para cargar la imagen a resolución completa.",
+	],
 	"Invalid email" => [
 		0 => "Email inválido",
 	],
@@ -363,9 +366,6 @@ $translation_table = [
 	],
 	"Support" => [
 		0 => "Soporte",
-	],
-	"Chevereto support" => [
-		0 => "soporte de Chevereto",
 	],
 	"Need help? Go to %s and you will get help quickly." => [
 		0 => "¿Necesitas ayuda? Ve a %s y obtendrás ayuda rápidamente.",
@@ -1887,9 +1887,6 @@ $translation_table = [
 	"Only alphanumerics, hyphens and forward slash" => [
 		0 => "Solo alfanuméricos, guiones y barra inclinada",
 	],
-	"Page URL key relative to %s" => [
-		0 => "Llave URL de página relativa a %s",
-	],
 	"File path" => [
 		0 => "Ruta de archivo",
 	],
@@ -2415,6 +2412,9 @@ $translation_table = [
 	"Favicon image. Image must have same width and height." => [
 		0 => "Imagen favicon. La imagen debe tener el mismo alto y ancho.",
 	],
+	"Image load max. filesize" => [
+		0 => "Tamaño máx. de carga",
+	],
 	"Enable download button" => [
 		0 => "Habilitar botón de descarga",
 	],
@@ -2762,12 +2762,6 @@ $translation_table = [
 	],
 	"%s secret key" => [
 		0 => "Llave secreta %s",
-	],
-	"reCAPTCHA public key" => [
-		0 => "Llave pública de reCAPTCHA",
-	],
-	"reCAPTCHA private key" => [
-		0 => "Llave privada de reCAPTCHA",
 	],
 	"reCAPTCHA threshold" => [
 		0 => "Umbral reCAPTCHA",
@@ -3162,9 +3156,6 @@ $translation_table = [
 	],
 	"Your website is running the latest version of %s" => [
 		0 => "Tu sitio está corriendo la última version de %s",
-	],
-	"Your website is running the latest version of Chevereto." => [
-		0 => "Tu sitio está corriendo la última versión de Chevereto.",
 	],
 	"Clipboard image" => [
 		0 => "Imagen portapales",

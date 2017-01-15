@@ -198,20 +198,6 @@ class Notification {
 		if(isset($row['user']['id'])) {
 			User::fill($row['user']);
 		}
-		switch($row['type']) {
-			case 'like':
-				$message = _s('%u liked your %t %c', [
-					'%t' => _s($row['content_type']),
-					'%c' => '<a href="'.$row['image']['url_viewer'].'">'.$row['image']['title_truncated_html'].'</a>'
-				]);
-			break;
-			case 'follow':
-				$message = _s('%u is now following you');
-			break;
-		}
-		$row['message'] = strtr($message, [
-			'%u' => '<a href="'.$row['user']['url'].'">'.$row['user']['name_short_html'].'</a>',
-		]);
 	}
 }
 class NotificationException extends Exception {}

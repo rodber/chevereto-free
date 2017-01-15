@@ -7,14 +7,13 @@
 			<inbox@rodolfoberrios.com>
 
   Copyright (C) Rodolfo Berrios A. All rights reserved.
-  
+
   BY USING THIS SOFTWARE YOU DECLARE TO ACCEPT THE CHEVERETO EULA
   http://chevereto.com/license
 
   --------------------------------------------------------------------- */
-  
-$(function(){
-	
+ 
+$(function(){	
 	// Window listeners
 	$(window).on("resize", function(){
 		CHV.fn.uploader.boxSizer();
@@ -26,14 +25,8 @@ $(function(){
 	
     // Landing fancy load
     if($("#home-cover, #maintenance-wrapper").exists()) {
-		if($("#maintenance-wrapper").exists()) {
-			var landing_src = $("#maintenance-wrapper").css("background-image").slice(4, -1).replace(/^\"|\"$/g, "");
-		} else {
-			var landing_src = $(".home-cover-img", "#home-cover-slideshow").first().attr("data-src");
-		}
-		
-		//$("body").hasClass("landing") &&
-		
+		var landing_src = $("#maintenance-wrapper").exists() ? $("#maintenance-wrapper").css("background-image").slice(4, -1).replace(/^\"|\"$/g, "") : $(".home-cover-img", "#home-cover-slideshow").first().attr("data-src");
+
 		function showHomeCover() {
 			$("body").addClass("load");
 			if(!$("#maintenance-wrapper").exists()) {
@@ -212,14 +205,12 @@ $(function(){
 		var $input_width = $("[name=form-width]", $parent);
 		var $input_height = $("[name=form-height]", $parent);
 		var ratio = $input_width.data("initial") / $input_height.data("initial");
-		
 		if($(e.target).is($input_width)) {
 			$input_height.prop("value", Math.round(Math.round($input_width.prop("value")/ratio)));
 		} else {
 			$input_width.prop("value", Math.round(Math.round($input_height.prop("value")*ratio)));
 		}
-		
-	})
+	});
 	
 	// Edit item from queue
 	$(document).on("click", anywhere_upload_queue +" [data-action=edit]", function() {
@@ -407,19 +398,14 @@ $(function(){
 	
 	// Uploader
 	$(document).on("click", "[data-action=upload]", function(){
-		
 		$("[data-group=upload], [data-group=upload-queue-ready]", $anywhere_upload).hide();
 		$("[data-group=uploading]", $anywhere_upload).show();
-		
 		CHV.fn.uploader.queueSize();
 		CHV.fn.uploader.canAdd = false;
-		
 		$queue_items = $("li", $anywhere_upload_queue);
 		$queue_items.addClass("uploading waiting");
-		
 		CHV.fn.uploader.timestamp = new Date().getTime();
 		CHV.fn.uploader.upload($queue_items.first("li"));
-		
 	});
 	
 	/*CHV.obj.image_viewer.$container.swipe({
@@ -469,7 +455,7 @@ $(function(){
 			$("#background-cover-src").css("transform", "");
 			$("#top-bar-shade").css("opacity", 1);
 			return;
-		};
+		}
 		var Y = $(window).scrollTop();
 		var is_slim_shady = $("#top-bar-shade").exists() && !$("html").hasClass("top-bar-box-shadow-none");
 		if(Y < 0) return;
@@ -502,11 +488,10 @@ $(function(){
 				CHV.fn.viewerLoadImage();
 			});
 			
-			var image_size = $(CHV.obj.image_viewer.loader).data("size");
-			if(image_size > "3 MB".getBytes() || (image_size > "500 KB".getBytes() && PF.fn.isDevice(["phone", "phablet"]))) {
+			if($(CHV.obj.image_viewer.loader).data("size") > CHV.obj.config.image.load_max_filesize.getBytes()) {
 				$(CHV.obj.image_viewer.loader).css("display", "block");
 			} else {
-				CHV.fn.viewerLoadImage();
+				CHV.fn.viewerLoadImage(); //estho
 			}
 
 			// Fix viewer width when height changes and boom! a wild scrollbar appears
@@ -1128,7 +1113,7 @@ $(function(){
 							success: function(XHR) {
 								$targets.each(function() {
 									var response = XHR.responseJSON;
-									$(this).data("category-id", response.category_id)
+									$(this).data("category-id", response.category_id);
 								});
 								CHV.fn.list_editor.clearSelection();
 							}
@@ -1314,7 +1299,7 @@ $(function(){
 		avatarXHR = new XMLHttpRequest();
 		avatarXHR.open("POST", PF.obj.config.json_api, true);
 		avatarXHR.send(user_avatar_fd);
-		avatarXHR.onreadystatechange = function(){
+		avatarXHR.onreadystatechange = function() {
 			if(this.readyState == 4){
 				var response = this.responseType !== "json" ? JSON.parse(this.response) : this.response,
 					image = response.success.image;
@@ -1346,7 +1331,7 @@ $(function(){
 				$this.data("uploading", false);
 			}
 
-		}
+		};
 	});
 	
 	$(document).on("change", "[data-content=user-background-upload-input]", function(e) {
@@ -1394,7 +1379,7 @@ $(function(){
 		avatarXHR = new XMLHttpRequest();
 		avatarXHR.open("POST", PF.obj.config.json_api, true);
 		avatarXHR.send(user_picture_fd);
-		avatarXHR.onreadystatechange = function(){
+		avatarXHR.onreadystatechange = function() {
 			if(this.readyState == 4){
 				var response = this.responseType !== "json" ? JSON.parse(this.response) : this.response,
 					image = response.success.image;
@@ -1424,7 +1409,7 @@ $(function(){
 				$this.data("uploading", false);
 			}
 
-		}
+		};
 	});
 	/*
 	$(document).on("click", "[data-action=disconnect]", function() {
@@ -1777,18 +1762,16 @@ $(function(){
 						$li.removeClass("transition");
 					}, 150);
 				}, 1500);
-			})
-		
-		
+			});
 	});
 	
 	// Invoke reCaptcha
 	if($("#g-recaptcha").is(':empty') && CHV.obj.config.recaptcha.enabled && CHV.obj.config.recaptcha.sitekey) {
 		reCaptchaCallback = function() {
 			grecaptcha.render("g-recaptcha", {
-				"sitekey" : CHV.obj.config.recaptcha.sitekey
+				sitekey: CHV.obj.config.recaptcha.sitekey,
 			});
-		}
+		};
 		$.getScript("https://www.google.com/recaptcha/api.js?onload=reCaptchaCallback&render=explicit");
 	}
 	
@@ -1796,7 +1779,7 @@ $(function(){
 		var $parent = $(this).closest(".list-item");
 		var $loadBtn = $parent.find("[data-action=load-image]");
 		if($loadBtn.length > 0) {
-			loadImageListing($loadBtn)
+			loadImageListing($loadBtn);
 			e.preventDefault();
 		}
 		return;
@@ -2147,10 +2130,10 @@ CHV.fn.uploader = {
 						$(this).remove();
 					}
 				});
-			}
+			};
 			
 			if(!$("#top-bar").hasClass("transparent")) {
-				fade_slim_shady()
+				fade_slim_shady();
 			}
             
             $(CHV.fn.uploader.selectors.fullscreen_mask).css({opacity: 0});
@@ -2175,7 +2158,7 @@ CHV.fn.uploader = {
             setTimeout(function() {
                 $(CHV.fn.uploader.selectors.root).css({top: ""});
                 if($("#top-bar-shade").exists()) {
-					fade_slim_shady()
+					fade_slim_shady();
 				}
 				
 				if($("body#image").exists()) {
@@ -2228,7 +2211,7 @@ CHV.fn.uploader = {
 			top: PF.fn.isDevice("phone") ? 0 : $(CHV.fn.uploader.selectors.root).data("top")
 		}));
         setTimeout(function() {
-            $(CHV.fn.uploader.selectors.fullscreen_mask).css({opacity: 1})
+            $(CHV.fn.uploader.selectors.fullscreen_mask).css({opacity: 1});
             setTimeout(function() {
                 if(typeof callback == "function") {
                     callback();
@@ -2331,7 +2314,7 @@ CHV.fn.uploader = {
 			e.preventDefault();
 			e.stopPropagation();
 			return false;
-		};
+		}
 
 		$fileinput = $(this.selectors.file);
 		$fileinput.replaceWith($fileinput = $fileinput.clone(true));
@@ -2384,7 +2367,7 @@ CHV.fn.uploader = {
 			
 			for(var i=0; i<failed_files.length; i++) {
 				var failed_file = failed_files[i];
-				files.splice(failed_file.id, 1)
+				files.splice(failed_file.id, 1);
 			}
 			
 			if(failed_files.length > 0 && files.length == 0) {
@@ -2504,7 +2487,7 @@ CHV.fn.uploader = {
 								'89504e47': 'image/png',
 								'47494638': 'image/gif',
 								'ffd8ffe0': 'image/jpeg',
-							}
+							};
 							$.each(['ffd8ffe1', 'ffd8ffe2'], function(i, v) {
 								header_to_mime[v] = header_to_mime['ffd8ffe0'];
 							});
@@ -2583,7 +2566,7 @@ CHV.fn.uploader = {
 							for(var i = 0; i < failed_files.length; i++){
 								failed_message += "<li>" + failed_files[i].name + "</li>";
 								delete CHV.fn.uploader.files[failed_files[i].uid];
-								$("li[data-id="+ failed_files[i].uid +"]", CHV.fn.uploader.selectors.queue).find("[data-action=cancel]").click()
+								$("li[data-id="+ failed_files[i].uid +"]", CHV.fn.uploader.selectors.queue).find("[data-action=cancel]").click();
 							}
 							PF.fn.modal.simple({title: PF.fn._s("Some files couldn't be added"), message: '<ul>'+failed_message+'</ul>'});
 						} else {
@@ -2688,7 +2671,7 @@ CHV.fn.uploader = {
 			$.each(f.formValues, function(i,v) {
 				formData[i.replace(/image_/g, "")] = v;
 			});
-		};
+		}
 		
 		$.each(formData, function(i,v) {
 			form.append(i, v);
@@ -2716,7 +2699,7 @@ CHV.fn.uploader = {
 					}
 				}
 				
-			}
+			};
 		} else {
 			this.queueSize();
 			this.queueProgress({loaded: 1, total: 1}, id);
@@ -2764,12 +2747,12 @@ CHV.fn.uploader = {
 						err_handle = {
 							status: 500,
 							statusText: "Internal server error"
-						}
+						};
 					} else {
 						err_handle = {
 							status: 400,
 							statusText: JSONresponse.error.message
-						}
+						};
 					}
 					
 					JSONresponse = {
@@ -3196,7 +3179,7 @@ CHV.fn.category = {
 			return false;
 		}
 		
-		if(/^[-\w]+$/.test($("[name=form-category-url_key]", modal).val()) == false) {
+		if(/^[-\w]+$/.test($("[name=form-category-url_key]", modal).val()) === false) {
 			PF.fn.growl.call(PF.fn._s("Invalid URL key."));
 			$("[name=form-category-url_key]", modal).highlight();
 			return false;
@@ -3682,7 +3665,7 @@ CHV.fn.storage = {
 				var sel;
 				sel = "[name=form-storage-"+v+"]";
 				if($(sel, modal).attr("type") !== "hidden") {
-					sel += ":visible"
+					sel += ":visible";
 				}
 				PF.obj.modal.form_data.editing[v] = $(sel, modal).val();
 			});
@@ -3725,7 +3708,7 @@ CHV.fn.storage = {
 				var sel;
 				sel = "[name=form-storage-"+v+"]";
 				if($(sel, modal).attr("type") !== "hidden") {
-					sel += ":visible"
+					sel += ":visible";
 				}
 				PF.obj.modal.form_data.storage[v] = $(sel, modal).val();
 			});
@@ -3778,7 +3761,7 @@ CHV.fn.storage = {
 CHV.fn.common = {
 	validateForm: function(modal) {
 		if(typeof modal == "undefined") {
-			var modal = PF.obj.modal.selectors.root
+			var modal = PF.obj.modal.selectors.root;
 		}
 		
 		var submit = true;
@@ -3972,7 +3955,7 @@ CHV.fn.list_editor = {
 			for(var k in affected_content_lists) {
 				var $list = $("#"+k),
 					stock_offset = $list.data("offset"),
-					offset = - affected_content_lists[k];;
+					offset = - affected_content_lists[k];
 				
 				stock_offset = (typeof stock_offset == "undefined") ? 0 : parseInt(stock_offset);
 				
@@ -4084,7 +4067,7 @@ CHV.fn.list_editor = {
 		if(action == "edit" || action == "move") {
 			if(action == "move" && CHV.obj.resource.type == "album") {
 				CHV.fn.list_editor.moveFromList($target, growl);
-				return
+				return;
 			}
 			$target.data("description", response.description);
 
@@ -4255,4 +4238,4 @@ CHV.fn.list_editor = {
 CHV.fn.queuePixel = function() {
 	var img = '<img data-content="queue-pixel" src="'+ PF.obj.config.base_url + '?queue&r=' + PF.fn.generate_random_string(32) +'" width="1" height="1" alt="" style="display: none;">';
 	$("body").append(img);
-}
+};

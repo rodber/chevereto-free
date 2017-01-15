@@ -58,7 +58,7 @@
 			<?php if(get_user()['is_private']) { ?>
 			<span class="user-meta font-size-small"><span class="icon icon-lock"></span><?php _se('Private profile'); ?></span>
 			<?php } ?>
-			<div class="user-meta"><span class="user-social-networks"><?php if(get_user()["twitter"]) { ?><a class="icon-twitter" href="<?php echo get_user()["twitter"]["url"]; ?>" rel="nofollow" target="_blank"></a><?php } if(get_user()["facebook"]) { ?><a class="icon-facebook" href="<?php echo get_user()["facebook"]["url"]; ?>" rel="nofollow" target="_blank"></a><?php } if(get_user()["website"]) { ?><a class="icon-globe" href="<?php echo get_user()["website_safe_html"]; ?>" rel="nofollow" target="_blank"></a><?php } ?></span><?php
+			<div class="user-meta"><span class="user-social-networks"><?php if(get_user()["twitter"]) { ?><a class="icon-twitter" href="<?php echo get_user()["twitter"]["url"]; ?>" rel="nofollow" target="_blank"></a><?php } if(get_user()["facebook"]) { ?><a class="icon-facebook" href="<?php echo get_user()["facebook"]["url"]; ?>" rel="nofollow" target="_blank"></a><?php } if(get_user()["website"]) { ?><a class="icon-globe" href="<?php echo get_user()['website_display']; ?>"<?php echo !get_user()['is_admin'] ? ' rel="nofollow"' : NULL; ?> target="_blank"></a><?php } ?></span><?php
 				if(is_owner() or is_admin()) {
 			?>
 				<a class="edit-link" href="<?php echo G\get_base_url(is_owner() ? 'settings/profile' : 'dashboard/user/' . get_user()['id']); ?>"><span class="icon-edit"></span><span><?php _se('Edit profile'); ?></span></a>
@@ -92,7 +92,7 @@
 			
 			<?php if(get_user()['bio']) { ?>
 			<div class="user-meta overflow-hidden">
-				<p class="c18 word-break-break-word"><?php echo G\linkify_safe(get_user()['bio']); ?></p>
+				<p class="c18 word-break-break-word"><?php echo get_user()['bio_linkify']; ?></p>
 			</div>
 			<?php } ?>
 						

@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-10-26 06:19+0000',
-  'PO-Revision-Date' => '2016-10-26 06:19+0000',
+  'POT-Creation-Date' => '2017-01-10 20:48+0000',
+  'PO-Revision-Date' => '2017-01-10 20:48+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'fr',
@@ -18,6 +18,9 @@ $translation_plural = array (
   'function' => '$index = (int)(($n > 1)); return ($index < 2) ? $index : 2 - 1;',
 );
 $translation_table = [
+	"Images greater than this size will show a button to load full resolution image." => [
+		0 => "Les images supérieures à cette taille afficheront un bouton pour charger l'image en pleine résolution.",
+	],
 	"Invalid email" => [
 		0 => "Adresse email incorrecte",
 	],
@@ -363,9 +366,6 @@ $translation_table = [
 	],
 	"Support" => [
 		0 => "Support",
-	],
-	"Chevereto support" => [
-		0 => "Support Chevereto",
 	],
 	"Need help? Go to %s and you will get help quickly." => [
 		0 => "Besoin d'aide ? Rendez-vous sur le %s !",
@@ -1887,9 +1887,6 @@ $translation_table = [
 	"Only alphanumerics, hyphens and forward slash" => [
 		0 => "Seuls les caractères alphanumériques, traits d'union et barre oblique",
 	],
-	"Page URL key relative to %s" => [
-		0 => "Clé URL de la page relative à %s",
-	],
 	"File path" => [
 		0 => "Chemin de fichier",
 	],
@@ -2763,12 +2760,6 @@ $translation_table = [
 	"%s secret key" => [
 		0 => "Clé secrète %s",
 	],
-	"reCAPTCHA public key" => [
-		0 => "Clé publique reCAPTCHA",
-	],
-	"reCAPTCHA private key" => [
-		0 => "Clé privée reCAPTCHA",
-	],
 	"reCAPTCHA threshold" => [
 		0 => "Seuil reCAPTCHA",
 	],
@@ -3162,9 +3153,6 @@ $translation_table = [
 	],
 	"Your website is running the latest version of %s" => [
 		0 => "Votre site web est en cours d'exécution sur la dernière version de %s",
-	],
-	"Your website is running the latest version of Chevereto." => [
-		0 => "Votre site web dispose de la dernière version de Chevereto.",
 	],
 	"Clipboard image" => [
 		0 => "Image de presse-papiers",

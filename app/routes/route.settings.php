@@ -121,21 +121,6 @@ $route = function($handler) {
 		$error_message = NULL;
 		$changed_email_message = NULL;
 		
-		if(in_array($doing, array('', 'account'))) {
-			// reCaptcha thing
-			$captcha_needed = CHV\getSettings()['recaptcha'] ? CHV\must_use_recaptcha($request_log['day']) : false;
-			
-			if($captcha_needed) {
-				if($_POST) {
-					$captcha = CHV\recaptcha_check();
-					if(!$captcha->is_valid) {
-						$is_error = true;
-						$error_message = _s("The reCAPTCHA wasn't entered correctly");
-					}
-				}
-			}
-		}
-		
 		if($_POST) {
 			
 			$field_limits = 255;
@@ -452,9 +437,6 @@ $route = function($handler) {
 				if(in_array($doing, array('', 'account')) and !$is_dashboard_user) {
 					CHV\Requestlog::insert(array('type' => 'account-edit', 'result' => 'fail'));
 					$error_message = _s('Wrong Username/Email values');
-					if(CHV\getSettings()['recaptcha'] and CHV\must_use_recaptcha($request_log['day'] + 1)) {
-						$captcha_needed = true;
-					}
 				}
 			}
 

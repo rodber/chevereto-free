@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-11-01 14:37+0000\n"
-"PO-Revision-Date: 2016-11-01 14:37+0000\n"
+"POT-Creation-Date: 2017-01-10 20:48+0000\n"
+"PO-Revision-Date: 2017-01-10 20:48+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -10,6 +10,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "Images greater than this size will show a button to load full resolution image."
+msgstr "При просмотре изображений большего размера, будет отображаться кнопка загрузки полной версии."
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -105,7 +108,7 @@ msgstr "В процессе выполнения произошла ошибка
 #: ../../../app/install/update/updater.php:72
 #, php-format
 msgid "Missing %s file"
-msgstr "Не хватает файла %s"
+msgstr "Отсутствует файл %s"
 
 #: ../../../app/install/update/updater.php:78
 msgid "Invalid license info"
@@ -614,9 +617,6 @@ msgstr "проверить обновления"
 msgid "Support"
 msgstr "Поддержка"
 
-msgid "Chevereto support"
-msgstr "службу поддержки Chevereto"
-
 msgid "Need help? Go to %s and you will get help quickly."
 msgstr "Нужна помощь? Посетите %s и мы быстро поможем вам."
 
@@ -769,7 +769,7 @@ msgid "Changelog"
 msgstr "Список изменений"
 
 msgid "Request new features"
-msgstr "Запрос на новые функции"
+msgstr "Предложить новый функционал"
 
 msgid "Bug tracking"
 msgstr "Баг трекер"
@@ -3016,11 +3016,6 @@ msgstr "Скрытые страницы не видны в меню, но буд
 msgid "Only alphanumerics, hyphens and forward slash"
 msgstr "Только цифры, латинские буквы, дефис и нижнее подчеркивание"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:489
-#, php-format
-msgid "Page URL key relative to %s"
-msgstr "URL-ключ страницы относительно %s"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:493
 msgid "File path"
 msgstr "Путь к файлу"
@@ -3735,6 +3730,9 @@ msgstr "Иконка сайта"
 msgid "Favicon image. Image must have same width and height."
 msgstr "Иконка вашего сайта. Ширина и высота данного изображения должны быть одинаковы."
 
+msgid "Image load max. filesize"
+msgstr "Макс. размер файла в просмотре"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1299
 msgid "Enable download button"
 msgstr "Включить кнопку загрузки"
@@ -3924,7 +3922,7 @@ msgid "Automatic updates check"
 msgstr "Автоматическая проверка обновлений"
 
 msgid "When enabled the system will automatically check for new updates."
-msgstr "Если включить данную настройку то система будет автоматически проверять обновления"
+msgstr "Если включить данную настройку, то система будет автоматически проверять обновления"
 
 msgid "Display available updates notification"
 msgstr "Показывать уведомление об обновлении"
@@ -4192,14 +4190,6 @@ msgstr "%s ключ сайта"
 
 msgid "%s secret key"
 msgstr "%s секретный ключ"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1974
-msgid "reCAPTCHA public key"
-msgstr "Публичный ключ reCAPTCHA"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1979
-msgid "reCAPTCHA private key"
-msgstr "Закрытый ключ reCAPTCHA"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1986
 msgid "reCAPTCHA threshold"
@@ -4757,10 +4747,6 @@ msgstr "Обновить"
 
 msgid "Your website is running the latest version of %s"
 msgstr "Вы используете последнюю версию Chevereto - %s"
-
-#: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
-msgid "Your website is running the latest version of Chevereto."
-msgstr "Вы используете последнюю версию Chevereto."
 
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"

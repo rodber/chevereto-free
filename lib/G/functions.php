@@ -126,8 +126,8 @@ namespace G {
 	 */
 	function random_string($length) {
 		switch(true) {
-            case function_exists('mcrypt_create_iv') :
-                $r = mcrypt_create_iv($length, MCRYPT_DEV_URANDOM);
+            case function_exists('random_bytes') :
+                $r = random_bytes($length);
             break;
             case function_exists('openssl_random_pseudo_bytes') :
                 $r = openssl_random_pseudo_bytes($length);
@@ -408,7 +408,7 @@ namespace G {
 	
 	// Linkify functions borrowed from https://github.com/misd-service-development/php-linkify
 	function linkify($text, array $options = array()) {
-         $attr = '';
+        $attr = '';
         if (true === array_key_exists('attr', $options)) {
             foreach ($options['attr'] as $key => $value) {
                 if (true === is_array($value)) {
@@ -498,7 +498,7 @@ namespace G {
 				$match[0] = 'http://' . $match[0];
 			}
 			if (isset($options['callback'])) {
-				$cb = $options['callback']($match[0], $caption, false);
+				$cb = $options['callback']($match[0], $caption, $options);
 				if (!is_null($cb)) {
 					return $cb;
 				}
@@ -508,8 +508,9 @@ namespace G {
 		return preg_replace_callback($pattern, $callback, $text);
 	}
 	
-	function linkify_safe($text, $options = []) {
-		return linkify(htmlspecialchars($text), ['attr' => array_merge(['rel' => 'nofollow', 'target' => '_blank'], $options)]);;
+	function linkify_safe($text, $options=[]) {
+		$options = array_merge(['attr' => ['rel' => 'nofollow', 'target' => '_blank']], $options);
+		return linkify(htmlspecialchars($text), $options);
 	}
 	
 	/**
@@ -1258,13 +1259,29 @@ namespace G {
 		}
 	}
 	
-	// Returns bytes for SIZE + Suffix format
-	function get_bytes($size, $cut=-2){
-		$units = ['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-		$suffix = strtoupper(substr($size, $cut));
+	// Returns bytes for SIZE + Suffix format (dec + bin)
+	function get_bytes($size, $cut=NULL) {
+		if($cut == NULL) {
+			$suffix = substr($size, -3);
+			$suffix = preg_match('/([A-Za-z]){3}/', $suffix) ? $suffix : substr($size, -2);
+		} else {
+			$suffix = substr($size, $cut);
+		}
+		
+		$suffix = strtoupper($suffix);
+
+		$units = ['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']; // Default dec units
+		
+		if(strlen($suffix) == 3) { // Convert units to bin
+			foreach($units as &$unit) {
+				$split = str_split($unit);
+				$unit = $split[0] . 'I' . $split[1];
+			}
+		}
+		
 		if(strlen($suffix) == 1) {
 			$ini_to_suffix = [
-				'M' => 'MB'
+				'M' => 'MB',
 			];
 			$suffix = $ini_to_suffix[$suffix];
 		}
@@ -1272,7 +1289,7 @@ namespace G {
 			return $size;
 		}
 		$pow_factor = array_search($suffix, $units) + 1;
-		return $size * pow(1000, $pow_factor);
+		return $size * pow(strlen($suffix) == 2 ? 1000 : 1024, $pow_factor);
 	}
 	
 	// Converts bytes to MB

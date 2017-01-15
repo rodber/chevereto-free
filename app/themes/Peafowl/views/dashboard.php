@@ -1418,6 +1418,13 @@
 			<hr class="line-separator"></hr>
 			
 			<div class="input-label">
+				<label for="image_load_max_filesize_mb"><?php _se('Image load max. filesize'); ?> (MB)</label>
+				<div class="c2"><input type="number" min="0" pattern="\d+" name="image_load_max_filesize_mb" id="image_load_max_filesize_mb" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['image_load_max_filesize_mb'] : CHV\Settings::get('image_load_max_filesize_mb'); ?>" placeholder="MB" required></div>
+				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['image_load_max_filesize_mb']; ?></div>
+				<div class="input-below"><?php _se('Images greater than this size will show a button to load full resolution image.'); ?></div>
+			</div>
+			
+			<div class="input-label">
 				<label for="theme_download_button"><?php _se('Enable download button'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="theme_download_button" id="theme_download_button" class="text-input">
 					<?php

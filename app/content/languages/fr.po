@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-10-26 06:19+0000\n"
-"PO-Revision-Date: 2016-10-26 06:19+0000\n"
+"POT-Creation-Date: 2017-01-10 20:48+0000\n"
+"PO-Revision-Date: 2017-01-10 20:48+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -10,6 +10,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Images greater than this size will show a button to load full resolution image."
+msgstr "Les images supérieures à cette taille afficheront un bouton pour charger l'image en pleine résolution."
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -603,9 +606,6 @@ msgstr "rechercher les mises à jour"
 
 msgid "Support"
 msgstr "Support"
-
-msgid "Chevereto support"
-msgstr "Support Chevereto"
 
 msgid "Need help? Go to %s and you will get help quickly."
 msgstr "Besoin d'aide ? Rendez-vous sur le %s !"
@@ -3001,11 +3001,6 @@ msgstr "Les pages cachées ne s'afficheront pas dans les menus système, mais to
 msgid "Only alphanumerics, hyphens and forward slash"
 msgstr "Seuls les caractères alphanumériques, traits d'union et barre oblique"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:489
-#, php-format
-msgid "Page URL key relative to %s"
-msgstr "Clé URL de la page relative à %s"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:493
 msgid "File path"
 msgstr "Chemin de fichier"
@@ -4178,14 +4173,6 @@ msgstr "Clé du site %s"
 msgid "%s secret key"
 msgstr "Clé secrète %s"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1974
-msgid "reCAPTCHA public key"
-msgstr "Clé publique reCAPTCHA"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1979
-msgid "reCAPTCHA private key"
-msgstr "Clé privée reCAPTCHA"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1986
 msgid "reCAPTCHA threshold"
 msgstr "Seuil reCAPTCHA"
@@ -4741,10 +4728,6 @@ msgstr "Mettre à jour maintenant"
 
 msgid "Your website is running the latest version of %s"
 msgstr "Votre site web est en cours d'exécution sur la dernière version de %s"
-
-#: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
-msgid "Your website is running the latest version of Chevereto."
-msgstr "Votre site web dispose de la dernière version de Chevereto."
 
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"

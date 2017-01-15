@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'Chevereto V3',
-  'POT-Creation-Date' => '2016-10-25 16:52-0300',
-  'PO-Revision-Date' => '2016-10-25 16:52-0300',
+  'POT-Creation-Date' => '2017-01-09 16:00-0300',
+  'PO-Revision-Date' => '2017-01-09 16:00-0300',
   'Last-Translator' => 'Rodolfo Berríos <inbox@rodolfoberrios.com>',
   'Language-Team' => '',
   'Language' => 'e',

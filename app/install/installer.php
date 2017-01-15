@@ -224,6 +224,9 @@ try {
 			'disqus_public_key'				=> NULL,
 			'disqus_secret_key'				=> NULL,
 		],
+		'1.0.6' => [
+			'image_load_max_filesize_mb' => '3',
+		]
 	];
 	// Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
 	$settings_rename = [];

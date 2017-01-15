@@ -51,7 +51,7 @@ switch(true) {
 			'image:width'	=> get_image()['width'],
 			'image:height'	=> get_image()['height']
 		];
-		if(get_image()['is_animated']) {
+		if(get_image()['is_animated'] && get_image()['size'] < G\get_bytes('8 MiB')) {
 			$open_graph_extend['type'] = 'video.other';
 			$open_graph_extend['url'] = get_image()['url'];
 		}

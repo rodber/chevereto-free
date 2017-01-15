@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-11-01 14:37+0000',
-  'PO-Revision-Date' => '2016-11-01 14:37+0000',
+  'POT-Creation-Date' => '2017-01-10 20:48+0000',
+  'PO-Revision-Date' => '2017-01-10 20:48+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ru',
@@ -18,6 +18,9 @@ $translation_plural = array (
   'function' => '$index = (int)(($n%10==1 && $n%100!=11 ? (0) : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? (1) : (2)))); return ($index < 3) ? $index : 3 - 1;',
 );
 $translation_table = [
+	"Images greater than this size will show a button to load full resolution image." => [
+		0 => "При просмотре изображений большего размера, будет отображаться кнопка загрузки полной версии.",
+	],
 	"Invalid email" => [
 		0 => "Неверный e-mail адрес",
 	],
@@ -61,7 +64,7 @@ $translation_table = [
 		0 => "В процессе выполнения произошла ошибка. Пожалуйста попробуйте позже.",
 	],
 	"Missing %s file" => [
-		0 => "Не хватает файла %s",
+		0 => "Отсутствует файл %s",
 	],
 	"Invalid license info" => [
 		0 => "Неверные данные лицензии",
@@ -374,9 +377,6 @@ $translation_table = [
 	"Support" => [
 		0 => "Поддержка",
 	],
-	"Chevereto support" => [
-		0 => "службу поддержки Chevereto",
-	],
 	"Need help? Go to %s and you will get help quickly." => [
 		0 => "Нужна помощь? Посетите %s и мы быстро поможем вам.",
 	],
@@ -431,7 +431,7 @@ $translation_table = [
 		0 => "Список изменений",
 	],
 	"Request new features" => [
-		0 => "Запрос на новые функции",
+		0 => "Предложить новый функционал",
 	],
 	"Bug tracking" => [
 		0 => "Баг трекер",
@@ -1902,9 +1902,6 @@ $translation_table = [
 	"Only alphanumerics, hyphens and forward slash" => [
 		0 => "Только цифры, латинские буквы, дефис и нижнее подчеркивание",
 	],
-	"Page URL key relative to %s" => [
-		0 => "URL-ключ страницы относительно %s",
-	],
 	"File path" => [
 		0 => "Путь к файлу",
 	],
@@ -2430,6 +2427,9 @@ $translation_table = [
 	"Favicon image. Image must have same width and height." => [
 		0 => "Иконка вашего сайта. Ширина и высота данного изображения должны быть одинаковы.",
 	],
+	"Image load max. filesize" => [
+		0 => "Макс. размер файла в просмотре",
+	],
 	"Enable download button" => [
 		0 => "Включить кнопку загрузки",
 	],
@@ -2572,7 +2572,7 @@ $translation_table = [
 		0 => "Автоматическая проверка обновлений",
 	],
 	"When enabled the system will automatically check for new updates." => [
-		0 => "Если включить данную настройку то система будет автоматически проверять обновления",
+		0 => "Если включить данную настройку, то система будет автоматически проверять обновления",
 	],
 	"Display available updates notification" => [
 		0 => "Показывать уведомление об обновлении",
@@ -2777,12 +2777,6 @@ $translation_table = [
 	],
 	"%s secret key" => [
 		0 => "%s секретный ключ",
-	],
-	"reCAPTCHA public key" => [
-		0 => "Публичный ключ reCAPTCHA",
-	],
-	"reCAPTCHA private key" => [
-		0 => "Закрытый ключ reCAPTCHA",
 	],
 	"reCAPTCHA threshold" => [
 		0 => "Порог срабатывания reCAPTCHA",
@@ -3178,9 +3172,6 @@ $translation_table = [
 	],
 	"Your website is running the latest version of %s" => [
 		0 => "Вы используете последнюю версию Chevereto - %s",
-	],
-	"Your website is running the latest version of Chevereto." => [
-		0 => "Вы используете последнюю версию Chevereto.",
 	],
 	"Clipboard image" => [
 		0 => "Изображение из буфера обмена",

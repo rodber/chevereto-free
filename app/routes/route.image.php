@@ -77,7 +77,7 @@ $route = function($handler) {
 		$is_owner = $image['user']['id'] !== NULL ? ($image['user']['id'] == $logged_user['id']) : false;
 		
 		// Password protected content
-		if((!$handler::getCond('admin') || !$is_owner) && $image['album']['privacy'] == 'password' && !CHV\Album::checkSessionPassword($image['album'])) {
+		if(!($handler::getCond('admin') || $is_owner) && $image['album']['privacy'] == 'password' && !CHV\Album::checkSessionPassword($image['album'])) {
 			G\redirect($image['album']['url']);
 		}
 		
@@ -202,12 +202,18 @@ $route = function($handler) {
 		if($image['description']) {
 			$meta_description = $image['description'];
 		} else {
-			if($image['album']['name']) {
-				$meta_description = _s('Image %i in %a album', ['%i' => $image[is_null($image['title']) ? 'filename' : 'title'], '%a' => $image['album']['name']]);
+			$image_tr = [
+				'%i' => $image[is_null($image['title']) ? 'filename' : 'title'],
+				'%a' => $image['album']['name'],
+				'%w' => CHV\getSetting('website_name'),
+				'%c' => $image['category']['name']
+			];
+			if($image['album']['id'] || (!$image['user']['is_private'] && $image['album']['name'])) {
+				$meta_description = _s('Image %i in %a album', $image_tr);
 			} else if($image['category']['id']) {
-				$meta_description = _s('Image %i in %c category', ['%i' => $image[is_null($image['title']) ? 'filename' : 'title'], '%c' => $image['category']['name']]);
+				$meta_description = _s('Image %i in %c category', $image_tr);
 			} else {
-				$meta_description = _s('Image %i hosted in %w', ['%i' => $image[is_null($image['title']) ? 'filename' : 'title'], '%w' => CHV\getSetting('website_name')]);
+				$meta_description = _s('Image %i hosted in %w', $image_tr);
 			}
 		}
 		$handler::setVar('meta_description', htmlspecialchars($meta_description));
