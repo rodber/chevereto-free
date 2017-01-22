@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-01-07 17:18+0000',
-  'PO-Revision-Date' => '2017-01-07 17:18+0000',
+  'POT-Creation-Date' => '2017-01-22 07:59+0000',
+  'PO-Revision-Date' => '2017-01-22 07:59+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'id',
@@ -18,6 +18,9 @@ $translation_plural = array (
   'function' => '$index = (int)(0); return ($index < 1) ? $index : 1 - 1;',
 );
 $translation_table = [
+	"Images greater than this size will show a button to load full resolution image." => [
+		0 => "Gambar lebih besar dari ukuran ini akan ditampilkan sebagai sebuah tombol untuk ditampilkan dalam resolusi penuh.",
+	],
 	"Invalid email" => [
 		0 => "Email tidak benar",
 	],
@@ -2271,6 +2274,21 @@ $translation_table = [
 	"Print and log errors" => [
 		0 => "Cetak dan log kesalahan",
 	],
+	"Image routing" => [
+		0 => "Pengarahan Gambar",
+	],
+	"Routing for %s" => [
+		0 => "Pengarahan untuk %s",
+	],
+	"Album routing" => [
+		0 => "Pengarahan Album",
+	],
+	"Custom language strings" => [
+		0 => "string bahasa kustom",
+	],
+	"language strings" => [
+		0 => "string bahasa",
+	],
 	"Default language" => [
 		0 => "Bahasa default",
 	],
@@ -2294,6 +2312,9 @@ $translation_table = [
 	],
 	"Unchecked languages won't be used in your website." => [
 		0 => "Bahasa yang tidak dicentang tidak akan digunakan di website anda.",
+	],
+	"Toggle this to enable or disable HTTPS" => [
+		0 => "Alihkan ini untuk mengaktifkan atau menonaktifkan HTTPS",
 	],
 	"Toggle this to enable or disable this storage" => [
 		0 => "Alihkan ini jika ingin mengaktifkan atau menonaktifkan penyimpanan ini",
@@ -2360,6 +2381,12 @@ $translation_table = [
 	],
 	"You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this." => [
 		0 => "Anda memerlukan sebuah <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> untuk hal ini.",
+	],
+	"Facebook app id" => [
+		0 => "id app Facebook",
+	],
+	"Facebook app secret" => [
+		0 => "Rahasia app Facebook",
 	],
 	"You need a <a href=\"https://apps.twitter.com\" target=\"_blank\">Twitter app</a> for this." => [
 		0 => "Anda membutuhkan sebuah <a href=\"https://apps.twitter.com\" target=\"_blank\">Apliksi Twitter</a> untuk hal ini.",
@@ -2546,6 +2573,9 @@ $translation_table = [
 	],
 	"Register date" => [
 		0 => "Tanggal pendaftaran",
+	],
+	"Registration IP" => [
+		0 => "Pendaftaran IP",
 	],
 	"Status" => [
 		0 => "Status",

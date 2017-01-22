@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-01-07 17:18+0000\n"
-"PO-Revision-Date: 2017-01-07 17:18+0000\n"
+"POT-Creation-Date: 2017-01-22 07:59+0000\n"
+"PO-Revision-Date: 2017-01-22 07:59+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: id\n"
@@ -10,6 +10,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Images greater than this size will show a button to load full resolution image."
+msgstr "Gambar lebih besar dari ukuran ini akan ditampilkan sebagai sebuah tombol untuk ditampilkan dalam resolusi penuh."
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -3546,6 +3549,21 @@ msgstr "Cetak kesalahan tanpa log kesalahan"
 msgid "Print and log errors"
 msgstr "Cetak dan log kesalahan"
 
+msgid "Image routing"
+msgstr "Pengarahan Gambar"
+
+msgid "Routing for %s"
+msgstr "Pengarahan untuk %s"
+
+msgid "Album routing"
+msgstr "Pengarahan Album"
+
+msgid "Custom language strings"
+msgstr "string bahasa kustom"
+
+msgid "language strings"
+msgstr "string bahasa"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1611
 msgid "Default language"
 msgstr "Bahasa default"
@@ -3577,6 +3595,10 @@ msgstr "Bahasa diaktifkan"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1656
 msgid "Unchecked languages won't be used in your website."
 msgstr "Bahasa yang tidak dicentang tidak akan digunakan di website anda."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1679
+msgid "Toggle this to enable or disable HTTPS"
+msgstr "Alihkan ini untuk mengaktifkan atau menonaktifkan HTTPS"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1680
 msgid "Toggle this to enable or disable this storage"
@@ -3667,6 +3689,14 @@ msgstr "jaringan sosial"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1838
 msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
 msgstr "Anda memerlukan sebuah <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> untuk hal ini."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1843
+msgid "Facebook app id"
+msgstr "id app Facebook"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1848
+msgid "Facebook app secret"
+msgstr "Rahasia app Facebook"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1864
 msgid "You need a <a href=\"https://apps.twitter.com\" target=\"_blank\">Twitter app</a> for this."
@@ -3921,6 +3951,10 @@ msgstr "Menghapus pengguna"
 #: ../../../app/themes/Peafowl/views/settings.php:81
 msgid "Register date"
 msgstr "Tanggal pendaftaran"
+
+#: ../../../app/themes/Peafowl/views/settings.php:91
+msgid "Registration IP"
+msgstr "Pendaftaran IP"
 
 #: ../../../app/themes/Peafowl/views/settings.php:105
 msgid "Status"

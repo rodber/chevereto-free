@@ -495,7 +495,7 @@ class User {
 		}
 		if(isset($user['bio'])) {
 			$user['bio_safe_html'] = G\safe_html($user['bio']);
-			$user['bio_linkify'] = $user['is_admin'] ? G\linkify($user['bio'], ['attr' => ['target' => '_blank']]) : linkify_redirector($user['bio']);
+			$user['bio_linkify'] = $user['is_admin'] ? G\linkify($user['bio_safe_html'], ['attr' => ['target' => '_blank']]) : linkify_redirector($user['bio_safe_html']);
 		}
 		
 		if(empty($user['name'])) {

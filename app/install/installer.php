@@ -226,7 +226,8 @@ try {
 		],
 		'1.0.6' => [
 			'image_load_max_filesize_mb' => '3',
-		]
+		],
+		'1.0.7' => NULL,
 	];
 	// Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
 	$settings_rename = [];

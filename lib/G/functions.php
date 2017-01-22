@@ -126,7 +126,7 @@ namespace G {
 	 */
 	function random_string($length) {
 		switch(true) {
-            case function_exists('random_bytes') :
+			case function_exists('random_bytes') :
                 $r = random_bytes($length);
             break;
             case function_exists('openssl_random_pseudo_bytes') :
@@ -1280,10 +1280,7 @@ namespace G {
 		}
 		
 		if(strlen($suffix) == 1) {
-			$ini_to_suffix = [
-				'M' => 'MB',
-			];
-			$suffix = $ini_to_suffix[$suffix];
+			$suffix .= 'B'; // Adds missing "B" for shorthand ini notation (Turns 1G into 1GB)
 		}
 		if(!in_array($suffix, $units)) {
 			return $size;

@@ -550,7 +550,7 @@ function upload_to_content_images($source, $what) {
 			$typeArr[$k . '_homepage'] = array_merge($typeArr[$k], ['name' => 'logo_homepage']);
 		}
 		foreach($typeArr as $k => &$v) {
-			$v['name'] .= '_' . round(microtime(TRUE) * 1000) . '_' . G\random_string(6); // prevent hard cache issues
+			$v['name'] .= '_' . number_format(round(microtime(TRUE) * 1000), 0, '', '') . '_' . G\random_string(6); // prevent hard cache issues
 		}
 		
 		$name = $typeArr[$what]['name'];
@@ -628,7 +628,7 @@ function upload_to_content_images($source, $what) {
 		$file = str_replace($uploaded['fileinfo']['filename'], $filename, $uploaded['file']);
 		
 		if(!@rename($uploaded['file'], $file)) {
-			throw new Exception("Can't rename uploaded ".$name." file", 500);
+			throw new Exception("Can't rename uploaded " . $name . " file", 500);
 		}
 		
 		$remove_old = isset($remove_old) ? $remove_old : TRUE;

@@ -680,7 +680,9 @@ function getFriendlyExif($Exif) {
 		];
 		$ExifRelevant = [];
 		foreach($exif_relevant as $v) {
-			$ExifRelevant[$v] = exifReadableValue($Exif, $v);
+			if(array_key_exists($v, $Exif) && strlen($Exif->{$v}) > 0) {
+				$ExifRelevant[$v] = exifReadableValue($Exif, $v);
+			}
 		}
 		$return = (object) [
 			'Simple'	=> (object) [
@@ -696,8 +698,14 @@ function getFriendlyExif($Exif) {
 				'FocalLength' 		=> $FocalLength
 			], $ExifRelevant)
 		];
-		foreach($return->Full as $k => $v) {
-			if(!$v) unset($return->Full->{$k});
+		// Clean all this stuff
+		foreach($return as $k => &$v) {
+			if($k == 'Full') {
+				$v = (object) array_filter((array) $v, 'strlen');
+			}
+			foreach($v as $kk => $vv) {
+				$return->{$k}->{$kk} = G\safe_html(strip_tags($vv));
+			}
 		}
 		return $return;
 	}
