@@ -580,6 +580,9 @@ function upload_to_content_images($source, $what) {
 			$upload->setSource($source);
 			$upload->setDestination(CHV_PATH_CONTENT_IMAGES_SYSTEM);
 			$upload->setFilename($name);
+			if(in_array($what, ['homepage_cover_image_add', 'homepage_cover_image', 'consent_screen_cover_image'])) {
+				$upload->setOption('max_size', Settings::get('true_upload_max_filesize'));
+			}
 			$upload->exec();
 			$uploaded = $upload->uploaded;
 			

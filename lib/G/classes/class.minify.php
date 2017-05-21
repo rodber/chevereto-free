@@ -112,7 +112,7 @@ class Minify {
 	 * setFileTarget
 	 * Sets the file target where you want to save the minified file
 	 */
-	public function setFileTarget() {
+	public function setFileTarget($target=NULL) {
 		$this->options['output'] = 'file';
 		$this->target = ($target == NULL ? $this->getDefaultTarget() : $target);
 	}

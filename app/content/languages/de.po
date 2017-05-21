@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-11-01 14:37+0000\n"
-"PO-Revision-Date: 2016-11-01 14:37+0000\n"
+"POT-Creation-Date: 2017-02-20 20:29+0000\n"
+"PO-Revision-Date: 2017-02-20 20:29+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -129,9 +129,11 @@ msgstr "%s kann nicht heruntergeladen werden"
 msgid "Can't extract %s"
 msgstr "%s kann nicht entpackt werden"
 
+#, php-format
 msgid "Can't create %s directory - %e"
 msgstr "Verzeichnis %s kann nicht erstellt werden - %e"
 
+#, php-format
 msgid "Can't update %s file - %e"
 msgstr "Datei %s kann nicht aktualisiert werden - %e"
 
@@ -201,6 +203,7 @@ msgstr "Privater Upload"
 msgid "Upload switched to local storage"
 msgstr "Upload wurde auf lokalen Datenspeicher umgestellt"
 
+#, php-format
 msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
 msgstr "Das Bild %s wurde aufgrund von nicht ausreichendem Speicherplatz (%c) auf dem externen Speicherserver automatisch auf dem lokalen Server gespeichert."
 
@@ -317,6 +320,7 @@ msgstr "System-Benachrichtigung"
 msgid "Dashboard"
 msgstr "Dashboard"
 
+#, php-format
 msgid "There is an update available for your system. Go to %s to download and install this update."
 msgstr "Es ist ein Update für Ihr System zur Verfügung. Gehen Sie auf %s zum Herunterladen und Installieren des Updates."
 
@@ -330,9 +334,11 @@ msgstr "Systemdatenbank ist veraltet. Starten sie das <a href=\"%s\">Update-Tool
 msgid "Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>."
 msgstr "Die Internetseite befindet sich im Wartungsmodus. Um den Modus zu beenden, rufen Sie die <a href=\"%s\">Dashboard-Einstellungen</a> auf."
 
+#, php-format
 msgid "You should disable PHP error reporting for production enviroment. Go to <a href='%s'>System settings</a> to revert this setting."
 msgstr "Die PHP-Fehlerberichterstattung sollte bei Live-Systemen deaktiviert werden. Gehen Sie in die <a href='%s'>Systemeinstellungen</a> um diese Einstellung zu ändern."
 
+#, php-format
 msgid "You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this."
 msgstr "Sie haben die Standard-Mail-Einstellungen nicht angepasst. Gehen Sie zu den <a href='%s'>E-Mail-Einstellungen</a> um dies zu beheben."
 
@@ -349,9 +355,11 @@ msgstr "Admin-Dashboard"
 msgid "You can apply this update directly from your %a or download it from %s and then manually install it."
 msgstr "Sie können dieses Update direkt aus Ihrem %a starten oder es manuell von %s herunterladen und installieren."
 
+#, php-format
 msgid "Chevereto update available (v%s)"
 msgstr "Chevereto-Update verfügbar (v%s)"
 
+#, php-format
 msgid "view on %s"
 msgstr "Auf %s ansehen"
 
@@ -604,9 +612,7 @@ msgstr "Suche nach Aktualisierungen"
 msgid "Support"
 msgstr "Support"
 
-msgid "Chevereto support"
-msgstr "Chevereto Support"
-
+#, php-format
 msgid "Need help? Go to %s and you will get help quickly."
 msgstr "Benötigen Sie Hilfe? Gehen Sie auf %s und Ihnen wird schnellstmöglich geholfen."
 
@@ -724,9 +730,8 @@ msgstr "Aktiviert"
 msgid "Disabled"
 msgstr "Deaktiviert"
 
-#: ../../../app/routes/route.dashboard.php:193
-msgid "Max. upload size"
-msgstr "Maximale Upload-Größe"
+msgid "Max. upload file size"
+msgstr "Max. Upload-Dateigröße"
 
 #: ../../../app/routes/route.dashboard.php:197
 msgid "Max. post size"
@@ -904,15 +909,19 @@ msgstr "Die Seite wurde gelöscht."
 msgid "homepage"
 msgstr "Internetseite"
 
+#, php-format
 msgid "Before main title (%s)"
 msgstr "Vor Haupttitel (%s)"
 
+#, php-format
 msgid "After call to action (%s)"
 msgstr "Nach \"Call to Action\" (%s)"
 
+#, php-format
 msgid "After cover (%s)"
 msgstr "Nach Titelbild (%s)"
 
+#, php-format
 msgid "After listing (%s)"
 msgstr "Nach Auflistung (%s)"
 
@@ -1017,12 +1026,9 @@ msgstr "Ungültige Sprache"
 msgid "Invalid timezone"
 msgstr "Ungültige Zeitzone"
 
-#: ../../../app/routes/route.dashboard.php:572
-#: ../../../app/routes/route.dashboard.php:617
-#: ../../../app/routes/route.dashboard.php:794
-#: ../../../app/routes/route.dashboard.php:940
-msgid "Invalid value"
-msgstr "Ungültiger Wert"
+#, php-format
+msgid "Invalid value: %s"
+msgstr "Ungültiger Wert: %s"
 
 #: ../../../app/routes/route.dashboard.php:577
 msgid "Invalid upload storage mode"
@@ -1054,6 +1060,13 @@ msgstr "Ungültige Wasserzeichen-Transparenz"
 #: ../../../app/routes/route.dashboard.php:612
 msgid "Invalid theme"
 msgstr "Ungültiges Theme"
+
+#: ../../../app/routes/route.dashboard.php:572
+#: ../../../app/routes/route.dashboard.php:617
+#: ../../../app/routes/route.dashboard.php:794
+#: ../../../app/routes/route.dashboard.php:940
+msgid "Invalid value"
+msgstr "Ungültiger Wert"
 
 #: ../../../app/routes/route.dashboard.php:622
 msgid "Invalid theme tone"
@@ -1340,9 +1353,11 @@ msgstr "Ungültiger Status"
 msgid "Username already being used"
 msgstr "Benutzername wird bereits genutzt"
 
+#, php-format
 msgid "Add a password or another social connection before deleting %s"
 msgstr "Fügen Sie ein Passwort oder eine neue Social-Media-Verbindung hinzu bevor Sie %s löschen."
 
+#, php-format
 msgid "Add an email or another social connection before deleting %s"
 msgstr "Fügen Sie eine E-Mail-Adressse oder eine andere Social-Media-Verbindung hinzu, bevor Sie %s löschen."
 
@@ -1550,6 +1565,7 @@ msgstr "Falsche Benutzernamen / E-Mail Werte"
 msgid "Settings for %s"
 msgstr "Einstellungen von %s"
 
+#, php-format
 msgid "You must be at least %s years old to use this website."
 msgstr "Sie müssen mindestens %s Jahre alt sein, um diese Seite zu nutzen ."
 
@@ -1714,6 +1730,7 @@ msgstr "E-Mail-Adresse"
 msgid "Username"
 msgstr "Benutzername"
 
+#, php-format
 msgid "I'm at least %s years old"
 msgstr "Ich bin mindestens %s Jahre alt"
 
@@ -2783,6 +2800,7 @@ msgstr "Album-Link"
 msgid "Please read and comply with the following conditions before you continue:"
 msgstr "Bitte lesen und bestätigen Sie die folgenden Bedingungen, bevor Sie fortfahren:"
 
+#, php-format
 msgid "This website contains information, links and images of sexually explicit material. If you are under the age of %s, if such material offends you or if it's illegal to view such material in your community please do not continue.\n\nI am at least %s years of age and I believe that as an adult it is my inalienable right to receive/view sexually explicit material. I desire to receive/view sexually explicit material. \n\nI believe that sexual acts between consenting adults are neither offensive nor obscene. The viewing, reading and downloading of sexually explicit materials does not violate the standards of my community, town, city, state or country.\n\nThe sexually explicit material I am viewing is for my own personal use and I will not expose minors to the material.\n\nI am solely responsible for any false disclosures or legal ramifications of viewing, reading or downloading any material in this site. Furthermore this website nor its affiliates will be held responsible for any legal ramifications arising from fraudulent entry into or use of this website.\n\nThis consent screen constitutes a legal agreement between this website and you and/or any business in which you have any legal or equitable interest. If any portion of this agreement is deemed unenforceable by a court of competent jurisdiction it shall not affect the enforceability of the other portions of the agreement."
 msgstr "Diese Internetseite enthält Informationen, Links und Bilder mit sexuell anstößigen Materialien. Sollten Sie weniger als %s Jahre alt sein, sollten Sie mit den gezeigten Materialien in jedweder Weise nicht einverstanden sein oder sollten die gezeigten Materialien in Ihrem Land illegal sein, verlassen Sie bitte diese Seite.\n\nIch bin mindestens %s Jahre alt und ich bin der Meinung, dass ich als Erwachsener berechtigt bin, die sexuell anstößigen Materialien zu betrachten. Ich wünsche, das sexuell anstößige Material zu betrachten bzw. zu empfangen.\n\nIch bin der Meinung, dass sexuelle Akte zwischen Erwachsenen weder obszön noch anstößig sind. Das Betrachten, Lesen und Herunterladen des sexuell anstößigen Materials verletzt nicht die Gesetzte meiner Gemeinschafft, Stadt, Staates oder Landes.\n\nDas sexuell anstößige Material ist nur zu meinem persönlichen Gebrauch gedacht und ich werde das Material nicht an Minderjährige aushändigen.\n\nIch bin persönlich für jegliche unerlaubte Veröffentlichung und rechtliche Konsequenzen verantwortlich, die eventuell durch das Betrachten, Lesen und Herunterladen des Materials auf dieser Seite entstehen können. Weiterhin sind weder der Betreiber dieser Seite, noch andere Partner dieser Internetseite für rechtliche Konsequenzen haftbar, die durch meinen Besuch oder meine Nutzung dieser Seite entstehen können.\n\nDiese Zustimmungs-Mitteilung stellt eine rechtlich verbindliche Vereinbarung zwischen Ihnen als Nutzer und dem Betreiber dieser Internetseite dar. Sollte ein Bestandteil dieser Vereinbarung rechtlich unwirksam sein, bleiben alle anderen Bestandteile in ihrer Wirksamkeit unberührt."
 
@@ -2832,6 +2850,7 @@ msgstr "Diese Einstellung ist immer deaktivert, wenn Sie den Privat-Modus aktivi
 msgid "documentation"
 msgstr "Dokumentation"
 
+#, php-format
 msgid "Learn more about %s at our %d."
 msgstr "Lernen Sie mehr über %s in unserer %d."
 
@@ -3001,11 +3020,6 @@ msgstr "Versteckte Seiten werden nicht im Menü angezeigt, allerdings kann jeder
 msgid "Only alphanumerics, hyphens and forward slash"
 msgstr "Nur alphanumerische Zeichen, Bindestriche und Schrägstriche erlaubt."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:489
-#, php-format
-msgid "Page URL key relative to %s"
-msgstr "Seiten-URL-Schlüssel relativ zu %s"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:493
 msgid "File path"
 msgstr "Dateifpad"
@@ -3136,6 +3150,12 @@ msgstr "Uploads mit Ablaufdatum"
 msgid "Enable this if you want to allow uploads with an automatic delete option."
 msgstr "Aktivieren, falls Sie Uploads mit einer automatischen Löschung nach einer bestimmten Zeit aktivieren wollen."
 
+msgid "Maximum image size"
+msgstr "Maximale Bildgröße"
+
+msgid "Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit."
+msgstr "Bilder größer als diese Größe werden automatisch verkleinert. Verwenden Sie Null (0), um kein Limit festzulegen."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:661
 #: ../../../app/themes/Peafowl/views/settings.php:183
 msgid "Image Exif data"
@@ -3158,14 +3178,8 @@ msgstr "EXIF-Daten (Benutzer-Einstellung)"
 msgid "Enable this if you want to allow each user to configure how image Exif data will be handled."
 msgstr "Aktivieren, falls Sie Benutzern erlauben wollen, die Behandlung von EXIF-Daten beim Upload individuell zu wählen."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:689
-msgid "Max. filesize"
-msgstr "Maximale Dateigröße"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:692
-#, php-format
-msgid "Max. allowed filesize. (Max allowed by server is %s)"
-msgstr "Maximal erlaubte Dateigröße (Serverlimit: %s)"
+msgid "Maximum upload file size"
+msgstr "Maximale Upload-Dateigröße"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:695
 msgid "Image path"
@@ -3357,6 +3371,7 @@ msgstr "Transparenz des Wasserzeichens im Bild. Werte von 0 bis 100 erlaubt."
 msgid "Dashboard > Settings > Website"
 msgstr "Dashboard > Einstellungen > Internetseite"
 
+#, php-format
 msgid "Categories won't work when the explorer feature is turned off. To revert this setting go to %s."
 msgstr "Kategorien funktionieren nicht, wenn die \"Entdecken\"-Funktion ausgeschaltet ist. Um die Einstellung zu ändern, klicken Sie hier %s."
 
@@ -3720,6 +3735,9 @@ msgstr "Favicon-Grafik"
 msgid "Favicon image. Image must have same width and height."
 msgstr "Die Favicon-Grafik muss die gleiche Höhe und Breite aufweisen."
 
+msgid "Images greater than this size will show a button to load full resolution image."
+msgstr "Bilder größer als diese Größe erhalten eine Schaltfläche zum Laden der vollen Auflösung."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1299
 msgid "Enable download button"
 msgstr "Download-Button aktivieren"
@@ -3975,12 +3993,14 @@ msgstr "Fehlerausgabe mit Fehler-Log"
 msgid "To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)."
 msgstr "Um den Debug-Level zu konfigurieren prüfen Sie die<a %s>Debug-Dokumentation</a>. Die Standardeinstellung lautet \"Fehler-Log\" (1)."
 
+#, php-format
 msgid "Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes."
 msgstr "Das Routing erlaubt, benutzerdefinierte Pfade festzulegen. Es sind nur alphanumerische Zeichen, Bindestriche und Unterstriche erlaubt. Prüfen Sie %s, wenn Sie pfade überschreiben oder neue festlegen wollen."
 
 msgid "Image routing"
 msgstr "Bild-Routing"
 
+#, php-format
 msgid "Routing for %s"
 msgstr "Routing for %s"
 
@@ -4172,19 +4192,13 @@ msgstr "VK Client-Secret"
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "Sie benötigen einen <a href=\"%s\" target=\"_blank\">reCAPTCHA Schlüssel</a> für diese Funktion."
 
+#, php-format
 msgid "%s site key"
 msgstr "%s Seiten-Schlüssel"
 
+#, php-format
 msgid "%s secret key"
 msgstr "%s Geheimer Schlüssel"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1974
-msgid "reCAPTCHA public key"
-msgstr "reCAPTCHA Public-Schlüssel"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1979
-msgid "reCAPTCHA private key"
-msgstr "reCAPTCHA Private-Schlüssel"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1986
 msgid "reCAPTCHA threshold"
@@ -4197,12 +4211,14 @@ msgstr "Ab wie vielen Fehlversuchen beim Login soll eine reCAPTCHA-Abfrage notwe
 msgid "Comments API"
 msgstr "Kommentare-API"
 
+#, php-format
 msgid "Disqus API works with %s."
 msgstr "Disqus API unterstützt %s."
 
 msgid "Disqus shortname"
 msgstr "Disqus Name"
 
+#, php-format
 msgid "%s public key"
 msgstr "%s Öffentlicher Schlüssel"
 
@@ -4739,12 +4755,9 @@ msgstr "Es steht ein Update für Ihr System zur Verfügung. Sie können das Upda
 msgid "Update now"
 msgstr "Jetzt updaten"
 
+#, javascript-format
 msgid "Your website is running the latest version of %s"
 msgstr "Diese Internetseite läuft mit der aktuellsten Version von %s"
-
-#: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
-msgid "Your website is running the latest version of Chevereto."
-msgstr "Die verwendete Chevereto-Version ist auf dem aktuellsten Stand."
 
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"

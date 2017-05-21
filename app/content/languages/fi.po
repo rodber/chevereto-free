@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-10-25 22:27+0000\n"
-"PO-Revision-Date: 2016-10-25 22:27+0000\n"
+"POT-Creation-Date: 2017-02-20 20:29+0000\n"
+"PO-Revision-Date: 2017-02-20 20:29+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: fi\n"
@@ -129,9 +129,11 @@ msgstr "Ei voida ladata %s"
 msgid "Can't extract %s"
 msgstr "Ei voida purkaa %s"
 
+#, php-format
 msgid "Can't create %s directory - %e"
 msgstr "Ei voida luoda %s hakemistoa - %e"
 
+#, php-format
 msgid "Can't update %s file - %e"
 msgstr "Ei voida ladata tiedostoa %s - %e"
 
@@ -201,6 +203,7 @@ msgstr "Yksityinen lähetys"
 msgid "Upload switched to local storage"
 msgstr "Lataus vaihdettu paikalliseen tallennustilaan"
 
+#, php-format
 msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
 msgstr "Järjestelmä vaihtoi paikalliseen tallennustilaan, kun ulkoisesta tallennustilasta loppui tila (%c). Kuva %s on tallennettu paikalliseen tallennustilaan."
 
@@ -317,6 +320,7 @@ msgstr "Järjestelmän ilmoitukset"
 msgid "Dashboard"
 msgstr "Hallintapaneeli"
 
+#, php-format
 msgid "There is an update available for your system. Go to %s to download and install this update."
 msgstr "Päivitys saatavilla. Mene %s ladataksesi ja asentaaksesi se."
 
@@ -330,9 +334,11 @@ msgstr "Järjestelmän tietokanta on vanhentunut. Sinun tulee käyttää <a href
 msgid "Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>."
 msgstr "Sivusto on huoltotilassa. Ottaaksesi huoltotilan pois, mene <a href=\"%s\">Hallintapaneeli > Asetukset</a>."
 
+#, php-format
 msgid "You should disable PHP error reporting for production enviroment. Go to <a href='%s'>System settings</a> to revert this setting."
 msgstr "Sinun tulee ottaa PHP virheiden raportointi pois käytöstä tuotantoympäristössä. Mene <a href='%s'>Järjestelmän asetukset</a> palauttaaksesi tämän asetuksen."
 
+#, php-format
 msgid "You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this."
 msgstr "Et ole muuttanu oletussähköpostiasetuksia. Mene <a href='%s'>Sähköpostiasetukset</a> muuttaaksesi ne."
 
@@ -349,9 +355,11 @@ msgstr "hallintapaneeli"
 msgid "You can apply this update directly from your %a or download it from %s and then manually install it."
 msgstr "Voit päivittää järjestelmän automaattisesti %a tai ladata sen %s ja asentaa käsin."
 
+#, php-format
 msgid "Chevereto update available (v%s)"
 msgstr "Chevereto päivitys saatavilla (v%s)"
 
+#, php-format
 msgid "view on %s"
 msgstr "näyttöä %s"
 
@@ -604,9 +612,7 @@ msgstr "tarkista päivitykset"
 msgid "Support"
 msgstr "Tuki"
 
-msgid "Chevereto support"
-msgstr "Cheverto tuki"
-
+#, php-format
 msgid "Need help? Go to %s and you will get help quickly."
 msgstr "Tarvitsetko apua? Mene %s ja saat apua nopeasti."
 
@@ -724,9 +730,8 @@ msgstr "Käytössä"
 msgid "Disabled"
 msgstr "Pois käytöstä"
 
-#: ../../../app/routes/route.dashboard.php:193
-msgid "Max. upload size"
-msgstr "Suurin tiedoston koko"
+msgid "Max. upload file size"
+msgstr "Suurin lähetettävän tiedoston koko"
 
 #: ../../../app/routes/route.dashboard.php:197
 msgid "Max. post size"
@@ -904,15 +909,19 @@ msgstr "Sivu on poistettu."
 msgid "homepage"
 msgstr "kotisivu"
 
+#, php-format
 msgid "Before main title (%s)"
 msgstr "Ennen pääotsikkoa (%s)"
 
+#, php-format
 msgid "After call to action (%s)"
 msgstr "Toimintapainikkeen jälkeen (%s)"
 
+#, php-format
 msgid "After cover (%s)"
 msgstr "Kannen jälkeen (%s)"
 
+#, php-format
 msgid "After listing (%s)"
 msgstr "Listauksen jälkeen (%s)"
 
@@ -1017,12 +1026,9 @@ msgstr "Virheellinen kieli"
 msgid "Invalid timezone"
 msgstr "Virheellinen aikavyöhyke"
 
-#: ../../../app/routes/route.dashboard.php:572
-#: ../../../app/routes/route.dashboard.php:617
-#: ../../../app/routes/route.dashboard.php:794
-#: ../../../app/routes/route.dashboard.php:940
-msgid "Invalid value"
-msgstr "Virheellinen arvo"
+#, php-format
+msgid "Invalid value: %s"
+msgstr "Virheellinen arvo: %s"
 
 #: ../../../app/routes/route.dashboard.php:577
 msgid "Invalid upload storage mode"
@@ -1054,6 +1060,13 @@ msgstr "Virheellinen vesileiman läpinäkyvyys"
 #: ../../../app/routes/route.dashboard.php:612
 msgid "Invalid theme"
 msgstr "Virheellinen teema"
+
+#: ../../../app/routes/route.dashboard.php:572
+#: ../../../app/routes/route.dashboard.php:617
+#: ../../../app/routes/route.dashboard.php:794
+#: ../../../app/routes/route.dashboard.php:940
+msgid "Invalid value"
+msgstr "Virheellinen arvo"
 
 #: ../../../app/routes/route.dashboard.php:622
 msgid "Invalid theme tone"
@@ -1340,9 +1353,11 @@ msgstr "Virheellinen rooli"
 msgid "Username already being used"
 msgstr "Käyttäjätunnus jo käytössä"
 
+#, php-format
 msgid "Add a password or another social connection before deleting %s"
 msgstr "Anna salasana tai muu sosiaalisen verkoston yhteys ennen %s poistamista"
 
+#, php-format
 msgid "Add an email or another social connection before deleting %s"
 msgstr "Anna sähköpostiosoite tai muu sosiaalisen verkoston yhteys ennen %s poistamista"
 
@@ -1550,6 +1565,7 @@ msgstr "Väärä käyttäjätunnus/sähköposti"
 msgid "Settings for %s"
 msgstr "Asetukset käyttäjälle %s"
 
+#, php-format
 msgid "You must be at least %s years old to use this website."
 msgstr "Sinun tulee olla vähintään %s vuotta vanha käyttääksesi sivustoa."
 
@@ -1714,6 +1730,7 @@ msgstr "Sähköpostiosoite"
 msgid "Username"
 msgstr "Käyttäjänimi"
 
+#, php-format
 msgid "I'm at least %s years old"
 msgstr "Olen vähintään %s vuotta vanha"
 
@@ -2783,6 +2800,7 @@ msgstr "Albumin osoite"
 msgid "Please read and comply with the following conditions before you continue:"
 msgstr "Lue ja täytä seuraavat ehdot ennen jatkamista:"
 
+#, php-format
 msgid "This website contains information, links and images of sexually explicit material. If you are under the age of %s, if such material offends you or if it's illegal to view such material in your community please do not continue.\n\nI am at least %s years of age and I believe that as an adult it is my inalienable right to receive/view sexually explicit material. I desire to receive/view sexually explicit material. \n\nI believe that sexual acts between consenting adults are neither offensive nor obscene. The viewing, reading and downloading of sexually explicit materials does not violate the standards of my community, town, city, state or country.\n\nThe sexually explicit material I am viewing is for my own personal use and I will not expose minors to the material.\n\nI am solely responsible for any false disclosures or legal ramifications of viewing, reading or downloading any material in this site. Furthermore this website nor its affiliates will be held responsible for any legal ramifications arising from fraudulent entry into or use of this website.\n\nThis consent screen constitutes a legal agreement between this website and you and/or any business in which you have any legal or equitable interest. If any portion of this agreement is deemed unenforceable by a court of competent jurisdiction it shall not affect the enforceability of the other portions of the agreement."
 msgstr "Tämä sivusto sisältää tietoa, linkkejä ja kuvia seksuaalisesta materiaalista. Jos olet alle %s-vuotias, koet tällaisen materiaalin loukkaavaksi tai jos se on laitonta katsella tällaista materiaalia paikkakunnallasi, älä jatka.\n\nOlen vähintään %s-vuotias ja uskon, että aikuisena minulla on oikeus saada/katsella seksuaalista materiaalia. Haluan saada/katsella seksuaalista materiaalia.\n\nUskon, että aikuisten välinen seksuaalinen toiminta on vapaaehtoista ja ei ole loukkaavaa eikä säädytöntä. Seksuaalisen materiaalin katselu, lukeminen ja lataaminen ei riko paikkakuntani, kaupungin tai maani lakia.\n\nKatselemani seksuaalinen materiaali on vain omaan käyttööni ja en näytä sitä alaikäisille.\n\nOlen yksin vastuussa kaikista vääristä tiedoista tai oikeudellisista seurauksista liittyen materiaalin katseluun, lukemiseen tai lataamiseen tällä sivustolla. Lisäksi tämä sivusto tai sen konserniyhtiöt eivät ole vastuussa mistään oikeudellisista seurauksista, jotka johtuvat petollisen tulon saamisesta tai näiden verkkosivujen käytöstä.\n\nTämä ehtojen hyväksyminen muodostaa laillisen sopimuksen tämän sivuston ja sinun ja/tai yrityksen, jossa sinulla on laillinen tai tasapuolinen osuus. Jos jokin osan tästä sopimuksesta toimivaltainen tuomioistuin katsoo täytäntöönpanokelvottomaksi, se ei vaikuta muihin sopimuksen osiin."
 
@@ -2832,6 +2850,7 @@ msgstr "Tämä asetus on aina pois käytöstä käytettäessä henkilökohtainen
 msgid "documentation"
 msgstr "dokumentit"
 
+#, php-format
 msgid "Learn more about %s at our %d."
 msgstr "Tutustu tarkemmin %s täällä %d."
 
@@ -3001,11 +3020,6 @@ msgstr "Piilotetut sivut eivät näy järjestelmän valikoissa, mutta kuka tahan
 msgid "Only alphanumerics, hyphens and forward slash"
 msgstr "Vain kirjaimia, väliviivoja ja vinoviiva"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:489
-#, php-format
-msgid "Page URL key relative to %s"
-msgstr "Suhteellinen sivun URL %s osoitteeseen nähden"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:493
 msgid "File path"
 msgstr "Tiedostopolku"
@@ -3113,6 +3127,9 @@ msgstr "Vieraiden kuvien lataus"
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "Salli vieraiden ladata kuvia."
 
+msgid "Upload threads"
+msgstr "Lähetyksen säikeet"
+
 msgid "Number of simultaneous upload threads (parallel uploads)"
 msgstr "Yhtäaikaisten latausten määrä (rinnakkaiset lataukset)"
 
@@ -3136,6 +3153,12 @@ msgstr "Ota käyttöön vanhentuvat lataukset"
 msgid "Enable this if you want to allow uploads with an automatic delete option."
 msgstr "Ota tämä käyttöön mikäli haluat sallia automaattisesti poistuvat kuvat."
 
+msgid "Maximum image size"
+msgstr "Kuvan enimmäiskoko"
+
+msgid "Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit."
+msgstr "Tätä suuremmat kuvat pienennetään automaattisesti. Käytä arvoa nolla (0) ellet halua asettaa rajaa."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:661
 #: ../../../app/themes/Peafowl/views/settings.php:183
 msgid "Image Exif data"
@@ -3158,14 +3181,11 @@ msgstr "Kuvan Exif tiedot (käyttäjän asetus)"
 msgid "Enable this if you want to allow each user to configure how image Exif data will be handled."
 msgstr "Salli käyttäjien valita miten kuvien Exif tietoja näytetään."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:689
-msgid "Max. filesize"
-msgstr "Maksimi tiedoston koko"
+msgid "Maximum upload file size"
+msgstr "Lähetettävän kuvatiedoston maksimikoko."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:692
-#, php-format
-msgid "Max. allowed filesize. (Max allowed by server is %s)"
-msgstr "Suurin sallittu tiedoston koko. (Suurin sallittu palvelimellasi on %s)"
+msgid "Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)."
+msgstr "Palvelimen sallima maksimikoko on %s. Ylärajan asettavat %u ja %p (%f arvot)."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:695
 msgid "Image path"
@@ -3357,6 +3377,7 @@ msgstr "Vesileiman läpinäkyvyys lopullisessa vesileimatussa kuvassa. Arvot 0-1
 msgid "Dashboard > Settings > Website"
 msgstr "Hallintapaneeli > Asetukset > Verkkosivu"
 
+#, php-format
 msgid "Categories won't work when the explorer feature is turned off. To revert this setting go to %s."
 msgstr "Kategoriat ei toimi kun tutki ominaisuus on pois päältä. Palauttaaksesi tämän asetuksen, mene %s."
 
@@ -3720,6 +3741,12 @@ msgstr "Favicon kuva"
 msgid "Favicon image. Image must have same width and height."
 msgstr "Favicon kuva. Kuvan tulee olla yhtä korkea kuin leveä."
 
+msgid "Image load max. filesize"
+msgstr "Kuvan lähetyksen maksimi tiedostokoko."
+
+msgid "Images greater than this size will show a button to load full resolution image."
+msgstr "Tätä kokoa suuremmissa kuvissa näytetään painike, jolla täyskokoisen kuvatiedoston voi ladata."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1299
 msgid "Enable download button"
 msgstr "Ota Lataa kuva -painike käyttöön"
@@ -3975,12 +4002,14 @@ msgstr "Näytä ja kirjaa virheet"
 msgid "To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)."
 msgstr "Katso <a %s>debug ohjeet</a> konfiguroidaksesi sen. Oletusarvoisesti taso on \"Virheen kirjaus\" (1)."
 
+#, php-format
 msgid "Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes."
 msgstr "Ohjauksen avulla voit muokata oletusohjauksen lennosta. Vain aakkosnumeerisia, tavuviiva ja alaviivat ovat sallittuja. Tutustu %s, jos haluat ylikirjoittaa tai lisätä uusia ohjauksia."
 
 msgid "Image routing"
 msgstr "Kuvan ohjaus"
 
+#, php-format
 msgid "Routing for %s"
 msgstr "%s ohjaus"
 
@@ -4172,19 +4201,13 @@ msgstr "VK asiakas salaisuus"
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "Tarvitset <a href=\"%s\" target=\"_blank\">reCAPTCHA avaimen</a> tätä varten."
 
+#, php-format
 msgid "%s site key"
 msgstr "%s sivuston avain"
 
+#, php-format
 msgid "%s secret key"
 msgstr "%s salainen avain"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1974
-msgid "reCAPTCHA public key"
-msgstr "reCAPTCHA public key"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1979
-msgid "reCAPTCHA private key"
-msgstr "reCAPTCHA private key"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1986
 msgid "reCAPTCHA threshold"
@@ -4197,12 +4220,14 @@ msgstr "Kuinka monta epäonnistunutta kirjautumisyritystä ennen kuin pyydetää
 msgid "Comments API"
 msgstr "Kommentointi API"
 
+#, php-format
 msgid "Disqus API works with %s."
 msgstr "Disqus API toimii %s kanssa."
 
 msgid "Disqus shortname"
 msgstr "Disqus lyhytnimi"
 
+#, php-format
 msgid "%s public key"
 msgstr "%s julkinen avain"
 
@@ -4739,12 +4764,9 @@ msgstr "Päivitys saatavilla järjestelmääsi. Voit automaattisesti ladata ja a
 msgid "Update now"
 msgstr "Päivitä nyt"
 
+#, javascript-format
 msgid "Your website is running the latest version of %s"
 msgstr "Sivustollasi on käytössä uusin versio ohjelmistosta %s"
-
-#: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
-msgid "Your website is running the latest version of Chevereto."
-msgstr "Verkkosivusi käyttää uusinta Chevereto versiota."
 
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"

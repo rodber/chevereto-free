@@ -52,7 +52,7 @@ try {
 define('CHV_MAX_INVALID_REQUESTS_PER_DAY', 25);
 
 // Folders definitions
-define("CHV_FOLDER_IMAGES", !is_null(Settings::get('chevereto_version_installed')) ? Settings::get('upload_image_path') : 'images');
+define('CHV_FOLDER_IMAGES', !is_null(Settings::get('chevereto_version_installed')) ? Settings::get('upload_image_path') : 'images');
 
 // CHV APP path definitions
 define('CHV_APP_PATH_INSTALL', G_APP_PATH . 'install/');
@@ -109,11 +109,20 @@ if(access !== 'install' and Settings::get('chevereto_version_installed')) {
 		if(isset($_SERVER['HTTP_CF_CONNECTING_IP'])) {
 			$_SERVER['REMOTE_ADDR'] = $_SERVER['HTTP_CF_CONNECTING_IP'];
 		}
-		// Inject CF setting // not safe to rely in this
-		/*if(Settings::get('cloudflare') !== (bool) $cloudflare) {
-			DB::update('settings', ['value' => $cloudflare], ['name' => 'cloudflare']);
-		}*/
 	}
+	
+	// Fix upload_max_filesize_mb if needed
+	$ini_upload_max_filesize = G\get_ini_bytes(ini_get('upload_max_filesize'));
+	$ini_post_max_size = ini_get('post_max_size') == 0 ? $ini_upload_max_filesize : G\get_ini_bytes(ini_get('post_max_size'));
+	
+	Settings::setValue('true_upload_max_filesize', min($ini_upload_max_filesize, $ini_post_max_size));
+	
+	if(Settings::get('true_upload_max_filesize') < G\get_bytes(Settings::get('upload_max_filesize_mb') . 'MB')) {
+		Settings::update([
+			'upload_max_filesize_mb' => G\bytes_to_mb(Settings::get('true_upload_max_filesize'))
+		]);
+	}
+	
 }
 
 // Proccess queues

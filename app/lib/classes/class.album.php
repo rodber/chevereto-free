@@ -356,7 +356,7 @@ class Album {
 		}
 	}
 	
-	public static function formatArray($dbrow, $safe=false) {
+	public static function formatArray($dbrow, $safe=FALSE) {
 		try {
 			$output = DB::formatRow($dbrow);
 			self::fill($output, $output['user']);		
@@ -365,6 +365,7 @@ class Album {
 			if($output['images_slice']) {
 				foreach($output['images_slice'] as $k => $v) {
 					$output['images_slice'][$k] = Image::formatArray($output['images_slice'][$k]);
+					$output['images_slice'][$k]['flag'] = $output['images_slice'][$k]['nsfw'] ? 'unsafe' : 'safe';
 				}
 			}
 	

@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-01-10 20:48+0000',
-  'PO-Revision-Date' => '2017-01-10 20:48+0000',
+  'POT-Creation-Date' => '2017-02-20 20:29+0000',
+  'PO-Revision-Date' => '2017-02-20 20:29+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ja',
@@ -18,9 +18,6 @@ $translation_plural = array (
   'function' => '$index = (int)(0); return ($index < 1) ? $index : 1 - 1;',
 );
 $translation_table = [
-	"Images greater than this size will show a button to load full resolution image." => [
-		0 => "このファイルサイズを超えたものは、オリジナル画像表示用のボタンが表示されます。",
-	],
 	"Invalid email" => [
 		0 => "有効なメールアドレスではありません。",
 	],
@@ -384,8 +381,8 @@ $translation_table = [
 	"Disabled" => [
 		0 => "無効化",
 	],
-	"Max. upload size" => [
-		0 => "最大アップロードサイズ",
+	"Max. upload file size" => [
+		0 => "アップロードファイルの最大サイズ",
 	],
 	"Max. post size" => [
 		0 => "最大投稿サイズ",
@@ -600,8 +597,8 @@ $translation_table = [
 	"Invalid timezone" => [
 		0 => "無効なタイムゾーン",
 	],
-	"Invalid value" => [
-		0 => "無効な値",
+	"Invalid value: %s" => [
+		0 => "不正な値: %s",
 	],
 	"Invalid upload storage mode" => [
 		0 => "無効なアップロード　ストレージモード",
@@ -626,6 +623,9 @@ $translation_table = [
 	],
 	"Invalid theme" => [
 		0 => "有効なテーマではありません。",
+	],
+	"Invalid value" => [
+		0 => "無効な値",
 	],
 	"Invalid theme tone" => [
 		0 => "テーマのトーン(色調)が有効ではありません。",
@@ -1947,6 +1947,9 @@ $translation_table = [
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "未登録ユーザのアップロードを許可するときに有効にしてください。",
 	],
+	"Upload threads" => [
+		0 => "アップロードスレッド数",
+	],
 	"Number of simultaneous upload threads (parallel uploads)" => [
 		0 => "同時アップロードのスレッド数(平行して動じにアップロード)",
 	],
@@ -1968,6 +1971,12 @@ $translation_table = [
 	"Enable this if you want to allow uploads with an automatic delete option." => [
 		0 => "画像の自動削除を付加したアップロードを有効にするにはこの設定を有効にしてください。",
 	],
+	"Maximum image size" => [
+		0 => "最大画像サイズ",
+	],
+	"Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit." => [
+		0 => "このサイズより大きなサイズは自動的にサイズを縮小されます。無制限サイズを選択される場合には「ゼロ」を指定してください。",
+	],
 	"Image Exif data" => [
 		0 => "画像のExifデータ",
 	],
@@ -1983,11 +1992,11 @@ $translation_table = [
 	"Enable this if you want to allow each user to configure how image Exif data will be handled." => [
 		0 => "画像のExifデータをユーザー毎に設定を許可する場合はこの設定を有効にしてください。",
 	],
-	"Max. filesize" => [
-		0 => "最大ファイルサイズ",
+	"Maximum upload file size" => [
+		0 => "最大アップロードファイルサイズ",
 	],
-	"Max. allowed filesize. (Max allowed by server is %s)" => [
-		0 => "最大ファイルサイズ (サーバーの許可容量は%s)",
+	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
+		0 => "サーバーが許可している最大サイズは、%sです。この制限は、%u、%p(%f)によって行われたものです。",
 	],
 	"Image path" => [
 		0 => "イメージパス",
@@ -2400,6 +2409,9 @@ $translation_table = [
 	"Image load max. filesize" => [
 		0 => "画像の最大ファイルサイズ",
 	],
+	"Images greater than this size will show a button to load full resolution image." => [
+		0 => "このファイルサイズを超えたものは、オリジナル画像表示用のボタンが表示されます。",
+	],
 	"Enable download button" => [
 		0 => "ダウンロードボタンを有効にする",
 	],
@@ -2758,10 +2770,10 @@ $translation_table = [
 		0 => "コメントAPI",
 	],
 	"Disqus API works with %s." => [
-		0 => "%s　でDisqus APIが動作しあｍす。",
+		0 => "%s　でDisqus APIが動作します。",
 	],
 	"Disqus shortname" => [
-		0 => "Disqus shortname",
+		0 => "Disqus ショートネーム",
 	],
 	"%s public key" => [
 		0 => "%s パブリックキー",

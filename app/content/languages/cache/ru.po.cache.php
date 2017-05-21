@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-01-10 20:48+0000',
-  'PO-Revision-Date' => '2017-01-10 20:48+0000',
+  'POT-Creation-Date' => '2017-02-20 20:29+0000',
+  'PO-Revision-Date' => '2017-02-20 20:29+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ru',
@@ -18,9 +18,6 @@ $translation_plural = array (
   'function' => '$index = (int)(($n%10==1 && $n%100!=11 ? (0) : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? (1) : (2)))); return ($index < 3) ? $index : 3 - 1;',
 );
 $translation_table = [
-	"Images greater than this size will show a button to load full resolution image." => [
-		0 => "При просмотре изображений большего размера, будет отображаться кнопка загрузки полной версии.",
-	],
 	"Invalid email" => [
 		0 => "Неверный e-mail адрес",
 	],
@@ -404,7 +401,7 @@ $translation_table = [
 	"Disabled" => [
 		0 => "Выкл.",
 	],
-	"Max. upload size" => [
+	"Max. upload file size" => [
 		0 => "Макс. размер файла",
 	],
 	"Max. post size" => [
@@ -622,8 +619,8 @@ $translation_table = [
 	"Invalid timezone" => [
 		0 => "Неверный часовой пояс",
 	],
-	"Invalid value" => [
-		0 => "Неверное значение",
+	"Invalid value: %s" => [
+		0 => "Неверное значение: %s",
 	],
 	"Invalid upload storage mode" => [
 		0 => "Неверный способ хранения файлов.",
@@ -648,6 +645,9 @@ $translation_table = [
 	],
 	"Invalid theme" => [
 		0 => "Неверный стиль",
+	],
+	"Invalid value" => [
+		0 => "Неверное значение",
 	],
 	"Invalid theme tone" => [
 		0 => "Неверный стиль темы",
@@ -1977,6 +1977,9 @@ $translation_table = [
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Включите, если хотите позволить загружать изображения незарегистрированным пользователям.",
 	],
+	"Upload threads" => [
+		0 => "Потоки загрузки",
+	],
 	"Number of simultaneous upload threads (parallel uploads)" => [
 		0 => "Количество одновременных (параллельных) загрузок",
 	],
@@ -1998,6 +2001,12 @@ $translation_table = [
 	"Enable this if you want to allow uploads with an automatic delete option." => [
 		0 => "Включите, чтобы разрешить загрузки с указанием срока хранения.",
 	],
+	"Maximum image size" => [
+		0 => "Максимальный размер изображения",
+	],
+	"Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit." => [
+		0 => "Изображения, размер которых, больше данного лимита, будут автоматически уменьшены. Чтобы не ограничивать максимальный размер изображения, укажите значение ноль(0).",
+	],
 	"Image Exif data" => [
 		0 => "Данные Exif",
 	],
@@ -2013,11 +2022,11 @@ $translation_table = [
 	"Enable this if you want to allow each user to configure how image Exif data will be handled." => [
 		0 => "Включите, чтобы разрешить каждому пользователю задавать способ обработки данных Exif.",
 	],
-	"Max. filesize" => [
-		0 => "Макс. размер файла",
+	"Maximum upload file size" => [
+		0 => "Максимальный размер файла",
 	],
-	"Max. allowed filesize. (Max allowed by server is %s)" => [
-		0 => "Макс. разрешеный размер файла (Ограничение сервера: %s)",
+	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
+		0 => "Ограничение сервера - %s. Это ограничение обусловлено %u и %p (значения %f).",
 	],
 	"Image path" => [
 		0 => "Путь к изображениям",
@@ -2429,6 +2438,9 @@ $translation_table = [
 	],
 	"Image load max. filesize" => [
 		0 => "Макс. размер файла в просмотре",
+	],
+	"Images greater than this size will show a button to load full resolution image." => [
+		0 => "При просмотре изображений большего размера, будет отображаться кнопка загрузки полной версии.",
 	],
 	"Enable download button" => [
 		0 => "Включить кнопку загрузки",

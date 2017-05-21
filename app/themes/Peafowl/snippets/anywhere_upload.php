@@ -43,7 +43,7 @@
 				</div>
             </div>
 			
-			<input id="anywhere-upload-input" data-action="anywhere-upload-input"<?php if(!CHV\getSetting('guest_uploads')) { ?> data-login-needed="true"<?php } ?> class="hidden-visibility" type="file" accept="<?php echo '.' . implode(',.', CHV\Upload::getEnabledImageFormats()); ?>" multiple>
+			<input id="anywhere-upload-input" data-action="anywhere-upload-input"<?php if(!CHV\getSetting('guest_uploads')) { ?> data-login-needed="true"<?php } ?> class="hidden-visibility" type="file" accept="<?php echo '.' . implode(',.', CHV\Image::getEnabledImageFormats()); ?>" multiple>
 			<input id="anywhere-upload-input-camera" data-action="anywhere-upload-input"<?php if(!CHV\getSetting('guest_uploads')) { ?> data-login-needed="true"<?php } ?> class="hidden-visibility" type="file" capture="camera" accept="image/*">
 			<ul id="anywhere-upload-queue" class="upload-box-queue content-width soft-hidden" data-group="upload-queue"></ul>
 			

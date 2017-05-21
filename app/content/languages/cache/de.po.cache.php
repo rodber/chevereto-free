@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-11-01 14:37+0000',
-  'PO-Revision-Date' => '2016-11-01 14:37+0000',
+  'POT-Creation-Date' => '2017-02-20 20:29+0000',
+  'PO-Revision-Date' => '2017-02-20 20:29+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'de',
@@ -364,9 +364,6 @@ $translation_table = [
 	"Support" => [
 		0 => "Support",
 	],
-	"Chevereto support" => [
-		0 => "Chevereto Support",
-	],
 	"Need help? Go to %s and you will get help quickly." => [
 		0 => "Benötigen Sie Hilfe? Gehen Sie auf %s und Ihnen wird schnellstmöglich geholfen.",
 	],
@@ -394,8 +391,8 @@ $translation_table = [
 	"Disabled" => [
 		0 => "Deaktiviert",
 	],
-	"Max. upload size" => [
-		0 => "Maximale Upload-Größe",
+	"Max. upload file size" => [
+		0 => "Max. Upload-Dateigröße",
 	],
 	"Max. post size" => [
 		0 => "Maximaler POST-Wert",
@@ -611,8 +608,8 @@ $translation_table = [
 	"Invalid timezone" => [
 		0 => "Ungültige Zeitzone",
 	],
-	"Invalid value" => [
-		0 => "Ungültiger Wert",
+	"Invalid value: %s" => [
+		0 => "Ungültiger Wert: %s",
 	],
 	"Invalid upload storage mode" => [
 		0 => "Ungültige Speichermethode",
@@ -637,6 +634,9 @@ $translation_table = [
 	],
 	"Invalid theme" => [
 		0 => "Ungültiges Theme",
+	],
+	"Invalid value" => [
+		0 => "Ungültiger Wert",
 	],
 	"Invalid theme tone" => [
 		0 => "Ungültiger Theme-Farbton",
@@ -1887,9 +1887,6 @@ $translation_table = [
 	"Only alphanumerics, hyphens and forward slash" => [
 		0 => "Nur alphanumerische Zeichen, Bindestriche und Schrägstriche erlaubt.",
 	],
-	"Page URL key relative to %s" => [
-		0 => "Seiten-URL-Schlüssel relativ zu %s",
-	],
 	"File path" => [
 		0 => "Dateifpad",
 	],
@@ -1986,6 +1983,12 @@ $translation_table = [
 	"Enable this if you want to allow uploads with an automatic delete option." => [
 		0 => "Aktivieren, falls Sie Uploads mit einer automatischen Löschung nach einer bestimmten Zeit aktivieren wollen.",
 	],
+	"Maximum image size" => [
+		0 => "Maximale Bildgröße",
+	],
+	"Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit." => [
+		0 => "Bilder größer als diese Größe werden automatisch verkleinert. Verwenden Sie Null (0), um kein Limit festzulegen.",
+	],
 	"Image Exif data" => [
 		0 => "EXIF-Daten",
 	],
@@ -2001,11 +2004,8 @@ $translation_table = [
 	"Enable this if you want to allow each user to configure how image Exif data will be handled." => [
 		0 => "Aktivieren, falls Sie Benutzern erlauben wollen, die Behandlung von EXIF-Daten beim Upload individuell zu wählen.",
 	],
-	"Max. filesize" => [
-		0 => "Maximale Dateigröße",
-	],
-	"Max. allowed filesize. (Max allowed by server is %s)" => [
-		0 => "Maximal erlaubte Dateigröße (Serverlimit: %s)",
+	"Maximum upload file size" => [
+		0 => "Maximale Upload-Dateigröße",
 	],
 	"Image path" => [
 		0 => "Bildpfad",
@@ -2415,6 +2415,9 @@ $translation_table = [
 	"Favicon image. Image must have same width and height." => [
 		0 => "Die Favicon-Grafik muss die gleiche Höhe und Breite aufweisen.",
 	],
+	"Images greater than this size will show a button to load full resolution image." => [
+		0 => "Bilder größer als diese Größe erhalten eine Schaltfläche zum Laden der vollen Auflösung.",
+	],
 	"Enable download button" => [
 		0 => "Download-Button aktivieren",
 	],
@@ -2762,12 +2765,6 @@ $translation_table = [
 	],
 	"%s secret key" => [
 		0 => "%s Geheimer Schlüssel",
-	],
-	"reCAPTCHA public key" => [
-		0 => "reCAPTCHA Public-Schlüssel",
-	],
-	"reCAPTCHA private key" => [
-		0 => "reCAPTCHA Private-Schlüssel",
 	],
 	"reCAPTCHA threshold" => [
 		0 => "reCAPTCHA Schwelle",
@@ -3162,9 +3159,6 @@ $translation_table = [
 	],
 	"Your website is running the latest version of %s" => [
 		0 => "Diese Internetseite läuft mit der aktuellsten Version von %s",
-	],
-	"Your website is running the latest version of Chevereto." => [
-		0 => "Die verwendete Chevereto-Version ist auf dem aktuellsten Stand.",
 	],
 	"Clipboard image" => [
 		0 => "Bild in Zwischenablage",

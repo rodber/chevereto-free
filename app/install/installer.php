@@ -228,6 +228,10 @@ try {
 			'image_load_max_filesize_mb' => '3',
 		],
 		'1.0.7' => NULL,
+		'1.0.8' => [
+			'upload_max_image_width' => '0',
+			'upload_max_image_height'=> '0',
+		],
 	];
 	// Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
 	$settings_rename = [];
@@ -529,8 +533,16 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 				}
 			}
 
-			// Renamed settings (actually updated values + remove old one)
 			$settings_get = Settings::get();
+			
+			// Deteled settings
+			foreach($settings_delete as $k) {
+				if(array_key_exists($k, $settings_get)) {
+					$sql_update[] = "DELETE FROM `%table_prefix%settings` WHERE `setting_name` = '" . $k . "';";
+				}
+			}
+			
+			// Renamed settings (actually updated values + remove old one)
 			foreach($settings_rename as $k => $v) {
 				if(array_key_exists($k, $settings_get)) {
 					// Typeset is set in the INSERT statement above

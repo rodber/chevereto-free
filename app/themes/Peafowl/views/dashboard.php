@@ -692,7 +692,7 @@
 			<hr class="line-separator"></hr>
 			
 			<div class="input-label">
-				<label for="upload_threads">Upload threads</label>
+				<label for="upload_threads"><?php _se('Upload threads'); ?></label>
 				<div class="c2"><input type="number" min="1" max="5" pattern="\d+" name="upload_threads" id="upload_threads" class="text-input" value="<?php echo CHV\Settings::get('upload_threads'); ?>" placeholder="2" required></div>
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['upload_threads']; ?></div>
 				<div class="input-below"><?php _se('Number of simultaneous upload threads (parallel uploads)'); ?></div>
@@ -730,6 +730,23 @@
 			
 			<hr class="line-separator"></hr>
             
+			<div class="input-label">
+				<label for="upload_max_image_width" class="display-block-forced"><?php _se('Maximum image size'); ?></label>
+				<div class="c5 overflow-auto clear-both">
+					<div class="c2 float-left">
+						<input type="number" min="0" pattern="\d+" name="upload_max_image_width" id="upload_max_image_width" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['upload_max_image_width'] : CHV\Settings::get('upload_max_image_width'); ?>" placeholder="<?php echo  CHV\Settings::getDefault('upload_max_image_width'); ?>" rel="tooltip" data-tiptip="top" title="<?php _se('Width'); ?>" required>
+					</div>
+					<div class="c2 float-left margin-left-10">
+						<input type="number" min="0" pattern="\d+" name="upload_max_image_height" id="upload_max_image_height" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['upload_max_image_height'] : CHV\Settings::get('upload_max_image_height'); ?>" placeholder="<?php echo  CHV\Settings::getDefault('upload_max_image_height'); ?>" rel="tooltip" data-tiptip="top" title="<?php _se('Height'); ?>" required>
+					</div>
+				</div>
+				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['upload_max_image_width']; ?></div>
+				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['upload_max_image_height']; ?></div>
+				<div class="input-below"><?php _se("Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit."); ?></div>
+			</div>
+			
+			<hr class="line-separator"></hr>
+			
             <div class="input-label">
 				<label for="upload_image_exif"><?php _se('Image Exif data'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="upload_image_exif" id="upload_image_exif" class="text-input">
@@ -759,10 +776,10 @@
             <hr class="line-separator"></hr>
 			
 			<div class="input-label">
-				<label for="upload_max_filesize_mb"><?php _se('Max. filesize'); ?> (MB)</label>
-				<div class="c2"><input type="number" min="0" pattern="\d+" name="upload_max_filesize_mb" id="upload_max_filesize_mb" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['upload_max_filesize_mb'] : CHV\Settings::get('upload_max_filesize_mb'); ?>" placeholder="MB" required></div>
+				<label for="upload_max_filesize_mb"><?php _se('Maximum upload file size'); ?> (MB)</label>
+				<div class="c2"><input type="number" min="1" max="<?php echo G\bytes_to_mb(CHV\Settings::get('true_upload_max_filesize')); ?>" pattern="\d+" name="upload_max_filesize_mb" id="upload_max_filesize_mb" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['upload_max_filesize_mb'] : CHV\Settings::get('upload_max_filesize_mb'); ?>" placeholder="MB" required></div>
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['upload_max_filesize_mb']; ?></div>
-				<div class="input-below"><?php _se('Max. allowed filesize. (Max allowed by server is %s)', G\format_bytes(G\get_ini_bytes(ini_get('upload_max_filesize'))), 'strtr'); ?></div>
+				<div class="input-below"><?php _se('Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values).', ['%s' => G\format_bytes(CHV\Settings::get('true_upload_max_filesize')), '%u' => '<code>upload_max_filesize = ' . ini_get('upload_max_filesize') . '</code>', '%p' => '<code>post_max_size = ' . ini_get('post_max_size') . '</code>', '%f' => 'php.ini']); ?></div>
 			</div>
 			<div class="input-label">
 				<label for="upload_image_path"><?php _se('Image path'); ?></label>
@@ -1419,7 +1436,7 @@
 			
 			<div class="input-label">
 				<label for="image_load_max_filesize_mb"><?php _se('Image load max. filesize'); ?> (MB)</label>
-				<div class="c2"><input type="number" min="0" pattern="\d+" name="image_load_max_filesize_mb" id="image_load_max_filesize_mb" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['image_load_max_filesize_mb'] : CHV\Settings::get('image_load_max_filesize_mb'); ?>" placeholder="MB" required></div>
+				<div class="c2"><input type="number" min="0" pattern="\d+" name="image_load_max_filesize_mb" id="image_load_max_filesize_mb" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['image_load_max_filesize_mb'] : CHV\Settings::get('image_load_max_filesize_mb'); ?>" placeholder="MB"></div>
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['image_load_max_filesize_mb']; ?></div>
 				<div class="input-below"><?php _se('Images greater than this size will show a button to load full resolution image.'); ?></div>
 			</div>

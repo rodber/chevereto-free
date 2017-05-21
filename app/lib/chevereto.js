@@ -205,10 +205,14 @@ $(function(){
 		var $input_width = $("[name=form-width]", $parent);
 		var $input_height = $("[name=form-height]", $parent);
 		var ratio = $input_width.data("initial") / $input_height.data("initial");
+		var image = {
+			width: Math.round($input_width.prop("value")/ratio),
+			height: Math.round($input_height.prop("value")*ratio)
+		};
 		if($(e.target).is($input_width)) {
-			$input_height.prop("value", Math.round(Math.round($input_width.prop("value")/ratio)));
+			$input_height.prop("value", Math.round(image.width));
 		} else {
-			$input_width.prop("value", Math.round(Math.round($input_height.prop("value")*ratio)));
+			$input_width.prop("value", Math.round(image.height));
 		}
 	});
 	
@@ -240,6 +244,27 @@ $(function(){
 			template: $("#anywhere-upload-edit-item").html(),
 			callback: function() {
 				
+				var imageMaxCfg = {
+					width: CHV.obj.config.image.max_width != 0 ? CHV.obj.config.image.max_width : queueObject.width,
+					height: CHV.obj.config.image.max_height != 0 ? CHV.obj.config.image.max_height : queueObject.height,
+				};
+				
+				var imageMax = $.extend({}, imageMaxCfg);
+				var ratio = queueObject.width / queueObject.height;
+
+				imageMax.width = Math.round(imageMaxCfg.height * ratio);
+				imageMax.height = Math.round(imageMaxCfg.width / ratio);
+				
+				if(imageMax.height > imageMaxCfg.height) {
+					imageMax.height = imageMaxCfg.height;
+					imageMax.width = Math.round(imageMax.height * ratio);
+				}
+				
+				if(imageMax.width > imageMaxCfg.width) {
+					imageMax.width = imageMaxCfg.width;
+					imageMax.height = Math.round(imageMax.width / ratio);
+				}
+				
 				$.each(queueObject, function(i, v) {
 								
 					var name = "[name=form-" + i.replace(/_/g, "-") + "]";
@@ -251,7 +276,7 @@ $(function(){
 					if($input.is(":checkbox")) {
 						$input.prop("checked", $input.attr("value") == v);
 					} else if($input.is("select")) {
-						var $option = $input.find("[value="+v+"]");
+						var $option = $input.find("[value=" + v + "]");
 						if(!$option.exists()) {
 							$option = $input.find("option:first");
 						}
@@ -259,8 +284,11 @@ $(function(){
 					} else {
 						$input.prop("value", v);
 					}
+					
 					if(i == "width" || i == "height") {
-						$input.prop("max", file.parsedMeta[i]).data("initial", file.parsedMeta[i]);
+						var max = imageMax[i];
+						var value = file.parsedMeta[i] > max ? max : file.parsedMeta[i];
+						$input.prop("max", value).data("initial", file.parsedMeta[i]).prop("value", value);
 					}
 				});
 				
@@ -378,7 +406,7 @@ $(function(){
 		
 		if(Object.size(CHV.fn.uploader.files) == 0) { // No queue left
 			// Null result ?
-			if(Object.size(CHV.fn.uploader.success.error) == 0 && Object.size(CHV.fn.uploader.results.error) == 0) {
+			if(!("success" in CHV.fn.uploader) || !("results" in CHV.fn.uploader) || (Object.size(CHV.fn.uploader.success.error) == 0 && Object.size(CHV.fn.uploader.results.error) == 0)) {
 				CHV.fn.uploader.reset();
 			}
 		} else {
@@ -809,6 +837,9 @@ $(function(){
 							}
 						}
 					},
+					load: function() {
+						$("[name=form-album-id]", PF.obj.modal.selectors.root).focus();
+					},
 					confirm: function() {
 						
 						var $modal = $(PF.obj.modal.selectors.root);
@@ -999,6 +1030,11 @@ $(function(){
 							success: function(XHR) {
 								CHV.fn.list_editor.updateMoveItemLists(XHR.responseJSON, dealing_with, $targets);
 							}
+						}
+					},
+					load: function() {
+						if(template == "form-move-multiple") {
+							$("[name=form-album-id]", PF.obj.modal.selectors.root).focus();
 						}
 					},
 					confirm: function() {
@@ -1564,7 +1600,7 @@ $(function(){
 					html: true
 				});
 			} else {
-				PF.fn.growl.call(PF.fn._s("Your website is running the latest version of %s", CHEVERETO.edition));
+				PF.fn.growl.call(PF.fn._s("This website is running latest %s version ", CHEVERETO.edition));
 			}
 			
 		});
@@ -2680,6 +2716,7 @@ CHV.fn.uploader = {
 		this.files[id].xhr = new XMLHttpRequest();
 		
 		$queue_item.removeClass("waiting");
+		$(".block.edit, .queue-item-button.edit", $queue_item).remove();
 		
 		if(!queue_is_url) {
 			this.files[id].xhr.upload.onprogress = function(e) {
@@ -2821,7 +2858,8 @@ CHV.fn.uploader = {
 		if(Object.size(this.results.error) > 0) {
 			var error_files = [];
 			for(var i in this.results.error) {
-				if(typeof this.results.error[i] !== typeof object) continue;
+				if(typeof this.results.error[i] !== "object") continue;
+				console.log(this.results.error[i])
 				error_files[i] = this.results.error[i].error.message;
 				//error_files.push(this.results.error[i].error.message);
 			}

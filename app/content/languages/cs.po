@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-01-07 17:18+0000\n"
-"PO-Revision-Date: 2017-01-07 17:18+0000\n"
+"POT-Creation-Date: 2017-03-02 13:40+0000\n"
+"PO-Revision-Date: 2017-03-02 13:40+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: cs\n"
@@ -129,9 +129,11 @@ msgstr "Nelze stáhnout %s"
 msgid "Can't extract %s"
 msgstr "Nelze rozbalit %s"
 
+#, php-format
 msgid "Can't create %s directory - %e"
 msgstr "Nelze vytvořit %s adresář - %e"
 
+#, php-format
 msgid "Can't update %s file - %e"
 msgstr "Nelze aktualizovat %s soubor - %e"
 
@@ -207,6 +209,7 @@ msgstr "Soukromé nahrávání"
 msgid "Upload switched to local storage"
 msgstr "Nahrávání se přepne do místního úložiště"
 
+#, php-format
 msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
 msgstr "Systém se přepne do lokálního úložiště kvůli nedostatečně diskové kapacitě (%c) na úložišti externího serveru (serverech). Obrázek %s bude přemístěn do místního úložiště."
 
@@ -337,6 +340,7 @@ msgstr "Systémová oznámení"
 msgid "Dashboard"
 msgstr "Administrace"
 
+#, php-format
 msgid "There is an update available for your system. Go to %s to download and install this update."
 msgstr "Je k dispozici nová aktualizace pro Váš systém. Klikněte na následující odkaz %s pro stažení a instalaci této aktualizace."
 
@@ -350,9 +354,11 @@ msgstr "Systémová databáze je zastaralá. Je potřeba spustit <a href=\"%s\">
 msgid "Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>."
 msgstr "Webová stránka se nachází v režimu údržby. Pro změnu tohoto nastavení jděte do <a href=\"%s\">Administrace > Nastavení</a>."
 
+#, php-format
 msgid "You should disable PHP error reporting for production enviroment. Go to <a href='%s'>System settings</a> to revert this setting."
 msgstr "Měl by jste vypnout zobrazování PHP chyb pro přehlednější prostředí. Jděte na <a href='%s'>Systémové nastavení</a> pro změnu tohoto nastavení."
 
+#, php-format
 msgid "You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this."
 msgstr "Dosud jste nezměnili výchozí nastavení e-mailu. Pro změnu tohoto nastavení jděte do <a href='%s'>Nastavení e-mailu</a>."
 
@@ -369,9 +375,11 @@ msgstr "Nástěnka admina"
 msgid "You can apply this update directly from your %a or download it from %s and then manually install it."
 msgstr "Tuto aktualizaci můžete nainstalovat automaticky přímo ze svého %a nebo si ji stáhnout z %s a nainstalovat manuálně."
 
+#, php-format
 msgid "Chevereto update available (v%s)"
 msgstr "Je k dispozici aktualizace Chevereta (v%s)"
 
+#, php-format
 msgid "view on %s"
 msgstr "zobrazit na %s"
 
@@ -624,6 +632,7 @@ msgstr "Zkontrolovat aktualizace"
 msgid "Support"
 msgstr "Podpora"
 
+#, php-format
 msgid "Need help? Go to %s and you will get help quickly."
 msgstr "Potřebujete pomoc? Navštivte %s a získejte rychle pomoc nebo radu."
 
@@ -741,9 +750,8 @@ msgstr "Zapnuto"
 msgid "Disabled"
 msgstr "Vypnuto"
 
-#: ../../../app/routes/route.dashboard.php:193
-msgid "Max. upload size"
-msgstr "Max. velikost souborů (upload size)"
+msgid "Max. upload file size"
+msgstr "Max. velikost nahrávaného souboru"
 
 #: ../../../app/routes/route.dashboard.php:197
 msgid "Max. post size"
@@ -923,12 +931,15 @@ msgstr "Stránka byla odstraněna."
 msgid "homepage"
 msgstr "domovská stránka"
 
+#, php-format
 msgid "Before main title (%s)"
 msgstr "Před hlavním názvem (%s)"
 
+#, php-format
 msgid "After cover (%s)"
 msgstr "Po titulním obrázku (%s)"
 
+#, php-format
 msgid "After listing (%s)"
 msgstr "Po výpisu (%s)"
 
@@ -1033,12 +1044,9 @@ msgstr "Neplatný jazyk"
 msgid "Invalid timezone"
 msgstr "Neplatná časová zóna"
 
-#: ../../../app/routes/route.dashboard.php:572
-#: ../../../app/routes/route.dashboard.php:617
-#: ../../../app/routes/route.dashboard.php:794
-#: ../../../app/routes/route.dashboard.php:940
-msgid "Invalid value"
-msgstr "Neplatná hodnota"
+#, php-format
+msgid "Invalid value: %s"
+msgstr "Neplatná hodnota: %s"
 
 #: ../../../app/routes/route.dashboard.php:577
 msgid "Invalid upload storage mode"
@@ -1070,6 +1078,13 @@ msgstr "Chybná neprůhlednost vodoznaku"
 #: ../../../app/routes/route.dashboard.php:612
 msgid "Invalid theme"
 msgstr "Špatná šablona (téma)"
+
+#: ../../../app/routes/route.dashboard.php:572
+#: ../../../app/routes/route.dashboard.php:617
+#: ../../../app/routes/route.dashboard.php:794
+#: ../../../app/routes/route.dashboard.php:940
+msgid "Invalid value"
+msgstr "Neplatná hodnota"
 
 #: ../../../app/routes/route.dashboard.php:622
 msgid "Invalid theme tone"
@@ -1342,9 +1357,11 @@ msgstr "Neplatná úloha"
 msgid "Username already being used"
 msgstr "Uživatelské jméno je obsazené"
 
+#, php-format
 msgid "Add a password or another social connection before deleting %s"
 msgstr "Přidat heslo nebo jiné sociální připojení před smazáním %s"
 
+#, php-format
 msgid "Add an email or another social connection before deleting %s"
 msgstr "Přidat e-mail nebo jiné sociální připojení před smazáním %s"
 
@@ -1542,6 +1559,7 @@ msgstr "Špatné hodnoty přihlašovacího jména  nebo e-mailu"
 msgid "Settings for %s"
 msgstr "Nastavení pro %s"
 
+#, php-format
 msgid "You must be at least %s years old to use this website."
 msgstr "Pro možnost používat tuto webovou stránku vám musí být alespoň %s let."
 
@@ -1706,6 +1724,7 @@ msgstr "E-mailová adresa"
 msgid "Username"
 msgstr "Uživatelské jméno"
 
+#, php-format
 msgid "I'm at least %s years old"
 msgstr "Je mi minimálně %s let."
 
@@ -2711,6 +2730,7 @@ msgstr "Odkaz na album"
 msgid "Please read and comply with the following conditions before you continue:"
 msgstr "Přečtěte si a souhlaste s těmito podmínkami, než budete moci pokračovat:"
 
+#, php-format
 msgid "This website contains information, links and images of sexually explicit material. If you are under the age of %s, if such material offends you or if it's illegal to view such material in your community please do not continue.\n\nI am at least %s years of age and I believe that as an adult it is my inalienable right to receive/view sexually explicit material. I desire to receive/view sexually explicit material. \n\nI believe that sexual acts between consenting adults are neither offensive nor obscene. The viewing, reading and downloading of sexually explicit materials does not violate the standards of my community, town, city, state or country.\n\nThe sexually explicit material I am viewing is for my own personal use and I will not expose minors to the material.\n\nI am solely responsible for any false disclosures or legal ramifications of viewing, reading or downloading any material in this site. Furthermore this website nor its affiliates will be held responsible for any legal ramifications arising from fraudulent entry into or use of this website.\n\nThis consent screen constitutes a legal agreement between this website and you and/or any business in which you have any legal or equitable interest. If any portion of this agreement is deemed unenforceable by a court of competent jurisdiction it shall not affect the enforceability of the other portions of the agreement."
 msgstr "Tato webová stránka obsahuje informace, odkazy a obrázky se sexuálním materiálem. Pokud jste mladší %s let, jestli Vás tento materiál uráží, nebo jestli je zobrazení tohoto materiálu nezákonné ve Vaší komunitě, prosím nepokračujte dál.\n\nJe mi alespoň %s let a věřím, že jako dospělý je to mé nezadatelné právo získávat/prohlížet sexuálně explicitní materiál. Přeji si získávat/zobrazovat  sexuálně explicitní materiály.\n\nDomnívám se, že sexuální akty mezi dospělými nejsou nezákonné ani obscénní. Prohlížení, čtení a stahování sexuálně explicitních materiálů neporušuje standardy mé komunity, města, státu nebo země.\n\nSexuálně explicitní materiál si prohlížím pro mou osobní potřebu a nebudu tomuto  materiálu vystavovat děti a mladistvé.\n\nJsem sám osobně zodpovědný(á) za poskytnutí nepravdivých informací nebo za jakékoli právní následky za prohlížení, čtení nebo stahování jakéhokoliv materiálu z této webové stránky. Navíc tyto webové stránky ani její pobočky nebudou zodpovědny za případné právní následky vyplývající z podvodného přístupu nebo používání této webové stránky.\n\nTato obrazovka představuje souhlas a právní dohodu mezi těmito webovými stránkami a Vámi a / nebo jakýkoliv podnikem, ve kterém můžete mít jakýkoli právní nebo soukromý zájem. Pokud bude některá část této smlouvy  považována za nevymahatelnou prostřednictvím příslušného soudu, nebude to mít vliv na vymahatelnost ostatních částí této dohody."
 
@@ -2764,6 +2784,7 @@ msgstr "Toto nastavení je vždy zakázáno při použití režimu osobní webov
 msgid "documentation"
 msgstr "dokumentace"
 
+#, php-format
 msgid "Learn more about %s at our %d."
 msgstr "Přečtěte si více o %s na našich stránkách %d."
 
@@ -3036,6 +3057,9 @@ msgstr "Nahráno hostem"
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "Povol pokud chceš umožnit neregistrovaným uživatelům nahrávání."
 
+msgid "Upload threads"
+msgstr "Počet vláken pro nahrávání"
+
 msgid "Number of simultaneous upload threads (parallel uploads)"
 msgstr "Počet vláken použitých při nahrávání (souběžné nahrávání více souborů)"
 
@@ -3052,6 +3076,12 @@ msgstr "Povolit časové omezení pro nahrané soubory"
 #: ../../../app/themes/Peafowl/views/dashboard.php:655
 msgid "Enable this if you want to allow uploads with an automatic delete option."
 msgstr "Aktivujte tuto funkci, pokud chcete povolit nahrávání s volbou automatického mazání."
+
+msgid "Maximum image size"
+msgstr "Maximální velikost obrázku"
+
+msgid "Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit."
+msgstr "Obrázky větší, než je tato velikost budou automaticky zmenšeny. Zadejte nulu (0) pokud chcete zachovat původní velikost obrázku."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:661
 #: ../../../app/themes/Peafowl/views/settings.php:183
@@ -3075,14 +3105,11 @@ msgstr "Exif data obrázku (uživ. nastavení)"
 msgid "Enable this if you want to allow each user to configure how image Exif data will be handled."
 msgstr "Povolte, pokud chcete, aby měl každý uživatel možnost nastavit, jak bude nakládáno s EXIF daty obrázku."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:689
-msgid "Max. filesize"
-msgstr "Maximální velikost souboru"
+msgid "Maximum upload file size"
+msgstr "Maximální velikost nahrávaného souboru"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:692
-#, php-format
-msgid "Max. allowed filesize. (Max allowed by server is %s)"
-msgstr "Maximální povolená velikost souboru (Maximální povolená velikost na serveru je %s)"
+msgid "Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)."
+msgstr "Maximální velikost povolená serverem je %s. Tato velikost je limitována %u a %p (%f hodnoty)."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:695
 msgid "Image path"
@@ -3266,6 +3293,7 @@ msgstr "Průhlednost vodoznaku vzhledem k obrázku. Hodnoty od 0 do 100."
 msgid "Dashboard > Settings > Website"
 msgstr "Administrace > Nastavení > Webová stránka"
 
+#, php-format
 msgid "Categories won't work when the explorer feature is turned off. To revert this setting go to %s."
 msgstr "Kategorie nebudou fungovat, pokud je tato funkce průzkumníka vypnuta. Pro změnu tohoto nastavení běžte do %s."
 
@@ -3632,7 +3660,7 @@ msgstr "Favicon musí mít stejnou šířku a výšku."
 msgid "Image load max. filesize"
 msgstr "Max. velikost obrázku"
 
-msgid "Images greater than this size will show a button to load full resolution image"
+msgid "Images greater than this size will show a button to load full resolution image."
 msgstr "U obrázků větších, než je tento rozměr, se zobrazí tlačítko pro načtení obrázku v plném rozlišení"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1299
@@ -3845,6 +3873,7 @@ msgstr "Pro nastavení úrovně ladění si prohlédněte <a %s>debug documentat
 msgid "Image routing"
 msgstr "Směrování obrázku"
 
+#, php-format
 msgid "Routing for %s"
 msgstr "Směrování pro %s"
 
@@ -4047,6 +4076,7 @@ msgstr "Kolik neúspěšných pokusů je zapotřebí k vyžadování reCAPTCHA? 
 msgid "Comments API"
 msgstr "API komentářů"
 
+#, php-format
 msgid "Disqus API works with %s."
 msgstr "Disqus API pracuje s %s."
 
@@ -4585,6 +4615,7 @@ msgstr "Je k dispozici aktualizace pro váš systém. Můžete ji automaticky st
 msgid "Update now"
 msgstr "Aktualizovat nyní"
 
+#, javascript-format
 msgid "Your website is running the latest version of %s"
 msgstr "Vaše webové stránky běží nejnovější verzi %s"
 

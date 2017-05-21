@@ -523,8 +523,10 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=NULL, 
 		$replacements['IMAGE_ALBUM_PRIVACY'] = 'public';
 	}
 	
-	if($stock_tpl == 'IMAGE') {
-		$replacements['IMAGE_FLAG'] = $item['nsfw'] ? 'unsafe' : 'safe';
+	if(in_array($stock_tpl, ['IMAGE', 'ALBUM'])) {
+		$nsfw = $stock_tpl == 'IMAGE' ? $item['nsfw'] : $item['images_slice'][0]['nsfw'];
+		$placeholder = $stock_tpl == 'IMAGE' ? 'IMAGE_FLAG' : 'ALBUM_COVER_FLAG';
+		$replacements[$placeholder] = $nsfw ? 'unsafe' : 'safe';
 	}
 	
 	$show_object = ($show_item_edit_tools || $show_item_public_tools) || ($requester['is_admin'] || (!is_null($requester) AND $item["user"]["id"] == $requester['id']));

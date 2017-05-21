@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-01-10 20:49+0000',
-  'PO-Revision-Date' => '2017-01-10 20:49+0000',
+  'POT-Creation-Date' => '2017-02-20 20:29+0000',
+  'PO-Revision-Date' => '2017-02-20 20:29+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'es',
@@ -18,9 +18,6 @@ $translation_plural = array (
   'function' => '$index = (int)(($n != 1)); return ($index < 2) ? $index : 2 - 1;',
 );
 $translation_table = [
-	"Images greater than this size will show a button to load full resolution image." => [
-		0 => "Imágenes de tamaño superior a este mostrarán un botón para cargar la imagen a resolución completa.",
-	],
 	"Invalid email" => [
 		0 => "Email inválido",
 	],
@@ -260,7 +257,7 @@ $translation_table = [
 		0 => "Esa página no existe",
 	],
 	"Forgot password?" => [
-		0 => "Recuperar constraseña",
+		0 => "Recuperar contraseña",
 	],
 	"Reset password" => [
 		0 => "Restablecer contraseña",
@@ -394,8 +391,8 @@ $translation_table = [
 	"Disabled" => [
 		0 => "Deshabilitado",
 	],
-	"Max. upload size" => [
-		0 => "Tamaño máx. de subidas",
+	"Max. upload file size" => [
+		0 => "Tamaño máx. de archivo de subida",
 	],
 	"Max. post size" => [
 		0 => "Tamaño máx. de post",
@@ -611,8 +608,8 @@ $translation_table = [
 	"Invalid timezone" => [
 		0 => "Zona horaria inválida",
 	],
-	"Invalid value" => [
-		0 => "Valor inválido",
+	"Invalid value: %s" => [
+		0 => "Valor inválido: %s",
 	],
 	"Invalid upload storage mode" => [
 		0 => "Método de almacenamiento inválido",
@@ -637,6 +634,9 @@ $translation_table = [
 	],
 	"Invalid theme" => [
 		0 => "Tema inválido",
+	],
+	"Invalid value" => [
+		0 => "Valor inválido",
 	],
 	"Invalid theme tone" => [
 		0 => "Tono de tema inválido",
@@ -1962,6 +1962,9 @@ $translation_table = [
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Habilita esto si deseas permitir permitir que usuarios no registrados suban imágenes",
 	],
+	"Upload threads" => [
+		0 => "Hilos de subida",
+	],
 	"Number of simultaneous upload threads (parallel uploads)" => [
 		0 => "Numero de hilos de subida simultáneos (subidas paralelas)",
 	],
@@ -1983,6 +1986,12 @@ $translation_table = [
 	"Enable this if you want to allow uploads with an automatic delete option." => [
 		0 => "Habilita esto si quieres permitir la opción de eliminar imágenes automáticamente.",
 	],
+	"Maximum image size" => [
+		0 => "Tamaño máximo de imagen",
+	],
+	"Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit." => [
+		0 => "Imágenes mayores de este tamaño se reducirán de tamaño automáticamente. Usa cero (0) para no establecer un límite.",
+	],
 	"Image Exif data" => [
 		0 => "Datos Exif de imagen",
 	],
@@ -1998,11 +2007,11 @@ $translation_table = [
 	"Enable this if you want to allow each user to configure how image Exif data will be handled." => [
 		0 => "Habilita esto si quieres permitir que cada usuario pueda configurar como se manejarán los datos Exif.",
 	],
-	"Max. filesize" => [
-		0 => "Tamaño máx. de archivo",
+	"Maximum upload file size" => [
+		0 => "Tamaño máximo de archivo de subida",
 	],
-	"Max. allowed filesize. (Max allowed by server is %s)" => [
-		0 => "Tamaño máx. de archivo permitido (El máx. permitido por el sistema es %s)",
+	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
+		0 => "Tamaño máximo permitido por el servidor es %s. Este límite es regido por %u y %p (valores %f).",
 	],
 	"Image path" => [
 		0 => "Ruta de las imágenes",
@@ -2086,7 +2095,7 @@ $translation_table = [
 		0 => "Tamaño mínimo necesario para aplicar marca de agua",
 	],
 	"Images smaller than this won't be watermarked. Use zero (0) to don't set a minimum image size limit." => [
-		0 => "Imágenes inferiores a esto no tendrán marca de agua. Usa cero (0) para no establecer un limite mínimo.",
+		0 => "Imágenes inferiores a esto no tendrán marca de agua. Usa cero (0) para no establecer un límite mínimo.",
 	],
 	"Watermark image" => [
 		0 => "Imagen de marca de agua",
@@ -2414,6 +2423,9 @@ $translation_table = [
 	],
 	"Image load max. filesize" => [
 		0 => "Tamaño máx. de carga",
+	],
+	"Images greater than this size will show a button to load full resolution image." => [
+		0 => "Imágenes de tamaño superior a este mostrarán un botón para cargar la imagen a resolución completa.",
 	],
 	"Enable download button" => [
 		0 => "Habilitar botón de descarga",

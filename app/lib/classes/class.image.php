@@ -45,7 +45,7 @@ class Image {
 				'title',
 				'expiration_date_gmt',
 				'likes',
-				'is_animated'
+				'is_animated',
             ];
 	static $chain_sizes = ['original', 'image', 'medium', 'thumb'];
     
@@ -547,15 +547,11 @@ class Image {
 	
 	public static function upload($source, $destination, $filename=NULL, $options=[], $storage_id=NULL) {
 		
-		$default_options = array(
-			'max_size'		=> G\get_bytes('2 MB'),
-			'filenaming'	=> 'original',
-            'exif'          => TRUE,
-		);
+		$default_options = Upload::getDefaultOptions();
 		
 		$options = array_merge($default_options, $options);
 
-		if(!is_null($filename) and !$options['filenaming']) {
+		if(!is_null($filename) && !$options['filenaming']) {
 			$options['filenaming'] = 'original';
 		}
 		
@@ -715,6 +711,9 @@ class Image {
 			// Filenaming
 			$upload_options['filenaming'] = $filenaming;
 			
+			// Allowed extensions
+			$upload_options['allowed_formats'] = self::getEnabledImageFormats();
+			
 			$image_upload = self::upload($source, $upload_path, $filenaming == 'id' ? encodeID($target_id) : NULL, $upload_options, $storage_id);
 
 			$chain_mask = [0, 1, 0, 1]; // original image medium thumb
@@ -728,9 +727,43 @@ class Image {
 			}
 			
 			// Handle resizing KEEP 'source', change 'uploaded'
+			$image_ratio = $image_upload['uploaded']['fileinfo']['width'] / $image_upload['uploaded']['fileinfo']['height'];
 			$must_resize = FALSE;
+			
+			// This dumb step is to have a failover for 0 values
+			$image_max_size_cfg = [
+				'width'		=> Settings::get('upload_max_image_width') ?: $image_upload['uploaded']['fileinfo']['width'],
+				'height'	=> Settings::get('upload_max_image_height') ?: $image_upload['uploaded']['fileinfo']['height'],
+			];
+			
+			// Is too large? (like my big fat dick...)
+			if($image_max_size_cfg['width'] < $image_upload['uploaded']['fileinfo']['width'] || $image_max_size_cfg['height'] < $image_upload['uploaded']['fileinfo']['height']) {
+				
+				$image_max = $image_max_size_cfg;
+				
+				$image_max['width'] = round($image_max_size_cfg['height'] * $image_ratio);
+				$image_max['height'] = round($image_max_size_cfg['width'] / $image_ratio);
+				
+				if($image_max['height'] > $image_max_size_cfg['height']) {
+					$image_max['height'] = $image_max_size_cfg['height'];
+					$image_max['width'] = round($image_max['height'] * $image_ratio);
+				}
+				
+				if($image_max['width'] > $image_max_size_cfg['width']) {
+					$image_max['width'] = $image_max_size_cfg['width'];
+					$image_max['height'] = round($image_max['width'] / $image_ratio);
+				}
+				
+				if($image_max != $image_max_size_cfg) { // $image_max has FLOAT | $image_max_size_cfg has INT (loose comparision)
+					$must_resize = TRUE;
+					$params['width'] = $image_max['width'];
+					$params['height'] = $image_max['height'];
+				}
+			
+			}
+			
 			foreach(['width', 'height'] as $k) {
-				if(!isset($params[$k]) or !is_numeric($params[$k])) continue;
+				if(!isset($params[$k]) || !is_numeric($params[$k])) continue;
 				if($params[$k] != $image_upload['uploaded']['fileinfo'][$k]) {
 					$must_resize = TRUE;
 				}
@@ -742,7 +775,6 @@ class Image {
 			}
 			
 			if($must_resize) {
-				$image_ratio = $image_upload['uploaded']['fileinfo']['width'] / $image_upload['uploaded']['fileinfo']['height'];
 				if($image_ratio == $params['width']/$params['height']) {
 					$image_resize_options = [
 						'width'		=> $params['width'],
@@ -983,6 +1015,14 @@ class Image {
 		
 	}
 	
+	public static function getEnabledImageFormats() {
+		$formats = explode(',', Settings::get('upload_enabled_image_formats'));
+		if(in_array('jpg', $formats)) {
+			$formats[] = 'jpeg';
+		}
+		return $formats;
+	}
+	
 	public static function resize($source, $destination, $filename=NULL, $options=[]) {
 		try {
 			$resize = new Imageresize;
@@ -1013,6 +1053,7 @@ class Image {
 	
 	public static function insert($image_upload, $values=[]) {
 		try {
+			
 			$table_chv_image = self::$table_chv_image;
 			foreach($table_chv_image as $k => $v) {
 				$table_chv_image[$k] = 'image_' . $v;
@@ -1325,7 +1366,8 @@ class Image {
 		
 		$image['title_truncated'] = G\truncate($image['title'], 28);
 		$image['title_truncated_html'] = G\safe_html($image['title_truncated']);
-        
+		
+		$image['is_use_loader'] = getSetting('image_load_max_filesize_mb') !== '' ? ($image['size'] > G\get_bytes(getSetting('image_load_max_filesize_mb') . 'MB')) : FALSE;
 	}
 	
 	public static function formatArray($dbrow, $safe=false) {

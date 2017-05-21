@@ -3,7 +3,7 @@ Theme Name: Peafowl
 Theme URL: http://chevereto.com/
 Version: 3
 Author: Rodolfo Berrios
-@Chevereto: 3.8.10
+@Chevereto: 3.8.13
 @requires peafowl.css
 */
 
@@ -378,8 +378,10 @@ body.split {
 			.upload-box-queue .uploading .progress-percent {
 				display: block;
 			}
-			
-			.upload-box-queue .uploading.waiting .progress-percent {
+
+			.queue-item.uploading.waiting .progress-percent,
+			.queue-item.uploading .queue-item-button.edit,
+			.queue-item.uploading .block.edit {
 				display: none;
 			}
 			
@@ -532,18 +534,17 @@ body.split {
 .list-item.privacy-public .list-item-privacy {
 	display: none;
 }
-
-.list-item-thumbs li {
-	display: block;
-	height: auto;
-}
-.list-item-thumbs li:last-child {
-	
-}
-	.list-item-thumbs li img {
-		width: 100%;
+.list-item-thumbs {}
+	.list-item-thumbs li,
+	.list-item-thumbs li a {
 		display: block;
+		height: auto;
+		overflow: hidden;
 	}
+		.list-item-thumbs li img {
+			width: 100%;
+			display: block;
+		}
 
 .input-copy {
 	position: relative;
@@ -651,12 +652,14 @@ body.split {
 			display: none;
 		}
 		
-		.unsafe-blur-on .list-item.unsafe .list-item-image .image-container {
+		.unsafe-blur-on .list-item.unsafe .list-item-image .image-container,
+		.unsafe-blur-on .list-item .list-item-thumbs li.unsafe a {
 			filter: blur(5px);
 			-webkit-filter: blur(5px);
 			transform: scale(1.04);
 		}
-		.unsafe-blur-on .list-item.unsafe:hover .list-item-image .image-container {
+		.unsafe-blur-on .list-item.unsafe:hover .list-item-image .image-container,
+		.unsafe-blur-on .list-item:hover .list-item-thumbs li.unsafe a {
 			filter: none;
 			-webkit-filter: none;
 		}

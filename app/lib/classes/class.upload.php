@@ -23,7 +23,8 @@ class Upload {
 	// file => /full/path/to/name.ext
 	// name => name
 	
-	public $source, $uploaded;
+	public $source;
+	public $uploaded;
 	
 	// Sets the type of resource being uploaded
 	public function setType($type) {
@@ -62,10 +63,12 @@ class Upload {
 	}
 	
 	// Default options
-	public function getDefaultOptions() {
+	public static function getDefaultOptions() {
 		return array(
-			'max_size'		=> G\get_bytes('2 MB'),
-			'filenaming'	=> 'original'
+			'max_size'			=> G\get_bytes('2 MB'), // it should be 'max_filesize'
+			'filenaming'		=> 'original',
+			'exif'				=> TRUE,
+			'allowed_formats' 	=> self::getAvailableImageFormats(), // array
 		);
 	}
 	
@@ -75,12 +78,18 @@ class Upload {
 	 */
 	public function exec() {
 		
+		// Merge options
+		$this->options = array_merge(self::getDefaultOptions(), (array) $this->options);
+		
 		$this->validateInput(); // Exception 1
+		
 		$this->fetchSource(); // Exception 2
+		
 		$this->validateSourceFile(); // Exception 3
 		
-		// Merge options
-		$this->options = array_merge($this->getDefaultOptions(), (array) $this->options);
+		if(!is_array($this->options['allowed_formats'])) {
+			$this->options['allowed_formats'] = explode(',', $this->options['allowed_formats']);
+		}
 		
 		// Save the source name
 		$this->source_name = G\get_filename_without_extension($this->type == "url" ? $this->source : $this->source["name"]);
@@ -169,16 +178,15 @@ class Upload {
 		
 	}
 	
+	// Get available (supported) extensions
 	public static function getAvailableImageFormats() {
-		return explode(',', Settings::get('upload_available_image_formats'));
+		$formats = Settings::get('upload_available_image_formats');
+		return explode(',', $formats);
 	}
 	
+	// Failover since v3.8.12
 	public static function getEnabledImageFormats() {
-		$formats = explode(',', Settings::get('upload_enabled_image_formats'));
-		if(in_array('jpg', $formats)) {
-			$formats[] = 'jpeg';
-		}
-		return $formats;
+		return Image::getEnabledImageFormats();
 	}
 	
 	/**
@@ -254,7 +262,7 @@ class Upload {
 		// Set the downstream file		
 		$this->downstream = @tempnam(sys_get_temp_dir(), 'chvtemp');
 		
-		if(!$this->downstream or !@is_writable($this->downstream)) {
+		if(!$this->downstream || !@is_writable($this->downstream)) {
 			$this->downstream = @tempnam($this->destination, 'chvtemp');
 			if(!$this->downstream) {
 				throw new UploadException("Can't get a tempnam", 200);
@@ -348,13 +356,18 @@ class Upload {
 		}
 		
 		// Valid image fileinto?
-		if($this->source_image_fileinfo["width"] == "" or $this->source_image_fileinfo["height"] == "") {
+		if($this->source_image_fileinfo['width'] == '' || $this->source_image_fileinfo['height'] == '') {
 			throw new UploadException("Invalid image", 311);
 		}
 		
-		// Allowed image format?
-		if(!in_array($this->source_image_fileinfo['extension'], self::getEnabledImageFormats())) {
-			throw new UploadException("Invalid image format", 313);
+		// Available image format?
+		if(!in_array($this->source_image_fileinfo['extension'], self::getAvailableImageFormats())) {
+			throw new UploadException("Unavailable image format", 313);
+		}
+		
+		// Enabled image format?
+		if(!in_array($this->source_image_fileinfo['extension'], $this->options['allowed_formats'])) {
+			throw new UploadException(sprintf("Disabled image format (%s)", $this->source_image_fileinfo['extension']), 314);
 		}
 		
 		// Mime

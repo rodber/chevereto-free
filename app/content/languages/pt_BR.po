@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-11-01 14:37+0000\n"
-"PO-Revision-Date: 2016-11-01 14:37+0000\n"
+"POT-Creation-Date: 2017-03-30 16:39+0000\n"
+"PO-Revision-Date: 2017-03-30 16:39+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -129,9 +129,11 @@ msgstr "Não foi possível baixar %s"
 msgid "Can't extract %s"
 msgstr "Não foi possível extrair %s"
 
+#, php-format
 msgid "Can't create %s directory - %e"
 msgstr "Não foi possível criar %s diretório - %e"
 
+#, php-format
 msgid "Can't update %s file - %e"
 msgstr "Não foi possível atualizar o arquivo %s - %e"
 
@@ -201,6 +203,7 @@ msgstr "Envio privado"
 msgid "Upload switched to local storage"
 msgstr "O envio foi alterado para o armazenamento local"
 
+#, php-format
 msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
 msgstr "O sistema foi alterado para o armazenamento local devido a capacidade do disco (%c) no armazenamento externo. A imagem %s foi salva no armazenamento local."
 
@@ -317,6 +320,7 @@ msgstr "Notificação do sistema"
 msgid "Dashboard"
 msgstr "Administração"
 
+#, php-format
 msgid "There is an update available for your system. Go to %s to download and install this update."
 msgstr "Existe uma atualização disponível para o seu sistema, Vá até %s para baixar e instalar a atualização."
 
@@ -330,9 +334,11 @@ msgstr "A base de dados do sistema está desatualizada. É necessário usar a fe
 msgid "Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>."
 msgstr "O site está em modo de manutenção. Para reverter esta configuração vá até a página de <a href=\"%s\">Administração</a>."
 
+#, php-format
 msgid "You should disable PHP error reporting for production enviroment. Go to <a href='%s'>System settings</a> to revert this setting."
 msgstr "Você deve desligar as notificações de erro do PHP. Vá até as<a href='%s'> Configurações do sistema</a> para reverter essa configuração."
 
+#, php-format
 msgid "You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this."
 msgstr "Você não mudou as configurações padrões do e-mail. Vá até as <a href='%s'>Configurações de e-mail</a> para arrumar."
 
@@ -349,9 +355,11 @@ msgstr "Painel de administração"
 msgid "You can apply this update directly from your %a or download it from %s and then manually install it."
 msgstr "Você pode aplicar essa atualização diretamente da sua %a ou baixa-lá da %s e assim instalar manualmente."
 
+#, php-format
 msgid "Chevereto update available (v%s)"
 msgstr "Atualização disponível (v%s)"
 
+#, php-format
 msgid "view on %s"
 msgstr "ver no %s"
 
@@ -604,9 +612,7 @@ msgstr "procurar atualizações"
 msgid "Support"
 msgstr "Suporte"
 
-msgid "Chevereto support"
-msgstr "Suporte"
-
+#, php-format
 msgid "Need help? Go to %s and you will get help quickly."
 msgstr "Precisa de ajuda ? Vá até %s e você vai achar ajuda rapidamente."
 
@@ -724,9 +730,8 @@ msgstr "Ativado"
 msgid "Disabled"
 msgstr "Desativado"
 
-#: ../../../app/routes/route.dashboard.php:193
-msgid "Max. upload size"
-msgstr "Tamanho máximo do envio"
+msgid "Max. upload file size"
+msgstr "Tamanho máximo do arquivo"
 
 #: ../../../app/routes/route.dashboard.php:197
 msgid "Max. post size"
@@ -901,15 +906,19 @@ msgstr "A página foi removida."
 msgid "homepage"
 msgstr "página inicial"
 
+#, php-format
 msgid "Before main title (%s)"
 msgstr "Depois do título principal (%s)"
 
+#, php-format
 msgid "After call to action (%s)"
 msgstr "Depois da Call to action (%s)"
 
+#, php-format
 msgid "After cover (%s)"
 msgstr "Depois da capa (%s)"
 
+#, php-format
 msgid "After listing (%s)"
 msgstr "Depois dos resultados (%s)"
 
@@ -1014,12 +1023,9 @@ msgstr "Idioma inválido"
 msgid "Invalid timezone"
 msgstr "Fuso horário inválido"
 
-#: ../../../app/routes/route.dashboard.php:572
-#: ../../../app/routes/route.dashboard.php:617
-#: ../../../app/routes/route.dashboard.php:794
-#: ../../../app/routes/route.dashboard.php:940
-msgid "Invalid value"
-msgstr "Valor inválido"
+#, php-format
+msgid "Invalid value: %s"
+msgstr "Valor inválido: %s"
 
 #: ../../../app/routes/route.dashboard.php:577
 msgid "Invalid upload storage mode"
@@ -1051,6 +1057,13 @@ msgstr "Opacidade de marca d'água inválido"
 #: ../../../app/routes/route.dashboard.php:612
 msgid "Invalid theme"
 msgstr "Tema inválido"
+
+#: ../../../app/routes/route.dashboard.php:572
+#: ../../../app/routes/route.dashboard.php:617
+#: ../../../app/routes/route.dashboard.php:794
+#: ../../../app/routes/route.dashboard.php:940
+msgid "Invalid value"
+msgstr "Valor inválido"
 
 #: ../../../app/routes/route.dashboard.php:622
 msgid "Invalid theme tone"
@@ -1337,9 +1350,11 @@ msgstr "Papel inválido"
 msgid "Username already being used"
 msgstr "Nome de usuário já está sendo utilizado"
 
+#, php-format
 msgid "Add a password or another social connection before deleting %s"
 msgstr "Adicione uma senha ou outra conexão social antes de apagar %s"
 
+#, php-format
 msgid "Add an email or another social connection before deleting %s"
 msgstr "Adicione um e-mail ou outra conexão social antes de apagar %s"
 
@@ -1547,6 +1562,7 @@ msgstr "Nome de utilizador ou e-mail errado "
 msgid "Settings for %s"
 msgstr "Configurações para %s"
 
+#, php-format
 msgid "You must be at least %s years old to use this website."
 msgstr "Você deve ter ao menos %s anos para usar o site."
 
@@ -1711,6 +1727,7 @@ msgstr "Endereço de email"
 msgid "Username"
 msgstr "Nome de usuário"
 
+#, php-format
 msgid "I'm at least %s years old"
 msgstr "Eu tenho ao menos %s anos"
 
@@ -2764,6 +2781,10 @@ msgstr "Link do álbum"
 msgid "Please read and comply with the following conditions before you continue:"
 msgstr "Por favor, leia e compreenda as seguintes condições antes de você continuar:"
 
+#, php-format
+msgid "This website contains information, links and images of sexually explicit material. If you are under the age of %s, if such material offends you or if it's illegal to view such material in your community please do not continue.\n\nI am at least %s years of age and I believe that as an adult it is my inalienable right to receive/view sexually explicit material. I desire to receive/view sexually explicit material. \n\nI believe that sexual acts between consenting adults are neither offensive nor obscene. The viewing, reading and downloading of sexually explicit materials does not violate the standards of my community, town, city, state or country.\n\nThe sexually explicit material I am viewing is for my own personal use and I will not expose minors to the material.\n\nI am solely responsible for any false disclosures or legal ramifications of viewing, reading or downloading any material in this site. Furthermore this website nor its affiliates will be held responsible for any legal ramifications arising from fraudulent entry into or use of this website.\n\nThis consent screen constitutes a legal agreement between this website and you and/or any business in which you have any legal or equitable interest. If any portion of this agreement is deemed unenforceable by a court of competent jurisdiction it shall not affect the enforceability of the other portions of the agreement."
+msgstr "Este site contém informações, links e imagens de material sexualmente explícito. Se você tem menos de %s anos, se tal material o ofende ou se é ilegal ver esse material na sua comunidade, por favor, não continue.\n\nTenho pelo menos %s anos de idade e acredito que, como adulto, é o meu direito inalienável de receber / ver material sexualmente explícito. Eu desejo receber / ver material sexualmente explícito.\n\nAcredito que os atos sexuais entre adultos consentâneos não são nem ofensivos nem obscenos. A visualização, leitura e download de materiais sexualmente explícitos não viola os padrões da minha comunidade, cidade, cidade, estado ou país.\n\nO material sexualmente explícito que estou vendo é para meu uso pessoal e não vou expor os menores ao material.\n\nEu sou o único responsável por quaisquer divulgações falsas ou ramificações legais de visualização, leitura ou download de qualquer material neste site. Além disso, este site nem suas afiliadas serão responsáveis ​​por quaisquer ramificações legais decorrentes da entrada ou uso fraudulento deste site.\n\nEsta tela de consentimento constitui um acordo legal entre este site e você e / ou qualquer negócio em que você tenha qualquer interesse legal ou equitativo. Se qualquer parte deste contrato for considerada inaplicável por um tribunal de jurisdição competente, não afetará a exequibilidade das outras partes do contrato."
+
 msgid "By clicking in \"I Agree\" you declare that you have read and understood all the conditions mentioned above."
 msgstr "Clicando em \"Eu aceito\" você declara que você leu e entendeu todas as condições mencionadas."
 
@@ -2810,6 +2831,7 @@ msgstr "Esta configuração estará sempre desativada quando você utilizar o mo
 msgid "documentation"
 msgstr "documentação"
 
+#, php-format
 msgid "Learn more about %s at our %d."
 msgstr "Aprenda mais sobre %s em nosso %d."
 
@@ -2979,11 +3001,6 @@ msgstr "Páginas ocultas não serão mostradas em menus do sistema, mas qualquer
 msgid "Only alphanumerics, hyphens and forward slash"
 msgstr "Apenas alfanuméricos, hífens e barra"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:489
-#, php-format
-msgid "Page URL key relative to %s"
-msgstr "URL da página em relação chave para %s"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:493
 msgid "File path"
 msgstr "Caminho de arquivo"
@@ -3114,6 +3131,9 @@ msgstr "Ativar envios expiráveis"
 msgid "Enable this if you want to allow uploads with an automatic delete option."
 msgstr "Ative esta opção se você deseja permitir envios com uma opção de exclusão automática."
 
+msgid "Maximum image size"
+msgstr "Tamanho máximo da imagem"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:661
 #: ../../../app/themes/Peafowl/views/settings.php:183
 msgid "Image Exif data"
@@ -3136,14 +3156,8 @@ msgstr "Dados EXIF da imagem (definição do usuário)"
 msgid "Enable this if you want to allow each user to configure how image Exif data will be handled."
 msgstr "Habilite esta se você quiser permitir que cada usuário configure como imagem de dados EXIF ​​serão tratadas."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:689
-msgid "Max. filesize"
-msgstr "Tamanho máximo do ficheiro"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:692
-#, php-format
-msgid "Max. allowed filesize. (Max allowed by server is %s)"
-msgstr "Tamanho máximo permitido para os envios (Máximo permitido pelo site é %s)"
+msgid "Maximum upload file size"
+msgstr "Tamanho máximo do arquivo para envio"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:695
 msgid "Image path"
@@ -3332,6 +3346,10 @@ msgstr "Opacidade da marca de água"
 msgid "Opacity of the watermark in the final watermarked image. Values 0 to 100."
 msgstr "Opacidade da marca de água na imagem final. Valores de 0 a 100."
 
+msgid "Dashboard > Settings > Website"
+msgstr "Painel > Configurações > Site"
+
+#, php-format
 msgid "Categories won't work when the explorer feature is turned off. To revert this setting go to %s."
 msgstr "As categorias não estão ativas, esta funcionalidade está desativada. Para reverter isso vá até %s."
 
@@ -3882,6 +3900,7 @@ msgstr "Imprimir com registro de erros"
 msgid "Image routing"
 msgstr "Rota da imagem"
 
+#, php-format
 msgid "Routing for %s"
 msgstr "Rota para %s"
 
@@ -4056,6 +4075,10 @@ msgstr "ID de cliente do Google"
 msgid "Google client secret"
 msgstr "Segredo do cliente Google"
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1923
+msgid "You need a <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> for this."
+msgstr "Você precisa de um <a href=\"http://vk.com/dev\" target=\"_blank\">Aplicativo VK</a> para isso."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1928
 msgid "VK client id"
 msgstr "ID do cliente VK"
@@ -4069,19 +4092,13 @@ msgstr "Segredo do cliente VK"
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "Você precisas de uma chave <a href=\"%s\" target=\"_blank\"> reCAPTCHA </a> para isto."
 
+#, php-format
 msgid "%s site key"
 msgstr "%s chave local"
 
+#, php-format
 msgid "%s secret key"
 msgstr "%s chave secreta"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1974
-msgid "reCAPTCHA public key"
-msgstr "Chave pública reCAPTCHA"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1979
-msgid "reCAPTCHA private key"
-msgstr "Chave privada reCAPTCHA"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1986
 msgid "reCAPTCHA threshold"
@@ -4094,12 +4111,14 @@ msgstr "Quantas tentativas falhadas são necessárias para pedir reCAPTCHA ? Use
 msgid "Comments API"
 msgstr "Comentários da API"
 
+#, php-format
 msgid "Disqus API works with %s."
 msgstr "A API do Disqus funciona com %s"
 
 msgid "Disqus shortname"
 msgstr "Nome no Disqus"
 
+#, php-format
 msgid "%s public key"
 msgstr "%s chave pública"
 
@@ -4313,7 +4332,7 @@ msgstr "Aguardando confirmação"
 #: ../../../app/themes/Peafowl/views/settings.php:144
 #: ../../../app/themes/Peafowl/views/signup.php:40
 msgid "%i to %f characters<br>Letters, numbers and \"_\""
-msgstr "%i to %f characters<br>Letters, numbers and \"_\""
+msgstr "%i para %f caracteres<br>Letras, números e \"_\""
 
 #: ../../../app/themes/Peafowl/views/settings.php:166
 msgid "Auto delete uploads"
@@ -4636,12 +4655,9 @@ msgstr "Há uma atualização disponível para o seu sistema. Você pode fazer o
 msgid "Update now"
 msgstr "Atualizar agora"
 
+#, javascript-format
 msgid "Your website is running the latest version of %s"
 msgstr "O seu site está rodando a última versão do %s"
-
-#: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
-msgid "Your website is running the latest version of Chevereto."
-msgstr "Não existem atualizações disponíveis. O seu website já está a rodar a ultima versão."
 
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"

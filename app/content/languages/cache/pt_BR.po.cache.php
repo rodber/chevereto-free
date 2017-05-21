@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-11-01 14:37+0000',
-  'PO-Revision-Date' => '2016-11-01 14:37+0000',
+  'POT-Creation-Date' => '2017-03-30 16:39+0000',
+  'PO-Revision-Date' => '2017-03-30 16:39+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'pt_BR',
@@ -364,9 +364,6 @@ $translation_table = [
 	"Support" => [
 		0 => "Suporte",
 	],
-	"Chevereto support" => [
-		0 => "Suporte",
-	],
 	"Need help? Go to %s and you will get help quickly." => [
 		0 => "Precisa de ajuda ? Vá até %s e você vai achar ajuda rapidamente.",
 	],
@@ -394,8 +391,8 @@ $translation_table = [
 	"Disabled" => [
 		0 => "Desativado",
 	],
-	"Max. upload size" => [
-		0 => "Tamanho máximo do envio",
+	"Max. upload file size" => [
+		0 => "Tamanho máximo do arquivo",
 	],
 	"Max. post size" => [
 		0 => "Tamanho maximo do envio",
@@ -608,8 +605,8 @@ $translation_table = [
 	"Invalid timezone" => [
 		0 => "Fuso horário inválido",
 	],
-	"Invalid value" => [
-		0 => "Valor inválido",
+	"Invalid value: %s" => [
+		0 => "Valor inválido: %s",
 	],
 	"Invalid upload storage mode" => [
 		0 => "Modo de armazenamento do envio inválido",
@@ -634,6 +631,9 @@ $translation_table = [
 	],
 	"Invalid theme" => [
 		0 => "Tema inválido",
+	],
+	"Invalid value" => [
+		0 => "Valor inválido",
 	],
 	"Invalid theme tone" => [
 		0 => "Tom de tema inválido",
@@ -1714,6 +1714,9 @@ $translation_table = [
 	"Please read and comply with the following conditions before you continue:" => [
 		0 => "Por favor, leia e compreenda as seguintes condições antes de você continuar:",
 	],
+	"This website contains information, links and images of sexually explicit material. If you are under the age of %s, if such material offends you or if it's illegal to view such material in your community please do not continue.\n\nI am at least %s years of age and I believe that as an adult it is my inalienable right to receive/view sexually explicit material. I desire to receive/view sexually explicit material. \n\nI believe that sexual acts between consenting adults are neither offensive nor obscene. The viewing, reading and downloading of sexually explicit materials does not violate the standards of my community, town, city, state or country.\n\nThe sexually explicit material I am viewing is for my own personal use and I will not expose minors to the material.\n\nI am solely responsible for any false disclosures or legal ramifications of viewing, reading or downloading any material in this site. Furthermore this website nor its affiliates will be held responsible for any legal ramifications arising from fraudulent entry into or use of this website.\n\nThis consent screen constitutes a legal agreement between this website and you and/or any business in which you have any legal or equitable interest. If any portion of this agreement is deemed unenforceable by a court of competent jurisdiction it shall not affect the enforceability of the other portions of the agreement." => [
+		0 => "Este site contém informações, links e imagens de material sexualmente explícito. Se você tem menos de %s anos, se tal material o ofende ou se é ilegal ver esse material na sua comunidade, por favor, não continue.\n\nTenho pelo menos %s anos de idade e acredito que, como adulto, é o meu direito inalienável de receber / ver material sexualmente explícito. Eu desejo receber / ver material sexualmente explícito.\n\nAcredito que os atos sexuais entre adultos consentâneos não são nem ofensivos nem obscenos. A visualização, leitura e download de materiais sexualmente explícitos não viola os padrões da minha comunidade, cidade, cidade, estado ou país.\n\nO material sexualmente explícito que estou vendo é para meu uso pessoal e não vou expor os menores ao material.\n\nEu sou o único responsável por quaisquer divulgações falsas ou ramificações legais de visualização, leitura ou download de qualquer material neste site. Além disso, este site nem suas afiliadas serão responsáveis ​​por quaisquer ramificações legais decorrentes da entrada ou uso fraudulento deste site.\n\nEsta tela de consentimento constitui um acordo legal entre este site e você e / ou qualquer negócio em que você tenha qualquer interesse legal ou equitativo. Se qualquer parte deste contrato for considerada inaplicável por um tribunal de jurisdição competente, não afetará a exequibilidade das outras partes do contrato.",
+	],
 	"By clicking in \"I Agree\" you declare that you have read and understood all the conditions mentioned above." => [
 		0 => "Clicando em \"Eu aceito\" você declara que você leu e entendeu todas as condições mencionadas.",
 	],
@@ -1869,9 +1872,6 @@ $translation_table = [
 	"Only alphanumerics, hyphens and forward slash" => [
 		0 => "Apenas alfanuméricos, hífens e barra",
 	],
-	"Page URL key relative to %s" => [
-		0 => "URL da página em relação chave para %s",
-	],
 	"File path" => [
 		0 => "Caminho de arquivo",
 	],
@@ -1968,6 +1968,9 @@ $translation_table = [
 	"Enable this if you want to allow uploads with an automatic delete option." => [
 		0 => "Ative esta opção se você deseja permitir envios com uma opção de exclusão automática.",
 	],
+	"Maximum image size" => [
+		0 => "Tamanho máximo da imagem",
+	],
 	"Image Exif data" => [
 		0 => "Dados EXIF da imagem",
 	],
@@ -1983,11 +1986,8 @@ $translation_table = [
 	"Enable this if you want to allow each user to configure how image Exif data will be handled." => [
 		0 => "Habilite esta se você quiser permitir que cada usuário configure como imagem de dados EXIF ​​serão tratadas.",
 	],
-	"Max. filesize" => [
-		0 => "Tamanho máximo do ficheiro",
-	],
-	"Max. allowed filesize. (Max allowed by server is %s)" => [
-		0 => "Tamanho máximo permitido para os envios (Máximo permitido pelo site é %s)",
+	"Maximum upload file size" => [
+		0 => "Tamanho máximo do arquivo para envio",
 	],
 	"Image path" => [
 		0 => "Caminho da imagem",
@@ -2129,6 +2129,9 @@ $translation_table = [
 	],
 	"Opacity of the watermark in the final watermarked image. Values 0 to 100." => [
 		0 => "Opacidade da marca de água na imagem final. Valores de 0 a 100.",
+	],
+	"Dashboard > Settings > Website" => [
+		0 => "Painel > Configurações > Site",
 	],
 	"Categories won't work when the explorer feature is turned off. To revert this setting go to %s." => [
 		0 => "As categorias não estão ativas, esta funcionalidade está desativada. Para reverter isso vá até %s.",
@@ -2670,6 +2673,9 @@ $translation_table = [
 	"Google client secret" => [
 		0 => "Segredo do cliente Google",
 	],
+	"You need a <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> for this." => [
+		0 => "Você precisa de um <a href=\"http://vk.com/dev\" target=\"_blank\">Aplicativo VK</a> para isso.",
+	],
 	"VK client id" => [
 		0 => "ID do cliente VK",
 	],
@@ -2684,12 +2690,6 @@ $translation_table = [
 	],
 	"%s secret key" => [
 		0 => "%s chave secreta",
-	],
-	"reCAPTCHA public key" => [
-		0 => "Chave pública reCAPTCHA",
-	],
-	"reCAPTCHA private key" => [
-		0 => "Chave privada reCAPTCHA",
 	],
 	"reCAPTCHA threshold" => [
 		0 => "Limite do reCAPTCHA",
@@ -2857,7 +2857,7 @@ $translation_table = [
 		0 => "Aguardando confirmação",
 	],
 	"%i to %f characters<br>Letters, numbers and \"_\"" => [
-		0 => "%i to %f characters<br>Letters, numbers and \"_\"",
+		0 => "%i para %f caracteres<br>Letras, números e \"_\"",
 	],
 	"Auto delete uploads" => [
 		0 => "Apagar automaticamente os envios",
@@ -3084,9 +3084,6 @@ $translation_table = [
 	],
 	"Your website is running the latest version of %s" => [
 		0 => "O seu site está rodando a última versão do %s",
-	],
-	"Your website is running the latest version of Chevereto." => [
-		0 => "Não existem atualizações disponíveis. O seu website já está a rodar a ultima versão.",
 	],
 	"Clipboard image" => [
 		0 => "Prancheta",

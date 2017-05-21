@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-01-07 17:18+0000',
-  'PO-Revision-Date' => '2017-01-07 17:18+0000',
+  'POT-Creation-Date' => '2017-03-02 13:40+0000',
+  'PO-Revision-Date' => '2017-03-02 13:40+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'cs',
@@ -411,8 +411,8 @@ $translation_table = [
 	"Disabled" => [
 		0 => "Vypnuto",
 	],
-	"Max. upload size" => [
-		0 => "Max. velikost souborů (upload size)",
+	"Max. upload file size" => [
+		0 => "Max. velikost nahrávaného souboru",
 	],
 	"Max. post size" => [
 		0 => "Max. velikost nahrávání (post size)",
@@ -627,8 +627,8 @@ $translation_table = [
 	"Invalid timezone" => [
 		0 => "Neplatná časová zóna",
 	],
-	"Invalid value" => [
-		0 => "Neplatná hodnota",
+	"Invalid value: %s" => [
+		0 => "Neplatná hodnota: %s",
 	],
 	"Invalid upload storage mode" => [
 		0 => "Neplatný způsob nahrávání do úložiště",
@@ -653,6 +653,9 @@ $translation_table = [
 	],
 	"Invalid theme" => [
 		0 => "Špatná šablona (téma)",
+	],
+	"Invalid value" => [
+		0 => "Neplatná hodnota",
 	],
 	"Invalid theme tone" => [
 		0 => "Neplatný tón šablony.",
@@ -1914,6 +1917,9 @@ $translation_table = [
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Povol pokud chceš umožnit neregistrovaným uživatelům nahrávání.",
 	],
+	"Upload threads" => [
+		0 => "Počet vláken pro nahrávání",
+	],
 	"Number of simultaneous upload threads (parallel uploads)" => [
 		0 => "Počet vláken použitých při nahrávání (souběžné nahrávání více souborů)",
 	],
@@ -1928,6 +1934,12 @@ $translation_table = [
 	],
 	"Enable this if you want to allow uploads with an automatic delete option." => [
 		0 => "Aktivujte tuto funkci, pokud chcete povolit nahrávání s volbou automatického mazání.",
+	],
+	"Maximum image size" => [
+		0 => "Maximální velikost obrázku",
+	],
+	"Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit." => [
+		0 => "Obrázky větší, než je tato velikost budou automaticky zmenšeny. Zadejte nulu (0) pokud chcete zachovat původní velikost obrázku.",
 	],
 	"Image Exif data" => [
 		0 => "Exif data obrázku",
@@ -1944,11 +1956,11 @@ $translation_table = [
 	"Enable this if you want to allow each user to configure how image Exif data will be handled." => [
 		0 => "Povolte, pokud chcete, aby měl každý uživatel možnost nastavit, jak bude nakládáno s EXIF daty obrázku.",
 	],
-	"Max. filesize" => [
-		0 => "Maximální velikost souboru",
+	"Maximum upload file size" => [
+		0 => "Maximální velikost nahrávaného souboru",
 	],
-	"Max. allowed filesize. (Max allowed by server is %s)" => [
-		0 => "Maximální povolená velikost souboru (Maximální povolená velikost na serveru je %s)",
+	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
+		0 => "Maximální velikost povolená serverem je %s. Tato velikost je limitována %u a %p (%f hodnoty).",
 	],
 	"Image path" => [
 		0 => "Cesta k obrázku",
@@ -2355,7 +2367,7 @@ $translation_table = [
 	"Image load max. filesize" => [
 		0 => "Max. velikost obrázku",
 	],
-	"Images greater than this size will show a button to load full resolution image" => [
+	"Images greater than this size will show a button to load full resolution image." => [
 		0 => "U obrázků větších, než je tento rozměr, se zobrazí tlačítko pro načtení obrázku v plném rozlišení",
 	],
 	"Enable download button" => [

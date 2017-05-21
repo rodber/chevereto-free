@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-01-10 20:48+0000\n"
-"PO-Revision-Date: 2017-01-10 20:48+0000\n"
+"POT-Creation-Date: 2017-02-20 20:29+0000\n"
+"PO-Revision-Date: 2017-02-20 20:29+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -10,9 +10,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-
-msgid "Images greater than this size will show a button to load full resolution image."
-msgstr "При просмотре изображений большего размера, будет отображаться кнопка загрузки полной версии."
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -132,9 +129,11 @@ msgstr "Невозможно загрузить %s"
 msgid "Can't extract %s"
 msgstr "Невозможно распаковать %s"
 
+#, php-format
 msgid "Can't create %s directory - %e"
 msgstr "Невозможно создать %s директорию - %e"
 
+#, php-format
 msgid "Can't update %s file - %e"
 msgstr "Невозможно обновить %s файл - %e"
 
@@ -207,6 +206,7 @@ msgstr "Скрытая загрузка"
 msgid "Upload switched to local storage"
 msgstr "Загрузка файлов ведется в локальное хранилище"
 
+#, php-format
 msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
 msgstr "Система переключилась на локальное хранилище из-за нехватки места на диске (%c) в одном или нескольких внешних хранилищах. Изображение %s было сохранено в локальном хранилище."
 
@@ -330,6 +330,7 @@ msgstr "Системное уведомление"
 msgid "Dashboard"
 msgstr "Панель управления"
 
+#, php-format
 msgid "There is an update available for your system. Go to %s to download and install this update."
 msgstr "Для вашей системы доступно обновление. Перейдите на %s, чтобы загрузить и установить его."
 
@@ -343,9 +344,11 @@ msgstr "База данных системы устарела. Пожалуйс�
 msgid "Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>."
 msgstr "Сайт находится в режиме технического обслуживания. Чтобы выйти из этого режима, перейдите в <a href=\"%s\">Панель управления</a>."
 
+#, php-format
 msgid "You should disable PHP error reporting for production enviroment. Go to <a href='%s'>System settings</a> to revert this setting."
 msgstr "Вы должны отключить отображение ошибок PHP при выходе из пробного режима. Перейдите в <a href='%s'>Настройки системы</a>, чтобы применить эту настройку."
 
+#, php-format
 msgid "You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this."
 msgstr "Вы не изменили настройки email по-умолчанию. Перейдите в <a href='%s'>Настройки Email</a>, чтобы исправить это."
 
@@ -362,9 +365,11 @@ msgstr "панель управления"
 msgid "You can apply this update directly from your %a or download it from %s and then manually install it."
 msgstr "Вы можете обновить систему через %a или скачать архив с %s и установить обновление вручную."
 
+#, php-format
 msgid "Chevereto update available (v%s)"
 msgstr "Доступно обновление Chevereto (v%s)"
 
+#, php-format
 msgid "view on %s"
 msgstr "посмотреть на %s"
 
@@ -617,6 +622,7 @@ msgstr "проверить обновления"
 msgid "Support"
 msgstr "Поддержка"
 
+#, php-format
 msgid "Need help? Go to %s and you will get help quickly."
 msgstr "Нужна помощь? Посетите %s и мы быстро поможем вам."
 
@@ -734,8 +740,7 @@ msgstr "Вкл."
 msgid "Disabled"
 msgstr "Выкл."
 
-#: ../../../app/routes/route.dashboard.php:193
-msgid "Max. upload size"
+msgid "Max. upload file size"
 msgstr "Макс. размер файла"
 
 #: ../../../app/routes/route.dashboard.php:197
@@ -915,15 +920,19 @@ msgstr "Страница удалена."
 msgid "homepage"
 msgstr "главная страница"
 
+#, php-format
 msgid "Before main title (%s)"
 msgstr "Перед главным заголовком (%s)"
 
+#, php-format
 msgid "After call to action (%s)"
 msgstr "После кнопки призыва к действию (%s)"
 
+#, php-format
 msgid "After cover (%s)"
 msgstr "После обложки (%s)"
 
+#, php-format
 msgid "After listing (%s)"
 msgstr "После списка изображений (%s)"
 
@@ -1028,12 +1037,9 @@ msgstr "Неверный язык"
 msgid "Invalid timezone"
 msgstr "Неверный часовой пояс"
 
-#: ../../../app/routes/route.dashboard.php:572
-#: ../../../app/routes/route.dashboard.php:617
-#: ../../../app/routes/route.dashboard.php:794
-#: ../../../app/routes/route.dashboard.php:940
-msgid "Invalid value"
-msgstr "Неверное значение"
+#, php-format
+msgid "Invalid value: %s"
+msgstr "Неверное значение: %s"
 
 #: ../../../app/routes/route.dashboard.php:577
 msgid "Invalid upload storage mode"
@@ -1065,6 +1071,13 @@ msgstr "Неверное значение непрозрачности водя�
 #: ../../../app/routes/route.dashboard.php:612
 msgid "Invalid theme"
 msgstr "Неверный стиль"
+
+#: ../../../app/routes/route.dashboard.php:572
+#: ../../../app/routes/route.dashboard.php:617
+#: ../../../app/routes/route.dashboard.php:794
+#: ../../../app/routes/route.dashboard.php:940
+msgid "Invalid value"
+msgstr "Неверное значение"
 
 #: ../../../app/routes/route.dashboard.php:622
 msgid "Invalid theme tone"
@@ -1351,9 +1364,11 @@ msgstr "Неверная роль"
 msgid "Username already being used"
 msgstr "Пользователь с таким именем уже существует."
 
+#, php-format
 msgid "Add a password or another social connection before deleting %s"
 msgstr "Перед удалением %s, добавьте пароль или привяжите другую учетную запись"
 
+#, php-format
 msgid "Add an email or another social connection before deleting %s"
 msgstr "Перед удалением %s, добавьте email или привяжите другую учетную запись"
 
@@ -1561,6 +1576,7 @@ msgstr "Неверное Имя пользователя/Email"
 msgid "Settings for %s"
 msgstr "Настройки %s"
 
+#, php-format
 msgid "You must be at least %s years old to use this website."
 msgstr "Для использования данного сайта вам должно быть как минимум %s лет."
 
@@ -1725,6 +1741,7 @@ msgstr "Адрес электронной почты"
 msgid "Username"
 msgstr "Имя пользователя"
 
+#, php-format
 msgid "I'm at least %s years old"
 msgstr "Мне %s лет или больше."
 
@@ -2796,6 +2813,7 @@ msgstr "Ссылка на альбом"
 msgid "Please read and comply with the following conditions before you continue:"
 msgstr "Прежде чем продолжить, прочтите и согласитесь с условиями ниже:"
 
+#, php-format
 msgid "This website contains information, links and images of sexually explicit material. If you are under the age of %s, if such material offends you or if it's illegal to view such material in your community please do not continue.\n\nI am at least %s years of age and I believe that as an adult it is my inalienable right to receive/view sexually explicit material. I desire to receive/view sexually explicit material. \n\nI believe that sexual acts between consenting adults are neither offensive nor obscene. The viewing, reading and downloading of sexually explicit materials does not violate the standards of my community, town, city, state or country.\n\nThe sexually explicit material I am viewing is for my own personal use and I will not expose minors to the material.\n\nI am solely responsible for any false disclosures or legal ramifications of viewing, reading or downloading any material in this site. Furthermore this website nor its affiliates will be held responsible for any legal ramifications arising from fraudulent entry into or use of this website.\n\nThis consent screen constitutes a legal agreement between this website and you and/or any business in which you have any legal or equitable interest. If any portion of this agreement is deemed unenforceable by a court of competent jurisdiction it shall not affect the enforceability of the other portions of the agreement."
 msgstr "Этот сайт содержит информацию, ссылки и изображения откровенного сексуального характера.  Если Вам еще не исполнилось %s лет, подобный материал запрещен в вашей стране или Вы считаете такой материал оскорбительным, пожалуйста, покиньте сайт.\n\nЯ подтверждаю, что мне исполнилось %s лет и считаю своим правом возможность просматривать материал откровенного сексуального характера.\n\nЯ не считаю добровольный половой акт между партнерами, достигшими совершеннолетия, оскорбительным или непристойным. Просмотр, чтение или загрузка материалов, откровенного сексуального характера не нарушает законы и порядки моего сообщества, города, области или страны.\n\nПросматриваемый мной материал откровенного сексуального характера, предназначен для личного пользования и не предназначен для демонстрации лицам, не достигшим совершеннолетия.\n\nЯ полностью отвечаю за все правовые последствия просмотра, чтения или загрузки материалов с данного сайта. Ни данный сайт, ни его партнеры не будут нести ответственность за неправомерное использование материалов данного сайта.\n\nЭтот документ служит соглашением между данным сайтом и конечным пользователем. В случае если одна из частей данного соглашения признается недействительной в суде, другие части соглашения не теряют юридическую силу."
 
@@ -2847,6 +2865,7 @@ msgstr "Данная настройка всегда выключена, есл�
 msgid "documentation"
 msgstr "документации"
 
+#, php-format
 msgid "Learn more about %s at our %d."
 msgstr "Узнайте больше о %s в %d."
 
@@ -3123,6 +3142,9 @@ msgstr "Гостевые загрузки"
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "Включите, если хотите позволить загружать изображения незарегистрированным пользователям."
 
+msgid "Upload threads"
+msgstr "Потоки загрузки"
+
 msgid "Number of simultaneous upload threads (parallel uploads)"
 msgstr "Количество одновременных (параллельных) загрузок"
 
@@ -3146,6 +3168,12 @@ msgstr "Включить временные загрузки"
 msgid "Enable this if you want to allow uploads with an automatic delete option."
 msgstr "Включите, чтобы разрешить загрузки с указанием срока хранения."
 
+msgid "Maximum image size"
+msgstr "Максимальный размер изображения"
+
+msgid "Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit."
+msgstr "Изображения, размер которых, больше данного лимита, будут автоматически уменьшены. Чтобы не ограничивать максимальный размер изображения, укажите значение ноль(0)."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:661
 #: ../../../app/themes/Peafowl/views/settings.php:183
 msgid "Image Exif data"
@@ -3168,14 +3196,11 @@ msgstr "Данные Exif (пользовательская настройка)"
 msgid "Enable this if you want to allow each user to configure how image Exif data will be handled."
 msgstr "Включите, чтобы разрешить каждому пользователю задавать способ обработки данных Exif."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:689
-msgid "Max. filesize"
-msgstr "Макс. размер файла"
+msgid "Maximum upload file size"
+msgstr "Максимальный размер файла"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:692
-#, php-format
-msgid "Max. allowed filesize. (Max allowed by server is %s)"
-msgstr "Макс. разрешеный размер файла (Ограничение сервера: %s)"
+msgid "Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)."
+msgstr "Ограничение сервера - %s. Это ограничение обусловлено %u и %p (значения %f)."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:695
 msgid "Image path"
@@ -3367,6 +3392,7 @@ msgstr "Прозрачность водяного знака при наложе
 msgid "Dashboard > Settings > Website"
 msgstr "Панель управления > Настройки > Сайт"
 
+#, php-format
 msgid "Categories won't work when the explorer feature is turned off. To revert this setting go to %s."
 msgstr "Категории не будут работать при отключенном обзоре изображений. Чтобы отменить эту настройку перейдите на %s."
 
@@ -3733,6 +3759,9 @@ msgstr "Иконка вашего сайта. Ширина и высота да�
 msgid "Image load max. filesize"
 msgstr "Макс. размер файла в просмотре"
 
+msgid "Images greater than this size will show a button to load full resolution image."
+msgstr "При просмотре изображений большего размера, будет отображаться кнопка загрузки полной версии."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1299
 msgid "Enable download button"
 msgstr "Включить кнопку загрузки"
@@ -3988,12 +4017,14 @@ msgstr "Выводить ошибки с записью в журнал"
 msgid "To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)."
 msgstr "Подробнее об уровнях отладки можно узнать в <a %s>документации</a>. Значение по-умолчанию: \"Записывать в журнал\" (1)."
 
+#, php-format
 msgid "Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes."
 msgstr "Маршрутизация позволяет изменять адреса ресурсов. В качестве имени маршрута можно использовать только цифры, латинские буквы, дефис и нижнее подчеркивание. Посмотрите нашу %s если вы хотите изменить маршрут или добавить новый."
 
 msgid "Image routing"
 msgstr "Маршрутизация изображений"
 
+#, php-format
 msgid "Routing for %s"
 msgstr "Маршрутизация для %s"
 
@@ -4185,9 +4216,11 @@ msgstr "Секретный ключ клиента ВКонтакте"
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "Для этого вам необходим <a href=\"%s\" target=\"_blank\">ключ reCAPTCHA</a>."
 
+#, php-format
 msgid "%s site key"
 msgstr "%s ключ сайта"
 
+#, php-format
 msgid "%s secret key"
 msgstr "%s секретный ключ"
 
@@ -4202,12 +4235,14 @@ msgstr "Через сколько неудачных попыток показы
 msgid "Comments API"
 msgstr "API системы комментариев"
 
+#, php-format
 msgid "Disqus API works with %s."
 msgstr "Disqus API работает с %s."
 
 msgid "Disqus shortname"
 msgstr "Идентификатор Disqus"
 
+#, php-format
 msgid "%s public key"
 msgstr "%s публичный ключ"
 
@@ -4745,6 +4780,7 @@ msgstr "Для Вашей системы доступно обновление. 
 msgid "Update now"
 msgstr "Обновить"
 
+#, javascript-format
 msgid "Your website is running the latest version of %s"
 msgstr "Вы используете последнюю версию Chevereto - %s"
 

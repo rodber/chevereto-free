@@ -145,7 +145,7 @@ namespace G {
         }
         return substr(bin2hex($r), 0, $length);
     }
-	
+
 	/**
 	 * A timing safe equals comparison
 	 *
@@ -295,7 +295,7 @@ namespace G {
 			18 => 'E',
 			15 => 'P',
 			12 => 'T',
-			9 => 'B',
+			9 => 'G',
 			6 => 'M',
 			3 => 'K',
 			0 => NULL
@@ -728,17 +728,17 @@ namespace G {
             return $datetime;
         }
         try {
-            $datetime = new \DateTime($datetime);
+            $DateTime = new \DateTime($datetime);
             if($action=='modify') {
-                $datetime->$action($var);
+                $DateTime->$action($var);
             } else {
-                $interval = dateinterval($var); // With validation
+                $interval = dateinterval($var); // validation
                 if(!$interval) {
                     return $datetime;
                 }
-                $datetime->$action($interval);
+                $DateTime->$action($interval);
             }
-            return $datetime->format('Y-m-d H:i:s');
+            return $DateTime->format('Y-m-d H:i:s');
         } catch(Exception $e) {
             throw new Exception($e->getMessage() . ' in ' . __FUNCTION__ . ' (' . $action . ')', $e->getCode());
         }
@@ -1554,10 +1554,18 @@ namespace G {
 	 * CONDITIONALS
 	 * ---------------------------------------------------------------------
 	 */
-
-	// Check if the value is an integer using regex
-	function is_integer($value) {
-		return !preg_match('/\D/', $value) ? true : false;
+	
+	// Checks if $var is a positive integer using filter_var
+	function is_integer($var, $range=[]) {
+		$options = [];
+		if(!empty($range) && is_array($range)) {
+			foreach(['min', 'max'] as $k) {
+				if(is_int($range[$k])) {
+					$options['options'][$k . '_range'] = $range[$k];
+				}
+			}
+		}
+		return filter_var($var, FILTER_VALIDATE_INT, $options) !== FALSE;
 	}
 
 	// This will tell if the string is an URL

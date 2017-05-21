@@ -124,10 +124,10 @@ class User {
 			}
 			if($user) {
 				return array(
-					'album_id' 			=> null,
-					'album_id_encoded'	=> null,
+					'album_id' 			=> NULL,
+					'album_id_encoded'	=> NULL,
 					'album_name' 		=> _s("%s's images", $user['name_short']),
-					'album_user_id' 	=> $id,
+					'album_user_id' 	=> $user['id'],
 					'album_privacy'		=> 'public',
 					'album_url'			=> $user['url']
 				);

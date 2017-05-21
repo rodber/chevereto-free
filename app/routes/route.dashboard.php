@@ -119,11 +119,8 @@ $route = function($handler) {
 				$system_values = [
 					'chv_version'	=> [
 						'label'		=> _s('Chevereto Free'),
-						'content'	=>  (version_compare($chv_version['files'], $chv_version['db'], '<=') ? $chv_version['files'] : $chv_version['files'] . ' ('.$chv_version['db'].' DB) <a href="'.G\get_base_url('install').'">'._s('install update').'</a>') . ' – <a data-action="check-for-updates">' . _s("check for updates") . '</a>' 
-					],
-					'chv_free'		=> [
-						'label'		=> 'Get more',
-						'content'	=> '<a href="https://chevereto.com/pricing" target="_blank">Upgrade</a> to contribute with Chevereto development and to get more <a href="https://chevereto.com/features" target="_blank">features</a> and support.',
+						'content'	=>  (version_compare($chv_version['files'], $chv_version['db'], '<=') ? $chv_version['files'] : $chv_version['files'] . ' ('.$chv_version['db'].' DB) <a href="'.G\get_base_url('install').'">'._s('install update').'</a>') . ' – <a data-action="check-for-updates">' . _s("check for updates") . '</a>' . '<p>Upgrade to our paid edition to get more features and support <a href="https://chevereto.com/pricing" class="btn btn-capsule default outline">Learn more</a>
+						</p>'
 					],
 					'g_version'		=> [
 						'label'		=> 'G\\',
@@ -154,12 +151,12 @@ $route = function($handler) {
 						'content'	=> ini_get('file_uploads') == 1 ? _s('Enabled') : _s('Disabled')
 					],
 					'max_upload_size' => [
-						'label'		=> _s('Max. upload size'),
+						'label'		=> _s('Max. upload file size'),
 						'content'	=> G\format_bytes(G\get_ini_bytes(ini_get('upload_max_filesize')))
 					],
 					'max_post_size' => [
 						'label'		=> _s('Max. post size'),
-						'content'	=> G\format_bytes(G\get_ini_bytes(ini_get('post_max_size')))
+						'content'	=> ini_get('post_max_size') == 0 ? _s('Unlimited') : G\format_bytes(G\get_ini_bytes(ini_get('post_max_size')))
 					],
 					'max_execution_time' => [
 						'label'		=> _s('Max. execution time'),
@@ -177,12 +174,12 @@ $route = function($handler) {
 				$chevereto_urls = [
 					_s('Support')				=> 'https://chevereto.com/support',
 					_s('Documentation')			=> 'https://chevereto.com/docs',
-					_s('Changelog')				=> 'https://chevereto.com/changelog',
-					_s('Request new features')	=> 'https://chevereto.com/request-new-features',
+					_s('Changelog')	. ' (paid edition)' => 'https://chevereto.com/changelog',
+					_s('Changelog') . ' (free edition)' => 'https://github.com/Chevereto/Chevereto-Free/releases',
 					_s('Bug tracking')			=> 'https://chevereto.com/bug-tracking',
 					_s('Blog')					=> 'https://chevereto.com/blog',
 					_s('Community')				=> 'https://chevereto.com/community',
-					'GitHub' 					=> 'https://github.com/Chevereto',
+					'GitHub' 					=> 'https://github.com/Chevereto/Chevereto-Free',
 				];
 				$chevereto_links = [];
 				foreach($chevereto_urls as $k => $v) {
@@ -265,7 +262,7 @@ $route = function($handler) {
 							$cover_index = $_GET['cover']-1;
 							$homecovers = CHV\getSetting('homepage_cover_images');
 							$cover_target = $homecovers[$cover_index];
-							if(!G\is_integer($_GET['cover']) || $_GET['cover'] == 0 || !isset($cover_target)) {
+							if(!G\is_integer($_GET['cover'], ['min' => 0]) || !isset($cover_target)) {
 								$is_error = TRUE;
 								$error_message = _s('Request denied');
 							}
@@ -451,12 +448,12 @@ $route = function($handler) {
 					$validations = [
 						'website_name'	=>
 							[
-								'validate'	=> $_POST['website_name'] ? true : false,
+								'validate'	=> $_POST['website_name'] ? TRUE : FALSE,
 								'error_msg'	=> _s('Invalid website name')
 							],
 						'default_language'	=>
 							[
-								'validate'	=> CHV\get_available_languages()[$_POST['default_language']] ? true : false,
+								'validate'	=> CHV\get_available_languages()[$_POST['default_language']] ? TRUE : FALSE,
 								'error_msg'	=> _s('Invalid language')
 							],
 						'default_timezone'	=>
@@ -466,13 +463,13 @@ $route = function($handler) {
 							],
 						'listing_items_per_page' =>
 							[
-								'validate'	=> is_numeric($_POST['listing_items_per_page']) and $_POST['listing_items_per_page'] > 0,
-								'error_msg'	=> _s('Invalid value')
+								'validate'	=> G\is_integer($_POST['listing_items_per_page'], ['min' => 1]),
+								'error_msg'	=> _s('Invalid value: %s', $_POST['listing_items_per_page'])
 							],
 						'upload_threads' =>
 							[
-								'validate'	=> filter_var($_POST['upload_threads'], FILTER_VALIDATE_INT) && $_POST['upload_threads'] > 0 && $_POST['upload_threads'] <= 5,
-								'error_msg'	=> _s('Invalid value')
+								'validate'	=> G\is_integer($_POST['upload_threads'], ['min' => 1, 'max' => 5]),
+								'error_msg'	=> _s('Invalid value: %s', $_POST['upload_threads'])
 							],
 						'upload_storage_mode'	=>
 							[
@@ -486,27 +483,27 @@ $route = function($handler) {
 							],
 						'upload_thumb_width'=>
 							[
-								'validate'	=> filter_var($_POST['upload_thumb_width'], FILTER_VALIDATE_INT),
+								'validate'	=> G\is_integer($_POST['upload_thumb_width'], ['min' => 16]),
 								'error_msg'	=> _s('Invalid thumb width')
 							],
 						'upload_thumb_height'=>
 							[
-								'validate'	=> filter_var($_POST['upload_thumb_height'], FILTER_VALIDATE_INT),
+								'validate'	=> G\is_integer($_POST['upload_thumb_height'], ['min' => 16]),
 								'error_msg'	=> _s('Invalid thumb height')
 							],
 						'upload_medium_size'=>
 							[
-								'validate'	=> filter_var($_POST['upload_medium_size'], FILTER_VALIDATE_INT),
+								'validate'	=> G\is_integer($_POST['upload_medium_size'], ['min' => 16]),
 								'error_msg'	=> _s('Invalid medium size')
 							],
 						'watermark_percentage' =>
 							[
-								'validate' 	=> filter_var($_POST['watermark_percentage'], FILTER_VALIDATE_INT) and (1 <= $_POST['watermark_percentage'] && $_POST['watermark_percentage'] <= 100),
+								'validate' 	=> G\is_integer($_POST['watermark_percentage'], ['min' => 1, 'max' => 100]),
 								'error_msg'	=> _s('Invalid watermark percentage')
 							],
 						'watermark_opacity' =>
 							[
-								'validate' 	=> filter_var($_POST['watermark_opacity'], FILTER_VALIDATE_INT) and (1 <= $_POST['watermark_opacity'] && $_POST['watermark_opacity'] <= 100),
+								'validate' 	=> G\is_integer($_POST['watermark_opacity'], ['min' => 0, 'max' => 100]),
 								'error_msg'	=> _s('Invalid watermark opacity')
 							],
 						'theme'	=>
@@ -516,7 +513,7 @@ $route = function($handler) {
 							],
 						'theme_logo_height' =>
 							[
-								'validate'	=> !empty($_POST['theme_logo_height']) ? filter_var($_POST['theme_logo_height'], FILTER_VALIDATE_INT) : TRUE,
+								'validate'	=> !empty($_POST['theme_logo_height']) ? (G\is_integer($_POST['theme_logo_height'], ['min' => 0])) : TRUE,
 								'error_msg'	=> _s('Invalid value')
 							],
 						'theme_tone' =>
@@ -546,7 +543,7 @@ $route = function($handler) {
 							],
 						'theme_home_uids' =>
 							[
-								'validate'	=> !empty($_POST['theme_home_uids']) ? preg_match('/^[0-9]+(,[0-9]+)*$/', $_POST['theme_home_uids']) : true,
+								'validate'	=> !empty($_POST['theme_home_uids']) ? preg_match('/^[0-9]+(,[0-9]+)*$/', $_POST['theme_home_uids']) : TRUE,
 								'error_msg'	=> _s('Invalid user id')
 							],
 						'email_mode'		=>
@@ -571,7 +568,7 @@ $route = function($handler) {
 							],
 						'website_mode_personal_uid' =>
 							[
-								'validate'	=> $_POST['website_mode'] == 'personal' ? filter_var($_POST['website_mode_personal_uid'], FILTER_VALIDATE_INT) : TRUE,
+								'validate'	=> $_POST['website_mode'] == 'personal' ? (G\is_integer($_POST['website_mode_personal_uid'], ['min' => 0])) : TRUE,
 								'error_msg'	=> _s('Invalid personal mode user ID')
 							],
 						'website_mode_personal_routing' =>
@@ -657,7 +654,7 @@ $route = function($handler) {
 							],
 						'user_minimum_age' =>
 							[
-								'validate'	=> filter_var($_POST['user_minimum_age'], FILTER_VALIDATE_INT) || $_POST['user_minimum_age'] == 0,
+								'validate'	=> $_POST['user_minimum_age'] !== '' ? G\is_integer($_POST['user_minimum_age'], ['min' => 0]) : TRUE,
 								'error_msg'	=> _s('Invalid user minimum age')
 							],
 						'route_image' =>
@@ -672,9 +669,19 @@ $route = function($handler) {
 							],
 						'image_load_max_filesize_mb' =>
 							[
-								'validate'	=> filter_var($_POST['image_load_max_filesize_mb'], FILTER_VALIDATE_INT),
-								'error_msg'	=> _s('Invalid value')
-							]
+								'validate'	=> $_POST['image_load_max_filesize_mb'] !== '' ? G\is_integer($_POST['image_load_max_filesize_mb'], ['min' => 0]) : TRUE,
+								'error_msg'	=> _s('Invalid value: %s', $_POST['image_load_max_filesize_mb'])
+							],
+						'upload_max_image_width' =>
+							[
+								'validate'	=> G\is_integer($_POST['upload_max_image_width'], ['min' => 0]),
+								'error_msg'	=> _s('Invalid value: %s', $_POST['upload_max_image_width'])
+							],
+						'upload_max_image_height' =>
+							[
+								'validate'	=> G\is_integer($_POST['upload_max_image_height'], ['min' => 0]),
+								'error_msg'	=> _s('Invalid value: %s', $_POST['upload_max_image_height'])
+							],
 					];
 					
 					// Detect funny stuff					
@@ -720,8 +727,8 @@ $route = function($handler) {
 							if(!is_numeric($_POST[$k]) or $_POST[$k] == 0) {
 								$error_max_filesize = _s('Invalid value');
 							} else {
-								if(G\get_bytes($_POST[$k].'mb') > G\get_ini_bytes(ini_get('upload_max_filesize'))) {
-									$error_max_filesize = _s('Max. allowed %s', G\format_bytes(G\get_ini_bytes(ini_get('upload_max_filesize'))));
+								if(G\get_bytes($_POST[$k].'MB') > CHV\Settings::get('true_upload_max_filesize')) {
+									$error_max_filesize = _s('Max. allowed %s', G\format_bytes(CHV\Settings::get('true_upload_max_filesize')));
 								}
 							}
 							$validations[$k] = ['validate' => isset($error_max_filesize) ? false : true, 'error_msg' => $error_max_filesize];
@@ -1035,39 +1042,37 @@ $route = function($handler) {
 							
 							$update_settings = [];
 							foreach(CHV\getSettings() as $k => $v) {
-								if(isset($_POST[$k]) and $_POST[$k] != (is_bool(CHV\getSetting($k)) ? (CHV\getSetting($k) ? 1 : 0) : CHV\getSetting($k))) {
-									$update_settings[] = ['name' => $k, 'value' => $_POST[$k]];
+								if(isset($_POST[$k]) && $_POST[$k] != (is_bool(CHV\getSetting($k)) ? (CHV\getSetting($k) ? 1 : 0) : CHV\getSetting($k))) {
+									$update_settings[$k] = $_POST[$k];
 								}
 							}
-							$db = CHV\DB::getInstance();
-							$db->beginTransaction();
-							$db->query('UPDATE ' . CHV\DB::getTable('settings') . ' SET setting_value = :value WHERE setting_name = :name');
-							foreach($update_settings as $k => $v) {
-								$db->bind(':name', $v['name']);
-								$db->bind(':value', $v['value'] ?: NULL);
-								$db->exec();
-							}
-							if($db->endTransaction()) {
-								$is_changed = TRUE;
-								$reset_notices = FALSE;
-								$settings_to_vars = [
-									'website_doctitle' => 'doctitle',
-									'website_description' => 'meta_description',
-									'website_keywords'=> 'meta_keywords'
-								];
-								foreach($update_settings as $k => $v) {
-									CHV\Settings::setValue($v['name'], $v['value']);
-									if($v['name'] == 'maintenance') {
-										$reset_notices = true;
+							
+							if (!empty($update_settings)) {
+								
+								$update = CHV\Settings::update($update_settings);
+
+								if($update) {
+									$is_changed = TRUE;
+									$reset_notices = FALSE;
+									$settings_to_vars = [
+										'website_doctitle' => 'doctitle',
+										'website_description' => 'meta_description',
+										'website_keywords'=> 'meta_keywords'
+									];
+									foreach($update_settings as $k => $v) {
+										if($k == 'maintenance') {
+											$reset_notices = true;
+										}
+										if(array_key_exists($k, $settings_to_vars)) {
+											$handler::setVar($settings_to_vars[$k], CHV\getSetting($k));
+										}
 									}
-									if(array_key_exists($v['name'], $settings_to_vars)) {
-										$handler::setVar($settings_to_vars[$v['name']], CHV\getSetting($v['name']));
+									if($reset_notices) {
+										$system_notices = CHV\getSystemNotices();
+										$handler::setVar('system_notices', $system_notices);
 									}
 								}
-								if($reset_notices) {
-									$system_notices = CHV\getSystemNotices();
-									$handler::setVar('system_notices', $system_notices);
-								}
+							
 							}
 							
 						}

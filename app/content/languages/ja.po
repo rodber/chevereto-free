@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-01-10 20:48+0000\n"
-"PO-Revision-Date: 2017-01-10 20:48+0000\n"
+"POT-Creation-Date: 2017-02-20 20:29+0000\n"
+"PO-Revision-Date: 2017-02-20 20:29+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -10,9 +10,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-msgid "Images greater than this size will show a button to load full resolution image."
-msgstr "このファイルサイズを超えたものは、オリジナル画像表示用のボタンが表示されます。"
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -132,9 +129,11 @@ msgstr "%s をダウンロードできません。"
 msgid "Can't extract %s"
 msgstr "%s を抽出できません。"
 
+#, php-format
 msgid "Can't create %s directory - %e"
 msgstr "%sディレクトリを作成できません - %e"
 
+#, php-format
 msgid "Can't update %s file - %e"
 msgstr "%sファイルを更新できません - %e"
 
@@ -201,6 +200,7 @@ msgstr "非公開アップロード"
 msgid "Upload switched to local storage"
 msgstr "アップロード先がローカルストレージに変更されました。"
 
+#, php-format
 msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
 msgstr "外部ストレージサーバのディスクの空き容量が十分にない(%c)ため、システムは自動的にローカルストレージへの保存に変更しました。画像 %s はローカルストレージに配置されています。"
 
@@ -310,6 +310,7 @@ msgstr "システム通知"
 msgid "Dashboard"
 msgstr "ダッシュボード"
 
+#, php-format
 msgid "There is an update available for your system. Go to %s to download and install this update."
 msgstr "適用できるアップデートがあります。%sからダウンロード後インストールしてください。"
 
@@ -323,9 +324,11 @@ msgstr "システム用データベースが更新されていません。 <a hr
 msgid "Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>."
 msgstr "Webサイトは現在メンテナンスモードです。 通常モードへ復帰させるためには <a href=\"%s\">ダッシュボード > 設定</a>画面で行います。"
 
+#, php-format
 msgid "You should disable PHP error reporting for production enviroment. Go to <a href='%s'>System settings</a> to revert this setting."
 msgstr "実機環境として運用される場合はPHPのエラーレポートを無効にするべきです。<a href='%s'>システム設定</a>からこの設定を変更してください。"
 
+#, php-format
 msgid "You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this."
 msgstr "デフォルトのメール設定を変更していません。<a href='%s'>メール設定</a>から修正してください。"
 
@@ -342,9 +345,11 @@ msgstr "管理者用ダッシュボード"
 msgid "You can apply this update directly from your %a or download it from %s and then manually install it."
 msgstr "%aから直接アップデート・ダウンロードは出来ません。%sより手動でインストールしてください。"
 
+#, php-format
 msgid "Chevereto update available (v%s)"
 msgstr "Cheveretoのアップデート(%s)があります。"
 
+#, php-format
 msgid "view on %s"
 msgstr "%sとして表示"
 
@@ -597,6 +602,7 @@ msgstr "アップデートのチェック"
 msgid "Support"
 msgstr "サポート"
 
+#, php-format
 msgid "Need help? Go to %s and you will get help quickly."
 msgstr "ヘルプが必要な方は、 %s まで。"
 
@@ -714,9 +720,8 @@ msgstr "有効"
 msgid "Disabled"
 msgstr "無効化"
 
-#: ../../../app/routes/route.dashboard.php:193
-msgid "Max. upload size"
-msgstr "最大アップロードサイズ"
+msgid "Max. upload file size"
+msgstr "アップロードファイルの最大サイズ"
 
 #: ../../../app/routes/route.dashboard.php:197
 msgid "Max. post size"
@@ -893,15 +898,19 @@ msgstr "ページは削除されました。"
 msgid "homepage"
 msgstr "ホームページ"
 
+#, php-format
 msgid "Before main title (%s)"
 msgstr "メインタイトル前 (%s)"
 
+#, php-format
 msgid "After call to action (%s)"
 msgstr "アクション呼び出し後 (%s)"
 
+#, php-format
 msgid "After cover (%s)"
 msgstr "カバーの後 (%s)"
 
+#, php-format
 msgid "After listing (%s)"
 msgstr "リストの後 (%s)"
 
@@ -1006,12 +1015,9 @@ msgstr "無効な言語"
 msgid "Invalid timezone"
 msgstr "無効なタイムゾーン"
 
-#: ../../../app/routes/route.dashboard.php:572
-#: ../../../app/routes/route.dashboard.php:617
-#: ../../../app/routes/route.dashboard.php:794
-#: ../../../app/routes/route.dashboard.php:940
-msgid "Invalid value"
-msgstr "無効な値"
+#, php-format
+msgid "Invalid value: %s"
+msgstr "不正な値: %s"
 
 #: ../../../app/routes/route.dashboard.php:577
 msgid "Invalid upload storage mode"
@@ -1043,6 +1049,13 @@ msgstr "透かしの不透明度の値が不正です。"
 #: ../../../app/routes/route.dashboard.php:612
 msgid "Invalid theme"
 msgstr "有効なテーマではありません。"
+
+#: ../../../app/routes/route.dashboard.php:572
+#: ../../../app/routes/route.dashboard.php:617
+#: ../../../app/routes/route.dashboard.php:794
+#: ../../../app/routes/route.dashboard.php:940
+msgid "Invalid value"
+msgstr "無効な値"
 
 #: ../../../app/routes/route.dashboard.php:622
 msgid "Invalid theme tone"
@@ -1329,9 +1342,11 @@ msgstr "無効な権限です。"
 msgid "Username already being used"
 msgstr "ユーザ名は既に使用されています。"
 
+#, php-format
 msgid "Add a password or another social connection before deleting %s"
 msgstr "%sを削除する前に、パスワードを追加するか他のソーシャルアカウントを接続してください。"
 
+#, php-format
 msgid "Add an email or another social connection before deleting %s"
 msgstr "%sを削除する前に、メールアドレスを追加するか他のソーシャルアカウントを接続してください。"
 
@@ -1539,6 +1554,7 @@ msgstr "ユーザ名/電子メールアドレスが有効な値ではありま�
 msgid "Settings for %s"
 msgstr "%sの設定"
 
+#, php-format
 msgid "You must be at least %s years old to use this website."
 msgstr "このサイトを利用するには、あなたが%s歳以上である必要があります。"
 
@@ -1703,6 +1719,7 @@ msgstr "メールアドレス"
 msgid "Username"
 msgstr "ユーザ名"
 
+#, php-format
 msgid "I'm at least %s years old"
 msgstr "私は%s歳以上です。"
 
@@ -2770,6 +2787,7 @@ msgstr "アルバムへのリンク"
 msgid "Please read and comply with the following conditions before you continue:"
 msgstr "続行する前に次の利用規約をお読みになり同意いただく必要があります："
 
+#, php-format
 msgid "This website contains information, links and images of sexually explicit material. If you are under the age of %s, if such material offends you or if it's illegal to view such material in your community please do not continue.\n\nI am at least %s years of age and I believe that as an adult it is my inalienable right to receive/view sexually explicit material. I desire to receive/view sexually explicit material. \n\nI believe that sexual acts between consenting adults are neither offensive nor obscene. The viewing, reading and downloading of sexually explicit materials does not violate the standards of my community, town, city, state or country.\n\nThe sexually explicit material I am viewing is for my own personal use and I will not expose minors to the material.\n\nI am solely responsible for any false disclosures or legal ramifications of viewing, reading or downloading any material in this site. Furthermore this website nor its affiliates will be held responsible for any legal ramifications arising from fraudulent entry into or use of this website.\n\nThis consent screen constitutes a legal agreement between this website and you and/or any business in which you have any legal or equitable interest. If any portion of this agreement is deemed unenforceable by a court of competent jurisdiction it shall not affect the enforceability of the other portions of the agreement."
 msgstr "このサイトには、性的な情報、リンク、画像があります。あなたが %s歳以下の場合、あなたの国で、この先にある情報を見ることは法律に違反します。\n\nこれ先に進むことは許されません。\n\n私は、%s歳以上で、性的な情報に触れたり・見ることが出来る権利をもった、法的に成人と見なされると思います。私は、自分の意思で、この先に進みます。\n\n私は、相手を不快にさせたり侮辱したりしない常識のある成人です。性的な情報・画像などを、見たり、読んだり、ダウンロードすることが、私の国の法律や市町村の条例には違反しません。\n\n性的なものを見ることは個人的な目的であり、そのような情報から保護されている未成年ではありません。\n\nこのサイトにある情報を、見たり、読んだり、ダウンロードしたことによる如何なる影響、開示されている情報に間違いがあった場合でも、全て個人の責任として受け入れます。私が、このサイトをしようしたことによる如何なる損害・損失もサイト提供者・アフィリエイターが負わないことろ理解しています。\n\nこの同意画面は、このウェブサイトおよびあなたと/またはあなたが法的または慣習上の利害関係を持っている全てのものとの間に交わされる法的な合意です。本契約のいずれかの部分が管轄裁判所によって執行不能と見なされた場合においても、契約書の他の部分の執行性に影響を与えないものとします。"
 
@@ -2817,6 +2835,7 @@ msgstr "この設定は個人Webサイトモードを利用している時は常
 msgid "documentation"
 msgstr "ドキュメント"
 
+#, php-format
 msgid "Learn more about %s at our %d."
 msgstr "%sについての詳細は、 %dから。"
 
@@ -3093,6 +3112,9 @@ msgstr "ゲストとしてアップロード"
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "未登録ユーザのアップロードを許可するときに有効にしてください。"
 
+msgid "Upload threads"
+msgstr "アップロードスレッド数"
+
 msgid "Number of simultaneous upload threads (parallel uploads)"
 msgstr "同時アップロードのスレッド数(平行して動じにアップロード)"
 
@@ -3116,6 +3138,12 @@ msgstr "期限付きアップロードを有効にする"
 msgid "Enable this if you want to allow uploads with an automatic delete option."
 msgstr "画像の自動削除を付加したアップロードを有効にするにはこの設定を有効にしてください。"
 
+msgid "Maximum image size"
+msgstr "最大画像サイズ"
+
+msgid "Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit."
+msgstr "このサイズより大きなサイズは自動的にサイズを縮小されます。無制限サイズを選択される場合には「ゼロ」を指定してください。"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:661
 #: ../../../app/themes/Peafowl/views/settings.php:183
 msgid "Image Exif data"
@@ -3138,14 +3166,11 @@ msgstr "画像のExifデータ（ユーザー設定）"
 msgid "Enable this if you want to allow each user to configure how image Exif data will be handled."
 msgstr "画像のExifデータをユーザー毎に設定を許可する場合はこの設定を有効にしてください。"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:689
-msgid "Max. filesize"
-msgstr "最大ファイルサイズ"
+msgid "Maximum upload file size"
+msgstr "最大アップロードファイルサイズ"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:692
-#, php-format
-msgid "Max. allowed filesize. (Max allowed by server is %s)"
-msgstr "最大ファイルサイズ (サーバーの許可容量は%s)"
+msgid "Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)."
+msgstr "サーバーが許可している最大サイズは、%sです。この制限は、%u、%p(%f)によって行われたものです。"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:695
 msgid "Image path"
@@ -3337,6 +3362,7 @@ msgstr "最終の透かし画像の透明度。値は0から100で入力して�
 msgid "Dashboard > Settings > Website"
 msgstr "ダッシュボード＞設定＞Webサイト"
 
+#, php-format
 msgid "Categories won't work when the explorer feature is turned off. To revert this setting go to %s."
 msgstr "カテゴリーは”探索”機能が無効になっている状態だと動作しません。この設定を戻すには%sに移動してください。"
 
@@ -3703,6 +3729,9 @@ msgstr "faviconは高さと幅が同じでないといけません。"
 msgid "Image load max. filesize"
 msgstr "画像の最大ファイルサイズ"
 
+msgid "Images greater than this size will show a button to load full resolution image."
+msgstr "このファイルサイズを超えたものは、オリジナル画像表示用のボタンが表示されます。"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1299
 msgid "Enable download button"
 msgstr "ダウンロードボタンを有効にする"
@@ -3958,12 +3987,14 @@ msgstr "エラー表示(ログを含む)"
 msgid "To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)."
 msgstr "デバッグレベルの設定は <a %s>debug documentation</a>を確認してください。 ディフォルトは \"Error log\" (1)です。"
 
+#, php-format
 msgid "Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes."
 msgstr "ルーティングは、既定のルートに直ちに反映されます。英数字、ハイフン、アンダースコアのみ有効です。ルートの新規追加、更新は、%sを確認してください。"
 
 msgid "Image routing"
 msgstr "画像ルーティング"
 
+#, php-format
 msgid "Routing for %s"
 msgstr "%sへのルート"
 
@@ -4155,9 +4186,11 @@ msgstr "VKクライアントシークレットキー"
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "画像認証を使用するためには、<a href=\"%s\" target=\"_blank\">reCAPTCHA キー</a>が必要です。"
 
+#, php-format
 msgid "%s site key"
 msgstr "%s サイトキー"
 
+#, php-format
 msgid "%s secret key"
 msgstr "%s シークレットキー"
 
@@ -4172,12 +4205,14 @@ msgstr "何回の失敗でreCAPTCHAを有効にしますか？ゼロ(0)だと常
 msgid "Comments API"
 msgstr "コメントAPI"
 
+#, php-format
 msgid "Disqus API works with %s."
-msgstr "%s　でDisqus APIが動作しあｍす。"
+msgstr "%s　でDisqus APIが動作します。"
 
 msgid "Disqus shortname"
-msgstr "Disqus shortname"
+msgstr "Disqus ショートネーム"
 
+#, php-format
 msgid "%s public key"
 msgstr "%s パブリックキー"
 
@@ -4713,6 +4748,7 @@ msgstr "このシステムで利用可能な更新が存在します。このア
 msgid "Update now"
 msgstr "今すぐ更新する"
 
+#, javascript-format
 msgid "Your website is running the latest version of %s"
 msgstr "あなたのサイトは、バージョン:%sで最新版です。"
 

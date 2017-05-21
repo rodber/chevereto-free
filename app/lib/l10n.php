@@ -22,7 +22,7 @@ if(!defined('access') or !access) die('This file cannot be directly accessed.');
 // Gettext with parsed arguments
 function _s($msg, $args=NULL) {
 	$msg = CHV\L10n::gettext($msg);
-	if($msg and $args) {
+	if($msg && !is_null($args)) {
 		$fn = is_array($args) ? 'strtr' : 'sprintf';
 		$msg = $fn($msg, $args);
 	}

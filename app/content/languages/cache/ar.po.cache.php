@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-08-14 03:30+0000',
-  'PO-Revision-Date' => '2016-08-14 03:30+0000',
+  'POT-Creation-Date' => '2017-03-30 16:39+0000',
+  'PO-Revision-Date' => '2017-03-30 16:39+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ar',
@@ -170,12 +170,6 @@ $translation_table = [
 		3 => "خانة فارغة",
 		4 => "خانة فارغة",
 		5 => "صور",
-	],
-	"%u liked your %t %c" => [
-		0 => "%u أعجب ب %t %c",
-	],
-	"%u is now following you" => [
-		0 => "%u الأن يتابعك",
 	],
 	"Can't create %s destination dir" => [
 		0 => "لايمكن إنشاء وجهة دليل %s",
@@ -374,6 +368,9 @@ $translation_table = [
 	"Share" => [
 		0 => "مشاركة",
 	],
+	"Embed codes" => [
+		0 => "إضافة اكواد",
+	],
 	"Full info" => [
 		0 => "المعلومات الكاملة",
 	],
@@ -404,6 +401,9 @@ $translation_table = [
 	"check for updates" => [
 		0 => "التحقق من التحديث",
 	],
+	"Support" => [
+		0 => "الدعم",
+	],
 	"PHP version" => [
 		0 => "نسخة PHP",
 	],
@@ -428,9 +428,6 @@ $translation_table = [
 	"Disabled" => [
 		0 => "معطل",
 	],
-	"Max. upload size" => [
-		0 => "الحجم الأقصى للرفع",
-	],
 	"Max. post size" => [
 		0 => "الحجم الأقصى للتخزين",
 	],
@@ -447,6 +444,12 @@ $translation_table = [
 	],
 	"Memory limit" => [
 		0 => "حدود الذاكرة",
+	],
+	"Links" => [
+		0 => "روابط",
+	],
+	"Blog" => [
+		0 => "المدونة",
 	],
 	"Website" => [
 		0 => "الموقع",
@@ -541,14 +544,8 @@ $translation_table = [
 	"The page has been deleted." => [
 		0 => "تم مسح الصفحة",
 	],
-	"Before cover (homepage)" => [
-		0 => "قبل الغطاء (الصفحة الرئيسية)",
-	],
-	"After cover (homepage)" => [
-		0 => "بعد الغطاء (الصفحة الرئيسية)",
-	],
-	"After listing (homepage)" => [
-		0 => "بعد القوائم (الصفحة الرئيسية)",
+	"homepage" => [
+		0 => "الصفحة الرئيسية",
 	],
 	"Before pagination" => [
 		0 => "قبل ترقيم الصفحات",
@@ -625,9 +622,6 @@ $translation_table = [
 	"Invalid timezone" => [
 		0 => "التوقيت غير صالح",
 	],
-	"Invalid value" => [
-		0 => "القيمة غير صالح",
-	],
 	"Invalid upload storage mode" => [
 		0 => "وضع التخزين الخاص بالتحميل غير صالح",
 	],
@@ -651,6 +645,9 @@ $translation_table = [
 	],
 	"Invalid theme" => [
 		0 => "سمة غير صحيحة",
+	],
+	"Invalid value" => [
+		0 => "القيمة غير صالح",
 	],
 	"Invalid theme tone" => [
 		0 => "اسلوب غير صحيح",
@@ -787,9 +784,6 @@ $translation_table = [
 	"About" => [
 		0 => "عن",
 	],
-	"Embed codes" => [
-		0 => "إضافة اكواد",
-	],
 	"Image ID" => [
 		0 => "رقم هوية الصورة",
 	],
@@ -888,6 +882,12 @@ $translation_table = [
 	],
 	"Content disliked" => [
 		0 => "محتوى تم إلغاء الإعجاب به",
+	],
+	"%u liked your %t %c" => [
+		0 => "%u أعجب ب %t %c",
+	],
+	"%u is now following you" => [
+		0 => "%u الأن يتابعك",
 	],
 	"Wrong Username/Email password combination" => [
 		0 => "بريد إلكتروني\\اسم مستخدم  أو كلمة مرور خاطئة",
@@ -1269,9 +1269,6 @@ $translation_table = [
 		4 => "خانة فارغة",
 		5 => "ألبومات",
 	],
-	"Links" => [
-		0 => "روابط",
-	],
 	"Viewer links" => [
 		0 => "روابط المشاهد",
 	],
@@ -1556,12 +1553,6 @@ $translation_table = [
 	"Load more" => [
 		0 => "عرض المزيد",
 	],
-	"Previous" => [
-		0 => "السابق",
-	],
-	"Next" => [
-		0 => "التالي",
-	],
 	"Select all" => [
 		0 => "تحديد الكل",
 	],
@@ -1794,6 +1785,9 @@ $translation_table = [
 	"This setting is always diabled when using personal website mode." => [
 		0 => "دائما تعطيل هذا الإعداد عند استخدام وضع موقع شخصي.",
 	],
+	"documentation" => [
+		0 => "التوثيق",
+	],
 	"Add category" => [
 		0 => "اضافة فئة",
 	],
@@ -1914,9 +1908,6 @@ $translation_table = [
 	"Only alphanumerics, hyphens and forward slash" => [
 		0 => "مسموح فقط فالأبجدية الرقمية والواصلات والخطوط المائلة إلى الأمام",
 	],
-	"Page URL key relative to %s" => [
-		0 => "مفتاح رابط الصفحة مرتبط بـ%s",
-	],
 	"File path" => [
 		0 => "مسار الملف",
 	],
@@ -2018,12 +2009,6 @@ $translation_table = [
 	],
 	"Enable this if you want to allow each user to configure how image Exif data will be handled." => [
 		0 => "تفعيل هذا إذا اردت ان تسمح لكل مستخدم بضبط كيفية إدارة بيانات الصورة الوصفية.",
-	],
-	"Max. filesize" => [
-		0 => "الحجم الأقصى للملف",
-	],
-	"Max. allowed filesize. (Max allowed by server is %s)" => [
-		0 => "الحجم الأقصى المسموح للملف. (الحد الأقصى الذي يسمج به السيرفر هو %s)",
 	],
 	"Image path" => [
 		0 => "مسار الصورة",
@@ -2565,8 +2550,11 @@ $translation_table = [
 	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
 		0 => "قائمة مفصولة بفصلة لهويات المستخدمين لإظهار الصور على الصفحة الرئيسية . اتركها فارغة لعرض كل الصور الحديثة .",
 	],
-	"Here you can set the codes for the predefined ad spaces." => [
-		0 => "هنا يمكنك اضافة رموز (code) لمساحات إعلانية محددة مسبقا.",
+	"Display available updates notification" => [
+		0 => "عرض إشعارات التحديثات المتاحة.",
+	],
+	"Enable this to show a notice on top warning you about new available system updates." => [
+		0 => "تمكين هذا لعرض ملحوظة فى الأعلى تنبه على التحديثات الجديدة المتاحة للنظام .",
 	],
 	"Minify code" => [
 		0 => "رمز التصغير",
@@ -2579,12 +2567,6 @@ $translation_table = [
 	],
 	"When enabled the website will show a maintenance message. This setting doesn't affect administrators." => [
 		0 => "عند التمكين , يقوم الموقع بإظهار رسالة الصيانة . هذا الإعداد لايؤثر على الإداريين فى الموقع",
-	],
-	"Display available updates notification" => [
-		0 => "عرض إشعارات التحديثات المتاحة.",
-	],
-	"Enable this to show a notice on top warning you about new available system updates." => [
-		0 => "تمكين هذا لعرض ملحوظة فى الأعلى تنبه على التحديثات الجديدة المتاحة للنظام .",
 	],
 	"Crypt salt" => [
 		0 => "التشفير المتقدم",
@@ -2615,9 +2597,6 @@ $translation_table = [
 	],
 	"To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)." => [
 		0 => "لضبط مستوى تصحيح الخطأ اختر <a %s> توثيق تصحيح الخطأ </a>. المستوى الافتراضى هو \" قائمة الخطأ\" (1).",
-	],
-	"documentation" => [
-		0 => "التوثيق",
 	],
 	"Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes." => [
 		0 => "التوجيه يسمح لك بتخصيص مسارات افتراضية سريعا. يسمح فقط بالأبجدية الرقمية, والواصلة والرموز السفلية فقط. الق نظرة على %s الخاص بنا إذا اردت تخطى أو إضافة طرق جديدة .",
@@ -2757,17 +2736,8 @@ $translation_table = [
 	"VK client secret" => [
 		0 => "الرمز السري لمستخدم VK",
 	],
-	"CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s." => [
-		0 => "CDN يسمح لك بإفراغ محتوى ثابت إلى عدة خوادم لجعل موقع الويب الخاص بك أسرع. إذا لم يكن لديك CDN عليك أن تحاول %s .",
-	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "تحتاج <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> لتفعيل هذا الخيار.",
-	],
-	"reCAPTCHA public key" => [
-		0 => "المفتاح العام لمكون صورة التحقق",
-	],
-	"reCAPTCHA private key" => [
-		0 => "المفتاح الخاص لمكون reCAPTCHA",
 	],
 	"reCAPTCHA threshold" => [
 		0 => "بداية reCAPTCHA",
@@ -3145,9 +3115,6 @@ $translation_table = [
 	],
 	"Update now" => [
 		0 => "تحديث الان",
-	],
-	"Your website is running the latest version of Chevereto." => [
-		0 => "موقع الويب الخاص بك يعمل  بأحدث نسخة من Chevereto.",
 	],
 	"Clipboard image" => [
 		0 => "صورة الحافظة",

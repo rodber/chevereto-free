@@ -1,4 +1,4 @@
-<div class="list-item c%COLUMN_SIZE_ALBUM% gutter-margin-right-bottom privacy-%ALBUM_PRIVACY%" data-type="album" data-id="%ALBUM_ID_ENCODED%" data-name="%ALBUM_NAME%" data-privacy="%ALBUM_PRIVACY%" data-description="%ALBUM_DESCRIPTION%" data-password="%ALBUM_PASSWORD%">
+<div class="list-item c%COLUMN_SIZE_ALBUM% gutter-margin-right-bottom privacy-%ALBUM_PRIVACY% %ALBUM_COVER_FLAG%" data-type="album" data-id="%ALBUM_ID_ENCODED%" data-name="%ALBUM_NAME%" data-privacy="%ALBUM_PRIVACY%" data-description="%ALBUM_DESCRIPTION%" data-password="%ALBUM_PASSWORD%">
 	<div class="list-item-image fixed-size">
 		<a href="%ALBUM_URL%" class="image-container">
 			%tpl_list_item/album_cover_empty%

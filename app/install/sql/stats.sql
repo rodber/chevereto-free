@@ -10,6 +10,7 @@ CREATE TABLE `%table_prefix%stats` (
   `stat_likes` bigint(32) NOT NULL DEFAULT '0',
   `stat_disk_used` bigint(32) NOT NULL DEFAULT '0',
   PRIMARY KEY (`stat_id`),
-  UNIQUE KEY `stat_date_gmt` (`stat_date_gmt`) USING BTREE
+  UNIQUE KEY `stat_date_gmt` (`stat_date_gmt`) USING BTREE,
+  KEY `stat_type` (`stat_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-INSERT INTO `%table_prefix%stats` VALUES ('1', 'total', NULL, '0', '0', '0', '0', '0', '0');
+INSERT INTO `%table_prefix%stats` VALUES ('1', 'total', NULL, '0', '0', '0', '0', '0', '0'); 
