@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-03-02 13:40+0000',
-  'PO-Revision-Date' => '2017-03-02 13:40+0000',
+  'POT-Creation-Date' => '2017-05-26 16:57+0000',
+  'PO-Revision-Date' => '2017-05-26 16:57+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'cs',
@@ -99,6 +99,27 @@ $translation_table = [
 	"Note: This content is private. Change privacy to \"public\" to share." => [
 		0 => "Poznámka: Tento obsah je soukromý. Pro umožnění sdílení je potřeba změnit soukromí na \"veřejné\".",
 	],
+	"Private" => [
+		0 => "Soukromý",
+	],
+	"Public" => [
+		0 => "Veřejné",
+	],
+	"Me" => [
+		0 => "Já",
+	],
+	"Link" => [
+		0 => "Odkaz",
+	],
+	"Password" => [
+		0 => "Heslo",
+	],
+	"view" => [
+		0 => "zobrazení",
+		1 => "zobrazení",
+		2 => "zobrazení",
+		3 => "zobrazení",
+	],
 	"After %n %t" => [
 		0 => "Po %n %t",
 	],
@@ -141,12 +162,6 @@ $translation_table = [
 	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
 		0 => "Systém se přepne do lokálního úložiště kvůli nedostatečně diskové kapacitě (%c) na úložišti externího serveru (serverech). Obrázek %s bude přemístěn do místního úložiště.",
 	],
-	"view" => [
-		0 => "zobrazení",
-		1 => "zobrazení",
-		2 => "zobrazení",
-		3 => "zobrazení",
-	],
 	"like" => [
 		0 => "líbí se",
 		1 => "se líbí",
@@ -159,6 +174,60 @@ $translation_table = [
 		2 => "obrázků",
 		3 => "obrázky",
 	],
+	"Recent" => [
+		0 => "Nedávné",
+	],
+	"Trending" => [
+		0 => "Trendy",
+	],
+	"Popular" => [
+		0 => "Populární",
+	],
+	"Top users" => [
+		0 => "Top uživatelé",
+	],
+	"Most recent" => [
+		0 => "Nejnovější",
+	],
+	"Oldest" => [
+		0 => "Nejstarší",
+	],
+	"Most viewed" => [
+		0 => "Nejprohlíženější",
+	],
+	"Most liked" => [
+		0 => "Nejoblíbenější",
+	],
+	"Explore" => [
+		0 => "Prozkoumat",
+	],
+	"Animated" => [
+		0 => "Animované",
+	],
+	"Search" => [
+		0 => "Hledat",
+	],
+	"People" => [
+		0 => "Lidi",
+	],
+	"Image" => [
+		0 => "Obrázek",
+		1 => "Obrázků",
+		2 => "Obrázků",
+		3 => "Obrázky",
+	],
+	"Album" => [
+		0 => "Album",
+		1 => "Alb",
+		2 => "Alb",
+		3 => "Alba",
+	],
+	"User" => [
+		0 => "Uřivatel",
+		1 => "Uživatelů",
+		2 => "Uživatelů",
+		3 => "Uživatelé",
+	],
 	"Can't create %s destination dir" => [
 		0 => "Nelze vytvořit %s cílový adresář",
 	],
@@ -167,9 +236,6 @@ $translation_table = [
 	],
 	"Internal" => [
 		0 => "Interní",
-	],
-	"Link" => [
-		0 => "Odkaz",
 	],
 	"Can't insert storage." => [
 		0 => "Nelze vložit úložiště.",
@@ -180,6 +246,9 @@ $translation_table = [
 	"Can't update storage details." => [
 		0 => "Nelze aktualizovat podrobnosti o úložišti.",
 	],
+	"requires %s" => [
+		0 => "vyžaduje %s",
+	],
 	"Unlimited" => [
 		0 => "Neomezeno",
 	],
@@ -188,9 +257,6 @@ $translation_table = [
 	],
 	"Private profile" => [
 		0 => "Soukromý profil",
-	],
-	"Private" => [
-		0 => "Soukromý",
 	],
 	"year" => [
 		0 => "rok",
@@ -332,18 +398,6 @@ $translation_table = [
 	],
 	"Password required" => [
 		0 => "Je vyžadováno heslo",
-	],
-	"Most recent" => [
-		0 => "Nejnovější",
-	],
-	"Oldest" => [
-		0 => "Nejstarší",
-	],
-	"Most viewed" => [
-		0 => "Nejprohlíženější",
-	],
-	"Most liked" => [
-		0 => "Nejoblíbenější",
 	],
 	"Share" => [
 		0 => "Sdílet",
@@ -735,6 +789,9 @@ $translation_table = [
 	"Only alphanumeric, hyphen and underscore characters are allowed" => [
 		0 => "Povoleny jsou pouze alfanumerické znaky, pomlčka a podtržítko",
 	],
+	"Routes can't be the same" => [
+		0 => "Cesty nemůžou být stejné",
+	],
 	"Invalid upload image path" => [
 		0 => "Neplatná cesta nahrávaného obrázku",
 	],
@@ -767,12 +824,6 @@ $translation_table = [
 	],
 	"Can't save page contents: %s." => [
 		0 => "Nelze uložit obsah stránky: %s.",
-	],
-	"Top users" => [
-		0 => "Top uživatelé",
-	],
-	"Explore" => [
-		0 => "Prozkoumat",
 	],
 	"Following" => [
 		0 => "Sledující",
@@ -867,6 +918,12 @@ $translation_table = [
 	"Test email sent to %s." => [
 		0 => "Testovací email byl odeslán na %s.",
 	],
+	"User %s followed" => [
+		0 => "Uživatel %s začal sledovat",
+	],
+	"User %s unfollowed" => [
+		0 => "Uživatel %s přestal sledovat",
+	],
 	"Content liked" => [
 		0 => "Obsah se líbí",
 	],
@@ -927,23 +984,17 @@ $translation_table = [
 	"User search results for %s" => [
 		0 => "Výsledky vyhledávání uživatele pro výraz %s",
 	],
-	"Search" => [
-		0 => "Hledat",
-	],
 	"Account" => [
 		0 => "Účet",
 	],
 	"Profile" => [
 		0 => "Profil",
 	],
-	"Password" => [
-		0 => "Heslo",
-	],
 	"Linked accounts" => [
 		0 => "Propojené účty",
 	],
-	"Invalid image expiration" => [
-		0 => "Neplatná doba expirace obrázku",
+	"Invalid image expiration: %s" => [
+		0 => "Chybná doba platnosti obrázku: %s",
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "Email byl odeslán %s s instrukcemi pro aktivaci tohoto emailu",
@@ -1001,6 +1052,9 @@ $translation_table = [
 	],
 	"%n (%u) on %w" => [
 		0 => "%n (%u) v %w",
+	],
+	"Discovery" => [
+		0 => "Objevit",
 	],
 	"Close" => [
 		0 => "Zavřít",
@@ -1110,56 +1164,74 @@ $translation_table = [
 	"Select the images to upload" => [
 		0 => "Zvolte obrázky k nahrání",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "Obrázky můžete také <a data-trigger=\"anywhere-upload-input\">vybrat z vašeho počítače</a> nebo <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">zadat internetovou adresu URL.</a>.",
+	"browse from your computer" => [
+		0 => "vybrat z vašeho počítače",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "Také můžete <a data-trigger=\"anywhere-upload-input-camera\">pořídit fotografii</a> nebo <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">vložit URL odkaz na obrázek</a>.",
+	"add image URLs" => [
+		0 => "přidat URL adresy obrázků",
 	],
-	"Edit or resize an image by clicking the image preview" => [
-		0 => "Upravit nebo změnit velikost kliknutím na náhled obrázku",
+	"You can also %i or %u." => [
+		0 => "Můžeš také %i nebo %u.",
 	],
-	"Edit or resize an image by touching the image preview" => [
-		0 => "Upravit nebo změnit velikost dotykem na náhled obrázku",
+	"take a picture" => [
+		0 => "pořídit fotku",
 	],
-	"You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>." => [
-		0 => "Můžete přidat další obrázky <a data-trigger=\"anywhere-upload-input\">z vašeho počítače</a> nebo <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">pomocí URL odkazů</a>.",
+	"Edit or resize any image by clicking the image preview" => [
+		0 => "Upravte nebo změňte velikost libovolného obrázku kliknutím na náhled obrázku",
 	],
-	"You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "Můžete <a data-trigger=\"anywhere-upload-input\">přidat další obrázky</a> nebo <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">vložit URL odkazy</a>.",
+	"Edit or resize any image by touching the image preview" => [
+		0 => "Upravte nebo změňte velikost libovolného obrázku dotykem na náhled obrázku",
 	],
-	"Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>" => [
-		0 => "Nahrávám <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">obrázků</span>",
+	"your computer" => [
+		0 => "vašeho počítače",
+	],
+	"image URLs" => [
+		0 => "URL adresy obrázků",
+	],
+	"You can keep adding more images from %i or from %u." => [
+		0 => "Můžete přidat další obrázky z %i nebo z %u.",
+	],
+	"your device" => [
+		0 => "vašeho zařízení",
+	],
+	"Uploading %q %o" => [
+		0 => "Nahrávání %q %o",
 	],
 	"complete" => [
 		0 => "kompletní",
 	],
-	"The queue is being uploaded. It will take just a few seconds to complete." => [
-		0 => "Obrázky se právě nahrávají. Bude to trvat jen pár sekund.",
+	"The queue is being uploaded, it should take just a few seconds to complete." => [
+		0 => "Fronta se nahrává. Proces nahrávání by měl trvat jen několik sekund.",
 	],
 	"Upload complete" => [
 		0 => "Nahrávání dokončeno",
 	],
-	"Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album." => [
-		0 => "Obsah byl přidán do <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">veřejného streamu</a>. Můžete <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">vytvořit album</a> nebo <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">přesunout <span data-text=\"queue-objects\">obrázky</span></a> do stávajícího alba.",
+	"Uploaded content added to %s." => [
+		0 => "Nahraný obsah byl přidán do %s.",
 	],
-	"You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account." => [
-		0 => "Můžete si také <a href=\"%s\">vytvořit účet</a> nebo se <a href=\"%l\">přihlásit</a>. Díky tomu si budete moci uchovávat a spravovat vaše budoucí nahrané obrázky pod svým účtem.",
+	"create a new album" => [
+		0 => "vytvořit nové album",
 	],
-	"No <span data-text=\"queue-objects\">images</span> have been uploaded" => [
-		0 => "Žádné <span data-text=\"queue-objects\">obrázky</span> nebyly nahrány",
+	"move it to an existing album" => [
+		0 => "přesunout do již existujícího alba",
+	],
+	"create an account" => [
+		0 => "vytvořit účet",
+	],
+	"sign in" => [
+		0 => "přihlásit se",
+	],
+	"No %s have been uploaded" => [
+		0 => "Žádné %s nebyly nahrány",
 	],
 	"Some errors have occured and the system couldn't process your request." => [
 		0 => "Bohužel se vyskytly nějaké chyby a server nemohl dokončit vaše požadavky.",
 	],
+	"Category" => [
+		0 => "Kategorie",
+	],
 	"Select category" => [
 		0 => "Vyberte kategorii",
-	],
-	"Change upload privacy" => [
-		0 => "Změnit bezpečnost nahrávání",
-	],
-	"cancel" => [
-		0 => "zrušit",
 	],
 	"Mark this if the upload is not family safe" => [
 		0 => "Zatrhněte pokud obrázek není vhodný pro děti a mladistvé.",
@@ -1169,6 +1241,9 @@ $translation_table = [
 	],
 	"Uploading" => [
 		0 => "Nahrávám",
+	],
+	"cancel" => [
+		0 => "zrušit",
 	],
 	"cancel remaining" => [
 		0 => "zrušit zbývající",
@@ -1220,6 +1295,12 @@ $translation_table = [
 	],
 	"Auto delete image" => [
 		0 => "Automatické smazání obrázku",
+	],
+	"Sign up" => [
+		0 => "Přihlásit se",
+	],
+	"%s to be able to customize or disable image auto delete." => [
+		0 => "%s pro zapnutí nebo vypnutí automatického mazání obrázků",
 	],
 	"Mark this if the image is not family safe" => [
 		0 => "Zatrhněte pokud obrázek není vhodný pro děti a mladistvé.",
@@ -1308,9 +1389,6 @@ $translation_table = [
 	"Put a minus sign just before words you don't want: -rodent -\"Jack Russell\"" => [
 		0 => "Vložte znaménko mínus před slova, která nechcete povolit: -rodent - \"Jack Russell\"",
 	],
-	"Category" => [
-		0 => "Kategorie",
-	],
 	"Storage" => [
 		0 => "Úložiště",
 	],
@@ -1335,9 +1413,6 @@ $translation_table = [
 	"Who can view this content" => [
 		0 => "Kdo může zobrazit tento obsah",
 	],
-	"Public" => [
-		0 => "Veřejné",
-	],
 	"Private (just me)" => [
 		0 => "Soukromé (pouze já)",
 	],
@@ -1349,9 +1424,6 @@ $translation_table = [
 	],
 	"Album password" => [
 		0 => "Heslo alba",
-	],
-	"No category" => [
-		0 => "Žádná kategorie",
 	],
 	"Name" => [
 		0 => "Jméno",
@@ -1395,24 +1467,6 @@ $translation_table = [
 	"Existing album" => [
 		0 => "Stávající album",
 	],
-	"Album" => [
-		0 => "Album",
-		1 => "Alb",
-		2 => "Alb",
-		3 => "Alba",
-	],
-	"me" => [
-		0 => "mě",
-	],
-	"link" => [
-		0 => "odkaz",
-	],
-	"password" => [
-		0 => "heslo",
-	],
-	"private" => [
-		0 => "soukromý",
-	],
 	"create new album" => [
 		0 => "Vytvořit nové album",
 	],
@@ -1454,6 +1508,9 @@ $translation_table = [
 	],
 	"Google Cloud JSON key" => [
 		0 => "Google Cloud JSON klíč",
+	],
+	"Service name" => [
+		0 => "Název služby",
 	],
 	"Hostname or IP of the storage server" => [
 		0 => "Hostname nebo IP serveru s úložištěm.",
@@ -1518,11 +1575,17 @@ $translation_table = [
 	"Delete" => [
 		0 => "Smazat",
 	],
+	"Create new album" => [
+		0 => "Vytvořit nové album",
+	],
 	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
 		0 => "Aby jste mohli používat všechny funkce, musíte být přihlášen(a). Pokud ještě nemáte svůj účet můžete se <a href=\"%s\">registrovat</a> právě teď.",
 	],
 	"There's nothing to show here." => [
 		0 => "Zde se nenachází nic k zobrazení.",
+	],
+	"Upload images" => [
+		0 => "Nahrát obrázky",
 	],
 	"Edit image details" => [
 		0 => "Upravit detaily obrázku",
@@ -1677,6 +1740,15 @@ $translation_table = [
 	"Delete album" => [
 		0 => "Smazat album",
 	],
+	"You like this" => [
+		0 => "Toto se vám líbí",
+	],
+	"Like" => [
+		0 => "Líbí se",
+	],
+	"Upload to album" => [
+		0 => "Nahrát do alba",
+	],
 	"Album link" => [
 		0 => "Odkaz na album",
 	],
@@ -1691,18 +1763,6 @@ $translation_table = [
 	],
 	"I Agree" => [
 		0 => "Souhlasím",
-	],
-	"Image" => [
-		0 => "Obrázek",
-		1 => "Obrázků",
-		2 => "Obrázků",
-		3 => "Obrázky",
-	],
-	"User" => [
-		0 => "Uřivatel",
-		1 => "Uživatelů",
-		2 => "Uživatelů",
-		3 => "Uživatelé",
 	],
 	"Disk used" => [
 		0 => "Využití disku",
@@ -1917,6 +1977,12 @@ $translation_table = [
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Povol pokud chceš umožnit neregistrovaným uživatelům nahrávání.",
 	],
+	"Enable embed codes (uploader)" => [
+		0 => "Povolit vkládací odkazy (v nahrávacím nástroji)",
+	],
+	"Enable this if you want to show embed codes when upload gets completed." => [
+		0 => "Povolte pokud chcete umožnit zobrazování vkládacích odkazů jakmile bude obrázek úspěšné nahraný.",
+	],
 	"Upload threads" => [
 		0 => "Počet vláken pro nahrávání",
 	],
@@ -1934,6 +2000,12 @@ $translation_table = [
 	],
 	"Enable this if you want to allow uploads with an automatic delete option." => [
 		0 => "Aktivujte tuto funkci, pokud chcete povolit nahrávání s volbou automatického mazání.",
+	],
+	"Auto delete guest uploads" => [
+		0 => "Automatické mazání návštěvnických uploadů",
+	],
+	"Enable this if you want to force guest uploads to be auto deleted after certain time." => [
+		0 => "Při povolení budou automatické mazány návštěvnické uploady po určitém čase.",
 	],
 	"Maximum image size" => [
 		0 => "Maximální velikost obrázku",
@@ -2400,12 +2472,6 @@ $translation_table = [
 	"Enable this if you want to show embed codes for the content." => [
 		0 => "Povolte pokud chcete v obsahu zobrazovat vkládací obsahy.",
 	],
-	"Enable embed codes (uploader)" => [
-		0 => "Povolit vkládací odkazy (v nahrávacím nástroji)",
-	],
-	"Enable this if you want to show embed codes when upload gets completed." => [
-		0 => "Povolte pokud chcete umožnit zobrazování vkládacích odkazů jakmile bude obrázek úspěšné nahraný.",
-	],
 	"Not safe content checkbox in uploader" => [
 		0 => "Zaškrtávací políčko s volbou nevhodného obsahu v nahrávacím rozhraní",
 	],
@@ -2726,12 +2792,6 @@ $translation_table = [
 	],
 	"Guest" => [
 		0 => "Host",
-	],
-	"You like this" => [
-		0 => "Toto se vám líbí",
-	],
-	"Like" => [
-		0 => "Líbí se",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "Přidáno do alba %a a zařazeno do kategorie %c",
@@ -3060,9 +3120,6 @@ $translation_table = [
 	"Update now" => [
 		0 => "Aktualizovat nyní",
 	],
-	"Your website is running the latest version of %s" => [
-		0 => "Vaše webové stránky běží nejnovější verzi %s",
-	],
 	"Clipboard image" => [
 		0 => "Kopírovat obrázek do schránky",
 	],
@@ -3077,6 +3134,9 @@ $translation_table = [
 	],
 	"Image edited successfully." => [
 		0 => "Obrázek byl úspěšně upraven.",
+	],
+	"private" => [
+		0 => "soukromý",
 	],
 	"Album edited successfully." => [
 		0 => "Album úspěšně upraveno.",

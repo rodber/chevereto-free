@@ -99,19 +99,29 @@
 		</div>
 		
 		<div class="header-content-right phone-float-none">
-			<div class="float-right phone-float-none">
-				<a class="number-figures float-left phone-float-none" href="<?php echo get_user()["url"]; ?>"><b data-text="image-count"><?php echo get_user()["image_count"]; ?></b> <span data-text="image-label" data-label-single="<?php _ne('image', 'images', 1); ?>" data-label-plural="<?php _ne('image', 'images', 2); ?>"><?php _ne('image', 'images', get_user()['image_count']); ?></span></a>
-				<a class="number-figures float-left phone-float-none" href="<?php echo get_user()["url_albums"]; ?>"><b data-text="album-count"><?php echo get_user()["album_count"]; ?></b> <span data-text="album-label" data-label-single="<?php _ne('album', 'albums', 1); ?>" data-label-plural="<?php _ne('album', 'albums', 2); ?>"><?php _ne('album', 'albums', get_user()['album_count']); ?></span></a>
+			<div class="text-align-right">
+				<a class="number-figures" href="<?php echo get_user()["url"]; ?>"><b data-text="image-count"><?php echo get_user()["image_count"]; ?></b> <span data-text="image-label" data-label-single="<?php _ne('image', 'images', 1); ?>" data-label-plural="<?php _ne('image', 'images', 2); ?>"><?php _ne('image', 'images', get_user()['image_count']); ?></span></a>
+				<a class="number-figures" href="<?php echo get_user()["url_albums"]; ?>"><b data-text="album-count"><?php echo get_user()["album_count"]; ?></b> <span data-text="album-label" data-label-single="<?php _ne('album', 'albums', 1); ?>" data-label-plural="<?php _ne('album', 'albums', 2); ?>"><?php _ne('album', 'albums', get_user()['album_count']); ?></span></a>
 				<?php if(CHV\getSetting('enable_likes') && !get_user()['is_private']) { ?>
-				<a class="number-figures float-left phone-float-none" href="<?php echo get_user()["url"]; ?>/liked"><span class="icon icon-heart4"></span> <b data-text="likes-count"><?php echo get_user()["liked"]; ?></b></a>
+				<a class="number-figures" href="<?php echo get_user()["url"]; ?>/liked"><span class="icon icon-heart4"></span> <b data-text="likes-count"><?php echo get_user()["liked"]; ?></b></a>
 				<?php } ?>
 			</div>
-			<div class="input-search float-left phone-float-none">
+			<div class="input-search">
 				<form action="<?php echo get_user()["url"] . "/search"; ?>">
 					<input class="search one-icon-padding" type="text" placeholder="<?php echo get_safe_html_user()["name"]; ?>" autocomplete="off" spellcheck="false" name="q">
 				</form>
 				<span class="icon-search"></span><span class="icon close icon-close soft-hidden" data-action="clear-search"></span>
 			</div>
+			<?php
+				if(is_owner()) {
+			?>
+			<div class="text-align-right">
+				<button class="btn default" data-modal="edit" data-target="new-album"><span class="btn-icon icon-folder"></span><span class="btn-text"><?php _se('Create new album'); ?></span></button>
+				<?php G\Render\include_theme_file('snippets/modal_create_album.php'); ?>
+			</div>
+			<?php
+				}
+			?>
 		</div>
 	</div>
 	

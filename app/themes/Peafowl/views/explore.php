@@ -6,7 +6,7 @@
 <div class="content-width">
 	
 	<div class="header header-tabs margin-bottom-10 follow-scroll">
-    	<h1><strong><?php echo (function_exists('get_category') and get_category()['name']) ? get_category()['name'] : _s('Explore'); ?></strong></h1>
+    	<h1><strong><?php echo (function_exists('get_category') and get_category()['name']) ? get_category()['name'] : ('<span class="margin-right-5 icon ' . get_listing()['icon'] . '"></span>' . get_listing()['label']); ?></strong></h1>
 		
         <?php G\Render\include_theme_file("snippets/tabs"); ?>
         

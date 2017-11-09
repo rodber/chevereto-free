@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-11-01 14:37+0000\n"
-"PO-Revision-Date: 2016-11-01 14:37+0000\n"
+"POT-Creation-Date: 2017-05-26 16:57+0000\n"
+"PO-Revision-Date: 2017-05-26 16:57+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: zh_TW\n"
@@ -129,9 +129,11 @@ msgstr "無法下載%s"
 msgid "Can't extract %s"
 msgstr "無法解壓%s"
 
+#, php-format
 msgid "Can't create %s directory - %e"
 msgstr "無法建立 %s 的資料夾 - %e"
 
+#, php-format
 msgid "Can't update %s file - %e"
 msgstr "無法更新 %s 檔案 - %e"
 
@@ -156,6 +158,45 @@ msgstr "筆記: 此內容已使用密碼保護, 記得將密碼通過分享來�
 #: ../../../app/themes/Peafowl/views/image.php:272
 msgid "Note: This content is private. Change privacy to \"public\" to share."
 msgstr "注意：此內容是私密的。更改隱私為“公共”分享。"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Private"
+msgstr "私密"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:20
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Public"
+msgstr "公開"
+
+msgid "Me"
+msgstr "我"
+
+#: ../../../app/lib/classes/class.page.php:137
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
+#: ../../../app/themes/Peafowl/views/dashboard.php:461
+msgid "Link"
+msgstr "連結"
+
+#: ../../../app/routes/route.settings.php:64
+#: ../../../app/themes/Peafowl/header.php:292
+#: ../../../app/themes/Peafowl/header.php:340
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:92
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:93
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:126
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:104
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/login.php:39
+#: ../../../app/themes/Peafowl/views/settings.php:322
+#: ../../../app/themes/Peafowl/views/signup.php:49
+#: ../../../app/themes/Peafowl/views/signup.php:50
+msgid "Password"
+msgstr "密碼"
+
+#: ../../../app/lib/classes/class.image.php:1230
+msgid "view"
+msgid_plural "views"
+msgstr[0] "瀏覽次數"
 
 msgid "After %n %t"
 msgstr "經過 %n %t"
@@ -198,13 +239,9 @@ msgstr "私人上傳"
 msgid "Upload switched to local storage"
 msgstr "上傳切換至本地儲存空間"
 
+#, php-format
 msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
 msgstr "系统已切换到本地儲存空間. 由於在外部儲存伺服器沒有足夠的磁碟容量(%c), 圖像 %s 已被分配到本地的儲存空間上."
-
-#: ../../../app/lib/classes/class.image.php:1230
-msgid "view"
-msgid_plural "views"
-msgstr[0] "瀏覽次數"
 
 #: ../../../app/lib/classes/class.image.php:1231
 msgid "like"
@@ -221,6 +258,102 @@ msgid "image"
 msgid_plural "images"
 msgstr[0] "圖片"
 
+msgid "Recent"
+msgstr "最新"
+
+msgid "Trending"
+msgstr "最熱門"
+
+msgid "Popular"
+msgstr "最喜歡"
+
+#: ../../../app/routes/route.dashboard.php:1163
+msgid "Top users"
+msgstr "排名高的用戶"
+
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "最新的"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "最舊的"
+
+#: ../../../app/routes/route.album.php:96
+#: ../../../app/routes/route.category.php:64
+#: ../../../app/routes/route.dashboard.php:1121
+#: ../../../app/routes/route.explore.php:50
+#: ../../../app/routes/route.following.php:29
+#: ../../../app/routes/route.user.php:201
+msgid "Most viewed"
+msgstr "最熱門的"
+
+#: ../../../app/routes/route.album.php:104
+#: ../../../app/routes/route.category.php:72
+#: ../../../app/routes/route.dashboard.php:1129
+#: ../../../app/routes/route.explore.php:58
+#: ../../../app/routes/route.following.php:37
+#: ../../../app/routes/route.user.php:207
+msgid "Most liked"
+msgstr "最喜歡的"
+
+#: ../../../app/routes/route.explore.php:89
+#: ../../../app/themes/Peafowl/header.php:188
+#: ../../../app/themes/Peafowl/header.php:206
+#: ../../../app/themes/Peafowl/views/dashboard.php:305
+#: ../../../app/themes/Peafowl/views/explore.php:9
+msgid "Explore"
+msgstr "探索"
+
+msgid "Animated"
+msgstr "動圖"
+
+#: ../../../app/routes/route.search.php:130
+#: ../../../app/themes/Peafowl/header.php:215
+#: ../../../app/themes/Peafowl/header.php:220
+#: ../../../app/themes/Peafowl/views/dashboard.php:295
+msgid "Search"
+msgstr "搜尋"
+
+msgid "People"
+msgstr "人"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:22
+msgid "Image"
+msgid_plural "Images"
+msgstr[0] "圖片"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "相簿"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:34
+#: ../../../app/themes/Peafowl/views/dashboard.php:90
+#: ../../../app/themes/Peafowl/views/settings.php:126
+msgid "User"
+msgid_plural "Users"
+msgstr[0] "使用者"
+
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
 msgid "Can't create %s destination dir"
@@ -236,12 +369,6 @@ msgstr "無法打開 %s 寫入"
 msgid "Internal"
 msgstr "內部"
 
-#: ../../../app/lib/classes/class.page.php:137
-#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
-#: ../../../app/themes/Peafowl/views/dashboard.php:461
-msgid "Link"
-msgstr "連結"
-
 msgid "Can't insert storage."
 msgstr "無法增加儲存空間"
 
@@ -254,6 +381,10 @@ msgstr "儲存空間不能少於當前的使用情形（%s）."
 msgid "Can't update storage details."
 msgstr "無法更新儲存空間訊息"
 
+#, php-format
+msgid "requires %s"
+msgstr "要求%s"
+
 #: ../../../app/lib/classes/class.storage.php:720
 msgid "Unlimited"
 msgstr "無限的"
@@ -264,10 +395,6 @@ msgstr "已用"
 
 msgid "Private profile"
 msgstr "私人檔案"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:366
-msgid "Private"
-msgstr "私密"
 
 #: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
 msgid "year"
@@ -307,6 +434,7 @@ msgstr "系統通知"
 msgid "Dashboard"
 msgstr "主控台"
 
+#, php-format
 msgid "There is an update available for your system. Go to %s to download and install this update."
 msgstr "您的系統有一個可用更新. 前往 %s 下載並安裝此更新."
 
@@ -320,9 +448,11 @@ msgstr "系統資料庫已經過時. 你需要運行 <a href=\"%s\">更新</a> �
 msgid "Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>."
 msgstr "網站處於維護模式. 欲恢復設置請前往 <a href=\"%s\">主控台 > 設定</a>."
 
+#, php-format
 msgid "You should disable PHP error reporting for production enviroment. Go to <a href='%s'>System settings</a> to revert this setting."
 msgstr "您應該禁用PHP錯誤報告在生產環境. 轉到 <a href='%s'>系統設定</a> 恢復此設置."
 
+#, php-format
 msgid "You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this."
 msgstr "你沒有改變預設的電子郵件設定. 轉到 <a href='%s'>電子郵件設定</a> 以解決此問題."
 
@@ -339,9 +469,11 @@ msgstr "管理員主控台"
 msgid "You can apply this update directly from your %a or download it from %s and then manually install it."
 msgstr "您可以直接從 %a 安裝此更新或從 %s 下載, 然後手動安裝更新."
 
+#, php-format
 msgid "Chevereto update available (v%s)"
 msgstr "Chevereto 更新已開放 (v%s)"
 
+#, php-format
 msgid "view on %s"
 msgstr "%s 已查看"
 
@@ -485,46 +617,6 @@ msgstr "請檢查表單中的錯誤以繼續"
 msgid "Password required"
 msgstr "需要密碼"
 
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "最新的"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "最舊的"
-
-#: ../../../app/routes/route.album.php:96
-#: ../../../app/routes/route.category.php:64
-#: ../../../app/routes/route.dashboard.php:1121
-#: ../../../app/routes/route.explore.php:50
-#: ../../../app/routes/route.following.php:29
-#: ../../../app/routes/route.user.php:201
-msgid "Most viewed"
-msgstr "最熱門的"
-
-#: ../../../app/routes/route.album.php:104
-#: ../../../app/routes/route.category.php:72
-#: ../../../app/routes/route.dashboard.php:1129
-#: ../../../app/routes/route.explore.php:58
-#: ../../../app/routes/route.following.php:37
-#: ../../../app/routes/route.user.php:207
-msgid "Most liked"
-msgstr "最喜歡的"
-
 #: ../../../app/routes/route.album.php:115
 #: ../../../app/themes/Peafowl/snippets/modal_share.php:4
 #: ../../../app/themes/Peafowl/views/album.php:36
@@ -594,9 +686,7 @@ msgstr "檢查更新"
 msgid "Support"
 msgstr "支援"
 
-msgid "Chevereto support"
-msgstr "Chevereto支援"
-
+#, php-format
 msgid "Need help? Go to %s and you will get help quickly."
 msgstr "需要協助？前往 %s 以及您將可獲得解答。"
 
@@ -714,9 +804,8 @@ msgstr "啟用"
 msgid "Disabled"
 msgstr "禁用"
 
-#: ../../../app/routes/route.dashboard.php:193
-msgid "Max. upload size"
-msgstr "最大上傳大小"
+msgid "Max. upload file size"
+msgstr "最大上傳檔案大小"
 
 #: ../../../app/routes/route.dashboard.php:197
 msgid "Max. post size"
@@ -893,15 +982,19 @@ msgstr "該頁面已被刪除."
 msgid "homepage"
 msgstr "首頁"
 
+#, php-format
 msgid "Before main title (%s)"
 msgstr "在主標題前 %s"
 
+#, php-format
 msgid "After call to action (%s)"
 msgstr "在按鈕後 %s"
 
+#, php-format
 msgid "After cover (%s)"
 msgstr "在封面後 %s"
 
+#, php-format
 msgid "After listing (%s)"
 msgstr "在列表後 %s"
 
@@ -1006,12 +1099,9 @@ msgstr "無效的語言"
 msgid "Invalid timezone"
 msgstr "無效的時區"
 
-#: ../../../app/routes/route.dashboard.php:572
-#: ../../../app/routes/route.dashboard.php:617
-#: ../../../app/routes/route.dashboard.php:794
-#: ../../../app/routes/route.dashboard.php:940
-msgid "Invalid value"
-msgstr "無效的值"
+#, php-format
+msgid "Invalid value: %s"
+msgstr "無效的值: %s"
 
 #: ../../../app/routes/route.dashboard.php:577
 msgid "Invalid upload storage mode"
@@ -1043,6 +1133,13 @@ msgstr "無效的水印不透明度"
 #: ../../../app/routes/route.dashboard.php:612
 msgid "Invalid theme"
 msgstr "無效的主題"
+
+#: ../../../app/routes/route.dashboard.php:572
+#: ../../../app/routes/route.dashboard.php:617
+#: ../../../app/routes/route.dashboard.php:794
+#: ../../../app/routes/route.dashboard.php:940
+msgid "Invalid value"
+msgstr "無效的值"
 
 #: ../../../app/routes/route.dashboard.php:622
 msgid "Invalid theme tone"
@@ -1207,18 +1304,6 @@ msgstr "此文件路徑已被另壹個頁面使用 (ID %s)"
 msgid "Can't save page contents: %s."
 msgstr "无法保存页面内容: %s"
 
-#: ../../../app/routes/route.dashboard.php:1163
-msgid "Top users"
-msgstr "排名高的用戶"
-
-#: ../../../app/routes/route.explore.php:89
-#: ../../../app/themes/Peafowl/header.php:188
-#: ../../../app/themes/Peafowl/header.php:206
-#: ../../../app/themes/Peafowl/views/dashboard.php:305
-#: ../../../app/themes/Peafowl/views/explore.php:9
-msgid "Explore"
-msgstr "探索"
-
 #: ../../../app/routes/route.following.php:73
 #: ../../../app/routes/route.user.php:104
 #: ../../../app/themes/Peafowl/views/following.php:7
@@ -1329,9 +1414,11 @@ msgstr "無效的角色"
 msgid "Username already being used"
 msgstr "該使用者名稱已經被使用"
 
+#, php-format
 msgid "Add a password or another social connection before deleting %s"
 msgstr "增加一個密碼或者是在以往社群連接時刪除 %s"
 
+#, php-format
 msgid "Add an email or another social connection before deleting %s"
 msgstr "增加一個電子郵件或者是在以往社群連接時刪除 %s"
 
@@ -1460,13 +1547,6 @@ msgstr "相簿搜尋結果： %s"
 msgid "User search results for %s"
 msgstr "使用者搜尋結果： %s"
 
-#: ../../../app/routes/route.search.php:130
-#: ../../../app/themes/Peafowl/header.php:215
-#: ../../../app/themes/Peafowl/header.php:220
-#: ../../../app/themes/Peafowl/views/dashboard.php:295
-msgid "Search"
-msgstr "搜尋"
-
 #: ../../../app/routes/route.settings.php:62
 msgid "Account"
 msgstr "帳戶"
@@ -1475,29 +1555,13 @@ msgstr "帳戶"
 msgid "Profile"
 msgstr "個人資料"
 
-#: ../../../app/routes/route.settings.php:64
-#: ../../../app/themes/Peafowl/header.php:292
-#: ../../../app/themes/Peafowl/header.php:340
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:92
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:93
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:126
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
-#: ../../../app/themes/Peafowl/views/dashboard.php:104
-#: ../../../app/themes/Peafowl/views/dashboard.php:105
-#: ../../../app/themes/Peafowl/views/login.php:39
-#: ../../../app/themes/Peafowl/views/settings.php:322
-#: ../../../app/themes/Peafowl/views/signup.php:49
-#: ../../../app/themes/Peafowl/views/signup.php:50
-msgid "Password"
-msgstr "密碼"
-
 #: ../../../app/routes/route.settings.php:65
 msgid "Linked accounts"
 msgstr "連結的帳號"
 
-#: ../../../app/routes/route.settings.php:191
-msgid "Invalid image expiration"
-msgstr "無效的圖像映像"
+#, php-format
+msgid "Invalid image expiration: %s"
+msgstr "無效的有效期限: %s"
 
 #: ../../../app/routes/route.settings.php:269
 #, php-format
@@ -1539,6 +1603,7 @@ msgstr "錯誤的用戶名或電子郵件"
 msgid "Settings for %s"
 msgstr "%s 的設定"
 
+#, php-format
 msgid "You must be at least %s years old to use this website."
 msgstr "您必須年滿 %s 歲才能繼續使用網站."
 
@@ -1560,7 +1625,7 @@ msgstr "%s 的圖片"
 
 #: ../../../app/routes/route.user.php:89
 #: ../../../app/themes/Peafowl/header.php:56
-#, php-format
+#, php-format, javascript-format
 msgid "%s's Albums"
 msgstr "%s 的相簿"
 
@@ -1590,6 +1655,9 @@ msgstr "%n (%u) 相簿在 %w"
 #: ../../../app/routes/route.user.php:384
 msgid "%n (%u) on %w"
 msgstr "%n (%u) 在 %w"
+
+msgid "Discovery"
+msgstr "探索"
 
 #: ../../../app/themes/Peafowl/header.php:222
 msgid "Close"
@@ -1703,6 +1771,7 @@ msgstr "電子郵件地址"
 msgid "Username"
 msgstr "使用者名稱"
 
+#, php-format
 msgid "I'm at least %s years old"
 msgstr "我已年滿 %s 歲"
 
@@ -1809,81 +1878,92 @@ msgstr "拖拉或是直接貼上圖像在此進行上傳"
 msgid "Select the images to upload"
 msgstr "選擇需要上傳的圖片"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:15
-msgid "You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "你也可以 <a data-trigger=\"anywhere-upload-input\">瀏覽您的電腦</a> 或者 <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">加入圖片的URL </a>."
+msgid "browse from your computer"
+msgstr "從電腦內選擇"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:16
-msgid "You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "您也可以  <a data-trigger=\"anywhere-upload-input-camera\">拍照</a> 或者 <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">加入圖像的URL</a>."
+msgid "add image URLs"
+msgstr "加入圖片連結"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:20
-msgid "Edit or resize an image by clicking the image preview"
+msgid "You can also %i or %u."
+msgstr "你可以從%i或%u"
+
+msgid "take a picture"
+msgstr "截圖"
+
+msgid "Edit or resize any image by clicking the image preview"
 msgstr "編輯或通過點擊圖像預覽調整圖像大小"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:21
-msgid "Edit or resize an image by touching the image preview"
+msgid "Edit or resize any image by touching the image preview"
 msgstr "編輯或通過觸摸圖像預覽調整圖像大小"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:22
-msgid "You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>."
-msgstr "您可以增加更多圖像 <a data-trigger=\"anywhere-upload-input\">瀏覽您的電腦</a> 或者 <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">瀏覽圖像的URL </a>."
+msgid "your computer"
+msgstr "你的電腦"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:23
-msgid "You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "您可以 <a data-trigger=\"anywhere-upload-input\">增加更多圖像</a> 或者 <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">增加更多的圖像URL</a>."
+msgid "image URLs"
+msgstr "圖片連結"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
-msgid "Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>"
-msgstr "上傳 <span data-text=\"queue-size\">0</span> 張<span data-text=\"queue-objects\">圖片</span>"
+msgid "You can keep adding more images from %i or from %u."
+msgstr "你可以從%i或%u持續新增更多圖片"
+
+msgid "your device"
+msgstr "你的裝置"
+
+msgid "Uploading %q %o"
+msgstr "上傳中 %q %o"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
 msgid "complete"
 msgstr "完成"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:28
-msgid "The queue is being uploaded. It will take just a few seconds to complete."
-msgstr "佇列上傳中. 只需花一些時間便能完成."
+msgid "The queue is being uploaded, it should take just a few seconds to complete."
+msgstr "佇列上傳中. 需要一點時間來完成"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:32
 msgid "Upload complete"
 msgstr "上傳完成"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:34
 #, php-format
-msgid "Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album."
-msgstr "圖片已加入到 <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">公開</a>. 您可以<a data-modal=\"form\" data-target=\"form-uploaded-create-album\">建立一個新的相簿</a> 或 <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">移動<span data-text=\"queue-objects\">圖片</span></a> 到現有的相簿."
+msgid "Uploaded content added to %s."
+msgstr "上傳的內容已經添加到%s"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:35
-msgid "You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account."
-msgstr "您可以 <a href=\"%s\">建立一個帳戶</a> 或 <a href=\"%l\">登入</a> 來保存接下來上傳的圖片於您的帳戶"
+msgid "You can %c with the content just uploaded or %m."
+msgstr "您已經可以使用剛剛上傳的%c或是%m"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:40
-msgid "No <span data-text=\"queue-objects\">images</span> have been uploaded"
-msgstr "沒有已經上傳的 <span data-text=\"queue-objects\">圖片</span>"
+#, php-format
+msgid "You can %c with the content just uploaded."
+msgstr "您已經可以使用剛剛上傳的%c"
+
+msgid "create a new album"
+msgstr "建立新相簿"
+
+msgid "move it to an existing album"
+msgstr "移動到現有的相簿"
+
+msgid "create an account"
+msgstr "建立新帳號"
+
+msgid "sign in"
+msgstr "登入"
+
+msgid "You can %s or %l to save this content into your account."
+msgstr "您可以%s或%l來保存圖片到您的帳戶"
+
+#, php-format
+msgid "No %s have been uploaded"
+msgstr "沒有%s已經上傳"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:41
 msgid "Some errors have occured and the system couldn't process your request."
 msgstr "發生錯誤, 系統無法處理您的請求."
 
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
+#: ../../../app/themes/Peafowl/snippets/form_category.php:3
+msgid "Category"
+msgstr "分類"
+
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:61
 msgid "Select category"
 msgstr "選擇類別"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-msgid "Change upload privacy"
-msgstr "更改上傳隱私"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
-msgid "cancel"
-msgstr "取消"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:77
 msgid "Mark this if the upload is not family safe"
@@ -1896,6 +1976,17 @@ msgstr "非闔家皆宜的上傳"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 msgid "Uploading"
 msgstr "上傳中"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "取消"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
@@ -1994,6 +2085,13 @@ msgstr "筆記: 動畫 GIF 圖像不會被調整大小."
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:180
 msgid "Auto delete image"
 msgstr "自動刪除圖像"
+
+msgid "Sign up"
+msgstr "註冊"
+
+#, php-format
+msgid "%s to be able to customize or disable image auto delete."
+msgstr "%s能夠自訂是否使用自動刪除圖片"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:192
 #: ../../../app/themes/Peafowl/snippets/form_image.php:25
@@ -2143,11 +2241,6 @@ msgstr "排除的關鍵字（若關鍵字帶空格請加雙引號）"
 msgid "Put a minus sign just before words you don't want: -rodent -\"Jack Russell\""
 msgstr "在不需要的關鍵字前加減號: -鄧麗欣 -\"王 祖男\""
 
-#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
-#: ../../../app/themes/Peafowl/snippets/form_category.php:3
-msgid "Category"
-msgstr "分類"
-
 #: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:66
 msgid "Storage"
 msgstr "儲存空間"
@@ -2180,11 +2273,6 @@ msgstr "相簿隱私"
 msgid "Who can view this content"
 msgstr "誰可以看到"
 
-#: ../../../app/themes/Peafowl/snippets/form_album.php:20
-#: ../../../app/themes/Peafowl/views/dashboard.php:366
-msgid "Public"
-msgstr "公開"
-
 #: ../../../app/themes/Peafowl/snippets/form_album.php:21
 msgid "Private (just me)"
 msgstr "私密（只有我）"
@@ -2198,10 +2286,6 @@ msgstr "私人 (密碼保護)"
 
 msgid "Album password"
 msgstr "相簿密碼"
-
-#: ../../../app/themes/Peafowl/snippets/form_category.php:9
-msgid "No category"
-msgstr "無分類"
 
 #: ../../../app/themes/Peafowl/snippets/form_category_edit.php:4
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:3
@@ -2268,31 +2352,6 @@ msgstr "文字訊息, HTML或重導向至URL"
 #: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
 msgid "Existing album"
 msgstr "現有的相簿"
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
-#: ../../../app/themes/Peafowl/views/dashboard.php:28
-msgid "Album"
-msgid_plural "Albums"
-msgstr[0] "相簿"
-
-msgid "me"
-msgstr "我"
-
-msgid "link"
-msgstr "超連結"
-
-msgid "password"
-msgstr "密碼"
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
-#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
-#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
-msgid "private"
-msgstr "私密"
 
 #: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
 msgid "create new album"
@@ -2496,6 +2555,9 @@ msgstr "標記為安全"
 msgid "Delete"
 msgstr "刪除"
 
+msgid "Create new album"
+msgstr "建立新的相簿"
+
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:5
 #, php-format
 msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
@@ -2506,6 +2568,9 @@ msgstr "您必須登入才能使用所有的功能. 如果您還未註冊請現�
 #: ../../../app/themes/Peafowl/views/index.php:63
 msgid "There's nothing to show here."
 msgstr "沒有顯示的內容"
+
+msgid "Upload images"
+msgstr "上傳圖片"
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
 #: ../../../app/themes/Peafowl/views/image.php:69
@@ -2763,6 +2828,18 @@ msgstr "你真的想刪除所選相簿和所有內容? 一旦刪除將無法恢�
 msgid "Delete album"
 msgstr "刪除相簿"
 
+#: ../../../app/themes/Peafowl/views/image.php:85
+msgid "You like this"
+msgstr "您喜歡這個"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "喜歡"
+
+msgid "Upload to album"
+msgstr "上傳至相簿"
+
 #: ../../../app/themes/Peafowl/views/album.php:86
 msgid "Album link"
 msgstr "相簿鏈接"
@@ -2770,6 +2847,7 @@ msgstr "相簿鏈接"
 msgid "Please read and comply with the following conditions before you continue:"
 msgstr "請閱讀並遵守以下條款, 然後再繼續:"
 
+#, php-format
 msgid "This website contains information, links and images of sexually explicit material. If you are under the age of %s, if such material offends you or if it's illegal to view such material in your community please do not continue.\n\nI am at least %s years of age and I believe that as an adult it is my inalienable right to receive/view sexually explicit material. I desire to receive/view sexually explicit material. \n\nI believe that sexual acts between consenting adults are neither offensive nor obscene. The viewing, reading and downloading of sexually explicit materials does not violate the standards of my community, town, city, state or country.\n\nThe sexually explicit material I am viewing is for my own personal use and I will not expose minors to the material.\n\nI am solely responsible for any false disclosures or legal ramifications of viewing, reading or downloading any material in this site. Furthermore this website nor its affiliates will be held responsible for any legal ramifications arising from fraudulent entry into or use of this website.\n\nThis consent screen constitutes a legal agreement between this website and you and/or any business in which you have any legal or equitable interest. If any portion of this agreement is deemed unenforceable by a court of competent jurisdiction it shall not affect the enforceability of the other portions of the agreement."
 msgstr "本網站所包含的訊息, 超連結和色情內容的圖像. 如果您是 %s 歲以下, 如果這種素材冒犯您, 或者如果在你的地區查看這些素材是違法的, 請不要繼續瀏覽.\n\n我已年滿 %s 歲, 我相信, 作為一個成年人, 這是我收到/瀏覽色情素材不可剝奪的權利. 我希望接收/觀看色情素材.\n\n我相信, 同意成年人之間的性行為既不進攻也不色情. 露骨色情內容的瀏覽, 閱讀和下載不違反我的地區, 鎮, 市, 州或國家標準.\n\n我已觀看的色情素材僅是我個人的使用, 我不會傳播未成年人的素材.\n\n我為任何虛假訊息或瀏覽, 閱讀或在本網站下載任何素材的法律後果承擔全部責任. 此外, 該網站及其分支機構將負責從欺詐性進入或使用本網站所產生的任何法律後果.\n\n此同意畫面構成了這個網站, 你和/或您有任何法律或衡平法權益的任何商業之間的法律協議. 如果本協議的任何部分被視為無效由有管轄權的法院不得影響該協議的其他部分的可執行性."
 
@@ -2778,18 +2856,6 @@ msgstr "點擊 \"我同意\" 後您可申明自己已閱讀並理解上述的所
 
 msgid "I Agree"
 msgstr "我同意"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:22
-msgid "Image"
-msgid_plural "Images"
-msgstr[0] "圖片"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:34
-#: ../../../app/themes/Peafowl/views/dashboard.php:90
-#: ../../../app/themes/Peafowl/views/settings.php:126
-msgid "User"
-msgid_plural "Users"
-msgstr[0] "使用者"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:40
 #: ../../../app/themes/Peafowl/views/dashboard.php:1732
@@ -2817,6 +2883,7 @@ msgstr "個人網站模式被開啟時, 該設置始終禁用."
 msgid "documentation"
 msgstr "文件"
 
+#, php-format
 msgid "Learn more about %s at our %d."
 msgstr "在我們的 %d 知道更多關於 %s 的資料"
 
@@ -2986,11 +3053,6 @@ msgstr "隱藏頁面將不會顯示在系統的選單, 但任何人擁有連結�
 msgid "Only alphanumerics, hyphens and forward slash"
 msgstr "只有字母, 數字和片語"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:489
-#, php-format
-msgid "Page URL key relative to %s"
-msgstr "頁面URL值相對於 %s"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:493
 msgid "File path"
 msgstr "檔案路徑"
@@ -3098,6 +3160,17 @@ msgstr "訪客上傳"
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "允許非註冊用戶上傳"
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1353
+msgid "Enable embed codes (uploader)"
+msgstr "啟用嵌入代碼（上傳者）"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1359
+msgid "Enable this if you want to show embed codes when upload gets completed."
+msgstr "如果你想圖片上傳完成後顯示嵌入代碼請啟用這個功能."
+
+msgid "Upload threads"
+msgstr "上傳序列"
+
 msgid "Number of simultaneous upload threads (parallel uploads)"
 msgstr "同時上傳連線數量（並行上傳）"
 
@@ -3121,6 +3194,18 @@ msgstr "啟用限時上傳"
 msgid "Enable this if you want to allow uploads with an automatic delete option."
 msgstr "如果您想允許上傳與自動刪除選項請啟用它."
 
+msgid "Auto delete guest uploads"
+msgstr "自動刪除訪客上傳"
+
+msgid "Enable this if you want to force guest uploads to be auto deleted after certain time."
+msgstr "開啟後可再一定時間後自動刪除訪客上傳的圖片"
+
+msgid "Maximum image size"
+msgstr "最大圖片大小"
+
+msgid "Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit."
+msgstr "大於此尺寸的圖片將自動縮小尺寸,使用(0)則不設置限制"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:661
 #: ../../../app/themes/Peafowl/views/settings.php:183
 msgid "Image Exif data"
@@ -3143,14 +3228,11 @@ msgstr "圖像Exif資料 (使用者設置)"
 msgid "Enable this if you want to allow each user to configure how image Exif data will be handled."
 msgstr "啟用它, 如果您允許每個用戶設置是否刪除圖像的Exif資料."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:689
-msgid "Max. filesize"
-msgstr "最大檔案大小"
+msgid "Maximum upload file size"
+msgstr "最大上傳大小"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:692
-#, php-format
-msgid "Max. allowed filesize. (Max allowed by server is %s)"
-msgstr "最大允許的檔案大小.（服務器最大允許為 %s）"
+msgid "Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)."
+msgstr "主機限制最大上傳大小是%s這個限制是因為%u以及%p(%f的數值)"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:695
 msgid "Image path"
@@ -3342,6 +3424,7 @@ msgstr "浮水印的不透明度設置, 值由0到100."
 msgid "Dashboard > Settings > Website"
 msgstr "主控台 > 設定 > 網站"
 
+#, php-format
 msgid "Categories won't work when the explorer feature is turned off. To revert this setting go to %s."
 msgstr "當關閉圖庫功能時, 圖片分類將不能正常工作. 恢復此設置請前往 %s."
 
@@ -3705,6 +3788,12 @@ msgstr "Favicon 圖樣"
 msgid "Favicon image. Image must have same width and height."
 msgstr "所上傳圖像必須具有相同的寬度和高度."
 
+msgid "Image load max. filesize"
+msgstr "最大可載入圖片檔案大小"
+
+msgid "Images greater than this size will show a button to load full resolution image."
+msgstr "大於此尺寸的圖片將顯示一個按鈕以加載最大解析度"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1299
 msgid "Enable download button"
 msgstr "啟用下載按鈕"
@@ -3744,14 +3833,6 @@ msgstr "啟用嵌入代碼（內容）"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1349
 msgid "Enable this if you want to show embed codes for the content."
 msgstr "啟用此選項, 允許用戶取得嵌入代碼 ."
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1353
-msgid "Enable embed codes (uploader)"
-msgstr "啟用嵌入代碼（上傳者）"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1359
-msgid "Enable this if you want to show embed codes when upload gets completed."
-msgstr "如果你想圖片上傳完成後顯示嵌入代碼請啟用這個功能."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1365
 msgid "Not safe content checkbox in uploader"
@@ -3960,12 +4041,14 @@ msgstr "列出錯誤記錄且寫入紀錄"
 msgid "To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)."
 msgstr "欲設定除錯層級請查看<a %s>除錯設定文件</a>，預設模式為 \"寫入錯誤記錄\""
 
+#, php-format
 msgid "Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes."
 msgstr "路徑允許您自訂預設路徑. 只允許字母, 連字符號和下劃線符號. 如果你想覆蓋或增加新的路線請看我們的 %s."
 
 msgid "Image routing"
 msgstr "圖像路徑"
 
+#, php-format
 msgid "Routing for %s"
 msgstr "路徑 %s"
 
@@ -4157,19 +4240,13 @@ msgstr "VK client secret"
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "你需要一個 <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a>"
 
+#, php-format
 msgid "%s site key"
 msgstr "%s 網站鑰匙"
 
+#, php-format
 msgid "%s secret key"
 msgstr "%s 秘密鑰匙"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1974
-msgid "reCAPTCHA public key"
-msgstr "reCAPTCHA public key"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1979
-msgid "reCAPTCHA private key"
-msgstr "reCAPTCHA private key"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1986
 msgid "reCAPTCHA threshold"
@@ -4182,12 +4259,14 @@ msgstr "登入失敗多少次後顯示驗證碼? 鍵入\"0\"零則始終顯示�
 msgid "Comments API"
 msgstr "評論 API"
 
+#, php-format
 msgid "Disqus API works with %s."
 msgstr "與 %s 工作的Disqus API"
 
 msgid "Disqus shortname"
 msgstr "Disqus 短名"
 
+#, php-format
 msgid "%s public key"
 msgstr "%s 公開鑰匙"
 
@@ -4249,15 +4328,6 @@ msgstr "讀取全等解像度"
 #: ../../../app/themes/Peafowl/views/image.php:57
 msgid "Guest"
 msgstr "訪客"
-
-#: ../../../app/themes/Peafowl/views/image.php:85
-msgid "You like this"
-msgstr "您喜歡這個"
-
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "喜歡"
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -4723,12 +4793,9 @@ msgstr "有可用的系統更新. 您可以自動下載並安裝此更新或者�
 msgid "Update now"
 msgstr "立刻更新"
 
-msgid "Your website is running the latest version of %s"
-msgstr "你的網站正在運行最新版本的 %s"
-
-#: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
-msgid "Your website is running the latest version of Chevereto."
-msgstr "您的網站正在執行Chevereto的最新版本."
+#, javascript-format
+msgid "This website is running latest %s version"
+msgstr "網站正在使用最新的%s版本"
 
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"
@@ -4749,6 +4816,12 @@ msgstr "有些文件無法加入"
 #: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
 msgid "Image edited successfully."
 msgstr "圖片編輯成功"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "私密"
 
 #: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
 msgid "Album edited successfully."

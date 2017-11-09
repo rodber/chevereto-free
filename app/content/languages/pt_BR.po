@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-03-30 16:39+0000\n"
-"PO-Revision-Date: 2017-03-30 16:39+0000\n"
+"POT-Creation-Date: 2017-06-08 12:42+0000\n"
+"PO-Revision-Date: 2017-06-08 12:42+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -159,6 +159,46 @@ msgstr "Aviso: Esse conteúdo é protegido por senha, lembre-se de passar a senh
 msgid "Note: This content is private. Change privacy to \"public\" to share."
 msgstr "Aviso: Este conteúdo é privado. Mude a privacidade para \"público\" para o compartilhar."
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Private"
+msgstr "Privado"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:20
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Public"
+msgstr "Público"
+
+msgid "Me"
+msgstr "Eu"
+
+#: ../../../app/lib/classes/class.page.php:137
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
+#: ../../../app/themes/Peafowl/views/dashboard.php:461
+msgid "Link"
+msgstr "Link"
+
+#: ../../../app/routes/route.settings.php:64
+#: ../../../app/themes/Peafowl/header.php:292
+#: ../../../app/themes/Peafowl/header.php:340
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:92
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:93
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:126
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:104
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/login.php:39
+#: ../../../app/themes/Peafowl/views/settings.php:322
+#: ../../../app/themes/Peafowl/views/signup.php:49
+#: ../../../app/themes/Peafowl/views/signup.php:50
+msgid "Password"
+msgstr "Senha"
+
+#: ../../../app/lib/classes/class.image.php:1230
+msgid "view"
+msgid_plural "views"
+msgstr[0] "vizualização"
+msgstr[1] "visualizações"
+
 msgid "After %n %t"
 msgstr "Depois de %n %t"
 
@@ -207,12 +247,6 @@ msgstr "O envio foi alterado para o armazenamento local"
 msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
 msgstr "O sistema foi alterado para o armazenamento local devido a capacidade do disco (%c) no armazenamento externo. A imagem %s foi salva no armazenamento local."
 
-#: ../../../app/lib/classes/class.image.php:1230
-msgid "view"
-msgid_plural "views"
-msgstr[0] "vizualização"
-msgstr[1] "visualizações"
-
 #: ../../../app/lib/classes/class.image.php:1231
 msgid "like"
 msgid_plural "likes"
@@ -230,6 +264,105 @@ msgid_plural "images"
 msgstr[0] "imagem"
 msgstr[1] "imagens"
 
+msgid "Recent"
+msgstr "Recentes"
+
+msgid "Trending"
+msgstr "Tendências"
+
+msgid "Popular"
+msgstr "Populares"
+
+#: ../../../app/routes/route.dashboard.php:1163
+msgid "Top users"
+msgstr "Principais usuários"
+
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Mais recentes"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "Mais antigas"
+
+#: ../../../app/routes/route.album.php:96
+#: ../../../app/routes/route.category.php:64
+#: ../../../app/routes/route.dashboard.php:1121
+#: ../../../app/routes/route.explore.php:50
+#: ../../../app/routes/route.following.php:29
+#: ../../../app/routes/route.user.php:201
+msgid "Most viewed"
+msgstr "Mais vistas"
+
+#: ../../../app/routes/route.album.php:104
+#: ../../../app/routes/route.category.php:72
+#: ../../../app/routes/route.dashboard.php:1129
+#: ../../../app/routes/route.explore.php:58
+#: ../../../app/routes/route.following.php:37
+#: ../../../app/routes/route.user.php:207
+msgid "Most liked"
+msgstr "Mais curtidas"
+
+#: ../../../app/routes/route.explore.php:89
+#: ../../../app/themes/Peafowl/header.php:188
+#: ../../../app/themes/Peafowl/header.php:206
+#: ../../../app/themes/Peafowl/views/dashboard.php:305
+#: ../../../app/themes/Peafowl/views/explore.php:9
+msgid "Explore"
+msgstr "Galeria"
+
+msgid "Animated"
+msgstr "Animadas"
+
+#: ../../../app/routes/route.search.php:130
+#: ../../../app/themes/Peafowl/header.php:215
+#: ../../../app/themes/Peafowl/header.php:220
+#: ../../../app/themes/Peafowl/views/dashboard.php:295
+msgid "Search"
+msgstr "Pesquisar"
+
+msgid "People"
+msgstr "Pessoas"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:22
+msgid "Image"
+msgid_plural "Images"
+msgstr[0] "imagem"
+msgstr[1] "imagens"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "Álbum"
+msgstr[1] "Álbuns"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:34
+#: ../../../app/themes/Peafowl/views/dashboard.php:90
+#: ../../../app/themes/Peafowl/views/settings.php:126
+msgid "User"
+msgid_plural "Users"
+msgstr[0] "Usuário"
+msgstr[1] "Usuários"
+
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
 msgid "Can't create %s destination dir"
@@ -245,12 +378,6 @@ msgstr "Não foi possível abrir %s para escrita"
 msgid "Internal"
 msgstr "Interno"
 
-#: ../../../app/lib/classes/class.page.php:137
-#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
-#: ../../../app/themes/Peafowl/views/dashboard.php:461
-msgid "Link"
-msgstr "Link"
-
 msgid "Can't insert storage."
 msgstr "Não foi possível inserir armazenamento."
 
@@ -263,6 +390,10 @@ msgstr "A capacidade de armazenamento não pode ser menor do que está sendo usa
 msgid "Can't update storage details."
 msgstr "Não foi possível atualizar dados de armazenamento."
 
+#, php-format
+msgid "requires %s"
+msgstr "Requer %s"
+
 #: ../../../app/lib/classes/class.storage.php:720
 msgid "Unlimited"
 msgstr "Ilimitado"
@@ -273,10 +404,6 @@ msgstr "usado"
 
 msgid "Private profile"
 msgstr "Perfil privado"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:366
-msgid "Private"
-msgstr "Privado"
 
 #: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
 msgid "year"
@@ -503,46 +630,6 @@ msgstr "Verifique os erros no formulário para continuar."
 msgid "Password required"
 msgstr "É necessário uma senha"
 
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "Mais recentes"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "Mais antigas"
-
-#: ../../../app/routes/route.album.php:96
-#: ../../../app/routes/route.category.php:64
-#: ../../../app/routes/route.dashboard.php:1121
-#: ../../../app/routes/route.explore.php:50
-#: ../../../app/routes/route.following.php:29
-#: ../../../app/routes/route.user.php:201
-msgid "Most viewed"
-msgstr "Mais vistas"
-
-#: ../../../app/routes/route.album.php:104
-#: ../../../app/routes/route.category.php:72
-#: ../../../app/routes/route.dashboard.php:1129
-#: ../../../app/routes/route.explore.php:58
-#: ../../../app/routes/route.following.php:37
-#: ../../../app/routes/route.user.php:207
-msgid "Most liked"
-msgstr "Mais curtidas"
-
 #: ../../../app/routes/route.album.php:115
 #: ../../../app/themes/Peafowl/snippets/modal_share.php:4
 #: ../../../app/themes/Peafowl/views/album.php:36
@@ -758,6 +845,9 @@ msgstr "Links"
 
 msgid "Documentation"
 msgstr "Documentação"
+
+msgid "Changelog"
+msgstr "Log de mudanças"
 
 msgid "Request new features"
 msgstr "Pedir novas funcionalidades"
@@ -1228,18 +1318,6 @@ msgstr "Este caminho de arquivo já está sendo usado por outra página (ID %s)"
 msgid "Can't save page contents: %s."
 msgstr "Não foi possível salvar o conteúdo da página: %s."
 
-#: ../../../app/routes/route.dashboard.php:1163
-msgid "Top users"
-msgstr "Principais usuários"
-
-#: ../../../app/routes/route.explore.php:89
-#: ../../../app/themes/Peafowl/header.php:188
-#: ../../../app/themes/Peafowl/header.php:206
-#: ../../../app/themes/Peafowl/views/dashboard.php:305
-#: ../../../app/themes/Peafowl/views/explore.php:9
-msgid "Explore"
-msgstr "Galeria"
-
 #: ../../../app/routes/route.following.php:73
 #: ../../../app/routes/route.user.php:104
 #: ../../../app/themes/Peafowl/views/following.php:7
@@ -1483,13 +1561,6 @@ msgstr "Resultados de álbuns contendo %s"
 msgid "User search results for %s"
 msgstr "Resultados de utilizadores contendo %s"
 
-#: ../../../app/routes/route.search.php:130
-#: ../../../app/themes/Peafowl/header.php:215
-#: ../../../app/themes/Peafowl/header.php:220
-#: ../../../app/themes/Peafowl/views/dashboard.php:295
-msgid "Search"
-msgstr "Pesquisar"
-
 #: ../../../app/routes/route.settings.php:62
 msgid "Account"
 msgstr "Conta"
@@ -1498,29 +1569,13 @@ msgstr "Conta"
 msgid "Profile"
 msgstr "Perfil"
 
-#: ../../../app/routes/route.settings.php:64
-#: ../../../app/themes/Peafowl/header.php:292
-#: ../../../app/themes/Peafowl/header.php:340
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:92
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:93
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:126
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
-#: ../../../app/themes/Peafowl/views/dashboard.php:104
-#: ../../../app/themes/Peafowl/views/dashboard.php:105
-#: ../../../app/themes/Peafowl/views/login.php:39
-#: ../../../app/themes/Peafowl/views/settings.php:322
-#: ../../../app/themes/Peafowl/views/signup.php:49
-#: ../../../app/themes/Peafowl/views/signup.php:50
-msgid "Password"
-msgstr "Senha"
-
 #: ../../../app/routes/route.settings.php:65
 msgid "Linked accounts"
 msgstr "Contas vinculadas"
 
-#: ../../../app/routes/route.settings.php:191
-msgid "Invalid image expiration"
-msgstr "Expiração de imagem inválido"
+#, php-format
+msgid "Invalid image expiration: %s"
+msgstr "Validade da imagem inválida: %s"
 
 #: ../../../app/routes/route.settings.php:269
 #, php-format
@@ -1584,7 +1639,7 @@ msgstr "Imagens de %s"
 
 #: ../../../app/routes/route.user.php:89
 #: ../../../app/themes/Peafowl/header.php:56
-#, php-format
+#, php-format, javascript-format
 msgid "%s's Albums"
 msgstr "Álbuns de %s"
 
@@ -1834,81 +1889,89 @@ msgstr "Cole araste ou solte aqui para enviar imagens"
 msgid "Select the images to upload"
 msgstr "Selecionar as imagens para envio"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:15
-msgid "You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "Você pode também <a data-trigger=\"anywhere-upload-input\">enviar do seu computador</a> ou <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">adicionar URLs de imagem</a>."
+msgid "browse from your computer"
+msgstr "Procure no seu computador"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:16
-msgid "You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "Você também pode <a data-trigger=\"anywhere-upload-input-camera\">tirar uma foto </a> ou <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\"> adicionar URLs de imagem </a>."
+msgid "add image URLs"
+msgstr "Adicionar URLs de imagens"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:20
-msgid "Edit or resize an image by clicking the image preview"
-msgstr "Editar ou redimensionar uma imagem clicando na visualização da imagem"
+msgid "You can also %i or %u."
+msgstr "Você também pode %i ou %u."
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:21
-msgid "Edit or resize an image by touching the image preview"
-msgstr "Editar ou redimensionar uma imagem tocando na visualização da imagem"
+msgid "take a picture"
+msgstr "tire uma foto"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:22
-msgid "You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>."
-msgstr "Você pode adicionar mais imagens <a data-trigger=\"anywhere-upload-input\"> do seu computador </a> ou <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\"> a partir de URLs de imagem </a>."
+msgid "Edit or resize any image by clicking the image preview"
+msgstr "Edite ou redimensione qualquer imagem clicando na visualização da imagem"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:23
-msgid "You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "Você pode <a data-trigger=\"anywhere-upload-input\"> adicionar mais imagens </a> ou <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\"> adicionar URLs de imagem </a>."
+msgid "Edit or resize any image by touching the image preview"
+msgstr "Edite ou redimensione qualquer imagem tocando na visualização da imagem"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
-msgid "Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>"
-msgstr "Enviando <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">Imagens</span>"
+msgid "your computer"
+msgstr "seu computador"
+
+msgid "You can keep adding more images from %i or from %u."
+msgstr "Você pode continuar adicionando mais imagens de %i ou de %u."
+
+msgid "your device"
+msgstr "seu dispositivo"
+
+msgid "Uploading %q %o"
+msgstr "Enviando %q %o"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
 msgid "complete"
 msgstr "completo"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:28
-msgid "The queue is being uploaded. It will take just a few seconds to complete."
-msgstr "A sua lista de imagens está sendo enviada. Poderá demorar alguns segundos para completar."
+msgid "The queue is being uploaded, it should take just a few seconds to complete."
+msgstr "A fila está sendo enviada, deve levar apenas alguns segundos para ser concluída."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:32
 msgid "Upload complete"
 msgstr "Envio completo"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:34
 #, php-format
-msgid "Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album."
-msgstr "Conteúdo adicionado aos <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">fluxo de público</a>. Pode <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">criar um álbum</a> ou <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">mover imagens <span data-text=\"queue-objects\">para</span></a> um álbum existente."
+msgid "Uploaded content added to %s."
+msgstr "Conteúdo enviado adicionado a %s."
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:35
-msgid "You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account."
-msgstr "Pode <a href=\"%s\">criar uma conta</a> ou <a href=\"%l\">iniciar sessão</a> para gravar os envios na sua conta."
+msgid "You can %c with the content just uploaded or %m."
+msgstr "Você pode %c com o conteúdo apenas enviado ou %m."
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:40
-msgid "No <span data-text=\"queue-objects\">images</span> have been uploaded"
-msgstr "Não foram enviadas nenhumas <span data-text=\"queue-objects\">imagens</span>"
+#, php-format
+msgid "You can %c with the content just uploaded."
+msgstr "Você pode %c com o conteúdo acabado de ser enviado."
+
+msgid "create a new album"
+msgstr "criar um álbum novo"
+
+msgid "move it to an existing album"
+msgstr "mover para um álbum existente"
+
+msgid "create an account"
+msgstr "criar uma conta"
+
+msgid "sign in"
+msgstr "entrar"
+
+msgid "You can %s or %l to save this content into your account."
+msgstr "Você pode %s ou %l para salvar esse conteúdo em sua conta."
+
+#, php-format
+msgid "No %s have been uploaded"
+msgstr "Nenhum %s foi carregado"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:41
 msgid "Some errors have occured and the system couldn't process your request."
 msgstr "Alguns erros ocorreram e o sistema não pode processar o seu pedido."
 
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
+#: ../../../app/themes/Peafowl/snippets/form_category.php:3
+msgid "Category"
+msgstr "Categoria"
+
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:61
 msgid "Select category"
 msgstr "Selecione a categoria"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-msgid "Change upload privacy"
-msgstr "Mude privacidade do envio"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
-msgid "cancel"
-msgstr "Cancelar"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:77
 msgid "Mark this if the upload is not family safe"
@@ -1921,6 +1984,17 @@ msgstr "Envio de conteúdo impróprio"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 msgid "Uploading"
 msgstr "Enviando"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "Cancelar"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
@@ -2019,6 +2093,13 @@ msgstr "Nota: imagens GIF animadas não será redimensionada."
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:180
 msgid "Auto delete image"
 msgstr "Apagar imagem automaticamente"
+
+msgid "Sign up"
+msgstr "Cadastrar"
+
+#, php-format
+msgid "%s to be able to customize or disable image auto delete."
+msgstr "%s para poder personalizar ou desabilitar a exclusão automática da imagem."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:192
 #: ../../../app/themes/Peafowl/snippets/form_image.php:25
@@ -2153,11 +2234,6 @@ msgstr "Nenhuma destas palavras"
 msgid "Put a minus sign just before words you don't want: -rodent -\"Jack Russell\""
 msgstr "Coloque um sinal de subtracção antes das palavras que não lhe interessam: -roedor -\"Jack Russell\""
 
-#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
-#: ../../../app/themes/Peafowl/snippets/form_category.php:3
-msgid "Category"
-msgstr "Categoria"
-
 #: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:66
 msgid "Storage"
 msgstr "Armazenamento"
@@ -2190,11 +2266,6 @@ msgstr "Privacidade do álbum"
 msgid "Who can view this content"
 msgstr "Quem pode visualizar este conteúdo"
 
-#: ../../../app/themes/Peafowl/snippets/form_album.php:20
-#: ../../../app/themes/Peafowl/views/dashboard.php:366
-msgid "Public"
-msgstr "Público"
-
 #: ../../../app/themes/Peafowl/snippets/form_album.php:21
 msgid "Private (just me)"
 msgstr "Privado (apenas eu)"
@@ -2208,10 +2279,6 @@ msgstr "Privado (protegido por senha)"
 
 msgid "Album password"
 msgstr "Senha do álbum"
-
-#: ../../../app/themes/Peafowl/snippets/form_category.php:9
-msgid "No category"
-msgstr "Sem categoria"
 
 #: ../../../app/themes/Peafowl/snippets/form_category_edit.php:4
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:3
@@ -2278,32 +2345,6 @@ msgstr "Mensagem de texto, HTML ou um redireccionamento URL"
 #: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
 msgid "Existing album"
 msgstr "Álbum existente"
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
-#: ../../../app/themes/Peafowl/views/dashboard.php:28
-msgid "Album"
-msgid_plural "Albums"
-msgstr[0] "Álbum"
-msgstr[1] "Álbuns"
-
-msgid "me"
-msgstr "eu"
-
-msgid "link"
-msgstr "link"
-
-msgid "password"
-msgstr "senha"
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
-#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
-#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
-msgid "private"
-msgstr "Privado"
 
 #: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
 msgid "create new album"
@@ -2507,6 +2548,9 @@ msgstr "Marcar como seguro"
 msgid "Delete"
 msgstr "Apagar"
 
+msgid "Create new album"
+msgstr "Criar um álbum novo"
+
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:5
 #, php-format
 msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
@@ -2517,6 +2561,9 @@ msgstr "Para usar todos os recursos do nosso site, você deve entrar na sua cont
 #: ../../../app/themes/Peafowl/views/index.php:63
 msgid "There's nothing to show here."
 msgstr "Não há nada para ver aqui."
+
+msgid "Upload images"
+msgstr "Enviar imagens"
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
 #: ../../../app/themes/Peafowl/views/image.php:69
@@ -2774,6 +2821,18 @@ msgstr "Quer mesmo apagar este álbum e todas as suas imagens? Esta operação n
 msgid "Delete album"
 msgstr "Apagar álbum"
 
+#: ../../../app/themes/Peafowl/views/image.php:85
+msgid "You like this"
+msgstr "Você curtiu isso"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Curtir"
+
+msgid "Upload to album"
+msgstr "Enviar para o álbum"
+
 #: ../../../app/themes/Peafowl/views/album.php:86
 msgid "Album link"
 msgstr "Link do álbum"
@@ -2790,20 +2849,6 @@ msgstr "Clicando em \"Eu aceito\" você declara que você leu e entendeu todas a
 
 msgid "I Agree"
 msgstr "Eu aceito"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:22
-msgid "Image"
-msgid_plural "Images"
-msgstr[0] "imagem"
-msgstr[1] "imagens"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:34
-#: ../../../app/themes/Peafowl/views/dashboard.php:90
-#: ../../../app/themes/Peafowl/views/settings.php:126
-msgid "User"
-msgid_plural "Users"
-msgstr[0] "Usuário"
-msgstr[1] "Usuários"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:40
 #: ../../../app/themes/Peafowl/views/dashboard.php:1732
@@ -3108,6 +3153,17 @@ msgstr "Envios de visitantes"
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "Ative isto se quiser permitir que os usuários não registados façam envios."
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1353
+msgid "Enable embed codes (uploader)"
+msgstr "Ativar códigos embed (usuário)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1359
+msgid "Enable this if you want to show embed codes when upload gets completed."
+msgstr "Ative isto para mostrar os códigos embed quando o envio terminar."
+
+msgid "Upload threads"
+msgstr "Linhas de envio"
+
 msgid "Number of simultaneous upload threads (parallel uploads)"
 msgstr "Número de threads simultâneos de envio (envio paralelo)"
 
@@ -3131,8 +3187,17 @@ msgstr "Ativar envios expiráveis"
 msgid "Enable this if you want to allow uploads with an automatic delete option."
 msgstr "Ative esta opção se você deseja permitir envios com uma opção de exclusão automática."
 
+msgid "Auto delete guest uploads"
+msgstr "Excluir automaticamente envio de visitantes"
+
+msgid "Enable this if you want to force guest uploads to be auto deleted after certain time."
+msgstr "Ative isso se desejar forçar os envios dos visitantes a serem excluídos automaticamente após certo tempo."
+
 msgid "Maximum image size"
 msgstr "Tamanho máximo da imagem"
+
+msgid "Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit."
+msgstr "As imagens maiores que esse tamanho serão automaticamente reduzidas. Use zero (0) para não definir um limite."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:661
 #: ../../../app/themes/Peafowl/views/settings.php:183
@@ -3737,14 +3802,6 @@ msgstr "Ativar códigos embed (conteúdo)"
 msgid "Enable this if you want to show embed codes for the content."
 msgstr "Ative isto se você quiser mostrar códigos embed para o conteúdo."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1353
-msgid "Enable embed codes (uploader)"
-msgstr "Ativar códigos embed (usuário)"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1359
-msgid "Enable this if you want to show embed codes when upload gets completed."
-msgstr "Ative isto para mostrar os códigos embed quando o envio terminar."
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1365
 msgid "Not safe content checkbox in uploader"
 msgstr "Caixa de conteúdo inseguro para o usuário"
@@ -4180,15 +4237,6 @@ msgstr "Carregar visualização completa"
 #: ../../../app/themes/Peafowl/views/image.php:57
 msgid "Guest"
 msgstr "Convidado"
-
-#: ../../../app/themes/Peafowl/views/image.php:85
-msgid "You like this"
-msgstr "Você curtiu isso"
-
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "Curtir"
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -4655,10 +4703,6 @@ msgstr "Há uma atualização disponível para o seu sistema. Você pode fazer o
 msgid "Update now"
 msgstr "Atualizar agora"
 
-#, javascript-format
-msgid "Your website is running the latest version of %s"
-msgstr "O seu site está rodando a última versão do %s"
-
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"
 msgstr "Prancheta"
@@ -4678,6 +4722,12 @@ msgstr "Alguns arquivos não puderam ser adiccionados"
 #: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
 msgid "Image edited successfully."
 msgstr "Imagem editada com sucesso."
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "Privado"
 
 #: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
 msgid "Album edited successfully."

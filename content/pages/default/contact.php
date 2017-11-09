@@ -115,7 +115,7 @@ if($_POST) {
 			<?php if(CHV\getSettings()['recaptcha']) { ?>
 			<div class="input-label">
 				<label for="recaptcha_response_field">reCAPTCHA</label>
-				<?php echo CHV\Render\get_recaptcha_html('clean'); ?>
+				<?php echo CHV\Render\get_recaptcha_html(); ?>
 				<div class="input-below red-warning"><?php echo $input_errors['recaptcha']; ?></div>
 			</div>
 			<?php } ?>

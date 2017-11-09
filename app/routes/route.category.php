@@ -45,46 +45,11 @@ $route = function($handler) {
 		}
 
 		// Tabs
-		$tabs = [
-			[
-				'list'		=> true,
-				'tools'		=> true,
-				'label'		=> _s('Most recent'),
-				'id'		=> 'list-most-recent',
-				'params'	=> 'list=images&sort=date_desc&page=1',
-				'current'	=> $_REQUEST['sort'] == 'date_desc' or !$_REQUEST['sort'] ? true : false,
-			],
-			[
-				'list'		=> true,
-				'tools'		=> true,
-				'label'		=> _s('Oldest'),
-				'id'		=> 'list-most-oldest',
-				'params'	=> 'list=images&sort=date_asc&page=1',
-				'current'	=> $_REQUEST['sort'] == 'date_asc',
-			],
-			[
-				'list'		=> true,
-				'tools'		=> true,
-				'label'		=> _s('Most viewed'),
-				'id'		=> 'list-most-viewed',
-				'params'	=> 'list=images&sort=views_desc&page=1',
-				'current'	=> $_REQUEST['sort'] == 'views_desc',
-			],
-		];
-		$current = false;
-		foreach($tabs as $k => $v) {
-			$tabs[$k]['params_hidden'] .= 'category_id=' . $category['id'];
-			if($v['current']) {
-				$current = true;
-			}
-			$tabs[$k]['type'] = 'images';
-			$route_path = G\get_route_name();
-			$route_path .= '/' . $category['url_key'];
-			$tabs[$k]['url'] = G\get_base_url($route_path . '/?' . $tabs[$k]['params']);
-		}
-		if(!$current) {
-			$tabs[0]['current'] = true;
-		}
+		$tabs = CHV\Listing::getTabs([
+			'listing'	=> 'images',
+			'basename'	=> G\get_route_name() . '/' . $category['url_key'],
+			'params_hidden' => ['category_id' => $category['id'], 'hide_banned' => 1],
+		]);
 		
 		// List
 		$list_params = CHV\Listing::getParams(); // Use CHV magic params
@@ -99,7 +64,7 @@ $route = function($handler) {
 		$list->setRequester(CHV\Login::getUser());
 		$list->exec();
 
-		$meta_description = $category['description'] ? $category['description'] : NULL;
+		$meta_description = $category['description'] ?: NULL;
 		
 		$handler::setVar('meta_description', htmlspecialchars($meta_description));
 		$handler::setVar('meta_keywords', $category['name']);		

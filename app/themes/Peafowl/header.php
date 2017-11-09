@@ -56,6 +56,21 @@ switch(true) {
 			$open_graph_extend['url'] = get_image()['url'];
 		}
 	break;
+	case function_exists('get_album') and G\is_route('album'):
+		$open_graph_extend = [
+			'type'			=> 'article',
+			'title'			=> get_pre_doctitle(),
+			'description'	=> get_album()['description'] ?: get_album()['name'],
+		];
+		if(in_array(get_album()['privacy'], ['public', 'private_but_link']) && get_list()->output_count) {
+			$open_graph_extend = array_merge($open_graph_extend, [
+				'image'			=> get_list()->output_assoc[0]['display_url'],
+				'image:width'	=> get_list()->output_assoc[0]['display_width'],
+				'image:height'	=> get_list()->output_assoc[0]['display_height'],
+				'image:height'	=> get_album()['height']
+			]);
+		}
+	break;
 	case function_exists('get_user') and G\is_route('user'):
 		$open_graph_extend = [
 			'type'			=> 'profile',
@@ -174,8 +189,12 @@ foreach($twitter_card as $k => $v) {
 			<?php
 				if(CHV\getSetting('website_explore_page')) {
 					// Category selector
-					$categories = get_categories();
 					
+			?>
+			<li id="top-bar-explore" data-nav="explore" class="phone-hide pop-btn pop-btn-auto pop-btn-auto pop-btn-show<?php if(in_array(G\get_route_name(), ['explore','category'])) { ?> current<?php } ?>">
+				<?php
+					$cols = 1;
+					$categories = get_categories();
 					if(count($categories) > 0) {
 						array_unshift($categories, [
 							'id'		=> NULL,
@@ -184,15 +203,39 @@ foreach($twitter_card as $k => $v) {
 							'url'		=> G\get_base_url('explore')
 						]);
 						$cols = min(5, round(count($categories)/5, 0, PHP_ROUND_HALF_UP));
-			?>
-			<li id="top-bar-explore" data-nav="explore" class="phone-hide pop-btn pop-btn-auto pop-btn-auto pop-btn-show<?php if(G\get_route_name() == 'explore') { ?> current<?php } ?>">
-				<?php
-					
+					}
 				?>
-                <span class="top-btn-text"><span class="icon icon-images2"></span><span class="btn-text phone-hide phablet-hide"><?php _se('Explore'); ?></span></span>
+                <span class="top-btn-text"><span class="icon icon-stack"></span><span class="btn-text phone-hide phablet-hide"><?php _se('Explore'); ?></span></span>
                 <div class="pop-box <?php if($cols > 1) { echo sprintf('pbcols%d ', $cols); } ?>arrow-box arrow-box-top anchor-left">
-                    <div class="pop-box-inner pop-box-menu<?php if($cols > 1) { ?> pop-box-menucols<?php } ?>">
-                        <ul>
+                    
+					<div class="pop-box-inner pop-box-menu<?php if($cols > 1) { ?> pop-box-menucols<?php } ?>">
+						<?php
+							if(function_exists('get_explore_semantics')) {
+								$explore_semantics = get_explore_semantics();
+								if(CHV\Login::isLoggedUser() && CHV\getSetting('enable_followers')) {
+									$explore_semantics = ['following' => [
+										'label' => _s('Following'),
+										'icon'	=> 'icon-rss',
+										'url'	=> G\get_base_url('following'),
+									]] + $explore_semantics;
+								}
+						?>
+						<div class="pop-box-label"><?php _se('Discovery'); ?></div>
+						<ul>
+							<?php
+								foreach($explore_semantics as $k => $v) {
+									echo '<li><a href="'.$v['url'].'"><span class="btn-icon '.$v['icon'].'"></span><span class="btn-text">'.$v['label'].'</span></a></li>';
+								}
+							?>
+						</ul>
+						<?php
+							}
+						?>
+						<?php
+							if(count($categories) > 0) {
+						?>
+						<div class="pop-box-label phone-margin-top-20"><?php _se('Categories'); ?></div>
+						<ul>
 						<?php
 							foreach($categories as $k => $v){
 								echo '<li data-content="category" data-category-id="' . $v['id'] . '"><a data-content="category-name" data-link="category-url" href="' . $v['url'] . '">' . $v["name"] . '</a></li>'."\n";
@@ -200,19 +243,15 @@ foreach($twitter_card as $k => $v) {
 							}
 						?>
                         </ul>
+						<?php
+							}
+						?>
                     </div>
                 </div>
 			</li>
             <?php
-            	} else {
+            	}
             ?>
-            <li id="top-bar-explore" data-nav="explore" class="phone-hide top-btn-el<?php if(G\get_route_name() == 'explore') { ?> current<?php } ?>">
-            	<a href="<?php echo G\get_base_url('explore'); ?>"><span class="top-btn-text"><span class="icon icon-images2"></span><span class="btn-text phone-hide phablet-hide"><?php _se('Explore'); ?></span></span></a>
-            </li>
-            <?php
-            	}	
-            }
-			?>
 			
 			<?php if(CHV\getSetting('website_search')) { ?>
             <li data-action="top-bar-search"  data-nav="search" class="phone-hide pop-btn">
@@ -233,7 +272,7 @@ foreach($twitter_card as $k => $v) {
 			<?php } ?>
 			
 			<?php if(CHV\getSetting('website_random')) { ?>
-			<li id="top-bar-random"  data-nav="random" class="top-btn-el">
+			<li id="top-bar-random"  data-nav="random" class="top-btn-el phone-hide">
                 <a href="<?php echo G\get_base_url("?random"); ?>"><span class="top-btn-text"><span class="icon icon-shuffle"></span><span class="btn-text phone-hide phablet-hide"><?php _se('Random'); ?></span></span></a>
             </li>
 			<?php } ?>
@@ -257,8 +296,8 @@ foreach($twitter_card as $k => $v) {
             </li>
 			<?php } ?>
 			
-			<?php if(is_upload_allowed()) { ?>
-            <li data-action="top-bar-upload" data-nav="upload" class="phone-hide pop-btn"<?php if(!CHV\getSetting('guest_uploads')) { ?> data-login-needed="true"<?php } ?>>
+			<?php if(is_upload_enabled()) { ?>
+            <li data-action="top-bar-upload" data-nav="upload" class="pop-btn"<?php if(!CHV\getSetting('guest_uploads')) { ?> data-login-needed="true"<?php } ?>>
                 <span class="top-btn-text"><span class="icon icon-cloud-upload"></span><span class="btn-text phone-hide phablet-hide"><?php _se('Upload'); ?></span></span>
             </li>
 			<?php } ?>
@@ -362,7 +401,7 @@ foreach($twitter_card as $k => $v) {
 						$notifications_display = CHV\Login::getUser()['notifications_unread_display'];
 						$notifications_counter = strtr('<span data-content="notifications-counter" class="top-btn-number%c">'.$notifications_display.'</span>', ['%c' => $notifications_unread > 0 ? ' on' : NULL]);
 			?>
-			<li data-action="top-bar-notifications" class="top-bar-notifications pop-btn pop-keep-click margin-right-5">
+			<li data-action="top-bar-notifications" class="top-bar-notifications pop-btn pop-keep-click margin-right-5 phone-hide">
 				<div class="top-btn-text">
 					<div class="soft-hidden menu-fullscreen-show"><span class="icon icon-bell2"></span><?php echo $notifications_counter; ?><span class="btn-text"><?php _se('Notifications'); ?></span></div>
 					<div class="menu-fullscreen-hide"><?php echo $notifications_counter; ?></div>
@@ -389,7 +428,7 @@ foreach($twitter_card as $k => $v) {
 			<?php 
 					}
 			?>
-            <li id="top-bar-user" data-nav="user" class="pop-btn pop-btn-delayed<?php echo is_show_notifications() ? ' margin-left-0' : NULL; ?>">
+            <li id="top-bar-user" data-nav="user" class="pop-btn pop-btn-delayed phone-hide<?php echo is_show_notifications() ? ' margin-left-0' : NULL; ?>">
                 <span class="top-btn-text">
 					<?php if(CHV\Login::getUser()["avatar"]["url"]) { ?>
 					<img src="<?php echo CHV\Login::getUser()["avatar"]["url"]; ?>" alt="" class="user-image">
@@ -397,18 +436,25 @@ foreach($twitter_card as $k => $v) {
 					<img src="" alt="" class="user-image hidden">
 					<?php } ?>
 					<span class="user-image default-user-image<?php echo (CHV\Login::getUser()["avatar"]["url"] ? ' hidden' : ''); ?>"><span class="icon icon-user"></span></span>
-					<span class="text phone-hide"><?php echo CHV\Login::getUser()["name_short_html"]; ?></span><span class="arrow-down"></span>
+					<span class="text phone-hide"><?php echo CHV\Login::getUser()["name_short_html"]; ?></span><span class="phone-hide arrow-down"></span>
 				</span>
                 <div class="pop-box arrow-box arrow-box-top anchor-right">
                     <div class="pop-box-inner pop-box-menu">
                         <ul>
                             <li><a href="<?php echo CHV\Login::getUser()["url"]; ?>"><?php _se('My Profile'); ?></a></li>
-                            <?php if(CHV\getSetting('enable_followers')) { ?><li><a href="<?php echo G\get_base_url('following'); ?>"><?php _se('Following'); ?></a></li><?php } ?>
-							<li><a href="<?php echo CHV\Login::getUser()["url_albums"]; ?>"><?php _se('Albums'); ?></a></li>
+                            <li><a href="<?php echo CHV\Login::getUser()["url_albums"]; ?>"><?php _se('Albums'); ?></a></li>
 							<?php if(CHV\getSetting('enable_likes')) { ?>
 							<li><a href="<?php echo CHV\Login::getUser()["url_liked"]; ?>"><?php _se('Liked'); ?></a></li>
 							<?php } ?>
-                            <li><a href="<?php echo G\get_base_url("settings"); ?>"><?php _se('Settings'); ?></a></li>
+                            <?php
+								if(CHV\getSetting('enable_followers')) {
+							?>
+							<li><a href="<?php echo CHV\Login::getUser()['url_following']; ?>"><?php _se('Following'); ?></a></li>
+							<li><a href="<?php echo CHV\Login::getUser()['url_followers']; ?>"><?php _se('Followers'); ?></a></li>
+							<?php
+								}
+							?>
+							<li><a href="<?php echo G\get_base_url("settings"); ?>"><?php _se('Settings'); ?></a></li>
 							<?php if(is_admin()) { ?>
 							<li><a href="<?php echo G\get_base_url("dashboard"); ?>"><?php _se('Dashboard'); ?></a></li>
 							<?php } ?>

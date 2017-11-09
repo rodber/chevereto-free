@@ -488,6 +488,10 @@ class User {
 		$user['url_following'] = $user['url'] . '/following';
 		$user['url_followers'] = $user['url'] . '/followers';
 		
+		if(!filter_var($user['website'], FILTER_VALIDATE_URL)) {
+			unset($user['website']);
+		}
+		
 		// Do some safe cleaning
 		if(isset($user['website'])) {
 			$user['website_safe_html'] = G\safe_html($user['website']);
@@ -552,16 +556,6 @@ class User {
 			}
 		}
 		unset($user['background_filename']);
-		
-		// Facebook API v2.0 my gosssh...
-		/*
-		if($user['facebook_username']) {
-			$user['facebook'] = array(
-				'username'	=> $user['facebook_username'],
-				'url'		=> 'http://fb.me/'.$user['facebook_username']
-			);
-		}
-		*/
 		unset($user['facebook_username']);
 		
 		if($user['twitter_username']) {
@@ -581,9 +575,11 @@ class User {
 	}
 	
 	// Clean unconfirmed accounts
-	public static function cleanup() {
+	public static function cleanUnconfirmed($limit=NULL) {
 		$db = DB::getInstance();
-		$db->query('SELECT * FROM ' . DB::getTable('users') . ' WHERE user_status IN ("awaiting-confirmation", "awaiting-email") AND user_date_gmt <= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 2 DAY) ORDER BY user_id DESC LIMIT 5'); // Only 5 entries per round, this is an expensive job
+		$query = 'SELECT * FROM ' . DB::getTable('users') . ' WHERE user_status IN ("awaiting-confirmation", "awaiting-email") AND user_date_gmt <= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 2 DAY) ORDER BY user_id DESC';
+		if(is_int($limit)) $query .= ' LIMIT ' . $limit;
+		$db->query($query);
 		$users = $db->fetchAll();
 		foreach($users as $user) {
 			$user = self::formatArray($user);

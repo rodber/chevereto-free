@@ -167,22 +167,9 @@ function get_checkbox_html($options=[]) {
 	return $html;
 }
 
-function get_recaptcha_html($theme="red", $key=NULL) {
-	$public_key = CHV\getSetting('recaptcha_public_key');
-	if($key) {
-		$public_key = $key;
-	}
-	// Detect reCaptcha version
-	if(preg_match('/[-_]+/', $public_key)) { // new one
-		return '<script src="https://www.google.com/recaptcha/api.js"></script><div class="g-recaptcha" data-sitekey="'.$public_key.'" data-theme="'. ( CHV\getSetting('theme_tone') == 'light' ? 'light' : 'dark') . '"></div>';
-	} else {
-		require_once(CHV_APP_PATH_LIB_VENDOR . "recaptchalib.php");
-		return '<script type="text/javascript">
-			var RecaptchaOptions = {
-				theme : "'.$theme.'"
-			};
-		</script>' . recaptcha_get_html($public_key, $theme);
-	}
+function get_recaptcha_html($id='g-recaptcha') {
+	// v2 only
+	return strtr('<div id="%id" data-recaptcha-element class="g-recaptcha"></div>', ['%id' => $id]);
 }
 
 
@@ -327,15 +314,35 @@ function include_peafowl_foot() {
 		$v = get_static_url($v);
 	}
 	$resources['scripts'] = get_static_url(CHV_PATH_PEAFOWL . 'js/scripts.js');
-	$echo =
-		 '<script src="' . $resources['scripts'] . '"></script>' . "\n" .
-		 '<script>(function($,d){$.each(readyQ,function(i,f){$(f)});$.each(bindReadyQ,function(i,f){$(d).bind("ready",f)})})(jQuery,document)</script>' . "\n" .
-		 '<script src="' . $resources['peafowl'] . '"></script>' . "\n" .
-		 '<script src="' . $resources['chevereto'] . '"></script>' . "\n\n";
-	if(method_exists('CHV\Settings','getChevereto')) {
-		$echo .= '<script>var CHEVERETO = ' . json_encode(CHV\Settings::getChevereto()) . '</script>';
+	$echo = [
+		'<script src="' . $resources['scripts'] . '"></script>',
+		'<script>(function($,d){$.each(readyQ,function(i,f){$(f)});$.each(bindReadyQ,function(i,f){$(d).bind("ready",f)})})(jQuery,document)</script>',
+		'<script src="' . $resources['peafowl'] . '"></script>',
+		'<script src="' . $resources['chevereto'] . '"></script>',
+	];
+	
+	if(G\Handler::getCond('captcha_needed')) {
+		$echo[] = strtr('<script>
+		var PFrecaptchaCallback = function() {
+			$("[data-recaptcha-element]:empty:visible").each(function() {
+				var $this = $(this);
+				grecaptcha.render($this.attr("id"), {
+					sitekey: "%k",
+					theme: "%t"
+				});
+			});
+		};
+		</script>', [
+			'%k'	=> CHV\getSetting('recaptcha_public_key'),
+			'%t'	=> in_array(CHV\getSetting('theme_tone'), ['light', 'dark']) ? CHV\getSetting('theme_tone') : 'light', // Esto es MongoCodeQl (en camel case)
+		]);
+		$echo[] = '<script src="https://www.google.com/recaptcha/api.js?onload=PFrecaptchaCallback&render=explicit"  defer></script>';
 	}
-	echo $echo;
+		
+	if(method_exists('CHV\Settings','getChevereto')) {
+		$echo[] = '<script>var CHEVERETO = ' . json_encode(CHV\Settings::getChevereto()) . '</script>';
+	}
+	echo implode("\n", $echo);
 }
  
 function get_peafowl_item_list($tpl="image", $item, $template, $requester=NULL, $tools) {
@@ -369,15 +376,16 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=NULL, 
 		}
 	}
 	
-	if($stock_tpl == 'IMAGE') {
+	if(in_array($stock_tpl, ['IMAGE', 'ALBUM'])) {
 		$item['liked'] = is_null($item['like']['user_id']) ? 0 : ($requester['id'] == $item['like']['user_id'] ? 1 : 0);
+	}
+	
+	if($stock_tpl == 'IMAGE') {
 		if(!$item['is_animated'] || !isset($item['file_resource']['chain']['image'])) {
 			$conditional_replaces['tpl_list_item/item_image_play_gif'] = NULL;
 		}
-	} else {
-		if(!isset($item['images_slice'][0]['is_animated']) || $item['images_slice'][0]['is_animated'] == FALSE) {
-			$conditional_replaces['tpl_list_item/item_image_play_gif'] = NULL;
-		}
+	} else if(!isset($item['images_slice'][0]['is_animated']) || $item['images_slice'][0]['is_animated'] == FALSE) {
+		$conditional_replaces['tpl_list_item/item_image_play_gif'] = NULL;
 	}
 	
 	$filled_template = $template["tpl_list_item/$tpl"]; // Stock the unfilled template
@@ -385,7 +393,7 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=NULL, 
 	// Missing template file cause uncaught error
 	$tpl_replacements = $template;
 	
-	if(!CHV\getSetting('enable_likes') || $requester['is_private'] || $item['user']['is_private']) {
+	if(!CHV\getSetting('enable_likes') || $requester['is_private']/* || $item['user']['is_private']*/) {
 		$conditional_replaces['tpl_list_item/item_like'] = NULL;
 	}
 	
@@ -532,7 +540,7 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=NULL, 
 	$show_object = ($show_item_edit_tools || $show_item_public_tools) || ($requester['is_admin'] || (!is_null($requester) AND $item["user"]["id"] == $requester['id']));
 	
 	if($show_object) {
-		$object = G\array_filter_array($item, ['image', 'medium', 'thumb', 'name', 'extension', 'size_formatted', 'display_url', 'how_long_ago', 'url', 'url_viewer', 'filename']);
+		$object = G\array_filter_array($item, ['image', 'medium', 'thumb', 'name', 'title', 'extension', 'size_formatted', 'display_url', 'how_long_ago', 'url', 'url_viewer', 'filename']);
 		$replacements['DATA_OBJECT'] = "data-object='" . rawurlencode(json_encode(G\array_utf8encode($object))) . "'";
 	} else {
 		$replacements['DATA_OBJECT'] = NULL;
@@ -618,7 +626,7 @@ function chevereto_die($error_msg, $paragraph=NULL, $title=NULL) {
 
 	$html[] = '<p>'.$solution.'</p>';
 	$html = join("", $html);
-	$template = CHV_APP_PATH_SYSTEM . 'template.php';
+	$template = CHV_APP_PATH_CONTENT_SYSTEM . 'template.php';
 	
 	if(!require_once($template)) {
 		die("Can't find " . G\absolute_to_relative($system_template));
@@ -644,7 +652,7 @@ function getFriendlyExif($Exif) {
 			$exif_one_line[] = $Aperture; 
 		}
 		if($Exif->ISOSpeedRatings) {
-			$ISO = 'ISO' . $Exif->ISOSpeedRatings;
+			$ISO = 'ISO' . (is_array($Exif->ISOSpeedRatings) ? $Exif->ISOSpeedRatings[0] : $Exif->ISOSpeedRatings);
 			$exif_one_line[] = $ISO;
 		}
 		if($Exif->FocalLength) {
@@ -681,9 +689,12 @@ function getFriendlyExif($Exif) {
 			'DateTimeDigitized'
 		];
 		$ExifRelevant = [];
-		foreach($exif_relevant as $v) {
-			if(array_key_exists($v, $Exif) && strlen($Exif->{$v}) > 0) {
-				$ExifRelevant[$v] = exifReadableValue($Exif, $v);
+		foreach($exif_relevant as $k) {
+			if(array_key_exists($k, $Exif)) {
+				$exifReadableValue = exifReadableValue($Exif, $k);
+				if($exifReadableValue !== NULL && !is_array($exifReadableValue)) { // Just make sure to avoid this array
+					$ExifRelevant[$k] = $exifReadableValue;
+				}
 			}
 		}
 		$return = (object) [

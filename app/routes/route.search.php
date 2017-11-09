@@ -75,43 +75,15 @@ $route = function($handler) {
             $list->output_tpl = $search->type;
             $list->exec();
         } catch(Exception $e) {} // Silence to avoid wrong input queries
-		
-		// Tabs
-		$tabs = array(
-			0 => array(
-				"list"		=> true,
-				"tools"		=> true,
-				"type"		=> "images",
-				"label"		=> _s('Images'),
-				"id"		=> "list-search-images"
-			),
-			1 => array(
-				"list"		=> true,
-				"tools"		=> true,
-				"type"		=> "albums",
-				"label"		=> _s('Albums'),
-				"id"		=> "list-search-albums"
-			),
-			2 => array(
-				"list"		=> true,
-				"tools"		=> false,
-				"type"		=> "users",
-				"label"		=> _s('Users'),
-				"id"		=> "list-search-users"
-			)
-		);
-		$current = FALSE;
-		foreach($tabs as $k => $v) {
-			if($v['type'] == $search->type) {
-				$current = true;
-			}
-			$tabs[$k]["params"] = "q=".$safe_html_search["q"] . "&page=1";
-			$tabs[$k]["params_hidden"] = "list=" . $v["type"];
-			$tabs[$k]["current"] = $search->type == $v["type"];
-			$tabs[$k]["url"] = G\get_base_url("search/" . $v["type"] . "/?" . $tabs[$k]["params"]);
-		}
-		if(!$current) {
-			$tabs[0]['current'] = true;
+			
+		$tabs = CHV\Listing::getTabs([
+			'listing'	=> 'search',
+			'basename'	=> 'search',
+			'params'	=> ['q' => $safe_html_search['q'], 'page' => '1'],
+			'params_remove_keys' => ['sort'],
+		]);
+		foreach($tabs as $k => &$v) {
+			$v['current'] = $v['type'] == $search->type;
 		}
 		
 		// _s() must be bind in this way for the PO grabber

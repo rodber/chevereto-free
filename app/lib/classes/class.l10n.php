@@ -33,8 +33,8 @@ class L10n {
 			
 			// Stock the available languages
 			self::$available_languages = [];
-			$directory = new DirectoryIterator(CHV_APP_PATH_LANGUAGES);
-			$regex  = new RegexIterator($directory, '/^.+\.'. self::CHV_DEFAULT_LANGUAGE_EXTENSION .'$/i', \RegexIterator::GET_MATCH);
+			$directory = new DirectoryIterator(CHV_APP_PATH_CONTENT_LANGUAGES);
+			$regex  = new RegexIterator($directory, '/^.+\.'. self::CHV_DEFAULT_LANGUAGE_EXTENSION .'$/i', RegexIterator::GET_MATCH);
 			
 			$locales = self::getLocales();
 			$missing_locales = [];
@@ -98,7 +98,7 @@ class L10n {
 
 			// Set some language definitions
 			if(!defined('CHV_LANGUAGE_CODE')) define('CHV_LANGUAGE_CODE', $locale);
-			if(!defined('CHV_LANGUAGE_FILE')) define('CHV_LANGUAGE_FILE', CHV_APP_PATH_LANGUAGES . $locale . '.' . self::CHV_DEFAULT_LANGUAGE_EXTENSION);
+			if(!defined('CHV_LANGUAGE_FILE')) define('CHV_LANGUAGE_FILE', CHV_APP_PATH_CONTENT_LANGUAGES . $locale . '.' . self::CHV_DEFAULT_LANGUAGE_EXTENSION);
 			
 			self::processTranslation($locale);
 			
@@ -149,7 +149,7 @@ class L10n {
 		$filename = $locale . '.' . self::CHV_DEFAULT_LANGUAGE_EXTENSION;
 		
 		// Overriding?
-		$language_file = CHV_APP_PATH_LANGUAGES . $filename;
+		$language_file = CHV_APP_PATH_CONTENT_LANGUAGES . $filename;
 		$language_override_file = dirname($language_file) . '/overrides/' . $filename;
 		
 		// Stock the static $locale

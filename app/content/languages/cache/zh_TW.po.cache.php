@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-11-01 14:37+0000',
-  'PO-Revision-Date' => '2016-11-01 14:37+0000',
+  'POT-Creation-Date' => '2017-05-26 16:57+0000',
+  'PO-Revision-Date' => '2017-05-26 16:57+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'zh_TW',
@@ -99,6 +99,24 @@ $translation_table = [
 	"Note: This content is private. Change privacy to \"public\" to share." => [
 		0 => "注意：此內容是私密的。更改隱私為“公共”分享。",
 	],
+	"Private" => [
+		0 => "私密",
+	],
+	"Public" => [
+		0 => "公開",
+	],
+	"Me" => [
+		0 => "我",
+	],
+	"Link" => [
+		0 => "連結",
+	],
+	"Password" => [
+		0 => "密碼",
+	],
+	"view" => [
+		0 => "瀏覽次數",
+	],
 	"After %n %t" => [
 		0 => "經過 %n %t",
 	],
@@ -132,14 +150,56 @@ $translation_table = [
 	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
 		0 => "系统已切换到本地儲存空間. 由於在外部儲存伺服器沒有足夠的磁碟容量(%c), 圖像 %s 已被分配到本地的儲存空間上.",
 	],
-	"view" => [
-		0 => "瀏覽次數",
-	],
 	"like" => [
 		0 => "喜歡",
 	],
 	"image" => [
 		0 => "圖片",
+	],
+	"Recent" => [
+		0 => "最新",
+	],
+	"Trending" => [
+		0 => "最熱門",
+	],
+	"Popular" => [
+		0 => "最喜歡",
+	],
+	"Top users" => [
+		0 => "排名高的用戶",
+	],
+	"Most recent" => [
+		0 => "最新的",
+	],
+	"Oldest" => [
+		0 => "最舊的",
+	],
+	"Most viewed" => [
+		0 => "最熱門的",
+	],
+	"Most liked" => [
+		0 => "最喜歡的",
+	],
+	"Explore" => [
+		0 => "探索",
+	],
+	"Animated" => [
+		0 => "動圖",
+	],
+	"Search" => [
+		0 => "搜尋",
+	],
+	"People" => [
+		0 => "人",
+	],
+	"Image" => [
+		0 => "圖片",
+	],
+	"Album" => [
+		0 => "相簿",
+	],
+	"User" => [
+		0 => "使用者",
 	],
 	"Can't create %s destination dir" => [
 		0 => "無法創建 %s 目標目錄",
@@ -150,9 +210,6 @@ $translation_table = [
 	"Internal" => [
 		0 => "內部",
 	],
-	"Link" => [
-		0 => "連結",
-	],
 	"Can't insert storage." => [
 		0 => "無法增加儲存空間",
 	],
@@ -162,6 +219,9 @@ $translation_table = [
 	"Can't update storage details." => [
 		0 => "無法更新儲存空間訊息",
 	],
+	"requires %s" => [
+		0 => "要求%s",
+	],
 	"Unlimited" => [
 		0 => "無限的",
 	],
@@ -170,9 +230,6 @@ $translation_table = [
 	],
 	"Private profile" => [
 		0 => "私人檔案",
-	],
-	"Private" => [
-		0 => "私密",
 	],
 	"year" => [
 		0 => "年",
@@ -303,18 +360,6 @@ $translation_table = [
 	"Password required" => [
 		0 => "需要密碼",
 	],
-	"Most recent" => [
-		0 => "最新的",
-	],
-	"Oldest" => [
-		0 => "最舊的",
-	],
-	"Most viewed" => [
-		0 => "最熱門的",
-	],
-	"Most liked" => [
-		0 => "最喜歡的",
-	],
 	"Share" => [
 		0 => "分享",
 	],
@@ -354,9 +399,6 @@ $translation_table = [
 	"Support" => [
 		0 => "支援",
 	],
-	"Chevereto support" => [
-		0 => "Chevereto支援",
-	],
 	"Need help? Go to %s and you will get help quickly." => [
 		0 => "需要協助？前往 %s 以及您將可獲得解答。",
 	],
@@ -384,8 +426,8 @@ $translation_table = [
 	"Disabled" => [
 		0 => "禁用",
 	],
-	"Max. upload size" => [
-		0 => "最大上傳大小",
+	"Max. upload file size" => [
+		0 => "最大上傳檔案大小",
 	],
 	"Max. post size" => [
 		0 => "最大的傳送大小",
@@ -600,8 +642,8 @@ $translation_table = [
 	"Invalid timezone" => [
 		0 => "無效的時區",
 	],
-	"Invalid value" => [
-		0 => "無效的值",
+	"Invalid value: %s" => [
+		0 => "無效的值: %s",
 	],
 	"Invalid upload storage mode" => [
 		0 => "無效的上傳儲存空間模式",
@@ -626,6 +668,9 @@ $translation_table = [
 	],
 	"Invalid theme" => [
 		0 => "無效的主題",
+	],
+	"Invalid value" => [
+		0 => "無效的值",
 	],
 	"Invalid theme tone" => [
 		0 => "無效的主題色調",
@@ -749,12 +794,6 @@ $translation_table = [
 	],
 	"Can't save page contents: %s." => [
 		0 => "无法保存页面内容: %s",
-	],
-	"Top users" => [
-		0 => "排名高的用戶",
-	],
-	"Explore" => [
-		0 => "探索",
 	],
 	"Following" => [
 		0 => "關註",
@@ -915,23 +954,17 @@ $translation_table = [
 	"User search results for %s" => [
 		0 => "使用者搜尋結果： %s",
 	],
-	"Search" => [
-		0 => "搜尋",
-	],
 	"Account" => [
 		0 => "帳戶",
 	],
 	"Profile" => [
 		0 => "個人資料",
 	],
-	"Password" => [
-		0 => "密碼",
-	],
 	"Linked accounts" => [
 		0 => "連結的帳號",
 	],
-	"Invalid image expiration" => [
-		0 => "無效的圖像映像",
+	"Invalid image expiration: %s" => [
+		0 => "無效的有效期限: %s",
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "這封郵件已發送至 %s 請登入信箱並啟用",
@@ -989,6 +1022,9 @@ $translation_table = [
 	],
 	"%n (%u) on %w" => [
 		0 => "%n (%u) 在 %w",
+	],
+	"Discovery" => [
+		0 => "探索",
 	],
 	"Close" => [
 		0 => "關閉",
@@ -1098,56 +1134,83 @@ $translation_table = [
 	"Select the images to upload" => [
 		0 => "選擇需要上傳的圖片",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "你也可以 <a data-trigger=\"anywhere-upload-input\">瀏覽您的電腦</a> 或者 <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">加入圖片的URL </a>.",
+	"browse from your computer" => [
+		0 => "從電腦內選擇",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "您也可以  <a data-trigger=\"anywhere-upload-input-camera\">拍照</a> 或者 <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">加入圖像的URL</a>.",
+	"add image URLs" => [
+		0 => "加入圖片連結",
 	],
-	"Edit or resize an image by clicking the image preview" => [
+	"You can also %i or %u." => [
+		0 => "你可以從%i或%u",
+	],
+	"take a picture" => [
+		0 => "截圖",
+	],
+	"Edit or resize any image by clicking the image preview" => [
 		0 => "編輯或通過點擊圖像預覽調整圖像大小",
 	],
-	"Edit or resize an image by touching the image preview" => [
+	"Edit or resize any image by touching the image preview" => [
 		0 => "編輯或通過觸摸圖像預覽調整圖像大小",
 	],
-	"You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>." => [
-		0 => "您可以增加更多圖像 <a data-trigger=\"anywhere-upload-input\">瀏覽您的電腦</a> 或者 <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">瀏覽圖像的URL </a>.",
+	"your computer" => [
+		0 => "你的電腦",
 	],
-	"You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "您可以 <a data-trigger=\"anywhere-upload-input\">增加更多圖像</a> 或者 <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">增加更多的圖像URL</a>.",
+	"image URLs" => [
+		0 => "圖片連結",
 	],
-	"Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>" => [
-		0 => "上傳 <span data-text=\"queue-size\">0</span> 張<span data-text=\"queue-objects\">圖片</span>",
+	"You can keep adding more images from %i or from %u." => [
+		0 => "你可以從%i或%u持續新增更多圖片",
+	],
+	"your device" => [
+		0 => "你的裝置",
+	],
+	"Uploading %q %o" => [
+		0 => "上傳中 %q %o",
 	],
 	"complete" => [
 		0 => "完成",
 	],
-	"The queue is being uploaded. It will take just a few seconds to complete." => [
-		0 => "佇列上傳中. 只需花一些時間便能完成.",
+	"The queue is being uploaded, it should take just a few seconds to complete." => [
+		0 => "佇列上傳中. 需要一點時間來完成",
 	],
 	"Upload complete" => [
 		0 => "上傳完成",
 	],
-	"Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album." => [
-		0 => "圖片已加入到 <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">公開</a>. 您可以<a data-modal=\"form\" data-target=\"form-uploaded-create-album\">建立一個新的相簿</a> 或 <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">移動<span data-text=\"queue-objects\">圖片</span></a> 到現有的相簿.",
+	"Uploaded content added to %s." => [
+		0 => "上傳的內容已經添加到%s",
 	],
-	"You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account." => [
-		0 => "您可以 <a href=\"%s\">建立一個帳戶</a> 或 <a href=\"%l\">登入</a> 來保存接下來上傳的圖片於您的帳戶",
+	"You can %c with the content just uploaded or %m." => [
+		0 => "您已經可以使用剛剛上傳的%c或是%m",
 	],
-	"No <span data-text=\"queue-objects\">images</span> have been uploaded" => [
-		0 => "沒有已經上傳的 <span data-text=\"queue-objects\">圖片</span>",
+	"You can %c with the content just uploaded." => [
+		0 => "您已經可以使用剛剛上傳的%c",
+	],
+	"create a new album" => [
+		0 => "建立新相簿",
+	],
+	"move it to an existing album" => [
+		0 => "移動到現有的相簿",
+	],
+	"create an account" => [
+		0 => "建立新帳號",
+	],
+	"sign in" => [
+		0 => "登入",
+	],
+	"You can %s or %l to save this content into your account." => [
+		0 => "您可以%s或%l來保存圖片到您的帳戶",
+	],
+	"No %s have been uploaded" => [
+		0 => "沒有%s已經上傳",
 	],
 	"Some errors have occured and the system couldn't process your request." => [
 		0 => "發生錯誤, 系統無法處理您的請求.",
 	],
+	"Category" => [
+		0 => "分類",
+	],
 	"Select category" => [
 		0 => "選擇類別",
-	],
-	"Change upload privacy" => [
-		0 => "更改上傳隱私",
-	],
-	"cancel" => [
-		0 => "取消",
 	],
 	"Mark this if the upload is not family safe" => [
 		0 => "標記這個上傳內容為非闔家皆宜",
@@ -1157,6 +1220,9 @@ $translation_table = [
 	],
 	"Uploading" => [
 		0 => "上傳中",
+	],
+	"cancel" => [
+		0 => "取消",
 	],
 	"cancel remaining" => [
 		0 => "取消剩下的",
@@ -1208,6 +1274,12 @@ $translation_table = [
 	],
 	"Auto delete image" => [
 		0 => "自動刪除圖像",
+	],
+	"Sign up" => [
+		0 => "註冊",
+	],
+	"%s to be able to customize or disable image auto delete." => [
+		0 => "%s能夠自訂是否使用自動刪除圖片",
 	],
 	"Mark this if the image is not family safe" => [
 		0 => "標記這個圖片為非闔家皆宜內容",
@@ -1308,9 +1380,6 @@ $translation_table = [
 	"Put a minus sign just before words you don't want: -rodent -\"Jack Russell\"" => [
 		0 => "在不需要的關鍵字前加減號: -鄧麗欣 -\"王 祖男\"",
 	],
-	"Category" => [
-		0 => "分類",
-	],
 	"Storage" => [
 		0 => "儲存空間",
 	],
@@ -1335,9 +1404,6 @@ $translation_table = [
 	"Who can view this content" => [
 		0 => "誰可以看到",
 	],
-	"Public" => [
-		0 => "公開",
-	],
 	"Private (just me)" => [
 		0 => "私密（只有我）",
 	],
@@ -1349,9 +1415,6 @@ $translation_table = [
 	],
 	"Album password" => [
 		0 => "相簿密碼",
-	],
-	"No category" => [
-		0 => "無分類",
 	],
 	"Name" => [
 		0 => "名字",
@@ -1394,21 +1457,6 @@ $translation_table = [
 	],
 	"Existing album" => [
 		0 => "現有的相簿",
-	],
-	"Album" => [
-		0 => "相簿",
-	],
-	"me" => [
-		0 => "我",
-	],
-	"link" => [
-		0 => "超連結",
-	],
-	"password" => [
-		0 => "密碼",
-	],
-	"private" => [
-		0 => "私密",
 	],
 	"create new album" => [
 		0 => "建立新的相簿",
@@ -1548,11 +1596,17 @@ $translation_table = [
 	"Delete" => [
 		0 => "刪除",
 	],
+	"Create new album" => [
+		0 => "建立新的相簿",
+	],
 	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
 		0 => "您必須登入才能使用所有的功能. 如果您還未註冊請現在就<a href=\"%s\">註冊</a>.",
 	],
 	"There's nothing to show here." => [
 		0 => "沒有顯示的內容",
+	],
+	"Upload images" => [
+		0 => "上傳圖片",
 	],
 	"Edit image details" => [
 		0 => "編輯圖片資訊",
@@ -1710,6 +1764,15 @@ $translation_table = [
 	"Delete album" => [
 		0 => "刪除相簿",
 	],
+	"You like this" => [
+		0 => "您喜歡這個",
+	],
+	"Like" => [
+		0 => "喜歡",
+	],
+	"Upload to album" => [
+		0 => "上傳至相簿",
+	],
 	"Album link" => [
 		0 => "相簿鏈接",
 	],
@@ -1724,12 +1787,6 @@ $translation_table = [
 	],
 	"I Agree" => [
 		0 => "我同意",
-	],
-	"Image" => [
-		0 => "圖片",
-	],
-	"User" => [
-		0 => "使用者",
 	],
 	"Disk used" => [
 		0 => "已用大小",
@@ -1872,9 +1929,6 @@ $translation_table = [
 	"Only alphanumerics, hyphens and forward slash" => [
 		0 => "只有字母, 數字和片語",
 	],
-	"Page URL key relative to %s" => [
-		0 => "頁面URL值相對於 %s",
-	],
 	"File path" => [
 		0 => "檔案路徑",
 	],
@@ -1950,6 +2004,15 @@ $translation_table = [
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "允許非註冊用戶上傳",
 	],
+	"Enable embed codes (uploader)" => [
+		0 => "啟用嵌入代碼（上傳者）",
+	],
+	"Enable this if you want to show embed codes when upload gets completed." => [
+		0 => "如果你想圖片上傳完成後顯示嵌入代碼請啟用這個功能.",
+	],
+	"Upload threads" => [
+		0 => "上傳序列",
+	],
 	"Number of simultaneous upload threads (parallel uploads)" => [
 		0 => "同時上傳連線數量（並行上傳）",
 	],
@@ -1971,6 +2034,18 @@ $translation_table = [
 	"Enable this if you want to allow uploads with an automatic delete option." => [
 		0 => "如果您想允許上傳與自動刪除選項請啟用它.",
 	],
+	"Auto delete guest uploads" => [
+		0 => "自動刪除訪客上傳",
+	],
+	"Enable this if you want to force guest uploads to be auto deleted after certain time." => [
+		0 => "開啟後可再一定時間後自動刪除訪客上傳的圖片",
+	],
+	"Maximum image size" => [
+		0 => "最大圖片大小",
+	],
+	"Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit." => [
+		0 => "大於此尺寸的圖片將自動縮小尺寸,使用(0)則不設置限制",
+	],
 	"Image Exif data" => [
 		0 => "圖像Exif資料",
 	],
@@ -1986,11 +2061,11 @@ $translation_table = [
 	"Enable this if you want to allow each user to configure how image Exif data will be handled." => [
 		0 => "啟用它, 如果您允許每個用戶設置是否刪除圖像的Exif資料.",
 	],
-	"Max. filesize" => [
-		0 => "最大檔案大小",
+	"Maximum upload file size" => [
+		0 => "最大上傳大小",
 	],
-	"Max. allowed filesize. (Max allowed by server is %s)" => [
-		0 => "最大允許的檔案大小.（服務器最大允許為 %s）",
+	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
+		0 => "主機限制最大上傳大小是%s這個限制是因為%u以及%p(%f的數值)",
 	],
 	"Image path" => [
 		0 => "圖片路徑",
@@ -2400,6 +2475,12 @@ $translation_table = [
 	"Favicon image. Image must have same width and height." => [
 		0 => "所上傳圖像必須具有相同的寬度和高度.",
 	],
+	"Image load max. filesize" => [
+		0 => "最大可載入圖片檔案大小",
+	],
+	"Images greater than this size will show a button to load full resolution image." => [
+		0 => "大於此尺寸的圖片將顯示一個按鈕以加載最大解析度",
+	],
 	"Enable download button" => [
 		0 => "啟用下載按鈕",
 	],
@@ -2429,12 +2510,6 @@ $translation_table = [
 	],
 	"Enable this if you want to show embed codes for the content." => [
 		0 => "啟用此選項, 允許用戶取得嵌入代碼 .",
-	],
-	"Enable embed codes (uploader)" => [
-		0 => "啟用嵌入代碼（上傳者）",
-	],
-	"Enable this if you want to show embed codes when upload gets completed." => [
-		0 => "如果你想圖片上傳完成後顯示嵌入代碼請啟用這個功能.",
 	],
 	"Not safe content checkbox in uploader" => [
 		0 => "上傳時顯示\"非安全內容\"的選項",
@@ -2748,12 +2823,6 @@ $translation_table = [
 	"%s secret key" => [
 		0 => "%s 秘密鑰匙",
 	],
-	"reCAPTCHA public key" => [
-		0 => "reCAPTCHA public key",
-	],
-	"reCAPTCHA private key" => [
-		0 => "reCAPTCHA private key",
-	],
 	"reCAPTCHA threshold" => [
 		0 => "reCAPTCHA threshold",
 	],
@@ -2813,12 +2882,6 @@ $translation_table = [
 	],
 	"Guest" => [
 		0 => "訪客",
-	],
-	"You like this" => [
-		0 => "您喜歡這個",
-	],
-	"Like" => [
-		0 => "喜歡",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "加入 %a 和分類至 %c",
@@ -3144,11 +3207,8 @@ $translation_table = [
 	"Update now" => [
 		0 => "立刻更新",
 	],
-	"Your website is running the latest version of %s" => [
-		0 => "你的網站正在運行最新版本的 %s",
-	],
-	"Your website is running the latest version of Chevereto." => [
-		0 => "您的網站正在執行Chevereto的最新版本.",
+	"This website is running latest %s version" => [
+		0 => "網站正在使用最新的%s版本",
 	],
 	"Clipboard image" => [
 		0 => "剪貼板圖像",
@@ -3164,6 +3224,9 @@ $translation_table = [
 	],
 	"Image edited successfully." => [
 		0 => "圖片編輯成功",
+	],
+	"private" => [
+		0 => "私密",
 	],
 	"Album edited successfully." => [
 		0 => "相簿編輯成功.",

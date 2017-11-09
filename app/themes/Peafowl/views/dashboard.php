@@ -2,14 +2,14 @@
 <?php G\Render\include_theme_header(); ?>
 
 <div class="content-width">
-	
+
 	<div class="form-content">
-		
+
 		<div class="header header-tabs">
 			<h1><?php _se('Dashboard'); ?></h1>
 			<?php G\Render\include_theme_file("snippets/tabs"); ?>
 		</div>
-		
+
 		<?php
 			switch(get_dashboard()) {
 				case 'stats':
@@ -41,22 +41,67 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<ul class="tabbed-content-list table-li margin-top-20">
 				<?php
 					foreach(get_system_values() as $v) {
 				?>
-				<li><span class="c6 display-table-cell padding-right-10"><?php echo $v['label']; ?></span> <span class="display-table-cell"><?php echo $v['content']; ?></span></li>
+				<li><span class="c6 display-table-cell padding-right-10"><?php echo $v['label']; ?><span style="opacity: 0;">:</span></span><span class="display-table-cell"><?php echo $v['content']; ?></span></li>
 				<?php
 					}
 				?>
+				<li>
+					<span class="c6 display-table-cell padding-right-10">GitHub<span style="opacity: 0;">:</span></span>
+					<span class="display-table-cell vertical-align-middle" style="line-height: 1;">
+						<a class="github-button" href="https://github.com/Chevereto/Chevereto-Free/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch Chevereto/Chevereto-Free on GitHub">Watch</a>
+						<a class="github-button" href="https://github.com/Chevereto/Chevereto-Free" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star Chevereto/Chevereto-Free on GitHub">Star</a>
+					</span>
+				</li>
 			</ul>
-			
+			<style>
+				.btn-upgrade {
+					line-height: inherit;
+					text-transform: uppercase;
+				}
+			</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+			<script>
+				$(document).ready(function() {
+					$(document).on("click", "[data-action=upgrade]", function() {
+						PF.fn.modal.call({
+							template: $("[data-modal=form-upgrade]").html(),
+							buttons: true,
+							button_submit: "Upgrade now",
+							ajax: {
+								data: {action: 'upgrade'},
+								deferred: {
+									success: function(XHR) {
+										window.location.href = XHR.responseJSON.redir.url;
+									},
+									error: function(XHR) {
+										PF.fn.growl.call(XHR.responseJSON.error.message);
+									}
+								}
+							},
+						});
+					});
+				});
+			</script>
+
+			<div data-modal="form-upgrade" class="hidden" data-is-xhr data-submit-fn="CHV.fn.submit_upgradeToPaid" data-ajax-deferred="CHV.fn.complete_upgradeToPaid">
+				<div class="text-align-center margin-top-30 margin-bottom-30">
+					<img class="c8 replace-svg" src="<?php echo G\absolute_to_url(CHV_PATH_CONTENT_IMAGES_SYSTEM . 'default/logo.svg'); ?>" alt="Chevereto" height="auto">
+				</div>
+				<p>Upgrading to paid edition not only allows you to get all features, support and early access to all new additions and fixes. It also helps to keep development ongoing which is the most important asset of your purchase.</p>
+				<p>Don't worry, we don't sell each paid feature as a separate plugin. Everything is included and we don't charge any yearly-based fees.</p>
+				<p>You will need a <a href="https://chevereto.com/panel/license" target="_blank">license key</a> for this process. If you don't have a license you can <a href="https://chevereto.com/pricing" target="_blank">purchase</a> it right now.</p>
+			</div>
+
 		</div>
-		
-		<?php 
+
+		<?php
 				break;
-				
+
 				case 'images':
 				case 'albums':
 				case 'users':
@@ -73,7 +118,7 @@
 			<div class="header-content-right phone-float-none">
 				<?php G\Render\include_theme_file("snippets/listing_tools_editor"); ?>
 			</div>
-			
+
 			<?php if(get_dashboard() == 'users') { ?>
 			<div class="header-content-right phone-float-none">
 				<div class="list-selection">
@@ -109,7 +154,7 @@
 			</div>
 			<?php } ?>
 		</div>
-		
+
 		<div id="content-listing-tabs" class="tabbed-listing">
 			<div id="tabbed-content-group">
 				<?php
@@ -118,7 +163,7 @@
 			</div>
 		</div>
 		<?php
-			break;	
+			break;
 			case 'settings':
 				function personal_mode_warning() {
 					if(CHV\getSetting('website_mode') == 'personal') {
@@ -137,9 +182,9 @@
 				}
 		?>
 		<form id="dashboard-settings" method="post" data-type="<?php echo get_dashboard(); ?>" data-action="validate" enctype="multipart/form-data">
-			
+
 			<?php echo G\Render\get_input_auth_token(); ?>
-			
+
 			<div class="header default-margin-bottom">
 				<h1>
 					<span class="icon icon-cog phablet-hide tablet-hide laptop-hide desktop-hide"></span>
@@ -213,13 +258,13 @@
 				</div>
 				<?php } ?>
 			</div>
-			
+
 			<?php
 				if(get_dashboard() == 'settings') {
 			?>
-			
+
 			<?php if(get_settings()['key'] == 'website') { ?>
-			
+
 			<div class="c9 phablet-c1">
 				<div class="input-label">
 					<label for="website_name"><?php _se('Website name'); ?></label>
@@ -241,21 +286,21 @@
 					<div class="input-warning red-warning"><?php echo get_input_errors()['website_keywords']; ?></div>
 				</div>
 			</div>
-			
+
 			<hr class="line-separator"></hr>
-			
-			<?php 
+
+			<?php
 				$zones = timezone_identifiers_list();
 				foreach ($zones as $zone) {
 					$zone = explode('/', $zone);
-					if(in_array($zone[0], array("Africa", "America", "Antarctica", "Arctic", "Asia", "Atlantic", "Australia", "Europe", "Indian", "Pacific"))) {      
+					if(in_array($zone[0], array("Africa", "America", "Antarctica", "Arctic", "Asia", "Atlantic", "Australia", "Europe", "Indian", "Pacific"))) {
 						if (isset($zone[1]) != '') {
 							$regions[$zone[0]][$zone[0]. '/' . $zone[1]] = str_replace('_', ' ', $zone[1]);
-						} 
+						}
 					}
 				}
 			?>
-			
+
 			<div class="input-label">
 				<label for="timezone-region"><?php _se('Default time zone'); ?></label>
 				<div class="overflow-auto">
@@ -291,9 +336,9 @@
 				</div>
 				<input type="hidden" id="default_timezone" name="default_timezone" data-content="timezone" data-highlight="#timezone-region" value="<?php echo CHV\Settings::get('default_timezone', true); ?>" required>
 			</div>
-			
+
 			<hr class="line-separator"></hr>
-			
+
 			<div class="input-label">
 				<label for="website_search"><?php _se('Search'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="website_search" id="website_search" class="text-input">
@@ -303,7 +348,7 @@
 				</select></div>
 				<div class="input-below"><?php _se('Allows to search images, albums and users based on a given search query.'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="website_explore_page"><?php _se('Explore'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="website_explore_page" id="website_explore_page" class="text-input">
@@ -313,7 +358,7 @@
 				</select></div>
 				<div class="input-below"><?php _se('Enables to browse public uploaded images. It also enables categories.'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="website_random"><?php _se('Random'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="website_random" id="website_random" class="text-input">
@@ -323,7 +368,7 @@
 				</select></div>
 				<div class="input-below"><?php _se('Enables to browse images randomly.'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="enable_likes"><?php _se('Likes'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" class="text-input" disabled>
@@ -334,7 +379,7 @@
 				<?php free_version_waring(); ?>
 				<?php personal_mode_warning(); ?>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="enable_followers"><?php _se('Followers'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" class="text-input" disabled>
@@ -345,9 +390,9 @@
 				<?php free_version_waring(); ?>
 				<?php personal_mode_warning(); ?>
 			</div>
-			
+
 			<hr class="line-separator"></hr>
-			
+
             <div class="input-label">
 				<label for="website_mode"><?php _se('Website mode'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="website_mode" id="website_mode" class="text-input" data-combo="website-mode-combo">
@@ -358,13 +403,13 @@
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['website_mode']; ?></div>
 				<div class="input-below"><?php _se('You can switch the website mode anytime.'); ?></div>
 			</div>
-            
+
 			<div id="website-mode-combo">
-				
+
 				<div data-combo-value="personal" class="switch-combo phablet-c1<?php if((get_safe_post() ? get_safe_post()['website_mode'] : CHV\Settings::get('website_mode')) != 'personal') echo ' soft-hidden'; ?>">
-					
+
 					<hr class="line-separator"></hr>
-					
+
 					<div class="input-label">
 						<label for="website_mode_personal_uid"><?php _se('Personal mode target user'); ?></label>
 						<div class="c3"><input type="number" min="1" name="website_mode_personal_uid" id="website_mode_personal_uid" class="text-input" value="<?php echo CHV\Settings::get('website_mode_personal_uid'); ?>" placeholder="<?php _se('User ID'); ?>" rel="tooltip" title="<?php _se('Your user id is: %s', CHV\Login::getUser()['id']); ?>" data-tipTip="right" data-required></div>
@@ -377,13 +422,13 @@
 						<div class="input-below input-warning red-warning"><?php echo get_input_errors()['website_mode_personal_routing']; ?></div>
 						<div class="input-below"><?php _se('Custom route to map /username to /something. Use "/" to map to homepage.'); ?></div>
 					</div>
-					
+
 					<hr class="line-separator"></hr>
-					
+
 				</div>
-				
+
 			</div>
-			
+
 			<div class="input-label">
 				<label for="website_privacy_mode"><?php _se('Website privacy mode'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="website_privacy_mode" id="website_privacy_mode" class="text-input" data-combo="website-privacy-mode-combo">
@@ -394,7 +439,7 @@
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['website_privacy_mode']; ?></div>
 				<div class="input-below"><?php _se('Private mode will make the website only available for registered users.'); ?></div>
 			</div>
-			
+
 			<div id="website-privacy-mode-combo">
 				<div data-combo-value="private" class="switch-combo phablet-c1<?php if((get_safe_post() ? get_safe_post()['website_privacy_mode'] : CHV\Settings::get('website_privacy_mode')) != 'private') echo ' soft-hidden'; ?>">
 					<div class="input-label">
@@ -413,14 +458,14 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<?php } ?>
-			
+
 			<?php
 				if(get_settings()['key'] == 'pages') {
-					
+
 					// So ugly!
-					
+
 					switch(get_settings_pages()['doing']) {
 						case 'display':
 						break;
@@ -435,10 +480,10 @@
 							foreach($page as $k => $v) {
 								$page_db['page_' . $k] =  $v;
 							}
-							
+
 						break;
 					}
-					
+
 					function get_page_val($key, $from='POST') {
 						global $page_db;
 						if(empty($key)) return NULL;
@@ -455,19 +500,19 @@
 							}
 						}
 					}
-					
+
 			?>
-			
+
 			<h3><?php echo get_settings_pages()['title']; ?></h3>
-			
+
 			<?php if(get_settings_pages()['doing'] !== 'listing') { ?>
-			
+
 			<div class="input-label">
 				<label for="page_title"><?php _se('Title'); ?></label>
 				<div class="c9 phablet-c1"><input type="text" name="page_title" id="page_title" class="text-input" value="<?php echo get_page_val('page_title'); ?>" required placeholder="<?php _se('Page title'); ?>"></div>
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['page_title']; ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="page_is_active"><?php _se('Page status'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="page_is_active" id="page_is_active" class="text-input">
@@ -478,7 +523,7 @@
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['page_is_active']; ?></div>
 				<div class="input-below"><?php _se('Only active pages will be accessible.'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="page_type"><?php _se('Type'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="page_type" id="page_type" class="text-input"  data-combo="page-type-combo">
@@ -488,14 +533,14 @@
 				</select></div>
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['page_type']; ?></div>
 			</div>
-			
+
 			<div id="page-type-combo">
-			
+
 				<?php
 					$page_internal_combo_visible = get_settings_pages()['doing'] == 'edit' ? (get_page_val('page_type') == 'internal') : TRUE;
 				?>
 				<div data-combo-value="internal" class="switch-combo phablet-c1<?php if(!$page_internal_combo_visible) echo ' soft-hidden' ; ?>">
-					
+
 					<div class="input-label">
 						<label for="page_is_link_visible"><?php _se('Page visibility'); ?></label>
 						<div class="c5 phablet-c1"><select type="text" name="page_is_link_visible" id="page_is_link_visible" class="text-input" <?php echo $page_internal_combo_visible ? 'required' : 'data-required'; ?>>
@@ -506,36 +551,36 @@
 						<div class="input-below input-warning red-warning"><?php echo get_input_errors()['page_is_link_visible']; ?></div>
 						<div class="input-below"><?php _se("Hidden pages won't be show in system menus, but anyone can access to it with the link."); ?></div>
 					</div>
-					
+
 					<div class="input-label">
 						<label for="page_url_key"><?php _se('URL key'); ?></label>
 						<div class="c9 phablet-c1"><input type="text" name="page_url_key" id="page_url_key" class="text-input" value="<?php echo get_page_val('page_url_key'); ?>" pattern="^[\w]([\w-]*[\w])?(\/[\w]([\w-]*[\w])?)*$" rel="tooltip" data-tiptip="right" placeholder="url-key" title="<?php _se('Only alphanumerics, hyphens and forward slash'); ?>" <?php echo $page_internal_combo_visible ? 'required' : 'data-required'; ?>></div>
 						<div class="input-below input-warning red-warning"><?php echo get_input_errors()['page_url_key']; ?></div>
 						<div class="input-below"><?php echo G\get_base_url('pages/url-key'); ?></div>
 					</div>
-					
+
 					<div class="input-label">
 						<label for="page_file_path"><?php _se('File path'); ?></label>
 						<div class="c9 phablet-c1"><input type="text" name="page_file_path" id="page_file_path" class="text-input" value="<?php echo get_page_val('page_file_path'); ?>" pattern="^[\w]([\w-]*[\w])?(\/[\w]([\w-]*[\w])?)*\.<?php echo G\get_app_setting('disable_php_pages') ? 'html' : 'php'; ?>$" <?php echo $page_internal_combo_visible ? 'required' : 'data-required'; ?> placeholder="page.<?php echo G\get_app_setting('disable_php_pages') ? 'html' : 'php'; ?>"></div>
 						<div class="input-below input-warning red-warning"><?php echo get_input_errors()['page_file_path']; ?></div>
-						<div class="input-below"><?php 
+						<div class="input-below"><?php
 							$pages_visible_path = G\absolute_to_relative(CHV_PATH_CONTENT_PAGES);
 							_se('A %f file relative to %s', ['%f' => G\get_app_setting('disable_php_pages') ? 'HTML' : 'PHP', '%s' => $pages_visible_path]);
 						?></div>
 					</div>
-					
+
 					<div class="input-label">
 						<label for="page_keywords"><?php _se('Meta keywords'); ?> <span class="optional"><?php _se('optional'); ?></span></label>
 						<div class="c9 phablet-c1"><input type="text" name="page_keywords" id="page_keywords" class="text-input" value="<?php echo get_page_val('page_keywords'); ?>"></div>
 						<div class="input-below input-warning red-warning"><?php echo get_input_errors()['page_keywords']; ?></div>
 					</div>
-					
+
 					<div class="input-label">
 						<label for="page_description"><?php _se('Meta description'); ?> <span class="optional"><?php _se('optional'); ?></span></label>
 						<div class="c9 phablet-c1"><textarea type="text" name="page_description" id="page_description" class="text-input resize-vertical r2"><?php echo get_page_val('page_description'); ?></textarea></div>
 						<div class="input-below input-warning red-warning"><?php echo get_input_errors()['page_description']; ?></div>
 					</div>
-					
+
 					<div class="input-label">
 						<label for="page_code"><?php _se('Source code'); ?></label>
 						<?php
@@ -561,11 +606,11 @@
 						<?php } ?>
 						<textarea type="text" name="page_code" id="page_code" class="text-input resize-vertical r14"<?php if(!$is_page_writable) echo ' readonly'; ?>><?php echo (is_readable($page_path_absolute)) ? htmlspecialchars(file_get_contents($page_path_absolute)) : NULL; ?></textarea>
 						<div class="input-below input-warning red-warning"><?php echo get_input_errors()['page_code']; ?></div>
-						
+
 					</div>
-					
+
 				</div>
-				
+
 				<div data-combo-value="link" class="switch-combo phablet-c1<?php if(get_page_val('page_type') !== 'link') echo ' soft-hidden' ; ?>">
 					<div class="input-label">
 						<label for="page_link_url"><?php _se('Link URL'); ?></label>
@@ -573,9 +618,9 @@
 						<div class="input-below input-warning red-warning"><?php echo get_input_errors()['page_link_url']; ?></div>
 					</div>
 				</div>
-				
+
 			</div>
-			
+
 			<div class="input-label">
 				<label for="page_attr_target"><?php _se('Link target attribute'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="page_attr_target" id="page_attr_target" class="text-input">
@@ -586,21 +631,21 @@
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['page_attr_target']; ?></div>
 				<div class="input-below"><?php _se('Select %s to open the page or link in a new window.', '"_blank"'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="page_attr_rel"><?php _se('Link rel attribute'); ?> <span class="optional"><?php _se('optional'); ?></span></label>
 				<div class="c9 phablet-c1"><input type="text" name="page_attr_rel" id="page_attr_rel" class="text-input" pattern="[\w\s\-]+" value="<?php echo get_page_val('page_attr_rel'); ?>" rel="tooltip" data-tiptip="right" title="<?php _se('Only alphanumerics, hyphens and whitespaces'); ?>"></div>
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['page_attr_rel']; ?></div>
 				<div class="input-below"><?php _se('HTML &lt;a&gt; %s attribute', '<a href="http://www.w3schools.com/tags/att_a_rel.asp" target="_blank">rel</a>'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="page_icon"><?php _se('Link icon'); ?> <span class="optional"><?php _se('optional'); ?></span></label>
 				<div class="c9 phablet-c1"><input type="text" name="page_icon" id="page_icon" class="text-input" pattern="[\w\s\-]+" value="<?php echo get_page_val('page_icon'); ?>" rel="tooltip" data-tiptip="right" title="<?php _se('Only alphanumerics, hyphens and whitespaces'); ?>"></div>
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['page_icon']; ?></div>
 				<div class="input-below"><?php _se('Check the <a %s>icon reference</a> for the complete list of supported icons.', 'href="http://chevereto.com/src/icomoon" target="_blank"'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="page_sort_display"><?php _se('Sort order display'); ?> <span class="optional"><?php _se('optional'); ?></span></label>
 				<div class="c3 phablet-c1"><input type="number" min="1" name="page_sort_display" id="page_sort_display" class="text-input" value="<?php echo get_page_val('page_sort_display'); ?>" ></div>
@@ -646,11 +691,11 @@
 			<?php
 					}
 			?>
-			
+
 			<?php } // display ?>
-			
+
 			<?php } // pages ?>
-			
+
 			<?php if(get_settings()['key'] == 'image-upload') { ?>
 			<div class="input-label">
 				<label>Enabled image formats</label>
@@ -664,11 +709,11 @@
 					</ul>
 					<div class="input-below input-warning red-warning"><?php echo get_input_errors()['upload_enabled_image_formats']; ?></div>
 					<p class="margin-top-20"><?php _se("Unchecked image formats won't be allowed to be uploaded."); ?></p>
-				</div>              
+				</div>
 			</div>
 
 			<hr class="line-separator"></hr>
-			
+
 			<div class="input-label">
 				<label for="enable_uploads"><?php _se('Enable uploads'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="enable_uploads" id="enable_uploads" class="text-input">
@@ -688,16 +733,28 @@
 				<div class="input-below"><?php _se('Enable this if you want to allow non registered users to upload.'); ?></div>
 				<?php personal_mode_warning(); ?>
 			</div>
-			
+
 			<hr class="line-separator"></hr>
-			
+
+			<div class="input-label">
+				<label for="theme_show_embed_uploader"><?php _se('Enable embed codes (uploader)'); ?></label>
+				<div class="c5 phablet-c1"><select type="text" name="theme_show_embed_uploader" id="theme_show_embed_uploader" class="text-input">
+					<?php
+						echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('theme_show_embed_uploader'));
+					?>
+				</select></div>
+				<div class="input-below"><?php _se('Enable this if you want to show embed codes when upload gets completed.'); ?></div>
+			</div>
+
+			<hr class="line-separator"></hr>
+
 			<div class="input-label">
 				<label for="upload_threads"><?php _se('Upload threads'); ?></label>
 				<div class="c2"><input type="number" min="1" max="5" pattern="\d+" name="upload_threads" id="upload_threads" class="text-input" value="<?php echo CHV\Settings::get('upload_threads'); ?>" placeholder="2" required></div>
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['upload_threads']; ?></div>
 				<div class="input-below"><?php _se('Number of simultaneous upload threads (parallel uploads)'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="enable_redirect_single_upload"><?php _se('Redirect on single upload'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="enable_redirect_single_upload" id="enable_redirect_single_upload" class="text-input">
@@ -707,7 +764,7 @@
 				</select></div>
 				<div class="input-below"><?php _se("Enable this if you want to redirect to image page on single upload."); ?></div>
 			</div>
-			
+
             <div class="input-label">
 				<label for="enable_duplicate_uploads"><?php _se('Enable duplicate uploads'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="enable_duplicate_uploads" id="enable_duplicate_uploads" class="text-input">
@@ -717,7 +774,9 @@
 				</select></div>
 				<div class="input-below"><?php _se("Enable this if you want to allow duplicate uploads from the same IP within 24hrs. This setting doesn't affect administrators."); ?></div>
 			</div>
-			
+
+			<hr class="line-separator"></hr>
+
 			<div class="input-label">
 				<label for="enable_expirable_uploads"><?php _se('Enable expirable uploads'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="enable_expirable_uploads" id="enable_expirable_uploads" class="text-input">
@@ -727,9 +786,20 @@
 				</select></div>
 				<div class="input-below"><?php _se("Enable this if you want to allow uploads with an automatic delete option."); ?></div>
 			</div>
-			
+
+			<div class="input-label">
+				<label for="auto_delete_guest_uploads"><?php _se('Auto delete guest uploads'); ?></label>
+				<div class="c5 phablet-c1"><select type="text" name="auto_delete_guest_uploads" id="auto_delete_guest_uploads" class="text-input">
+					<?php
+						echo CHV\Render\get_select_options_html(CHV\Image::getAvailableExpirations(), CHV\Settings::get('auto_delete_guest_uploads'));
+					?>
+				</select></div>
+				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['auto_delete_guest_uploads']; ?></div>
+				<div class="input-below"><?php _se("Enable this if you want to force guest uploads to be auto deleted after certain time."); ?></div>
+			</div>
+
 			<hr class="line-separator"></hr>
-            
+
 			<div class="input-label">
 				<label for="upload_max_image_width" class="display-block-forced"><?php _se('Maximum image size'); ?></label>
 				<div class="c5 overflow-auto clear-both">
@@ -744,9 +814,9 @@
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['upload_max_image_height']; ?></div>
 				<div class="input-below"><?php _se("Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit."); ?></div>
 			</div>
-			
+
 			<hr class="line-separator"></hr>
-			
+
             <div class="input-label">
 				<label for="upload_image_exif"><?php _se('Image Exif data'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="upload_image_exif" id="upload_image_exif" class="text-input">
@@ -774,7 +844,7 @@
 			</div>
 
             <hr class="line-separator"></hr>
-			
+
 			<div class="input-label">
 				<label for="upload_max_filesize_mb"><?php _se('Maximum upload file size'); ?> (MB)</label>
 				<div class="c2"><input type="number" min="1" max="<?php echo G\bytes_to_mb(CHV\Settings::get('true_upload_max_filesize')); ?>" pattern="\d+" name="upload_max_filesize_mb" id="upload_max_filesize_mb" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['upload_max_filesize_mb'] : CHV\Settings::get('upload_max_filesize_mb'); ?>" placeholder="MB" required></div>
@@ -805,9 +875,9 @@
 				</select></div>
 				<div class="input-below"><?php _se('"Original" will try to keep the image source name while "Random" will generate a random name. "ID" will name the image just like the image ID.'); ?></div>
 			</div>
-			
+
 			<hr class="line-separator"></hr>
-			
+
 			<div class="input-label">
 				<label for="upload_thumb_width" class="display-block-forced"><?php _se('Thumb size'); ?></label>
 				<div class="c5 overflow-auto clear-both">
@@ -839,9 +909,9 @@
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['upload_medium_size']; ?></div>
 				<div class="input-below"><?php _se('Width or height will be automatically calculated.'); ?></div>
 			</div>
-			
+
 			<hr class="line-separator"></hr>
-			
+
 			<div class="input-label">
 				<label for="watermark_enable"><?php _se('Watermarks'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="watermark_enable" id="watermark_enable" class="text-input" data-combo="watermark-combo">
@@ -861,7 +931,7 @@
 					<?php
 						}
 					?>
-					
+
 					<div class="input-label">
 						<label for="watermark_checkboxes"><?php _se('Watermark user toggles'); ?></label>
 						<?php echo CHV\Render\get_checkbox_html([
@@ -880,7 +950,7 @@
 							'checked'	=> ((bool)(get_safe_post() ? get_safe_post()['watermark_enable_admin'] : CHV\Settings::get('watermark_enable_admin')))
 						]); ?>
 					</div>
-					
+
 					<div class="input-label">
 						<label for="watermark_checkboxes"><?php _se('Watermark file toggles'); ?></label>
 						<?php echo CHV\Render\get_checkbox_html([
@@ -889,7 +959,7 @@
 							'checked'	=> ((bool)(get_safe_post() ? get_safe_post()['watermark_enable_file_gif'] : CHV\Settings::get('watermark_enable_file_gif')))
 						]); ?>
 					</div>
-					
+
 					<div class="input-label">
 						<label for="watermark_target_min_width" class="display-block-forced"><?php _se('Minimum image size needed to apply watermark'); ?></label>
 						<div class="c5 overflow-auto clear-both">
@@ -904,7 +974,7 @@
 						<div class="input-below input-warning red-warning"><?php echo get_input_errors()['watermark_target_min_height']; ?></div>
 						<div class="input-below"><?php _se("Images smaller than this won't be watermarked. Use zero (0) to don't set a minimum image size limit."); ?></div>
 					</div>
-					
+
 					<div class="input-label">
 						<label for="watermark_image"><?php _se('Watermark image'); ?></label>
 						<div class="transparent-canvas dark margin-bottom-10" style="max-width: 200px;"><img class="display-block" width="100%" src="<?php echo CHV\get_system_image_url(CHV\Settings::get('watermark_image')) . '?' . G\random_string(8); ?>"></div>
@@ -960,9 +1030,9 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<?php } ?>
-			
+
 			<?php if(get_settings()['key'] == 'categories') { ?>
 			<?php if(!CHV\getSetting('website_explore_page')) { ?>
 				<div class="growl static"><?php _se("Categories won't work when the explorer feature is turned off. To revert this setting go to %s.", ['%s' => '<a href="'.G\get_base_url('dashboard/settings/website').'">'._s('Dashboard > Settings > Website').'</a>']); ?></div>
@@ -1055,7 +1125,7 @@
 				</div>
 			</div>
 			<?php } ?>
-			
+
 			<?php if(get_settings()['key'] == 'users') { ?>
 			<div class="input-label">
 				<label for="enable_signups"><?php _se('Enable signups'); ?></label>
@@ -1074,9 +1144,9 @@
 				<div class="input-below"><?php _se("Leave it empty to don't require a minimum age to use the website."); ?></div>
 				<?php personal_mode_warning(); ?>
 			</div>
-			
+
 			<hr class="line-separator"></hr>
-			
+
 			<div class="input-label">
 				<label for="user_routing"><?php _se('Username routing'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="user_routing" id="user_routing" class="text-input"<?php if(CHV\getSetting('website_mode') == 'personal') echo ' disabled'; ?>>
@@ -1087,7 +1157,7 @@
 				<div class="input-below"><?php _se('Enable this if you want to use %s/username URLs instead of %s/user/username.', ['%s' => rtrim(G\get_base_url(), '/')]); ?></div>
 				<?php personal_mode_warning(); ?>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="require_user_email_confirmation"><?php _se('Require email confirmation'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="require_user_email_confirmation" id="require_user_email_confirmation" class="text-input"<?php if(CHV\getSetting('website_mode') == 'personal') echo ' disabled'; ?>>
@@ -1108,9 +1178,9 @@
 				<?php free_version_waring(); ?>
 				<?php personal_mode_warning(); ?>
 			</div>
-			
+
 			<hr class="line-separator"></hr>
-			
+
 			<div class="input-label">
 				<label for="user_image_avatar_max_filesize_mb"><?php _se('User avatar max. filesize'); ?> (MB)</label>
 				<div class="c3"><input type="number" min="0" pattern="\d+" name="user_image_avatar_max_filesize_mb" id="user_image_avatar_max_filesize_mb" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['user_image_avatar_max_filesize_mb'] : CHV\Settings::get('user_image_avatar_max_filesize_mb'); ?>" placeholder="MB" required></div>
@@ -1123,9 +1193,9 @@
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['user_image_background_max_filesize_mb']; ?></div>
 				<div class="input-below"><?php _se('Max. allowed filesize for user background image. (Max allowed by server is %s)', G\format_bytes(G\get_ini_bytes(ini_get('upload_max_filesize'))), 'strtr'); ?></div>
 			</div>
-			
+
 			<?php } ?>
-			
+
 			<?php if(get_settings()['key'] == 'consent-screen') { ?>
 			<p><?php _se("Shows a consent screen before accessing the website. Useful for adult content websites where minors shouldn't be allowed."); ?></p>
 			<div class="input-label">
@@ -1149,7 +1219,7 @@
 				</div>
 			</div>
 			<?php } ?>
-			
+
 			<?php if(get_settings()['key'] == 'flood-protection') { ?>
 			<p><?php _se("Block image uploads by IP if the system notice a flood  behavior based on the number of uploads per time period. This setting doesn't affect administrators."); ?></p>
 			<div class="input-label">
@@ -1199,7 +1269,7 @@
 				</div>
 			</div>
 			<?php } ?>
-			
+
 			<?php if(get_settings()['key'] == 'content') { ?>
 			<div class="input-label">
 				<label for="show_nsfw_in_listings"><?php _se('Show not safe content in listings'); ?></label>
@@ -1228,7 +1298,7 @@
 				</select></div>
 				<?php free_version_waring(); ?>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="show_nsfw_in_random_mode"><?php _se('Show not safe content in random mode'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="show_nsfw_in_random_mode" id="show_nsfw_in_random_mode" class="text-input">
@@ -1238,7 +1308,7 @@
 				</select></div>
 			</div>
 			<?php } ?>
-			
+
 			<?php if(get_settings()['key'] == 'listings') { ?>
 			<div class="input-label">
 				<label for="listing_items_per_page"><?php _se('List items per page'); ?></label>
@@ -1246,7 +1316,7 @@
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['listing_items_per_page']; ?></div>
 				<div class="input-below"><?php _se('How many items should be displayed per page listing.'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="listing_pagination_mode"><?php _se('List pagination mode'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="listing_pagination_mode" id="listing_pagination_mode" class="text-input">
@@ -1257,7 +1327,7 @@
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['listing_pagination_mode']; ?></div>
 				<div class="input-below"><?php _se('What pagination method should be used.'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="theme_image_listing_sizing"><?php _se('Image listing size'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="theme_image_listing_sizing" id="theme_image_listing_sizing" class="text-input">
@@ -1268,9 +1338,9 @@
 				<div class="input-below input-warning red-warning clear-both"><?php echo get_input_errors()['theme_image_listing_sizing']; ?></div>
 				<div class="input-below"><?php _se('Both methods use a fixed width but fluid method uses automatic heights.'); ?></div>
 			</div>
-			
+
 			<hr class="line-separator"></hr>
-			
+
 			<div class="input-label">
 				<label><?php _se('Listing columns number'); ?></label>
 				<div class="input-below"><?php _se('Here you can set how many columns are used based on each target device.'); ?></div>
@@ -1297,7 +1367,7 @@
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['listing_columns']; ?></div>
 			</div>
 			<?php } ?>
-			
+
 			<?php if(get_settings()['key'] == 'theme') { ?>
 			<p><?php echo read_the_docs(['%s' => _s('theme editing'), '%k' => 'theme']); ?></p>
 			<hr class="line-separator"></hr>
@@ -1330,14 +1400,14 @@
 				</select></div>
 				<div class="input-below input-warning red-warning clear-both"><?php echo get_input_errors()['theme_tone']; ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="theme_main_color"><?php _se('Main color'); ?></label>
 				<div class="c4"><input type="text" name="theme_main_color" id="theme_main_color" class="text-input" value="<?php echo CHV\Settings::get('theme_main_color', true); ?>" placeholder="#00A7DA" pattern="#?([\da-fA-F]{2})([\da-fA-F]{2})([\da-fA-F]{2})" title="<?php _se('Hexadecimal color value'); ?>" rel="toolTip" data-tipTip="right"></div>
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['theme_main_color']; ?></div>
 				<div class="input-below"><?php _se('Use this to set the main theme color. Value must be in <a href="%s" target="_blank">hex format</a>.', 'http://www.color-hex.com/'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="theme_top_bar_color"><?php _se('Top bar color'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="theme_top_bar_color" id="theme_top_bar_color" class="text-input">
@@ -1348,7 +1418,7 @@
 				<div class="input-below input-warning red-warning clear-both"><?php echo get_input_errors()['theme_top_bar_color']; ?></div>
 				<div class="input-below"><?php _se('If you set this to "white" the top bar and all the black tones will be changed to white tones.'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="theme_top_bar_button_color"><?php _se('Top bar button color'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="theme_top_bar_button_color" id="theme_top_bar_button_color" class="text-input">
@@ -1368,9 +1438,9 @@
 				<div class="input-below input-warning red-warning clear-both"><?php echo get_input_errors()['theme_top_bar_button_color']; ?></div>
 				<div class="input-below"><?php _se('Color for the top bar buttons like the "Create account" button.'); ?></div>
 			</div>
-			
+
 			<hr class="line-separator"></hr>
-			
+
 			<?php
 				if(!is_writable(CHV_PATH_CONTENT_IMAGES_SYSTEM)) {
 			?>
@@ -1378,7 +1448,7 @@
 			<?php
 				}
 			?>
-			
+
 			<div class="input-label">
 				<label for="logo_vector_enable"><?php _se('Enable vector logo'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="logo_vector_enable" id="logo_vector_enable" class="text-input" data-combo="logo-vector-combo">
@@ -1402,7 +1472,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="logo_image"><?php _se('Raster logo image'); ?></label>
 				<div class="transparent-canvas dark margin-bottom-10" style="max-width: 200px;"><img class="display-block" width="100%" src="<?php echo CHV\get_system_image_url(CHV\Settings::get('logo_image')) . '?' . G\random_string(8); ?>"></div>
@@ -1412,16 +1482,16 @@
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['logo_image']; ?></div>
 				<div class="input-below"><?php _se('Bitmap version or your website logo. PNG format is recommended.'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="theme_logo_height"><?php _se('Logo height'); ?></label>
 				<div class="c4"><input type="number" min="0" pattern="\d+" name="theme_logo_height" id="theme_logo_height" class="text-input" value="<?php echo CHV\Settings::get('theme_logo_height'); ?>" placeholder="<?php _se('No value'); ?>"></div>
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['theme_logo_height']; ?></div>
 				<div class="input-below"><?php _se('Use this to set the logo height if needed.'); ?></div>
 			</div>
-			
+
 			<hr class="line-separator"></hr>
-			
+
 			<div class="input-label">
 				<label for="favicon_image"><?php _se('Favicon image'); ?></label>
 				<div class="transparent-canvas dark margin-bottom-10" style="max-width: 100px;"><img class="display-block" width="100%" src="<?php echo CHV\get_system_image_url(CHV\Settings::get('favicon_image')) . '?' . G\random_string(8);  ?>"></div>
@@ -1431,16 +1501,16 @@
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['favicon_image']; ?></div>
 				<div class="input-below"><?php _se('Favicon image. Image must have same width and height.'); ?></div>
 			</div>
-			
+
 			<hr class="line-separator"></hr>
-			
+
 			<div class="input-label">
 				<label for="image_load_max_filesize_mb"><?php _se('Image load max. filesize'); ?> (MB)</label>
 				<div class="c2"><input type="number" min="0" pattern="\d+" name="image_load_max_filesize_mb" id="image_load_max_filesize_mb" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['image_load_max_filesize_mb'] : CHV\Settings::get('image_load_max_filesize_mb'); ?>" placeholder="MB"></div>
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['image_load_max_filesize_mb']; ?></div>
 				<div class="input-below"><?php _se('Images greater than this size will show a button to load full resolution image.'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="theme_download_button"><?php _se('Enable download button'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="theme_download_button" id="theme_download_button" class="text-input">
@@ -1450,7 +1520,7 @@
 				</select></div>
 				<div class="input-below"><?php _se('Enable this if you want to show the image download button.'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="theme_image_right_click"><?php _se('Enable right click on image'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="theme_image_right_click" id="theme_image_right_click" class="text-input">
@@ -1460,9 +1530,9 @@
 				</select></div>
 				<div class="input-below"><?php _se('Enable this if you want to allow right click on image viewer page.'); ?></div>
 			</div>
-			
+
 			<hr class="line-separator"></hr>
-			
+
 			<div class="input-label">
 				<label for="theme_show_exif_data"><?php _se('Enable show Exif data'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="theme_show_exif_data" id="theme_show_exif_data" class="text-input">
@@ -1472,9 +1542,9 @@
 				</select></div>
 				<div class="input-below"><?php _se('Enable this if you want to show image Exif data.'); ?></div>
 			</div>
-			
+
 			<hr class="line-separator"></hr>
-			
+
 			<div class="input-label">
 				<label for="theme_show_social_share"><?php _se('Enable social share'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="theme_show_social_share" id="theme_show_social_share" class="text-input">
@@ -1484,7 +1554,7 @@
 				</select></div>
 				<div class="input-below"><?php _se('Enable this if you want to show social network buttons to share content.'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="theme_show_embed_content"><?php _se('Enable embed codes (content)'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="theme_show_embed_content" id="theme_show_embed_content" class="text-input">
@@ -1494,19 +1564,9 @@
 				</select></div>
 				<div class="input-below"><?php _se('Enable this if you want to show embed codes for the content.'); ?></div>
 			</div>
-			
-			<div class="input-label">
-				<label for="theme_show_embed_uploader"><?php _se('Enable embed codes (uploader)'); ?></label>
-				<div class="c5 phablet-c1"><select type="text" name="theme_show_embed_uploader" id="theme_show_embed_uploader" class="text-input">
-					<?php
-						echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('theme_show_embed_uploader'));
-					?>
-				</select></div>
-				<div class="input-below"><?php _se('Enable this if you want to show embed codes when upload gets completed.'); ?></div>
-			</div>
-			
+
 			<hr class="line-separator"></hr>
-			
+
 			<div class="input-label">
 				<label for="theme_nsfw_upload_checkbox"><?php _se('Not safe content checkbox in uploader'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="theme_nsfw_upload_checkbox" id="theme_nsfw_upload_checkbox" class="text-input">
@@ -1516,21 +1576,21 @@
 				</select></div>
 				<div class="input-below"><?php _se('Enable this if you want to show a checkbox to indicate not safe content upload.'); ?></div>
 			</div>
-				
+
 			<hr class="line-separator"></hr>
-			
+
 			<div class="input-label">
 				<label for="theme_custom_css_code"><?php _se('Custom CSS code'); ?></label>
 				<div class="c12 phablet-c1"><textarea type="text" name="theme_custom_css_code" id="theme_custom_css_code" class="text-input r4" placeholder="<?php _se('Put your custom CSS code here. It will be placed as <style> just before the closing </head> tag.'); ?>"><?php echo CHV\Settings::get('theme_custom_css_code', true); ?></textarea></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="theme_custom_js_code"><?php _se('Custom JS code'); ?></label>
 				<div class="c12 phablet-c1"><textarea type="text" name="theme_custom_js_code" id="theme_custom_js_code" class="text-input r4" placeholder="<?php _se('Put your custom JS code here. It will be placed as <script> just before the closing </head> tag.'); ?>"><?php echo CHV\Settings::get('theme_custom_js_code', true); ?></textarea></div>
 			</div>
-			
+
 			<?php } ?>
-			
+
 			<?php if(get_settings()['key'] == 'homepage') { ?>
 			<div class="input-label">
 				<label for="homepage_style"><?php _se('Style'); ?></label>
@@ -1574,11 +1634,11 @@
 						</div>
 						<div class="input-below input-warning red-warning"><?php echo get_input_errors()['homepage_cover_image_add']; ?></div>
 					</div>
-					
+
 					<?php if(CHV\Settings::get('logo_vector_enable')) { ?>
-					
+
 					<hr class="line-separator"></hr>
-					
+
 					<div class="input-label">
 						<label for="logo_vector_homepage"><?php _se('Vector logo image'); ?> <span class="optional"><?php _se('optional'); ?></span></label>
 						<div class="transparent-canvas dark margin-bottom-10" style="max-width: 200px;"><img class="display-block" width="100%" src="<?php echo CHV\get_system_image_url(CHV\Settings::get('logo_vector_homepage')) . '?' . G\random_string(8); ?>"></div>
@@ -1598,21 +1658,21 @@
 						<div class="input-below input-warning red-warning"><?php echo get_input_errors()['logo_image_homepage']; ?></div>
 						<div class="input-below"><?php _se('Bitmap version or your website logo (only for homepage). PNG format is recommended.'); ?></div>
 					</div>
-					
+
 					<hr class="line-separator"></hr>
-					
+
 					<div class="input-label">
 						<label for="homepage_title_html"><?php _se('Title'); ?></label>
 						<div class="c12 phablet-c1"><textarea type="text" name="homepage_title_html" id="homepage_title_html" class="text-input r2 resize-vertical" placeholder="<?php echo G\safe_html(_s('This will be added inside the homepage %s tag. Leave it blank to use the default contents.', '<h1>')); ?>"><?php echo CHV\Settings::get('homepage_title_html'); ?></textarea></div>
 					</div>
-					
+
 					<div class="input-label">
 						<label for="homepage_paragraph_html"><?php _se('Paragraph'); ?></label>
 						<div class="c12 phablet-c1"><textarea type="text" name="homepage_paragraph_html" id="homepage_paragraph_html" class="text-input r2 resize-vertical" placeholder="<?php echo G\safe_html(_s('This will be added inside the homepage %s tag. Leave it blank to use the default contents.', '<p>')); ?>"><?php echo CHV\Settings::get('homepage_paragraph_html'); ?></textarea></div>
 					</div>
-					
+
 					<hr class="line-separator"></hr>
-					
+
 					<div class="input-label">
 						<label for="homepage_cta_color"><?php _se('Call to action button color'); ?></label>
 						<div class="c5 phablet-c1"><select type="text" name="homepage_cta_color" id="homepage_cta_color" class="text-input">
@@ -1632,7 +1692,7 @@
 						<div class="input-below input-warning red-warning clear-both"><?php echo get_input_errors()['homepage_cta_color']; ?></div>
 						<div class="input-below"><?php _se('Color of the homepage call to action button.'); ?></div>
 					</div>
-					
+
 					<div class="input-label">
 						<label for="homepage_cta_outline"><?php _se('Call to action outline style button'); ?></label>
 						<div class="c5 phablet-c1"><select type="text" name="homepage_cta_outline" id="homepage_cta_outline" class="text-input">
@@ -1643,7 +1703,7 @@
 						<div class="input-below input-warning red-warning clear-both"><?php echo get_input_errors()['homepage_cta_outline']; ?></div>
 						<div class="input-below"><?php _se('Enable this to use outline style for the homepage call to action button.'); ?></div>
 					</div>
-					
+
 					<div class="input-label">
 						<label for="homepage_cta_fn"><?php _se('Call to action functionality'); ?></label>
 						<div class="c5 phablet-c1"><select type="text" name="homepage_cta_fn" id="homepage_cta_fn" class="text-input" data-combo="cta-fn-combo">
@@ -1671,7 +1731,7 @@
 						<label for="homepage_cta_html"><?php _se('Call to action HTML'); ?></label>
 						<div class="c12 phablet-c1"><textarea type="text" name="homepage_cta_html" id="homepage_cta_html" class="text-input r2 resize-vertical" placeholder="<?php echo G\safe_html(_s('This will be added inside the call to action <a> tag. Leave it blank to use the default contents.')); ?>"><?php echo CHV\Settings::get('homepage_cta_html'); ?></textarea></div>
 					</div>
-					
+
 				</div>
 				<div data-combo-value="split" class="switch-combo<?php if((get_safe_post() ? get_safe_post()['homepage_style'] : CHV\Settings::get('homepage_style')) !== 'split') echo ' soft-hidden'; ?>">
 					<div class="input-label">
@@ -1682,9 +1742,9 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<?php } ?>
-			
+
 			<?php if(get_settings()['key'] == 'system') { ?>
 			<div class="input-label">
 				<label for="enable_automatic_updates_check"><?php _se('Automatic updates check'); ?></label>
@@ -1750,9 +1810,9 @@
 				</select></div>
 				<div class="input-below"><?php _se('To configure the debug level check the <a %s>debug documentation</a>. Default level is "Error log" (1).', 'href="https://goo.gl/UQtZEf" target="_blank"'); ?></div>
 			</div>
-			
+
 			<?php } ?>
-			
+
 			<?php if(get_settings()['key'] == 'routing') { ?>
 			<p><?php  _se('Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes.', '<a href="https://chevereto.com/docs/routes">' . _s('documentation') . '</a>'); ?></p>
 			<div class="input-label">
@@ -1772,7 +1832,7 @@
 				<div class="input-below"><?php _se('Routing for %s', G\get_base_url('album/&lt;id&gt;')); ?></div>
 			</div>
 			<?php } ?>
-			
+
 			<?php if(get_settings()['key'] == 'languages') { ?>
 			<div class="input-label">
 				<label><?php _se('Custom language strings'); ?></label>
@@ -1790,7 +1850,7 @@
 				</select></div>
 				<div class="input-below"><?php _se('Default base language to use.'); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="auto_language"><?php _se('Auto language'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="auto_language" id="auto_language" class="text-input">
@@ -1800,7 +1860,7 @@
 				</select></div>
 				<div class="input-below"><?php _se("Enable this if you want to automatically detect and set the right language for each user."); ?></div>
 			</div>
-			
+
 			<div class="input-label">
 				<label for="language_chooser_enable"><?php _se('Language chooser'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="language_chooser_enable" id="language_chooser_enable" class="text-input" data-combo="language-enable-combo">
@@ -1810,7 +1870,7 @@
 				</select></div>
 				<div class="input-below"><?php _se("Enable this if you want to allow language selection."); ?></div>
 			</div>
-			
+
 			<?php if(count(CHV\get_available_languages()) > 0) { ?>
 			<div id="language-enable-combo">
 				<div data-combo-value="1" class="switch-combo<?php if((get_safe_post() ? get_safe_post()['language_chooser_enable'] == 0 : !CHV\Settings::get('language_chooser_enable'))) echo ' soft-hidden'; ?>">
@@ -1829,7 +1889,7 @@
 				</div>
 			</div>
 			<?php } ?>
-			
+
 			<?php } ?>
 
 			<?php if(get_settings()['key'] == 'email') { ?>
@@ -2025,7 +2085,7 @@
 				<div class="input-below"><?php echo read_the_docs(['%s' => 'CloudFlare', '%k' => 'cloudflare']); ?></div>
 			</div>
 			<?php } ?>
-			
+
 			<?php if(get_settings()['key'] == 'api') { ?>
 				<p><?php _se('For documentation about the API check the <a %s>API documentation</a>', 'href="http://bit.ly/1EFSP0H" target="_blank"'); ?></p>
 				<div class="input-label">
@@ -2035,7 +2095,7 @@
 					<div class="input-below"><?php _se('Use this key when using the <a %s>API v1</a>.', 'href="http://bit.ly/1F8s9sX" target="_blank"'); ?></div>
 				</div>
 			<?php } ?>
-			
+
 			<?php if(get_settings()['key'] == 'additional-settings') { ?>
 			<div class="input-label">
 				<label for="enable_cookie_law"><?php _se('Cookie law compliance'); ?></label>
@@ -2047,35 +2107,35 @@
 				<div class="input-below"><?php _se('Enable this to display a message that complies with the EU Cookie law requirements. Note: You only need this if your website is hosted in the EU and if you add tracking cookies.'); ?></div>
 			</div>
 			<?php } ?>
-			
+
 			<?php if(in_array(get_settings()['key'], ['banners', 'external-storage', 'social-networks'])) {
 				free_version_waring(FALSE);
 			} ?>
-			
+
 			<?php
 					if(is_show_submit()) {
 			?>
 			<hr class="line-separator"></hr>
-			
+
 			<div class="btn-container">
 				<button class="btn btn-input default" type="submit"><?php _se('Save changes'); ?></button> <span class="btn-alt"><?php _se('or'); ?> <a href="<?php echo get_settings()['url']; ?>"><?php _se('cancel'); ?></a></span>
 			</div>
 			<?php
 					}
 			?>
-			
+
 			<?php
 				}
 			?>
-			
+
 		</form>
 		<?php
 				break;
 			}
 		?>
-		
+
 	</div>
-    
+
 </div>
 
 <?php G\Render\include_theme_footer(); ?>

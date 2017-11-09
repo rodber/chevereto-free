@@ -4,7 +4,7 @@ CREATE TABLE `%table_prefix%likes` (
   `like_date` datetime NOT NULL,
   `like_date_gmt` datetime NOT NULL,
   `like_user_id` bigint(32) DEFAULT NULL,
-  `like_content_type` enum('image') DEFAULT NULL,
+  `like_content_type` enum('image','album') DEFAULT NULL,
   `like_content_id` bigint(32) NOT NULL,
   `like_content_user_id` bigint(32) DEFAULT NULL,
   `like_ip` varchar(255) NOT NULL,

@@ -6,7 +6,7 @@
 		$categories = get_categories();
 		array_unshift($categories, [
 			'id'		=> NULL,
-			'name'		=> _s('No category'),
+			'name'		=> _s('Select category'),
 			'url_key'	=> NULL,
 			'url'		=> NULL
 		]);

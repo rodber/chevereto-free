@@ -5,14 +5,8 @@
 	<?php
 		if(is_array($user_items_editor)) {
 			foreach($user_items_editor['user_albums'] as $album) {
-				$privacy_to_label = [
-					'public'			=> NULL,
-					'private'			=> _s('me'),
-					'private_but_link'	=> _s('link'),
-					'password'			=> _s('password'),
-				];
 	?>
-	<option value="<?php echo $album['id_encoded']; ?>"<?php if($album['id'] == $user_items_editor['album']['id']) echo " selected"; ?>><?php echo $album['name']; if($album['privacy'] !== 'public') { ?> (<?php _se('private'); ?>/<?php echo $privacy_to_label[$album['privacy']]; ?>)<?php } ?></option>
+	<option value="<?php echo $album['id_encoded']; ?>"<?php if($album['id'] == $user_items_editor['album']['id']) echo " selected"; ?>><?php echo $album['name_with_privacy_readable']; ?></option>
 	<?php
 			}
 		}

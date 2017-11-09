@@ -226,16 +226,15 @@ $(function(){
 		var modal = PF.obj.modal.selectors.root;
 		var queueObject = $.extend({}, file.formValues || file.parsedMeta);
 		
-		// Attempt to inject the category id
-		if(typeof queueObject.category_id == typeof undefined) {
-			var upload_category = $("[name=upload-category-id]", CHV.fn.uploader.selectors.root).prop("value") || null;
-			queueObject.category_id = upload_category;
-		}
-		
-		// Attempt to inject the NSFW flag
-		if(typeof queueObject.nsfw == typeof undefined) {
-			var upload_nsfw = $("[name=upload-nsfw]:checked", CHV.fn.uploader.selectors.root).prop("value") || null;
-			queueObject.nsfw = upload_nsfw;
+		// Inject global upload options if needed
+		var injectKeys = ["album_id", "category_id", "nsfw"];
+		for(var i=0; i < injectKeys.length; i++) {
+			var key = injectKeys[i];
+			if(typeof queueObject[key] == typeof undefined) {
+				var $object = $("[name=upload-" + key.replace("_", "-") + "]", CHV.fn.uploader.selectors.root);
+				var value = $object.prop($object.is(":checkbox") ? "checked" : "value");
+				queueObject[key] = $object.is(":checkbox") ? (value ? "1" : null) : value;
+			}
 		}
 		
 		// Resize before upload				
@@ -291,15 +290,15 @@ $(function(){
 						$input.prop("max", value).data("initial", file.parsedMeta[i]).prop("value", value);
 					}
 				});
-				
+
 				// Warning on GIF images
 				if(file.parsedMeta.mimetype !== "image/gif") {
 					$("[ data-content=animated-gif-warning]", modal).remove();
 				}
-				
+
 				// Canvas image preview
 				$(".image-preview", modal).append($('<canvas/>',{'class':'canvas'}));
-				
+
 				var source_canvas = $(".queue-item[data-id="+id+"] .preview .canvas")[0];
 				var target_canvas = $(".image-preview .canvas", modal)[0];
 				
@@ -347,6 +346,7 @@ $(function(){
 						nsfw: null,
 						expiration: null,
 						description: null,
+						album_id: null,
 					};
 				}
 				
@@ -1600,7 +1600,7 @@ $(function(){
 					html: true
 				});
 			} else {
-				PF.fn.growl.call(PF.fn._s("This website is running latest %s version ", CHEVERETO.edition));
+				PF.fn.growl.call(PF.fn._s("This website is running latest %s version", CHEVERETO.edition));
 			}
 			
 		});
@@ -2039,6 +2039,7 @@ CHV.fn.uploader = {
 
 	selectors: {
 		root: "#anywhere-upload",
+		shown: ".upload-box--show",
 		queue: "#anywhere-upload-queue",
 		queue_complete: ".queue-complete",
 		queue_item: ".queue-item",
@@ -2052,9 +2053,12 @@ CHV.fn.uploader = {
 		fullscreen_mask: "#fullscreen-uploader-mask",
 		dropzone: "#uploader-dropzone",
 		paste: "#anywhere-upload-paste",
+		input: "[data-action=anywhere-upload-input]",
 	},
 
 	toggle: function(options, args) {
+		
+		this.queueSize();
 		
 		var $switch = $("[data-action=top-bar-upload]", ".top-bar");
         var show = !$(CHV.fn.uploader.selectors.root).data("shown");
@@ -2068,35 +2072,29 @@ CHV.fn.uploader = {
 		
 		this.toggleWorking = 1;
 		
-        var uploadBoxHeight = $(CHV.fn.uploader.selectors.root).outerHeight() + "px";
-        var uploadBoxTop = $(CHV.fn.uploader.selectors.root).css("top");
-        var uploadBoxPush = (parseInt(uploadBoxHeight) + parseInt(uploadBoxTop)) + "px";
-        
-        var animation = {
-				core: !show ? ("-" + uploadBoxPush) : uploadBoxPush,
-				time: 500,
-			},
-			callbacks = function() {
-				if(options.reset) {
-					CHV.fn.uploader.reset();
-				}
-				if(PF.obj.follow_scroll.$node.exists()) {
-					PF.obj.follow_scroll.$node.removeClass("fixed");
-					PF.obj.follow_scroll.set();
-				}
-				if(!show) {
-					$(CHV.fn.uploader.selectors.root).css({visibility: "hidden"}).addClass("hidden-visibility");
-				}
-				PF.fn.topMenu.hide();
-				if(typeof options.callback == "function") {
-					options.callback(args);
-				}
-				CHV.fn.uploader.boxSizer();
-				CHV.fn.uploader.toggleWorking = 0;
-			};
-			
+		var animation = {
+			time: 500,
+			easing: null,
+		};
+		var callbacks = function() {
+			if(!show && options.reset) {
+				CHV.fn.uploader.reset();
+			}
+			if(PF.obj.follow_scroll.$node.exists()) {
+				PF.obj.follow_scroll.$node.removeClass("fixed");
+				PF.obj.follow_scroll.set();
+			}
+			PF.fn.topMenu.hide();
+			if(typeof options.callback == "function") {
+				options.callback(args);
+			}
+			CHV.fn.uploader.boxSizer();
+			CHV.fn.uploader.toggleWorking = 0;
+		};
+		
+		$(CHV.fn.uploader.selectors.root)[(show ? "add" : "remove") + "Class"]("upload-box--show");
+		
 		if(show) {
-            $(CHV.fn.uploader.selectors.root).data("initial-height", uploadBoxHeight);
             
 			$("html").data({
 				"followed-scroll": $("html").hasClass("followed-scroll"),
@@ -2107,41 +2105,15 @@ CHV.fn.uploader = {
 				"stock_classes": $("#top-bar").attr("class")
 			});
 			
-			var top_bar_color = $("#top-bar").hasClass("white") ? "white" : "black";
-			var is_slim_shady = $("#top-bar-shade").exists();
-			
-			//if($("#top-bar").hasClass("transparent")) {
-				if(!is_slim_shady) {
-					$("<div/>", {
-						id: "top-bar-shade",
-						"class": "top-bar " + top_bar_color
-					}).insertBefore("#top-bar");
-				}
-				//$("#top-bar").attr("class", "top-bar").addClass(top_bar_color);
-			//}
-			var shade_target_opacity = 1;
-			if($("body").hasClass("landing") || $("body").hasClass("split_landing")) {
-				shade_target_opacity = 0;
-			}
-            if(PF.fn.isDevice("phone")) {
-                $("#top-bar-shade").css({opacity: shade_target_opacity});
-            } else {
-                $("#top-bar-shade").animate({opacity: shade_target_opacity}, animation.time/2, animation.easing);
-            }
-			
 			$(".current[data-nav]", ".top-bar").each(function(){
 				if($(this).is("[data-action=top-bar-menu-full]")) return;
 				$(this).removeClass("current").attr("data-current", 1);
 			});
-			$(CHV.fn.uploader.selectors.root).removeClass("hidden-visibility").css({visibility: "visible", top: "-" + uploadBoxHeight});
+
 			if(PF.fn.isDevice("mobile")) {
 				var $upload_heading = $(".upload-box-heading", $(CHV.fn.uploader.selectors.root));
 				$upload_heading.css({position: "relative", top: 0.5*($(window).height() - $upload_heading.height())+"px"});
 			}
-            
-            $(CHV.fn.uploader.selectors.root).css({
-                transform: "translate(0,"+animation.core+")"
-            });
             
 			CHV.fn.uploader.focus(function() {
                 setTimeout(function() {
@@ -2155,22 +2127,6 @@ CHV.fn.uploader = {
 			$("[data-nav][data-current=1]", ".top-bar").each(function(){
 				$(this).addClass("current");
 			});
-			
-			var fade_slim_shady = function() {
-                if(PF.fn.isDevice("phone")) {
-                    $("#top-bar-shade").remove();
-                    return;
-                }
-				$("#top-bar-shade").animate({opacity: 0}, animation.time, animation.easing, function() {
-					if(!is_slim_shady) {
-						$(this).remove();
-					}
-				});
-			};
-			
-			if(!$("#top-bar").hasClass("transparent")) {
-				fade_slim_shady();
-			}
             
             $(CHV.fn.uploader.selectors.fullscreen_mask).css({opacity: 0});
             setTimeout(function() {
@@ -2192,11 +2148,7 @@ CHV.fn.uploader = {
             }, animation.time * 1/3);
             
             setTimeout(function() {
-                $(CHV.fn.uploader.selectors.root).css({top: ""});
-                if($("#top-bar-shade").exists()) {
-					fade_slim_shady();
-				}
-				
+                $(CHV.fn.uploader.selectors.root).css({top: ""});				
 				if($("body#image").exists()) {
 					CHV.obj.topBar.transparencyScrollToggle();
 				}
@@ -2214,27 +2166,37 @@ CHV.fn.uploader = {
 	},
 	
 	reset: function() {
-		
+				
 		$.extend(this, $.extend(true, {}, CHV.obj.uploaderReset));
 		
 		$("li", this.selectors.queue).remove();
-		$(this.selectors.anywhere).height("").css({"overflow-y": "", "overflow-x": ""});
+		$(this.selectors.root).height("").css({"overflow-y": "", "overflow-x": ""});
 		
 		$(this.selectors.queue).removeClass(this.selectors.queue_complete.substring(1));
 		
-		$("[data-group=upload-result] textarea", this.selectors.anywhere).prop("value", "");
+		$(this.selectors.input, this.selectors.root).each(function() {
+			$(this).prop("value", null);
+		});
+		$("[data-group=upload-result] textarea", this.selectors.root).prop("value", "");
 		$.each(['upload-queue-ready', 'uploading', 'upload-result', 'upload-queue-ready', 'upload-queue'], function(i,v) {
 			$("[data-group="+v+"]").hide();
 		});
-		//$("[data-group=upload-queue-ready], [data-group=uploading], [data-group=upload-result], [data-group=upload-queue-ready], [data-group=upload-queue]", this.selectors.anywhere).hide();
-		$("[data-group=upload]", this.selectors.anywhere).show();
-		$("[name=upload-category-id]", this.selectors.root).val("");
+		$("[data-group=upload]", this.selectors.root).show();
+		// Force HTML album selection (used for upload to current album)
+		$("[name=upload-album-id]", this.selectors.root).prop("value", function() {
+			var $selected = $("option[selected]", this);
+			if($selected.exists()) {
+				return $selected.attr("value");
+			}
+		});
+		// Always ask for category
+		$("[name=upload-category-id]", this.selectors.root).prop("value", "");
 		$("[name=upload-nsfw]", this.selectors.root).prop("checked", this.defaultChecked);
 		
-		$(this.selectors.close_cancel, this.selectors.anywhere).hide().each(function() {
+		$(this.selectors.close_cancel, this.selectors.root).hide().each(function() {
 			if($(this).data("action") == "close-upload") $(this).show();
 		});
-		
+
         this.boxSizer(true);
 	},
 	
@@ -2258,21 +2220,20 @@ CHV.fn.uploader = {
 	
 	boxSizer: function(forced) {
         
-		if($(this.selectors.root).css("visibility") == "visible") {
+		var shown = $(this.selectors.root).is(this.selectors.shown);
+		var doit = shown || forced;
+		
+		if(shown) {
 			$("html")[(PF.fn.isDevice(["phone", "phablet"]) ? "add" : "remove") + "Class"]("overflow-hidden");
 		}
-		
-		var doit = $(this.selectors.root).css("visibility") == "visible" || forced;
-		
+
 		if(!doit) return;
 		
 		$(this.selectors.root).height("");
 		
-		if($(this.selectors.root).height() + $("#top-bar").outerHeight(true) > $(window).height()) {
-            
-			$(this.selectors.root).height($(window).height() - $("#top-bar").outerHeight(true)).css({"overflow-y": "scroll", "overflow-x": "auto"});
+		if($(this.selectors.root).height() > $(window).height()) {
+			$(this.selectors.root).height($(window).height()).css({"overflow-y": "scroll", "overflow-x": "auto"});
             $("body").addClass("overflow-hidden");
-            
 		} else {
 			$(this.selectors.root).css("overflow-y", "");
 			$("body").removeClass("overflow-hidden");
@@ -2484,6 +2445,7 @@ CHV.fn.uploader = {
 			}
 			
 			if(!(i in files)) {
+				PF.fn.loading.destroy("fullscreen");
 				return;
 			}
 			
@@ -2504,7 +2466,7 @@ CHV.fn.uploader = {
 					var $queue_item = $(CHV.fn.uploader.selectors.queue_item + "[data-id="+(file.uid)+"]", CHV.fn.uploader.selectors.queue);
 					
 					if(img.type === "error"/* || typeof data.imageHead == typeof undefined*/) { // image parse error (png always return undefined data)
-						failed_files.push({id: file.uid, name: file.name.truncate_middle()});
+						failed_files.push({uid: file.uid, name: file.name.truncate_middle()});
 					} else {
 						if(!$("[data-group=upload-queue]", CHV.fn.uploader.selectors.root).is(":visible")) {
 							$("[data-group=upload-queue]", CHV.fn.uploader.selectors.root).css("display", "block");
@@ -2602,6 +2564,8 @@ CHV.fn.uploader = {
 							for(var i = 0; i < failed_files.length; i++){
 								failed_message += "<li>" + failed_files[i].name + "</li>";
 								delete CHV.fn.uploader.files[failed_files[i].uid];
+								console.log(failed_files)
+								console.log(CHV.fn.uploader.files)
 								$("li[data-id="+ failed_files[i].uid +"]", CHV.fn.uploader.selectors.queue).find("[data-action=cancel]").click();
 							}
 							PF.fn.modal.simple({title: PF.fn._s("Some files couldn't be added"), message: '<ul>'+failed_message+'</ul>'});
@@ -2621,14 +2585,17 @@ CHV.fn.uploader = {
 
 			});
 		}
-		
+
 		PF.fn.loading.fullscreen();
 		
+		// Load all the target images starting from zero (null in this case, yeah I like to fuck around just because reasons)
 		CHVLoadImage();
 		
+		this.queueSize();
 	},
 		
 	queueSize: function() {
+		$(this.selectors.root).attr("data-queue-size", Object.size(this.files));
 		$("[data-text=queue-objects]", this.selectors.root).text(PF.fn._n("image", "images", Object.size(this.files)));
 		$("[data-text=queue-size]", this.selectors.root).text(Object.size(this.files));
 	},
@@ -2652,6 +2619,7 @@ CHV.fn.uploader = {
 		// Already working on this?
 		if($.inArray(id, this.uploadParsedIds) !== -1) {
 			if($queue_item.next().exists()) {
+				console.log(">>>TOP TRIGGER NEXT WHICH IS " + $queue_item.next().data("id"))
 				this.upload($queue_item.next());
 			}
 			return;
@@ -2688,15 +2656,17 @@ CHV.fn.uploader = {
 		// HTML5 form
 		var form = new FormData();
 		var formData = {
-			source: null,
-			type: queue_is_url ? "url" : "file",
-			action: "upload",
-			privacy: $("[data-privacy]", this.selectors.root).first().data("privacy"),
-			timestamp: this.timestamp,
-			auth_token: PF.obj.config.auth_token,
-			category_id: $("[name=upload-category-id]", this.selectors.root).val() || null,
-			nsfw: $("[name=upload-nsfw]", this.selectors.root).prop("checked") ? 1 : 0
-		};
+				source: null,
+				type: queue_is_url ? "url" : "file",
+				action: "upload",
+				privacy: $("[data-privacy]", this.selectors.root).first().data("privacy"),
+				timestamp: this.timestamp,
+				auth_token: PF.obj.config.auth_token,
+				category_id: $("[name=upload-category-id]", this.selectors.root).val() || null,
+				nsfw: $("[name=upload-nsfw]", this.selectors.root).prop("checked") ? 1 : 0,
+				album_id: $("[name=upload-album-id]", this.selectors.root).val() || null
+			};
+		
 		// Append URL BLOB source
 		if(queue_is_url) {
 			formData.source = source;
@@ -2704,12 +2674,13 @@ CHV.fn.uploader = {
 			form.append("source", source, f.name); // Stupid 3rd argument for file
 		}
 		if(hasForm) { // Merge with each queue item form data
-			$.each(f.formValues, function(i,v) {
+			$.each(f.formValues, function(i, v) {
 				formData[i.replace(/image_/g, "")] = v;
 			});
 		}
 		
 		$.each(formData, function(i,v) {
+			if(v === null) return true;
 			form.append(i, v);
 		});
 		
@@ -2744,11 +2715,11 @@ CHV.fn.uploader = {
 		}
 		
 		this.files[id].xhr.onreadystatechange = function() {
-			
+						
 			var is_error = false;
 			
 			if(this.readyState == 4 && typeof CHV.fn.uploader.files[id].xhr !== "undefined" && CHV.fn.uploader.files[id].xhr.status !== 0) {
-				
+
 				self.uploadProcessedIds.push(id);
 				self.uploadThreads -= 1;
 				
@@ -2779,7 +2750,7 @@ CHV.fn.uploader = {
 					
 					var err_handle;
 					
-					if(typeof JSONresponse == "undefined") {
+					if(typeof JSONresponse == typeof undefined) {
 						// Server epic error
 						err_handle = {
 							status: 500,
@@ -2802,10 +2773,9 @@ CHV.fn.uploader = {
 						status_txt: err_handle.statusText
 					};
 					
-					CHV.fn.uploader.results.error[Object.size(CHV.fn.uploader.results.error) + 1] = JSONresponse;
-					//CHV.fn.uploader.results.error.push(JSONresponse);
-					console.log("server error", JSONresponse);
+					var error_key = Object.size(CHV.fn.uploader.results.error) + 1;
 					
+					CHV.fn.uploader.results.error[error_key] = JSONresponse;
 				}
 				
 				$queue_item.addClass(!is_error ? "completed" : "failed");
@@ -2816,6 +2786,7 @@ CHV.fn.uploader = {
 				}
 				
 				if(self.uploadThreads < CHV.obj.config.upload.threads && nextId) {
+					console.log(">>>GO FOR NEXT WHICH IS " + $queue_item.next().data("id"))
 					CHV.fn.uploader.upload($queue_item.next());
 					$(CHV.fn.uploader.selectors.close_cancel, CHV.fn.uploader.selectors.root).hide().each(function() {
 						if($(this).data("action") == "cancel-upload-remaining") {
@@ -2898,12 +2869,34 @@ CHV.fn.uploader = {
 		}
 		
 		if($(results.success, this.selectors.root).is(":visible")) {
-			$(results.success, this.selectors.root).find("[data-group=user], [data-group=guest]").hide();
+			$(results.success, this.selectors.root).find("[data-group^=user], [data-group=guest]").hide();
 			$(results.success, this.selectors.root).find("[data-group=" + (PF.fn.is_user_logged() ? "user" : "guest") + "]").show();
 			var firstKey = Object.keys(this.results.success)[0];
 			if(typeof this.results.success[firstKey].image.album !== "undefined") {
-				$("[data-text=upload-target]").text(this.results.success[0].image.album.name);
-				$("[data-link=upload-target]").attr("href", this.results.success[0].image.album.url);
+				var albums = [];
+				for(var key in this.results.success) {
+					var image = this.results.success[key].image;
+					if(image.album && !!image.album.id_encoded && albums.indexOf(image.album.id_encoded)==-1) {
+						albums.push(image.album.id_encoded);
+					}
+				}
+				var targetAlbum = {link: null, text: null};
+				
+				if(albums.length <= 1) {
+					targetAlbum.link = this.results.success[firstKey].image.album.url;
+					targetAlbum.text = this.results.success[firstKey].image.album.name;
+				} else {
+					targetAlbum.link = this.results.success[firstKey].image.user.url_albums;
+					targetAlbum.text = PF.fn._s("%s's Albums", this.results.success[firstKey].image.user.name_short_html);
+				}
+								
+				$("[data-text=upload-target]", this.selectors.root).text(targetAlbum.text);
+				$("[data-link=upload-target]", this.selectors.root).attr("href", targetAlbum.link);
+				
+				if(PF.fn.is_user_logged()) {
+					var show_user_stuff = albums.length > 0 ? "album" : "stream";
+					$("[data-group=user-" + show_user_stuff + "]", this.selectors.root).show();
+				}
 			}
 		}
 		
@@ -2976,6 +2969,38 @@ CHV.fn.resource_privacy_toggle = function(privacy) {
 	$("[data-content=privacy-private]").hide();
 	if(privacy !== "public") {
 		$("[data-content=privacy-private]").show();
+	}
+};
+
+// Album stuff
+CHV.fn.submit_create_album = function() {
+	var $modal = $(PF.obj.modal.selectors.root);
+	if($("[name=form-album-name]", $modal).val() == "") {
+		PF.fn.growl.call(PF.fn._s("You must enter the album name."));
+		$("[name=form-album-name]", $modal).highlight();
+		return false;
+	}
+	PF.obj.modal.form_data = {
+		action: "create-album",
+		type: "album",
+		album: {
+			name: $("[name=form-album-name]", $modal).val(),
+			description: $("[name=form-album-description]", $modal).val(),
+			privacy: $("[name=form-privacy]", $modal).val(),
+			password: $("[name=form-privacy]", $modal).val() == "password" ? $("[name=form-album-password]", $modal).val() : null,
+			new: true,
+		}
+	};
+	return true;
+};
+CHV.fn.complete_create_album = {
+	success: function(XHR) {
+		var response = XHR.responseJSON.album;		
+		window.location = response.url;
+	},
+	error: function(XHR) {
+		var response = XHR.responseJSON;
+		PF.fn.growl.call(PF.fn._s(response.error.message));
 	}
 };
 

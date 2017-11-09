@@ -109,7 +109,7 @@ function check_system_integrity() {
 	
 	/*** Folders check ***/
 	
-	// Check the writting folders
+	// Check writtable folders
 	$writting_paths = array(CHV_PATH_IMAGES, CHV_PATH_CONTENT);
 	foreach($writting_paths as $v) {
 		if(!file_exists($v)) { // Exists?
@@ -124,7 +124,7 @@ function check_system_integrity() {
 	}
 	
 	/*** System template file check ***/
-	$system_template = CHV_APP_PATH_SYSTEM . 'template.php';
+	$system_template = CHV_APP_PATH_CONTENT_SYSTEM . 'template.php';
 	if(!file_exists($system_template)) {
 		$install_errors[] = "<code>".G\absolute_to_relative($system_template)."</code> doesn't exists. Make sure to upload this.";
 	}

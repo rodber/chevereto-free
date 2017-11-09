@@ -28,6 +28,8 @@ class Settings {
 	public function __construct() {
 		try {
 			
+			$settings = []; // init
+			
 			try {
 				$db_settings = DB::get('settings', 'all', NULL, ['field' => 'name', 'order' => 'asc']);
 				foreach($db_settings as $k => $v) {
@@ -68,6 +70,8 @@ class Settings {
 				// 1.0.8
 				'upload_max_image_width' => '0',
 				'upload_max_image_height'=> '0',
+				// 1.0.9
+				'enable_expirable_uploads' => NULL,
 			];
 			
 			// Default listing thing
@@ -118,7 +122,7 @@ class Settings {
 				'enable_likes'				=> 0,
 				'social_signin'				=> 0,
 				'require_user_email_social_signup' => 0,
-				// HArdc0D3
+				// HArdc0D3, so haxxor that it hurts!
 				'username_min_length'		=> 3,
 				'username_max_length'		=> 16,
 				'username_pattern'			=> '^[\w]{3,16}$',

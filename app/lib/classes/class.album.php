@@ -20,21 +20,49 @@ use G, Exception;
 
 class Album {
 	
-	public static function getSingle($id, $pretty=true) {
+	public static function getSingle($id, $sumview=FALSE, $pretty=TRUE, $requester=NULL) {
 		$tables = DB::getTables();
 		$query = 'SELECT * FROM '.$tables['albums']."\n";
-		$joins = array(
+		$joins = [
 			'LEFT JOIN '.$tables['users'].' ON '.$tables['albums'].'.album_user_id = '.$tables['users'].'.user_id'
-		);
+		];
+		
+		if($requester) {
+			if(!is_array($requester)) {
+				$requester = User::getSingle($requester, 'id');
+			}
+			if(version_compare(Settings::get('chevereto_version_installed'), '3.9.0', '>=')) {
+				$joins[] = 'LEFT JOIN '.$tables['likes'].' ON '.$tables['likes'].'.like_content_type = "album" AND '.$tables['albums'].'.album_id = '.$tables['likes'].'.like_content_id AND '.$tables['likes'].'.like_user_id = ' . $requester['id'];
+			}
+		}
+		
 		$query .=  implode("\n", $joins) . "\n";
 		$query .= 'WHERE album_id=:album_id;'."\n";
+		
+		if($sumview) {
+			$query .= 'UPDATE '.$tables['albums'].' SET album_views = album_views + 1 WHERE album_id=:album_id';	
+		}
+		
 		try {
 			$db = DB::getInstance();
 			$db->query($query);
 			$db->bind(':album_id', $id);
 			$album_db = $db->fetchSingle();
-			if(!$album_db) return false;
-			return $pretty ? self::formatArray($album_db) : $album_db;
+			if(!$album_db) return $album_db;
+			
+			if($sumview) {
+				$album_db['album_views'] += 1;
+				// Track stats
+				Stat::track([
+					'action'	=> 'update',
+					'table'		=> 'albums',
+					'value'		=> '+1',
+					'user_id'	=> $album_db['album_user_id'],
+				]);
+			}
+			$return = $album_db;
+			$return = $pretty ? self::formatArray($return) : $return;
+			return $return;
 		} catch(Exception $e) {
 			throw new AlbumException($e->getMessage(), 400);
 		}
@@ -75,6 +103,32 @@ class Album {
 				return $return;
 			}
 			return $db_rows;
+		} catch(Exception $e) {
+			throw new AlbumException($e->getMessage(), 400);
+		}
+		
+	}
+	
+	public static function sumView($id, $album=[]) {
+		try {
+			if(!G\is_integer($id)) {
+				throw new Exception('Invalid $id in ' . __METHOD__);
+			}
+			if($album['id'] !== $id) {
+				$album = self::getSingle($id, FALSE);
+				if(!$album) {
+					throw new Exception(sprintf('Invalid album %s in ' . __METHOD__, $id));
+				}
+			}
+			$increment = '+1';
+			DB::increment('albums', ['views' => $increment], ['id' => $id]);
+			Stat::track([
+				'action'	=> 'update',
+				'table'		=> 'albums',
+				'value'		=> $increment,
+				'user_id'	=> $album['album_user_id'],
+			]);
+			$_SESSION['album_view_stock'][] = $id;			
 		} catch(Exception $e) {
 			throw new AlbumException($e->getMessage(), 400);
 		}
@@ -350,7 +404,21 @@ class Album {
 				$album['privacy_notes'] = NULL;
 			break;
 		}
+		
+		$private_str = _s('Private');
+		$privacy_to_label = [
+			'public'			=> _s('Public'),
+			'private'			=> $private_str . '/' . _s('Me'),
+			'private_but_link'	=> $private_str . '/' . _s('Link'),
+			'password'			=> $private_str . '/' . _s('Password'),
+		];
+		
+		$album['privacy_readable'] = $privacy_to_label[$album['privacy']];
+		$album['name_with_privacy_readable'] = $album['name'] . ' (' . $album['privacy_readable'] . ')';
+		
 		$album['name_truncated'] = G\truncate($album['name'], 28);
+		$album['name_truncated_html'] = G\safe_html($album['name_truncated']);
+		
 		if(!empty($user)) {
 			User::fill($user);
 		}
@@ -360,6 +428,7 @@ class Album {
 		try {
 			$output = DB::formatRow($dbrow);
 			self::fill($output, $output['user']);		
+			$output['views_label'] = _n('view', 'views', $output['views']);
 			$output['how_long_ago'] = time_elapsed_string($output['date_gmt']);
 	
 			if($output['images_slice']) {

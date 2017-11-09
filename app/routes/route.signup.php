@@ -259,7 +259,7 @@ $route = function($handler) {
 		$handler::setCond('captcha_needed', $captcha_needed);
 		
 		if($captcha_needed && !$handler::getVar('recaptcha_html')) {
-			$handler::setVar('recaptcha_html', CHV\Render\get_recaptcha_html('clean'));
+			$handler::setVar('recaptcha_html', CHV\Render\get_recaptcha_html());
 		}
 		
 		$handler::setVar('pre_doctitle', _s('Create account'));

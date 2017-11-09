@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-02-20 20:29+0000',
-  'PO-Revision-Date' => '2017-02-20 20:29+0000',
+  'POT-Creation-Date' => '2017-05-23 17:56+0000',
+  'PO-Revision-Date' => '2017-05-23 17:56+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ja',
@@ -91,13 +91,31 @@ $translation_table = [
 		0 => "%sさんの画像",
 	],
 	"Note: This content is private but anyone with the link will be able to see this." => [
-		0 => "注：このコンテンツはメンバー用ですが、リンクは誰でもできます。",
+		0 => "注：このコンテンツは非公開ですが、リンクから誰でも閲覧することができます。",
 	],
 	"Note: This content is password protected. Remember to pass the content password to share." => [
 		0 => "注：このコンテンツはパスワードで保護されています。コンテンツを共有するためには、コンテンツ用パスワードも共有してください。",
 	],
 	"Note: This content is private. Change privacy to \"public\" to share." => [
 		0 => "注意:このコンテンツは非公開です。公開するためには、プライバシー設定を変更して下さい。",
+	],
+	"Private" => [
+		0 => "非公開",
+	],
+	"Public" => [
+		0 => "公開",
+	],
+	"Me" => [
+		0 => "自分",
+	],
+	"Link" => [
+		0 => "リンク",
+	],
+	"Password" => [
+		0 => "パスワード",
+	],
+	"view" => [
+		0 => "回",
 	],
 	"After %n %t" => [
 		0 => "%n以降%t",
@@ -132,14 +150,56 @@ $translation_table = [
 	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
 		0 => "外部ストレージサーバのディスクの空き容量が十分にない(%c)ため、システムは自動的にローカルストレージへの保存に変更しました。画像 %s はローカルストレージに配置されています。",
 	],
-	"view" => [
-		0 => "回",
-	],
 	"like" => [
 		0 => "いいね！",
 	],
 	"image" => [
 		0 => "画像",
+	],
+	"Recent" => [
+		0 => "最新",
+	],
+	"Trending" => [
+		0 => "流行",
+	],
+	"Popular" => [
+		0 => "人気",
+	],
+	"Top users" => [
+		0 => "トップユーザ",
+	],
+	"Most recent" => [
+		0 => "新しい順",
+	],
+	"Oldest" => [
+		0 => "古い順",
+	],
+	"Most viewed" => [
+		0 => "閲覧順",
+	],
+	"Most liked" => [
+		0 => "もっともいいね！されている",
+	],
+	"Explore" => [
+		0 => "もっと見る",
+	],
+	"Animated" => [
+		0 => "アニメーション",
+	],
+	"Search" => [
+		0 => "検索",
+	],
+	"People" => [
+		0 => "人々",
+	],
+	"Image" => [
+		0 => "画像",
+	],
+	"Album" => [
+		0 => "アルバム",
+	],
+	"User" => [
+		0 => "ユーザ",
 	],
 	"Can't create %s destination dir" => [
 		0 => "転送先ディレクトリ %s が作成できません。",
@@ -150,9 +210,6 @@ $translation_table = [
 	"Internal" => [
 		0 => "内部",
 	],
-	"Link" => [
-		0 => "リンク",
-	],
 	"Can't insert storage." => [
 		0 => "ストレージを追加できません",
 	],
@@ -162,6 +219,9 @@ $translation_table = [
 	"Can't update storage details." => [
 		0 => "ストレージの詳細を更新できません",
 	],
+	"requires %s" => [
+		0 => "%sが必要",
+	],
 	"Unlimited" => [
 		0 => "無制限",
 	],
@@ -170,9 +230,6 @@ $translation_table = [
 	],
 	"Private profile" => [
 		0 => "非公開プロフィール",
-	],
-	"Private" => [
-		0 => "非公開",
 	],
 	"year" => [
 		0 => "年",
@@ -302,18 +359,6 @@ $translation_table = [
 	],
 	"Password required" => [
 		0 => "パスワードが必要です。",
-	],
-	"Most recent" => [
-		0 => "新しい順",
-	],
-	"Oldest" => [
-		0 => "古い順",
-	],
-	"Most viewed" => [
-		0 => "閲覧順",
-	],
-	"Most liked" => [
-		0 => "もっともいいね！されている",
 	],
 	"Share" => [
 		0 => "共有",
@@ -750,12 +795,6 @@ $translation_table = [
 	"Can't save page contents: %s." => [
 		0 => "ページコンテンツを保存出来ません。: %s.",
 	],
-	"Top users" => [
-		0 => "トップユーザ",
-	],
-	"Explore" => [
-		0 => "もっと見る",
-	],
 	"Following" => [
 		0 => "フォロー中",
 	],
@@ -915,23 +954,17 @@ $translation_table = [
 	"User search results for %s" => [
 		0 => "%sのユーザーの検索結果",
 	],
-	"Search" => [
-		0 => "検索",
-	],
 	"Account" => [
 		0 => "アカウント",
 	],
 	"Profile" => [
 		0 => "プロフィール",
 	],
-	"Password" => [
-		0 => "パスワード",
-	],
 	"Linked accounts" => [
 		0 => "関連づけされているアカウント",
 	],
-	"Invalid image expiration" => [
-		0 => "無効な画像の有効期限です。",
+	"Invalid image expiration: %s" => [
+		0 => "無効な画像の有効期限: %s",
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "この電子メールアドレスは認証され、%s宛に説明書を添付したメールを送信しました。",
@@ -989,6 +1022,9 @@ $translation_table = [
 	],
 	"%n (%u) on %w" => [
 		0 => "%w上にある%n (%u)さんのアルバム",
+	],
+	"Discovery" => [
+		0 => "発見",
 	],
 	"Close" => [
 		0 => "閉じる",
@@ -1078,7 +1114,7 @@ $translation_table = [
 		0 => "パスワードをリセットするには<a href=\"%s\">こちらのリンク</a>をクリックして下さい。",
 	],
 	"Hi %n, welcome to %w" => [
-		0 => "こんにちは、 %nさん、 ようこそ%wへ",
+		0 => "こんにちは、 %nさん。%wへようこそ",
 	],
 	"Now that your account is ready you can enjoy uploading your images, creating albums and setting the privacy of your content as well as many more cool things that you will discover." => [
 		0 => "画像のアップロードをしたり、アルバムの作成を行ったり、非公開コンテンツの設定を行うなどの、沢山の機能を使用するためのアカウント登録が完了しました。",
@@ -1098,56 +1134,83 @@ $translation_table = [
 	"Select the images to upload" => [
 		0 => "アップロードする画像を選択",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "<a data-trigger=\"anywhere-upload-input\">あなたのPCにある画像</a>や<a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">インターネット上の画像URL</a>で画像のアップロードができます。",
+	"browse from your computer" => [
+		0 => "コンピュータから参照",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "こちらから <a data-trigger=\"anywhere-upload-input-camera\">写真を撮影</a> したり、 こちらから<a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">画像URLの追加</a>ができます。",
+	"add image URLs" => [
+		0 => "画像のURLを追加",
 	],
-	"Edit or resize an image by clicking the image preview" => [
-		0 => "画像プレビューをクリックして、画像の編集・リサイズがする",
+	"You can also %i or %u." => [
+		0 => "%iまたは%uすることもできます。",
 	],
-	"Edit or resize an image by touching the image preview" => [
-		0 => "画像プレビューをタップして、画像の編集・リサイズがする",
+	"take a picture" => [
+		0 => "写真を撮影",
 	],
-	"You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>." => [
-		0 => "こちらから <a data-trigger=\"anywhere-upload-input\">PC内の画像を追加</a> したり、 <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">画像のURLの追加</a>ができます。",
+	"Edit or resize any image by clicking the image preview" => [
+		0 => "画像のプレビューをクリックして編集または画像をリサイズ",
 	],
-	"You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "こちらから <a data-trigger=\"anywhere-upload-input\">複数の画像のアップロード</a> や <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">複数の画像URLの追加</a>ができます。",
+	"Edit or resize any image by touching the image preview" => [
+		0 => "画像のプレビューをタップして編集または画像をリサイズ",
 	],
-	"Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>" => [
-		0 => "<span data-text=\"queue-size\">0</span>枚の<span data-text=\"queue-objects\">画像</span>をアップロード中",
+	"your computer" => [
+		0 => "あなたのコンピュータ",
+	],
+	"image URLs" => [
+		0 => "画像のURL",
+	],
+	"You can keep adding more images from %i or from %u." => [
+		0 => "%iまたは%uからさらに画像を追加することができます。",
+	],
+	"your device" => [
+		0 => "あなたのデバイス",
+	],
+	"Uploading %q %o" => [
+		0 => "アップロード中 %q %o",
 	],
 	"complete" => [
 		0 => "完了",
 	],
-	"The queue is being uploaded. It will take just a few seconds to complete." => [
-		0 => "アップロードは完了しました。完了するまでもう少々お待ち下さい。",
+	"The queue is being uploaded, it should take just a few seconds to complete." => [
+		0 => "キューのアップロードが進行中です。完了まで数秒ほどかかります。",
 	],
 	"Upload complete" => [
 		0 => "アップロード完了",
 	],
-	"Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album." => [
-		0 => "<a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">公開用画像</a>へ追加されました。 <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">アルバムを作成</a>するか、お持ちのアルバムへ<a data-modal=\"form\" data-target=\"form-uploaded-move-album\"><span data-text=\"queue-objects\">画像を</span>貼付け</a>て下さい。",
+	"Uploaded content added to %s." => [
+		0 => "アップロードが完了したコンテンツは%sに追加されました。",
 	],
-	"You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account." => [
-		0 => "今後の画像アップロードのために<a href=\"%s\">アカウントの新規作成</a> または <a href=\"%l\">サインイン</a>して下さい。",
+	"You can %c with the content just uploaded or %m." => [
+		0 => "アップロードされたコンテンツまたは%mに対して%cが可能です。",
 	],
-	"No <span data-text=\"queue-objects\">images</span> have been uploaded" => [
-		0 => "0 <span data-text=\"queue-objects\">画像</span> アップロード済み",
+	"You can %c with the content just uploaded." => [
+		0 => "アップロードされたコンテンツに対して%cが可能です。",
+	],
+	"create a new album" => [
+		0 => "新規アルバムを作成",
+	],
+	"move it to an existing album" => [
+		0 => "既に存在するアルバムに移動",
+	],
+	"create an account" => [
+		0 => "アカウントを作成",
+	],
+	"sign in" => [
+		0 => "サインイン",
+	],
+	"You can %s or %l to save this content into your account." => [
+		0 => "このコンテンツをアカウントに保存するために、%sまたは%lが利用できます。",
+	],
+	"No %s have been uploaded" => [
+		0 => "アップロードされた%sはありません。",
 	],
 	"Some errors have occured and the system couldn't process your request." => [
 		0 => "エラーが発生しました、システムはリクエストを処理出来ません。",
 	],
+	"Category" => [
+		0 => "カテゴリ",
+	],
 	"Select category" => [
 		0 => "カテゴリ選択",
-	],
-	"Change upload privacy" => [
-		0 => "アップロード規約を変更",
-	],
-	"cancel" => [
-		0 => "キャンセル",
 	],
 	"Mark this if the upload is not family safe" => [
 		0 => "ファミリーセーフティに触れるものをアップロードする場合には、チェックボックスをONにして下さい。",
@@ -1157,6 +1220,9 @@ $translation_table = [
 	],
 	"Uploading" => [
 		0 => "アップロード中",
+	],
+	"cancel" => [
+		0 => "キャンセル",
 	],
 	"cancel remaining" => [
 		0 => "残りも全てキャンセルする",
@@ -1208,6 +1274,12 @@ $translation_table = [
 	],
 	"Auto delete image" => [
 		0 => "画像を自動削除する",
+	],
+	"Sign up" => [
+		0 => "会員登録",
+	],
+	"%s to be able to customize or disable image auto delete." => [
+		0 => "%s で画像の自動削除、またはカスタマイズを可能にできます。",
 	],
 	"Mark this if the image is not family safe" => [
 		0 => "ファミリーセーフティに触れるコンテンツの場合は、チェックボックスをONにして下さい。",
@@ -1308,9 +1380,6 @@ $translation_table = [
 	"Put a minus sign just before words you don't want: -rodent -\"Jack Russell\"" => [
 		0 => "検索結果に含みたくない語句の前にマイナス(-)をつけて下さい。： -ねずみ目 -\"ジャック・ラッセル・テリア\"",
 	],
-	"Category" => [
-		0 => "カテゴリ",
-	],
 	"Storage" => [
 		0 => "ストレージ",
 	],
@@ -1335,9 +1404,6 @@ $translation_table = [
 	"Who can view this content" => [
 		0 => "このコンテンツを見ることのできるユーザ",
 	],
-	"Public" => [
-		0 => "公開",
-	],
 	"Private (just me)" => [
 		0 => "非公開 (自分のみ閲覧可)",
 	],
@@ -1349,9 +1415,6 @@ $translation_table = [
 	],
 	"Album password" => [
 		0 => "アルバムパスワード",
-	],
-	"No category" => [
-		0 => "カテゴリが未設定",
 	],
 	"Name" => [
 		0 => "名前",
@@ -1394,21 +1457,6 @@ $translation_table = [
 	],
 	"Existing album" => [
 		0 => "既に存在するアルバム",
-	],
-	"Album" => [
-		0 => "アルバム",
-	],
-	"me" => [
-		0 => "私",
-	],
-	"link" => [
-		0 => "リンク",
-	],
-	"password" => [
-		0 => "パスワード",
-	],
-	"private" => [
-		0 => "非公開",
 	],
 	"create new album" => [
 		0 => "新しいアルバムを作成",
@@ -1548,11 +1596,17 @@ $translation_table = [
 	"Delete" => [
 		0 => "削除",
 	],
+	"Create new album" => [
+		0 => "新規アルバムを作成",
+	],
 	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
 		0 => "このサイトの機能を全て利用するためには、ログインが必要です。 アカウントをお持ちでない場合は、<a href=\"%s\">こちら</a>でアカウントを作成することができます。",
 	],
 	"There's nothing to show here." => [
 		0 => "表示するものはありません。",
+	],
+	"Upload images" => [
+		0 => "画像をアップロード",
 	],
 	"Edit image details" => [
 		0 => "画像の詳細の編集",
@@ -1710,6 +1764,15 @@ $translation_table = [
 	"Delete album" => [
 		0 => "アルバムを削除する",
 	],
+	"You like this" => [
+		0 => "いいね！しました",
+	],
+	"Like" => [
+		0 => "いいね！",
+	],
+	"Upload to album" => [
+		0 => "アルバムにアップロード",
+	],
 	"Album link" => [
 		0 => "アルバムへのリンク",
 	],
@@ -1724,12 +1787,6 @@ $translation_table = [
 	],
 	"I Agree" => [
 		0 => "同意します",
-	],
-	"Image" => [
-		0 => "画像",
-	],
-	"User" => [
-		0 => "ユーザ",
 	],
 	"Disk used" => [
 		0 => "ディスク使用量",
@@ -1947,6 +2004,12 @@ $translation_table = [
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "未登録ユーザのアップロードを許可するときに有効にしてください。",
 	],
+	"Enable embed codes (uploader)" => [
+		0 => "埋込みコード(アップロードしたユーザへのリンク)を有効にします。",
+	],
+	"Enable this if you want to show embed codes when upload gets completed." => [
+		0 => "アップロードが完了したときに、画像への埋込みコードを表示する場合に有効にします。",
+	],
 	"Upload threads" => [
 		0 => "アップロードスレッド数",
 	],
@@ -1970,6 +2033,12 @@ $translation_table = [
 	],
 	"Enable this if you want to allow uploads with an automatic delete option." => [
 		0 => "画像の自動削除を付加したアップロードを有効にするにはこの設定を有効にしてください。",
+	],
+	"Auto delete guest uploads" => [
+		0 => "ゲストアップロードの自動削除",
+	],
+	"Enable this if you want to force guest uploads to be auto deleted after certain time." => [
+		0 => "ゲストアップロードは一定期間後に自動で削除するようにするにはこれを有効にしてください。",
 	],
 	"Maximum image size" => [
 		0 => "最大画像サイズ",
@@ -2442,12 +2511,6 @@ $translation_table = [
 	"Enable this if you want to show embed codes for the content." => [
 		0 => "コンテンツへの埋込みコードを表示したい場合に有効にします。",
 	],
-	"Enable embed codes (uploader)" => [
-		0 => "埋込みコード(アップロードしたユーザへのリンク)を有効にします。",
-	],
-	"Enable this if you want to show embed codes when upload gets completed." => [
-		0 => "アップロードが完了したときに、画像への埋込みコードを表示する場合に有効にします。",
-	],
 	"Not safe content checkbox in uploader" => [
 		0 => "ファミリーセーフティに接触するコンテンツのチェックボックスを表示する",
 	],
@@ -2770,7 +2833,7 @@ $translation_table = [
 		0 => "コメントAPI",
 	],
 	"Disqus API works with %s." => [
-		0 => "%s　でDisqus APIが動作します。",
+		0 => "%s でDisqus APIが動作します。",
 	],
 	"Disqus shortname" => [
 		0 => "Disqus ショートネーム",
@@ -2819,12 +2882,6 @@ $translation_table = [
 	],
 	"Guest" => [
 		0 => "ゲスト",
-	],
-	"You like this" => [
-		0 => "いいね！しました",
-	],
-	"Like" => [
-		0 => "いいね！",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "%a へ追加してカテゴリ名: %c に分類",
@@ -3150,8 +3207,8 @@ $translation_table = [
 	"Update now" => [
 		0 => "今すぐ更新する",
 	],
-	"Your website is running the latest version of %s" => [
-		0 => "あなたのサイトは、バージョン:%sで最新版です。",
+	"This website is running latest %s version" => [
+		0 => "このサイトは、最新のバージョン %s で構成しています。",
 	],
 	"Clipboard image" => [
 		0 => "クリップボードの画像",
@@ -3167,6 +3224,9 @@ $translation_table = [
 	],
 	"Image edited successfully." => [
 		0 => "画像の編集が完了しました。",
+	],
+	"private" => [
+		0 => "非公開",
 	],
 	"Album edited successfully." => [
 		0 => "アルバムの編集が完了しました。",

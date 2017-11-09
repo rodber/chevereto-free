@@ -32,10 +32,18 @@ $route = function($handler) {
 		$id = CHV\decodeID($handler->request[0]);
 		$tables = CHV\DB::getTables();
 		
-		$album = CHV\Album::getSingle($id);
+		// Session stock viewed albums
+		if(!$_SESSION['album_view_stock']) {
+			$_SESSION['album_view_stock'] = [];
+		}
+		
+		$album = CHV\Album::getSingle($id, !in_array($id, $_SESSION['album_view_stock']), TRUE, $logged_user);
+		
+		// Stock this album view
+		$_SESSION['album_view_stock'][] = $id;
 		
 		// No album or belogns to a banned user?
-		if(!$album  or (!$logged_user['is_admin'] and $album['user']['status'] !== 'valid')) {
+		if(!$album || (!$logged_user['is_admin'] and $album['user']['status'] !== 'valid')) {
 			return $handler->issue404();
 		}
 
@@ -88,7 +96,7 @@ $route = function($handler) {
 				}
 				$handler::setCond('captcha_needed', $captcha_needed);
 				if($captcha_needed && !$handler::getVar('recaptcha_html')) {
-					$handler::setVar('recaptcha_html', CHV\Render\get_recaptcha_html('clean'));
+					$handler::setVar('recaptcha_html', CHV\Render\get_recaptcha_html());
 				}
 				$handler->template = 'password-gate';
 				$handler::setVar('pre_doctitle', _s('Password required'));
@@ -110,7 +118,7 @@ $route = function($handler) {
 		if(!$handler::getCond('admin') && in_array($album['privacy'], array('private', 'custom')) and !$is_owner) {
 			return $handler->issue404();
 		}
-		
+
 		$safe_html_album = G\safe_html($album);
 		
 		// List
@@ -138,72 +146,40 @@ $route = function($handler) {
 		$list->exec();
 		
 		// Tabs
-		$tabs = [
-			[
-				"list"		=> true,
-				"tools"		=> true,
-				"label"		=> _s('Most recent'),
-				"id"		=> "list-most-recent",
-				"params"	=> "sort=date_desc&page=1",
-				"current"	=> $_REQUEST["sort"] == "date_desc" or !$_REQUEST["sort"] ? true : false,
-			],
-			[
-				"list"		=> true,
-				"tools"		=> true,
-				"label"		=> _s('Oldest'),
-				"id"		=> "list-most-oldest",
-				"params"	=> "sort=date_asc&page=1",
-				"current"	=> $_REQUEST["sort"] == "date_asc",
-			],
-			[
-				"list"		=> true,
-				"tools"		=> true,
-				"label"		=> _s('Most viewed'),
-				"id"		=> "list-most-viewed",
-				"params"	=> "sort=views_desc&page=1",
-				"current"	=> $_REQUEST["sort"] == "views_desc",
-			],
-		];
+		$tabs = CHV\Listing::getTabs([
+			'listing'	=> 'images',
+			'basename'	=> $album['url'],
+			'params_hidden' => ['list' => 'images', 'from' => 'album', 'albumid' => $album['id_encoded']],
+		]);
 
 		if(CHV\getSetting('theme_show_social_share')) {
-			$tabs[] = array(
-				"list"		=> false,
-				"tools"		=> false,
-				"label"		=> _s('Share'),
-				"id"		=> "tab-share",
-			);
-		}
-		
-		$tabs[] = array(
-				"list"		=> false,
-				"tools"		=> false,
-				"label"		=> _s('Embed codes'),
-				"id"		=> "tab-codes",
-			);
-		
-		if($logged_user['is_admin']) {
 			$tabs[] = [
-				"list"		=> false,
-				"tools"		=> false,
-				"label"		=> _s('Full info'),
-				"id"		=> "tab-full-info",
+				'list'		=> FALSE,
+				'tools'		=> FALSE,
+				'label'		=> _s('Share'),
+				'id'		=> 'tab-share',
 			];
 		}
 		
-		$current = false;
-		foreach($tabs as $k => $v) {
-			if($v["params"]) {
-				if($v['current']) {
-					$current = true;
-				}
-				$tabs[$k]['type'] = 'images';
-				$tabs[$k]["url"] = $album["url"] . "/?" . $tabs[$k]["params"];
-				$tabs[$k]["params_hidden"] = "list=images&from=album&albumid=".$album["id_encoded"];
-				$tabs[$k]["disabled"] = $album["image_count"] == 0 ? !$v["current"] : false;
-			}
+		$tabs[] = [
+			'list'		=> FALSE,
+			'tools'		=> FALSE,
+			'label'		=> _s('Embed codes'),
+			'id'		=> 'tab-codes',
+		];
+		
+		if($logged_user['is_admin']) {
+			$tabs[] = [
+				'list'		=> FALSE,
+				'tools'		=> FALSE,
+				'label'		=> _s('Full info'),
+				'id'		=> 'tab-full-info',
+			];
 		}
-		if(!$current) {
-			$tabs[0]['current'] = true;
+		
+		foreach($tabs as $k => &$v) {
+			if(!isset($v['params'])) continue;
+			$class_tabs[$k]['disabled'] = $album['image_count'] == 0 ? !$v['current'] : FALSE;
 		}
 		
 		$handler::setCond('owner', $is_owner);

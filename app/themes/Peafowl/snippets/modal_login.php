@@ -26,7 +26,7 @@
 				<?php if(is_captcha_needed()) { ?>
 				<div class="input-label">
 					<label for="recaptcha_response_field">reCAPTCHA</label>
-					<?php echo get_recaptcha_html(); ?>
+					<?php echo CHV\Render\get_recaptcha_html('g-recaptcha-modal'); ?>
 				</div>
 				<?php } ?>
 			</form>

@@ -1,4 +1,4 @@
-<div class="list-item c%COLUMN_SIZE_ALBUM% gutter-margin-right-bottom privacy-%ALBUM_PRIVACY% %ALBUM_COVER_FLAG%" data-type="album" data-id="%ALBUM_ID_ENCODED%">
+<div class="list-item c%COLUMN_SIZE_ALBUM% gutter-margin-right-bottom privacy-%ALBUM_PRIVACY% %ALBUM_COVER_FLAG%" data-type="album" data-id="%ALBUM_ID_ENCODED%" data-liked="%ALBUM_LIKED%">
 	<div class="list-item-image fixed-size">
 		<a href="%ALBUM_URL%" class="image-container">
 			%tpl_list_item/album_cover_empty%
@@ -10,7 +10,9 @@
 	</div>
 	%tpl_list_item/album_thumbs%
 	<div class="list-item-desc">
-		<div class="position-absolute left-10"><a class="text-decoration-none list-item-desc-title" href="%ALBUM_URL%">%ALBUM_NAME_TRUNCATED%</a><span class="display-block font-size-small">%ALBUM_HOW_LONG_AGO%</span></div>
-		<div class="position-absolute right-10 text-align-right"><span>%ALBUM_IMAGE_COUNT%</span><span class="display-block font-size-small">%ALBUM_IMAGE_COUNT_LABEL%</span></div>
+		<div class="list-item-desc-title">
+			<a class="list-item-desc-title-link" href="%ALBUM_URL%">%ALBUM_NAME%</a><span class="display-block font-size-small">%ALBUM_IMAGE_COUNT% %ALBUM_IMAGE_COUNT_LABEL%</span>
+		</div>
+		%tpl_list_item/item_like% 
 	</div>
 </div>

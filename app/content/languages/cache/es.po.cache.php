@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-02-20 20:29+0000',
-  'PO-Revision-Date' => '2017-02-20 20:29+0000',
+  'POT-Creation-Date' => '2017-05-23 17:56+0000',
+  'PO-Revision-Date' => '2017-05-23 17:56+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'es',
@@ -22,7 +22,7 @@ $translation_table = [
 		0 => "Email inválido",
 	],
 	"Invalid username" => [
-		0 => "Usuario inválido",
+		0 => "Nombre de usuario inválido",
 	],
 	"Invalid password" => [
 		0 => "Contraseña inválida",
@@ -99,6 +99,25 @@ $translation_table = [
 	"Note: This content is private. Change privacy to \"public\" to share." => [
 		0 => "Nota: Este contenido es privado. Cambia su privacidad a \"publico\" para compatir.",
 	],
+	"Private" => [
+		0 => "Privado",
+	],
+	"Public" => [
+		0 => "Público",
+	],
+	"Me" => [
+		0 => "Yo",
+	],
+	"Link" => [
+		0 => "Enlace",
+	],
+	"Password" => [
+		0 => "Contraseña",
+	],
+	"view" => [
+		0 => "visita",
+		1 => "visitas",
+	],
 	"After %n %t" => [
 		0 => "Después de %n %t",
 	],
@@ -135,10 +154,6 @@ $translation_table = [
 	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
 		0 => "El sistema ha cambiado al almacenamiento externo debido a insuficiente capacidad en el disco (%c) en el(los) servidores de almacenamiento externo. La imagen %s ha sido ubicada en el almacenamiento local.",
 	],
-	"view" => [
-		0 => "visita",
-		1 => "visitas",
-	],
 	"like" => [
 		0 => "me gusta",
 		1 => "me gusta",
@@ -146,6 +161,54 @@ $translation_table = [
 	"image" => [
 		0 => "imagen",
 		1 => "imágenes",
+	],
+	"Recent" => [
+		0 => "Reciente",
+	],
+	"Trending" => [
+		0 => "Tendencia",
+	],
+	"Popular" => [
+		0 => "Popular",
+	],
+	"Top users" => [
+		0 => "Usuarios top",
+	],
+	"Most recent" => [
+		0 => "Más reciente",
+	],
+	"Oldest" => [
+		0 => "Más antiguo",
+	],
+	"Most viewed" => [
+		0 => "Más visto",
+	],
+	"Most liked" => [
+		0 => "Más me gusta",
+	],
+	"Explore" => [
+		0 => "Explorar",
+	],
+	"Animated" => [
+		0 => "Animado",
+	],
+	"Search" => [
+		0 => "Buscar",
+	],
+	"People" => [
+		0 => "Gente",
+	],
+	"Image" => [
+		0 => "Imagen",
+		1 => "Imágenes",
+	],
+	"Album" => [
+		0 => "Álbum",
+		1 => "Álbumes",
+	],
+	"User" => [
+		0 => "Usuario",
+		1 => "Usuarios",
 	],
 	"Can't create %s destination dir" => [
 		0 => "No se puede crear el directorio %s de destino",
@@ -156,9 +219,6 @@ $translation_table = [
 	"Internal" => [
 		0 => "Interna",
 	],
-	"Link" => [
-		0 => "Enlace",
-	],
 	"Can't insert storage." => [
 		0 => "No se puede insertar el almacenamiento.",
 	],
@@ -168,6 +228,9 @@ $translation_table = [
 	"Can't update storage details." => [
 		0 => "No se pueden actualizar los datos del almacenamiento.",
 	],
+	"requires %s" => [
+		0 => "requiere %s",
+	],
 	"Unlimited" => [
 		0 => "Ilimitado",
 	],
@@ -176,9 +239,6 @@ $translation_table = [
 	],
 	"Private profile" => [
 		0 => "Perfil privado",
-	],
-	"Private" => [
-		0 => "Privado",
 	],
 	"year" => [
 		0 => "año",
@@ -275,7 +335,7 @@ $translation_table = [
 		0 => "El reCAPTCHA no fue ingresado correctamente",
 	],
 	"Invalid Username/Email" => [
-		0 => "Usuario/Email inválido",
+		0 => "Nombre de usuario / Email inválido",
 	],
 	"User doesn't have an email." => [
 		0 => "El usuario no tiene email.",
@@ -312,18 +372,6 @@ $translation_table = [
 	],
 	"Password required" => [
 		0 => "Contraseña requerida",
-	],
-	"Most recent" => [
-		0 => "Más reciente",
-	],
-	"Oldest" => [
-		0 => "Más antiguo",
-	],
-	"Most viewed" => [
-		0 => "Más visto",
-	],
-	"Most liked" => [
-		0 => "Más me gusta",
 	],
 	"Share" => [
 		0 => "Compartir",
@@ -761,12 +809,6 @@ $translation_table = [
 	"Can't save page contents: %s." => [
 		0 => "No se puede guardar el contenido de la página: %s.",
 	],
-	"Top users" => [
-		0 => "Usuarios top",
-	],
-	"Explore" => [
-		0 => "Explorar",
-	],
 	"Following" => [
 		0 => "Siguiendo",
 	],
@@ -882,7 +924,7 @@ $translation_table = [
 		0 => "Un usuario privado",
 	],
 	"Wrong Username/Email password combination" => [
-		0 => "Combinación Usuario/Email incorrecta",
+		0 => "Combinación Nombre de usuario / Email incorrecta",
 	],
 	"Sign in" => [
 		0 => "Entrar",
@@ -926,23 +968,17 @@ $translation_table = [
 	"User search results for %s" => [
 		0 => "Resultados de búsqueda de usuario para %s",
 	],
-	"Search" => [
-		0 => "Buscar",
-	],
 	"Account" => [
 		0 => "Cuenta",
 	],
 	"Profile" => [
 		0 => "Perfil",
 	],
-	"Password" => [
-		0 => "Contraseña",
-	],
 	"Linked accounts" => [
 		0 => "Cuentas enlazadas",
 	],
-	"Invalid image expiration" => [
-		0 => "Expiración de imagen inválida",
+	"Invalid image expiration: %s" => [
+		0 => "Fecha de expiración inválida: %s",
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "Un email ha sido enviado a %s con las instrucciones para activar este email",
@@ -966,7 +1002,7 @@ $translation_table = [
 		0 => "La contraseña ha sido creada.",
 	],
 	"Wrong Username/Email values" => [
-		0 => "Usuario/Email inválidos",
+		0 => "Nombre de usuario / Email inválidos",
 	],
 	"Settings for %s" => [
 		0 => "Ajustes para %s",
@@ -1001,6 +1037,9 @@ $translation_table = [
 	"%n (%u) on %w" => [
 		0 => "%n (%u) en %w",
 	],
+	"Discovery" => [
+		0 => "Descubrimiento",
+	],
 	"Close" => [
 		0 => "Cerrar",
 	],
@@ -1023,7 +1062,7 @@ $translation_table = [
 		0 => "o",
 	],
 	"Username or Email address" => [
-		0 => "Usuario o dirección de email",
+		0 => "Nombre de usuario o dirección de email",
 	],
 	"Keep me logged in" => [
 		0 => "Recordarme",
@@ -1109,56 +1148,83 @@ $translation_table = [
 	"Select the images to upload" => [
 		0 => "Selecciona las imágenes a subir",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "También puedes <a data-trigger=\"anywhere-upload-input\">explorar desde tu equipo</a> o <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">agregar URLs</a>.",
+	"browse from your computer" => [
+		0 => "explorar desde tu computadora",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "También puedes <a data-trigger=\"anywhere-upload-input-camera\">tomar una foto</a> o <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">agregar URLs</a>.",
+	"add image URLs" => [
+		0 => "agregar URLs de imagen",
 	],
-	"Edit or resize an image by clicking the image preview" => [
-		0 => "Edita o redimensiona una imagen haciendo click en la previsualización",
+	"You can also %i or %u." => [
+		0 => "También puedes %i o %u.",
 	],
-	"Edit or resize an image by touching the image preview" => [
-		0 => "Edita o redimensiona una imagen tocando la previsualización",
+	"take a picture" => [
+		0 => "tomar una foto",
 	],
-	"You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>." => [
-		0 => "Puedes agregar mas imágenes  <a data-trigger=\"anywhere-upload-input\">desde tu equipo</a> o <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">desde URLs</a>.",
+	"Edit or resize any image by clicking the image preview" => [
+		0 => "Edita o redimensiona cualquier imagen haciendo click en la previsualización",
 	],
-	"You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "Puedes <a data-trigger=\"anywhere-upload-input\">agregar más imágenes</a> o <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">agregar URLs</a>.",
+	"Edit or resize any image by touching the image preview" => [
+		0 => "Edita o redimensiona cualquier imagen tocando la previsualización",
 	],
-	"Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>" => [
-		0 => "Subiendo <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">imágenes</span>",
+	"your computer" => [
+		0 => "tu computadora",
+	],
+	"image URLs" => [
+		0 => "URLs de imagen",
+	],
+	"You can keep adding more images from %i or from %u." => [
+		0 => "Puedes seguir añadiendo más imágenes desde %i o desde %u.",
+	],
+	"your device" => [
+		0 => "tu dispositivo",
+	],
+	"Uploading %q %o" => [
+		0 => "Subiendo %q %o",
 	],
 	"complete" => [
 		0 => "completado",
 	],
-	"The queue is being uploaded. It will take just a few seconds to complete." => [
-		0 => "Subida en curso. Tomará un momento para finalizar.",
+	"The queue is being uploaded, it should take just a few seconds to complete." => [
+		0 => "Subida en curso, debería tomar solo un momento para completar el proceso.",
 	],
 	"Upload complete" => [
 		0 => "Subida completada",
 	],
-	"Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album." => [
-		0 => "Contenido agregado a <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">stream público</a>. Puedes <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">crear un álbum</a> o <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">trasladar las <span data-text=\"queue-objects\">imágenes</span></a> a un álbum existente.",
+	"Uploaded content added to %s." => [
+		0 => "Contenido subido agregado a %s.",
 	],
-	"You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account." => [
-		0 => "Puedes <a href=\"%s\">crear una cuenta</a> o <a href=\"%l\">entrar</a> para guardar tus subidas en tu cuenta.",
+	"You can %c with the content just uploaded or %m." => [
+		0 => "Puedes %c con el contenido recién subido o %m.",
 	],
-	"No <span data-text=\"queue-objects\">images</span> have been uploaded" => [
-		0 => "No se han subido <span data-text=\"queue-objects\">imágenes</span>",
+	"You can %c with the content just uploaded." => [
+		0 => "Puedes %c con el contenido recién subido.",
+	],
+	"create a new album" => [
+		0 => "crear un nuevo ábum",
+	],
+	"move it to an existing album" => [
+		0 => "trasladarlo a un álbum existente",
+	],
+	"create an account" => [
+		0 => "crear una cuenta",
+	],
+	"sign in" => [
+		0 => "entrar",
+	],
+	"You can %s or %l to save this content into your account." => [
+		0 => "Puedes %s or %l para guardar este contenido en tu cuenta.",
+	],
+	"No %s have been uploaded" => [
+		0 => "No se han subido %s",
 	],
 	"Some errors have occured and the system couldn't process your request." => [
 		0 => "Han ocurrido algunos errores y el sistema no ha podido procesar la solicitud.",
 	],
+	"Category" => [
+		0 => "Categoría",
+	],
 	"Select category" => [
 		0 => "Seleccionar categoría",
-	],
-	"Change upload privacy" => [
-		0 => "Cambiar la privacidad de subida",
-	],
-	"cancel" => [
-		0 => "cancelar",
 	],
 	"Mark this if the upload is not family safe" => [
 		0 => "Marca esto si la subida no es segura para familia",
@@ -1168,6 +1234,9 @@ $translation_table = [
 	],
 	"Uploading" => [
 		0 => "Subiendo",
+	],
+	"cancel" => [
+		0 => "cancelar",
 	],
 	"cancel remaining" => [
 		0 => "cancelar restantes",
@@ -1219,6 +1288,12 @@ $translation_table = [
 	],
 	"Auto delete image" => [
 		0 => "Eliminar imagen automáticamente",
+	],
+	"Sign up" => [
+		0 => "Regístrate",
+	],
+	"%s to be able to customize or disable image auto delete." => [
+		0 => "%s para poder personalizar o inhabilitar la eliminación automática de imágenes.",
 	],
 	"Mark this if the image is not family safe" => [
 		0 => "Marca esto si la imagen no es segura para familia",
@@ -1320,9 +1395,6 @@ $translation_table = [
 	"Put a minus sign just before words you don't want: -rodent -\"Jack Russell\"" => [
 		0 => "Ingresa un signo menos justo delante de las palabras que no deseas que aparezcan: -Roedor, -\"Jack Russell\"",
 	],
-	"Category" => [
-		0 => "Categoría",
-	],
 	"Storage" => [
 		0 => "Almacenamiento",
 	],
@@ -1347,9 +1419,6 @@ $translation_table = [
 	"Who can view this content" => [
 		0 => "Quién puede ver este contenido",
 	],
-	"Public" => [
-		0 => "Público",
-	],
 	"Private (just me)" => [
 		0 => "Privado (sólo yo)",
 	],
@@ -1361,9 +1430,6 @@ $translation_table = [
 	],
 	"Album password" => [
 		0 => "Contraseña del álbum",
-	],
-	"No category" => [
-		0 => "Sin categoría",
 	],
 	"Name" => [
 		0 => "Nombre",
@@ -1406,22 +1472,6 @@ $translation_table = [
 	],
 	"Existing album" => [
 		0 => "Álbum existente",
-	],
-	"Album" => [
-		0 => "Álbum",
-		1 => "Álbumes",
-	],
-	"me" => [
-		0 => "yo",
-	],
-	"link" => [
-		0 => "enlace",
-	],
-	"password" => [
-		0 => "contraseña",
-	],
-	"private" => [
-		0 => "privado",
 	],
 	"create new album" => [
 		0 => "crear nuevo álbum",
@@ -1561,11 +1611,17 @@ $translation_table = [
 	"Delete" => [
 		0 => "Eliminar",
 	],
+	"Create new album" => [
+		0 => "Crear nuevo album",
+	],
 	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
 		0 => "Debes ingresar para usar todas las características de este sitio. Si no tienes una cuenta puedes <a href=\"%s\">crear tu cuenta</a> ahora mismo.",
 	],
 	"There's nothing to show here." => [
 		0 => "No hay nada que mostrar aquí.",
+	],
+	"Upload images" => [
+		0 => "Subir imágenes",
 	],
 	"Edit image details" => [
 		0 => "Editar detalles de la imagen",
@@ -1723,6 +1779,15 @@ $translation_table = [
 	"Delete album" => [
 		0 => "Eliminar álbum",
 	],
+	"You like this" => [
+		0 => "Te gusta esto",
+	],
+	"Like" => [
+		0 => "Me gusta",
+	],
+	"Upload to album" => [
+		0 => "Subir al ábum",
+	],
 	"Album link" => [
 		0 => "Enlace al álbum",
 	],
@@ -1737,14 +1802,6 @@ $translation_table = [
 	],
 	"I Agree" => [
 		0 => "Estoy de acuerdo",
-	],
-	"Image" => [
-		0 => "Imagen",
-		1 => "Imágenes",
-	],
-	"User" => [
-		0 => "Usuario",
-		1 => "Usuarios",
 	],
 	"Disk used" => [
 		0 => "Disco usado",
@@ -1962,6 +2019,12 @@ $translation_table = [
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Habilita esto si deseas permitir permitir que usuarios no registrados suban imágenes",
 	],
+	"Enable embed codes (uploader)" => [
+		0 => "Habilitar códigos de inserción (subidas)",
+	],
+	"Enable this if you want to show embed codes when upload gets completed." => [
+		0 => "Habilita esto si deseas mostrar códigos de inserción al completar la subida.",
+	],
 	"Upload threads" => [
 		0 => "Hilos de subida",
 	],
@@ -1985,6 +2048,12 @@ $translation_table = [
 	],
 	"Enable this if you want to allow uploads with an automatic delete option." => [
 		0 => "Habilita esto si quieres permitir la opción de eliminar imágenes automáticamente.",
+	],
+	"Auto delete guest uploads" => [
+		0 => "Auto eliminar subidas de invitados",
+	],
+	"Enable this if you want to force guest uploads to be auto deleted after certain time." => [
+		0 => "Habilita esto si deseas forzar la eliminación automática de las subidas de invitados después de cierto tiempo.",
 	],
 	"Maximum image size" => [
 		0 => "Tamaño máximo de imagen",
@@ -2197,7 +2266,7 @@ $translation_table = [
 		0 => "Dejar vacío para no requerir una edad mínima para usar el sitio web.",
 	],
 	"Username routing" => [
-		0 => "Enrutamiento de usuario",
+		0 => "Enrutamiento de nombre de usuario",
 	],
 	"Enable this if you want to use %s/username URLs instead of %s/user/username." => [
 		0 => "Habilita esto si deseas usar URLs %s/username en lugar de %s/user/username",
@@ -2456,12 +2525,6 @@ $translation_table = [
 	],
 	"Enable this if you want to show embed codes for the content." => [
 		0 => "Habilita esto si deseas mostrar códigos de inserción para el contenido.",
-	],
-	"Enable embed codes (uploader)" => [
-		0 => "Habilitar códigos de inserción (subidas)",
-	],
-	"Enable this if you want to show embed codes when upload gets completed." => [
-		0 => "Habilita esto si deseas mostrar códigos de inserción al completar la subida.",
 	],
 	"Not safe content checkbox in uploader" => [
 		0 => "Caja de selección de contenido no seguro en uploader",
@@ -2835,12 +2898,6 @@ $translation_table = [
 	"Guest" => [
 		0 => "Invitado",
 	],
-	"You like this" => [
-		0 => "Te gusta esto",
-	],
-	"Like" => [
-		0 => "Me gusta",
-	],
 	"Added to %a and categorized in %c" => [
 		0 => "Agregada a %a y categorizada en %c",
 	],
@@ -2983,7 +3040,7 @@ $translation_table = [
 		0 => "Confirmar nueva contraseña",
 	],
 	"Add a password to be able to login using your username or email." => [
-		0 => "Agrega una contraseña para poder entrar usando tu usuario o email.",
+		0 => "Agrega una contraseña para poder entrar usando tu nombre de usuario o email.",
 	],
 	"This user doesn't have a password. Add one using this form." => [
 		0 => "Este usuario no tiene contraseña. Agrega una usando este formulario.",
@@ -3166,8 +3223,8 @@ $translation_table = [
 	"Update now" => [
 		0 => "Actualizar ahora",
 	],
-	"Your website is running the latest version of %s" => [
-		0 => "Tu sitio está corriendo la última version de %s",
+	"This website is running latest %s version" => [
+		0 => "Este sitio web está corriendo la última versión de %s",
 	],
 	"Clipboard image" => [
 		0 => "Imagen portapales",
@@ -3183,6 +3240,9 @@ $translation_table = [
 	],
 	"Image edited successfully." => [
 		0 => "Imagen editada exitosamente.",
+	],
+	"private" => [
+		0 => "privado",
 	],
 	"Album edited successfully." => [
 		0 => "Álbum editado exitosamente.",

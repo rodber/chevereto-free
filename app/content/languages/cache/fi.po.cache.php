@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-10-19 15:26+0000',
-  'PO-Revision-Date' => '2016-10-19 15:26+0000',
+  'POT-Creation-Date' => '2017-06-21 18:28+0000',
+  'PO-Revision-Date' => '2017-06-21 18:28+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'fi',
@@ -99,6 +99,25 @@ $translation_table = [
 	"Note: This content is private. Change privacy to \"public\" to share." => [
 		0 => "Huomio: Tämä materiaali on yksityinen. Vaihda yksityisyysasetus \"julkinen\" jakaaksesi.",
 	],
+	"Private" => [
+		0 => "Yksityinen",
+	],
+	"Public" => [
+		0 => "Julkinen",
+	],
+	"Me" => [
+		0 => "Minä",
+	],
+	"Link" => [
+		0 => "Linkki",
+	],
+	"Password" => [
+		0 => "Salasana",
+	],
+	"view" => [
+		0 => "näyttökerta",
+		1 => "näyttökertaa",
+	],
 	"After %n %t" => [
 		0 => "Jälkeen %n %t",
 	],
@@ -135,10 +154,6 @@ $translation_table = [
 	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
 		0 => "Järjestelmä vaihtoi paikalliseen tallennustilaan, kun ulkoisesta tallennustilasta loppui tila (%c). Kuva %s on tallennettu paikalliseen tallennustilaan.",
 	],
-	"view" => [
-		0 => "näyttökerta",
-		1 => "näyttökertaa",
-	],
 	"like" => [
 		0 => "tykkäys",
 		1 => "tykkäystä",
@@ -147,11 +162,53 @@ $translation_table = [
 		0 => "kuva",
 		1 => "kuvaa",
 	],
-	"%u liked your %t %c" => [
-		0 => "%u tykkäsi sinun %t %c",
+	"Recent" => [
+		0 => "Viimeaikainen",
 	],
-	"%u is now following you" => [
-		0 => "%u seuraa sinua",
+	"Trending" => [
+		0 => "Nousussa",
+	],
+	"Popular" => [
+		0 => "Suosittu",
+	],
+	"Top users" => [
+		0 => "Suosituimmat käyttäjät",
+	],
+	"Most recent" => [
+		0 => "Viimeisimmät",
+	],
+	"Oldest" => [
+		0 => "Vanhimmat",
+	],
+	"Most viewed" => [
+		0 => "Katsotuimmat",
+	],
+	"Most liked" => [
+		0 => "Suosituimmat",
+	],
+	"Explore" => [
+		0 => "Selaa",
+	],
+	"Animated" => [
+		0 => "Animoitu",
+	],
+	"Search" => [
+		0 => "Etsi",
+	],
+	"People" => [
+		0 => "Ihmiset",
+	],
+	"Image" => [
+		0 => "Kuva",
+		1 => "Kuvat",
+	],
+	"Album" => [
+		0 => "Albumi",
+		1 => "Albumit",
+	],
+	"User" => [
+		0 => "Käyttäjä",
+		1 => "Käyttäjät",
 	],
 	"Can't create %s destination dir" => [
 		0 => "Kohde hakemistoa %s ei voida luoda",
@@ -162,9 +219,6 @@ $translation_table = [
 	"Internal" => [
 		0 => "Sisäinen",
 	],
-	"Link" => [
-		0 => "Linkki",
-	],
 	"Can't insert storage." => [
 		0 => "Ei voida lisätä ulkoista tallennustilaa.",
 	],
@@ -174,6 +228,9 @@ $translation_table = [
 	"Can't update storage details." => [
 		0 => "Ei voida päivittää tallennustilan tietoja.",
 	],
+	"requires %s" => [
+		0 => "tarvitsee %s",
+	],
 	"Unlimited" => [
 		0 => "Rajoittamaton",
 	],
@@ -182,9 +239,6 @@ $translation_table = [
 	],
 	"Private profile" => [
 		0 => "Yksityinen profiili",
-	],
-	"Private" => [
-		0 => "Yksityinen",
 	],
 	"year" => [
 		0 => "vuosi",
@@ -262,15 +316,6 @@ $translation_table = [
 	"That page doesn't exist" => [
 		0 => "Sivua ei ole olemassa",
 	],
-	"Most recent" => [
-		0 => "Viimeisimmät",
-	],
-	"Oldest" => [
-		0 => "Vanhimmat",
-	],
-	"Albums" => [
-		0 => "Albumit",
-	],
 	"Forgot password?" => [
 		0 => "Salasana unohtunut?",
 	],
@@ -328,12 +373,6 @@ $translation_table = [
 	"Password required" => [
 		0 => "Salasana vaaditaan",
 	],
-	"Most viewed" => [
-		0 => "Katsotuimmat",
-	],
-	"Most liked" => [
-		0 => "Suosituimmat",
-	],
 	"Share" => [
 		0 => "Jaa",
 	],
@@ -352,6 +391,9 @@ $translation_table = [
 	"Images" => [
 		0 => "Kuvat",
 	],
+	"Albums" => [
+		0 => "Albumit",
+	],
 	"Users" => [
 		0 => "Käyttäjät",
 	],
@@ -367,8 +409,8 @@ $translation_table = [
 	"check for updates" => [
 		0 => "tarkista päivitykset",
 	],
-	"Chevereto support" => [
-		0 => "Cheverto tuki",
+	"Support" => [
+		0 => "Tuki",
 	],
 	"Need help? Go to %s and you will get help quickly." => [
 		0 => "Tarvitsetko apua? Mene %s ja saat apua nopeasti.",
@@ -397,8 +439,8 @@ $translation_table = [
 	"Disabled" => [
 		0 => "Pois käytöstä",
 	],
-	"Max. upload size" => [
-		0 => "Suurin tiedoston koko",
+	"Max. upload file size" => [
+		0 => "Suurin lähetettävän tiedoston koko",
 	],
 	"Max. post size" => [
 		0 => "Suurin lähetyksen koko",
@@ -614,8 +656,8 @@ $translation_table = [
 	"Invalid timezone" => [
 		0 => "Virheellinen aikavyöhyke",
 	],
-	"Invalid value" => [
-		0 => "Virheellinen arvo",
+	"Invalid value: %s" => [
+		0 => "Virheellinen arvo: %s",
 	],
 	"Invalid upload storage mode" => [
 		0 => "Virheellinen lähetysten tallennustila",
@@ -640,6 +682,9 @@ $translation_table = [
 	],
 	"Invalid theme" => [
 		0 => "Virheellinen teema",
+	],
+	"Invalid value" => [
+		0 => "Virheellinen arvo",
 	],
 	"Invalid theme tone" => [
 		0 => "Virheellinen teeman sävy",
@@ -764,12 +809,6 @@ $translation_table = [
 	"Can't save page contents: %s." => [
 		0 => "Sivun %s sisältöä ei voida tallentaa.",
 	],
-	"Top users" => [
-		0 => "Suosituimmat käyttäjät",
-	],
-	"Explore" => [
-		0 => "Selaa",
-	],
 	"Following" => [
 		0 => "Seurataan",
 	],
@@ -875,6 +914,15 @@ $translation_table = [
 	"Content disliked" => [
 		0 => "Ei tykätty sisällöstä",
 	],
+	"%u liked your %t %c" => [
+		0 => "%u tykkäsi sinun %t %c",
+	],
+	"%u is now following you" => [
+		0 => "%u seuraa sinua",
+	],
+	"A private user" => [
+		0 => "Yksityinen käyttäjä",
+	],
 	"Wrong Username/Email password combination" => [
 		0 => "Väärä käyttäjätunnus tai salasana",
 	],
@@ -920,23 +968,17 @@ $translation_table = [
 	"User search results for %s" => [
 		0 => "Käyttäjähaun tulokset %s",
 	],
-	"Search" => [
-		0 => "Etsi",
-	],
 	"Account" => [
 		0 => "Käyttäjätunnus",
 	],
 	"Profile" => [
 		0 => "Profiili",
 	],
-	"Password" => [
-		0 => "Salasana",
-	],
 	"Linked accounts" => [
 		0 => "Linkitetyt tilit",
 	],
-	"Invalid image expiration" => [
-		0 => "Virheellinen kuvan vanhentumisaika",
+	"Invalid image expiration: %s" => [
+		0 => "Virheellinen kuvan vanheneminen: %s",
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "Sähköposti lähetetty osoitteeseen %s aktivointi-ohjeiden kera",
@@ -994,6 +1036,9 @@ $translation_table = [
 	],
 	"%n (%u) on %w" => [
 		0 => "%n (%u) %w",
+	],
+	"Discovery" => [
+		0 => "Löytö",
 	],
 	"Close" => [
 		0 => "Sulje",
@@ -1103,56 +1148,83 @@ $translation_table = [
 	"Select the images to upload" => [
 		0 => "Valitse kuvat lähetettäväksi",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "Voit myös <a data-trigger=\"anywhere-upload-input\">etsiä kuvia koneeltasi</a> tai <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">lisätä kuvien osoitteet</a>.",
+	"browse from your computer" => [
+		0 => "Selaa tietokoneeltasi",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "Voit myös <a data-trigger=\"anywhere-upload-input-camera\">ottaa kuvan</a> tai <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">lisätä kuvien osoitteet</a>.",
+	"add image URLs" => [
+		0 => "lisää kuvan osoite",
 	],
-	"Edit or resize an image by clicking the image preview" => [
+	"You can also %i or %u." => [
+		0 => "Voit myös %i tai %u.",
+	],
+	"take a picture" => [
+		0 => "ota kuva",
+	],
+	"Edit or resize any image by clicking the image preview" => [
 		0 => "Muokkaa tai muuta kuvan kokoa osoittamalla kuvan esikatselua",
 	],
-	"Edit or resize an image by touching the image preview" => [
+	"Edit or resize any image by touching the image preview" => [
 		0 => "Muokkaa tai muuta kuvan kokoa osoittamalla kuvan esikatselua",
 	],
-	"You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>." => [
-		0 => "Voit lisätä enemmän kuvia <a data-trigger=\"anywhere-upload-input\">tietokoneeltasi</a> tai <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">lisätä kuvien osoitteet</a>.",
+	"your computer" => [
+		0 => "tietokoneesi",
 	],
-	"You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "Voit <a data-trigger=\"anywhere-upload-input\">listätä enemmän kuvia</a> tai <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">lisätä kuvien osoitteet</a>.",
+	"image URLs" => [
+		0 => "kuvan osoite",
 	],
-	"Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>" => [
-		0 => "Lähetetään <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">kuvaa</span>",
+	"You can keep adding more images from %i or from %u." => [
+		0 => "Voit lisätä enemmän kuvia %i tai %u.",
+	],
+	"your device" => [
+		0 => "laitteesi",
+	],
+	"Uploading %q %o" => [
+		0 => "Ladataan %q %o",
 	],
 	"complete" => [
 		0 => "valmis",
 	],
-	"The queue is being uploaded. It will take just a few seconds to complete." => [
-		0 => "Kuvia lähetetään. Lähettäminen voi kestää hetken aikaa.",
+	"The queue is being uploaded, it should take just a few seconds to complete." => [
+		0 => "Ladataan kuvia, pitäisi kestää vielä hetki.",
 	],
 	"Upload complete" => [
 		0 => "Lähettäminen valmis",
 	],
-	"Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album." => [
-		0 => "Kuvat lisätty <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">julkiseen virtaan</a>. Voit  <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">luoda albumin</a> tai <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">siirtää <span data-text=\"queue-objects\">kuvat</span></a> olemassa olevaan albumiin.",
+	"Uploaded content added to %s." => [
+		0 => "Ladattu sisältö lisätty %s.",
 	],
-	"You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account." => [
-		0 => "Voit <a href=\"%s\">Luoda käyttäjätunnuksen</a> tai <a href=\"%l\">kirjautua sisään</a> tallentaaksesi lähettämäsi tiedostot jatkossa profiiliisi.",
+	"You can %c with the content just uploaded or %m." => [
+		0 => "Voi %c juuri ladatun sisällön tai %m.",
 	],
-	"No <span data-text=\"queue-objects\">images</span> have been uploaded" => [
-		0 => "Ei <span data-text=\"queue-objects\">kuvia</span> lähetettäväksi",
+	"You can %c with the content just uploaded." => [
+		0 => "Voit %c juuri ladatun sisällön.",
+	],
+	"create a new album" => [
+		0 => "luo uusi albumi",
+	],
+	"move it to an existing album" => [
+		0 => "siirrä olemassa olevaan albumiin",
+	],
+	"create an account" => [
+		0 => "luo uusi käyttäjätunnus",
+	],
+	"sign in" => [
+		0 => "kirjaudu sisään",
+	],
+	"You can %s or %l to save this content into your account." => [
+		0 => "Voit %s tai %l tallentaaksesi sisällön sinun käyttäjätunnukselle.",
+	],
+	"No %s have been uploaded" => [
+		0 => "Yhtään %s ei ladattu",
 	],
 	"Some errors have occured and the system couldn't process your request." => [
 		0 => "Joitakin virheitä havaittu eikä järjestelmä voinut suorittaa prosessiasi loppuun asti.",
 	],
+	"Category" => [
+		0 => "Kategoria",
+	],
 	"Select category" => [
 		0 => "Valitse kategoria",
-	],
-	"Change upload privacy" => [
-		0 => "Muuta lähetyksen yksityisyyttä",
-	],
-	"cancel" => [
-		0 => "peruuta",
 	],
 	"Mark this if the upload is not family safe" => [
 		0 => "Merkise tämä, jos lataus on sopimatonta",
@@ -1162,6 +1234,9 @@ $translation_table = [
 	],
 	"Uploading" => [
 		0 => "Lähetetään",
+	],
+	"cancel" => [
+		0 => "peruuta",
 	],
 	"cancel remaining" => [
 		0 => "peruuta jäljellä olevat",
@@ -1213,6 +1288,12 @@ $translation_table = [
 	],
 	"Auto delete image" => [
 		0 => "Poista kuva automaattisesti",
+	],
+	"Sign up" => [
+		0 => "Kirjaudu",
+	],
+	"%s to be able to customize or disable image auto delete." => [
+		0 => "%s muokataksesi tai poistaaksesi automaattinen kuvien poisto käytöstä.",
 	],
 	"Mark this if the image is not family safe" => [
 		0 => "Merkitse kuva sopimattomaksi",
@@ -1314,9 +1395,6 @@ $translation_table = [
 	"Put a minus sign just before words you don't want: -rodent -\"Jack Russell\"" => [
 		0 => "Lisää miinusmerkki niiden sanojen eteen, joilla et halua hakea: -nainen, -\"elin\"",
 	],
-	"Category" => [
-		0 => "Kategoria",
-	],
 	"Storage" => [
 		0 => "Tallennustila",
 	],
@@ -1341,9 +1419,6 @@ $translation_table = [
 	"Who can view this content" => [
 		0 => "Kuka voi nähdä tämän sisällön",
 	],
-	"Public" => [
-		0 => "Julkinen",
-	],
 	"Private (just me)" => [
 		0 => "Yksityinen (vain minä)",
 	],
@@ -1355,9 +1430,6 @@ $translation_table = [
 	],
 	"Album password" => [
 		0 => "Albumin salasana",
-	],
-	"No category" => [
-		0 => "Ei kategoriaa",
 	],
 	"Name" => [
 		0 => "Nimi",
@@ -1400,22 +1472,6 @@ $translation_table = [
 	],
 	"Existing album" => [
 		0 => "Olemassaoleva albumi",
-	],
-	"Album" => [
-		0 => "Albumi",
-		1 => "Albumit",
-	],
-	"me" => [
-		0 => "minä",
-	],
-	"link" => [
-		0 => "linkki",
-	],
-	"password" => [
-		0 => "salasana",
-	],
-	"private" => [
-		0 => "yksityinen",
 	],
 	"create new album" => [
 		0 => "luo uusi albumi",
@@ -1555,11 +1611,17 @@ $translation_table = [
 	"Delete" => [
 		0 => "Poista",
 	],
+	"Create new album" => [
+		0 => "Luo uusi albumi",
+	],
 	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
 		0 => "Käyttääksesi kaikkia ominaisuuksia, sinun täytyy olla kirjautunut sisään. Jos sinulla ei ole käyttäjätunnusta voit luoda sellaisen <a href=\"%s\">tästä</a>.",
 	],
 	"There's nothing to show here." => [
 		0 => "Täällä ei ole mitään nähtävää.",
+	],
+	"Upload images" => [
+		0 => "Lataa kuvia",
 	],
 	"Edit image details" => [
 		0 => "Muokkaa kuvan tietoja",
@@ -1717,6 +1779,15 @@ $translation_table = [
 	"Delete album" => [
 		0 => "Poista albumi",
 	],
+	"You like this" => [
+		0 => "Tykkäsit tästä",
+	],
+	"Like" => [
+		0 => "Tykkäys",
+	],
+	"Upload to album" => [
+		0 => "Lataa albumiin",
+	],
 	"Album link" => [
 		0 => "Albumin osoite",
 	],
@@ -1731,14 +1802,6 @@ $translation_table = [
 	],
 	"I Agree" => [
 		0 => "Hyväksyn",
-	],
-	"Image" => [
-		0 => "Kuva",
-		1 => "Kuvat",
-	],
-	"User" => [
-		0 => "Käyttäjä",
-		1 => "Käyttäjät",
 	],
 	"Disk used" => [
 		0 => "Käytetty levytila",
@@ -1881,9 +1944,6 @@ $translation_table = [
 	"Only alphanumerics, hyphens and forward slash" => [
 		0 => "Vain kirjaimia, väliviivoja ja vinoviiva",
 	],
-	"Page URL key relative to %s" => [
-		0 => "Suhteellinen sivun URL %s osoitteeseen nähden",
-	],
 	"File path" => [
 		0 => "Tiedostopolku",
 	],
@@ -1959,6 +2019,15 @@ $translation_table = [
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Salli vieraiden ladata kuvia.",
 	],
+	"Enable embed codes (uploader)" => [
+		0 => "Ota käyttöön upotuskoodit (lataus)",
+	],
+	"Enable this if you want to show embed codes when upload gets completed." => [
+		0 => "Ota upotuskoodit käyttöön, kun lataus on valmis.",
+	],
+	"Upload threads" => [
+		0 => "Lähetyksen säikeet",
+	],
 	"Number of simultaneous upload threads (parallel uploads)" => [
 		0 => "Yhtäaikaisten latausten määrä (rinnakkaiset lataukset)",
 	],
@@ -1980,6 +2049,18 @@ $translation_table = [
 	"Enable this if you want to allow uploads with an automatic delete option." => [
 		0 => "Ota tämä käyttöön mikäli haluat sallia automaattisesti poistuvat kuvat.",
 	],
+	"Auto delete guest uploads" => [
+		0 => "Automaattisesti poista vieraiden lataukset",
+	],
+	"Enable this if you want to force guest uploads to be auto deleted after certain time." => [
+		0 => "Ota käyttöön vieraiden latausten automaattinen poisto tietyn ajan kuluttua.",
+	],
+	"Maximum image size" => [
+		0 => "Kuvan enimmäiskoko",
+	],
+	"Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit." => [
+		0 => "Tätä suuremmat kuvat pienennetään automaattisesti. Käytä arvoa nolla (0) ellet halua asettaa rajaa.",
+	],
 	"Image Exif data" => [
 		0 => "Kuvan Exif tiedot",
 	],
@@ -1995,11 +2076,11 @@ $translation_table = [
 	"Enable this if you want to allow each user to configure how image Exif data will be handled." => [
 		0 => "Salli käyttäjien valita miten kuvien Exif tietoja näytetään.",
 	],
-	"Max. filesize" => [
-		0 => "Maksimi tiedoston koko",
+	"Maximum upload file size" => [
+		0 => "Lähetettävän kuvatiedoston maksimikoko.",
 	],
-	"Max. allowed filesize. (Max allowed by server is %s)" => [
-		0 => "Suurin sallittu tiedoston koko. (Suurin sallittu palvelimellasi on %s)",
+	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
+		0 => "Palvelimen sallima maksimikoko on %s. Ylärajan asettavat %u ja %p (%f arvot).",
 	],
 	"Image path" => [
 		0 => "Kuvien sijainti",
@@ -2409,6 +2490,12 @@ $translation_table = [
 	"Favicon image. Image must have same width and height." => [
 		0 => "Favicon kuva. Kuvan tulee olla yhtä korkea kuin leveä.",
 	],
+	"Image load max. filesize" => [
+		0 => "Kuvan lähetyksen maksimi tiedostokoko.",
+	],
+	"Images greater than this size will show a button to load full resolution image." => [
+		0 => "Tätä kokoa suuremmissa kuvissa näytetään painike, jolla täyskokoisen kuvatiedoston voi ladata.",
+	],
 	"Enable download button" => [
 		0 => "Ota Lataa kuva -painike käyttöön",
 	],
@@ -2438,12 +2525,6 @@ $translation_table = [
 	],
 	"Enable this if you want to show embed codes for the content." => [
 		0 => "Ota upotuskoodit käyttöön sisällölle.",
-	],
-	"Enable embed codes (uploader)" => [
-		0 => "Ota käyttöön upotuskoodit (lataus)",
-	],
-	"Enable this if you want to show embed codes when upload gets completed." => [
-		0 => "Ota upotuskoodit käyttöön, kun lataus on valmis.",
 	],
 	"Not safe content checkbox in uploader" => [
 		0 => "Sopimatonta sisältöä -valintaruutu latauksessa",
@@ -2751,17 +2832,29 @@ $translation_table = [
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Tarvitset <a href=\"%s\" target=\"_blank\">reCAPTCHA avaimen</a> tätä varten.",
 	],
-	"reCAPTCHA public key" => [
-		0 => "reCAPTCHA public key",
+	"%s site key" => [
+		0 => "%s sivuston avain",
 	],
-	"reCAPTCHA private key" => [
-		0 => "reCAPTCHA private key",
+	"%s secret key" => [
+		0 => "%s salainen avain",
 	],
 	"reCAPTCHA threshold" => [
 		0 => "reCAPTCHA-kynnys",
 	],
 	"How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA." => [
 		0 => "Kuinka monta epäonnistunutta kirjautumisyritystä ennen kuin pyydetään reCAPTCHA? Käytä nollaa (0) näyttääksesi aina reCAPTCHA.",
+	],
+	"Comments API" => [
+		0 => "Kommentointi API",
+	],
+	"Disqus API works with %s." => [
+		0 => "Disqus API toimii %s kanssa.",
+	],
+	"Disqus shortname" => [
+		0 => "Disqus lyhytnimi",
+	],
+	"%s public key" => [
+		0 => "%s julkinen avain",
 	],
 	"Comment code" => [
 		0 => "Kommenttikoodi",
@@ -2796,14 +2889,14 @@ $translation_table = [
 	"Check the errors to proceed." => [
 		0 => "Tarkista virheet jatkaaksesi.",
 	],
+	"Play GIF" => [
+		0 => "Toista GIF",
+	],
+	"Load full resolution" => [
+		0 => "Lataa täydessä resoluutiossa",
+	],
 	"Guest" => [
 		0 => "Vieras",
-	],
-	"You like this" => [
-		0 => "Tykkäsit tästä",
-	],
-	"Like" => [
-		0 => "Tykkäys",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "Lisätty %a ja kategorioitu %c",
@@ -3130,8 +3223,8 @@ $translation_table = [
 	"Update now" => [
 		0 => "Päivitä nyt",
 	],
-	"Your website is running the latest version of Chevereto." => [
-		0 => "Verkkosivusi käyttää uusinta Chevereto versiota.",
+	"This website is running latest %s version" => [
+		0 => "Sivusto käyttää viimeisintä %s versiota",
 	],
 	"Clipboard image" => [
 		0 => "Leikepöydän kuva",
@@ -3147,6 +3240,9 @@ $translation_table = [
 	],
 	"Image edited successfully." => [
 		0 => "Kuva muokattu onnistuneesti.",
+	],
+	"private" => [
+		0 => "yksityinen",
 	],
 	"Album edited successfully." => [
 		0 => "Albumi muokattu onnistuneesti.",

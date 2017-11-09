@@ -8,58 +8,58 @@
   @author	Rodolfo Berrios A. <http://rodolfoberrios.com/>
 
   Copyright (c) Rodolfo Berrios <inbox@rodolfoberrios.com> All rights reserved.
-  
+
   Licensed under the MIT license
   http://opensource.org/licenses/MIT
-  
+
   --------------------------------------------------------------------- */
 
 namespace G {
-	
+
 	use Exception;
-	
+
 	/**
 	 * ROUTE HELPERS
 	 * ---------------------------------------------------------------------
 	 */
-	
+
 	// Returns true if the $route is current /route or mapped-route -> /route
 	function is_route($route){
 		return Handler::$base_request == $route;
 	}
-	
+
 	// Returns true if the $route is has route file
 	function is_route_available($route) {
 		$route_file = 'route.'.$route.'.php';
 		return file_exists(G_APP_PATH_ROUTES . $route_file) or file_exists(G_APP_PATH_ROUTES_OVERRIDES . $route_file);
 	}
-	
+
 	// Returns true if the route is prevented
 	function is_prevented_route() {
 		return Handler::$prevented_route == true;
 	}
-	
+
 	// Get the route path
 	// $full=true returns route/and/sub/routes, $full=false returns just the /route base
-	function get_route_path($full=false) { 
+	function get_route_path($full=false) {
 		return Handler::getRoutePath($full);
 	}
-	
+
 	// Get route name from route.name.php
 	function get_route_name() {
 		return Handler::getRouteName();
 	}
-	
+
 	// Get the route template basename file used. Useful when you do route mapping.
-	function get_template_used() { 
+	function get_template_used() {
 		return Handler::getTemplateUsed();
 	}
-	
+
 	/**
 	 * GLOBAL HELPERS
 	 * ---------------------------------------------------------------------
 	 */
-	
+
 	// Outputs a well formatted HTML output of anything (strings, arrays, comma separated "things", anything)
 	function debug($arguments) {
 		if(empty($arguments)) return;
@@ -69,45 +69,45 @@ namespace G {
 		}
 		echo '</pre>';
 	}
-	
+
 	// Universal check for setted values for strings and arrays
 	function check_value($anything) {
 		if((@count($anything)>0 and !@empty($anything) and @isset($anything)) || $anything=='0') {
 			return true;
 		}
 	}
-	
+
 	function get_global($var) {
 		global ${$var};
 		return ${$var};
 	}
-	
+
 	function is_apache() {
 		return (isset($_SERVER['SERVER_SOFTWARE']) and preg_match('/Apache/i', $_SERVER['SERVER_SOFTWARE']));
 	}
-	
+
 	// Fixed from the original (not working) at: http://stackoverflow.com/a/7859707
 	function random_values($min, $max, $limit) {
-		
+
 		// Numbers?
 		if(!is_numeric($min) or !is_numeric($max)) {
 			return NULL;
 		}
-		
+
 		// Get the accurate min and max
 		$min = min($min, $max);
 		$max = max($min, $max);
-		
+
 		// Go home
 		if($min == $max) return array($min);
-		
+
 		// is the limit ok?
 		$minmax_limit = abs($max - $min);
 		if($limit > $minmax_limit) {
 			$limit = $minmax_limit;
 		}
-		
-		
+
+
 		$array = Array();
 		for($i = 0; $i < $limit; $i++) {
 			$rand = rand($min,$max);
@@ -115,10 +115,10 @@ namespace G {
 			   $rand = mt_rand($min,$max);
 			}
 			$array[$i] = $rand;
-		}   
+		}
 		return $array;
 	}
-	
+
 	/**
 	 * Generates a random string
 	 * @autor Baba
@@ -180,7 +180,7 @@ namespace G {
 		// They are only identical strings if $result is exactly 0...
 		return $result === 0;
 	}
-	
+
 	function str_replace_first($search, $replace, $subject) {
 		$pos = strpos($subject, $search);
 		if ($pos !== false) {
@@ -188,7 +188,7 @@ namespace G {
 		}
 		return $subject;
 	}
-	
+
 	function str_replace_last($search, $replace, $subject) {
 		$pos = strrpos($subject, $search);
 		if($pos !== false) {
@@ -196,13 +196,13 @@ namespace G {
 		}
 		return $subject;
 	}
-	
+
 	// Taken from http://stackoverflow.com/a/834355
 	function starts_with($needle, $haystack) {
 		$length = strlen($needle);
 		return (substr($haystack, 0, $length) === $needle);
 	}
-	
+
 	// Taken from http://stackoverflow.com/a/834355
 	function ends_with($needle, $haystack) {
 		$length = strlen($needle);
@@ -211,19 +211,19 @@ namespace G {
 		}
 		return (substr($haystack, -$length) === $needle);
 	}
-	
+
 	/**
 	 * DATA HANDLING
 	 * ---------------------------------------------------------------------
 	 */
-	
+
 	// Filter array with another array
 	function array_filter_array($array, $filter_keys, $get='exclusion') {
 		$arr = $array;
 		$return = [];
 		$get = strtolower($get);
 		$default_get = 'exclusion';
-		
+
 		foreach($filter_keys as $k => $v) {
 			switch($get) {
 				default: case $default_get:
@@ -238,7 +238,7 @@ namespace G {
 		}
 		return $get == $default_get ? $return : $array;
 	}
-	
+
 	function key_asort(&$array, $key) {
 		$sorter = [];
 		$ret = [];
@@ -252,7 +252,7 @@ namespace G {
 		}
 		$array = $ret;
 	}
-	
+
 	/**
 	 * Recursive UTF-8 encode array
 	 */
@@ -262,7 +262,7 @@ namespace G {
 		});
 		return $arr;
 	}
-	
+
 	/**
 	 * Recursive remove empty properties
 	 */
@@ -277,7 +277,7 @@ namespace G {
 		}
 		return $haystack;
 	}
-	
+
 	/**
 	 * Abbreviate a number with suffix output
 	 */
@@ -285,7 +285,7 @@ namespace G {
 
 		// strip any formatting
 		$number = (0+str_replace(',', '', $number));
-		
+
 		// Not a number, keep it "as is"
 		if(!is_numeric($number) or $number == 0) return $number;
 
@@ -306,13 +306,13 @@ namespace G {
 			}
 		}
 	}
-	
+
 	function nullify_string(&$string) {
 		if(is_string($string) and $string == '') {
 			$string = NULL;
 		}
 	}
-	
+
 	// http://bavotasan.com/2011/convert-hex-color-to-rgb-using-php/
 	function hex_to_rgb($hex) {
 		$hex = str_replace('#', '', $hex);
@@ -335,7 +335,7 @@ namespace G {
 		$hex .= str_pad(dechex($rgb[2]), 2, '0', STR_PAD_LEFT);
 		return $hex; // returns the hex value including the number sign (#)
 	}
-	
+
 	/**
 	 * Convert HTML code to BBCode
 	 * http://kuikie.com/snippets/snippet.php/90-17/php-function-to-convert-bbcode-to-html
@@ -351,8 +351,8 @@ namespace G {
 			'/\<img(.*?) src=\"(.*?)\" (.*?)\>/is',
 			'/\<img(.*?) src=\"(.*?)\" alt=\":(.*?)\" .*? \/\>/is',
 			'/\<div class=\"quotecontent\"\>(.*?)\<\/div\>/is',
-			'/\<div class=\"codecontent\"\>(.*?)\<\/div\>/is', 
-			'/\<div class=\"quotetitle\"\>(.*?)\<\/div\>/is',  
+			'/\<div class=\"codecontent\"\>(.*?)\<\/div\>/is',
+			'/\<div class=\"quotetitle\"\>(.*?)\<\/div\>/is',
 			'/\<div class=\"codetitle\"\>(.*?)\<\/div\>/is',
 			'/\<cite.*?\>(.*?)\<\/cite\>/is',
 			'/\<blockquote.*?\>(.*?)\<\/blockquote\>/is',
@@ -389,23 +389,23 @@ namespace G {
 			'[url]$1[/url]',
 			'[url=$1]$3[/url]'
 		);
-	 
+
 		$text = str_replace ("\n", ' ', $text);
 		$ntext = preg_replace ($htmltags, $bbtags, $text);
 		$ntext = preg_replace ($htmltags, $bbtags, $ntext);
-	 
+
 		// for too large text and cannot handle by str_replace
 		if(!$ntext) {
 			$ntext = str_replace(array('<br>', '<br />'), "\n", $text);
 			$ntext = str_replace(array('<strong>', '</strong>'), array('[b]', '[/b]'), $ntext);
 			$ntext = str_replace(array('<em>', '</em>'), array('[i]', '[/i]'), $ntext);
 		}
-	 
+
 		$ntext = strip_tags($ntext);
 		$ntext = trim(html_entity_decode($ntext, ENT_QUOTES, 'UTF-8'));
 		return $ntext;
 	}
-	
+
 	// Linkify functions borrowed from https://github.com/misd-service-development/php-linkify
 	function linkify($text, array $options = array()) {
         $attr = '';
@@ -446,7 +446,7 @@ namespace G {
         $text = implode($chunks);
         return $text;
     }
-	
+
 	function linkify_emails($text, $options = array('attr' => '')) {
         $pattern = '~(?xi)
                 \b
@@ -468,7 +468,7 @@ namespace G {
         };
         return preg_replace_callback($pattern, $callback, $text);
     }
-	
+
 	function linkify_urls($text, $options = array('attr' => '')) {
 		$pattern = '~(?xi)
               (?:
@@ -507,38 +507,38 @@ namespace G {
 		};
 		return preg_replace_callback($pattern, $callback, $text);
 	}
-	
+
 	function linkify_safe($text, $options=[]) {
 		$options = array_merge(['attr' => ['rel' => 'nofollow', 'target' => '_blank']], $options);
 		return linkify(htmlspecialchars($text), $options);
 	}
-	
+
 	/**
 	 * ERROR HANDLING
 	 * ---------------------------------------------------------------------
 	 */
-	
+
 	// Converts an Exception to a formatted PHP like error
 	function exception_to_error($e, $die=TRUE) {
-		
+
 		$internal_code = 500;
 		$internal_error = '<b>'.G_APP_NAME.' error:</b> ' . get_set_status_header_desc($internal_code);
-		
+
 		set_status_header($internal_code);
-		
+
 		// Debug levels
 		// 0:NONE 1:ERROR_LOG 2:PRINT(NO ERROR_LOG) 3:PRINT+ERROR_LOG
-		
+
 		$debug_level = get_app_setting('debug_level');
-		
+
 		if(!in_array($debug_level, [0,1,2,3])) {
 			$debug_level = 1;
 		}
-		
+
 		if(in_array($debug_level, [1,3])) {
 			error_log($e);
 		}
-		
+
 		if(!in_array($debug_level, [2,3])) { // No print here
 			die($internal_error);
 		}
@@ -547,7 +547,7 @@ namespace G {
 		$message[] = '<b>Fatal error ['.$e->getCode().']:</b> ' . safe_html($e->getMessage());
 		$message[] = 'Triggered in ' . absolute_to_relative($e->getFile()) . ' at line ' . $e->getLine() . "\n";
 		$message[] = '<b>Stack trace:</b>';
-		
+
 		$rtn = '';
 		$count = 0;
 		foreach ($e->getTrace() as $frame) {
@@ -582,10 +582,10 @@ namespace G {
 						break;
 					}
 
-				}   
+				}
 				$args = join(', ', $args);
 			}
-			
+
 			$rtn .= sprintf("#%s %s(%s): %s(%s)\n",
 						$count,
 						isset($frame['file']) ? absolute_to_relative($frame['file']) : 'unknown file',
@@ -595,9 +595,9 @@ namespace G {
 			$count++;
 		}
 		$message[] = $rtn;
-		
+
 		$message = implode("\n", $message);
-		
+
 		if($die) {
 			echo nl2br($message);
 			die();
@@ -606,38 +606,38 @@ namespace G {
 		}
 
 	}
-	
+
 	/**
 	 * MATH
 	 * ---------------------------------------------------------------------
 	 */
-	 
+
 	function fraction_to_decimal($fraction) {
 		list($top, $bottom) = explode('/', $fraction);
 		return $bottom == 0 ? $fraction : ($top / $bottom);
 	}
-	
+
 	/**
 	 * TIME
 	 * ---------------------------------------------------------------------
 	 */
-	
+
 	// Returns current GMT datetime
 	function datetimegmt($format=NULL) {
 		return gmdate(!is_null($format) ? $format : 'Y-m-d H:i:s');
 	}
-	
+
 	// Returns current datetime (for the system timezone)
 	function datetime($format=NULL) {
 		return date(!is_null($format) ? $format : 'Y-m-d H:i:s');
 	}
-	
+
 	// Returns current datetime in the specified timezone
 	function datetime_tz($tz, $format=NULL) {
 		$date = date_create(NULL, timezone_open($tz));
 		return date_format($date, !is_null($format) ? $format : 'Y-m-d H:i:s');
 	}
-	
+
 	// http://stackoverflow.com/a/5878722
 	function is_valid_timezone($tzid){
 		$valid = [];
@@ -648,7 +648,7 @@ namespace G {
 		unset($valid['']);
 		return !!$valid[$tzid];
 	}
-	
+
 	// http://stackoverflow.com/a/18602474
 	function time_elapsed_string($datetime, $full=false) {
 		$now = new \DateTime(datetimegmt());
@@ -678,51 +678,51 @@ namespace G {
 		if (!$full) $string = array_slice($string, 0, 1);
 		return $string ? implode(', ', $string) . ' ago' : 'just now';
 	}
-	
+
 	function datetimegmt_convert_tz($datetimegmt, $tz) {
 		if(!is_valid_timezone($tz)) return $datetimegmt;
 		$date = new \DateTime($datetimegmt . "+00");
 		$date->setTimezone(new \DateTimeZone($tz));
 		return $date->format('Y-m-d H:i:s');
 	}
-	
+
 	// Returns the difference between two dates in the given format (default seconds)
 	function datetime_diff($older, $newer=NULL, $format='s') {
-		
+
 		if(!in_array($format, ['s', 'm', 'h', 'd'])) {
 			$format = 's';
 		}
-		
+
 		if(!$newer or $newer == NULL) {
 			$newer = datetimegmt();
 		}
-		
+
 		$datetime1 = new \DateTime($older);
 		$datetime2 = new \DateTime($newer);
 		$diff = $datetime2->getTimestamp() - $datetime1->getTimestamp(); // In seconds
-		
+
 		$timeconstant = [
 			's' => 1,
 			'm' => 60,
 			'h' => 3600,
-			'd' => 86400 
+			'd' => 86400
 		];
-		
+
 		return $diff/$timeconstant[$format];
 	}
-	
+
 	function datetime_add($datetime, $add) {
 		return datetime_alter($datetime, $add, 'add');
 	}
-    
+
     function datetime_sub($datetime, $sub) {
 		return datetime_alter($datetime, $sub, 'sub');
 	}
-    
+
     function datetime_modify($datetime, $var) {
 		return datetime_alter($datetime, $var, 'modify');
 	}
-    
+
     function datetime_alter($datetime, $var, $action='add') {
         if(!in_array($action, ['add', 'sub', 'modify'])) {
             return $datetime;
@@ -743,7 +743,7 @@ namespace G {
             throw new Exception($e->getMessage() . ' in ' . __FUNCTION__ . ' (' . $action . ')', $e->getCode());
         }
     }
-    
+
     function dateinterval($var) {
         try {
             $di = new \DateInterval($var);
@@ -756,15 +756,15 @@ namespace G {
 	 * CLIENT
 	 * ---------------------------------------------------------------------
 	 */
-	
+
 	function get_client_ip(){
-		
+
 		$client_ip = !empty($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : (!empty($_ENV['REMOTE_ADDR']) ? $_ENV['REMOTE_ADDR'] : NULL);
-		
+
 		if(array_key_exists('HTTP_CF_CONNECTING_IP', $_SERVER) && $_SERVER['HTTP_CF_CONNECTING_IP'] == $_SERVER['REMOTE_ADDR']) {
 			return $_SERVER['HTTP_CF_CONNECTING_IP'];
 		}
-		
+
 		if(isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
 
 			$entries = preg_split('/[\s,]/', $_SERVER['HTTP_X_FORWARDED_FOR'], -1, PREG_SPLIT_NO_EMPTY);
@@ -775,10 +775,10 @@ namespace G {
 				$entry = trim($entry);
 				if(preg_match('/^([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)/', $entry, $ip_list)){
 					$private_ip = array(
-						  '/^0\./', 
-						  '/^127\.0\.0\.1/', 
-						  '/^192\.168\..*/', 
-						  '/^172\.((1[6-9])|(2[0-9])|(3[0-1]))\..*/', 
+						  '/^0\./',
+						  '/^127\.0\.0\.1/',
+						  '/^192\.168\..*/',
+						  '/^172\.((1[6-9])|(2[0-9])|(3[0-1]))\..*/',
 						  '/^10\..*/');
 
 					$found_ip = preg_replace($private_ip, $client_ip, $ip_list[1]);
@@ -790,28 +790,28 @@ namespace G {
 				}
 			}
 		}
-	 
+
 		return $client_ip;
-	 
+
 	}
-	
+
 	function get_client_languages($getSortedList=true, $acceptedLanguages=false) {
 
 		if (empty($acceptedLanguages)) {
 			$acceptedLanguages = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
 		}
-		
+
 		// regex inspired from @GabrielAnderson on http://stackoverflow.com/questions/6038236/http-accept-language
 		preg_match_all('/([a-z]{1,8}(-[a-z]{1,8})*)\s*(;\s*q\s*=\s*(1|0\.[0-9]+))?/i', $acceptedLanguages, $lang_parse);
 		$langs = $lang_parse[1];
 		$ranks = $lang_parse[4];
-		
+
 		// (create an associative array 'language' => 'preference')
 		$lang2pref = array();
 		for($i=0; $i<count($langs); $i++) {
 			$lang2pref[$langs[$i]] = (float) (!empty($ranks[$i]) ? $ranks[$i] : 1);
 		}
-		
+
 		$cmpLangs = function($a, $b) use ($lang2pref) {
 			if ($lang2pref[$a] > $lang2pref[$b]) {
 				return -1;
@@ -825,7 +825,7 @@ namespace G {
 				return 0;
 			}
 		};
-		
+
 		// Just in case the server is running eAccelerator
 		if(is_callable($cmpLangs)) {
 			uksort($lang2pref, $cmpLangs);
@@ -838,7 +838,7 @@ namespace G {
 		reset($lang2pref);
 		return key($lang2pref);
 	}
-	
+
 	/**
 	 * Parses a user agent string into its important parts
 	 *
@@ -940,7 +940,7 @@ namespace G {
 			$version = $result['version'][$key];
 		} elseif( $find('Midori', $key) ) {
 			$browser = 'Midori';
-			$version = $result['version'][$key]; 
+			$version = $result['version'][$key];
 		} elseif( $browser == 'AppleWebKit' ) {
 			if( ($platform == 'Android' && !($key = 0)) ) {
 				$browser = 'Android Browser';
@@ -971,8 +971,8 @@ namespace G {
 		return array( 'platform' => $platform, 'browser' => $browser, 'version' => $version );
 
 	}
-	
-	
+
+
 	/**
 	 * MISC. VALIDATIONS
 	 * ---------------------------------------------------------------------
@@ -1009,7 +1009,7 @@ namespace G {
 				$valid = false;
 			} else if(!preg_match('/^(\\\\.|[A-Za-z0-9!#%&`_=\\/$\'*+?^{}|~.-])+$/',
 			str_replace('\\\\','',$local))) {
-				// character not valid in local part unless 
+				// character not valid in local part unless
 				// local part is quoted
 				if(!preg_match('/^"(\\\\"|[^"])+"$/', str_replace("\\\\","",$local))) {
 					$valid = false;
@@ -1022,15 +1022,15 @@ namespace G {
 		}
 		return $valid;
 	}
-	
+
 	function is_valid_hex_color($string, $prefix=true) {
 		return preg_match('/#' . ($prefix ? '?' : NULL) . '([\da-fA-F]{2})([\da-fA-F]{2})([\da-fA-F]{2})/', $string);
 	}
-	
+
 	function is_valid_ip($ip) {
 		return filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) or filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6);
 	}
-	
+
 	/**
 	 * SANITIZATION
 	 * ---------------------------------------------------------------------
@@ -1045,11 +1045,11 @@ namespace G {
 	function sanitize_path_slashes($path) {
 		return preg_replace('#/+#','/', $path);
 	}
-	
+
 	function sanitize_directory_separator($path) {
 		return preg_replace('#' . DIRECTORY_SEPARATOR . '+#', DIRECTORY_SEPARATOR , $path);
 	}
-	
+
 	function sanitize_relative_path($path) {
 		$clean = forward_slash($path);
 		$clean = sanitize_path_slashes($path);
@@ -1072,7 +1072,7 @@ namespace G {
 		$clean = ($truncate ? substr($clean, 0, $truncate) : $clean);
 		return ($force_lowercase) ? (function_exists('mb_strtolower')) ? mb_strtolower($clean, 'UTF-8') : strtolower($clean) : $clean;
 	}
-	
+
 	// Original PHP code by Chirp Internet: www.chirp.com.au
 	function truncate($string, $limit, $break=NULL, $pad='...') {
 		$encoding = 'UTF-8';
@@ -1088,11 +1088,11 @@ namespace G {
 		}
 		return $string;
 	}
-	
+
 	// Thanks to http://www.evaisse.net/2008/php-translit-remove-accent-unaccent-21001
 	function unaccent_string($string) {
 		$string = (string)$string;
-		
+
 		if(function_exists('mb_detect_encoding')) {
 			$utf8 = strtolower(mb_detect_encoding($string)) == 'utf-8';
 		} else {
@@ -1116,9 +1116,9 @@ namespace G {
 				}
 			}
 		}
-	
+
 		if(!$utf8) $string = utf8_encode($string);
-	
+
 		$transliteration = array(
 			'Ĳ' => 'I', 'Ö' => 'O', 'Œ' => 'O', 'Ü' => 'U', 'ä' => 'a', 'æ' => 'a',
 			'ĳ' => 'i', 'ö' => 'o', 'œ' => 'o', 'ü' => 'u', 'ß' => 's', 'ſ' => 's',
@@ -1219,14 +1219,14 @@ namespace G {
 			'ş' => 's', 'ā' => 'a', 'ţ' => 't', 'ễ'	=> 'e'
 		);
 		$string = str_replace(array_keys($transliteration), array_values($transliteration), $string);
-		
+
 		// Missing something?
 		if(strpos($string = htmlentities($string, ENT_QUOTES, 'UTF-8'), '&') !== false) {
 			$string = html_entity_decode(preg_replace('~&([a-z]{1,2})(?:acute|cedil|circ|grave|lig|orn|ring|slash|tilde|uml);~i', '$1', $string), ENT_QUOTES, 'UTF-8');
 		}
 		return $string;
 	}
-	
+
 	// Safe for HTML output
 	function safe_html($var, $flag=ENT_QUOTES) {
 		if(!is_array($var)) {
@@ -1258,7 +1258,7 @@ namespace G {
 			}
 		}
 	}
-	
+
 	// Returns bytes for SIZE + Suffix format (dec + bin)
 	function get_bytes($size, $cut=NULL) {
 		if($cut == NULL) {
@@ -1267,18 +1267,18 @@ namespace G {
 		} else {
 			$suffix = substr($size, $cut);
 		}
-		
+
 		$suffix = strtoupper($suffix);
 
 		$units = ['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']; // Default dec units
-		
+
 		if(strlen($suffix) == 3) { // Convert units to bin
 			foreach($units as &$unit) {
 				$split = str_split($unit);
 				$unit = $split[0] . 'I' . $split[1];
 			}
 		}
-		
+
 		if(strlen($suffix) == 1) {
 			$suffix .= 'B'; // Adds missing "B" for shorthand ini notation (Turns 1G into 1GB)
 		}
@@ -1288,17 +1288,17 @@ namespace G {
 		$pow_factor = array_search($suffix, $units) + 1;
 		return $size * pow(strlen($suffix) == 2 ? 1000 : 1024, $pow_factor);
 	}
-	
+
 	// Converts bytes to MB
 	function bytes_to_mb($bytes) {
 		return round($bytes / pow(10, 6));
 	}
-	
+
 	// Returns bytes (used for the ini_get functions)
 	function get_ini_bytes($size) {
 		return get_bytes($size, -1);
 	}
-	
+
 
 	/**
 	 * PATHS AND URL HANDLING
@@ -1309,11 +1309,11 @@ namespace G {
 	function add_trailing_slashes($string) {
 		return add_ending_slash(add_starting_slash($string));
 	}
-	
+
 	function add_starting_slash($string) {
 		return '/' . ltrim($string, '/');
 	}
-	
+
 	function add_ending_slash($string) {
 		return rtrim($string, '/') . '/';
 	}
@@ -1373,12 +1373,12 @@ namespace G {
 	 * GET AND FETCH SOME DATA
 	 * ---------------------------------------------------------------------
 	 */
-	
+
 	// Get current G\ version
 	function get_version() {
 		return G_VERSION;
 	}
-	
+
 	// Get the current app version
 	function get_app_version($full=true) {
 		if($full) {
@@ -1388,7 +1388,7 @@ namespace G {
 			return $return[0];
 		}
 	}
-	
+
 	// Get the $settings value for the app
 	function get_app_setting($key) {
 		return get_global('settings')[$key];
@@ -1402,11 +1402,11 @@ namespace G {
 		$return = G_ROOT_URL . sanitize_relative_path($path);
 		return rtrim($return, '/');
 	}
-	
+
 	function get_current_url() {
 		return get_base_url(preg_replace('#'.G_ROOT_PATH_RELATIVE.'#', '', $_SERVER['REQUEST_URI'], 1));
 	}
-	
+
 	function settings_has_db_info() {
 		$settings = get_global('settings');
 		if(!is_array($settings)) return FALSE;
@@ -1419,7 +1419,7 @@ namespace G {
 		}
 		return $has;
 	}
-	
+
 	function get_regex_match($regex, $delimiter='/', $subject, $key=NULL) {
 		preg_match($delimiter . $regex . $delimiter, $subject, $matches);
 		if(array_key_exists($key, $matches)) {
@@ -1428,25 +1428,25 @@ namespace G {
 			return $matches;
 		}
 	}
-	
+
 	/**
 	 * Fetch the contents from an URL
 	 * if $file is set the downloaed file will be saved there
 	 */
-	function fetch_url($url, $file=NULL) {
+	function fetch_url($url, $file=NULL, $options=[]) {
 		if(!$url) {
 			throw new Exception('missing $url in ' . __FUNCTION__);
-			return false;
+			return FALSE;
 		}
-		
+
 		if(ini_get('allow_url_fopen') !== 1 && !function_exists('curl_init')) {
 			throw new Exception("Fatal error in " .__FUNCTION__. ": cURL isn't installed and allow_url_fopen is disabled. Can't perform HTTP requests.");
 			return FALSE;
 		}
 
 		// File get contents is the failover fn
-		$fn = (!function_exists('curl_init') ? 'fgc' : 'curl'); 
-		
+		$fn = (!function_exists('curl_init') ? 'fgc' : 'curl');
+
 		if($fn == 'curl') {
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, $url);
@@ -1459,7 +1459,13 @@ namespace G {
 			curl_setopt($ch, CURLOPT_FAILONERROR, 0);
 			curl_setopt($ch, CURLOPT_ENCODING, 'gzip'); // this needs zlib output compression enabled (php)
 			curl_setopt($ch, CURLOPT_VERBOSE, 0);
-			
+
+			if(is_array($options) && count($options) > 0) {
+				foreach($options as $k => $v) {
+					curl_setopt($ch, $k, $v);
+				}
+			}
+
 			if($file) {
 				// Save the file to $file destination
 				$out = @fopen($file, 'wb');
@@ -1485,9 +1491,9 @@ namespace G {
 				return $file_get_contents;
 			}
 		} else {
-            $context = stream_context_create([
-                'http' => ['ignore_errors' => TRUE],
-            ]);
+      $context = stream_context_create([
+          'http' => ['ignore_errors' => TRUE],
+      ]);
 			$result = @file_get_contents($url, FALSE, $context);
 			if(!$result) {
 				throw new Exception("file_get_contents: can't fetch target URL");
@@ -1503,7 +1509,7 @@ namespace G {
 			}
 		}
 	}
-	
+
 	/* get complete raw, add success + error properties */
 	function getUrlHeaders($url, $options=[]) {
 		$ch = curl_init();
@@ -1537,7 +1543,7 @@ namespace G {
 	function get_execution_time() {
 		return microtime(true) - G_APP_TIME_EXECUTION_START;
 	}
-	
+
 	// Get bcrypt optimal cost
 	function bcrypt_cost($time=0.2, $cost=9) {
 		do {
@@ -1546,7 +1552,7 @@ namespace G {
 			password_hash('test', PASSWORD_BCRYPT, ['cost' => $cost]);
 			$fin = microtime(true);
 		} while (($fin - $inicio) < $time);
-		
+
 		return $cost;
 	}
 
@@ -1554,7 +1560,7 @@ namespace G {
 	 * CONDITIONALS
 	 * ---------------------------------------------------------------------
 	 */
-	
+
 	// Checks if $var is a positive integer using filter_var
 	function is_integer($var, $range=[]) {
 		$options = [];
@@ -1596,7 +1602,7 @@ namespace G {
 		}
 		return false;
 	}
-	
+
 	// Tells if the given url is https or not
 	function is_https($string) {
 		return strpos($string, 'https://') !== false;
@@ -1604,13 +1610,13 @@ namespace G {
 
 	// Tell if the string is an URL and if is valid
 	function is_valid_url($string) {
-	
+
 		if(!is_url($string)){
 			return false;
 		}
-		
+
 		$url = preg_replace('/^https/', 'http', $string, 1);
-			
+
 		if(function_exists('curl_init')) {
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, $url);
@@ -1635,7 +1641,7 @@ namespace G {
 	function is_image_url($string) {
 		if(!is_string($string)) return false;
 		return preg_match('/(?:ftp|https?):\/\/(\w+:\w+@)?([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}(:[0-9]{1,4}){0,1}|(?:[\w\-]+\.)+[a-z]{2,6})(?:\/[^\/#\?]+)+\.(?:jpe?g|gif|png|bmp)/i', $string);
-		
+
 	}
 
 	// Returns true if the system is in development mode
@@ -1667,21 +1673,21 @@ namespace G {
 	 * FILE RELATED
 	 * ---------------------------------------------------------------------
 	 */
-	
+
 	// Get mimetype of $file according to your php version
 	function get_mimetype($file) {
 		if(function_exists('finfo_open')) {
-			return finfo_file(finfo_open(FILEINFO_MIME_TYPE), $file); 
+			return finfo_file(finfo_open(FILEINFO_MIME_TYPE), $file);
 		} else {
 			if(function_exists('mime_content_type')) {
 				return mime_content_type($file);
 			} else {
 				return extension_to_mime(get_file_extension($file));
 			}
-			
+
 		}
 	}
-	
+
 	// For now this only works for images
 	function mime_to_extension($mime, $reverse=false) {
 		$mime_to_extension = array(
@@ -1698,26 +1704,29 @@ namespace G {
 			'image/x-icon'			=> 'ico',
 			'image/x-rgb'			=> 'rgb'
 		);
-		
+
 		// Used to get ext -> mime
 		if($reverse) $mime_to_extension = array_flip($mime_to_extension);
-		
+
 		return $mime_to_extension[$mime];
 	}
-	
+
 	function extension_to_mime($ext) {
 		return mime_to_extension($ext, true);
 	}
 
 	// Retrieves info about the current image file
 	function get_image_fileinfo($file) {
+
+		clearstatcache($file); // http://php.net/manual/es/function.clearstatcache.php (add G\ magic for those)
+
 		$info = getimagesize($file);
 		$filesize = @filesize($file);
-		
-		if(!$info and !$filesize) return false;
-		
+
+		if(!$info || $filesize === FALSE) return FALSE;
+
 		$mime = strtolower($info['mime']);
-		
+
 		return array(
 			'filename'	=> basename($file), // image.jpg
 			'name'		=> basename($file, '.' . get_file_extension($file)), // image
@@ -1734,15 +1743,15 @@ namespace G {
 			'md5'		=> md5_file($file)
 		);
 	}
-	
+
 	function get_file_extension($file) {
 		return strtolower(pathinfo($file, PATHINFO_EXTENSION));
 	}
-	
+
 	function get_filename($file) {
 		return basename($file);
 	}
-	
+
 	function get_filename_without_extension($file) {
 		return preg_replace('/\\.[^.\\s]{2,4}$/', '', basename($file));
 	}
@@ -1752,29 +1761,29 @@ namespace G {
 	 * This can be also used to add rules to a existing .htaccess file
 	 */
 	function generate_htaccess($rules, $directory, $before=NULL, $output=false) {
-		
+
 		$htaccess = $directory.'.htaccess';
-		
+
 		$rules_stock = [
 			'static'	=>  '<Files .*>'."\n".
 							'order allow,deny'."\n".
 							'deny from all'."\n".
-							'</Files>'."\n\n". 
+							'</Files>'."\n\n".
 							'AddHandler cgi-script .php .php3 .phtml .pl .py .jsp .asp .htm .shtml .sh .cgi .fcgi'."\n".
 							'Options -ExecCGI',
-						 
+
 			'deny_php'	=>	'<FilesMatch "\.php$">'."\n".
 							'Order Deny,Allow'."\n".
 							'Deny from all'."\n".
 							'</FilesMatch>',
-							
+
 			'deny'		=>	'deny from all'
 		];
-		
+
 		if(array_key_exists($rules, $rules_stock)) {
 			$rules = $rules_stock[$rules];
 		}
-		
+
 		if(file_exists($htaccess)) {
 			$fgc = file_get_contents($htaccess);
 			if(strpos($fgc, $rules)) {
@@ -1791,7 +1800,7 @@ namespace G {
 		} else {
 			$f = 'w';
 		}
-		
+
 		if(!$done) {
 			$fh = @fopen($htaccess, $f);
 			if(!$fh) return false;
@@ -1804,7 +1813,7 @@ namespace G {
 			return $output ? $rules : true;
 		}
 	}
-	
+
 	/**
 	 * Get a safe filename
 	 * $method: original | random | mixed | id
@@ -1813,7 +1822,7 @@ namespace G {
 	function get_filename_by_method($method, $filename) {
 
 		$max_lenght = 200;
-		
+
 		$extension = get_file_extension($filename);
 		$clean_filename = substr($filename, 0, -(strlen($extension) + 1));
 		$clean_filename = unaccent_string($clean_filename); // change áéíóú to aeiou
@@ -1823,8 +1832,8 @@ namespace G {
 		if(strlen($clean_filename) == 0) {
 			$clean_filename = random_string(16);
 		}
-		
-		$unlimited_filename = $clean_filename; // No max_lenght limit		
+
+		$unlimited_filename = $clean_filename; // No max_lenght limit
 		$clean_filename = substr($clean_filename, 0, $max_lenght);
 
 		switch($method){
@@ -1847,11 +1856,11 @@ namespace G {
 				$name = $unlimited_filename;
 			break;
 		}
-		
+
 		return $name . '.' . $extension;
-		
+
 	}
-	
+
 	function name_unique_file($path, $method='original', $filename) {
 		$file = $path . get_filename_by_method($method, $filename);
 		if($method == 'id') {
@@ -1863,7 +1872,7 @@ namespace G {
 		}
 		return $file;
 	}
-	
+
 
 	/**
 	 * IMAGE RELATED
@@ -1889,7 +1898,7 @@ namespace G {
 			$transparent_index = imagecolortransparent($dst_im);
 			$colors_total = imagecolorstotal($dst_im);
 			$cut = imagecreatetruecolor($src_w, $src_h);
-			
+
 			if($transparent_index >= 0) {
 				$transparent_color = imagecolorsforindex($dst_im, $transparent_index);
 				$transparent_index = imagecolorallocatealpha($cut, $transparent_color['red'], $transparent_color['green'], $transparent_color['blue'], 127);
@@ -1899,7 +1908,7 @@ namespace G {
 				$color = imagecolorallocatealpha($cut, 0, 0, 0, 127);
 				imagefill($cut, 0, 0, $color);
 			}
-			
+
 			if($dst_im_ext=='png') {
 				imagealphablending($dst_im, false);
 				imagesavealpha($dst_im, true);
@@ -1907,9 +1916,9 @@ namespace G {
 				if($dst_im_ext!=='jpg') {
 					imagetruecolortopalette($dst_im, true, 255);
 					imagesavealpha($dst_im, false);
-				}	
+				}
 			}
-			
+
 			if($dst_im_ext=='png' && $colors_total==0) {
 				if($pct<100) imagefilteropacity($src_im, $pct);
 				imagealphablending($dst_im, true);
@@ -1921,10 +1930,10 @@ namespace G {
 				imagecopy($cut, $src_im, 0, 0, $src_x, $src_y, $src_w, $src_h);
 				imagecopymerge($dst_im, $cut, $dst_x, $dst_y, 0, 0, $src_w, $src_h, $pct);
 			}
-			
+
 			imagedestroy($cut);
 		}
-		
+
 		imagedestroy($src_im);
 
 	}
@@ -1935,12 +1944,12 @@ namespace G {
 			return false;
 		}
 		$opacity /= 100;
-	   
+
 		$w = imagesx($img);
 		$h = imagesy($img);
 
 		imagealphablending($img, false);
-	   
+
 		//find the most opaque pixel in the image (the one with the smallest alpha value)
 		$minalpha = 127;
 		for($x = 0; $x < $w; $x++)
@@ -1950,7 +1959,7 @@ namespace G {
 						$minalpha = $alpha;
 					}
 			}
-	   
+
 		//loop through image pixels and modify alpha for each
 		for($x = 0; $x < $w; $x++) {
 				for($y = 0; $y < $h; $y++) {
@@ -1971,7 +1980,7 @@ namespace G {
 			}
 		return true;
 	}
-	
+
 	function image_allocate_transparency($image, $extension) {
 		if($extension == 'png') {
 			imagealphablending($image, false);
@@ -1981,7 +1990,7 @@ namespace G {
 			imagesavealpha($image, false);
 		}
 	}
-	
+
 	function image_copy_transparency($image_source, $image_target) {
 		$transparent_index = imagecolortransparent($image_source);
 		$palletsize = imagecolorstotal($image_source);
@@ -1995,7 +2004,7 @@ namespace G {
 			imagefill($image_target, 0, 0, $color);
 		}
 	}
-	
+
 	// http://www.programmierer-forum.de/function-imagecreatefrombmp-welche-variante-laeuft-t143137.htm
 	function imagecreatefrombmp($file) {
 		if(function_exists('imagecreatefrombmp')) return imagecreatefrombmp($file);
@@ -2129,12 +2138,12 @@ namespace G {
 		fclose($fh);
 		return $im;
 	}
-	
+
 	/**
 	 * JSON
 	 * ---------------------------------------------------------------------
 	 */
-	 
+
 	// Prepare json to only serve XMLHttpRequest
 	function json_prepare() {
 		if(is_development_env()) return;
@@ -2155,7 +2164,7 @@ namespace G {
 			}
 		} else {
 			if(func_num_args($args) == 1) {
-				$message = $args; 
+				$message = $args;
 				$code = NULL;
 				$context = NULL;
 			} else {
@@ -2182,7 +2191,7 @@ namespace G {
 
 	/**
 	 * Redirects to another URL
-	 */	
+	 */
 	function redirect($to='', $status=301) {
 		if(!filter_var($to, FILTER_VALIDATE_URL)){
 			$to = get_base_url($to);
@@ -2192,7 +2201,7 @@ namespace G {
 		header("Location: $to");
 		die();
 	}
-	
+
 	/**
 	 * Set HTTP status header from status code
 	 * @Inspired from WordPress
@@ -2265,7 +2274,7 @@ namespace G {
 				510 => 'Not Extended'
 		);
 		if(check_value($codes_to_desc[$code])) {
-			return $codes_to_desc[$code];	
+			return $codes_to_desc[$code];
 		}
 	}
 
@@ -2273,13 +2282,13 @@ namespace G {
 	function clean_header_comment($string) {
 		return trim(preg_replace('/\s*(?:\*\/|\?>).*/', '', $string));
 	}
-	
+
 } // G Namespace
 
 // Global namespace
 namespace {
 
-	function class_autoloader($class) {		
+	function class_autoloader($class) {
 		$array = ['class' => $class, 'exists' => class_exists($class)];
 		$explode = explode('\\', $class);
 		$last_key = key(array_slice($explode, -1, 1, TRUE));
@@ -2292,7 +2301,7 @@ namespace {
 		}
 	}
 	spl_autoload_register('class_autoloader');
-	
+
 	/**
 	 * A Compatibility library with PHP 5.5's simplified password hashing API.
 	 *
@@ -2414,9 +2423,9 @@ namespace {
 				}
 				$salt = str_replace('+', '.', base64_encode($buffer));
 			}
-			
+
 			$salt = substr($salt, 0, $required_salt_len);
-			
+
 			$hash = $hash_format . $salt;
 			$ret = crypt($password, $hash);
 

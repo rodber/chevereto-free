@@ -1,10 +1,8 @@
-<p align="center"><a href="https://chevereto.com/"><img src="https://chevereto.com/app/themes/v3/img/chevereto-large.png" alt="Chevereto"></a></p>
+<p align="center"><a href="https://chevereto.com/"><img src="https://chevereto.com/app/themes/v3/img/chevereto-blue.svg" alt="Chevereto"></a></p>
 
-<p align="center">Chevereto is an image hosting script that allows you to create a beautiful and full featured image hosting website in your own server. It's your hosting and your rules, say goodbye to closures and restrictions. <a href="https://chevereto.com">Chevereto.com</a></p>
+<p align="center"><a href="https://chevereto.com">Chevereto</a> is an image hosting script that allows you to create a beautiful and full-featured image hosting website on your own server. It's your hosting and your rules, say goodbye to closures and restrictions.</p>
 
-<p>&nbsp;</p>
-
-<p align="center"><a href="https://chevereto.com/"><img src="https://chevereto.com/app/themes/v3/img/devices.png" alt=""></a></p>
+<p align="center"><a href="https://chevereto.com/"><img src="https://chevereto.com/app/themes/v3/img/devices.png" alt="" vspace="20"></a></p>
 
 Chevereto Free
 =
@@ -12,21 +10,26 @@ Chevereto Free
 <a href="https://chevereto.com/free" title="♫♪ Ha llegado tu tiempo, es el momento de Freeeeeeeeeeeeeeee"><img src="https://chevereto.com/app/themes/v3/img/chevereto-free-cover.jpg" alt="Chevereto Sugar Free Cola"></a>
 
 ### About this repo
-This is the repository of Chevereto Free which has been forked from Chevereto 3.X series. Chevereto Free has the same look, feel and taste of our [paid version](https://chevereto.com/pricing) but it comes in a free and Open Source package which includes all the basic image hosting functionalities. Free to use, forever.
+This is the repository of Chevereto Free edition which is forked from Chevereto 3.X series. Chevereto Free has the same look and feel of our [paid version](https://chevereto.com) but it packs only the most essential features and it doesn't include any kind of support. It is Open Source software licensed under the AGPLv3 license.
 
-### Free vs paid Chevereto
-Chevereto Free includes all the basic image hosting stuff but it comes without dedicated support. Paid Chevereto comes with all features, updates and support. The following table summarizes the differences between paid vs free.
+### Free vs Paid Chevereto
+Paid edition includes all features (storages, banners, likes, followers, social login, etc.) and it gets more frequent updates. Free edition is always 6 months behind the paid edition and lots of sacrifices had to be made to be able to offer this free product. The following table summarizes the differences between free/paid editions.
 
 | Item                                         	| Free            	| Paid                   	|
 |----------------------------------------------	|-----------------	|------------------------	|
-| Contribution to Chevereto                    	| ☆                 |   ★★★★              	|
-| Access to latest features                    	| Delayed         	| Always                 	|
+| Updates										| Each 6 months		| Monthly        	      	|
+| Features delay								| 6 months			| Zero	        	      	|
 | One click system update                       | Yes              	| Yes                    	|
-| Tech support                                 	| No 	            | Yes 	|
+| Tech support                                 	| No 	            | Yes 						|
 | External storage support                     	| No              	| Yes                    	|
 | Manage banners                               	| No              	| Yes                    	|
+| Upload plugin	                            	| No              	| Yes                    	|
 | Likes + Followers                            	| No              	| Yes                    	|
 | Facebook, Twitter, Google and VK signup      	| No              	| Yes                    	|
+
+Keep in mind that when you prefer the paid edition you contribute to keep development ongoing. At Chevereto we don't sell any kind of extra paid plugins or offer additional support tiers. We believe in one-time payments and upgrade fees only for major versions. We don't even charge any yearly-based fees.
+
+If you enjoy this software then consider [purchasing](https://chevereto.com/pricing) our paid edition.
 
 ## Minimum system requirements
 Make sure your server meets the minimum system requirements which are:
@@ -35,15 +38,15 @@ Make sure your server meets the minimum system requirements which are:
  - PHP 5.5.0 (standard libraries)
  - MySQL 5.0 (ALL PRIVILEGES)
 
-In most servers that's all you need. The system has a built-in system check that it will tell you right away when you have to fix some stuff in your server.
+In most servers that's all you need. The system has a built-in system check that it will tell you right away when you have to fix some stuff on your server.
 
-## Free installation service
-We will be happy to install Chevereto for you, just send us an [installation request](https://chevereto.com/panel/request-installation) and we will do all the installation job for you. For free.
-
-## Install via web installer
-1. Download the [Chevereto Free web installer](https://cdn.rawgit.com/Chevereto/php-repo-installer/master/index.php)
+## Install via Installer (recommended)
+1. Download the [Chevereto Installer](https://chevereto.com/download/file/installer)
 2. Upload this file to your target destination (usually the `public_html` folder)
 3. Open your website target destination URL and follow the install process
+
+## Free installation service
+We will be happy to install Chevereto for you, just send us an [installation request](https://chevereto.com/panel/request-installation) and we will do all the installation job for you. For free. Service available only for cPanel based websites.
 
 ## Install via zip/tarball
  1. Download the [latest release](https://github.com/Chevereto/Chevereto-Free/releases/latest) of Chevereto Free
@@ -53,22 +56,13 @@ We will be happy to install Chevereto for you, just send us an [installation req
 For additional install instructions refer to our [official documentation](https://chevereto.com/docs/install).
 
 ## Updates
-Chevereto Free has a built-in system that everyday pings the [Chevereto API](https://chevereto.com/api/get/info/free) for new updates available for your website. To update your website go to `/update` and the system will download and install the update for you. For manual update just follow the install procedure.
+Chevereto has a built-in system that everyday checks for new updates via the [Chevereto API](https://chevereto.com/api/get/info/free). The system will notify when an update is available and it will guide you through the process.
 
 ## Upgrade to paid edition
-To upgrade Chevereto Free to paid Chevereto you need to [get a license](https://chevereto.com/pricing) and then do the following:
- 1. Download the [paid edition web installer](https://chevereto.com/panel/downloads/?get=web-installer)
- 2. Follow steps (2) and (3) from the "[install via web installer](#install-via-web-installer)" instructions.
- 3. Go to `/update` to complete the process.
- 
-### Alternative method
- 1. Download latest Chevereto paid edition from [Chevereto.com/panel/downloads](http://chevereto.com/panel/downloads)
- 2. Upload `app/license` and `app/install` folders
- 3. Open your current website `app/app.php` file and remove this line: `define('G_APP_GITHUB_REPO_URL', 'https://github.com/' . G_APP_GITHUB_OWNER . '/' . G_APP_GITHUB_REPO);`
- 4. Go to `/update` to complete the process
+To upgrade to our paid edition simply navigate to your dashboard panel and click on the `upgrade` button.
 
 ## Support
-Chevereto Free doesn't include dedicated support. However, feel free to browse current and previous [support tickets](https://chevereto.com/tech-support). If you need further assistance please consider buying a license. By purchasing a license you get same-day support, all features and it makes you a supporter of Chevereto development.
+Chevereto Free doesn't include any kind of support. However, feel free to browse all our [support tickets](https://chevereto.com/tech-support). If you need further assistance consider buying our paid edition.
 
 ## License
-Copyright 2017 [Rodolfo Berríos](http://rodolfoberrios.com) - Released under the AGPLv3 license. The software is offered on an “as-is” basis and no warranty, either expressed or implied, is given.
+Copyright [Rodolfo Berríos](http://rodolfoberrios.com) - Released under the AGPLv3 license. The software is offered on an “as-is” basis and no warranty, either expressed or implied, is given.

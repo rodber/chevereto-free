@@ -13,7 +13,7 @@
 		<span class="label label-edit"><?php _se('Edit'); ?></span>
 	</li>
 	<li class="tool-move" data-action="move">
-		<span class="btn-icon icon-move" title="<?php _ne('Album', 'Albums', 1); ?>"></span>
+		<span class="btn-icon icon-folder" title="<?php _ne('Album', 'Albums', 1); ?>"></span>
 		<span class="label label-move"><?php _ne('Album', 'Albums', 1); ?></span>
 	</li>
 	<li class="tool-delete" data-action="delete">

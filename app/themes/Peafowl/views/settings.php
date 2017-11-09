@@ -171,6 +171,7 @@
                         ?>
                         </select>
                     </div>
+					<div class="input-below input-warning red-warning"><?php echo get_input_errors()["image_expiration"]; ?></div>
                     <div class="input-below"><?php _se('This setting will apply to all your image uploads by default. You can override this setting on each upload.'); ?></div>
                 </div>
 

@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-01-22 07:59+0000',
-  'PO-Revision-Date' => '2017-01-22 07:59+0000',
+  'POT-Creation-Date' => '2017-05-23 17:56+0000',
+  'PO-Revision-Date' => '2017-05-23 17:56+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'id',
@@ -18,9 +18,6 @@ $translation_plural = array (
   'function' => '$index = (int)(0); return ($index < 1) ? $index : 1 - 1;',
 );
 $translation_table = [
-	"Images greater than this size will show a button to load full resolution image." => [
-		0 => "Gambar lebih besar dari ukuran ini akan ditampilkan sebagai sebuah tombol untuk ditampilkan dalam resolusi penuh.",
-	],
 	"Invalid email" => [
 		0 => "Email tidak benar",
 	],
@@ -96,8 +93,29 @@ $translation_table = [
 	"Note: This content is private but anyone with the link will be able to see this." => [
 		0 => "Catatan: Konten ini bersifat pribadi namun siapapun yang memiliki tautan dapat melihat ini.",
 	],
+	"Note: This content is password protected. Remember to pass the content password to share." => [
+		0 => "Catatan: Konten ini dilindungi kata sandi.\nIngat untuk melewati konten dengan kata sandi untuk dibagikan.",
+	],
 	"Note: This content is private. Change privacy to \"public\" to share." => [
 		0 => "Catatan: Ini konten pribadi. Ubah privasi ke \"Umum\" untuk membagikan.",
+	],
+	"Private" => [
+		0 => "Pribadi",
+	],
+	"Public" => [
+		0 => "Umum",
+	],
+	"Me" => [
+		0 => "Aku",
+	],
+	"Link" => [
+		0 => "Sambungan",
+	],
+	"Password" => [
+		0 => "Kata sandi",
+	],
+	"view" => [
+		0 => "dilihat",
 	],
 	"After %n %t" => [
 		0 => "Setelah %n %t",
@@ -132,14 +150,41 @@ $translation_table = [
 	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
 		0 => "Sistem telah beralih ke penyimpanan lokal dikarenakan kapasitas disk tidak mencukupi (%c) di server penyimpanan eksternal. Gambar %s telah dialokasikan ke penyimpanan lokal.",
 	],
-	"view" => [
-		0 => "dilihat",
-	],
 	"like" => [
 		0 => "suka",
 	],
 	"image" => [
 		0 => "foto",
+	],
+	"Top users" => [
+		0 => "Pengguna teratas",
+	],
+	"Most recent" => [
+		0 => "Terbaru",
+	],
+	"Oldest" => [
+		0 => "Terlama",
+	],
+	"Most viewed" => [
+		0 => "Paling dilihat",
+	],
+	"Most liked" => [
+		0 => "Paling disukai",
+	],
+	"Explore" => [
+		0 => "Jelajahi",
+	],
+	"Search" => [
+		0 => "Cari",
+	],
+	"Image" => [
+		0 => "Gambar",
+	],
+	"Album" => [
+		0 => "Album",
+	],
+	"User" => [
+		0 => "Pengguna",
 	],
 	"Can't create %s destination dir" => [
 		0 => "Tidak dapat membuat direktori tujuan %s",
@@ -149,9 +194,6 @@ $translation_table = [
 	],
 	"Internal" => [
 		0 => "Internal",
-	],
-	"Link" => [
-		0 => "Sambungan",
 	],
 	"Can't insert storage." => [
 		0 => "Tidak dapat menyisipkan penyimpanan.",
@@ -170,9 +212,6 @@ $translation_table = [
 	],
 	"Private profile" => [
 		0 => "Profil pribadi",
-	],
-	"Private" => [
-		0 => "Pribadi",
 	],
 	"year" => [
 		0 => "tahun",
@@ -228,6 +267,9 @@ $translation_table = [
 	"Chevereto update available (v%s)" => [
 		0 => "Pembaruan Chevereto tersedia (v%s)",
 	],
+	"view on %s" => [
+		0 => "Ditampilkan pad %s",
+	],
 	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy." => [
 		0 => "Kami menggunakan kuki sendiri dan pihak ke tiga untuk meningkatkan pengalaman pencarian dan layanan kami. Jika anda melanjutkan menggunakan website kami, berarti anda menyetujui kebijakan kuki ini.",
 	],
@@ -235,7 +277,7 @@ $translation_table = [
 		0 => "Anda telah diblokir dari website ini.",
 	],
 	"Feel free to browse and discover all my shared images and albums." => [
-		0 => "Anda bebas mencari dan menemukan semua gambar dan album yang saya bagikan/",
+		0 => "Silahkan mencari dan menemukan semua gambar dan album yang saya bagikan.",
 	],
 	"View all my images" => [
 		0 => "Tampilkan semua gambarku",
@@ -299,18 +341,6 @@ $translation_table = [
 	],
 	"Password required" => [
 		0 => "Kata sandi diperlukan",
-	],
-	"Most recent" => [
-		0 => "Terbaru",
-	],
-	"Oldest" => [
-		0 => "Terlama",
-	],
-	"Most viewed" => [
-		0 => "Paling dilihat",
-	],
-	"Most liked" => [
-		0 => "Paling disukai",
 	],
 	"Share" => [
 		0 => "Bagikan",
@@ -378,8 +408,8 @@ $translation_table = [
 	"Disabled" => [
 		0 => "Dinonaktifkan",
 	],
-	"Max. upload size" => [
-		0 => "Ukuran maks. pengunggahan",
+	"Max. upload file size" => [
+		0 => "Ukuran unggah berkas maks.",
 	],
 	"Max. post size" => [
 		0 => "Ukuran maks. penulisan",
@@ -398,6 +428,9 @@ $translation_table = [
 	],
 	"Documentation" => [
 		0 => "Dokumentasi",
+	],
+	"Changelog" => [
+		0 => "Catatan perubahan",
 	],
 	"Request new features" => [
 		0 => "Minta fitur baru",
@@ -507,8 +540,14 @@ $translation_table = [
 	"Before main title (%s)" => [
 		0 => "Sebelum judul utama (%s)",
 	],
+	"After call to action (%s)" => [
+		0 => "Setelah panggilan untuk melakukan (%s)",
+	],
 	"After cover (%s)" => [
 		0 => "Setelah sampul (%s)",
+	],
+	"After listing (%s)" => [
+		0 => "Setelah pendaftaran (%s)",
 	],
 	"Before pagination" => [
 		0 => "Sebelum nomor halaman",
@@ -585,8 +624,8 @@ $translation_table = [
 	"Invalid timezone" => [
 		0 => "Zona waktu tidak sah",
 	],
-	"Invalid value" => [
-		0 => "Isi tidak sah",
+	"Invalid value: %s" => [
+		0 => "Nilai tidak valid: %s",
 	],
 	"Invalid upload storage mode" => [
 		0 => "Mode penyimpanan upload tidak valid",
@@ -611,6 +650,9 @@ $translation_table = [
 	],
 	"Invalid theme" => [
 		0 => "Tema tidak sah",
+	],
+	"Invalid value" => [
+		0 => "Isi tidak sah",
 	],
 	"Invalid theme tone" => [
 		0 => "Suasana tema tidak valid",
@@ -693,6 +735,9 @@ $translation_table = [
 	"Only alphanumeric, hyphen and underscore characters are allowed" => [
 		0 => "Hanya karakter alfanumerik, tanda hubung dan garis bawah yang diperbolehkan",
 	],
+	"Routes can't be the same" => [
+		0 => "Pengarahan tidak boleh sama",
+	],
 	"Invalid upload image path" => [
 		0 => "Jalur upload gambar tidak valid",
 	],
@@ -701,6 +746,15 @@ $translation_table = [
 	],
 	"Max. allowed %s" => [
 		0 => "Maks. diperbolehkan %s",
+	],
+	"Can't map %m to an existing folder (%f)" => [
+		0 => "Tidak dapat memetakan %m ke folder yang telah ada (%f)",
+	],
+	"Can't map %m to an existing route (%r)" => [
+		0 => "Tidak dapat memetakan %m ke rute yang telah ada (%r)",
+	],
+	"Can't map %m to %r (username collision)" => [
+		0 => "Tidak dapat memetakan %m ke %r (tubrukan nama pengguna)",
 	],
 	"Invalid SMTP server" => [
 		0 => "Server SMTP tidak valid",
@@ -719,12 +773,6 @@ $translation_table = [
 	],
 	"Can't save page contents: %s." => [
 		0 => "Tidak dapat menyimpan isi halaman: %s",
-	],
-	"Top users" => [
-		0 => "Pengguna teratas",
-	],
-	"Explore" => [
-		0 => "Jelajahi",
 	],
 	"Following" => [
 		0 => "Mengikuti",
@@ -885,23 +933,17 @@ $translation_table = [
 	"User search results for %s" => [
 		0 => "Hasil pencarian user %s",
 	],
-	"Search" => [
-		0 => "Cari",
-	],
 	"Account" => [
 		0 => "Akun",
 	],
 	"Profile" => [
 		0 => "Profil",
 	],
-	"Password" => [
-		0 => "Kata sandi",
-	],
 	"Linked accounts" => [
 		0 => "Akun terhubung",
 	],
-	"Invalid image expiration" => [
-		0 => "Kadaluarsa gambar tidak valid",
+	"Invalid image expiration: %s" => [
+		0 => "Kadaluarsa gambar tidak valid: %s",
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "Sebuah email telah terrkirim ke %s dengan instruksi untuk mengaktifkan email ini",
@@ -1068,56 +1110,83 @@ $translation_table = [
 	"Select the images to upload" => [
 		0 => "Pilih gambar untuk mengunggah",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "Anda juga dapat <a data-trigger=\"anywhere-upload-input\">Cari dari komputer anda</a>atau <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">Tambah URL gambar</a>.",
+	"browse from your computer" => [
+		0 => "cari dari komputer anda",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "Anda juga dapat <a data-trigger=\"anywhere-upload-input-camera\">Ambil sebuah gambar</a> atau <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">Tambahkan URL gambar</a>.",
+	"add image URLs" => [
+		0 => "tambah URL gambar",
 	],
-	"Edit or resize an image by clicking the image preview" => [
-		0 => "Edit atau ukur ulang sebuah gambar dengan menekan pra tampil gambar",
+	"You can also %i or %u." => [
+		0 => "Anda dapat %i atau %u.",
 	],
-	"Edit or resize an image by touching the image preview" => [
-		0 => "Edit atau ukur ulang sebuah gambar dengan menyentuh pra tinjau gambar",
+	"take a picture" => [
+		0 => "ambil sebuah gambar",
 	],
-	"You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>." => [
-		0 => "Anda dapat menambahkan lebih banyak gambar <a data-trigger=\"anywhere-upload-input\">dari komputer anda</a> atau <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">dari URL gambar</a>.",
+	"Edit or resize any image by clicking the image preview" => [
+		0 => "Ubah atau ukur ulang gambar apapun dengan mengklik pratinjau gambar",
 	],
-	"You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "Anda dapat <a data-trigger=\"anywhere-upload-input\">menambahkan lebih banyak gambar</a> atau <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">dari URL gambar</a>.",
+	"Edit or resize any image by touching the image preview" => [
+		0 => "Ubah atau ukur ulang gambar apapun dengan menyentuh pratinjau gambar",
 	],
-	"Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>" => [
-		0 => "Mengunggah <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">gambar</span>",
+	"your computer" => [
+		0 => "komputer anda",
+	],
+	"image URLs" => [
+		0 => "URL gambar",
+	],
+	"You can keep adding more images from %i or from %u." => [
+		0 => "Anda dapat tetap menambahkan lebih banyak gambar dari %i atau dari %u.",
+	],
+	"your device" => [
+		0 => "perangkat anda",
+	],
+	"Uploading %q %o" => [
+		0 => "Mengunggah %q %o",
 	],
 	"complete" => [
 		0 => "selesai",
 	],
-	"The queue is being uploaded. It will take just a few seconds to complete." => [
-		0 => "Antiran sedang diunggah. Hal tersebut membutuhkan waktu untuk menyelesaikan.",
+	"The queue is being uploaded, it should take just a few seconds to complete." => [
+		0 => "Antrian sedang diunggah, hal ini harusnya berlangsung beberapa saat untuk selesai.",
 	],
 	"Upload complete" => [
 		0 => "Upload selesai",
 	],
-	"Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album." => [
-		0 => "Konten ditambahkan ke <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">saluran umum</a>. Anda dapat <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">membuat sebuah album</a> atau <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">memindah <span data-text=\"queue-objects\">gambar</span></a> ke album yang ada.",
+	"Uploaded content added to %s." => [
+		0 => "Konten terunggah ditambahkan ke %s.",
 	],
-	"You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account." => [
-		0 => "Anda dapat <a href=\"%s\">membuat sebuah akun</a> atau <a href=\"%l\">masuk</a> untuk menyimpan unggahan selanjutnya ke akun anda.",
+	"You can %c with the content just uploaded or %m." => [
+		0 => "Anda dapat %c dengan konten yang baru saja terunggah atau %m.",
 	],
-	"No <span data-text=\"queue-objects\">images</span> have been uploaded" => [
-		0 => "Tidak ada <span data-text=\"queue-objects\">gambar</span> yang telah terunggah",
+	"You can %c with the content just uploaded." => [
+		0 => "Anda dapat %c dengan konten yang baru saja terunggah.",
+	],
+	"create a new album" => [
+		0 => "buat sebuah album baru",
+	],
+	"move it to an existing album" => [
+		0 => "pindahkan ke album yang sudah ada",
+	],
+	"create an account" => [
+		0 => "buat sebuah akun",
+	],
+	"sign in" => [
+		0 => "masuk",
+	],
+	"You can %s or %l to save this content into your account." => [
+		0 => "anda dapat %s atau %l untuk menyimpan konten ini ke akun anda.",
+	],
+	"No %s have been uploaded" => [
+		0 => "tidak ada %s yang barus saja terunggah",
 	],
 	"Some errors have occured and the system couldn't process your request." => [
 		0 => "Beberapa kesalahan terjadi dan sistem tidak dapat memproses permintaan anda.",
 	],
+	"Category" => [
+		0 => "Kategori",
+	],
 	"Select category" => [
 		0 => "Pilih kategori",
-	],
-	"Change upload privacy" => [
-		0 => "Ubah privasi unggahan",
-	],
-	"cancel" => [
-		0 => "batal",
 	],
 	"Mark this if the upload is not family safe" => [
 		0 => "Tandai ini jika upload tidak aman untuk keluarga",
@@ -1127,6 +1196,9 @@ $translation_table = [
 	],
 	"Uploading" => [
 		0 => "mengunggah",
+	],
+	"cancel" => [
+		0 => "batal",
 	],
 	"cancel remaining" => [
 		0 => "batalkan sisanya",
@@ -1178,6 +1250,12 @@ $translation_table = [
 	],
 	"Auto delete image" => [
 		0 => "Hapus otomatis gambar",
+	],
+	"Sign up" => [
+		0 => "Mendaftar",
+	],
+	"%s to be able to customize or disable image auto delete." => [
+		0 => "%s tidak dapat mengkostumisasi atau mematikan hapus gambar otomatis.",
 	],
 	"Mark this if the image is not family safe" => [
 		0 => "Tandai ini jika gambar tidak aman untuk keluarga",
@@ -1278,9 +1356,6 @@ $translation_table = [
 	"Put a minus sign just before words you don't want: -rodent -\"Jack Russell\"" => [
 		0 => "Berikan tanda minus sebelum kata yang tidak anda inginkan: -hewan pengerat -\"Jack Russell\"",
 	],
-	"Category" => [
-		0 => "Kategori",
-	],
 	"Storage" => [
 		0 => "Penyimpanan",
 	],
@@ -1305,9 +1380,6 @@ $translation_table = [
 	"Who can view this content" => [
 		0 => "Siapa yang bisa melihat konten ini",
 	],
-	"Public" => [
-		0 => "Umum",
-	],
 	"Private (just me)" => [
 		0 => "Pribadi (hanya saya)",
 	],
@@ -1319,9 +1391,6 @@ $translation_table = [
 	],
 	"Album password" => [
 		0 => "Kata sandi album",
-	],
-	"No category" => [
-		0 => "Tidak ada kategori",
 	],
 	"Name" => [
 		0 => "Nama",
@@ -1364,18 +1433,6 @@ $translation_table = [
 	],
 	"Existing album" => [
 		0 => "Album yang telah ada",
-	],
-	"Album" => [
-		0 => "Album",
-	],
-	"link" => [
-		0 => "tautan",
-	],
-	"password" => [
-		0 => "kata sandi",
-	],
-	"private" => [
-		0 => "pribadi",
 	],
 	"create new album" => [
 		0 => "buat album baru",
@@ -1509,11 +1566,17 @@ $translation_table = [
 	"Delete" => [
 		0 => "Hapus",
 	],
+	"Create new album" => [
+		0 => "Buat album baru",
+	],
 	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
 		0 => "Untuk menggunakan semua fitur dari situs ini anda harus masuk. Jika tidak memiliki akun anda dapat <a href=\"%s\">mendaftar</a> sekarang.",
 	],
 	"There's nothing to show here." => [
 		0 => "Tidak ada yang ditampilkan disini.",
+	],
+	"Upload images" => [
+		0 => "Unggah gambar",
 	],
 	"Edit image details" => [
 		0 => "Edit detail gambar",
@@ -1565,6 +1628,9 @@ $translation_table = [
 	],
 	"From %s" => [
 		0 => "Dari %s",
+	],
+	"Uploaded by private" => [
+		0 => "Diunggah oleh pribadi",
 	],
 	"by %u" => [
 		0 => "oleh %u",
@@ -1665,6 +1731,15 @@ $translation_table = [
 	"Delete album" => [
 		0 => "Hapus album",
 	],
+	"You like this" => [
+		0 => "Anda menyukai ini",
+	],
+	"Like" => [
+		0 => "Suka",
+	],
+	"Upload to album" => [
+		0 => "Unggah ke album",
+	],
 	"Album link" => [
 		0 => "Tautan album",
 	],
@@ -1676,12 +1751,6 @@ $translation_table = [
 	],
 	"I Agree" => [
 		0 => "Saya Setuju",
-	],
-	"Image" => [
-		0 => "Gambar",
-	],
-	"User" => [
-		0 => "Pengguna",
 	],
 	"Disk used" => [
 		0 => "Ruang disk digunakan",
@@ -1776,6 +1845,9 @@ $translation_table = [
 	"Force private (anyone with the link)" => [
 		0 => "Paksa pribadi (semua orang dengan tautan)",
 	],
+	"Forced privacy modes will override user selected privacy." => [
+		0 => "Mode privasi dipaksakan akan mengembalikan privasi pengguna terpilih.",
+	],
 	"Page title" => [
 		0 => "Judul halaman",
 	],
@@ -1857,6 +1929,12 @@ $translation_table = [
 	"pages" => [
 		0 => "halaman",
 	],
+	"Do you really want to delete the page ID %s? This can't be undone." => [
+		0 => "Apakah anda yakin ingin menghapus halaman dengan ID %s? Hal ini tidak dapat dibatalkan.",
+	],
+	"Unchecked image formats won't be allowed to be uploaded." => [
+		0 => "format gambar yang tidak diperiksa tidak akan diperbolehkan untuk diunggah.",
+	],
 	"Enable uploads" => [
 		0 => "Aktifkan upload",
 	],
@@ -1869,8 +1947,38 @@ $translation_table = [
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Aktifkan ini jika anda mengizinkan pengguna tidak terdaftar menunggah.",
 	],
+	"Enable this if you want to show embed codes when upload gets completed." => [
+		0 => "Aktifkan ini jika anda ingin menampilkan kode sematkan ketika unggahan akan selesai.",
+	],
+	"Redirect on single upload" => [
+		0 => "Arahkan pada unggahan tunggal",
+	],
+	"Enable this if you want to redirect to image page on single upload." => [
+		0 => "Aktifkan ini jika anda ingin mengarahkan kembali ke halaman gambar pada unggahan tunggal.",
+	],
+	"Enable duplicate uploads" => [
+		0 => "Nyalakan unggahan duplikat",
+	],
+	"Enable this if you want to allow duplicate uploads from the same IP within 24hrs. This setting doesn't affect administrators." => [
+		0 => "Nyalakan ini jika anda ingin memperbolehkan unggahan duplikat dari alamat IP yang sama dalam 24 Jam. Pengaturan ini tidak mempengaruhi administrator.",
+	],
 	"Enable expirable uploads" => [
 		0 => "Aktifkan upload berkadaluarsa",
+	],
+	"Enable this if you want to allow uploads with an automatic delete option." => [
+		0 => "Nyalakan ini jika anda ingin memperbolehkan unggahan dengan sebuah opsi hapus otomatis.",
+	],
+	"Auto delete guest uploads" => [
+		0 => "Hapus otomatis unggahan pengunjung",
+	],
+	"Enable this if you want to force guest uploads to be auto deleted after certain time." => [
+		0 => "Nyalakan ini jika anda ingin memaksa unggahan pengunjung untuk dihapus otomatis setelah waktu tertentu.",
+	],
+	"Maximum image size" => [
+		0 => "Ukuran maksimum gambar",
+	],
+	"Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit." => [
+		0 => "Gambar lebih besar dari ukuran ini akan secara otomatis diturunkan ukurannya. Gunakan Nol (0) untuk tidak menetapkan batas.",
 	],
 	"Image Exif data" => [
 		0 => "Data Exif gambar",
@@ -1878,26 +1986,41 @@ $translation_table = [
 	"Keep" => [
 		0 => "Biarkan",
 	],
+	"Select the default setting for image <a %s>Exif data</a> on upload." => [
+		0 => "Pilih pengaturan default untuk gambar <a %s>Exif data</a> pada ungguhan.",
+	],
 	"Image Exif data (user setting)" => [
 		0 => "Data Exif gambar (pengaturan pengguna)",
 	],
 	"Enable this if you want to allow each user to configure how image Exif data will be handled." => [
 		0 => "Aktifkan ini jika anda ingin membolehkan setiap pengguna mengatur bagaimana data Exif gambar akan ditangani.",
 	],
-	"Max. filesize" => [
-		0 => "Ukuran berkas Maks.",
+	"Maximum upload file size" => [
+		0 => "Ukuran unggah berkas maksimum",
 	],
-	"Max. allowed filesize. (Max allowed by server is %s)" => [
-		0 => "Ukuran berkas Maks. (Maksimal yang dibolehkan server ialah %s)",
+	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
+		0 => "Ukuran maksumum yang diperbolehkan serever adalah %s. Ukuran ini dibatasi oleh %u dan %p (nilai %f).",
 	],
 	"Image path" => [
 		0 => "Jalur gambar",
 	],
+	"Relative to Chevereto root" => [
+		0 => "Berhubungan ke akar Chevereto",
+	],
+	"Where to store the images? Relative to Chevereto root." => [
+		0 => "Dimana harus menyimpan gambar? Tergantung pada akar Chevereto.",
+	],
 	"Storage mode" => [
 		0 => "Mode penyimpanan",
 	],
+	"Datefolders" => [
+		0 => "Tanggalfolder",
+	],
 	"Direct" => [
 		0 => "Langsung",
+	],
+	"Datefolders creates %s structure" => [
+		0 => "Tanggalfolder membuat struktur %s",
 	],
 	"File naming method" => [
 		0 => "Metode penamaan berkas",
@@ -1910,6 +2033,9 @@ $translation_table = [
 	],
 	"\"Original\" will try to keep the image source name while \"Random\" will generate a random name. \"ID\" will name the image just like the image ID." => [
 		0 => "\"Asli\" akan mencoba menjaga nama sumber gambar sedangkan \"Acak\" akan menghasilkan sebuah nama acak. \"ID\" akan menamakan gambar seperti halnya ID gambar.",
+	],
+	"Thumb size" => [
+		0 => "Ukuran Thumb",
 	],
 	"Watermarks" => [
 		0 => "Tanda air",
@@ -2058,6 +2184,27 @@ $translation_table = [
 	"Show not safe content in listings" => [
 		0 => "Perlihatkan isi yang tidak aman",
 	],
+	"Classic pagination" => [
+		0 => "Penomoran halaman klasik",
+	],
+	"What pagination method should be used." => [
+		0 => "Metode penomoran apa yang harusnya digunakan.",
+	],
+	"Image listing size" => [
+		0 => "Ukuran pendaftaran gambar",
+	],
+	"Fixed" => [
+		0 => "Tetap",
+	],
+	"Both methods use a fixed width but fluid method uses automatic heights." => [
+		0 => "kedua metode menggunakan lebar tetap tapi metode tidak pasti menggunakan tinggi otomatis.",
+	],
+	"Listing columns number" => [
+		0 => "Jumlah kolom pendaftaran",
+	],
+	"Here you can set how many columns are used based on each target device." => [
+		0 => "Disini anda dapat mengatur berapa banyak kolom yang digunakan berdasarkan masing-masing target perangkat.",
+	],
 	"Phone" => [
 		0 => "Selular",
 	],
@@ -2073,6 +2220,9 @@ $translation_table = [
 	"Desktop" => [
 		0 => "Desktop",
 	],
+	"theme editing" => [
+		0 => "penyuntingan tema",
+	],
 	"Put your themes in the %s folder" => [
 		0 => "Tempatkan tema anda di folder %s",
 	],
@@ -2081,6 +2231,9 @@ $translation_table = [
 	],
 	"Light" => [
 		0 => "Menyala",
+	],
+	"Dark" => [
+		0 => "Gelap",
 	],
 	"Main color" => [
 		0 => "Warna utama",
@@ -2099,6 +2252,9 @@ $translation_table = [
 	],
 	"White" => [
 		0 => "Putih",
+	],
+	"If you set this to \"white\" the top bar and all the black tones will be changed to white tones." => [
+		0 => "Jika anda mengatur ini ke \"putih\" bar diatas dan semua nada hitam akan berubah ke nada putih.",
 	],
 	"Top bar button color" => [
 		0 => "Warna tombol bilah atas",
@@ -2133,6 +2289,9 @@ $translation_table = [
 	"Vector version or your website logo in SVG format." => [
 		0 => "Versi vektor atau logo website dalam format SVG.",
 	],
+	"Bitmap version or your website logo. PNG format is recommended." => [
+		0 => "Versi bitmap atau logo situs web anda. Disarankan berformat PNG.",
+	],
 	"Logo height" => [
 		0 => "Tinggi logo",
 	],
@@ -2147,6 +2306,9 @@ $translation_table = [
 	],
 	"Favicon image. Image must have same width and height." => [
 		0 => "Gambar favicon. Gambar harus memiliki lebar dan tinggi yang sama.",
+	],
+	"Images greater than this size will show a button to load full resolution image." => [
+		0 => "Gambar lebih besar dari ukuran ini akan ditampilkan sebagai sebuah tombol untuk ditampilkan dalam resolusi penuh.",
 	],
 	"Enable download button" => [
 		0 => "Aktifkan tombol unduh",
@@ -2181,6 +2343,9 @@ $translation_table = [
 	"Not safe content checkbox in uploader" => [
 		0 => "Kotak centang konten tidak aman di pengunggah",
 	],
+	"Enable this if you want to show a checkbox to indicate not safe content upload." => [
+		0 => "Nyalakan ini jika anda ingin menampilkan sebuah kotak centang untuk mengindikasikan unggahan konten tidak aman.",
+	],
 	"Custom CSS code" => [
 		0 => "Kode CSS kustom",
 	],
@@ -2196,6 +2361,15 @@ $translation_table = [
 	"Style" => [
 		0 => "Gaya",
 	],
+	"Landing page" => [
+		0 => "Halaman arahan",
+	],
+	"Split landing + images" => [
+		0 => "Halaman arahan + gambar",
+	],
+	"Route explore" => [
+		0 => "Menjelajah rute",
+	],
 	"Select the homepage style. To customize it further edit app/themes/%s/views/index.php" => [
 		0 => "Pilih gaya halaman muka. Untuk menyesuaikannya lanjut ubah app/themes/%s/views/index.php",
 	],
@@ -2210,6 +2384,15 @@ $translation_table = [
 	],
 	"Add new cover image" => [
 		0 => "Tambah sebuah gambar sampul baru",
+	],
+	"Vector version or your website logo in SVG format (only for homepage)." => [
+		0 => "Versi vektor atau logo situs web dalam format SVG (hanya untuk halaman depan)",
+	],
+	"Bitmap version or your website logo (only for homepage). PNG format is recommended." => [
+		0 => "Versi bitmap atau logo situs web anda ( hanya untuk halaman depan). Disarankan berformat PNG.",
+	],
+	"This will be added inside the homepage %s tag. Leave it blank to use the default contents." => [
+		0 => "ini akan ditambahkan kedalam tag halaman depan %s. Biarkan kosong untuk mengunakan konten default.",
 	],
 	"Paragraph" => [
 		0 => "Paragraf",
@@ -2273,6 +2456,9 @@ $translation_table = [
 	],
 	"Print and log errors" => [
 		0 => "Cetak dan log kesalahan",
+	],
+	"Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes." => [
+		0 => "Pengarahan memungkinkan anda mengkostumisasi pengikatan pengarahan dengan ceoat. Hanya karakter alfanumerik, tanda hubung dan garis bawah yang diperbolehkan. Periksa %s kami jika anda ingin membatalkan atau menambahkan pengarahan baru.",
 	],
 	"Image routing" => [
 		0 => "Pengarahan Gambar",
@@ -2486,12 +2672,6 @@ $translation_table = [
 	],
 	"Guest" => [
 		0 => "Tamu",
-	],
-	"You like this" => [
-		0 => "Anda menyukai ini",
-	],
-	"Like" => [
-		0 => "Suka",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "Ditambahkan ke %a dan dikategorikan kedalam %c",
@@ -2817,9 +2997,6 @@ $translation_table = [
 	"Update now" => [
 		0 => "Perbarui sekarang",
 	],
-	"Your website is running the latest version of %s" => [
-		0 => "Situs web anda menjalankan versi terbaru dari %s",
-	],
 	"Clipboard image" => [
 		0 => "Gambar papan klip",
 	],
@@ -2834,6 +3011,9 @@ $translation_table = [
 	],
 	"Image edited successfully." => [
 		0 => "Gambar berhasil diubah.",
+	],
+	"private" => [
+		0 => "pribadi",
 	],
 	"Album edited successfully." => [
 		0 => "Album berhasil diubah.",

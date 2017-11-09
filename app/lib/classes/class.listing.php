@@ -38,6 +38,10 @@ class Listing {
 		$this->offset = intval($offset);
 	}
 	
+	public function setParamsHidden($params) {
+		$this->params_hidden = $params;
+	}
+	
 	// Sets the limit (sql> LIMIT offset,limit)
 	public function setLimit($limit) {
 		$this->limit = intval($limit);
@@ -96,7 +100,7 @@ class Listing {
 	}
 	
 	public function getTotals($bool) {
-		$this->get_totals = $bool ? true : false;
+		$this->get_totals = (bool) $bool;
 	}
 	
 	/**
@@ -125,9 +129,41 @@ class Listing {
 			],
 			'users' => [],
 			'albums' => [
-				'user'		=> 'LEFT JOIN '.$tables['users'].' ON '.$tables['albums'].'.album_user_id = '.$tables['users'].'.user_id'
+				'users'		=> 'LEFT JOIN '.$tables['users'].' ON '.$tables['albums'].'.album_user_id = '.$tables['users'].'.user_id'
 			]
 		];
+		
+		if($this->type == 'users' && $this->sort_type == 'views') {
+			$this->sort_type = 'content_views';
+		}
+		
+		// Params hidden handler. Introduced to avoid stupid route.json.php cloning
+		// Same level content clauses (it won't help to filter joined tables)
+		if(!is_null($this->params_hidden)) {
+			// hide_empty
+			$emptyTypeClauses = [
+				'albums'	=> 'album_image_count > 0',
+				'users'		=> 'user_image_count > 0 OR user_avatar_filename IS NOT NULL OR user_background_filename IS NOT NULL'
+			];
+			if(array_key_exists($this->type, $emptyTypeClauses) && $this->params_hidden['hide_empty'] == 1) {
+				$whereClauses[] = $emptyTypeClauses[$this->type];
+			}
+			// hide_banned
+			if($this->params_hidden['hide_banned'] == 1) {
+				$whereClauses[] = '(' . $tables['users'] . '.user_status IS NULL OR ' . $tables['users'] . '.user_status <> "banned"' . ')';
+			}
+			// animated
+			if($this->type == 'images' && $this->params_hidden['is_animated'] == 1) {
+				$whereClauses[] = 'image_is_animated = 1';
+			}
+			// We are getting clauser!.. got it? nvm...
+			if(!empty($whereClauses)) {
+				$whereClauses = join(' AND ', $whereClauses);
+				$this->where = (empty($this->where) ? 'WHERE ' : ' AND ') . $whereClauses;
+			}
+		}
+		
+		$type_singular = DB::getFieldPrefix($this->type);
 		
 		// Attempt to add explicit clauses
 		if(!empty($this->where)) {
@@ -162,7 +198,7 @@ class Listing {
 		}
 
 		// Privacy layer
-		if(!$this->requester['is_admin'] && in_array($this->type, array('images', 'albums')) && ((!$this->owner || !$this->requester) || $this->owner !== $this->requester['id'])) {
+		if(!$this->requester['is_admin'] && in_array($this->type, ['images', 'albums', 'users']) && ((!$this->owner || !$this->requester) || $this->owner !== $this->requester['id'])) {
 			
 			if(empty($this->where)) {
 				$this->where = 'WHERE ';
@@ -172,32 +208,43 @@ class Listing {
 			
 			$nsfw_off = $this->requester ? !$this->requester['show_nsfw_listings'] : !getSetting('show_nsfw_in_listings');
 			
-			if($this->type == 'images' && $nsfw_off) {
-				$this->where .= $tables['images'].'.image_nsfw = 0 AND ';
+			switch($this->type) {
+				case 'images':
+					if($nsfw_off) {
+						$this->where .= $tables['images'].'.image_nsfw = 0 AND ';
+					}
+				break;
+				case 'users':
+					$this->where .= $tables['users'].'.user_is_private = 0';
+				break;
 			}
 			
-			if(getSetting('website_privacy_mode') == 'public' || $this->privacy == 'private_but_link' || getSetting('website_content_privacy_mode') == 'default') {
-				$this->where .= '(' . $tables['albums'].'.album_privacy NOT IN';
-				$privacy_modes = ['private', 'private_but_link', 'password', 'custom'];
-				if(in_array($this->privacy, $privacy_modes)) {
-					unset($privacy_modes[array_search($this->privacy, $privacy_modes)]);
+			if($this->type !== 'users') {
+				if(getSetting('website_privacy_mode') == 'public' || $this->privacy == 'private_but_link' || getSetting('website_content_privacy_mode') == 'default') {
+					$this->where .= '(' . $tables['albums'].'.album_privacy NOT IN';
+					$privacy_modes = ['private', 'private_but_link', 'password', 'custom'];
+					if(in_array($this->privacy, $privacy_modes)) {
+						unset($privacy_modes[array_search($this->privacy, $privacy_modes)]);
+					}
+					$this->where .= " (" . "'" . implode("','", $privacy_modes) . "'" . ") ";
+					$this->where .=  "OR ".$tables['albums'].'.album_privacy IS NULL OR '.$tables['albums'].'.album_user_id';
+					$this->where .= (!$this->requester ? ' IS NULL' : '='.$this->requester['id']) . ')';
+				} else {
+					$injected_requester = !$this->requester['id'] ? 0 : $this->requester['id'];
+					$this->where .= '(' . $tables['albums'].'.album_user_id = '.$injected_requester;				
+					$this->where .= $this->type == 'albums' ? ')' : (' OR ' . $tables['images'].'.image_user_id = '.$injected_requester . ')');
 				}
-				$this->where .= " (" . "'" . implode("','", $privacy_modes) . "'" . ") ";
-				$this->where .=  "OR ".$tables['albums'].'.album_privacy IS NULL OR '.$tables['albums'].'.album_user_id';
-				$this->where .= (!$this->requester ? ' IS NULL' : '='.$this->requester['id']) . ')';
-			} else {
-				$injected_requester = !$this->requester['id'] ? 0 : $this->requester['id'];
-				$this->where .= '(' . $tables['albums'].'.album_user_id = '.$injected_requester;				
-				$this->where .= $this->type == 'albums' ? ')' : (' OR ' . $tables['images'].'.image_user_id = '.$injected_requester . ')');
 			}
+			
+			
 		}
 		
 		if(!empty($this->where)) {
 			$this->where = "\n" . $this->where;
 		}
 		
-		$type_singular = substr($this->type, 0, -1);		
 		$order_by = "\n" . 'ORDER BY ' . DB::getTableFromFieldPrefix($type_singular) . '.' . $type_singular . '_' . $this->sort_type . ' ' . strtoupper($this->sort_order);
+		
 		$limit = "\n" . 'LIMIT ' . $this->offset . ',' . ($this->limit + 1);
 
 		$base_table = $tables[$this->type];
@@ -205,11 +252,7 @@ class Listing {
 		// Normal query
 		if(empty($joins[$this->type])) {
 			$query = 'SELECT * FROM ' . $base_table;
-			$query .= $this->where . $order_by;
-			if($this->offset < 0 || $this->limit < 0) {
-				throw new ListingException('Limit integrity violation', 400);
-			}
-			$query .= $limit;
+			$query .= $this->where . $order_by . $limit;
 		// Alternative query
 		} else {
 			if(!empty($this->where)) {
@@ -224,6 +267,7 @@ class Listing {
 				reset($joins);
 				$join_tables = [key($joins)];
 			}
+			
 			$join = NULL;
 			foreach($join_tables as $join_table) {
 				if(!empty($joins[$this->type][$join_table])) {
@@ -235,8 +279,10 @@ class Listing {
 			// Get rid of the original Exif data (for listings)
 			$null_db = $this->type == 'images' ? ', NULL as image_original_exifdata ' : NULL;
 			
-			$query = 'SELECT *' . $null_db . 'FROM (SELECT * FROM ' . $base_table . $join . $this->where . $order_by . $limit . ') ' . $base_table . ' ' . "\n";
-			$query .=  implode("\n", $joins[$this->type]);
+			$query = 'SELECT * ' . $null_db . 'FROM (SELECT * FROM ' . $base_table . $join . $this->where . $order_by . $limit . ') ' . $base_table;
+			if(!empty($joins[$this->type])) {
+				$query .=  "\n" . implode("\n", $joins[$this->type]);
+			}
 			$query .= $order_by;
 		}
 		
@@ -249,8 +295,9 @@ class Listing {
 					$db->bind($bind['param'], $bind['value'], $bind['type']);
 				}
 			}
-
+			
 			$this->output = $db->fetchAll();
+			$this->output_count = $db->rowCount();
 			$this->has_page_next = $db->rowCount() > $this->limit;
 			if($db->rowCount() > $this->limit) {
 				array_pop($this->output);
@@ -324,6 +371,207 @@ class Listing {
 		
 	}
 	
+	public static function getTabs($args=[], $expanded=FALSE) {
+		$default = [
+			'list'		=> TRUE,
+			'REQUEST'	=> $_REQUEST,
+			'listing'	=> 'explore',
+			'basename'	=> G\get_route_name(),
+			'tools'		=> TRUE,
+			'tools_available' => [],
+		];
+        $args = array_merge($default, $args);
+		// Fix some stuff
+		if(strpos($args['basename'], G\get_base_url()) !== FALSE) {
+			$args['basename'] = G\str_replace_first(G\get_base_url(), NULL, $args['basename']);
+		}
+		// Semantics -> trending | popular | recent
+		$semantics = [
+			'recent'	=> [
+				'label'		=> _s('Recent'),
+				'content' 	=> 'all',
+				'sort'		=> 'date_desc',
+			],
+			'trending'	=> [
+				'label'		=> _s('Trending'),
+				'content' 	=> 'all',
+				'sort'		=> 'views_desc',
+			],
+		];
+		
+		// Criteria -> images | albums | users
+		// Criteria -> [CONTENT TABS]
+		$criterias = [ 
+			'top-users'		=> [
+				'label'		=> _s('Top users'),
+				'sort'		=> 'image_count_desc',
+				'content'	=> 'users',
+			],
+			'most-recent'	=> [
+				'label'		=> _s('Most recent'),
+				'sort'		=> 'date_desc',
+				'content'	=> 'all',
+			],
+			'most-oldest'	=> [
+				'label' 	=> _s('Oldest'),
+				'sort'		=> 'date_asc',
+				'content'	=> 'all',
+			],
+			'most-viewed'	=> [
+				'label'		=> _s('Most viewed'),
+				'sort'		=> 'views_desc',
+				'content'	=> 'all',
+			],
+		];
+		$listings = [
+			'explore'	=> [
+				'label'		=> _s('Explore'),
+				'content'	=> 'images',
+			],
+			'animated'	=> [
+				'label'		=> _s('Animated'),
+				'content'	=> 'images',
+				'where'		=> 'image_is_animated = 1',
+				'semantic'	=> TRUE,
+			],
+			'search'	=> [
+				'label'		=> _s('Search'),
+				'content'	=> 'all',
+			],
+			'users'	=> [
+				'label'		=> _s('People'),
+				'content'	=> 'users',
+			],
+			'images'	=> [
+				'label'		=> _n('Image', 'Images', 2),
+				'content'	=> 'images',
+			],
+			'albums'	=> [
+				'label'		=> _n('Album', 'Albums', 2),
+				'content'	=> 'albums',
+			],	
+		];
+		$listings = array_merge($listings, $semantics);
+				
+		$parameters = $listings[$args['listing']];
+		
+		if(is_array($args['exclude_criterias'])) {
+			foreach($args['exclude_criterias'] as $exclude) {
+				if(array_key_exists($exclude, $criterias)) {
+					unset($criterias[$exclude]);
+				}
+			}
+		}
+		
+		// Content -> most recent | oldest | most viewed | most liked
+		// Content -> [CRITERIA TABS]
+		$contents = [ 
+			'images' => [
+				'label' => _n('Image', 'Images', 2),
+			],
+			'albums' => [
+				'label' => _n('Album', 'Albums', 2),
+			],
+			'users' => [
+				'label' => _n('User', 'Users', 2),
+			]
+		];
+		$i = 0;
+		$hasCurrent = FALSE;
+		$currentKey = NULL;
+		
+		foreach(($parameters['content'] == 'all' ? $contents : ($parameters['semantic'] ? $semantics : $criterias)) as $k => $v) {
+			
+			if($parameters['content'] == 'all') {
+				$content = $k;
+				$id = 'list-' . $args['listing'] . '-' . $content; // list-popular-images
+				$sort = $parameters['sort'];
+			} else {
+				$content = $parameters['content'];
+				if($v['content'] !== 'all' && $v['content'] !== $content) {
+					continue;
+				}
+				$id = 'list-' . $k; // list-most-oldest
+				$sort = $v['sort'];
+			}
+			if(!$content) {
+				$content = 'images'; // explore
+			}
+			$basename = $args['basename'];
+			$default_params = [
+				'list' => $content,
+				'sort' => $sort,
+				'page' => '1',
+			];
+			$params = $args['params'] ?: $default_params;
+			foreach((array)$args['params_remove_keys'] as $key) {
+				unset($params[$key]);
+			}
+			if(is_array($args['params']) && array_key_exists('q', $args['params']) && $args['listing'] == 'search') {
+				$args['params_hidden']['list'] = $content;
+				$basename .= '/' . $content;
+			}
+			foreach((array)$args['params_hidden'] as $kk => $vv) {
+				if(array_key_exists($kk, $params)) {
+					unset($params[$kk]);
+				}
+			}
+			$query_append = ($basename ? '/' : NULL) . '?' . http_build_query($params);
+			
+			$current = isset($args['REQUEST']['sort']) ? $args['REQUEST']['sort'] == $v['sort'] : FALSE;
+			if($i==0 && !$current) {
+				$current = !$args['REQUEST']['sort'];
+			}
+			if($current && is_null($currentKey)) {
+				$currentKey = $i;
+			}
+
+			$tab = [
+                'list'				=> (bool) $args['list'],
+				'tools'				=> $content == 'users' ? FALSE : (bool) $args['tools'],
+				'tools_available'	=> $args['tools_available'],
+				'label'				=> $v['label'],
+				'id'				=> $id,
+				'params'			=> G\str_replace_first('/?', NULL, $query_append),
+				'current'			=> (bool) $current,
+				'type'				=> $content,
+				'url'				=> G\get_base_url($basename . $query_append)
+			];
+			if($args['tools_available'] == NULL) {
+				unset($tab['tools_available']);
+			}
+			
+			if($args['params_hidden']) {
+				$tab['params_hidden'] = http_build_query($args['params_hidden']);
+			}
+			
+			$tabs[] = $tab;
+			unset($id, $params, $basename, $query_append, $content, $current);
+			$i++;
+		}
+		
+		if(is_null($currentKey)) {
+			if($parameters['content'] == 'all') {
+				foreach($tabs as $k => &$v) {
+					if(isset($args['REQUEST']['list']) && $v['type'] == $args['REQUEST']['list']) {
+						$v['current'] = TRUE;
+						$currentKey = $k;
+						break;
+					}
+				}
+			} else {
+				$currentKey = 0;
+				$tabs[0]['current'] = TRUE;
+			}
+		}
+		
+		if($expanded) {
+			return ['tabs' => $tabs, 'currentKey' => $currentKey];
+		}
+		
+		return $tabs;
+	}
+	
 	/**
 	 * validate_input aka "first stage validation"
 	 * This checks for valid input source data before exec
@@ -331,10 +579,7 @@ class Listing {
 	 */
 	protected function validateInput() {
 		
-		if($this->limit == 1) {
-			$this->sort_type = 'date';
-			$this->sort_order = 'desc'; 
-		}
+		self::setValidSortTypes();
 		
 		if(empty($this->offset)) {
 			$this->offset = 0;
@@ -353,6 +598,9 @@ class Listing {
 		if($this->offset == 0 && $this->limit == 0) {
 			throw new ListingException('$offset and $limit are equal to 0 (zero)', 120);
 		}
+		if($this->offset < 0 || $this->limit < 0) {
+			throw new ListingException('Limit integrity violation', 121);
+		}
 		
 		// Validate sort type
 		if(!in_array($this->sort_type, self::$valid_sort_types)) {
@@ -366,14 +614,18 @@ class Listing {
 		
 	}
 	
-	public function htmlOutput($tpl_list='images') {
+	// Handler for all those switcheable sort options (based on on/off settings)
+	protected static function setValidSortTypes() {
+	}
+	
+	public function htmlOutput($tpl_list=NULL) {
 		
 		if(!is_array($this->output)) {
 			return;
 		}
 		
 		if(is_null($tpl_list)) {
-			$tpl_list = 'images';
+			$tpl_list = $this->type ?: 'images';
 		}
 		
 		$directory = new \RecursiveDirectoryIterator(G_APP_PATH_THEME . 'tpl_list_item/');
@@ -440,6 +692,8 @@ class Listing {
 			$album->setType('albums');
 			$album->setOffset(0);
 			$album->setLimit(1);
+			$album->setSortType('date');
+			$album->setSortOrder('desc');
 			$album->setWhere('WHERE album_id=:album_id');
 			$album->bind(':album_id', $album_id);
 			$album->exec();
@@ -450,6 +704,8 @@ class Listing {
 	}
 	
 	public static function getParams($json_call=false) {
+		
+		self::setValidSortTypes();
 		
 		$items_per_page = getSetting('listing_items_per_page');
 		$listing_pagination_mode = getSetting('listing_pagination_mode');

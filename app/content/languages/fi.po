@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-02-20 20:29+0000\n"
-"PO-Revision-Date: 2017-02-20 20:29+0000\n"
+"POT-Creation-Date: 2017-06-21 18:28+0000\n"
+"PO-Revision-Date: 2017-06-21 18:28+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: fi\n"
@@ -159,6 +159,46 @@ msgstr "Huomio: Tämä sisältö on salasanalla suojattu. Jaa myös salasana jak
 msgid "Note: This content is private. Change privacy to \"public\" to share."
 msgstr "Huomio: Tämä materiaali on yksityinen. Vaihda yksityisyysasetus \"julkinen\" jakaaksesi."
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Private"
+msgstr "Yksityinen"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:20
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Public"
+msgstr "Julkinen"
+
+msgid "Me"
+msgstr "Minä"
+
+#: ../../../app/lib/classes/class.page.php:137
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
+#: ../../../app/themes/Peafowl/views/dashboard.php:461
+msgid "Link"
+msgstr "Linkki"
+
+#: ../../../app/routes/route.settings.php:64
+#: ../../../app/themes/Peafowl/header.php:292
+#: ../../../app/themes/Peafowl/header.php:340
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:92
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:93
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:126
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:104
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/login.php:39
+#: ../../../app/themes/Peafowl/views/settings.php:322
+#: ../../../app/themes/Peafowl/views/signup.php:49
+#: ../../../app/themes/Peafowl/views/signup.php:50
+msgid "Password"
+msgstr "Salasana"
+
+#: ../../../app/lib/classes/class.image.php:1230
+msgid "view"
+msgid_plural "views"
+msgstr[0] "näyttökerta"
+msgstr[1] "näyttökertaa"
+
 msgid "After %n %t"
 msgstr "Jälkeen %n %t"
 
@@ -207,12 +247,6 @@ msgstr "Lataus vaihdettu paikalliseen tallennustilaan"
 msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
 msgstr "Järjestelmä vaihtoi paikalliseen tallennustilaan, kun ulkoisesta tallennustilasta loppui tila (%c). Kuva %s on tallennettu paikalliseen tallennustilaan."
 
-#: ../../../app/lib/classes/class.image.php:1230
-msgid "view"
-msgid_plural "views"
-msgstr[0] "näyttökerta"
-msgstr[1] "näyttökertaa"
-
 #: ../../../app/lib/classes/class.image.php:1231
 msgid "like"
 msgid_plural "likes"
@@ -230,6 +264,105 @@ msgid_plural "images"
 msgstr[0] "kuva"
 msgstr[1] "kuvaa"
 
+msgid "Recent"
+msgstr "Viimeaikainen"
+
+msgid "Trending"
+msgstr "Nousussa"
+
+msgid "Popular"
+msgstr "Suosittu"
+
+#: ../../../app/routes/route.dashboard.php:1163
+msgid "Top users"
+msgstr "Suosituimmat käyttäjät"
+
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Viimeisimmät"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "Vanhimmat"
+
+#: ../../../app/routes/route.album.php:96
+#: ../../../app/routes/route.category.php:64
+#: ../../../app/routes/route.dashboard.php:1121
+#: ../../../app/routes/route.explore.php:50
+#: ../../../app/routes/route.following.php:29
+#: ../../../app/routes/route.user.php:201
+msgid "Most viewed"
+msgstr "Katsotuimmat"
+
+#: ../../../app/routes/route.album.php:104
+#: ../../../app/routes/route.category.php:72
+#: ../../../app/routes/route.dashboard.php:1129
+#: ../../../app/routes/route.explore.php:58
+#: ../../../app/routes/route.following.php:37
+#: ../../../app/routes/route.user.php:207
+msgid "Most liked"
+msgstr "Suosituimmat"
+
+#: ../../../app/routes/route.explore.php:89
+#: ../../../app/themes/Peafowl/header.php:188
+#: ../../../app/themes/Peafowl/header.php:206
+#: ../../../app/themes/Peafowl/views/dashboard.php:305
+#: ../../../app/themes/Peafowl/views/explore.php:9
+msgid "Explore"
+msgstr "Selaa"
+
+msgid "Animated"
+msgstr "Animoitu"
+
+#: ../../../app/routes/route.search.php:130
+#: ../../../app/themes/Peafowl/header.php:215
+#: ../../../app/themes/Peafowl/header.php:220
+#: ../../../app/themes/Peafowl/views/dashboard.php:295
+msgid "Search"
+msgstr "Etsi"
+
+msgid "People"
+msgstr "Ihmiset"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:22
+msgid "Image"
+msgid_plural "Images"
+msgstr[0] "Kuva"
+msgstr[1] "Kuvat"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "Albumi"
+msgstr[1] "Albumit"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:34
+#: ../../../app/themes/Peafowl/views/dashboard.php:90
+#: ../../../app/themes/Peafowl/views/settings.php:126
+msgid "User"
+msgid_plural "Users"
+msgstr[0] "Käyttäjä"
+msgstr[1] "Käyttäjät"
+
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
 msgid "Can't create %s destination dir"
@@ -245,12 +378,6 @@ msgstr "%s ei voida avata kirjoittaakseen sinne"
 msgid "Internal"
 msgstr "Sisäinen"
 
-#: ../../../app/lib/classes/class.page.php:137
-#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
-#: ../../../app/themes/Peafowl/views/dashboard.php:461
-msgid "Link"
-msgstr "Linkki"
-
 msgid "Can't insert storage."
 msgstr "Ei voida lisätä ulkoista tallennustilaa."
 
@@ -263,6 +390,10 @@ msgstr "Tallennustila ei voi olla matalampi kuin se nykyinen käyttö (%s)."
 msgid "Can't update storage details."
 msgstr "Ei voida päivittää tallennustilan tietoja."
 
+#, php-format
+msgid "requires %s"
+msgstr "tarvitsee %s"
+
 #: ../../../app/lib/classes/class.storage.php:720
 msgid "Unlimited"
 msgstr "Rajoittamaton"
@@ -273,10 +404,6 @@ msgstr "käytetty"
 
 msgid "Private profile"
 msgstr "Yksityinen profiili"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:366
-msgid "Private"
-msgstr "Yksityinen"
 
 #: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
 msgid "year"
@@ -502,46 +629,6 @@ msgstr "Tarkista virheet jatkaaksesi."
 
 msgid "Password required"
 msgstr "Salasana vaaditaan"
-
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "Viimeisimmät"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "Vanhimmat"
-
-#: ../../../app/routes/route.album.php:96
-#: ../../../app/routes/route.category.php:64
-#: ../../../app/routes/route.dashboard.php:1121
-#: ../../../app/routes/route.explore.php:50
-#: ../../../app/routes/route.following.php:29
-#: ../../../app/routes/route.user.php:201
-msgid "Most viewed"
-msgstr "Katsotuimmat"
-
-#: ../../../app/routes/route.album.php:104
-#: ../../../app/routes/route.category.php:72
-#: ../../../app/routes/route.dashboard.php:1129
-#: ../../../app/routes/route.explore.php:58
-#: ../../../app/routes/route.following.php:37
-#: ../../../app/routes/route.user.php:207
-msgid "Most liked"
-msgstr "Suosituimmat"
 
 #: ../../../app/routes/route.album.php:115
 #: ../../../app/themes/Peafowl/snippets/modal_share.php:4
@@ -1231,18 +1318,6 @@ msgstr "Tiedostopolku on jo käytössä toisella sivulla (ID %s)"
 msgid "Can't save page contents: %s."
 msgstr "Sivun %s sisältöä ei voida tallentaa."
 
-#: ../../../app/routes/route.dashboard.php:1163
-msgid "Top users"
-msgstr "Suosituimmat käyttäjät"
-
-#: ../../../app/routes/route.explore.php:89
-#: ../../../app/themes/Peafowl/header.php:188
-#: ../../../app/themes/Peafowl/header.php:206
-#: ../../../app/themes/Peafowl/views/dashboard.php:305
-#: ../../../app/themes/Peafowl/views/explore.php:9
-msgid "Explore"
-msgstr "Selaa"
-
 #: ../../../app/routes/route.following.php:73
 #: ../../../app/routes/route.user.php:104
 #: ../../../app/themes/Peafowl/views/following.php:7
@@ -1486,13 +1561,6 @@ msgstr "Albumihaun tulokset %s"
 msgid "User search results for %s"
 msgstr "Käyttäjähaun tulokset %s"
 
-#: ../../../app/routes/route.search.php:130
-#: ../../../app/themes/Peafowl/header.php:215
-#: ../../../app/themes/Peafowl/header.php:220
-#: ../../../app/themes/Peafowl/views/dashboard.php:295
-msgid "Search"
-msgstr "Etsi"
-
 #: ../../../app/routes/route.settings.php:62
 msgid "Account"
 msgstr "Käyttäjätunnus"
@@ -1501,29 +1569,13 @@ msgstr "Käyttäjätunnus"
 msgid "Profile"
 msgstr "Profiili"
 
-#: ../../../app/routes/route.settings.php:64
-#: ../../../app/themes/Peafowl/header.php:292
-#: ../../../app/themes/Peafowl/header.php:340
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:92
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:93
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:126
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
-#: ../../../app/themes/Peafowl/views/dashboard.php:104
-#: ../../../app/themes/Peafowl/views/dashboard.php:105
-#: ../../../app/themes/Peafowl/views/login.php:39
-#: ../../../app/themes/Peafowl/views/settings.php:322
-#: ../../../app/themes/Peafowl/views/signup.php:49
-#: ../../../app/themes/Peafowl/views/signup.php:50
-msgid "Password"
-msgstr "Salasana"
-
 #: ../../../app/routes/route.settings.php:65
 msgid "Linked accounts"
 msgstr "Linkitetyt tilit"
 
-#: ../../../app/routes/route.settings.php:191
-msgid "Invalid image expiration"
-msgstr "Virheellinen kuvan vanhentumisaika"
+#, php-format
+msgid "Invalid image expiration: %s"
+msgstr "Virheellinen kuvan vanheneminen: %s"
 
 #: ../../../app/routes/route.settings.php:269
 #, php-format
@@ -1587,7 +1639,7 @@ msgstr "Käyttäjän %s kuvat"
 
 #: ../../../app/routes/route.user.php:89
 #: ../../../app/themes/Peafowl/header.php:56
-#, php-format
+#, php-format, javascript-format
 msgid "%s's Albums"
 msgstr "Käyttäjän %s albumit"
 
@@ -1617,6 +1669,9 @@ msgstr "%n (%u) albumia %w"
 #: ../../../app/routes/route.user.php:384
 msgid "%n (%u) on %w"
 msgstr "%n (%u) %w"
+
+msgid "Discovery"
+msgstr "Löytö"
 
 #: ../../../app/themes/Peafowl/header.php:222
 msgid "Close"
@@ -1837,81 +1892,92 @@ msgstr "Raahaa ja tiputa tai liitä kuva tähän lähettääksesi sen"
 msgid "Select the images to upload"
 msgstr "Valitse kuvat lähetettäväksi"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:15
-msgid "You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "Voit myös <a data-trigger=\"anywhere-upload-input\">etsiä kuvia koneeltasi</a> tai <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">lisätä kuvien osoitteet</a>."
+msgid "browse from your computer"
+msgstr "Selaa tietokoneeltasi"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:16
-msgid "You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "Voit myös <a data-trigger=\"anywhere-upload-input-camera\">ottaa kuvan</a> tai <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">lisätä kuvien osoitteet</a>."
+msgid "add image URLs"
+msgstr "lisää kuvan osoite"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:20
-msgid "Edit or resize an image by clicking the image preview"
+msgid "You can also %i or %u."
+msgstr "Voit myös %i tai %u."
+
+msgid "take a picture"
+msgstr "ota kuva"
+
+msgid "Edit or resize any image by clicking the image preview"
 msgstr "Muokkaa tai muuta kuvan kokoa osoittamalla kuvan esikatselua"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:21
-msgid "Edit or resize an image by touching the image preview"
+msgid "Edit or resize any image by touching the image preview"
 msgstr "Muokkaa tai muuta kuvan kokoa osoittamalla kuvan esikatselua"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:22
-msgid "You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>."
-msgstr "Voit lisätä enemmän kuvia <a data-trigger=\"anywhere-upload-input\">tietokoneeltasi</a> tai <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">lisätä kuvien osoitteet</a>."
+msgid "your computer"
+msgstr "tietokoneesi"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:23
-msgid "You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "Voit <a data-trigger=\"anywhere-upload-input\">listätä enemmän kuvia</a> tai <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">lisätä kuvien osoitteet</a>."
+msgid "image URLs"
+msgstr "kuvan osoite"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
-msgid "Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>"
-msgstr "Lähetetään <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">kuvaa</span>"
+msgid "You can keep adding more images from %i or from %u."
+msgstr "Voit lisätä enemmän kuvia %i tai %u."
+
+msgid "your device"
+msgstr "laitteesi"
+
+msgid "Uploading %q %o"
+msgstr "Ladataan %q %o"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
 msgid "complete"
 msgstr "valmis"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:28
-msgid "The queue is being uploaded. It will take just a few seconds to complete."
-msgstr "Kuvia lähetetään. Lähettäminen voi kestää hetken aikaa."
+msgid "The queue is being uploaded, it should take just a few seconds to complete."
+msgstr "Ladataan kuvia, pitäisi kestää vielä hetki."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:32
 msgid "Upload complete"
 msgstr "Lähettäminen valmis"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:34
 #, php-format
-msgid "Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album."
-msgstr "Kuvat lisätty <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">julkiseen virtaan</a>. Voit  <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">luoda albumin</a> tai <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">siirtää <span data-text=\"queue-objects\">kuvat</span></a> olemassa olevaan albumiin."
+msgid "Uploaded content added to %s."
+msgstr "Ladattu sisältö lisätty %s."
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:35
-msgid "You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account."
-msgstr "Voit <a href=\"%s\">Luoda käyttäjätunnuksen</a> tai <a href=\"%l\">kirjautua sisään</a> tallentaaksesi lähettämäsi tiedostot jatkossa profiiliisi."
+msgid "You can %c with the content just uploaded or %m."
+msgstr "Voi %c juuri ladatun sisällön tai %m."
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:40
-msgid "No <span data-text=\"queue-objects\">images</span> have been uploaded"
-msgstr "Ei <span data-text=\"queue-objects\">kuvia</span> lähetettäväksi"
+#, php-format
+msgid "You can %c with the content just uploaded."
+msgstr "Voit %c juuri ladatun sisällön."
+
+msgid "create a new album"
+msgstr "luo uusi albumi"
+
+msgid "move it to an existing album"
+msgstr "siirrä olemassa olevaan albumiin"
+
+msgid "create an account"
+msgstr "luo uusi käyttäjätunnus"
+
+msgid "sign in"
+msgstr "kirjaudu sisään"
+
+msgid "You can %s or %l to save this content into your account."
+msgstr "Voit %s tai %l tallentaaksesi sisällön sinun käyttäjätunnukselle."
+
+#, php-format
+msgid "No %s have been uploaded"
+msgstr "Yhtään %s ei ladattu"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:41
 msgid "Some errors have occured and the system couldn't process your request."
 msgstr "Joitakin virheitä havaittu eikä järjestelmä voinut suorittaa prosessiasi loppuun asti."
 
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
+#: ../../../app/themes/Peafowl/snippets/form_category.php:3
+msgid "Category"
+msgstr "Kategoria"
+
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:61
 msgid "Select category"
 msgstr "Valitse kategoria"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-msgid "Change upload privacy"
-msgstr "Muuta lähetyksen yksityisyyttä"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
-msgid "cancel"
-msgstr "peruuta"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:77
 msgid "Mark this if the upload is not family safe"
@@ -1924,6 +1990,17 @@ msgstr "Sopimaton lataus"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 msgid "Uploading"
 msgstr "Lähetetään"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "peruuta"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
@@ -2022,6 +2099,13 @@ msgstr "Huom: Animoitujen GIF kuvien koko ei muutu."
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:180
 msgid "Auto delete image"
 msgstr "Poista kuva automaattisesti"
+
+msgid "Sign up"
+msgstr "Kirjaudu"
+
+#, php-format
+msgid "%s to be able to customize or disable image auto delete."
+msgstr "%s muokataksesi tai poistaaksesi automaattinen kuvien poisto käytöstä."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:192
 #: ../../../app/themes/Peafowl/snippets/form_image.php:25
@@ -2172,11 +2256,6 @@ msgstr "Ei millään näistä sanoista"
 msgid "Put a minus sign just before words you don't want: -rodent -\"Jack Russell\""
 msgstr "Lisää miinusmerkki niiden sanojen eteen, joilla et halua hakea: -nainen, -\"elin\""
 
-#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
-#: ../../../app/themes/Peafowl/snippets/form_category.php:3
-msgid "Category"
-msgstr "Kategoria"
-
 #: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:66
 msgid "Storage"
 msgstr "Tallennustila"
@@ -2209,11 +2288,6 @@ msgstr "Albumin yksityisyys"
 msgid "Who can view this content"
 msgstr "Kuka voi nähdä tämän sisällön"
 
-#: ../../../app/themes/Peafowl/snippets/form_album.php:20
-#: ../../../app/themes/Peafowl/views/dashboard.php:366
-msgid "Public"
-msgstr "Julkinen"
-
 #: ../../../app/themes/Peafowl/snippets/form_album.php:21
 msgid "Private (just me)"
 msgstr "Yksityinen (vain minä)"
@@ -2227,10 +2301,6 @@ msgstr "Yksityinen (salasanalla suojattu)"
 
 msgid "Album password"
 msgstr "Albumin salasana"
-
-#: ../../../app/themes/Peafowl/snippets/form_category.php:9
-msgid "No category"
-msgstr "Ei kategoriaa"
 
 #: ../../../app/themes/Peafowl/snippets/form_category_edit.php:4
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:3
@@ -2297,32 +2367,6 @@ msgstr "Viesti, HTML tai osoitteetn uudelleenohjaus"
 #: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
 msgid "Existing album"
 msgstr "Olemassaoleva albumi"
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
-#: ../../../app/themes/Peafowl/views/dashboard.php:28
-msgid "Album"
-msgid_plural "Albums"
-msgstr[0] "Albumi"
-msgstr[1] "Albumit"
-
-msgid "me"
-msgstr "minä"
-
-msgid "link"
-msgstr "linkki"
-
-msgid "password"
-msgstr "salasana"
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
-#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
-#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
-msgid "private"
-msgstr "yksityinen"
 
 #: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
 msgid "create new album"
@@ -2526,6 +2570,9 @@ msgstr "Liputa turvalliseksi"
 msgid "Delete"
 msgstr "Poista"
 
+msgid "Create new album"
+msgstr "Luo uusi albumi"
+
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:5
 #, php-format
 msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
@@ -2536,6 +2583,9 @@ msgstr "Käyttääksesi kaikkia ominaisuuksia, sinun täytyy olla kirjautunut si
 #: ../../../app/themes/Peafowl/views/index.php:63
 msgid "There's nothing to show here."
 msgstr "Täällä ei ole mitään nähtävää."
+
+msgid "Upload images"
+msgstr "Lataa kuvia"
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
 #: ../../../app/themes/Peafowl/views/image.php:69
@@ -2793,6 +2843,18 @@ msgstr "Haluatko varmasti poistaa albumin ja kaikki sen kuvat? Toimintoa ei voi 
 msgid "Delete album"
 msgstr "Poista albumi"
 
+#: ../../../app/themes/Peafowl/views/image.php:85
+msgid "You like this"
+msgstr "Tykkäsit tästä"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Tykkäys"
+
+msgid "Upload to album"
+msgstr "Lataa albumiin"
+
 #: ../../../app/themes/Peafowl/views/album.php:86
 msgid "Album link"
 msgstr "Albumin osoite"
@@ -2809,20 +2871,6 @@ msgstr "Klikkaamalla \"Hyväksyn\" ilmoitat, että olet lukenut ja ymmärtänyt 
 
 msgid "I Agree"
 msgstr "Hyväksyn"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:22
-msgid "Image"
-msgid_plural "Images"
-msgstr[0] "Kuva"
-msgstr[1] "Kuvat"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:34
-#: ../../../app/themes/Peafowl/views/dashboard.php:90
-#: ../../../app/themes/Peafowl/views/settings.php:126
-msgid "User"
-msgid_plural "Users"
-msgstr[0] "Käyttäjä"
-msgstr[1] "Käyttäjät"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:40
 #: ../../../app/themes/Peafowl/views/dashboard.php:1732
@@ -3127,6 +3175,14 @@ msgstr "Vieraiden kuvien lataus"
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "Salli vieraiden ladata kuvia."
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1353
+msgid "Enable embed codes (uploader)"
+msgstr "Ota käyttöön upotuskoodit (lataus)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1359
+msgid "Enable this if you want to show embed codes when upload gets completed."
+msgstr "Ota upotuskoodit käyttöön, kun lataus on valmis."
+
 msgid "Upload threads"
 msgstr "Lähetyksen säikeet"
 
@@ -3152,6 +3208,12 @@ msgstr "Ota käyttöön vanhentuvat lataukset"
 #: ../../../app/themes/Peafowl/views/dashboard.php:655
 msgid "Enable this if you want to allow uploads with an automatic delete option."
 msgstr "Ota tämä käyttöön mikäli haluat sallia automaattisesti poistuvat kuvat."
+
+msgid "Auto delete guest uploads"
+msgstr "Automaattisesti poista vieraiden lataukset"
+
+msgid "Enable this if you want to force guest uploads to be auto deleted after certain time."
+msgstr "Ota käyttöön vieraiden latausten automaattinen poisto tietyn ajan kuluttua."
 
 msgid "Maximum image size"
 msgstr "Kuvan enimmäiskoko"
@@ -3787,14 +3849,6 @@ msgstr "Ota käyttöön upotuskoodit (sisältö)"
 msgid "Enable this if you want to show embed codes for the content."
 msgstr "Ota upotuskoodit käyttöön sisällölle."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1353
-msgid "Enable embed codes (uploader)"
-msgstr "Ota käyttöön upotuskoodit (lataus)"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1359
-msgid "Enable this if you want to show embed codes when upload gets completed."
-msgstr "Ota upotuskoodit käyttöön, kun lataus on valmis."
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1365
 msgid "Not safe content checkbox in uploader"
 msgstr "Sopimatonta sisältöä -valintaruutu latauksessa"
@@ -4290,15 +4344,6 @@ msgstr "Lataa täydessä resoluutiossa"
 msgid "Guest"
 msgstr "Vieras"
 
-#: ../../../app/themes/Peafowl/views/image.php:85
-msgid "You like this"
-msgstr "Tykkäsit tästä"
-
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "Tykkäys"
-
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
 msgstr "Lisätty %a ja kategorioitu %c"
@@ -4765,8 +4810,8 @@ msgid "Update now"
 msgstr "Päivitä nyt"
 
 #, javascript-format
-msgid "Your website is running the latest version of %s"
-msgstr "Sivustollasi on käytössä uusin versio ohjelmistosta %s"
+msgid "This website is running latest %s version"
+msgstr "Sivusto käyttää viimeisintä %s versiota"
 
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"
@@ -4787,6 +4832,12 @@ msgstr "Joitakin tiedostoja ei voitu lisätä"
 #: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
 msgid "Image edited successfully."
 msgstr "Kuva muokattu onnistuneesti."
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "yksityinen"
 
 #: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
 msgid "Album edited successfully."

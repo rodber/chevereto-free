@@ -9,7 +9,7 @@
 			<inbox@rodolfoberrios.com>
 
   Copyright (C) Rodolfo Berrios A. All rights reserved.
-  
+
   BY USING THIS SOFTWARE YOU DECLARE TO ACCEPT THE CHEVERETO EULA
   http://chevereto.com/license
 
@@ -17,22 +17,22 @@
 
 $route = function($handler) {
 	try {
-	   
+
 		if($_POST and !$handler::checkAuthToken($_REQUEST['auth_token'])) {
 			$handler->template = 'request-denied';
 			return;
 		}
-		
+
 		$logged_user = CHV\Login::getUser();
-		
+
 		if(!$logged_user) {
 			G\redirect(G\get_base_url('login'));
 		}
-		
+
 		if(!$logged_user['is_admin']) {
 			return $handler->issue404();
 		}
-		
+
 		$route_prefix = 'dashboard';
 		$sub_routes = [
 			'stats'		=> _s('Stats'),
@@ -41,27 +41,27 @@ $route = function($handler) {
 			'users'		=> _s('Users'),
 			'settings'	=> _s('Settings')
 		];
-		
+
 		$default_route = 'stats';
 		$doing = $handler->request[0];
-		
+
 		// Hack the user settings route
 		if($doing == 'user') {
 			$route = $handler->getRouteFn('settings');
 			$handler::setCond('dashboard_user', true);
 			return $route($handler);
 		}
-		
+
 		if(!is_null($doing) and !array_key_exists($doing, $sub_routes)) {
 			return $handler->issue404();
 		}
-		
+
 		if($doing == '') $doing = $default_route;
 
 		// Populate the routes
 		foreach($sub_routes as $route => $label) {
 			$aux = str_replace('_', '-', $route);
-			$handler::setCond($route_prefix.'_'.$aux, $doing == $aux);			
+			$handler::setCond($route_prefix.'_'.$aux, $doing == $aux);
 			if($handler::getCond($route_prefix.'_'.$aux)) {
 				$handler::setVar($route_prefix, $aux);
 			}
@@ -71,25 +71,25 @@ $route = function($handler) {
 				'current' => $handler::getCond($route_prefix.'_'.$aux)
 			);
 		}
-		
+
 		$handler::setVar($route_prefix.'_menu', $route_menu);
 		$handler::setVar('tabs', $route_menu);
-		
+
 		// conds
 		$is_error = false;
 		$is_changed = false;
-		
+
 		// vars
 		$input_errors = array();
 		$error_message = NULL;
-		
+
 		if($doing == '') {
 			$doing = 'stats';
 		}
-		
+
 		// Old and new image size counter
-		$image_size_count_qry = 'SELECT SUM(image_size) as count';
-		
+		$image_size_count_qry = 'SELECT (SUM(image_size) + SUM(image_thumb_size) + SUM(image_medium_size)) as count';
+
 		switch($doing) {
 
 			case 'stats':
@@ -99,27 +99,27 @@ $route = function($handler) {
 				foreach(['images', 'users', 'albums'] as $v) {
 					$totals_display[$v] = G\abbreviate_number($totals[$v]);
 				}
-				$format_disk_ussage = explode(' ', G\format_bytes($totals['disk_used']));				
+				$format_disk_ussage = explode(' ', G\format_bytes($totals['disk_used']));
 				$totals_display['disk'] = ['used' => $format_disk_ussage[0], 'unit' => $format_disk_ussage[1]];
-				
+
 				if(empty($totals_display['disk']['used'])) {
 					$totals_display['disk'] = [
 						'used' => 0,
 						'unit' => 'KB'
 					];
 				}
-				
+
 				$db = CHV\DB::getInstance();
-				
+
 				$chv_version = [
 					'files'	=> G\get_app_version(),
 					'db'	=> CHV\getSetting('chevereto_version_installed')
 				];
-				
+
 				$system_values = [
 					'chv_version'	=> [
 						'label'		=> _s('Chevereto Free'),
-						'content'	=>  (version_compare($chv_version['files'], $chv_version['db'], '<=') ? $chv_version['files'] : $chv_version['files'] . ' ('.$chv_version['db'].' DB) <a href="'.G\get_base_url('install').'">'._s('install update').'</a>') . ' – <a data-action="check-for-updates">' . _s("check for updates") . '</a>' . '<p>Upgrade to our paid edition to get more features and support <a href="https://chevereto.com/pricing" class="btn btn-capsule default outline">Learn more</a>
+						'content'	=>  (version_compare($chv_version['files'], $chv_version['db'], '<=') ? $chv_version['files'] : $chv_version['files'] . ' ('.$chv_version['db'].' DB) <a href="'.G\get_base_url('install').'">'._s('install update').'</a>') . ' – <a data-action="check-for-updates">' . _s("check for updates") . '</a>' . '<p><a class="btn btn-capsule btn-upgrade red" data-action="upgrade">Upgrade</a> Upgrade to paid edition to get all features, constant updates and support.
 						</p>'
 					],
 					'g_version'		=> [
@@ -132,7 +132,7 @@ $route = function($handler) {
 					],
 					'server' => [
 						'label'		=> _s('Server'),
-						'content'	=> gethostname() . ' ' . PHP_OS . '/' . PHP_SAPI 
+						'content'	=> gethostname() . ' ' . PHP_OS . '/' . PHP_SAPI
 					],
 					'mysql_version' => [
 						'label'		=> _s('MySQL version'),
@@ -170,12 +170,12 @@ $route = function($handler) {
 						'label'		=> _s('Links'),
 					],
 				];
-				
+
 				$chevereto_urls = [
 					_s('Support')				=> 'https://chevereto.com/support',
 					_s('Documentation')			=> 'https://chevereto.com/docs',
-					_s('Changelog')	. ' (paid edition)' => 'https://chevereto.com/changelog',
-					_s('Changelog') . ' (free edition)' => 'https://github.com/Chevereto/Chevereto-Free/releases',
+					_s('Releases')	. ' (paid edition)' => 'https://chevereto.com/releases',
+					_s('Request new features')	=> 'https://chevereto.com/request-new-features',
 					_s('Bug tracking')			=> 'https://chevereto.com/bug-tracking',
 					_s('Blog')					=> 'https://chevereto.com/blog',
 					_s('Community')				=> 'https://chevereto.com/community',
@@ -185,25 +185,25 @@ $route = function($handler) {
 				foreach($chevereto_urls as $k => $v) {
 					$chevereto_links[] = '<a href="'.$v.'" target="_blank">'.$k.'</a>';
 				}
-				
+
 				$system_values['links']['content'] = implode(' · ', $chevereto_links);
-				
+
 				$handler::setVar('system_values', $system_values);
 				$handler::setVar('totals', $totals);
 				$handler::setVar('totals_display', $totals_display);
-				
+
 			break;
-			
+
 			case 'settings':
-				
+
 				$max_request_level = $handler->request[1] == 'pages' ? (in_array($handler->request[2], ['edit', 'delete']) ? 6 : 5) : 4;
-				
+
 				if($handler->isRequestLevel($max_request_level)) {
 					return $handler->issue404();
 				}
-				
+
 				$handler::setCond('show_submit', TRUE);
-				
+
 				$settings_sections = [
 					'website'				=> _s('Website'),
 					'content'				=> _s('Content'),
@@ -229,7 +229,7 @@ $route = function($handler) {
 					'additional-settings'	=> _s('Additional settings'),
                     'tools'				    => _s('Tools'),
 				];
-				
+
 				foreach($settings_sections as $k => $v) {
 					$current = $handler->request[1] ? ($handler->request[1] == $k) : ($k == 'website');
 					$settings_sections[$k] = [
@@ -244,19 +244,19 @@ $route = function($handler) {
 							$handler::setCond('show_submit', FALSE);
 						}
 					}
-					
+
 				}
-				
+
 				// Reject non-existing settings sections
 				if(!empty($handler->request[1]) && !array_key_exists($handler->request[1], $settings_sections)) {
 					return $handler->issue404();
 				}
-				
+
 				$handler::setVar('settings_menu', $settings_sections);
 				//$handler::setVar('tabs', $settings_sections);
-				
+
 				switch($handler->request[1]) {
-					
+
                     case 'homepage':
 						if($_GET['action'] == 'delete-cover' && isset($_GET['cover'])) {
 							$cover_index = $_GET['cover']-1;
@@ -293,16 +293,16 @@ $route = function($handler) {
 							unset($_SESSION['is_changed']);
 						}
 					break;
-					
+
 					case 'tools':
                         $handler::setCond('show_submit', FALSE);
                     break;
-                    
+
 					case 'pages':
 
 						// Check the sub-request
 						if($handler->request[2]) {
-							
+
 							switch($handler->request[2]) {
 								case 'add':
 									$settings_pages['title'] = _s('Add page');
@@ -350,7 +350,7 @@ $route = function($handler) {
 									return $handler->issue404();
 								break;
 							}
-							
+
 						} else {
 							$pages = CHV\Page::getAll([], ['field' => 'sort_display', 'order' => 'asc']);
 							$handler::setVar('pages', $pages ?: []);
@@ -362,38 +362,38 @@ $route = function($handler) {
 							}
 							$handler::setCond('show_submit', FALSE);
 						}
-						
+
 						$handler::setvar('settings_pages', $settings_pages);
-						
+
 					break;
 				}
-				
+
 				if($_POST) {
-					
+
 					if(!headers_sent()) {
 						header('X-XSS-Protection: 0');
 					}
-					
+
 					/*** Do some cleaning... ***/
 
 					// Remove bad formatting and duplicates
 					if($_POST['theme_home_uids']) {
 						$_POST['theme_home_uids'] = implode(',', array_keys(array_flip(explode(',', trim(preg_replace(['/\s+/', '/,+/'], ['', ','], $_POST['theme_home_uids']), ',')))));
 					}
-					
+
 					// Personal mode stuff
 					if($_POST['website_mode'] == 'personal') {
 						$_POST['website_mode_personal_routing'] = G\get_regex_match(CHV\getSetting('routing_regex'), '#', $_POST['website_mode_personal_routing'], 1);
-						
+
 						if(!G\check_value($_POST['website_mode_personal_routing'])) {
 							$_POST['website_mode_personal_routing'] = '/';
 						}
 					}
-					
+
 					if(isset($_POST['homepage_cta_fn_extra'])) {
 						$_POST['homepage_cta_fn_extra'] = trim($_POST['homepage_cta_fn_extra']);
 					}
-					
+
 					// Columns number
 					foreach(['phone', 'phablet', 'laptop', 'desktop'] as $k) {
 						if($_POST['listing_columns_' . $k]) {
@@ -402,17 +402,17 @@ $route = function($handler) {
 							$_POST[$key] = (filter_var($val, FILTER_VALIDATE_INT) and $val > 0) ? $val : CHV\get_chv_default_setting($key);
 						}
 					}
-					
+
 					// HEX color
 					if($_POST['theme_main_color']) {
 						$_POST['theme_main_color'] = '#' . ltrim($_POST['theme_main_color'], '#');
 					}
-					
+
 					// Pages related cleaning
 					if($handler->request[1] == 'pages') {
-						
+
 						$page_file_path_clean = trim(G\sanitize_relative_path($_POST['page_file_path']), '/');
-												
+
 						// Disable PHP pages here
 						if(G\get_app_setting('disable_php_pages')) {
 							$page_extension = G\get_file_extension($page_file_path_clean);
@@ -420,15 +420,15 @@ $route = function($handler) {
 								$page_file_path_clean = G\str_replace_last($page_extension, 'html', $page_file_path_clean);
 							}
 						}
-						
+
 						$_POST['page_file_path'] = str_replace('default/', NULL, $page_file_path_clean);
 						$_POST['page_file_path_absolute'] = CHV\Page::getPath($_POST['page_file_path']);
-						
+
                         // Invalid page sort display
                         if(!filter_var($_POST['page_sort_display'], FILTER_VALIDATE_INT)) {
                             $_POST['page_sort_display'] = NULL;
                         }
-                        
+
 						// Do some fixing..
 						if($_POST['page_type'] == 'internal') {
 							if(!$_POST['page_is_active']) {
@@ -443,7 +443,7 @@ $route = function($handler) {
 							'page_file_path_absolute'	=> $_POST['page_file_path_absolute'],
 						]);
 					}
-					
+
 					// Validations
 					$validations = [
 						'website_name'	=>
@@ -575,7 +575,7 @@ $route = function($handler) {
 							[
 								'validate'	=> $_POST['website_mode'] == 'personal' ? !G\is_route_available($_POST['website_mode_personal_routing']) : TRUE,
 								'error_msg'	=> _s('Invalid or reserved route')
-							],	
+							],
 						'website_privacy_mode' =>
 							[
 								'validate'	=> in_array($_POST['website_privacy_mode'], ['public', 'private']),
@@ -682,9 +682,14 @@ $route = function($handler) {
 								'validate'	=> G\is_integer($_POST['upload_max_image_height'], ['min' => 0]),
 								'error_msg'	=> _s('Invalid value: %s', $_POST['upload_max_image_height'])
 							],
+						'auto_delete_guest_uploads' =>
+							[
+								'validate'	=> $_POST['auto_delete_guest_uploads'] !== NULL && array_key_exists($_POST['auto_delete_guest_uploads'], CHV\Image::getAvailableExpirations()),
+								'error_msg'	=> _s('Invalid value: %s', $_POST['auto_delete_guest_uploads'])
+							],
 					];
-					
-					// Detect funny stuff					
+
+					// Detect funny stuff
 					if(isset($_POST['route_image'], $_POST['route_album']) && $_POST['route_image'] == $_POST['route_album']) {
 						$validations['route_image'] = [
 							'validate'	=> FALSE,
@@ -704,12 +709,12 @@ $route = function($handler) {
 							];
 						}
 					}
-					
+
 					// Validate CTA url
 					if($_POST['homepage_style'] !== 'route_explore' and $_POST['homepage_cta_fn'] == 'cta-link' and !G\is_url($_POST['homepage_cta_fn_extra'])) {
 						if(!empty($_POST['homepage_cta_fn_extra'])) {
 							// Sanitize the fn_extra
-							$_POST['homepage_cta_fn_extra'] = rtrim(G\sanitize_relative_path($_POST['homepage_cta_fn_extra']), '/');						
+							$_POST['homepage_cta_fn_extra'] = rtrim(G\sanitize_relative_path($_POST['homepage_cta_fn_extra']), '/');
 							$_POST['homepage_cta_fn_extra'] = G\get_regex_match(CHV\getSetting('routing_regex_path'), '#', $_POST['homepage_cta_fn_extra'], 1);
 						} else {
 							$validations['homepage_cta_fn_extra'] = [
@@ -717,9 +722,9 @@ $route = function($handler) {
 								'error_msg' => _s('Invalid call to action URL')
 							];
 						}
-						
+
 					}
-					
+
 					// Validate max size
 					foreach(['upload_max_filesize_mb', 'user_image_avatar_max_filesize_mb', 'user_image_background_max_filesize_mb'] as $k) {
 						unset($error_max_filesize);
@@ -734,7 +739,7 @@ $route = function($handler) {
 							$validations[$k] = ['validate' => isset($error_max_filesize) ? false : true, 'error_msg' => $error_max_filesize];
 						}
 					}
-					
+
 					// Validate virtual routes
 					$validate_routes = [];
 					foreach(['image', 'album'] as $k) {
@@ -764,10 +769,10 @@ $route = function($handler) {
 							}
 						}
 					}
-					
+
 					// 1. No pueden mappear una ruta ya existente, excepto self (no puden mapear /dashboard, pero si /image)
 					// 2. No pueden mapear a un username
-					
+
 					// Handle disabled image formats
 					if($_POST['image_format_enable'] && is_array($_POST['image_format_enable'])) {
 						// Validate each entry
@@ -779,15 +784,15 @@ $route = function($handler) {
 						}
 						$_POST['upload_enabled_image_formats'] = implode(',', $image_format_enable);
 					}
-					
+
 					// Handle disabled languages
 					if($_POST['languages_enable'] && is_array($_POST['languages_enable'])) {
-						
+
 						// Push default language
 						if(!in_array($_POST['default_language'], $_POST['languages_enable'])) {
 							$_POST['languages_enable'][] = $_POST['default_language'];
 						}
-						
+
 						$enabled_languages = [];
 						$disabled_languages = CHV\get_available_languages();
 						$_POST['languages_disable'] = [];
@@ -804,7 +809,7 @@ $route = function($handler) {
 						}
 						$_POST['languages_disable'] = implode(',', $_POST['languages_disable']);
 					}
-					
+
 					// Handle personal mode change
 					if($_POST['website_mode'] == 'personal' and $_POST['website_mode_personal_routing']) {
 						if($logged_user['id'] == $_POST['website_mode_personal_uid']) {
@@ -818,7 +823,7 @@ $route = function($handler) {
 							];
 						}
 					}
-					
+
 					// Validate image upload
 					$content_image_props = [];
 					foreach(CHV\getSetting('homepage_cover_images') as $k => $v) {
@@ -837,7 +842,7 @@ $route = function($handler) {
 							}
 						}
 					}
-					
+
 					// Validate SMTP credentials
 					if($_POST['email_mode'] == 'smtp') {
 						$email_smtp_validate = [
@@ -848,7 +853,7 @@ $route = function($handler) {
 						foreach($email_smtp_validate as $k => $v) {
 							$validations[$k] = ['validate' => $_POST[$k] ? true : false, 'error_msg' => $v];
 						}
-						
+
 						$email_validate = ['email_smtp_server', 'email_smtp_server_port', 'email_smtp_server_username', /*'email_smtp_server_password',*/ 'email_smtp_server_security'];
 						$email_error = false;
 						foreach($email_validate as $k) {
@@ -887,9 +892,9 @@ $route = function($handler) {
 								}
 							}
 						}
-                        
+
 					}
-					
+
 					// Validate social networks
 					$social_validate = [
 						'facebook'	=> ['facebook_app_id', 'facebook_app_secret'],
@@ -903,7 +908,7 @@ $route = function($handler) {
 							}
 						}
 					}
-					
+
 					// Validate CDN
 					if($_POST['cdn'] == 1) {
 						$cdn_url = trim($_POST['cdn_url'], '/') . '/';
@@ -920,21 +925,21 @@ $route = function($handler) {
 							$handler::updateVar('safe_post', ['cdn_url' => $cdn_url]);
 						}
 					}
-					
+
 					// Validate recaptcha
 					if($_POST['recaptcha'] == 1) {
 						foreach(['recaptcha_public_key', 'recaptcha_private_key'] as $v) {
 							$validations[$v] = ['validate' => $_POST[$v] ? true : false];
 						}
 					}
-					
+
 					// Run the thing
 					foreach($_POST + $_FILES as $k => $v) {
 						if(isset($validations[$k]) and !$validations[$k]['validate']) {
 							$input_errors[$k] = $validations[$k]['error_msg'] ?: _s('Invalid value');
 						}
 					}
-					
+
 					// Test target page path and URL key
 					if($handler->request[1] == 'pages' and in_array($handler->request[2], ['edit', 'add']) and $_POST['page_type'] == 'internal') {
 						if($page) {
@@ -965,13 +970,13 @@ $route = function($handler) {
 							}
 						}
 					}
-					
-					
+
+
 					// Input data looks fine
 					if(count($input_errors) == 0) {
-						
+
 						if($handler->request[1] == 'pages') {
-							
+
 							// Try to edit / add a page
 							if(in_array($handler->request[2], ['edit', 'add']) and $_POST['page_type'] == 'internal') {
 								// Try to write page source code
@@ -986,9 +991,9 @@ $route = function($handler) {
 									$input_errors['page_code'] = _s("Can't save page contents: %s.", $e->getMessage());
 								}
 							}
-							
+
 							$page_fields = CHV\Page::getFields();
-							
+
 							$page_values = [];
 							foreach($page_fields as $v) {
 								$_post = $_POST['page_' . $v];
@@ -997,16 +1002,16 @@ $route = function($handler) {
 								}
 								$page_values[$v] = $_post;
 							}
-							
+
 							if($page_values) {
 								if($handler->request[2] == 'add') {
 									$page_inserted = CHV\Page::insert($page_values);
 									$_SESSION['dashboard_page_added'] = ['id' => $page_inserted];
 									G\redirect(G\get_base_url('dashboard/settings/pages/edit/' . $page_inserted));
 								} else {
-									
+
 									CHV\Page::update($page['id'], $page_values);
-									
+
 									$is_changed = TRUE;
 									$pages_sort_changed = FALSE;
 									foreach(['sort_display', 'is_active', 'is_link_visible'] as $k) {
@@ -1015,15 +1020,15 @@ $route = function($handler) {
 											break;
 										}
 									}
-									
+
 									// Update 'page' var
 									$page = array_merge($handler::getVar('page'), $page_values);
 									CHV\Page::fill($page);
 									$handler::updateVar('page', $page);
-									
+
 									// Update pages_link_visible (menu)
 									$pages_link_visible = $handler::getVar('pages_link_visible');
-									
+
 									$pages_link_visible[$page['id']] = $page; // Either update or append
 
 									if(!$page['is_active'] or !$page['is_link_visible']) {
@@ -1034,21 +1039,21 @@ $route = function($handler) {
 										});
 									}
 									$handler::setVar('pages_link_visible', $pages_link_visible);
-									
+
 								}
 							}
 
 						} else { // Settings
-							
+
 							$update_settings = [];
 							foreach(CHV\getSettings() as $k => $v) {
 								if(isset($_POST[$k]) && $_POST[$k] != (is_bool(CHV\getSetting($k)) ? (CHV\getSetting($k) ? 1 : 0) : CHV\getSetting($k))) {
 									$update_settings[$k] = $_POST[$k];
 								}
 							}
-							
+
 							if (!empty($update_settings)) {
-								
+
 								$update = CHV\Settings::update($update_settings);
 
 								if($update) {
@@ -1072,19 +1077,19 @@ $route = function($handler) {
 										$handler::setVar('system_notices', $system_notices);
 									}
 								}
-							
+
 							}
-							
+
 						}
-						
+
 					} else {
 						$is_error = TRUE;
 					}
 
 				}
-				
+
 			break;
-			
+
 			case 'images':
 			case 'albums':
 			case 'users':
@@ -1117,7 +1122,7 @@ $route = function($handler) {
 							],
 						];
 					break;
-					
+
 					case 'albums':
 						$tabs = [
 							[
@@ -1138,7 +1143,7 @@ $route = function($handler) {
 							]
 						];
 					break;
-					
+
 					case 'users':
 						$tabs = [
 							[
@@ -1168,7 +1173,7 @@ $route = function($handler) {
 						];
 					break;
 				}
-				
+
 				$type = $doing;
 				$current = false;
 				foreach($tabs as $k => $v) {
@@ -1182,13 +1187,13 @@ $route = function($handler) {
 					$current = 0;
 					$tabs[0]['current'] = true;
 				}
-				
+
 				// Use CHV magic params
 				$list_params = CHV\Listing::getParams();
-				parse_str($tabs[$current]['params'], $tab_params);		
+				parse_str($tabs[$current]['params'], $tab_params);
 				preg_match('/(.*)_(asc|desc)/', !empty($_REQUEST['sort']) ? $_REQUEST['sort'] : $tab_params['sort'], $sort_matches);
 				$list_params['sort'] = array_slice($sort_matches, 1);
-				
+
 				$list = new CHV\Listing;
 				$list->setType($type); // images | users | albums
 				$list->setOffset($list_params['offset']);
@@ -1199,27 +1204,27 @@ $route = function($handler) {
 				$list->setRequester($logged_user );
 				$list->output_tpl = $type;
 				$list->exec();
-				
+
 			break;
-			
+
 		}
-		
+
 		$handler::setVar('pre_doctitle', _s('Dashboard'));
-		
+
 		$handler::setCond('error', $is_error);
 		$handler::setCond('changed', $is_changed);
-		
+
 		$handler::setVar('error_message', $error_message);
 		$handler::setVar('input_errors', $input_errors);
 		$handler::setVar('changed_message', $changed_message);
-		
+
 		if($tabs) {
 			$handler::setVar('sub_tabs', $tabs);
 		}
 		if($list) {
 			$handler::setVar('list', $list);
 		}
-		
+
 	} catch(Exception $e) {
 		G\exception_to_error($e);
 	}

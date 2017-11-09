@@ -1,43 +1,85 @@
-<?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
-<!--googleoff: index-->
-<div id="anywhere-upload" class="upload-box fixed hidden-visibility">
+<?php
+if(!defined('access') or !access) die('This file cannot be directly accessed.');
+if(CHV\Login::isLoggedUser()) {
+	$user_albums = [];
+	if(CHV\Login::getUser()['album_count'] > 0) {
+		$user_albums = function_exists('is_owner') && is_owner() && function_exists('get_user_items_editor') && isset(get_user_items_editor()['user_albums']) ? get_user_items_editor()['user_albums'] : CHV\User::getAlbums(CHV\Login::getUser());
+	}
+}
+?>
+<div id="anywhere-upload" class="upload-box upload-box--fixed upload-box--hidden">
 
 	<div class="content-width">
 	
     	<div class="upload-box-inner">
 
-        	<div class="upload-box-heading">
+        	<div class="upload-box-heading c16 center-box">
 				<div class="upload-box-status">
 					<div data-group="upload">
 						<span class="icon icon-download2 cursor-pointer" data-trigger="anywhere-upload-input"></span>
 						<div class="heading phone-hide phablet-hide"><a data-trigger="anywhere-upload-input"><?php _se('Drag and drop or paste images here to upload'); ?></a></div>
 						<div class="heading tablet-hide laptop-hide desktop-hide"><a data-trigger="anywhere-upload-input"><?php _se('Select the images to upload'); ?></a></div>
-						<div class="phone-hide phablet-hide upload-box-status-text"><?php _se('You can also <a data-trigger="anywhere-upload-input">browse from your computer</a> or <a data-modal="form" data-target="anywhere-upload-paste-url">add image URLs</a>.'); ?></div>
-						<div class="tablet-hide laptop-hide desktop-hide upload-box-status-text"><?php _se('You can also <a data-trigger="anywhere-upload-input-camera">take a picture</a> or <a data-modal="form" data-target="anywhere-upload-paste-url">add image URLs</a>.'); ?></div>
+						<div class="phone-hide phablet-hide upload-box-status-text"><?php _se('You can also %i or %u.', [
+							'%i' => '<a data-trigger="anywhere-upload-input">' . _s('browse from your computer') . '</a>',
+							'%u' => '<a data-modal="form" data-target="anywhere-upload-paste-url">' . _s('add image URLs') . '</a>',
+						]); ?></div>
+						<div class="tablet-hide laptop-hide desktop-hide upload-box-status-text"><?php _se('You can also %i or %u.', [
+							'%i' => '<a data-trigger="anywhere-upload-input-camera">' . _s('take a picture') . '</a>',
+							'%u' => '<a data-modal="form" data-target="anywhere-upload-paste-url">' . _s('add image URLs') . '</a>',
+						]); ?></div>
 					</div>
 					<div data-group="upload-queue-ready" class="soft-hidden">
 						<span class="icon icon-images" data-trigger="anywhere-upload-input"></span>
-						<div class="heading phone-hide phablet-hide"><?php _se('Edit or resize an image by clicking the image preview'); ?></div>
-						<div class="heading tablet-hide laptop-hide desktop-hide"><?php _se('Edit or resize an image by touching the image preview'); ?></div>
-						<div class="phone-hide phablet-hide upload-box-status-text"><?php _se('You can add more images <a data-trigger="anywhere-upload-input">from your computer</a> or <a data-modal="form" data-target="anywhere-upload-paste-url">from image URLs</a>.'); ?></div>
-						<div class="tablet-hide laptop-hide desktop-hide upload-box-status-text"><?php _se('You can <a data-trigger="anywhere-upload-input">add more images</a> or <a data-modal="form" data-target="anywhere-upload-paste-url">add image URLs</a>.'); ?></div>
+						<div class="heading phone-hide phablet-hide"><?php _se('Edit or resize any image by clicking the image preview'); ?></div>
+						<div class="heading tablet-hide laptop-hide desktop-hide"><?php _se('Edit or resize any image by touching the image preview'); ?></div>
+						<div class="phone-hide phablet-hide upload-box-status-text"><?php _se('You can keep adding more images from %i or from %u.', [
+							'%i' => '<a data-trigger="anywhere-upload-input">' . _s('your computer') . '</a>',
+							'%u' => '<a data-modal="form" data-target="anywhere-upload-paste-url">' . _s('image URLs') . '</a>',
+						]); ?></div>
+						<div class="tablet-hide laptop-hide desktop-hide upload-box-status-text"><?php _se('You can keep adding more images from %i or from %u.', [
+							'%i' => '<a data-trigger="anywhere-upload-input">' . _s('your device') . '</a>',
+							'%u' => '<a data-modal="form" data-target="anywhere-upload-paste-url">' . _s('image URLs') . '</a>',
+						]); ?></div>
 					</div>
 					<div data-group="uploading" class="soft-hidden">
 						<span class="icon icon-cloud-upload"></span>
-						<div class="heading"><?php _se('Uploading <span data-text="queue-size">0</span> <span data-text="queue-objects">images</span>'); ?> (<span data-text="queue-progress">0</span>% <?php _se('complete'); ?>)</div>
-						<div class="upload-box-status-text"><?php _se('The queue is being uploaded. It will take just a few seconds to complete.'); ?></div>
+						<div class="heading"><?php _se('Uploading %q %o', [
+							'%q' => '<span data-text="queue-size">0</span>',
+							'%o' => '<span data-text="queue-objects">' . _s('image', 'images', 10) . '</span>',
+						]); ?> (<span data-text="queue-progress">0</span>% <?php _se('complete'); ?>)</div>
+						<div class="upload-box-status-text"><?php _se('The queue is being uploaded, it should take just a few seconds to complete.'); ?></div>
 					</div>
 					<div data-group="upload-result" data-result="success" class="soft-hidden">
 						<span class="icon icon-checkmark-circle color-green"></span>
 						<div class="heading"><?php _se('Upload complete'); ?></div>
 						<div class="upload-box-status-text">
-							<div data-group="user" class="soft-hidden"><?php _se('Content added to <a data-text="upload-target" data-link="upload-target" href="%s">public stream</a>. You can <a data-modal="form" data-target="form-uploaded-create-album">create an album</a> or <a data-modal="form" data-target="form-uploaded-move-album">move the <span data-text="queue-objects">images</span></a> to an existing album.', CHV\Login::getUser()["url"]); ?></div>
-							<div data-group="guest" class="soft-hidden"><?php _se('You can <a href="%s">create an account</a> or <a href="%l">sign in</a> to save future uploads in your account.', ['%s' => G\get_base_url("signup"), '%l' => G\get_base_url("login")]); ?></div>
+							<div data-group="user" class="soft-hidden">
+								<div data-group="user-stream" class="soft-hidden">
+								<?php 
+									$uploaded_message = _s('Uploaded content added to %s.') . ' ';
+									if(CHV\Login::getUser()['album_count'] > 0) {
+										$uploaded_message .= _s('You can %c with the content just uploaded or %m.');
+									} else {
+										$uploaded_message .= _s('You can %c with the content just uploaded.');
+									}
+									echo strtr($uploaded_message, [
+										'%s'	=> '<a data-text="upload-target" data-link="upload-target"></a>',
+										'%c'	=> '<a data-modal="form" data-target="form-uploaded-create-album">' . _s('create a new album') . '</a>',
+										'%m'	=> '<a data-modal="form" data-target="form-uploaded-move-album">' . _s('move it to an existing album') . '</a>',
+									]);								
+								?>
+								</div>
+								<div data-group="user-album" class="soft-hidden"><?php _se('Uploaded content added to %s.', '<a data-text="upload-target" data-link="upload-target"></a>'); ?></div>
+							</div>
+							<div data-group="guest" class="soft-hidden"><?php _se('You can %s or %l to save this content into your account.', [
+								'%s' => '<a href="' . G\get_base_url("signup") . '">' . _s('create an account') . '</a>',
+								'%l' => '<a href="' . G\get_base_url("login") . '">' . _s('sign in') . '</a>'
+							]); ?></div>
 						</div>
 					</div>
 					<div data-group="upload-result" data-result="error" class="soft-hidden">
 						<span class="icon icon-cross4 color-grey"></span>
-						<div class="heading"><?php _se('No <span data-text="queue-objects">images</span> have been uploaded') ;?></div>
+						<div class="heading"><?php _se('No %s have been uploaded', '<span data-text="queue-objects">' . _s('image', 'images', 10) . '</span>') ;?></div>
 						<div class="upload-box-status-text"><?php _se("Some errors have occured and the system couldn't process your request."); ?></div>
 					</div>
 				</div>
@@ -49,20 +91,39 @@
 			
 			<div id="anywhere-upload-submit" class="btn-container text-align-center margin-bottom-0 soft-hidden" data-group="upload-queue-ready">
 				<div data-group="upload-queue-ready">
+					
 					<?php
-						$categories = get_categories();
-						if($categories) {
+						if(CHV\Login::isLoggedUser() && CHV\Login::getUser()['album_count'] > 0) {
 					?>
-					<div class="input-label c7 center-box">
-						<select name="upload-category-id" id="upload-category-id" class="text-input">
+					<div class="input-label c8 center-box text-align-left">
+						<label for="upload-album-id"><?php _se('Album', 'Albums', 1); ?></label>
+						<select name="upload-album-id" id="upload-album-id" class="text-input">
 							<?php
-								array_unshift($categories, [
-									'id'		=> NULL,
-									'name'		=> _s('Select category'),
-									'url_key'	=> NULL,
-									'url'		=> NULL
-								]);
-								foreach($categories as $category) {
+								$user_album_options_html = [];
+								foreach($user_albums as $album) {
+									$user_album_options_html[] = strtr('<option value="%id"%selected>%name</option>', [
+											'%selected' => (function_exists('get_album') && get_album()['id_encoded'] == $album['id_encoded']) ? ' selected' : NULL,
+											'%id'	=> $album['id_encoded'],
+											'%name' => $album['name_with_privacy_readable']
+										]);
+								}
+								$user_album_options_html = implode("\n", $user_album_options_html);
+								echo $user_album_options_html;
+							?>
+						</select>
+					</div>
+					<?php
+						}
+					?>
+					<?php
+						if(get_categories()) {
+					?>
+					<div class="input-label c8 center-box text-align-left">
+						<label for="upload-category-id"><?php _se('Category'); ?></label>
+						<select name="upload-category-id" id="upload-category-id" class="text-input">
+							<option value><?php _se('Select category'); ?></option>
+							<?php
+								foreach(get_categories() as $category) {
 							?>
 							<option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
 							<?php
@@ -73,8 +134,14 @@
 					<?php
 						} // categories?
 					?>
-					<?php if(CHV\getSetting('website_privacy_mode') == 'public' or (CHV\getSetting('website_privacy_mode') == 'private' and CHV\getSetting('website_content_privacy_mode') == 'default')) { ?><button class="btn btn-big plain margin-right-5 btn-upload-privacy" rel="tooltip" data-tiptip="top" title="<?php _se('Change upload privacy'); ?>" data-login-needed="1" data-action="upload-privacy" data-privacy="public"><span class="icon icon-unlocked" data-lock="icon-lock" data-unlock="icon-unlocked"></span></button><?php } ?><button class="btn btn-big green" data-action="upload" data-public="<?php _se('Upload'); ?>" data-private="<?php _se('Private upload'); ?>"><?php echo is_forced_private_mode() ? _s('Private upload') : _s('Upload'); ?></button> <span class="btn-alt"><?php _se('or'); ?> <a data-action="cancel-upload"><?php _se('cancel'); ?></a></span>
-					<?php if(CHV\getSetting('theme_nsfw_upload_checkbox')) { ?><div class="margin-top-10"><span rel="tooltip" data-tiptip="top" title="<?php _se('Mark this if the upload is not family safe'); ?>"><input type="checkbox" name="upload-nsfw" id="upload-nsfw" class="margin-right-5" value="1"><label for="upload-nsfw"><?php _se('Not family safe upload'); ?></label></span></div><?php } ?>
+					<?php
+						if(CHV\getSetting('theme_nsfw_upload_checkbox')) {
+					?>
+					<div class="margin-10"><span rel="tooltip" data-tiptip="top" title="<?php _se('Mark this if the upload is not family safe'); ?>"><input type="checkbox" name="upload-nsfw" id="upload-nsfw" class="margin-right-5" value="1"><label for="upload-nsfw"><?php _se('Not family safe upload'); ?></label></span></div>
+					<?php
+						}
+					?>
+					<button class="btn btn-big green" data-action="upload" data-public="<?php _se('Upload'); ?>" data-private="<?php _se('Private upload'); ?>"><?php echo is_forced_private_mode() ? _s('Private upload') : _s('Upload'); ?></button></span>
 				</div>
 				<div data-group="uploading" class="soft-hidden">
 					<button class="btn plain disabled btn-big plain margin-right-5" disabled data-action="upload-privacy-copy"><span class="icon icon-unlocked" data-lock="icon-lock" data-unlock="icon-unlocked"></span></button><button class="btn btn-big disabled off" disabled><?php _se('Uploading'); ?></button> <span class="btn-alt"><?php _se('or'); ?> <a data-action="cancel-upload" data-button="close-cancel"><?php _se('cancel'); ?></a><a data-action="cancel-upload-remaining" data-button="close-cancel" class="soft-hidden"><?php _se('cancel remaining'); ?></a></span>
@@ -94,7 +161,7 @@
 			</div>
             
 			<?php if(CHV\getSetting('theme_show_embed_uploader')) { ?>
-			<div data-group="upload-result" data-result="success" class="c14 center-box soft-hidden">
+			<div data-group="upload-result" data-result="success" class="c16 center-box soft-hidden">
 				<div class="input-label margin-bottom-0 copy-hover-display">
 					<label for="uploaded-embed-toggle"><?php _se('Embed codes'); ?></label>
 					<div class="c7 margin-bottom-10">
@@ -162,11 +229,29 @@
 					<label for="form-title"><?php _se('Title'); ?> <span class="optional"><?php _se('optional'); ?></span></label>
 					<input type="text" id="form-title" name="form-title" class="text-input" value="" maxlength="<?php echo CHV\getSetting('image_title_max_length'); ?>">
 				</div>
-				<?php if(get_categories()) { ?>
+				<?php
+					if(CHV\Login::isLoggedUser() && CHV\Login::getUser()['album_count'] > 0) {
+				?>
+				<div class="input-label c7">
+					<label for="form-album-id"><?php _se('Album'); ?></label>
+					<select name="form-album-id" id="form-album-id" class="text-input">
+						<?php
+							echo $user_album_options_html;
+						?>
+					</select>
+				</div>
+				<?php
+					}
+				?>
+				<?php
+					if(get_categories()) {
+				?>
 				<div class="input-label c7">
 					<?php G\Render\include_theme_file('snippets/form_category'); ?>
 				</div>
-				<?php } ?>
+				<?php
+					}
+				?>
 				<div class="input-label" data-action="resize-combo-input">
 					<label for="form-width" class="display-block-forced"><?php _se('Resize image'); ?></label>
 					<div class="c6 overflow-auto clear-both">
@@ -185,10 +270,21 @@
                     <div class="c6 phablet-1">
                         <select type="text" name="form-expiration" id="form-expiration" class="text-input">
                         <?php
-                            echo CHV\Render\get_select_options_html(CHV\Image::getAvailableExpirations(), CHV\Login::isLoggedUser() ? CHV\Login::getUser()['image_expiration'] : NULL);
+							$expirations = CHV\Image::getAvailableExpirations();
+							if(!CHV\Login::isLoggedUser() && CHV\getSetting('auto_delete_guest_uploads') != NULL) {
+								$expirations = [$expirations[CHV\getSetting('auto_delete_guest_uploads')]];
+							}
+                            echo CHV\Render\get_select_options_html($expirations, CHV\Login::isLoggedUser() ? CHV\Login::getUser()['image_expiration'] : NULL);
                         ?>
                         </select>
                     </div>
+					<?php
+						if(!CHV\Login::isLoggedUser() && CHV\getSetting('auto_delete_guest_uploads') != NULL) {
+					?>
+					<div class="input-below"><?php _se('%s to be able to customize or disable image auto delete.', '<a href="' . G\get_base_url('signup') . '">' . _s('Sign up') . '</a>'); ?></div>
+					<?php
+						}
+					?>
                 </div>
                 <?php } ?>
                 <?php if(CHV\getSetting('theme_nsfw_upload_checkbox')) { ?>
@@ -219,11 +315,11 @@
 			global $new_album, $user_items_editor;
 			$new_album = true;
 			$user_items_editor = [
-				"user_albums"	=> CHV\User::getAlbums(CHV\Login::getUser()),
+				"user_albums"	=> $user_albums,
 				"type"			=> "albums"
 			];
 	?>
-	<div data-modal="form-uploaded-create-album" class="hidden" data-submit-fn="CHV.fn.submit_upload_edit" data-ajax-deferred="CHV.fn.complete_upload_edit" data-ajax-url="<?php echo G\get_base_url("json"); ?>">
+	<div data-modal="form-uploaded-create-album" class="hidden" data-is-xhr data-submit-fn="CHV.fn.submit_upload_edit" data-ajax-deferred="CHV.fn.complete_upload_edit">
 		<span class="modal-box-title"><?php _se('Create album'); ?></span>
 		<p><?php _se('The uploaded content will be moved to this newly created album. You can also move the content to an <a class="modal-switch" data-switch="move-existing-album">existing album</a>.'); ?></p>
 		<div class="modal-form">
@@ -235,7 +331,7 @@
 			</div>
 		</div>
 	</div>
-	<div data-modal="form-uploaded-move-album" class="hidden" data-submit-fn="CHV.fn.submit_upload_edit" data-ajax-deferred="CHV.fn.complete_upload_edit" data-ajax-url="<?php echo G\get_base_url("json"); ?>">
+	<div data-modal="form-uploaded-move-album" class="hidden" data-is-xhr data-submit-fn="CHV.fn.submit_upload_edit" data-ajax-deferred="CHV.fn.complete_upload_edit">
 		<span class="modal-box-title"><?php _se('Move to album'); ?></span>
 		<p><?php _se('Select an existing album to move the uploaded content. You can also <a class="modal-switch" data-switch="move-new-album">create a new album</a> and move the content there.'); ?></p>
 		<div class="modal-form">
@@ -258,4 +354,3 @@
 	</div>
 	
 </div>
-<!--googleon: index-->

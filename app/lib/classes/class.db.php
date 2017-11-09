@@ -25,7 +25,7 @@ class DB extends G\DB {
 	}
 	
 	public static function getTables() {
-		$tables = ['images', 'users', 'albums', 'logins', 'queue', 'requests', 'confirmations', 'settings', 'storages', 'storage_apis', 'categories', 'ip_bans', 'id_reservations', 'pages', 'likes', 'stats', 'deletions', 'follows', 'notifications'];
+		$tables = ['images', 'users', 'albums', 'logins', 'queue', 'requests', 'confirmations', 'settings', 'storages', 'storage_apis', 'categories', 'ip_bans', 'pages', 'likes', 'stats', 'deletions', 'follows', 'notifications'];
 		$return = [];
 		foreach($tables as $table) {
 			$return[$table] = G\get_app_setting('db_table_prefix') . $table;

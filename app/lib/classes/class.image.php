@@ -60,6 +60,12 @@ class Image {
 			'LEFT JOIN '.$tables['users'].' ON '.$tables['images'].'.image_user_id = '.$tables['users'].'.user_id',
 			'LEFT JOIN '.$tables['albums'].' ON '.$tables['images'].'.image_album_id = '.$tables['albums'].'.album_id'
 		];
+		
+		if($requester) {
+			if(!is_array($requester)) {
+				$requester = User::getSingle($requester, 'id');
+			}
+		}
 
 		$query .=  implode("\n", $joins) . "\n";
 		$query .= 'WHERE image_id=:image_id;'."\n";
@@ -81,12 +87,8 @@ class Image {
 						'action'	=> 'update',
 						'table'		=> 'images',
 						'value'		=> '+1',
-						'date_gmt'	=> $image_db['image_date_gmt'],
 						'user_id'	=> $image_db['image_user_id'],
 					]);
-				}
-				if($requester) {
-					$image_db['image_liked'] = $image_db['like_user_id'] ? TRUE : FALSE;
 				}
 				$return = $image_db;
 				$return = $pretty ? self::formatArray($return) : $return;
@@ -666,38 +668,6 @@ class Image {
                 'exif'          => (getSetting('upload_image_exif_user_setting') && $user) ? $user['image_keep_exif'] : getSetting('upload_image_exif'),
 			];
 			
-			// Reserve this ID
-			if($filenaming == 'id') {
-				
-				$AUTO_INCREMENT = DB::queryFetchSingle("SELECT AUTO_INCREMENT FROM information_schema.tables WHERE table_name = '" . DB::getTable('images') . "' AND table_schema = DATABASE();")['AUTO_INCREMENT'];
-				
-				$target_id = $AUTO_INCREMENT;			
-				
-				// Wipe any garbage
-				/*$db = DB::getInstance();
-				$db->query("DELETE FROM `" . DB::getTable('id_reservations') . "` WHERE");
-				$db->exec();*/
-				
-				$last_reservation = DB::queryFetchSingle("SELECT * FROM `" . DB::getTable('id_reservations') . "` ORDER BY `id_reservation_id` DESC LIMIT 0,1");
-				
-				if($last_reservation && $last_reservation['id_reservation_next_id'] > $target_id) {
-					$target_id = $last_reservation['id_reservation_next_id'];
-				}
-				
-				$reserve = [
-						'reserved_id'	=> $target_id,
-						'date_gmt'		=> G\datetimegmt(),
-						'next_id' 		=> $target_id + 1
-					];
-
-				try {
-					$reserved_id = DB::insert('id_reservations', $reserve);
-				} catch(Exception $e) {
-					$filenaming = 'original'; // fallback
-				}
-				
-			}
-			
 			// Workaround watermark by user group
 			if($upload_options['watermark']) {
 				$watermark_enable = [];
@@ -707,6 +677,42 @@ class Image {
 			
 			// Watermark by filetype
 			$upload_options['watermark_gif'] = (bool) getSetting('watermark_enable_file_gif');
+						
+			// Reserve this ID
+			if($filenaming == 'id') {
+				try {
+					//  Detect last auto increment
+					$AUTO_INCREMENT = DB::queryFetchSingle("SELECT AUTO_INCREMENT FROM information_schema.tables WHERE table_name = '" . DB::getTable('images') . "' AND table_schema = DATABASE();")['AUTO_INCREMENT'];
+										
+					$target_id = $AUTO_INCREMENT;
+					
+					// Initiate lock object
+					$lock = new Lock('image-ID-' . $target_id);
+					
+					while($lock->check()) {
+						$target_id++;
+						$lock = new Lock('image-ID-' . $target_id);
+						if(!$lock->check()) {
+							break;
+						}
+					}
+					
+					// Create lock
+					$lock->setExpiration(FALSE);
+					$lock->create();			
+
+					$reserve = [
+							'reserved_id'	=> $target_id,
+							'date_gmt'		=> G\datetimegmt(),
+							'next_id' 		=> $target_id + 1
+						];
+				} catch(Exception $e) {
+					error_log($e);
+					// Fallback
+					$filenaming = 'original';
+				}
+				
+			}
 			
 			// Filenaming
 			$upload_options['filenaming'] = $filenaming;
@@ -896,13 +902,19 @@ class Image {
 			
             // Expirable upload
             if(getSetting('enable_expirable_uploads')) {
+				
+				// Inject guest forced auto delete
+				if(!$user && getSetting('auto_delete_guest_uploads') !== NULL) {
+					$params['expiration'] = getSetting('auto_delete_guest_uploads');
+				}
+				
                 // Inject user's default expiration date 
-                if(!isset($params['expiration']) and !is_null($user['image_expiration'])) {
+                if(!isset($params['expiration']) && !is_null($user['image_expiration'])) {
                     $params['expiration'] = $user['image_expiration'];
                 }
                 try {
                     // Handle image expire time (source comes as DateInterval string)
-                    if(!empty($params['expiration'])) {
+                    if(!empty($params['expiration']) && array_key_exists($params['expiration'], self::getAvailableExpirations())) {
                             $params['expiration_date_gmt'] = G\datetime_add(G\datetimegmt(),  strtoupper($params['expiration']));
                     }
                     // Image expirable handling
@@ -930,17 +942,25 @@ class Image {
 				$image_insert_values['title'] = $image_title;
 			}
 			
-			if($filenaming == 'id' and $target_id) { // Insert as a reserved ID
+			if($filenaming == 'id' && $target_id) { // Insert as a reserved ID
 				$image_insert_values['id'] = $target_id;
 			}
 			
 			// Trim image_title to the actual DB limit
 			$image_insert_values['title'] = mb_substr($image_insert_values['title'], 0, 100, 'UTF-8');
 			
+			
+			if($user && $image_insert_values['album_id']) {
+				$album = Album::getSingle($image_insert_values['album_id']);
+				// Check album ownership
+				if($album['user']['id'] != $user['id']) {
+					unset($image_insert_values['album_id'], $album);
+				}
+			}
+			
 			$uploaded_id = self::insert($image_upload, $image_insert_values);
 			
 			if($filenaming == 'id') {
-				DB::delete('id_reservations', ['id' => $reserved_id]);
 				unset($reserved_id);
 			}
 			
@@ -950,11 +970,6 @@ class Image {
 				}
 			}
 			
-			if($image_insert_values['album_id']) {
-				$album = Album::getSingle($image_insert_values['album_id']);
-			} else {
-				$album = NULL;
-			}
 			// Private upload? Create a private album then (if needed)
 			if(in_array($params['privacy'], ['private', 'private_but_link'])) {
 				if(is_null($album) or !in_array($album['privacy'], ['private', 'private_but_link'])) {
@@ -1005,11 +1020,6 @@ class Image {
 			@unlink($image_upload['uploaded']['file']);
 			@unlink($image_medium['file']);
 			@unlink($image_thumb['file']);
-			if($filenaming == 'id' and $reserved_id) { // Remove any garbage
-				try {
-					DB::delete('id_reservations', ['id' => $reserved_id]);
-				} catch(Exception $e) {} // Silence
-			}
 			throw $e;
 		}
 		
@@ -1183,25 +1193,6 @@ class Image {
 			// Remove "liked" counter for each user who liked this image
 			DB::queryExec('UPDATE '.DB::getTable('users').' INNER JOIN '.DB::getTable('likes').' ON user_id = like_user_id AND like_content_type = "image" AND like_content_id = '.$image['id'].' SET user_liked = GREATEST(cast(user_liked AS SIGNED) - 1, 0);');
 			
-			if(isset($image['user']['id'])) {
-				// Detect autolike
-				$autoliked = DB::get('likes', ['user_id' => $image['user']['id'], 'content_type' => 'image', 'content_id' => $image['id']])[0];
-				$likes_counter = $image['likes'];
-				if($autoliked) {
-					$likes_counter -= 1;
-				}
-				// Update user "likes" counter
-				DB::increment('users', ['likes' => '-' . $likes_counter], ['id' => $image['user']['id']]);
-				// Remove notifications related to this image (owner notifications)
-				Notification::delete([
-					'table'		=> 'images',
-					'image_id'	=> $image['id'],
-					'user_id'	=> $image['user']['id'],
-				]);
-			}
-
-			// Remove image likes
-			DB::delete('likes', ['content_type' => 'image', 'content_id' => $image['id']]);
 
 			// Log image deletion
 			DB::insert('deletions', [
@@ -1218,7 +1209,7 @@ class Image {
 			
 			return DB::delete('images', ['id' => $id]);	
 		} catch(Exception $e) {
-			throw new ImageException($e->getMessage(), 400);
+			throw new ImageException($e->getMessage() .' (LINE:' . $e->getLine() . ')', 400);
 		}
 	}
 	

@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-03-30 16:39+0000',
-  'PO-Revision-Date' => '2017-03-30 16:39+0000',
+  'POT-Creation-Date' => '2017-06-21 18:28+0000',
+  'PO-Revision-Date' => '2017-06-21 18:28+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ar',
@@ -19,7 +19,7 @@ $translation_plural = array (
 );
 $translation_table = [
 	"Invalid email" => [
-		0 => "البريد الإلكتروني غير صحيح",
+		0 => "البريد الالكتروني غير صحيح",
 	],
 	"Invalid username" => [
 		0 => "إسم المستخدم غير صحيح",
@@ -64,10 +64,10 @@ $translation_table = [
 		0 => "الملف  %s  مفقود",
 	],
 	"Invalid license info" => [
-		0 => "معلومات الرخصة غير صالحة",
+		0 => "معلومات الترخيص غير صالحة",
 	],
 	"Invalid license key" => [
-		0 => "مفتاح الرخصة غير صالح",
+		0 => "مفتاح الترخيص غير صالح",
 	],
 	"Can't save file" => [
 		0 => "لا يمكن حفظ الملف\n",
@@ -94,10 +94,29 @@ $translation_table = [
 		0 => "ملاحظة: هذا المحتوى خاص ولكن أي شخص لديه الرابط سيكون قادرا على رؤيته.",
 	],
 	"Note: This content is password protected. Remember to pass the content password to share." => [
-		0 => "ملاحظة: هذا المحتوى محمي . تذكر ان تجتاز كلمة المرور لهذا المحتوى للمشاركته.",
+		0 => "ملاحظة: هذا المحتوى محمي . تذكر ان تجتاز كلمة المرور لهذا المحتوى لمشاركته.",
 	],
 	"Note: This content is private. Change privacy to \"public\" to share." => [
 		0 => "تنبيه : هذا المحتوى خاص. عدل خيارات الخصوصية إلى \"عام\" لأجل مشاركته.",
+	],
+	"Private" => [
+		0 => "خاص",
+	],
+	"Public" => [
+		0 => "عام",
+	],
+	"Me" => [
+		0 => "أنا",
+	],
+	"Link" => [
+		0 => "رابط",
+	],
+	"Password" => [
+		0 => "كلمة المرور",
+	],
+	"view" => [
+		1 => "مشاهدة",
+		5 => "مشاهدات",
 	],
 	"After %n %t" => [
 		0 => "بعد  %n  %t",
@@ -136,7 +155,7 @@ $translation_table = [
 		0 => "خطأ في تخزين الملف في خادم التخزين الخارجي",
 	],
 	"External storage has failed" => [
-		0 => "فشل التخزين خارجي",
+		0 => "فشل التخزين الخارجي",
 	],
 	"Private upload" => [
 		0 => "رفع خاص",
@@ -147,21 +166,9 @@ $translation_table = [
 	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
 		0 => "تم تحويل النظام إلى التخزين المحلى لعدم كفاية مساحة القرص (%c) فى مشغلات التخزين الخارجى. تم وضع الصورة %s فى المخزن المحلى",
 	],
-	"view" => [
-		0 => "خانة فارغة",
-		1 => "مشاهدة",
-		2 => "خانة فارغة",
-		3 => "خانة فارغة",
-		4 => "خانة فارغة",
-		5 => "مشاهدات",
-	],
 	"like" => [
-		0 => "خانة فارغة",
 		1 => "إعجاب",
-		2 => "خانة فارغة",
-		3 => "خانة فارغة",
-		4 => "خانة فارغة",
-		5 => "إعجابات",
+		5 => "إعجاب",
 	],
 	"image" => [
 		0 => "خانة فارغة",
@@ -170,6 +177,58 @@ $translation_table = [
 		3 => "خانة فارغة",
 		4 => "خانة فارغة",
 		5 => "صور",
+	],
+	"Recent" => [
+		0 => "الأحدث",
+	],
+	"Trending" => [
+		0 => "الأكثر رواجا",
+	],
+	"Popular" => [
+		0 => "الأكثر شعبية",
+	],
+	"Top users" => [
+		0 => "الأعضاء الأكثر نشاطا",
+	],
+	"Most recent" => [
+		0 => "الأحدث",
+	],
+	"Oldest" => [
+		0 => "الأقدم",
+	],
+	"Most viewed" => [
+		0 => "الأكثر مشاهدة",
+	],
+	"Most liked" => [
+		0 => "الأكثر إعجابا",
+	],
+	"Explore" => [
+		0 => " تصفح",
+	],
+	"Animated" => [
+		0 => "الصور المتحركة",
+	],
+	"Search" => [
+		0 => " بحث",
+	],
+	"People" => [
+		0 => "اشخاص",
+	],
+	"Image" => [
+		0 => "خانة فارغة",
+		1 => "صورة",
+		2 => "خانة فارغة",
+		3 => "خانة فارغة",
+		4 => "خانة فارغة",
+		5 => "صور",
+	],
+	"Album" => [
+		1 => "ألبوم",
+		5 => "الألبومات",
+	],
+	"User" => [
+		1 => "مستخدم",
+		5 => "مستخدمين",
 	],
 	"Can't create %s destination dir" => [
 		0 => "لايمكن إنشاء وجهة دليل %s",
@@ -180,17 +239,17 @@ $translation_table = [
 	"Internal" => [
 		0 => "داخلي",
 	],
-	"Link" => [
-		0 => "رابط",
-	],
 	"Can't insert storage." => [
 		0 => "لا يمكن إدراج التخزين",
 	],
 	"Storage capacity can't be lower than its current usage (%s)." => [
-		0 => "سعة تخزين المستخدمة لا يمكن أن يكون أقل من الاستخدام الحالى (%s).",
+		0 => "سعة التخزين المستخدمة لا يمكن أن تكون أقل من الاستخدام الحالى (%s).",
 	],
 	"Can't update storage details." => [
 		0 => "لا يمكن تحديث تفاصيل التخزين.",
+	],
+	"requires %s" => [
+		0 => "يتطلب %s",
 	],
 	"Unlimited" => [
 		0 => "غير محدود",
@@ -201,24 +260,13 @@ $translation_table = [
 	"Private profile" => [
 		0 => "ملف شخصي خاص",
 	],
-	"Private" => [
-		0 => "خاص",
-	],
 	"year" => [
-		0 => "خانة فارغة",
-		1 => "عام",
-		2 => "خانة فارغة",
-		3 => "خانة فارغة",
-		4 => "خانة فارغة",
-		5 => "أعوام",
+		1 => "سنة",
+		5 => "سنوات",
 	],
 	"month" => [
-		0 => "خانة فارغة",
 		1 => "شهر",
-		2 => "خانة فارغة",
-		3 => "خانة فارغة",
-		4 => "خانة فارغة",
-		5 => "شهور",
+		5 => "أشهر",
 	],
 	"week" => [
 		0 => "خانة فارغة",
@@ -261,7 +309,7 @@ $translation_table = [
 		0 => "يجب ان تعطل خاصية تقارير الأخطاء ل php لبيئة الإنتاج. اذهب إلى <a href='%s'>إعدادات النظام</a> لتبديل هذا الإعداد.",
 	],
 	"You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this." => [
-		0 => "لم تغير أعدادات البريك الإلكترونى الأفتراضية. إذهب إلى <a href='%s'>إعدادات البريد الإلكترونى</a> لتصليح هذا",
+		0 => "لم تغير أعدادات البريد الإلكترونى الأفتراضية. إذهب إلى <a href='%s'>إعدادات البريد الإلكترونى</a> لتصليح هذا",
 	],
 	"There is an update available for your Chevereto based website." => [
 		0 => "هذا تحديث متاح لموقعك القائم على Chevereto",
@@ -282,7 +330,7 @@ $translation_table = [
 		0 => "مشاهدة على  %s",
 	],
 	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy." => [
-		0 => "نحن نستخدم ملفات تعريف الارتباط الخاصة بنا وأيضا ملفات تعريف الطرف الثالث  لتحسين تجربة التصفح الخاص بك في خدماتنا. إذا كنت لا تزال تستخدم موقعنا من المفهوم أن تقبل سياسة الكوكيز.",
+		0 => "نحن نستخدم ملفات تعريف الارتباط الخاصة بنا وأيضا ملفات تعريف طرف ثالث  لتحسين تجربة التصفح الخاص بك في خدماتنا. إذا كنت لا تزال تستخدم موقعنا من المفهوم أن تقبل سياسة الكوكيز.",
 	],
 	"You have been forbidden to use this website." => [
 		0 => "تم منعك من استخدام هذا الموقع.",
@@ -345,25 +393,13 @@ $translation_table = [
 		0 => "كلمة المرور غير متطابقة",
 	],
 	"Email already being used" => [
-		0 => "البريد الإلكتروني مستخدم بالفعل",
+		0 => "البريد الإلكتروني مستخدم مسبقا‘",
 	],
 	"Check the errors in the form to continue." => [
 		0 => "إفحص الخطأ أولاً حتى تتمكن من المتابعة.",
 	],
 	"Password required" => [
 		0 => "كلمة السر مطلوبة",
-	],
-	"Most recent" => [
-		0 => "الأحدث",
-	],
-	"Oldest" => [
-		0 => "الأقدم",
-	],
-	"Most viewed" => [
-		0 => "الأكثر مشاهدة",
-	],
-	"Most liked" => [
-		0 => "الأكثر إعجابا",
 	],
 	"Share" => [
 		0 => "مشاركة",
@@ -404,6 +440,9 @@ $translation_table = [
 	"Support" => [
 		0 => "الدعم",
 	],
+	"Need help? Go to %s and you will get help quickly." => [
+		0 => "تحتاج المساعدة؟ اذهب الى %s وسوف تحصل على المساعدة بسرعة.",
+	],
 	"PHP version" => [
 		0 => "نسخة PHP",
 	],
@@ -428,6 +467,9 @@ $translation_table = [
 	"Disabled" => [
 		0 => "معطل",
 	],
+	"Max. upload file size" => [
+		0 => "الحد الاقصى. حجم ملف التحميل",
+	],
 	"Max. post size" => [
 		0 => "الحجم الأقصى للتخزين",
 	],
@@ -447,6 +489,18 @@ $translation_table = [
 	],
 	"Links" => [
 		0 => "روابط",
+	],
+	"Documentation" => [
+		0 => "المستندات",
+	],
+	"Changelog" => [
+		0 => "سجل التغيير",
+	],
+	"Request new features" => [
+		0 => "طلب ميزات جديدة",
+	],
+	"Bug tracking" => [
+		0 => "تتبع الأخطاء",
 	],
 	"Blog" => [
 		0 => "المدونة",
@@ -547,6 +601,18 @@ $translation_table = [
 	"homepage" => [
 		0 => "الصفحة الرئيسية",
 	],
+	"Before main title (%s)" => [
+		0 => "قبل العنوان الرئيسي (%s)",
+	],
+	"After call to action (%s)" => [
+		0 => "بعد إتخاذ إجراء (%s)",
+	],
+	"After cover (%s)" => [
+		0 => "بعد الغلاف (%s)",
+	],
+	"After listing (%s)" => [
+		0 => "بعد القائمة (%s)",
+	],
 	"Before pagination" => [
 		0 => "قبل ترقيم الصفحات",
 	],
@@ -621,6 +687,9 @@ $translation_table = [
 	],
 	"Invalid timezone" => [
 		0 => "التوقيت غير صالح",
+	],
+	"Invalid value: %s" => [
+		0 => "قيمة غير صالحة: %s",
 	],
 	"Invalid upload storage mode" => [
 		0 => "وضع التخزين الخاص بالتحميل غير صالح",
@@ -772,12 +841,6 @@ $translation_table = [
 	"Can't save page contents: %s." => [
 		0 => "لا يمكن حفظ محتوى الصفحة: %s",
 	],
-	"Top users" => [
-		0 => "الأعضاء الأكثر نشاطا",
-	],
-	"Explore" => [
-		0 => " تصفح",
-	],
 	"Following" => [
 		0 => "متابع",
 	],
@@ -889,6 +952,9 @@ $translation_table = [
 	"%u is now following you" => [
 		0 => "%u الأن يتابعك",
 	],
+	"A private user" => [
+		0 => "مستخدم خاص",
+	],
 	"Wrong Username/Email password combination" => [
 		0 => "بريد إلكتروني\\اسم مستخدم  أو كلمة مرور خاطئة",
 	],
@@ -934,23 +1000,17 @@ $translation_table = [
 	"User search results for %s" => [
 		0 => "نتائج بحث المستخدمين لـ%s",
 	],
-	"Search" => [
-		0 => " بحث",
-	],
 	"Account" => [
 		0 => "الحساب",
 	],
 	"Profile" => [
 		0 => "الملف الشخصي",
 	],
-	"Password" => [
-		0 => "كلمة المرور",
-	],
 	"Linked accounts" => [
 		0 => "الحسابات المرتبطة",
 	],
-	"Invalid image expiration" => [
-		0 => "تاريخ صلاحية صورة غير صالح",
+	"Invalid image expiration: %s" => [
+		0 => "تاريخ إنتهاء الصورة غير صالح: %s",
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "تم إرسال رسالة إلى %s تحتوي على طريقة تفعيل هذا البريد الإلكتروني",
@@ -1008,6 +1068,9 @@ $translation_table = [
 	],
 	"%n (%u) on %w" => [
 		0 => "%n (%u) على %w",
+	],
+	"Discovery" => [
+		0 => "اكتشاف",
 	],
 	"Close" => [
 		0 => "إغلاق",
@@ -1117,56 +1180,83 @@ $translation_table = [
 	"Select the images to upload" => [
 		0 => "إختر الصور المراد رفعها",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "تستطيع <a data-trigger=\"anywhere-upload-input\"> أن تحمل من جهازك</a> أو <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\"> تضع رابط الصورة</a>",
+	"browse from your computer" => [
+		0 => "تصفح من جهاز الكمبيوتر الخاص بك",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "يمكنك أيضا <a data-trigger=\"anywhere-upload-input-camera\"> التقاط صورة </a> أو <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\"> إضافة عناوين صورة </A>.",
+	"add image URLs" => [
+		0 => "أضف رابط صورة",
 	],
-	"Edit or resize an image by clicking the image preview" => [
-		0 => "تعديل أو تغيير حجم الصورة عن طريق النقر على معاينة الصورة",
+	"You can also %i or %u." => [
+		0 => "يمكنك أيضاً %i أو %u.",
 	],
-	"Edit or resize an image by touching the image preview" => [
-		0 => "تعديل أو تغيير حجم الصورة عن طريق لمس معاينة الصورة",
+	"take a picture" => [
+		0 => "التقط صورة",
 	],
-	"You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>." => [
-		0 => "يمكنك إضافة المزيد من الصور<a data-trigger=\"anywhere-upload-input\"> من حاسبك الشخصى </a> أو <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\"> من روابط الصور </a>.",
+	"Edit or resize any image by clicking the image preview" => [
+		0 => "تعديل أو تغيير حجم أي صورة من خلال النقر على معاينة الصورة",
 	],
-	"You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "يمكنك <a data-trigger=\"anywhere-upload-input\"> إضافة المزيد من الصور</a> أو <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\"> إضافة روابط الصور</a>.",
+	"Edit or resize any image by touching the image preview" => [
+		0 => "تعديل أو تغيير حجم أي صورة من خلال اللمس على معاينة الصورة",
 	],
-	"Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>" => [
-		0 => "يتم رفع <span data-text=\"queue-size\">0</span><span data-text=\"queue-objects\">صور</span>",
+	"your computer" => [
+		0 => "جهاز الكمبيوتر الخاص بك",
+	],
+	"image URLs" => [
+		0 => "روابط الصور",
+	],
+	"You can keep adding more images from %i or from %u." => [
+		0 => "يمكنك الاستمرار في إضافة المزيد من الصور من %i أو من %u",
+	],
+	"your device" => [
+		0 => "جهازك",
+	],
+	"Uploading %q %o" => [
+		0 => "يتم تحميل %q %o",
 	],
 	"complete" => [
 		0 => "أكتمل",
 	],
-	"The queue is being uploaded. It will take just a few seconds to complete." => [
-		0 => "يتم تحميلها على قائمة الانتظار. وسوف تستغرق بضع ثوان لإكمال العملية.",
+	"The queue is being uploaded, it should take just a few seconds to complete." => [
+		0 => "يجري الآن تحميل القائمة، سوف يستغرق عدة ثواني للإنتهاء.",
 	],
 	"Upload complete" => [
 		0 => "تم الرفع",
 	],
-	"Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album." => [
-		0 => "تم إضافة محتوى ل <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\"> عام</a> تستطيع <a data-modal=\"form\" data-target=\"form-uploaded-create-album\"> انشاء ألبوم </a> أو <a data-modal=\"form\" data-target=\"form-uploaded-move-album\"> نقل <span data-text=\"queue-objects\"> الصور</span></a> الى هذا الألبوم",
+	"Uploaded content added to %s." => [
+		0 => "تمت إضافة المحتوى الذي تم تحميله إلى %s.",
 	],
-	"You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account." => [
-		0 => "يمكنك <a href=\"%s\"> إنشاء حساب جديد</a> أو <a href=\"%l\">تسجيل دخولك </a> لكي تحتفظ بالصور التي ترفعها في حسابك الشخصي",
+	"You can %c with the content just uploaded or %m." => [
+		0 => "يمكنك %c فقط مع المحتوى الذي تم تحميله أو %m.",
 	],
-	"No <span data-text=\"queue-objects\">images</span> have been uploaded" => [
-		0 => "لم يتم رفع <span data-text=\"queue-objects\">صور</span>",
+	"You can %c with the content just uploaded." => [
+		0 => "يمكنك %c مع المحتوى الذي تم تحميله للتو.",
+	],
+	"create a new album" => [
+		0 => "إنشاء ألبوم جديد.",
+	],
+	"move it to an existing album" => [
+		0 => "نقله إلى ألبوم موجود",
+	],
+	"create an account" => [
+		0 => "إنشاء حساب",
+	],
+	"sign in" => [
+		0 => "تسجيل الدخول",
+	],
+	"You can %s or %l to save this content into your account." => [
+		0 => "يمكنك %s أو %l لحفظ هذا المحتوى في حسابك.",
+	],
+	"No %s have been uploaded" => [
+		0 => "لا %s تم تحميلها",
 	],
 	"Some errors have occured and the system couldn't process your request." => [
 		0 => "حدث خطأ ما والنظام لا يستطيع الاستجابة لطلبك.",
 	],
+	"Category" => [
+		0 => "فئة",
+	],
 	"Select category" => [
 		0 => "تحديد الفئات",
-	],
-	"Change upload privacy" => [
-		0 => "تغيير خصوصية الرفع",
-	],
-	"cancel" => [
-		0 => "إلغاء",
 	],
 	"Mark this if the upload is not family safe" => [
 		0 => "قم بتعليم المحتوى على أنه غير مناسب للأسرة",
@@ -1176,6 +1266,9 @@ $translation_table = [
 	],
 	"Uploading" => [
 		0 => "جاري الرفع",
+	],
+	"cancel" => [
+		0 => "إلغاء",
 	],
 	"cancel remaining" => [
 		0 => "إلغاء ما تبقى",
@@ -1227,6 +1320,12 @@ $translation_table = [
 	],
 	"Auto delete image" => [
 		0 => "حذف تلقائي للصورة",
+	],
+	"Sign up" => [
+		0 => "تسجيل",
+	],
+	"%s to be able to customize or disable image auto delete." => [
+		0 => "%s لتتمكن من تخصيص أو تعطيل الحذف التلقائي للصورة.",
 	],
 	"Mark this if the image is not family safe" => [
 		0 => "الاشارة على هذه الصورة في حال كانت غير آمنة",
@@ -1332,9 +1431,6 @@ $translation_table = [
 	"Put a minus sign just before words you don't want: -rodent -\"Jack Russell\"" => [
 		0 => "وضع علامة الطرح قبل الكلمات التي لا تريد:-rodent -\"Jack Russell\"",
 	],
-	"Category" => [
-		0 => "فئة",
-	],
 	"Storage" => [
 		0 => "المخزن",
 	],
@@ -1359,9 +1455,6 @@ $translation_table = [
 	"Who can view this content" => [
 		0 => "من سيشاهد هذا المحتوى",
 	],
-	"Public" => [
-		0 => "عام",
-	],
 	"Private (just me)" => [
 		0 => "خاص (أنا فقط)",
 	],
@@ -1373,9 +1466,6 @@ $translation_table = [
 	],
 	"Album password" => [
 		0 => "كلمة سر الألبوم",
-	],
-	"No category" => [
-		0 => "بدون فئة",
 	],
 	"Name" => [
 		0 => "الإسم",
@@ -1418,26 +1508,6 @@ $translation_table = [
 	],
 	"Existing album" => [
 		0 => "المجلد القائم",
-	],
-	"Album" => [
-		0 => "خانة فارغة",
-		1 => "ألبوم ",
-		2 => "خانة فارغة",
-		3 => "خانة فارغة",
-		4 => "خانة فارغة",
-		5 => "الألبومات",
-	],
-	"me" => [
-		0 => "أنا",
-	],
-	"link" => [
-		0 => "الرابط",
-	],
-	"password" => [
-		0 => "كلمة السر",
-	],
-	"private" => [
-		0 => "خاص",
 	],
 	"create new album" => [
 		0 => "إنشاء ألبوم جديد",
@@ -1577,11 +1647,17 @@ $translation_table = [
 	"Delete" => [
 		0 => "حذف",
 	],
+	"Create new album" => [
+		0 => "إنشاء ألبوم جديد",
+	],
 	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
 		0 => "حتى تتمكن من إستخدام جميع المميزات يجب عليك تسجيل الدخول. إذا لم يكن لديك حساب <a href=\"%s\">اشترك</a>الان",
 	],
 	"There's nothing to show here." => [
 		0 => "لا يوجد شيء لإظهاره هنا.",
+	],
+	"Upload images" => [
+		0 => "تحميل الصور",
 	],
 	"Edit image details" => [
 		0 => "تعديل بيانات الصورة",
@@ -1739,6 +1815,15 @@ $translation_table = [
 	"Delete album" => [
 		0 => "حذف الألبوم",
 	],
+	"You like this" => [
+		0 => "انت معحب بهذا",
+	],
+	"Like" => [
+		0 => "إعجاب",
+	],
+	"Upload to album" => [
+		0 => "تحميل إلى الألبوم",
+	],
 	"Album link" => [
 		0 => "رابط الألبوم",
 	],
@@ -1753,22 +1838,6 @@ $translation_table = [
 	],
 	"I Agree" => [
 		0 => "أنا موافق",
-	],
-	"Image" => [
-		0 => "خانة فارغة",
-		1 => "صورة",
-		2 => "خانة فارغة",
-		3 => "خانة فارغة",
-		4 => "خانة فارغة",
-		5 => "صور",
-	],
-	"User" => [
-		0 => "خانة فارغة",
-		1 => "عضو",
-		2 => "خانة فارغة",
-		3 => "خانة فارغة",
-		4 => "خانة فارغة",
-		5 => "أعضاء",
 	],
 	"Disk used" => [
 		0 => "القرص المستخدم",
@@ -1787,6 +1856,9 @@ $translation_table = [
 	],
 	"documentation" => [
 		0 => "التوثيق",
+	],
+	"Learn more about %s at our %d." => [
+		0 => "تعلم أكثر عن %s على %d الخاص بنا.",
 	],
 	"Add category" => [
 		0 => "اضافة فئة",
@@ -1962,8 +2034,14 @@ $translation_table = [
 	"Page sort order display for menus and listings. Use \"1\" for top priority." => [
 		0 => "ترتيب العرض فى الصفحة للقوائم . استخدم \"1\" للأولوية الأعلى",
 	],
+	"pages" => [
+		0 => "صفحات",
+	],
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "هل تريد حذف هوية الصورة %s ؟ لايمكن التراجع عن هذا الإجراء",
+	],
+	"Unchecked image formats won't be allowed to be uploaded." => [
+		0 => "تنسيقات الصور غير المحددة لن يسمح بتحميلها.",
 	],
 	"Enable uploads" => [
 		0 => "تفعيل الرفع",
@@ -1976,6 +2054,18 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "فعل هذا الخيار إن كنت تريد السماح لغير المسجلين برفع الصور.",
+	],
+	"Enable embed codes (uploader)" => [
+		0 => "تفعيل تضمين الرموز (رافع)",
+	],
+	"Enable this if you want to show embed codes when upload gets completed." => [
+		0 => "قم بتفعيل هذا الخيار إذا كنت تريد أن تظهرالرموز المضمنة بعد انتهاء التحميل.",
+	],
+	"Upload threads" => [
+		0 => "Upload threads",
+	],
+	"Number of simultaneous upload threads (parallel uploads)" => [
+		0 => "عدد سلاسل التحميل المتزامنة (التحميل المتوازي)",
 	],
 	"Redirect on single upload" => [
 		0 => "إعادة التوجيه عند الرفع المفرد",
@@ -1995,6 +2085,18 @@ $translation_table = [
 	"Enable this if you want to allow uploads with an automatic delete option." => [
 		0 => "تفعيل هذا إذا اردت أن تسمح برفوعات ذات خاصية المسح التلقائى.",
 	],
+	"Auto delete guest uploads" => [
+		0 => "حذف تحميلات الضيف تلقائيا",
+	],
+	"Enable this if you want to force guest uploads to be auto deleted after certain time." => [
+		0 => "تمكين هذا إذا كنت ترغب في حذف تحميلات الضيوف بعد وقت معين.",
+	],
+	"Maximum image size" => [
+		0 => "الحد الأقصى لحجم الصورة",
+	],
+	"Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit." => [
+		0 => "سيتم تصغير حجم الصور التي تزيد عن هذا الحجم تلقائيا. استخدم صفر (0) لتجاهل هذا.",
+	],
 	"Image Exif data" => [
 		0 => "بيانات وصف الصورة",
 	],
@@ -2009,6 +2111,9 @@ $translation_table = [
 	],
 	"Enable this if you want to allow each user to configure how image Exif data will be handled." => [
 		0 => "تفعيل هذا إذا اردت ان تسمح لكل مستخدم بضبط كيفية إدارة بيانات الصورة الوصفية.",
+	],
+	"Maximum upload file size" => [
+		0 => "الحد الأقصى لحجم ملف التحميل",
 	],
 	"Image path" => [
 		0 => "مسار الصورة",
@@ -2445,12 +2550,6 @@ $translation_table = [
 	"Enable this if you want to show embed codes for the content." => [
 		0 => "قم بتفعيل هذا الخيار إذا كنت تريد أن تظهررموز المحتوى.",
 	],
-	"Enable embed codes (uploader)" => [
-		0 => "تفعيل تضمين الرموز (رافع)",
-	],
-	"Enable this if you want to show embed codes when upload gets completed." => [
-		0 => "قم بتفعيل هذا الخيار إذا كنت تريد أن تظهرالرموز المضمنة بعد انتهاء التحميل.",
-	],
 	"Not safe content checkbox in uploader" => [
 		0 => "قم بالاشارة على المربع عند الرفع اذا كان محتوى الصور غير آمن",
 	],
@@ -2778,14 +2877,11 @@ $translation_table = [
 	"Check the errors to proceed." => [
 		0 => "تحقق من الأخطاء لاكمال العملية.",
 	],
+	"Play GIF" => [
+		0 => "تشغيل GIF",
+	],
 	"Guest" => [
 		0 => "زائر",
-	],
-	"You like this" => [
-		0 => "انت معحب بهذا",
-	],
-	"Like" => [
-		0 => "إعجاب",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "مضاف الى %a ومصنف في %c",
@@ -2818,7 +2914,7 @@ $translation_table = [
 		0 => "ارفع و شارك صورك",
 	],
 	"Drag and drop anywhere you want and start uploading your images now. %s limit. Direct image links, BBCode and HTML thumbnails." => [
-		0 => "اسحب و أسقط فى أى مكان هنا وايدأ فى تحميل صورك الآن . بحد أقصى %s . روابط مباشرة للصور, كود BB و صور HTML  مصغرة.",
+		0 => "اسحب و أسقط فى أى مكان هنا وأبداء فى تحميل صورك الآن . بحد أقصى %s . روابط مباشرة للصور, كود BB و صور HTML  مصغرة.",
 	],
 	"Start uploading" => [
 		0 => "بدء الرفع",
@@ -3016,11 +3112,7 @@ $translation_table = [
 		0 => "تعديل الملف",
 	],
 	"Follower" => [
-		0 => "خانة فارغة",
 		1 => "متابع",
-		2 => "خانة فارغة",
-		3 => "خانة فارغة",
-		4 => "خانة فارغة",
 		5 => "المتابعون",
 	],
 	"Follow" => [
@@ -3130,6 +3222,9 @@ $translation_table = [
 	],
 	"Image edited successfully." => [
 		0 => "تم تعديل الصورة بنجاح.",
+	],
+	"private" => [
+		0 => "خاص",
 	],
 	"Album edited successfully." => [
 		0 => "تم تعديل الالبوم بنجاح.",

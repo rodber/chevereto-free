@@ -156,8 +156,7 @@ $route = function($handler) {
 		}
 		
 		// Tabs
-		$base_user_url = $user["url"];
-		
+		$base_user_url = basename($user['url']);
 		foreach($user_views as $k => $v) {
 			$handler::setCond('user_' . $k, $v['current']);
 			if($v['current']) {
@@ -167,6 +166,7 @@ $route = function($handler) {
 				}
 			}
 		}
+		$base_user_url = rtrim($base_user_url, '/');
 		
 		$safe_html_user = G\safe_html($user);
 	
@@ -175,116 +175,77 @@ $route = function($handler) {
 			case 'images':
 			case 'liked':
 				$type = "images";
-				$tabs = [
-					[
-						"label"		=> _s('Most recent'),
-						"id"		=> "list-most-recent",
-						"params"	=> "list=images&sort=date_desc&page=1",
-						"current"	=> $_REQUEST["sort"] == "date_desc" or !$_REQUEST["sort"] ? TRUE : FALSE,
-					],
-					[
-						"label"		=> _s('Oldest'),
-						"id"		=> "list-most-oldest",
-						"params"	=> "list=images&sort=date_asc&page=1",
-						"current"	=> $_REQUEST["sort"] == "date_asc",
-					],
-					[
-						'label'		=> _s('Most viewed'),
-						'id'		=> 'list-most-viewed',
-						'params'	=> 'list=images&sort=views_desc&page=1',
-						'current'	=> $_REQUEST['sort'] == 'views_desc',
-					],
-				];
+				$tools = $is_owner || $logged_user['is_admin'];
 				$current = FALSE;
-				foreach($tabs as $k => $v) {
-					if($v['current']) {
-						$current = TRUE;
-					}
-					$tabs[$k]["type"] = "images";
-					$tabs[$k]['list'] = TRUE;
-					$tabs[$k]['tools'] = ($is_owner || $logged_user['is_admin']);
-					if($current_view == 'liked') {
-						$tabs[$k]['tools_available'] = $handler::getCond('admin') ? ['delete', 'category', 'flag'] : [];
-					}
+				if($current_view == 'liked') {
+					$tools_available = $handler::getCond('admin') ? ['delete', 'category', 'flag'] : [];
 				}
+				
 			break;
 			
 			case 'following':
 			case 'followers':
-				$type = "users";
-				$tabs = [
-					[
-						"label"		=> _s('Most recent'),
-						"id"		=> "list-most-recent",
-						"params"	=> "sort=date_desc&page=1",
-						"current"	=> ($_REQUEST["sort"] == "date_desc" || !$_REQUEST["sort"]),
-					],
-					[
-						"label"		=> _s('Oldest'),
-						"id"		=> "list-most-oldest",
-						"params"	=> "list=images&sort=date_asc&page=1",
-						"current"	=> $_REQUEST["sort"] == "date_asc",
-					]
-				];
-				foreach($tabs as $k => $v) {
-					$tabs[$k]["type"] = "users";
-					$tabs[$k]['tools'] = FALSE;
-					$tabs[$k]['params_hidden'] = $current_view . '_user_id=' . $user["id_encoded"];
-					
-				}
+				$type = 'users';
+				$tools = FALSE;
+				$params_hidden = [$current_view . '_user_id' => $user['id_encoded']];
+				$params_remove_keys = ['list'];
 			break;
 			
 			case 'albums':
 				$type = "albums";
-				$tabs = [
-					[
-						"label"			=> _s('Most recent'),
-						"id"			=> "list-most-recent",
-						"params"		=> "sort=date_desc&page=1",
-						"current"		=> $_REQUEST["sort"] == "date_desc" or !$_REQUEST["sort"] ? true : false,
-					],
-					[
-						"label"			=> _s('Oldest'),
-						"id"			=> "list-most-oldest",
-						"params"		=> "sort=date_asc&page=1",
-						"current"		=> $_REQUEST["sort"] == "date_asc",
-					]
-				];
-				foreach($tabs as $k => $v) {
-					$tabs[$k]["type"] = "albums";
-				}
+				$tools = TRUE;
 			break;
 			
 			case 'search':
-				$type = $user["search"]["type"];
+				$type = $user['search']['type'];
 				$tabs = [
 					[
-						"type"		=> "images",
-						"label"		=> _s('Images'),
-						"id"		=> "list-user-images",
-						"current"	=> $_REQUEST["list"] == "images" or !$_REQUEST["list"] ? true : false,
+						'type'		=> 'images',
+						'label'		=> _n('Image', 'Images', 2),
+						'id'		=> 'list-user-images',
+						'current'	=> $_REQUEST['list'] == 'images' || !$_REQUEST['list'],
 					],
 					[
-						"type"		=> "albums",
-						"label"		=> _s('Albums'),
-						"id"		=> "list-user-albums",
-						"current"	=> $_REQUEST["list"] == "albums",
+						'type'		=> 'albums',
+						'label'		=> _n('Album', 'Albums', 2),
+						'id'		=> 'list-user-albums',
+						'current'	=> $_REQUEST['list'] == 'albums',
 					]
 				];
 				foreach($tabs as $k => $v) {
-					$tabs[$k]["params"] = "list=".$v["type"]."&q=".$safe_html_user["search"]["q"]."&sort=date_desc&page=1";
+					$params = [
+						'list'	=> $v['type'],
+						'q'		=> $safe_html_user['search']['q'],
+						'sort'	=> 'date_desc',
+						'page'	=> '1',
+					];
+					$tabs[$k]['params'] = http_build_query($params);
+					$tabs[$k]['url'] = G\get_base_url($base_user_url) . '/?' . $tabs[$k]['params'];
 				}
 			break;
 		}
 		
-		foreach((array)$tabs as $k => $v) {
-			$tabs[$k]["url"] = rtrim($base_user_url, '/') . "/?" . $tabs[$k]["params"];		
-			$tabs[$k]["params_hidden"] = isset($tabs[$k]["params_hidden"]) ? ($tabs[$k]["params_hidden"] . '&') : '';
-			if($user_views['albums']['current']) {
-				$tabs[$k]["params_hidden"] .= "list=albums&";
+		if($user_views['albums']['current']) {
+			$params_hidden['list'] = 'albums';
+		}
+
+		$params_hidden['from'] = 'user';
+		
+		if(!$tabs) {
+			$tabs = CHV\Listing::getTabs([
+				'listing'	=> $type,
+				'basename'	=> $base_user_url,
+				'tools'		=> $tools,
+				'tools_available'	=> $tools_available, 
+				'params_hidden'		=> $params_hidden,
+				'params_remove_keys'=> $params_remove_keys,
+			]);
+		}
+		foreach($tabs as $k => &$v) {
+			if($params_hidden && !array_key_exists('params_hidden', $tabs)) {
+				$tabs[$k]['params_hidden'] = http_build_query($params_hidden);
 			}
-			$tabs[$k]["params_hidden"] .= ($current_view == 'liked' ? 'like_user_id' : 'userid') . '=' . $user["id_encoded"] . "&from=user";
-			$tabs[$k]["disabled"] = $user[$user_views['images']['current'] ? "image_count" : "album_count"] == 0 ? !$v["current"] : false;
+			$v['disabled'] = $user[($user_views['images']['current'] ? 'image' : 'album') . '_count'] == 0 ? !$v['current'] : FALSE;
 		}
 		
 		// Listings

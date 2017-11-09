@@ -7,8 +7,8 @@ $tabs = (array) (G\get_global('tabs') ? G\get_global('tabs') : (function_exists(
 $classic = isset($_GET['pagination']) || CHV\getSetting('listing_pagination_mode') == 'classic';
 $do_pagination = !isset($list->pagination) OR $list->pagination == true ? true : false;
 foreach($tabs as $tab) {
-	if($tab['list'] === false) continue;
-	if($tab["current"]) {
+	if($tab['list'] === FALSE) continue;
+	if($tab['current']) {
 ?>
 <div id="<?php echo $tab["id"]; ?>" class="tabbed-content content-listing visible list-<?php echo $tab["type"]; ?>" data-action="list" data-list="<?php echo $tab["type"]; ?>" data-params="<?php echo $tab["params"]; ?>" data-params-hidden="<?php echo $tab["params_hidden"]; ?>">
 	<?php
@@ -42,7 +42,7 @@ foreach($tabs as $tab) {
 	<?php		
 				$current_url = G\add_ending_slash(preg_replace('/\?.*/', '', G\get_current_url()));
 				$current_url .= '?' . $tab["params"] . '&' . 'pagination';
-				
+
 				preg_match('/page=([0-9]+)/', $tab["params"], $matches);
 				$current_page_qs = $matches[0];
 				

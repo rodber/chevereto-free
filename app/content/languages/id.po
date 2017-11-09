@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-01-22 07:59+0000\n"
-"PO-Revision-Date: 2017-01-22 07:59+0000\n"
+"POT-Creation-Date: 2017-05-23 17:56+0000\n"
+"PO-Revision-Date: 2017-05-23 17:56+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: id\n"
@@ -10,9 +10,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-msgid "Images greater than this size will show a button to load full resolution image."
-msgstr "Gambar lebih besar dari ukuran ini akan ditampilkan sebagai sebuah tombol untuk ditampilkan dalam resolusi penuh."
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -132,9 +129,11 @@ msgstr "Tidak dapat mengunduh %s"
 msgid "Can't extract %s"
 msgstr "Tidak dapat mengekstrak %s"
 
+#, php-format
 msgid "Can't create %s directory - %e"
 msgstr "Tidak dapat membuat direktori %s - %e"
 
+#, php-format
 msgid "Can't update %s file - %e"
 msgstr "Tidak dapat memperbarui berkas %s - %e"
 
@@ -151,11 +150,53 @@ msgstr "%s foto"
 msgid "Note: This content is private but anyone with the link will be able to see this."
 msgstr "Catatan: Konten ini bersifat pribadi namun siapapun yang memiliki tautan dapat melihat ini."
 
+msgid "Note: This content is password protected. Remember to pass the content password to share."
+msgstr "Catatan: Konten ini dilindungi kata sandi.\nIngat untuk melewati konten dengan kata sandi untuk dibagikan."
+
 #: ../../../app/themes/Peafowl/snippets/modal_share.php:14
 #: ../../../app/themes/Peafowl/views/album.php:74
 #: ../../../app/themes/Peafowl/views/image.php:272
 msgid "Note: This content is private. Change privacy to \"public\" to share."
 msgstr "Catatan: Ini konten pribadi. Ubah privasi ke \"Umum\" untuk membagikan."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Private"
+msgstr "Pribadi"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:20
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Public"
+msgstr "Umum"
+
+msgid "Me"
+msgstr "Aku"
+
+#: ../../../app/lib/classes/class.page.php:137
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
+#: ../../../app/themes/Peafowl/views/dashboard.php:461
+msgid "Link"
+msgstr "Sambungan"
+
+#: ../../../app/routes/route.settings.php:64
+#: ../../../app/themes/Peafowl/header.php:292
+#: ../../../app/themes/Peafowl/header.php:340
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:92
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:93
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:126
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:104
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/login.php:39
+#: ../../../app/themes/Peafowl/views/settings.php:322
+#: ../../../app/themes/Peafowl/views/signup.php:49
+#: ../../../app/themes/Peafowl/views/signup.php:50
+msgid "Password"
+msgstr "Kata sandi"
+
+#: ../../../app/lib/classes/class.image.php:1230
+msgid "view"
+msgid_plural "views"
+msgstr[0] "dilihat"
 
 msgid "After %n %t"
 msgstr "Setelah %n %t"
@@ -198,13 +239,9 @@ msgstr "Unggahan pribadi"
 msgid "Upload switched to local storage"
 msgstr "Pengunggahan dialihkan ke penyimpanan lokal"
 
+#, php-format
 msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
 msgstr "Sistem telah beralih ke penyimpanan lokal dikarenakan kapasitas disk tidak mencukupi (%c) di server penyimpanan eksternal. Gambar %s telah dialokasikan ke penyimpanan lokal."
-
-#: ../../../app/lib/classes/class.image.php:1230
-msgid "view"
-msgid_plural "views"
-msgstr[0] "dilihat"
 
 #: ../../../app/lib/classes/class.image.php:1231
 msgid "like"
@@ -221,6 +258,87 @@ msgid "image"
 msgid_plural "images"
 msgstr[0] "foto"
 
+#: ../../../app/routes/route.dashboard.php:1163
+msgid "Top users"
+msgstr "Pengguna teratas"
+
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Terbaru"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "Terlama"
+
+#: ../../../app/routes/route.album.php:96
+#: ../../../app/routes/route.category.php:64
+#: ../../../app/routes/route.dashboard.php:1121
+#: ../../../app/routes/route.explore.php:50
+#: ../../../app/routes/route.following.php:29
+#: ../../../app/routes/route.user.php:201
+msgid "Most viewed"
+msgstr "Paling dilihat"
+
+#: ../../../app/routes/route.album.php:104
+#: ../../../app/routes/route.category.php:72
+#: ../../../app/routes/route.dashboard.php:1129
+#: ../../../app/routes/route.explore.php:58
+#: ../../../app/routes/route.following.php:37
+#: ../../../app/routes/route.user.php:207
+msgid "Most liked"
+msgstr "Paling disukai"
+
+#: ../../../app/routes/route.explore.php:89
+#: ../../../app/themes/Peafowl/header.php:188
+#: ../../../app/themes/Peafowl/header.php:206
+#: ../../../app/themes/Peafowl/views/dashboard.php:305
+#: ../../../app/themes/Peafowl/views/explore.php:9
+msgid "Explore"
+msgstr "Jelajahi"
+
+#: ../../../app/routes/route.search.php:130
+#: ../../../app/themes/Peafowl/header.php:215
+#: ../../../app/themes/Peafowl/header.php:220
+#: ../../../app/themes/Peafowl/views/dashboard.php:295
+msgid "Search"
+msgstr "Cari"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:22
+msgid "Image"
+msgid_plural "Images"
+msgstr[0] "Gambar"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "Album"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:34
+#: ../../../app/themes/Peafowl/views/dashboard.php:90
+#: ../../../app/themes/Peafowl/views/settings.php:126
+msgid "User"
+msgid_plural "Users"
+msgstr[0] "Pengguna"
+
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
 msgid "Can't create %s destination dir"
@@ -235,12 +353,6 @@ msgstr "Tidak dapat membuka %s untuk ditulis"
 #: ../../../app/themes/Peafowl/views/dashboard.php:461
 msgid "Internal"
 msgstr "Internal"
-
-#: ../../../app/lib/classes/class.page.php:137
-#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
-#: ../../../app/themes/Peafowl/views/dashboard.php:461
-msgid "Link"
-msgstr "Sambungan"
 
 msgid "Can't insert storage."
 msgstr "Tidak dapat menyisipkan penyimpanan."
@@ -264,10 +376,6 @@ msgstr "digunakan"
 
 msgid "Private profile"
 msgstr "Profil pribadi"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:366
-msgid "Private"
-msgstr "Pribadi"
 
 #: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
 msgid "year"
@@ -307,6 +415,7 @@ msgstr "Notifikasi sistem"
 msgid "Dashboard"
 msgstr "Beranda"
 
+#, php-format
 msgid "There is an update available for your system. Go to %s to download and install this update."
 msgstr "Terdapat pembaruan untuk sistem anda. Pergi ke %s untuk mengunduh dan memasang pembaruan ini."
 
@@ -320,9 +429,11 @@ msgstr "Sistem database sudah kadaluarsa. Anda perlu untuk menjalankan menu <a h
 msgid "Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>."
 msgstr "Website sedang dalam perbaikan. Untuk merubah setting ini kunjungi <a href=\"%s\">Menu Utama > Pengaturan</a>"
 
+#, php-format
 msgid "You should disable PHP error reporting for production enviroment. Go to <a href='%s'>System settings</a> to revert this setting."
 msgstr "Anda harus menonaktifkan pelaporan kesalahan PHP untuk lingkungan produksi. Pergi ke <a href='%s'>Pengaturan sistem</a> untuk mengembalikan pengaturan ini."
 
+#, php-format
 msgid "You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this."
 msgstr "Anda belum mengubah pengaturan email bawaan. Pergi ke <a href='%s'>Pengaturan Email</a> untuk memperbaiki hal ini."
 
@@ -339,8 +450,13 @@ msgstr "dasbor admin"
 msgid "You can apply this update directly from your %a or download it from %s and then manually install it."
 msgstr "Anda dapat menerapkan pembaruan ini secara langsung dari %a anda atau mengunduhnya dari %s dan kemudian secara manual memasangnya."
 
+#, php-format
 msgid "Chevereto update available (v%s)"
 msgstr "Pembaruan Chevereto tersedia (v%s)"
+
+#, php-format
+msgid "view on %s"
+msgstr "Ditampilkan pad %s"
 
 #: ../../../app/lib/functions.render.php:303
 msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
@@ -353,7 +469,7 @@ msgstr "Anda telah diblokir dari website ini."
 #: ../../../app/loader.php:279
 #: ../../../app/themes/Peafowl/views/settings.php:441
 msgid "Feel free to browse and discover all my shared images and albums."
-msgstr "Anda bebas mencari dan menemukan semua gambar dan album yang saya bagikan/"
+msgstr "Silahkan mencari dan menemukan semua gambar dan album yang saya bagikan."
 
 #: ../../../app/loader.php:282
 #: ../../../app/themes/Peafowl/views/settings.php:447
@@ -482,46 +598,6 @@ msgstr "Periksa kesalahan pada kotak isian untuk melanjutkan"
 msgid "Password required"
 msgstr "Kata sandi diperlukan"
 
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "Terbaru"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "Terlama"
-
-#: ../../../app/routes/route.album.php:96
-#: ../../../app/routes/route.category.php:64
-#: ../../../app/routes/route.dashboard.php:1121
-#: ../../../app/routes/route.explore.php:50
-#: ../../../app/routes/route.following.php:29
-#: ../../../app/routes/route.user.php:201
-msgid "Most viewed"
-msgstr "Paling dilihat"
-
-#: ../../../app/routes/route.album.php:104
-#: ../../../app/routes/route.category.php:72
-#: ../../../app/routes/route.dashboard.php:1129
-#: ../../../app/routes/route.explore.php:58
-#: ../../../app/routes/route.following.php:37
-#: ../../../app/routes/route.user.php:207
-msgid "Most liked"
-msgstr "Paling disukai"
-
 #: ../../../app/routes/route.album.php:115
 #: ../../../app/themes/Peafowl/snippets/modal_share.php:4
 #: ../../../app/themes/Peafowl/views/album.php:36
@@ -591,6 +667,7 @@ msgstr "Cek pembaharuan"
 msgid "Support"
 msgstr "Dukungan"
 
+#, php-format
 msgid "Need help? Go to %s and you will get help quickly."
 msgstr "Butuh bantuan? Pergi ke %s dan anda akan mendapatkan bantuan segera."
 
@@ -708,9 +785,8 @@ msgstr "Diaktifkan"
 msgid "Disabled"
 msgstr "Dinonaktifkan"
 
-#: ../../../app/routes/route.dashboard.php:193
-msgid "Max. upload size"
-msgstr "Ukuran maks. pengunggahan"
+msgid "Max. upload file size"
+msgstr "Ukuran unggah berkas maks."
 
 #: ../../../app/routes/route.dashboard.php:197
 msgid "Max. post size"
@@ -736,6 +812,9 @@ msgstr "Tautan"
 
 msgid "Documentation"
 msgstr "Dokumentasi"
+
+msgid "Changelog"
+msgstr "Catatan perubahan"
 
 msgid "Request new features"
 msgstr "Minta fitur baru"
@@ -884,11 +963,21 @@ msgstr "Halaman telah dihapus."
 msgid "homepage"
 msgstr "beranda"
 
+#, php-format
 msgid "Before main title (%s)"
 msgstr "Sebelum judul utama (%s)"
 
+#, php-format
+msgid "After call to action (%s)"
+msgstr "Setelah panggilan untuk melakukan (%s)"
+
+#, php-format
 msgid "After cover (%s)"
 msgstr "Setelah sampul (%s)"
+
+#, php-format
+msgid "After listing (%s)"
+msgstr "Setelah pendaftaran (%s)"
 
 #: ../../../app/routes/route.dashboard.php:390
 msgid "Before pagination"
@@ -991,12 +1080,9 @@ msgstr "Bahasa tidak sah"
 msgid "Invalid timezone"
 msgstr "Zona waktu tidak sah"
 
-#: ../../../app/routes/route.dashboard.php:572
-#: ../../../app/routes/route.dashboard.php:617
-#: ../../../app/routes/route.dashboard.php:794
-#: ../../../app/routes/route.dashboard.php:940
-msgid "Invalid value"
-msgstr "Isi tidak sah"
+#, php-format
+msgid "Invalid value: %s"
+msgstr "Nilai tidak valid: %s"
 
 #: ../../../app/routes/route.dashboard.php:577
 msgid "Invalid upload storage mode"
@@ -1028,6 +1114,13 @@ msgstr "Kegelapan tanda air tidak valid"
 #: ../../../app/routes/route.dashboard.php:612
 msgid "Invalid theme"
 msgstr "Tema tidak sah"
+
+#: ../../../app/routes/route.dashboard.php:572
+#: ../../../app/routes/route.dashboard.php:617
+#: ../../../app/routes/route.dashboard.php:794
+#: ../../../app/routes/route.dashboard.php:940
+msgid "Invalid value"
+msgstr "Isi tidak sah"
 
 #: ../../../app/routes/route.dashboard.php:622
 msgid "Invalid theme tone"
@@ -1136,6 +1229,9 @@ msgstr "Usia minimal pengguna tidak valid"
 msgid "Only alphanumeric, hyphen and underscore characters are allowed"
 msgstr "Hanya karakter alfanumerik, tanda hubung dan garis bawah yang diperbolehkan"
 
+msgid "Routes can't be the same"
+msgstr "Pengarahan tidak boleh sama"
+
 #: ../../../app/routes/route.dashboard.php:769
 msgid "Invalid upload image path"
 msgstr "Jalur upload gambar tidak valid"
@@ -1148,6 +1244,15 @@ msgstr "Panggilan tidak valid untuk aksi URL"
 #, php-format
 msgid "Max. allowed %s"
 msgstr "Maks. diperbolehkan %s"
+
+msgid "Can't map %m to an existing folder (%f)"
+msgstr "Tidak dapat memetakan %m ke folder yang telah ada (%f)"
+
+msgid "Can't map %m to an existing route (%r)"
+msgstr "Tidak dapat memetakan %m ke rute yang telah ada (%r)"
+
+msgid "Can't map %m to %r (username collision)"
+msgstr "Tidak dapat memetakan %m ke %r (tubrukan nama pengguna)"
 
 #: ../../../app/routes/route.dashboard.php:860
 msgid "Invalid SMTP server"
@@ -1175,18 +1280,6 @@ msgstr "Jalur file ini telah digunakan oleh halaman lainnya (ID %s)"
 #, php-format
 msgid "Can't save page contents: %s."
 msgstr "Tidak dapat menyimpan isi halaman: %s"
-
-#: ../../../app/routes/route.dashboard.php:1163
-msgid "Top users"
-msgstr "Pengguna teratas"
-
-#: ../../../app/routes/route.explore.php:89
-#: ../../../app/themes/Peafowl/header.php:188
-#: ../../../app/themes/Peafowl/header.php:206
-#: ../../../app/themes/Peafowl/views/dashboard.php:305
-#: ../../../app/themes/Peafowl/views/explore.php:9
-msgid "Explore"
-msgstr "Jelajahi"
 
 #: ../../../app/routes/route.following.php:73
 #: ../../../app/routes/route.user.php:104
@@ -1298,9 +1391,11 @@ msgstr "Peran tidak valid"
 msgid "Username already being used"
 msgstr "Username talah digunakan"
 
+#, php-format
 msgid "Add a password or another social connection before deleting %s"
 msgstr "Tambahkan sebuah kata sandi atau sambungan sosial lainnya sebelum menghapus %s"
 
+#, php-format
 msgid "Add an email or another social connection before deleting %s"
 msgstr "Tambakan sebuah email atau atau sambungan sosial lainnya sebelum menghapus %s"
 
@@ -1429,13 +1524,6 @@ msgstr "Hasil pencarian album %s"
 msgid "User search results for %s"
 msgstr "Hasil pencarian user %s"
 
-#: ../../../app/routes/route.search.php:130
-#: ../../../app/themes/Peafowl/header.php:215
-#: ../../../app/themes/Peafowl/header.php:220
-#: ../../../app/themes/Peafowl/views/dashboard.php:295
-msgid "Search"
-msgstr "Cari"
-
 #: ../../../app/routes/route.settings.php:62
 msgid "Account"
 msgstr "Akun"
@@ -1444,29 +1532,13 @@ msgstr "Akun"
 msgid "Profile"
 msgstr "Profil"
 
-#: ../../../app/routes/route.settings.php:64
-#: ../../../app/themes/Peafowl/header.php:292
-#: ../../../app/themes/Peafowl/header.php:340
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:92
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:93
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:126
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
-#: ../../../app/themes/Peafowl/views/dashboard.php:104
-#: ../../../app/themes/Peafowl/views/dashboard.php:105
-#: ../../../app/themes/Peafowl/views/login.php:39
-#: ../../../app/themes/Peafowl/views/settings.php:322
-#: ../../../app/themes/Peafowl/views/signup.php:49
-#: ../../../app/themes/Peafowl/views/signup.php:50
-msgid "Password"
-msgstr "Kata sandi"
-
 #: ../../../app/routes/route.settings.php:65
 msgid "Linked accounts"
 msgstr "Akun terhubung"
 
-#: ../../../app/routes/route.settings.php:191
-msgid "Invalid image expiration"
-msgstr "Kadaluarsa gambar tidak valid"
+#, php-format
+msgid "Invalid image expiration: %s"
+msgstr "Kadaluarsa gambar tidak valid: %s"
 
 #: ../../../app/routes/route.settings.php:269
 #, php-format
@@ -1508,6 +1580,7 @@ msgstr "Nilai Nama pengguna/Email salah"
 msgid "Settings for %s"
 msgstr "Pengaturan untuk %s"
 
+#, php-format
 msgid "You must be at least %s years old to use this website."
 msgstr "Anda paling tidak harus berumur %s tahun untuk bisa menggunakan website ini."
 
@@ -1529,7 +1602,7 @@ msgstr "Gambar %s"
 
 #: ../../../app/routes/route.user.php:89
 #: ../../../app/themes/Peafowl/header.php:56
-#, php-format
+#, php-format, javascript-format
 msgid "%s's Albums"
 msgstr "Album %s"
 
@@ -1672,6 +1745,7 @@ msgstr "Alamat surel"
 msgid "Username"
 msgstr "Nama pengguna"
 
+#, php-format
 msgid "I'm at least %s years old"
 msgstr "Saya telah berumur %s tahun"
 
@@ -1778,81 +1852,92 @@ msgstr "Tarik dan lepas atau tempel gambar disini untuk mengunggah"
 msgid "Select the images to upload"
 msgstr "Pilih gambar untuk mengunggah"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:15
-msgid "You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "Anda juga dapat <a data-trigger=\"anywhere-upload-input\">Cari dari komputer anda</a>atau <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">Tambah URL gambar</a>."
+msgid "browse from your computer"
+msgstr "cari dari komputer anda"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:16
-msgid "You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "Anda juga dapat <a data-trigger=\"anywhere-upload-input-camera\">Ambil sebuah gambar</a> atau <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">Tambahkan URL gambar</a>."
+msgid "add image URLs"
+msgstr "tambah URL gambar"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:20
-msgid "Edit or resize an image by clicking the image preview"
-msgstr "Edit atau ukur ulang sebuah gambar dengan menekan pra tampil gambar"
+msgid "You can also %i or %u."
+msgstr "Anda dapat %i atau %u."
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:21
-msgid "Edit or resize an image by touching the image preview"
-msgstr "Edit atau ukur ulang sebuah gambar dengan menyentuh pra tinjau gambar"
+msgid "take a picture"
+msgstr "ambil sebuah gambar"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:22
-msgid "You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>."
-msgstr "Anda dapat menambahkan lebih banyak gambar <a data-trigger=\"anywhere-upload-input\">dari komputer anda</a> atau <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">dari URL gambar</a>."
+msgid "Edit or resize any image by clicking the image preview"
+msgstr "Ubah atau ukur ulang gambar apapun dengan mengklik pratinjau gambar"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:23
-msgid "You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "Anda dapat <a data-trigger=\"anywhere-upload-input\">menambahkan lebih banyak gambar</a> atau <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">dari URL gambar</a>."
+msgid "Edit or resize any image by touching the image preview"
+msgstr "Ubah atau ukur ulang gambar apapun dengan menyentuh pratinjau gambar"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
-msgid "Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>"
-msgstr "Mengunggah <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">gambar</span>"
+msgid "your computer"
+msgstr "komputer anda"
+
+msgid "image URLs"
+msgstr "URL gambar"
+
+msgid "You can keep adding more images from %i or from %u."
+msgstr "Anda dapat tetap menambahkan lebih banyak gambar dari %i atau dari %u."
+
+msgid "your device"
+msgstr "perangkat anda"
+
+msgid "Uploading %q %o"
+msgstr "Mengunggah %q %o"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
 msgid "complete"
 msgstr "selesai"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:28
-msgid "The queue is being uploaded. It will take just a few seconds to complete."
-msgstr "Antiran sedang diunggah. Hal tersebut membutuhkan waktu untuk menyelesaikan."
+msgid "The queue is being uploaded, it should take just a few seconds to complete."
+msgstr "Antrian sedang diunggah, hal ini harusnya berlangsung beberapa saat untuk selesai."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:32
 msgid "Upload complete"
 msgstr "Upload selesai"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:34
 #, php-format
-msgid "Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album."
-msgstr "Konten ditambahkan ke <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">saluran umum</a>. Anda dapat <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">membuat sebuah album</a> atau <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">memindah <span data-text=\"queue-objects\">gambar</span></a> ke album yang ada."
+msgid "Uploaded content added to %s."
+msgstr "Konten terunggah ditambahkan ke %s."
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:35
-msgid "You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account."
-msgstr "Anda dapat <a href=\"%s\">membuat sebuah akun</a> atau <a href=\"%l\">masuk</a> untuk menyimpan unggahan selanjutnya ke akun anda."
+msgid "You can %c with the content just uploaded or %m."
+msgstr "Anda dapat %c dengan konten yang baru saja terunggah atau %m."
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:40
-msgid "No <span data-text=\"queue-objects\">images</span> have been uploaded"
-msgstr "Tidak ada <span data-text=\"queue-objects\">gambar</span> yang telah terunggah"
+#, php-format
+msgid "You can %c with the content just uploaded."
+msgstr "Anda dapat %c dengan konten yang baru saja terunggah."
+
+msgid "create a new album"
+msgstr "buat sebuah album baru"
+
+msgid "move it to an existing album"
+msgstr "pindahkan ke album yang sudah ada"
+
+msgid "create an account"
+msgstr "buat sebuah akun"
+
+msgid "sign in"
+msgstr "masuk"
+
+msgid "You can %s or %l to save this content into your account."
+msgstr "anda dapat %s atau %l untuk menyimpan konten ini ke akun anda."
+
+#, php-format
+msgid "No %s have been uploaded"
+msgstr "tidak ada %s yang barus saja terunggah"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:41
 msgid "Some errors have occured and the system couldn't process your request."
 msgstr "Beberapa kesalahan terjadi dan sistem tidak dapat memproses permintaan anda."
 
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
+#: ../../../app/themes/Peafowl/snippets/form_category.php:3
+msgid "Category"
+msgstr "Kategori"
+
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:61
 msgid "Select category"
 msgstr "Pilih kategori"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-msgid "Change upload privacy"
-msgstr "Ubah privasi unggahan"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
-msgid "cancel"
-msgstr "batal"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:77
 msgid "Mark this if the upload is not family safe"
@@ -1865,6 +1950,17 @@ msgstr "Upload tidak aman untuk keluarga"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 msgid "Uploading"
 msgstr "mengunggah"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "batal"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
@@ -1963,6 +2059,13 @@ msgstr "Catatan: Gambar animasi GIF tidak bisa di ubah ukuran."
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:180
 msgid "Auto delete image"
 msgstr "Hapus otomatis gambar"
+
+msgid "Sign up"
+msgstr "Mendaftar"
+
+#, php-format
+msgid "%s to be able to customize or disable image auto delete."
+msgstr "%s tidak dapat mengkostumisasi atau mematikan hapus gambar otomatis."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:192
 #: ../../../app/themes/Peafowl/snippets/form_image.php:25
@@ -2112,11 +2215,6 @@ msgstr "Tak satu pun dari kata-kata ini"
 msgid "Put a minus sign just before words you don't want: -rodent -\"Jack Russell\""
 msgstr "Berikan tanda minus sebelum kata yang tidak anda inginkan: -hewan pengerat -\"Jack Russell\""
 
-#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
-#: ../../../app/themes/Peafowl/snippets/form_category.php:3
-msgid "Category"
-msgstr "Kategori"
-
 #: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:66
 msgid "Storage"
 msgstr "Penyimpanan"
@@ -2149,11 +2247,6 @@ msgstr "Privasi album"
 msgid "Who can view this content"
 msgstr "Siapa yang bisa melihat konten ini"
 
-#: ../../../app/themes/Peafowl/snippets/form_album.php:20
-#: ../../../app/themes/Peafowl/views/dashboard.php:366
-msgid "Public"
-msgstr "Umum"
-
 #: ../../../app/themes/Peafowl/snippets/form_album.php:21
 msgid "Private (just me)"
 msgstr "Pribadi (hanya saya)"
@@ -2167,10 +2260,6 @@ msgstr "Privat (dilindungi kata sandi)"
 
 msgid "Album password"
 msgstr "Kata sandi album"
-
-#: ../../../app/themes/Peafowl/snippets/form_category.php:9
-msgid "No category"
-msgstr "Tidak ada kategori"
 
 #: ../../../app/themes/Peafowl/snippets/form_category_edit.php:4
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:3
@@ -2237,28 +2326,6 @@ msgstr "Pesan teks, HTML atau sebuah URL pengarahan"
 #: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
 msgid "Existing album"
 msgstr "Album yang telah ada"
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
-#: ../../../app/themes/Peafowl/views/dashboard.php:28
-msgid "Album"
-msgid_plural "Albums"
-msgstr[0] "Album"
-
-msgid "link"
-msgstr "tautan"
-
-msgid "password"
-msgstr "kata sandi"
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
-#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
-#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
-msgid "private"
-msgstr "pribadi"
 
 #: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
 msgid "create new album"
@@ -2454,6 +2521,9 @@ msgstr "Tandai aman"
 msgid "Delete"
 msgstr "Hapus"
 
+msgid "Create new album"
+msgstr "Buat album baru"
+
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:5
 #, php-format
 msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
@@ -2464,6 +2534,9 @@ msgstr "Untuk menggunakan semua fitur dari situs ini anda harus masuk. Jika tida
 #: ../../../app/themes/Peafowl/views/index.php:63
 msgid "There's nothing to show here."
 msgstr "Tidak ada yang ditampilkan disini."
+
+msgid "Upload images"
+msgstr "Unggah gambar"
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
 #: ../../../app/themes/Peafowl/views/image.php:69
@@ -2537,6 +2610,9 @@ msgstr "Diunggah oleh pengunjung"
 #, php-format
 msgid "From %s"
 msgstr "Dari %s"
+
+msgid "Uploaded by private"
+msgstr "Diunggah oleh pribadi"
 
 #: ../../../app/themes/Peafowl/tpl_list_item/image_description_user.php:2
 #, php-format
@@ -2713,6 +2789,18 @@ msgstr "Apakah anda benar-benar ingin menghapus album ini dan semua gambarnya? H
 msgid "Delete album"
 msgstr "Hapus album"
 
+#: ../../../app/themes/Peafowl/views/image.php:85
+msgid "You like this"
+msgstr "Anda menyukai ini"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Suka"
+
+msgid "Upload to album"
+msgstr "Unggah ke album"
+
 #: ../../../app/themes/Peafowl/views/album.php:86
 msgid "Album link"
 msgstr "Tautan album"
@@ -2725,18 +2813,6 @@ msgstr "Dengan mengklik di \"Saya Setuju\" nda menyatakan bahwa Anda telah memba
 
 msgid "I Agree"
 msgstr "Saya Setuju"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:22
-msgid "Image"
-msgid_plural "Images"
-msgstr[0] "Gambar"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:34
-#: ../../../app/themes/Peafowl/views/dashboard.php:90
-#: ../../../app/themes/Peafowl/views/settings.php:126
-msgid "User"
-msgid_plural "Users"
-msgstr[0] "Pengguna"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:40
 #: ../../../app/themes/Peafowl/views/dashboard.php:1732
@@ -2764,6 +2840,7 @@ msgstr "Pengaturan ini akan selalu dinonaktifkan ketika menggunakan mode website
 msgid "documentation"
 msgstr "dokumentasi"
 
+#, php-format
 msgid "Learn more about %s at our %d."
 msgstr "Pelajari lebih lanjut tentang %s di %d kami."
 
@@ -2867,6 +2944,10 @@ msgstr "Paksa pribadi (sendiri)"
 #: ../../../app/themes/Peafowl/views/dashboard.php:382
 msgid "Force private (anyone with the link)"
 msgstr "Paksa pribadi (semua orang dengan tautan)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:387
+msgid "Forced privacy modes will override user selected privacy."
+msgstr "Mode privasi dipaksakan akan mengembalikan privasi pengguna terpilih."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:442
 msgid "Page title"
@@ -2985,6 +3066,14 @@ msgstr "Urutan tampilan"
 msgid "pages"
 msgstr "halaman"
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:607
+#, php-format
+msgid "Do you really want to delete the page ID %s? This can't be undone."
+msgstr "Apakah anda yakin ingin menghapus halaman dengan ID %s? Hal ini tidak dapat dibatalkan."
+
+msgid "Unchecked image formats won't be allowed to be uploaded."
+msgstr "format gambar yang tidak diperiksa tidak akan diperbolehkan untuk diunggah."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:630
 msgid "Enable uploads"
 msgstr "Aktifkan upload"
@@ -3001,9 +3090,41 @@ msgstr "Unggahan pengunjung"
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "Aktifkan ini jika anda mengizinkan pengguna tidak terdaftar menunggah."
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1359
+msgid "Enable this if you want to show embed codes when upload gets completed."
+msgstr "Aktifkan ini jika anda ingin menampilkan kode sematkan ketika unggahan akan selesai."
+
+msgid "Redirect on single upload"
+msgstr "Arahkan pada unggahan tunggal"
+
+msgid "Enable this if you want to redirect to image page on single upload."
+msgstr "Aktifkan ini jika anda ingin mengarahkan kembali ke halaman gambar pada unggahan tunggal."
+
+msgid "Enable duplicate uploads"
+msgstr "Nyalakan unggahan duplikat"
+
+msgid "Enable this if you want to allow duplicate uploads from the same IP within 24hrs. This setting doesn't affect administrators."
+msgstr "Nyalakan ini jika anda ingin memperbolehkan unggahan duplikat dari alamat IP yang sama dalam 24 Jam. Pengaturan ini tidak mempengaruhi administrator."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:649
 msgid "Enable expirable uploads"
 msgstr "Aktifkan upload berkadaluarsa"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:655
+msgid "Enable this if you want to allow uploads with an automatic delete option."
+msgstr "Nyalakan ini jika anda ingin memperbolehkan unggahan dengan sebuah opsi hapus otomatis."
+
+msgid "Auto delete guest uploads"
+msgstr "Hapus otomatis unggahan pengunjung"
+
+msgid "Enable this if you want to force guest uploads to be auto deleted after certain time."
+msgstr "Nyalakan ini jika anda ingin memaksa unggahan pengunjung untuk dihapus otomatis setelah waktu tertentu."
+
+msgid "Maximum image size"
+msgstr "Ukuran maksimum gambar"
+
+msgid "Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit."
+msgstr "Gambar lebih besar dari ukuran ini akan secara otomatis diturunkan ukurannya. Gunakan Nol (0) untuk tidak menetapkan batas."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:661
 #: ../../../app/themes/Peafowl/views/settings.php:183
@@ -3014,6 +3135,11 @@ msgstr "Data Exif gambar"
 msgid "Keep"
 msgstr "Biarkan"
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:670
+#, php-format
+msgid "Select the default setting for image <a %s>Exif data</a> on upload."
+msgstr "Pilih pengaturan default untuk gambar <a %s>Exif data</a> pada ungguhan."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:674
 msgid "Image Exif data (user setting)"
 msgstr "Data Exif gambar (pengaturan pengguna)"
@@ -3022,26 +3148,40 @@ msgstr "Data Exif gambar (pengaturan pengguna)"
 msgid "Enable this if you want to allow each user to configure how image Exif data will be handled."
 msgstr "Aktifkan ini jika anda ingin membolehkan setiap pengguna mengatur bagaimana data Exif gambar akan ditangani."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:689
-msgid "Max. filesize"
-msgstr "Ukuran berkas Maks."
+msgid "Maximum upload file size"
+msgstr "Ukuran unggah berkas maksimum"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:692
-#, php-format
-msgid "Max. allowed filesize. (Max allowed by server is %s)"
-msgstr "Ukuran berkas Maks. (Maksimal yang dibolehkan server ialah %s)"
+msgid "Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)."
+msgstr "Ukuran maksumum yang diperbolehkan serever adalah %s. Ukuran ini dibatasi oleh %u dan %p (nilai %f)."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:695
 msgid "Image path"
 msgstr "Jalur gambar"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:696
+msgid "Relative to Chevereto root"
+msgstr "Berhubungan ke akar Chevereto"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:698
+msgid "Where to store the images? Relative to Chevereto root."
+msgstr "Dimana harus menyimpan gambar? Tergantung pada akar Chevereto."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:701
 msgid "Storage mode"
 msgstr "Mode penyimpanan"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:704
+msgid "Datefolders"
+msgstr "Tanggalfolder"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:704
 msgid "Direct"
 msgstr "Langsung"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:707
+#, php-format
+msgid "Datefolders creates %s structure"
+msgstr "Tanggalfolder membuat struktur %s"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:710
 msgid "File naming method"
@@ -3058,6 +3198,10 @@ msgstr "Campur asli + acak"
 #: ../../../app/themes/Peafowl/views/dashboard.php:716
 msgid "\"Original\" will try to keep the image source name while \"Random\" will generate a random name. \"ID\" will name the image just like the image ID."
 msgstr "\"Asli\" akan mencoba menjaga nama sumber gambar sedangkan \"Acak\" akan menghasilkan sebuah nama acak. \"ID\" akan menamakan gambar seperti halnya ID gambar."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:722
+msgid "Thumb size"
+msgstr "Ukuran Thumb"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:747
 msgid "Watermarks"
@@ -3160,6 +3304,7 @@ msgstr "kegelapan tanda air di gambar akhir yang diberi tanda air. Nilai antara 
 msgid "Dashboard > Settings > Website"
 msgstr "Dasbor > Pengaturan > Situs Web"
 
+#, php-format
 msgid "Categories won't work when the explorer feature is turned off. To revert this setting go to %s."
 msgstr "Kategori tidak akan bekerja ketika fitur penjelajah dimatikan. Untuk mengubah pengaturan ini pergilah ke %s."
 
@@ -3252,6 +3397,34 @@ msgstr "Batas bulanan"
 msgid "Show not safe content in listings"
 msgstr "Perlihatkan isi yang tidak aman"
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1119
+msgid "Classic pagination"
+msgstr "Penomoran halaman klasik"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1123
+msgid "What pagination method should be used."
+msgstr "Metode penomoran apa yang harusnya digunakan."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1127
+msgid "Image listing size"
+msgstr "Ukuran pendaftaran gambar"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1130
+msgid "Fixed"
+msgstr "Tetap"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1134
+msgid "Both methods use a fixed width but fluid method uses automatic heights."
+msgstr "kedua metode menggunakan lebar tetap tapi metode tidak pasti menggunakan tinggi otomatis."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1140
+msgid "Listing columns number"
+msgstr "Jumlah kolom pendaftaran"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1141
+msgid "Here you can set how many columns are used based on each target device."
+msgstr "Disini anda dapat mengatur berapa banyak kolom yang digunakan berdasarkan masing-masing target perangkat."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1143
 msgid "Phone"
 msgstr "Selular"
@@ -3272,6 +3445,9 @@ msgstr "Laptop"
 msgid "Desktop"
 msgstr "Desktop"
 
+msgid "theme editing"
+msgstr "penyuntingan tema"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1167
 #, php-format
 msgid "Put your themes in the %s folder"
@@ -3284,6 +3460,10 @@ msgstr "Suasana"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1189
 msgid "Light"
 msgstr "Menyala"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1189
+msgid "Dark"
+msgstr "Gelap"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1196
 msgid "Main color"
@@ -3313,6 +3493,10 @@ msgstr "Hitam"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1462
 msgid "White"
 msgstr "Putih"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1210
+msgid "If you set this to \"white\" the top bar and all the black tones will be changed to white tones."
+msgstr "Jika anda mengatur ini ke \"putih\" bar diatas dan semua nada hitam akan berubah ke nada putih."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1214
 msgid "Top bar button color"
@@ -3364,6 +3548,10 @@ msgstr "Gambar logo vektor"
 msgid "Vector version or your website logo in SVG format."
 msgstr "Versi vektor atau logo website dalam format SVG."
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1274
+msgid "Bitmap version or your website logo. PNG format is recommended."
+msgstr "Versi bitmap atau logo situs web anda. Disarankan berformat PNG."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1278
 msgid "Logo height"
 msgstr "Tinggi logo"
@@ -3384,6 +3572,9 @@ msgstr "Gambar favicon"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1293
 msgid "Favicon image. Image must have same width and height."
 msgstr "Gambar favicon. Gambar harus memiliki lebar dan tinggi yang sama."
+
+msgid "Images greater than this size will show a button to load full resolution image."
+msgstr "Gambar lebih besar dari ukuran ini akan ditampilkan sebagai sebuah tombol untuk ditampilkan dalam resolusi penuh."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1299
 msgid "Enable download button"
@@ -3429,6 +3620,10 @@ msgstr "Aktifkan ini jika anda ingin menampilkan kode sematkan untuk konten."
 msgid "Not safe content checkbox in uploader"
 msgstr "Kotak centang konten tidak aman di pengunggah"
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1371
+msgid "Enable this if you want to show a checkbox to indicate not safe content upload."
+msgstr "Nyalakan ini jika anda ingin menampilkan sebuah kotak centang untuk mengindikasikan unggahan konten tidak aman."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1377
 msgid "Custom CSS code"
 msgstr "Kode CSS kustom"
@@ -3449,6 +3644,18 @@ msgstr "Letakkan kode JS kustom disini. Ini akan ditempatkan sebagai <style> tep
 msgid "Style"
 msgstr "Gaya"
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1394
+msgid "Landing page"
+msgstr "Halaman arahan"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1395
+msgid "Split landing + images"
+msgstr "Halaman arahan + gambar"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1396
+msgid "Route explore"
+msgstr "Menjelajah rute"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1401
 #, php-format
 msgid "Select the homepage style. To customize it further edit app/themes/%s/views/index.php"
@@ -3468,6 +3675,20 @@ msgstr "Menghapus gambar"
 
 msgid "Add new cover image"
 msgstr "Tambah sebuah gambar sampul baru"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1424
+msgid "Vector version or your website logo in SVG format (only for homepage)."
+msgstr "Versi vektor atau logo situs web dalam format SVG (hanya untuk halaman depan)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1434
+msgid "Bitmap version or your website logo (only for homepage). PNG format is recommended."
+msgstr "Versi bitmap atau logo situs web anda ( hanya untuk halaman depan). Disarankan berformat PNG."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1441
+#: ../../../app/themes/Peafowl/views/dashboard.php:1446
+#, php-format
+msgid "This will be added inside the homepage %s tag. Leave it blank to use the default contents."
+msgstr "ini akan ditambahkan kedalam tag halaman depan %s. Biarkan kosong untuk mengunakan konten default."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1445
 #: ../../../app/themes/Peafowl/views/settings.php:440
@@ -3549,9 +3770,14 @@ msgstr "Cetak kesalahan tanpa log kesalahan"
 msgid "Print and log errors"
 msgstr "Cetak dan log kesalahan"
 
+#, php-format
+msgid "Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes."
+msgstr "Pengarahan memungkinkan anda mengkostumisasi pengikatan pengarahan dengan ceoat. Hanya karakter alfanumerik, tanda hubung dan garis bawah yang diperbolehkan. Periksa %s kami jika anda ingin membatalkan atau menambahkan pengarahan baru."
+
 msgid "Image routing"
 msgstr "Pengarahan Gambar"
 
+#, php-format
 msgid "Routing for %s"
 msgstr "Pengarahan untuk %s"
 
@@ -3743,9 +3969,11 @@ msgstr "rahasia klien VK"
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "Anda memerlukan sebuah <a href=\"%s\" target=\"_blank\"> kunci reCAPTCHA</a> untuk hal ini."
 
+#, php-format
 msgid "%s site key"
 msgstr "Kunci situs %s"
 
+#, php-format
 msgid "%s secret key"
 msgstr "Kunci rahasia %s"
 
@@ -3760,12 +3988,14 @@ msgstr "Berapa kali percobaan yang diperbolehkan untuk meminta reCAPTCHA? Gunaka
 msgid "Comments API"
 msgstr "API Komentar"
 
+#, php-format
 msgid "Disqus API works with %s."
 msgstr "API Disqus bekerja dengan %s"
 
 msgid "Disqus shortname"
 msgstr "Nama pendek Disqus"
 
+#, php-format
 msgid "%s public key"
 msgstr "Kunci publik %s"
 
@@ -3827,15 +4057,6 @@ msgstr "Muat resolusi penuh"
 #: ../../../app/themes/Peafowl/views/image.php:57
 msgid "Guest"
 msgstr "Tamu"
-
-#: ../../../app/themes/Peafowl/views/image.php:85
-msgid "You like this"
-msgstr "Anda menyukai ini"
-
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "Suka"
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -4301,9 +4522,6 @@ msgstr "Terdapat pembaruan untuk sistem anda. Anda dapat mengunduh otomatis dan 
 msgid "Update now"
 msgstr "Perbarui sekarang"
 
-msgid "Your website is running the latest version of %s"
-msgstr "Situs web anda menjalankan versi terbaru dari %s"
-
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"
 msgstr "Gambar papan klip"
@@ -4323,6 +4541,12 @@ msgstr "Beberapa berkas tidak dapat ditambahkan."
 #: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
 msgid "Image edited successfully."
 msgstr "Gambar berhasil diubah."
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "pribadi"
 
 #: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
 msgid "Album edited successfully."

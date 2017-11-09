@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-01-07 17:18+0000',
-  'PO-Revision-Date' => '2017-01-07 17:18+0000',
+  'POT-Creation-Date' => '2017-06-21 18:28+0000',
+  'PO-Revision-Date' => '2017-06-21 18:28+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'nl',
@@ -99,6 +99,25 @@ $translation_table = [
 	"Note: This content is private. Change privacy to \"public\" to share." => [
 		0 => "Let op: deze inhoud is privé. Wijzig de privacy-instellingen naar \" publiek\" om deze te delen met buitenstaanders.",
 	],
+	"Private" => [
+		0 => "Privé",
+	],
+	"Public" => [
+		0 => "Publiek",
+	],
+	"Me" => [
+		0 => "Mijn",
+	],
+	"Link" => [
+		0 => "Link",
+	],
+	"Password" => [
+		0 => "Wachtwoord",
+	],
+	"view" => [
+		0 => "weergave",
+		1 => "weergaven",
+	],
 	"After %n %t" => [
 		0 => "Na %n %t",
 	],
@@ -135,10 +154,6 @@ $translation_table = [
 	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
 		0 => "Het systeem is overgegaan naar lokale opslag omdat er niet genoeg opslagcapaciteit is (%c) op de externe opslaglokatie(s). De foto %s is opgeslagen op de lokale opslag.",
 	],
-	"view" => [
-		0 => "weergave",
-		1 => "weergaven",
-	],
 	"like" => [
 		0 => "like",
 		1 => "likes",
@@ -146,6 +161,54 @@ $translation_table = [
 	"image" => [
 		0 => "afbeelding",
 		1 => "afbeeldingen",
+	],
+	"Recent" => [
+		0 => "Recent",
+	],
+	"Trending" => [
+		0 => "Trending",
+	],
+	"Popular" => [
+		0 => "Populair",
+	],
+	"Top users" => [
+		0 => "Topgebruikers",
+	],
+	"Most recent" => [
+		0 => "Meest recent",
+	],
+	"Oldest" => [
+		0 => "Oudste",
+	],
+	"Most viewed" => [
+		0 => "Meest bekeken",
+	],
+	"Most liked" => [
+		0 => "meest geliked",
+	],
+	"Explore" => [
+		0 => "Verkennen",
+	],
+	"Animated" => [
+		0 => "Geanimeerde",
+	],
+	"Search" => [
+		0 => "Zoeken",
+	],
+	"People" => [
+		0 => "Mensen",
+	],
+	"Image" => [
+		0 => "Afbeelding",
+		1 => "Afbeeldingen",
+	],
+	"Album" => [
+		0 => "Album",
+		1 => "Albums",
+	],
+	"User" => [
+		0 => "Gebruiker",
+		1 => "Gebruikers",
 	],
 	"Can't create %s destination dir" => [
 		0 => "Kan doelmap %s niet maken",
@@ -156,9 +219,6 @@ $translation_table = [
 	"Internal" => [
 		0 => "Intern",
 	],
-	"Link" => [
-		0 => "Link",
-	],
 	"Can't insert storage." => [
 		0 => "Kan deze opslag niet toevoegen.",
 	],
@@ -168,6 +228,9 @@ $translation_table = [
 	"Can't update storage details." => [
 		0 => "Kan opslagdetails niet bijwerken.",
 	],
+	"requires %s" => [
+		0 => "vereist %s",
+	],
 	"Unlimited" => [
 		0 => "Ongelimiteerd",
 	],
@@ -176,9 +239,6 @@ $translation_table = [
 	],
 	"Private profile" => [
 		0 => "Privéprofiel",
-	],
-	"Private" => [
-		0 => "Privé",
 	],
 	"year" => [
 		0 => "jaar",
@@ -313,18 +373,6 @@ $translation_table = [
 	"Password required" => [
 		0 => "Wachtwoord vereist",
 	],
-	"Most recent" => [
-		0 => "Meest recent",
-	],
-	"Oldest" => [
-		0 => "Oudste",
-	],
-	"Most viewed" => [
-		0 => "Meest bekeken",
-	],
-	"Most liked" => [
-		0 => "meest geliked",
-	],
 	"Share" => [
 		0 => "Delen",
 	],
@@ -391,8 +439,8 @@ $translation_table = [
 	"Disabled" => [
 		0 => "Uitgeschakeld",
 	],
-	"Max. upload size" => [
-		0 => "Maximale uploadgrootte",
+	"Max. upload file size" => [
+		0 => "Max. upload bestandsgrootte",
 	],
 	"Max. post size" => [
 		0 => "Maximale berichtgrootte",
@@ -453,7 +501,7 @@ $translation_table = [
 		0 => "Thema",
 	],
 	"Homepage" => [
-		0 => "Hoofdpagina",
+		0 => "Startpagina",
 	],
 	"Banners" => [
 		0 => "Advertenties",
@@ -588,7 +636,7 @@ $translation_table = [
 		0 => "Achter bovenzijde (profiel)",
 	],
 	"Before listing (user profile)" => [
-		0 => "Achter afbeeldinglijst (hoofdpagina)",
+		0 => "Achter afbeeldinglijst (startpagina)",
 	],
 	"Explore page" => [
 		0 => "Verkenningspagina",
@@ -608,8 +656,8 @@ $translation_table = [
 	"Invalid timezone" => [
 		0 => "Ongeldige tijdzone",
 	],
-	"Invalid value" => [
-		0 => "Ongeldige waarde",
+	"Invalid value: %s" => [
+		0 => "Ongeldigde waarde: %s",
 	],
 	"Invalid upload storage mode" => [
 		0 => "Ongeldige opslagmodus",
@@ -634,6 +682,9 @@ $translation_table = [
 	],
 	"Invalid theme" => [
 		0 => "Ongeldig thema",
+	],
+	"Invalid value" => [
+		0 => "Ongeldige waarde",
 	],
 	"Invalid theme tone" => [
 		0 => "Ongeldige thema toonzetting",
@@ -678,10 +729,10 @@ $translation_table = [
 		0 => "Ongeldige homepage stijl",
 	],
 	"Invalid homepage call to action button color" => [
-		0 => "Ongeldige kleur homepagina call to action button",
+		0 => "Ongeldige startpagina oproep tot actie knop kleur",
 	],
 	"Invalid homepage call to action functionality" => [
-		0 => "Ongeldige homepage oproep tot actie functionaliteit",
+		0 => "Ongeldige startpagina oproep tot actie functionaliteit",
 	],
 	"Invalid title" => [
 		0 => "Ongeldige titel",
@@ -757,12 +808,6 @@ $translation_table = [
 	],
 	"Can't save page contents: %s." => [
 		0 => "Kan pagina inhoud niet opslaan: %s.",
-	],
-	"Top users" => [
-		0 => "Topgebruikers",
-	],
-	"Explore" => [
-		0 => "Verkennen",
 	],
 	"Following" => [
 		0 => "Volgend",
@@ -923,23 +968,17 @@ $translation_table = [
 	"User search results for %s" => [
 		0 => "Zoekresultaten gebruiker voor %s",
 	],
-	"Search" => [
-		0 => "Zoeken",
-	],
 	"Account" => [
 		0 => "Account",
 	],
 	"Profile" => [
 		0 => "Profiel",
 	],
-	"Password" => [
-		0 => "Wachtwoord",
-	],
 	"Linked accounts" => [
 		0 => "Gekoppelde accounts",
 	],
-	"Invalid image expiration" => [
-		0 => "Ongeldige vervaltermijn foto",
+	"Invalid image expiration: %s" => [
+		0 => "Ongeldige afbeelding expiratie: %s",
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "Een e-mail is verzonden naar %s met instructies om dit e-mailadres te activeren.",
@@ -997,6 +1036,9 @@ $translation_table = [
 	],
 	"%n (%u) on %w" => [
 		0 => "%n (%u) in %w",
+	],
+	"Discovery" => [
+		0 => "Ontdekken",
 	],
 	"Close" => [
 		0 => "Sluiten",
@@ -1106,56 +1148,83 @@ $translation_table = [
 	"Select the images to upload" => [
 		0 => "Selecteer afbeeldingen om te uploaden",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "U kunt ook <a data-trigger=\"anywhere-upload-input\">bladeren van uw computer</a> of <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">URL's toevoegen</a>.",
+	"browse from your computer" => [
+		0 => "vanaf uw computer bladeren",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "U kunt ook <a data-trigger=\"anywhere-upload-input-camera\">  een foto maken </a> of <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">afbeeldings URL's toevoegen</a>.",
+	"add image URLs" => [
+		0 => "voeg afbeeldingen URL's toe",
 	],
-	"Edit or resize an image by clicking the image preview" => [
-		0 => "Wijzig een foto of verander de grootte middels klikken op het voorbeeld",
+	"You can also %i or %u." => [
+		0 => "Je kunt ook %i of %u.",
 	],
-	"Edit or resize an image by touching the image preview" => [
-		0 => "Wijzig of verander grootte van een afbeelding middels het klikken op het voorbeeld",
+	"take a picture" => [
+		0 => "neem een foto",
 	],
-	"You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>." => [
-		0 => "U kunt meer afbeeldingen <a data-trigger=\"anywhere-upload-input\"> van uw computer</a> of <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">van afbeeldings URL's</a>.",
+	"Edit or resize any image by clicking the image preview" => [
+		0 => "Bewerk of pas formaat aan van de afbeelding door op de voorvertoning te klikken",
 	],
-	"You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "U kunt <a data-trigger=\"anywhere-upload-input\">meer afbeeldingen</a> of <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">afbeeldings URL's toevoegen</a>.",
+	"Edit or resize any image by touching the image preview" => [
+		0 => "Bewerk of pas formaat aan van de afbeelding door de voorvertoning aan te raken",
 	],
-	"Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>" => [
-		0 => "<span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">afbeeldingen</span> uploaden",
+	"your computer" => [
+		0 => "jouw computer",
+	],
+	"image URLs" => [
+		0 => "afbeelding URLs",
+	],
+	"You can keep adding more images from %i or from %u." => [
+		0 => "Je kunt meer afbeeldingen toe blijven voegen vanaf %i of middels %u.",
+	],
+	"your device" => [
+		0 => "jouw apparaat",
+	],
+	"Uploading %q %o" => [
+		0 => "Uploading %q %o",
 	],
 	"complete" => [
 		0 => "afgerond",
 	],
-	"The queue is being uploaded. It will take just a few seconds to complete." => [
-		0 => "De wachtrij is geüpload. Het duurt nog slechts enkele seconden om het uploaden te voltooien.",
+	"The queue is being uploaded, it should take just a few seconds to complete." => [
+		0 => "De wachtrij wordt geupload, dit duurt een aantal seconden voordat het gereed is.",
 	],
 	"Upload complete" => [
 		0 => "Upload voltooid",
 	],
-	"Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album." => [
-		0 => "Afbeeldingen toegevoegd aan <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">uw persoonlijk overzicht</a>. U kunt <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">een album maken met deze afbeeldingen</a> of <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">deze <span data-text=\"queue-objects\">afbeeldingen</span> verplaatsen naar een bestaand album</a>.",
+	"Uploaded content added to %s." => [
+		0 => "Geuploade afbeeldingen toegevoegd aan %s.",
 	],
-	"You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account." => [
-		0 => "U kunt <a href=\"%s\">een account aanmaken</a> of <a href=\"%l\">inloggen</a> om toekomstige uploads op te slaan in uw account.",
+	"You can %c with the content just uploaded or %m." => [
+		0 => "Je kunt %c met de afbeeldingen die net zijn geupload of %m.",
 	],
-	"No <span data-text=\"queue-objects\">images</span> have been uploaded" => [
-		0 => "Er zijn geen <span data-text=\"queue-objects\">afbeeldingen</span> geüpload",
+	"You can %c with the content just uploaded." => [
+		0 => "Je kunt %c met de afbeeldingen die net zijn geupload.",
+	],
+	"create a new album" => [
+		0 => "een nieuw album maken",
+	],
+	"move it to an existing album" => [
+		0 => "verplaats naar een bestaand album",
+	],
+	"create an account" => [
+		0 => "Maak een account",
+	],
+	"sign in" => [
+		0 => "Log in",
+	],
+	"You can %s or %l to save this content into your account." => [
+		0 => "Je kunt %s of %l om deze gegevens op te slaan in jouw account.",
+	],
+	"No %s have been uploaded" => [
+		0 => "Geen %s is geupload",
 	],
 	"Some errors have occured and the system couldn't process your request." => [
 		0 => "Er zijn een aantal fouten gebeurd waardoor uw aanvraag niet verwerkt kon worden.",
 	],
+	"Category" => [
+		0 => "Categorie",
+	],
 	"Select category" => [
 		0 => "Selecteer categorie",
-	],
-	"Change upload privacy" => [
-		0 => "Wijzig privacy-instellingen",
-	],
-	"cancel" => [
-		0 => "annuleren",
 	],
 	"Mark this if the upload is not family safe" => [
 		0 => "Markeer dit wanneer de inhoud onveilige inhoud bevat (NSFW)",
@@ -1165,6 +1234,9 @@ $translation_table = [
 	],
 	"Uploading" => [
 		0 => "Uploaden",
+	],
+	"cancel" => [
+		0 => "annuleren",
 	],
 	"cancel remaining" => [
 		0 => "annuleer resterende",
@@ -1217,6 +1289,12 @@ $translation_table = [
 	"Auto delete image" => [
 		0 => "Verwijder automatisch foto",
 	],
+	"Sign up" => [
+		0 => "Registreer",
+	],
+	"%s to be able to customize or disable image auto delete." => [
+		0 => "%s om het automatisch verwijderen van foto's te kunnen aanpassen of uit te schakelen.",
+	],
 	"Mark this if the image is not family safe" => [
 		0 => "Markeer dit wanneer de inhoud onveilige inhoud bevat (NSFW)",
 	],
@@ -1258,34 +1336,46 @@ $translation_table = [
 		0 => "Kijker",
 	],
 	"HTML Codes" => [
-		0 => "HTML-codes",
+		0 => "HTML codes",
 	],
 	"HTML image" => [
 		0 => "HTML foto",
 	],
 	"HTML full linked" => [
-		0 => "Volledige link HTML foto",
+		0 => "HTML groot met link",
 	],
 	"HTML medium linked" => [
-		0 => "HTML medium grootte",
+		0 => "HTML medium met link",
 	],
 	"HTML thumbnail linked" => [
-		0 => "HTML thumbnail grootte",
+		0 => "HTML thumbnail met link",
 	],
 	"BBCodes" => [
-		0 => "BBCodes",
+		0 => "BB codes",
 	],
 	"BBCode full" => [
-		0 => "Volledige BB code",
+		0 => "BB code groot",
 	],
 	"BBCode full linked" => [
-		0 => "Volledige link BB code",
+		0 => "BB code groot met link",
 	],
 	"BBCode medium linked" => [
-		0 => "BBCode medium grootte",
+		0 => "BB code medium met link",
 	],
 	"BBCode thumbnail linked" => [
-		0 => "BBCode thumbnails",
+		0 => "BB code thumbnails met link",
+	],
+	"Markdown full" => [
+		0 => "Markdown groot",
+	],
+	"Markdown full linked" => [
+		0 => "Markdown groot met link",
+	],
+	"Markdown medium linked" => [
+		0 => "Markdown medium met link",
+	],
+	"Markdown thumbnail linked" => [
+		0 => "Markdown thumbnail met link",
 	],
 	"All these words" => [
 		0 => "Al deze woorden",
@@ -1304,9 +1394,6 @@ $translation_table = [
 	],
 	"Put a minus sign just before words you don't want: -rodent -\"Jack Russell\"" => [
 		0 => "Voer een minteken in voor de woorden die je niet wilt: -rodent - Jack Russell\".",
-	],
-	"Category" => [
-		0 => "Categorie",
 	],
 	"Storage" => [
 		0 => "Opslag",
@@ -1332,9 +1419,6 @@ $translation_table = [
 	"Who can view this content" => [
 		0 => "Wie kan deze inhoud zien?",
 	],
-	"Public" => [
-		0 => "Publiek",
-	],
 	"Private (just me)" => [
 		0 => "Prive (alleen ik)",
 	],
@@ -1346,9 +1430,6 @@ $translation_table = [
 	],
 	"Album password" => [
 		0 => "Album wachtwoord",
-	],
-	"No category" => [
-		0 => "Geen categorie",
 	],
 	"Name" => [
 		0 => "Naam",
@@ -1391,22 +1472,6 @@ $translation_table = [
 	],
 	"Existing album" => [
 		0 => "Bestaand album",
-	],
-	"Album" => [
-		0 => "Album",
-		1 => "Albums",
-	],
-	"me" => [
-		0 => "ik",
-	],
-	"link" => [
-		0 => "link",
-	],
-	"password" => [
-		0 => "wachtwoord",
-	],
-	"private" => [
-		0 => "privé",
 	],
 	"create new album" => [
 		0 => "maak nieuw album",
@@ -1546,11 +1611,17 @@ $translation_table = [
 	"Delete" => [
 		0 => "Verwijder",
 	],
+	"Create new album" => [
+		0 => "Maak een nieuw album",
+	],
 	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
 		0 => "Om alle functies van deze site te gebruiken moet u ingelogd zijn. Indien u nog geen account heeft, dan kunt u zich <a href=\"%s\">registreren</a>.",
 	],
 	"There's nothing to show here." => [
 		0 => "Er is hier niets te zien",
+	],
+	"Upload images" => [
+		0 => "Upload afbeeldingen",
 	],
 	"Edit image details" => [
 		0 => "Afbeelding bewerken",
@@ -1634,7 +1705,7 @@ $translation_table = [
 		0 => "Een e-mail werd verstuurd naar %s met instructies om uw account te activeren. De activatielink is slechts 48 uur geldig. Indien u deze niet heeft ontvangen, controleer dan uw spam-folder.",
 	],
 	"Go to homepage" => [
-		0 => "Naar de hoofdpagina",
+		0 => "Naar de startpagina",
 	],
 	"Resend activation" => [
 		0 => "Activatie opnieuw verzenden",
@@ -1708,6 +1779,15 @@ $translation_table = [
 	"Delete album" => [
 		0 => "Verwijder album",
 	],
+	"You like this" => [
+		0 => "Je waardeert dit",
+	],
+	"Like" => [
+		0 => "Waardeer",
+	],
+	"Upload to album" => [
+		0 => "Upload naar album",
+	],
 	"Album link" => [
 		0 => "Album link",
 	],
@@ -1722,14 +1802,6 @@ $translation_table = [
 	],
 	"I Agree" => [
 		0 => "Ik bevestig",
-	],
-	"Image" => [
-		0 => "Afbeelding",
-		1 => "Afbeeldingen",
-	],
-	"User" => [
-		0 => "Gebruiker",
-		1 => "Gebruikers",
 	],
 	"Disk used" => [
 		0 => "Schijfverbruik",
@@ -1750,7 +1822,7 @@ $translation_table = [
 		0 => "documentatie",
 	],
 	"Learn more about %s at our %d." => [
-		0 => "Leer meer over %s in ons %d.",
+		0 => "Leer meer over %s in onze %d.",
 	],
 	"Add category" => [
 		0 => "Categorie toevoegen",
@@ -1800,14 +1872,23 @@ $translation_table = [
 	"Followers allows users to follow each other." => [
 		0 => "Volgers staan gebruikers toe om elkaar te volgen.",
 	],
+	"Personal mode target user" => [
+		0 => "Persoonlijke modus doelgebruiker",
+	],
 	"User ID" => [
 		0 => "Gebruikers ID",
 	],
 	"Your user id is: %s" => [
 		0 => "Jouw gebruikersnummer is: %s",
 	],
+	"Numeric ID of the target user for personal mode." => [
+		0 => "Numeriek nummer  van de doelgebruiker voor persoonlijke modus.",
+	],
 	"Personal mode routing" => [
 		0 => "Persoonlijke mode route",
+	],
+	"Custom route to map /username to /something. Use \"/\" to map to homepage." => [
+		0 => "Persoonlijke route voor verwijzing naar /gebruikersnaam of /iets. Gebruik \"/\" om naar de homepage te verwijzen.",
 	],
 	"Website privacy mode" => [
 		0 => "Website privé mode",
@@ -1866,6 +1947,9 @@ $translation_table = [
 	"File path" => [
 		0 => "Bedtandspad",
 	],
+	"A %f file relative to %s" => [
+		0 => "Een %f bestand ten opzichte van %s",
+	],
 	"Meta keywords" => [
 		0 => "Meta sleutelwoorden",
 	],
@@ -1905,6 +1989,9 @@ $translation_table = [
 	"Link icon" => [
 		0 => "Link icoon",
 	],
+	"Check the <a %s>icon reference</a> for the complete list of supported icons." => [
+		0 => "Controleer de referentie <a %s>referentie icoon</a> voor de volledige lijst met ondersteunde iconen.",
+	],
 	"Sort order display" => [
 		0 => "Sorteervolgorde weergave",
 	],
@@ -1932,6 +2019,15 @@ $translation_table = [
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Schakel dit in om gastuploads toe te staan",
 	],
+	"Enable embed codes (uploader)" => [
+		0 => "Insluitcodes inschakelen (uploader)",
+	],
+	"Enable this if you want to show embed codes when upload gets completed." => [
+		0 => "Selecteer dit om de insluitcodes te tonen als de upload gereed is.",
+	],
+	"Upload threads" => [
+		0 => "Upload threads",
+	],
 	"Number of simultaneous upload threads (parallel uploads)" => [
 		0 => "Aantal gelijktijdige uploads",
 	],
@@ -1953,11 +2049,26 @@ $translation_table = [
 	"Enable this if you want to allow uploads with an automatic delete option." => [
 		0 => "Schakel dit in om uploads met automatisch verwijderen toe te staan.",
 	],
+	"Auto delete guest uploads" => [
+		0 => "Automatisch verwijderen van uploads van gasten",
+	],
+	"Enable this if you want to force guest uploads to be auto deleted after certain time." => [
+		0 => "Schakel dit in om automatisch afbeeldingen van gasten te verwijderen na een bepaalde tijd.",
+	],
+	"Maximum image size" => [
+		0 => "Maximale afbeeldingsgrootte",
+	],
+	"Images greater than this size will get automatically downsized. Use zero (0) to don't set a limit." => [
+		0 => "Afbeeldingen groter dan dit formaat worden automatisch verkleind. Gebruik nul (0) om geen limiet in te stellen.",
+	],
 	"Image Exif data" => [
 		0 => "Foto Exif gegevens",
 	],
 	"Keep" => [
 		0 => "Bewaar",
+	],
+	"Select the default setting for image <a %s>Exif data</a> on upload." => [
+		0 => "Kies de standaard waarde voor de <a %s>Exif data</a> van de afbeelding bij uploaden.",
 	],
 	"Image Exif data (user setting)" => [
 		0 => "Foto Exif gegevens (gebruikers instelling)",
@@ -1965,11 +2076,11 @@ $translation_table = [
 	"Enable this if you want to allow each user to configure how image Exif data will be handled." => [
 		0 => "Schakel dit in om iedere gebruiker toe te staan om aan te geven hoe afbeeldings EXIF gegevens worden behandeld.",
 	],
-	"Max. filesize" => [
-		0 => "Maximale bestandsgrootte",
+	"Maximum upload file size" => [
+		0 => "Maximale upload bestandsgrootte",
 	],
-	"Max. allowed filesize. (Max allowed by server is %s)" => [
-		0 => "Maximale bestandsgrootte (maximale serverwaarde is %s).",
+	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
+		0 => "Maximum grootte toegestaan door de server is %s. Deze limiet is ingesteld via %u en %p (%f waarden).",
 	],
 	"Image path" => [
 		0 => "Pad",
@@ -2026,10 +2137,13 @@ $translation_table = [
 		0 => "Watermerken",
 	],
 	"Enable this to put a logo or anything you want in image uploads." => [
-		0 => "Schakel dit in om een ​​logo of dergelijke in het uploadveld te plaatsen.",
+		0 => "Schakel dit in om een ​​logo of wat anders in het uploadveld te plaatsen.",
 	],
 	"Warning: Can't write in %s" => [
 		0 => "Waarschuwing: kan geen data wegschrijven naar %s",
+	],
+	"Watermark user toggles" => [
+		0 => "Watermerk opties t.b.v. gebruikers",
 	],
 	"Enable watermark on guest uploads" => [
 		0 => "Schakel watermerk in bij upload van gasten",
@@ -2039,6 +2153,9 @@ $translation_table = [
 	],
 	"Enable watermark on admin uploads" => [
 		0 => "Schakel watermerk in bij upload van beheerders",
+	],
+	"Watermark file toggles" => [
+		0 => "Watermerk opties t.b.v. bestanden",
 	],
 	"Enable watermark on GIF image uploads" => [
 		0 => "Schakel watermerk in bij upload van GIF plaatjes",
@@ -2052,8 +2169,11 @@ $translation_table = [
 	"Watermark image" => [
 		0 => "Watermerk",
 	],
+	"You will get best results with plain logos with drop shadow. You can use a large image if the file size is not that big (recommended max. is 16KB). Must be a PNG." => [
+		0 => "U krijgt de beste resultaten met duidelijke logo's met druppelschaduw. U kunt een grote afbeelding gebruiken als de bestandsgrootte niet zo groot is (aanbevolen maximum is 16KB). Het moet een PNG zijn.",
+	],
 	"Watermark position" => [
-		0 => "Watermerk: positie",
+		0 => "Positie watermerk",
 	],
 	"left top" => [
 		0 => "links bovenaan",
@@ -2088,17 +2208,20 @@ $translation_table = [
 	"Watermark percentage" => [
 		0 => "Watermerk percentage",
 	],
+	"Watermark percentual size relative to the target image area. Values 1 to 100." => [
+		0 => "Watermerk percentuele grootte ten opzichte van het doelbeeldgebied. Waarden 1 tot 100.",
+	],
 	"Watermark margin" => [
-		0 => "Watermerk: marge",
+		0 => "Marge watermerk",
 	],
 	"Margin from the border of the image to the watermark image." => [
 		0 => "Marge tussen de rand van het watermerk en de afbeelding (in pixels).",
 	],
 	"Watermark opacity" => [
-		0 => "Watermerk: doorzichtigheid",
+		0 => "Doorzichtigheid watermerk",
 	],
 	"Opacity of the watermark in the final watermarked image. Values 0 to 100." => [
-		0 => "Doorzichtigheid van het watermerk: van 0 voor transparant tot 100 voor voorledig zichtbaar.",
+		0 => "Doorzichtigheid van het watermerk: van 0 voor transparant tot 100 voor volledig zichtbaar.",
 	],
 	"Dashboard > Settings > Website" => [
 		0 => "Dashboard > Instellingen > Website",
@@ -2207,6 +2330,9 @@ $translation_table = [
 	],
 	"Show not safe content in listings" => [
 		0 => "Geef onveilige (NFSW) inhoud weer",
+	],
+	"Enable this if you want to show not safe content in listings. This setting doesn't affect administrators and can be overridden by user own settings." => [
+		0 => "Schakel dit in als u onveilige inhoud wilt weergeven in lijsten. Deze instelling heeft geen invloed op beheerders en kan worden overschreven door gebruikersinstellingen.",
 	],
 	"Blur NSFW content in listings" => [
 		0 => "Vervaag NSFW inhoud in lijstoverzicht",
@@ -2328,6 +2454,9 @@ $translation_table = [
 	"Grey" => [
 		0 => "Grijs",
 	],
+	"Color for the top bar buttons like the \"Create account\" button." => [
+		0 => "Kleur voor de knoppen in de bovenste balk, bijvoorbeeld voor 'Nieuw account'",
+	],
 	"Enable vector logo" => [
 		0 => "Gebruik vectorieel logo",
 	],
@@ -2361,6 +2490,12 @@ $translation_table = [
 	"Favicon image. Image must have same width and height." => [
 		0 => "Favicon. De afbeelding moet dezelfde breedte en hoogte hebben.",
 	],
+	"Image load max. filesize" => [
+		0 => "Laden afbeelding max. grootte",
+	],
+	"Images greater than this size will show a button to load full resolution image." => [
+		0 => "Afbeeldingen groter dan dit formaat worden voorzien van een knop om de afbeelding in volledig formaat te laden.",
+	],
 	"Enable download button" => [
 		0 => "Schakel downloadknop in",
 	],
@@ -2374,7 +2509,7 @@ $translation_table = [
 		0 => "Selecteer dit om rechts klikken op de afbeeldingen viewer toe te staan.",
 	],
 	"Enable show Exif data" => [
-		0 => "Toon Exif data.",
+		0 => "Toon Exif data",
 	],
 	"Enable this if you want to show image Exif data." => [
 		0 => "Schakel dit in indien Exif data van de afbeelding getoond moet worden.",
@@ -2390,12 +2525,6 @@ $translation_table = [
 	],
 	"Enable this if you want to show embed codes for the content." => [
 		0 => "Selecteer dit om de insluitcodes voor de inhoud te tonen.",
-	],
-	"Enable embed codes (uploader)" => [
-		0 => "Insluitcodes inschakelen (uploader)",
-	],
-	"Enable this if you want to show embed codes when upload gets completed." => [
-		0 => "Selecteer dit om de insluitcodes te tonen als de upload gereed is.",
 	],
 	"Not safe content checkbox in uploader" => [
 		0 => "Onveilige (NSFW) inhoud checkbox bij uploaden",
@@ -2413,7 +2542,7 @@ $translation_table = [
 		0 => "Eigen JS code",
 	],
 	"Put your custom JS code here. It will be placed as <script> just before the closing </head> tag." => [
-		0 => "Zet uw aangepaste JS-code hier. Het zal zo <script> geplaatst worden net vóór de afsluitende </head>-tag.",
+		0 => "Zet uw aangepaste JS-code hier. Het zal als <script> geplaatst worden net vóór de afsluitende </head>-tag.",
 	],
 	"Style" => [
 		0 => "Stijl",
@@ -2442,17 +2571,59 @@ $translation_table = [
 	"Add new cover image" => [
 		0 => "Voeg een nieuwe omslagafbeelding toe.",
 	],
+	"Vector version or your website logo in SVG format (only for homepage)." => [
+		0 => "Vector versie van uw website logo in SVG formaat (alleen voor startpagina).",
+	],
+	"Bitmap version or your website logo (only for homepage). PNG format is recommended." => [
+		0 => "Bitmap versie van uw website logo (alleen voor homepage). PNG-formaat wordt aanbevolen.",
+	],
+	"This will be added inside the homepage %s tag. Leave it blank to use the default contents." => [
+		0 => "Dit wordt toegevoegd aan de startpagina %s-tag. Laat het leeg om de standaardinhoud te gebruiken.",
+	],
 	"Paragraph" => [
 		0 => "Paragraaf",
+	],
+	"Call to action button color" => [
+		0 => "Oproep tot actie knop kleur",
+	],
+	"Color of the homepage call to action button." => [
+		0 => "Kleur van de startpagina oproep tot actie knop.",
+	],
+	"Call to action outline style button" => [
+		0 => "Oproep tot actie overzicht opmaak knop",
+	],
+	"Enable this to use outline style for the homepage call to action button." => [
+		0 => "Schakel dit in om de overzichts opmaak voor de startpagina oproep tot actie knop te gebruiken.",
+	],
+	"Call to action functionality" => [
+		0 => "Oproep tot actie functionaliteit",
+	],
+	"Trigger uploader" => [
+		0 => "Selecteer uploader",
 	],
 	"Open URL" => [
 		0 => "Open URL",
 	],
+	"Call to action URL" => [
+		0 => "Oproep tot actie URL",
+	],
 	"Enter an absolute or relative URL" => [
 		0 => "Voer een absolute of relatieve URL in",
 	],
+	"A relative URL like %r will be mapped to %l" => [
+		0 => "Een relatieve URL zoals %r zal worden gekoppeld aan %l",
+	],
+	"Call to action HTML" => [
+		0 => "Oproep tot actie HTML",
+	],
+	"This will be added inside the call to action <a> tag. Leave it blank to use the default contents." => [
+		0 => "Dit wordt toegevoegd aan de oproep tot actie <a>-tag. Laat het leeg om de standaardinhoud te gebruiken.",
+	],
 	"User IDs" => [
 		0 => "Gebruikers ID's",
+	],
+	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
+		0 => "Komma gescheiden lijst van doel gebruikers ID's om afbeeldingen op de startpagina te tonen. Laat het leeg om alle recente afbeeldingen weer te geven.",
 	],
 	"banners" => [
 		0 => "advertenties",
@@ -2490,8 +2661,11 @@ $translation_table = [
 	"PHP error reporting" => [
 		0 => "PHP foutmelding rapportage",
 	],
+	"Enable this if you want to print errors generated by PHP <a %s>error_reporting()</a>. This should be disabled in production." => [
+		0 => "Schakel dit in om fouten van PHP <a %s>error reporting()</a> weer te geven. Dit moet uitgeschakeld staan in een productieomgeving.",
+	],
 	"Debug level" => [
-		0 => "Debug level",
+		0 => "Debug niveau",
 	],
 	"None" => [
 		0 => "Geen",
@@ -2505,6 +2679,12 @@ $translation_table = [
 	"Print and log errors" => [
 		0 => "Toon en sla errors op",
 	],
+	"To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)." => [
+		0 => "Om het debug niveau in te stellen, kijk in de <A %s>debug documentatie</a>. Standaard niveau is \"Error log\" (1).",
+	],
+	"Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes." => [
+		0 => "Routering stelt u in staat om standaard route koppelingen aan te passen. Alleen alfanumerieke, lettertypen en onderstreeptekens zijn toegestaan. Bekijk onze %s als u nieuwe routes wilt overschrijven of toevoegen.",
+	],
 	"Image routing" => [
 		0 => "Afbeelding routering",
 	],
@@ -2513,6 +2693,12 @@ $translation_table = [
 	],
 	"Album routing" => [
 		0 => "Album routering",
+	],
+	"Custom language strings" => [
+		0 => "Aangepaste taalreeksen",
+	],
+	"language strings" => [
+		0 => "taalreeksen",
 	],
 	"Default language" => [
 		0 => "Standaardtaal",
@@ -2575,19 +2761,19 @@ $translation_table = [
 		0 => "Hoe wil je e-mails verzenden? SMTP wordt aangeraden.",
 	],
 	"SMTP server and port" => [
-		0 => "SMTP-server en -poort",
+		0 => "SMTP server en -poort",
 	],
 	"SMTP server" => [
-		0 => "SMTP-server",
+		0 => "SMTP server",
 	],
 	"SMTP username" => [
-		0 => "SMTP-gebruikersnaam",
+		0 => "SMTP gebruikersnaam",
 	],
 	"SMTP password" => [
-		0 => "SMTP-wachtwoord",
+		0 => "SMTP wachtwoord",
 	],
 	"SMTP security" => [
-		0 => "SMTP-beveiliging",
+		0 => "SMTP beveiliging",
 	],
 	"Unsecured" => [
 		0 => "Onbewaakt",
@@ -2644,7 +2830,7 @@ $translation_table = [
 		0 => "VK gebruikers secret",
 	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
-		0 => "Er is een <a href=\"%s\" target=\"_blank\">reCAPTCHA code</a> nodig.",
+		0 => "Er is een <a href=\"%s\" target=\"_blank\">reCAPTCHA code</a> nodig om dit te kunnen gebruiken.",
 	],
 	"%s site key" => [
 		0 => "%s site sleutel",
@@ -2694,6 +2880,9 @@ $translation_table = [
 	"Cookie law compliance" => [
 		0 => "Cookiewet naleving",
 	],
+	"Enable this to display a message that complies with the EU Cookie law requirements. Note: You only need this if your website is hosted in the EU and if you add tracking cookies." => [
+		0 => "Schakel dit in om een bericht weer te geven die voldoet aan de eisen van de EU-cookie wetgeving. Opmerking: dit heeft u alleen nodig als uw website in de EU gehost wordt en u trackingcookies toevoegt.",
+	],
 	"Save changes" => [
 		0 => "Wijzigingen opslaan",
 	],
@@ -2708,12 +2897,6 @@ $translation_table = [
 	],
 	"Guest" => [
 		0 => "Gast",
-	],
-	"You like this" => [
-		0 => "Je waardeert dit",
-	],
-	"Like" => [
-		0 => "Waardeer",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "Toegevoegd aan %a en gecategoriseerd in %c",
@@ -2764,10 +2947,10 @@ $translation_table = [
 		0 => "Voer uw wachtwoord in",
 	],
 	"You have been logged off %s. Hope to see you soon." => [
-		0 => "U bent nu uitgelogd van %s.",
+		0 => "U bent nu uitgelogd van %s. Hopelijk tot snel.",
 	],
 	"Website under maintenance" => [
-		0 => "Website in onderhoud.",
+		0 => "Website is in onderhoud.",
 	],
 	"We're performing scheduled maintenance tasks in the website. Please come back in a few minutes." => [
 		0 => "We hebben op dit moment gepland onderhoud aan de website. Kijk over een paar minuten nog eens.",
@@ -2794,7 +2977,7 @@ $translation_table = [
 		0 => "Verwijder gebruiker",
 	],
 	"Register date" => [
-		0 => "Datum van registratie",
+		0 => "Registratiedatum",
 	],
 	"Registration IP" => [
 		0 => "Registratie IP",
@@ -2819,6 +3002,9 @@ $translation_table = [
 	],
 	"Auto delete uploads" => [
 		0 => "Automatisch verwijderen uploads",
+	],
+	"This setting will apply to all your image uploads by default. You can override this setting on each upload." => [
+		0 => "Deze instelling geldt standaard voor al jouw geuploade afbeeldingen. Je kunt dit overrulen bij iedere upload.",
 	],
 	"Keep image <a %s>Exif data</a> on upload" => [
 		0 => "Behoud <a %s>Exif data</a> van afbeelding bij uploaden",
@@ -2905,10 +3091,10 @@ $translation_table = [
 		0 => "Wilt u uw %s-account echt ontkoppelen?",
 	],
 	"You will be logged out and you won't be able to login to your account using this %s account." => [
-		0 => "U wordt afgemeld en u zult niet meer kunnen inloggen via %s.",
+		0 => "U wordt afgemeld en u zult niet meer kunnen inloggen via account %s.",
 	],
 	"Your account is connected to %s" => [
-		0 => "Deze account is gekoppeld aan %s",
+		0 => "Dit account is gekoppeld aan %s",
 	],
 	"disconnect" => [
 		0 => "ontkoppelen",
@@ -3037,8 +3223,8 @@ $translation_table = [
 	"Update now" => [
 		0 => "Nu bijwerken",
 	],
-	"Your website is running the latest version of %s" => [
-		0 => "Uw website draait op de laatste versie van %s",
+	"This website is running latest %s version" => [
+		0 => "Deze website gebruikt de laatste %s versie",
 	],
 	"Clipboard image" => [
 		0 => "Klembord afbeelding",
@@ -3054,6 +3240,9 @@ $translation_table = [
 	],
 	"Image edited successfully." => [
 		0 => "Afbeelding is aangepast",
+	],
+	"private" => [
+		0 => "privé",
 	],
 	"Album edited successfully." => [
 		0 => "Album is aangepast",

@@ -4,28 +4,24 @@
 <div class="content-width">
 	
 	<div class="header header-tabs margin-bottom-10 follow-scroll">
-    	<h1><strong><?php _se('Following'); ?></strong></h1>
-		
-        <?php G\Render\include_theme_file("snippets/tabs"); ?>
-        
+    	<h1><strong><span class="margin-right-5 icon icon-rss"></span><?php _se('Following'); ?></strong></h1>
+        <?php G\Render\include_theme_file('snippets/tabs'); ?>
+
 		<?php
 			if(is_admin()) {
-				G\Render\include_theme_file("snippets/user_items_editor");
+				G\Render\include_theme_file('snippets/user_items_editor');
 		?>
         <div class="header-content-right phone-float-none">
-			<?php G\Render\include_theme_file("snippets/listing_tools_editor"); ?>
+			<?php G\Render\include_theme_file('snippets/listing_tools_editor'); ?>
         </div>
 		<?php
 			}
 		?>
-        
     </div>
     
     <div id="content-listing-tabs" class="tabbed-listing">
         <div id="tabbed-content-group">
-            <?php
-                G\Render\include_theme_file("snippets/listing");
-            ?>
+            <?php G\Render\include_theme_file('snippets/listing'); ?>
         </div>
     </div>
 	

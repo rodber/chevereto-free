@@ -20,7 +20,8 @@ $route = function($handler) {
 	
 		$handler->template = 404;
 		
-		$route = $handler->{request_array}[0];
+		$route = $handler->request_array[0];
+		
 		$doing = $handler->request[0];
 		
 		// Process the second level request like 'account/password-reset'
@@ -413,7 +414,7 @@ $route = function($handler) {
 		
 		$handler::setCond('captcha_needed', $captcha_needed);
 		if($captcha_needed and !$handler::getVar('recaptcha_html')) {
-			$handler::setVar('recaptcha_html', CHV\Render\get_recaptcha_html('clean'));
+			$handler::setVar('recaptcha_html', CHV\Render\get_recaptcha_html());
 		}
 	
 	} catch(Exception $e) {

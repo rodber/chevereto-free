@@ -12,7 +12,7 @@
 	?>
 	<div id="image-viewer-container" class="image-viewer-main image-viewer-container"><img src="<?php echo $image_url; ?>" alt="<?php echo get_image_safe_html()['description']; ?>" width="<?php echo get_image()["width"]; ?>" height="<?php echo get_image()["height"]; ?>" <?php if(get_image()['medium']) { ?> data-load="full"<?php } ?>></div>
 	<?php
-		if(get_image()['user']['id'] != NULL and (get_image()['album']['privacy'] !== 'private_but_link' or is_owner() or is_admin())) {
+		if(get_image()['user']['id'] != NULL) {
 	?>
 	<div class="image-viewer-navigation arrow-navigator">
 		<?php
@@ -84,12 +84,16 @@
 			<?php if(CHV\getSetting('theme_download_button')) { ?>
 			<a href="<?php echo get_image()['url']; ?>" download="<?php echo get_image()['filename']; ?>" class="btn btn-download default" rel="tooltip" title="<?php echo get_image()["width"] . ' x ' . get_image()["height"] . ' - ' . strtoupper(get_image()["extension"]) . ' ' . get_image()["size_formatted"]; ?>"><span class="btn-icon icon-download"></span></a>
 			<?php } ?>
-			<?php if(CHV\getSetting('enable_likes')) { ?>
+			<?php
+				if(CHV\getSetting('enable_likes')) {
+			?>
 			<a class="btn-like" data-liked="<?php echo (int)get_image()['liked']; ?>" data-action="like">
 				<span class="btn btn-liked blue" rel="tooltip" title="<?php _se("You like this"); ?>"><span class="btn-icon icon-heart3"></span><span class="btn-text phone-hide"><?php _se('Liked'); ?></span></span>
 				<span class="btn btn-unliked blue outline"><span class="btn-icon icon-heart4"></span><span class="btn-text phone-hide"><?php _se('Like'); ?></span></span>
 			</a>
-			<?php } ?>
+			<?php
+				}
+			?>
             <?php if(CHV\getSetting('theme_show_social_share')) { ?>
 			<a class="btn red" data-modal="simple" data-target="modal-share"><span class="btn-icon icon-share"></span><span class="btn-text phone-hide"><?php _se('Share'); ?></span></a>
 			<?php } ?>
@@ -251,7 +255,7 @@
 			<?php } ?>
 			
 			<?php
-				if(get_image()['album'] && (get_image()['album']['privacy'] !== 'private_but_link' || is_owner() || is_admin())) {
+				if(get_image()['album']) {
 			?>
             <div class="c15 phablet-c1 fluid-column grid-columns margin-left-10 phablet-margin-left-0 phone-margin-left-0">
             	<h4 class="title c4 phablet-c1 grid-columns"><span data-content="album-panel-title"<?php if(get_image()["album"]["id"] == NULL) echo ' class="soft-hidden"'?>><?php _se('In this album'); ?></span></h4>
@@ -318,7 +322,7 @@
     
 </div>
 
-<!--googleoff: index-->
+
 <?php
 	if(is_owner() or is_admin()) {
 ?>
@@ -338,6 +342,6 @@
 	}
 	
 ?>
-<!--googleon: index-->
+
 
 <?php G\Render\include_theme_footer(); ?>

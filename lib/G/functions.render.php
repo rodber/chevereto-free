@@ -22,7 +22,7 @@ use G;
  * ---------------------------------------------------------------------
  */
 
-function include_theme_file($filename) {
+function include_theme_file($filename, $args=[]) {
 	$file = G_APP_PATH_THEME . $filename;
 	$override = G_APP_PATH_THEME . 'overrides/' . $filename;
 	if(!file_exists($file)) {
@@ -32,7 +32,11 @@ function include_theme_file($filename) {
 	if(file_exists($override)) {
 		$file = $override;
 	}
-	if(file_exists($file)) include($file);
+	if(file_exists($file)) {
+		$GLOBALS['theme_include_args'] = $args;
+		include($file);
+		unset($GLOBALS['theme_include_args']);
+	}
 }
 
 function include_theme_header() {

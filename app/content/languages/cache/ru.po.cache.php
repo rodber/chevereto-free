@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-02-20 20:29+0000',
-  'PO-Revision-Date' => '2017-02-20 20:29+0000',
+  'POT-Creation-Date' => '2017-05-23 17:56+0000',
+  'PO-Revision-Date' => '2017-05-23 17:56+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ru',
@@ -99,6 +99,26 @@ $translation_table = [
 	"Note: This content is private. Change privacy to \"public\" to share." => [
 		0 => "Внимание: Это скрытое содержимое. Чтобы поделиться им, измените настройки видимости на \"Публичное\".",
 	],
+	"Private" => [
+		0 => "Частный",
+	],
+	"Public" => [
+		0 => "Публичный",
+	],
+	"Me" => [
+		0 => "Я",
+	],
+	"Link" => [
+		0 => "Ссылка",
+	],
+	"Password" => [
+		0 => "Пароль",
+	],
+	"view" => [
+		0 => "просмотр",
+		1 => "просмотра",
+		2 => "просмотров",
+	],
 	"After %n %t" => [
 		0 => "Через %n %t",
 	],
@@ -138,11 +158,6 @@ $translation_table = [
 	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
 		0 => "Система переключилась на локальное хранилище из-за нехватки места на диске (%c) в одном или нескольких внешних хранилищах. Изображение %s было сохранено в локальном хранилище.",
 	],
-	"view" => [
-		0 => "просмотр",
-		1 => "просмотра",
-		2 => "просмотров",
-	],
 	"like" => [
 		0 => "понравилось",
 		1 => "понравилось",
@@ -153,6 +168,57 @@ $translation_table = [
 		1 => "изображения",
 		2 => "изображений",
 	],
+	"Recent" => [
+		0 => "Новые",
+	],
+	"Trending" => [
+		0 => "В тренде",
+	],
+	"Popular" => [
+		0 => "Популярные",
+	],
+	"Top users" => [
+		0 => "Самые активные",
+	],
+	"Most recent" => [
+		0 => "Новые",
+	],
+	"Oldest" => [
+		0 => "Старые",
+	],
+	"Most viewed" => [
+		0 => "Популярные",
+	],
+	"Most liked" => [
+		0 => "Избранные",
+	],
+	"Explore" => [
+		0 => "Обзор",
+	],
+	"Animated" => [
+		0 => "Анимации",
+	],
+	"Search" => [
+		0 => "Поиск",
+	],
+	"People" => [
+		0 => "Люди",
+	],
+	"Image" => [
+		0 => "Изображение",
+		1 => "Изображения",
+		2 => "Изображений",
+	],
+	"Album" => [
+		0 => "Альбом",
+		1 => "Альбома",
+		2 => "Альбомов",
+	],
+	"User" => [
+		0 => "Пользователь",
+		1 => "Пользователя",
+		2 => "Пользователей",
+	],
 	"Can't create %s destination dir" => [
 		0 => "Невозможно создать каталог %s",
 	],
@@ -161,9 +227,6 @@ $translation_table = [
 	],
 	"Internal" => [
 		0 => "Внутреннее",
-	],
-	"Link" => [
-		0 => "Ссылка",
 	],
 	"Can't insert storage." => [
 		0 => "Невозможно добавить хранилище.",
@@ -174,6 +237,9 @@ $translation_table = [
 	"Can't update storage details." => [
 		0 => "Невозможно получить подробную информацию о хранилище.",
 	],
+	"requires %s" => [
+		0 => "требует %s",
+	],
 	"Unlimited" => [
 		0 => "Без лимита",
 	],
@@ -182,9 +248,6 @@ $translation_table = [
 	],
 	"Private profile" => [
 		0 => "Скрытый профиль",
-	],
-	"Private" => [
-		0 => "Частный",
 	],
 	"year" => [
 		0 => "год",
@@ -322,18 +385,6 @@ $translation_table = [
 	],
 	"Password required" => [
 		0 => "Требуется указать пароль",
-	],
-	"Most recent" => [
-		0 => "Новые",
-	],
-	"Oldest" => [
-		0 => "Старые",
-	],
-	"Most viewed" => [
-		0 => "Популярные",
-	],
-	"Most liked" => [
-		0 => "С наивысшим рейтингом",
 	],
 	"Share" => [
 		0 => "Поделиться",
@@ -772,12 +823,6 @@ $translation_table = [
 	"Can't save page contents: %s." => [
 		0 => "Невозможно сохранить содержимое страницы: %s.",
 	],
-	"Top users" => [
-		0 => "Самые активные",
-	],
-	"Explore" => [
-		0 => "Обзор",
-	],
 	"Following" => [
 		0 => "Подписан",
 	],
@@ -937,23 +982,17 @@ $translation_table = [
 	"User search results for %s" => [
 		0 => "Результаты поиска пользователей по запросу %s",
 	],
-	"Search" => [
-		0 => "Поиск",
-	],
 	"Account" => [
 		0 => "Аккаунт",
 	],
 	"Profile" => [
 		0 => "Профиль",
 	],
-	"Password" => [
-		0 => "Пароль",
-	],
 	"Linked accounts" => [
 		0 => "Сервисы",
 	],
-	"Invalid image expiration" => [
-		0 => "Неверный срок хранения изображений",
+	"Invalid image expiration: %s" => [
+		0 => "Неверный срок хранения изображения: %s",
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "На %s было отправлено сообщение с инструкциями по активации",
@@ -1011,6 +1050,9 @@ $translation_table = [
 	],
 	"%n (%u) on %w" => [
 		0 => "%n (%u) на %w",
+	],
+	"Discovery" => [
+		0 => "Подборки",
 	],
 	"Close" => [
 		0 => "Закрыть",
@@ -1120,56 +1162,83 @@ $translation_table = [
 	"Select the images to upload" => [
 		0 => "Выберите изображения для загрузки",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "Вы также можете загрузить изображения <a data-trigger=\"anywhere-upload-input\">со своего компьютера</a> или указать <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">прямые ссылки</a>.",
+	"browse from your computer" => [
+		0 => "обзор изображений с компьютера",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "Вы также можете <a data-trigger=\"anywhere-upload-input-camera\">сделать снимок</a> или <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">добавить прямые ссылки</a>.",
+	"add image URLs" => [
+		0 => "добавить ссылки на изображения",
 	],
-	"Edit or resize an image by clicking the image preview" => [
+	"You can also %i or %u." => [
+		0 => "Вы также можете %i или %u.\n",
+	],
+	"take a picture" => [
+		0 => "сделать фото",
+	],
+	"Edit or resize any image by clicking the image preview" => [
 		0 => "Нажмите на миниатюру, чтобы отредактировать изображение или изменить его размер",
 	],
-	"Edit or resize an image by touching the image preview" => [
-		0 => "Прикоснитесь к миниатюре, чтобы отредактировать изображение или изменить его размер",
+	"Edit or resize any image by touching the image preview" => [
+		0 => "Дотроньтесь до миниатюры, чтобы отредактировать изображение или изменить его размер",
 	],
-	"You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>." => [
-		0 => "Вы можете загрузить другие изображения <a data-trigger=\"anywhere-upload-input\">со своего компьютера</a> или указать <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">прямые ссылки</a>.",
+	"your computer" => [
+		0 => "вашего компьютера",
 	],
-	"You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "Вы можете <a data-trigger=\"anywhere-upload-input\">добавить другие изображения</a> или <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">прямые ссылки</a>.",
+	"image URLs" => [
+		0 => "ссылки на изображения",
 	],
-	"Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>" => [
-		0 => "Загружается <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">изображений</span>",
+	"You can keep adding more images from %i or from %u." => [
+		0 => "Вы можете добавить изображения с %i или %u.",
+	],
+	"your device" => [
+		0 => "вашего устройства",
+	],
+	"Uploading %q %o" => [
+		0 => "Загружается %q %o",
 	],
 	"complete" => [
 		0 => "завершено",
 	],
-	"The queue is being uploaded. It will take just a few seconds to complete." => [
+	"The queue is being uploaded, it should take just a few seconds to complete." => [
 		0 => "Загружается очередь изображений. Это может занять некоторое время.",
 	],
 	"Upload complete" => [
 		0 => "Загрузка завершена",
 	],
-	"Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album." => [
-		0 => "Содержимое добавлено в <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">общий доступ</a>. Вы можете <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">создать альбом</a> или <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">переместить <span data-text=\"queue-objects\">изображения</span></a> в уже существующий.",
+	"Uploaded content added to %s." => [
+		0 => "Загруженное содержимое добавлено к %s.",
 	],
-	"You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account." => [
-		0 => "Вы можете <a href=\"%s\">создать аккаунт</a> или <a href=\"%l\">войти</a>, чтобы сохранять ваши изображения.",
+	"You can %c with the content just uploaded or %m." => [
+		0 => "Вы можете %c с загруженным содержимым или %m.",
 	],
-	"No <span data-text=\"queue-objects\">images</span> have been uploaded" => [
-		0 => "Не было загружено ни одного <span data-text=\"queue-objects\">изображения</span>",
+	"You can %c with the content just uploaded." => [
+		0 => "Вы можете %c с загруженным содержимым.",
+	],
+	"create a new album" => [
+		0 => "создать новый альбом",
+	],
+	"move it to an existing album" => [
+		0 => "переместить его в существующий",
+	],
+	"create an account" => [
+		0 => "создать аккаунт",
+	],
+	"sign in" => [
+		0 => "войти",
+	],
+	"You can %s or %l to save this content into your account." => [
+		0 => "Вы можете %s и %l, чтобы сохранить содержимое в своем аккаунте.",
+	],
+	"No %s have been uploaded" => [
+		0 => "Не было загружено ни одного %s.",
 	],
 	"Some errors have occured and the system couldn't process your request." => [
 		0 => "В процессе обработки вашего запроса произошла ошибка.",
 	],
+	"Category" => [
+		0 => "Категория",
+	],
 	"Select category" => [
 		0 => "Выберите категорию",
-	],
-	"Change upload privacy" => [
-		0 => "Изменить видимость загрузки",
-	],
-	"cancel" => [
-		0 => "отменить",
 	],
 	"Mark this if the upload is not family safe" => [
 		0 => "Пометить это изображение как неподходящее для семейного просмотра",
@@ -1179,6 +1248,9 @@ $translation_table = [
 	],
 	"Uploading" => [
 		0 => "Загружается",
+	],
+	"cancel" => [
+		0 => "отменить",
 	],
 	"cancel remaining" => [
 		0 => "отменить оставшиеся",
@@ -1230,6 +1302,12 @@ $translation_table = [
 	],
 	"Auto delete image" => [
 		0 => "Автоудаление изображений",
+	],
+	"Sign up" => [
+		0 => "Зарегистрируйтесь",
+	],
+	"%s to be able to customize or disable image auto delete." => [
+		0 => "%s, чтобы получить дополнительные возможности или отключить автоматическое удаление изображений.",
 	],
 	"Mark this if the image is not family safe" => [
 		0 => "Пометить это изображение как небезопасное",
@@ -1332,9 +1410,6 @@ $translation_table = [
 	"Put a minus sign just before words you don't want: -rodent -\"Jack Russell\"" => [
 		0 => "Поставьте знак минуса перед словами: -цвет -\"русский той\"",
 	],
-	"Category" => [
-		0 => "Категория",
-	],
 	"Storage" => [
 		0 => "Хранилище",
 	],
@@ -1359,9 +1434,6 @@ $translation_table = [
 	"Who can view this content" => [
 		0 => "Кто может просматривать это содержимое",
 	],
-	"Public" => [
-		0 => "Публичный",
-	],
 	"Private (just me)" => [
 		0 => "Скрытое (только я)",
 	],
@@ -1373,9 +1445,6 @@ $translation_table = [
 	],
 	"Album password" => [
 		0 => "Пароль альбома",
-	],
-	"No category" => [
-		0 => "Без категории",
 	],
 	"Name" => [
 		0 => "Имя",
@@ -1418,23 +1487,6 @@ $translation_table = [
 	],
 	"Existing album" => [
 		0 => "Существующий альбом",
-	],
-	"Album" => [
-		0 => "Альбом",
-		1 => "Альбома",
-		2 => "Альбомов",
-	],
-	"me" => [
-		0 => "мне",
-	],
-	"link" => [
-		0 => "ссылка",
-	],
-	"password" => [
-		0 => "пароль",
-	],
-	"private" => [
-		0 => "скрытое",
 	],
 	"create new album" => [
 		0 => "создать новый альбом",
@@ -1574,11 +1626,17 @@ $translation_table = [
 	"Delete" => [
 		0 => "Удалить",
 	],
+	"Create new album" => [
+		0 => "Создать альбом",
+	],
 	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
 		0 => "Вы должны войти, чтобы использовать все возможности этого сайта. Если у вас ещё нет аккаунта, вы можете <a href=\"%s\">зарегистрироваться</a> прямо сейчас.",
 	],
 	"There's nothing to show here." => [
 		0 => "Нет элементов для отображения.",
+	],
+	"Upload images" => [
+		0 => "Загрузить изображения",
 	],
 	"Edit image details" => [
 		0 => "Редактировать изображение",
@@ -1736,6 +1794,15 @@ $translation_table = [
 	"Delete album" => [
 		0 => "Удалить",
 	],
+	"You like this" => [
+		0 => "Вам это нравится",
+	],
+	"Like" => [
+		0 => "Нравится",
+	],
+	"Upload to album" => [
+		0 => "Загрузить в альбом",
+	],
 	"Album link" => [
 		0 => "Ссылка на альбом",
 	],
@@ -1750,16 +1817,6 @@ $translation_table = [
 	],
 	"I Agree" => [
 		0 => "Я согласен",
-	],
-	"Image" => [
-		0 => "Изображение",
-		1 => "Изображения",
-		2 => "Изображений",
-	],
-	"User" => [
-		0 => "Пользователь",
-		1 => "Пользователя",
-		2 => "Пользователей",
 	],
 	"Disk used" => [
 		0 => "Использовано места на диске",
@@ -1977,6 +2034,12 @@ $translation_table = [
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Включите, если хотите позволить загружать изображения незарегистрированным пользователям.",
 	],
+	"Enable embed codes (uploader)" => [
+		0 => "Коды для встраивания (в загрузчике)",
+	],
+	"Enable this if you want to show embed codes when upload gets completed." => [
+		0 => "Включите эту настройку, если вы хотите показывать коды для встраивания по завершении загрузки.",
+	],
 	"Upload threads" => [
 		0 => "Потоки загрузки",
 	],
@@ -2000,6 +2063,12 @@ $translation_table = [
 	],
 	"Enable this if you want to allow uploads with an automatic delete option." => [
 		0 => "Включите, чтобы разрешить загрузки с указанием срока хранения.",
+	],
+	"Auto delete guest uploads" => [
+		0 => "Автоматически удалять гостевые загрузки",
+	],
+	"Enable this if you want to force guest uploads to be auto deleted after certain time." => [
+		0 => "Включите, чтобы автоматически удалять гостевые загрузки через заданный интервал времени.",
 	],
 	"Maximum image size" => [
 		0 => "Максимальный размер изображения",
@@ -2472,12 +2541,6 @@ $translation_table = [
 	"Enable this if you want to show embed codes for the content." => [
 		0 => "Включите эту настройку, если вы хотите показывать коды для встраивания в просмотре изображений.",
 	],
-	"Enable embed codes (uploader)" => [
-		0 => "Коды для встраивания (в загрузчике)",
-	],
-	"Enable this if you want to show embed codes when upload gets completed." => [
-		0 => "Включите эту настройку, если вы хотите показывать коды для встраивания по завершении загрузки.",
-	],
 	"Not safe content checkbox in uploader" => [
 		0 => "Показывать в загрузчике настройку для небезопасного содержимого",
 	],
@@ -2850,12 +2913,6 @@ $translation_table = [
 	"Guest" => [
 		0 => "Гость",
 	],
-	"You like this" => [
-		0 => "Вам это нравится",
-	],
-	"Like" => [
-		0 => "Нравится",
-	],
 	"Added to %a and categorized in %c" => [
 		0 => "Добавлено к %a в категорию %c",
 	],
@@ -3182,7 +3239,7 @@ $translation_table = [
 	"Update now" => [
 		0 => "Обновить",
 	],
-	"Your website is running the latest version of %s" => [
+	"This website is running latest %s version" => [
 		0 => "Вы используете последнюю версию Chevereto - %s",
 	],
 	"Clipboard image" => [
@@ -3199,6 +3256,9 @@ $translation_table = [
 	],
 	"Image edited successfully." => [
 		0 => "Изображение успешно отредактировано.",
+	],
+	"private" => [
+		0 => "скрытое",
 	],
 	"Album edited successfully." => [
 		0 => "Альбом успешно отредактирован.",

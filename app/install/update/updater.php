@@ -36,7 +36,7 @@ try {
     }
     if(!isset($_REQUEST['action'])) {
         $doctitle = _s('Update in progress');
-        $system_template = CHV_APP_PATH_SYSTEM . 'template.php';
+        $system_template = CHV_APP_PATH_CONTENT_SYSTEM . 'template.php';
         $update_template = dirname($update_temp_dir) . '/template/update.php';
         if(file_exists($update_template)) {
             ob_start();
@@ -58,7 +58,9 @@ try {
         switch($_REQUEST['action']) {
             case 'ask':
                 try {
-                    $json_array = json_decode(G\fetch_url($CHEVERETO['api']['get']['info']), TRUE);
+                    $json_array = json_decode(G\fetch_url($CHEVERETO['api']['get']['info'], FALSE, [
+						CURLOPT_REFERER => G\get_base_url()
+					]), TRUE);
                     $json_array['success'] = ['message' => 'OK']; // "success" is a Chevereto internal thing
                 } catch(Exception $e) {
                     throw new Exception(_s("An error occurred. Please try again later."), 400);

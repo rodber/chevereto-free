@@ -23,7 +23,7 @@ $route = function($handler) {
 		if(!$handler::checkAuthToken($_REQUEST['auth_token'])) {
 			throw new Exception(_s('Request denied'), 400);
 		}
-        
+
 		$logged_user = CHV\Login::getUser();
 
 		$doing = $_REQUEST['action'];
@@ -39,14 +39,9 @@ $route = function($handler) {
 
 			case 'upload': // EX 100
 
-				// Deny guest uploads if setting is set to false and no user is logged in
-				if(!CHV\getSetting('guest_uploads') and !$logged_user) {
-					throw new Exception(_s('Login needed'), 403);
-				}
-
-				// Deny all uploads if setting is set to true and logged user isn't admin
-				if(!CHV\getSetting('enable_uploads') and $logged_user['is_admin'] == false) {
-					throw new Exception(_s('Request denied'), 403);
+				// Is upload allowed anyway?
+				if(!$handler::getCond('upload_allowed')) {
+					throw new Exception(_s('Request denied'), 401);
 				}
 
 				$source = $_REQUEST['type'] == 'file' ? $_FILES['source'] : $_REQUEST['source'];
@@ -78,15 +73,15 @@ $route = function($handler) {
 				if($handler::getCond('forced_private_mode')) {
 					$_REQUEST['privacy'] = CHV\getSetting('website_content_privacy_mode');
 				}
-				
-				// Fix some values (due to js)
-				if(intval($_REQUEST['category_id']) == 0) {
-					$_REQUEST['category_id'] = NULL;
+
+				// Fix some encoded stuff
+				if(!empty($_REQUEST['album_id'])) {
+					$_REQUEST['album_id'] = CHV\decodeID($_REQUEST['album_id']);
 				}
-                
+
 				// Upload to website
 				$uploaded_id = CHV\Image::uploadToWebsite($source, $logged_user, $_REQUEST);
-				
+
 				$json_array['status_code'] = 200;
 				$json_array['success'] = array('message' => 'image uploaded', 'code' => 200);
 				$json_array['image'] = CHV\Image::formatArray(CHV\Image::getSingle($uploaded_id, false, false), true);
@@ -95,7 +90,7 @@ $route = function($handler) {
 
 			case 'get-album-contents':
 			case 'list': // EX 200
-				
+
 				if($doing == 'get-album-contents') {
 					if(!$logged_user) {
 						throw new Exception(_s('Login needed'), 403);
@@ -107,20 +102,30 @@ $route = function($handler) {
 				} else {
 					$list_request = $_REQUEST["list"];
 				}
-				
+
 				if(!in_array($list_request, array('images', 'albums', 'users'))) {
 					throw new Exception('Invalid list request', 100);
 				}
 
 				$output_tpl = $list_request;
 
+				// Params hidden handler
+				if($_REQUEST['params_hidden'] && is_array($_REQUEST['params_hidden'])) {
+					$params_hidden = [];
+					foreach($_REQUEST['params_hidden'] as $k => $v) {
+						if(isset($_REQUEST[$k])) {
+							$params_hidden[$k] = $v;
+						}
+					}
+				}
+
 				switch($list_request) {
 
 					case 'images':
 
-						$binds = array();
+						$binds = [];
 						$where = '';
-						
+
 						if(!empty($_REQUEST['like_user_id'])) {
 							$where .= ($where == '' ? 'WHERE' : ' AND') . ' like_user_id=:image_user_id';
 							$binds[] = [
@@ -128,7 +133,7 @@ $route = function($handler) {
 								'value'	=> CHV\decodeID($_REQUEST['like_user_id'])
 							];
 						}
-						
+
 						if(!empty($_REQUEST['follow_user_id'])) {
 							$where .= ($where == '' ? 'WHERE' : ' AND') . ' follow_user_id=:image_user_id';
 							$binds[] = [
@@ -136,7 +141,7 @@ $route = function($handler) {
 								'value'	=> CHV\decodeID($_REQUEST['follow_user_id'])
 							];
 						}
-						
+
 						if(!empty($_REQUEST['userid'])) {
 							$owner_id = CHV\decodeID($_REQUEST['userid']);
 							$where .= ($where == '' ? 'WHERE' : ' AND') . ' image_user_id=:image_user_id';
@@ -161,7 +166,6 @@ $route = function($handler) {
 								throw new Exception(_s('Request denied'), 403);
 							}
 						}
-
 
 						if(!empty($_REQUEST['category_id']) and is_numeric($_REQUEST['category_id'])) {
 							$category = $_REQUEST['category_id'];
@@ -206,9 +210,9 @@ $route = function($handler) {
 						$where = '';
 					break;
 				}
-				
+
 				if(!empty($_REQUEST['q'])) {
-					
+
 					// Build search params
 					$search = new CHV\Search;
 					$search->q = $_REQUEST['q'];
@@ -216,22 +220,22 @@ $route = function($handler) {
 					$search->request = $_REQUEST;
 					$search->requester = CHV\Login::getUser();
 					$search->build();
-					
+
 					if(!G\check_value($search->q)) {
 						throw new Exception('Missing search term', 400);
 					}
-					
+
 					$where .= $where == '' ? $search->wheres : preg_replace('/WHERE /', ' AND ', $search->wheres, 1);
 					$binds = array_merge((array)$binds, $search->binds);
-					
+
 				}
-				
+
 				$list_params = CHV\Listing::getParams(TRUE);
-				
+
 				if($list_params['sort'][0] == 'likes') {
 					throw new Exception(_s('Request denied'), 403);
 				}
-				
+
 				if($doing == 'get-album-contents') {
 					$album_fetch = min(1000, $album['image_count']);
 					$list_params = [
@@ -242,7 +246,7 @@ $route = function($handler) {
 						'sort'		=> ['date', 'desc'],
 					];
 				}
-				
+
 				$list = new CHV\Listing;
 				$list->setType($list_request); // images | users | albums
 				$list->setOffset($list_params['offset']);
@@ -255,7 +259,10 @@ $route = function($handler) {
 				$list->setWhere($where);
 				$list->setOwner($owner_id);
 				$list->setRequester($logged_user);
-				
+				if(!empty($params_hidden)) {
+					$list->setParamsHidden($params_hidden);
+				}
+
 				if($list_request == 'images' && !empty($_REQUEST['albumid'])) {
 					if($handler::getCond('forced_private_mode')) { // Remeber this override...
 						$album['privacy'] = CHV\getSetting('website_content_privacy_mode');
@@ -269,7 +276,7 @@ $route = function($handler) {
 					}
 				}
 				$list->exec();
-				
+
 				$json_array['status_code'] = 200;
 
 				if($doing == 'get-album-contents') {
@@ -280,7 +287,7 @@ $route = function($handler) {
 					}
 					$json_array['is_output_truncated'] = $album['image_count'] > $album_fetch ? 1 : 0;
 					$json_array['contents'] = $contents;
-					
+
 				} else {
 					$json_array['html'] = $list->htmlOutput($output_tpl);
 				}
@@ -414,7 +421,7 @@ $route = function($handler) {
 					case 'album':
 
 						if($id) {
-							$source_album_db = CHV\Album::getSingle($id, false);
+							$source_album_db = CHV\Album::getSingle($id, FALSE, FALSE); // Farso farso!!
 							if(!$source_album_db) {
 								throw new Exception("Album doesn't exists", 100);
 							}
@@ -424,7 +431,7 @@ $route = function($handler) {
 						}
 
 						// We want to move contents or edit?
-						if(isset($editing['album_id']) or $editing['new_album']) {
+						if(!empty($editing['album_id']) or $editing['new_album']) {
 							$album_move = true;
 							if($editing['new_album']) {
 								$editing['album_id'] = CHV\Album::insert($editing['album_name'],  $source_album_db['album_user_id'], $editing['album_privacy'], $editing['album_description'], $editing['album_password']);
@@ -449,7 +456,7 @@ $route = function($handler) {
 						$json_array['album'] = $album_edited;
 
 						if($album_move) {
-							$json_array['old_album'] = CHV\Album::formatArray(CHV\Album::getSingle($id, false), true); // Safe formatted album
+							$json_array['old_album'] = CHV\Album::formatArray(CHV\Album::getSingle($id, FALSE, FALSE), TRUE); // Safe formatted album
 							$json_array['album']['html'] = CHV\Listing::getAlbumHtml($album_edited['id']);
 							$json_array['old_album']['html'] = CHV\Listing::getAlbumHtml($id);
 						}
@@ -505,37 +512,37 @@ $route = function($handler) {
 						$json_array['category'] = $category;
 
 					break;
-					
+
 					case 'ip_ban':
 						if(!CHV\Login::isAdmin()) {
 							throw new Exception('Invalid content owner request', 403);
 						}
-						
+
 						$id = $_REQUEST['editing']['id'];
-						
+
 						// Validate IP
 						if(!G\is_valid_ip($editing['ip'])) {
 							throw new Exception('Invalid IP address', 101);
 						}
-						
+
 						// Validate expiration
 						if(!empty($editing['expires']) and !preg_match('/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/', $editing['expires'])) {
 							throw new Exception('Invalid expiration date format', 102);
 						}
-						
+
 						try {
 							// Already banned?
 							$ip_already_banned = CHV\Ip_ban::getSingle(['ip' => $editing['ip']]);
-							
+
 							if($ip_already_banned and $ip_already_banned['id'] !== $id) {
 								throw new Exception(_s('IP address already banned'), 103);
 							}
-							
+
 							// Fix expiration
 							if(empty($editing['expires'])) {
 								$editing['expires'] = NULL;
 							}
-							
+
 							// OK to go
 							$editing = array_merge($editing, ['expires_gmt' => is_null($editing['expires']) ? NULL : gmdate('Y-m-d H:i:s', strtotime($editing['expires']) )]);
 
@@ -546,7 +553,7 @@ $route = function($handler) {
 							$json_array['status_code'] = 200;
 							$json_array['success'] = array('message' => 'IP ban edited', 'code' => 200);
 							$json_array['ip_ban'] = CHV\Ip_ban::getSingle(['id' => $id]);
-							
+
 						} catch(Exception $e) {
 							$json_array = [
 								'status_code' => 403,
@@ -554,9 +561,9 @@ $route = function($handler) {
 							];
 							break;
 						}
-						
+
 					break;
-					
+
 				}
 
 			break;
@@ -575,17 +582,17 @@ $route = function($handler) {
 						throw new Exception(_s('Missing values'), 100);
 					}
 				}
-				
+
 				// Validate username
 				if(!CHV\User::isValidUsername($user['username'])) {
 					throw new Exception(_s('Invalid username'), 101);
 				}
-				
+
 				// Validate email
 				if(!filter_var($user['email'], FILTER_VALIDATE_EMAIL)) {
 					throw new Exception(_s('Invalid email'), 102);
 				}
-				
+
 				// Validate password
 				if(!preg_match('/'.CHV\getSetting('user_password_pattern').'/', $user['password'])) {
 					throw new Exception(_s('Invalid password'), 103);;
@@ -642,7 +649,7 @@ $route = function($handler) {
 				if(!preg_match('/^[-\w]+$/', $category['url_key'])) {
 					throw new Exception('Invalid category URL key', 102);
 				}
-				
+
 				// Category URL key being used?
 				if($handler::getVar('categories')) {
 					foreach($handler::getVar('categories') as $v) {
@@ -672,40 +679,40 @@ $route = function($handler) {
 				$json_array['category'] = $category;
 
 			break;
-			
+
 			case 'add-ip_ban':
 				// Must be admin
 				if(!CHV\Login::isAdmin()) {
 					throw new Exception(_s('Request denied'), 403);
 				}
-				
+
 				$ip_ban = G\array_filter_array($_REQUEST['ip_ban'], ['ip', 'expires', 'message'], 'exclusion');
-				
+
 				// Validate IP
 				if(!G\is_valid_ip($ip_ban['ip'])) {
 					throw new Exception('Invalid IP address', 101);
 				}
-				
+
 				// Validate expiration
 				if(!empty($ip_ban['expires']) and !preg_match('/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/', $ip_ban['expires'])) {
 					throw new Exception('Invalid expiration date format', 102);
 				}
-				
+
 				try {
 					// Already banned?
 					if(CHV\Ip_ban::getSingle(['ip' => $ip_ban['ip']])) {
 						throw new Exception(_s('IP address already banned'), 103);
 					}
-					
+
 					// Fix expiration
 					if(empty($ip_ban['expires'])) {
 						$ip_ban['expires'] = NULL;
 					}
-					
+
 					// OK to go
 					$ip_ban = array_merge($ip_ban, ['date' => G\datetime(), 'date_gmt' => G\datetimegmt(), 'expires_gmt' => is_null($ip_ban['expires']) ? NULL : gmdate('Y-m-d H:i:s', strtotime($ip_ban['expires']) )]);
 					$add_ip_ban = CHV\Ip_ban::insert($ip_ban);
-					
+
 				} catch(Exception $e) {
 					$json_array = [
 						'status_code' => 403,
@@ -713,13 +720,13 @@ $route = function($handler) {
 					];
 					break;
 				}
-				
+
 				$json_array['status_code'] = 200;
 				$json_array['success'] = ['message' => 'IP ban added', 'code' => 200];
 				$json_array['ip_ban'] = CHV\Ip_ban::getSingle(['id' => $add_ip_ban]);
 
 			break;
-			
+
 			case 'edit-category':
 			case 'flag-safe':
 			case 'flag-unsafe':
@@ -727,7 +734,7 @@ $route = function($handler) {
 				if(!$logged_user) {
 					throw new Exception(_s('Login needed'), 403);
 				}
-				
+
 				$editing = $_REQUEST['editing'];
 				$owner_id = $logged_user['id'];
 
@@ -756,7 +763,7 @@ $route = function($handler) {
 				}
 
 				// There is no CHV\Image::editMultiple, so we must cast manually the editing
-				
+
 				switch($doing) {
 					case 'flag-safe':
 					case 'flag-unsafe':
@@ -778,7 +785,7 @@ $route = function($handler) {
 
 				$json_array['status_code'] = 200;
 				$json_array['success'] = ['message' => $msg, 'code' => 200];
-				
+
 				if($query_field == 'category_id') {
 					$json_array['category_id'] = $prop;
 				}
@@ -813,57 +820,63 @@ $route = function($handler) {
 
 				// Had to create an album ?
 				$album_id = $album['new'] ? CHV\Album::insert($album['name'], $owner_id, $album['privacy'], $album['description'], $album['password']) : CHV\decodeID($album['id']);
-				$album_db = CHV\Album::getSingle($album_id, false);
+				$album_db = CHV\Album::getSingle($album_id, FALSE, FALSE);
 
-				if(!is_array($album['ids']) && count($album['ids']) == 0) {
-					throw new Exception('Invalid source album ids' . ($_REQUEST['action'] == 'move' ? 'move' : 'create') . ' request', 100);
+				if(is_array($album['ids']) && count($album['ids']) == 0) {
+					throw new Exception('Invalid source album ids ' . ($_REQUEST['action'] == 'move' ? 'move' : 'create') . ' request', 100);
 				}
 
-				$ids = array();
-				foreach($album['ids'] as $id) {
-					$ids[] = CHV\decodeID($id);
+				if(count($album['ids']) > 0) {
+					$ids = array();
+					foreach($album['ids'] as $id) {
+						$ids[] = CHV\decodeID($id);
+					}
 				}
 
-				// Move by type
-				if($type == 'images') {
+				// IF $ids then append those contents
+				if($ids && count($ids) > 0) {
 
-					$images = CHV\Image::getMultiple($ids);
-					$images_ids = [];
+					// Move by type
+					if($type == 'images') {
 
-					foreach($images as $image) {
-						if(!$logged_user['is_admin'] and $image['image_user_id'] != $logged_user['id']) {
-							continue;
+						$images = CHV\Image::getMultiple($ids);
+						$images_ids = [];
+
+						foreach($images as $image) {
+							if(!$logged_user['is_admin'] and $image['image_user_id'] != $logged_user['id']) {
+								continue;
+							}
+							$images_ids[] = $image['image_id'];
 						}
-						$images_ids[] = $image['image_id'];
-					}
 
-					if(!$images_ids) {
-						throw new Exception('Invalid content owner request', 101);
-					}
-
-					$album_add = CHV\Album::addImages($album_db['album_id'], $images_ids);
-
-				} else {
-					$album_move = true;
-
-					$albums = CHV\Album::getMultiple($ids);
-					$albums_ids = array();
-
-					foreach($albums as $album) {
-						if(!$logged_user['is_admin'] and $album['album_user_id'] != $logged_user['id']) {
-							continue;
+						if(!$images_ids) {
+							throw new Exception('Invalid content owner request', 101);
 						}
-						$albums_ids[] = $album['album_id'];
-					}
 
-					if(!$albums_ids) {
-						throw new Exception('Invalid content owner request', 101);
-					}
+						$album_add = CHV\Album::addImages($album_db['album_id'], $images_ids);
 
-					$album_to_album = CHV\Album::moveContents($albums_ids, $album_id);
+					} else {
+						$album_move = true;
+
+						$albums = CHV\Album::getMultiple($ids);
+						$albums_ids = array();
+
+						foreach($albums as $album) {
+							if(!$logged_user['is_admin'] and $album['album_user_id'] != $logged_user['id']) {
+								continue;
+							}
+							$albums_ids[] = $album['album_id'];
+						}
+
+						if(!$albums_ids) {
+							throw new Exception('Invalid content owner request', 101);
+						}
+
+						$album_to_album = CHV\Album::moveContents($albums_ids, $album_id);
+					}
 				}
 
-				$album_move_db = $album_db['album_id'] ? CHV\Album::getSingle($album_db['album_id'], false) : CHV\User::getStreamAlbum($owner_id);
+				$album_move_db = $album_db['album_id'] ? CHV\Album::getSingle($album_db['album_id'], FALSE, FALSE) : CHV\User::getStreamAlbum($owner_id);
 
 				$json_array['status_code'] = 200;
 				$json_array['success'] = ['message' => 'Content added to album', 'code' => 200];
@@ -878,7 +891,7 @@ $route = function($handler) {
 				if($type == 'albums') {
 					$json_array['albums_old'] = [];
 					foreach($ids as $album_id) {
-						$album_item = CHV\Album::formatArray(CHV\Album::getSingle($album_id, false), true);
+						$album_item = CHV\Album::formatArray(CHV\Album::getSingle($album_id, FALSE, FALSE), true);
 						$album_item['html'] = CHV\Listing::getAlbumHtml($album_id);
 						$json_array['albums_old'][] = $album_item;
 
@@ -900,7 +913,7 @@ $route = function($handler) {
 				$multiple = $_REQUEST['multiple'] == 'true';
 				$single = $_REQUEST['single'] == 'true';
 				if(!$multiple) $single = TRUE;
-				
+
 				// Admin
 				if(in_array($type, ['avatar', 'background', 'user', 'category', 'ip_ban']) and !CHV\Login::isAdmin() and $owner_id !== $logged_user['id']) {
 					throw new Exception('Invalid content owner request', 403);
@@ -944,7 +957,7 @@ $route = function($handler) {
 					}
 					break;
 				}
-				
+
 				if($type == 'ip_ban') {
 					if(!CHV\Ip_ban::delete(['id' => $deleting['id']])) {
 						throw new Exception('Error deleting IP ban', 400);
@@ -1017,12 +1030,12 @@ $route = function($handler) {
 					if(!$owned_ids) {
 						throw new Exception('Invalid content owner request', 101);
 					}
-					
+
 					$delete = $Class_fn::deleteMultiple($owned_ids);
 
 					$affected = $delete;
 				}
-                
+
 				$json_array['success'] = [
 					'message' => ucfirst($type) . ' deleted',
 					'code' 	  => 200,
@@ -1030,23 +1043,23 @@ $route = function($handler) {
 				];
 
 			break;
-                
-            case 'test':
-                if(!$logged_user['is_admin']) {
+
+      case 'test':
+        if(!$logged_user['is_admin']) {
 					throw new Exception('Invalid request', 403);
 				}
-                switch($_REQUEST['test']['object']) {
-                    case 'email':
-                        // Validate email
-                        if(!filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL)) {
-                            throw new Exception(_s('Invalid email'), 100);
-                        }
-                        CHV\send_mail($_REQUEST['email'], _s('Test email from %s @ %t', ['%s' => CHV\getSetting('website_name'), '%t' => G\datetime()]), _s('This is just a test'));
-                        $json_array['success'] = ['message' => _s('Test email sent to %s.', $_REQUEST['email']), 'code' => 200];
-                    break;
+        switch($_REQUEST['test']['object']) {
+            case 'email':
+                // Validate email
+                if(!filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL)) {
+                    throw new Exception(_s('Invalid email'), 100);
                 }
+                CHV\send_mail($_REQUEST['email'], _s('Test email from %s @ %t', ['%s' => CHV\getSetting('website_name'), '%t' => G\datetime()]), _s('This is just a test'));
+                $json_array['success'] = ['message' => _s('Test email sent to %s.', $_REQUEST['email']), 'code' => 200];
             break;
-			
+        }
+	    break;
+
 			case 'notifications':
 				if(!$logged_user) {
 					throw new Exception('Invalid request', 403);
@@ -1069,11 +1082,12 @@ $route = function($handler) {
 						1 => '<a href="%user_url">%user_avatar</a>'
 					];
 					foreach($notifications as $k => $v) {
+						$content_type = $v['content_type'];
 						switch($v['type']) {
 							case 'like':
 								$message = _s('%u liked your %t %c', [
-									'%t' => _s($v['content_type']),
-									'%c' => '<a href="'.$v['image']['url_viewer'].'">'.$v['image']['title_truncated_html'].'</a>'
+									'%t' => _s($content_type),
+									'%c' => '<a href="'.$v[$content_type]['url_viewer'].'">' . $v[$content_type][($content_type == 'image' ? 'title' : 'name') . '_truncated_html'] . '</a>'
 								]);
 							break;
 							case 'follow':
@@ -1102,8 +1116,103 @@ $route = function($handler) {
 							'%how_long_ago'	=> CHV\time_elapsed_string($v['date_gmt']),
 						]);
 					}
+					unset($content_type);
 				} else {
 					$json_array['html'] = NULL;
+				}
+			break;
+
+			case 'upgrade':
+				try {
+					function bytesToMb($bytes, $round=2) {
+						$mb = $bytes / pow(10, 6);
+						if($round) {
+							$mb = round($mb, $round);
+						}
+						return $mb;
+					}
+					function getUrlContent($url, $options=NULL) {
+						if (!$url) {
+							throw new Exception('Missing $url');
+						}
+						if (!function_exists('curl_init')) {
+							throw new Exception("cURL isn't installed");
+						}
+						$ch = curl_init();
+						curl_setopt($ch, CURLOPT_URL, $url);
+						curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+						curl_setopt($ch, CURLOPT_AUTOREFERER, 1);
+						curl_setopt($ch, CURLOPT_TIMEOUT, 60);
+						curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+						curl_setopt($ch, CURLOPT_HEADER, 0);
+						curl_setopt($ch, CURLOPT_FAILONERROR, 0);
+						curl_setopt($ch, CURLOPT_ENCODING, 'gzip');
+						curl_setopt($ch, CURLOPT_VERBOSE, 0);
+						if ($options && is_array($options)) {
+							foreach ($options as $k => $v) {
+								curl_setopt($ch, $k, $v);
+							}
+						}
+						// Try to always save this as a tmp file
+						$temp_file_path = @tempnam(sys_get_temp_dir(), 'download');
+						if(!$temp_file_path || !@is_writable($temp_file_path)) {
+							unset($temp_file_path);
+						}
+						if ($temp_file_path) {
+							$out = @fopen($temp_file_path, 'wb');
+							if (!$out) {
+								throw new Exception("Can't open temp file for read and write in " . __FUNCTION__ . '()');
+							}
+							curl_setopt($ch, CURLOPT_FILE, $out);
+							@curl_exec($ch);
+							fclose($out);
+						} else {
+							$file_get_contents = @curl_exec($ch);
+						}
+						$transfer = curl_getinfo($ch);
+						if (curl_errno($ch)) {
+							$curl_error = curl_error($ch);
+							curl_close($ch);
+							throw new Exception('Curl error ' . $curl_error);
+						}
+						curl_close($ch);
+						$return = array('transfer' => $transfer);
+						if ($temp_file_path) {
+							$return['tmp_file_path'] = $temp_file_path;
+						} else {
+							$return['contents'] = $file_get_contents;
+						}
+						if(!isset($return['contents']) && bytesToMb($transfer['size_download']) < 0.5) {
+							$return['contents'] = file_get_contents($temp_file_path);
+						}
+						return $return;
+					}
+					$installer_filepath = G_ROOT_PATH . 'installer.php';
+					$download = getUrlContent(CHEVERETO_INSTALLER_DOWNLOAD_URL);
+					$http_code = $download['transfer']['http_code'];
+					if($http_code != 200) {
+						throw new Exception(strtr('Unable to download Chevereto installer from %s (%c)', [
+							'%s' => CHEVERETO_INSTALLER_DOWNLOAD_URL,
+							'%c' => 'HTTP ERROR ' . $http_code
+						]));
+					} else {
+						if(!@rename($download['tmp_file_path'], $installer_filepath)) {
+							throw new Exception("Can't save downloaded file " . $installer_filepath, 5001);
+						}
+						@unlink($download['tmp_file_path']);
+						$json_array = [
+							'success' => [
+								'message' => 'Installer downloaded successfully',
+								'code' 	  => 200,
+							],
+							'redir' => [
+								'url' => G\get_base_url(basename($installer_filepath) . '?UpgradeToPaid')
+							]
+						];
+					}
+				} catch (Exception $e) {
+					throw new Exception('Error: ' . $e->getMessage());
 				}
 			break;
 

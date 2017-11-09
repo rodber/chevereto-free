@@ -17,7 +17,6 @@
 
 $route = function($handler) {
 	try {
-
         // Parse the current query string
 		parse_str($_SERVER['QUERY_STRING'], $querystr);
 		
@@ -51,7 +50,7 @@ $route = function($handler) {
 					$limit = $db->fetchSingle();
 					
 					// Try to get the right image
-					$random_ids = G\random_values($limit['min'], $limit['max'], 10);
+					$random_ids = G\random_values($limit['min'], $limit['max'], 100);
 					
 					if(is_null($random_ids)) {
 						G\redirect();
@@ -103,7 +102,7 @@ $route = function($handler) {
 					} else {
 						unset($_SESSION['random_failure']);
 					}
-
+					
 					return G\redirect($image ? CHV\Image::getUrlViewer(CHV\encodeID($imageID)) : '?random');
 
 				break;

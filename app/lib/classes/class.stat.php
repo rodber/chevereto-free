@@ -66,11 +66,19 @@ class Stat {
 		if(!isset($args['date_gmt'])) {
 			switch($args['action']) {
 				case 'insert':
+				case 'update':
 					$args['date_gmt'] = G\datetimegmt();
 				break;
 				case 'delete':
 					throw new StatException('Missing date_gmt value in ' . __METHOD__, 105);
 				break;
+			}
+		} else {
+			try {
+				$date = new \DateTime($args['date_gmt']);
+				$args['date_gmt'] = $date->format('Y-m-d');
+			} catch(Exception $e) {
+				throw new StatException('Invalid date_gmt value in ' . __METHOD__, 106);
 			}
 		}
 		
@@ -98,13 +106,15 @@ class Stat {
 			case 'update':
 				switch($args['table']) {
 					case 'images':
-						// Track image and user views
+					case 'albums':
+						// Track image | album | user views
 						$sql_tpl = 
-							'UPDATE `%table_stats` SET stat_image_views = stat_image_views + %value WHERE stat_type = "total";' . "\n" . 
-							'INSERT INTO `%table_stats` (stat_type, stat_date_gmt, stat_image_views) VALUES ("date",DATE("%date_gmt"),"%value") ON DUPLICATE KEY UPDATE stat_image_views = stat_image_views + %value;';
+							'UPDATE `%table_stats` SET stat_%aux_views = stat_%aux_views + %value WHERE stat_type = "total";' . "\n" . 
+							'INSERT INTO `%table_stats` (stat_type, stat_date_gmt, stat_%aux_views) VALUES ("date",DATE("%date_gmt"),"%value") ON DUPLICATE KEY UPDATE stat_%aux_views = stat_%aux_views + %value;';
 						if(isset($args['user_id'])) {
 							$sql_tpl .= "\n" . 'UPDATE `%table_users` SET user_content_views = user_content_views + %value WHERE user_id = %user_id;';
 						}
+						$sql_tpl = strtr($sql_tpl, ['%aux' => DB::getFieldPrefix($args['table'])]);
 					break;
 				}
 			break;
@@ -115,8 +125,8 @@ class Stat {
 						$sql_tpl = 
 							'UPDATE `%table_stats` SET stat_images = GREATEST(stat_images - %value, 0) WHERE stat_type = "total";' . "\n" .
 							'UPDATE `%table_stats` SET stat_images = GREATEST(stat_images - %value, 0) WHERE stat_type = "date" AND stat_date_gmt = DATE("%date_gmt");' . "\n" .
-							'UPDATE `%table_stats` SET stat_likes = GREATEST(stat_likes - %likes, 0) WHERE stat_type = "total";' . "\n" .
-							'UPDATE `%table_stats` SET stat_likes = GREATEST(stat_likes - %likes, 0) WHERE stat_type = "date" AND stat_date_gmt = DATE("%date_gmt");' . "\n" .
+							'UPDATE `%table_stats` SET stat_image_likes = GREATEST(stat_image_likes - %likes, 0) WHERE stat_type = "total";' . "\n" .
+							'UPDATE `%table_stats` SET stat_image_likes = GREATEST(stat_image_likes - %likes, 0) WHERE stat_type = "date" AND stat_date_gmt = DATE("%date_gmt");' . "\n" .
 							'UPDATE `%table_stats` SET stat_disk_used = GREATEST(stat_disk_used - %disk_sum, 0) WHERE stat_type = "total";' . "\n" .
 							'UPDATE `%table_stats` SET stat_disk_used = GREATEST(stat_disk_used - %disk_sum, 0) WHERE stat_type = "date" AND stat_date_gmt = DATE("%date_gmt");';
 					break;
@@ -134,8 +144,8 @@ class Stat {
 											WHERE like_user_id = %user_id
 										GROUP BY DATE(like_date_gmt)
 								  ) AS L ON S.stat_date_gmt = L.like_date_gmt
-								SET S.stat_likes = GREATEST(S.stat_likes - COALESCE(L.cnt, "0"), 0) WHERE stat_type = "date";
-								UPDATE IGNORE `%table_stats` SET stat_likes = GREATEST(stat_likes - COALESCE((SELECT COUNT(*) FROM `%table_likes` WHERE like_user_id = %user_id), "0"), 0) WHERE stat_type = "total";' . "\n" .
+								SET S.stat_image_likes = GREATEST(S.stat_image_likes - COALESCE(L.cnt, "0"), 0) WHERE stat_type = "date";
+								UPDATE IGNORE `%table_stats` SET stat_image_likes = GREATEST(stat_image_likes - COALESCE((SELECT COUNT(*) FROM `%table_likes` WHERE like_user_id = %user_id), "0"), 0) WHERE stat_type = "total";' . "\n" .
 								// Update album stats related to this deleted user
 								'UPDATE IGNORE `%table_stats` AS S
 									INNER JOIN (
@@ -157,7 +167,7 @@ class Stat {
 			'%table_users'		=> $tables['users'],
 			'%table_likes'		=> $tables['likes'],
 			'%table_albums'		=> $tables['albums'],
-			'%related_table'	=> $args['table'],
+			'%related_table'	=> (isset($args['content_type']) ? ($args['content_type'] . '_') : NULL) . $args['table'],
 			'%value'			=> $value,
 			'%date_gmt'			=> $args['date_gmt'],
 			'%user_id'			=> $args['user_id'],

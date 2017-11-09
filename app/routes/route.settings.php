@@ -139,6 +139,9 @@ $route = function($handler) {
 					
 					$checkboxes = ['upload_image_exif', 'newsletter_subscribe', 'show_nsfw_listings', 'is_private'];
 					foreach($checkboxes as $k) {
+						if(!isset($_POST[$k])) {
+							continue;
+						}
 						$_POST[$k] = in_array($_POST[$k], ['On', 1]) ? 1 : 0;
 					}
 					
@@ -167,8 +170,8 @@ $route = function($handler) {
                     
                     if(CHV\getSetting('enable_expirable_uploads')) {
                         // Image expire time
-                        if($_POST['image_expiration'] !== NULL and !G\dateinterval($_POST['image_expiration'])) {
-                            $input_errors['image_expiration'] = _s('Invalid image expiration');
+                        if($_POST['image_expiration'] !== NULL && (!G\dateinterval($_POST['image_expiration']) || !array_key_exists($_POST['image_expiration'], CHV\Image::getAvailableExpirations()))) {
+                            $input_errors['image_expiration'] = _s('Invalid image expiration: %s', $_POST['image_expiration']);
                         }
                     }
                     
@@ -452,7 +455,7 @@ $route = function($handler) {
 		$handler::setCond('email_required', $is_email_required);
 		
 		if($captcha_needed and !$handler::getVar('recaptcha_html')) {
-			$handler::setVar('recaptcha_html', CHV\Render\get_recaptcha_html('clean'));
+			$handler::setVar('recaptcha_html', CHV\Render\get_recaptcha_html());
 		}
 		
 		$handler::setVar('pre_doctitle', $is_dashboard_user ? _s('Settings for %s', $user['username']) : _s('Settings'));

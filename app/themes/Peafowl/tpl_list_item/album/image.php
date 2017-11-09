@@ -9,7 +9,9 @@
 		%tpl_list_item/item_image_play_gif%
 	</div>
 	<div class="list-item-desc">
-		<div class="list-item-overflow"><a href="%IMAGE_URL_VIEWER%" class="text-decoration-none list-item-desc-title" data-text="image-title" data-content="image-link">%IMAGE_TITLE_TRUNCATED%</a></div>
+		<div class="list-item-desc-title list-item-desc-title--center-y">
+			<a href="%IMAGE_URL_VIEWER%" class="list-item-desc-title-link" data-text="image-title" data-content="image-link">%IMAGE_TITLE%</a>
+		</div>
 		%tpl_list_item/item_like% 
 	</div>
 </div>

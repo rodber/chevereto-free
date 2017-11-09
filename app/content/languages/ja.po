@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-02-20 20:29+0000\n"
-"PO-Revision-Date: 2017-02-20 20:29+0000\n"
+"POT-Creation-Date: 2017-05-23 17:56+0000\n"
+"PO-Revision-Date: 2017-05-23 17:56+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -148,7 +148,7 @@ msgid "%s's images"
 msgstr "%sさんの画像"
 
 msgid "Note: This content is private but anyone with the link will be able to see this."
-msgstr "注：このコンテンツはメンバー用ですが、リンクは誰でもできます。"
+msgstr "注：このコンテンツは非公開ですが、リンクから誰でも閲覧することができます。"
 
 msgid "Note: This content is password protected. Remember to pass the content password to share."
 msgstr "注：このコンテンツはパスワードで保護されています。コンテンツを共有するためには、コンテンツ用パスワードも共有してください。"
@@ -158,6 +158,45 @@ msgstr "注：このコンテンツはパスワードで保護されています
 #: ../../../app/themes/Peafowl/views/image.php:272
 msgid "Note: This content is private. Change privacy to \"public\" to share."
 msgstr "注意:このコンテンツは非公開です。公開するためには、プライバシー設定を変更して下さい。"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Private"
+msgstr "非公開"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:20
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Public"
+msgstr "公開"
+
+msgid "Me"
+msgstr "自分"
+
+#: ../../../app/lib/classes/class.page.php:137
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
+#: ../../../app/themes/Peafowl/views/dashboard.php:461
+msgid "Link"
+msgstr "リンク"
+
+#: ../../../app/routes/route.settings.php:64
+#: ../../../app/themes/Peafowl/header.php:292
+#: ../../../app/themes/Peafowl/header.php:340
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:92
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:93
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:126
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:104
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/login.php:39
+#: ../../../app/themes/Peafowl/views/settings.php:322
+#: ../../../app/themes/Peafowl/views/signup.php:49
+#: ../../../app/themes/Peafowl/views/signup.php:50
+msgid "Password"
+msgstr "パスワード"
+
+#: ../../../app/lib/classes/class.image.php:1230
+msgid "view"
+msgid_plural "views"
+msgstr[0] "回"
 
 msgid "After %n %t"
 msgstr "%n以降%t"
@@ -204,11 +243,6 @@ msgstr "アップロード先がローカルストレージに変更されまし
 msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
 msgstr "外部ストレージサーバのディスクの空き容量が十分にない(%c)ため、システムは自動的にローカルストレージへの保存に変更しました。画像 %s はローカルストレージに配置されています。"
 
-#: ../../../app/lib/classes/class.image.php:1230
-msgid "view"
-msgid_plural "views"
-msgstr[0] "回"
-
 #: ../../../app/lib/classes/class.image.php:1231
 msgid "like"
 msgid_plural "likes"
@@ -223,6 +257,102 @@ msgstr[0] "いいね！"
 msgid "image"
 msgid_plural "images"
 msgstr[0] "画像"
+
+msgid "Recent"
+msgstr "最新"
+
+msgid "Trending"
+msgstr "流行"
+
+msgid "Popular"
+msgstr "人気"
+
+#: ../../../app/routes/route.dashboard.php:1163
+msgid "Top users"
+msgstr "トップユーザ"
+
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "新しい順"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "古い順"
+
+#: ../../../app/routes/route.album.php:96
+#: ../../../app/routes/route.category.php:64
+#: ../../../app/routes/route.dashboard.php:1121
+#: ../../../app/routes/route.explore.php:50
+#: ../../../app/routes/route.following.php:29
+#: ../../../app/routes/route.user.php:201
+msgid "Most viewed"
+msgstr "閲覧順"
+
+#: ../../../app/routes/route.album.php:104
+#: ../../../app/routes/route.category.php:72
+#: ../../../app/routes/route.dashboard.php:1129
+#: ../../../app/routes/route.explore.php:58
+#: ../../../app/routes/route.following.php:37
+#: ../../../app/routes/route.user.php:207
+msgid "Most liked"
+msgstr "もっともいいね！されている"
+
+#: ../../../app/routes/route.explore.php:89
+#: ../../../app/themes/Peafowl/header.php:188
+#: ../../../app/themes/Peafowl/header.php:206
+#: ../../../app/themes/Peafowl/views/dashboard.php:305
+#: ../../../app/themes/Peafowl/views/explore.php:9
+msgid "Explore"
+msgstr "もっと見る"
+
+msgid "Animated"
+msgstr "アニメーション"
+
+#: ../../../app/routes/route.search.php:130
+#: ../../../app/themes/Peafowl/header.php:215
+#: ../../../app/themes/Peafowl/header.php:220
+#: ../../../app/themes/Peafowl/views/dashboard.php:295
+msgid "Search"
+msgstr "検索"
+
+msgid "People"
+msgstr "人々"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:22
+msgid "Image"
+msgid_plural "Images"
+msgstr[0] "画像"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "アルバム"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:34
+#: ../../../app/themes/Peafowl/views/dashboard.php:90
+#: ../../../app/themes/Peafowl/views/settings.php:126
+msgid "User"
+msgid_plural "Users"
+msgstr[0] "ユーザ"
 
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
@@ -239,12 +369,6 @@ msgstr "書込み権限で %s を開けません。"
 msgid "Internal"
 msgstr "内部"
 
-#: ../../../app/lib/classes/class.page.php:137
-#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
-#: ../../../app/themes/Peafowl/views/dashboard.php:461
-msgid "Link"
-msgstr "リンク"
-
 msgid "Can't insert storage."
 msgstr "ストレージを追加できません"
 
@@ -257,6 +381,10 @@ msgstr "ストレージ容量は現在の使用量 (%s)より小さくできま�
 msgid "Can't update storage details."
 msgstr "ストレージの詳細を更新できません"
 
+#, php-format
+msgid "requires %s"
+msgstr "%sが必要"
+
 #: ../../../app/lib/classes/class.storage.php:720
 msgid "Unlimited"
 msgstr "無制限"
@@ -267,10 +395,6 @@ msgstr "使用中"
 
 msgid "Private profile"
 msgstr "非公開プロフィール"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:366
-msgid "Private"
-msgstr "非公開"
 
 #: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
 msgid "year"
@@ -492,46 +616,6 @@ msgstr "先に進むためには、フォーム内のエラーを修正してく
 
 msgid "Password required"
 msgstr "パスワードが必要です。"
-
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "新しい順"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "古い順"
-
-#: ../../../app/routes/route.album.php:96
-#: ../../../app/routes/route.category.php:64
-#: ../../../app/routes/route.dashboard.php:1121
-#: ../../../app/routes/route.explore.php:50
-#: ../../../app/routes/route.following.php:29
-#: ../../../app/routes/route.user.php:201
-msgid "Most viewed"
-msgstr "閲覧順"
-
-#: ../../../app/routes/route.album.php:104
-#: ../../../app/routes/route.category.php:72
-#: ../../../app/routes/route.dashboard.php:1129
-#: ../../../app/routes/route.explore.php:58
-#: ../../../app/routes/route.following.php:37
-#: ../../../app/routes/route.user.php:207
-msgid "Most liked"
-msgstr "もっともいいね！されている"
 
 #: ../../../app/routes/route.album.php:115
 #: ../../../app/themes/Peafowl/snippets/modal_share.php:4
@@ -1220,18 +1304,6 @@ msgstr "このファイルパスは、 すでに他のページで使用され�
 msgid "Can't save page contents: %s."
 msgstr "ページコンテンツを保存出来ません。: %s."
 
-#: ../../../app/routes/route.dashboard.php:1163
-msgid "Top users"
-msgstr "トップユーザ"
-
-#: ../../../app/routes/route.explore.php:89
-#: ../../../app/themes/Peafowl/header.php:188
-#: ../../../app/themes/Peafowl/header.php:206
-#: ../../../app/themes/Peafowl/views/dashboard.php:305
-#: ../../../app/themes/Peafowl/views/explore.php:9
-msgid "Explore"
-msgstr "もっと見る"
-
 #: ../../../app/routes/route.following.php:73
 #: ../../../app/routes/route.user.php:104
 #: ../../../app/themes/Peafowl/views/following.php:7
@@ -1475,13 +1547,6 @@ msgstr "%sのアルバムの検索結果"
 msgid "User search results for %s"
 msgstr "%sのユーザーの検索結果"
 
-#: ../../../app/routes/route.search.php:130
-#: ../../../app/themes/Peafowl/header.php:215
-#: ../../../app/themes/Peafowl/header.php:220
-#: ../../../app/themes/Peafowl/views/dashboard.php:295
-msgid "Search"
-msgstr "検索"
-
 #: ../../../app/routes/route.settings.php:62
 msgid "Account"
 msgstr "アカウント"
@@ -1490,29 +1555,13 @@ msgstr "アカウント"
 msgid "Profile"
 msgstr "プロフィール"
 
-#: ../../../app/routes/route.settings.php:64
-#: ../../../app/themes/Peafowl/header.php:292
-#: ../../../app/themes/Peafowl/header.php:340
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:92
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:93
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:126
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
-#: ../../../app/themes/Peafowl/views/dashboard.php:104
-#: ../../../app/themes/Peafowl/views/dashboard.php:105
-#: ../../../app/themes/Peafowl/views/login.php:39
-#: ../../../app/themes/Peafowl/views/settings.php:322
-#: ../../../app/themes/Peafowl/views/signup.php:49
-#: ../../../app/themes/Peafowl/views/signup.php:50
-msgid "Password"
-msgstr "パスワード"
-
 #: ../../../app/routes/route.settings.php:65
 msgid "Linked accounts"
 msgstr "関連づけされているアカウント"
 
-#: ../../../app/routes/route.settings.php:191
-msgid "Invalid image expiration"
-msgstr "無効な画像の有効期限です。"
+#, php-format
+msgid "Invalid image expiration: %s"
+msgstr "無効な画像の有効期限: %s"
 
 #: ../../../app/routes/route.settings.php:269
 #, php-format
@@ -1576,7 +1625,7 @@ msgstr "%sさんの画像"
 
 #: ../../../app/routes/route.user.php:89
 #: ../../../app/themes/Peafowl/header.php:56
-#, php-format
+#, php-format, javascript-format
 msgid "%s's Albums"
 msgstr "%sさんのアルバム"
 
@@ -1606,6 +1655,9 @@ msgstr "%w上にある%n (%u)さんのアルバム"
 #: ../../../app/routes/route.user.php:384
 msgid "%n (%u) on %w"
 msgstr "%w上にある%n (%u)さんのアルバム"
+
+msgid "Discovery"
+msgstr "発見"
 
 #: ../../../app/themes/Peafowl/header.php:222
 msgid "Close"
@@ -1800,7 +1852,7 @@ msgstr "パスワードをリセットするには<a href=\"%s\">こちらのリ
 
 #: ../../../app/themes/Peafowl/mails/account-welcome.php:4
 msgid "Hi %n, welcome to %w"
-msgstr "こんにちは、 %nさん、 ようこそ%wへ"
+msgstr "こんにちは、 %nさん。%wへようこそ"
 
 #: ../../../app/themes/Peafowl/mails/account-welcome.php:6
 msgid "Now that your account is ready you can enjoy uploading your images, creating albums and setting the privacy of your content as well as many more cool things that you will discover."
@@ -1826,81 +1878,92 @@ msgstr "アップロードするために、ここへ画像をドラッグする
 msgid "Select the images to upload"
 msgstr "アップロードする画像を選択"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:15
-msgid "You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "<a data-trigger=\"anywhere-upload-input\">あなたのPCにある画像</a>や<a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">インターネット上の画像URL</a>で画像のアップロードができます。"
+msgid "browse from your computer"
+msgstr "コンピュータから参照"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:16
-msgid "You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "こちらから <a data-trigger=\"anywhere-upload-input-camera\">写真を撮影</a> したり、 こちらから<a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">画像URLの追加</a>ができます。"
+msgid "add image URLs"
+msgstr "画像のURLを追加"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:20
-msgid "Edit or resize an image by clicking the image preview"
-msgstr "画像プレビューをクリックして、画像の編集・リサイズがする"
+msgid "You can also %i or %u."
+msgstr "%iまたは%uすることもできます。"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:21
-msgid "Edit or resize an image by touching the image preview"
-msgstr "画像プレビューをタップして、画像の編集・リサイズがする"
+msgid "take a picture"
+msgstr "写真を撮影"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:22
-msgid "You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>."
-msgstr "こちらから <a data-trigger=\"anywhere-upload-input\">PC内の画像を追加</a> したり、 <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">画像のURLの追加</a>ができます。"
+msgid "Edit or resize any image by clicking the image preview"
+msgstr "画像のプレビューをクリックして編集または画像をリサイズ"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:23
-msgid "You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "こちらから <a data-trigger=\"anywhere-upload-input\">複数の画像のアップロード</a> や <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">複数の画像URLの追加</a>ができます。"
+msgid "Edit or resize any image by touching the image preview"
+msgstr "画像のプレビューをタップして編集または画像をリサイズ"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
-msgid "Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>"
-msgstr "<span data-text=\"queue-size\">0</span>枚の<span data-text=\"queue-objects\">画像</span>をアップロード中"
+msgid "your computer"
+msgstr "あなたのコンピュータ"
+
+msgid "image URLs"
+msgstr "画像のURL"
+
+msgid "You can keep adding more images from %i or from %u."
+msgstr "%iまたは%uからさらに画像を追加することができます。"
+
+msgid "your device"
+msgstr "あなたのデバイス"
+
+msgid "Uploading %q %o"
+msgstr "アップロード中 %q %o"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
 msgid "complete"
 msgstr "完了"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:28
-msgid "The queue is being uploaded. It will take just a few seconds to complete."
-msgstr "アップロードは完了しました。完了するまでもう少々お待ち下さい。"
+msgid "The queue is being uploaded, it should take just a few seconds to complete."
+msgstr "キューのアップロードが進行中です。完了まで数秒ほどかかります。"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:32
 msgid "Upload complete"
 msgstr "アップロード完了"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:34
 #, php-format
-msgid "Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album."
-msgstr "<a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">公開用画像</a>へ追加されました。 <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">アルバムを作成</a>するか、お持ちのアルバムへ<a data-modal=\"form\" data-target=\"form-uploaded-move-album\"><span data-text=\"queue-objects\">画像を</span>貼付け</a>て下さい。"
+msgid "Uploaded content added to %s."
+msgstr "アップロードが完了したコンテンツは%sに追加されました。"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:35
-msgid "You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account."
-msgstr "今後の画像アップロードのために<a href=\"%s\">アカウントの新規作成</a> または <a href=\"%l\">サインイン</a>して下さい。"
+msgid "You can %c with the content just uploaded or %m."
+msgstr "アップロードされたコンテンツまたは%mに対して%cが可能です。"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:40
-msgid "No <span data-text=\"queue-objects\">images</span> have been uploaded"
-msgstr "0 <span data-text=\"queue-objects\">画像</span> アップロード済み"
+#, php-format
+msgid "You can %c with the content just uploaded."
+msgstr "アップロードされたコンテンツに対して%cが可能です。"
+
+msgid "create a new album"
+msgstr "新規アルバムを作成"
+
+msgid "move it to an existing album"
+msgstr "既に存在するアルバムに移動"
+
+msgid "create an account"
+msgstr "アカウントを作成"
+
+msgid "sign in"
+msgstr "サインイン"
+
+msgid "You can %s or %l to save this content into your account."
+msgstr "このコンテンツをアカウントに保存するために、%sまたは%lが利用できます。"
+
+#, php-format
+msgid "No %s have been uploaded"
+msgstr "アップロードされた%sはありません。"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:41
 msgid "Some errors have occured and the system couldn't process your request."
 msgstr "エラーが発生しました、システムはリクエストを処理出来ません。"
 
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
+#: ../../../app/themes/Peafowl/snippets/form_category.php:3
+msgid "Category"
+msgstr "カテゴリ"
+
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:61
 msgid "Select category"
 msgstr "カテゴリ選択"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-msgid "Change upload privacy"
-msgstr "アップロード規約を変更"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
-msgid "cancel"
-msgstr "キャンセル"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:77
 msgid "Mark this if the upload is not family safe"
@@ -1913,6 +1976,17 @@ msgstr "ファミリーセーフティではない"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 msgid "Uploading"
 msgstr "アップロード中"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "キャンセル"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
@@ -2011,6 +2085,13 @@ msgstr "注意:アニメーションGIFはリサイズできません。"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:180
 msgid "Auto delete image"
 msgstr "画像を自動削除する"
+
+msgid "Sign up"
+msgstr "会員登録"
+
+#, php-format
+msgid "%s to be able to customize or disable image auto delete."
+msgstr "%s で画像の自動削除、またはカスタマイズを可能にできます。"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:192
 #: ../../../app/themes/Peafowl/snippets/form_image.php:25
@@ -2160,11 +2241,6 @@ msgstr "これらの語句を含まない"
 msgid "Put a minus sign just before words you don't want: -rodent -\"Jack Russell\""
 msgstr "検索結果に含みたくない語句の前にマイナス(-)をつけて下さい。： -ねずみ目 -\"ジャック・ラッセル・テリア\""
 
-#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
-#: ../../../app/themes/Peafowl/snippets/form_category.php:3
-msgid "Category"
-msgstr "カテゴリ"
-
 #: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:66
 msgid "Storage"
 msgstr "ストレージ"
@@ -2197,11 +2273,6 @@ msgstr "アルバムの公開モード"
 msgid "Who can view this content"
 msgstr "このコンテンツを見ることのできるユーザ"
 
-#: ../../../app/themes/Peafowl/snippets/form_album.php:20
-#: ../../../app/themes/Peafowl/views/dashboard.php:366
-msgid "Public"
-msgstr "公開"
-
 #: ../../../app/themes/Peafowl/snippets/form_album.php:21
 msgid "Private (just me)"
 msgstr "非公開 (自分のみ閲覧可)"
@@ -2215,10 +2286,6 @@ msgstr "非公開(パスワードが必要)"
 
 msgid "Album password"
 msgstr "アルバムパスワード"
-
-#: ../../../app/themes/Peafowl/snippets/form_category.php:9
-msgid "No category"
-msgstr "カテゴリが未設定"
 
 #: ../../../app/themes/Peafowl/snippets/form_category_edit.php:4
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:3
@@ -2285,31 +2352,6 @@ msgstr "テキストメッセージ、HTMLまたはリダイレクト先のURL"
 #: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
 msgid "Existing album"
 msgstr "既に存在するアルバム"
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
-#: ../../../app/themes/Peafowl/views/dashboard.php:28
-msgid "Album"
-msgid_plural "Albums"
-msgstr[0] "アルバム"
-
-msgid "me"
-msgstr "私"
-
-msgid "link"
-msgstr "リンク"
-
-msgid "password"
-msgstr "パスワード"
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
-#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
-#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
-msgid "private"
-msgstr "非公開"
 
 #: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
 msgid "create new album"
@@ -2513,6 +2555,9 @@ msgstr "ファミリーセーフティを満たすとしてマーク"
 msgid "Delete"
 msgstr "削除"
 
+msgid "Create new album"
+msgstr "新規アルバムを作成"
+
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:5
 #, php-format
 msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
@@ -2523,6 +2568,9 @@ msgstr "このサイトの機能を全て利用するためには、ログイン
 #: ../../../app/themes/Peafowl/views/index.php:63
 msgid "There's nothing to show here."
 msgstr "表示するものはありません。"
+
+msgid "Upload images"
+msgstr "画像をアップロード"
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
 #: ../../../app/themes/Peafowl/views/image.php:69
@@ -2780,6 +2828,18 @@ msgstr "本当にこのアルバムとアルバムにある全ての画像を削
 msgid "Delete album"
 msgstr "アルバムを削除する"
 
+#: ../../../app/themes/Peafowl/views/image.php:85
+msgid "You like this"
+msgstr "いいね！しました"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "いいね！"
+
+msgid "Upload to album"
+msgstr "アルバムにアップロード"
+
 #: ../../../app/themes/Peafowl/views/album.php:86
 msgid "Album link"
 msgstr "アルバムへのリンク"
@@ -2796,18 +2856,6 @@ msgstr "”同意します”をクリックした時点で、あなたは上記
 
 msgid "I Agree"
 msgstr "同意します"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:22
-msgid "Image"
-msgid_plural "Images"
-msgstr[0] "画像"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:34
-#: ../../../app/themes/Peafowl/views/dashboard.php:90
-#: ../../../app/themes/Peafowl/views/settings.php:126
-msgid "User"
-msgid_plural "Users"
-msgstr[0] "ユーザ"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:40
 #: ../../../app/themes/Peafowl/views/dashboard.php:1732
@@ -3112,6 +3160,14 @@ msgstr "ゲストとしてアップロード"
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "未登録ユーザのアップロードを許可するときに有効にしてください。"
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1353
+msgid "Enable embed codes (uploader)"
+msgstr "埋込みコード(アップロードしたユーザへのリンク)を有効にします。"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1359
+msgid "Enable this if you want to show embed codes when upload gets completed."
+msgstr "アップロードが完了したときに、画像への埋込みコードを表示する場合に有効にします。"
+
 msgid "Upload threads"
 msgstr "アップロードスレッド数"
 
@@ -3137,6 +3193,12 @@ msgstr "期限付きアップロードを有効にする"
 #: ../../../app/themes/Peafowl/views/dashboard.php:655
 msgid "Enable this if you want to allow uploads with an automatic delete option."
 msgstr "画像の自動削除を付加したアップロードを有効にするにはこの設定を有効にしてください。"
+
+msgid "Auto delete guest uploads"
+msgstr "ゲストアップロードの自動削除"
+
+msgid "Enable this if you want to force guest uploads to be auto deleted after certain time."
+msgstr "ゲストアップロードは一定期間後に自動で削除するようにするにはこれを有効にしてください。"
 
 msgid "Maximum image size"
 msgstr "最大画像サイズ"
@@ -3772,14 +3834,6 @@ msgstr "埋込みコード(コンテンツへのリンク)を有効にする"
 msgid "Enable this if you want to show embed codes for the content."
 msgstr "コンテンツへの埋込みコードを表示したい場合に有効にします。"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1353
-msgid "Enable embed codes (uploader)"
-msgstr "埋込みコード(アップロードしたユーザへのリンク)を有効にします。"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1359
-msgid "Enable this if you want to show embed codes when upload gets completed."
-msgstr "アップロードが完了したときに、画像への埋込みコードを表示する場合に有効にします。"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1365
 msgid "Not safe content checkbox in uploader"
 msgstr "ファミリーセーフティに接触するコンテンツのチェックボックスを表示する"
@@ -4207,7 +4261,7 @@ msgstr "コメントAPI"
 
 #, php-format
 msgid "Disqus API works with %s."
-msgstr "%s　でDisqus APIが動作します。"
+msgstr "%s でDisqus APIが動作します。"
 
 msgid "Disqus shortname"
 msgstr "Disqus ショートネーム"
@@ -4274,15 +4328,6 @@ msgstr "最大解像度で表示"
 #: ../../../app/themes/Peafowl/views/image.php:57
 msgid "Guest"
 msgstr "ゲスト"
-
-#: ../../../app/themes/Peafowl/views/image.php:85
-msgid "You like this"
-msgstr "いいね！しました"
-
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "いいね！"
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -4749,8 +4794,8 @@ msgid "Update now"
 msgstr "今すぐ更新する"
 
 #, javascript-format
-msgid "Your website is running the latest version of %s"
-msgstr "あなたのサイトは、バージョン:%sで最新版です。"
+msgid "This website is running latest %s version"
+msgstr "このサイトは、最新のバージョン %s で構成しています。"
 
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"
@@ -4771,6 +4816,12 @@ msgstr "いくつかのファイルが追加できませんでした。"
 #: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
 msgid "Image edited successfully."
 msgstr "画像の編集が完了しました。"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "非公開"
 
 #: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
 msgid "Album edited successfully."

@@ -228,9 +228,14 @@ try {
 			'image_load_max_filesize_mb' => '3',
 		],
 		'1.0.7' => NULL,
+		// 3.8.13
 		'1.0.8' => [
 			'upload_max_image_width' => '0',
 			'upload_max_image_height'=> '0',
+		],
+		// 3.9.5
+		'1.0.9' => [ 
+			'auto_delete_guest_uploads' => NULL,
 		],
 	];
 	// Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
@@ -252,7 +257,8 @@ try {
 		$is_2X = false;
 	}
 	
-	$stats_query = 'TRUNCATE TABLE `%table_prefix%stats`;
+	/* Stats query from 3.7.0 up to 3.8.13 */
+	$stats_query_legacy = 'TRUNCATE TABLE `%table_prefix%stats`;
 
 INSERT INTO `%table_prefix%stats` (stat_id, stat_date_gmt, stat_type) VALUES ("1", NULL, "total") ON DUPLICATE KEY UPDATE stat_type=stat_type;
 
@@ -395,7 +401,49 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 			}
 			
 			// Set the right table schema changes per release
-			$update_table = [];
+			$update_table = [
+				'1.0.9' => [
+					'albums' => [
+						'album_views' => [
+							'op'	=> 'ADD',
+							'type'	=> 'bigint(32)',
+							'prop'	=> "NOT NULL DEFAULT '0'",
+						]
+					],
+					'likes' => [
+						'like_content_type' => [
+							'op'		=> 'MODIFY',
+							'type'		=> "enum('image','album')",
+							'prop'		=> 'DEFAULT NULL'
+						]
+					],
+					'notifications' => [
+						'notification_content_type' => [
+							'op'		=> 'MODIFY',
+							'type'		=> "enum('user','image','album')",
+							'prop'		=> 'NOT NULL'
+						]
+					],
+					'stats' => [
+						'stat_album_views' => [
+							'op'	=> 'ADD',
+							'type'	=> 'bigint(32)',
+							'prop'	=> "NOT NULL DEFAULT '0'",
+						],
+						'stat_album_likes' => [
+							'op'	=> 'ADD',
+							'type'	=> 'bigint(32)',
+							'prop'	=> "NOT NULL DEFAULT '0'",
+						],
+						'stat_likes' => [
+							'op'	=> 'CHANGE',
+							'to'	=> 'stat_image_likes',
+							'type'	=> 'bigint(32)',
+							'prop'	=> "NOT NULL DEFAULT '0'",
+						],
+					],
+				]
+			];
 			
 			$sql_update = [];
 			
@@ -831,7 +879,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 						}
 						
 						// Stats (since 3.7.0)
-						$install_sql .= strtr($stats_query, [
+						$install_sql .= strtr($stats_query_legacy, [
 								'%table_prefix%' => $table_prefix,
 								'%table_engine%' => $fulltext_engine
 							]);
@@ -891,7 +939,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 	}
 	
 	$doctitle = $doctitles[$doing].' - Chevereto ' . get_chevereto_version(true);
-	$system_template = CHV_APP_PATH_SYSTEM . 'template.php';
+	$system_template = CHV_APP_PATH_CONTENT_SYSTEM . 'template.php';
 	$install_template = CHV_APP_PATH_INSTALL . 'template/'.$doing.'.php';
 
 	if(file_exists($install_template)) {

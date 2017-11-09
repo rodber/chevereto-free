@@ -4,12 +4,6 @@
 	<label for="form-image-title"><?php _se('Title'); ?> <span class="optional"><?php _se('optional'); ?></span></label>
 	<input type="text" id="form-image-title" name="form-image-title" class="text-input" value="<?php echo function_exists('get_image_safe_html') ? get_image_safe_html()["title"] : NULL; ?>" placeholder="<?php _se('Untitled image'); ?>" maxlength="<?php echo CHV\getSetting('image_title_max_length'); ?>">
 </div>
-
-<?php if(get_categories()) { ?>
-<div class="input-label c7">
-	<?php G\Render\include_theme_file('snippets/form_category'); ?>
-</div>
-<?php } ?>
 <?php
 	if(!function_exists('get_image') or (function_exists('get_image') && get_image()['user'])) {
 ?>
@@ -18,6 +12,15 @@
 </div>
 <div id="move-new-album" data-content="form-new-album" data-view="switchable" class="soft-hidden">
     <?php G\Render\include_theme_file("snippets/form_album"); ?>
+</div>
+<?php
+	}
+?>
+<?php
+	if(get_categories()) {
+?>
+<div class="input-label c7">
+	<?php G\Render\include_theme_file('snippets/form_category'); ?>
 </div>
 <?php
 	}

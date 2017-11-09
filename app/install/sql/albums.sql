@@ -12,6 +12,7 @@ CREATE TABLE `%table_prefix%albums` (
   `album_image_count` bigint(32) NOT NULL DEFAULT '0',
   `album_description` text,
   `album_likes` bigint(32) NOT NULL DEFAULT '0',
+  `album_views` bigint(32) NOT NULL DEFAULT '0',
   PRIMARY KEY (`album_id`),
   KEY `album_user_id` (`album_user_id`),
   KEY `album_date_gmt` (`album_date_gmt`),

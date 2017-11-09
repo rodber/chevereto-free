@@ -9,12 +9,12 @@
 			<inbox@rodolfoberrios.com>
 
   Copyright (C) Rodolfo Berrios A. All rights reserved.
-  
+
   BY USING THIS SOFTWARE YOU DECLARE TO ACCEPT THE CHEVERETO EULA
   http://chevereto.com/license
 
   --------------------------------------------------------------------- */
-  
+
   # This file is used to load G and your G APP
   # If you need to hook elements to this loader you can add them in loader-hook.php
 
@@ -58,8 +58,8 @@ define('CHV_FOLDER_IMAGES', !is_null(Settings::get('chevereto_version_installed'
 define('CHV_APP_PATH_INSTALL', G_APP_PATH . 'install/');
 define('CHV_APP_PATH_CONTENT', G_APP_PATH . 'content/');
 define('CHV_APP_PATH_LIB_VENDOR', G_APP_PATH . 'vendor/');
-define('CHV_APP_PATH_SYSTEM', CHV_APP_PATH_CONTENT . 'system/');
-define('CHV_APP_PATH_LANGUAGES', CHV_APP_PATH_CONTENT . 'languages/');
+define('CHV_APP_PATH_CONTENT_SYSTEM', CHV_APP_PATH_CONTENT . 'system/');
+define('CHV_APP_PATH_CONTENT_LANGUAGES', CHV_APP_PATH_CONTENT . 'languages/');
 
 // CHV paths
 define('CHV_PATH_IMAGES', G_ROOT_PATH . CHV_FOLDER_IMAGES . '/');
@@ -104,30 +104,39 @@ if(access !== 'install' and Settings::get('chevereto_version_installed')) {
 	if(G\is_valid_timezone(Settings::get('default_timezone'))) {
 		date_default_timezone_set(Settings::get('default_timezone'));
 	}
-	// Cloudflare REMOTE_ADDR workaround 
+	// Cloudflare REMOTE_ADDR workaround
 	if(Settings::get('cloudflare') or isset($_SERVER['HTTP_CF_CONNECTING_IP'])) {
 		if(isset($_SERVER['HTTP_CF_CONNECTING_IP'])) {
 			$_SERVER['REMOTE_ADDR'] = $_SERVER['HTTP_CF_CONNECTING_IP'];
 		}
 	}
-	
+
 	// Fix upload_max_filesize_mb if needed
 	$ini_upload_max_filesize = G\get_ini_bytes(ini_get('upload_max_filesize'));
 	$ini_post_max_size = ini_get('post_max_size') == 0 ? $ini_upload_max_filesize : G\get_ini_bytes(ini_get('post_max_size'));
-	
+
 	Settings::setValue('true_upload_max_filesize', min($ini_upload_max_filesize, $ini_post_max_size));
-	
+
 	if(Settings::get('true_upload_max_filesize') < G\get_bytes(Settings::get('upload_max_filesize_mb') . 'MB')) {
 		Settings::update([
 			'upload_max_filesize_mb' => G\bytes_to_mb(Settings::get('true_upload_max_filesize'))
 		]);
 	}
-	
+
 }
 
 // Proccess queues
-if(array_key_exists('queue', $_REQUEST) && $_REQUEST['r']) {
-	Queue::process(['type' => 'storage-delete']);
+if(class_exists('CHV\Lock') && array_key_exists('queue', $_REQUEST) && $_REQUEST['r']) {
+	try {
+		$lock = new Lock('storage-delete');
+		if(!$lock->check() && $lock->create()) {
+			Queue::process(['type' => 'storage-delete']);
+			$lock->destroy();
+		}
+		Render\displayEmptyPixel();
+	} catch(Exception $e) {
+		error_log($e);
+	}
 }
 
 // User login handle
@@ -166,17 +175,22 @@ if(!Settings::get('chevereto_version_installed')) {
 	]);
 }
 
-// Process ping update
-if(Settings::get('enable_automatic_updates_check') && array_key_exists('ping', $_REQUEST) && $_REQUEST['r']) {
-	L10n::setLocale(Settings::get('default_language')); // Force system language
-	checkUpdates();
-}
-
-// Delete expired images
-if(method_exists('CHV\Image','deleteExpired')) {
-    try {
-		Image::deleteExpired();
-	} catch(Exception $e) {}
+// Process showPingPixel (automatic updates check)
+if(class_exists('CHV\Lock') && Settings::get('enable_automatic_updates_check') && array_key_exists('ping', $_REQUEST) && $_REQUEST['r']) {
+  die();
+	if(is_null(Settings::get('update_check_datetimegmt')) || G\datetime_add(Settings::get('update_check_datetimegmt'), 'P1D') < G\datetimegmt()) {
+		try {
+			L10n::setLocale(Settings::get('default_language')); // Force system language
+			$lock = new Lock('check-updates');
+			if(!$lock->check() && $lock->create()) {
+				checkUpdates();
+				$lock->destroy();
+			}
+		} catch(Exception $e) {
+			error_log($e);
+		}
+	}
+	Render\displayEmptyPixel();
 }
 
 // Translate logged user count labels
@@ -187,7 +201,7 @@ if(Login::isLoggedUser()) {
 }
 
 // Handle banned IP address
-if(method_exists('CHV\Ip_ban','getSingle')) {
+if(method_exists('CHV\Ip_ban', 'getSingle')) {
 	$banned_ip = Ip_ban::getSingle();
 	if($banned_ip) {
 		if(G\is_url($banned_ip['message'])) {
@@ -196,13 +210,6 @@ if(method_exists('CHV\Ip_ban','getSingle')) {
 			die(empty($banned_ip['message']) ? _s('You have been forbidden to use this website.') : $banned_ip['message']);
 		}
 	}
-}
-
-// Handle invalid user accounts
-if(method_exists('CHV\User','cleanup')) {
-	try {
-		User::cleanup();
-	} catch(Exception $e) {}
 }
 
 // Append any app loader hook (user own hooks)
@@ -237,8 +244,8 @@ foreach([
 				}
 			}
 		}
-		
-		
+
+
 		if($homepage_cover_image !== getSetting('homepage_cover_image')) {
 			Settings::update(['homepage_cover_image' => $homepage_cover_image]);
 		}
@@ -265,27 +272,85 @@ foreach([
 	}
 }
 
+// Let's try this one out... Why not?
+register_shutdown_function(function() {
+
+	if(class_exists('CHV\Lock')) {
+
+		// Delete expired images
+		if(method_exists('CHV\Image', 'deleteExpired')) {
+			try {
+				$lock = new Lock('delete-expired-images');
+				if(!$lock->check() && $lock->create()) {
+					Image::deleteExpired();
+					$lock->destroy();
+				}
+			} catch(Exception $e) {
+				error_log($e);
+			}
+		}
+
+		// Handle invalid user accounts
+		if(method_exists('CHV\User', 'cleanUnconfirmed')) {
+			try {
+				$lock = new Lock('clean-unconfirmed-users');
+				if(!$lock->check() && $lock->create()) {
+					User::cleanUnconfirmed(5);
+					$lock->destroy();
+				}
+			} catch(Exception $e) {
+				error_log($e);
+			}
+		}
+
+		try {
+			$lock = new Lock('remove-image-ID-locks');
+			if(!$lock->check() && $lock->create()) {
+				$limit = 60 * 5; // 5 minutes
+				// Do regex stuff
+				$directory = new \DirectoryIterator(Lock::$path);
+				$regex  = new \RegexIterator($directory, '/^image-ID.*\.lock$/i');
+				$i = 0;
+				foreach($regex as $file) {
+					$file = $file->getPathname();
+					if($i > 5) break;
+					if(!is_file($file)) return;
+					if (microtime(TRUE) - filemtime($file) >= $limit) {
+						if(!unlink($file)) {
+							error_log(sprintf("Chevereto Error: Can't remove %s lock", basename($file)));
+						}
+					}
+					$i++;
+				}
+				$lock->destroy();
+			}
+
+		} catch(Exception $e) {
+			error_log($e);
+		}
+
+	}
+
+});
+
 // We're getting fancy
 try {
 	if(!isset($hook_before)) {
 		$hook_before = function($handler) {
-			
+
 			// Handle agree consent stuff
 			if(array_key_exists('agree-consent', $_GET)) {
 				setcookie('AGREE_CONSENT', 1, time()+(60*60*24*30), G_ROOT_PATH_RELATIVE); // 30-day cookie
 				$_SESSION['agree-consent'] = TRUE;
 				G\redirect(preg_replace('/([&\?]agree-consent)/', NULL, G\get_current_url()));
 			}
-			
+
 			// ACE OF BASE
 			$base = $handler::$base_request;
-			
-			// Magic
-			$is_admin = (bool) Login::getUser()['is_admin'];
-			
+
 			// Parse this sh*t right away
 			parse_str($_SERVER['QUERY_STRING'], $querystr);
-			
+
 			// Inject some global stuff
 			$handler::setVar('auth_token', $handler::getAuthToken());
 			$handler::setVar('doctitle', getSetting('website_name'));
@@ -294,18 +359,18 @@ try {
 			$handler::setVar('logged_user', Login::getUser());
 			$handler::setVar('failed_access_requests', 0); // Init
 			$handler::setVar('header_logo_link', G\get_base_url());
-			$handler::setCond('admin', $is_admin);
+			$handler::setCond('admin', Login::getUser()['is_admin']);
 			$handler::setCond('maintenance', getSetting('maintenance') AND !Login::getUser()['is_admin']);
 			$handler::setCond('show_consent_screen', $base !== 'api' && (getSetting('enable_consent_screen') ? !(Login::getUser() OR isset($_SESSION['agree-consent']) OR isset($_COOKIE['AGREE_CONSENT'])) : FALSE));
 			$handler::setCond('captcha_needed', getSetting('recaptcha') AND getSetting('recaptcha_threshold') == 0);
 			$handler::setCond('show_header', !($handler::getCond('maintenance') OR $handler::getCond('show_consent_screen')));
 			$handler::setCond('show_notifications', FALSE);
-			
+
 			// Login if maintenance /dashboard
 			if($handler::getCond('maintenance') && $handler->request_array[0] == 'dashboard') {
 				G\redirect('login');
 			}
-			
+
 			// Consent screen "accept" URL
 			if($handler::getCond('show_consent_screen')) {
 				$handler::setVar('consent_accept_url', G\get_current_url() . (parse_url(G\get_current_url(), PHP_URL_QUERY) ? '&' : '/?')  . 'agree-consent');
@@ -319,20 +384,20 @@ try {
 				}
 				$handler::setVar('failed_access_requests', $failed_access_requests);
 			}
-			
+
 			if($handler::getCond('captcha_needed')) {
-				$handler::setVar('recaptcha_html', Render\get_recaptcha_html('clean'));
+				$handler::setVar('recaptcha_html', Render\get_recaptcha_html());
 			}
-			
+
 			// Personal mode
 			if(getSetting('website_mode') == 'personal') {
-				
+
 				// Disable some stuff for the rest of the mortals
 				if(!$handler::getVar('logged_user')['is_admin']) {
 					//Settings::setValue('website_explore_page', FALSE);
 					//Settings::setValue('website_search', FALSE);
 				}
-				
+
 				// Keep ?random & ?lang when route is /
 				if($handler->request_array[0] == '/' and getSetting('website_mode_personal_routing') == '/' and in_array(key($querystr), ['random', 'lang'])) {
 					$handler->mapRoute('index');
@@ -345,7 +410,7 @@ try {
 						'id' => getSetting('website_mode_personal_uid')
 					]);
 				}
-				
+
 				// Inject some stuff for the index page
 				if($handler->request_array[0] == '/' and !in_array(key($querystr), ['random', 'lang']) and !$handler::getCond('mapped_route')) {
 					$personal_mode_user = User::getSingle(getSetting('website_mode_personal_uid'));
@@ -366,9 +431,9 @@ try {
 						Settings::setValue('homepage_cover_image', $personal_mode_user['background']['url']);
 					}
 				}
-				
+
 			} else { // Community mode
-				
+
 				if($base !== 'index' and !G\is_route_available($handler->request_array[0])) {
 					if(getSetting('user_routing')) {
 						$handler->mapRoute('user');
@@ -381,10 +446,10 @@ try {
 					}
 				}
 			}
-			
+
 			// Virtual routes galore
 			$virtualizable_routes = ['image', 'album'];
-			
+
 			// Redirect from real route to virtual route (only if needed)
 			if(in_array($handler->request_array[0], $virtualizable_routes)) {
 				$virtual_route = getSetting('route_' . $handler->request_array[0]);
@@ -393,7 +458,7 @@ try {
 					return G\redirect($virtualized_url);
 				}
 			}
-			
+
 			// Virtual route mapping
 			if($base !== 'index' && !G\is_route_available($handler->request_array[0])) {
 				foreach($virtualizable_routes as $k) {
@@ -401,8 +466,8 @@ try {
 						$handler->mapRoute($k);
 					}
 				}
-			}		
-			
+			}
+
 			// Website privacy mode
 			if(getSetting('website_privacy_mode') == 'private' and !Login::getUser()) {
 				$allowed_requests = ['api', 'login', 'logout', 'image', 'album', 'page', 'account', 'connect', 'json']; // json allows endless scrolling for privacy link
@@ -413,13 +478,13 @@ try {
 					G\redirect('login');
 				}
 			}
-			
+
 			// Private gate
 			$handler::setCond('private_gate', getSetting('website_privacy_mode') == 'private' and !Login::getUser());
-			
+
 			// Forced privacy
 			$handler::setCond('forced_private_mode', (getSetting('website_privacy_mode') == 'private' and getSetting('website_content_privacy_mode') !== 'default'));
-			
+
 			// Categories
 			$categories = [];
 			if(getSetting('website_explore_page') || $base == 'dashboard') {
@@ -437,35 +502,61 @@ try {
 			}
 			$handler::setVar('categories', $categories);
 
+			$explore_semantics = [
+				'recent' => [
+					'label' => _s('Recent'),
+					'icon'	=> 'icon-ccw',
+				],
+				'trending' => [
+					'label' => _s('Trending'),
+					'icon'	=> 'icon-fire',
+				],
+				'animated' => [
+					'label' => _s('Animated'),
+					'icon'	=> 'icon-play4',
+				],
+			];
+			if(!getSetting('enable_likes')) {
+				unset($explore_semantics['popular']);
+			}
+			if(!in_array('gif', Image::getEnabledImageFormats())) {
+				unset($explore_semantics['animated']);
+			}
+			foreach($explore_semantics as $k => &$v) {
+				$v['url'] = G\get_base_url('explore/' . $k);
+			}
+			unset($v);
+
+			$handler::setVar('explore_semantics', $explore_semantics);
+
 			// Get active AND visible pages
 			$pages_visible_db = Page::getAll(['is_active' => 1, 'is_link_visible' => 1], ['field' => 'sort_display', 'order' => 'ASC']);
 			$pages_visible = [];
 			if($pages_visible_db) {
 				foreach($pages_visible_db as $k => $v) {
-					if(!$v['is_active'] and !$v['is_link_visible']) {
+					if(!$v['is_active'] && !$v['is_link_visible']) {
 						continue;
 					}
 					$pages_visible[$v['id']] = $v;
 				}
 			}
 			$handler::setVar('pages_link_visible', $pages_visible);
-			
-			// Allowed upload conditional
-			$upload_allowed = getSetting('enable_uploads');
+
+			// Allowed/Enabled upload conditional
+			$upload_enabled = Login::getUser()['is_admin'] ? TRUE : getSetting('enable_uploads');
+			$upload_allowed = $upload_enabled;
+
 			if(!Login::getUser()) {
 				if(!getSetting('guest_uploads') || getSetting('website_privacy_mode') == 'private' || $handler::getCond('maintenance')) {
-					$upload_allowed = false;
+					$upload_allowed = FALSE;
 				}
-			} else {
-				if(getSetting('website_mode') == 'personal' && getSetting('website_mode_personal_uid') !== Login::getUser()['id']) {
-					$upload_allowed = false;
-				}
+			} else if(!Login::getUser()['is_admin'] && getSetting('website_mode') == 'personal' && getSetting('website_mode_personal_uid') !== Login::getUser()['id']) {
+				$upload_allowed = FALSE;
 			}
-			if(Login::getUser()['is_admin']) {
-				$upload_allowed = true;
-			}
+
+			$handler::setCond('upload_enabled', $upload_enabled);
 			$handler::setCond('upload_allowed', $upload_allowed);
-			
+
 			// Maintenance mode + Consent screen
 			if($handler::getCond('maintenance') || $handler::getCond('show_consent_screen')) {
 				$handler::setCond('private_gate', TRUE);
@@ -474,13 +565,10 @@ try {
 					$handler->preventRoute($handler::getCond('show_consent_screen') ? 'consent-screen' : 'maintenance');
 				}
 			}
-			
-			// Inject the system notices
-			if($is_admin) {
-				$system_notices = getSystemNotices();
-			}
-			$handler::setVar('system_notices', $system_notices);
-			
+
+			// Inject system notices
+			$handler::setVar('system_notices', Login::getUser()['is_admin'] ? getSystemNotices() : NULL);
+
 			if(!in_array($handler->request_array[0], ['login', 'signup', 'account', 'connect', 'logout', 'json', 'api'])) {
 				$_SESSION['last_url'] = G\get_current_url();
 			}

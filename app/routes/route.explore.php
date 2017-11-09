@@ -24,59 +24,63 @@ $route = function($handler) {
 			return $handler->issue404();
 		}
 		
-		if($handler->isRequestLevel(2)) return $handler->issue404(); // Allow only 3 levels
+		$doing = $handler->request[0];
 		
-		// Build the tabs
-		$tabs = [
-			[
-				'list'		=> TRUE,
-				'tools'		=> TRUE,
-				'label'		=> _s('Most recent'),
-				'id'		=> 'list-most-recent',
-				'params'	=> 'list=images&sort=date_desc&page=1',
-				'current'	=> $_REQUEST['sort'] == 'date_desc' or !$_REQUEST['sort'] ? TRUE : FALSE, // Default
-			],
-			[
-				'list'		=> TRUE,
-				'tools'		=> TRUE,
-				'label'		=> _s('Oldest'),
-				'id'		=> 'list-most-oldest',
-				'params'	=> 'list=images&sort=date_asc&page=1',
-				'current'	=> $_REQUEST['sort'] == 'date_asc',
-			],
-			[
-				'list'		=> TRUE,
-				'tools'		=> TRUE,
-				'label'		=> _s('Most viewed'),
-				'id'		=> 'list-most-viewed',
-				'params'	=> 'list=images&sort=views_desc&page=1',
-				'current'	=> $_REQUEST['sort'] == 'views_desc',
-			],
+		if(!$doing && CHV\getSetting('homepage_style') == 'route_explore' && strpos(G\get_current_url(), G\get_base_url(G\get_route_name())) !== FALSE) {
+			$redir = G\str_replace_first(G\get_base_url(G\get_route_name()), G\get_base_url(), G\get_current_url());
+			G\redirect($redir);
+		}
+		
+		$explore_semantics = $handler::getVar('explore_semantics');
+		
+		if(isset($doing) && !array_key_exists($doing, $explore_semantics)) {
+			return $handler->issue404();
+		}
+		
+		if($handler->isRequestLevel(3)) return $handler->issue404(); // Allow only 3 levels
+		
+		$basename = CHV\getSetting('homepage_style') == 'route_explore' && $handler->getCond('mapped_route') ? NULL : G\get_route_name();
+		if($doing) {
+			$basename .= ($basename ? '/' : NULL) . $doing;
+		}
+		
+		$listing = isset($doing) ? $explore_semantics[$doing] : ['label' => _s('Explore'), 'icon' => 'icon-images2'];
+		$listing['list'] = is_null($doing) ? G\get_route_name() : $doing;
+		
+		$listingParams = [
+			'listing'	=> $listing['list'],
+			'basename'	=> $basename,
+			'params_hidden' => ['hide_empty' => 1, 'hide_banned' => 1],
 		];
-		$current = FALSE;
-		foreach($tabs as $k => $v) {
-			if($v['current']) {
-				$current = TRUE;
-			}
-			$tabs[$k]['type'] = 'images';
-			$route_path = CHV\getSetting('homepage_style') == 'route_explore' ? NULL : (G\get_route_name() . '/');
-			$tabs[$k]['url'] = G\get_base_url($route_path . '?' . $tabs[$k]['params']); // Note: Routing explore is adding /explore
-		}
-		if(!$current) {
-			$tabs[0]['current'] = TRUE;
+		
+		if($doing == 'animated') {
+			$listingParams['params_hidden']['is_animated'] = 1;
 		}
 		
-		// List
+		$tabs = CHV\Listing::getTabs($listingParams, TRUE);
+		
+		$currentKey = $tabs['currentKey'];	
+		$type = $tabs['tabs'][$currentKey]['type'];
+		$tabs = $tabs['tabs'];
+
+		parse_str($tabs[$currentKey]['params'], $tabs_params);
+		
 		$list_params = CHV\Listing::getParams(); // Use CHV magic params
+		$list_params['sort'] = explode('_', $tabs_params['sort']); // Hack this stuff
+
+		// List
 		$list = new CHV\Listing;
-		$list->setType('images');
+		$list->setType($type);
 		$list->setOffset($list_params['offset']);
 		$list->setLimit($list_params['limit']); // how many results?
 		$list->setItemsPerPage($list_params['items_per_page']); // must
 		$list->setSortType($list_params['sort'][0]); // date | size | views | likes
 		$list->setSortOrder($list_params['sort'][1]); // asc | desc
 		$list->setRequester(CHV\Login::getUser());
+		$list->setParamsHidden($listingParams['params_hidden']);
 		$list->exec();
+		
+		$handler::setVar('listing', $listing);
 		
 		$handler::setVar('pre_doctitle', _s('Explore'));
 		//$handler::setVar('meta_keywords', NULL);
@@ -85,7 +89,7 @@ $route = function($handler) {
 		$handler::setVar('list', $list);
 		
 		if($logged_user['is_admin']) {
-			$handler::setVar('user_items_editor', false);
+			$handler::setVar('user_items_editor', FALSE);
 		}
 		
 	} catch(Exception $e) {

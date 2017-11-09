@@ -6,7 +6,9 @@
 	?>
     <label for="<?php echo $label; ?>"><?php _se('Album name'); ?></label>
     <input type="text" id="<?php echo $label; ?>" name="<?php echo $label; ?>" class="text-input" value="<?php echo $album["name"]; ?>" placeholder="<?php _se('Album name'); ?>" maxlength="<?php echo CHV\getSetting('album_name_max_length'); ?>" required>
+	<?php if($GLOBALS['theme_include_args']['album-switch'] !== FALSE) { ?>
     <span data-action="album-switch" class="btn-alt c7"><?php _se('or'); ?> <a data-switch="move-existing-album"><?php _se('move to existing album'); ?></a></span>
+	<?php } ?>
 </div>
 <div class="input-label">
 	<label for="form-album-description"><?php _se('Album description'); ?> <span class="optional"><?php _se('optional'); ?></span></label>

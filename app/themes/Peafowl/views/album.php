@@ -24,7 +24,7 @@
 				?>
                 
 				<div class="breadcrum-item">
-					<h1><span class="breadcrum-text"><span class="icon icon-eye-blocked margin-right-5 <?php if(get_album()["privacy"] == "public") echo "soft-hidden"; ?>" data-content="privacy-private" title="<?php _se('This content is private'); ?>" rel="tooltip"></span><span class="breadcrum-text"><a href="<?php echo get_album()["url"]; ?>" data-text="album-name"<?php if(get_album()['name'] !== get_album()['name_truncated']) { ?> title="<?php echo get_album_safe_html()["name"]; ?><?php } ?>"><?php echo get_album_safe_html()["name_truncated"]; ?></a></span></h1>
+					<h1><span class="breadcrum-text"><span class="icon icon-eye-blocked margin-right-5 <?php if(get_album()["privacy"] == "public") echo "soft-hidden"; ?>" data-content="privacy-private" title="<?php _se('This content is private'); ?>" rel="tooltip"></span><span class="breadcrum-text"><a href="<?php echo get_album()["url"]; ?>" data-text="album-name"<?php if(get_album()['name'] !== get_album()['name_truncated']) { ?> title="<?php echo get_album_safe_html()["name"]; ?><?php } ?>"><?php echo get_album()["name_truncated_html"]; ?></a></span></h1>
 				</div>
 				<?php
 					if(is_owner() or is_admin()) {
@@ -43,9 +43,31 @@
 		
 		<div class="header-content-right phone-hide">
         	<div class="number-figures float-left"><b data-text="image-count"><?php echo get_album()["image_count"]; ?></b> <span data-text="image-label" data-label-single="<?php _ne('image', 'images', 1); ?>" data-label-plural="<?php _ne('image', 'images', 2); ?>"><?php _ne('image', 'images', get_album()['image_count']); ?></span></div>
-			<?php if(CHV\getSetting('theme_show_social_share')) { ?>
+			<div class="number-figures float-left"><?php echo get_album()['views']; ?> <span><?php echo get_album()['views_label']; ?></span></div>
+			<?php
+				if(CHV\getSetting('enable_likes')) {
+			?>
+			<a class="btn-like" data-liked="<?php echo (int)get_album()['liked']; ?>" data-action="like">
+				<span class="btn btn-liked blue" rel="tooltip" title="<?php _se("You like this"); ?>"><span class="btn-icon icon-heart3"></span><span class="btn-text phone-hide"><?php _se('Liked'); ?></span></span>
+				<span class="btn btn-unliked blue outline"><span class="btn-icon icon-heart4"></span><span class="btn-text phone-hide"><?php _se('Like'); ?></span></span>
+			</a>
+			<?php
+				}
+			?>
+			<?php 
+				if(CHV\getSetting('theme_show_social_share')) {
+			?>
 			<a class="btn red" data-modal="simple" data-target="modal-share"><span class="btn-icon icon-share"></span><span class="btn-text phone-hide"><?php _se('Share'); ?></span></a>
-			<?php } ?>
+			<?php 
+				}
+			?>
+			<?php
+				if(is_owner()) {
+			?>
+			<button class="btn default" data-trigger="anywhere-upload-input"><span class="btn-icon icon-cloud-upload"></span><span class="btn-text phone-hide"><?php _se('Upload to album'); ?></span></button>
+			<?php
+				}
+			?>
         </div>
 		
     </div>
@@ -161,7 +183,7 @@
 </div>
 	
 	
-<!--googleoff: index-->
+
 <?php
 	if(is_owner() or is_admin()) {
 ?>
@@ -177,7 +199,7 @@
 		G\Render\include_theme_file("snippets/modal_share");
 	}
 ?>
-<!--googleon: index-->
+
 
 <?php G\Render\include_theme_footer(); ?>
 

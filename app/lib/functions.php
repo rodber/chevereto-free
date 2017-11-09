@@ -261,29 +261,18 @@ function check_hashed_token($hash, $public_token_format) {
 }
 
 function recaptcha_check() {
-	// Detect reCaptcha version
-	if(preg_match('/[-_]+/', getSetting('recaptcha_public_key'))) { // new one
-		$endpoint = 'https://www.google.com/recaptcha/api/siteverify';
-		$params = [
-			'secret'	=> getSetting('recaptcha_private_key'),
-			'response'	=> $_POST['g-recaptcha-response'],
-			'remoteip'	=> G\get_client_ip()
-		];
-		
-		$endpoint .= '?' . http_build_query($params);
-		$re_api = json_decode(G\fetch_url($endpoint));
-		// Mimic old reCaptcha API return
-		return (object)['is_valid' => (bool)$re_api->success];
-	} else {
-		$re = array(
-			'private_key'	=> getSetting('recaptcha_private_key'),
-			'ip'			=> G\get_client_ip(),
-			'challenge'		=> $_POST['recaptcha_challenge_field'],
-			'response'		=> $_POST['recaptcha_response_field']
-		);
-		require_once(CHV_APP_PATH_LIB_VENDOR . 'recaptchalib.php');
-		return recaptcha_check_answer($re['private_key'], $re['ip'], $re['challenge'], $re['response']);
-	}
+	// V2 ONLY
+	$endpoint = 'https://www.google.com/recaptcha/api/siteverify';
+	$params = [
+		'secret'	=> getSetting('recaptcha_private_key'),
+		'response'	=> $_POST['g-recaptcha-response'],
+		'remoteip'	=> G\get_client_ip()
+	];
+	
+	$endpoint .= '?' . http_build_query($params);
+	$re_api = json_decode(G\fetch_url($endpoint));
+	// Mimic old reCaptcha API return
+	return (object)['is_valid' => (bool)$re_api->success];
 }
 
 function must_use_recaptcha($val, $max="") {
@@ -727,7 +716,6 @@ function checkUpdates() {
 				Settings::update($settings_update);
 			}
 		}
-		return \CHV\Render\displayEmptyPixel();
 	} catch(Exception $e) {
 		error_log($e);
 	} // Silence

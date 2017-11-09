@@ -5,7 +5,7 @@ CREATE TABLE `%table_prefix%notifications` (
   `notification_user_id` bigint(32) NOT NULL,
   `notification_trigger_user_id` bigint(32) DEFAULT NULL,
   `notification_type` enum('follow','like') NOT NULL,
-  `notification_content_type` enum('user','image') NOT NULL,
+  `notification_content_type` enum('user','image','album') NOT NULL,
   `notification_type_id` bigint(32) NOT NULL COMMENT 'type_id based on action (type) table',
   `notification_is_read` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`notification_id`),

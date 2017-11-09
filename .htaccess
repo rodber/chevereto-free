@@ -20,7 +20,7 @@ Options +FollowSymLinks
 	# Make sure to apply the correct paths to reflect your current installation
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteRule images/.+\.(gif|jpe?g|png|bmp) - [NC,L,R=404]
-	#RewriteRule images/.+\.(gif|jpe?g|png|bmp) content/images/system/404.gif [NC,L]
+	#RewriteRule images/.+\.(gif|jpe?g|png|bmp) content/images/system/default/404.gif [NC,L]
 	
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
