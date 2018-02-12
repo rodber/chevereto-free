@@ -335,7 +335,7 @@ class Gettext {
 		}
 		// Detect if callable function has been already created
 		if(!array_key_exists('callable', $this->translation_plural)) {
-			$this->translation_plural['callable'] = create_function('$n', $this->translation_plural['function']);
+			$this->translation_plural['callable'] = function($n) { return eval($this->translation_plural['function']); };
 		}
 		return call_user_func($this->translation_plural['callable'], $count);
 	}
