@@ -9,7 +9,7 @@
 			<inbox@rodolfoberrios.com>
 
   Copyright (C) Rodolfo Berrios A. All rights reserved.
-  
+
   BY USING THIS SOFTWARE YOU DECLARE TO ACCEPT THE CHEVERETO EULA
   http://chevereto.com/license
 
@@ -17,13 +17,13 @@
 
 namespace CHV;
 use G, DirectoryIterator, Exception;
-  
+
 if(!defined("access") or !access) die("This file cannot be directly accessed.");
 
 // Inspired from http://stackoverflow.com/a/18602474
 // L10n version of G\time_elapsed_string
 function time_elapsed_string($datetime, $full=false) {
-	
+
 	$now = new \DateTime(G\datetimegmt());
 	$ago = new \DateTime($datetime);
 	$diff = $now->diff($ago);
@@ -42,7 +42,7 @@ function time_elapsed_string($datetime, $full=false) {
 	];
 	foreach ($string as $k => &$v) {
 		if ($diff->$k) {
-			
+
 			$times = [
 				'y' => _n('year', 'years', $diff->$k),
 				'm' => _n('month', 'months', $diff->$k),
@@ -52,16 +52,16 @@ function time_elapsed_string($datetime, $full=false) {
 				'i' => _n('minute', 'minutes', $diff->$k),
 				's' => _n('second', 'seconds', $diff->$k),
 			];
-			
+
 			$v = $diff->$k . ' ' . $times[$k];
-			
+
 		} else {
 			unset($string[$k]);
 		}
 	}
 
 	if (!$full) $string = array_slice($string, 0, 1);
-	
+
 	return count($string) > 0 ? _s('%s ago', implode(', ', $string)) : _s('moments ago');
 
 }
@@ -86,19 +86,16 @@ function system_notification_email($args=[]) {
 	}
 }
 
-// Work-in-progress
+// Work-in-progress 2.0 baby!
 function send_mail($to, $subject, $body) {
-	
 	$own_name = __FUNCTION__ . '()';
-	
 	$args = ['to', 'subject', 'body'];
-	
 	foreach(func_get_args() as $k => $v) {
 		if(!$v) {
 			throw new Exception('Missing $'.$args[$k].' in '. $own_name);
 		}
 	}
-	
+
 	// Bridge implementation
 	if(is_array($to)) {
 		$aux = $to;
@@ -109,7 +106,7 @@ function send_mail($to, $subject, $body) {
 		$from = [getSettings()['email_from_email'], getSettings()['email_from_name']];
 		$reply_to = NULL;
 	}
-	
+
 	if(!filter_var($to, FILTER_VALIDATE_EMAIL)) {
 		throw new Exception('Invalid email in ' . $own_name);
 	}
@@ -118,13 +115,11 @@ function send_mail($to, $subject, $body) {
 			throw new Exception('Invalid $'.$v.' setting in ' . $own_name);
 		}
 	}
-	
+	$body = trim($body);
 	try {
 		$mail = new \Mailer();
+		$alt_body = $mail->html2text($body);
 		$mail->CharSet = 'UTF-8';
-		if($body != strip_tags($body)) {
-			$mail->IsHTML(true);
-		}
 		$mail->Mailer = getSettings()['email_mode'];
 		if($mail->Mailer == 'smtp') {
 			$mail->IsSMTP();
@@ -133,12 +128,18 @@ function send_mail($to, $subject, $body) {
 			$mail->SMTPAutoTLS = in_array(getSettings()['email_smtp_server_security'], ['ssl', 'tls']);
 			$mail->Port	= getSettings()['email_smtp_server_port'];
 			$mail->Host = getSettings()['email_smtp_server'];
-			$mail->Username = getSettings()['email_smtp_server_username']; 
+			$mail->Username = getSettings()['email_smtp_server_username'];
 			$mail->Password = getSettings()['email_smtp_server_password'];
 		}
 		$mail->Timeout = 30;
 		$mail->Subject = $subject;
-		$mail->Body = $body;
+		if($body != $alt_body) {
+			$mail->IsHTML(true);
+			$mail->Body = $mail->normalizeBreaks($body);
+			$mail->AltBody = $mail->normalizeBreaks($alt_body);
+		} else {
+			$mail->Body = $body;
+		}
 		$mail->addAddress($to);
 		if($reply_to and is_array($reply_to)) {
 			foreach($reply_to as $v) {
@@ -154,7 +155,7 @@ function send_mail($to, $subject, $body) {
 	} catch (Exception $e) {
 		throw new Exception($e->getMessage(), $e->getCode());
 	}
-	
+
 }
 
 /**
@@ -215,7 +216,8 @@ function get_banner_code($banner, $safe_html=true) {
 
 function getSystemNotices() {
 	$system_notices = [];
-	if(getSetting('update_check_display_notification') && version_compare(getSetting('update_check_notified_release'), getSetting('chevereto_version_installed'), '>')) {
+	// Don't notify if system files are newer or match notified release
+	if(getSetting('update_check_display_notification') && (version_compare(getSetting('update_check_notified_release'), getSetting('chevereto_version_installed'), '>') && version_compare(getSetting('update_check_notified_release'), G_APP_VERSION, '>'))) {
 		$system_notices[] = _s('There is an update available for your system. Go to %s to download and install this update.', '<a href="'.G\get_base_url('dashboard?checkUpdates').'">'._s('Dashboard').'</a>');
 	}
 	if(version_compare(G_APP_VERSION, getSetting('chevereto_version_installed'), '>')) {
@@ -255,7 +257,7 @@ function generate_hashed_token($id, $token="") {
 	);
 }
 
-function check_hashed_token($hash, $public_token_format) {	
+function check_hashed_token($hash, $public_token_format) {
 	$public_token = hashed_token_info($public_token_format);
 	return password_verify($public_token["token"], $hash);
 }
@@ -268,7 +270,7 @@ function recaptcha_check() {
 		'response'	=> $_POST['g-recaptcha-response'],
 		'remoteip'	=> G\get_client_ip()
 	];
-	
+
 	$endpoint .= '?' . http_build_query($params);
 	$re_api = json_decode(G\fetch_url($endpoint));
 	// Mimic old reCaptcha API return
@@ -319,7 +321,7 @@ if (!function_exists('bcdiv')) {
 function get_translation_table() {
 	return L10n::getTranslation();
 }
- 
+
 function get_language_used() {
 	return get_available_languages()[L10n::getStatic('locale')];
 }
@@ -340,7 +342,7 @@ function get_disabled_languages() {
  * CRYPT
  * ----------------------------------------------------------------------------------------------------------------------------------------
  */
- 
+
 /*
  * cheveretoID
  * Encode/decode an id
@@ -362,14 +364,14 @@ function cheveretoID($in, $action="encode") {
 	$index = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	$salt = getSetting('crypt_salt');
 	$id_padding = intval(getSetting('id_padding'));
-	
+
 	// Use a stock version of the hashed values (faster execution)
 	if(isset($cheveretoID)) {
 		$passhash = $cheveretoID['passhash'];
 		$p = $cheveretoID['p'];
 		$i = $cheveretoID['i'];
 	} else {
-		
+
 		for($n = 0; $n<strlen($index); $n++) {
 			$i[] = substr($index,$n ,1);
 		}
@@ -380,7 +382,7 @@ function cheveretoID($in, $action="encode") {
 		for($n=0; $n < strlen($index); $n++) {
 			$p[] =  substr($passhash, $n ,1);
 		}
-		
+
 		// Stock the crypting thing to don't do it every time
 		$cheveretoID = [
 			'passhash'	=> $passhash,
@@ -388,12 +390,12 @@ function cheveretoID($in, $action="encode") {
 			'i'			=> $i
 		];
 	}
-	
+
 	array_multisort($p, SORT_DESC, $i);
 	$index = implode($i);
 
 	$base  = strlen($index);
-	
+
 	if($action == 'decode') {
 		// Digital number  <<--  alphabet letter code
 		$out = 0;
@@ -421,9 +423,9 @@ function cheveretoID($in, $action="encode") {
 		}
 	}
 
-	return $out; 
+	return $out;
 }
- 
+
 // Shorthand for cheveretoID encode
 function encodeID($var) {
 	return cheveretoID($var, "encode");
@@ -484,19 +486,19 @@ function get_image_fileinfo($file) {
  */
 function upload_to_content_images($source, $what) {
 	try {
-		
+
 		if(!defined('CHV_PATH_CONTENT_IMAGES_SYSTEM')) {
 			throw new Exception('Outdated app/loader.php', 100);
 		}
-		
+
 		if(!file_exists(CHV_PATH_CONTENT_IMAGES_SYSTEM) && !@mkdir(CHV_PATH_CONTENT_IMAGES_SYSTEM, 0755, true)) {
 			throw new Exception(sprinf("Target upload directory %s doesn't exists.", G\absolute_to_relative(CHV_PATH_CONTENT_IMAGES_SYSTEM)), 101);
 		}
-		
+
 		if(!is_writable(CHV_PATH_CONTENT_IMAGES_SYSTEM)) {
 			throw new Exception(sprintf("No write permission in %s", G\absolute_to_relative(CHV_PATH_CONTENT_IMAGES_SYSTEM)), 102);
 		}
-		
+
 		$typeArr = [
 			'favicon_image'	=> [
 				'name' => 'favicon',
@@ -523,7 +525,7 @@ function upload_to_content_images($source, $what) {
 				'type'	=> 'image'
 			]
 		];
-		
+
 		if(G\starts_with('homepage_cover_image_', $what)) {
 			$cover_handle = str_replace('homepage_cover_image_', NULL, $what);
 			if($cover_handle == 'add') {
@@ -534,20 +536,20 @@ function upload_to_content_images($source, $what) {
 			}
 			$typeArr[$what] = $typeArr['homepage_cover_image'];
 		}
-		
+
 		foreach(['logo_vector', 'logo_image'] as $k) {
 			$typeArr[$k . '_homepage'] = array_merge($typeArr[$k], ['name' => 'logo_homepage']);
 		}
 		foreach($typeArr as $k => &$v) {
 			$v['name'] .= '_' . number_format(round(microtime(TRUE) * 1000), 0, '', '') . '_' . G\random_string(6); // prevent hard cache issues
 		}
-		
+
 		$name = $typeArr[$what]['name'];
 
 		if($typeArr[$what]['type'] == 'image') {
-			
+
 			$fileinfo = @G\get_image_fileinfo($source['tmp_name']);
-			
+
 			// Pre-validations
 			switch($what) {
 				case 'favicon_image':
@@ -564,7 +566,7 @@ function upload_to_content_images($source, $what) {
 					}
 				break;
 			}
-			
+
 			$upload = new Upload;
 			$upload->setSource($source);
 			$upload->setDestination(CHV_PATH_CONTENT_IMAGES_SYSTEM);
@@ -574,9 +576,9 @@ function upload_to_content_images($source, $what) {
 			}
 			$upload->exec();
 			$uploaded = $upload->uploaded;
-			
+
 		} else {
-			
+
 			// Check file error
 			 switch ($source['error']) {
 				case UPLOAD_ERR_OK:
@@ -589,23 +591,23 @@ function upload_to_content_images($source, $what) {
 				default:
 					throw new Exception('Unknown errors.', 502);
 			}
-			
+
 			$file_contents = @file_get_contents($source['tmp_name']);
 			if(!$file_contents) {
 				throw new Exception("Can't read uploaded file content.", 500);
 			}
-			
+
 			if(strpos($file_contents, '<!DOCTYPE svg PUBLIC') == false and strpos($file_contents, '<svg') == false) {
 				throw new Exception("Uploaded file isn't an SVG.", 300);
 			}
-			
+
 			$filename = $name . G\random_string(8) . '.svg';
 			$destination = CHV_PATH_CONTENT_IMAGES_SYSTEM . $filename;
-			
+
 			if(!@move_uploaded_file($source['tmp_name'], $destination)) {
 				throw new Exception("Can't move uploaded file to its destination.", 500);
 			}
-			
+
 			$uploaded = [
 				'file' => $destination,
 				'filename' => $filename,
@@ -615,29 +617,29 @@ function upload_to_content_images($source, $what) {
 				]
 			];
 		}
-		
+
 		$filename = $name . '.' . $uploaded['fileinfo']['extension'];
 		$file = str_replace($uploaded['fileinfo']['filename'], $filename, $uploaded['file']);
-		
+
 		if(!@rename($uploaded['file'], $file)) {
 			throw new Exception("Can't rename uploaded " . $name . " file", 500);
 		}
-		
+
 		$remove_old = isset($remove_old) ? $remove_old : TRUE;
 
 		if(!isset($db_filename) || empty($db_filename)) {
 			$db_filename = getSetting($what);
 		}
 		$db_file = CHV_PATH_CONTENT_IMAGES_SYSTEM . $db_filename;
-		
+
 		if(in_array($what, ['logo_vector_homepage', 'logo_image_homepage']) && !G\starts_with('logo_homepage', $db_filename)) {
 			$remove_old = FALSE;
 		}
-		
+
 		if($remove_old && !G\starts_with('default/', $db_filename) && $db_filename != $filename && is_readable($db_file) && !@unlink($db_file)) {
 			throw new Exception("Can't remove old ".$name." file", 500);
 		}
-		
+
 		if(isset($cover_handle)) {
 			$what = 'homepage_cover_image';
 			$homepage_cover_image = getSetting($what);
@@ -655,9 +657,9 @@ function upload_to_content_images($source, $what) {
 				];
 			}
 		}
-		
+
 		Settings::update([$what => $filename]);
-		
+
 		if(isset($cover_handle)) {
 			Settings::setValue('homepage_cover_images', $homecovers);
 		}
@@ -682,42 +684,49 @@ function isSafeToExecute($max_execution_time=NULL, $options=[]) {
 /* Update ping */
 function checkUpdates() {
 	try {
-		if(is_null(getSetting('update_check_datetimegmt')) || G\datetime_add(getSetting('update_check_datetimegmt'), 'P1D') < G\datetimegmt()) {
-			@set_time_limit(60); // Don't run forever
-			$safe_time = 5;
-			$max_execution_time = ini_get('max_execution_time'); // Store the limit
-			$CHEVERETO = Settings::getChevereto();
-			$update = G\fetch_url($CHEVERETO['api']['get']['info']);
-			if(isSafeToExecute() && $update) {
-				$json = json_decode($update);
-				$release_notes = trim($json->software->release_notes);
-				$latest_release = $json->software->current_version;
-				// Notify only if not notified OR if latest release is newer and not being notified
-				if(is_null(getSetting('update_check_notified_release')) || (version_compare($latest_release, getSetting('chevereto_version_installed'), '>') && version_compare($latest_release, getSetting('update_check_notified_release'), '>'))) {
-					// Email notify
-					$message = _s('There is an update available for your Chevereto based website.') . ' ' . _s('The release notes for this update are:') ;
-					$message .= "\n\n";
-					$message .= $release_notes . "\n\n";
-					$message .= _s('You can apply this update directly from your %a or download it from %s and then manually install it.', ['%a' => '<a href="' . G\get_base_url('dashboard?checkUpdates') . '" target="_blank">'._s('admin dashboard').'</a>', '%s' => '<a href="' . $CHEVERETO['source']['url'] . '" target="_blank">' . $CHEVERETO['source']['label'] . '</a>']) . "\n\n";
-					$message .= '--' . "\n" . 'Chevereto' . "\n" . G\get_base_url();
-					$message = nl2br($message);
-					system_notification_email([
-						'subject' => str_replace('Chevereto', G_APP_NAME, _s('Chevereto update available (v%s)', $latest_release)), 
-						'message' => $message
-					]);
-					$settings_update = [
-						'update_check_notified_release'	=> $latest_release,
-						'update_check_datetimegmt'		=> G\datetimegmt(),
-						'update_check_latest_release'	=> $latest_release,
-					];
-				} else {
-					$settings_update = ['update_check_datetimegmt' => G\datetimegmt()];
-				}
-				Settings::update($settings_update);
+		$safe_time = 5;
+		$max_execution_time = ini_get('max_execution_time'); // Store the limit
+		$CHEVERETO = Settings::getChevereto();
+		$update = G\fetch_url($CHEVERETO['api']['get']['info']);
+		if(isSafeToExecute() && $update) {
+			$json = json_decode($update);
+			$release_notes = $json->software->release_notes;
+			$latest_release = $json->software->current_version;
+			// Notify only if not notified OR if latest release is newer and not being notified AND is not installed (files)
+			if(is_null(getSetting('update_check_notified_release')) || (version_compare($latest_release, G_APP_VERSION, '>') && version_compare($latest_release, getSetting('update_check_notified_release'), '>'))) {
+				error_log('se fue un email');
+				// Email notify
+				$message = _s('There is an update available for your Chevereto based website.') . ' ' . _s('The release notes for this update are:') ;
+				$message .= "\n\n";
+				$message .= $release_notes . "\n\n";
+				$message .= _s('You can apply this update directly from your %a or download it from %s and then manually install it.', ['%a' => '<a href="' . G\get_base_url('dashboard?checkUpdates') . '" target="_blank">'._s('admin dashboard').'</a>', '%s' => '<a href="' . $CHEVERETO['source']['url'] . '" target="_blank">' . $CHEVERETO['source']['label'] . '</a>']) . "\n\n";
+				$message .= '--' . "\n" . 'Chevereto' . "\n" . G\get_base_url();
+				$message = nl2br($message);
+				system_notification_email(['subject' => _s('Chevereto update available (v%s)', $latest_release), $latest_release, 'message' => $message]);
+				$settings_update = [
+					'update_check_notified_release'	=> $latest_release,
+					'update_check_datetimegmt'		=> G\datetimegmt(),
+					'update_check_latest_release'	=> $latest_release,
+				];
+			} else {
+				error_log("no email");
+				$settings_update = ['update_check_datetimegmt' => G\datetimegmt()];
 			}
+			Settings::update($settings_update);
 		}
 	} catch(Exception $e) {
 		error_log($e);
 	} // Silence
+}
 
+function getJsModLangL10n() {
+	foreach (new DirectoryIterator(CHV_APP_PATH_CONTENT_LANGUAGES . 'cache/') as $fileInfo) {
+		if($fileInfo->isDot() || $fileInfo->isDir()) continue;
+		$lang_code = str_replace('.po.cache.php', NULL, $fileInfo->getFilename());
+		include($fileInfo->getPathname());
+		if(!$translation_table['Upload images']) continue;
+		$l10n[$lang_code] = $translation_table['Upload images'][0];
+	}
+	unset($translation_table);
+	return json_encode($l10n);
 }

@@ -7,38 +7,40 @@ if(CHV\Login::isLoggedUser()) {
 	}
 }
 ?>
-<div id="anywhere-upload" class="upload-box upload-box--fixed upload-box--hidden">
+<div id="anywhere-upload" class="upload-box upload-box--fixed upload-box--hidden queueEmpty" data-queue-size="0">
 
 	<div class="content-width">
-	
+
     	<div class="upload-box-inner">
 
         	<div class="upload-box-heading c16 center-box">
 				<div class="upload-box-status">
 					<div data-group="upload">
 						<span class="icon icon-download2 cursor-pointer" data-trigger="anywhere-upload-input"></span>
-						<div class="heading phone-hide phablet-hide"><a data-trigger="anywhere-upload-input"><?php _se('Drag and drop or paste images here to upload'); ?></a></div>
-						<div class="heading tablet-hide laptop-hide desktop-hide"><a data-trigger="anywhere-upload-input"><?php _se('Select the images to upload'); ?></a></div>
-						<div class="phone-hide phablet-hide upload-box-status-text"><?php _se('You can also %i or %u.', [
+						<div class="heading device-mobile--hide"><a data-trigger="anywhere-upload-input"><?php _se('Drag and drop or paste images here to upload'); ?></a></div>
+						<div class="heading device-nonmobile--hide"><a data-trigger="anywhere-upload-input"><?php _se('Select the images to upload'); ?></a></div>
+						<div class="device-mobile--hide upload-box-status-text"><?php _se('You can also %i or %u.', [
 							'%i' => '<a data-trigger="anywhere-upload-input">' . _s('browse from your computer') . '</a>',
 							'%u' => '<a data-modal="form" data-target="anywhere-upload-paste-url">' . _s('add image URLs') . '</a>',
 						]); ?></div>
-						<div class="tablet-hide laptop-hide desktop-hide upload-box-status-text"><?php _se('You can also %i or %u.', [
-							'%i' => '<a data-trigger="anywhere-upload-input-camera">' . _s('take a picture') . '</a>',
+						<div class="device-nonmobile--hide upload-box-status-text"><?php _se('You can also %i, %c or %u.', [
+							'%i' => '<a data-trigger="anywhere-upload-input">' . _s('browse from your device') . '</a>',
+							'%c' => '<a data-trigger="anywhere-upload-input-camera">' . _s('take a picture') . '</a>',
 							'%u' => '<a data-modal="form" data-target="anywhere-upload-paste-url">' . _s('add image URLs') . '</a>',
 						]); ?></div>
 					</div>
 					<div data-group="upload-queue-ready" class="soft-hidden">
 						<span class="icon icon-images" data-trigger="anywhere-upload-input"></span>
-						<div class="heading phone-hide phablet-hide"><?php _se('Edit or resize any image by clicking the image preview'); ?></div>
-						<div class="heading tablet-hide laptop-hide desktop-hide"><?php _se('Edit or resize any image by touching the image preview'); ?></div>
-						<div class="phone-hide phablet-hide upload-box-status-text"><?php _se('You can keep adding more images from %i or from %u.', [
+						<div class="heading device-mobile--hide"><?php _se('Edit or resize any image by clicking the image preview'); ?></div>
+						<div class="heading device-nonmobile--hide"><?php _se('Edit any image by touching the image preview'); ?></div>
+						<div class="device-mobile--hide upload-box-status-text"><?php _se('You can add more images from %i or %u.', [
 							'%i' => '<a data-trigger="anywhere-upload-input">' . _s('your computer') . '</a>',
-							'%u' => '<a data-modal="form" data-target="anywhere-upload-paste-url">' . _s('image URLs') . '</a>',
+							'%u' => '<a data-modal="form" data-target="anywhere-upload-paste-url">' . _s('add image URLs') . '</a>',
 						]); ?></div>
-						<div class="tablet-hide laptop-hide desktop-hide upload-box-status-text"><?php _se('You can keep adding more images from %i or from %u.', [
+						<div class="device-nonmobile--hide upload-box-status-text"><?php _se('You can add more images from %i, %c or %u.', [
 							'%i' => '<a data-trigger="anywhere-upload-input">' . _s('your device') . '</a>',
-							'%u' => '<a data-modal="form" data-target="anywhere-upload-paste-url">' . _s('image URLs') . '</a>',
+							'%c' => '<a data-trigger="anywhere-upload-input-camera">' . _s('take a picture') . '</a>',
+							'%u' => '<a data-modal="form" data-target="anywhere-upload-paste-url">' . _s('add image URLs') . '</a>',
 						]); ?></div>
 					</div>
 					<div data-group="uploading" class="soft-hidden">
@@ -55,7 +57,7 @@ if(CHV\Login::isLoggedUser()) {
 						<div class="upload-box-status-text">
 							<div data-group="user" class="soft-hidden">
 								<div data-group="user-stream" class="soft-hidden">
-								<?php 
+								<?php
 									$uploaded_message = _s('Uploaded content added to %s.') . ' ';
 									if(CHV\Login::getUser()['album_count'] > 0) {
 										$uploaded_message .= _s('You can %c with the content just uploaded or %m.');
@@ -66,7 +68,7 @@ if(CHV\Login::isLoggedUser()) {
 										'%s'	=> '<a data-text="upload-target" data-link="upload-target"></a>',
 										'%c'	=> '<a data-modal="form" data-target="form-uploaded-create-album">' . _s('create a new album') . '</a>',
 										'%m'	=> '<a data-modal="form" data-target="form-uploaded-move-album">' . _s('move it to an existing album') . '</a>',
-									]);								
+									]);
 								?>
 								</div>
 								<div data-group="user-album" class="soft-hidden"><?php _se('Uploaded content added to %s.', '<a data-text="upload-target" data-link="upload-target"></a>'); ?></div>
@@ -84,18 +86,18 @@ if(CHV\Login::isLoggedUser()) {
 					</div>
 				</div>
             </div>
-			
+
 			<input id="anywhere-upload-input" data-action="anywhere-upload-input"<?php if(!CHV\getSetting('guest_uploads')) { ?> data-login-needed="true"<?php } ?> class="hidden-visibility" type="file" accept="<?php echo '.' . implode(',.', CHV\Image::getEnabledImageFormats()); ?>" multiple>
 			<input id="anywhere-upload-input-camera" data-action="anywhere-upload-input"<?php if(!CHV\getSetting('guest_uploads')) { ?> data-login-needed="true"<?php } ?> class="hidden-visibility" type="file" capture="camera" accept="image/*">
 			<ul id="anywhere-upload-queue" class="upload-box-queue content-width soft-hidden" data-group="upload-queue"></ul>
-			
+
 			<div id="anywhere-upload-submit" class="btn-container text-align-center margin-bottom-0 soft-hidden" data-group="upload-queue-ready">
 				<div data-group="upload-queue-ready">
-					
+
 					<?php
 						if(CHV\Login::isLoggedUser() && CHV\Login::getUser()['album_count'] > 0) {
 					?>
-					<div class="input-label c8 center-box text-align-left">
+					<div class="input-label upload-input-col center-box text-align-left">
 						<label for="upload-album-id"><?php _se('Album', 'Albums', 1); ?></label>
 						<select name="upload-album-id" id="upload-album-id" class="text-input">
 							<?php
@@ -104,7 +106,7 @@ if(CHV\Login::isLoggedUser()) {
 									$user_album_options_html[] = strtr('<option value="%id"%selected>%name</option>', [
 											'%selected' => (function_exists('get_album') && get_album()['id_encoded'] == $album['id_encoded']) ? ' selected' : NULL,
 											'%id'	=> $album['id_encoded'],
-											'%name' => $album['name_with_privacy_readable']
+											'%name' => $album['name_with_privacy_readable_html']
 										]);
 								}
 								$user_album_options_html = implode("\n", $user_album_options_html);
@@ -118,7 +120,7 @@ if(CHV\Login::isLoggedUser()) {
 					<?php
 						if(get_categories()) {
 					?>
-					<div class="input-label c8 center-box text-align-left">
+					<div class="input-label upload-input-col center-box text-align-left">
 						<label for="upload-category-id"><?php _se('Category'); ?></label>
 						<select name="upload-category-id" id="upload-category-id" class="text-input">
 							<option value><?php _se('Select category'); ?></option>
@@ -147,19 +149,21 @@ if(CHV\Login::isLoggedUser()) {
 					<button class="btn plain disabled btn-big plain margin-right-5" disabled data-action="upload-privacy-copy"><span class="icon icon-unlocked" data-lock="icon-lock" data-unlock="icon-unlocked"></span></button><button class="btn btn-big disabled off" disabled><?php _se('Uploading'); ?></button> <span class="btn-alt"><?php _se('or'); ?> <a data-action="cancel-upload" data-button="close-cancel"><?php _se('cancel'); ?></a><a data-action="cancel-upload-remaining" data-button="close-cancel" class="soft-hidden"><?php _se('cancel remaining'); ?></a></span>
 				</div>
 			</div>
-			
+
 			<div id="anywhere-upload-report">
 				<div data-group="upload-result" data-result="mixted" class="soft-hidden margin-top-10 text-align-center upload-box-status-text"><?php _se("Note: Some images couldn't be uploaded."); ?> <a data-modal="simple" data-target="failed-upload-result"><?php _se('learn more'); ?></a></div>
 				<div data-group="upload-result" data-result="error" class="soft-hidden margin-top-10 text-align-center upload-box-status-text"><?php _se('Check the <a data-modal="simple" data-target="failed-upload-result">error report</a> for more information.'); ?></div>
 			</div>
 
-        	<div class="upload-box-allowed-files position-absolute"><span class="phone-hide"><?php echo str_replace(',', ' ', strtoupper(CHV\getSetting('upload_enabled_image_formats'))); ?></span> <span><?php _se('max'); ?> <?php echo G\format_bytes(G\get_bytes(CHV\getSetting('upload_max_filesize_mb').'MB')); ?></span></div>
+      <div class="upload-box-allowed-files position-absolute"><span><?php echo str_replace(',', ' ', strtoupper(CHV\getSetting('upload_enabled_image_formats'))); ?></span><span> <?php echo G\format_bytes(G\get_bytes(CHV\getSetting('upload_max_filesize_mb').'MB')); ?></span></div>
+
 			<div class="upload-box-close position-absolute">
+				<a data-action="reset-upload" data-button="close-cancel"><span class="btn-icon icon-loop2"></span><span class="btn-text"><?php _se('reset'); ?></span></a>
 				<a data-action="close-upload" data-button="close-cancel"><span class="btn-icon icon-close"></span><span class="btn-text"><?php _se('close'); ?></span></a>
-				<a data-action="cancel-upload" data-button="close-cancel" class="soft-hidden"><span class="btn-icon icon-close"></span><span class="btn-text"><?php _se('cancel'); ?></span></a>
-				<a data-action="cancel-upload-remaining" data-button="close-cancel" class="soft-hidden"><span class="btn-icon icon-close"></span><span class="btn-text"><?php _se('cancel remaining'); ?></span></a>
+				<a data-action="cancel-upload" data-button="close-cancel"><span class="btn-icon icon-close"></span><span class="btn-text"><?php _se('cancel'); ?></span></a>
+				<a data-action="cancel-upload-remaining" data-button="close-cancel"><span class="btn-icon icon-close"></span><span class="btn-text"><?php _se('cancel remaining'); ?></span></a>
 			</div>
-            
+
 			<?php if(CHV\getSetting('theme_show_embed_uploader')) { ?>
 			<div data-group="upload-result" data-result="success" class="c16 center-box soft-hidden">
 				<div class="input-label margin-bottom-0 copy-hover-display">
@@ -184,7 +188,8 @@ if(CHV\Login::isLoggedUser()) {
 								foreach($value['options'] as $k => $v) {
 									echo '<div data-combo-value="'.$k.'" class="switch-combo'.($i>0 ? " soft-hidden" : "").'">
 										<textarea id="uploaded-embed-code-'.$i.'" class="r2 resize-vertical" name="'.$k.'" data-size="'.$v["size"].'" data-focus="select-all"></textarea>
-										<button class="copy-input" data-action="copy" data-action-target="#uploaded-embed-code-'.$i.'">'._s('copy').'</button>
+										<button class="input-action" data-action="copy" data-action-target="#uploaded-embed-code-'.$i.'">'._s('copy').'</button>
+										<button class="input-action" data-action="openerPostMessage" data-action-target="#uploaded-embed-code-'.$i.'">'._s('insert').'</button>
 									</div>'."\n";
 									$i++;
 								}
@@ -194,11 +199,11 @@ if(CHV\Login::isLoggedUser()) {
 				</div>
 			</div>
 			<?php } ?>
-			
+
         </div>
-		
+
     </div>
-	
+
 	<div class="hidden">
 		<div id="anywhere-upload-item-template">
 			<li class="queue-item">
@@ -309,7 +314,7 @@ if(CHV\Login::isLoggedUser()) {
 			</div>
 		</div>
 	</div>
-	
+
 	<?php
 		if(CHV\Login::isLoggedUser()) {
 			global $new_album, $user_items_editor;
@@ -343,14 +348,14 @@ if(CHV\Login::isLoggedUser()) {
 			</div>
 		</div>
 	</div>
-	
+
 	<?php
 		}
 	?>
-	
+
 	<div data-modal="failed-upload-result" class="hidden">
 		<span class="modal-box-title"><?php _se('Error report'); ?></span>
 		<ul data-content="failed-upload-result" style="max-height: 115px;" class="overflow-auto"></ul>
 	</div>
-	
+
 </div>

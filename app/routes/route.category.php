@@ -9,7 +9,7 @@
 			<inbox@rodolfoberrios.com>
 
   Copyright (C) Rodolfo Berrios A. All rights reserved.
-  
+
   BY USING THIS SOFTWARE YOU DECLARE TO ACCEPT THE CHEVERETO EULA
   http://chevereto.com/license
 
@@ -17,19 +17,19 @@
 
 $route = function($handler) {
 	try {
-		
+
 		if(!CHV\getSetting('website_explore_page')) {
 			return $handler->issue404();
 		}
-		
+
 		$category = NULL;
 		$categories = $handler::getVar('categories');
 		$category_url_key = $handler->request[0];
-		
+
 		if(!$category_url_key) {
 			G\redirect('explore');
 		}
-		
+
 		if($category_url_key) {
 			foreach($categories as $k => $v) {
 				// Set category info
@@ -50,7 +50,7 @@ $route = function($handler) {
 			'basename'	=> G\get_route_name() . '/' . $category['url_key'],
 			'params_hidden' => ['category_id' => $category['id'], 'hide_banned' => 1],
 		]);
-		
+
 		// List
 		$list_params = CHV\Listing::getParams(); // Use CHV magic params
 		$list = new CHV\Listing;
@@ -67,13 +67,12 @@ $route = function($handler) {
 		$meta_description = $category['description'] ?: NULL;
 		
 		$handler::setVar('meta_description', htmlspecialchars($meta_description));
-		$handler::setVar('meta_keywords', $category['name']);		
 		$handler::setVar('category', $category);
 		$handler::setVar('tabs', $tabs);
 		$handler::setVar('list', $list);
-		
+
 		$handler->template = 'explore';
-		
+
 	} catch(Exception $e) {
 		G\exception_to_error($e);
 	}

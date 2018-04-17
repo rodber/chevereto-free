@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-05-23 17:56+0000',
-  'PO-Revision-Date' => '2017-05-23 17:56+0000',
+  'POT-Creation-Date' => '2017-09-23 17:30+0000',
+  'PO-Revision-Date' => '2017-09-23 17:30+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ja',
@@ -18,6 +18,18 @@ $translation_plural = array (
   'function' => '$index = (int)(0); return ($index < 1) ? $index : 1 - 1;',
 );
 $translation_table = [
+	"Plugin" => [
+		0 => "プラグイン",
+	],
+	"Plugin route" => [
+		0 => "プラグインルート",
+	],
+	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
+		0 => "%uでプラグインの説明を表示する。これらの説明は、メニューに%sを追加します。この設定は管理者には影響しません。",
+	],
+	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
+		0 => "%pのカスタムURLをセットするのに使用。手動でこのURLを%sで複製してください。",
+	],
 	"Invalid email" => [
 		0 => "有効なメールアドレスではありません。",
 	],
@@ -56,9 +68,6 @@ $translation_table = [
 	],
 	"Update in progress" => [
 		0 => "進行中の更新",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "エラーが発生しました。後ほど、再度お試し下さい。",
 	],
 	"Missing %s file" => [
 		0 => "ファイル: %s が見つかりません。",
@@ -162,9 +171,6 @@ $translation_table = [
 	"Trending" => [
 		0 => "流行",
 	],
-	"Popular" => [
-		0 => "人気",
-	],
 	"Top users" => [
 		0 => "トップユーザ",
 	],
@@ -176,6 +182,9 @@ $translation_table = [
 	],
 	"Most viewed" => [
 		0 => "閲覧順",
+	],
+	"Popular" => [
+		0 => "人気",
 	],
 	"Most liked" => [
 		0 => "もっともいいね！されている",
@@ -831,11 +840,11 @@ $translation_table = [
 	"Direct links" => [
 		0 => "ダイレクトリンク",
 	],
-	"Image URL" => [
-		0 => "画像URL",
-	],
 	"Image link" => [
 		0 => "画像へのリンク",
+	],
+	"Image URL" => [
+		0 => "画像URL",
 	],
 	"Thumbnail URL" => [
 		0 => "サムネイルURL",
@@ -945,6 +954,12 @@ $translation_table = [
 	"Mail error" => [
 		0 => "メールでエラーが発生しました。",
 	],
+	"Upload images" => [
+		0 => "画像をアップロード",
+	],
+	"Upload plugin" => [
+		0 => "プラグインをアップロード",
+	],
 	"Image search results for %s" => [
 		0 => "%sの検索結果",
 	],
@@ -999,6 +1014,9 @@ $translation_table = [
 	"Create account" => [
 		0 => "アカウント作成",
 	],
+	"Upload" => [
+		0 => "アップロード",
+	],
 	"%s's Images" => [
 		0 => "%sさんの画像",
 	],
@@ -1037,9 +1055,6 @@ $translation_table = [
 	],
 	"Notices (%s)" => [
 		0 => "通知 (%s)",
-	],
-	"Upload" => [
-		0 => "アップロード",
 	],
 	"Sign in with another account" => [
 		0 => "別のアカウントでサインイン",
@@ -1143,26 +1158,32 @@ $translation_table = [
 	"You can also %i or %u." => [
 		0 => "%iまたは%uすることもできます。",
 	],
+	"browse from your device" => [
+		0 => "デバイスを見る",
+	],
 	"take a picture" => [
 		0 => "写真を撮影",
+	],
+	"You can also %i, %c or %u." => [
+		0 => "%i, %c または、 %uから",
 	],
 	"Edit or resize any image by clicking the image preview" => [
 		0 => "画像のプレビューをクリックして編集または画像をリサイズ",
 	],
-	"Edit or resize any image by touching the image preview" => [
-		0 => "画像のプレビューをタップして編集または画像をリサイズ",
+	"Edit any image by touching the image preview" => [
+		0 => "プレビューをタッチして編集",
 	],
 	"your computer" => [
 		0 => "あなたのコンピュータ",
 	],
-	"image URLs" => [
-		0 => "画像のURL",
-	],
-	"You can keep adding more images from %i or from %u." => [
-		0 => "%iまたは%uからさらに画像を追加することができます。",
+	"You can add more images from %i or %u." => [
+		0 => "%u、または、%iから画像を追加することができます。",
 	],
 	"your device" => [
 		0 => "あなたのデバイス",
+	],
+	"You can add more images from %i, %c or %u." => [
+		0 => "%i、%c または %uから画像を追加することができます。",
 	],
 	"Uploading %q %o" => [
 		0 => "アップロード中 %q %o",
@@ -1236,14 +1257,17 @@ $translation_table = [
 	"Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information." => [
 		0 => "詳しくは<a data-modal=\"simple\" data-target=\"failed-upload-result\">エラーレポート</a>をご覧下さい。",
 	],
-	"max" => [
-		0 => "最大",
+	"reset" => [
+		0 => "リセット",
 	],
 	"close" => [
 		0 => "閉じる",
 	],
 	"copy" => [
 		0 => "コピー",
+	],
+	"insert" => [
+		0 => "挿入",
 	],
 	"Edit" => [
 		0 => "編集",
@@ -1605,9 +1629,6 @@ $translation_table = [
 	"There's nothing to show here." => [
 		0 => "表示するものはありません。",
 	],
-	"Upload images" => [
-		0 => "画像をアップロード",
-	],
 	"Edit image details" => [
 		0 => "画像の詳細の編集",
 	],
@@ -1715,6 +1736,9 @@ $translation_table = [
 	],
 	"Resend instructions" => [
 		0 => "手順を再送信",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "エラーが発生しました。後ほど、再度お試し下さい。",
 	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "パスワードのリセットの手順をメールで送信しました。届いていない場合には、迷惑メールフォルダをチェックして下さい。",
@@ -2240,6 +2264,12 @@ $translation_table = [
 	],
 	"Enable this if you want to allow users to signup." => [
 		0 => "ゲストに新規アカウントの登録を許可する場合に有効にしてください。",
+	],
+	"Enable user content delete" => [
+		0 => "ユーザーのコンテンツの消去を許可",
+	],
+	"Enable this if you want to allow users to delete their own content. This setting doesn't affect administrators." => [
+		0 => "ユーザーに自分のコンテンツの削除を許可する。この設定は管理者には影響しません。",
 	],
 	"Minimum age required" => [
 		0 => "最低年齢の要求",
@@ -2948,6 +2978,63 @@ $translation_table = [
 	],
 	"Send" => [
 		0 => "送信",
+	],
+	"Add image uploading to your website, blog or forum by installing our upload plugin. It provides image uploading to any website by placing a button that will allow your users to directly upload images to our service and it will automatically handle the codes needed for insertion. All features included like drag and drop, remote upload, image resizing and more." => [
+		0 => "このアップロードプラグインのインストールされている、Webサイト、ブログ、またはフォーラムから画像をアップロードして追加する。画像の追加に必要なコードを自動で扱うボタンの設置されたWebサイトへ画像をアップロードします。ドラッグ＆ドロップやリモートアップロード、画像のリサイズなどの機能も全てふくまれています。",
+	],
+	"Supported software" => [
+		0 => "サポートするソフトウェア",
+	],
+	"supported software" => [
+		0 => "サポートするソフトウェア",
+	],
+	"The plugin works in any website with user-editable content and for %sv, it will place an upload button that will match the target editor toolbar so no extra customization is needed." => [
+		0 => "プラグインは、ユーザーがコンテンツを編集可能なWebサイトや%sの編集用エディタに特別なカスタマイズなしで、画像のアップロートボタンを追加します。",
+	],
+	"Add it to your website" => [
+		0 => "あなたのWebサイトへ追加",
+	],
+	"options" => [
+		0 => "オプション",
+	],
+	"Copy and paste the plugin code into your website HTML code (preferably inside the head section). There are plenty %o to make it fit better to your needs." => [
+		0 => "WebサイトのHTMLへコードをコピーして貼りつけます(head内が最適です)。豊富な%oが合わせます。",
+	],
+	"Basic options" => [
+		0 => "基本オプション",
+	],
+	"Color palette" => [
+		0 => "カラーパレット",
+	],
+	"Button color scheme" => [
+		0 => "ボタン色スキーマ",
+	],
+	"Embed codes that will be auto-inserted in editor box" => [
+		0 => "エディターボックスに自動でコードを埋め込む",
+	],
+	"Sibling selector" => [
+		0 => "兄弟セレクター",
+	],
+	"Sibling element selector where to place the button next to" => [
+		0 => "ボタンの隣の兄弟セレクター",
+	],
+	"Sibling position" => [
+		0 => "兄弟ポジション",
+	],
+	"After" => [
+		0 => "アフター",
+	],
+	"Before" => [
+		0 => "ビフォー",
+	],
+	"Position relative to sibling element" => [
+		0 => "兄弟エレメントとrelativeに",
+	],
+	"Advanced options" => [
+		0 => "追加オプション",
+	],
+	"The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options." => [
+		0 => "プラグインには、フルカスタマイズするための豊富な追加オプションセットがあります。カスタムHTML,カスタムCSS、カラーパレットなどが使えます。追加オプションセットを使いこなすには、%dか、プラグインのソースを参照してください。",
 	],
 	"You either don't have permission to access this page or the link has expired." => [
 		0 => "このページにアクセスする権利がないか、または、期限切れのリンクです。",

@@ -23,6 +23,7 @@ $route = function($handler) {
 		}
 		
 		if($_POST and !$handler::checkAuthToken($_REQUEST['auth_token'])) {
+			G\set_status_header(403);
 			$handler->template = 'request-denied';
 			return;
 		}

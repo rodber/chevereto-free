@@ -9,7 +9,7 @@
 			<inbox@rodolfoberrios.com>
 
   Copyright (C) Rodolfo Berrios A. All rights reserved.
-  
+
   BY USING THIS SOFTWARE YOU DECLARE TO ACCEPT THE CHEVERETO EULA
   http://chevereto.com/license
 
@@ -19,7 +19,7 @@ namespace CHV;
 use G, Exception;
 
 class Page {
-	
+
 	static $table_fields = [
 			'url_key',
 			'type',
@@ -35,7 +35,7 @@ class Page {
 			'attr_rel',
 			'sort_display'
 		];
-	
+
 	public static function getSingle($var, $by='url_key') {
 		try {
 			$page = self::get([$by => $var], NULL, 1);
@@ -44,7 +44,7 @@ class Page {
 			throw new PageException($e->getMessage(), 400);
 		}
 	}
-	
+
 	public static function getAll($args=[], $sort=[]) {
 		try {
 			$page = self::get($args, $sort, NULL);
@@ -53,7 +53,7 @@ class Page {
 			throw new PageException($e->getMessage(), 400);
 		}
 	}
-	
+
 	public static function get($values, $sort=[], $limit=NULL) {
 		try {
 			$get = DB::get('pages', $values, 'AND', $sort, $limit);
@@ -71,15 +71,15 @@ class Page {
 			throw new PageException($e->getMessage(), 400);
 		}
 	}
-	
+
 	public static function getPath($var=NULL) {
 		return CHV_PATH_CONTENT_PAGES . (is_string($var) ? $var : NULL);
 	}
-	
+
 	public static function getFields() {
 		return self::$table_fields;
 	}
-	
+
 	public static function update($id, $values) {
 		try {
 			return DB::update('pages', $values, array('id'=>$id));
@@ -87,17 +87,17 @@ class Page {
 			throw new PageException($e->getMessage(), 400);
 		}
 	}
-	
+
 	public static function writePage($args=[]) {
-		
+
 		if(!$args['file_path']) {
 			throw new PageException("Missing file_path argument", 100);
 		}
-		
+
 		$file_path = self::getPath($args['file_path']);
 		$file_dirname = dirname($file_path);
 		$contents = !empty($args['contents']) ? $args['contents'] : NULL;
-		
+
 		if(!is_dir($file_dirname)) {
 			$base_perms = fileperms(self::getPath());
 			$old_umask = umask(0);
@@ -108,12 +108,12 @@ class Page {
 				throw new PageException(_s("Can't create %s destination dir", $file_dirname), 500);
 			}
 		}
-		
+
 		// Skip empting an empty file
 		if(file_exists($file_path) and $contents == NULL and filesize($file_path) == 0) {
 			return TRUE;
 		}
-		
+
 		$fh = @fopen($file_path, 'w');
 		if(!$fh or fwrite($fh, $contents) === FALSE) { // Ternary if the write is zero (null)
 			$st = FALSE;
@@ -121,15 +121,15 @@ class Page {
 			$st = TRUE;
 		}
 		@fclose($fh);
-		
+
 		if(!$st) {
 			throw new PageException(_s("Can't open %s for writing", $file_path), 501);
 		}
-		
+
 		return TRUE;
-		
+
 	}
-	
+
 	public static function fill(&$page) {
 		$page['title_html'] = $page['title'];
 		$type_tr = [
@@ -146,12 +146,12 @@ class Page {
 						'default'	=> 'default/',
 						'user'		=> NULL // base
 					];
-					$file_basename = $page['url_key'] . '.' . (G\get_app_setting('disable_php_pages') ? 'html' : 'php');
+					$file_basename = $page['url_key'] . '.php';
 					foreach($filepaths as $k => $v) {
 						if($k == 'default') {
 							//$file_basename =  $page['url_key'] . '.php';
 						} else {
-							
+
 						}
 						if(is_readable(self::getPath($v) . $file_basename)) {
 							$page['file_path'] = $v . $file_basename;
@@ -186,13 +186,13 @@ class Page {
 			$page['title_html'] = '<span class="btn-icon ' . $page['icon'] . '"></span> ' . $page['title_html'];
 		}
 	}
-	
+
 	// Format get row return
 	protected static function formatRowValues(&$values, $row=[]) {
 		$values = DB::formatRow(count($row) > 0 ? $row : $values);
 		self::fill($values);
 	}
-	
+
 	public static function insert($values=[]) {
 		if(!is_array($values)) {
 			throw new PageException('Expecting array, '.gettype($values).' given in ' . __METHOD__, 100);
@@ -203,7 +203,7 @@ class Page {
 			throw new PageException($e->getMessage(), 400);
 		}
 	}
-	
+
 	public static function delete($page) {
 		try {
 			if(!is_array($page)) {

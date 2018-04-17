@@ -6,7 +6,7 @@ $owner = function_exists('get_owner') ? get_owner() : G\get_global("owner");
 <div class="breadcrum-item pop-btn pop-btn-auto pop-keep-click pop-btn-desktop">
 	<a href="<?php echo $owner['url']; ?>" class="user-image">
 		<?php if($owner['avatar']['url']) { ?>
-		<img src="<?php echo $owner['avatar']['url']; ?>" alt="<?php echo $owner['username']; ?>">
+		<img class="user-image" src="<?php echo $owner['avatar']['url']; ?>" alt="<?php echo $owner['username']; ?>">
 		<?php } else { ?>
 		<span class="user-image default-user-image"><span class="icon icon-user"></span></span>
 		<?php } ?>

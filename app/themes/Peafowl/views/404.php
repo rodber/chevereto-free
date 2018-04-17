@@ -19,5 +19,9 @@
 <?php G\Render\include_theme_footer(); ?>
 
 <?php if(isset($_REQUEST["deleted"])) { ?>
-<script>PF.fn.growl.call("<?php echo (G\get_route_name() == 'user' ? _s('The user has been deleted') : _s('The content has been deleted.')); ?>");</script>
+<script>
+	$(function() {
+		PF.fn.growl.call("<?php echo (G\get_route_name() == 'user' ? _s('The user has been deleted') : _s('The content has been deleted.')); ?>");
+	});
+</script>
 <?php } ?>

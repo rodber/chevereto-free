@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-05-23 17:56+0000',
-  'PO-Revision-Date' => '2017-05-23 17:56+0000',
+  'POT-Creation-Date' => '2017-09-23 17:30+0000',
+  'PO-Revision-Date' => '2017-09-23 17:30+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'it',
@@ -18,6 +18,18 @@ $translation_plural = array (
   'function' => '$index = (int)(($n != 1)); return ($index < 2) ? $index : 2 - 1;',
 );
 $translation_table = [
+	"Plugin" => [
+		0 => "Plugin",
+	],
+	"Plugin route" => [
+		0 => "Percorso Plugin",
+	],
+	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
+		0 => "Abilita questo per visualizzare le istruzioni del plugin a %u. Un link a queste istruzioni verrà aggiunto al menu %s. Questa impostazione non riguarda gli amministratori.",
+	],
+	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
+		0 => "Utilizza questo per impostare una URL personalizzato per %p. Tieni presente che devi replicare manualmente %s in questa URL.",
+	],
 	"Invalid email" => [
 		0 => "Indirizzo email non valido",
 	],
@@ -56,9 +68,6 @@ $translation_table = [
 	],
 	"Update in progress" => [
 		0 => "Aggiornamento in corso...",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "Si è verificato un errore. Riprova più tardi.",
 	],
 	"Missing %s file" => [
 		0 => "File %s non trovato",
@@ -168,9 +177,6 @@ $translation_table = [
 	"Trending" => [
 		0 => "Argomenti",
 	],
-	"Popular" => [
-		0 => "Popolare",
-	],
 	"Top users" => [
 		0 => "Utenti top",
 	],
@@ -182,6 +188,9 @@ $translation_table = [
 	],
 	"Most viewed" => [
 		0 => "Più viste",
+	],
+	"Popular" => [
+		0 => "Popolare",
 	],
 	"Most liked" => [
 		0 => "Più piaciute",
@@ -845,11 +854,11 @@ $translation_table = [
 	"Direct links" => [
 		0 => "Link diretti",
 	],
-	"Image URL" => [
-		0 => "Immagine originale",
-	],
 	"Image link" => [
 		0 => "Pagina immagine",
+	],
+	"Image URL" => [
+		0 => "Immagine originale",
 	],
 	"Thumbnail URL" => [
 		0 => "Immagine in miniatura",
@@ -959,6 +968,12 @@ $translation_table = [
 	"Mail error" => [
 		0 => "Errore email",
 	],
+	"Upload images" => [
+		0 => "Carica immagini",
+	],
+	"Upload plugin" => [
+		0 => "Caricare plugin",
+	],
 	"Image search results for %s" => [
 		0 => "Risultati della ricerca immagine per %s",
 	],
@@ -1013,6 +1028,9 @@ $translation_table = [
 	"Create account" => [
 		0 => "Crea un account",
 	],
+	"Upload" => [
+		0 => "Carica",
+	],
 	"%s's Images" => [
 		0 => "Immagini di %s",
 	],
@@ -1051,9 +1069,6 @@ $translation_table = [
 	],
 	"Notices (%s)" => [
 		0 => "Avvisi (%s)",
-	],
-	"Upload" => [
-		0 => "Carica",
 	],
 	"Sign in with another account" => [
 		0 => "Accedi con un account diverso",
@@ -1157,26 +1172,32 @@ $translation_table = [
 	"You can also %i or %u." => [
 		0 => "È inoltre possibile %i o %u.",
 	],
+	"browse from your device" => [
+		0 => "esplorare dal tuo dispositivo",
+	],
 	"take a picture" => [
 		0 => "Fai una foto",
+	],
+	"You can also %i, %c or %u." => [
+		0 => "Puoi anche %i, %c o %u.",
 	],
 	"Edit or resize any image by clicking the image preview" => [
 		0 => "Modificare o ridimensionare un immagine cliccando l'immagine di anteprima",
 	],
-	"Edit or resize any image by touching the image preview" => [
-		0 => "Modificare o ridimensionare un'immagine toccando l'immagine di anteprima",
+	"Edit any image by touching the image preview" => [
+		0 => "Modifica qualsiasi immagine toccando l'anteprima dell'immagine",
 	],
 	"your computer" => [
 		0 => "il tuo computer",
 	],
-	"image URLs" => [
-		0 => "URL  immagini",
-	],
-	"You can keep adding more images from %i or from %u." => [
-		0 => "È possibile continuare ad aggiungere altre immagini da %i oppure da %u.",
+	"You can add more images from %i or %u." => [
+		0 => "È possibile aggiungere altre immagini %i o %u.",
 	],
 	"your device" => [
 		0 => "il tuo dispositivo",
+	],
+	"You can add more images from %i, %c or %u." => [
+		0 => "È possibile aggiungere altre immagini %i, %c o %u.",
 	],
 	"Uploading %q %o" => [
 		0 => "Caricamento %q %o",
@@ -1250,14 +1271,17 @@ $translation_table = [
 	"Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information." => [
 		0 => "Controlla il <a data-modal=\"simple\" data-target=\"failed-upload-result\">rapporto di errore</a> per ulteriori informazioni.",
 	],
-	"max" => [
-		0 => "Massimo",
+	"reset" => [
+		0 => "azzerare",
 	],
 	"close" => [
 		0 => "chiudi",
 	],
 	"copy" => [
 		0 => "copia",
+	],
+	"insert" => [
+		0 => "inserire",
 	],
 	"Edit" => [
 		0 => "Modifica",
@@ -1620,9 +1644,6 @@ $translation_table = [
 	"There's nothing to show here." => [
 		0 => "Non c'è niente da mostrare qui.",
 	],
-	"Upload images" => [
-		0 => "Carica immagini",
-	],
 	"Edit image details" => [
 		0 => "Modifica dettagli immagini",
 	],
@@ -1730,6 +1751,9 @@ $translation_table = [
 	],
 	"Resend instructions" => [
 		0 => "Invia di nuovo le istruzioni",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "Si è verificato un errore. Riprova più tardi.",
 	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "Ti abbiamo già inviata una email con le indicazioni per reimpostare la password. Se non la hai ricevuta, verifica anche nelle cartelle spam o posta indesiderata.",
@@ -2255,6 +2279,12 @@ $translation_table = [
 	],
 	"Enable this if you want to allow users to signup." => [
 		0 => "Attiva questa opzione per consentire all'utente di registrarsi al sito",
+	],
+	"Enable user content delete" => [
+		0 => "Abilita l'eliminazione dei contenuti utente",
+	],
+	"Enable this if you want to allow users to delete their own content. This setting doesn't affect administrators." => [
+		0 => "Abilitare questa opzione se si desidera consentire agli utenti di eliminare i propri contenuti. Questa impostazione non riguarda gli amministratori.",
 	],
 	"Minimum age required" => [
 		0 => "Età minima richiesta",
@@ -2963,6 +2993,63 @@ $translation_table = [
 	],
 	"Send" => [
 		0 => "Invia",
+	],
+	"Add image uploading to your website, blog or forum by installing our upload plugin. It provides image uploading to any website by placing a button that will allow your users to directly upload images to our service and it will automatically handle the codes needed for insertion. All features included like drag and drop, remote upload, image resizing and more." => [
+		0 => "Aggiungi l'upload dell'immagine al tuo sito web, blog o forum installando il nostro plug-in per il caricamento. Fornisce l'upload di immagini a qualsiasi sito web posizionando un pulsante che permetterà agli utenti di caricare direttamente immagini al nostro servizio e gestirà automaticamente i codici necessari per l'inserimento. Tutte le funzioni incluse come trascinamento, rilascio remoto, ridimensionamento delle immagini e altro ancora.",
+	],
+	"Supported software" => [
+		0 => "Software supportato",
+	],
+	"supported software" => [
+		0 => "Software supportato",
+	],
+	"The plugin works in any website with user-editable content and for %sv, it will place an upload button that will match the target editor toolbar so no extra customization is needed." => [
+		0 => "Il plugin funziona in qualsiasi sito web con contenuti modificabili dall'utente e per %sv, metterà un pulsante di caricamento che corrisponderà alla barra degli strumenti dell'editor di destinazione in modo che non sia necessaria alcuna personalizzazione aggiuntiva.",
+	],
+	"Add it to your website" => [
+		0 => "Aggiungilo al tuo sito web",
+	],
+	"options" => [
+		0 => "opzioni",
+	],
+	"Copy and paste the plugin code into your website HTML code (preferably inside the head section). There are plenty %o to make it fit better to your needs." => [
+		0 => "Copia e incolla il codice plug-in nel codice HTML del tuo sito web (preferibilmente all'interno della sezione di testa). Ci sono molti %o per adattarla meglio alle tue esigenze.",
+	],
+	"Basic options" => [
+		0 => "Opzioni di base",
+	],
+	"Color palette" => [
+		0 => "Palette dei colori",
+	],
+	"Button color scheme" => [
+		0 => "Schema colore dei pulsanti",
+	],
+	"Embed codes that will be auto-inserted in editor box" => [
+		0 => "Incorpora i codici che verranno inseriti automaticamente nella casella di testo",
+	],
+	"Sibling selector" => [
+		0 => "Selettore",
+	],
+	"Sibling element selector where to place the button next to" => [
+		0 => "Selettore di elementi di sintonia in cui posizionare il pulsante accanto",
+	],
+	"Sibling position" => [
+		0 => "Posizione del Selettore",
+	],
+	"After" => [
+		0 => "Dopo",
+	],
+	"Before" => [
+		0 => "Prima",
+	],
+	"Position relative to sibling element" => [
+		0 => "Posizione relativa all'elemento del selettore",
+	],
+	"Advanced options" => [
+		0 => "Opzioni avanzate",
+	],
+	"The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options." => [
+		0 => "Il plugin dispone di un vasto set di opzioni aggiuntive che consentono una completa personalizzazione. È possibile utilizzare HTML personalizzato, CSS, la propria tavolozza di colori, impostare gli osservatori e altro ancora. Controlla la %d e la fonte plugin per avere un'idea migliore di queste opzioni avanzate.",
 	],
 	"You either don't have permission to access this page or the link has expired." => [
 		0 => "Attenzione Tu non hai i permessi per accedere a questa pagina o il link oppure  è scaduto.",

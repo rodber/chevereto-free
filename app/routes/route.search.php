@@ -9,7 +9,7 @@
 			<inbox@rodolfoberrios.com>
 
   Copyright (C) Rodolfo Berrios A. All rights reserved.
-  
+
   BY USING THIS SOFTWARE YOU DECLARE TO ACCEPT THE CHEVERETO EULA
   http://chevereto.com/license
 
@@ -17,32 +17,32 @@
 
 $route = function($handler) {
 	try {
-		
+
 		$logged_user = CHV\Login::getUser();
-		
+
 		if(!CHV\getSetting('website_search') && !$logged_user['is_admin']) {
 			return $handler->issue404();
 		}
-		
+
 		if($_POST and !$handler::checkAuthToken($_REQUEST['auth_token'])) {
 			$handler->template = 'request-denied';
 			return;
 		}
-		
+
 		if($handler->isRequestLevel(4)) return $handler->issue404(); // Allow only 3 levels
-		
+
 		if(empty($handler->request[0])) {
 			return $handler->issue404();
 		}
 
 		// User status override redirect
 		CHV\User::statusRedirect($logged_user['status']);
-		
+
 		// Valid search type
 		if(!in_array($handler->request[0], ['images', 'albums', 'users'])) {
 			return $handler->issue404();
 		}
-		
+
 		// Build search params
 		$search = new CHV\Search;
 		$search->q = $_REQUEST['q'];
@@ -50,13 +50,13 @@ $route = function($handler) {
 		$search->request = $_REQUEST;
 		$search->requester = CHV\Login::getUser();
 		$search->build();
-		
+
 		if(!G\check_value($search->q)) {
 			return G\redirect();
 		}
-		
+
 		$safe_html_search = G\safe_html($search->display);
-		
+
         try {
             /*** Listing ***/
             $list_params = CHV\Listing::getParams(); // Use CHV magic params
@@ -75,7 +75,7 @@ $route = function($handler) {
             $list->output_tpl = $search->type;
             $list->exec();
         } catch(Exception $e) {} // Silence to avoid wrong input queries
-			
+
 		$tabs = CHV\Listing::getTabs([
 			'listing'	=> 'search',
 			'basename'	=> 'search',
@@ -85,7 +85,7 @@ $route = function($handler) {
 		foreach($tabs as $k => &$v) {
 			$v['current'] = $v['type'] == $search->type;
 		}
-		
+
 		// _s() must be bind in this way for the PO grabber
 		switch($search->type) {
 			case 'images':
@@ -98,19 +98,18 @@ $route = function($handler) {
 				$meta_description = _s('User search results for %s');
 			break;
 		}
-		
+
 		$handler::setVar('pre_doctitle', _s('Search'));
 		$handler::setVar('meta_description', sprintf($meta_description, $safe_html_search['q']));
-		//$handler::setVar('meta_keywords', NULL);
 		$handler::setVar('search', $search->display);
 		$handler::setVar('safe_html_search', $safe_html_search);
 		$handler::setVar('tabs', $tabs);
 		$handler::setVar('list', $list);
-		
+
 		if($logged_user['is_admin']) {
 			$handler::setVar('user_items_editor', false);
 		}
-		
+
 	} catch(Exception $e) {
 		G\exception_to_error($e);
 	}

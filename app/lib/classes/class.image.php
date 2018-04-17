@@ -9,7 +9,7 @@
 			<inbox@rodolfoberrios.com>
 
   Copyright (C) Rodolfo Berrios A. All rights reserved.
-  
+
   BY USING THIS SOFTWARE YOU DECLARE TO ACCEPT THE CHEVERETO EULA
   http://chevereto.com/license
 
@@ -19,7 +19,7 @@ namespace CHV;
 use G, Exception;
 
 class Image {
-	
+
 	static $table_chv_image = [
 				'name',
 				'extension',
@@ -46,21 +46,22 @@ class Image {
 				'expiration_date_gmt',
 				'likes',
 				'is_animated',
-            ];
+      ];
+
 	static $chain_sizes = ['original', 'image', 'medium', 'thumb'];
-    
+
 	public static function getSingle($id, $sumview=FALSE, $pretty=FALSE, $requester=NULL) {
-		
+
 		$tables = DB::getTables();
 		$query = 'SELECT * FROM '.$tables['images']."\n";
-		
+
 		$joins = [
 			'LEFT JOIN '.$tables['storages'].' ON '.$tables['images'].'.image_storage_id = '.$tables['storages'].'.storage_id',
 			'LEFT JOIN '.$tables['storage_apis'].' ON '.$tables['storages'].'.storage_api_id = '.$tables['storage_apis'].'.storage_api_id',
 			'LEFT JOIN '.$tables['users'].' ON '.$tables['images'].'.image_user_id = '.$tables['users'].'.user_id',
 			'LEFT JOIN '.$tables['albums'].' ON '.$tables['images'].'.image_album_id = '.$tables['albums'].'.album_id'
 		];
-		
+
 		if($requester) {
 			if(!is_array($requester)) {
 				$requester = User::getSingle($requester, 'id');
@@ -69,11 +70,11 @@ class Image {
 
 		$query .=  implode("\n", $joins) . "\n";
 		$query .= 'WHERE image_id=:image_id;'."\n";
-		
+
 		if($sumview) {
-			$query .= 'UPDATE '.$tables['images'].' SET image_views = image_views + 1 WHERE image_id=:image_id';	
+			$query .= 'UPDATE '.$tables['images'].' SET image_views = image_views + 1 WHERE image_id=:image_id';
 		}
-		
+
 		try {
 			$db = DB::getInstance();
 			$db->query($query);
@@ -92,7 +93,7 @@ class Image {
 				}
 				$return = $image_db;
 				$return = $pretty ? self::formatArray($return) : $return;
-				
+
 				if(!$return['file_resource']) {
 					$return['file_resource'] =  self::getSrcTargetSingle($image_db, true);
 				}
@@ -103,11 +104,11 @@ class Image {
 		} catch(Exception $e) {
 			throw new ImageException($e->getMessage(), 400);
 		}
-		
+
 	}
-	
+
 	public static function getMultiple($ids, $pretty=FALSE) {
-		
+
 		if(!is_array($ids)) {
 			$ids = func_get_args();
 			$aux = array();
@@ -116,14 +117,14 @@ class Image {
 			}
 			$ids = $aux;
 		}
-		
+
 		if(count($ids) == 0) {
 			throw new ImageException('Null ids provided in Image::get_multiple', 100);
 		}
-		
+
 		$tables = DB::getTables();
 		$query = 'SELECT * FROM '.$tables['images']."\n";
-		
+
 		$joins = array(
 			'LEFT JOIN '.$tables['users'].' ON '.$tables['images'].'.image_user_id = '.$tables['users'].'.user_id',
 			'LEFT JOIN '.$tables['albums'].' ON '.$tables['images'].'.image_album_id = '.$tables['albums'].'.album_id'
@@ -131,7 +132,7 @@ class Image {
 
 		$query .=  implode("\n", $joins) . "\n";
 		$query .= 'WHERE image_id IN ('. join(',', $ids). ')' . "\n";
-		
+
 		try {
 			$db = DB::getInstance();
 			$db->query($query);
@@ -153,15 +154,15 @@ class Image {
 			throw new ImageException($e->getMessage(), 400);
 		}
 	}
-	
+
 	public static function getAlbumSlice($image_id, $album_id=NULL, $padding=2) {
-		
+
 		$tables = DB::getTables();
-		
+
 		if($image_id == NULL) {
 			throw new ImageException("Image id can't be NULL", 100);
 		}
-		
+
 		if($album_id == NULL) {
 			try {
 				$db = DB::getInstance();
@@ -172,18 +173,18 @@ class Image {
 			} catch(Excepton $e) {
 				throw new ImageException($e->getMessage(), 400);
 			}
-			
+
 			if($album_id == NULL) {
 				return;
 			}
 		}
-		
+
 		if(!is_numeric($padding)) {
 			$padding = 2;
 		}
 
 		//$where_album = $album_id !== NULL ? "image_album_id=:image_album_id" : "image_album_id IS NULL";
-		
+
 		try {
 			$db = DB::getInstance();
 			$db->query('SELECT * FROM (
@@ -196,9 +197,9 @@ class Image {
 
 			$db->bind(':image_album_id', $album_id);
 			$db->bind(':image_id', $image_id);
-			
+
 			$image_album_slice_db = $db->fetchAll();
-			
+
 			$album_offset = array('top' => 0, 'bottom' => 0);
 			foreach($image_album_slice_db as $v) {
 				if($image_id > $v['image_id']) {
@@ -208,12 +209,12 @@ class Image {
 					$album_offset['bottom']++;
 				}
 			}
-			
+
 			$album_chop_count = count($image_album_slice_db);
 			$album_iteration_times = $album_chop_count - ($padding*2 + 1);
-			
+
 			if($album_chop_count > ($padding*2 + 1)) {
-									
+
 				if($album_offset['top'] > $padding && $album_offset['bottom'] > $padding) {
 					// Cut on top
 					for($i=0; $i<$album_offset['top']-$padding; $i++) {
@@ -234,7 +235,7 @@ class Image {
 						unset($image_album_slice_db[$i]);
 					}
 				}
-				
+
 				// Some cleaning after the unsets
 				$image_album_slice_db = array_values($image_album_slice_db);
 			}
@@ -246,21 +247,21 @@ class Image {
 					break;
 				}
 			}
-			
+
 			$image_album_slice['images'] = array();
-			
+
 			foreach($image_album_slice_db as $k => $v) {
 				$image_album_slice['images'][$k] = self::formatArray($v);
 			}
-			
+
 			if($image_album_slice['images'][$album_cursor-1]) {
 				$image_album_slice['prev'] =  $image_album_slice['images'][$album_cursor-1];
 			}
-			
+
 			if($image_album_slice['images'][$album_cursor+1]) {
 				$image_album_slice['next'] = $image_album_slice['images'][$album_cursor+1];
 			}
-			
+
 			return array(
 				'db'		=> $image_album_slice_db,
 				'formatted'	=> $image_album_slice
@@ -270,15 +271,15 @@ class Image {
 			throw new ImageException($e->getMessage(), 400);
 		}
 	}
-	
+
 	public static function getSrcTargetSingle($filearray, $prefix=true) {
-		
+
 		$prefix = $prefix ? 'image_' : NULL;
 		$folder = CHV_PATH_IMAGES;
 		$pretty = !isset($filearray['image_id']);
-		
+
 		$chain_mask = str_split((string) str_pad(decbin($filearray[$pretty ? 'chain' : 'image_chain']), 4, '0', STR_PAD_LEFT));
-		
+
 		$chain_to_sufix = [
 			//'original'	=> '.original.',
 			'image'		=> '.',
@@ -291,11 +292,11 @@ class Image {
 		} else {
 			$type = $filearray['storage_id'] ? 'url' : 'path';
 		}
-		
+
 		if($type == 'url') { // URL resource folder
 			$folder = G\add_ending_slash($pretty ? $filearray['storage']['url'] : $filearray['storage_url']);
 		}
-		
+
 		switch($filearray[$prefix.'storage_mode']) {
 			case 'datefolder':
 				$datetime = $filearray[$prefix.'date'];
@@ -309,7 +310,7 @@ class Image {
 				// use direct $folder
 			break;
 		}
-		
+
 		$targets = [
 			'type' => $type,
 			'chain'	=> [
@@ -319,11 +320,11 @@ class Image {
 				'medium'	=> NULL
 			]
 		];
-		
+
 		foreach($targets['chain'] as $k => $v) {
 			$targets['chain'][$k] = $folder.$filearray[$prefix.'name'] . $chain_to_sufix[$k] . $filearray[$prefix.'extension'];
 		}
-		
+
 		if($type == 'path') {
 			foreach($targets['chain'] as $k => $v) {
 				if(!file_exists($v)) {
@@ -337,31 +338,52 @@ class Image {
 				}
 			}
 		}
-		
+
 		return $targets;
 	}
-	
+
 	public static function getUrlViewer($id_encoded) {
 		return G\get_base_url(getSetting('route_image') . '/' . $id_encoded);
 	}
-	
-    public static function getAvailableExpirations() {
-		$string = _s('After %n %t');
-        return [
-            NULL        => _s("Don't autodelete"),
-            'PT5M'      => strtr($string, ['%n' => 5, '%t' => _n('minute', 'minutes', 5)]),
-            'PT30M'     => strtr($string, ['%n' => 30, '%t' => _n('minute', 'minutes', 30)]),
-            'PT1H'      => strtr($string, ['%n' => 1, '%t' => _n('hour', 'hours', 1)]),
-            'PT2H'      => strtr($string, ['%n' => 2, '%t' => _n('hour', 'hours', 2)]),
-            'PT6H'      => strtr($string, ['%n' => 6, '%t' => _n('hour', 'hours', 6)]),
-            'PT12H'     => strtr($string, ['%n' => 12, '%t' => _n('hour', 'hours', 12)]),
-            'P1D'       => strtr($string, ['%n' => 1, '%t' => _n('day','days', 1)]),
-            'P2D'       => strtr($string, ['%n' => 2, '%t' => _n('day','days', 2)])
-        ];
+
+  public static function getAvailableExpirations() {
+			$string = _s('After %n %t');
+			$translate = [ // Just for gettext parsing
+				'minute'=> _n('minute', 'minutes', 1),
+				'hour'	=> _n('hour', 'hours', 1),
+				'day'		=> _n('day', 'days', 1),
+				'week'	=> _n('week', 'weeks', 1),
+				'month'	=> _n('month', 'months', 1),
+				'year'	=> _n('year', 'years', 1),
+			];
+			$return = [
+				NULL => _s("Don't autodelete"),
+			];
+			$table = [
+				['minute', 5],
+				['minute', 15],
+				['minute', 30],
+				['hour', 1],
+				['hour', 2],
+				['hour', 6],
+				['hour', 12],
+				['day', 1],
+				['day', 2],
+				['day', 3],
+				['week', 1],
+				['week', 2],
+				['month', 1],
+			];
+			foreach($table as $expire) {
+				$unit = $expire[0];
+				$interval_spec = 'P' . (in_array($unit, ['second', 'minute', 'hour']) ? 'T' : NULL) . $expire[1] . strtoupper($unit[0]);
+				$return[$interval_spec] = strtr($string, ['%n' => $expire[1], '%t' => _n($unit, $unit . 's', $expire[1])]);
+			}
+			return $return;
     }
-    
-    public static function watermark($image_path, $options=[]) {
-		
+
+  public static function watermark($image_path, $options=[]) {
+
 		// Watermark options
 		$options = array_merge([
 			'ratio'		=> getSetting('watermark_percentage') / 100,
@@ -372,10 +394,10 @@ class Image {
 		if(!is_readable($options['file'])) {
 			throw new Exception("Can't read watermark file", 100);
 		}
-		
+
 		// Fail-safe ratio
 		$options['ratio'] = min(1, (!is_numeric($options['ratio']) ? 0.01 : max(0.01, $options['ratio'])));
-		
+
 		// Fail-safe positioning
 		if(!in_array($options['position'][0], ['left', 'center', 'right'])) {
 			$options['position'][0] = 'right';
@@ -383,10 +405,10 @@ class Image {
 		if(!in_array($options['position'][1], ['top', 'center', 'bottom'])) {
 			$options['position'][0] = 'bottom';
 		}
-		
+
 		// Get source fileinfo
 		$image_fileinfo = G\get_image_fileinfo($image_path);
-		
+
 		// Create working source image
 		switch($image_fileinfo['extension']) {
 			case 'gif':
@@ -401,48 +423,48 @@ class Image {
 		}
 		$src_width = imagesx($src);
 		$src_height = imagesy($src);
-		
+
 		// Create working watermark image
 		$watermark_fileinfo = G\get_image_fileinfo($options['file']);
-		
+
 		$watermark_width = $watermark_fileinfo['width'];
 		$watermark_height = $watermark_fileinfo['height'];
 		$watermark_max_upscale = 1.2;
 		$watermark_max_width = $watermark_fileinfo['width'] * $watermark_max_upscale;
 		$watermark_max_height = $watermark_fileinfo['height'] * $watermark_max_upscale;
-		
+
 		$watermark_area = $image_fileinfo['width'] * $image_fileinfo['height'] * $options['ratio'];
 		$watermark_image_ratio = $watermark_fileinfo['ratio'];
-		
+
 		$watermark_new_height = round(sqrt($watermark_area/$watermark_image_ratio), 0);
-		
+
 		if($watermark_new_height > $watermark_max_height) { // Set a max cap
 			$watermark_new_height = $watermark_max_height;
 		}
-		
+
 		// To legit to quit
 		if($watermark_new_height > $src_height) {
 			$watermark_new_height = $src_height;
 		}
-		
+
 		// Fix watermark margin issues on height
 		if(getSetting('watermark_margin') and $options['position'][1] !== 'center' and $watermark_new_height + getSetting('watermark_margin') > $src_height) {
 			$watermark_new_height -= $watermark_new_height + 2*getSetting('watermark_margin') - $src_height;
 		}
-		
+
 		$watermark_new_width  = round($watermark_image_ratio * $watermark_new_height, 0);
-		
+
 		// To legit to quit yo
 		if($watermark_new_width > $src_width) {
 			$watermark_new_width = $src_width;
 		}
-		
+
 		// Fix watermark margin issues on width
 		if(getSetting('watermark_margin') and $options['position'][0] !== 'center' and $watermark_new_width + getSetting('watermark_margin') > $src_width) {
 			$watermark_new_width -= $watermark_new_width + 2*getSetting('watermark_margin') - $src_width;
 			$watermark_new_height = $watermark_new_width / $watermark_image_ratio;
 		}
-		
+
 		if($watermark_new_height <= $watermark_max_height or $watermark_new_width <= $watermark_fileinfo['width']*2) {
 			// Resizable watermark image
 			try {
@@ -466,7 +488,7 @@ class Image {
 			// Watermark "as is"
 			$watermark_src = imagecreatefrompng($options['file']);
 		}
-		
+
 
 		// Calculate the watermark position
 		switch($options['position'][0]) {
@@ -491,7 +513,7 @@ class Image {
 				$watermark_y = $src_height - $watermark_height - getSetting('watermark_margin');
 			break;
 		}
-		
+
 		/*
 		// Watermark has the same or greater size of the image ?
 		// --> Center the watermark
@@ -499,7 +521,7 @@ class Image {
 			$watermark_x = $src_width/2 - $watermark_width/2;
 			$watermark_y = $src_height/2 - $watermark_height/2;
 		}
-		
+
 		// Watermark is too big ?
 		// --> Fit the watermark on the image
 		if($watermark_width > $src_width || $watermark_height > $src_height) {
@@ -526,10 +548,10 @@ class Image {
 			} catch(Exception $e) {} // Silence
 		}
 		*/
-		
+
 		// Apply and save the watermark
 		G\imagecopymerge_alpha($src, $watermark_src, $watermark_x, $watermark_y, 0, 0, $watermark_width, $watermark_height, getSetting('watermark_opacity'), $image_fileinfo['extension']);
-		
+
 		switch($image_fileinfo['extension']) {
 			case 'gif': // Cast gif as png (gif has very poor quality)
 				imagegif($src, $image_path);
@@ -542,21 +564,21 @@ class Image {
 		}
 		imagedestroy($src);
 		@unlink($watermark_temp);
-		
+
 		return true;
-				
+
 	}
-	
+
 	public static function upload($source, $destination, $filename=NULL, $options=[], $storage_id=NULL) {
-		
+
 		$default_options = Upload::getDefaultOptions();
-		
+
 		$options = array_merge($default_options, $options);
 
 		if(!is_null($filename) && !$options['filenaming']) {
 			$options['filenaming'] = 'original';
 		}
-		
+
 		try {
 			$upload = new Upload;
 			$upload->setSource($source);
@@ -569,17 +591,17 @@ class Image {
 				$upload->setFilename($filename);
 			}
 			$upload->exec();
-			
+
 			$original_md5 = $upload->uploaded['fileinfo']['md5'];
-			
+
 			$is_animated_image = ($upload->uploaded['fileinfo']['extension'] == 'gif' and G\is_animated_image($upload->uploaded['file']));
 			$apply_watermark = ($options['watermark'] and !$is_animated_image);
-			
+
 			// Disable animated image watermark
 			if($is_animated_image) {
 				$apply_watermark = FALSE;
 			}
-			
+
 			if($apply_watermark) {
 				// Detect watermark min image requirement
 				foreach(['width', 'height'] as $k) {
@@ -594,12 +616,12 @@ class Image {
 					$apply_watermark = FALSE;
 				}
 			}
-			
+
 			if($apply_watermark && self::watermark($upload->uploaded['file'])) {
 				$upload->uploaded['fileinfo'] = G\get_image_fileinfo($upload->uploaded['file']); // Remake the fileinfo array, new full array file info (todo: faster!)
 				$upload->uploaded['fileinfo']['md5'] = $original_md5; // Preserve original MD5 for watermarked images
 			}
-			
+
 			return [
 				'uploaded'	=> $upload->uploaded,
 				'source'	=> $upload->source
@@ -607,24 +629,24 @@ class Image {
 		} catch(Exception $e) {
 			throw new UploadException($e->getMessage(), $e->getCode());
 		}
-		
+
 	}
-	
+
 	// Mostly for people uploading two times the same image to test or just bug you
 	public static function isDuplicatedUpload($md5_file, $time_frame='P1D') {
 		$db = DB::getInstance();
 		$db->query('SELECT * FROM ' . DB::getTable('images') . ' WHERE image_md5=:md5 AND image_uploader_ip=:ip AND image_date_gmt > :date_gmt');
 		$db->bind(':md5', $md5_file);
 		$db->bind(':ip', G\get_client_ip());
-		$db->bind(':date_gmt', G\datetime_sub(G\datetimegmt(), $time_frame));	
+		$db->bind(':date_gmt', G\datetime_sub(G\datetimegmt(), $time_frame));
 		$db->exec();
 		return $db->fetchColumn();
 	}
-	
+
 	public static function uploadToWebsite($source, $user=NULL, $params=[]) {
-		 
+
 		try {
-			
+
 			// Get user
 			if($user) {
 				switch(gettype($user)) {
@@ -636,7 +658,7 @@ class Image {
 					break;
 				}
 			}
-			
+
 			// Detect duplicated uploads (local) by IP + MD5 (first layer)
 			if(!getSetting('enable_duplicate_uploads') && is_array($source) && array_key_exists('tmp_name', $source) && !$user['is_admin']) {
 				$md5_file = md5_file($source['tmp_name']);
@@ -655,40 +677,40 @@ class Image {
 					$upload_path = CHV_PATH_IMAGES . $datefolder;
 				break;
 			}
-			
+
 			$filenaming = getSetting('upload_filenaming');
-			
+
 			if($filenaming !== 'id' and in_array($params['privacy'], ['password', 'private', 'private_but_link']) ) {
 				$filenaming = 'random';
 			}
-			
+
 			$upload_options = [
 				'max_size'		=> G\get_bytes(getSetting('upload_max_filesize_mb') . ' MB'),
 				'watermark'		=> getSetting('watermark_enable'),
                 'exif'          => (getSetting('upload_image_exif_user_setting') && $user) ? $user['image_keep_exif'] : getSetting('upload_image_exif'),
 			];
-			
+
 			// Workaround watermark by user group
 			if($upload_options['watermark']) {
 				$watermark_enable = [];
 				$watermark_user = $user ? ($user['is_admin'] ? 'admin' : 'user') : 'guest';
 				$upload_options['watermark'] = getSetting('watermark_enable_' . $watermark_user);
 			}
-			
+
 			// Watermark by filetype
 			$upload_options['watermark_gif'] = (bool) getSetting('watermark_enable_file_gif');
-						
+
 			// Reserve this ID
 			if($filenaming == 'id') {
 				try {
 					//  Detect last auto increment
 					$AUTO_INCREMENT = DB::queryFetchSingle("SELECT AUTO_INCREMENT FROM information_schema.tables WHERE table_name = '" . DB::getTable('images') . "' AND table_schema = DATABASE();")['AUTO_INCREMENT'];
-										
+
 					$target_id = $AUTO_INCREMENT;
-					
+
 					// Initiate lock object
 					$lock = new Lock('image-ID-' . $target_id);
-					
+
 					while($lock->check()) {
 						$target_id++;
 						$lock = new Lock('image-ID-' . $target_id);
@@ -696,10 +718,10 @@ class Image {
 							break;
 						}
 					}
-					
+
 					// Create lock
 					$lock->setExpiration(FALSE);
-					$lock->create();			
+					$lock->create();
 
 					$reserve = [
 							'reserved_id'	=> $target_id,
@@ -711,75 +733,77 @@ class Image {
 					// Fallback
 					$filenaming = 'original';
 				}
-				
+
 			}
-			
+
 			// Filenaming
 			$upload_options['filenaming'] = $filenaming;
-			
+
 			// Allowed extensions
 			$upload_options['allowed_formats'] = self::getEnabledImageFormats();
-			
+
 			$image_upload = self::upload($source, $upload_path, $filenaming == 'id' ? encodeID($target_id) : NULL, $upload_options, $storage_id);
 
 			$chain_mask = [0, 1, 0, 1]; // original image medium thumb
 			$chain_array = [];
-			
+
 			// Detect duplicated uploads (all) by IP + MD5 (second layer)
 			if(!getSetting('enable_duplicate_uploads') && $image_upload['uploaded']['fileinfo']['md5'] && !$user['is_admin']) {
 				if(self::isDuplicatedUpload($image_upload['uploaded']['fileinfo']['md5'])) {
 					throw new Exception(_s('Duplicated upload'), 100);
 				}
 			}
-			
+
 			// Handle resizing KEEP 'source', change 'uploaded'
 			$image_ratio = $image_upload['uploaded']['fileinfo']['width'] / $image_upload['uploaded']['fileinfo']['height'];
 			$must_resize = FALSE;
-			
+
 			// This dumb step is to have a failover for 0 values
 			$image_max_size_cfg = [
 				'width'		=> Settings::get('upload_max_image_width') ?: $image_upload['uploaded']['fileinfo']['width'],
 				'height'	=> Settings::get('upload_max_image_height') ?: $image_upload['uploaded']['fileinfo']['height'],
 			];
-			
+
 			// Is too large? (like my big fat dick...)
 			if($image_max_size_cfg['width'] < $image_upload['uploaded']['fileinfo']['width'] || $image_max_size_cfg['height'] < $image_upload['uploaded']['fileinfo']['height']) {
-				
+
+				// Adjust image_max to max_size_cfg (setting value)
 				$image_max = $image_max_size_cfg;
-				
-				$image_max['width'] = round($image_max_size_cfg['height'] * $image_ratio);
-				$image_max['height'] = round($image_max_size_cfg['width'] / $image_ratio);
-				
+
+				$image_max['width'] = (int) round($image_max_size_cfg['height'] * $image_ratio);
+				$image_max['height'] =  (int) round($image_max_size_cfg['width'] / $image_ratio);
+
 				if($image_max['height'] > $image_max_size_cfg['height']) {
 					$image_max['height'] = $image_max_size_cfg['height'];
-					$image_max['width'] = round($image_max['height'] * $image_ratio);
+					$image_max['width'] =  (int) round($image_max['height'] * $image_ratio);
 				}
-				
+
 				if($image_max['width'] > $image_max_size_cfg['width']) {
 					$image_max['width'] = $image_max_size_cfg['width'];
-					$image_max['height'] = round($image_max['width'] / $image_ratio);
+					$image_max['height'] =  (int) round($image_max['width'] / $image_ratio);
 				}
-				
-				if($image_max != $image_max_size_cfg) { // $image_max has FLOAT | $image_max_size_cfg has INT (loose comparision)
+
+				// Detect if resize is needed, if so, use $image_max values
+				if($image_max != ['width' => $image_upload['uploaded']['fileinfo']['width'], 'height' => $image_max_size_cfg['height']]) { // loose just in case..
 					$must_resize = TRUE;
 					$params['width'] = $image_max['width'];
 					$params['height'] = $image_max['height'];
 				}
-			
+
 			}
-			
+
 			foreach(['width', 'height'] as $k) {
 				if(!isset($params[$k]) || !is_numeric($params[$k])) continue;
 				if($params[$k] != $image_upload['uploaded']['fileinfo'][$k]) {
 					$must_resize = TRUE;
 				}
 			}
-			
+
 			// Disable resize for animated images (for now)
 			if(G\is_animated_image($image_upload['uploaded']['file'])) {
 				$must_resize = FALSE;
 			}
-			
+
 			if($must_resize) {
 				if($image_ratio == $params['width']/$params['height']) {
 					$image_resize_options = [
@@ -790,20 +814,20 @@ class Image {
 					$image_resize_options = ['width' => $params['width']];
 				}
 				$image_upload['uploaded'] = self::resize($image_upload['uploaded']['file'], dirname($image_upload['uploaded']['file']), NULL, $image_resize_options);
-			} 
-			
+			}
+
 			// Try to generate the thumb
 			$image_thumb_options = [
 				'width'		=> getSetting('upload_thumb_width'),
 				'height'	=> getSetting('upload_thumb_height')
 			];
-			
+
 			// Try to generate the medium
 			$medium_size = getSetting('upload_medium_size');
 			$medium_fixed_dimension = getSetting('upload_medium_fixed_dimension');
 
 			$is_animated_image = $image_upload['uploaded']['fileinfo']['extension'] == 'gif' && G\is_animated_image($image_upload['uploaded']['file']);
-			
+
 			// Medium sized image
 			if($image_upload['uploaded']['fileinfo'][$medium_fixed_dimension] > $medium_size or $is_animated_image) {
 				$image_medium_options = [];
@@ -815,15 +839,15 @@ class Image {
 				$image_medium = self::resize($image_upload['uploaded']['file'], dirname($image_upload['uploaded']['file']), $image_upload['uploaded']['name'] . '.md', $image_medium_options);
 				$chain_mask[2] = 1;
 			}
-			
+
 			// Thumb sized image
 			$image_thumb = self::resize($image_upload['uploaded']['file'], dirname($image_upload['uploaded']['file']), $image_upload['uploaded']['name'] . '.th', $image_thumb_options);
-			
+
 			// Image chain (binary)
 			$chain_value = bindec((int)implode('', $chain_mask));
-			
+
 			$disk_space_needed = $image_upload['uploaded']['fileinfo']['size'] + $image_thumb['fileinfo']['size'] + ($image_medium['fileinfo']['size'] ?: 0);
-			
+
 			// Can the storage allocate all the files?
 			if($storage_id and !empty($storage['capacity']) and $disk_space_needed > ($storage['capacity'] - $storage['space_used'])) {
 
@@ -842,10 +866,10 @@ class Image {
 				} else {
 					$switch_to_local = true;
 				}
-				
+
 				// Switch to local storage
 				if($switch_to_local) {
-										
+
 					$storage_id = NULL;
 					$downstream = $image_upload['uploaded']['file'];
 					$fixed_filename = $image_upload['uploaded']['filename'];
@@ -853,7 +877,7 @@ class Image {
 					if(!@rename($downstream, $uploaded_file)) {
 						throw new Exception("Can't re-allocate image to local storage", 500);
 					}
-					
+
 					// Re-build the uploaded array
 					$image_upload['uploaded'] = [
 						'file'		=> $uploaded_file,
@@ -861,14 +885,14 @@ class Image {
 						'name'		=> G\get_filename_without_extension($uploaded_file),
 						'fileinfo'	=> G\get_image_fileinfo($uploaded_file)
 					];
-					
+
 					// ...And re-build all the chain
 					$chain_props = [
 						'thumb'		=> ['suffix' => 'th'],
 						'medium'	=> ['suffix' => 'md']
 					];
 					if(!$image_medium) unset($chain_props['medium']);
-					
+
 					foreach($chain_props as $k => $v) {
 						$chain_file = G\add_ending_slash(dirname($image_upload['uploaded']['file'])) . $image_upload['uploaded']['name'] . '.'.$v['suffix'].'.' . ${"image_$k"}['fileinfo']['extension'];
 						if(!@rename(${"image_$k"}['file'], $chain_file)) {
@@ -881,75 +905,75 @@ class Image {
 							'fileinfo'	=> G\get_image_fileinfo($chain_file)
 						];
 					}
-				
+
 				}
 			}
-			
+
 			$image_insert_values = [
 				'storage_mode'	=> $storage_mode,
 				'storage_id'	=> $storage_id,
 				'user_id'		=> $user['id'],
-				'album_id'		=> $params['album_id'],
+				'album_id'		=> $params['album_id'] ?: NULL,
 				'nsfw'			=> $params['nsfw'],
-				'category_id'	=> $params['category_id'],
+				'category_id'	=> $params['category_id'] ?: NULL,
 				'title'			=> $params['title'],
-				'description'	=> $params['description'],
+				'description'	=> $params['description'] ?: NULL,
 				'chain'			=> $chain_value,
 				'thumb_size'	=> $image_thumb['fileinfo']['size'],
 				'medium_size'	=> $image_medium['fileinfo']['size'] ?: 0,
 				'is_animated'	=> $is_animated_image
-			];
-			
-            // Expirable upload
-            if(getSetting('enable_expirable_uploads')) {
-				
+			]; // Note: NULL is strongly needed here to avoid integer 0 issues on the sql
+
+      // Expirable upload
+      if(getSetting('enable_expirable_uploads')) {
+
 				// Inject guest forced auto delete
 				if(!$user && getSetting('auto_delete_guest_uploads') !== NULL) {
 					$params['expiration'] = getSetting('auto_delete_guest_uploads');
 				}
-				
-                // Inject user's default expiration date 
-                if(!isset($params['expiration']) && !is_null($user['image_expiration'])) {
-                    $params['expiration'] = $user['image_expiration'];
-                }
-                try {
-                    // Handle image expire time (source comes as DateInterval string)
-                    if(!empty($params['expiration']) && array_key_exists($params['expiration'], self::getAvailableExpirations())) {
-                            $params['expiration_date_gmt'] = G\datetime_add(G\datetimegmt(),  strtoupper($params['expiration']));
-                    }
-                    // Image expirable handling
-                    if(!empty($params['expiration_date_gmt'])) {
-                        $expirable_diff = G\datetime_diff(G\datetimegmt(), $params['expiration_date_gmt'], 'm');
-                        // 5 minutes minimum
-                        $image_insert_values['expiration_date_gmt'] = $expirable_diff < 5 ? G\datetime_modify(G\datetimegmt(), '+5 minutes') : $params['expiration_date_gmt'];
-                    }
-                } catch(Exception $e) {} // Silence
+
+        // Inject user's default expiration date
+        if(!isset($params['expiration']) && !is_null($user['image_expiration'])) {
+            $params['expiration'] = $user['image_expiration'];
+        }
+        try {
+            // Handle image expire time (source comes as DateInterval string)
+            if(!empty($params['expiration']) && array_key_exists($params['expiration'], self::getAvailableExpirations())) {
+                    $params['expiration_date_gmt'] = G\datetime_add(G\datetimegmt(),  strtoupper($params['expiration']));
             }
+            // Image expirable handling
+            if(!empty($params['expiration_date_gmt'])) {
+              $expirable_diff = G\datetime_diff(G\datetimegmt(), $params['expiration_date_gmt'], 'm');
+              // 5 minutes minimum
+              $image_insert_values['expiration_date_gmt'] = $expirable_diff < 5 ? G\datetime_modify(G\datetimegmt(), '+5 minutes') : $params['expiration_date_gmt'];
+            }
+        } catch(Exception $e) {} // Silence
+      }
 
             // Inject image title
 			if(!array_key_exists('title', $params)) {
-                // From Exif
-                $title_from_exif = $image_upload['source']['image_exif']['ImageDescription'] ? trim($image_upload['source']['image_exif']['ImageDescription']) : NULL;
-                if($title_from_exif) {
+        // From Exif
+        $title_from_exif = $image_upload['source']['image_exif']['ImageDescription'] ? trim($image_upload['source']['image_exif']['ImageDescription']) : NULL;
+        if($title_from_exif) {
 					// Get rid of any unicode stuff
 					$title_from_exif = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $title_from_exif);
-                    $image_title = $title_from_exif;
-                } else {
-                    // From filename
-                    $title_from_filename = preg_replace('/[-_\s]+/', ' ', trim($image_upload['source']['name']));
-                    $image_title = $title_from_filename;
-                }
+          $image_title = $title_from_exif;
+        } else {
+          // From filename
+          $title_from_filename = preg_replace('/[-_\s]+/', ' ', trim($image_upload['source']['name']));
+          $image_title = $title_from_filename;
+        }
 				$image_insert_values['title'] = $image_title;
 			}
-			
+
 			if($filenaming == 'id' && $target_id) { // Insert as a reserved ID
 				$image_insert_values['id'] = $target_id;
 			}
-			
+
 			// Trim image_title to the actual DB limit
 			$image_insert_values['title'] = mb_substr($image_insert_values['title'], 0, 100, 'UTF-8');
-			
-			
+
+
 			if($user && $image_insert_values['album_id']) {
 				$album = Album::getSingle($image_insert_values['album_id']);
 				// Check album ownership
@@ -957,19 +981,19 @@ class Image {
 					unset($image_insert_values['album_id'], $album);
 				}
 			}
-			
+
 			$uploaded_id = self::insert($image_upload, $image_insert_values);
-			
+
 			if($filenaming == 'id') {
 				unset($reserved_id);
 			}
-			
+
 			if($toStorage) {
 				foreach($toStorage as $k => $v) {
 					@unlink($v['file']); // Remove the source image
 				}
 			}
-			
+
 			// Private upload? Create a private album then (if needed)
 			if(in_array($params['privacy'], ['private', 'private_but_link'])) {
 				if(is_null($album) or !in_array($album['privacy'], ['private', 'private_but_link'])) {
@@ -991,7 +1015,7 @@ class Image {
 					}
 				}
 			}
-			
+
 			// Update album (if any)
 			if(isset($image_insert_values['album_id'])) {
 				Album::addImage($image_insert_values['album_id'], $uploaded_id);
@@ -1001,30 +1025,30 @@ class Image {
 			if($user) {
 				DB::increment('users', ['image_count' => '+1'], ['id' => $user['id']]);
 			} else {
-                // Save this upload into "session" record
-                if(!isset($_SESSION['guest_uploads'])) {
-                     $_SESSION['guest_uploads'] = [];
-                }
-                $_SESSION['guest_uploads'][] = $uploaded_id;
-            }
-			
+          // Save this upload into "session" record
+          if(!isset($_SESSION['guest_uploads'])) {
+          	$_SESSION['guest_uploads'] = [];
+          }
+          $_SESSION['guest_uploads'][] = $uploaded_id;
+      }
+
 			if($switch_to_local) {
 				$image_viewer = self::getUrlViewer(encodeID($uploaded_id));
 				// NOTIFY > External storage switched to local storage
 				system_notification_email(['subject' => _s('Upload switched to local storage'), 'message' => _s('System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage.', ['%c' => $disk_space_needed . ' B', '%s' => '<a href="'.$image_viewer.'">'.$image_viewer.'</a>'])]);
 			}
-			
+
 			return $uploaded_id;
-			
+
 		} catch(Exception $e) {
 			@unlink($image_upload['uploaded']['file']);
 			@unlink($image_medium['file']);
 			@unlink($image_thumb['file']);
 			throw $e;
 		}
-		
+
 	}
-	
+
 	public static function getEnabledImageFormats() {
 		$formats = explode(',', Settings::get('upload_enabled_image_formats'));
 		if(in_array('jpg', $formats)) {
@@ -1032,7 +1056,7 @@ class Image {
 		}
 		return $formats;
 	}
-	
+
 	public static function resize($source, $destination, $filename=NULL, $options=[]) {
 		try {
 			$resize = new Imageresize;
@@ -1060,25 +1084,25 @@ class Image {
 			throw new ImageException($e->getMessage(), $e->getCode());
 		}
 	}
-	
+
 	public static function insert($image_upload, $values=[]) {
 		try {
-			
+
 			$table_chv_image = self::$table_chv_image;
 			foreach($table_chv_image as $k => $v) {
 				$table_chv_image[$k] = 'image_' . $v;
 			}
-			
+
 			// Remove eternal/useless Exif MakerNote
 			if($image_upload['source']['image_exif']['MakerNote']) {
 				unset($image_upload['source']['image_exif']['MakerNote']);
 			}
-			
+
 			$original_exifdata = $image_upload['source']['image_exif'] ? json_encode(G\array_utf8encode($image_upload['source']['image_exif'])) : NULL;
-            
+
 			// Fix some values
 			$values['nsfw'] = in_array(strval($values['nsfw']), ['0','1']) ? $values['nsfw'] : 0;
-			
+
 			$populate_values = [
 				'date'				=> G\datetime(),
 				'date_gmt'			=> G\datetimegmt(),
@@ -1087,14 +1111,15 @@ class Image {
 				'original_filename' => $image_upload['source']['filename'],
 				'original_exifdata' => $original_exifdata
 			];
-			
+
 			// Populate values with fileinfo + populate_values
 			$values = array_merge($image_upload['uploaded']['fileinfo'], $populate_values, $values);
-			
-			foreach(['title', 'description', 'category_id'] as $v) {
+
+			// This doesn't work all the time...
+			foreach(['title', 'description', 'category_id', 'album_id'] as $v) {
 				G\nullify_string($values[$v]);
 			}
-			
+
 			// Now use only the values accepted by the table
 			foreach($values as $k => $v) {
 				if(!in_array('image_' . $k, $table_chv_image)) {
@@ -1104,9 +1129,9 @@ class Image {
 
 			// Insert image
 			$insert = DB::insert('images', $values);
-			
+
 			$disk_space_used = $values['size'] + $values['thumb_size'] + $values['medium_size'];
-			
+
 			// Track stats
 			Stat::track([
 				'action'	=> 'insert',
@@ -1115,29 +1140,29 @@ class Image {
 				'date_gmt'	=> $values['date_gmt'],
 				'disk_sum'	=> $disk_space_used,
 			]);
-			
+
 			// Update album count
 			if(!is_null($values['album_id']) and $insert) {
 				Album::updateImageCount($values['album_id'], 1);
 			}
-			
+
 			return $insert;
 
 		} catch(Exception $e) {
 			throw new ImageException($e->getMessage(), $e->getCode());
 		}
 	}
-	
+
 	public static function update($id, $values) {
 		try {
-			
+
 			$values = G\array_filter_array($values, self::$table_chv_image, 'exclusion');
-			
-			foreach(['title', 'description', 'category_id'] as $v) {
+
+			foreach(['title', 'description', 'category_id', 'album_id'] as $v) {
 				if(!array_key_exists($v, $values)) continue;
 				G\nullify_string($values[$v]);
 			}
-			
+
 			if(isset($values['album_id'])) {
 				$image_db = self::getSingle($id, FALSE, FALSE);
 				$old_album = $image_db['image_album_id'];
@@ -1159,27 +1184,29 @@ class Image {
 			throw new ImageException($e->getMessage(), 400);
 		}
 	}
-	
+
 	public static function delete($id, $update_user=TRUE) {
 		try {
 			$image = self::getSingle($id, FALSE, TRUE);
 			$disk_space_used = $image['size'] + $image['thumb']['size'] + $image['medium']['size'];
-			
-			foreach($image['file_resource']['chain'] as $file_delete) {
-				if(file_exists($file_delete) and !@unlink($file_delete)) {
-					throw new ImageException("Can't delete file", 200);
+
+			if($image['file_resource']['type'] == 'path') {
+				foreach($image['file_resource']['chain'] as $file_delete) {
+					if(file_exists($file_delete) and !@unlink($file_delete)) {
+						throw new ImageException("Can't delete file", 200);
+					}
 				}
 			}
-			
+
 			if($update_user and isset($image['user']['id'])) {
 				DB::increment('users', ['image_count' => '-1'], ['id' => $image['user']['id']]);
 			}
-			
+
 			// Update album count
 			if($image['album']['id'] > 0) {
 				Album::updateImageCount($image['album']['id'], 1, '-');
 			}
-			
+
 			// Track stats
 			Stat::track([
 				'action'	=> 'delete',
@@ -1206,13 +1233,13 @@ class Image {
 				'content_likes'		=> $image['likes'],
 				'content_original_filename'	=> $image['original_filename'],
 			]);
-			
-			return DB::delete('images', ['id' => $id]);	
+
+			return DB::delete('images', ['id' => $id]);
 		} catch(Exception $e) {
 			throw new ImageException($e->getMessage() .' (LINE:' . $e->getLine() . ')', 400);
 		}
 	}
-	
+
 	public static function deleteMultiple($ids) {
 		if(!is_array($ids)) {
 			throw new ImageException('Expecting array argument, '.gettype($ids).' given in '. __METHOD__, 100);
@@ -1229,28 +1256,28 @@ class Image {
 			throw new ImageException($e->getMessage(), 400);
 		}
 	}
-	
-    public static function deleteExpired() {
-        try {
-            $db = DB::getInstance();
-            $db->query('SELECT image_id FROM ' . DB::getTable('images') . ' WHERE image_expiration_date_gmt IS NOT NULL AND image_expiration_date_gmt < :datetimegmt ORDER BY image_expiration_date_gmt DESC LIMIT 50;'); // Just 50 files per request to prevent CPU meltdown or something like that
-            $db->bind(':datetimegmt', G\datetimegmt());
-            $expired_db = $db->fetchAll();
-            if($expired_db) {
-                $expired = [];
-                foreach($expired_db as $k => $v) {
-                    $expired[] = $v['image_id'];
-                }
-                self::deleteMultiple($expired);
-            } else {
-                return NULL;
-            }
-            return $return ? $return['image_id'] : FALSE;
-        } catch(Exception $e) {
-            throw new ImageException($e->getMessage(), 400);
-        }
-    }
-    
+
+  public static function deleteExpired() {
+      try {
+          $db = DB::getInstance();
+          $db->query('SELECT image_id FROM ' . DB::getTable('images') . ' WHERE image_expiration_date_gmt IS NOT NULL AND image_expiration_date_gmt < :datetimegmt ORDER BY image_expiration_date_gmt DESC LIMIT 50;'); // Just 50 files per request to prevent CPU meltdown or something like that
+          $db->bind(':datetimegmt', G\datetimegmt());
+          $expired_db = $db->fetchAll();
+          if($expired_db) {
+              $expired = [];
+              foreach($expired_db as $k => $v) {
+                  $expired[] = $v['image_id'];
+              }
+              self::deleteMultiple($expired);
+          } else {
+              return NULL;
+          }
+          return $return ? $return['image_id'] : FALSE;
+      } catch(Exception $e) {
+          throw new ImageException($e->getMessage(), 400);
+      }
+  }
+
 	public static function fill(&$image) {
 
 		$image['id_encoded'] = encodeID($image['id']);
@@ -1258,7 +1285,7 @@ class Image {
 		$targets = self::getSrcTargetSingle($image, false);
 
 		if($targets['type'] == 'path') {
-			
+
 			// Re-create missing stuff
 			if($image['size'] == 0) {
 				$get_image_fileinfo = G\get_image_fileinfo($targets['chain']['image']);
@@ -1278,9 +1305,9 @@ class Image {
 				self::update($image['id'], $update_missing_values);
 				$image = array_merge($image, $update_missing_values);
 			}
-			
+
 			$is_animated = $image['extension'] == 'gif' && G\is_animated_image($targets['chain']['image']);
-			
+
 			// Recreate thumb
 			if(count($targets['chain']) > 0 && !$targets['chain']['thumb']) {
 				try {
@@ -1292,11 +1319,11 @@ class Image {
 					$targets['chain']['thumb'] = self::resize($targets['chain']['image'], pathinfo($targets['chain']['image'], PATHINFO_DIRNAME), $image['name'] . '.th', $thumb_options)['file'];
 				} catch(Exception $e) {}
 			}
-			
+
 			// Recreate medium
 			$medium_size = getSetting('upload_medium_size');
 			$medium_fixed_dimension = getSetting('upload_medium_fixed_dimension');
-			
+
 			if($image[$medium_fixed_dimension] > $medium_size && count($targets['chain']) > 0 && !$targets['chain']['medium']) {
 				try {
 					$medium_options = [
@@ -1306,19 +1333,19 @@ class Image {
 					$targets['chain']['medium'] = self::resize($targets['chain']['image'], pathinfo($targets['chain']['image'], PATHINFO_DIRNAME), $image['name'] . '.md', $medium_options)['file'];
 				} catch(Exception $e) {}
 			}
-			
+
 			if(count($targets['chain']) > 0) {
 				$original_md5 = $image['md5'];
 				$image = array_merge($image, (array) @get_image_fileinfo($targets['chain']['image'])); // Never do an array merge over an empty thing!
 				$image['md5'] = $original_md5;
 			}
-			
+
 			// Update is_animated flag
 			if($is_animated && !$image['is_animated']) {
 				self::update($image['id'], ['is_animated' => 1]);
 				$image['is_animated'] = 1;
 			}
-			
+
 		} else {
 			$image_fileinfo = [
 				'ratio'				=> $image['width'] / $image['height'],
@@ -1327,10 +1354,10 @@ class Image {
 			];
 			$image = array_merge($image, get_image_fileinfo($targets['chain']['image']), $image_fileinfo);
 		}
-		
+
 		$image['file_resource'] = $targets;
 		$image['url_viewer'] = self::getUrlViewer($image['id_encoded']);
-		
+
 		foreach($targets['chain'] as $k => $v) {
 			if($targets['type'] == 'path') {
 				$image[$k] = file_exists($v) ? get_image_fileinfo($v) : NULL;
@@ -1339,32 +1366,32 @@ class Image {
 			}
 			$image[$k]['size'] = $image[($k == 'image' ? '' : $k . '_') . 'size'];
 		}
-		
+
 		$display = $image['medium'] !== NULL ? $image['medium'] : ($image['size'] < G\get_bytes('500 KB') ? $image : $image['thumb']);
 		$display_thumb = $display == $image['thumb'];
 
 		$image['size_formatted'] = G\format_bytes($image['size']);
-		
+
 		$image['display_url'] = $display['url'];
 		$image['display_width'] = $display_thumb ? getSetting('upload_thumb_width') : $image['width'];
 		$image['display_height'] = $display_thumb ? getSetting('upload_thumb_height') : $image['height'];
-		
+
 		$image['views_label'] = _n('view', 'views', $image['views']);
 		$image['likes_label'] = _n('like', 'likes', $image['likes']);
 		$image['how_long_ago'] = time_elapsed_string($image['date_gmt']);
-				
+
 		$image['date_fixed_peer'] = Login::getUser() ? G\datetimegmt_convert_tz($image['date_gmt'], Login::getUser()['timezone']) : $image['date_gmt'];
-		
+
 		$image['title_truncated'] = G\truncate($image['title'], 28);
 		$image['title_truncated_html'] = G\safe_html($image['title_truncated']);
-		
+
 		$image['is_use_loader'] = getSetting('image_load_max_filesize_mb') !== '' ? ($image['size'] > G\get_bytes(getSetting('image_load_max_filesize_mb') . 'MB')) : FALSE;
 	}
-	
+
 	public static function formatArray($dbrow, $safe=false) {
 		try {
 			$output = DB::formatRow($dbrow);
-			
+
 			if(!is_null($output['user']['id'])) {
 				User::fill($output['user']);
 			} else {
@@ -1376,9 +1403,9 @@ class Image {
 			} else {
 				unset($output['album']);
 			}
-		
+
 			self::fill($output);
-		
+
 			if($safe) {
 				unset($output['storage']);
 				unset($output['id'], $output['path'], $output['uploader_ip']);
@@ -1386,14 +1413,14 @@ class Image {
 				unset($output['user']['id']);
 				unset($output['file_resource']);
 			}
-		
+
 			return $output;
-			
+
 		} catch(Excepton $e) {
 			throw new ImageException($e->getMessage(), 400);
 		}
 	}
-	
+
 }
 
 class ImageException extends Exception {}

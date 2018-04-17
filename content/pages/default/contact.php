@@ -9,11 +9,11 @@ $allowed_subjects = [
 ];
 
 if($_POST) {
-	
+
 	if(!G\Handler::checkAuthToken($_REQUEST['auth_token'])) {
 		die(_s("Request denied"));
 	}
-	
+
 	// Validate post data
 	if(strlen($_POST['name']) == 0) {
 		$input_errors['name'] = _s('Invalid name');
@@ -33,7 +33,7 @@ if($_POST) {
 			$input_errors['recaptcha'] = _s('Invalid reCAPTCHA');
 		}
 	}
-	
+
 	if(count($input_errors) > 0) {
 		$is_error = TRUE;
 	} else {
@@ -50,15 +50,15 @@ if($_POST) {
 			'E-mail'	=> $email,
 			'User'		=> (CHV\Login::isLoggedUser() ? CHV\Login::getUser()['url'] : 'not user'),
 			'Subject'	=> $_POST['subject'] . "\n",
-			'Message'	=> $_POST['message'] . "\n",
+			'Message'	=> strip_tags($_POST['message']) . "\n",
 			'IP'		=> G\get_client_ip(),
 			'Browser'	=> getenv("HTTP_USER_AGENT"),
 			'URL'		=> G\get_base_url() . "\n"
 		];
 		// Format body message
 		$body = '';
-		foreach($body_arr as $k => $v) { 
-			$body .= $k . ': ' . $v . "\n"; 
+		foreach($body_arr as $k => $v) {
+			$body .= $k . ': ' . $v . "\n";
 		}
 		// Mail send handle
 		try {
@@ -81,7 +81,7 @@ if($_POST) {
 		<form method="post" class="form-content">
 
 			<?php echo G\Render\get_input_auth_token(); ?>
-			
+
 			<p><?php echo $is_sent ? _s('Message sent. We will get in contact soon.') : _s('If you want to send a message fill the form below.'); ?></p>
 			<div class="input-label c9">
 				<label for="name"><?php _se('Name'); ?></label>
@@ -98,7 +98,7 @@ if($_POST) {
 				<select type="text" name="subject" id="subject" class="text-input">
 					<?php
 						$ask_for = get_safe_post() ? get_safe_post()['subject'] : '';
-						foreach($allowed_subjects as $k => $v) {	
+						foreach($allowed_subjects as $k => $v) {
 					?>
 					<option value="<?php echo $k; ?>"<?php if($ask_for == $k) { ?> selected<?php } ?>><?php echo $v; ?></option>
 					<?php

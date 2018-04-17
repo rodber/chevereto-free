@@ -156,7 +156,8 @@ $route = function($handler) {
 		}
 		
 		// Tabs
-		$base_user_url = basename($user['url']);
+
+		$base_user_url = $user['url'];
 		foreach($user_views as $k => $v) {
 			$handler::setCond('user_' . $k, $v['current']);
 			if($v['current']) {

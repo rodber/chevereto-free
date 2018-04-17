@@ -1,5 +1,5 @@
 <?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
-<form action="<?php echo G\get_base_url("search/images"); ?>" method="get" data-beforeunload="continue">
+<form action="<?php echo G\get_base_url("search/images"); ?>/" method="get" data-beforeunload="continue">
 	<?php
 		foreach([
 			'as_q' => [
@@ -19,7 +19,7 @@
 			'as_eq'	=> [
 				'label'			=> _s('None of these words'),
 				'placeholder'	=> _s('Put a minus sign just before words you don\'t want: -rodent -"Jack Russell"')
-			]		
+			]
 		] as $k => $v) {
 	?>
 	<div class="input-label">
@@ -27,7 +27,7 @@
 		<input type="text" id="<?php echo $k; ?>" name="<?php echo $k; ?>" class="text-input" placeholder="<?php echo G\safe_html($v['placeholder']); ?>">
 	</div>
 	<?php } ?>
-	<?php 
+	<?php
 		// Category selector
 		$categories = get_categories();
 		if(count($categories) > 0) {

@@ -5,9 +5,6 @@
 
 <div id="image-viewer" class="image-viewer full-viewer margin-bottom-10">
 	<?php
-		CHV\Render\show_banner('image_image-viewer_top', !get_image()['nsfw']);
-	?>
-	<?php
 		$image_url = get_image()['medium'] ? get_image()['medium']['url'] : get_image()['url'];
 	?>
 	<div id="image-viewer-container" class="image-viewer-main image-viewer-container"><img src="<?php echo $image_url; ?>" alt="<?php echo get_image_safe_html()['description']; ?>" width="<?php echo get_image()["width"]; ?>" height="<?php echo get_image()["height"]; ?>" <?php if(get_image()['medium']) { ?> data-load="full"<?php } ?>></div>
@@ -34,19 +31,12 @@
 	<?php if(get_image()['is_use_loader']) { ?>
 	<div id="image-viewer-loader" data-size="<?php echo get_image()['size']; ?>"><?php if(get_image()['is_animated']) { ?><span class="btn-icon icon icon-play3"></span><?php } ?><span class="btn-text"><?php get_image()['is_animated'] ? _se('Play GIF') : _se('Load full resolution'); ?> - <?php echo get_image()['size_formatted']; ?></span></div>
 	<?php } ?>
-	<?php
-		CHV\Render\show_banner('image_image-viewer_foot', !get_image()['nsfw']);
-	?>
 </div>
 
 <?php CHV\Render\show_theme_inline_code('snippets/image.js'); ?>
 
-<?php
-	CHV\Render\show_banner('image_after_image-viewer', !get_image()['nsfw']);
-?>
-
 <div class="content-width">
-	
+
 	<div class="header header-content margin-bottom-10">
 		<div class="header-content-left">
             <div class="header-content-breadcrum">
@@ -71,10 +61,14 @@
 				<div class="breadcrum-item">
 					<a class="edit-link" data-modal="edit"><span class="icon-edit"></span><span><?php _se('Edit image details'); ?></span></a>
 				</div>
+				<?php
+						if(is_allowed_to_delete_content()) {
+				?>
 				<div class="breadcrum-item">
 					<a class="delete-link" data-confirm="<?php _se("Do you really want to delete this image? This can't be undone."); ?>" data-submit-fn="CHV.fn.submit_resource_delete" data-ajax-deferred="CHV.fn.complete_resource_delete" data-ajax-url="<?php echo G\get_base_url("json"); ?>"><?php _se('Delete image'); ?></a>
 				</div>
 				<?php
+						}
 					}
 				?>
             </div>
@@ -98,9 +92,9 @@
 			<a class="btn red" data-modal="simple" data-target="modal-share"><span class="btn-icon icon-share"></span><span class="btn-text phone-hide"><?php _se('Share'); ?></span></a>
 			<?php } ?>
         </div>
-		
+
     </div>
-	
+
 	<?php
 		if(!get_image()['title']) {
 	?>
@@ -112,11 +106,7 @@
 	<?php
 		}
 	?>
-    
-	<?php
-		CHV\Render\show_banner('image_before_header', !get_image()['nsfw']);
-	?>
-	
+
     <div class="header">
 		<?php G\Render\include_theme_file("snippets/tabs"); ?>
         <div class="header-content-right">
@@ -124,13 +114,9 @@
 			<?php if(CHV\getSetting('enable_likes')) { ?><div class="number-figures float-left"><span class="icon icon-heart4"></span> <b data-text="likes-count"><?php echo get_image()["likes"]; ?></b></div><?php } ?>
         </div>
     </div>
-    
-	<?php
-		CHV\Render\show_banner('image_after_header', !get_image()['nsfw']);
-	?>
-	
+
     <div id="tabbed-content-group">
-		
+
 		<div id="tab-about" class="tabbed-content<?php echo (get_current_tab() == 'about' ? ' visible' : NULL); ?>">
         	<div class="c9 phablet-c1 fluid-column grid-columns">
 				<div class="panel-description default-margin-bottom">
@@ -141,7 +127,7 @@
 						$category_link = '<a href="'.$category['url'].'" rel="tag">'.$category['name'].'</a>';
 						$time_elapsed_string = '<span title="'.get_image()['date_fixed_peer'].'">' . CHV\time_elapsed_string(get_image()['date_gmt']) . '</span>';
 						if(get_image()['album']['id'] and (get_image()['album']['privacy'] !== 'private_but_link' or is_owner() or is_admin())) {
-							$album_link = '<a href="'.get_image()['album']['url'].'"'. (get_image()['album']['name'] !== get_image()['album']['name_truncated'] ? (' title="' . get_image()['album']['name'] . '"') : NULL)  .'>' . get_image()['album']['name_truncated'] . '</a>';
+							$album_link = '<a href="'.get_image()['album']['url'].'"'. (get_image()['album']['name'] !== get_image()['album']['name_truncated'] ? (' title="' . get_image()['album']['name_html'] . '"') : NULL)  .'>' . get_image()['album']['name_truncated_html'] . '</a>';
 							if($category) {
 								echo _s('Added to %a and categorized in %c', ['%a' => $album_link, '%c' => $category_link]);
 							} else {
@@ -186,7 +172,7 @@
 						} // theme_show_exif_data
 					?>
 				</div>
-				
+
 				<?php if(CHV\getSetting('theme_show_social_share')) { ?>
 				<div class="phone-show phablet-show hidden panel-share-networks margin-bottom-30">
 					<h4 class="title"><?php _se('Share image'); ?></h4>
@@ -195,7 +181,7 @@
 					</ul>
 				</div>
 				<?php } ?>
-				
+
 				<?php
 					if(is_admin()) {
 				?>
@@ -217,7 +203,7 @@
 									] +
 									array_slice($image_admin_list_values, 1, count($image_admin_list_values) - 1, true) ;
 							}
-							
+
 							foreach($image_admin_list_values as $v) {
 						?>
 						<li><span class="c5 display-table-cell padding-right-10"><?php echo $v['label']; ?></span> <span class="display-table-cell"><?php echo $v['content']; ?></span></li>
@@ -235,16 +221,12 @@
 				<?php
 					}
 				?>
-				
-				<?php
-					CHV\Render\show_banner('content_before_comments', !get_image()['nsfw']);
-				?>
-				
+
 				<div class="comments">
 					<?php CHV\Render\showComments(); ?>
 				</div>
             </div>
-			
+
 			<?php if(CHV\getSetting('theme_show_social_share')) { ?>
 			<div class="tablet-show laptop-show desktop-show hidden c15 phablet-c1 fluid-column grid-columns default-margin-bottom margin-left-10 panel-share-networks">
 				<h4 class="title c4 grid-columns"><?php _se('Share image'); ?></h4>
@@ -253,7 +235,7 @@
 				</ul>
 			</div>
 			<?php } ?>
-			
+
 			<?php
 				if(get_image()['album']) {
 			?>
@@ -266,20 +248,17 @@
 			<?php
 				}
 			?>
-			
+
 			<div class="c15 phablet-c1 fluid-column grid-columns margin-left-10 phablet-margin-left-0">
-				<?php
-					CHV\Render\show_banner('content_tab-about_column', !get_image()['nsfw']);
-				?>
 			</div>
-			
+
         </div>
-        
+
 		<?php if(CHV\getSetting('theme_show_embed_content')) { ?>
         <div id="tab-codes" class="tabbed-content<?php echo (get_current_tab() == 'codes' ? ' visible' : NULL); ?>">
-			
+
 			<div class="growl static text-align-center margin-bottom-30 clear-both<?php if(get_image()['album']['privacy'] == 'public' || get_image()['album']['privacy'] == NULL) echo " soft-hidden"; ?>" data-content="privacy-private"><?php echo get_image()['album']['privacy_notes']; ?></div>
-			
+
         	<div class="panel-share c16 phablet-c1 grid-columns margin-right-10">
 				<?php
 					foreach(get_embed() as $embed) {
@@ -291,19 +270,19 @@
                         <h4 class="title c5 grid-columns"><?php echo $entry['label']; ?></h4>
                         <div class="c10 phablet-c1 grid-columns">
                             <input id="<?php echo $entry['id']; ?>" type="text" class="text-input" value="<?php echo $entry['value']; ?>" data-focus="select-all">
-							<button class="copy-input" data-action="copy" data-action-target="#<?php echo $entry['id']; ?>">copy</button>
+							<button class="input-action" data-action="copy" data-action-target="#<?php echo $entry['id']; ?>">copy</button>
                         </div>
                     </div>
 					<?php } ?>
                 </div>
-				<?php 
+				<?php
 					}
 				?>
             </div>
-            
+
         </div>
 		<?php } ?>
-		
+
 		<?php
 			if(is_admin()) {
 		?>
@@ -313,13 +292,9 @@
 		<?php
 			}
 		?>
-		
+
     </div>
-	
-	<?php
-		CHV\Render\show_banner('image_footer', !get_image()['nsfw']);
-	?>
-    
+
 </div>
 
 
@@ -336,12 +311,11 @@
 </div>
 <?php
 	}
-	
+
 	if(CHV\getSetting('theme_show_social_share')) {
 		G\Render\include_theme_file('snippets/modal_share');
 	}
-	
-?>
 
+?>
 
 <?php G\Render\include_theme_footer(); ?>

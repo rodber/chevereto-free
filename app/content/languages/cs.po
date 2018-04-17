@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-05-26 16:57+0000\n"
-"PO-Revision-Date: 2017-05-26 16:57+0000\n"
+"POT-Creation-Date: 2017-10-01 18:12+0000\n"
+"PO-Revision-Date: 2017-10-01 18:12+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: cs\n"
@@ -10,6 +10,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
+
+msgid "Plugin"
+msgstr "Plugin"
+
+msgid "Plugin route"
+msgstr "Směrování Pluginu"
+
+#, php-format
+msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
+msgstr "Toto aktivujte, aby jste zobrazili instrukce pluginu na %u. Odkaz na tyto pokyny bude přidán do nabídky %s.Toto nastavení nemá vliv na administrátory."
+
+msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
+msgstr "Toto použijte pro nastavení vlastní URL adresy pro %p. Upozorňujeme, že musíte v této URL adrese ručně zkopírovat %s."
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -87,20 +100,6 @@ msgstr "Osobní"
 #: ../../../app/install/update/template/update.php:2
 msgid "Update in progress"
 msgstr "Probíhá aktualizace"
-
-#: ../../../app/install/update/updater.php:62
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
-#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
-#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
-#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
-#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
-#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
-#: ../../../lib/Peafowl/peafowl.min.js:158
-#: ../../../lib/Peafowl/peafowl.min.js:195
-msgid "An error occurred. Please try again later."
-msgstr "Došlo k chybě. Prosím zkuste opakovat akci později."
 
 #: ../../../app/install/update/updater.php:72
 #, php-format
@@ -282,9 +281,6 @@ msgstr "Nedávné"
 msgid "Trending"
 msgstr "Trendy"
 
-msgid "Popular"
-msgstr "Populární"
-
 #: ../../../app/routes/route.dashboard.php:1163
 msgid "Top users"
 msgstr "Top uživatelé"
@@ -319,6 +315,9 @@ msgstr "Nejstarší"
 #: ../../../app/routes/route.user.php:201
 msgid "Most viewed"
 msgstr "Nejprohlíženější"
+
+msgid "Popular"
+msgstr "Populární"
 
 #: ../../../app/routes/route.album.php:104
 #: ../../../app/routes/route.category.php:72
@@ -518,7 +517,7 @@ msgstr "zobrazit na %s"
 
 #: ../../../app/lib/functions.render.php:303
 msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
-msgstr "Používáme vlastní a cookie třetích stran s cílem zlepšit váš komfort při prohlížení a používání našich služeb. Chcete-li pokračovat v používání našich webových stránek, je nutné, že přijmete tuto cookie politiku."
+msgstr "Za účelem vylepšení vašeho komfortu při prohlížení a užívání našich služeb používáme cookies. Používáním našich stránek s tímto souhlasíte."
 
 #: ../../../app/loader.php:180
 msgid "You have been forbidden to use this website."
@@ -1029,6 +1028,10 @@ msgid "Before main title (%s)"
 msgstr "Před hlavním názvem (%s)"
 
 #, php-format
+msgid "After call to action (%s)"
+msgstr "Po \"call to action\" (%s)"
+
+#, php-format
 msgid "After cover (%s)"
 msgstr "Po titulním obrázku (%s)"
 
@@ -1236,6 +1239,14 @@ msgstr "Neplatný režim bezpečnosti stránky"
 msgid "Invalid homepage style"
 msgstr "Neplatný styl domovské stránky"
 
+#: ../../../app/routes/route.dashboard.php:697
+msgid "Invalid homepage call to action button color"
+msgstr "Neplatný příkaz tlačítka akce."
+
+#: ../../../app/routes/route.dashboard.php:702
+msgid "Invalid homepage call to action functionality"
+msgstr "Neplatný příkaz."
+
 #: ../../../app/routes/route.dashboard.php:708
 msgid "Invalid title"
 msgstr "Neplatný název"
@@ -1300,6 +1311,9 @@ msgstr "Max. povoleno %s"
 
 msgid "Can't map %m to an existing folder (%f)"
 msgstr "%m nelze namapovat do existující složky (%f)"
+
+msgid "Can't map %m to an existing route (%r)"
+msgstr "Nelze namapovat %m na existující trasu (%r)"
 
 msgid "Can't map %m to %r (username collision)"
 msgstr "%m nelze namapovat k %r (kolize uživatelského jména)"
@@ -1385,13 +1399,13 @@ msgstr "Obrázek %i hostován v %w"
 msgid "Direct links"
 msgstr "Přímé odkazy"
 
-#: ../../../app/themes/Peafowl/views/image.php:279
-msgid "Image URL"
-msgstr "URL obrázku"
-
 #: ../../../app/themes/Peafowl/views/image.php:285
 msgid "Image link"
 msgstr "Odkaz obrázku"
+
+#: ../../../app/themes/Peafowl/views/image.php:279
+msgid "Image URL"
+msgstr "URL obrázku"
 
 #: ../../../app/themes/Peafowl/views/image.php:291
 msgid "Thumbnail URL"
@@ -1559,6 +1573,12 @@ msgstr "Zpráva byla odeslána. Budeme Vás brzy kontaktovat."
 msgid "Mail error"
 msgstr "Chyba e-mailu."
 
+msgid "Upload images"
+msgstr "Nahrát obrázky"
+
+msgid "Upload plugin"
+msgstr "Plugin pro nahrávání"
+
 #: ../../../app/routes/route.search.php:120
 #, php-format
 msgid "Image search results for %s"
@@ -1643,6 +1663,11 @@ msgstr "Pro možnost používat tuto webovou stránku vám musí být alespoň %
 msgid "Create account"
 msgstr "Vytvořit účet"
 
+#: ../../../app/themes/Peafowl/header.php:258
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Upload"
+msgstr "Nahrát"
+
 #: ../../../app/routes/route.user.php:84
 #: ../../../app/themes/Peafowl/header.php:56
 #: ../../../app/themes/Peafowl/views/index.php:46
@@ -1705,11 +1730,6 @@ msgstr "Náhodně"
 #, php-format
 msgid "Notices (%s)"
 msgstr "Oznámení (%s)"
-
-#: ../../../app/themes/Peafowl/header.php:258
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-msgid "Upload"
-msgstr "Nahrát"
 
 #: ../../../app/themes/Peafowl/header.php:281
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:11
@@ -1914,26 +1934,32 @@ msgstr "přidat URL adresy obrázků"
 msgid "You can also %i or %u."
 msgstr "Můžeš také %i nebo %u."
 
+msgid "browse from your device"
+msgstr "procházet z vašeho zařízení"
+
 msgid "take a picture"
 msgstr "pořídit fotku"
+
+msgid "You can also %i, %c or %u."
+msgstr "Můžete také %i, %c nebo %u."
 
 msgid "Edit or resize any image by clicking the image preview"
 msgstr "Upravte nebo změňte velikost libovolného obrázku kliknutím na náhled obrázku"
 
-msgid "Edit or resize any image by touching the image preview"
-msgstr "Upravte nebo změňte velikost libovolného obrázku dotykem na náhled obrázku"
+msgid "Edit any image by touching the image preview"
+msgstr "Upravte jakýkoli snímek tím, že se dotknete náhledu obrázku"
 
 msgid "your computer"
 msgstr "vašeho počítače"
 
-msgid "image URLs"
-msgstr "URL adresy obrázků"
-
-msgid "You can keep adding more images from %i or from %u."
-msgstr "Můžete přidat další obrázky z %i nebo z %u."
+msgid "You can add more images from %i or %u."
+msgstr "Můžete přidat další obrázky z %i nebo %u."
 
 msgid "your device"
 msgstr "vašeho zařízení"
+
+msgid "You can add more images from %i, %c or %u."
+msgstr "Můžete přidat další obrázky z %i, %c nebo %u."
 
 msgid "Uploading %q %o"
 msgstr "Nahrávání %q %o"
@@ -1953,6 +1979,13 @@ msgstr "Nahrávání dokončeno"
 msgid "Uploaded content added to %s."
 msgstr "Nahraný obsah byl přidán do %s."
 
+msgid "You can %c with the content just uploaded or %m."
+msgstr "Můžete %c s právě nahraným obsahem nebo %m."
+
+#, php-format
+msgid "You can %c with the content just uploaded."
+msgstr "Můžete %c s právě nahraným obsahem."
+
 msgid "create a new album"
 msgstr "vytvořit nové album"
 
@@ -1964,6 +1997,9 @@ msgstr "vytvořit účet"
 
 msgid "sign in"
 msgstr "přihlásit se"
+
+msgid "You can %s or %l to save this content into your account."
+msgstr "Můžete použít %s nebo %l pro uložení tohoto obsahu do vašeho účtu."
 
 #, php-format
 msgid "No %s have been uploaded"
@@ -2022,9 +2058,8 @@ msgstr "dozvědět se více"
 msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
 msgstr "Zkontrolujte <a data-modal=\"simple\" data-target=\"failed-upload-result\">chybovou zprávu</a> kde se dozvíte více informací."
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:89
-msgid "max"
-msgstr "max"
+msgid "reset"
+msgstr "resetovat"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:91
 msgid "close"
@@ -2032,6 +2067,9 @@ msgstr "zavřít"
 
 msgid "copy"
 msgstr "kopírovat"
+
+msgid "insert"
+msgstr "vložit"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
 #: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
@@ -2209,6 +2247,10 @@ msgstr "do fóra (BBCode)"
 msgid "BBCode full"
 msgstr "BBKód plné velikosti obrázku"
 
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:54
+msgid "BBCode full linked"
+msgstr "Plný odkaz do diskuzního fóra."
+
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:59
 msgid "BBCode medium linked"
 msgstr "Kód do fóra se střední zmenšeninou obrázku a odkazem."
@@ -2216,6 +2258,22 @@ msgstr "Kód do fóra se střední zmenšeninou obrázku a odkazem."
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:64
 msgid "BBCode thumbnail linked"
 msgstr "miniatura obrázku s odkazem na originál"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:74
+msgid "Markdown full"
+msgstr "Markdown kód plné velikosti obrázku"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:79
+msgid "Markdown full linked"
+msgstr "Markdown kód plné velikosti obrázku s odkazem"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:84
+msgid "Markdown medium linked"
+msgstr "Markdown kód střední velikosti velikosti obrázku"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:89
+msgid "Markdown thumbnail linked"
+msgstr "Markdown kód náhledu obrázku s odkazem"
 
 #: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:6
 msgid "All these words"
@@ -2414,6 +2472,46 @@ msgstr "Google Cloud JSON klíč"
 msgid "Service name"
 msgstr "Název služby"
 
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:84
+msgid "Identity URL"
+msgstr "Adresa URL Identity (Identity URL)"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:85
+msgid "Identity API endpoint"
+msgstr "Koncový bod API Identity (Identity API endpoint)"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:85
+msgid "API endpoint for OpenStack identity"
+msgstr "Koncový bod API OpenStack identity (API endpoint for OpenStack identity)"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
+msgid "Storage region"
+msgstr "Region úložiště (Storage region)"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:100
+msgid "Container"
+msgstr "Kontejner (Container)"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:101
+msgid "Storage container"
+msgstr "Kontejner úložiště (Storage container)"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:104
+msgid "Tenant id"
+msgstr "ID Nájemce (Tenant id)"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:105
+msgid "Tenant id (account id)"
+msgstr "ID účtu nájemce (Tenant id)"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:108
+msgid "Tenant name"
+msgstr "Jméno nájemce (Tenant name)"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:109
+msgid "Tenant name (account name)"
+msgstr "uživatelský účet"
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:115
 msgid "Hostname or IP of the storage server"
 msgstr "Hostname nebo IP serveru s úložištěm."
@@ -2529,9 +2627,6 @@ msgstr "Aby jste mohli používat všechny funkce, musíte být přihlášen(a).
 msgid "There's nothing to show here."
 msgstr "Zde se nenachází nic k zobrazení."
 
-msgid "Upload images"
-msgstr "Nahrát obrázky"
-
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
 #: ../../../app/themes/Peafowl/views/image.php:69
 #: ../../../app/themes/Peafowl/views/image.php:457
@@ -2628,6 +2723,11 @@ msgstr "od %u"
 msgid "Select"
 msgstr "Vybrat"
 
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:7
+msgid "Toggle unsafe flag"
+msgstr "Označit obrázek jako nevhodný"
+
 #: ../../../app/themes/Peafowl/views/404.php:7
 msgid "The requested page was not found."
 msgstr "Požadovaná stránka nebyla nalezena."
@@ -2703,6 +2803,20 @@ msgstr "E-mail s instrukcemi jak resetovat vaše heslo byl právě odeslán na e
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
 msgid "Resend instructions"
 msgstr "Zaslat instrukce znova."
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "Došlo k chybě. Prosím zkuste opakovat akci později."
 
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
 msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
@@ -3057,6 +3171,10 @@ msgstr "Atribut cíle odkazu"
 msgid "Select %s to open the page or link in a new window."
 msgstr "Zvolte %s pro otevření stránky nebo odkazu v novém okně."
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:566
+msgid "Link rel attribute"
+msgstr "\"REL\" atribut odkazu"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:567
 #: ../../../app/themes/Peafowl/views/dashboard.php:574
 msgid "Only alphanumerics, hyphens and whitespaces"
@@ -3124,6 +3242,12 @@ msgstr "Počet vláken pro nahrávání"
 
 msgid "Number of simultaneous upload threads (parallel uploads)"
 msgstr "Počet vláken použitých při nahrávání (souběžné nahrávání více souborů)"
+
+msgid "Redirect on single upload"
+msgstr "Přesměrování na jednotlivé nahrání"
+
+msgid "Enable this if you want to redirect to image page on single upload."
+msgstr "Povolte tuto funkci, pokud chcete přesměrovat na stránku s obrázky při jednotlivém nahrávání."
 
 msgid "Enable duplicate uploads"
 msgstr "Povolit duplicitní nahrávání"
@@ -3258,6 +3382,10 @@ msgstr "Aktivuj pokud chceš vložit logo nebo cokoliv jiného do nahrávaných 
 msgid "Warning: Can't write in %s"
 msgstr "Výstraha: Nemůžu zapisovat do %s"
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:767
+msgid "Watermark user toggles"
+msgstr "Přepínač vodoznaku uživatele"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:770
 msgid "Enable watermark on guest uploads"
 msgstr "Povolit vodoznak pro soubory nahrané hostem"
@@ -3269,6 +3397,10 @@ msgstr "Povolit vodoznak pro soubory nahrané uživatelem"
 #: ../../../app/themes/Peafowl/views/dashboard.php:780
 msgid "Enable watermark on admin uploads"
 msgstr "Povolit vodoznak pro soubory nahrané administrátorem"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:786
+msgid "Watermark file toggles"
+msgstr "Přepínač vodoznaku souboru"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:789
 msgid "Enable watermark on GIF image uploads"
@@ -3402,6 +3534,12 @@ msgstr "Povolit registrace"
 #: ../../../app/themes/Peafowl/views/dashboard.php:965
 msgid "Enable this if you want to allow users to signup."
 msgstr "Povolte, pokud chcete povolit uživatelům registraci."
+
+msgid "Enable user content delete"
+msgstr "Povolit smazání obsahu uživatele"
+
+msgid "Enable this if you want to allow users to delete their own content. This setting doesn't affect administrators."
+msgstr "Zapněte tuto funkci, pokud chcete uživatelům povolit smazat vlastní obsah. Toto nastavení nemá vliv na správce."
 
 msgid "Minimum age required"
 msgstr "Požadavek na minimální věk"
@@ -3803,6 +3941,10 @@ msgstr "Styl"
 msgid "Landing page"
 msgstr "Vstupní stránka"
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1396
+msgid "Route explore"
+msgstr "Prozkoumejte trasu"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1401
 #, php-format
 msgid "Select the homepage style. To customize it further edit app/themes/%s/views/index.php"
@@ -3842,6 +3984,14 @@ msgstr "Toto bude přidáno dovnitř %s tagu domovské stránky. Ponechte pole p
 msgid "Paragraph"
 msgstr "Odstavec"
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1452
+msgid "Call to action button color"
+msgstr "Barva tlačítka \"Call to action\""
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1479
+msgid "Enable this to use outline style for the homepage call to action button."
+msgstr "Zapněte, pokud chcete aktivovat rámeček kolem tlačítka akce na titulce"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1488
 msgid "Open URL"
 msgstr "Otevřít URL adresu"
@@ -3857,6 +4007,10 @@ msgstr "Zadat absolutní nebo relativní URL"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1500
 msgid "A relative URL like %r will be mapped to %l"
 msgstr "Relativní URL jako %r bude namapována na %l"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1507
+msgid "This will be added inside the call to action <a> tag. Leave it blank to use the default contents."
+msgstr "Toto bude přidáno uvnitř výzvy k akci <a> tagu. Zanechte prázdné pro použití výchozího obsahu."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1513
 msgid "User IDs"
@@ -3879,6 +4033,14 @@ msgstr "Zobrazení oznámení o dostupné aktualizaci Chevereta"
 
 msgid "Enable this to show a notice on top warning you about new available system updates."
 msgstr "Povolte, pokud chcete zobrazit oznámení při dostupné aktualizaci Chevereta."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1570
+msgid "Minify code"
+msgstr "Minimalizovat kód"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1576
+msgid "Enable this if you want to auto minify CSS and JS code."
+msgstr "Zapněte pokud chcete minimalizovat kód CSS"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1579
 msgid "Maintenance"
@@ -3929,6 +4091,10 @@ msgstr "Vytisknout a protokolovat chyby"
 #, php-format
 msgid "To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)."
 msgstr "Pro nastavení úrovně ladění si prohlédněte <a %s>debug documentation</a>. Výchozí hodnota je \"Error log\" (1)."
+
+#, php-format
+msgid "Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes."
+msgstr "Směrování umožňuje přizpůsobit výchozí vazby trasy v reálném čase. Povoleny jsou pouze alfanumerické znaky, pomlčky a znaky podtržítka. Podívejte se na naši %s, pokud chcete přepsat nebo přidat nové trasy."
 
 msgid "Image routing"
 msgstr "Směrování obrázku"
@@ -4125,6 +4291,14 @@ msgstr "VK client secret"
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "Potřebujete <a href=\"%s\" target=\"_blank\">reCAPTCHA klíč</a>."
 
+#, php-format
+msgid "%s site key"
+msgstr "%s kód stránky"
+
+#, php-format
+msgid "%s secret key"
+msgstr "%s tajný kód"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1986
 msgid "reCAPTCHA threshold"
 msgstr "reCAPTCHA threshold (práh)"
@@ -4139,6 +4313,10 @@ msgstr "API komentářů"
 #, php-format
 msgid "Disqus API works with %s."
 msgstr "Disqus API pracuje s %s."
+
+#, php-format
+msgid "%s public key"
+msgstr "%s veřejný kód"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1997
 msgid "Comment code"
@@ -4292,6 +4470,54 @@ msgstr "Pro pokračování zadejte prosím vaše heslo."
 
 msgid "Send"
 msgstr "Odeslat"
+
+msgid "Add image uploading to your website, blog or forum by installing our upload plugin. It provides image uploading to any website by placing a button that will allow your users to directly upload images to our service and it will automatically handle the codes needed for insertion. All features included like drag and drop, remote upload, image resizing and more."
+msgstr "Přidejte funkci nahrávání obrázků na své webové stránky, blog nebo fórum nainstalováním pluginu pro nahrávání. Tato funkce poskytuje možnost nahrávání obrázků z libovolné webové stránky tím, že zde umístí tlačítko, které umožní vašim uživatelům přímo odesílat obrázky do naší služby a automaticky zpracuje a vytvoří kódy potřebné pro vkládání. Všechny funkce zahrnují například funkci přetáhni a pusť, vzdálené nahrávání, změnu velikosti obrázků a další."
+
+msgid "Supported software"
+msgstr "Podporovaný software"
+
+msgid "supported software"
+msgstr "podporovaný software"
+
+#, php-format
+msgid "The plugin works in any website with user-editable content and for %sv, it will place an upload button that will match the target editor toolbar so no extra customization is needed."
+msgstr "Plugin funguje na libovolné webové stránce s uživatelsky upravitelným obsahem a pro %sv, umístí tlačítko pro nahrání, které bude odpovídat panelu nástrojů pro cílový editor, takže není potřeba další přizpůsobení."
+
+msgid "Add it to your website"
+msgstr "Přidejte je na své webové stránky"
+
+msgid "options"
+msgstr "možnosti"
+
+#, php-format
+msgid "Copy and paste the plugin code into your website HTML code (preferably inside the head section). There are plenty %o to make it fit better to your needs."
+msgstr "Zkopírujte a vložte kód pluginu do kódu HTML vašich stránek (nejlépe v sekci hlavičky webu). Existuje spousta  %o, aby to lépe vyhovovalo vašim potřebám."
+
+msgid "Basic options"
+msgstr "Základní možnosti"
+
+msgid "Color palette"
+msgstr "Paleta barev"
+
+msgid "Button color scheme"
+msgstr "Barevné schéma tlačítka"
+
+msgid "Embed codes that will be auto-inserted in editor box"
+msgstr "Kódy pro sdílení, které budou automaticky vloženy do pole editoru"
+
+msgid "After"
+msgstr "Po"
+
+msgid "Before"
+msgstr "Před"
+
+msgid "Advanced options"
+msgstr "Pokročilé možnosti"
+
+#, php-format
+msgid "The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options."
+msgstr "Plugin má velkou sadu dalších možností, které umožňují úplné přizpůsobení. Můžete použít vlastní HTML, CSS, vlastní paletu barev, nastavit pozorovatele a další. Zkontrolujte %d a zdroj pluginu, abyste získali lepší představu o těchto pokročilých možnostech."
 
 #: ../../../app/themes/Peafowl/views/request-denied.php:12
 msgid "You either don't have permission to access this page or the link has expired."
@@ -4665,6 +4891,10 @@ msgstr "Je k dispozici aktualizace pro váš systém. Můžete ji automaticky st
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 msgid "Update now"
 msgstr "Aktualizovat nyní"
+
+#, javascript-format
+msgid "This website is running latest %s version"
+msgstr "Tato webová stránka používá nejnovější verzi %s"
 
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"

@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-05-26 16:57+0000',
-  'PO-Revision-Date' => '2017-05-26 16:57+0000',
+  'POT-Creation-Date' => '2017-10-01 18:12+0000',
+  'PO-Revision-Date' => '2017-10-01 18:12+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'cs',
@@ -18,6 +18,18 @@ $translation_plural = array (
   'function' => '$index = (int)(($n != 1)); return ($index < 2) ? $index : 2 - 1;',
 );
 $translation_table = [
+	"Plugin" => [
+		0 => "Plugin",
+	],
+	"Plugin route" => [
+		0 => "Směrování Pluginu",
+	],
+	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
+		0 => "Toto aktivujte, aby jste zobrazili instrukce pluginu na %u. Odkaz na tyto pokyny bude přidán do nabídky %s.Toto nastavení nemá vliv na administrátory.",
+	],
+	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
+		0 => "Toto použijte pro nastavení vlastní URL adresy pro %p. Upozorňujeme, že musíte v této URL adrese ručně zkopírovat %s.",
+	],
 	"Invalid email" => [
 		0 => "Neplatný e-mail",
 	],
@@ -56,9 +68,6 @@ $translation_table = [
 	],
 	"Update in progress" => [
 		0 => "Probíhá aktualizace",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "Došlo k chybě. Prosím zkuste opakovat akci později.",
 	],
 	"Missing %s file" => [
 		0 => "Chybějící %s soubor",
@@ -180,9 +189,6 @@ $translation_table = [
 	"Trending" => [
 		0 => "Trendy",
 	],
-	"Popular" => [
-		0 => "Populární",
-	],
 	"Top users" => [
 		0 => "Top uživatelé",
 	],
@@ -194,6 +200,9 @@ $translation_table = [
 	],
 	"Most viewed" => [
 		0 => "Nejprohlíženější",
+	],
+	"Popular" => [
+		0 => "Populární",
 	],
 	"Most liked" => [
 		0 => "Nejoblíbenější",
@@ -328,7 +337,7 @@ $translation_table = [
 		0 => "zobrazit na %s",
 	],
 	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy." => [
-		0 => "Používáme vlastní a cookie třetích stran s cílem zlepšit váš komfort při prohlížení a používání našich služeb. Chcete-li pokračovat v používání našich webových stránek, je nutné, že přijmete tuto cookie politiku.",
+		0 => "Za účelem vylepšení vašeho komfortu při prohlížení a užívání našich služeb používáme cookies. Používáním našich stránek s tímto souhlasíte.",
 	],
 	"You have been forbidden to use this website." => [
 		0 => "Máte zakázáno používat tuto webovou stránku.",
@@ -600,6 +609,9 @@ $translation_table = [
 	"Before main title (%s)" => [
 		0 => "Před hlavním názvem (%s)",
 	],
+	"After call to action (%s)" => [
+		0 => "Po \"call to action\" (%s)",
+	],
 	"After cover (%s)" => [
 		0 => "Po titulním obrázku (%s)",
 	],
@@ -753,6 +765,12 @@ $translation_table = [
 	"Invalid homepage style" => [
 		0 => "Neplatný styl domovské stránky",
 	],
+	"Invalid homepage call to action button color" => [
+		0 => "Neplatný příkaz tlačítka akce.",
+	],
+	"Invalid homepage call to action functionality" => [
+		0 => "Neplatný příkaz.",
+	],
 	"Invalid title" => [
 		0 => "Neplatný název",
 	],
@@ -803,6 +821,9 @@ $translation_table = [
 	],
 	"Can't map %m to an existing folder (%f)" => [
 		0 => "%m nelze namapovat do existující složky (%f)",
+	],
+	"Can't map %m to an existing route (%r)" => [
+		0 => "Nelze namapovat %m na existující trasu (%r)",
 	],
 	"Can't map %m to %r (username collision)" => [
 		0 => "%m nelze namapovat k %r (kolize uživatelského jména)",
@@ -861,11 +882,11 @@ $translation_table = [
 	"Direct links" => [
 		0 => "Přímé odkazy",
 	],
-	"Image URL" => [
-		0 => "URL obrázku",
-	],
 	"Image link" => [
 		0 => "Odkaz obrázku",
+	],
+	"Image URL" => [
+		0 => "URL obrázku",
 	],
 	"Thumbnail URL" => [
 		0 => "URL miniatury",
@@ -975,6 +996,12 @@ $translation_table = [
 	"Mail error" => [
 		0 => "Chyba e-mailu.",
 	],
+	"Upload images" => [
+		0 => "Nahrát obrázky",
+	],
+	"Upload plugin" => [
+		0 => "Plugin pro nahrávání",
+	],
 	"Image search results for %s" => [
 		0 => "Výsledky vyhledávání obrázku pro výraz %s",
 	],
@@ -1029,6 +1056,9 @@ $translation_table = [
 	"Create account" => [
 		0 => "Vytvořit účet",
 	],
+	"Upload" => [
+		0 => "Nahrát",
+	],
 	"%s's Images" => [
 		0 => "%s Obrázků",
 	],
@@ -1067,9 +1097,6 @@ $translation_table = [
 	],
 	"Notices (%s)" => [
 		0 => "Oznámení (%s)",
-	],
-	"Upload" => [
-		0 => "Nahrát",
 	],
 	"Sign in with another account" => [
 		0 => "Přihlásit se pomocí jiného účtu",
@@ -1173,26 +1200,32 @@ $translation_table = [
 	"You can also %i or %u." => [
 		0 => "Můžeš také %i nebo %u.",
 	],
+	"browse from your device" => [
+		0 => "procházet z vašeho zařízení",
+	],
 	"take a picture" => [
 		0 => "pořídit fotku",
+	],
+	"You can also %i, %c or %u." => [
+		0 => "Můžete také %i, %c nebo %u.",
 	],
 	"Edit or resize any image by clicking the image preview" => [
 		0 => "Upravte nebo změňte velikost libovolného obrázku kliknutím na náhled obrázku",
 	],
-	"Edit or resize any image by touching the image preview" => [
-		0 => "Upravte nebo změňte velikost libovolného obrázku dotykem na náhled obrázku",
+	"Edit any image by touching the image preview" => [
+		0 => "Upravte jakýkoli snímek tím, že se dotknete náhledu obrázku",
 	],
 	"your computer" => [
 		0 => "vašeho počítače",
 	],
-	"image URLs" => [
-		0 => "URL adresy obrázků",
-	],
-	"You can keep adding more images from %i or from %u." => [
-		0 => "Můžete přidat další obrázky z %i nebo z %u.",
+	"You can add more images from %i or %u." => [
+		0 => "Můžete přidat další obrázky z %i nebo %u.",
 	],
 	"your device" => [
 		0 => "vašeho zařízení",
+	],
+	"You can add more images from %i, %c or %u." => [
+		0 => "Můžete přidat další obrázky z %i, %c nebo %u.",
 	],
 	"Uploading %q %o" => [
 		0 => "Nahrávání %q %o",
@@ -1209,6 +1242,12 @@ $translation_table = [
 	"Uploaded content added to %s." => [
 		0 => "Nahraný obsah byl přidán do %s.",
 	],
+	"You can %c with the content just uploaded or %m." => [
+		0 => "Můžete %c s právě nahraným obsahem nebo %m.",
+	],
+	"You can %c with the content just uploaded." => [
+		0 => "Můžete %c s právě nahraným obsahem.",
+	],
 	"create a new album" => [
 		0 => "vytvořit nové album",
 	],
@@ -1220,6 +1259,9 @@ $translation_table = [
 	],
 	"sign in" => [
 		0 => "přihlásit se",
+	],
+	"You can %s or %l to save this content into your account." => [
+		0 => "Můžete použít %s nebo %l pro uložení tohoto obsahu do vašeho účtu.",
 	],
 	"No %s have been uploaded" => [
 		0 => "Žádné %s nebyly nahrány",
@@ -1257,14 +1299,17 @@ $translation_table = [
 	"Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information." => [
 		0 => "Zkontrolujte <a data-modal=\"simple\" data-target=\"failed-upload-result\">chybovou zprávu</a> kde se dozvíte více informací.",
 	],
-	"max" => [
-		0 => "max",
+	"reset" => [
+		0 => "resetovat",
 	],
 	"close" => [
 		0 => "zavřít",
 	],
 	"copy" => [
 		0 => "kopírovat",
+	],
+	"insert" => [
+		0 => "vložit",
 	],
 	"Edit" => [
 		0 => "Uprav",
@@ -1365,11 +1410,26 @@ $translation_table = [
 	"BBCode full" => [
 		0 => "BBKód plné velikosti obrázku",
 	],
+	"BBCode full linked" => [
+		0 => "Plný odkaz do diskuzního fóra.",
+	],
 	"BBCode medium linked" => [
 		0 => "Kód do fóra se střední zmenšeninou obrázku a odkazem.",
 	],
 	"BBCode thumbnail linked" => [
 		0 => "miniatura obrázku s odkazem na originál",
+	],
+	"Markdown full" => [
+		0 => "Markdown kód plné velikosti obrázku",
+	],
+	"Markdown full linked" => [
+		0 => "Markdown kód plné velikosti obrázku s odkazem",
+	],
+	"Markdown medium linked" => [
+		0 => "Markdown kód střední velikosti velikosti obrázku",
+	],
+	"Markdown thumbnail linked" => [
+		0 => "Markdown kód náhledu obrázku s odkazem",
 	],
 	"All these words" => [
 		0 => "Všechna tato slova",
@@ -1512,6 +1572,36 @@ $translation_table = [
 	"Service name" => [
 		0 => "Název služby",
 	],
+	"Identity URL" => [
+		0 => "Adresa URL Identity (Identity URL)",
+	],
+	"Identity API endpoint" => [
+		0 => "Koncový bod API Identity (Identity API endpoint)",
+	],
+	"API endpoint for OpenStack identity" => [
+		0 => "Koncový bod API OpenStack identity (API endpoint for OpenStack identity)",
+	],
+	"Storage region" => [
+		0 => "Region úložiště (Storage region)",
+	],
+	"Container" => [
+		0 => "Kontejner (Container)",
+	],
+	"Storage container" => [
+		0 => "Kontejner úložiště (Storage container)",
+	],
+	"Tenant id" => [
+		0 => "ID Nájemce (Tenant id)",
+	],
+	"Tenant id (account id)" => [
+		0 => "ID účtu nájemce (Tenant id)",
+	],
+	"Tenant name" => [
+		0 => "Jméno nájemce (Tenant name)",
+	],
+	"Tenant name (account name)" => [
+		0 => "uživatelský účet",
+	],
 	"Hostname or IP of the storage server" => [
 		0 => "Hostname nebo IP serveru s úložištěm.",
 	],
@@ -1584,9 +1674,6 @@ $translation_table = [
 	"There's nothing to show here." => [
 		0 => "Zde se nenachází nic k zobrazení.",
 	],
-	"Upload images" => [
-		0 => "Nahrát obrázky",
-	],
 	"Edit image details" => [
 		0 => "Upravit detaily obrázku",
 	],
@@ -1647,6 +1734,9 @@ $translation_table = [
 	"Select" => [
 		0 => "Vybrat",
 	],
+	"Toggle unsafe flag" => [
+		0 => "Označit obrázek jako nevhodný",
+	],
 	"The requested page was not found." => [
 		0 => "Požadovaná stránka nebyla nalezena.",
 	],
@@ -1691,6 +1781,9 @@ $translation_table = [
 	],
 	"Resend instructions" => [
 		0 => "Zaslat instrukce znova.",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "Došlo k chybě. Prosím zkuste opakovat akci později.",
 	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "E-mail s instrukcemi k resetování vašeho hesla jsme již odeslali. Pokud vám nedorazil pak si prosím zkontrolujte vaši složku se spamem.",
@@ -1938,6 +2031,9 @@ $translation_table = [
 	"Select %s to open the page or link in a new window." => [
 		0 => "Zvolte %s pro otevření stránky nebo odkazu v novém okně.",
 	],
+	"Link rel attribute" => [
+		0 => "\"REL\" atribut odkazu",
+	],
 	"Only alphanumerics, hyphens and whitespaces" => [
 		0 => "Pouze alfanumerické znaky, pomlčky a prázné mezery",
 	],
@@ -1988,6 +2084,12 @@ $translation_table = [
 	],
 	"Number of simultaneous upload threads (parallel uploads)" => [
 		0 => "Počet vláken použitých při nahrávání (souběžné nahrávání více souborů)",
+	],
+	"Redirect on single upload" => [
+		0 => "Přesměrování na jednotlivé nahrání",
+	],
+	"Enable this if you want to redirect to image page on single upload." => [
+		0 => "Povolte tuto funkci, pokud chcete přesměrovat na stránku s obrázky při jednotlivém nahrávání.",
 	],
 	"Enable duplicate uploads" => [
 		0 => "Povolit duplicitní nahrávání",
@@ -2094,6 +2196,9 @@ $translation_table = [
 	"Warning: Can't write in %s" => [
 		0 => "Výstraha: Nemůžu zapisovat do %s",
 	],
+	"Watermark user toggles" => [
+		0 => "Přepínač vodoznaku uživatele",
+	],
 	"Enable watermark on guest uploads" => [
 		0 => "Povolit vodoznak pro soubory nahrané hostem",
 	],
@@ -2102,6 +2207,9 @@ $translation_table = [
 	],
 	"Enable watermark on admin uploads" => [
 		0 => "Povolit vodoznak pro soubory nahrané administrátorem",
+	],
+	"Watermark file toggles" => [
+		0 => "Přepínač vodoznaku souboru",
 	],
 	"Enable watermark on GIF image uploads" => [
 		0 => "Povolit vodoznak při nahrávání GIF obrázků",
@@ -2201,6 +2309,12 @@ $translation_table = [
 	],
 	"Enable this if you want to allow users to signup." => [
 		0 => "Povolte, pokud chcete povolit uživatelům registraci.",
+	],
+	"Enable user content delete" => [
+		0 => "Povolit smazání obsahu uživatele",
+	],
+	"Enable this if you want to allow users to delete their own content. This setting doesn't affect administrators." => [
+		0 => "Zapněte tuto funkci, pokud chcete uživatelům povolit smazat vlastní obsah. Toto nastavení nemá vliv na správce.",
 	],
 	"Minimum age required" => [
 		0 => "Požadavek na minimální věk",
@@ -2496,6 +2610,9 @@ $translation_table = [
 	"Landing page" => [
 		0 => "Vstupní stránka",
 	],
+	"Route explore" => [
+		0 => "Prozkoumejte trasu",
+	],
 	"Select the homepage style. To customize it further edit app/themes/%s/views/index.php" => [
 		0 => "Vyberte styl domovské obrazovky. Pro přispůsobení stylu jej upravte v app/themes/%s/views/index.php",
 	],
@@ -2523,6 +2640,12 @@ $translation_table = [
 	"Paragraph" => [
 		0 => "Odstavec",
 	],
+	"Call to action button color" => [
+		0 => "Barva tlačítka \"Call to action\"",
+	],
+	"Enable this to use outline style for the homepage call to action button." => [
+		0 => "Zapněte, pokud chcete aktivovat rámeček kolem tlačítka akce na titulce",
+	],
 	"Open URL" => [
 		0 => "Otevřít URL adresu",
 	],
@@ -2534,6 +2657,9 @@ $translation_table = [
 	],
 	"A relative URL like %r will be mapped to %l" => [
 		0 => "Relativní URL jako %r bude namapována na %l",
+	],
+	"This will be added inside the call to action <a> tag. Leave it blank to use the default contents." => [
+		0 => "Toto bude přidáno uvnitř výzvy k akci <a> tagu. Zanechte prázdné pro použití výchozího obsahu.",
 	],
 	"User IDs" => [
 		0 => "ID uživatele(ů)",
@@ -2555,6 +2681,12 @@ $translation_table = [
 	],
 	"Enable this to show a notice on top warning you about new available system updates." => [
 		0 => "Povolte, pokud chcete zobrazit oznámení při dostupné aktualizaci Chevereta.",
+	],
+	"Minify code" => [
+		0 => "Minimalizovat kód",
+	],
+	"Enable this if you want to auto minify CSS and JS code." => [
+		0 => "Zapněte pokud chcete minimalizovat kód CSS",
 	],
 	"Maintenance" => [
 		0 => "Mód údržby",
@@ -2591,6 +2723,9 @@ $translation_table = [
 	],
 	"To configure the debug level check the <a %s>debug documentation</a>. Default level is \"Error log\" (1)." => [
 		0 => "Pro nastavení úrovně ladění si prohlédněte <a %s>debug documentation</a>. Výchozí hodnota je \"Error log\" (1).",
+	],
+	"Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes." => [
+		0 => "Směrování umožňuje přizpůsobit výchozí vazby trasy v reálném čase. Povoleny jsou pouze alfanumerické znaky, pomlčky a znaky podtržítka. Podívejte se na naši %s, pokud chcete přepsat nebo přidat nové trasy.",
 	],
 	"Image routing" => [
 		0 => "Směrování obrázku",
@@ -2739,6 +2874,12 @@ $translation_table = [
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Potřebujete <a href=\"%s\" target=\"_blank\">reCAPTCHA klíč</a>.",
 	],
+	"%s site key" => [
+		0 => "%s kód stránky",
+	],
+	"%s secret key" => [
+		0 => "%s tajný kód",
+	],
 	"reCAPTCHA threshold" => [
 		0 => "reCAPTCHA threshold (práh)",
 	],
@@ -2750,6 +2891,9 @@ $translation_table = [
 	],
 	"Disqus API works with %s." => [
 		0 => "Disqus API pracuje s %s.",
+	],
+	"%s public key" => [
+		0 => "%s veřejný kód",
 	],
 	"Comment code" => [
 		0 => "Kód komentáře",
@@ -2858,6 +3002,51 @@ $translation_table = [
 	],
 	"Send" => [
 		0 => "Odeslat",
+	],
+	"Add image uploading to your website, blog or forum by installing our upload plugin. It provides image uploading to any website by placing a button that will allow your users to directly upload images to our service and it will automatically handle the codes needed for insertion. All features included like drag and drop, remote upload, image resizing and more." => [
+		0 => "Přidejte funkci nahrávání obrázků na své webové stránky, blog nebo fórum nainstalováním pluginu pro nahrávání. Tato funkce poskytuje možnost nahrávání obrázků z libovolné webové stránky tím, že zde umístí tlačítko, které umožní vašim uživatelům přímo odesílat obrázky do naší služby a automaticky zpracuje a vytvoří kódy potřebné pro vkládání. Všechny funkce zahrnují například funkci přetáhni a pusť, vzdálené nahrávání, změnu velikosti obrázků a další.",
+	],
+	"Supported software" => [
+		0 => "Podporovaný software",
+	],
+	"supported software" => [
+		0 => "podporovaný software",
+	],
+	"The plugin works in any website with user-editable content and for %sv, it will place an upload button that will match the target editor toolbar so no extra customization is needed." => [
+		0 => "Plugin funguje na libovolné webové stránce s uživatelsky upravitelným obsahem a pro %sv, umístí tlačítko pro nahrání, které bude odpovídat panelu nástrojů pro cílový editor, takže není potřeba další přizpůsobení.",
+	],
+	"Add it to your website" => [
+		0 => "Přidejte je na své webové stránky",
+	],
+	"options" => [
+		0 => "možnosti",
+	],
+	"Copy and paste the plugin code into your website HTML code (preferably inside the head section). There are plenty %o to make it fit better to your needs." => [
+		0 => "Zkopírujte a vložte kód pluginu do kódu HTML vašich stránek (nejlépe v sekci hlavičky webu). Existuje spousta  %o, aby to lépe vyhovovalo vašim potřebám.",
+	],
+	"Basic options" => [
+		0 => "Základní možnosti",
+	],
+	"Color palette" => [
+		0 => "Paleta barev",
+	],
+	"Button color scheme" => [
+		0 => "Barevné schéma tlačítka",
+	],
+	"Embed codes that will be auto-inserted in editor box" => [
+		0 => "Kódy pro sdílení, které budou automaticky vloženy do pole editoru",
+	],
+	"After" => [
+		0 => "Po",
+	],
+	"Before" => [
+		0 => "Před",
+	],
+	"Advanced options" => [
+		0 => "Pokročilé možnosti",
+	],
+	"The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options." => [
+		0 => "Plugin má velkou sadu dalších možností, které umožňují úplné přizpůsobení. Můžete použít vlastní HTML, CSS, vlastní paletu barev, nastavit pozorovatele a další. Zkontrolujte %d a zdroj pluginu, abyste získali lepší představu o těchto pokročilých možnostech.",
 	],
 	"You either don't have permission to access this page or the link has expired." => [
 		0 => "Nemáte oprávnění k prohlížení této stránky nebo odkaz ze kterého jste se zde dostali již expiroval.",
@@ -3119,6 +3308,9 @@ $translation_table = [
 	],
 	"Update now" => [
 		0 => "Aktualizovat nyní",
+	],
+	"This website is running latest %s version" => [
+		0 => "Tato webová stránka používá nejnovější verzi %s",
 	],
 	"Clipboard image" => [
 		0 => "Kopírovat obrázek do schránky",

@@ -9,33 +9,33 @@
 			<inbox@rodolfoberrios.com>
 
   Copyright (C) Rodolfo Berrios A. All rights reserved.
-  
+
   BY USING THIS SOFTWARE YOU DECLARE TO ACCEPT THE CHEVERETO EULA
   http://chevereto.com/license
 
   --------------------------------------------------------------------- */
-  
+
 namespace CHV;
 use G, Exception, DirectoryIterator, RegexIterator;
 
 class L10n {
-	
+
 	protected static $instance, $processed;
 	const CHV_DEFAULT_LANGUAGE_EXTENSION = 'po';
 	const CHV_BASE_LANGUAGE = 'en';
-	
+
 	static $gettext, $translation_table, $available_languages, $enabled_languages, $disabled_languages;
 	static $locale = self::CHV_BASE_LANGUAGE;
 	static $forced_locale = FALSE;
-	
+
 	public function __construct() {
 		try {
-			
+
 			// Stock the available languages
 			self::$available_languages = [];
 			$directory = new DirectoryIterator(CHV_APP_PATH_CONTENT_LANGUAGES);
 			$regex  = new RegexIterator($directory, '/^.+\.'. self::CHV_DEFAULT_LANGUAGE_EXTENSION .'$/i', RegexIterator::GET_MATCH);
-			
+
 			$locales = self::getLocales();
 			$missing_locales = [];
 			foreach($regex as $file) {
@@ -43,10 +43,10 @@ class L10n {
 				$locale_code = basename($file, '.' . self::CHV_DEFAULT_LANGUAGE_EXTENSION);
 				self::$available_languages[$locale_code] = $locales[$locale_code];
 			}
-			
+
 			// Remove any missing lang array
 			self::$available_languages = array_filter(self::$available_languages);
-			
+
 			// Handle the enabled/disabled languages
 			self::$enabled_languages = self::$available_languages;
 			self::$disabled_languages = [];
@@ -54,7 +54,7 @@ class L10n {
 				self::$disabled_languages[$k] = $locales[$k];
 				unset(self::$enabled_languages[$k]);
 			}
-			
+
 			if(!self::$forced_locale) {
 
 				// Set default website locale
@@ -67,7 +67,7 @@ class L10n {
 				// Auto-language?
 				if(getSetting('auto_language') and !Login::isLoggedUser()) {
 					foreach(G\get_client_languages() as $k => $v) {
-						$user_locale = str_replace('-', '_', $k);
+						$user_locale = str_replace('_', '-', $k);
 						if(array_key_exists($user_locale, self::$available_languages) and !array_key_exists($user_locale, self::$disabled_languages)) {
 							$locale = $user_locale;
 							break;
@@ -80,10 +80,10 @@ class L10n {
 								}
 							}
 						}
-						if($locale) break;	
+						if($locale) break;
 					};
 				}
-				
+
 				// Override with the user selected lang
 				if(Login::isLoggedUser() || $_COOKIE['USER_SELECTED_LANG']) {
 					$user_lang = Login::getUser() ? Login::getUser()['language'] : $_COOKIE['USER_SELECTED_LANG'];
@@ -91,7 +91,7 @@ class L10n {
 						$locale = $user_lang;
 					}
 				}
-			
+
 			} else {
 				$locale = self::$forced_locale;
 			}
@@ -99,21 +99,21 @@ class L10n {
 			// Set some language definitions
 			if(!defined('CHV_LANGUAGE_CODE')) define('CHV_LANGUAGE_CODE', $locale);
 			if(!defined('CHV_LANGUAGE_FILE')) define('CHV_LANGUAGE_FILE', CHV_APP_PATH_CONTENT_LANGUAGES . $locale . '.' . self::CHV_DEFAULT_LANGUAGE_EXTENSION);
-			
+
 			self::processTranslation($locale);
-			
+
 		} catch(Exception $e) {
 			throw $e;
 		}
 	}
-	
+
 	public static function getInstance() {
 		if(is_null(self::$instance)) {
 			self::$instance = new self;
 		}
 		return self::$instance;
 	}
-	
+
 	public static function setLocale($locale) {
 		if(is_null(self::$instance)) {
 			self::$forced_locale = $locale;
@@ -121,18 +121,18 @@ class L10n {
 			self::processTranslation($locale);
 		}
 	}
-	
+
 	public static function processTranslation($locale) {
-		
+
 		if(is_null($locale)) {
 			$locale = self::$locale;
 		}
-		
+
 		// Already did it
 		if($locale == self::$locale and isset(self::$translation_table)) {
 			return;
 		}
-		
+
 		// If locale isn't available use the default one and if that fails use the first one in the available table
 		if(!array_key_exists($locale, self::$available_languages)) {
 			if(array_key_exists(self::$locale, self::$available_languages)) {
@@ -144,17 +144,17 @@ class L10n {
 				$locale = $first_key;
 			}
 		}
-		
+
 		// Filename
 		$filename = $locale . '.' . self::CHV_DEFAULT_LANGUAGE_EXTENSION;
-		
+
 		// Overriding?
 		$language_file = CHV_APP_PATH_CONTENT_LANGUAGES . $filename;
 		$language_override_file = dirname($language_file) . '/overrides/' . $filename;
-		
+
 		// Stock the static $locale
 		self::$locale = $locale;
-		
+
 		// Handle translation and its overrides
 		$language_handling = [
 			'base' => [
@@ -168,18 +168,18 @@ class L10n {
 				'table' 		=> [],
 			]
 		];
-		
+
 		foreach($language_handling as $k => $v) {
-		
+
 			$cache_path = $v['cache_path'];
 			$cache_file = basename($v['file']) . '.cache.php';
-			
+
 			if(!file_exists($v['file'])) continue;
-			
+
 			if(!file_exists($cache_path) and !@mkdir($cache_path)) {
 				$cache_path = dirname($cache_path);
 			}
-			
+
 			try {
 				self::$gettext = new G\Gettext([
 					'file' 				=> $v['file'],
@@ -195,32 +195,32 @@ class L10n {
 				error_log($e); // Silence
 			}
 		}
-		
+
 		// Re-stock the base language values
 		self::$gettext->translation_plural = $translation_plural;
 		self::$gettext->translation_header = $translation_header;
 		self::$gettext->translation_table = array_merge($language_handling['base']['table'], $language_handling['override']['table']);
 		self::$translation_table = self::$gettext->translation_table;
-		
+
 	}
-	
+
 	// gettext wrapper
 	public static function gettext($msg) {
 		$translation = self::getGettext()->gettext($msg);
 		return $translation;
 	}
-	
+
 	// ngettext wrapper
 	public static function ngettext($msg, $msg_plural, $count) {
 		$translation = self::getGettext()->ngettext($msg, $msg_plural, $count);
 		return $translation;
 	}
-	
+
 	public static function setStatic($var, $value) {
 		$instance = self::getInstance();
 		$instance::${$var} = $value;
 	}
-	
+
 	public static function getStatic($var) {
 		$instance = self::getInstance();
 		return $instance::${$var};
@@ -243,7 +243,7 @@ class L10n {
 	public static function getLocale() {
 		return self::getStatic('locale');
 	}
-	
+
 	// Locales table
 	public static function getLocales() {
 		return [
@@ -254,8 +254,8 @@ class L10n {
 			'base' => 'af',
 			'short_name' => 'AF',
 		  ],
-		  'af_AF' => [
-			'code' => 'af_AF',
+		  'af-AF' => [
+			'code' => 'af-AF',
 			'dir' => 'ltr',
 			'name' => 'Afrikaans',
 			'base' => 'af',
@@ -268,8 +268,8 @@ class L10n {
 			'base' => 'am',
 			'short_name' => 'AM',
 		  ],
-		  'am_AM' => [
-			'code' => 'am_AM',
+		  'am-AM' => [
+			'code' => 'am-AM',
 			'dir' => 'ltr',
 			'name' => 'āmariññā',
 			'base' => 'am',
@@ -282,8 +282,8 @@ class L10n {
 			'base' => 'an',
 			'short_name' => 'AN',
 		  ],
-		  'an_AN' => [
-			'code' => 'an_AN',
+		  'an-AN' => [
+			'code' => 'an-AN',
 			'dir' => 'ltr',
 			'name' => 'Aragonés',
 			'base' => 'an',
@@ -296,120 +296,120 @@ class L10n {
 			'base' => 'ar',
 			'short_name' => 'AR',
 		  ],
-		  'ar_AE' => [
-			'code' => 'ar_AE',
+		  'ar-AE' => [
+			'code' => 'ar-AE',
 			'dir' => 'rtl',
 			'name' => 'العربية (الإمارات)',
 			'base' => 'ar',
 			'short_name' => 'AR (AE)',
 		  ],
-		  'ar_BH' => [
-			'code' => 'ar_BH',
+		  'ar-BH' => [
+			'code' => 'ar-BH',
 			'dir' => 'rtl',
 			'name' => 'العربية (البحرين)',
 			'base' => 'ar',
 			'short_name' => 'AR (BH)',
 		  ],
-		  'ar_DZ' => [
-			'code' => 'ar_DZ',
+		  'ar-DZ' => [
+			'code' => 'ar-DZ',
 			'dir' => 'rtl',
 			'name' => 'العربية (الجزائر)',
 			'base' => 'ar',
 			'short_name' => 'AR (DZ)',
 		  ],
-		  'ar_EG' => [
-			'code' => 'ar_EG',
+		  'ar-EG' => [
+			'code' => 'ar-EG',
 			'dir' => 'rtl',
 			'name' => 'العربية (مصر)',
 			'base' => 'ar',
 			'short_name' => 'AR (EG)',
 		  ],
-		  'ar_IQ' => [
-			'code' => 'ar_IQ',
+		  'ar-IQ' => [
+			'code' => 'ar-IQ',
 			'dir' => 'rtl',
 			'name' => 'العربية (العراق)',
 			'base' => 'ar',
 			'short_name' => 'AR (IQ)',
 		  ],
-		  'ar_JO' => [
-			'code' => 'ar_JO',
+		  'ar-JO' => [
+			'code' => 'ar-JO',
 			'dir' => 'rtl',
 			'name' => 'العربية (الأردن)',
 			'base' => 'ar',
 			'short_name' => 'AR (JO)',
 		  ],
-		  'ar_KW' => [
-			'code' => 'ar_KW',
+		  'ar-KW' => [
+			'code' => 'ar-KW',
 			'dir' => 'rtl',
 			'name' => 'العربية (الكويت)',
 			'base' => 'ar',
 			'short_name' => 'AR (KW)',
 		  ],
-		  'ar_LB' => [
-			'code' => 'ar_LB',
+		  'ar-LB' => [
+			'code' => 'ar-LB',
 			'dir' => 'rtl',
 			'name' => 'العربية (لبنان)',
 			'base' => 'ar',
 			'short_name' => 'AR (LB)',
 		  ],
-		  'ar_LY' => [
-			'code' => 'ar_LY',
+		  'ar-LY' => [
+			'code' => 'ar-LY',
 			'dir' => 'rtl',
 			'name' => 'العربية (ليبيا)',
 			'base' => 'ar',
 			'short_name' => 'AR (LY)',
 		  ],
-		  'ar_MA' => [
-			'code' => 'ar_MA',
+		  'ar-MA' => [
+			'code' => 'ar-MA',
 			'dir' => 'rtl',
 			'name' => 'العربية (المغرب)',
 			'base' => 'ar',
 			'short_name' => 'AR (MA)',
 		  ],
-		  'ar_OM' => [
-			'code' => 'ar_OM',
+		  'ar-OM' => [
+			'code' => 'ar-OM',
 			'dir' => 'rtl',
 			'name' => 'العربية (سلطنة عمان)',
 			'base' => 'ar',
 			'short_name' => 'AR (OM)',
 		  ],
-		  'ar_QA' => [
-			'code' => 'ar_QA',
+		  'ar-QA' => [
+			'code' => 'ar-QA',
 			'dir' => 'rtl',
 			'name' => 'العربية (قطر)',
 			'base' => 'ar',
 			'short_name' => 'AR (QA)',
 		  ],
-		  'ar_SA' => [
-			'code' => 'ar_SA',
+		  'ar-SA' => [
+			'code' => 'ar-SA',
 			'dir' => 'rtl',
 			'name' => 'العربية (السعودية)',
 			'base' => 'ar',
 			'short_name' => 'AR (SA)',
 		  ],
-		  'ar_SD' => [
-			'code' => 'ar_SD',
+		  'ar-SD' => [
+			'code' => 'ar-SD',
 			'dir' => 'rtl',
 			'name' => 'العربية (السودان)',
 			'base' => 'ar',
 			'short_name' => 'AR (SD)',
 		  ],
-		  'ar_SY' => [
-			'code' => 'ar_SY',
+		  'ar-SY' => [
+			'code' => 'ar-SY',
 			'dir' => 'rtl',
 			'name' => 'العربية (سوريا)',
 			'base' => 'ar',
 			'short_name' => 'AR (SY)',
 		  ],
-		  'ar_TN' => [
-			'code' => 'ar_TN',
+		  'ar-TN' => [
+			'code' => 'ar-TN',
 			'dir' => 'rtl',
 			'name' => 'العربية (تونس)',
 			'base' => 'ar',
 			'short_name' => 'AR (TN)',
 		  ],
-		  'ar_YE' => [
-			'code' => 'ar_YE',
+		  'ar-YE' => [
+			'code' => 'ar-YE',
 			'dir' => 'rtl',
 			'name' => 'العربية (اليمن)',
 			'base' => 'ar',
@@ -422,8 +422,8 @@ class L10n {
 			'base' => 'as',
 			'short_name' => 'AS',
 		  ],
-		  'as_AS' => [
-			'code' => 'as_AS',
+		  'as-AS' => [
+			'code' => 'as-AS',
 			'dir' => 'ltr',
 			'name' => 'অসমীয়া',
 			'base' => 'as',
@@ -436,8 +436,8 @@ class L10n {
 			'base' => 'ast',
 			'short_name' => 'AST',
 		  ],
-		  'ast_AST' => [
-			'code' => 'ast_AST',
+		  'ast-AST' => [
+			'code' => 'ast-AST',
 			'dir' => 'ltr',
 			'name' => 'Asturianu',
 			'base' => 'ast',
@@ -450,8 +450,8 @@ class L10n {
 			'base' => 'az',
 			'short_name' => 'AZ',
 		  ],
-		  'az_AZ' => [
-			'code' => 'az_AZ',
+		  'az-AZ' => [
+			'code' => 'az-AZ',
 			'dir' => 'ltr',
 			'name' => 'Azərbaycan',
 			'base' => 'az',
@@ -464,8 +464,8 @@ class L10n {
 			'base' => 'ba',
 			'short_name' => 'BA',
 		  ],
-		  'ba_BA' => [
-			'code' => 'ba_BA',
+		  'ba-BA' => [
+			'code' => 'ba-BA',
 			'dir' => 'ltr',
 			'name' => 'Башҡорт',
 			'base' => 'ba',
@@ -478,8 +478,8 @@ class L10n {
 			'base' => 'be',
 			'short_name' => 'BE',
 		  ],
-		  'be_BY' => [
-			'code' => 'be_BY',
+		  'be-BY' => [
+			'code' => 'be-BY',
 			'dir' => 'ltr',
 			'name' => 'Беларускі',
 			'base' => 'be',
@@ -492,8 +492,8 @@ class L10n {
 			'base' => 'bg',
 			'short_name' => 'BG',
 		  ],
-		  'bg_BG' => [
-			'code' => 'bg_BG',
+		  'bg-BG' => [
+			'code' => 'bg-BG',
 			'dir' => 'ltr',
 			'name' => 'Български',
 			'base' => 'bg',
@@ -506,8 +506,8 @@ class L10n {
 			'base' => 'bn',
 			'short_name' => 'BN',
 		  ],
-		  'bn_BN' => [
-			'code' => 'bn_BN',
+		  'bn-BN' => [
+			'code' => 'bn-BN',
 			'dir' => 'ltr',
 			'name' => 'Bangla',
 			'base' => 'bn',
@@ -520,8 +520,8 @@ class L10n {
 			'base' => 'br',
 			'short_name' => 'BR',
 		  ],
-		  'br_BR' => [
-			'code' => 'br_BR',
+		  'br-BR' => [
+			'code' => 'br-BR',
 			'dir' => 'ltr',
 			'name' => 'Brezhoneg',
 			'base' => 'br',
@@ -534,8 +534,8 @@ class L10n {
 			'base' => 'bs',
 			'short_name' => 'BS',
 		  ],
-		  'bs_BS' => [
-			'code' => 'bs_BS',
+		  'bs-BS' => [
+			'code' => 'bs-BS',
 			'dir' => 'ltr',
 			'name' => 'Bosanski',
 			'base' => 'bs',
@@ -548,8 +548,8 @@ class L10n {
 			'base' => 'ca',
 			'short_name' => 'CA',
 		  ],
-		  'ca_ES' => [
-			'code' => 'ca_ES',
+		  'ca-ES' => [
+			'code' => 'ca-ES',
 			'dir' => 'ltr',
 			'name' => 'Сatalà (Espanya)',
 			'base' => 'ca',
@@ -562,8 +562,8 @@ class L10n {
 			'base' => 'ce',
 			'short_name' => 'CE',
 		  ],
-		  'ce_CE' => [
-			'code' => 'ce_CE',
+		  'ce-CE' => [
+			'code' => 'ce-CE',
 			'dir' => 'ltr',
 			'name' => 'Нохчийн',
 			'base' => 'ce',
@@ -576,8 +576,8 @@ class L10n {
 			'base' => 'ch',
 			'short_name' => 'CH',
 		  ],
-		  'ch_CH' => [
-			'code' => 'ch_CH',
+		  'ch-CH' => [
+			'code' => 'ch-CH',
 			'dir' => 'ltr',
 			'name' => 'Chamoru',
 			'base' => 'ch',
@@ -590,8 +590,8 @@ class L10n {
 			'base' => 'co',
 			'short_name' => 'CO',
 		  ],
-		  'co_CO' => [
-			'code' => 'co_CO',
+		  'co-CO' => [
+			'code' => 'co-CO',
 			'dir' => 'ltr',
 			'name' => 'Corsu',
 			'base' => 'co',
@@ -604,8 +604,8 @@ class L10n {
 			'base' => 'cr',
 			'short_name' => 'CR',
 		  ],
-		  'cr_CR' => [
-			'code' => 'cr_CR',
+		  'cr-CR' => [
+			'code' => 'cr-CR',
 			'dir' => 'ltr',
 			'name' => 'Cree',
 			'base' => 'cr',
@@ -618,8 +618,8 @@ class L10n {
 			'base' => 'cs',
 			'short_name' => 'CS',
 		  ],
-		  'cs_CZ' => [
-			'code' => 'cs_CZ',
+		  'cs-CZ' => [
+			'code' => 'cs-CZ',
 			'dir' => 'ltr',
 			'name' => 'Čeština',
 			'base' => 'cs',
@@ -632,8 +632,8 @@ class L10n {
 			'base' => 'cv',
 			'short_name' => 'CV',
 		  ],
-		  'cv_CV' => [
-			'code' => 'cv_CV',
+		  'cv-CV' => [
+			'code' => 'cv-CV',
 			'dir' => 'ltr',
 			'name' => 'Чăвашла',
 			'base' => 'cv',
@@ -646,8 +646,8 @@ class L10n {
 			'base' => 'cy',
 			'short_name' => 'CY',
 		  ],
-		  'cy_CY' => [
-			'code' => 'cy_CY',
+		  'cy-CY' => [
+			'code' => 'cy-CY',
 			'dir' => 'ltr',
 			'name' => 'Cymraeg',
 			'base' => 'cy',
@@ -660,8 +660,8 @@ class L10n {
 			'base' => 'da',
 			'short_name' => 'DA',
 		  ],
-		  'da_DK' => [
-			'code' => 'da_DK',
+		  'da-DK' => [
+			'code' => 'da-DK',
 			'dir' => 'ltr',
 			'name' => 'Dansk',
 			'base' => 'da',
@@ -674,29 +674,29 @@ class L10n {
 			'base' => 'de',
 			'short_name' => 'DE',
 		  ],
-		  'de_AT' => [
-			'code' => 'de_AT',
+		  'de-AT' => [
+			'code' => 'de-AT',
 			'dir' => 'ltr',
 			'name' => 'Deutsch (Österreich)',
 			'base' => 'de',
 			'short_name' => 'DE (AT)',
 		  ],
-		  'de_CH' => [
-			'code' => 'de_CH',
+		  'de-CH' => [
+			'code' => 'de-CH',
 			'dir' => 'ltr',
 			'name' => 'Deutsch (Schweiz)',
 			'base' => 'de',
 			'short_name' => 'DE (CH)',
 		  ],
-		  'de_DE' => [
-			'code' => 'de_DE',
+		  'de-DE' => [
+			'code' => 'de-DE',
 			'dir' => 'ltr',
 			'name' => 'Deutsch (Deutschland)',
 			'base' => 'de',
 			'short_name' => 'DE (DE)',
 		  ],
-		  'de_LU' => [
-			'code' => 'de_LU',
+		  'de-LU' => [
+			'code' => 'de-LU',
 			'dir' => 'ltr',
 			'name' => 'Deutsch (Luxemburg)',
 			'base' => 'de',
@@ -709,15 +709,15 @@ class L10n {
 			'base' => 'el',
 			'short_name' => 'EL',
 		  ],
-		  'el_CY' => [
-			'code' => 'el_CY',
+		  'el-CY' => [
+			'code' => 'el-CY',
 			'dir' => 'ltr',
 			'name' => 'Ελληνικά (Κύπρος)',
 			'base' => 'el',
 			'short_name' => 'EL (CY)',
 		  ],
-		  'el_GR' => [
-			'code' => 'el_GR',
+		  'el-GR' => [
+			'code' => 'el-GR',
 			'dir' => 'ltr',
 			'name' => 'Ελληνικά (Ελλάδα)',
 			'base' => 'el',
@@ -730,78 +730,78 @@ class L10n {
 			'base' => 'en',
 			'short_name' => 'EN',
 		  ],
-		  'en_AU' => [
-			'code' => 'en_AU',
+		  'en-AU' => [
+			'code' => 'en-AU',
 			'dir' => 'ltr',
 			'name' => 'English (Australia)',
 			'base' => 'en',
 			'short_name' => 'EN (AU)',
 		  ],
-		  'en_CA' => [
-			'code' => 'en_CA',
+		  'en-CA' => [
+			'code' => 'en-CA',
 			'dir' => 'ltr',
 			'name' => 'English (Canada)',
 			'base' => 'en',
 			'short_name' => 'EN (CA)',
 		  ],
-		  'en_GB' => [
-			'code' => 'en_GB',
+		  'en-GB' => [
+			'code' => 'en-GB',
 			'dir' => 'ltr',
 			'name' => 'English (UK)',
 			'base' => 'en',
 			'short_name' => 'EN (GB)',
 		  ],
-		  'en_IE' => [
-			'code' => 'en_IE',
+		  'en-IE' => [
+			'code' => 'en-IE',
 			'dir' => 'ltr',
 			'name' => 'English (Ireland)',
 			'base' => 'en',
 			'short_name' => 'EN (IE)',
 		  ],
-		  'en_IN' => [
-			'code' => 'en_IN',
+		  'en-IN' => [
+			'code' => 'en-IN',
 			'dir' => 'ltr',
 			'name' => 'English (India)',
 			'base' => 'en',
 			'short_name' => 'EN (IN)',
 		  ],
-		  'en_MT' => [
-			'code' => 'en_MT',
+		  'en-MT' => [
+			'code' => 'en-MT',
 			'dir' => 'ltr',
 			'name' => 'English (Malta)',
 			'base' => 'en',
 			'short_name' => 'EN (MT)',
 		  ],
-		  'en_NZ' => [
-			'code' => 'en_NZ',
+		  'en-NZ' => [
+			'code' => 'en-NZ',
 			'dir' => 'ltr',
 			'name' => 'English (New Zealand)',
 			'base' => 'en',
 			'short_name' => 'EN (NZ)',
 		  ],
-		  'en_PH' => [
-			'code' => 'en_PH',
+		  'en-PH' => [
+			'code' => 'en-PH',
 			'dir' => 'ltr',
 			'name' => 'English (Philippines)',
 			'base' => 'en',
 			'short_name' => 'EN (PH)',
 		  ],
-		  'en_SG' => [
-			'code' => 'en_SG',
+		  'en-SG' => [
+			'code' => 'en-SG',
 			'dir' => 'ltr',
 			'name' => 'English (Singapore)',
 			'base' => 'en',
 			'short_name' => 'EN (SG)',
 		  ],
-		  'en_US' => [
-			'code' => 'en_US',
+		  'en-US' => [
+			'code' => 'en-US',
 			'dir' => 'ltr',
 			'name' => 'English (US)',
 			'base' => 'en',
 			'short_name' => 'EN (US)',
 		  ],
-		  'en_ZA' => [
-			'code' => 'en_ZA',
+		  'en-ZA' => [
+			'code' => 'en-ZA',
 			'dir' => 'ltr',
 			'name' => 'English (South Africa)',
 			'base' => 'en',
@@ -814,8 +814,8 @@ class L10n {
 			'base' => 'eo',
 			'short_name' => 'EO',
 		  ],
-		  'eo_EO' => [
-			'code' => 'eo_EO',
+		  'eo-EO' => [
+			'code' => 'eo-EO',
 			'dir' => 'ltr',
 			'name' => 'Esperanta',
 			'base' => 'eo',
@@ -828,141 +828,141 @@ class L10n {
 			'base' => 'es',
 			'short_name' => 'ES',
 		  ],
-		  'es_AR' => [
-			'code' => 'es_AR',
+		  'es-AR' => [
+			'code' => 'es-AR',
 			'dir' => 'ltr',
 			'name' => 'Español (Argentina)',
 			'base' => 'es',
 			'short_name' => 'ES (AR)',
 		  ],
-		  'es_BO' => [
-			'code' => 'es_BO',
+		  'es-BO' => [
+			'code' => 'es-BO',
 			'dir' => 'ltr',
 			'name' => 'Español (Bolivia)',
 			'base' => 'es',
 			'short_name' => 'ES (BO)',
 		  ],
-		  'es_CL' => [
-			'code' => 'es_CL',
+		  'es-CL' => [
+			'code' => 'es-CL',
 			'dir' => 'ltr',
 			'name' => 'Español (Chile)',
 			'base' => 'es',
 			'short_name' => 'ES (CL)',
 		  ],
-		  'es_CO' => [
-			'code' => 'es_CO',
+		  'es-CO' => [
+			'code' => 'es-CO',
 			'dir' => 'ltr',
 			'name' => 'Español (Colombia)',
 			'base' => 'es',
 			'short_name' => 'ES (CO)',
 		  ],
-		  'es_CR' => [
-			'code' => 'es_CR',
+		  'es-CR' => [
+			'code' => 'es-CR',
 			'dir' => 'ltr',
 			'name' => 'Español (Costa Rica)',
 			'base' => 'es',
 			'short_name' => 'ES (CR)',
 		  ],
-		  'es_DO' => [
-			'code' => 'es_DO',
+		  'es-DO' => [
+			'code' => 'es-DO',
 			'dir' => 'ltr',
 			'name' => 'Español (República Dominicana)',
 			'base' => 'es',
 			'short_name' => 'ES (DO)',
 		  ],
-		  'es_EC' => [
-			'code' => 'es_EC',
+		  'es-EC' => [
+			'code' => 'es-EC',
 			'dir' => 'ltr',
 			'name' => 'Español (Ecuador)',
 			'base' => 'es',
 			'short_name' => 'ES (EC)',
 		  ],
-		  'es_ES' => [
-			'code' => 'es_ES',
+		  'es-ES' => [
+			'code' => 'es-ES',
 			'dir' => 'ltr',
 			'name' => 'Español (España)',
 			'base' => 'es',
 			'short_name' => 'ES (ES)',
 		  ],
-		  'es_GT' => [
-			'code' => 'es_GT',
+		  'es-GT' => [
+			'code' => 'es-GT',
 			'dir' => 'ltr',
 			'name' => 'Español (Guatemala)',
 			'base' => 'es',
 			'short_name' => 'ES (GT)',
 		  ],
-		  'es_HN' => [
-			'code' => 'es_HN',
+		  'es-HN' => [
+			'code' => 'es-HN',
 			'dir' => 'ltr',
 			'name' => 'Español (Honduras)',
 			'base' => 'es',
 			'short_name' => 'ES (HN)',
 		  ],
-		  'es_MX' => [
-			'code' => 'es_MX',
+		  'es-MX' => [
+			'code' => 'es-MX',
 			'dir' => 'ltr',
 			'name' => 'Español (México)',
 			'base' => 'es',
 			'short_name' => 'ES (MX)',
 		  ],
-		  'es_NI' => [
-			'code' => 'es_NI',
+		  'es-NI' => [
+			'code' => 'es-NI',
 			'dir' => 'ltr',
 			'name' => 'Español (Nicaragua)',
 			'base' => 'es',
 			'short_name' => 'ES (NI)',
 		  ],
-		  'es_PA' => [
-			'code' => 'es_PA',
+		  'es-PA' => [
+			'code' => 'es-PA',
 			'dir' => 'ltr',
 			'name' => 'Español (Panamá)',
 			'base' => 'es',
 			'short_name' => 'ES (PA)',
 		  ],
-		  'es_PE' => [
-			'code' => 'es_PE',
+		  'es-PE' => [
+			'code' => 'es-PE',
 			'dir' => 'ltr',
 			'name' => 'Español (Perú)',
 			'base' => 'es',
 			'short_name' => 'ES (PE)',
 		  ],
-		  'es_PR' => [
-			'code' => 'es_PR',
+		  'es-PR' => [
+			'code' => 'es-PR',
 			'dir' => 'ltr',
 			'name' => 'Español (Puerto Rico)',
 			'base' => 'es',
 			'short_name' => 'ES (PR)',
 		  ],
-		  'es_PY' => [
-			'code' => 'es_PY',
+		  'es-PY' => [
+			'code' => 'es-PY',
 			'dir' => 'ltr',
 			'name' => 'Español (Paraguay)',
 			'base' => 'es',
 			'short_name' => 'ES (PY)',
 		  ],
-		  'es_SV' => [
-			'code' => 'es_SV',
+		  'es-SV' => [
+			'code' => 'es-SV',
 			'dir' => 'ltr',
 			'name' => 'Español (El Salvador)',
 			'base' => 'es',
 			'short_name' => 'ES (SV)',
 		  ],
-		  'es_US' => [
-			'code' => 'es_US',
+		  'es-US' => [
+			'code' => 'es-US',
 			'dir' => 'ltr',
 			'name' => 'Español (Estados Unidos)',
 			'base' => 'es',
 			'short_name' => 'ES (US)',
 		  ],
-		  'es_UY' => [
-			'code' => 'es_UY',
+		  'es-UY' => [
+			'code' => 'es-UY',
 			'dir' => 'ltr',
 			'name' => 'Español (Uruguay)',
 			'base' => 'es',
 			'short_name' => 'ES (UY)',
 		  ],
-		  'es_VE' => [
-			'code' => 'es_VE',
+		  'es-VE' => [
+			'code' => 'es-VE',
 			'dir' => 'ltr',
 			'name' => 'Español (Venezuela)',
 			'base' => 'es',
@@ -975,8 +975,8 @@ class L10n {
 			'base' => 'et',
 			'short_name' => 'ET',
 		  ],
-		  'et_EE' => [
-			'code' => 'et_EE',
+		  'et-EE' => [
+			'code' => 'et-EE',
 			'dir' => 'ltr',
 			'name' => 'Eesti (Eesti)',
 			'base' => 'et',
@@ -989,8 +989,8 @@ class L10n {
 			'base' => 'eu',
 			'short_name' => 'EU',
 		  ],
-		  'eu_EU' => [
-			'code' => 'eu_EU',
+		  'eu-EU' => [
+			'code' => 'eu-EU',
 			'dir' => 'ltr',
 			'name' => 'Euskera',
 			'base' => 'eu',
@@ -1003,8 +1003,8 @@ class L10n {
 			'base' => 'fa',
 			'short_name' => 'FA',
 		  ],
-		  'fa_FA' => [
-			'code' => 'fa_FA',
+		  'fa-FA' => [
+			'code' => 'fa-FA',
 			'dir' => 'rtl',
 			'name' => 'فارسی',
 			'base' => 'fa',
@@ -1017,8 +1017,8 @@ class L10n {
 			'base' => 'fi',
 			'short_name' => 'FI',
 		  ],
-		  'fi_FI' => [
-			'code' => 'fi_FI',
+		  'fi-FI' => [
+			'code' => 'fi-FI',
 			'dir' => 'ltr',
 			'name' => 'Suomi',
 			'base' => 'fi',
@@ -1031,8 +1031,8 @@ class L10n {
 			'base' => 'fj',
 			'short_name' => 'FJ',
 		  ],
-		  'fj_FJ' => [
-			'code' => 'fj_FJ',
+		  'fj-FJ' => [
+			'code' => 'fj-FJ',
 			'dir' => 'ltr',
 			'name' => 'Na Vosa Vakaviti',
 			'base' => 'fj',
@@ -1045,8 +1045,8 @@ class L10n {
 			'base' => 'fo',
 			'short_name' => 'FO',
 		  ],
-		  'fo_FO' => [
-			'code' => 'fo_FO',
+		  'fo-FO' => [
+			'code' => 'fo-FO',
 			'dir' => 'ltr',
 			'name' => 'Føroyskt',
 			'base' => 'fo',
@@ -1059,36 +1059,36 @@ class L10n {
 			'base' => 'fr',
 			'short_name' => 'FR',
 		  ],
-		  'fr_BE' => [
-			'code' => 'fr_BE',
+		  'fr-BE' => [
+			'code' => 'fr-BE',
 			'dir' => 'ltr',
 			'name' => 'Français (Belgique)',
 			'base' => 'fr',
 			'short_name' => 'FR (BE)',
 		  ],
-		  'fr_CA' => [
-			'code' => 'fr_CA',
+		  'fr-CA' => [
+			'code' => 'fr-CA',
 			'dir' => 'ltr',
 			'name' => 'Français (Canada)',
 			'base' => 'fr',
 			'short_name' => 'FR (CA)',
 		  ],
-		  'fr_CH' => [
-			'code' => 'fr_CH',
+		  'fr-CH' => [
+			'code' => 'fr-CH',
 			'dir' => 'ltr',
 			'name' => 'Français (Suisse)',
 			'base' => 'fr',
 			'short_name' => 'FR (CH)',
 		  ],
-		  'fr_FR' => [
-			'code' => 'fr_FR',
+		  'fr-FR' => [
+			'code' => 'fr-FR',
 			'dir' => 'ltr',
 			'name' => 'Français (France)',
 			'base' => 'fr',
 			'short_name' => 'FR (FR)',
 		  ],
-		  'fr_LU' => [
-			'code' => 'fr_LU',
+		  'fr-LU' => [
+			'code' => 'fr-LU',
 			'dir' => 'ltr',
 			'name' => 'Français (Luxembourg)',
 			'base' => 'fr',
@@ -1101,8 +1101,8 @@ class L10n {
 			'base' => 'fy',
 			'short_name' => 'FY',
 		  ],
-		  'fy_FY' => [
-			'code' => 'fy_FY',
+		  'fy-FY' => [
+			'code' => 'fy-FY',
 			'dir' => 'ltr',
 			'name' => 'Frysk',
 			'base' => 'fy',
@@ -1115,8 +1115,8 @@ class L10n {
 			'base' => 'ga',
 			'short_name' => 'GA',
 		  ],
-		  'ga_IE' => [
-			'code' => 'ga_IE',
+		  'ga-IE' => [
+			'code' => 'ga-IE',
 			'dir' => 'ltr',
 			'name' => 'Gaeilge (Éire)',
 			'base' => 'ga',
@@ -1129,8 +1129,8 @@ class L10n {
 			'base' => 'gd',
 			'short_name' => 'GD',
 		  ],
-		  'gd_GD' => [
-			'code' => 'gd_GD',
+		  'gd-GD' => [
+			'code' => 'gd-GD',
 			'dir' => 'ltr',
 			'name' => 'Gàidhlig',
 			'base' => 'gd',
@@ -1143,8 +1143,8 @@ class L10n {
 			'base' => 'gl',
 			'short_name' => 'GL',
 		  ],
-		  'gl_GL' => [
-			'code' => 'gl_GL',
+		  'gl-GL' => [
+			'code' => 'gl-GL',
 			'dir' => 'ltr',
 			'name' => 'Galego',
 			'base' => 'gl',
@@ -1157,8 +1157,8 @@ class L10n {
 			'base' => 'gu',
 			'short_name' => 'GU',
 		  ],
-		  'gu_GU' => [
-			'code' => 'gu_GU',
+		  'gu-GU' => [
+			'code' => 'gu-GU',
 			'dir' => 'ltr',
 			'name' => 'Gujarati',
 			'base' => 'gu',
@@ -1171,8 +1171,8 @@ class L10n {
 			'base' => 'he',
 			'short_name' => 'HE',
 		  ],
-		  'he_IL' => [
-			'code' => 'he_IL',
+		  'he-IL' => [
+			'code' => 'he-IL',
 			'dir' => 'rtl',
 			'name' => 'עברית',
 			'base' => 'he',
@@ -1185,8 +1185,8 @@ class L10n {
 			'base' => 'hi',
 			'short_name' => 'HI',
 		  ],
-		  'hi_IN' => [
-			'code' => 'hi_IN',
+		  'hi-IN' => [
+			'code' => 'hi-IN',
 			'dir' => 'ltr',
 			'name' => 'हिंदी (भारत)',
 			'base' => 'hi',
@@ -1199,8 +1199,8 @@ class L10n {
 			'base' => 'hr',
 			'short_name' => 'HR',
 		  ],
-		  'hr_HR' => [
-			'code' => 'hr_HR',
+		  'hr-HR' => [
+			'code' => 'hr-HR',
 			'dir' => 'ltr',
 			'name' => 'Hrvatski',
 			'base' => 'hr',
@@ -1213,8 +1213,8 @@ class L10n {
 			'base' => 'hsb',
 			'short_name' => 'HSB',
 		  ],
-		  'hsb_HSB' => [
-			'code' => 'hsb_HSB',
+		  'hsb-HSB' => [
+			'code' => 'hsb-HSB',
 			'dir' => 'ltr',
 			'name' => 'Hornjoserbšćina',
 			'base' => 'hsb',
@@ -1227,8 +1227,8 @@ class L10n {
 			'base' => 'ht',
 			'short_name' => 'HT',
 		  ],
-		  'ht_HT' => [
-			'code' => 'ht_HT',
+		  'ht-HT' => [
+			'code' => 'ht-HT',
 			'dir' => 'ltr',
 			'name' => 'Kreyòl Ayisyen',
 			'base' => 'ht',
@@ -1241,8 +1241,8 @@ class L10n {
 			'base' => 'hu',
 			'short_name' => 'HU',
 		  ],
-		  'hu_HU' => [
-			'code' => 'hu_HU',
+		  'hu-HU' => [
+			'code' => 'hu-HU',
 			'dir' => 'ltr',
 			'name' => 'Magyar',
 			'base' => 'hu',
@@ -1255,8 +1255,8 @@ class L10n {
 			'base' => 'hy',
 			'short_name' => 'HY',
 		  ],
-		  'hy_HY' => [
-			'code' => 'hy_HY',
+		  'hy-HY' => [
+			'code' => 'hy-HY',
 			'dir' => 'ltr',
 			'name' => 'հայերեն',
 			'base' => 'hy',
@@ -1269,8 +1269,8 @@ class L10n {
 			'base' => 'ia',
 			'short_name' => 'IA',
 		  ],
-		  'ia_IA' => [
-			'code' => 'ia_IA',
+		  'ia-IA' => [
+			'code' => 'ia-IA',
 			'dir' => 'ltr',
 			'name' => 'Interlingua',
 			'base' => 'ia',
@@ -1283,8 +1283,8 @@ class L10n {
 			'base' => 'id',
 			'short_name' => 'ID',
 		  ],
-		  'id_ID' => [
-			'code' => 'id_ID',
+		  'id-ID' => [
+			'code' => 'id-ID',
 			'dir' => 'ltr',
 			'name' => 'Bahasa Indonesia',
 			'base' => 'id',
@@ -1297,8 +1297,8 @@ class L10n {
 			'base' => 'ie',
 			'short_name' => 'IE',
 		  ],
-		  'ie_IE' => [
-			'code' => 'ie_IE',
+		  'ie-IE' => [
+			'code' => 'ie-IE',
 			'dir' => 'ltr',
 			'name' => 'Interlingue',
 			'base' => 'ie',
@@ -1311,8 +1311,8 @@ class L10n {
 			'base' => 'in',
 			'short_name' => 'IN',
 		  ],
-		  'in_ID' => [
-			'code' => 'in_ID',
+		  'in-ID' => [
+			'code' => 'in-ID',
 			'dir' => 'ltr',
 			'name' => 'Bahasa Indonesia (Indonesia)',
 			'base' => 'in',
@@ -1325,8 +1325,8 @@ class L10n {
 			'base' => 'is',
 			'short_name' => 'IS',
 		  ],
-		  'is_IS' => [
-			'code' => 'is_IS',
+		  'is-IS' => [
+			'code' => 'is-IS',
 			'dir' => 'ltr',
 			'name' => 'Íslenska (Ísland)',
 			'base' => 'is',
@@ -1339,15 +1339,15 @@ class L10n {
 			'base' => 'it',
 			'short_name' => 'IT',
 		  ],
-		  'it_CH' => [
-			'code' => 'it_CH',
+		  'it-CH' => [
+			'code' => 'it-CH',
 			'dir' => 'ltr',
 			'name' => 'Italiano (Svizzera)',
 			'base' => 'it',
 			'short_name' => 'IT (CH)',
 		  ],
-		  'it_IT' => [
-			'code' => 'it_IT',
+		  'it-IT' => [
+			'code' => 'it-IT',
 			'dir' => 'ltr',
 			'name' => 'Italiano (Italia)',
 			'base' => 'it',
@@ -1360,8 +1360,8 @@ class L10n {
 			'base' => 'iu',
 			'short_name' => 'IU',
 		  ],
-		  'iu_IU' => [
-			'code' => 'iu_IU',
+		  'iu-IU' => [
+			'code' => 'iu-IU',
 			'dir' => 'ltr',
 			'name' => 'Inuktitut',
 			'base' => 'iu',
@@ -1374,8 +1374,8 @@ class L10n {
 			'base' => 'iw',
 			'short_name' => 'IW',
 		  ],
-		  'iw_IL' => [
-			'code' => 'iw_IL',
+		  'iw-IL' => [
+			'code' => 'iw-IL',
 			'dir' => 'ltr',
 			'name' => 'עברית',
 			'base' => 'iw',
@@ -1388,8 +1388,8 @@ class L10n {
 			'base' => 'ja',
 			'short_name' => 'JA',
 		  ],
-		  'ja_JP' => [
-			'code' => 'ja_JP',
+		  'ja-JP' => [
+			'code' => 'ja-JP',
 			'dir' => 'ltr',
 			'name' => '日本語',
 			'base' => 'ja',
@@ -1402,8 +1402,8 @@ class L10n {
 			'base' => 'ka',
 			'short_name' => 'KA',
 		  ],
-		  'ka_KA' => [
-			'code' => 'ka_KA',
+		  'ka-KA' => [
+			'code' => 'ka-KA',
 			'dir' => 'ltr',
 			'name' => 'ქართული',
 			'base' => 'ka',
@@ -1416,8 +1416,8 @@ class L10n {
 			'base' => 'kk',
 			'short_name' => 'KK',
 		  ],
-		  'kk_KK' => [
-			'code' => 'kk_KK',
+		  'kk-KK' => [
+			'code' => 'kk-KK',
 			'dir' => 'ltr',
 			'name' => 'Қазақша',
 			'base' => 'kk',
@@ -1430,8 +1430,8 @@ class L10n {
 			'base' => 'km',
 			'short_name' => 'KM',
 		  ],
-		  'km_KM' => [
-			'code' => 'km_KM',
+		  'km-KM' => [
+			'code' => 'km-KM',
 			'dir' => 'ltr',
 			'name' => 'Khmer',
 			'base' => 'km',
@@ -1444,8 +1444,8 @@ class L10n {
 			'base' => 'ko',
 			'short_name' => 'KO',
 		  ],
-		  'ko_KR' => [
-			'code' => 'ko_KR',
+		  'ko-KR' => [
+			'code' => 'ko-KR',
 			'dir' => 'ltr',
 			'name' => '한국어',
 			'base' => 'ko',
@@ -1458,8 +1458,8 @@ class L10n {
 			'base' => 'ky',
 			'short_name' => 'KY',
 		  ],
-		  'ky_KY' => [
-			'code' => 'ky_KY',
+		  'ky-KY' => [
+			'code' => 'ky-KY',
 			'dir' => 'ltr',
 			'name' => 'Кыргызча',
 			'base' => 'ky',
@@ -1472,8 +1472,8 @@ class L10n {
 			'base' => 'la',
 			'short_name' => 'LA',
 		  ],
-		  'la_LA' => [
-			'code' => 'la_LA',
+		  'la-LA' => [
+			'code' => 'la-LA',
 			'dir' => 'ltr',
 			'name' => 'Latina',
 			'base' => 'la',
@@ -1486,8 +1486,8 @@ class L10n {
 			'base' => 'lb',
 			'short_name' => 'LB',
 		  ],
-		  'lb_LB' => [
-			'code' => 'lb_LB',
+		  'lb-LB' => [
+			'code' => 'lb-LB',
 			'dir' => 'ltr',
 			'name' => 'Lëtzebuergesch',
 			'base' => 'lb',
@@ -1500,8 +1500,8 @@ class L10n {
 			'base' => 'lt',
 			'short_name' => 'LT',
 		  ],
-		  'lt_LT' => [
-			'code' => 'lt_LT',
+		  'lt-LT' => [
+			'code' => 'lt-LT',
 			'dir' => 'ltr',
 			'name' => 'Lietuvių (Lietuva)',
 			'base' => 'lt',
@@ -1514,8 +1514,8 @@ class L10n {
 			'base' => 'lv',
 			'short_name' => 'LV',
 		  ],
-		  'lv_LV' => [
-			'code' => 'lv_LV',
+		  'lv-LV' => [
+			'code' => 'lv-LV',
 			'dir' => 'ltr',
 			'name' => 'Latviešu (Latvija)',
 			'base' => 'lv',
@@ -1528,8 +1528,8 @@ class L10n {
 			'base' => 'mi',
 			'short_name' => 'MI',
 		  ],
-		  'mi_MI' => [
-			'code' => 'mi_MI',
+		  'mi-MI' => [
+			'code' => 'mi-MI',
 			'dir' => 'ltr',
 			'name' => 'Te Reo Māori',
 			'base' => 'mi',
@@ -1542,8 +1542,8 @@ class L10n {
 			'base' => 'mk',
 			'short_name' => 'MK',
 		  ],
-		  'mk_MK' => [
-			'code' => 'mk_MK',
+		  'mk-MK' => [
+			'code' => 'mk-MK',
 			'dir' => 'ltr',
 			'name' => 'Македонски (Македонија)',
 			'base' => 'mk',
@@ -1556,8 +1556,8 @@ class L10n {
 			'base' => 'ml',
 			'short_name' => 'ML',
 		  ],
-		  'ml_ML' => [
-			'code' => 'ml_ML',
+		  'ml-ML' => [
+			'code' => 'ml-ML',
 			'dir' => 'ltr',
 			'name' => 'Malayalam',
 			'base' => 'ml',
@@ -1570,8 +1570,8 @@ class L10n {
 			'base' => 'mo',
 			'short_name' => 'MO',
 		  ],
-		  'mo_MO' => [
-			'code' => 'mo_MO',
+		  'mo-MO' => [
+			'code' => 'mo-MO',
 			'dir' => 'ltr',
 			'name' => 'Graiul Moldovenesc',
 			'base' => 'mo',
@@ -1584,8 +1584,8 @@ class L10n {
 			'base' => 'mr',
 			'short_name' => 'MR',
 		  ],
-		  'mr_MR' => [
-			'code' => 'mr_MR',
+		  'mr-MR' => [
+			'code' => 'mr-MR',
 			'dir' => 'ltr',
 			'name' => 'मराठी',
 			'base' => 'mr',
@@ -1598,8 +1598,8 @@ class L10n {
 			'base' => 'ms',
 			'short_name' => 'MS',
 		  ],
-		  'ms_MY' => [
-			'code' => 'ms_MY',
+		  'ms-MY' => [
+			'code' => 'ms-MY',
 			'dir' => 'ltr',
 			'name' => 'Bahasa Melayu',
 			'base' => 'ms',
@@ -1612,8 +1612,8 @@ class L10n {
 			'base' => 'mt',
 			'short_name' => 'MT',
 		  ],
-		  'mt_MT' => [
-			'code' => 'mt_MT',
+		  'mt-MT' => [
+			'code' => 'mt-MT',
 			'dir' => 'ltr',
 			'name' => 'Malti',
 			'base' => 'mt',
@@ -1626,8 +1626,8 @@ class L10n {
 			'base' => 'nb',
 			'short_name' => 'NB',
 		  ],
-		  'nb_NB' => [
-			'code' => 'nb_NB',
+		  'nb-NB' => [
+			'code' => 'nb-NB',
 			'dir' => 'ltr',
 			'name' => '‪Norsk Bokmål‬',
 			'base' => 'nb',
@@ -1640,8 +1640,8 @@ class L10n {
 			'base' => 'ne',
 			'short_name' => 'NE',
 		  ],
-		  'ne_NE' => [
-			'code' => 'ne_NE',
+		  'ne-NE' => [
+			'code' => 'ne-NE',
 			'dir' => 'ltr',
 			'name' => 'नेपाली',
 			'base' => 'ne',
@@ -1654,8 +1654,8 @@ class L10n {
 			'base' => 'ng',
 			'short_name' => 'NG',
 		  ],
-		  'ng_NG' => [
-			'code' => 'ng_NG',
+		  'ng-NG' => [
+			'code' => 'ng-NG',
 			'dir' => 'ltr',
 			'name' => 'Oshiwambo',
 			'base' => 'ng',
@@ -1668,15 +1668,15 @@ class L10n {
 			'base' => 'nl',
 			'short_name' => 'NL',
 		  ],
-		  'nl_BE' => [
-			'code' => 'nl_BE',
+		  'nl-BE' => [
+			'code' => 'nl-BE',
 			'dir' => 'ltr',
 			'name' => 'Nederlands (België)',
 			'base' => 'nl',
 			'short_name' => 'NL (BE)',
 		  ],
-		  'nl_NL' => [
-			'code' => 'nl_NL',
+		  'nl-NL' => [
+			'code' => 'nl-NL',
 			'dir' => 'ltr',
 			'name' => 'Nederlands (Nederland)',
 			'base' => 'nl',
@@ -1689,8 +1689,8 @@ class L10n {
 			'base' => 'nn',
 			'short_name' => 'NN',
 		  ],
-		  'nn_NN' => [
-			'code' => 'nn_NN',
+		  'nn-NN' => [
+			'code' => 'nn-NN',
 			'dir' => 'ltr',
 			'name' => 'Norsk (Nynorsk)',
 			'base' => 'nn',
@@ -1703,8 +1703,8 @@ class L10n {
 			'base' => 'no',
 			'short_name' => 'NO',
 		  ],
-		  'no_NO' => [
-			'code' => 'no_NO',
+		  'no-NO' => [
+			'code' => 'no-NO',
 			'dir' => 'ltr',
 			'name' => 'Norsk (Norge)',
 			'base' => 'no',
@@ -1717,8 +1717,8 @@ class L10n {
 			'base' => 'nv',
 			'short_name' => 'NV',
 		  ],
-		  'nv_NV' => [
-			'code' => 'nv_NV',
+		  'nv-NV' => [
+			'code' => 'nv-NV',
 			'dir' => 'ltr',
 			'name' => 'Diné Bizaad',
 			'base' => 'nv',
@@ -1731,8 +1731,8 @@ class L10n {
 			'base' => 'oc',
 			'short_name' => 'OC',
 		  ],
-		  'oc_OC' => [
-			'code' => 'oc_OC',
+		  'oc-OC' => [
+			'code' => 'oc-OC',
 			'dir' => 'ltr',
 			'name' => 'Lenga d’òc',
 			'base' => 'oc',
@@ -1745,8 +1745,8 @@ class L10n {
 			'base' => 'om',
 			'short_name' => 'OM',
 		  ],
-		  'om_OM' => [
-			'code' => 'om_OM',
+		  'om-OM' => [
+			'code' => 'om-OM',
 			'dir' => 'ltr',
 			'name' => 'Afaan Oromoo',
 			'base' => 'om',
@@ -1759,15 +1759,15 @@ class L10n {
 			'base' => 'pa',
 			'short_name' => 'PA',
 		  ],
-		  'pa_IN' => [
-			'code' => 'pa_IN',
+		  'pa-IN' => [
+			'code' => 'pa-IN',
 			'dir' => 'rtl',
 			'name' => 'भारत गणराज्य (नेपाली)',
 			'base' => 'pa',
 			'short_name' => 'PA (IN)',
 		  ],
-		  'pa_PK' => [
-			'code' => 'pa_PK',
+		  'pa-PK' => [
+			'code' => 'pa-PK',
 			'dir' => 'rtl',
 			'name' => 'یپنجاب (پنجاب)',
 			'base' => 'pa',
@@ -1780,8 +1780,8 @@ class L10n {
 			'base' => 'pl',
 			'short_name' => 'PL',
 		  ],
-		  'pl_PL' => [
-			'code' => 'pl_PL',
+		  'pl-PL' => [
+			'code' => 'pl-PL',
 			'dir' => 'ltr',
 			'name' => 'Polski (Polska)',
 			'base' => 'pl',
@@ -1794,15 +1794,15 @@ class L10n {
 			'base' => 'pt',
 			'short_name' => 'PT',
 		  ],
-		  'pt_BR' => [
-			'code' => 'pt_BR',
+		  'pt-BR' => [
+			'code' => 'pt-BR',
 			'dir' => 'ltr',
 			'name' => 'Português (Brasil)',
 			'base' => 'pt',
 			'short_name' => 'PT (BR)',
 		  ],
-		  'pt_PT' => [
-			'code' => 'pt_PT',
+		  'pt-PT' => [
+			'code' => 'pt-PT',
 			'dir' => 'ltr',
 			'name' => 'Português (Portugal)',
 			'base' => 'pt',
@@ -1815,8 +1815,8 @@ class L10n {
 			'base' => 'qu',
 			'short_name' => 'QU',
 		  ],
-		  'qu_QU' => [
-			'code' => 'qu_QU',
+		  'qu-QU' => [
+			'code' => 'qu-QU',
 			'dir' => 'ltr',
 			'name' => 'Runa Simi',
 			'base' => 'qu',
@@ -1829,8 +1829,8 @@ class L10n {
 			'base' => 'rm',
 			'short_name' => 'RM',
 		  ],
-		  'rm_RM' => [
-			'code' => 'rm_RM',
+		  'rm-RM' => [
+			'code' => 'rm-RM',
 			'dir' => 'ltr',
 			'name' => 'Rumantsch',
 			'base' => 'rm',
@@ -1843,8 +1843,8 @@ class L10n {
 			'base' => 'ro',
 			'short_name' => 'RO',
 		  ],
-		  'ro_RO' => [
-			'code' => 'ro_RO',
+		  'ro-RO' => [
+			'code' => 'ro-RO',
 			'dir' => 'ltr',
 			'name' => 'Română (România)',
 			'base' => 'ro',
@@ -1857,8 +1857,8 @@ class L10n {
 			'base' => 'ru',
 			'short_name' => 'RU',
 		  ],
-		  'ru_RU' => [
-			'code' => 'ru_RU',
+		  'ru-RU' => [
+			'code' => 'ru-RU',
 			'dir' => 'ltr',
 			'name' => 'Русский (Россия)',
 			'base' => 'ru',
@@ -1871,8 +1871,8 @@ class L10n {
 			'base' => 'sa',
 			'short_name' => 'SA',
 		  ],
-		  'sa_SA' => [
-			'code' => 'sa_SA',
+		  'sa-SA' => [
+			'code' => 'sa-SA',
 			'dir' => 'ltr',
 			'name' => 'संस्कृत',
 			'base' => 'sa',
@@ -1885,8 +1885,8 @@ class L10n {
 			'base' => 'sc',
 			'short_name' => 'SC',
 		  ],
-		  'sc_SC' => [
-			'code' => 'sc_SC',
+		  'sc-SC' => [
+			'code' => 'sc-SC',
 			'dir' => 'ltr',
 			'name' => 'Sardu',
 			'base' => 'sc',
@@ -1899,8 +1899,8 @@ class L10n {
 			'base' => 'sd',
 			'short_name' => 'SD',
 		  ],
-		  'sd_SD' => [
-			'code' => 'sd_SD',
+		  'sd-SD' => [
+			'code' => 'sd-SD',
 			'dir' => 'rtl',
 			'name' => 'فارسی',
 			'base' => 'sd',
@@ -1913,8 +1913,8 @@ class L10n {
 			'base' => 'sg',
 			'short_name' => 'SG',
 		  ],
-		  'sg_SG' => [
-			'code' => 'sg_SG',
+		  'sg-SG' => [
+			'code' => 'sg-SG',
 			'dir' => 'ltr',
 			'name' => 'Sango',
 			'base' => 'sg',
@@ -1927,8 +1927,8 @@ class L10n {
 			'base' => 'sk',
 			'short_name' => 'SK',
 		  ],
-		  'sk_SK' => [
-			'code' => 'sk_SK',
+		  'sk-SK' => [
+			'code' => 'sk-SK',
 			'dir' => 'ltr',
 			'name' => 'Slovenčina (Slovenská republika)',
 			'base' => 'sk',
@@ -1941,8 +1941,8 @@ class L10n {
 			'base' => 'sl',
 			'short_name' => 'SL',
 		  ],
-		  'sl_SI' => [
-			'code' => 'sl_SI',
+		  'sl-SI' => [
+			'code' => 'sl-SI',
 			'dir' => 'ltr',
 			'name' => 'Slovenščina (Slovenija)',
 			'base' => 'sl',
@@ -1955,8 +1955,8 @@ class L10n {
 			'base' => 'so',
 			'short_name' => 'SO',
 		  ],
-		  'so_SO' => [
-			'code' => 'so_SO',
+		  'so-SO' => [
+			'code' => 'so-SO',
 			'dir' => 'ltr',
 			'name' => 'Af Somali',
 			'base' => 'so',
@@ -1969,8 +1969,8 @@ class L10n {
 			'base' => 'sq',
 			'short_name' => 'SQ',
 		  ],
-		  'sq_AL' => [
-			'code' => 'sq_AL',
+		  'sq-AL' => [
+			'code' => 'sq-AL',
 			'dir' => 'ltr',
 			'name' => 'Shqipe',
 			'base' => 'sq',
@@ -1983,22 +1983,22 @@ class L10n {
 			'base' => 'sr',
 			'short_name' => 'SR',
 		  ],
-		  'sr_BA' => [
-			'code' => 'sr_BA',
+		  'sr-BA' => [
+			'code' => 'sr-BA',
 			'dir' => 'ltr',
 			'name' => 'Српски (Босна и Херцеговина)',
 			'base' => 'sr',
 			'short_name' => 'SR (BA)',
 		  ],
-		  'sr_CS' => [
-			'code' => 'sr_CS',
+		  'sr-CS' => [
+			'code' => 'sr-CS',
 			'dir' => 'ltr',
 			'name' => 'Српски (Србија и Црна Гора)',
 			'base' => 'sr',
 			'short_name' => 'SR (CS)',
 		  ],
-		  'sr_RS' => [
-			'code' => 'sr_RS',
+		  'sr-RS' => [
+			'code' => 'sr-RS',
 			'dir' => 'ltr',
 			'name' => 'Српски',
 			'base' => 'sr',
@@ -2011,8 +2011,8 @@ class L10n {
 			'base' => 'sv',
 			'short_name' => 'SV',
 		  ],
-		  'sv_SE' => [
-			'code' => 'sv_SE',
+		  'sv-SE' => [
+			'code' => 'sv-SE',
 			'dir' => 'ltr',
 			'name' => 'Svenska (Sverige)',
 			'base' => 'sv',
@@ -2025,8 +2025,8 @@ class L10n {
 			'base' => 'sw',
 			'short_name' => 'SW',
 		  ],
-		  'sw_SW' => [
-			'code' => 'sw_SW',
+		  'sw-SW' => [
+			'code' => 'sw-SW',
 			'dir' => 'ltr',
 			'name' => 'Kiswahili',
 			'base' => 'sw',
@@ -2039,8 +2039,8 @@ class L10n {
 			'base' => 'ta',
 			'short_name' => 'TA',
 		  ],
-		  'ta_TA' => [
-			'code' => 'ta_TA',
+		  'ta-TA' => [
+			'code' => 'ta-TA',
 			'dir' => 'ltr',
 			'name' => 'தமிழ',
 			'base' => 'ta',
@@ -2053,8 +2053,8 @@ class L10n {
 			'base' => 'th',
 			'short_name' => 'TH',
 		  ],
-		  'th_TH' => [
-			'code' => 'th_TH',
+		  'th-TH' => [
+			'code' => 'th-TH',
 			'dir' => 'ltr',
 			'name' => 'ไทย (ประเทศไทย)',
 			'base' => 'th',
@@ -2067,8 +2067,8 @@ class L10n {
 			'base' => 'tig',
 			'short_name' => 'TIG',
 		  ],
-		  'tig_TIG' => [
-			'code' => 'tig_TIG',
+		  'tig-TIG' => [
+			'code' => 'tig-TIG',
 			'dir' => 'ltr',
 			'name' => 'Tigré',
 			'base' => 'tig',
@@ -2081,8 +2081,8 @@ class L10n {
 			'base' => 'tk',
 			'short_name' => 'TK',
 		  ],
-		  'tk_TK' => [
-			'code' => 'tk_TK',
+		  'tk-TK' => [
+			'code' => 'tk-TK',
 			'dir' => 'ltr',
 			'name' => 'Түркмен',
 			'base' => 'tk',
@@ -2095,8 +2095,8 @@ class L10n {
 			'base' => 'tlh',
 			'short_name' => 'TLH',
 		  ],
-		  'tlh_TLH' => [
-			'code' => 'tlh_TLH',
+		  'tlh-TLH' => [
+			'code' => 'tlh-TLH',
 			'dir' => 'ltr',
 			'name' => 'tlhIngan Hol',
 			'base' => 'tlh',
@@ -2109,8 +2109,8 @@ class L10n {
 			'base' => 'tr',
 			'short_name' => 'TR',
 		  ],
-		  'tr_TR' => [
-			'code' => 'tr_TR',
+		  'tr-TR' => [
+			'code' => 'tr-TR',
 			'dir' => 'ltr',
 			'name' => 'Türkçe',
 			'base' => 'tr',
@@ -2123,8 +2123,8 @@ class L10n {
 			'base' => 'uk',
 			'short_name' => 'UK',
 		  ],
-		  'uk_UA' => [
-			'code' => 'uk_UA',
+		  'uk-UA' => [
+			'code' => 'uk-UA',
 			'dir' => 'ltr',
 			'name' => 'Українська',
 			'base' => 'uk',
@@ -2137,8 +2137,8 @@ class L10n {
 			'base' => 've',
 			'short_name' => 'VE',
 		  ],
-		  've_VE' => [
-			'code' => 've_VE',
+		  've-VE' => [
+			'code' => 've-VE',
 			'dir' => 'ltr',
 			'name' => 'Tshivenda',
 			'base' => 've',
@@ -2151,8 +2151,8 @@ class L10n {
 			'base' => 'vi',
 			'short_name' => 'VI',
 		  ],
-		  'vi_VN' => [
-			'code' => 'vi_VN',
+		  'vi-VN' => [
+			'code' => 'vi-VN',
 			'dir' => 'ltr',
 			'name' => 'Tiếng Việt',
 			'base' => 'vi',
@@ -2165,8 +2165,8 @@ class L10n {
 			'base' => 'vo',
 			'short_name' => 'VO',
 		  ],
-		  'vo_VO' => [
-			'code' => 'vo_VO',
+		  'vo-VO' => [
+			'code' => 'vo-VO',
 			'dir' => 'ltr',
 			'name' => 'Volapük',
 			'base' => 'vo',
@@ -2179,8 +2179,8 @@ class L10n {
 			'base' => 'wa',
 			'short_name' => 'WA',
 		  ],
-		  'wa_WA' => [
-			'code' => 'wa_WA',
+		  'wa-WA' => [
+			'code' => 'wa-WA',
 			'dir' => 'ltr',
 			'name' => 'Walon',
 			'base' => 'wa',
@@ -2193,8 +2193,8 @@ class L10n {
 			'base' => 'xh',
 			'short_name' => 'XH',
 		  ],
-		  'xh_XH' => [
-			'code' => 'xh_XH',
+		  'xh-XH' => [
+			'code' => 'xh-XH',
 			'dir' => 'ltr',
 			'name' => 'isiXhosa',
 			'base' => 'xh',
@@ -2207,8 +2207,8 @@ class L10n {
 			'base' => 'yi',
 			'short_name' => 'YI',
 		  ],
-		  'yi_YI' => [
-			'code' => 'yi_YI',
+		  'yi-YI' => [
+			'code' => 'yi-YI',
 			'dir' => 'rtl',
 			'name' => 'ייִדיש',
 			'base' => 'yi',
@@ -2221,29 +2221,29 @@ class L10n {
 			'base' => 'zh',
 			'short_name' => 'ZH',
 		  ],
-		  'zh_CN' => [
-			'code' => 'zh_CN',
+		  'zh-CN' => [
+			'code' => 'zh-CN',
 			'dir' => 'ltr',
 			'name' => '中文 (中国)',
 			'base' => 'zh',
 			'short_name' => 'ZH (CN)',
 		  ],
-		  'zh_HK' => [
-			'code' => 'zh_HK',
+		  'zh-HK' => [
+			'code' => 'zh-HK',
 			'dir' => 'ltr',
 			'name' => '中文 (香港)',
 			'base' => 'zh',
 			'short_name' => 'ZH (HK)',
 		  ],
-		  'zh_SG' => [
-			'code' => 'zh_SG',
+		  'zh-SG' => [
+			'code' => 'zh-SG',
 			'dir' => 'ltr',
 			'name' => '中文 (新加坡)',
 			'base' => 'zh',
 			'short_name' => 'ZH (SG)',
 		  ],
-		  'zh_TW' => [
-			'code' => 'zh_TW',
+		  'zh-TW' => [
+			'code' => 'zh-TW',
 			'dir' => 'ltr',
 			'name' => '中文 (台灣)',
 			'base' => 'zh',
@@ -2256,8 +2256,8 @@ class L10n {
 			'base' => 'zu',
 			'short_name' => 'ZU',
 		  ],
-		  'zu_ZU' => [
-			'code' => 'zu_ZU',
+		  'zu-ZU' => [
+			'code' => 'zu-ZU',
 			'dir' => 'ltr',
 			'name' => 'isiZulu',
 			'base' => 'zu',

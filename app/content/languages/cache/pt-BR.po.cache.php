@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-06-08 12:42+0000',
-  'PO-Revision-Date' => '2017-06-08 12:42+0000',
+  'POT-Creation-Date' => '2017-10-11 19:51+0000',
+  'PO-Revision-Date' => '2017-10-11 19:51+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'pt_BR',
@@ -18,6 +18,18 @@ $translation_plural = array (
   'function' => '$index = (int)(($n != 1)); return ($index < 2) ? $index : 2 - 1;',
 );
 $translation_table = [
+	"Plugin" => [
+		0 => "Plugin",
+	],
+	"Plugin route" => [
+		0 => "Rota do plugin",
+	],
+	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
+		0 => "Ative para mostrar instruções do plugin no %u. Um link para as instruções será adicionado para o %s menu. Esta opção não afeta administradores.",
+	],
+	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
+		0 => "Use isto para definir uma URL customizada para %p. Por favor, note que você precisa replicar manualmente %s nessa URL.",
+	],
 	"Invalid email" => [
 		0 => "E-mail inválido",
 	],
@@ -57,9 +69,6 @@ $translation_table = [
 	"Update in progress" => [
 		0 => "Atualização em progresso",
 	],
-	"An error occurred. Please try again later." => [
-		0 => "Ocorreu um erro. Por favor, tente novamente mais tarde.",
-	],
 	"Missing %s file" => [
 		0 => "Faltando %s arquivo",
 	],
@@ -94,7 +103,7 @@ $translation_table = [
 		0 => "Aviso: Esse conteúdo é privado, mas qualquer pessoa com o link pode ver.",
 	],
 	"Note: This content is password protected. Remember to pass the content password to share." => [
-		0 => "Aviso: Esse conteúdo é protegido por senha, lembre-se de passar a senha para compartilhar o mesmo.",
+		0 => "Aviso: Esse conteúdo é protegido por senha, lembre-se de passar a senha para compartilhar o conteúdo.",
 	],
 	"Note: This content is private. Change privacy to \"public\" to share." => [
 		0 => "Aviso: Este conteúdo é privado. Mude a privacidade para \"público\" para o compartilhar.",
@@ -168,9 +177,6 @@ $translation_table = [
 	"Trending" => [
 		0 => "Tendências",
 	],
-	"Popular" => [
-		0 => "Populares",
-	],
 	"Top users" => [
 		0 => "Principais usuários",
 	],
@@ -182,6 +188,9 @@ $translation_table = [
 	],
 	"Most viewed" => [
 		0 => "Mais vistas",
+	],
+	"Popular" => [
+		0 => "Populares",
 	],
 	"Most liked" => [
 		0 => "Mais curtidas",
@@ -199,8 +208,8 @@ $translation_table = [
 		0 => "Pessoas",
 	],
 	"Image" => [
-		0 => "imagem",
-		1 => "imagens",
+		0 => "Imagem",
+		1 => "Imagens",
 	],
 	"Album" => [
 		0 => "Álbum",
@@ -257,10 +266,10 @@ $translation_table = [
 		1 => "segundos",
 	],
 	"%s ago" => [
-		0 => "á %s atrás",
+		0 => "a %s atrás",
 	],
 	"moments ago" => [
-		0 => "á momentos atrás",
+		0 => "a momentos atrás",
 	],
 	"System notification" => [
 		0 => "Notificação do sistema",
@@ -317,7 +326,7 @@ $translation_table = [
 		0 => "Esta página não existe",
 	],
 	"Forgot password?" => [
-		0 => "Você esqueceu sua senha?",
+		0 => "Esqueceu sua senha?",
 	],
 	"Reset password" => [
 		0 => "Redefinir senha",
@@ -356,10 +365,10 @@ $translation_table = [
 		0 => "Mude a sua senha em %s",
 	],
 	"Confirmation required at %s" => [
-		0 => "Confirmação necessária no %s",
+		0 => "Confirme sua conta na %s",
 	],
 	"Welcome to %s" => [
-		0 => "Bem-vindo ao %s",
+		0 => "Bem-vindo a %s",
 	],
 	"Passwords don't match" => [
 		0 => "As senhas não coincidem",
@@ -845,11 +854,11 @@ $translation_table = [
 	"Direct links" => [
 		0 => "Links Diretos",
 	],
-	"Image URL" => [
-		0 => "URL da imagem",
-	],
 	"Image link" => [
 		0 => "Link da imagem",
+	],
+	"Image URL" => [
+		0 => "URL da imagem",
 	],
 	"Thumbnail URL" => [
 		0 => "URL Thumbnail",
@@ -959,6 +968,12 @@ $translation_table = [
 	"Mail error" => [
 		0 => "Erro de correio",
 	],
+	"Upload images" => [
+		0 => "Enviar imagens",
+	],
+	"Upload plugin" => [
+		0 => "Plugin de Upload",
+	],
 	"Image search results for %s" => [
 		0 => "Resultados de imagens contendo %s",
 	],
@@ -1013,6 +1028,9 @@ $translation_table = [
 	"Create account" => [
 		0 => "Criar conta",
 	],
+	"Upload" => [
+		0 => "Enviar",
+	],
 	"%s's Images" => [
 		0 => "Imagens de %s",
 	],
@@ -1037,6 +1055,9 @@ $translation_table = [
 	"%n (%u) on %w" => [
 		0 => "%n (%u) em %w",
 	],
+	"Discovery" => [
+		0 => "Descubra",
+	],
 	"Close" => [
 		0 => "Fechar",
 	],
@@ -1048,9 +1069,6 @@ $translation_table = [
 	],
 	"Notices (%s)" => [
 		0 => "Notificações (%s)",
-	],
-	"Upload" => [
-		0 => "Enviar",
 	],
 	"Sign in with another account" => [
 		0 => "Entre com outra conta",
@@ -1065,7 +1083,7 @@ $translation_table = [
 		0 => "Mantenha-me conectado",
 	],
 	"Don't have an account? <a href='%s'>Sign up</a> now." => [
-		0 => "Não tem uma conta? <a href='%s'> Registre-se </a> agora.",
+		0 => "Você não tem uma conta? <a href='%s'> Registre-se </a> agora.",
 	],
 	"Sign up with another account" => [
 		0 => "Entrar através de outra conta",
@@ -1104,7 +1122,7 @@ $translation_table = [
 		0 => "Para completar o processo, você deve <a href=\"%s\">ativar aqui o seu e-mail</a>.",
 	],
 	"Alternatively you can copy and paste the URL into your browser: <a href=\"%s\">%s</a>" => [
-		0 => "Poderá também optar por copiar e colar o seguinte URL no seu browser: <a href=\"%s\">%s</a>",
+		0 => "Você pode também pode optar por copiar e colar a seguinte URL no seu navegador: <a href=\"%s\">%s</a>",
 	],
 	"If you didn't intend this just ignore this message." => [
 		0 => "Se não pretendia fazer isto, ignore esta mensagem.",
@@ -1113,64 +1131,73 @@ $translation_table = [
 		0 => "Este pedido foi feito apartir do IP: %s",
 	],
 	"We received a request to register the %n account at %w." => [
-		0 => "Recebemos um pedido para registar a conta %n no site %w.",
+		0 => "Recebemos o seu pedido para registar sua conta %n na %w.",
 	],
 	"To complete the process you must <a href=\"%s\">activate your account</a>." => [
 		0 => "Para completar o processo, você deve <a href=\"%s\"> ativar a sua conta </a>.",
 	],
 	"We received a request to reset the password for your <a href=\"%u\">%n</a> account." => [
-		0 => "Recebemos um pedido para redefinir a senha da sua conta <a href=\"%u\">%n</a>.",
+		0 => "Recebemos um pedido para redefinir a senha da sua conta na <a href=\"%u\">%n</a>.",
 	],
 	"To reset your password <a href=\"%s\">follow this link</a>." => [
-		0 => "Para redefinir sua senha <a href=\"%s\">Clique neste link</a>.",
+		0 => "Para redefinir sua senha <a href=\"%s\">clique neste link</a>.",
 	],
 	"Hi %n, welcome to %w" => [
-		0 => "Olá %n, seja bem-vindo ao %w",
+		0 => "Olá %n, seja bem-vindo a %w.",
 	],
 	"Now that your account is ready you can enjoy uploading your images, creating albums and setting the privacy of your content as well as many more cool things that you will discover." => [
 		0 => "Agora que a sua conta está ativada, você poderá desfrutar do envio de imagens, criar álbuns e definir a sua privacidade, bem como partilhar as suas imagens nos mais variados locais.",
 	],
 	"By the way, here is you very own awesome profile page: <a href=\"%u\">%n</a>. Go ahead and customize it, its yours!." => [
-		0 => "Aliás, aqui está a sua fantástica página de perfil: <a href=\"%u\">%n</a>. Vá até la e edite-a a seu gosto. É toda sua!",
+		0 => "Aliás, aqui está a sua fantástica página de perfil: <a href=\"%u\">%n</a>. Vá até lá e edite-a a seu gosto. Ela é toda sua!",
 	],
 	"Thank you for joining" => [
 		0 => "Obrigado por se juntar a nós",
 	],
 	"This email was sent from %w %u" => [
-		0 => "Este e-mail foi enviado por %w %u",
+		0 => "Este e-mail foi enviado pelo sistema automático da %w %u",
 	],
 	"Drag and drop or paste images here to upload" => [
-		0 => "Cole araste ou solte aqui para enviar imagens",
+		0 => "Cole, araste ou solte aqui para enviar imagens",
 	],
 	"Select the images to upload" => [
 		0 => "Selecionar as imagens para envio",
 	],
 	"browse from your computer" => [
-		0 => "Procure no seu computador",
+		0 => "procurar no seu computador",
 	],
 	"add image URLs" => [
-		0 => "Adicionar URLs de imagens",
+		0 => "adicionar imagens pela URL",
 	],
 	"You can also %i or %u." => [
 		0 => "Você também pode %i ou %u.",
 	],
+	"browse from your device" => [
+		0 => "procurar no seu computador",
+	],
 	"take a picture" => [
 		0 => "tire uma foto",
+	],
+	"You can also %i, %c or %u." => [
+		0 => "Você também pode %i, %c ou %u.",
 	],
 	"Edit or resize any image by clicking the image preview" => [
 		0 => "Edite ou redimensione qualquer imagem clicando na visualização da imagem",
 	],
-	"Edit or resize any image by touching the image preview" => [
+	"Edit any image by touching the image preview" => [
 		0 => "Edite ou redimensione qualquer imagem tocando na visualização da imagem",
 	],
 	"your computer" => [
 		0 => "seu computador",
 	],
-	"You can keep adding more images from %i or from %u." => [
-		0 => "Você pode continuar adicionando mais imagens de %i ou de %u.",
+	"You can add more images from %i or %u." => [
+		0 => "Você pode adicionar mais imagens de %i ou de %u.",
 	],
 	"your device" => [
 		0 => "seu dispositivo",
+	],
+	"You can add more images from %i, %c or %u." => [
+		0 => "Você pode continuar adicionando mais imagens de %i, %c ou %u.",
 	],
 	"Uploading %q %o" => [
 		0 => "Enviando %q %o",
@@ -1179,7 +1206,7 @@ $translation_table = [
 		0 => "completo",
 	],
 	"The queue is being uploaded, it should take just a few seconds to complete." => [
-		0 => "A fila está sendo enviada, deve levar apenas alguns segundos para ser concluída.",
+		0 => "Suas imagens estão sendo enviadas, deve levar apenas alguns segundos para o envio ser totalmente concluído.",
 	],
 	"Upload complete" => [
 		0 => "Envio completo",
@@ -1244,14 +1271,17 @@ $translation_table = [
 	"Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information." => [
 		0 => "Verifique o <a data-modal=\"simple\" data-target=\"failed-upload-result\">relatório de erro</a> para mais informações.",
 	],
-	"max" => [
-		0 => "máximo",
+	"reset" => [
+		0 => "resetar",
 	],
 	"close" => [
 		0 => "fechar",
 	],
 	"copy" => [
 		0 => "copiar",
+	],
+	"insert" => [
+		0 => "insira",
 	],
 	"Edit" => [
 		0 => "Editar",
@@ -1302,7 +1332,7 @@ $translation_table = [
 		0 => "Breve descrição desta imagem",
 	],
 	"Add image URLs" => [
-		0 => "Adicionar URLs de imagem",
+		0 => "Adicionar imagens pela URL",
 	],
 	"Add the image URLs here" => [
 		0 => "Adicione os URLs de imagem aqui",
@@ -1602,9 +1632,6 @@ $translation_table = [
 	"There's nothing to show here." => [
 		0 => "Não há nada para ver aqui.",
 	],
-	"Upload images" => [
-		0 => "Enviar imagens",
-	],
 	"Edit image details" => [
 		0 => "Editar os detalhes da imagem",
 	],
@@ -1708,10 +1735,13 @@ $translation_table = [
 		0 => "Adicionar e-mail",
 	],
 	"An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters." => [
-		0 => "Um e-mail com instruções para redefinir sua senha foi enviado para o endereço de e-mail de registo. Se não receber as instruções verifique a sua pasta de correio não solicitado/spam/Lixo.",
+		0 => "Um e-mail com instruções para redefinir sua senha foi enviado para o endereço de e-mail da sua conta. Se você não receber as instruções verifique a sua pasta de spam ou lixeira.",
 	],
 	"Resend instructions" => [
 		0 => "Reenviar instruções",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "Ocorreu um erro. Por favor, tente novamente mais tarde.",
 	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "Um email anterior foi enviado com instruções para redefinir a sua palavra passe. Se não recebeu as instruções verifique a sua pasta de correio não solicitado/spam/Lixo.",
@@ -1723,7 +1753,7 @@ $translation_table = [
 		0 => "Enviar",
 	],
 	"Your password has been changed. You can now try logging in using your new password." => [
-		0 => "A sua senha foi alterada, Agora você pode iniciar sessão com a sua nova senha.",
+		0 => "A sua senha foi alterada com sucesso. Agora você pode iniciar sessão com a sua nova senha.",
 	],
 	"Login now" => [
 		0 => "Entrar agora",
@@ -1738,13 +1768,13 @@ $translation_table = [
 		0 => "%d caracteres mínimos",
 	],
 	"Enter your new password" => [
-		0 => "introduza a nova senha",
+		0 => "Introduza sua nova senha",
 	],
 	"Confirm password" => [
-		0 => "Confirme a nova senha",
+		0 => "Confirme sua senha",
 	],
 	"Re-enter your new password" => [
-		0 => "Re-digite a nova senha",
+		0 => "Digite novamente a sua nova senha",
 	],
 	"An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "Um e-mail para %s foi enviado com instruções para ativar sua conta. Se você não receber as instruções tente verificar os seus filtros de spam ou caixa de spam.",
@@ -2061,6 +2091,9 @@ $translation_table = [
 	"Maximum upload file size" => [
 		0 => "Tamanho máximo do arquivo para envio",
 	],
+	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
+		0 => "O tamanho máximo permitido pelo servidor é %s. Esse limite é limitado por %u e %p (valores %f).",
+	],
 	"Image path" => [
 		0 => "Caminho da imagem",
 	],
@@ -2235,6 +2268,12 @@ $translation_table = [
 	"Enable this if you want to allow users to signup." => [
 		0 => "Ative esta opção para permitir que os utilizadores possam registar-se.",
 	],
+	"Enable user content delete" => [
+		0 => "Ativar códigos embed (conteúdo)",
+	],
+	"Enable this if you want to allow users to delete their own content. This setting doesn't affect administrators." => [
+		0 => "Ative isto se você deseja permitir que os usuários deletem o próprio conteúdo. Esta opção não afeta administradores.",
+	],
 	"Minimum age required" => [
 		0 => "Idade mínima",
 	],
@@ -2363,6 +2402,9 @@ $translation_table = [
 	],
 	"Phone" => [
 		0 => "Telefone",
+	],
+	"Phablet" => [
+		0 => "Phablet",
 	],
 	"Tablet" => [
 		0 => "Tablet",
@@ -2818,7 +2860,7 @@ $translation_table = [
 		0 => "Convidado",
 	],
 	"Added to %a and categorized in %c" => [
-		0 => "Adicionado á %a e categorizado em %c",
+		0 => "Adicionado a %a e categorizado em %c",
 	],
 	"Added to %s" => [
 		0 => "Adicionar a %s",
@@ -2863,7 +2905,7 @@ $translation_table = [
 		0 => "Gerencie suas imagens, crie álbuns privados, personalize seu perfil e muito mais.",
 	],
 	"Enter your password" => [
-		0 => "Digite sua senha",
+		0 => "Digite a sua senha",
 	],
 	"You have been logged off %s. Hope to see you soon." => [
 		0 => "Você saiu da sua conta. Esperamos vê-lo novamente em breve.",
@@ -2882,6 +2924,63 @@ $translation_table = [
 	],
 	"Send" => [
 		0 => "Enviar",
+	],
+	"Add image uploading to your website, blog or forum by installing our upload plugin. It provides image uploading to any website by placing a button that will allow your users to directly upload images to our service and it will automatically handle the codes needed for insertion. All features included like drag and drop, remote upload, image resizing and more." => [
+		0 => "Adicione o upload da imagem ao seu site, blog ou fórum, instalando nosso plugin de upload. Ele fornece o upload de imagens para qualquer site, colocando um botão que permitirá que seus usuários enviem imagens diretamente para o nosso serviço e ele irá manipular automaticamente os códigos necessários para a inserção. Todos os recursos incluídos como arrastar e soltar, upload remoto, redimensionamento de imagem e muito mais.",
+	],
+	"Supported software" => [
+		0 => "Software suportado",
+	],
+	"supported software" => [
+		0 => "software suportado",
+	],
+	"The plugin works in any website with user-editable content and for %sv, it will place an upload button that will match the target editor toolbar so no extra customization is needed." => [
+		0 => "O plugin funciona em qualquer site com conteúdo editável pelo usuário e para %sv, ele colocará um botão de upload que irá corresponder à barra de ferramentas do editor de destino para que não seja necessária nenhuma personalização adicional.",
+	],
+	"Add it to your website" => [
+		0 => "Adicione-o ao seu site",
+	],
+	"options" => [
+		0 => "opções",
+	],
+	"Copy and paste the plugin code into your website HTML code (preferably inside the head section). There are plenty %o to make it fit better to your needs." => [
+		0 => "Copie e cole o código do plugin no código HTML do seu site (de preferência dentro da seção principal). Há uma abundância de %o para adequá-lo melhor às suas necessidades.",
+	],
+	"Basic options" => [
+		0 => "Opções básicas",
+	],
+	"Color palette" => [
+		0 => "Paleta de cores",
+	],
+	"Button color scheme" => [
+		0 => "Esquema de cores do botão",
+	],
+	"Embed codes that will be auto-inserted in editor box" => [
+		0 => "Códigos de incorporação que serão inseridos automaticamente na caixa de editor",
+	],
+	"Sibling selector" => [
+		0 => "Seletor Sibling",
+	],
+	"Sibling element selector where to place the button next to" => [
+		0 => "Onde colocar o botão perto do elemento Sibling",
+	],
+	"Sibling position" => [
+		0 => "Posição do Sibling",
+	],
+	"After" => [
+		0 => "Depois",
+	],
+	"Before" => [
+		0 => "Antes",
+	],
+	"Position relative to sibling element" => [
+		0 => "Posição relativa ao elemento Sibling",
+	],
+	"Advanced options" => [
+		0 => "Opções avançadas",
+	],
+	"The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options." => [
+		0 => "O plugin possui um grande conjunto de opções adicionais que permitem a personalização completa. Você pode usar HTML, CSS, paleta de cores própria, configurar observadores e muito mais. Verifique o %d e a fonte do plugin para ter uma melhor ideia dessas opções avançadas.",
 	],
 	"You either don't have permission to access this page or the link has expired." => [
 		0 => "Ou você não tem permissão para acessar esta página ou o link expirou.",
@@ -2956,16 +3055,16 @@ $translation_table = [
 		0 => "Nova senha",
 	],
 	"Confirm new password" => [
-		0 => "Confirmar nova senha",
+		0 => "Confirme sua nova senha",
 	],
 	"Add a password to be able to login using your username or email." => [
-		0 => "Adicionar uma senha para ser capaz de fazer login usando o seu nome de usuário ou e-mail.",
+		0 => "Adicione uma senha para ser poder fazer login usando o seu nome de usuário ou e-mail.",
 	],
 	"This user doesn't have a password. Add one using this form." => [
-		0 => "Este usuário não tem uma senha. Adicionar uma usando este formulário.",
+		0 => "Este usuário não tem uma senha. Adicione uma usando este formulário.",
 	],
 	"Re-enter your password" => [
-		0 => "Re-digite sua senha",
+		0 => "Digite novamente a sua senha",
 	],
 	"Upload new image" => [
 		0 => "Carregar nova imagem",
@@ -3019,7 +3118,7 @@ $translation_table = [
 		0 => "Desconectar",
 	],
 	"Connect %s" => [
-		0 => "Conectar a %s",
+		0 => "Conectar ao %s",
 	],
 	"Button" => [
 		0 => "Botão",
@@ -3142,6 +3241,9 @@ $translation_table = [
 	"Update now" => [
 		0 => "Atualizar agora",
 	],
+	"This website is running latest %s version" => [
+		0 => "O seu site está rodando a última versão do %s",
+	],
 	"Clipboard image" => [
 		0 => "Prancheta",
 	],
@@ -3200,7 +3302,7 @@ $translation_table = [
 		0 => "Armazenamento editado com sucesso,",
 	],
 	"User added successfully." => [
-		0 => "Utilizador adicionado com sucesso.",
+		0 => "Usuário adicionado com sucesso.",
 	],
 	"The content has been moved." => [
 		0 => "O conteúdo foi movido.",

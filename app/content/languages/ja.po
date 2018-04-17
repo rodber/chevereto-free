@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-05-23 17:56+0000\n"
-"PO-Revision-Date: 2017-05-23 17:56+0000\n"
+"POT-Creation-Date: 2017-09-23 17:30+0000\n"
+"PO-Revision-Date: 2017-09-23 17:30+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -10,6 +10,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Plugin"
+msgstr "プラグイン"
+
+msgid "Plugin route"
+msgstr "プラグインルート"
+
+#, php-format
+msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
+msgstr "%uでプラグインの説明を表示する。これらの説明は、メニューに%sを追加します。この設定は管理者には影響しません。"
+
+msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
+msgstr "%pのカスタムURLをセットするのに使用。手動でこのURLを%sで複製してください。"
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -87,20 +100,6 @@ msgstr "個人"
 #: ../../../app/install/update/template/update.php:2
 msgid "Update in progress"
 msgstr "進行中の更新"
-
-#: ../../../app/install/update/updater.php:62
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
-#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
-#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
-#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
-#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
-#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
-#: ../../../lib/Peafowl/peafowl.min.js:158
-#: ../../../lib/Peafowl/peafowl.min.js:195
-msgid "An error occurred. Please try again later."
-msgstr "エラーが発生しました。後ほど、再度お試し下さい。"
 
 #: ../../../app/install/update/updater.php:72
 #, php-format
@@ -264,9 +263,6 @@ msgstr "最新"
 msgid "Trending"
 msgstr "流行"
 
-msgid "Popular"
-msgstr "人気"
-
 #: ../../../app/routes/route.dashboard.php:1163
 msgid "Top users"
 msgstr "トップユーザ"
@@ -301,6 +297,9 @@ msgstr "古い順"
 #: ../../../app/routes/route.user.php:201
 msgid "Most viewed"
 msgstr "閲覧順"
+
+msgid "Popular"
+msgstr "人気"
 
 #: ../../../app/routes/route.album.php:104
 #: ../../../app/routes/route.category.php:72
@@ -1358,13 +1357,13 @@ msgstr "%wでホストされている画像：%i"
 msgid "Direct links"
 msgstr "ダイレクトリンク"
 
-#: ../../../app/themes/Peafowl/views/image.php:279
-msgid "Image URL"
-msgstr "画像URL"
-
 #: ../../../app/themes/Peafowl/views/image.php:285
 msgid "Image link"
 msgstr "画像へのリンク"
+
+#: ../../../app/themes/Peafowl/views/image.php:279
+msgid "Image URL"
+msgstr "画像URL"
 
 #: ../../../app/themes/Peafowl/views/image.php:291
 msgid "Thumbnail URL"
@@ -1532,6 +1531,12 @@ msgstr "メッセージを送信しました。まもなく私どもから連絡
 msgid "Mail error"
 msgstr "メールでエラーが発生しました。"
 
+msgid "Upload images"
+msgstr "画像をアップロード"
+
+msgid "Upload plugin"
+msgstr "プラグインをアップロード"
+
 #: ../../../app/routes/route.search.php:120
 #, php-format
 msgid "Image search results for %s"
@@ -1616,6 +1621,11 @@ msgstr "このサイトを利用するには、あなたが%s歳以上である�
 msgid "Create account"
 msgstr "アカウント作成"
 
+#: ../../../app/themes/Peafowl/header.php:258
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Upload"
+msgstr "アップロード"
+
 #: ../../../app/routes/route.user.php:84
 #: ../../../app/themes/Peafowl/header.php:56
 #: ../../../app/themes/Peafowl/views/index.php:46
@@ -1678,11 +1688,6 @@ msgstr "ランダム"
 #, php-format
 msgid "Notices (%s)"
 msgstr "通知 (%s)"
-
-#: ../../../app/themes/Peafowl/header.php:258
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-msgid "Upload"
-msgstr "アップロード"
 
 #: ../../../app/themes/Peafowl/header.php:281
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:11
@@ -1887,26 +1892,32 @@ msgstr "画像のURLを追加"
 msgid "You can also %i or %u."
 msgstr "%iまたは%uすることもできます。"
 
+msgid "browse from your device"
+msgstr "デバイスを見る"
+
 msgid "take a picture"
 msgstr "写真を撮影"
+
+msgid "You can also %i, %c or %u."
+msgstr "%i, %c または、 %uから"
 
 msgid "Edit or resize any image by clicking the image preview"
 msgstr "画像のプレビューをクリックして編集または画像をリサイズ"
 
-msgid "Edit or resize any image by touching the image preview"
-msgstr "画像のプレビューをタップして編集または画像をリサイズ"
+msgid "Edit any image by touching the image preview"
+msgstr "プレビューをタッチして編集"
 
 msgid "your computer"
 msgstr "あなたのコンピュータ"
 
-msgid "image URLs"
-msgstr "画像のURL"
-
-msgid "You can keep adding more images from %i or from %u."
-msgstr "%iまたは%uからさらに画像を追加することができます。"
+msgid "You can add more images from %i or %u."
+msgstr "%u、または、%iから画像を追加することができます。"
 
 msgid "your device"
 msgstr "あなたのデバイス"
+
+msgid "You can add more images from %i, %c or %u."
+msgstr "%i、%c または %uから画像を追加することができます。"
 
 msgid "Uploading %q %o"
 msgstr "アップロード中 %q %o"
@@ -2005,9 +2016,8 @@ msgstr "もっと詳しく"
 msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
 msgstr "詳しくは<a data-modal=\"simple\" data-target=\"failed-upload-result\">エラーレポート</a>をご覧下さい。"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:89
-msgid "max"
-msgstr "最大"
+msgid "reset"
+msgstr "リセット"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:91
 msgid "close"
@@ -2015,6 +2025,9 @@ msgstr "閉じる"
 
 msgid "copy"
 msgstr "コピー"
+
+msgid "insert"
+msgstr "挿入"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
 #: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
@@ -2569,9 +2582,6 @@ msgstr "このサイトの機能を全て利用するためには、ログイン
 msgid "There's nothing to show here."
 msgstr "表示するものはありません。"
 
-msgid "Upload images"
-msgstr "画像をアップロード"
-
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
 #: ../../../app/themes/Peafowl/views/image.php:69
 #: ../../../app/themes/Peafowl/views/image.php:457
@@ -2748,6 +2758,20 @@ msgstr "パスワードのリセット方法を登録されているメールア
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
 msgid "Resend instructions"
 msgstr "手順を再送信"
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "エラーが発生しました。後ほど、再度お試し下さい。"
 
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
 msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
@@ -3465,6 +3489,12 @@ msgstr "新規アカウントの登録を有効にする"
 #: ../../../app/themes/Peafowl/views/dashboard.php:965
 msgid "Enable this if you want to allow users to signup."
 msgstr "ゲストに新規アカウントの登録を許可する場合に有効にしてください。"
+
+msgid "Enable user content delete"
+msgstr "ユーザーのコンテンツの消去を許可"
+
+msgid "Enable this if you want to allow users to delete their own content. This setting doesn't affect administrators."
+msgstr "ユーザーに自分のコンテンツの削除を許可する。この設定は管理者には影響しません。"
 
 msgid "Minimum age required"
 msgstr "最低年齢の要求"
@@ -4422,6 +4452,66 @@ msgstr "続けるにはパスワードを入力してください。"
 
 msgid "Send"
 msgstr "送信"
+
+msgid "Add image uploading to your website, blog or forum by installing our upload plugin. It provides image uploading to any website by placing a button that will allow your users to directly upload images to our service and it will automatically handle the codes needed for insertion. All features included like drag and drop, remote upload, image resizing and more."
+msgstr "このアップロードプラグインのインストールされている、Webサイト、ブログ、またはフォーラムから画像をアップロードして追加する。画像の追加に必要なコードを自動で扱うボタンの設置されたWebサイトへ画像をアップロードします。ドラッグ＆ドロップやリモートアップロード、画像のリサイズなどの機能も全てふくまれています。"
+
+msgid "Supported software"
+msgstr "サポートするソフトウェア"
+
+msgid "supported software"
+msgstr "サポートするソフトウェア"
+
+#, php-format
+msgid "The plugin works in any website with user-editable content and for %sv, it will place an upload button that will match the target editor toolbar so no extra customization is needed."
+msgstr "プラグインは、ユーザーがコンテンツを編集可能なWebサイトや%sの編集用エディタに特別なカスタマイズなしで、画像のアップロートボタンを追加します。"
+
+msgid "Add it to your website"
+msgstr "あなたのWebサイトへ追加"
+
+msgid "options"
+msgstr "オプション"
+
+#, php-format
+msgid "Copy and paste the plugin code into your website HTML code (preferably inside the head section). There are plenty %o to make it fit better to your needs."
+msgstr "WebサイトのHTMLへコードをコピーして貼りつけます(head内が最適です)。豊富な%oが合わせます。"
+
+msgid "Basic options"
+msgstr "基本オプション"
+
+msgid "Color palette"
+msgstr "カラーパレット"
+
+msgid "Button color scheme"
+msgstr "ボタン色スキーマ"
+
+msgid "Embed codes that will be auto-inserted in editor box"
+msgstr "エディターボックスに自動でコードを埋め込む"
+
+msgid "Sibling selector"
+msgstr "兄弟セレクター"
+
+msgid "Sibling element selector where to place the button next to"
+msgstr "ボタンの隣の兄弟セレクター"
+
+msgid "Sibling position"
+msgstr "兄弟ポジション"
+
+msgid "After"
+msgstr "アフター"
+
+msgid "Before"
+msgstr "ビフォー"
+
+msgid "Position relative to sibling element"
+msgstr "兄弟エレメントとrelativeに"
+
+msgid "Advanced options"
+msgstr "追加オプション"
+
+#, php-format
+msgid "The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options."
+msgstr "プラグインには、フルカスタマイズするための豊富な追加オプションセットがあります。カスタムHTML,カスタムCSS、カラーパレットなどが使えます。追加オプションセットを使いこなすには、%dか、プラグインのソースを参照してください。"
 
 #: ../../../app/themes/Peafowl/views/request-denied.php:12
 msgid "You either don't have permission to access this page or the link has expired."

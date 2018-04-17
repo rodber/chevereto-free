@@ -34,7 +34,6 @@ foreach($tabs as $tab) {
 	?>
 	<?php
 		if($classic) {
-			CHV\Render\show_banner('listing_before_pagination', $list->sfw);
 		}
 		if($list->has_page_prev || $list->has_page_next) {
 	?>
@@ -96,7 +95,6 @@ foreach($tabs as $tab) {
 	<?php
 		}
 		if($classic) {
-			CHV\Render\show_banner('listing_after_pagination', $list->sfw);
 		}
 	?>
 	<?php

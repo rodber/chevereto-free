@@ -38,7 +38,6 @@ $route = function($handler) {
 			break;
 
 			case 'upload': // EX 100
-
 				// Is upload allowed anyway?
 				if(!$handler::getCond('upload_allowed')) {
 					throw new Exception(_s('Request denied'), 401);
@@ -521,9 +520,7 @@ $route = function($handler) {
 						$id = $_REQUEST['editing']['id'];
 
 						// Validate IP
-						if(!G\is_valid_ip($editing['ip'])) {
-							throw new Exception('Invalid IP address', 101);
-						}
+						CHV\Ip_ban::validateIP($editing['ip']);
 
 						// Validate expiration
 						if(!empty($editing['expires']) and !preg_match('/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/', $editing['expires'])) {
@@ -689,9 +686,7 @@ $route = function($handler) {
 				$ip_ban = G\array_filter_array($_REQUEST['ip_ban'], ['ip', 'expires', 'message'], 'exclusion');
 
 				// Validate IP
-				if(!G\is_valid_ip($ip_ban['ip'])) {
-					throw new Exception('Invalid IP address', 101);
-				}
+				CHV\Ip_ban::validateIP($ip_ban['ip']);
 
 				// Validate expiration
 				if(!empty($ip_ban['expires']) and !preg_match('/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/', $ip_ban['expires'])) {
@@ -908,6 +903,11 @@ $route = function($handler) {
 
 				$deleting = $_REQUEST['deleting'];
 				$type = $_REQUEST['delete'];
+
+				if(!$logged_user['is_admin'] && !CHV\getSetting('enable_user_content_delete') && (G\starts_with('image', $type) || G\starts_with('album', $type))) {
+					throw new Exception('Forbidden action', 403);
+				}
+
 				$owner_id = $_REQUEST['owner'] != NULL ? CHV\decodeID($_REQUEST['owner']) : $logged_user['id'];
 
 				$multiple = $_REQUEST['multiple'] == 'true';
@@ -1045,82 +1045,20 @@ $route = function($handler) {
 			break;
 
       case 'test':
-        if(!$logged_user['is_admin']) {
-					throw new Exception('Invalid request', 403);
-				}
-        switch($_REQUEST['test']['object']) {
-            case 'email':
-                // Validate email
-                if(!filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL)) {
-                    throw new Exception(_s('Invalid email'), 100);
-                }
-                CHV\send_mail($_REQUEST['email'], _s('Test email from %s @ %t', ['%s' => CHV\getSetting('website_name'), '%t' => G\datetime()]), _s('This is just a test'));
-                $json_array['success'] = ['message' => _s('Test email sent to %s.', $_REQUEST['email']), 'code' => 200];
-            break;
-        }
-	    break;
-
-			case 'notifications':
-				if(!$logged_user) {
-					throw new Exception('Invalid request', 403);
-				}
-				$notification_array = [
-					'user_id'	=> $logged_user['id']
-				];
-				$notifications = CHV\Notification::get($notification_array);
-				CHV\Notification::markAsRead($notification_array);
-				$json_array['status_code'] = 200;
-				if($notifications) {
-					$json_array['html'] = '';
-					$template = '<li%class>%avatar<span class="notification-text">%message</span><span class="how-long-ago">%how_long_ago</span></li>';
-					$avatar_src_tpl = [
-						0 => '<span class="user-image default-user-image"><span class="icon icon-user"></span></span>',
-						1 => '<img class="user-image" src="%user_avatar_url" alt="%user_name_short_html">'
-					];
-					$avatar_tpl = [
-						0 => $avatar_src_tpl[0],
-						1 => '<a href="%user_url">%user_avatar</a>'
-					];
-					foreach($notifications as $k => $v) {
-						$content_type = $v['content_type'];
-						switch($v['type']) {
-							case 'like':
-								$message = _s('%u liked your %t %c', [
-									'%t' => _s($content_type),
-									'%c' => '<a href="'.$v[$content_type]['url_viewer'].'">' . $v[$content_type][($content_type == 'image' ? 'title' : 'name') . '_truncated_html'] . '</a>'
-								]);
-							break;
-							case 'follow':
-								$message = _s('%u is now following you');
-							break;
-						}
-						$v['message'] = strtr($message, [
-							'%u' => $v['user']['is_private'] ? _s('A private user') : ('<a href="'.$v['user']['url'].'">'.$v['user']['name_short_html'].'</a>'),
-						]);
-						if($v['user']['is_private']) {
-							$avatar = $avatar_tpl[0];
-						} else {
-							$avatar = strtr($avatar_tpl[1], [
-								'%user_url'		=> $v['user']['url'],
-								'%user_avatar'	=> strtr($avatar_src_tpl[isset($v['user']['avatar']) ? 1 : 0], [
-									'%user_avatar_url' 		=> $v['user']['avatar']['url'],
-									'%user_name_short_html' => $v['user']['name_short_html'],
-								]),
-							]);
-						}
-						$json_array['html'] .= strtr($template, [
-							'%class'		=> !$v['is_read'] ? ' class="new"' : NULL,
-							'%avatar'		=> $avatar,
-							'%user_url'		=> $v['user']['url'],
-							'%message'		=> $v['message'],
-							'%how_long_ago'	=> CHV\time_elapsed_string($v['date_gmt']),
-						]);
+          if(!$logged_user['is_admin']) {
+						throw new Exception('Invalid request', 403);
 					}
-					unset($content_type);
-				} else {
-					$json_array['html'] = NULL;
-				}
-			break;
+          switch($_REQUEST['test']['object']) {
+              case 'email':
+                  // Validate email
+                  if(!filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL)) {
+                      throw new Exception(_s('Invalid email'), 100);
+                  }
+                  CHV\send_mail($_REQUEST['email'], _s('Test email from %s @ %t', ['%s' => CHV\getSetting('website_name'), '%t' => G\datetime()]), '<p>' . _s('This is just a test') . '</p>');
+                  $json_array['success'] = ['message' => _s('Test email sent to %s.', $_REQUEST['email']), 'code' => 200];
+              break;
+          }
+      break;
 
 			case 'upgrade':
 				try {

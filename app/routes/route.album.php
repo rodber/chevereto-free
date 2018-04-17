@@ -9,7 +9,7 @@
 			<inbox@rodolfoberrios.com>
 
   Copyright (C) Rodolfo Berrios A. All rights reserved.
-  
+
   BY USING THIS SOFTWARE YOU DECLARE TO ACCEPT THE CHEVERETO EULA
   http://chevereto.com/license
 
@@ -17,53 +17,53 @@
 
 $route = function($handler) {
 	try {
-		
+
 		if($handler->isRequestLevel(4)) return $handler->issue404(); // Allow only 3 levels
-		
+
 		if(is_null($handler->request[0])) {
 			return $handler->issue404();
 		}
-		
+
 		$logged_user = CHV\Login::getUser();
-		
+
 		// User status override redirect
 		CHV\User::statusRedirect($logged_user['status']);
 
 		$id = CHV\decodeID($handler->request[0]);
 		$tables = CHV\DB::getTables();
-		
+
 		// Session stock viewed albums
 		if(!$_SESSION['album_view_stock']) {
 			$_SESSION['album_view_stock'] = [];
 		}
-		
+
 		$album = CHV\Album::getSingle($id, !in_array($id, $_SESSION['album_view_stock']), TRUE, $logged_user);
-		
+
 		// Stock this album view
 		$_SESSION['album_view_stock'][] = $id;
-		
+
 		// No album or belogns to a banned user?
 		if(!$album || (!$logged_user['is_admin'] and $album['user']['status'] !== 'valid')) {
 			return $handler->issue404();
 		}
 
 		$is_owner = $album['user']['id'] == $logged_user['id'];
-		
-		// Password protected content		
+
+		// Password protected content
 		if(!($handler::getCond('admin') || $is_owner) && $album['privacy'] == 'password' && isset($album['password'])) {
-			
+
 			$is_error = FALSE;
 			$error_message = NULL;
-			
+
 			$failed_access_requests = CHV\Requestlog::getCounts('content-password', 'fail');
-			
+
 			// GTFO
 			if(CHV\is_max_invalid_request($failed_access_requests['day'])) {
 				G\set_status_header(403);
 				$handler->template = 'request-denied';
 				return;
 			}
-			
+
 			$captcha_needed = $handler::getCond('captcha_needed');
 			if($captcha_needed && $_POST['content-password']) {
 				$captcha = CHV\recaptcha_check();
@@ -72,7 +72,7 @@ $route = function($handler) {
 					$error_message = _s("The reCAPTCHA wasn't entered correctly");
 				}
 			}
-			
+
 			if(!$is_error) {
 				if(isset($_POST['content-password']) && CHV\Album::checkPassword($album['password'], $_POST['content-password'])) {
 					CHV\Album::storeUserPasswordHash($album['id'], $_POST['content-password']);
@@ -86,10 +86,10 @@ $route = function($handler) {
 					}
 				}
 			}
-			
+
 			$handler::setCond('error', $is_error);
 			$handler::setVar('error', $error_message);
-			
+
 			if($is_error) {
 				if(CHV\getSettings()['recaptcha'] && CHV\must_use_recaptcha($failed_access_requests['day'] + 1)) {
 					$captcha_needed = TRUE;
@@ -104,13 +104,13 @@ $route = function($handler) {
 			}
 
 		}
-		
+
 		// Private profile
 		if($album['user']['is_private'] && !$logged_user['is_admin'] && $album["user"]["id"] !== $logged_user['id']) {
 			unset($album['user']);
 			$album['user'] = CHV\User::getPrivate();
 		}
-		
+
 		// Privacy
 		if($handler::getCond('forced_private_mode')) {
 			$album['privacy'] = CHV\getSetting('website_content_privacy_mode');
@@ -120,13 +120,13 @@ $route = function($handler) {
 		}
 
 		$safe_html_album = G\safe_html($album);
-		
+
 		// List
 		$list_params = CHV\Listing::getParams(); // Use CHV magic params
-		
+
 		$type = 'images';
 		$where = 'WHERE image_album_id=:image_album_id';
-		
+
 		$list = new CHV\Listing;
 		$list->setType($type); // images | users | albums
 		$list->setOffset($list_params['offset']);
@@ -144,11 +144,11 @@ $route = function($handler) {
 			$list->setTools(TRUE);
 		}
 		$list->exec();
-		
+
 		// Tabs
 		$tabs = CHV\Listing::getTabs([
 			'listing'	=> 'images',
-			'basename'	=> $album['url'],
+			'basename'	=> G\get_route_name() . '/' . $album['id_encoded'],
 			'params_hidden' => ['list' => 'images', 'from' => 'album', 'albumid' => $album['id_encoded']],
 		]);
 
@@ -160,14 +160,16 @@ $route = function($handler) {
 				'id'		=> 'tab-share',
 			];
 		}
-		
-		$tabs[] = [
-			'list'		=> FALSE,
-			'tools'		=> FALSE,
-			'label'		=> _s('Embed codes'),
-			'id'		=> 'tab-codes',
-		];
-		
+
+		if(CHV\getSetting('theme_show_embed_content')) {
+			$tabs[] = [
+				'list'		=> FALSE,
+				'tools'		=> FALSE,
+				'label'		=> _s('Embed codes'),
+				'id'		=> 'tab-codes',
+			];
+		}
+
 		if($logged_user['is_admin']) {
 			$tabs[] = [
 				'list'		=> FALSE,
@@ -176,12 +178,12 @@ $route = function($handler) {
 				'id'		=> 'tab-full-info',
 			];
 		}
-		
+
 		foreach($tabs as $k => &$v) {
 			if(!isset($v['params'])) continue;
 			$class_tabs[$k]['disabled'] = $album['image_count'] == 0 ? !$v['current'] : FALSE;
 		}
-		
+
 		$handler::setCond('owner', $is_owner);
 		$handler::setVars([
 			'pre_doctitle'		=> $safe_html_album['name'],
@@ -191,7 +193,7 @@ $route = function($handler) {
 			'list'				=> $list,
 			'owner'				=> $album['user']
 		]);
-		
+
 		// Populate the album meta description
 		if($album['description']) {
 			$meta_description = $album['description'];
@@ -199,7 +201,7 @@ $route = function($handler) {
 			$meta_description = _s('%a album hosted in %w', ['%a' => $album['name'], '%w' => CHV\getSetting('website_name')]);
 		}
 		$handler::setVar('meta_description', htmlspecialchars($meta_description));
-		
+
 		// Items editor
 		if($handler::getCond('admin') or $is_owner) {
 			$handler::setVar('user_items_editor', [
@@ -207,7 +209,7 @@ $route = function($handler) {
 				"type"			=> "images"
 			]);
 		}
-		
+
 		// Sharing
 		$share_element = array(
 			"referer"		=> G\get_base_url(),
@@ -216,9 +218,9 @@ $route = function($handler) {
 		);
 		$share_element["HTML"] = '<a href="'.$share_element["url"].'" title="'.$share_element["title"].'">'.$safe_html_album["name"].' ('.$album['image_count'].' '._n('image', 'images', $album['user']['image_count']).')</a>';
 		$share_links_array = CHV\render\get_share_links($share_element);
-		
+
 		$handler::setVar('share_links_array', $share_links_array);
-		
+
 		// Share modal
 		$handler::setVar('share_modal', [
 			'type'			=> 'album',
@@ -227,7 +229,7 @@ $route = function($handler) {
 			'privacy'		=> $album['privacy'],
 			'privacy_notes'	=> $album['privacy_notes'],
 		]);
-	
+
 	} catch(Exception $e) {
 		G\exception_to_error($e);
 	}

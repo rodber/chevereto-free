@@ -20,18 +20,18 @@ use G, Exception;
 if(!defined('access') or !access) die('This file cannot be directly accessed.');
 
 try {
-	
+
 	if(!is_null(getSetting('chevereto_version_installed')) and !Login::getUser()['is_admin']) {
 		G\set_status_header(403);
 		die('Request denied. You must be an admin to be here.');
 	}
-    
+
     set_time_limit(600); // This could take up to 10 minutes...
-	
-	if(function_exists('opcache_reset')) { 
+
+	if(function_exists('opcache_reset')) {
 		opcache_reset(); // Try to flush OPCache
 	}
-	
+
 	$doctitles = [
 		'connect' 	=> 'Connect to the database',
 		'ready'		=> 'Ready to install',
@@ -55,7 +55,7 @@ try {
 
 	$error = false;
 	$db_conn_error = "Can't connect to the target database. The server replied with this:<br>%s<br><br>Please fix your MySQL info.";
-	
+
 	$settings_updates = [
 		'1.0.0' => [
 			'analytics_code' => NULL,
@@ -237,6 +237,11 @@ try {
 		'1.0.9' => [ 
 			'auto_delete_guest_uploads' => NULL,
 		],
+		'1.0.10' => [
+			'enable_user_content_delete' => 1,
+			'enable_plugin_route' => 1,
+			'sdk_pup_url' => NULL,
+		],
 	];
 	// Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
 	$settings_rename = [];
@@ -256,13 +261,13 @@ try {
 	} catch(Exception $e) {
 		$is_2X = false;
 	}
-	
+
 	/* Stats query from 3.7.0 up to 3.8.13 */
 	$stats_query_legacy = 'TRUNCATE TABLE `%table_prefix%stats`;
 
 INSERT INTO `%table_prefix%stats` (stat_id, stat_date_gmt, stat_type) VALUES ("1", NULL, "total") ON DUPLICATE KEY UPDATE stat_type=stat_type;
 
-UPDATE `%table_prefix%stats` SET 
+UPDATE `%table_prefix%stats` SET
 stat_images = (SELECT IFNULL(COUNT(*),0) FROM `%table_prefix%images`),
 stat_albums = (SELECT IFNULL(COUNT(*),0) FROM `%table_prefix%albums`),
 stat_users = (SELECT IFNULL(COUNT(*),0) FROM `%table_prefix%users`),
@@ -286,20 +291,20 @@ FROM (SELECT "date" AS stat_type, DATE(album_date_gmt) AS stat_date_gmt, COUNT(*
 ON DUPLICATE KEY UPDATE stat_albums = sb.stat_albums;
 
 UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image_views) FROM `%table_prefix%images` WHERE image_user_id = user_id GROUP BY user_id), "0");';
-	
+
 	// Fulltext engine
 	if(G\settings_has_db_info()) {
 		$db = DB::getInstance();
 		$fulltext_engine = version_compare($db->getAttr(\PDO::ATTR_SERVER_VERSION), '5.6', '<') ? 'MyISAM' : 'InnoDB';
 	}
-	
+
 	// settings.php contains db
 	if(G\settings_has_db_info() and !$_POST) {
 
 		// Chevereto already installed?
 		$installed_version = getSetting('chevereto_version_installed');
 		$maintenance = getSetting('maintenance');
-		
+
 		// Get the setting rows from DB (to avoid overwrite)
 		$db_settings_keys = [];
 		try {
@@ -308,28 +313,28 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 				$db_settings_keys[] = $v['setting_name'];
 			}
 		} catch(Exception $e) {}
-		
+
 		// Update procedure
 		if((!empty($db_settings_keys) && count($chv_initial_settings) !== count($db_settings_keys)) || (!is_null($installed_version) and version_compare(G_APP_VERSION, $installed_version, '>'))) {
 
 			if(!array_key_exists(G_APP_VERSION, $settings_updates)) {
 				die('Fatal error: app/install is outdated. You need to re-upload app/install folder with the one from Chevereto ' . G_APP_VERSION);
 			}
-			
+
 			// Get database schema
 			$schema = [];
 			$raw_schema = DB::queryFetchAll('SELECT * FROM information_schema.COLUMNS WHERE TABLE_SCHEMA="'.G_APP_DB_NAME.'" AND TABLE_NAME LIKE "'. G\get_app_setting('db_table_prefix') .'%";');
-			
+
 			foreach($raw_schema as $k => $v) {
 				$TABLE = preg_replace('#'.G\get_app_setting('db_table_prefix').'#i', '', strtolower($v['TABLE_NAME']), 1);
-				
+
 				$COLUMN = $v['COLUMN_NAME'];
 				if(!array_key_exists($TABLE, $schema)) {
 					$schema[$TABLE] = [];
 				}
 				$schema[$TABLE][$COLUMN] = $v;
 			}
-			
+
 			// Remove triggers
 			$triggers_to_remove = [
 				'album_insert',
@@ -367,11 +372,11 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 					}
 				}
 			}
-			
+
 			// Get DB indexes
 			$DB_indexes = [];
 			$raw_indexes = DB::queryFetchAll('SELECT DISTINCT TABLE_NAME, INDEX_NAME, INDEX_TYPE FROM INFORMATION_SCHEMA.STATISTICS WHERE TABLE_SCHEMA = "'.G_APP_DB_NAME.'"');
-			
+
 			foreach($raw_indexes as $k => $v) {
 				$TABLE = preg_replace('#'.G\get_app_setting('db_table_prefix').'#i', '', strtolower($v['TABLE_NAME']), 1);
 				$INDEX_NAME = $v['INDEX_NAME'];
@@ -380,26 +385,26 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 				}
 				$DB_indexes[$TABLE][$INDEX_NAME] = $v;
 			}
-			
+
 			// Get needed KEY indexes (only for tables that already exists)
 			$CHV_indexes = [];
 			foreach(new \DirectoryIterator(CHV_APP_PATH_INSTALL . 'sql') as $fileInfo) {
-				if($fileInfo->isDot() or $fileInfo->isDir() or !array_key_exists($fileInfo->getBasename('.sql'), $schema)) continue;				
+				if($fileInfo->isDot() or $fileInfo->isDir() or !array_key_exists($fileInfo->getBasename('.sql'), $schema)) continue;
 				$crate_table = file_get_contents(realpath($fileInfo->getPathname()));
 				if(preg_match_all('/KEY [`\(]+(\w+)/', $crate_table, $matches)) {
 					$CHV_indexes[$fileInfo->getBasename('.sql')] = $matches[1];
 				}
 			}
-			
+
 			// Get database engines
 			$engines = [];
 			$raw_engines = DB::queryFetchAll('SELECT TABLE_NAME, ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = "'.G_APP_DB_NAME.'"');
-			
+
 			foreach($raw_engines as $k => $v) {
 				$TABLE = preg_replace('#'.G\get_app_setting('db_table_prefix').'#i', '', strtolower($v['TABLE_NAME']), 1);
 				$engines[$TABLE] = $v['ENGINE'];
 			}
-			
+
 			// Set the right table schema changes per release
 			$update_table = [
 				'1.0.9' => [
@@ -444,24 +449,24 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 					],
 				]
 			];
-			
+
 			$sql_update = [];
-			
+
 			// Turn ON maintenance mode (if needed)
 			if(!$maintenance) {
 				$sql_update[] = "UPDATE `%table_prefix%settings` SET `setting_value` = 1 WHERE `setting_name` = 'maintenance';";
 			}
-			
+
 			// SQLize the $update_table
 			$required_sql_files = [];
 			foreach($update_table as $version => $changes) {
-				
+
 				foreach($changes as $table => $columns) {
-					
+
 					if($table == 'query') continue;
-					
+
 					$schema_table = $schema[$table];
-					
+
 					$create_table = false;
 					// Create table if it doesn't exists
 					if(!array_key_exists($table, $schema) and !in_array($table, $required_sql_files)) {
@@ -472,18 +477,18 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 							$create_table = true;
 						}
 					}
-					
+
 					// Missing table
 					if(!in_array($table, $required_sql_files) and $create_table) {
 						$sql_update[] = file_get_contents(CHV_APP_PATH_INSTALL . 'sql/'.$table.'.sql');
 						$required_sql_files[] = $table;
 					}
-					
+
 					// If the table was added from scratch then skip the rest of the columns scheme
 					if(in_array($table, $required_sql_files)) {
 						continue;
 					}
-					
+
 					// Is a table op..
 					if($columns['op']) {
 						switch($columns['op']) {
@@ -497,13 +502,13 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 						}
 						continue;
 					}
-					
+
 					// Check the columns scheme
 					foreach($columns as $column => $column_meta) {
-						
+
 						$query = NULL; // reset
 						$schema_column = $schema_table[$column];
-						
+
 						switch($column_meta['op']) {
 							case 'MODIFY':
 								if(array_key_exists($column, $schema[$table]) and ($schema_column['COLUMN_TYPE'] !== $column_meta['type'] or (preg_match('/DEFAULT NULL/i', $column_meta['prop']) and $schema_column['IS_NULLABLE'] == 'NO'))) {
@@ -518,7 +523,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 							case 'ADD':
 								if(!array_key_exists($column, $schema[$table])) {
 									$query = '`%column` %type';
-									
+
 								}
 							break;
 						}
@@ -532,15 +537,15 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 						}
 					}
 				}
-				
+
 				if($changes['query']) {
 					if(version_compare($version, $installed_version, '>')) {
 						$sql_update[] = $changes['query'];
 					}
 				}
-				
+
 			}
-			
+
 			// Fix the missing KEY indexes
 			foreach($CHV_indexes as $table => $indexes) {
 				$field_prefix = DB::getFieldPrefix($table);
@@ -551,17 +556,17 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 					}
 				}
 			}
-			
+
 			// Merge settings and version changes
 			$updates_stock = [];
 			foreach(array_merge($settings_updates, $update_table) as $k => $v) {
 				if($k == '3.0.0') continue;
 				$updates_stock[] = $k;
 			}
-			
+
 			// Flat settings
 			$settings_flat = [];
-			
+
 			// Settings workaround
 			foreach($updates_stock as $k) {
 				$sql = NULL; // reset the pointer
@@ -582,14 +587,14 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 			}
 
 			$settings_get = Settings::get();
-			
+
 			// Deteled settings
 			foreach($settings_delete as $k) {
 				if(array_key_exists($k, $settings_get)) {
 					$sql_update[] = "DELETE FROM `%table_prefix%settings` WHERE `setting_name` = '" . $k . "';";
 				}
 			}
-			
+
 			// Renamed settings (actually updated values + remove old one)
 			foreach($settings_rename as $k => $v) {
 				if(array_key_exists($k, $settings_get)) {
@@ -598,7 +603,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 					$sql_update[] = "UPDATE `%table_prefix%settings` SET `setting_value` = " . $value . " WHERE `setting_name` = '" . $v . "';" . "\n" . "DELETE FROM `%table_prefix%settings` WHERE `setting_name` = '" . $k . "';";
 				}
 			}
-			
+
 			// Switched settings (as rename but with update of the old key)
 			foreach($settings_switch as $version => $keys) {
 				if(!version_compare($version, $installed_version, '>')) {
@@ -616,23 +621,23 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 
 			// Always update to the target version
 			$sql_update[] = 'UPDATE `%table_prefix%settings` SET `setting_value` = "' . G_APP_VERSION . '" WHERE `setting_name` = "chevereto_version_installed";';
-			
+
 			// Revert maintenance (if needed)
 			if(!$maintenance) {
 				$sql_update[]  = 'UPDATE `%table_prefix%settings` SET `setting_value` = 0 WHERE `setting_name` = "maintenance";';
 			}
 
 			$sql_update = join("\r\n", $sql_update);
-			
+
 			// Replace the %table_storage% and %table_prefix% thing
 			$sql_update = strtr($sql_update, [
 				'%table_prefix%' => G\get_app_setting('db_table_prefix'),
 				'%table_engine%' => $fulltext_engine
 			]);
-			
+
 			// Remove extra white spaces and line breaks
 			$sql_update = preg_replace('/[ \t]+/', ' ', preg_replace('/\s*$^\s*/m', "\n", $sql_update));
-			
+
 			if(isset($_REQUEST['debug'])) {
 				G\debug($sql_update);
 				die();
@@ -722,12 +727,12 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 							$doing = 'ready';
 						}
 						@fclose($fh);
-						
+
 						// Reset opcache in this file
 						if(function_exists('opcache_invalidate')) {
-							@opcache_invalidate($settings_file, TRUE); 
+							@opcache_invalidate($settings_file, TRUE);
 						}
-						
+
 					}
 
 					// Ready to install
@@ -765,7 +770,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 				if(!in_array($_POST['website_mode'], ['community', 'personal'])) {
 					$input_errors['website_mode'] = _s('Invalid website mode');
 				}
-				
+
 				if(count($input_errors) > 0) {
 					$error = true;
 					$error_message = 'Please correct your data to continue.';
@@ -778,11 +783,11 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 							if($fileInfo->isDot() or $fileInfo->isDir()) continue;
 							$create_table[$fileInfo->getBasename('.sql')] = realpath($fileInfo->getPathname());
 						}
-						
+
 						$install_sql = 'SET FOREIGN_KEY_CHECKS=0;' . "\n";
 
 						if($is_2X) {
-							
+
 							// Need to sync this to avoid bad datefolder mapping due to MySQL time != PHP time
 							// In Chevereto v2.X date was TIMESTAMP and in v3.X is DATETIME
 							$DT = new \DateTime();
@@ -835,19 +840,19 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 								ADD INDEX `image_expiration_date_gmt` (`image_expiration_date_gmt`),
 								ADD INDEX `image_is_animated` (`image_is_animated`),
 								ENGINE=".$fulltext_engine.";
-							
+
 							UPDATE `chv_images`
 								SET `image_date_gmt` = `image_date`,
 								`image_storage_mode` = CASE
-								WHEN `image_storage_id` IS NULL THEN 'datefolder' 
-								WHEN `image_storage_id` = 0 THEN 'datefolder' 
-								WHEN `image_storage_id` = 1 THEN 'old' 
-								WHEN `image_storage_id` = 2 THEN 'direct' 
+								WHEN `image_storage_id` IS NULL THEN 'datefolder'
+								WHEN `image_storage_id` = 0 THEN 'datefolder'
+								WHEN `image_storage_id` = 1 THEN 'old'
+								WHEN `image_storage_id` = 2 THEN 'direct'
 								END,
 								`image_storage_id` = NULL;
-							
+
 							CREATE FULLTEXT INDEX searchindex ON `chv_images`(image_name, image_title, image_description, image_original_filename);
-							
+
 							RENAME TABLE `chv_info` to `_chv_info`;
 							RENAME TABLE `chv_options` to `_chv_options`;
 							RENAME TABLE `chv_storages` to `_chv_storages`;";
@@ -870,25 +875,25 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 								'%table_engine%' => $fulltext_engine
 							]) . "\n\n";
 						}
-						
+
 						// id padding for long faked public IDs
 						$chv_initial_settings['id_padding'] = $is_2X ? 0 : 5000;
-						
+
 						if($_POST['website_mode'] == 'personal') {
 							$chv_initial_settings['website_mode'] = 'personal';
 						}
-						
+
 						// Stats (since 3.7.0)
 						$install_sql .= strtr($stats_query_legacy, [
 								'%table_prefix%' => $table_prefix,
 								'%table_engine%' => $fulltext_engine
 							]);
-						
+
 						if(isset($_REQUEST['debug'])) {
 							G\debug($install_sql);
 							die();
 						}
-						
+
 						// Do the DB magic
 						$db = DB::getInstance();
 						$db->query($install_sql);
@@ -914,22 +919,22 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 								'timezone'	=> $chv_initial_settings['default_timezone']
 							]);
 							Login::addPassword($insert_admin, $_POST['password']);
-							
+
 							// Add admin user as the personal mode guy
 							if($_POST['website_mode'] == 'personal') {
 								$db->update('settings', ['setting_value' => 'me'], ['setting_name' => 'website_mode_personal_routing']);
 								$db->update('settings', ['setting_value' => $insert_admin], ['setting_name' => 'website_mode_personal_uid']);
 							}
-							
+
 							// Insert the email settings
 							$db->update('settings', ['setting_value' => $_POST['email_from_email']], ['setting_name' => 'email_from_email']);
 							$db->update('settings', ['setting_value' => $_POST['email_incoming_email']], ['setting_name' => 'email_incoming_email']);
-							
+
 							$doing = 'finished';
 						}
 					} catch(Exception $e) {
 						$error = true;
-						$error_message = "Can't create admin user:<br>" . $e->getMessage();
+						$error_message = 'Installation error: ' . $e->getMessage();
 					}
 
 				}
@@ -937,7 +942,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 			break;
 		}
 	}
-	
+
 	$doctitle = $doctitles[$doing].' - Chevereto ' . get_chevereto_version(true);
 	$system_template = CHV_APP_PATH_CONTENT_SYSTEM . 'template.php';
 	$install_template = CHV_APP_PATH_INSTALL . 'template/'.$doing.'.php';
@@ -954,9 +959,9 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 	if(!@require_once($system_template)) {
 		die("Can't find " . G\absolute_to_relative($system_template));
 	}
-	
+
 	die(); // Terminate any remaining execution
-	
+
 } catch (Exception $e) {
 	G\exception_to_error($e);
 }

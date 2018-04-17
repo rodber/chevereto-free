@@ -9,7 +9,7 @@
 			<inbox@rodolfoberrios.com>
 
   Copyright (C) Rodolfo Berrios A. All rights reserved.
-  
+
   BY USING THIS SOFTWARE YOU DECLARE TO ACCEPT THE CHEVERETO EULA
   http://chevereto.com/license
 
@@ -117,7 +117,7 @@ function theme_file_exists($var) {
 /*** HTML TAGS ***/
 
 function get_html_tags() {
-	$classes = 'tone-' . CHV\getSetting('theme_tone') . ' top-bar-' . CHV\getSetting('theme_top_bar_color') . ' unsafe-blur-' . (CHV\getSetting('theme_nsfw_blur') ? 'on' : 'off');
+	$classes = 'device-' . (G\Handler::getCond('mobile_device') ? 'mobile' : 'nonmobile') . ' tone-' . CHV\getSetting('theme_tone') . ' top-bar-' . CHV\getSetting('theme_top_bar_color') . ' unsafe-blur-' . (CHV\getSetting('theme_nsfw_blur') ? 'on' : 'off');
 	return get_lang_html_tags() . ' class="' . $classes . '"';
 }
 
@@ -143,27 +143,27 @@ function get_select_options_html($arr, $selected) {
 }
 
 function get_checkbox_html($options=[]) {
-	
+
 	if(!array_key_exists('name', $options)) {
 		return 'ERR:CHECKBOX_NAME_MISSING';
 	}
-	
+
 	$options = array_merge([
 		'value_checked'		=> 1,
 		'value_unchecked'	=> 0,
 		'label'				=> $options['name'],
 		'checked'			=> FALSE
 	], $options);
-	
+
 	$tooltip = $options['tooltip'] ? (' rel="tooltip" title="'.$options['tooltip'].'"') : NULL;
-	
+
 	$html = '<div class="checkbox-label">' . "\n" .
 			'	<label for="'.$options['name'].'"' . $tooltip  . '>'  . "\n" .
 			'		<input type="hidden" name="'.$options['name'].'" value="'.$options['value_unchecked'].'">' . "\n" .
-	        '		<input type="checkbox" name="'.$options['name'].'" id="'.$options['name'].'" ' . ((bool)$options['checked'] ? ' checked' : NULL) .' value="'.$options['value_checked'].'">' . $options['label'] . "\n" . 
+	        '		<input type="checkbox" name="'.$options['name'].'" id="'.$options['name'].'" ' . ((bool)$options['checked'] ? ' checked' : NULL) .' value="'.$options['value_checked'].'">' . $options['label'] . "\n" .
 			'	</label>' . "\n" .
 			'</div>';
-			
+
 	return $html;
 }
 
@@ -183,21 +183,21 @@ function get_share_links($share_element) {
 	if(function_exists("get_share_links")) {
 		return \get_share_links($share_element);
 	}
-	
+
 	if(!$share_element["twitter"]) {
 		$share_element["twitter"] = CHV\getSetting('twitter_account');
 	}
-	
+
 	$share_element["urlencoded"] = array();
-	
+
 	foreach($share_element as $key => $value) {
 		if($key == "urlencoded") continue;
-		$share_element["urlencoded"][$key] = rawurlencode($value); 
+		$share_element["urlencoded"][$key] = rawurlencode($value);
 	}
 
 	global $share_links_networks;
 	G\Render\include_theme_file('custom_hooks/share_links');
-	
+
 	if(!$share_links_networks) {
 		$share_links_networks = array(
 			'facebook'	=> array(
@@ -249,19 +249,19 @@ function get_share_links($share_element) {
 	}
 
 	$return = array();
-	
+
 	foreach($share_links_networks as $key => $value) {
 		$search = array("%URL%", "%TITLE%", "%DESCRIPTION%", "%HTML%", "%PHOTO_URL%", "%TWITTER%");
 		$replace= array("url", "title", "description", "HTML", "image", "twitter");
-		
+
 		for($i=0; $i<count($replace); $i++) {
 			if(array_key_exists($replace[$i], $share_element["urlencoded"])) {
 				$replace[$i] = $share_element["urlencoded"][$replace[$i]];
 			}
 		}
-		
+
 		$value["url"] = str_replace($search, $replace, $value["url"]);
-		
+
 		$return[] = '<li'.($value['mobileonly'] ? ' class="hidden phone-show"' : NULL).'><a data-href="'.$value["url"].'" class="popup-link btn-32 btn-social btn-'.$key.'" rel="tooltip" data-tiptip="top" title="'.$value["label"].'"><span class="btn-icon icon-'.$key.'"></span></a></li>';
 	}
 
@@ -274,20 +274,12 @@ function get_share_links($share_element) {
  * ----------------------------------------------------------------------------------------------------------------------------------------
  */
 function include_peafowl_head() {
-	$peafowl_css = get_static_url(CHV_PATH_PEAFOWL . 'peafowl.css');
-	$opensans_css = get_static_url(CHV_PATH_PEAFOWL . 'fonts/opensans/opensans.css');
-	echo	'<meta name="generator" content="' . G_APP_NAME . ' ' . CHV\get_chevereto_version() . '">' . "\n" . 
-			'<link rel="stylesheet" href="' . $peafowl_css . '">' . "\n" .
-			'<link rel="stylesheet" href="' . $opensans_css . '">' . "\n\n" .
-			'<script>document.documentElement.className += " js";(function(w,d,u){w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}})(window,document);var devices=["phone","phablet","tablet","laptop","desktop","largescreen"];window_to_device=function(){for(var e=[480,768,992,1200,1880,2180],n=[],t="",d=document.documentElement.clientWidth||document.getElementsByTagName("body")[0].clientWidth||window.innerWidth,o=0;o<devices.length;++o)d>=e[o]&&n.push(devices[o]);0==n.length&&n.push(devices[0]),t=n[n.length-1];for(var o=0;o<devices.length;++o)document.documentElement.className=document.documentElement.className.replace(devices[o],""),o==devices.length-1&&(document.documentElement.className+=" "+t),document.documentElement.className=document.documentElement.className.replace(/\s+/g," ");if("laptop"==t||"desktop"==t){var c=document.getElementById("pop-box-mask");null!==c&&c.parentNode.removeChild(c)}},window_to_device(),window.onresize=window_to_device,$(document).ready(function(){PF.obj.devices=window.devices,PF.fn.window_to_device=window.window_to_device});</script>' . "\n\n";
-			
-	// We don't need no language localization
-	/*
-	foreach(CHV\get_enabled_languages() as $k => $v) {
-		if(CHV\get_language_used()['code'] == $k) continue;
-		echo '<link rel="alternate" hreflang="'.str_replace('_', '-', $k).'" href="'.G\get_base_url('?lang=' . $k).'">'. "\n";
-	}
-	*/
+	echo	'<meta name="generator" content="' . G_APP_NAME . ' ' . CHV\get_chevereto_version() . '">' . "\n" .
+			'<link rel="stylesheet" href="' . get_static_url(CHV_PATH_PEAFOWL . 'peafowl.css') . '">' . "\n" .
+			'<link rel="stylesheet" href="' . get_static_url(CHV_PATH_PEAFOWL . 'fonts/opensans/opensans.css') . '">' . "\n" .
+			'<link rel="stylesheet" href="' . get_theme_file_url('style.css') . '">' . "\n\n" .
+			'<script data-cfasync="false">document.documentElement.className+=" js";var devices=["phone","phablet","tablet","laptop","desktop","largescreen"],window_to_device=function(){for(var e=[480,768,992,1200,1880,2180],t=[],n="",d=document.documentElement.clientWidth||document.getElementsByTagName("body")[0].clientWidth||window.innerWidth,c=0;c<devices.length;++c)d>=e[c]&&t.push(devices[c]);for(0==t.length&&t.push(devices[0]),n=t[t.length-1],c=0;c<devices.length;++c)document.documentElement.className=document.documentElement.className.replace(devices[c],""),c==devices.length-1&&(document.documentElement.className+=" "+n),document.documentElement.className=document.documentElement.className.replace(/\s+/g," ");if("laptop"==n||"desktop"==n){var o=document.getElementById("pop-box-mask");null!==o&&o.parentNode.removeChild(o)}};window_to_device(),window.onresize=window_to_device;function jQueryLoaded(){!function(n,d){n.each(readyQ,function(d,e){n(e)}),n.each(bindReadyQ,function(e,i){n(d).bind("ready",i)})}(jQuery,document)}!function(n,d,e){function i(d,e){"ready"==d?n.bindReadyQ.push(e):n.readyQ.push(d)}n.readyQ=[],n.bindReadyQ=[];var u={ready:i,bind:i};n.$=n.jQuery=function(n){return n===d||void 0===n?u:void i(n)}}(window,document);
+			</script>' . "\n\n";
 }
 
 // Get cookie law banner
@@ -315,12 +307,10 @@ function include_peafowl_foot() {
 	}
 	$resources['scripts'] = get_static_url(CHV_PATH_PEAFOWL . 'js/scripts.js');
 	$echo = [
-		'<script src="' . $resources['scripts'] . '"></script>',
-		'<script>(function($,d){$.each(readyQ,function(i,f){$(f)});$.each(bindReadyQ,function(i,f){$(d).bind("ready",f)})})(jQuery,document)</script>',
-		'<script src="' . $resources['peafowl'] . '"></script>',
-		'<script src="' . $resources['chevereto'] . '"></script>',
+		'<script defer data-cfasync="false" src="' . $resources['scripts'] . '" id="jquery-js" onload="jQueryLoaded(this, event)"></script>',
+		'<script defer data-cfasync="false" src="' . $resources['peafowl'] . '" id="peafowl-js"></script>',
+		'<script defer data-cfasync="false" src="' . $resources['chevereto'] . '" id="chevereto-js"></script>',
 	];
-	
 	if(G\Handler::getCond('captcha_needed')) {
 		$echo[] = strtr('<script>
 		var PFrecaptchaCallback = function() {
@@ -336,27 +326,27 @@ function include_peafowl_foot() {
 			'%k'	=> CHV\getSetting('recaptcha_public_key'),
 			'%t'	=> in_array(CHV\getSetting('theme_tone'), ['light', 'dark']) ? CHV\getSetting('theme_tone') : 'light', // Esto es MongoCodeQl (en camel case)
 		]);
-		$echo[] = '<script src="https://www.google.com/recaptcha/api.js?onload=PFrecaptchaCallback&render=explicit"  defer></script>';
+		$echo[] = '<script defer src="https://www.google.com/recaptcha/api.js?onload=PFrecaptchaCallback&render=explicit"></script>';
 	}
-		
+
 	if(method_exists('CHV\Settings','getChevereto')) {
-		$echo[] = '<script>var CHEVERETO = ' . json_encode(CHV\Settings::getChevereto()) . '</script>';
+		$echo[] = '<script data-cfasync="false">var CHEVERETO = ' . json_encode(CHV\Settings::getChevereto()) . '</script>';
 	}
 	echo implode("\n", $echo);
 }
- 
+
 function get_peafowl_item_list($tpl="image", $item, $template, $requester=NULL, $tools) {
-	
+
 	// todo: pass requester permissions
 	if(empty($requester)) {
 		$requester = CHV\Login::getUser();
 	} else if(!is_array($requester) and !is_null($requester)) {
 		$requester = CHV\User::getSingle($requester, 'id');
 	}
-	
+
 	// Default
 	$stock_tpl = 'IMAGE';
-	
+
 	if($tpl == 'album' || $tpl == 'user/album') {
 		$stock_tpl = "ALBUM";
 	}
@@ -375,11 +365,11 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=NULL, 
 			CHV\User::fill($item["user"]);
 		}
 	}
-	
+
 	if(in_array($stock_tpl, ['IMAGE', 'ALBUM'])) {
 		$item['liked'] = is_null($item['like']['user_id']) ? 0 : ($requester['id'] == $item['like']['user_id'] ? 1 : 0);
 	}
-	
+
 	if($stock_tpl == 'IMAGE') {
 		if(!$item['is_animated'] || !isset($item['file_resource']['chain']['image'])) {
 			$conditional_replaces['tpl_list_item/item_image_play_gif'] = NULL;
@@ -387,16 +377,16 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=NULL, 
 	} else if(!isset($item['images_slice'][0]['is_animated']) || $item['images_slice'][0]['is_animated'] == FALSE) {
 		$conditional_replaces['tpl_list_item/item_image_play_gif'] = NULL;
 	}
-	
+
 	$filled_template = $template["tpl_list_item/$tpl"]; // Stock the unfilled template
-	
+
 	// Missing template file cause uncaught error
 	$tpl_replacements = $template;
-	
+
 	if(!CHV\getSetting('enable_likes') || $requester['is_private']/* || $item['user']['is_private']*/) {
 		$conditional_replaces['tpl_list_item/item_like'] = NULL;
 	}
-	
+
 	if($item['user']['is_private'] && !$requester['is_admin'] && $item["user"]["id"] !== $requester['id']) {
 		unset($item['user']);
 		$item['user'] = CHV\User::getPrivate();
@@ -405,24 +395,24 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=NULL, 
 	} else {
 		$conditional_replaces['tpl_list_item/image_description_private'] = NULL;
 	}
-	
+
 	if($item['user']['is_private'] && $requester['is_admin']) {
 		$item['user']['name'] = '🔒 ' . $item['user']['name'];
 	}
-	
-	$conditional_replaces[$item["user"]["id"] == NULL ? "tpl_list_item/image_description_user" : "tpl_list_item/image_description_guest"] = NULL;	
+
+	$conditional_replaces[$item["user"]["id"] == NULL ? "tpl_list_item/image_description_user" : "tpl_list_item/image_description_guest"] = NULL;
 	$conditional_replaces[$item["user"]["avatar"] == NULL ? "tpl_list_item/image_description_user_avatar" : "tpl_list_item/image_description_user_no_avatar"] = NULL;
-	
+
 	if($stock_tpl == "IMAGE") {
 		$conditional_replaces['tpl_list_item/' . (!$item['file_resource']['chain']['image'] ? 'image_cover_image' : 'image_cover_empty')] = NULL;
 	}
-	
+
 	if($stock_tpl == "ALBUM") {
-		
+
 		if($item['privacy'] !== 'password' || (!$requester['is_admin'] || $item["user"]["id"] !== $requester['id'])) {
 			$item['password'] = NULL;
 		}
-		
+
 		$conditional_replaces['tpl_list_item/' . (($item['image_count'] == 0 or !$item['images_slice'][0]['file_resource']) ? 'album_cover_image' : 'album_cover_empty')] = NULL;
 		for($i=1; $i<count($item["images_slice"]); $i++) {
 			if(!$item['images_slice'][$i]['file_resource']['chain']['thumb']) {
@@ -432,7 +422,7 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=NULL, 
 		}
 		$template["tpl_list_item/album_thumbs"] = preg_replace("/%[0-9]+(.*)%[0-9]+/", "", $template["tpl_list_item/album_thumbs"]);
 	}
-	
+
 	if($stock_tpl == "USER") {
 		$conditional_replaces[$item["avatar"] ? "tpl_list_item/user_no_avatar" : "tpl_list_item/user_avatar"] = NULL;
 		foreach(array("twitter", "facebook", "website") as $social) {
@@ -443,7 +433,7 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=NULL, 
 		$conditional_replaces[empty($item["avatar"]['url']) ? "tpl_list_item/user_cover_image" : "tpl_list_item/user_cover_empty"] = NULL;
 		$conditional_replaces[empty($item["background"]['url']) ? "tpl_list_item/user_background_image" : "tpl_list_item/user_background_empty"] = NULL;
 	}
-	
+
 	if(is_null($requester)) {
 		$show_item_edit_tools = FALSE;
 		$show_item_public_tools = FALSE;
@@ -457,54 +447,54 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=NULL, 
 			$show_item_edit_tools = FALSE;
 			$show_item_public_tools = FALSE;
 		}
-		
+
 		if($requester['is_admin']) {
 			$show_item_edit_tools = TRUE;
 			$show_item_public_tools = FALSE;
 		}
-	}	
-	
+	}
+
 	if(!$show_item_public_tools) {
 		$template['tpl_list_item/item_'.strtolower($stock_tpl).'_public_tools'] = NULL;
 	}
-	
+
 	if(!$show_item_edit_tools) {
 		$template['tpl_list_item/item_'.strtolower($stock_tpl).'_edit_tools'] = NULL;
 	}
-	
+
 	if(!$requester['is_admin']) {
 		$template['tpl_list_item/item_'.strtolower($stock_tpl).'_admin_tools'] = NULL;
 	}
-	
+
 	foreach($conditional_replaces as $k => $v) {
 		$template[$k] = $v;
 	}
-	
+
 	preg_match_all("#%(tpl_list_item/.*)%#", $filled_template, $matches);
-	
+
 	if(is_array($matches[1])) {
 		foreach($matches[1] as $k => $v) {
 			$filled_template = replace_tpl_string($v, $template[$v], $filled_template);
 		}
 	}
-	
+
 	foreach($template as $k => $v) {
 		$filled_template = replace_tpl_string($k, $v, $filled_template);
 	}
-	
+
 	// Get rid of the useless keys
 	unset($item['original_exifdata']);
-	
+
 	// Get rid of any empty property
 	//$item = G\array_remove_empty($item);
-	
+
 	// Sensitive utf8 encode
 	$utf8_encodes = [
 		'image'	=> ['title', 'title_truncated', 'original_filename'],
 		'album' => ['name', 'name_truncated', 'description'],
 		'user'	=> ['name', 'bio'],
 	];
-	
+
 	foreach($utf8_encodes as $k => $v) {
 		if($k == strtolower($stock_tpl)) {
 			foreach($v as $encode) {
@@ -516,56 +506,56 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=NULL, 
 			}
 		}
 	}
-	
+
 	// Now stock the item values
 	$replacements = array_change_key_case(flatten_array($item, $stock_tpl."_"), CASE_UPPER);
-	
+
 	unset($replacements['IMAGE_ORIGINAL_EXIFDATA']);
-	
+
 	if($stock_tpl == "IMAGE" or $stock_tpl == "ALBUM") {
 		$replacements["ITEM_URL_EDIT"] = ($stock_tpl == "IMAGE" ? $item["url_viewer"] : $item["url"]) . "#edit";
 	}
-	
+
 	// Public for the guest
 	if(!array_key_exists('user', $item)) {
 		$replacements['IMAGE_ALBUM_PRIVACY'] = 'public';
 	}
-	
+
 	if(in_array($stock_tpl, ['IMAGE', 'ALBUM'])) {
 		$nsfw = $stock_tpl == 'IMAGE' ? $item['nsfw'] : $item['images_slice'][0]['nsfw'];
 		$placeholder = $stock_tpl == 'IMAGE' ? 'IMAGE_FLAG' : 'ALBUM_COVER_FLAG';
 		$replacements[$placeholder] = $nsfw ? 'unsafe' : 'safe';
 	}
-	
+
 	$show_object = ($show_item_edit_tools || $show_item_public_tools) || ($requester['is_admin'] || (!is_null($requester) AND $item["user"]["id"] == $requester['id']));
-	
+
 	if($show_object) {
 		$object = G\array_filter_array($item, ['image', 'medium', 'thumb', 'name', 'title', 'extension', 'size_formatted', 'display_url', 'how_long_ago', 'url', 'url_viewer', 'filename']);
 		$replacements['DATA_OBJECT'] = "data-object='" . rawurlencode(json_encode(G\array_utf8encode($object))) . "'";
 	} else {
 		$replacements['DATA_OBJECT'] = NULL;
 	}
-	
+
 	if($stock_tpl == 'IMAGE') {
 		$replacements['SIZE_TYPE'] = CHV\getSetting('theme_image_listing_sizing') . '-size';
 	}
-	
+
 	foreach($replacements as $k => $v) {
 		$filled_template = replace_tpl_string($k, $v, $filled_template);
 	}
-	
+
 	$column_sizes = array(
 		"image"	=> 8,
 		"album"	=> 8,
 		"user"	=> 8
 	);
-	
+
 	foreach($column_sizes as $k => $v) {
 		$filled_template = replace_tpl_string("COLUMN_SIZE_".strtoupper($k), $v, $filled_template);
 	}
-	
+
 	return $filled_template;
-	
+
 }
 
 function replace_tpl_string($search, $replace, $subject) {
@@ -588,17 +578,17 @@ function flatten_array($array, $prefix = '') {
 // This function is sort of an alias of php die() but with html error display
 function chevereto_die($error_msg, $paragraph=NULL, $title=NULL) {
 	if(!is_array($error_msg) && G\check_value($error_msg)) $error_msg = array($error_msg);
-	
+
 	if(is_null($paragraph)) {
 		$paragraph = "The system has encountered errors that must be fixed to allow proper Chevereto functionality. Chevereto won't work until the following issues are solved:";
 	}
 	$solution = "Need help or questions about this? Go to <a href='http://chevereto.com/support' target='_blank'>Chevereto support<a/>.";
 	$title = (!is_null($title)) ? $title : 'System error';
 	$doctitle = $title . " - Chevereto";
-	
+
 	$handled_request = G_ROOT_PATH == '/' ? sanitize_path_slashes($_SERVER["REQUEST_URI"]) : str_ireplace(G_ROOT_PATH_RELATIVE, "", G\add_trailing_slashes($_SERVER["REQUEST_URI"]));
 	$base_request = explode('/', rtrim(str_replace("//", "/", str_replace("?", "/", $handled_request)), '/'))[0];
-	
+
 	if($base_request == 'json' || $base_request == 'api'){
 		$output = array(
 			'status_code' => 500,
@@ -610,12 +600,12 @@ function chevereto_die($error_msg, $paragraph=NULL, $title=NULL) {
 		G\json_prepare();
 		die(G\Render\json_output($output));
 	}
-	
+
 	$html = [
 		'<h1>'.$title.'</h1>',
 		'<p>'.$paragraph.'</p>'
 	];
-	
+
 	if(is_array($error_msg)) {
 		$html[] = '<ul class="errors">';
 		foreach($error_msg as $error) {
@@ -627,16 +617,16 @@ function chevereto_die($error_msg, $paragraph=NULL, $title=NULL) {
 	$html[] = '<p>'.$solution.'</p>';
 	$html = join("", $html);
 	$template = CHV_APP_PATH_CONTENT_SYSTEM . 'template.php';
-	
+
 	if(!require_once($template)) {
 		die("Can't find " . G\absolute_to_relative($system_template));
 	}
-	
+
 	die();
 }
 
 function getFriendlyExif($Exif) {
-	
+
 	if(gettype($Exif) == 'string') {
 		$Exif = json_decode($Exif);
 	}
@@ -649,7 +639,7 @@ function getFriendlyExif($Exif) {
 		}
 		if($Exif->FNumber or $Exif->COMPUTED->ApertureFNumber) {
 			$Aperture = 'ƒ/' . ($Exif->FNumber ? G\fraction_to_decimal($Exif->FNumber) : explode('/', $Exif->COMPUTED->ApertureFNumber)[1]);
-			$exif_one_line[] = $Aperture; 
+			$exif_one_line[] = $Aperture;
 		}
 		if($Exif->ISOSpeedRatings) {
 			$ISO = 'ISO' . (is_array($Exif->ISOSpeedRatings) ? $Exif->ISOSpeedRatings[0] : $Exif->ISOSpeedRatings);
@@ -659,7 +649,7 @@ function getFriendlyExif($Exif) {
 			$FocalLength = G\fraction_to_decimal($Exif->FocalLength) . 'mm';
 			$exif_one_line[] = $FocalLength;
 		}
-		
+
 		$exif_relevant = [
 			'XResolution',
 			'YResolution',
@@ -762,7 +752,7 @@ function exifReadableValue($Exif, $key) {
 		],
 		'ResolutionUnit' => [
 			1 => 'None',
-			2 => 'inches', 
+			2 => 'inches',
 			3 => 'cm'
 		],
 		'ExposureProgram' => [
@@ -863,7 +853,7 @@ function exifReadableValue($Exif, $key) {
 			9	=> 'Fine Weather',
 			10	=> 'Cloudy',
 			11	=> 'Shade',
-			12	=> 'Daylight Fluorescent',	
+			12	=> 'Daylight Fluorescent',
 			13	=> 'Day White Fluorescent',
 			14	=> 'Cool White Fluorescent',
 			15	=> 'White Fluorescent',
@@ -890,12 +880,12 @@ function exifReadableValue($Exif, $key) {
     } else {
          $value = $table[$key][$Exif->$key];
     }
-	
+
 	switch($key) {
 		case 'DateTime':
 		case 'DateTimeOriginal':
 		case 'DateTimeDigitized':
-			$value =  preg_replace('/(\d{4})(:)(\d{2})(:)(\d{2})/', '$1-$3-$5', $value);	
+			$value =  preg_replace('/(\d{4})(:)(\d{2})(:)(\d{2})/', '$1-$3-$5', $value);
 		break;
 		case 'WhiteBalance':
 			$value = $value == 0 ? 'Auto' : $value;
@@ -1011,7 +1001,7 @@ var disqus_config = function() {
 	s.setAttribute("data-timestamp", +new Date());
 	(d.head || d.body).appendChild(s);
 })();
-var disqus_config = function () { 
+var disqus_config = function () {
 	this.language = "%language_code";
 	this.page.remote_auth_s3 = "%auth";
 	this.page.api_key = "%api_key";

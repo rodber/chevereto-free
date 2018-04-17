@@ -9,15 +9,10 @@
 <?php if(get_meta_description()) { ?>
 <meta name="description" content="<?php echo get_meta_description(); ?>">
 <?php } ?>
-<?php if(get_meta_keywords()) { ?>
-<meta name="keywords" content="<?php echo get_meta_keywords(); ?>">
-<?php } ?>
 
 <title><?php echo get_doctitle(); ?></title>
 
 <?php CHV\Render\include_peafowl_head(); ?>
-
-<link rel="stylesheet" href="<?php echo CHV\Render\get_theme_file_url('style.css'); ?>">
 
 <link rel="shortcut icon" href="<?php echo CHV\get_system_image_url(CHV\getSetting('favicon_image')); ?>">
 <link rel="icon" type="image/png" href="<?php echo CHV\get_system_image_url(CHV\getSetting('favicon_image')); ?>" sizes="192x192">
@@ -157,7 +152,7 @@ foreach($twitter_card as $k => $v) {
 	if(is_maintenance() || is_show_consent_screen()) {
 		$body_class = '';
 	}
-	
+
 	$top_bar_class = CHV\getSetting('theme_top_bar_color');
 ?>
 <?php
@@ -178,20 +173,20 @@ foreach($twitter_card as $k => $v) {
 			$logo_header = CHV\getSetting($logo_header);
 		?>
         <div id="logo" class="top-bar-logo"><a href="<?php echo get_header_logo_link(); ?>"><img class="replace-svg" src="<?php echo CHV\get_system_image_url($logo_header); ?>" alt="<?php echo CHV\getSetting('website_name'); ?>"></a></div>
-        
+
 		<?php if(CHV\getSetting('website_privacy_mode') == 'public' or (CHV\getSetting('website_privacy_mode') == 'private' and CHV\Login::getUser())) { ?>
         <ul class="top-bar-left float-left">
-			
+
 			<li data-action="top-bar-menu-full" data-nav="mobile-menu" class="top-btn-el phone-show hidden">
 				<span class="top-btn-text"><span class="icon icon-menu3"></span></span>
 			</li>
-			
+
 			<?php
 				if(CHV\getSetting('website_explore_page')) {
 					// Category selector
-					
+
 			?>
-			<li id="top-bar-explore" data-nav="explore" class="phone-hide pop-btn pop-btn-auto pop-btn-auto pop-btn-show<?php if(in_array(G\get_route_name(), ['explore','category'])) { ?> current<?php } ?>">
+			<li id="top-bar-explore" data-nav="explore" class="phone-hide pop-keep-click pop-btn pop-btn-show<?php if(in_array(G\get_route_name(), ['explore','category'])) { ?> current<?php } ?>">
 				<?php
 					$cols = 1;
 					$categories = get_categories();
@@ -207,7 +202,7 @@ foreach($twitter_card as $k => $v) {
 				?>
                 <span class="top-btn-text"><span class="icon icon-stack"></span><span class="btn-text phone-hide phablet-hide"><?php _se('Explore'); ?></span></span>
                 <div class="pop-box <?php if($cols > 1) { echo sprintf('pbcols%d ', $cols); } ?>arrow-box arrow-box-top anchor-left">
-                    
+
 					<div class="pop-box-inner pop-box-menu<?php if($cols > 1) { ?> pop-box-menucols<?php } ?>">
 						<?php
 							if(function_exists('get_explore_semantics')) {
@@ -252,14 +247,14 @@ foreach($twitter_card as $k => $v) {
             <?php
             	}
             ?>
-			
+
 			<?php if(CHV\getSetting('website_search')) { ?>
             <li data-action="top-bar-search"  data-nav="search" class="phone-hide pop-btn">
                 <span class="top-btn-text"><span class="icon icon-search"></span><span class="btn-text phone-hide phablet-hide"><?php _se('Search'); ?></span></span>
             </li>
             <li data-action="top-bar-search-input" class="top-bar-search-input phone-hide pop-btn pop-keep-click hidden">
                 <div class="input-search">
-                	<form action="<?php echo G\get_base_url("search/images"); ?>" method="get">
+                	<form action="<?php echo G\get_base_url("search/images"); ?>/" method="get">
                     	<input class="search" type="text" placeholder="<?php _se('Search'); ?>" autocomplete="off" spellcheck="false" name="q">
                     </form>
                     <span class="icon-search"></span><span class="icon close icon-close" data-action="clear-search" title="<?php _se('Close'); ?>"></span><span class="icon settings icon-triangle-down" data-modal="form" data-target="advanced-search" title="<?php _se('Advanced search'); ?>"></span>
@@ -270,17 +265,17 @@ foreach($twitter_card as $k => $v) {
 				<?php G\Render\include_theme_file('snippets/form_advanced_search'); ?>
 			</div>
 			<?php } ?>
-			
+
 			<?php if(CHV\getSetting('website_random')) { ?>
 			<li id="top-bar-random"  data-nav="random" class="top-btn-el phone-hide">
                 <a href="<?php echo G\get_base_url("?random"); ?>"><span class="top-btn-text"><span class="icon icon-shuffle"></span><span class="btn-text phone-hide phablet-hide"><?php _se('Random'); ?></span></span></a>
             </li>
 			<?php } ?>
-            
+
         </ul>
 		<?php } ?>
         <ul class="top-bar-right float-right keep-visible">
-			
+
 			<?php if(get_system_notices()) { ?>
 				<li data-nav="notices" class="phone-hide pop-btn pop-keep-click">
                 <span class="top-btn-text"><span class="icon icon-notification color-red"></span><span class="btn-text phone-hide phablet-hide"><?php _se('Notices (%s)', count(get_system_notices())); ?></span></span>
@@ -295,13 +290,13 @@ foreach($twitter_card as $k => $v) {
 				</div>
             </li>
 			<?php } ?>
-			
+
 			<?php if(is_upload_enabled()) { ?>
-            <li data-action="top-bar-upload" data-nav="upload" class="pop-btn"<?php if(!CHV\getSetting('guest_uploads')) { ?> data-login-needed="true"<?php } ?>>
+            <li data-action="top-bar-upload" data-nav="upload" class="<?php if(G\is_route("upload")) echo "current "; ?>pop-btn phone-hide"<?php if(!CHV\getSetting('guest_uploads')) { ?> data-login-needed="true"<?php } ?>>
                 <span class="top-btn-text"><span class="icon icon-cloud-upload"></span><span class="btn-text phone-hide phablet-hide"><?php _se('Upload'); ?></span></span>
             </li>
 			<?php } ?>
-			
+
         	<?php
 				if(!CHV\Login::isLoggedUser()) {
 			?>
@@ -316,7 +311,7 @@ foreach($twitter_card as $k => $v) {
 			?>
 			<li id="top-bar-signin" data-nav="signin" class="<?php if(G\is_route("login")) echo "current "; ?>pop-btn pop-btn-delayed pop-account pop-keep-click">
 				<span class="top-btn-text"><span class="icon icon-login tablet-hide laptop-hide desktop-hide"></span><span class="text phone-hide phablet-hide"><?php _se('Sign in'); ?></span></span>
-                <div id="top-signin-menu" class="pop-box c8 arrow-box arrow-box-top anchor-<?php echo (get_pages_link_visible() && CHV\getSetting('enable_signups')) ? 'center' : 'right'; ?>">
+                <div id="top-signin-menu" class="pop-box anchor-center c8 arrow-box arrow-box-top">
                     <div class="pop-box-inner">
                     	<?php
                         	if(CHV\getSetting('social_signin')) {
@@ -356,14 +351,14 @@ foreach($twitter_card as $k => $v) {
 						if(is_captcha_needed()) {
 			?>
 			<li id="top-bar-signup" data-nav="signup" class="<?php if(G\is_route("signup")) echo "current "; ?>phone-hide top-btn-el">
-				<a href="<?php echo G\get_base_url('signup'); ?>" class="top-btn-text top-btn-create-account btn <?php echo CHV\getSetting('theme_top_bar_button_color'); ?> text"><span class="icon icon-user phablet-hide tablet-hide laptop-hide desktop-hide"></span><?php _se('Create account'); ?></a>
+				<a href="<?php echo G\get_base_url('signup'); ?>" class="top-btn-text top-btn-create-account btn <?php echo CHV\getSetting('theme_top_bar_button_color'); ?> text"><span class="icon icon-user2 phablet-hide tablet-hide laptop-hide desktop-hide"></span><?php _se('Create account'); ?></a>
 			</li>
 			<?php
-						} else {		
+						} else {
 			?>
 			<li id="top-bar-signup" data-nav="signup" class="<?php if(G\is_route("signup")) echo "current "; ?>phone-hide pop-btn pop-btn-delayed pop-account pop-keep-click">
-            	<span class="top-btn-text top-btn-create-account btn <?php echo CHV\getSetting('theme_top_bar_button_color'); ?> text"><span class="icon icon-user phablet-hide tablet-hide laptop-hide desktop-hide"></span><?php _se('Create account'); ?></span>
-                <div id="top-signup-menu" class="pop-box anchor-<?php echo get_pages_link_visible() ? 'center' : 'right'; ?> c8 arrow-box arrow-box-top">
+            	<span class="top-btn-text top-btn-create-account btn <?php echo CHV\getSetting('theme_top_bar_button_color'); ?> text"><span class="icon icon-user2 phablet-hide tablet-hide laptop-hide desktop-hide"></span><?php _se('Create account'); ?></span>
+                <div id="top-signup-menu" class="pop-box anchor-center c8 arrow-box arrow-box-top">
                     <div class="pop-box-inner">
                     	<?php
                         	if(CHV\getSetting('social_signin')) {
@@ -390,10 +385,10 @@ foreach($twitter_card as $k => $v) {
                 </div>
             </li>
 			<?php
-						} 
+						}
 					} // signups
 			?>
-            
+
 			<?php
 				} else {
 					if(is_show_notifications()) {
@@ -401,12 +396,12 @@ foreach($twitter_card as $k => $v) {
 						$notifications_display = CHV\Login::getUser()['notifications_unread_display'];
 						$notifications_counter = strtr('<span data-content="notifications-counter" class="top-btn-number%c">'.$notifications_display.'</span>', ['%c' => $notifications_unread > 0 ? ' on' : NULL]);
 			?>
-			<li data-action="top-bar-notifications" class="top-bar-notifications pop-btn pop-keep-click margin-right-5 phone-hide">
+			<li data-action="top-bar-notifications" class="top-bar-notifications pop-btn pop-keep-click">
 				<div class="top-btn-text">
 					<div class="soft-hidden menu-fullscreen-show"><span class="icon icon-bell2"></span><?php echo $notifications_counter; ?><span class="btn-text"><?php _se('Notifications'); ?></span></div>
-					<div class="menu-fullscreen-hide"><?php echo $notifications_counter; ?></div>
+					<div class="menu-fullscreen-hide"><span class="icon icon-bell2"></span><?php echo $notifications_counter; ?></div>
 				</div>
-                <div class="top-bar-notifications-container c9 pop-box arrow-box arrow-box-top anchor-right">
+                <div class="top-bar-notifications-container c9 pop-box arrow-box arrow-box-top anchor-center">
                     <div class="pop-box-inner">
                     	<div class="top-bar-notifications-header phone-hide phablet-hide">
                     		<h2><?php _se('Notifications'); ?></h2>
@@ -425,17 +420,17 @@ foreach($twitter_card as $k => $v) {
                     </div>
                 </div>
             </li>
-			<?php 
+			<?php
 					}
 			?>
-            <li id="top-bar-user" data-nav="user" class="pop-btn pop-btn-delayed phone-hide<?php echo is_show_notifications() ? ' margin-left-0' : NULL; ?>">
+            <li id="top-bar-user" data-nav="user" class="pop-btn pop-keep-click pop-btn-delayed <?php echo is_show_notifications() ? ' margin-left-10' : NULL; ?>">
                 <span class="top-btn-text">
 					<?php if(CHV\Login::getUser()["avatar"]["url"]) { ?>
 					<img src="<?php echo CHV\Login::getUser()["avatar"]["url"]; ?>" alt="" class="user-image">
 					<?php } else { ?>
 					<img src="" alt="" class="user-image hidden">
 					<?php } ?>
-					<span class="user-image default-user-image<?php echo (CHV\Login::getUser()["avatar"]["url"] ? ' hidden' : ''); ?>"><span class="icon icon-user"></span></span>
+					<span class="user-image default-user-image<?php echo (CHV\Login::getUser()["avatar"]["url"] ? ' hidden' : ''); ?>"><span class="icon icon-user2"></span></span>
 					<span class="text phone-hide"><?php echo CHV\Login::getUser()["name_short_html"]; ?></span><span class="phone-hide arrow-down"></span>
 				</span>
                 <div class="pop-box arrow-box arrow-box-top anchor-right">
@@ -466,13 +461,13 @@ foreach($twitter_card as $k => $v) {
 			<?php
 				}
 			?>
-			<?php 
+			<?php
 				if(CHV\getSetting('website_privacy_mode') == 'public' or (CHV\getSetting('website_privacy_mode') == 'private' and CHV\Login::getUser())) {
 			?>
 			<?php
 					if(get_pages_link_visible()) {
 			?>
-            <li data-nav="about" class="phone-hide pop-btn pop-btn-delayed">
+            <li data-nav="about" class="phone-hide pop-btn pop-keep-click pop-btn-delayed">
                 <span class="top-btn-text"><span class="icon icon-info tablet-hide laptop-hide desktop-hide"></span><span class="text phone-hide phablet-hide"><?php _se('About'); ?></span><span class="arrow-down"></span></span>
                 <div class="pop-box arrow-box arrow-box-top anchor-right">
                     <div class="pop-box-inner pop-box-menu">
@@ -501,7 +496,7 @@ foreach($twitter_card as $k => $v) {
 					$cols = min(6, ceil(count($enabled_languages) / 6));
 				?>
                 <span class="top-btn-text"><span class="text"><?php echo CHV\get_language_used()['short_name']; ?></span><span class="arrow-down"></span></span>
-                <div class="pop-box <?php if($cols > 1) { echo sprintf('pbcols%d ', $cols); } ?>arrow-box arrow-box-top anchor-right">
+                <div class="pop-box <?php if($cols > 1) { echo sprintf('pbcols%d ', $cols); } ?>arrow-box arrow-box-top anchor-center">
                     <div class="pop-box-inner pop-box-menu<?php if($cols > 1) { ?> pop-box-menucols<?php } ?>">
                         <ul>
 						<?php
@@ -520,9 +515,9 @@ foreach($twitter_card as $k => $v) {
 			<?php
 				}
 			?>
-			
+
         </ul>
-        
+
     </div>
 </header>
 <?php } ?>

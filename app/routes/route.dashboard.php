@@ -179,7 +179,7 @@ $route = function($handler) {
 					_s('Bug tracking')			=> 'https://chevereto.com/bug-tracking',
 					_s('Blog')					=> 'https://chevereto.com/blog',
 					_s('Community')				=> 'https://chevereto.com/community',
-					'GitHub' 					=> 'https://github.com/Chevereto/Chevereto-Free',
+					'GitHub' 					=> 'https://github.com/Chevereto',
 				];
 				$chevereto_links = [];
 				foreach($chevereto_urls as $k => $v) {
@@ -413,14 +413,6 @@ $route = function($handler) {
 
 						$page_file_path_clean = trim(G\sanitize_relative_path($_POST['page_file_path']), '/');
 
-						// Disable PHP pages here
-						if(G\get_app_setting('disable_php_pages')) {
-							$page_extension = G\get_file_extension($page_file_path_clean);
-							if($page_extension == 'php') {
-								$page_file_path_clean = G\str_replace_last($page_extension, 'html', $page_file_path_clean);
-							}
-						}
-
 						$_POST['page_file_path'] = str_replace('default/', NULL, $page_file_path_clean);
 						$_POST['page_file_path_absolute'] = CHV\Page::getPath($_POST['page_file_path']);
 
@@ -644,7 +636,7 @@ $route = function($handler) {
 							],
 						'page_file_path' =>
 							[
-								'validate'	=> $_POST['page_type'] == 'internal' ? preg_match('/^[\w\-\_\/]+\.('.(G\get_app_setting('disable_php_pages') ? 'html' : 'html|php').')$/', $_POST['page_file_path']) : TRUE,
+								'validate'	=> $_POST['page_type'] == 'internal' ? preg_match('/^[\w\-\_\/]+\.php$/', $_POST['page_file_path']) : TRUE,
 								'error_msg'	=> _s('Invalid file path')
 							],
 						'page_link_url' =>
@@ -686,6 +678,11 @@ $route = function($handler) {
 							[
 								'validate'	=> $_POST['auto_delete_guest_uploads'] !== NULL && array_key_exists($_POST['auto_delete_guest_uploads'], CHV\Image::getAvailableExpirations()),
 								'error_msg'	=> _s('Invalid value: %s', $_POST['auto_delete_guest_uploads'])
+							],
+						'sdk_pup_url' =>
+							[
+								'validate'	=> $_POST['sdk_pup_url'] ? filter_var($_POST['sdk_pup_url'], FILTER_VALIDATE_URL) : TRUE,
+								'error_msg'	=> _s('Invalid URL')
 							],
 					];
 
@@ -1062,7 +1059,6 @@ $route = function($handler) {
 									$settings_to_vars = [
 										'website_doctitle' => 'doctitle',
 										'website_description' => 'meta_description',
-										'website_keywords'=> 'meta_keywords'
 									];
 									foreach($update_settings as $k => $v) {
 										if($k == 'maintenance') {

@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-06-21 18:28+0000',
-  'PO-Revision-Date' => '2017-06-21 18:28+0000',
+  'POT-Creation-Date' => '2017-10-01 18:12+0000',
+  'PO-Revision-Date' => '2017-10-01 18:12+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'fi',
@@ -18,6 +18,18 @@ $translation_plural = array (
   'function' => '$index = (int)(($n != 1)); return ($index < 2) ? $index : 2 - 1;',
 );
 $translation_table = [
+	"Plugin" => [
+		0 => "Liitännäinen",
+	],
+	"Plugin route" => [
+		0 => "Liitännäisen ohjaus",
+	],
+	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
+		0 => "Ota käyttään liitännäisen ohjeet %u. Ohjeet tulee näkymään %s valikossa. Tämä asetus ei vaikuta ylläpitäjiin.",
+	],
+	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
+		0 => "Aseta kustomoitu URL %p. Huomioi, että sinun tulee käsin kopioida se %s URL:iin.",
+	],
 	"Invalid email" => [
 		0 => "Virheellinen sähköpostiosoite",
 	],
@@ -56,9 +68,6 @@ $translation_table = [
 	],
 	"Update in progress" => [
 		0 => "Päivitys käynnissä",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "Virhe havaittu. Yritä myöhemmin uudelleen.",
 	],
 	"Missing %s file" => [
 		0 => "Puuttuva %s tiedosto",
@@ -168,9 +177,6 @@ $translation_table = [
 	"Trending" => [
 		0 => "Nousussa",
 	],
-	"Popular" => [
-		0 => "Suosittu",
-	],
 	"Top users" => [
 		0 => "Suosituimmat käyttäjät",
 	],
@@ -182,6 +188,9 @@ $translation_table = [
 	],
 	"Most viewed" => [
 		0 => "Katsotuimmat",
+	],
+	"Popular" => [
+		0 => "Suosittu",
 	],
 	"Most liked" => [
 		0 => "Suosituimmat",
@@ -413,7 +422,7 @@ $translation_table = [
 		0 => "Tuki",
 	],
 	"Need help? Go to %s and you will get help quickly." => [
-		0 => "Tarvitsetko apua? Mene %s ja saat apua nopeasti.",
+		0 => "Tarvitsetko apua? %s -sivustolta saat apua nopeasti.",
 	],
 	"PHP version" => [
 		0 => "PHP-versio",
@@ -845,11 +854,11 @@ $translation_table = [
 	"Direct links" => [
 		0 => "Suorat linkit",
 	],
-	"Image URL" => [
-		0 => "Kuvan osoite",
-	],
 	"Image link" => [
 		0 => "Kuvan linkki",
+	],
+	"Image URL" => [
+		0 => "Kuvan osoite",
 	],
 	"Thumbnail URL" => [
 		0 => "Kuvakkeen osoite",
@@ -959,6 +968,12 @@ $translation_table = [
 	"Mail error" => [
 		0 => "Sähköpostivirhe",
 	],
+	"Upload images" => [
+		0 => "Lataa kuvia",
+	],
+	"Upload plugin" => [
+		0 => "Kuvien lataus liitännäinen",
+	],
 	"Image search results for %s" => [
 		0 => "Kuvahaun tulokset %s",
 	],
@@ -1013,6 +1028,9 @@ $translation_table = [
 	"Create account" => [
 		0 => "Rekisteröidy",
 	],
+	"Upload" => [
+		0 => "Lähetä",
+	],
 	"%s's Images" => [
 		0 => "Käyttäjän %s kuvat",
 	],
@@ -1052,9 +1070,6 @@ $translation_table = [
 	"Notices (%s)" => [
 		0 => "Ilmoitukset (%s)",
 	],
-	"Upload" => [
-		0 => "Lähetä",
-	],
 	"Sign in with another account" => [
 		0 => "Kirjaudu tilillä",
 	],
@@ -1065,7 +1080,7 @@ $translation_table = [
 		0 => "Käyttäjänimi tai sähköpostiosoite",
 	],
 	"Keep me logged in" => [
-		0 => "Pidä minut kirjautuneena",
+		0 => "Pysy kirjautuneena",
 	],
 	"Don't have an account? <a href='%s'>Sign up</a> now." => [
 		0 => "Ei tunnusta? <a href='%s'>Rekisteröidy</a> nyt.",
@@ -1157,26 +1172,32 @@ $translation_table = [
 	"You can also %i or %u." => [
 		0 => "Voit myös %i tai %u.",
 	],
+	"browse from your device" => [
+		0 => "selaa laitteesta",
+	],
 	"take a picture" => [
 		0 => "ota kuva",
+	],
+	"You can also %i, %c or %u." => [
+		0 => "Voit myös %i, %c tai %u.",
 	],
 	"Edit or resize any image by clicking the image preview" => [
 		0 => "Muokkaa tai muuta kuvan kokoa osoittamalla kuvan esikatselua",
 	],
-	"Edit or resize any image by touching the image preview" => [
-		0 => "Muokkaa tai muuta kuvan kokoa osoittamalla kuvan esikatselua",
+	"Edit any image by touching the image preview" => [
+		0 => "Muokkaa kuvaa koskettamalla kuvan esikatselua",
 	],
 	"your computer" => [
 		0 => "tietokoneesi",
 	],
-	"image URLs" => [
-		0 => "kuvan osoite",
-	],
-	"You can keep adding more images from %i or from %u." => [
-		0 => "Voit lisätä enemmän kuvia %i tai %u.",
+	"You can add more images from %i or %u." => [
+		0 => "Voit lisätä kuvia %i tai %u.",
 	],
 	"your device" => [
 		0 => "laitteesi",
+	],
+	"You can add more images from %i, %c or %u." => [
+		0 => "Voit lisätä kuvia %i, %c tai %u.",
 	],
 	"Uploading %q %o" => [
 		0 => "Ladataan %q %o",
@@ -1185,7 +1206,7 @@ $translation_table = [
 		0 => "valmis",
 	],
 	"The queue is being uploaded, it should take just a few seconds to complete." => [
-		0 => "Ladataan kuvia, pitäisi kestää vielä hetki.",
+		0 => "Ladataan kuvia, kestää vielä hetken.",
 	],
 	"Upload complete" => [
 		0 => "Lähettäminen valmis",
@@ -1250,14 +1271,17 @@ $translation_table = [
 	"Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information." => [
 		0 => "Katso <a data-modal=\"simple\" data-target=\"failed-upload-result\">virheraportti</a> saadaksesi lisätietoja.",
 	],
-	"max" => [
-		0 => "maksimi",
+	"reset" => [
+		0 => "nollaa",
 	],
 	"close" => [
 		0 => "sulje",
 	],
 	"copy" => [
 		0 => "kopioi",
+	],
+	"insert" => [
+		0 => "lisää",
 	],
 	"Edit" => [
 		0 => "Muokkaa",
@@ -1620,9 +1644,6 @@ $translation_table = [
 	"There's nothing to show here." => [
 		0 => "Täällä ei ole mitään nähtävää.",
 	],
-	"Upload images" => [
-		0 => "Lataa kuvia",
-	],
 	"Edit image details" => [
 		0 => "Muokkaa kuvan tietoja",
 	],
@@ -1730,6 +1751,9 @@ $translation_table = [
 	],
 	"Resend instructions" => [
 		0 => "Lähetä ohjeet uudelleen",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "Virhe havaittu. Yritä myöhemmin uudelleen.",
 	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "Teille on lähetetty sähköpostiviesti josta löydätte tarkemmat ohjeet salasanan vaihtamiseen. Jos et saanut sähköpostiviestiä, tarkista roskapostit.",
@@ -2255,6 +2279,12 @@ $translation_table = [
 	],
 	"Enable this if you want to allow users to signup." => [
 		0 => "Salli käyttäjien rekisteröityä palveluun.",
+	],
+	"Enable user content delete" => [
+		0 => "Salli käyttäjien poistaa sisältöä",
+	],
+	"Enable this if you want to allow users to delete their own content. This setting doesn't affect administrators." => [
+		0 => "Salli käyttäjien poistaa omaa sisältöään palvelusta. Tämä asetus ei vaikuta ylläpitäjiin.",
 	],
 	"Minimum age required" => [
 		0 => "Vähimmäisikä vaaditaan",
@@ -2963,6 +2993,63 @@ $translation_table = [
 	],
 	"Send" => [
 		0 => "Lähetä",
+	],
+	"Add image uploading to your website, blog or forum by installing our upload plugin. It provides image uploading to any website by placing a button that will allow your users to directly upload images to our service and it will automatically handle the codes needed for insertion. All features included like drag and drop, remote upload, image resizing and more." => [
+		0 => "Lisää kuvien lataus mahdollisuus verkkosivuille, blogiin tai foorumille asentamalla liitännäinen. Tämä lisää painikkeen sivuille mahdollistaen kuvien lataamisen palvelimelle ja hoitaa automaattisesti kaiken taustalla. Kaikki toiminnot saatavilla mm. kuvien lataaminen raahaamalla ja tiputtamalla, etälataus sekä kuvien kokojen automaattinen muuttaminen.",
+	],
+	"Supported software" => [
+		0 => "Tuetut alustat",
+	],
+	"supported software" => [
+		0 => "tuetut alustat",
+	],
+	"The plugin works in any website with user-editable content and for %sv, it will place an upload button that will match the target editor toolbar so no extra customization is needed." => [
+		0 => "Tämä liitännäinen toimii millä tahansa verkkosivulla, jolla käyttäjä voi muokata sisältöä. %sv latauspainike tulee näkymään automaattisesti työkalupalkissa ja ylimääräisiä muokkauksia ei siis tarvitse tehdä.",
+	],
+	"Add it to your website" => [
+		0 => "Asentaminen",
+	],
+	"options" => [
+		0 => "asetuksia",
+	],
+	"Copy and paste the plugin code into your website HTML code (preferably inside the head section). There are plenty %o to make it fit better to your needs." => [
+		0 => "Sijoita liitännäisen koodi verkkosivun HTML-koodiin (mieluiten head-osion sisään). Liitännäiseen löytyy paljon %o, joilla voit muokata sen paremmin tarpeisiisi.",
+	],
+	"Basic options" => [
+		0 => "Asetukset",
+	],
+	"Color palette" => [
+		0 => "Väripaletti",
+	],
+	"Button color scheme" => [
+		0 => "Painikkeiden väriteema",
+	],
+	"Embed codes that will be auto-inserted in editor box" => [
+		0 => "Upotuskoodit, jotka tulevat automaattisesti muokkauslaatikkoon",
+	],
+	"Sibling selector" => [
+		0 => "Sisarvalikko",
+	],
+	"Sibling element selector where to place the button next to" => [
+		0 => "Sisarelementin valitsin, johon sijoitetaan vieressä oleva painike",
+	],
+	"Sibling position" => [
+		0 => "Sisarelementin sijainti",
+	],
+	"After" => [
+		0 => "Jälkeen",
+	],
+	"Before" => [
+		0 => "Ennen",
+	],
+	"Position relative to sibling element" => [
+		0 => "Asema sisarelementtiin nähden",
+	],
+	"Advanced options" => [
+		0 => "Edistyneet asetukset",
+	],
+	"The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options." => [
+		0 => "Tähän liitännäiseen on paljon edistyneitä muokkausasetuksia. Voit muokata mm. HTML, CSS, värejä, asettaa tarkkailijoita yms. Lue liitännäisen %d saadaksesi paremman käsityksen edistyneistä asetuksista.",
 	],
 	"You either don't have permission to access this page or the link has expired." => [
 		0 => "Sinulla ei ole oikeutta tälle sivulle tai linkkisi on vanhentunut.",

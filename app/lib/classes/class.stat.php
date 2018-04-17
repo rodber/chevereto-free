@@ -78,6 +78,7 @@ class Stat {
 				$date = new \DateTime($args['date_gmt']);
 				$args['date_gmt'] = $date->format('Y-m-d');
 			} catch(Exception $e) {
+				//throw new StatException($e);
 				throw new StatException('Invalid date_gmt value in ' . __METHOD__, 106);
 			}
 		}
@@ -174,6 +175,7 @@ class Stat {
 			'%disk_sum'			=> $disk_sum_value,
 			'%likes'			=> $args['likes'],
 		]);
+		
 		try {
 			DB::queryExec($sql);
 		} catch(Exception $e) {

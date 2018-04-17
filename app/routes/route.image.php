@@ -9,7 +9,7 @@
 			<inbox@rodolfoberrios.com>
 
   Copyright (C) Rodolfo Berrios A. All rights reserved.
-  
+
   BY USING THIS SOFTWARE YOU DECLARE TO ACCEPT THE CHEVERETO EULA
   http://chevereto.com/license
 
@@ -17,45 +17,45 @@
 
 $route = function($handler) {
 	try {
-		
+
 		if($handler->isRequestLevel(3)) return $handler->issue404(); // Allow only 2 levels
-		
+
 		if(is_null($handler->request[0])) {
 			return $handler->issue404();
 		}
-		
+
 		$logged_user = CHV\Login::getUser();
-		
+
 		// User status override redirect
 		CHV\User::statusRedirect($logged_user['status']);
 
 		$id = CHV\decodeID($handler->request[0]);
-		
+
 		$tables = CHV\DB::getTables();
-		
+
 		if($id==0) {
 			return $handler->issue404();
 		}
-		
+
 		// Trail this view
 		$_SESSION['last_viewed_image'] = CHV\encodeId($id);
-		
+
 		// Session stock viewed images
 		if(!$_SESSION['image_view_stock']) {
 			$_SESSION['image_view_stock'] = [];
 		}
-		
+
 		// Get image DB
 		$image = CHV\Image::getSingle($id, !in_array($id, $_SESSION['image_view_stock']), TRUE, $logged_user);
-		
+
 		// Stock this image view
 		$_SESSION['image_view_stock'][] = $id;
-		
+
 		// No image or belongs to a banned user if exists?
 		if(!$image || (!$logged_user['is_admin'] && $image['user']['status'] == 'banned')) {
 			return $handler->issue404();
 		}
-		
+
 		// Test local images
 		if($image['file_resource']['type'] == 'path') {
 			if(!$image['file_resource']['chain']['image'] || !file_exists($image['file_resource']['chain']['image'])) {
@@ -67,7 +67,7 @@ $route = function($handler) {
 				$image['is_animated'] = 1;
 			}
 		}
-		
+
 		/*
 			Note: Remote image testing was removed because of the HUGE number of websites running external containers unaccesible via HTTP.
 			Remote image test works only if the website can fetch the image URI headers.
@@ -75,18 +75,18 @@ $route = function($handler) {
 		*/
 
 		$is_owner = $image['user']['id'] !== NULL ? ($image['user']['id'] == $logged_user['id']) : false;
-		
+
 		// Password protected content
 		if(!($handler::getCond('admin') || $is_owner) && $image['album']['privacy'] == 'password' && !CHV\Album::checkSessionPassword($image['album'])) {
 			G\redirect($image['album']['url']);
 		}
-		
+
 		// Private profile
 		if($image['user']['is_private'] && !$logged_user['is_admin'] && $image["user"]["id"] !== $logged_user['id']) {
 			unset($image['user']);
 			$image['user'] = CHV\User::getPrivate();
 		}
-		
+
 		// Privacy
 		if($handler::getCond('forced_private_mode')) {
 			$image['album']['privacy'] = CHV\getSetting('website_content_privacy_mode');
@@ -94,29 +94,29 @@ $route = function($handler) {
 		if(!$handler::getCond('admin') and in_array($image['album']['privacy'], array('private', 'custom')) and !$is_owner) {
 			return $handler->issue404();
 		}
-		
+
 		$db = CHV\DB::getInstance();
-		
+
 		// User found
 		if($image['user']['id'] !== NULL) {
-			
+
 			// Get user albums
 			$name_array = explode(' ', $image['user']['name']);
 			$user_name_short = $name_array[0];
-			
+
 			$image['user']['albums'] = [];
-			
+
 			// Lets fake the stream as an album
 			$image['user']['albums']['stream'] = CHV\User::getStreamAlbum($image['user']);
-			
+
 			// Get user album list
 			$image['user']['albums'] += CHV\DB::get('albums', ['user_id' => $image['user']['id']], 'AND', ['field' => 'name', 'order' => 'asc']);
-			
+
 			foreach($image['user']['albums'] as $k => $v) {
 				$image['user']['albums'][$k] = CHV\DB::formatRow($v, 'album');
 				CHV\Album::fill($image['user']['albums'][$k]);
 			}
-			
+
 		}
 
 		// Get the album slice
@@ -125,11 +125,11 @@ $route = function($handler) {
 			$image_album_slice_db = $get_album_slice['db'];
 			$image_album_slice = array_merge($image['album'], $get_album_slice['formatted']);
 		}
-		
+
 		$image_safe_html =  G\safe_html($image);
-		
+
 		$pre_doctitle = $image_safe_html['title'] ?: ($image_safe_html['name'].'.'.$image_safe_html['extension']) . ' hosted at ' . CHV\getSetting('website_name');
-		
+
 		$tabs = [
 			[
 				"label"		=> _s('About'),
@@ -143,16 +143,16 @@ $route = function($handler) {
 				"id"		=> "tab-codes",
 			];
 		}
-		
+
 		if($handler::getCond('admin')) {
 			$tabs[] = [
 				"label"		=> _s('Full info'),
 				"id"		=> "tab-full-info"
 			];
-			
+
 			// Banned uploader IP?
 			$banned_uploader_ip = CHV\Ip_ban::getSingle(['ip' => $image['uploader_ip']]);
-			
+
 			// Admin list values
 			$image_admin_list_values = [
 				[
@@ -172,11 +172,11 @@ $route = function($handler) {
 					'content' 	=> $image['date_gmt'] . ' (GMT)'
 				]
 			];
-			
+
 			$handler::setVar('image_admin_list_values', $image_admin_list_values);
 			$handler::setCond('banned_uploader_ip', (bool)$banned_uploader_ip);
 		}
-		
+
 		foreach($tabs as $tab) {
 			if($tab['current'] === TRUE) {
 				$handler::setVar('current_tab', G\str_replace_first('tab-', NULL, $tab['id']));
@@ -192,12 +192,6 @@ $route = function($handler) {
 		$handler::setVar('tabs', $tabs);
 		$handler::setVar('owner', $image['user']);
 
-		// Populate image category to meta keywords
-		$category = $handler::getVar('categories')[$image['category_id']];
-		if($category) {
-			$handler::setVar('meta_keywords', _s('%s images', $category['name']) . ', ' . $handler::getVar('meta_keywords'));
-		}
-		
 		// Populate the image meta description
 		if($image['description']) {
 			$meta_description = $image['description'];
@@ -217,7 +211,7 @@ $route = function($handler) {
 			}
 		}
 		$handler::setVar('meta_description', htmlspecialchars($meta_description));
-		
+
 		if($handler::getCond('admin') or $is_owner) {
 			$handler::setVar('user_items_editor', [
 				'user_albums'	=> $image['user']['albums'],
@@ -226,7 +220,7 @@ $route = function($handler) {
 				'category_id'	=> $image['category_id']
 			]);
 		}
-		
+
 		// Share thing
 		$share_element = [
 			'referer'		=> G\get_base_url(),
@@ -237,7 +231,7 @@ $route = function($handler) {
 		$share_element['HTML'] = '<a href="'.$share_element["url"].'" title="'.$share_element["title"].'"><img src="'.$share_element["image"].'" /></a>';
 		$share_links_array = CHV\render\get_share_links($share_element);
 		$handler::setVar('share_links_array', $share_links_array);
-		
+
 		// Share modal
 		$handler::setVar('share_modal', [
 			'type'			=> 'image',
@@ -246,19 +240,19 @@ $route = function($handler) {
 			'privacy'		=> $image['album']['privacy'],
 			'privacy_notes'	=> $image['album']['privacy_notes'],
 		]);
-		
+
 		// Embed codes
 		$embed = [];
 		$embed['direct-links'] = [
 			'label' => _s('Direct links'),
 			'entries' => [
 				[
-					'label' => _s('Image URL'),
-					'value' => $image['url']
-				],
-				[
 					'label' => _s('Image link'),
 					'value' => $image['url_viewer']
+				],
+				[
+					'label' => _s('Image URL'),
+					'value' => $image['url']
 				],
 				[
 					'label' => _s('Thumbnail URL'),
@@ -272,13 +266,13 @@ $route = function($handler) {
 				'value' => $image['medium']['url']
 			];
 		}
-		
+
 		$image_full = [
 			'html'		=> '<img src="'.$image['url'].'" alt="'.$image['filename'].'" border="0" />',
 			'markdown'	=> '!['.$image['filename'].']('.$image['url'].')'
 		];
 		$image_full['bbcode'] = G\html_to_bbcode($image_full['html']);
-		
+
 		$embed['full-image'] = [
 			'label' => _s('Full image'),
 			'entries' => [
@@ -296,11 +290,11 @@ $route = function($handler) {
 				],
 			]
 		];
-		
+
 		$embed_full_linked['html'] = '<a href="'.$image['url_viewer'].'">'.$image_full['html'].'</a>';
 		$embed_full_linked['bbcode'] = G\html_to_bbcode($embed_full_linked['html']);
 		$embed_full_linked['markdown'] = '[!['.$image['filename'].']('.$image['url'].')]('.$image['url_viewer'].')';
-		
+
 		$embed['full-linked'] = [
 			'label' => _s('Full image (linked)'),
 			'entries' => [
@@ -318,7 +312,7 @@ $route = function($handler) {
 				],
 			]
 		];
-		
+
 		if($image['medium']) {
 			$embed_medium_linked = array(
 				"html" => '<a href="'.$image['url_viewer'].'"><img src="'.$image['medium']['url'].'" alt="'.$image['filename'].'" border="0" /></a>'
@@ -343,13 +337,13 @@ $route = function($handler) {
 				]
 			];
 		}
-		
+
 		$embed_thumb_linked = [
 			'html' => '<a href="'.$image['url_viewer'].'"><img src="'.$image['thumb']['url'].'" alt="'.$image['filename'].'" border="0" /></a>'
 		];
 		$embed_thumb_linked['bbcode'] = G\html_to_bbcode($embed_thumb_linked['html']);
 		$embed_thumb_linked['markdown'] = '[!['.$image['thumb']['filename'].']('.$image['thumb']['url'].')]('.$image['url_viewer'].')';
-		
+
 		$embed['thumb-linked'] = [
 			'label' => _s('Thumbnail image (linked)'),
 			'entries' => [
@@ -367,7 +361,7 @@ $route = function($handler) {
 				],
 			]
 		];
-		
+
 		// Insert an embed id for each entry (for the cliboard.js bind)
 		$embed_id = 1;
 		foreach($embed as &$v) {
@@ -376,9 +370,9 @@ $route = function($handler) {
 				$embed_id++;
 			}
 		}
-		
+
 		$handler::setVar('embed', $embed);
-		
+
 	} catch(Exception $e) {
 		G\exception_to_error($e);
 	}

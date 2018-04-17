@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-06-21 18:28+0000\n"
-"PO-Revision-Date: 2017-06-21 18:28+0000\n"
+"POT-Creation-Date: 2017-10-10 10:31+0000\n"
+"PO-Revision-Date: 2017-10-10 10:31+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -10,6 +10,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Plugin"
+msgstr "插件"
+
+msgid "Plugin route"
+msgstr "上传插件"
+
+#, php-format
+msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
+msgstr "启用此功能可在%u页面显示插件说明。这些说明的链接将添加到%s菜单中。此设置不会影响管理员。"
+
+msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
+msgstr "使用它来设置%p的自定义URL。请注意，您需要手动复制此URL中的%s。"
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -87,20 +100,6 @@ msgstr "个人"
 #: ../../../app/install/update/template/update.php:2
 msgid "Update in progress"
 msgstr "正在更新"
-
-#: ../../../app/install/update/updater.php:62
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
-#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
-#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
-#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
-#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
-#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
-#: ../../../lib/Peafowl/peafowl.min.js:158
-#: ../../../lib/Peafowl/peafowl.min.js:195
-msgid "An error occurred. Please try again later."
-msgstr "发生错误. 请稍后再试."
 
 #: ../../../app/install/update/updater.php:72
 #, php-format
@@ -264,9 +263,6 @@ msgstr "最近"
 msgid "Trending"
 msgstr "热门"
 
-msgid "Popular"
-msgstr "最爱"
-
 #: ../../../app/routes/route.dashboard.php:1163
 msgid "Top users"
 msgstr "所有用户"
@@ -301,6 +297,9 @@ msgstr "最旧的"
 #: ../../../app/routes/route.user.php:201
 msgid "Most viewed"
 msgstr "最热门的"
+
+msgid "Popular"
+msgstr "最爱"
 
 #: ../../../app/routes/route.album.php:104
 #: ../../../app/routes/route.category.php:72
@@ -1167,7 +1166,7 @@ msgstr "无效的用户ID"
 
 #: ../../../app/routes/route.dashboard.php:652
 msgid "Invalid email mode"
-msgstr "无效的电子邮件方式"
+msgstr "无效的电子邮件地址"
 
 #: ../../../app/routes/route.dashboard.php:657
 msgid "Invalid SMTP port"
@@ -1310,7 +1309,7 @@ msgstr "无法保存页面内容: %s."
 #: ../../../app/themes/Peafowl/views/user.php:74
 #: ../../../app/themes/Peafowl/views/user.php:80
 msgid "Following"
-msgstr "已关注"
+msgstr "关注"
 
 #: ../../../app/routes/route.image.php:120
 #: ../../../app/themes/Peafowl/header.php:424
@@ -1358,13 +1357,13 @@ msgstr "图片 %i 托管在 %w"
 msgid "Direct links"
 msgstr "直接（源文件）链接"
 
-#: ../../../app/themes/Peafowl/views/image.php:279
-msgid "Image URL"
-msgstr "图片URL链接"
-
 #: ../../../app/themes/Peafowl/views/image.php:285
 msgid "Image link"
 msgstr "图片链接"
+
+#: ../../../app/themes/Peafowl/views/image.php:279
+msgid "Image URL"
+msgstr "图片URL链接"
 
 #: ../../../app/themes/Peafowl/views/image.php:291
 msgid "Thumbnail URL"
@@ -1532,6 +1531,12 @@ msgstr "消息已发送. 我们将很快和您取得了联系."
 msgid "Mail error"
 msgstr "邮件错误"
 
+msgid "Upload images"
+msgstr "上传图片"
+
+msgid "Upload plugin"
+msgstr "上传插件"
+
 #: ../../../app/routes/route.search.php:120
 #, php-format
 msgid "Image search results for %s"
@@ -1616,6 +1621,11 @@ msgstr "你必须年满 %s 周岁才能继续访问这个网站."
 msgid "Create account"
 msgstr "注册账户"
 
+#: ../../../app/themes/Peafowl/header.php:258
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Upload"
+msgstr "上传"
+
 #: ../../../app/routes/route.user.php:84
 #: ../../../app/themes/Peafowl/header.php:56
 #: ../../../app/themes/Peafowl/views/index.php:46
@@ -1678,11 +1688,6 @@ msgstr "随机"
 #, php-format
 msgid "Notices (%s)"
 msgstr "通知 (%s)"
-
-#: ../../../app/themes/Peafowl/header.php:258
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-msgid "Upload"
-msgstr "上传"
 
 #: ../../../app/themes/Peafowl/header.php:281
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:11
@@ -1887,26 +1892,32 @@ msgstr "添加图像的URL"
 msgid "You can also %i or %u."
 msgstr "你也可以%i或者%u。"
 
+msgid "browse from your device"
+msgstr "浏览您的计算机"
+
 msgid "take a picture"
 msgstr "拍照"
 
-msgid "Edit or resize any image by clicking the image preview"
-msgstr "编辑或通过点击图像预览调整图像大小"
+msgid "You can also %i, %c or %u."
+msgstr "你也可以%i,%c或者%u."
 
-msgid "Edit or resize any image by touching the image preview"
-msgstr "编辑或通过触摸图像预览调整图像大小"
+msgid "Edit or resize any image by clicking the image preview"
+msgstr "通过点击图像预览来编辑或调整任意图像的大小"
+
+msgid "Edit any image by touching the image preview"
+msgstr "通过点击图像预览来调整任意图像"
 
 msgid "your computer"
 msgstr "您的计算机"
 
-msgid "image URLs"
-msgstr "图片网址"
-
-msgid "You can keep adding more images from %i or from %u."
-msgstr "您可以从 %i 或从 %u 添加更多的图片。"
+msgid "You can add more images from %i or %u."
+msgstr "你可以从%i或者%u添加更多的图片."
 
 msgid "your device"
 msgstr "你的设备"
+
+msgid "You can add more images from %i, %c or %u."
+msgstr "你可以从%i,%c或者%u添加更多的图片."
 
 msgid "Uploading %q %o"
 msgstr "上传 %q %o"
@@ -1924,14 +1935,14 @@ msgstr "上传完毕"
 
 #, php-format
 msgid "Uploaded content added to %s."
-msgstr "图片添加到 %s."
+msgstr "图片已经添加到 %s."
 
 msgid "You can %c with the content just uploaded or %m."
-msgstr "您可以 %c或 %m到现有的相册."
+msgstr "您可以将刚刚上传的图片 %c或 %m."
 
 #, php-format
 msgid "You can %c with the content just uploaded."
-msgstr "您可以 %c到现有的相册."
+msgstr "您可以将刚刚上传的图片 %c."
 
 msgid "create a new album"
 msgstr "创建相册"
@@ -2005,9 +2016,8 @@ msgstr "了解更多"
 msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
 msgstr "检查 <a data-modal=\"simple\" data-target=\"failed-upload-result\">错误报告</a> 更多信息."
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:89
-msgid "max"
-msgstr "最多"
+msgid "reset"
+msgstr "重置"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:91
 msgid "close"
@@ -2015,6 +2025,9 @@ msgstr "关闭"
 
 msgid "copy"
 msgstr "复制"
+
+msgid "insert"
+msgstr "插入"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
 #: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
@@ -2569,9 +2582,6 @@ msgstr "您必须登录才能使用所有的功能. 如果您还没有账号请�
 msgid "There's nothing to show here."
 msgstr "没有要显示的内容"
 
-msgid "Upload images"
-msgstr "上传图片"
-
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
 #: ../../../app/themes/Peafowl/views/image.php:69
 #: ../../../app/themes/Peafowl/views/image.php:457
@@ -2748,6 +2758,20 @@ msgstr "这封关于重新设定密码的邮件已发送到您的邮箱. 如果�
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
 msgid "Resend instructions"
 msgstr "重新发送"
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "发生错误. 请稍后再试."
 
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
 msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
@@ -3465,6 +3489,12 @@ msgstr "开放注册"
 #: ../../../app/themes/Peafowl/views/dashboard.php:965
 msgid "Enable this if you want to allow users to signup."
 msgstr "启用它代表您允许用户自行注册账号."
+
+msgid "Enable user content delete"
+msgstr "用户内容删除"
+
+msgid "Enable this if you want to allow users to delete their own content. This setting doesn't affect administrators."
+msgstr "如果要允许用户删除自己的内容，请启用此功能。 此设置不会影响管理员。"
 
 msgid "Minimum age required"
 msgstr "最低年龄要求"
@@ -4260,6 +4290,13 @@ msgid "Comments API"
 msgstr "评论 API"
 
 #, php-format
+msgid "Disqus API works with %s."
+msgstr "Disqus API 适用于 %s."
+
+msgid "Disqus shortname"
+msgstr "Disqus 短名称"
+
+#, php-format
 msgid "%s public key"
 msgstr "%s 公共密钥"
 
@@ -4415,6 +4452,66 @@ msgstr "请输入您的密码以继续浏览."
 
 msgid "Send"
 msgstr "发送"
+
+msgid "Add image uploading to your website, blog or forum by installing our upload plugin. It provides image uploading to any website by placing a button that will allow your users to directly upload images to our service and it will automatically handle the codes needed for insertion. All features included like drag and drop, remote upload, image resizing and more."
+msgstr "通过安装我们的上传插件，将图像上传到您的网站，博客或论坛。 它提供图像上传到任何网站，放置一个按钮，将允许您的用户直接上传图像到我们的服务，它将自动处理插入所需的代码。 所有功能包括拖放，远程上传，图像调整大小等。"
+
+msgid "Supported software"
+msgstr "支持的软件"
+
+msgid "supported software"
+msgstr "支持的软件"
+
+#, php-format
+msgid "The plugin works in any website with user-editable content and for %sv, it will place an upload button that will match the target editor toolbar so no extra customization is needed."
+msgstr "该插件适用于具有用户可编辑内容的任何网站，对于%sv，它将放置一个与目标编辑器工具栏匹配的上传按钮，因此不需要额外的自定义。"
+
+msgid "Add it to your website"
+msgstr "将其添加到您的网站"
+
+msgid "options"
+msgstr "options"
+
+#, php-format
+msgid "Copy and paste the plugin code into your website HTML code (preferably inside the head section). There are plenty %o to make it fit better to your needs."
+msgstr "将插件代码复制并粘贴到您的网站HTML代码中（最好在头部内）。 这里有很多%o来使其更加满足你的需求。"
+
+msgid "Basic options"
+msgstr "基本选项"
+
+msgid "Color palette"
+msgstr "调色板"
+
+msgid "Button color scheme"
+msgstr "按钮配色方案"
+
+msgid "Embed codes that will be auto-inserted in editor box"
+msgstr "嵌入代码将自动插入到编辑框中"
+
+msgid "Sibling selector"
+msgstr "Sibling选择器"
+
+msgid "Sibling element selector where to place the button next to"
+msgstr "Sibling元素选择器的旁边放置按钮"
+
+msgid "Sibling position"
+msgstr "Sibling顺序"
+
+msgid "After"
+msgstr "先"
+
+msgid "Before"
+msgstr "后"
+
+msgid "Position relative to sibling element"
+msgstr "相对于sibling元素的位置"
+
+msgid "Advanced options"
+msgstr "高级选项"
+
+#, php-format
+msgid "The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options."
+msgstr "该插件具有大量附加选项，允许完全自定义。 您可以使用自定义HTML，CSS，自己的调色板，设置监控服务等。 查找%d和插件源以更好地了解这些高级选项。"
 
 #: ../../../app/themes/Peafowl/views/request-denied.php:12
 msgid "You either don't have permission to access this page or the link has expired."

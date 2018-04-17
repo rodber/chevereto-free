@@ -63,7 +63,7 @@ try {
 					]), TRUE);
                     $json_array['success'] = ['message' => 'OK']; // "success" is a Chevereto internal thing
                 } catch(Exception $e) {
-                    throw new Exception(_s("An error occurred. Please try again later."), 400);
+                    throw new Exception(sprintf('Fatal error: %s', $e->getMessage()) , 400);
                 }
             break;
             case 'download':

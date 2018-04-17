@@ -1028,7 +1028,7 @@ namespace G {
 	}
 
 	function is_valid_ip($ip) {
-		return filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) or filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6);
+		return filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) || filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6);
 	}
 
 	/**
@@ -1457,7 +1457,7 @@ namespace G {
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			curl_setopt($ch, CURLOPT_HEADER, 0);
 			curl_setopt($ch, CURLOPT_FAILONERROR, 0);
-			curl_setopt($ch, CURLOPT_ENCODING, 'gzip'); // this needs zlib output compression enabled (php)
+			curl_setopt($ch, CURLOPT_ENCODING, 'gzip');
 			curl_setopt($ch, CURLOPT_VERBOSE, 0);
 
 			if(is_array($options) && count($options) > 0) {
@@ -1470,7 +1470,7 @@ namespace G {
 				// Save the file to $file destination
 				$out = @fopen($file, 'wb');
 				if(!$out) {
-					throw new Exception("can't open " . __FUNCTION__ . "() file for read and write");
+					throw new Exception("Can't open " . __FUNCTION__ . "() file for read and write");
 					return false;
 				}
 				curl_setopt($ch, CURLOPT_FILE, $out);
@@ -1483,7 +1483,7 @@ namespace G {
 			if(curl_errno($ch)) {
 				$curl_error = curl_error($ch);
 				curl_close($ch);
-				throw new Exception('curl error: ' . $curl_error);
+				throw new Exception('Curl error ' . $curl_error);
 				return false;
 			}
 			if($file == NULL) {
@@ -1492,16 +1492,16 @@ namespace G {
 			}
 		} else {
       $context = stream_context_create([
-          'http' => ['ignore_errors' => TRUE],
+        'http' => ['ignore_errors' => TRUE],
       ]);
 			$result = @file_get_contents($url, FALSE, $context);
 			if(!$result) {
-				throw new Exception("file_get_contents: can't fetch target URL");
+				throw new Exception("Can't fetch target URL (file_get_contents)");
 				return false;
 			}
 			if($file) {
 				if(file_put_contents($file, $result) === false) {
-					throw new Exception("file_put_contents: can't fetch target URL");
+					throw new Exception("Can't fetch target URL (file_put_contents)");
 					return false;
 				}
 			} else {
@@ -1513,12 +1513,12 @@ namespace G {
 	/* get complete raw, add success + error properties */
 	function getUrlHeaders($url, $options=[]) {
 		$ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_HEADER, 1);
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_HEADER, 1);
 		curl_setopt($ch, CURLOPT_NOBODY, 1);
 		curl_setopt($ch, CURLOPT_AUTOREFERER, 1);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36');
 		// Inject custom options
@@ -1535,7 +1535,7 @@ namespace G {
 			$return = curl_getinfo($ch);
 			$return['raw'] = $raw;
 		}
-        curl_close($ch);
+    curl_close($ch);
 		return $return;
 	}
 
@@ -1821,43 +1821,47 @@ namespace G {
 	 */
 	function get_filename_by_method($method, $filename) {
 
-		$max_lenght = 200;
+		$max_length = 200; // Safe limit, ideally this should be 255 - 4
 
 		$extension = get_file_extension($filename);
 		$clean_filename = substr($filename, 0, -(strlen($extension) + 1));
 		$clean_filename = unaccent_string($clean_filename); // change áéíóú to aeiou
-		$clean_filename = preg_replace('/[^\.\w\d-]/i', '', $clean_filename); // remove any non alphanumeric, non underscore, non hyphen and non period
+		$clean_filename = preg_replace('/\s+/','-', $clean_filename); // change all spaces with dash
+		$clean_filename = trim($clean_filename, '-'); // get rid of those ugly dashes
+		$clean_filename = preg_replace('/[^\.\w\d-]/i', '', $clean_filename); // remove any non alphanumeric, non underscore, non hyphen and non dot
 
 		// Non alphanumeric name uh..
 		if(strlen($clean_filename) == 0) {
-			$clean_filename = random_string(16);
+			$clean_filename = random_string(32);
 		}
 
-		$unlimited_filename = $clean_filename; // No max_lenght limit
-		$clean_filename = substr($clean_filename, 0, $max_lenght);
+		$unlimited_filename = $clean_filename; // No max_length limit
+		$capped_filename = substr($clean_filename, 0, $max_length); // 1->200
 
 		switch($method){
 			default:
 			case 'original':
-				$name = $clean_filename;
+				$name = $capped_filename;
 			break;
 			case 'random':
 				$name = random_string(32);
 			break;
 			case 'mixed':
-				if(strlen($clean_filename) >= $max_lenght) {
-					$name = substr($clean_filename, 0, $max_lenght - 5);
-				} else {
-					$name = $clean_filename;
+				$mixed_chars_length = 16;
+				$mixed_chars = random_string($mixed_chars_length);
+				if(strlen($capped_filename) + $mixed_chars_length > $max_length) {
+					// Bring the scissors Morty
+					$capped_filename = substr($capped_filename, 0, $max_length - $mixed_chars_length - strlen($capped_filename));
+					// Well done Morty you little piece of shit
 				}
-				$name .= random_string(5);
+				$name = $capped_filename . $mixed_chars;
 			break;
 			case 'id':
 				$name = $unlimited_filename;
 			break;
 		}
 
-		return $name . '.' . $extension;
+		return $name . '.' . $extension; // 200 + 4
 
 	}
 

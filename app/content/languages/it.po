@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-05-23 17:56+0000\n"
-"PO-Revision-Date: 2017-05-23 17:56+0000\n"
+"POT-Creation-Date: 2017-09-23 17:30+0000\n"
+"PO-Revision-Date: 2017-09-23 17:30+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -10,6 +10,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Plugin"
+msgstr "Plugin"
+
+msgid "Plugin route"
+msgstr "Percorso Plugin"
+
+#, php-format
+msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
+msgstr "Abilita questo per visualizzare le istruzioni del plugin a %u. Un link a queste istruzioni verrà aggiunto al menu %s. Questa impostazione non riguarda gli amministratori."
+
+msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
+msgstr "Utilizza questo per impostare una URL personalizzato per %p. Tieni presente che devi replicare manualmente %s in questa URL."
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -87,20 +100,6 @@ msgstr "Personale"
 #: ../../../app/install/update/template/update.php:2
 msgid "Update in progress"
 msgstr "Aggiornamento in corso..."
-
-#: ../../../app/install/update/updater.php:62
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
-#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
-#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
-#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
-#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
-#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
-#: ../../../lib/Peafowl/peafowl.min.js:158
-#: ../../../lib/Peafowl/peafowl.min.js:195
-msgid "An error occurred. Please try again later."
-msgstr "Si è verificato un errore. Riprova più tardi."
 
 #: ../../../app/install/update/updater.php:72
 #, php-format
@@ -270,9 +269,6 @@ msgstr "Recente"
 msgid "Trending"
 msgstr "Argomenti"
 
-msgid "Popular"
-msgstr "Popolare"
-
 #: ../../../app/routes/route.dashboard.php:1163
 msgid "Top users"
 msgstr "Utenti top"
@@ -307,6 +303,9 @@ msgstr "Più vecchie"
 #: ../../../app/routes/route.user.php:201
 msgid "Most viewed"
 msgstr "Più viste"
+
+msgid "Popular"
+msgstr "Popolare"
 
 #: ../../../app/routes/route.album.php:104
 #: ../../../app/routes/route.category.php:72
@@ -1372,13 +1371,13 @@ msgstr "Immagine %i ospitata in %w"
 msgid "Direct links"
 msgstr "Link diretti"
 
-#: ../../../app/themes/Peafowl/views/image.php:279
-msgid "Image URL"
-msgstr "Immagine originale"
-
 #: ../../../app/themes/Peafowl/views/image.php:285
 msgid "Image link"
 msgstr "Pagina immagine"
+
+#: ../../../app/themes/Peafowl/views/image.php:279
+msgid "Image URL"
+msgstr "Immagine originale"
 
 #: ../../../app/themes/Peafowl/views/image.php:291
 msgid "Thumbnail URL"
@@ -1546,6 +1545,12 @@ msgstr "Messaggio inviato. Sarai ricontattato il prima possibile."
 msgid "Mail error"
 msgstr "Errore email"
 
+msgid "Upload images"
+msgstr "Carica immagini"
+
+msgid "Upload plugin"
+msgstr "Caricare plugin"
+
 #: ../../../app/routes/route.search.php:120
 #, php-format
 msgid "Image search results for %s"
@@ -1630,6 +1635,11 @@ msgstr "L'utilizzo di questo sito web è vietato ai minori di %s anni."
 msgid "Create account"
 msgstr "Crea un account"
 
+#: ../../../app/themes/Peafowl/header.php:258
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Upload"
+msgstr "Carica"
+
 #: ../../../app/routes/route.user.php:84
 #: ../../../app/themes/Peafowl/header.php:56
 #: ../../../app/themes/Peafowl/views/index.php:46
@@ -1692,11 +1702,6 @@ msgstr "Casuale"
 #, php-format
 msgid "Notices (%s)"
 msgstr "Avvisi (%s)"
-
-#: ../../../app/themes/Peafowl/header.php:258
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-msgid "Upload"
-msgstr "Carica"
 
 #: ../../../app/themes/Peafowl/header.php:281
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:11
@@ -1901,26 +1906,32 @@ msgstr "aggiungi URL  immagini"
 msgid "You can also %i or %u."
 msgstr "È inoltre possibile %i o %u."
 
+msgid "browse from your device"
+msgstr "esplorare dal tuo dispositivo"
+
 msgid "take a picture"
 msgstr "Fai una foto"
+
+msgid "You can also %i, %c or %u."
+msgstr "Puoi anche %i, %c o %u."
 
 msgid "Edit or resize any image by clicking the image preview"
 msgstr "Modificare o ridimensionare un immagine cliccando l'immagine di anteprima"
 
-msgid "Edit or resize any image by touching the image preview"
-msgstr "Modificare o ridimensionare un'immagine toccando l'immagine di anteprima"
+msgid "Edit any image by touching the image preview"
+msgstr "Modifica qualsiasi immagine toccando l'anteprima dell'immagine"
 
 msgid "your computer"
 msgstr "il tuo computer"
 
-msgid "image URLs"
-msgstr "URL  immagini"
-
-msgid "You can keep adding more images from %i or from %u."
-msgstr "È possibile continuare ad aggiungere altre immagini da %i oppure da %u."
+msgid "You can add more images from %i or %u."
+msgstr "È possibile aggiungere altre immagini %i o %u."
 
 msgid "your device"
 msgstr "il tuo dispositivo"
+
+msgid "You can add more images from %i, %c or %u."
+msgstr "È possibile aggiungere altre immagini %i, %c o %u."
 
 msgid "Uploading %q %o"
 msgstr "Caricamento %q %o"
@@ -2019,9 +2030,8 @@ msgstr "Scopri di più"
 msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
 msgstr "Controlla il <a data-modal=\"simple\" data-target=\"failed-upload-result\">rapporto di errore</a> per ulteriori informazioni."
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:89
-msgid "max"
-msgstr "Massimo"
+msgid "reset"
+msgstr "azzerare"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:91
 msgid "close"
@@ -2029,6 +2039,9 @@ msgstr "chiudi"
 
 msgid "copy"
 msgstr "copia"
+
+msgid "insert"
+msgstr "inserire"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
 #: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
@@ -2584,9 +2597,6 @@ msgstr "Per utilizzare tutte le funzionalità di questo sito devi collegarti. Se
 msgid "There's nothing to show here."
 msgstr "Non c'è niente da mostrare qui."
 
-msgid "Upload images"
-msgstr "Carica immagini"
-
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
 #: ../../../app/themes/Peafowl/views/image.php:69
 #: ../../../app/themes/Peafowl/views/image.php:457
@@ -2763,6 +2773,20 @@ msgstr "Ti abbiamo inviata una email all'indirizzo email registrato con le indic
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
 msgid "Resend instructions"
 msgstr "Invia di nuovo le istruzioni"
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "Si è verificato un errore. Riprova più tardi."
 
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
 msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
@@ -3480,6 +3504,12 @@ msgstr "Attiva registrazione utenti"
 #: ../../../app/themes/Peafowl/views/dashboard.php:965
 msgid "Enable this if you want to allow users to signup."
 msgstr "Attiva questa opzione per consentire all'utente di registrarsi al sito"
+
+msgid "Enable user content delete"
+msgstr "Abilita l'eliminazione dei contenuti utente"
+
+msgid "Enable this if you want to allow users to delete their own content. This setting doesn't affect administrators."
+msgstr "Abilitare questa opzione se si desidera consentire agli utenti di eliminare i propri contenuti. Questa impostazione non riguarda gli amministratori."
 
 msgid "Minimum age required"
 msgstr "Età minima richiesta"
@@ -4437,6 +4467,66 @@ msgstr "Si prega di inserire la password per continuare"
 
 msgid "Send"
 msgstr "Invia"
+
+msgid "Add image uploading to your website, blog or forum by installing our upload plugin. It provides image uploading to any website by placing a button that will allow your users to directly upload images to our service and it will automatically handle the codes needed for insertion. All features included like drag and drop, remote upload, image resizing and more."
+msgstr "Aggiungi l'upload dell'immagine al tuo sito web, blog o forum installando il nostro plug-in per il caricamento. Fornisce l'upload di immagini a qualsiasi sito web posizionando un pulsante che permetterà agli utenti di caricare direttamente immagini al nostro servizio e gestirà automaticamente i codici necessari per l'inserimento. Tutte le funzioni incluse come trascinamento, rilascio remoto, ridimensionamento delle immagini e altro ancora."
+
+msgid "Supported software"
+msgstr "Software supportato"
+
+msgid "supported software"
+msgstr "Software supportato"
+
+#, php-format
+msgid "The plugin works in any website with user-editable content and for %sv, it will place an upload button that will match the target editor toolbar so no extra customization is needed."
+msgstr "Il plugin funziona in qualsiasi sito web con contenuti modificabili dall'utente e per %sv, metterà un pulsante di caricamento che corrisponderà alla barra degli strumenti dell'editor di destinazione in modo che non sia necessaria alcuna personalizzazione aggiuntiva."
+
+msgid "Add it to your website"
+msgstr "Aggiungilo al tuo sito web"
+
+msgid "options"
+msgstr "opzioni"
+
+#, php-format
+msgid "Copy and paste the plugin code into your website HTML code (preferably inside the head section). There are plenty %o to make it fit better to your needs."
+msgstr "Copia e incolla il codice plug-in nel codice HTML del tuo sito web (preferibilmente all'interno della sezione di testa). Ci sono molti %o per adattarla meglio alle tue esigenze."
+
+msgid "Basic options"
+msgstr "Opzioni di base"
+
+msgid "Color palette"
+msgstr "Palette dei colori"
+
+msgid "Button color scheme"
+msgstr "Schema colore dei pulsanti"
+
+msgid "Embed codes that will be auto-inserted in editor box"
+msgstr "Incorpora i codici che verranno inseriti automaticamente nella casella di testo"
+
+msgid "Sibling selector"
+msgstr "Selettore"
+
+msgid "Sibling element selector where to place the button next to"
+msgstr "Selettore di elementi di sintonia in cui posizionare il pulsante accanto"
+
+msgid "Sibling position"
+msgstr "Posizione del Selettore"
+
+msgid "After"
+msgstr "Dopo"
+
+msgid "Before"
+msgstr "Prima"
+
+msgid "Position relative to sibling element"
+msgstr "Posizione relativa all'elemento del selettore"
+
+msgid "Advanced options"
+msgstr "Opzioni avanzate"
+
+#, php-format
+msgid "The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options."
+msgstr "Il plugin dispone di un vasto set di opzioni aggiuntive che consentono una completa personalizzazione. È possibile utilizzare HTML personalizzato, CSS, la propria tavolozza di colori, impostare gli osservatori e altro ancora. Controlla la %d e la fonte plugin per avere un'idea migliore di queste opzioni avanzate."
 
 #: ../../../app/themes/Peafowl/views/request-denied.php:12
 msgid "You either don't have permission to access this page or the link has expired."

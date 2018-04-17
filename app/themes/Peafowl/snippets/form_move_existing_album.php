@@ -6,7 +6,7 @@
 		if(is_array($user_items_editor)) {
 			foreach($user_items_editor['user_albums'] as $album) {
 	?>
-	<option value="<?php echo $album['id_encoded']; ?>"<?php if($album['id'] == $user_items_editor['album']['id']) echo " selected"; ?>><?php echo $album['name_with_privacy_readable']; ?></option>
+	<option value="<?php echo $album['id_encoded']; ?>"<?php if($album['id'] == $user_items_editor['album']['id']) echo " selected"; ?>><?php echo $album['name_with_privacy_readable_html']; ?></option>
 	<?php
 			}
 		}

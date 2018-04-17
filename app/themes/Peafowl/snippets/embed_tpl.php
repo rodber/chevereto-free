@@ -34,7 +34,7 @@
 					foreach($value['options'] as $k => $v) {
 						echo '<div data-combo-value="'.$k.'" class="switch-combo'.($i>0 ? " soft-hidden" : "").'">
 							<textarea id="modal-embed-code-'.$i.'" class="r3 resize-vertical" name="'.$k.'" data-size="'.$v["size"].'" data-focus="select-all"></textarea>
-							<button class="copy-input" data-action="copy" data-action-target="#modal-embed-code-'.$i.'">'._s('copy').'</button>
+							<button class="input-action" data-action="copy" data-action-target="#modal-embed-code-'.$i.'">'._s('copy').'</button>
 						</div>'."\n";
 						$i++;
 					}

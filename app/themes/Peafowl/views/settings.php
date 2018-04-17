@@ -482,8 +482,12 @@
     
 </div>
 
-<?php G\Render\include_theme_footer(); ?>
-
 <?php if(get_post() and (is_changed() or is_error())) { ?>
-<script>PF.fn.growl.expirable("<?php echo is_changed() ? (get_changed_message() ? get_changed_message() : _s('Changes have been saved.')) : _s('Check the errors to proceed.'); ?>");</script>
+<script>
+$(function() {
+	PF.fn.growl.expirable("<?php echo is_changed() ? (get_changed_message() ? get_changed_message() : _s('Changes have been saved.')) : _s('Check the errors to proceed.'); ?>");
+});
+</script>
 <?php } ?>
+
+<?php G\Render\include_theme_footer(); ?>

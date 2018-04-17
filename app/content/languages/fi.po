@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-06-21 18:28+0000\n"
-"PO-Revision-Date: 2017-06-21 18:28+0000\n"
+"POT-Creation-Date: 2017-10-01 18:12+0000\n"
+"PO-Revision-Date: 2017-10-01 18:12+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: fi\n"
@@ -10,6 +10,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Plugin"
+msgstr "Liitännäinen"
+
+msgid "Plugin route"
+msgstr "Liitännäisen ohjaus"
+
+#, php-format
+msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
+msgstr "Ota käyttään liitännäisen ohjeet %u. Ohjeet tulee näkymään %s valikossa. Tämä asetus ei vaikuta ylläpitäjiin."
+
+msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
+msgstr "Aseta kustomoitu URL %p. Huomioi, että sinun tulee käsin kopioida se %s URL:iin."
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -87,20 +100,6 @@ msgstr "Henkilökohtainen"
 #: ../../../app/install/update/template/update.php:2
 msgid "Update in progress"
 msgstr "Päivitys käynnissä"
-
-#: ../../../app/install/update/updater.php:62
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
-#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
-#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
-#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
-#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
-#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
-#: ../../../lib/Peafowl/peafowl.min.js:158
-#: ../../../lib/Peafowl/peafowl.min.js:195
-msgid "An error occurred. Please try again later."
-msgstr "Virhe havaittu. Yritä myöhemmin uudelleen."
 
 #: ../../../app/install/update/updater.php:72
 #, php-format
@@ -270,9 +269,6 @@ msgstr "Viimeaikainen"
 msgid "Trending"
 msgstr "Nousussa"
 
-msgid "Popular"
-msgstr "Suosittu"
-
 #: ../../../app/routes/route.dashboard.php:1163
 msgid "Top users"
 msgstr "Suosituimmat käyttäjät"
@@ -307,6 +303,9 @@ msgstr "Vanhimmat"
 #: ../../../app/routes/route.user.php:201
 msgid "Most viewed"
 msgstr "Katsotuimmat"
+
+msgid "Popular"
+msgstr "Suosittu"
 
 #: ../../../app/routes/route.album.php:104
 #: ../../../app/routes/route.category.php:72
@@ -701,7 +700,7 @@ msgstr "Tuki"
 
 #, php-format
 msgid "Need help? Go to %s and you will get help quickly."
-msgstr "Tarvitsetko apua? Mene %s ja saat apua nopeasti."
+msgstr "Tarvitsetko apua? %s -sivustolta saat apua nopeasti."
 
 #: ../../../app/routes/route.dashboard.php:169
 msgid "PHP version"
@@ -1372,13 +1371,13 @@ msgstr "Kuva %i yläpidetty %w"
 msgid "Direct links"
 msgstr "Suorat linkit"
 
-#: ../../../app/themes/Peafowl/views/image.php:279
-msgid "Image URL"
-msgstr "Kuvan osoite"
-
 #: ../../../app/themes/Peafowl/views/image.php:285
 msgid "Image link"
 msgstr "Kuvan linkki"
+
+#: ../../../app/themes/Peafowl/views/image.php:279
+msgid "Image URL"
+msgstr "Kuvan osoite"
 
 #: ../../../app/themes/Peafowl/views/image.php:291
 msgid "Thumbnail URL"
@@ -1546,6 +1545,12 @@ msgstr "Viesti lähetetty. Olemme sinuun yhteydessä pian."
 msgid "Mail error"
 msgstr "Sähköpostivirhe"
 
+msgid "Upload images"
+msgstr "Lataa kuvia"
+
+msgid "Upload plugin"
+msgstr "Kuvien lataus liitännäinen"
+
 #: ../../../app/routes/route.search.php:120
 #, php-format
 msgid "Image search results for %s"
@@ -1630,6 +1635,11 @@ msgstr "Sinun tulee olla vähintään %s vuotta vanha käyttääksesi sivustoa."
 msgid "Create account"
 msgstr "Rekisteröidy"
 
+#: ../../../app/themes/Peafowl/header.php:258
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Upload"
+msgstr "Lähetä"
+
 #: ../../../app/routes/route.user.php:84
 #: ../../../app/themes/Peafowl/header.php:56
 #: ../../../app/themes/Peafowl/views/index.php:46
@@ -1693,11 +1703,6 @@ msgstr "Satunnainen"
 msgid "Notices (%s)"
 msgstr "Ilmoitukset (%s)"
 
-#: ../../../app/themes/Peafowl/header.php:258
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-msgid "Upload"
-msgstr "Lähetä"
-
 #: ../../../app/themes/Peafowl/header.php:281
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:11
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:40
@@ -1751,7 +1756,7 @@ msgstr "Käyttäjänimi tai sähköpostiosoite"
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:23
 #: ../../../app/themes/Peafowl/views/login.php:53
 msgid "Keep me logged in"
-msgstr "Pidä minut kirjautuneena"
+msgstr "Pysy kirjautuneena"
 
 #: ../../../app/themes/Peafowl/header.php:301
 #, php-format
@@ -1901,26 +1906,32 @@ msgstr "lisää kuvan osoite"
 msgid "You can also %i or %u."
 msgstr "Voit myös %i tai %u."
 
+msgid "browse from your device"
+msgstr "selaa laitteesta"
+
 msgid "take a picture"
 msgstr "ota kuva"
+
+msgid "You can also %i, %c or %u."
+msgstr "Voit myös %i, %c tai %u."
 
 msgid "Edit or resize any image by clicking the image preview"
 msgstr "Muokkaa tai muuta kuvan kokoa osoittamalla kuvan esikatselua"
 
-msgid "Edit or resize any image by touching the image preview"
-msgstr "Muokkaa tai muuta kuvan kokoa osoittamalla kuvan esikatselua"
+msgid "Edit any image by touching the image preview"
+msgstr "Muokkaa kuvaa koskettamalla kuvan esikatselua"
 
 msgid "your computer"
 msgstr "tietokoneesi"
 
-msgid "image URLs"
-msgstr "kuvan osoite"
-
-msgid "You can keep adding more images from %i or from %u."
-msgstr "Voit lisätä enemmän kuvia %i tai %u."
+msgid "You can add more images from %i or %u."
+msgstr "Voit lisätä kuvia %i tai %u."
 
 msgid "your device"
 msgstr "laitteesi"
+
+msgid "You can add more images from %i, %c or %u."
+msgstr "Voit lisätä kuvia %i, %c tai %u."
 
 msgid "Uploading %q %o"
 msgstr "Ladataan %q %o"
@@ -1930,7 +1941,7 @@ msgid "complete"
 msgstr "valmis"
 
 msgid "The queue is being uploaded, it should take just a few seconds to complete."
-msgstr "Ladataan kuvia, pitäisi kestää vielä hetki."
+msgstr "Ladataan kuvia, kestää vielä hetken."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:32
 msgid "Upload complete"
@@ -2019,9 +2030,8 @@ msgstr "lue lisää"
 msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
 msgstr "Katso <a data-modal=\"simple\" data-target=\"failed-upload-result\">virheraportti</a> saadaksesi lisätietoja."
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:89
-msgid "max"
-msgstr "maksimi"
+msgid "reset"
+msgstr "nollaa"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:91
 msgid "close"
@@ -2029,6 +2039,9 @@ msgstr "sulje"
 
 msgid "copy"
 msgstr "kopioi"
+
+msgid "insert"
+msgstr "lisää"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
 #: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
@@ -2584,9 +2597,6 @@ msgstr "Käyttääksesi kaikkia ominaisuuksia, sinun täytyy olla kirjautunut si
 msgid "There's nothing to show here."
 msgstr "Täällä ei ole mitään nähtävää."
 
-msgid "Upload images"
-msgstr "Lataa kuvia"
-
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
 #: ../../../app/themes/Peafowl/views/image.php:69
 #: ../../../app/themes/Peafowl/views/image.php:457
@@ -2763,6 +2773,20 @@ msgstr "Teille on lähetetty sähköpostiviesti josta löydätte tarkemmat ohjee
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
 msgid "Resend instructions"
 msgstr "Lähetä ohjeet uudelleen"
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "Virhe havaittu. Yritä myöhemmin uudelleen."
 
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
 msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
@@ -3480,6 +3504,12 @@ msgstr "Salli rekisteröitymiset"
 #: ../../../app/themes/Peafowl/views/dashboard.php:965
 msgid "Enable this if you want to allow users to signup."
 msgstr "Salli käyttäjien rekisteröityä palveluun."
+
+msgid "Enable user content delete"
+msgstr "Salli käyttäjien poistaa sisältöä"
+
+msgid "Enable this if you want to allow users to delete their own content. This setting doesn't affect administrators."
+msgstr "Salli käyttäjien poistaa omaa sisältöään palvelusta. Tämä asetus ei vaikuta ylläpitäjiin."
 
 msgid "Minimum age required"
 msgstr "Vähimmäisikä vaaditaan"
@@ -4437,6 +4467,66 @@ msgstr "Anna salasana jatkaaksesi."
 
 msgid "Send"
 msgstr "Lähetä"
+
+msgid "Add image uploading to your website, blog or forum by installing our upload plugin. It provides image uploading to any website by placing a button that will allow your users to directly upload images to our service and it will automatically handle the codes needed for insertion. All features included like drag and drop, remote upload, image resizing and more."
+msgstr "Lisää kuvien lataus mahdollisuus verkkosivuille, blogiin tai foorumille asentamalla liitännäinen. Tämä lisää painikkeen sivuille mahdollistaen kuvien lataamisen palvelimelle ja hoitaa automaattisesti kaiken taustalla. Kaikki toiminnot saatavilla mm. kuvien lataaminen raahaamalla ja tiputtamalla, etälataus sekä kuvien kokojen automaattinen muuttaminen."
+
+msgid "Supported software"
+msgstr "Tuetut alustat"
+
+msgid "supported software"
+msgstr "tuetut alustat"
+
+#, php-format
+msgid "The plugin works in any website with user-editable content and for %sv, it will place an upload button that will match the target editor toolbar so no extra customization is needed."
+msgstr "Tämä liitännäinen toimii millä tahansa verkkosivulla, jolla käyttäjä voi muokata sisältöä. %sv latauspainike tulee näkymään automaattisesti työkalupalkissa ja ylimääräisiä muokkauksia ei siis tarvitse tehdä."
+
+msgid "Add it to your website"
+msgstr "Asentaminen"
+
+msgid "options"
+msgstr "asetuksia"
+
+#, php-format
+msgid "Copy and paste the plugin code into your website HTML code (preferably inside the head section). There are plenty %o to make it fit better to your needs."
+msgstr "Sijoita liitännäisen koodi verkkosivun HTML-koodiin (mieluiten head-osion sisään). Liitännäiseen löytyy paljon %o, joilla voit muokata sen paremmin tarpeisiisi."
+
+msgid "Basic options"
+msgstr "Asetukset"
+
+msgid "Color palette"
+msgstr "Väripaletti"
+
+msgid "Button color scheme"
+msgstr "Painikkeiden väriteema"
+
+msgid "Embed codes that will be auto-inserted in editor box"
+msgstr "Upotuskoodit, jotka tulevat automaattisesti muokkauslaatikkoon"
+
+msgid "Sibling selector"
+msgstr "Sisarvalikko"
+
+msgid "Sibling element selector where to place the button next to"
+msgstr "Sisarelementin valitsin, johon sijoitetaan vieressä oleva painike"
+
+msgid "Sibling position"
+msgstr "Sisarelementin sijainti"
+
+msgid "After"
+msgstr "Jälkeen"
+
+msgid "Before"
+msgstr "Ennen"
+
+msgid "Position relative to sibling element"
+msgstr "Asema sisarelementtiin nähden"
+
+msgid "Advanced options"
+msgstr "Edistyneet asetukset"
+
+#, php-format
+msgid "The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options."
+msgstr "Tähän liitännäiseen on paljon edistyneitä muokkausasetuksia. Voit muokata mm. HTML, CSS, värejä, asettaa tarkkailijoita yms. Lue liitännäisen %d saadaksesi paremman käsityksen edistyneistä asetuksista."
 
 #: ../../../app/themes/Peafowl/views/request-denied.php:12
 msgid "You either don't have permission to access this page or the link has expired."

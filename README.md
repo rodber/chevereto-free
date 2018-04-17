@@ -18,12 +18,12 @@ Paid edition includes all features (storages, banners, likes, followers, social 
 | Item                                         	| Free            	| Paid                   	|
 |----------------------------------------------	|-----------------	|------------------------	|
 | Updates										| Each 6 months		| Monthly        	      	|
-| Features delay								| 6 months			| Zero	        	      	|
+| Features delay								| +6 months			| Zero	        	      	|
 | One click system update                       | Yes              	| Yes                    	|
+| Upload plugin	                            	| Yes              	| Yes                    	|
 | Tech support                                 	| No 	            | Yes 						|
 | External storage support                     	| No              	| Yes                    	|
 | Manage banners                               	| No              	| Yes                    	|
-| Upload plugin	                            	| No              	| Yes                    	|
 | Likes + Followers                            	| No              	| Yes                    	|
 | Facebook, Twitter, Google and VK signup      	| No              	| Yes                    	|
 

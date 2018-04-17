@@ -31,8 +31,12 @@
 	</div>
 </div>
 
-<?php G\Render\include_theme_footer(); ?>
-
 <?php if(get_post() and is_error()) { ?>
-<script>PF.fn.growl.expirable("<?php echo get_error(); ?>"); </script>
+<script>
+$(function() {
+	PF.fn.growl.expirable("<?php echo get_error(); ?>");
+});
+</script>
 <?php } ?>
+
+<?php G\Render\include_theme_footer(); ?>

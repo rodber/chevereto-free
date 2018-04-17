@@ -23,8 +23,6 @@ use G, Exception;
 
 if(!defined('access') or !access) die('This file cannot be directly accessed.');
 
-setlocale(LC_ALL, 'en_US.UTF8');
-
 // settings.php workaround
 if(!is_readable(dirname(__FILE__) . '/settings.php')) {
 	if(!@fopen(dirname(__FILE__) . '/settings.php', 'w')) {
@@ -34,6 +32,14 @@ if(!is_readable(dirname(__FILE__) . '/settings.php')) {
 
 // G thing
 (file_exists(dirname(dirname(__FILE__)) . '/lib/G/G.php')) ? require_once(dirname(dirname(__FILE__)) . '/lib/G/G.php') : die("Can't find lib/G/G.php");
+
+// Require at least X memory to do the thing
+$min_memory = '256M';
+$memory_limit = ini_get('memory_limit');
+$memory_limit_bytes = $memory_limit ? G\get_ini_bytes($memory_limit) : 0;
+if($memory_limit_bytes < G\get_ini_bytes($min_memory)) {
+	@ini_set('memory_limit', $min_memory); // Careful with that Axe, Eugene
+}
 
 // CHV\DB instance
 // CHV\Settings Instance
@@ -60,6 +66,7 @@ define('CHV_APP_PATH_CONTENT', G_APP_PATH . 'content/');
 define('CHV_APP_PATH_LIB_VENDOR', G_APP_PATH . 'vendor/');
 define('CHV_APP_PATH_CONTENT_SYSTEM', CHV_APP_PATH_CONTENT . 'system/');
 define('CHV_APP_PATH_CONTENT_LANGUAGES', CHV_APP_PATH_CONTENT . 'languages/');
+define('CHV_APP_PATH_CONTENT_LOCKS', CHV_APP_PATH_CONTENT . 'locks/');
 
 // CHV paths
 define('CHV_PATH_IMAGES', G_ROOT_PATH . CHV_FOLDER_IMAGES . '/');
@@ -177,7 +184,6 @@ if(!Settings::get('chevereto_version_installed')) {
 
 // Process showPingPixel (automatic updates check)
 if(class_exists('CHV\Lock') && Settings::get('enable_automatic_updates_check') && array_key_exists('ping', $_REQUEST) && $_REQUEST['r']) {
-  die();
 	if(is_null(Settings::get('update_check_datetimegmt')) || G\datetime_add(Settings::get('update_check_datetimegmt'), 'P1D') < G\datetimegmt()) {
 		try {
 			L10n::setLocale(Settings::get('default_language')); // Force system language
@@ -219,7 +225,7 @@ if(is_readable(G_APP_PATH . 'chevereto-hook.php')) {
 
 // Fix the default system images (must be done here because CHV_PATH_CONTENT_IMAGES_SYSTEM)
 foreach([
-	'favicon_image'			=> 'favicon.png',
+	'favicon_image'		=> 'favicon.png',
 	'logo_vector'			=> 'logo.svg',
 	'logo_image'			=> 'logo.png',
 	'watermark_image'		=> 'watermark.png',
@@ -244,8 +250,6 @@ foreach([
 				}
 			}
 		}
-
-
 		if($homepage_cover_image !== getSetting('homepage_cover_image')) {
 			Settings::update(['homepage_cover_image' => $homepage_cover_image]);
 		}
@@ -337,7 +341,7 @@ register_shutdown_function(function() {
 try {
 	if(!isset($hook_before)) {
 		$hook_before = function($handler) {
-
+            $time = G\get_execution_time();
 			// Handle agree consent stuff
 			if(array_key_exists('agree-consent', $_GET)) {
 				setcookie('AGREE_CONSENT', 1, time()+(60*60*24*30), G_ROOT_PATH_RELATIVE); // 30-day cookie
@@ -345,7 +349,6 @@ try {
 				G\redirect(preg_replace('/([&\?]agree-consent)/', NULL, G\get_current_url()));
 			}
 
-			// ACE OF BASE
 			$base = $handler::$base_request;
 
 			// Parse this sh*t right away
@@ -355,16 +358,16 @@ try {
 			$handler::setVar('auth_token', $handler::getAuthToken());
 			$handler::setVar('doctitle', getSetting('website_name'));
 			$handler::setVar('meta_description', getSetting('website_description'));
-			$handler::setVar('meta_keywords', getSetting('website_keywords'));
 			$handler::setVar('logged_user', Login::getUser());
 			$handler::setVar('failed_access_requests', 0); // Init
 			$handler::setVar('header_logo_link', G\get_base_url());
-			$handler::setCond('admin', Login::getUser()['is_admin']);
-			$handler::setCond('maintenance', getSetting('maintenance') AND !Login::getUser()['is_admin']);
+			$handler::setCond('admin', Login::isAdmin());
+			$handler::setCond('maintenance', getSetting('maintenance') AND !Login::isAdmin());
 			$handler::setCond('show_consent_screen', $base !== 'api' && (getSetting('enable_consent_screen') ? !(Login::getUser() OR isset($_SESSION['agree-consent']) OR isset($_COOKIE['AGREE_CONSENT'])) : FALSE));
 			$handler::setCond('captcha_needed', getSetting('recaptcha') AND getSetting('recaptcha_threshold') == 0);
 			$handler::setCond('show_header', !($handler::getCond('maintenance') OR $handler::getCond('show_consent_screen')));
 			$handler::setCond('show_notifications', FALSE);
+			$handler::setCond('allowed_to_delete_content', Login::isAdmin() || getSetting('enable_user_content_delete'));
 
 			// Login if maintenance /dashboard
 			if($handler::getCond('maintenance') && $handler->request_array[0] == 'dashboard') {
@@ -540,22 +543,35 @@ try {
 					$pages_visible[$v['id']] = $v;
 				}
 			}
+			if(getSetting('enable_plugin_route')) {
+				$plugin_page = [
+		        'type' => 'link',
+		        'link_url' => G\get_base_url('plugin'),
+		        'icon' => 'icon-code2',
+		        'title' => _s('Plugin'),
+		        'is_active' => 1,
+		        'is_link_visible' => 1,
+				];
+				Page::fill($plugin_page);
+				array_unshift($pages_visible, $plugin_page);
+			}
+
 			$handler::setVar('pages_link_visible', $pages_visible);
 
 			// Allowed/Enabled upload conditional
-			$upload_enabled = Login::getUser()['is_admin'] ? TRUE : getSetting('enable_uploads');
+			$upload_enabled = Login::isAdmin() ? TRUE : getSetting('enable_uploads');
 			$upload_allowed = $upload_enabled;
 
 			if(!Login::getUser()) {
 				if(!getSetting('guest_uploads') || getSetting('website_privacy_mode') == 'private' || $handler::getCond('maintenance')) {
 					$upload_allowed = FALSE;
 				}
-			} else if(!Login::getUser()['is_admin'] && getSetting('website_mode') == 'personal' && getSetting('website_mode_personal_uid') !== Login::getUser()['id']) {
+			} else if(!Login::isAdmin() && getSetting('website_mode') == 'personal' && getSetting('website_mode_personal_uid') !== Login::getUser()['id']) {
 				$upload_allowed = FALSE;
 			}
 
-			$handler::setCond('upload_enabled', $upload_enabled);
-			$handler::setCond('upload_allowed', $upload_allowed);
+			$handler::setCond('upload_enabled', $upload_enabled); // System allows to upload?
+			$handler::setCond('upload_allowed', $upload_allowed); // Target peer can upload?
 
 			// Maintenance mode + Consent screen
 			if($handler::getCond('maintenance') || $handler::getCond('show_consent_screen')) {
@@ -567,12 +583,19 @@ try {
 			}
 
 			// Inject system notices
-			$handler::setVar('system_notices', Login::getUser()['is_admin'] ? getSystemNotices() : NULL);
+			$handler::setVar('system_notices', Login::isAdmin() ? getSystemNotices() : NULL);
 
 			if(!in_array($handler->request_array[0], ['login', 'signup', 'account', 'connect', 'logout', 'json', 'api'])) {
 				$_SESSION['last_url'] = G\get_current_url();
 			}
-
+         if(!isset($_SESSION['is_mobile_device'])) {
+				$_SESSION['is_mobile_device'] = FALSE;
+				if(@require_once CHV_APP_PATH_LIB_VENDOR . '/serbanghita/Mobile_Detect.php') {
+					$detect = new \Mobile_Detect;
+					$_SESSION['is_mobile_device'] = $detect->isMobile();
+				}
+			}
+			$handler::setCond('mobile_device', isset($_SESSION['is_mobile_device']) ? $_SESSION['is_mobile_device'] : NULL);
 		};
 	}
 	if(!isset($hook_after)) {

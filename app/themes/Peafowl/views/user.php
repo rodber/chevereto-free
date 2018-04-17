@@ -37,8 +37,6 @@
 
 <div class="content-width">
 	
-	<?php CHV\Render\show_banner('user_after_top', get_list()->sfw); ?>
-	
 	<div id="top-user" class="top-user<?php echo (!get_user()["background"] and (!is_owner() and !is_admin())) ? ' user-has-no-background' : NULL; ?>">
 		<div class="top-user-credentials">
 			<a href="<?php echo get_user()["url"]; ?>">
@@ -131,8 +129,6 @@
 		}
 	?>
 	
-	<?php CHV\Render\show_banner('user_before_listing', get_list()->sfw); ?>
-	
 	<div class="header header-tabs margin-bottom-10 follow-scroll">
 		<?php
 			if(is_user_search()) {
@@ -182,8 +178,12 @@
 	
 </div>
 
-<?php G\Render\include_theme_footer(); ?>
-
 <?php if((is_owner() or is_admin()) and isset($_REQUEST["deleted"])) { ?>
-<script>PF.fn.growl.expirable("<?php _se('The content has been deleted.'); ?>");</script>
+<script>
+$(function() {
+	PF.fn.growl.expirable("<?php _se('The content has been deleted.'); ?>");
+});
+</script>
 <?php } ?>
+
+<?php G\Render\include_theme_footer(); ?>

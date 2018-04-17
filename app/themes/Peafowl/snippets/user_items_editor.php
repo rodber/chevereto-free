@@ -13,7 +13,7 @@ if($user_items_editor !== false) {
     <span class="modal-box-title">
 	<?php
 		if($modal_dealing_with == 'images') {
-	 		_se('Edit image details'); 
+	 		_se('Edit image details');
 		} else {
 	 		_se('Edit album details');
 			$disable_album_toggle = true;

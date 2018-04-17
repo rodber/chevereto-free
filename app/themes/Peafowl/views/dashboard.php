@@ -190,7 +190,7 @@
 					<span class="icon icon-cog phablet-hide tablet-hide laptop-hide desktop-hide"></span>
 					<span class="phone-hide"><?php echo get_dashboard_menu()[get_dashboard()]['label']; ?></span>
 				</h1>
-				<div data-content="pop-selection" class="pop-btn header-link float-left margin-left-10" data-action="settings-switch">
+				<div data-content="pop-selection" class="pop-btn pop-keep-click header-link float-left margin-left-10" data-action="settings-switch">
 					<span class="pop-btn-text margin-left-5"><?php echo get_settings()['label']; ?><span class="arrow-down"></span></span>
 					<div class="pop-box pbcols3 anchor-left arrow-box arrow-box-top">
 						<div class="pop-box-inner pop-box-menu pop-box-menucols">
@@ -279,11 +279,6 @@
 					<label for="website_description"><?php _se('Website description'); ?></label>
 					<input type="text" name="website_description" id="website_description" class="text-input" value="<?php echo CHV\Settings::get('website_description', true); ?>">
 					<div class="input-warning red-warning"><?php echo get_input_errors()['website_description']; ?></div>
-				</div>
-				<div class="input-label">
-					<label for="website_keywords"><?php _se('Website keywords'); ?></label>
-					<input type="text" name="website_keywords" id="website_keywords" class="text-input" value="<?php echo CHV\Settings::get('website_keywords', true); ?>">
-					<div class="input-warning red-warning"><?php echo get_input_errors()['website_keywords']; ?></div>
 				</div>
 			</div>
 
@@ -393,7 +388,7 @@
 
 			<hr class="line-separator"></hr>
 
-            <div class="input-label">
+      <div class="input-label">
 				<label for="website_mode"><?php _se('Website mode'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="website_mode" id="website_mode" class="text-input" data-combo="website-mode-combo">
 					<?php
@@ -703,7 +698,7 @@
 					<ul class="c20 phablet-c1">
 						<?php
 							foreach(CHV\Upload::getAvailableImageFormats() as $k) {
-								echo '<li class="c5 display-inline-block"><label class="display-block" for="image_format_enable['.$k.']"> <input type="checkbox" name="image_format_enable[]" id="image_format_enable['.$k.']" value="'.$k.'"'.(in_array($k, CHV\Upload::getEnabledImageFormats()) ? ' checked' : NULL).'>'.strtoupper($k).'</label></li>';
+								echo '<li class="c5 display-inline-block margin-right-10"><label class="display-block" for="image_format_enable['.$k.']"> <input type="checkbox" name="image_format_enable[]" id="image_format_enable['.$k.']" value="'.$k.'"'.(in_array($k, CHV\Upload::getEnabledImageFormats()) ? ' checked' : NULL).'>'.strtoupper($k).'</label></li>';
 							}
 						?>
 					</ul>
@@ -1137,6 +1132,18 @@
 				<div class="input-below"><?php _se('Enable this if you want to allow users to signup.'); ?></div>
 				<?php personal_mode_warning(); ?>
 			</div>
+
+			<div class="input-label">
+				<label for="enable_user_content_delete"><?php _se('Enable user content delete'); ?></label>
+				<div class="c5 phablet-c1"><select type="text" name="enable_user_content_delete" id="enable_user_content_delete" class="text-input">
+					<?php
+						echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('enable_user_content_delete'));
+					?>
+				</select></div>
+				<div class="input-below"><?php _se("Enable this if you want to allow users to delete their own content. This setting doesn't affect administrators."); ?></div>
+				<?php personal_mode_warning(); ?>
+			</div>
+
 			<div class="input-label">
 				<label for="user_minimum_age"><?php _se("Minimum age required"); ?></label>
 				<div class="c3"><input type="number" min="0" pattern="\d+" name="user_minimum_age" id="user_minimum_age" class="text-input"<?php if(CHV\getSetting('website_mode') == 'personal') echo ' disabled'; ?> value="<?php echo get_safe_post() ? get_safe_post()['user_minimum_age'] : CHV\Settings::get('user_minimum_age'); ?>" placeholder="<?php _se('Empty'); ?>"></div>
@@ -1157,6 +1164,8 @@
 				<div class="input-below"><?php _se('Enable this if you want to use %s/username URLs instead of %s/user/username.', ['%s' => rtrim(G\get_base_url(), '/')]); ?></div>
 				<?php personal_mode_warning(); ?>
 			</div>
+
+			<hr class="line-separator"></hr>
 
 			<div class="input-label">
 				<label for="require_user_email_confirmation"><?php _se('Require email confirmation'); ?></label>
@@ -2040,7 +2049,7 @@
 						], get_safe_post() ? get_safe_post()['comments_api'] : CHV\Settings::get('comments_api'));
 					?>
 				</select></div>
-				<div class="input-below"><?php _se('Disqus API works with %s.', '<a href="https://help.disqus.com/customer/portal/articles/236206" target="_blank">Single Sing-On</a> (SSO)'); ?></div>
+				<div class="input-below"><?php _se('Disqus API works with %s.', '<a href="https://help.disqus.com/customer/portal/articles/236206" target="_blank">Single Sign-On</a> (SSO)'); ?></div>
 			</div>
 			<div id="comments_api-combo">
 				<div data-combo-value="disqus" class="switch-combo<?php if((get_safe_post() ? get_safe_post()['comments_api'] : CHV\Settings::get('comments_api')) !== 'disqus') echo ' soft-hidden'; ?>">
@@ -2098,6 +2107,27 @@
 
 			<?php if(get_settings()['key'] == 'additional-settings') { ?>
 			<div class="input-label">
+				<label for="enable_plugin_route"><?php _se('Plugin route'); ?></label>
+				<div class="c5 phablet-c1"><select type="text" name="enable_plugin_route" id="enable_plugin_route" class="text-input">
+					<?php
+						echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('enable_plugin_route'));
+					?>
+				</select></div>
+				<div class="input-below"><?php _se("Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators.", [
+					'%u' => G_ROOT_PATH_RELATIVE . 'plugin',
+					'%s' => '“' . _s('About') . '”',
+				]); ?></div>
+			</div>
+			<div class="input-label">
+				<label for="sdk_pup_url">PUP SDK URL</label>
+				<div class="c9 phablet-c1"><input type="text" name="sdk_pup_url" id="sdk_pup_url" class="text-input" value="<?php echo CHV\Settings::get('sdk_pup_url', true); ?>" placeholder="<?php _se('Empty'); ?>"></div>
+				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['sdk_pup_url']; ?></div>
+				<div class="input-below"><?php _se('Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL.', ['%p' => 'PUP SDK', '%s' => G_ROOT_PATH_RELATIVE . 'sdk/pup.js']); ?></div>
+			</div>
+
+			<hr class="line-separator"></hr>
+
+			<div class="input-label">
 				<label for="enable_cookie_law"><?php _se('Cookie law compliance'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="enable_cookie_law" id="enable_cookie_law" class="text-input">
 					<?php
@@ -2138,8 +2168,12 @@
 
 </div>
 
-<?php G\Render\include_theme_footer(); ?>
-
 <?php if(is_changed() || is_error()) { ?>
-<script>PF.fn.growl.expirable("<?php echo is_changed() ? (get_changed_message() ?: _s('Changes have been saved.')) : (get_error_message() ?: _s('Check the errors to proceed.')); ?>");</script>
+<script>
+$(function() {
+	PF.fn.growl.expirable("<?php echo is_changed() ? (get_changed_message() ?: _s('Changes have been saved.')) : (get_error_message() ?: _s('Check the errors to proceed.')); ?>");
+});
+</script>
 <?php } ?>
+
+<?php G\Render\include_theme_footer(); ?>

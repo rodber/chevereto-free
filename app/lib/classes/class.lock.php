@@ -26,7 +26,7 @@ class Lock {
 	protected $api = 'default';
 	
 	function __construct($lock=NULL) {
-		self::$path = CHV_APP_PATH_CONTENT . 'locks/';
+		self::$path = CHV_APP_PATH_CONTENT_LOCKS;
 		if(strlen($lock) > 0) {
 			$this->setLock($lock);
 		}
@@ -152,7 +152,7 @@ class Lock {
 						}
 					break;
 					default:
-						if(!@unlink($lock_file)) {
+						if(file_exists($lock_file) && !@unlink($lock_file)) {
 							throw new LockException('Unable to destroy ' . $this->lock . ' lock in ' . $method);
 						}
 					break;

@@ -110,7 +110,6 @@
 	
 	// Bind the native fn to the CHV object
 	$(document).ready(function() {
-		
 		CHV.obj.image_viewer.image = {
 			width: <?php echo get_image()["width"]; ?>,
 			height: <?php echo get_image()["height"]; ?>,
@@ -124,10 +123,7 @@
 		CHV.obj.image_viewer.album = {
 			id_encoded: "<?php echo get_image()["album"]["id_encoded"]; ?>"
 		};	
-		
 		image_viewer_full_fix();
-		
 		CHV.fn.image_viewer_full_fix = window["image_viewer_full_fix"];
-		
 	});
 </script>

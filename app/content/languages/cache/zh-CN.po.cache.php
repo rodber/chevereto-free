@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-06-21 18:28+0000',
-  'PO-Revision-Date' => '2017-06-21 18:28+0000',
+  'POT-Creation-Date' => '2017-10-10 10:31+0000',
+  'PO-Revision-Date' => '2017-10-10 10:31+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'zh_CN',
@@ -18,6 +18,18 @@ $translation_plural = array (
   'function' => '$index = (int)(0); return ($index < 1) ? $index : 1 - 1;',
 );
 $translation_table = [
+	"Plugin" => [
+		0 => "插件",
+	],
+	"Plugin route" => [
+		0 => "上传插件",
+	],
+	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
+		0 => "启用此功能可在%u页面显示插件说明。这些说明的链接将添加到%s菜单中。此设置不会影响管理员。",
+	],
+	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
+		0 => "使用它来设置%p的自定义URL。请注意，您需要手动复制此URL中的%s。",
+	],
 	"Invalid email" => [
 		0 => "无效的电子邮箱",
 	],
@@ -56,9 +68,6 @@ $translation_table = [
 	],
 	"Update in progress" => [
 		0 => "正在更新",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "发生错误. 请稍后再试.",
 	],
 	"Missing %s file" => [
 		0 => "缺少 %s 文件",
@@ -162,9 +171,6 @@ $translation_table = [
 	"Trending" => [
 		0 => "热门",
 	],
-	"Popular" => [
-		0 => "最爱",
-	],
 	"Top users" => [
 		0 => "所有用户",
 	],
@@ -176,6 +182,9 @@ $translation_table = [
 	],
 	"Most viewed" => [
 		0 => "最热门的",
+	],
+	"Popular" => [
+		0 => "最爱",
 	],
 	"Most liked" => [
 		0 => "最喜欢的",
@@ -691,7 +700,7 @@ $translation_table = [
 		0 => "无效的用户ID",
 	],
 	"Invalid email mode" => [
-		0 => "无效的电子邮件方式",
+		0 => "无效的电子邮件地址",
 	],
 	"Invalid SMTP port" => [
 		0 => "无效的SMTP端口",
@@ -796,7 +805,7 @@ $translation_table = [
 		0 => "无法保存页面内容: %s.",
 	],
 	"Following" => [
-		0 => "已关注",
+		0 => "关注",
 	],
 	"About" => [
 		0 => "关于",
@@ -831,11 +840,11 @@ $translation_table = [
 	"Direct links" => [
 		0 => "直接（源文件）链接",
 	],
-	"Image URL" => [
-		0 => "图片URL链接",
-	],
 	"Image link" => [
 		0 => "图片链接",
+	],
+	"Image URL" => [
+		0 => "图片URL链接",
 	],
 	"Thumbnail URL" => [
 		0 => "缩略图URL链接",
@@ -945,6 +954,12 @@ $translation_table = [
 	"Mail error" => [
 		0 => "邮件错误",
 	],
+	"Upload images" => [
+		0 => "上传图片",
+	],
+	"Upload plugin" => [
+		0 => "上传插件",
+	],
 	"Image search results for %s" => [
 		0 => "图片搜索结果 %s",
 	],
@@ -999,6 +1014,9 @@ $translation_table = [
 	"Create account" => [
 		0 => "注册账户",
 	],
+	"Upload" => [
+		0 => "上传",
+	],
 	"%s's Images" => [
 		0 => "%s 的图片",
 	],
@@ -1037,9 +1055,6 @@ $translation_table = [
 	],
 	"Notices (%s)" => [
 		0 => "通知 (%s)",
-	],
-	"Upload" => [
-		0 => "上传",
 	],
 	"Sign in with another account" => [
 		0 => "登录您的帐户",
@@ -1143,26 +1158,32 @@ $translation_table = [
 	"You can also %i or %u." => [
 		0 => "你也可以%i或者%u。",
 	],
+	"browse from your device" => [
+		0 => "浏览您的计算机",
+	],
 	"take a picture" => [
 		0 => "拍照",
 	],
-	"Edit or resize any image by clicking the image preview" => [
-		0 => "编辑或通过点击图像预览调整图像大小",
+	"You can also %i, %c or %u." => [
+		0 => "你也可以%i,%c或者%u.",
 	],
-	"Edit or resize any image by touching the image preview" => [
-		0 => "编辑或通过触摸图像预览调整图像大小",
+	"Edit or resize any image by clicking the image preview" => [
+		0 => "通过点击图像预览来编辑或调整任意图像的大小",
+	],
+	"Edit any image by touching the image preview" => [
+		0 => "通过点击图像预览来调整任意图像",
 	],
 	"your computer" => [
 		0 => "您的计算机",
 	],
-	"image URLs" => [
-		0 => "图片网址",
-	],
-	"You can keep adding more images from %i or from %u." => [
-		0 => "您可以从 %i 或从 %u 添加更多的图片。",
+	"You can add more images from %i or %u." => [
+		0 => "你可以从%i或者%u添加更多的图片.",
 	],
 	"your device" => [
 		0 => "你的设备",
+	],
+	"You can add more images from %i, %c or %u." => [
+		0 => "你可以从%i,%c或者%u添加更多的图片.",
 	],
 	"Uploading %q %o" => [
 		0 => "上传 %q %o",
@@ -1177,13 +1198,13 @@ $translation_table = [
 		0 => "上传完毕",
 	],
 	"Uploaded content added to %s." => [
-		0 => "图片添加到 %s.",
+		0 => "图片已经添加到 %s.",
 	],
 	"You can %c with the content just uploaded or %m." => [
-		0 => "您可以 %c或 %m到现有的相册.",
+		0 => "您可以将刚刚上传的图片 %c或 %m.",
 	],
 	"You can %c with the content just uploaded." => [
-		0 => "您可以 %c到现有的相册.",
+		0 => "您可以将刚刚上传的图片 %c.",
 	],
 	"create a new album" => [
 		0 => "创建相册",
@@ -1236,14 +1257,17 @@ $translation_table = [
 	"Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information." => [
 		0 => "检查 <a data-modal=\"simple\" data-target=\"failed-upload-result\">错误报告</a> 更多信息.",
 	],
-	"max" => [
-		0 => "最多",
+	"reset" => [
+		0 => "重置",
 	],
 	"close" => [
 		0 => "关闭",
 	],
 	"copy" => [
 		0 => "复制",
+	],
+	"insert" => [
+		0 => "插入",
 	],
 	"Edit" => [
 		0 => "编辑",
@@ -1605,9 +1629,6 @@ $translation_table = [
 	"There's nothing to show here." => [
 		0 => "没有要显示的内容",
 	],
-	"Upload images" => [
-		0 => "上传图片",
-	],
 	"Edit image details" => [
 		0 => "编辑图片",
 	],
@@ -1715,6 +1736,9 @@ $translation_table = [
 	],
 	"Resend instructions" => [
 		0 => "重新发送",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "发生错误. 请稍后再试.",
 	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "刚才的电子邮件已发送和说明重置您的密码. 如果您没有收到邮件, 请尝试检查您的垃圾邮件或垃圾邮件过滤器.",
@@ -2240,6 +2264,12 @@ $translation_table = [
 	],
 	"Enable this if you want to allow users to signup." => [
 		0 => "启用它代表您允许用户自行注册账号.",
+	],
+	"Enable user content delete" => [
+		0 => "用户内容删除",
+	],
+	"Enable this if you want to allow users to delete their own content. This setting doesn't affect administrators." => [
+		0 => "如果要允许用户删除自己的内容，请启用此功能。 此设置不会影响管理员。",
 	],
 	"Minimum age required" => [
 		0 => "最低年龄要求",
@@ -2832,6 +2862,12 @@ $translation_table = [
 	"Comments API" => [
 		0 => "评论 API",
 	],
+	"Disqus API works with %s." => [
+		0 => "Disqus API 适用于 %s.",
+	],
+	"Disqus shortname" => [
+		0 => "Disqus 短名称",
+	],
 	"%s public key" => [
 		0 => "%s 公共密钥",
 	],
@@ -2942,6 +2978,63 @@ $translation_table = [
 	],
 	"Send" => [
 		0 => "发送",
+	],
+	"Add image uploading to your website, blog or forum by installing our upload plugin. It provides image uploading to any website by placing a button that will allow your users to directly upload images to our service and it will automatically handle the codes needed for insertion. All features included like drag and drop, remote upload, image resizing and more." => [
+		0 => "通过安装我们的上传插件，将图像上传到您的网站，博客或论坛。 它提供图像上传到任何网站，放置一个按钮，将允许您的用户直接上传图像到我们的服务，它将自动处理插入所需的代码。 所有功能包括拖放，远程上传，图像调整大小等。",
+	],
+	"Supported software" => [
+		0 => "支持的软件",
+	],
+	"supported software" => [
+		0 => "支持的软件",
+	],
+	"The plugin works in any website with user-editable content and for %sv, it will place an upload button that will match the target editor toolbar so no extra customization is needed." => [
+		0 => "该插件适用于具有用户可编辑内容的任何网站，对于%sv，它将放置一个与目标编辑器工具栏匹配的上传按钮，因此不需要额外的自定义。",
+	],
+	"Add it to your website" => [
+		0 => "将其添加到您的网站",
+	],
+	"options" => [
+		0 => "options",
+	],
+	"Copy and paste the plugin code into your website HTML code (preferably inside the head section). There are plenty %o to make it fit better to your needs." => [
+		0 => "将插件代码复制并粘贴到您的网站HTML代码中（最好在头部内）。 这里有很多%o来使其更加满足你的需求。",
+	],
+	"Basic options" => [
+		0 => "基本选项",
+	],
+	"Color palette" => [
+		0 => "调色板",
+	],
+	"Button color scheme" => [
+		0 => "按钮配色方案",
+	],
+	"Embed codes that will be auto-inserted in editor box" => [
+		0 => "嵌入代码将自动插入到编辑框中",
+	],
+	"Sibling selector" => [
+		0 => "Sibling选择器",
+	],
+	"Sibling element selector where to place the button next to" => [
+		0 => "Sibling元素选择器的旁边放置按钮",
+	],
+	"Sibling position" => [
+		0 => "Sibling顺序",
+	],
+	"After" => [
+		0 => "先",
+	],
+	"Before" => [
+		0 => "后",
+	],
+	"Position relative to sibling element" => [
+		0 => "相对于sibling元素的位置",
+	],
+	"Advanced options" => [
+		0 => "高级选项",
+	],
+	"The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options." => [
+		0 => "该插件具有大量附加选项，允许完全自定义。 您可以使用自定义HTML，CSS，自己的调色板，设置监控服务等。 查找%d和插件源以更好地了解这些高级选项。",
 	],
 	"You either don't have permission to access this page or the link has expired." => [
 		0 => "您没有权限访问此网页或链接已过期.",

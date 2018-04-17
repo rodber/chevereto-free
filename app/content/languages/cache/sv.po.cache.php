@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2015-04-13 17:55+0000',
-  'PO-Revision-Date' => '2015-04-13 17:55+0000',
+  'POT-Creation-Date' => '2017-07-10 19:51+0000',
+  'PO-Revision-Date' => '2017-07-10 19:51+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'sv',
@@ -27,6 +27,9 @@ $translation_table = [
 	"Invalid password" => [
 		0 => "Felaktigt lösenord",
 	],
+	"Invalid website mode" => [
+		0 => "Okänt webbplatsläge",
+	],
 	"From email address" => [
 		0 => "Avsändarens email",
 	],
@@ -39,22 +42,170 @@ $translation_table = [
 	"Recipient for contact form and system alerts." => [
 		0 => "Mottagare för kontaktformuläret samt systemmeddelanden",
 	],
+	"Website mode" => [
+		0 => "Webbplatsläge",
+	],
+	"You can switch the website mode anytime." => [
+		0 => "Du kan byta hemsidans läge närsomhelst.",
+	],
+	"Community" => [
+		0 => "Gemenskap",
+	],
+	"Personal" => [
+		0 => "Personligt",
+	],
+	"Update in progress" => [
+		0 => "Uppdatering pågår",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "Något gick fel, vänligen prova igen senare.",
+	],
+	"Missing %s file" => [
+		0 => "Saknad %s fil",
+	],
+	"Invalid license info" => [
+		0 => "Ogiltig licensinformation",
+	],
+	"Invalid license key" => [
+		0 => "Ogiltig licensnyckel",
+	],
+	"Can't save file" => [
+		0 => "Kan inte spara fil",
+	],
+	"Can't download %s" => [
+		0 => "Kan inte ladda ned %s",
+	],
+	"Can't extract %s" => [
+		0 => "Kan inte extrahera %s",
+	],
+	"Can't create %s directory - %e" => [
+		0 => "Kan inte skapa %s register - %e",
+	],
+	"Can't update %s file - %e" => [
+		0 => "Kan inte uppdatera %s fil - %e",
+	],
 	"Untitled" => [
-		0 => "Ingen titel",
+		0 => "Namnlös",
 	],
 	"%s's images" => [
 		0 => "%s's bilder",
 	],
-	"Private upload" => [
-		0 => "Privat uppladdning",
+	"Note: This content is private but anyone with the link will be able to see this." => [
+		0 => "Notera: Detta innehåll är privat men kan ses av alla som har länken.",
+	],
+	"Note: This content is password protected. Remember to pass the content password to share." => [
+		0 => "Notera: Detta innehåll är lösenordsskyddat. Kom ihåg att dela lösenordet med andra om du vill att de ska kunna se det.",
+	],
+	"Note: This content is private. Change privacy to \"public\" to share." => [
+		0 => "Notera: Detta innehåll är privat, ändra sekretess till \"publikt\" för att dela.",
+	],
+	"Private" => [
+		0 => "Privat",
+	],
+	"Public" => [
+		0 => "Publikt",
+	],
+	"Me" => [
+		0 => "Jag",
+	],
+	"Link" => [
+		0 => "Länk",
+	],
+	"Password" => [
+		0 => "Lösenord",
 	],
 	"view" => [
 		0 => "visning",
 		1 => "visningar",
 	],
+	"After %n %t" => [
+		0 => "Efter %n %t",
+	],
+	"Don't autodelete" => [
+		0 => "Radera inte automatiskt",
+	],
+	"minute" => [
+		0 => "minut",
+		1 => "minuter",
+	],
+	"hour" => [
+		0 => "timme",
+		1 => "timmar",
+	],
+	"day" => [
+		0 => "dag",
+		1 => "dagar",
+	],
+	"Duplicated upload" => [
+		0 => "Duplicerad uppladdning",
+	],
+	"Error storing file in external storage server" => [
+		0 => "Fel vid lagring av fil i extern lagringsserver",
+	],
+	"External storage has failed" => [
+		0 => "Extern lagring misslyckad",
+	],
+	"Private upload" => [
+		0 => "Privat uppladdning",
+	],
+	"Upload switched to local storage" => [
+		0 => "Uppladdning flyttad till lokalt lagringsutrymme",
+	],
+	"like" => [
+		0 => "Gilla",
+		1 => "gillar",
+	],
 	"image" => [
 		0 => "bild",
 		1 => "bilder",
+	],
+	"Recent" => [
+		0 => "Nyliga",
+	],
+	"Trending" => [
+		0 => "Trendar",
+	],
+	"Popular" => [
+		0 => "Populärt",
+	],
+	"Top users" => [
+		0 => "Aktivaste användarna",
+	],
+	"Most recent" => [
+		0 => "Nyast",
+	],
+	"Oldest" => [
+		0 => "Äldst",
+	],
+	"Most viewed" => [
+		0 => "Flest visningar",
+	],
+	"Most liked" => [
+		0 => "Mest gillad",
+	],
+	"Explore" => [
+		0 => "Bläddra",
+	],
+	"Animated" => [
+		0 => "GIFar",
+	],
+	"Search" => [
+		0 => "Sök",
+	],
+	"People" => [
+		0 => "Gillar",
+	],
+	"Image" => [
+		0 => "Bild",
+		1 => "Bilder",
+	],
+	"Album" => [
+		0 => "Album",
+		1 => "Album",
+	],
+	"User" => [
+		0 => "Användare",
+		1 => "Användare",
 	],
 	"year" => [
 		0 => "år",
@@ -68,18 +219,6 @@ $translation_table = [
 		0 => "vecka",
 		1 => "veckor",
 	],
-	"day" => [
-		0 => "dag",
-		1 => "dagar",
-	],
-	"hour" => [
-		0 => "timme",
-		1 => "timmar",
-	],
-	"minute" => [
-		0 => "minut",
-		1 => "minuter",
-	],
 	"second" => [
 		0 => "sekund",
 		1 => "sekunder",
@@ -90,8 +229,20 @@ $translation_table = [
 	"moments ago" => [
 		0 => "alldeles nyss",
 	],
+	"Dashboard" => [
+		0 => "Kontrollpanel",
+	],
+	"Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>." => [
+		0 => "Hemsidan är i underhållsläge. För att ångra denna inställning, gå till <a href=\"%s\">Instrumentpanel > Inställningar</a>.",
+	],
+	"Feel free to browse and discover all my shared images and albums." => [
+		0 => "Välkommen att se och upptäcka alla mina delade bilder och album.",
+	],
 	"That page doesn't exist" => [
 		0 => "Sidan existerar inte",
+	],
+	"Forgot password?" => [
+		0 => "Glömt lösenord?",
 	],
 	"Reset password" => [
 		0 => "Återställ lösenord",
@@ -144,17 +295,11 @@ $translation_table = [
 	"Check the errors in the form to continue." => [
 		0 => "Kontrollera felen innan du går vidare.",
 	],
-	"Most recent" => [
-		0 => "Nyast",
-	],
-	"Oldest" => [
-		0 => "Äldst",
-	],
-	"Most viewed" => [
-		0 => "Flest visningar",
-	],
 	"Share" => [
 		0 => "Dela",
+	],
+	"Embed codes" => [
+		0 => "Inbäddningskoder",
 	],
 	"Full info" => [
 		0 => "Full info",
@@ -198,9 +343,6 @@ $translation_table = [
 	"Disabled" => [
 		0 => "Inaktiverat",
 	],
-	"Max. upload size" => [
-		0 => "Max uppladdningsstorlek",
-	],
 	"Max. post size" => [
 		0 => "Max. poststorlek",
 	],
@@ -213,6 +355,9 @@ $translation_table = [
 	],
 	"Memory limit" => [
 		0 => "Minnesgräns",
+	],
+	"Links" => [
+		0 => "Länkar",
 	],
 	"Website" => [
 		0 => "Hemsida",
@@ -256,6 +401,18 @@ $translation_table = [
 	"search content" => [
 		0 => "Sök innehåll",
 	],
+	"Before comments" => [
+		0 => "Före kommentarer",
+	],
+	"Image page" => [
+		0 => "Bild sida",
+	],
+	"Album page" => [
+		0 => "Album sida",
+	],
+	"User profile page" => [
+		0 => "Användarprofil sida",
+	],
 	"Invalid website name" => [
 		0 => "Ogiltigt namn på hemsidan",
 	],
@@ -264,9 +421,6 @@ $translation_table = [
 	],
 	"Invalid timezone" => [
 		0 => "Ogiltig tidszon",
-	],
-	"Invalid value" => [
-		0 => "Ogiltigt värde",
 	],
 	"Invalid upload storage mode" => [
 		0 => "Ogiltig uppladdning till lagringsläge",
@@ -280,11 +434,11 @@ $translation_table = [
 	"Invalid thumb height" => [
 		0 => "Ogiltig tumnagelhöjd",
 	],
-	"Invalid medium width" => [
-		0 => "Fel bredd på medium",
-	],
 	"Invalid theme" => [
 		0 => "Ogiltigt tema",
+	],
+	"Invalid value" => [
+		0 => "Ogiltigt värde",
 	],
 	"Invalid user id" => [
 		0 => "Okänd användar ID",
@@ -297,9 +451,6 @@ $translation_table = [
 	],
 	"Invalid SMTP security" => [
 		0 => "Fel SMTP-säkerhet",
-	],
-	"Invalid website mode" => [
-		0 => "Okänt webbplatsläge",
 	],
 	"Invalid website content privacy mode" => [
 		0 => "Ogiltig webbplatsinnehåll privat läge",
@@ -316,20 +467,8 @@ $translation_table = [
 	"Invalid SMTP username" => [
 		0 => "Felaktigt SMTP användarnamn",
 	],
-	"Top users" => [
-		0 => "Aktivaste användarna",
-	],
-	"Dashboard" => [
-		0 => "Kontrollpanel",
-	],
-	"Explore" => [
-		0 => "Bläddra",
-	],
 	"About" => [
 		0 => "Om",
-	],
-	"Embed codes" => [
-		0 => "Inbäddningskoder",
 	],
 	"Image ID" => [
 		0 => "Bild ID",
@@ -342,6 +481,21 @@ $translation_table = [
 	],
 	"%s images" => [
 		0 => "%s bilder",
+	],
+	"Direct links" => [
+		0 => "Direktlänkar",
+	],
+	"Image URL" => [
+		0 => "Direktlänk",
+	],
+	"Image link" => [
+		0 => "Bildlänk",
+	],
+	"Thumbnail URL" => [
+		0 => "Liten miniatyrbild",
+	],
+	"Medium URL" => [
+		0 => "Medelstor miniatyrbild",
 	],
 	"Login needed" => [
 		0 => "Inloggning krävs",
@@ -367,8 +521,26 @@ $translation_table = [
 	"Logged out" => [
 		0 => "Utloggad",
 	],
-	"Search" => [
-		0 => "Sök",
+	"General questions/comments" => [
+		0 => "General questions/comments",
+	],
+	"DMCA complaint" => [
+		0 => "DMCA",
+	],
+	"Invalid name" => [
+		0 => "Ogiltigt namn",
+	],
+	"Invalid message" => [
+		0 => "Ogiltigt meddelande",
+	],
+	"Invalid subject" => [
+		0 => "Ogiltigt ämne",
+	],
+	"Invalid reCAPTCHA" => [
+		0 => "Ogiltig reCAPTCHA",
+	],
+	"Mail error" => [
+		0 => "E-postfel",
 	],
 	"Account" => [
 		0 => "Konto",
@@ -376,17 +548,11 @@ $translation_table = [
 	"Profile" => [
 		0 => "Profil",
 	],
-	"Password" => [
-		0 => "Lösenord",
-	],
 	"Linked accounts" => [
 		0 => "Länkade konton",
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "Ett email har skickats till %s med instruktioner.",
-	],
-	"Invalid name" => [
-		0 => "Ogiltigt namn",
 	],
 	"Invalid website" => [
 		0 => "Ogiltig hemsida",
@@ -421,6 +587,9 @@ $translation_table = [
 	"%s's Albums" => [
 		0 => "%s's Album",
 	],
+	"Results for" => [
+		0 => "Resultat för",
+	],
 	"Random" => [
 		0 => "Slumpvald",
 	],
@@ -454,20 +623,14 @@ $translation_table = [
 	"By signing up you agree to our <a href=\"%s\">Terms of service</a>" => [
 		0 => "Genom att registrera dig accepterar du våra <a href=\"%s\">villkor</a>",
 	],
+	"loading" => [
+		0 => "laddar",
+	],
 	"My Profile" => [
 		0 => "Min profil",
 	],
 	"Sign out" => [
 		0 => "Logga ut",
-	],
-	"Terms of service" => [
-		0 => "Villkor",
-	],
-	"Privacy" => [
-		0 => "Sekretess",
-	],
-	"Contact" => [
-		0 => "Kontakt",
 	],
 	"We received a request to change the email of your <a href=\"%u\">%n</a> account at %w." => [
 		0 => "We received a request to change the email of your <a href=\"%u\">%n</a> account at %w.",
@@ -508,83 +671,17 @@ $translation_table = [
 	"This email was sent from %w %u" => [
 		0 => "Detta mail skickades från %w %u",
 	],
-	"General questions/comments" => [
-		0 => "General questions/comments",
-	],
-	"DMCA complaint" => [
-		0 => "DMCA",
-	],
-	"Invalid message" => [
-		0 => "Ogiltigt meddelande",
-	],
-	"Invalid subject" => [
-		0 => "Ogiltigt ämne",
-	],
-	"Invalid reCAPTCHA" => [
-		0 => "Ogiltig reCAPTCHA",
-	],
-	"Mail error" => [
-		0 => "E-postfel",
-	],
-	"Message sent" => [
-		0 => "Meddelande skickat",
-	],
-	"We will be in touch soon." => [
-		0 => "Vi hör av oss snart.",
-	],
-	"If you want to send a message fill the form below." => [
-		0 => "Om du vill skicka ett meddelande vänligen fyll i formuläret nedanför.",
-	],
-	"Name" => [
-		0 => "Namn",
-	],
-	"Your name" => [
-		0 => "Ditt namn",
-	],
-	"Your email address" => [
-		0 => "Din e-postadress",
-	],
-	"Subject" => [
-		0 => "Ämne",
-	],
-	"Message" => [
-		0 => "Meddelande",
-	],
-	"Send message" => [
-		0 => "Skicka meddelande",
-	],
-	"cancel" => [
-		0 => "avbryt",
-	],
-	"Drag and drop images here to upload" => [
-		0 => "Dra och släpp bilder här för att ladda upp",
-	],
 	"Select the images to upload" => [
 		0 => "Välj bilder att ladda upp",
-	],
-	"You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "Du kan också <a data-trigger=\"anywhere-upload-input\">ladda upp från din dator</a> eller <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">ange en URL till bilden</a>.",
-	],
-	"Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>" => [
-		0 => "Laddar upp <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">bilder</span>",
-	],
-	"The queue is being uploaded. It will take just a few seconds to complete." => [
-		0 => "Kön håller på att laddas upp. Det tar bara några sekunder innan det är klart.",
 	],
 	"Upload complete" => [
 		0 => "Uppladdning klar",
 	],
-	"Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album." => [
-		0 => "Innehåll har lagts till i <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">den publika bildströmmen</a>. Du kan <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">Skapa ett album</a> eller <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">Flytta <span data-text=\"queue-objects\">bilder</span></a> till ett existerande album.",
-	],
-	"You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account." => [
-		0 => "Du kan <a href=\"%s\">skapa ett konto</a> eller <a href=\"%l\">logga in</a> för att spara dina uppladdningar till ditt konto.",
-	],
-	"No <span data-text=\"queue-objects\">images</span> have been uploaded" => [
-		0 => "Inga <span data-text=\"queue-objects\">bilder</span> har laddats upp.",
-	],
 	"Some errors have occured and the system couldn't process your request." => [
 		0 => "Det blev ett fel och systemet kunde inte hantera din begärda åtgärd.",
+	],
+	"Category" => [
+		0 => "Kategori",
 	],
 	"Select category" => [
 		0 => "Välj kategori",
@@ -597,6 +694,9 @@ $translation_table = [
 	],
 	"Uploading" => [
 		0 => "Laddar upp",
+	],
+	"cancel" => [
+		0 => "avbryt",
 	],
 	"cancel remaining" => [
 		0 => "avbryt kvarvarande",
@@ -615,6 +715,21 @@ $translation_table = [
 	],
 	"close" => [
 		0 => "stäng",
+	],
+	"Edit" => [
+		0 => "Redigera",
+	],
+	"optional" => [
+		0 => "valfritt",
+	],
+	"Flag as unsafe" => [
+		0 => "Markera som osäkert",
+	],
+	"Description" => [
+		0 => "Beskrivning",
+	],
+	"Brief description of this image" => [
+		0 => "Kort beskrivning av bilden",
 	],
 	"Add image URLs" => [
 		0 => "Lägg till URL till bild",
@@ -641,23 +756,11 @@ $translation_table = [
 		0 => "album",
 		1 => "album",
 	],
-	"Links" => [
-		0 => "Länkar",
-	],
 	"Viewer links" => [
 		0 => "Kortlänkar",
 	],
-	"Direct links" => [
-		0 => "Direktlänkar",
-	],
 	"HTML Codes" => [
 		0 => "HTML-kod",
-	],
-	"HTML embed" => [
-		0 => "HTML-inbäddning",
-	],
-	"HTML original linked" => [
-		0 => "HTML-länk till originalet",
 	],
 	"HTML medium linked" => [
 		0 => "HTML-länk mediumstor",
@@ -668,26 +771,14 @@ $translation_table = [
 	"BBCodes" => [
 		0 => "BBCodes",
 	],
-	"BBCode embed" => [
-		0 => "BBCode inbäddad",
-	],
-	"BBCode original linked" => [
-		0 => "BBCode originallänk",
-	],
 	"BBCode medium linked" => [
 		0 => "BBCode mellanstor link",
 	],
 	"BBCode thumbnail linked" => [
 		0 => "BBCode länk miniatyrbild",
 	],
-	"Category" => [
-		0 => "Kategori",
-	],
 	"Album name" => [
 		0 => "Albumnamn",
-	],
-	"Untitled album" => [
-		0 => "Namnlöst album",
 	],
 	"move to existing album" => [
 		0 => "flytta till befintligt album",
@@ -695,23 +786,14 @@ $translation_table = [
 	"Album description" => [
 		0 => "Album beskrivning",
 	],
-	"optional" => [
-		0 => "valfritt",
-	],
-	"Album Privacy" => [
-		0 => "Sekretess album",
-	],
 	"Who can view this content" => [
 		0 => "Vem kan se detta innehåll",
-	],
-	"Public" => [
-		0 => "Publikt",
 	],
 	"Private (just me)" => [
 		0 => "Privat (bara jag)",
 	],
-	"No category" => [
-		0 => "Ingen kategori",
+	"Name" => [
+		0 => "Namn",
 	],
 	"Category name" => [
 		0 => "Kategori namn",
@@ -722,20 +804,11 @@ $translation_table = [
 	"Category URL key" => [
 		0 => "Kategori URL nyckel",
 	],
-	"Description" => [
-		0 => "Beskrivning",
-	],
-	"Flag as unsafe" => [
-		0 => "Markera som osäkert",
-	],
-	"Brief description of this image" => [
-		0 => "Kort beskrivning av bilden",
+	"Message" => [
+		0 => "Meddelande",
 	],
 	"Existing album" => [
 		0 => "Existerande album",
-	],
-	"private" => [
-		0 => "privat",
 	],
 	"create new album" => [
 		0 => "Skapa nytt album",
@@ -746,14 +819,11 @@ $translation_table = [
 	"Load more" => [
 		0 => "Ladda mer",
 	],
-	"Previous" => [
-		0 => "Föregående",
-	],
-	"Next" => [
-		0 => "Nästa",
-	],
 	"Select all" => [
 		0 => "Välj alla",
+	],
+	"Clear selection" => [
+		0 => "Plocka bort val",
 	],
 	"Action" => [
 		0 => "Funktion",
@@ -764,20 +834,8 @@ $translation_table = [
 	"Delete" => [
 		0 => "Radera",
 	],
-	"Clear selection" => [
-		0 => "Plocka bort val",
-	],
 	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
 		0 => "För att använda alla funktioner på denna webbplats måste du logga in. Om du inte har ett konto kan du <a href=\"%s\">skapa ett nu</a>.",
-	],
-	"forgot?" => [
-		0 => "Glömt?",
-	],
-	"Link" => [
-		0 => "Länk",
-	],
-	"Note: This content is private. Change privacy to \"public\" to share." => [
-		0 => "Notera: Detta innehåll är privat, ändra sekretess till \"publikt\" för att dela.",
 	],
 	"There's nothing to show here." => [
 		0 => "Finns inget att visa här",
@@ -806,20 +864,11 @@ $translation_table = [
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "Vill du verkligen radera dessa valda delar? Detta kan inte ångras.",
 	],
-	"Uploaded by guest to Public" => [
-		0 => "Uppladdat av gäst till Publikt",
-	],
 	"From %s" => [
 		0 => "Från %s",
 	],
-	"From %a by %u" => [
-		0 => "Från %a av %u",
-	],
 	"Select" => [
 		0 => "Markera",
-	],
-	"Edit" => [
-		0 => "Redigera",
 	],
 	"The requested page was not found." => [
 		0 => "Den begärda sidan kunde inte hittas",
@@ -854,6 +903,9 @@ $translation_table = [
 	"A confirmation link will be sent to this email with details to activate your account." => [
 		0 => "En aktiveringslänk kommer skickas till mailen.",
 	],
+	"Your email address" => [
+		0 => "Din e-postadress",
+	],
 	"Add email" => [
 		0 => "Lägg till e-postadress",
 	],
@@ -862,9 +914,6 @@ $translation_table = [
 	],
 	"Resend instructions" => [
 		0 => "Skicka instruktioner igen",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "Något gick fel, vänligen prova igen senare.",
 	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters.",
@@ -899,12 +948,6 @@ $translation_table = [
 	"Re-enter your new password" => [
 		0 => "Skriv in lösenordet igen",
 	],
-	"An email to %s has been sent with instructions to activate your account.n\\If you don't receive the instructions try checking your junk or spam filters." => [
-		0 => "Ett e-postmeddelande har skickats till %s med instruktioner om hur du aktiverar ditt konto. Har du inte fått något inom ett par minuter så kan du kolla igenom dina spamfilter.",
-	],
-	"Enter the email address that you used to create your account to continue." => [
-		0 => "Ange den e-postadress du använde när du registrerade dig för att fortsätta.",
-	],
 	"This content is private" => [
 		0 => "Detta innehåll är privat",
 	],
@@ -916,14 +959,6 @@ $translation_table = [
 	],
 	"Album link" => [
 		0 => "Länk till album",
-	],
-	"Image" => [
-		0 => "Bild",
-		1 => "Bilder",
-	],
-	"User" => [
-		0 => "Användare",
-		1 => "Användare",
 	],
 	"Disk used" => [
 		0 => "Använt utrymme",
@@ -958,14 +993,8 @@ $translation_table = [
 	"Select region" => [
 		0 => "Välj region",
 	],
-	"Enable this if you want to allow the explore page." => [
-		0 => "Aktivera detta om du vill tillåta bläddringssidan.",
-	],
-	"Website mode" => [
-		0 => "Webbplatsläge",
-	],
-	"Private" => [
-		0 => "Privat",
+	"User ID" => [
+		0 => "Användar-ID",
 	],
 	"Content privacy mode" => [
 		0 => "Innehåll privat läge",
@@ -990,12 +1019,6 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Aktivera detta om du vill tillåta icke registrerade användare att ladda upp.",
-	],
-	"Max. filesize" => [
-		0 => "Max filstorlek",
-	],
-	"Max. allowed filesize. (Max allowed by server is %s)" => [
-		0 => "Max tillåtna filstorlek. (Max tillåtet av servern är %s)",
 	],
 	"Image path" => [
 		0 => "Sökväg för bild",
@@ -1024,23 +1047,11 @@ $translation_table = [
 	"Original" => [
 		0 => "Original",
 	],
-	"Mixed" => [
-		0 => "Mixad",
-	],
-	"\"Original\" will try to keep the image source name while \"Random\" will generate a random name. \"Mixed\" is a combination of both methods." => [
-		0 => "\"Original\" kommer att försöka behålla det ursprungliga namnet, mendans \"Slumpvald\" genererar ett slumpmässigt namn. \"Mixad\" är en kombination av båda.",
-	],
 	"Thumb size" => [
 		0 => "Storlek på miniatyrbild",
 	],
 	"Thumbnails will be fixed to this size." => [
 		0 => "Miniatyrbilder kommer att fastställas till den här storleken.",
-	],
-	"Medium size" => [
-		0 => "Medium storlek",
-	],
-	"Height will be automatic calculated." => [
-		0 => "Storleken beräknas automatiskt.",
 	],
 	"Enable this to put a logo or anything you want in image uploads." => [
 		0 => "Aktivera denna för att lägga till en logotyp eller vad du vill i bilduppladdning.",
@@ -1050,9 +1061,6 @@ $translation_table = [
 	],
 	"Watermark image" => [
 		0 => "Vattenmärkningsbild",
-	],
-	"Watermark image to use. Must be a PNG." => [
-		0 => "Bild att använda vid vattenmärkning. Måste vara i PNG format.",
 	],
 	"Watermark position" => [
 		0 => "Position för vattenmärkning",
@@ -1189,32 +1197,17 @@ $translation_table = [
 	"Put your custom JS code here. It will be placed as <script> just before the closing </head> tag." => [
 		0 => "Sätt in din anpassade JS kod här. Den kommer att läggas till inom <script> precis före </head> taggen.",
 	],
-	"After listing (homepage)" => [
-		0 => "Efter listning (startsida)",
+	"Do you really want to delete this image? This can't be undone." => [
+		0 => "Vill du verkligen radera bilden? Kan ej ångras.",
 	],
-	"Before comments" => [
-		0 => "Före kommentarer",
-	],
-	"Image page" => [
-		0 => "Bild sida",
-	],
-	"Album page" => [
-		0 => "Album sida",
-	],
-	"User profile page" => [
-		0 => "Användarprofil sida",
+	"Delete image" => [
+		0 => "Radera bild",
 	],
 	"Crypt salt" => [
 		0 => "Crypt salt",
 	],
 	"This is the salt used to convert numeric ID to alphanumeric. It was generated on install." => [
 		0 => "This is the salt used to convert numeric ID to alphanumeric. It was generated on install.",
-	],
-	"Error reporting" => [
-		0 => "Felhantering",
-	],
-	"Enable this if you need to debug PHP errors." => [
-		0 => "Aktivera detta om du vill debugga PHP-fel",
 	],
 	"Default language" => [
 		0 => "Standardspråk",
@@ -1285,12 +1278,6 @@ $translation_table = [
 	"Google client secret" => [
 		0 => "Google client secret",
 	],
-	"reCAPTCHA public key" => [
-		0 => "reCAPTCHA public key",
-	],
-	"reCAPTCHA private key" => [
-		0 => "reCAPTCHA private key",
-	],
 	"reCAPTCHA threshold" => [
 		0 => "reCAPTCHA threshold",
 	],
@@ -1306,9 +1293,6 @@ $translation_table = [
 	"Google Analytics or anything you want. It will be added to the theme footer." => [
 		0 => "Google Analytics eller det du vill använda kommer att läggas till i footern på temat.",
 	],
-	"Enable this if you are using Cloudflare." => [
-		0 => "Aktivera detta om du använder Cloudflare.",
-	],
 	"API v1 key" => [
 		0 => "API nyckel v1",
 	],
@@ -1320,12 +1304,6 @@ $translation_table = [
 	],
 	"Guest" => [
 		0 => "Gäst",
-	],
-	"Do you really want to delete this image? This can't be undone." => [
-		0 => "Vill du verkligen radera bilden? Kan ej ångras.",
-	],
-	"Delete image" => [
-		0 => "Radera bild",
 	],
 	"Added to %s" => [
 		0 => "Tillagt i %s",
@@ -1345,33 +1323,6 @@ $translation_table = [
 	"In this album" => [
 		0 => "I detta album",
 	],
-	"Image links" => [
-		0 => "Bildlänkar",
-	],
-	"Image URL" => [
-		0 => "Direktlänk",
-	],
-	"Image link" => [
-		0 => "Bildlänk",
-	],
-	"Thumbnail URL" => [
-		0 => "Liten miniatyrbild",
-	],
-	"Medium URL" => [
-		0 => "Medelstor miniatyrbild",
-	],
-	"Image embed codes" => [
-		0 => "Inbäddningskoder",
-	],
-	"Linked image" => [
-		0 => "Länkad bild",
-	],
-	"Linked medium" => [
-		0 => "Länkad medium",
-	],
-	"Linked thumbnail" => [
-		0 => "Länkad tumnagel",
-	],
 	"Upload and share your images." => [
 		0 => "Ladda upp och dela dina bilder.",
 	],
@@ -1390,17 +1341,11 @@ $translation_table = [
 	"You either don't have permission to access this page or the link has expired." => [
 		0 => "Du har inte tillåtelse att besöka denna sida, alternativt har länken dött.",
 	],
-	"Results for" => [
-		0 => "Resultat för",
-	],
 	"Do you really want to delete this user? This can't be undone." => [
 		0 => "Vill du verkligen radera denna användare? Går ej att ångra.",
 	],
 	"Delete user" => [
 		0 => "Radera användare",
-	],
-	"User ID" => [
-		0 => "Användar-ID",
 	],
 	"Register date" => [
 		0 => "Blev medlem",
@@ -1449,9 +1394,6 @@ $translation_table = [
 	],
 	"Re-enter your password" => [
 		0 => "Ange ditt lösenord igen",
-	],
-	"loading" => [
-		0 => "laddar",
 	],
 	"Upload new image" => [
 		0 => "Ladda upp ny bild",
@@ -1542,6 +1484,9 @@ $translation_table = [
 	],
 	"Image edited successfully." => [
 		0 => "Bilden har ändrats.",
+	],
+	"private" => [
+		0 => "privat",
 	],
 	"Album edited successfully." => [
 		0 => "Albumet har ändrats.",

@@ -50,9 +50,13 @@ foreach($tabs as $tab) {
                     <?php
 						}
 					?>
-					<?php if((array_key_exists('tools_available', $tab) ? in_array('delete', $tab['tools_available']) : TRUE)) { ?>
+					<?php
+						if(is_allowed_to_delete_content() && (array_key_exists('tools_available', $tab) ? in_array('delete', $tab['tools_available']) : TRUE)) {
+					?>
 					<li><a data-action="delete"><?php _se('Delete'); ?></a></li>
-					<?php } ?>
+					<?php
+						}
+					?>
 					<li><a data-action="clear"><?php _se('Clear selection'); ?></a></li>
 				</ul>
 			</div>
