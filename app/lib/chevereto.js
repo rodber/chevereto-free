@@ -1924,10 +1924,10 @@ CHV.fn.bindSelectableItems = function() {
 		return;
 	}
 
-	$("html.device-nonmobile " + sel).selectable({ //
+	$("html.device-nonmobile " + sel).selectable({
+		delay: 150,
 		filter: PF.obj.listing.selectors.list_item,
 		cancel: ".content-empty, .header, #tab-share, #tab-full-info, .viewer-title, .header-link, .top-bar, .content-listing-pagination *, #fullscreen-modal, #top-user, #background-cover, .list-item-desc, .list-item-image-tools, [data-action=load-image], #tab-codes",
-		delay: 5, // Avoids unattended click reset
 		selecting: function(event, ui) {
 			var $this = $(ui.selecting);
 			var unselect = $this.hasClass("selected");
@@ -2165,12 +2165,6 @@ CHV.fn.uploader = {
 		$("[name=upload-category-id]", this.selectors.root).prop("value", "");
 		$("[name=upload-nsfw]", this.selectors.root).prop("checked", this.defaultChecked);
 
-		/*
-		$(this.selectors.close_cancel, this.selectors.root).hide().each(function() {
-			if($(this).data("action") == "close-upload") $(this).show();
-		});
-		*/
-
 		this.boxSizer(true);
 	},
 
@@ -2211,7 +2205,7 @@ CHV.fn.uploader = {
 
 		if(!$("body").is("#upload") && $(this.selectors.root).height() > $(window).height()) {
 			$(this.selectors.root).height($(window).height()).css({"overflow-y": "scroll", "overflow-x": "auto"});
-            $("body").addClass("overflow-hidden");
+      $("body").addClass("overflow-hidden");
 		} else {
 			$(this.selectors.root).css("overflow-y", "");
 			$("body").removeClass("overflow-hidden");
@@ -2403,12 +2397,6 @@ CHV.fn.uploader = {
 		$(this.selectors.queue, this.selectors.root).append(item_queue_template.repeat(files.length));
 
 		$(this.selectors.queue + " " + this.selectors.queue_item + ":not([data-id])", this.selectors.root).hide(); // hide the stock items
-
-		/*
-		$(this.selectors.close_cancel, this.selectors.root).hide().each(function() {
-			if($(this).data("action") == "close-upload") $(this).show();
-		});
-		*/
 
 		var failed_before = failed_files,
 			failed_files = [],
@@ -2624,11 +2612,7 @@ CHV.fn.uploader = {
 			}
 			return;
 		}
-		/*
-		$(this.selectors.close_cancel, this.selectors.root).hide().each(function() {
-			if($(this).data("action") == "cancel-upload") $(this).show();
-		});
-		*/
+
 		this.uploadThreads += 1;
 
 		if(this.uploadThreads < CHV.obj.config.upload.threads && nextId) {
@@ -2772,13 +2756,6 @@ CHV.fn.uploader = {
 				if(self.uploadThreads < CHV.obj.config.upload.threads && nextId) {
 					CHV.fn.uploader.upload($queue_item.next());
 					$(CHV.fn.uploader.selectors.root).addClass('queueHasResults');
-					/*
-					$(CHV.fn.uploader.selectors.close_cancel, CHV.fn.uploader.selectors.root).hide().each(function() {
-						if($(this).data("action") == "cancel-upload-remaining") {
-							$(this).show();
-						}
-					});
-					*/
 				}
 
 				if(self.uploadProcessedIds.length == Object.size(self.files)) {
@@ -4232,10 +4209,6 @@ CHV.fn.list_editor = {
 		CHV.fn.list_editor.clearSelection();
 
 		if(/image/.test(dealing_with)) {
-
-			/*if( (response.request.editing && response.request.editing.new_album == "true") || (response.request.album && response.request.album.new == "true")) {
-				//CHV.fn.list_editor.updateUserCounters("album", 1);
-			}*/
 
 			if(dealing_with == "image") { // single
 				CHV.fn.list_editor.updateItem("[data-id="+$targets.data("id")+"]", response.image, "move");

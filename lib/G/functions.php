@@ -725,7 +725,7 @@ namespace G {
 
     function datetime_alter($datetime, $var, $action='add') {
         if(!in_array($action, ['add', 'sub', 'modify'])) {
-            return $datetime;
+          return $datetime;
         }
         try {
             $DateTime = new \DateTime($datetime);

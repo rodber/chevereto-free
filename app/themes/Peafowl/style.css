@@ -3,7 +3,7 @@ Theme Name: Peafowl
 Theme URL: http://chevereto.com/
 Version: 3
 Author: Rodolfo Berrios
-@Chevereto: 3.10.3
+@Chevereto: 3.10.6
 @requires peafowl.css
 */
 
@@ -56,7 +56,6 @@ body.split {
 	width: 100%;
 	/*max-width: 1620px;*/
 }
-
 
 @media (min-width: 992px) {
 	.content-width.wide {
@@ -126,7 +125,6 @@ body#upload {
 			background-color: #AAA;
 			background-color: rgba(0,0,0,.3);
 		}
-
 	#image-viewer-loading {
 		width: 30px;
 		height: 30px;
@@ -649,7 +647,7 @@ body:not(#upload) [data-action="reset-upload"] {
 
 .list-item-image-tools {
 	position: absolute;
-	right: -2.4em;
+	right: 0;
 	top: 0;
 	opacity: 0;
 }

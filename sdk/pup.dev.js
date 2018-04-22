@@ -3,7 +3,7 @@
   Chevereto Popup Upload Plugin (PUP)
 
   @website	http://chevereto.com/
-  @version	1.0.2
+  @version	1.0.3
   @author	Rodolfo Berrios A. <http://rodolfoberrios.com/>
 
   --------------------------------------------------------------------- */
@@ -124,7 +124,7 @@
 			   	buttonClass: 1,
 					html: '<a %x title="%text" class="%bClass">%iconSvg</a>',
 					sibling: '.fclr,#e_attach',
-					css: 'a.%bClass,.b1r a.%bClass{box-sizing:border-box;cursor:pointer;background:%1;color:%2;text-indent:unset;position:relative}.b1r a.%bClass:hover,a.%bClass:hover{background:%3;color:%4}a.%bClass{font-size:14px}.b1r a.%bClass{border:1px solid rgba(0,0,0,.15)!important;font-size:20px;padding:0;height:44px}.%bClass svg{font-size:1em;width:1em;height:1em;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);position:absolute;left:50%;top:50%;fill:currentColor}',
+					css: 'a.%bClass,.bar a.%bClass{box-sizing:border-box;cursor:pointer;background:%1;color:%2;text-indent:unset;position:relative}.b1r a.%bClass:hover,a.%bClass:hover{background:%3;color:%4}a.%bClass{font-size:14px}.b1r a.%bClass{border:1px solid rgba(0,0,0,.15)!important;font-size:20px;padding:0;height:44px}.%bClass svg{font-size:1em;width:1em;height:1em;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);position:absolute;left:50%;top:50%;fill:currentColor}',
 					palette: 'purple',
 				},
 				palettes: {
@@ -401,7 +401,7 @@
 			}
 			var count = 0;
 			for (var i=0; i<areas.length; i++) {
-				if(areas[i].getAttribute(this.ns.dataPluginId)) {
+				if(areas[i].getAttribute(this.ns.dataPluginTarget)) {
 					continue;
 				};
 				var target = sibling ? sibling : areas[i];
@@ -484,7 +484,8 @@
 		setBoundId: function(trigger, target) {
 			var id = this.generateGuid();
 			trigger.setAttribute(this.ns.dataPluginId, id);
-			target.setAttribute(this.ns.dataPluginId, id);
+			// target.setAttribute(this.ns.dataPluginId, id);
+			target.setAttribute(this.ns.dataPluginTarget, id);
 		},
 		openPopup: function(id) {
 			if(typeof id !== "string") {
@@ -556,6 +557,7 @@
 			this.ns.dataPlugin = 'data-' + this.ns.plugin;
 			this.ns.dataPluginId = this.ns.dataPlugin + '-id';
 			this.ns.dataPluginTrigger = this.ns.dataPlugin + '-trigger';
+			this.ns.dataPluginTarget = this.ns.dataPlugin + '-target';
 			this.ns.pluginStyle = this.ns.plugin + '-style';
 			this.ns.selDataPluginTrigger = '[' + this.ns.dataPluginTrigger + ']';
 			var srcEl = document.currentScript || document.getElementById(this.ns.plugin + '-src');
@@ -742,7 +744,7 @@
 					}
 				}
 				if(!area) {
-					 area = document.querySelector('[' + self.ns.dataPluginId + '="' + id + '"]');
+					 area = document.querySelector('[' + self.ns.dataPluginTarget + '="' + id + '"]');
 					 if(!area) {
 						 alert("Target not found"); // calma calma que no panda el cúnico
 						 return;
@@ -751,6 +753,7 @@
 				var valueProp = area.getAttribute('contenteditable') === null ? 'value' : 'innerHTML';
 				area[valueProp] += self.getNewValue(area, e.data.message);
 				var events = ['blur', 'focus', 'input', 'change', 'paste'];
+				console.log(area)
 				for(var i=0; i<events.length; i++) {
 					var event = new Event(events[i]);
 					area.dispatchEvent(event);
