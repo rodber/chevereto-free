@@ -234,7 +234,7 @@ try {
 			'upload_max_image_height'=> '0',
 		],
 		// 3.9.5
-		'1.0.9' => [ 
+		'1.0.9' => [
 			'auto_delete_guest_uploads' => NULL,
 		],
 		'1.0.10' => [
@@ -242,13 +242,15 @@ try {
 			'enable_plugin_route' => 1,
 			'sdk_pup_url' => NULL,
 		],
+		'1.0.11' => NULL,
+		'1.0.12' => NULL,
 	];
 	// Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
 	$settings_rename = [];
-	
+
 	// Settings that must be renamed from NAME to NEW NAME and doesn't delete old NAME
 	$settings_switch = [];
-	
+
 	$chv_initial_settings = [];
 	foreach($settings_updates as $k => $v) {
 		if(is_null($v)) continue;

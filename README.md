@@ -62,7 +62,10 @@ Chevereto has a built-in system that everyday checks for new updates via the [Ch
 To upgrade to our paid edition simply navigate to your dashboard panel and click on the `upgrade` button.
 
 ## Support
-Chevereto Free doesn't include any kind of support. However, feel free to browse all our [support tickets](https://chevereto.com/tech-support). If you need further assistance consider buying our paid edition.
+Chevereto Free is forked from previous paid releases and it inheriths not only the new features and improvements, but also the bugs at that prior stage of development. Since this edition is always several months behind the paid edition, **any support request or bug reporting is ignored**.
 
 ## License
-Copyright [Rodolfo Berríos](http://rodolfoberrios.com) - Released under the AGPLv3 license. The software is offered on an “as-is” basis and no warranty, either expressed or implied, is given.
+Copyright [Rodolfo Berríos](http://rodolfoberrios.com) - Released under the AGPLv3 license.
+
+## Warranty
+This software doesn't include support, it may contain bugs, use it at your own risk. The software is offered on an “as-is” basis and no warranty, either expressed or implied, is given.
