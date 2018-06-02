@@ -50,7 +50,7 @@
 		l10n: {
 			"ar":"\u062a\u062d\u0645\u064a\u0644 \u0627\u0644\u0635\u0648\u0631",
 			"cs":"Nahr\u00e1t obr\u00e1zky",
-			"de":"Bilder hochalden",
+			"de":"Bilder hochladen",
 			"es":"Subir im\u00e1genes",
 			"fi":"Lataa kuvia",
 			"fr":"Importer des images",
