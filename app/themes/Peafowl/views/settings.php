@@ -2,9 +2,9 @@
 <?php G\Render\include_theme_header(); ?>
 
 <div class="content-width">
-    
+
 	<div class="c24 center-box">
-		
+
 		<div class="header header-tabs default-margin-bottom">
 			<h1><?php echo get_pre_doctitle(); ?></h1>
 			<div class="hidden phone-show phablet-show">
@@ -40,9 +40,9 @@
 				}
 			?>
 		</div>
-		
+
 		<div class="form-content">
-			
+
 			<ul class="content-tabs c5 content-tabs-vertical phone-hide phablet-hide">
 				<?php
 					foreach(get_settings_menu() as $item) {
@@ -52,11 +52,11 @@
 					}
 				?>
 			</ul>
-		
+
 			<form data-content="main-form" class="tabbed-input-column" method="post" data-type="<?php echo get_setting(); ?>" data-action="validate">
-				
+
 				<?php echo G\Render\get_input_auth_token(); ?>
-				
+
 				<?php
 					if(is_settings_account()) {
 
@@ -99,7 +99,7 @@
 						}
 					?>
 				</ul>
-				
+
 				<div class="c5 phablet-c1">
 					<div class="input-label">
 						<label for="status"><?php _se('Status'); ?></label>
@@ -132,9 +132,9 @@
 						</select>
 					</div>
 				</div>
-				
+
 				<hr class="line-separator"></hr>
-				
+
 				<?php
 						}
 				?>
@@ -158,9 +158,9 @@
 						<?php if(get_changed_email_message()) { ?><div class="input-below highlight padding-5"><?php echo get_changed_email_message(); ?></div><?php } ?>
 					</div>
 				</div>
-				
+
 				<hr class="line-separator"></hr>
-				
+
 				<?php if(CHV\getSetting('enable_expirable_uploads')) { ?>
                 <div class="input-label">
                     <label for="image_expiration"><?php _se('Auto delete uploads'); ?></label>
@@ -176,9 +176,9 @@
                 </div>
 
                 <hr class="line-separator"></hr>
-				
+
 				<?php } ?>
-				
+
                 <?php if(CHV\getSetting('upload_image_exif_user_setting')) { ?>
                 <div class="input-label">
                     <label><?php _se('Image Exif data'); ?></label>
@@ -189,7 +189,7 @@
 					]); ?>
                 </div>
                 <?php } ?>
-        
+
 				<div class="input-label">
 					<label><?php _se('Newsletter'); ?></label>
 					<?php echo CHV\Render\get_checkbox_html([
@@ -198,7 +198,7 @@
 						'checked'	=> ((bool)(get_safe_post() ? get_safe_post()['newsletter_subscribe'] : get_user()['newsletter_subscribe']))
 					]); ?>
 				</div>
-				
+
 				<div class="input-label">
 					<label><?php _se('Content settings'); ?></label>
 					<?php echo CHV\Render\get_checkbox_html([
@@ -207,9 +207,9 @@
 						'checked'	=> ((bool)(get_safe_post() ? get_safe_post()['show_nsfw_listings'] : get_user()['show_nsfw_listings']))
 					]); ?>
 				</div>
-				
+
 				<hr class="line-separator"></hr>
-				
+
 				<?php if(CHV\getSetting('language_chooser_enable')) { ?>
 				<div class="c5 phablet-c1">
 					<div class="input-label">
@@ -226,27 +226,27 @@
 					</div>
 				</div>
 				<?php } ?>
-				
-				<?php 
+
+				<?php
 
 				$zones = timezone_identifiers_list();
-				
+
 				foreach ($zones as $zone) {
 					$zone = explode('/', $zone);
-					if(in_array($zone[0], array("Africa", "America", "Antarctica", "Arctic", "Asia", "Atlantic", "Australia", "Europe", "Indian", "Pacific"))) {      
+					if(in_array($zone[0], array("Africa", "America", "Antarctica", "Arctic", "Asia", "Atlantic", "Australia", "Europe", "Indian", "Pacific"))) {
 						if (isset($zone[1]) != '') {
 							$regions[$zone[0]][$zone[0]. '/' . $zone[1]] = str_replace('_', ' ', $zone[1]);
-						} 
+						}
 					}
 				}
-				
+
 				?>
-				
+
 				<div class="input-label">
 					<label for="timezone"><?php _se('Timezone'); ?></label>
-					
+
 					<div class="overflow-auto">
-					
+
 						<select id="timezone-region" class="c5 phablet-c1 grid-columns margin-right-10 phone-margin-bottom-10 phablet-margin-bottom-10 text-input" data-combo="timezone-combo">
 							<option><?php _se('Select region'); ?></option>
 							<?php
@@ -276,15 +276,15 @@
 						</div>
 
 					</div>
-					
+
 					<input type="hidden" id="timezone" name="timezone" data-content="timezone" data-highlight="#timezone-region" value="<?php echo get_user()["timezone"]; ?>" required>
-					
+
 				</div>
 
 				<?php } ?>
-				
+
 				<?php if(is_settings_password()) { ?>
-				
+
 				<?php
 					// User has password
 					if(get_user()["login"]["password"] !== NULL) {
@@ -335,7 +335,7 @@
 					}
 				?>
 				<?php } ?>
-				
+
 				<?php if(is_settings_profile()) { ?>
 				<div class="c19 phablet-c1">
 					<div class="input-upload user-settings-avatar">
@@ -359,7 +359,7 @@
 						<input id="user-avatar-upload" data-content="user-avatar-upload-input" class="hidden-visibility" type="file" accept="image/*">
 					</div>
 				</div>
-				
+
 				<div class="input-label">
                     <label><?php _se('Privacy'); ?></label>
 					<?php echo CHV\Render\get_checkbox_html([
@@ -367,9 +367,9 @@
 						'label'		=> _s('Make my profile and identity totally private'),
 						'tooltip'	=> _s('Enable this if you want to act like an anonymous user'),
 						'checked'	=> ((bool)(get_safe_post() ? get_safe_post()['is_private'] : get_user()['is_private']))
-					]); ?>      
+					]); ?>
 				</div>
-				
+
 				<div class="c9 phablet-c1">
 					<div class="input-label">
 						<label for="name"><?php _se('Name'); ?></label>
@@ -384,12 +384,12 @@
 					</div>
 					<div class="input-label">
 						<label for="bio"><?php _se('Bio'); ?></label>
-						<textarea name="bio" id="bio" class="resize-vertical" placeholder="<?php _se('Tell us a little bit about you'); ?>" maxlength="255"><?php echo get_safe_post() ? get_safe_post()["bio"] : get_user()["bio"]; ?></textarea>
+						<textarea name="bio" id="bio" class="resize-vertical" placeholder="<?php _se('Tell us a little bit about you'); ?>" maxlength="255"><?php echo get_safe_post() ? get_safe_post()["bio"] : get_safe_html_user()["bio"]; ?></textarea>
 						<span class="input-warning red-warning"><?php echo get_input_errors()["bio"]; ?></span>
 					</div>
 				</div>
 				<?php } ?>
-				
+
 				<?php
 					if(is_settings_linked_accounts()) {
 
@@ -424,7 +424,7 @@
 				<?php
 						}
 				?>
-				
+
 				<?php
 						if(!is_dashboard_user()) {
 							foreach(get_available_connections() as $connection => $label) {
@@ -437,49 +437,49 @@
 							}
 						}
 				?>
-				
+
 				<?php } ?>
-				
+
 				<?php if(is_settings_homepage()) { ?>
 				<div class="input-label">
 					<label for="homepage_title_html"><?php _se('Title'); ?></label>
 					<div class="c12 phablet-c1"><textarea type="text" name="homepage_title_html" id="homepage_title_html" class="text-input r2 resize-vertical" placeholder="<?php echo get_user()['name']; ?>"><?php echo CHV\Settings::get('homepage_title_html'); ?></textarea></div>
 					<span class="input-warning red-warning"><?php echo get_input_errors()["homepage_title_html"]; ?></span>
 				</div>
-				
+
 				<div class="input-label">
 					<label for="homepage_paragraph_html"><?php _se('Paragraph'); ?></label>
 					<div class="c12 phablet-c1"><textarea type="text" name="homepage_paragraph_html" id="homepage_paragraph_html" class="text-input r2 resize-vertical" placeholder="<?php _se('Feel free to browse and discover all my shared images and albums.'); ?>"><?php echo CHV\Settings::get('homepage_paragraph_html'); ?></textarea></div>
 					<span class="input-warning red-warning"><?php echo get_input_errors()["homepage_paragraph_html"]; ?></span>
 				</div>
-				
+
 				<div class="input-label">
 					<label for="homepage_cta_html"><?php _se('Button'); ?></label>
 					<div class="c12 phablet-c1"><textarea type="text" name="homepage_cta_html" id="homepage_cta_html" class="text-input r2 resize-vertical" placeholder="<?php _se('View all my images'); ?>"><?php echo CHV\Settings::get('homepage_cta_html'); ?></textarea></div>
 					<span class="input-warning red-warning"><?php echo get_input_errors()["homepage_cta_html"]; ?></span>
 				</div>
 				<?php } ?>
-				
+
 				<hr class="line-separator"></hr>
-				
+
 				<?php if(is_captcha_needed()) { ?>
 				<div class="input-label">
 					<label for="recaptcha_response_field">reCAPTCHA</label>
 					<?php echo get_recaptcha_html(); ?>
 				</div>
 				<?php } ?>
-				
+
 				<?php if(!is_settings_linked_accounts()) { ?>
 				<div class="btn-container">
 					<button class="btn btn-input default" type="submit"><?php _se('Save changes'); ?></button> <span class="btn-alt"><?php _se('or'); ?> <a href="<?php echo get_user()["url"]; ?>"><?php _se('cancel'); ?></a></span>
 				</div>
 				<?php } ?>
-			
+
 			</form>
 		</div>
-	
+
 	</div>
-    
+
 </div>
 
 <?php if(get_post() and (is_changed() or is_error())) { ?>
