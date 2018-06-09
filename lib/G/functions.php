@@ -2054,9 +2054,9 @@ namespace G {
 				$meta['gMask'] = 0x03e0;
 				$meta['bMask'] = 0x001f;
 			} else if ($meta['bits'] > 16) {
-				$meta['rMask'] = 0x000000ff;
+				$meta['rMask'] = 0x00ff0000;
 				$meta['gMask'] = 0x0000ff00;
-				$meta['bMask'] = 0x00ff0000;
+				$meta['bMask'] = 0x000000ff;
 			}
 		}
 		// set bytes and padding
