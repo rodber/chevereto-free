@@ -2026,9 +2026,12 @@ namespace G {
 		}
 		// read image header
 		$meta += unpack('Vheadersize/Vwidth/Vheight/vplanes/vbits/Vcompression/Vimagesize/Vxres/Vyres/Vcolors/Vimportant', fread($fh, 40));
-		// read additional 16bit header
-		if ($meta['bits'] == 16) {
+		$bytes_read = 40;
+		// read additional bitfields
+		if ($meta['headersize'] > $bytes_read) {
+			// RGB bit field masks
 			$meta += unpack('VrMask/VgMask/VbMask', fread($fh, 12));
+			$bytes_read += 12;
 		}
 		// set bytes and padding
 		$meta['bytes'] = $meta['bits'] / 8;
@@ -2060,6 +2063,10 @@ namespace G {
 					$palette[$i] = $color + 16777216;
 				}
 			}
+		}
+		// ignore extra bitmap headers
+		if ($meta['headersize'] > $bytes_read) {
+			fread($fh, $meta['headersize'] - $bytes_read);
 		}
 		// create gd image
 		$im = imagecreatetruecolor($meta['width'], $meta['height']);
