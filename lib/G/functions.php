@@ -2009,6 +2009,22 @@ namespace G {
 		}
 	}
 
+	function get_mask_bit_shift($bits, $mask) {
+		if ($bits == 16) {
+			// 555
+			if ($mask == 0x7c00) return 7;
+			if ($mask == 0x03e0) return 2;
+			// 656
+			if ($mask == 0xf800) return 8;
+			if ($mask == 0x07e0) return 3;
+		} else {
+			if ($mask == 0xff000000) return 24;
+			if ($mask == 0x00ff0000) return 16;
+			if ($mask == 0x0000ff00) return 8;
+		}
+		return 0;
+	}
+
 	// http://www.programmierer-forum.de/function-imagecreatefrombmp-welche-variante-laeuft-t143137.htm
 	function imagecreatefrombmp($file) {
 		if(function_exists('imagecreatefrombmp')) return imagecreatefrombmp($file);
@@ -2026,9 +2042,22 @@ namespace G {
 		}
 		// read image header
 		$meta += unpack('Vheadersize/Vwidth/Vheight/vplanes/vbits/Vcompression/Vimagesize/Vxres/Vyres/Vcolors/Vimportant', fread($fh, 40));
-		// read additional 16bit header
-		if ($meta['bits'] == 16) {
+		$bytes_read = 40;
+		// read additional bitfields
+		if ($meta['headersize'] > $bytes_read) {
+			// RGB bit field masks
 			$meta += unpack('VrMask/VgMask/VbMask', fread($fh, 12));
+			$bytes_read += 12;
+		} else {
+			if ($meta['bits'] == 16) {
+				$meta['rMask'] = 0x7c00;
+				$meta['gMask'] = 0x03e0;
+				$meta['bMask'] = 0x001f;
+			} else if ($meta['bits'] > 16) {
+				$meta['rMask'] = 0x00ff0000;
+				$meta['gMask'] = 0x0000ff00;
+				$meta['bMask'] = 0x000000ff;
+			}
 		}
 		// set bytes and padding
 		$meta['bytes'] = $meta['bits'] / 8;
@@ -2061,6 +2090,10 @@ namespace G {
 				}
 			}
 		}
+		// ignore extra bitmap headers
+		if ($meta['headersize'] > $bytes_read) {
+			fread($fh, $meta['headersize'] - $bytes_read);
+		}
 		// create gd image
 		$im = imagecreatetruecolor($meta['width'], $meta['height']);
 		$data = fread($fh, $meta['imagesize']);
@@ -2074,12 +2107,24 @@ namespace G {
 			while ($x < $meta['width']) {
 				switch ($meta['bits']) {
 					case 32:
+						if (!($part = substr($data, $p, 4))) {
+							trigger_error($error, E_USER_WARNING);
+							return $im;
+						}
+						$color = unpack('V', $part);
+						$color[1] = (($color[1] & $meta['rMask']) >> get_mask_bit_shift(32, $meta['rMask'])) * 65536 +
+								(($color[1] & $meta['gMask']) >> get_mask_bit_shift(32, $meta['gMask'])) * 256 +
+								(($color[1] & $meta['bMask']) >> get_mask_bit_shift(32, $meta['bMask']));
+						break;
 					case 24:
 						if (!($part = substr($data, $p, 3))) {
 							trigger_error($error, E_USER_WARNING);
 							return $im;
 						}
 						$color = unpack('V', $part . $vide);
+						$color[1] = (($color[1] & $meta['rMask']) >> get_mask_bit_shift(24, $meta['rMask'])) * 65536 +
+								(($color[1] & $meta['gMask']) >> get_mask_bit_shift(24, $meta['gMask'])) * 256 +
+								(($color[1] & $meta['bMask']) >> get_mask_bit_shift(24, $meta['bMask']));
 						break;
 					case 16:
 						if (!($part = substr($data, $p, 2))) {
@@ -2087,7 +2132,9 @@ namespace G {
 							return $im;
 						}
 						$color = unpack('v', $part);
-						$color[1] = (($color[1] & 0xf800) >> 8) * 65536 + (($color[1] & 0x07e0) >> 3) * 256 + (($color[1] & 0x001f) << 3);
+						$color[1] = (($color[1] & $meta['rMask']) >> get_mask_bit_shift(16, $meta['rMask'])) * 65536 +
+								(($color[1] & $meta['gMask']) >> get_mask_bit_shift(16, $meta['gMask'])) * 256 +
+								(($color[1] & $meta['bMask']) << 3);
 						break;
 					case 8:
 						$color = unpack('n', $vide . substr($data, $p, 1));
