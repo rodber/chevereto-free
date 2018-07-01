@@ -379,7 +379,7 @@
 				for(var i=0; i<targets.length; i++) {
 					targetsSel.push(targets[i].dataset.target);
 				}
-				if(targetsSel) {
+				if(targetsSel.length > 0) {
 					areas = document.querySelectorAll(targetsSel.join(','));
 				}
 			}
