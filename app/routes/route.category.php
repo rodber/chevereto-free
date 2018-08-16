@@ -18,7 +18,7 @@
 $route = function($handler) {
 	try {
 
-		if(!CHV\getSetting('website_explore_page')) {
+		if(!$handler::getCond('explore_enabled')) {
 			return $handler->issue404();
 		}
 
@@ -65,7 +65,7 @@ $route = function($handler) {
 		$list->exec();
 
 		$meta_description = $category['description'] ?: NULL;
-		
+
 		$handler::setVar('meta_description', htmlspecialchars($meta_description));
 		$handler::setVar('category', $category);
 		$handler::setVar('tabs', $tabs);

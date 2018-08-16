@@ -1,4 +1,4 @@
-<div class="list-item c%COLUMN_SIZE_ALBUM% gutter-margin-right-bottom privacy-%ALBUM_PRIVACY% %ALBUM_COVER_FLAG%" data-type="album" data-id="%ALBUM_ID_ENCODED%" data-name="%ALBUM_NAME%" data-privacy="%ALBUM_PRIVACY%" data-description="%ALBUM_DESCRIPTION%" data-password="%ALBUM_PASSWORD%" data-liked="%ALBUM_LIKED%">
+<div class="list-item c%COLUMN_SIZE_ALBUM% gutter-margin-right-bottom" data-type="album" data-id="%ALBUM_ID_ENCODED%" data-name="%ALBUM_NAME%" data-privacy="%ALBUM_PRIVACY%" data-description="%ALBUM_DESCRIPTION%" data-password="%ALBUM_PASSWORD%" data-liked="%ALBUM_LIKED%" data-flag="%ALBUM_COVER_FLAG%" data-privacy="%ALBUM_PRIVACY%">
 	<div class="list-item-image fixed-size">
 		<a href="%ALBUM_URL%" class="image-container">
 			%tpl_list_item/album_cover_empty%
@@ -13,6 +13,6 @@
 		<div class="list-item-desc-title">
 			<a class="list-item-desc-title-link" href="%ALBUM_URL%">%ALBUM_NAME%</a><span class="display-block font-size-small">%ALBUM_IMAGE_COUNT% %ALBUM_IMAGE_COUNT_LABEL%</span>
 		</div>
-		%tpl_list_item/item_like% 
+		%tpl_list_item/item_like%
 	</div>
 </div>

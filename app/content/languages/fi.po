@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-10-01 18:12+0000\n"
-"PO-Revision-Date: 2017-10-01 18:12+0000\n"
+"POT-Creation-Date: 2018-06-03 14:28+0000\n"
+"PO-Revision-Date: 2018-06-03 14:28+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: fi\n"
@@ -11,18 +11,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Plugin"
-msgstr "Liitännäinen"
-
-msgid "Plugin route"
-msgstr "Liitännäisen ohjaus"
+msgid "To use all the features of this site you must be logged in."
+msgstr "Käyttääksesi kaikkia ominaisuuksia, sinun täytyy olla kirjautunut sisään."
 
 #, php-format
-msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
-msgstr "Ota käyttään liitännäisen ohjeet %u. Ohjeet tulee näkymään %s valikossa. Tämä asetus ei vaikuta ylläpitäjiin."
-
-msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
-msgstr "Aseta kustomoitu URL %p. Huomioi, että sinun tulee käsin kopioida se %s URL:iin."
+msgid "If you don't have an account you can <a href=\"%s\">sign up</a> right now."
+msgstr "Jos sinulla ei ole käyttäjätunnusta voit luoda sellaisen <a href=\"%s\">tästä</a>."
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -201,10 +195,6 @@ msgstr[1] "näyttökertaa"
 msgid "After %n %t"
 msgstr "Jälkeen %n %t"
 
-#: ../../../app/lib/classes/class.image.php:348
-msgid "Don't autodelete"
-msgstr "Älä poista automaattisesti"
-
 #: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
 msgid "minute"
 msgid_plural "minutes"
@@ -223,28 +213,37 @@ msgid_plural "days"
 msgstr[0] "päivä"
 msgstr[1] "päivää"
 
+#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "viikko"
+msgstr[1] "viikkoa"
+
+#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
+msgid "month"
+msgid_plural "months"
+msgstr[0] "kuukausi"
+msgstr[1] "kuukautta"
+
+#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
+msgid "year"
+msgid_plural "years"
+msgstr[0] "vuosi"
+msgstr[1] "vuotta"
+
+#: ../../../app/lib/classes/class.image.php:348
+msgid "Don't autodelete"
+msgstr "Älä poista automaattisesti"
+
 #: ../../../app/lib/classes/class.image.php:636
 #: ../../../app/lib/classes/class.image.php:742
 msgid "Duplicated upload"
 msgstr "Kaksinkertainen lataus"
 
-msgid "Error storing file in external storage server"
-msgstr "Virhe tallentaessa tiedosto ulkoiseen tallennustilaan"
-
-msgid "External storage has failed"
-msgstr "Ulkoinen tallennustila epäonnistui"
-
 #: ../../../app/lib/classes/class.image.php:955
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
 msgid "Private upload"
 msgstr "Yksityinen lähetys"
-
-msgid "Upload switched to local storage"
-msgstr "Lataus vaihdettu paikalliseen tallennustilaan"
-
-#, php-format
-msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
-msgstr "Järjestelmä vaihtoi paikalliseen tallennustilaan, kun ulkoisesta tallennustilasta loppui tila (%c). Kuva %s on tallennettu paikalliseen tallennustilaan."
 
 #: ../../../app/lib/classes/class.image.php:1231
 msgid "like"
@@ -404,24 +403,6 @@ msgstr "käytetty"
 msgid "Private profile"
 msgstr "Yksityinen profiili"
 
-#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
-msgid "year"
-msgid_plural "years"
-msgstr[0] "vuosi"
-msgstr[1] "vuotta"
-
-#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
-msgid "month"
-msgid_plural "months"
-msgstr[0] "kuukausi"
-msgstr[1] "kuukautta"
-
-#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
-msgid "week"
-msgid_plural "weeks"
-msgstr[0] "viikko"
-msgstr[1] "viikkoa"
-
 #: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
 msgid "second"
 msgid_plural "seconds"
@@ -436,9 +417,6 @@ msgstr "%s sitten"
 #: ../../../app/lib/functions.php:67
 msgid "moments ago"
 msgstr "hetki sitten"
-
-msgid "System notification"
-msgstr "Järjestelmän ilmoitukset"
 
 #: ../../../app/routes/route.dashboard.php:1223
 #: ../../../app/themes/Peafowl/header.php:407
@@ -482,16 +460,8 @@ msgid "You can apply this update directly from your %a or download it from %s an
 msgstr "Voit päivittää järjestelmän automaattisesti %a tai ladata sen %s ja asentaa käsin."
 
 #, php-format
-msgid "Chevereto update available (v%s)"
-msgstr "Chevereto päivitys saatavilla (v%s)"
-
-#, php-format
 msgid "view on %s"
 msgstr "näyttöä %s"
-
-#: ../../../app/lib/functions.render.php:303
-msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
-msgstr "Käytämme omia ja kolmannen osapuolen evästeitä parantaaksemme palveluamme ja sen käytettävyyttä. Käyttämällä palvelujamme hyväksyt evästeiden käytön."
 
 #: ../../../app/loader.php:180
 msgid "You have been forbidden to use this website."
@@ -506,6 +476,9 @@ msgstr "Voit vapaasti selata kaikkia jakamiani kuvia ja albumeita."
 #: ../../../app/themes/Peafowl/views/settings.php:447
 msgid "View all my images"
 msgstr "Näytä kaikki kuvani"
+
+msgid "Plugin"
+msgstr "Liitännäinen"
 
 #: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
 msgid "That page doesn't exist"
@@ -1265,6 +1238,10 @@ msgstr "Virheellinen käyttäjän minimi ikä"
 msgid "Only alphanumeric, hyphen and underscore characters are allowed"
 msgstr "Vain aakkosnumeerisia, tavuviiva ja alaviivat ovat sallittuja"
 
+#: ../../../app/routes/route.dashboard.php:922
+msgid "Invalid URL"
+msgstr "Virheellinen osoite"
+
 msgid "Routes can't be the same"
 msgstr "Ohjaukset ei voi olla samoja"
 
@@ -1297,10 +1274,6 @@ msgstr "Virheellinen SMTP-palvelin"
 #: ../../../app/routes/route.dashboard.php:861
 msgid "Invalid SMTP username"
 msgstr "Virheellinen SMTP:n käyttäjänimi"
-
-#: ../../../app/routes/route.dashboard.php:922
-msgid "Invalid URL"
-msgstr "Virheellinen osoite"
 
 #: ../../../app/routes/route.dashboard.php:960
 #, php-format
@@ -1349,11 +1322,6 @@ msgstr "IP-osoite jo estetty"
 #: ../../../app/routes/route.image.php:152
 msgid "Upload date"
 msgstr "Lähetetty"
-
-#: ../../../app/routes/route.image.php:177
-#, php-format
-msgid "%s images"
-msgstr "%s kuvaa"
 
 #: ../../../app/routes/route.image.php:185
 msgid "Image %i in %a album"
@@ -1500,51 +1468,6 @@ msgstr "Kirjaudu sisään"
 msgid "Logged out"
 msgstr "Kirjauduttu ulos"
 
-#: ../../../app/routes/route.page.php:61
-#: ../../../content/pages/default/contact.php:7
-msgid "General questions/comments"
-msgstr "Yleiset kysymykset/kommentit"
-
-#: ../../../app/routes/route.page.php:62
-#: ../../../content/pages/default/contact.php:8
-msgid "DMCA complaint"
-msgstr "Tekijänoikeusrikkomus"
-
-#: ../../../app/routes/route.page.php:71
-#: ../../../app/routes/route.settings.php:302
-#: ../../../content/pages/default/contact.php:19
-msgid "Invalid name"
-msgstr "Virheellinen nimi"
-
-#: ../../../app/routes/route.page.php:74
-#: ../../../content/pages/default/contact.php:22
-msgid "Invalid message"
-msgstr "Virheellinen viesti"
-
-#: ../../../app/routes/route.page.php:77
-#: ../../../content/pages/default/contact.php:25
-msgid "Invalid subject"
-msgstr "Virheellinen aihe"
-
-#: ../../../app/routes/route.page.php:85
-#: ../../../content/pages/default/contact.php:33
-msgid "Invalid reCAPTCHA"
-msgstr "Virheellinen reCAPTCHA"
-
-#: ../../../app/routes/route.page.php:90
-#, php-format
-msgid "Can't submit the form: %s"
-msgstr "Lomakkeet %s lähetys ei onnistunut"
-
-#: ../../../app/routes/route.page.php:119
-msgid "Message sent. We will get in contact soon."
-msgstr "Viesti lähetetty. Olemme sinuun yhteydessä pian."
-
-#: ../../../app/routes/route.page.php:122
-#: ../../../content/pages/default/contact.php:69
-msgid "Mail error"
-msgstr "Sähköpostivirhe"
-
 msgid "Upload images"
 msgstr "Lataa kuvia"
 
@@ -1586,6 +1509,12 @@ msgstr "Virheellinen kuvan vanheneminen: %s"
 #, php-format
 msgid "An email has been sent to %s with instructions to activate this email"
 msgstr "Sähköposti lähetetty osoitteeseen %s aktivointi-ohjeiden kera"
+
+#: ../../../app/routes/route.page.php:71
+#: ../../../app/routes/route.settings.php:302
+#: ../../../content/pages/default/contact.php:19
+msgid "Invalid name"
+msgstr "Virheellinen nimi"
 
 #: ../../../app/routes/route.settings.php:305
 msgid "Invalid website"
@@ -1793,12 +1722,6 @@ msgstr "Käyttäjänimi"
 #, php-format
 msgid "I'm at least %s years old"
 msgstr "Olen vähintään %s vuotta vanha"
-
-#: ../../../app/themes/Peafowl/header.php:341
-#: ../../../app/themes/Peafowl/views/signup.php:65
-#, php-format
-msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
-msgstr "Rekisteröitymällä hyväksyt <a href=\"%s\">käyttöehdot</a>"
 
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
@@ -2662,6 +2585,15 @@ msgstr "Haluatko varmasti poistaa tämän sisällön? Toimintoa ei voi perua."
 msgid "Do you really want to remove all the selected content? This can't be undone."
 msgstr "Haluatko varmasti poistaa kaiken valitun sisällön? Toimintoa ei voi perua."
 
+#: ../../../app/themes/Peafowl/views/image.php:57
+msgid "Guest"
+msgstr "Vieras"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Tykkäys"
+
 msgid "Uploaded by guest"
 msgstr "Ladannut vieras"
 
@@ -2871,11 +2803,6 @@ msgstr "Poista albumi"
 msgid "You like this"
 msgstr "Tykkäsit tästä"
 
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "Tykkäys"
-
 msgid "Upload to album"
 msgstr "Lataa albumiin"
 
@@ -2957,10 +2884,6 @@ msgstr "Verkkosivuston otsake"
 #: ../../../app/themes/Peafowl/views/dashboard.php:231
 msgid "Website description"
 msgstr "Verkkosivuston kuvaus"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:236
-msgid "Website keywords"
-msgstr "Verkkosivun avainsanat"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:257
 msgid "Default time zone"
@@ -4345,6 +4268,16 @@ msgstr "API v1 avain"
 msgid "Use this key when using the <a %s>API v1</a>."
 msgstr "Käytä tätä avainta käyttäessäsi <a %s>API v1</a>."
 
+msgid "Plugin route"
+msgstr "Liitännäisen ohjaus"
+
+#, php-format
+msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
+msgstr "Ota käyttään liitännäisen ohjeet %u. Ohjeet tulee näkymään %s valikossa. Tämä asetus ei vaikuta ylläpitäjiin."
+
+msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
+msgstr "Aseta kustomoitu URL %p. Huomioi, että sinun tulee käsin kopioida se %s URL:iin."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:2028
 msgid "Cookie law compliance"
 msgstr "Evästeiden lakiteksti"
@@ -4369,10 +4302,6 @@ msgstr "Toista GIF"
 
 msgid "Load full resolution"
 msgstr "Lataa täydessä resoluutiossa"
-
-#: ../../../app/themes/Peafowl/views/image.php:57
-msgid "Guest"
-msgstr "Vieras"
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -4763,11 +4692,45 @@ msgstr[1] "Seuraajaa"
 msgid "Follow"
 msgstr "Seuraa"
 
+#: ../../../app/routes/route.page.php:61
+#: ../../../content/pages/default/contact.php:7
+msgid "General questions/comments"
+msgstr "Yleiset kysymykset/kommentit"
+
+#: ../../../app/routes/route.page.php:62
+#: ../../../content/pages/default/contact.php:8
+msgid "DMCA complaint"
+msgstr "Tekijänoikeusrikkomus"
+
+#: ../../../app/routes/route.page.php:74
+#: ../../../content/pages/default/contact.php:22
+msgid "Invalid message"
+msgstr "Virheellinen viesti"
+
+#: ../../../app/routes/route.page.php:77
+#: ../../../content/pages/default/contact.php:25
+msgid "Invalid subject"
+msgstr "Virheellinen aihe"
+
+#: ../../../app/routes/route.page.php:85
+#: ../../../content/pages/default/contact.php:33
+msgid "Invalid reCAPTCHA"
+msgstr "Virheellinen reCAPTCHA"
+
+#: ../../../app/routes/route.page.php:122
+#: ../../../content/pages/default/contact.php:69
+msgid "Mail error"
+msgstr "Sähköpostivirhe"
+
 msgid "Message sent"
 msgstr "Viesti lähetetty"
 
 msgid "Contact"
 msgstr "Ota yhteyttä"
+
+#: ../../../app/routes/route.page.php:119
+msgid "Message sent. We will get in contact soon."
+msgstr "Viesti lähetetty. Olemme sinuun yhteydessä pian."
 
 msgid "If you want to send a message fill the form below."
 msgstr "Ota yhteyttä alla olevan lomakkeen kautta."

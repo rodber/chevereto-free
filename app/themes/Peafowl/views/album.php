@@ -30,9 +30,15 @@
 				<div class="breadcrum-item">
 					<a class="edit-link" data-modal="edit"><span class="icon-edit"></span><span><?php _se('Edit album details'); ?></span></a>
 				</div>
+				<?php
+						if(is_allowed_to_delete_content()) {
+				?>
 				<div class="breadcrum-item">
 					<a class="delete-link" data-confirm="<?php _se("Do you really want to delete this album and all of its images? This can't be undone."); ?>" data-submit-fn="CHV.fn.submit_resource_delete" data-ajax-deferred="CHV.fn.complete_resource_delete" data-ajax-url="<?php echo G\get_base_url("json"); ?>"><?php _se('Delete album'); ?></a>
 				</div>
+				<?php
+						}
+				?>
 				<?php
 					}
 				?>
@@ -45,7 +51,7 @@
 			<?php
 				if(CHV\getSetting('enable_likes')) {
 			?>
-			<a class="btn-like" data-liked="<?php echo (int)get_album()['liked']; ?>" data-action="like">
+			<a class="btn-like" data-type="album" data-id="<?php echo get_album()['id_encoded']; ?>" data-liked="<?php echo (int)get_album()['liked']; ?>" data-action="like">
 				<span class="btn btn-liked blue" rel="tooltip" title="<?php _se("You like this"); ?>"><span class="btn-icon icon-heart3"></span><span class="btn-text phone-hide"><?php _se('Liked'); ?></span></span>
 				<span class="btn btn-unliked blue outline"><span class="btn-icon icon-heart4"></span><span class="btn-text phone-hide"><?php _se('Like'); ?></span></span>
 			</a>
@@ -70,7 +76,7 @@
 
     </div>
 
-	<h1 class="viewer-title" data-text="album-description"><?php echo nl2br(get_album_safe_html()['description']); ?></h1>
+	<h1 class="viewer-title" data-text="album-description"><?php echo nl2br(G\truncate(trim(get_album_safe_html()['description']), 100)); ?></h1>
 
 	<div class="header header-tabs margin-bottom-10 follow-scroll">
 		<h1><strong data-text="album-name"><?php echo get_album()["name_truncated_html"]; ?></strong></h1>

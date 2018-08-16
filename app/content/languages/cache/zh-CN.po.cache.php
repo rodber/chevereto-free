@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-10-10 10:31+0000',
-  'PO-Revision-Date' => '2017-10-10 10:31+0000',
+  'POT-Creation-Date' => '2018-06-06 20:25+0000',
+  'PO-Revision-Date' => '2018-06-06 20:25+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'zh_CN',
@@ -13,22 +13,14 @@ $translation_header = array (
 );
 $translation_plural = array (
   'nplurals' => 1,
-  'plural' => '0',
-  'formula' => '0',
-  'function' => '$index = (int)(0); return ($index < 1) ? $index : 1 - 1;',
+  'function' => '($n != 1)',
 );
 $translation_table = [
-	"Plugin" => [
-		0 => "插件",
+	"To use all the features of this site you must be logged in." => [
+		0 => "您必须登录才能使用所有的功能.",
 	],
-	"Plugin route" => [
-		0 => "上传插件",
-	],
-	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
-		0 => "启用此功能可在%u页面显示插件说明。这些说明的链接将添加到%s菜单中。此设置不会影响管理员。",
-	],
-	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
-		0 => "使用它来设置%p的自定义URL。请注意，您需要手动复制此URL中的%s。",
+	"If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
+		0 => "如果您还没有账号请现在就<a href=\"%s\">注册</a>.",
 	],
 	"Invalid email" => [
 		0 => "无效的电子邮箱",
@@ -129,9 +121,6 @@ $translation_table = [
 	"After %n %t" => [
 		0 => "经过 %n %t",
 	],
-	"Don't autodelete" => [
-		0 => "不自动删除",
-	],
 	"minute" => [
 		0 => "分钟",
 	],
@@ -141,23 +130,23 @@ $translation_table = [
 	"day" => [
 		0 => "天",
 	],
+	"week" => [
+		0 => "周",
+	],
+	"month" => [
+		0 => "月",
+	],
+	"year" => [
+		0 => "年",
+	],
+	"Don't autodelete" => [
+		0 => "不自动删除",
+	],
 	"Duplicated upload" => [
 		0 => "重复上传",
 	],
-	"Error storing file in external storage server" => [
-		0 => "在外部存储服务器中存储文件的错误",
-	],
-	"External storage has failed" => [
-		0 => "外部存储失败",
-	],
 	"Private upload" => [
 		0 => "私密（只有本人可见）",
-	],
-	"Upload switched to local storage" => [
-		0 => "上传切换到本地存储",
-	],
-	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
-		0 => "系统已切换到本地存储. 由于在外部存储服务器(s)没有足够的磁盘容量(%c), 图像 %s 已被分配到的本地存储.",
 	],
 	"like" => [
 		0 => "喜欢",
@@ -193,7 +182,7 @@ $translation_table = [
 		0 => "探索",
 	],
 	"Animated" => [
-		0 => "动画",
+		0 => "动图",
 	],
 	"Search" => [
 		0 => "搜索",
@@ -240,15 +229,6 @@ $translation_table = [
 	"Private profile" => [
 		0 => "私隐设置",
 	],
-	"year" => [
-		0 => "年",
-	],
-	"month" => [
-		0 => "月",
-	],
-	"week" => [
-		0 => "周",
-	],
 	"second" => [
 		0 => "秒",
 	],
@@ -257,9 +237,6 @@ $translation_table = [
 	],
 	"moments ago" => [
 		0 => "刚刚",
-	],
-	"System notification" => [
-		0 => "系统通知",
 	],
 	"Dashboard" => [
 		0 => "仪表盘",
@@ -291,14 +268,17 @@ $translation_table = [
 	"You can apply this update directly from your %a or download it from %s and then manually install it." => [
 		0 => "您可以直接从 %a 安装此更新或从 %s 下载, 然后手动安装更新.",
 	],
-	"Chevereto update available (v%s)" => [
-		0 => "Chevereto可用更新 (v%s)",
-	],
 	"view on %s" => [
 		0 => "%s 已查看",
 	],
-	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy." => [
-		0 => "我们使用自己和第三方Cookies来改善我们的服务浏览体验. 如果您继续使用了解我们的网站, 您需要接受这个Cookie政策.",
+	"cookie policy" => [
+		0 => "cookie 政策",
+	],
+	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link." => [
+		0 => "我们使用了第三方的cookie政策来改善你的浏览体验与我们的服务标准；\n如果你要继浏览并使用我们的网站，则你需要理解并接受这个Cookie政策%cookie_policy_link.",
+	],
+	"I understand" => [
+		0 => "\"我\"明白了",
 	],
 	"You have been forbidden to use this website." => [
 		0 => "你已经被禁止使用本网站.",
@@ -308,6 +288,9 @@ $translation_table = [
 	],
 	"View all my images" => [
 		0 => "查看我的所有图片",
+	],
+	"Plugin" => [
+		0 => "插件",
 	],
 	"That page doesn't exist" => [
 		0 => "该页面不存在",
@@ -765,6 +748,9 @@ $translation_table = [
 	"Only alphanumeric, hyphen and underscore characters are allowed" => [
 		0 => "只允许字母, 连字符和下划线字符是允许的",
 	],
+	"Invalid URL" => [
+		0 => "无效URL",
+	],
 	"Routes can't be the same" => [
 		0 => "路径不能是相同的",
 	],
@@ -791,9 +777,6 @@ $translation_table = [
 	],
 	"Invalid SMTP username" => [
 		0 => "无效的SMTP用户名",
-	],
-	"Invalid URL" => [
-		0 => "无效URL",
 	],
 	"This URL key is already being used by another page (ID %s)" => [
 		0 => "此链接值已被另一个页面使用 (ID %s)",
@@ -824,9 +807,6 @@ $translation_table = [
 	],
 	"Upload date" => [
 		0 => "上传时间",
-	],
-	"%s images" => [
-		0 => "%s 图片",
 	],
 	"Image %i in %a album" => [
 		0 => "图片 %i 在 %a 相册",
@@ -927,33 +907,6 @@ $translation_table = [
 	"Logged out" => [
 		0 => "注销",
 	],
-	"General questions/comments" => [
-		0 => "一般问题/意见",
-	],
-	"DMCA complaint" => [
-		0 => "DMCA（数字千年版权）投诉",
-	],
-	"Invalid name" => [
-		0 => "无效的名称",
-	],
-	"Invalid message" => [
-		0 => "无效的消息",
-	],
-	"Invalid subject" => [
-		0 => "无效的主题",
-	],
-	"Invalid reCAPTCHA" => [
-		0 => "无效的验证码",
-	],
-	"Can't submit the form: %s" => [
-		0 => "不能提交表单: %s",
-	],
-	"Message sent. We will get in contact soon." => [
-		0 => "消息已发送. 我们将很快和您取得了联系.",
-	],
-	"Mail error" => [
-		0 => "邮件错误",
-	],
 	"Upload images" => [
 		0 => "上传图片",
 	],
@@ -984,6 +937,9 @@ $translation_table = [
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "这封邮件已发送至 %s 请登录邮箱并激活",
 	],
+	"Invalid name" => [
+		0 => "无效的名称",
+	],
 	"Invalid website" => [
 		0 => "无效的网站",
 	],
@@ -1007,6 +963,9 @@ $translation_table = [
 	],
 	"Settings for %s" => [
 		0 => "设置为 %s",
+	],
+	"You must agree to the terms and privacy policy" => [
+		0 => "你必须同意我们的服务条款和隐私政策",
 	],
 	"You must be at least %s years old to use this website." => [
 		0 => "你必须年满 %s 周岁才能继续访问这个网站.",
@@ -1083,8 +1042,11 @@ $translation_table = [
 	"I'm at least %s years old" => [
 		0 => "我已年满 %s 周岁",
 	],
-	"By signing up you agree to our <a href=\"%s\">Terms of service</a>" => [
-		0 => "继续则表示已阅读并同意我们的 <a href=\"%s\">服务条款</a>",
+	"terms" => [
+		0 => "服务条款",
+	],
+	"privacy policy" => [
+		0 => "隐私政策",
 	],
 	"Notifications" => [
 		0 => "通知",
@@ -1256,6 +1218,9 @@ $translation_table = [
 	],
 	"Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information." => [
 		0 => "检查 <a data-modal=\"simple\" data-target=\"failed-upload-result\">错误报告</a> 更多信息.",
+	],
+	"Register to get %s" => [
+		0 => "注册之后可上传大小:%s",
 	],
 	"reset" => [
 		0 => "重置",
@@ -1461,6 +1426,9 @@ $translation_table = [
 	"Untitled image" => [
 		0 => "无标题图像",
 	],
+	"You can use wildcard * characters." => [
+		0 => "你可以使用通配符 * 符号.",
+	],
 	"Expiration date" => [
 		0 => "截止日期",
 	],
@@ -1488,9 +1456,6 @@ $translation_table = [
 	"Storage name" => [
 		0 => "存储名称",
 	],
-	"API" => [
-		0 => "API",
-	],
 	"Region" => [
 		0 => "区域",
 	],
@@ -1510,7 +1475,7 @@ $translation_table = [
 		0 => "存储秘密",
 	],
 	"Client email" => [
-		0 => "客户电子邮件",
+		0 => "用户的电子邮箱",
 	],
 	"Google Cloud client email" => [
 		0 => "Google Cloud客户电子邮件",
@@ -1519,10 +1484,7 @@ $translation_table = [
 		0 => "您需要一个 <a %s>服务帐户</a> .",
 	],
 	"Private key" => [
-		0 => "密钥",
-	],
-	"Google Cloud JSON key" => [
-		0 => "Google Cloud JSON key",
+		0 => "私钥(Private key)",
 	],
 	"Service name" => [
 		0 => "服务名称",
@@ -1545,14 +1507,8 @@ $translation_table = [
 	"Storage container" => [
 		0 => "存储容器",
 	],
-	"Tenant id" => [
-		0 => "Tenant id",
-	],
 	"Tenant id (account id)" => [
 		0 => "Tenant id (用户id)",
-	],
-	"Tenant name" => [
-		0 => "Tenant name",
 	],
 	"Tenant name (account name)" => [
 		0 => "Tenant name (用户名)",
@@ -1674,6 +1630,21 @@ $translation_table = [
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "你真的想删除所选内容? 一旦删除将无法恢复.",
 	],
+	"Fullscreen" => [
+		0 => "全屏",
+	],
+	"Exit fullscreen" => [
+		0 => "退出全屏",
+	],
+	"Guest" => [
+		0 => "访客",
+	],
+	"Keyboard shortcuts" => [
+		0 => "键盘快捷键",
+	],
+	"Like" => [
+		0 => "喜欢",
+	],
 	"Uploaded by guest" => [
 		0 => "来自访客",
 	],
@@ -1791,9 +1762,6 @@ $translation_table = [
 	"You like this" => [
 		0 => "你喜欢它",
 	],
-	"Like" => [
-		0 => "喜欢",
-	],
 	"Upload to album" => [
 		0 => "上传到相册",
 	],
@@ -1854,9 +1822,6 @@ $translation_table = [
 	"Website description" => [
 		0 => "网站描述",
 	],
-	"Website keywords" => [
-		0 => "网站关键字",
-	],
 	"Default time zone" => [
 		0 => "默认时区",
 	],
@@ -1868,6 +1833,12 @@ $translation_table = [
 	],
 	"Enables to browse public uploaded images. It also enables categories." => [
 		0 => "启用探索图库功能, 允许查看所有用户上传的图片（不含私隐）,并可以按分类查看.",
+	],
+	"guests" => [
+		0 => "游客",
+	],
+	"Enables explore for guests." => [
+		0 => "为游客启用探索.",
 	],
 	"Enables to browse images randomly." => [
 		0 => "启用随机浏览图片.",
@@ -2017,7 +1988,7 @@ $translation_table = [
 		0 => "不允许上传未经检查的图片格式.",
 	],
 	"Enable uploads" => [
-		0 => "启动上传",
+		0 => "启用上传",
 	],
 	"Enable this if you want to allow image uploads. This setting doesn't affect administrators." => [
 		0 => "启用图片上传（如果你想允许图片上传请启用）. 此设置不会影响管理员.",
@@ -2026,7 +1997,7 @@ $translation_table = [
 		0 => "访客（不需注册）上传",
 	],
 	"Enable this if you want to allow non registered users to upload." => [
-		0 => "启用它则允许非注册用户上传",
+		0 => "启用它则允许未注册的用户上传图片",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "启用嵌入代码（上传者）",
@@ -2038,7 +2009,7 @@ $translation_table = [
 		0 => "上传线程",
 	],
 	"Number of simultaneous upload threads (parallel uploads)" => [
-		0 => "同时上传的线程数(并行上传)",
+		0 => "最大同时上传的线程数(并行上传)",
 	],
 	"Redirect on single upload" => [
 		0 => "单张图片上传跳转",
@@ -2090,6 +2061,9 @@ $translation_table = [
 	],
 	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
 		0 => "服务器最大允许上传%s.因为参数%u和%p(文件:%f)",
+	],
+	"Same as \"%s\" but for guests." => [
+		0 => "跟\"%s\"一样，游客允许上传大小.",
 	],
 	"Image path" => [
 		0 => "图像路径",
@@ -2280,6 +2254,12 @@ $translation_table = [
 	"Leave it empty to don't require a minimum age to use the website." => [
 		0 => "留空则表示不设置最低年龄, 对所有年龄都有效.",
 	],
+	"Notify on user signup" => [
+		0 => "用户注册通知",
+	],
+	"Enable this if you want to get an email notification for each new user signup." => [
+		0 => "启用之后，如果有人注册就会给你发送邮件通知.",
+	],
 	"Username routing" => [
 		0 => "用户名链接结构",
 	],
@@ -2382,6 +2362,12 @@ $translation_table = [
 	"What pagination method should be used." => [
 		0 => "应该用什么分页模式.",
 	],
+	"Listing viewer" => [
+		0 => "列表预览",
+	],
+	"Enable this to use the listing viewer when clicking on an image." => [
+		0 => "启用之后，你在探索页面点击图片之后会有预览界面.",
+	],
 	"Image listing size" => [
 		0 => "图片列表样式",
 	],
@@ -2393,6 +2379,15 @@ $translation_table = [
 	],
 	"Both methods use a fixed width but fluid method uses automatic heights." => [
 		0 => "首页图片列表样式. 这两种方法都使用固定宽度, 但“自动”的方法是使用自动图片的高度.",
+	],
+	"Album listing images requirement" => [
+		0 => "相册被列出所需图片数量",
+	],
+	"explore" => [
+		0 => "探索",
+	],
+	"Sets the minimum image count needed to show albums in explore." => [
+		0 => "设置探索页中可以被展示出的相册所需的最少图像数量.",
 	],
 	"Listing columns number" => [
 		0 => "页面显示列数",
@@ -2796,11 +2791,17 @@ $translation_table = [
 	"Send test email" => [
 		0 => "发送测试邮件",
 	],
-	"test@somedomain.com" => [
-		0 => "test@somedomain.com",
-	],
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "使用此来测试你的电子邮件是否已发送. 我们建议您使用 %s.",
+	],
+	"Export a user" => [
+		0 => "导出用户(1个)",
+	],
+	"Export user" => [
+		0 => "导出",
+	],
+	"This will allow you to download a user's standard personal information in JSON format." => [
+		0 => "这将让用户信息保存到 .Json 格式的文件中并下载",
 	],
 	"social networks" => [
 		0 => "社交网络",
@@ -2837,12 +2838,6 @@ $translation_table = [
 	],
 	"You need a <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> for this." => [
 		0 => "完成此您需要一个 <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a>",
-	],
-	"VK client id" => [
-		0 => "VK client id",
-	],
-	"VK client secret" => [
-		0 => "VK client secret",
 	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "您需要一个 <a href=\"%s\" target=\"_blank\">验证码Key</a> 来完成此项设置.",
@@ -2886,11 +2881,17 @@ $translation_table = [
 	"For documentation about the API check the <a %s>API documentation</a>" => [
 		0 => "有关API的文档查看 <a %s>API文档</a>",
 	],
-	"API v1 key" => [
-		0 => "API v1 key",
-	],
 	"Use this key when using the <a %s>API v1</a>." => [
 		0 => "使用<a %s>API V1</a>时使用此值.",
+	],
+	"Plugin route" => [
+		0 => "上传插件",
+	],
+	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
+		0 => "启用此功能可在%u页面显示插件说明。这些说明的链接将添加到%s菜单中。此设置不会影响管理员。",
+	],
+	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
+		0 => "使用它来设置%p的自定义URL。请注意，您需要手动复制此URL中的%s。",
 	],
 	"Cookie law compliance" => [
 		0 => "Cookie的法律法规",
@@ -2909,9 +2910,6 @@ $translation_table = [
 	],
 	"Load full resolution" => [
 		0 => "加载原图",
-	],
-	"Guest" => [
-		0 => "访客",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "加入 %a 和标记上 %c",
@@ -2983,10 +2981,10 @@ $translation_table = [
 		0 => "通过安装我们的上传插件，将图像上传到您的网站，博客或论坛。 它提供图像上传到任何网站，放置一个按钮，将允许您的用户直接上传图像到我们的服务，它将自动处理插入所需的代码。 所有功能包括拖放，远程上传，图像调整大小等。",
 	],
 	"Supported software" => [
-		0 => "支持的软件",
+		0 => "支持的项目",
 	],
 	"supported software" => [
-		0 => "支持的软件",
+		0 => "支持的项目",
 	],
 	"The plugin works in any website with user-editable content and for %sv, it will place an upload button that will match the target editor toolbar so no extra customization is needed." => [
 		0 => "该插件适用于具有用户可编辑内容的任何网站，对于%sv，它将放置一个与目标编辑器工具栏匹配的上传按钮，因此不需要额外的自定义。",
@@ -2995,10 +2993,10 @@ $translation_table = [
 		0 => "将其添加到您的网站",
 	],
 	"options" => [
-		0 => "options",
+		0 => "选项",
 	],
 	"Copy and paste the plugin code into your website HTML code (preferably inside the head section). There are plenty %o to make it fit better to your needs." => [
-		0 => "将插件代码复制并粘贴到您的网站HTML代码中（最好在头部内）。 这里有很多%o来使其更加满足你的需求。",
+		0 => "将插件代码复制并粘贴到您的网站HTML代码中（最好在head内）。 这里有更多%o来使其更好的满足您的需求。",
 	],
 	"Basic options" => [
 		0 => "基本选项",
@@ -3139,7 +3137,7 @@ $translation_table = [
 		0 => "这是你的个性昵称. 不是你的用户名.",
 	],
 	"http://yourwebsite.com" => [
-		0 => "http://yourwebsite.com",
+		0 => "http://YourWebsite.com(你的网站地址)",
 	],
 	"Bio" => [
 		0 => "个人介绍",
@@ -3204,11 +3202,32 @@ $translation_table = [
 	"Follow" => [
 		0 => "关注",
 	],
+	"General questions/comments" => [
+		0 => "一般问题/意见",
+	],
+	"DMCA complaint" => [
+		0 => "DMCA（数字千年版权）投诉",
+	],
+	"Invalid message" => [
+		0 => "无效的消息",
+	],
+	"Invalid subject" => [
+		0 => "无效的主题",
+	],
+	"Invalid reCAPTCHA" => [
+		0 => "无效的验证码",
+	],
+	"Mail error" => [
+		0 => "邮件错误",
+	],
 	"Message sent" => [
 		0 => "发送消息",
 	],
 	"Contact" => [
 		0 => "联系",
+	],
+	"Message sent. We will get in contact soon." => [
+		0 => "消息已发送. 我们将很快和您取得了联系.",
 	],
 	"If you want to send a message fill the form below." => [
 		0 => "如果你想发送一个消息, 请填写下面表格.",
@@ -3258,6 +3277,9 @@ $translation_table = [
 	"Please provide a valid email address" => [
 		0 => "请提供一个有效的电子邮件地址",
 	],
+	"Please provide a valid username" => [
+		0 => "请提供正确的用户名",
+	],
 	"You must enter the album name." => [
 		0 => "您必须输入相册名称.",
 	],
@@ -3297,11 +3319,23 @@ $translation_table = [
 	"This website is running latest %s version" => [
 		0 => "此网站正在运行最新版的%s",
 	],
+	"Toggle select" => [
+		0 => "选中/取消选中",
+	],
+	"Toggle flag" => [
+		0 => "标记为安全/不安全",
+	],
+	"Previous" => [
+		0 => "上一页",
+	],
+	"Next" => [
+		0 => "下一页",
+	],
 	"Clipboard image" => [
 		0 => "剪贴板图像",
 	],
 	"File too big." => [
-		0 => "文件超出允許上傳的大小",
+		0 => "文件超出允许上传的大小.",
 	],
 	"Invalid or unsupported file format." => [
 		0 => "无效或不支持的文件格式",

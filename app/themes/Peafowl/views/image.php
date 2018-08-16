@@ -7,7 +7,7 @@
 	<?php
 		$image_url = get_image()['medium'] ? get_image()['medium']['url'] : get_image()['url'];
 	?>
-	<div id="image-viewer-container" class="image-viewer-main image-viewer-container"><img src="<?php echo $image_url; ?>" alt="<?php echo get_image_safe_html()['description']; ?>" width="<?php echo get_image()["width"]; ?>" height="<?php echo get_image()["height"]; ?>" <?php if(get_image()['medium']) { ?> data-load="full"<?php } ?>></div>
+	<div id="image-viewer-container" class="image-viewer-main image-viewer-container"><img src="<?php echo $image_url; ?>"<?php if(!CHV\getSetting('theme_download_button')) { ?> class="no-select"<?php } ?> alt="<?php echo get_image_safe_html()['description']; ?>" width="<?php echo get_image()["width"]; ?>" height="<?php echo get_image()["height"]; ?>" <?php if(get_image()['medium']) { ?> data-load="full"<?php } ?>></div>
 	<?php
 		if(get_image()['user']['id'] != NULL) {
 	?>
@@ -81,7 +81,7 @@
 			<?php
 				if(CHV\getSetting('enable_likes')) {
 			?>
-			<a class="btn-like" data-liked="<?php echo (int)get_image()['liked']; ?>" data-action="like">
+			<a class="btn-like" data-type="image" data-id="<?php echo get_image()['id_encoded']; ?>" data-liked="<?php echo (int)get_image()['liked']; ?>" data-action="like">
 				<span class="btn btn-liked blue" rel="tooltip" title="<?php _se("You like this"); ?>"><span class="btn-icon icon-heart3"></span><span class="btn-text phone-hide"><?php _se('Liked'); ?></span></span>
 				<span class="btn btn-unliked blue outline"><span class="btn-icon icon-heart4"></span><span class="btn-text phone-hide"><?php _se('Like'); ?></span></span>
 			</a>

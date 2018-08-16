@@ -245,6 +245,13 @@ try {
 		'1.0.11' => NULL,
 		'1.0.12' => NULL,
 		'1.0.13' => NULL,
+		'1.1.0' => [
+			'website_explore_page_guest' => 1,
+			'explore_albums_min_image_count' => 5,
+			'upload_max_filesize_mb_guest' => 0.5,
+			'notify_user_signups' => 0,
+			'listing_viewer' => 1,
+		]
 	];
 	// Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
 	$settings_rename = [];
@@ -450,6 +457,15 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 							'prop'	=> "NOT NULL DEFAULT '0'",
 						],
 					],
+				],
+				'1.1.0' => [
+					'images' => [
+						'image_source_md5' => [
+							'op'	=> 'ADD',
+							'type'	=> 'varchar(32)',
+							'prop'	=> 'DEFAULT NULL',
+						]
+					]
 				]
 			];
 
@@ -774,7 +790,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 					$input_errors['website_mode'] = _s('Invalid website mode');
 				}
 
-				if(count($input_errors) > 0) {
+				if(is_array($input_errors) && count($input_errors) > 0) {
 					$error = true;
 					$error_message = 'Please correct your data to continue.';
 				} else {
@@ -816,6 +832,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 								ADD `image_user_id` bigint(32) DEFAULT NULL,
 								ADD `image_album_id` bigint(32) DEFAULT NULL,
 								ADD `image_md5` varchar(32) NOT NULL,
+								ADD `image_source_md5` varchar(32) DEFAULT NULL,
 								ADD `image_storage_mode` enum('datefolder','direct','old') NOT NULL DEFAULT 'datefolder',
 								ADD `image_original_filename` text NOT NULL,
 								ADD `image_original_exifdata` longtext,
@@ -837,6 +854,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
 								ADD INDEX `image_album_id` (`image_album_id`),
 								ADD INDEX `image_storage_id` (`image_storage_id`),
 								ADD INDEX `image_md5` (`image_md5`),
+								ADD INDEX `image_source_md5` (`image_source_md5`),
 								ADD INDEX `image_likes` (`image_views`),
 								ADD INDEX `image_views` (`image_views`),
 								ADD INDEX `image_category_id` (`image_category_id`),

@@ -205,7 +205,7 @@ class Handler {
 				'auth_token' 	=> self::getAuthToken()
 			);
 
-			if(count(self::$vars) > 0) {
+			if(self::$vars && count(self::$vars) > 0) {
 				self::$vars = array_merge(self::$vars, $magic);
 			} else {
 				self::$vars = $magic;

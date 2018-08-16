@@ -361,7 +361,7 @@
 				</div>
 
 				<div class="input-label">
-                    <label><?php _se('Privacy'); ?></label>
+          <label><?php _se('Privacy'); ?></label>
 					<?php echo CHV\Render\get_checkbox_html([
 						'name'		=> 'is_private',
 						'label'		=> _s('Make my profile and identity totally private'),

@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-05-26 16:57+0000',
-  'PO-Revision-Date' => '2017-05-26 16:57+0000',
+  'POT-Creation-Date' => '2018-06-03 14:28+0000',
+  'PO-Revision-Date' => '2018-06-03 14:28+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'zh_TW',
@@ -13,9 +13,7 @@ $translation_header = array (
 );
 $translation_plural = array (
   'nplurals' => 1,
-  'plural' => '0',
-  'formula' => '0',
-  'function' => '$index = (int)(0); return ($index < 1) ? $index : 1 - 1;',
+  'function' => '($n != 1)',
 );
 $translation_table = [
 	"Invalid email" => [
@@ -56,9 +54,6 @@ $translation_table = [
 	],
 	"Update in progress" => [
 		0 => "正在更新",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "發生錯誤. 請稍後再試.",
 	],
 	"Missing %s file" => [
 		0 => "缺少 %s 文件",
@@ -120,9 +115,6 @@ $translation_table = [
 	"After %n %t" => [
 		0 => "經過 %n %t",
 	],
-	"Don't autodelete" => [
-		0 => "不要自動刪除",
-	],
 	"minute" => [
 		0 => "分鐘",
 	],
@@ -132,23 +124,23 @@ $translation_table = [
 	"day" => [
 		0 => "天",
 	],
+	"week" => [
+		0 => "週",
+	],
+	"month" => [
+		0 => "月",
+	],
+	"year" => [
+		0 => "年",
+	],
+	"Don't autodelete" => [
+		0 => "不要自動刪除",
+	],
 	"Duplicated upload" => [
 		0 => "重複的上傳",
 	],
-	"Error storing file in external storage server" => [
-		0 => "在外部儲存伺服器中有儲存檔案的錯誤",
-	],
-	"External storage has failed" => [
-		0 => "外部儲存空間失敗",
-	],
 	"Private upload" => [
 		0 => "私人上傳",
-	],
-	"Upload switched to local storage" => [
-		0 => "上傳切換至本地儲存空間",
-	],
-	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
-		0 => "系统已切换到本地儲存空間. 由於在外部儲存伺服器沒有足夠的磁碟容量(%c), 圖像 %s 已被分配到本地的儲存空間上.",
 	],
 	"like" => [
 		0 => "喜歡",
@@ -162,9 +154,6 @@ $translation_table = [
 	"Trending" => [
 		0 => "最熱門",
 	],
-	"Popular" => [
-		0 => "最喜歡",
-	],
 	"Top users" => [
 		0 => "排名高的用戶",
 	],
@@ -176,6 +165,9 @@ $translation_table = [
 	],
 	"Most viewed" => [
 		0 => "最熱門的",
+	],
+	"Popular" => [
+		0 => "最喜歡",
 	],
 	"Most liked" => [
 		0 => "最喜歡的",
@@ -231,15 +223,6 @@ $translation_table = [
 	"Private profile" => [
 		0 => "私人檔案",
 	],
-	"year" => [
-		0 => "年",
-	],
-	"month" => [
-		0 => "月",
-	],
-	"week" => [
-		0 => "週",
-	],
 	"second" => [
 		0 => "秒",
 	],
@@ -248,9 +231,6 @@ $translation_table = [
 	],
 	"moments ago" => [
 		0 => "剛剛",
-	],
-	"System notification" => [
-		0 => "系統通知",
 	],
 	"Dashboard" => [
 		0 => "主控台",
@@ -282,14 +262,11 @@ $translation_table = [
 	"You can apply this update directly from your %a or download it from %s and then manually install it." => [
 		0 => "您可以直接從 %a 安裝此更新或從 %s 下載, 然後手動安裝更新.",
 	],
-	"Chevereto update available (v%s)" => [
-		0 => "Chevereto 更新已開放 (v%s)",
-	],
 	"view on %s" => [
 		0 => "%s 已查看",
 	],
-	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy." => [
-		0 => "我們使用自己和第三方Cookies來改善我們的服務瀏覽體驗. 如果您繼續使用了解我們的網站, 您需要接受這個Cookie政策.",
+	"I understand" => [
+		0 => "我明白",
 	],
 	"You have been forbidden to use this website." => [
 		0 => "你被禁止進入這個網站",
@@ -299,6 +276,9 @@ $translation_table = [
 	],
 	"View all my images" => [
 		0 => "查看我所有的圖片",
+	],
+	"Plugin" => [
+		0 => "插件",
 	],
 	"That page doesn't exist" => [
 		0 => "該網頁不存在",
@@ -756,6 +736,9 @@ $translation_table = [
 	"Only alphanumeric, hyphen and underscore characters are allowed" => [
 		0 => "僅允許字母, 連字符號和下劃線符號是允許的",
 	],
+	"Invalid URL" => [
+		0 => "無效URL",
+	],
 	"Routes can't be the same" => [
 		0 => "路徑是不能相同的",
 	],
@@ -782,9 +765,6 @@ $translation_table = [
 	],
 	"Invalid SMTP username" => [
 		0 => "無效的SMTP用戶名",
-	],
-	"Invalid URL" => [
-		0 => "無效URL",
 	],
 	"This URL key is already being used by another page (ID %s)" => [
 		0 => "此鏈接值已被另壹個頁面使用 (ID %s)",
@@ -816,9 +796,6 @@ $translation_table = [
 	"Upload date" => [
 		0 => "上傳時間",
 	],
-	"%s images" => [
-		0 => "%s 圖片",
-	],
 	"Image %i in %a album" => [
 		0 => "圖片 %i 在 %a 相簿",
 	],
@@ -831,11 +808,11 @@ $translation_table = [
 	"Direct links" => [
 		0 => "直連URL",
 	],
-	"Image URL" => [
-		0 => "圖片URL",
-	],
 	"Image link" => [
 		0 => "圖片連結",
+	],
+	"Image URL" => [
+		0 => "圖片URL",
 	],
 	"Thumbnail URL" => [
 		0 => "縮圖URL",
@@ -918,32 +895,11 @@ $translation_table = [
 	"Logged out" => [
 		0 => "登出",
 	],
-	"General questions/comments" => [
-		0 => "一般問題/意見",
+	"Upload images" => [
+		0 => "上傳圖片",
 	],
-	"DMCA complaint" => [
-		0 => "DMCA檢舉",
-	],
-	"Invalid name" => [
-		0 => "無效的名稱",
-	],
-	"Invalid message" => [
-		0 => "無效的訊息",
-	],
-	"Invalid subject" => [
-		0 => "無效的主題",
-	],
-	"Invalid reCAPTCHA" => [
-		0 => "無效的驗證碼",
-	],
-	"Can't submit the form: %s" => [
-		0 => "無法送出的表單: %s",
-	],
-	"Message sent. We will get in contact soon." => [
-		0 => "訊息已寄出. 我們很快地與您聯絡.",
-	],
-	"Mail error" => [
-		0 => "電子郵件錯誤",
+	"Upload plugin" => [
+		0 => "上載插件",
 	],
 	"Image search results for %s" => [
 		0 => "圖片搜尋結果： %s",
@@ -968,6 +924,9 @@ $translation_table = [
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "這封郵件已發送至 %s 請登入信箱並啟用",
+	],
+	"Invalid name" => [
+		0 => "無效的名稱",
 	],
 	"Invalid website" => [
 		0 => "無效的網站",
@@ -998,6 +957,9 @@ $translation_table = [
 	],
 	"Create account" => [
 		0 => "註冊帳戶",
+	],
+	"Upload" => [
+		0 => "上傳",
 	],
 	"%s's Images" => [
 		0 => "%s 的圖片",
@@ -1038,9 +1000,6 @@ $translation_table = [
 	"Notices (%s)" => [
 		0 => "通知 (%s)",
 	],
-	"Upload" => [
-		0 => "上傳",
-	],
 	"Sign in with another account" => [
 		0 => "登入其他帳號",
 	],
@@ -1067,9 +1026,6 @@ $translation_table = [
 	],
 	"I'm at least %s years old" => [
 		0 => "我已年滿 %s 歲",
-	],
-	"By signing up you agree to our <a href=\"%s\">Terms of service</a>" => [
-		0 => "繼續則表示已閱讀並同意我們的 <a href=\"%s\">服務條款</a>",
 	],
 	"Notifications" => [
 		0 => "通知",
@@ -1149,17 +1105,8 @@ $translation_table = [
 	"Edit or resize any image by clicking the image preview" => [
 		0 => "編輯或通過點擊圖像預覽調整圖像大小",
 	],
-	"Edit or resize any image by touching the image preview" => [
-		0 => "編輯或通過觸摸圖像預覽調整圖像大小",
-	],
 	"your computer" => [
 		0 => "你的電腦",
-	],
-	"image URLs" => [
-		0 => "圖片連結",
-	],
-	"You can keep adding more images from %i or from %u." => [
-		0 => "你可以從%i或%u持續新增更多圖片",
 	],
 	"your device" => [
 		0 => "你的裝置",
@@ -1235,9 +1182,6 @@ $translation_table = [
 	],
 	"Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information." => [
 		0 => "檢查 <a data-modal=\"simple\" data-target=\"failed-upload-result\">錯誤報告</a> 來了解更多訊息.",
-	],
-	"max" => [
-		0 => "最大",
 	],
 	"close" => [
 		0 => "關閉",
@@ -1605,9 +1549,6 @@ $translation_table = [
 	"There's nothing to show here." => [
 		0 => "沒有顯示的內容",
 	],
-	"Upload images" => [
-		0 => "上傳圖片",
-	],
 	"Edit image details" => [
 		0 => "編輯圖片資訊",
 	],
@@ -1652,6 +1593,18 @@ $translation_table = [
 	],
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "你真的想刪除所選內容? 一旦刪除將無法恢復.",
+	],
+	"Fullscreen" => [
+		0 => "全螢幕",
+	],
+	"Exit fullscreen" => [
+		0 => "退出全螢幕",
+	],
+	"Guest" => [
+		0 => "訪客",
+	],
+	"Like" => [
+		0 => "喜歡",
 	],
 	"Uploaded by guest" => [
 		0 => "由訪客上傳",
@@ -1716,6 +1669,9 @@ $translation_table = [
 	"Resend instructions" => [
 		0 => "重新發送",
 	],
+	"An error occurred. Please try again later." => [
+		0 => "發生錯誤. 請稍後再試.",
+	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "剛才的電子郵件已發送和說明重置您的密碼. 如果您沒有收到郵件, 請嘗試檢查您的垃圾郵件或垃圾郵件過濾器",
 	],
@@ -1766,9 +1722,6 @@ $translation_table = [
 	],
 	"You like this" => [
 		0 => "您喜歡這個",
-	],
-	"Like" => [
-		0 => "喜歡",
 	],
 	"Upload to album" => [
 		0 => "上傳至相簿",
@@ -1830,9 +1783,6 @@ $translation_table = [
 	"Website description" => [
 		0 => "網站描述",
 	],
-	"Website keywords" => [
-		0 => "網站關鍵字",
-	],
 	"Default time zone" => [
 		0 => "預設時區",
 	],
@@ -1844,6 +1794,9 @@ $translation_table = [
 	],
 	"Enables to browse public uploaded images. It also enables categories." => [
 		0 => "啟用探索圖庫功能, 允許查看所有用戶上傳的圖像（不含隱私）, 並可以按分類查看.",
+	],
+	"guests" => [
+		0 => "訪客",
 	],
 	"Enables to browse images randomly." => [
 		0 => "啟用隨機圖像瀏覽",
@@ -2880,9 +2833,6 @@ $translation_table = [
 	"Load full resolution" => [
 		0 => "讀取全等解像度",
 	],
-	"Guest" => [
-		0 => "訪客",
-	],
 	"Added to %a and categorized in %c" => [
 		0 => "加入 %a 和分類至 %c",
 	],
@@ -3117,11 +3067,32 @@ $translation_table = [
 	"Follow" => [
 		0 => "跟隨",
 	],
+	"General questions/comments" => [
+		0 => "一般問題/意見",
+	],
+	"DMCA complaint" => [
+		0 => "DMCA檢舉",
+	],
+	"Invalid message" => [
+		0 => "無效的訊息",
+	],
+	"Invalid subject" => [
+		0 => "無效的主題",
+	],
+	"Invalid reCAPTCHA" => [
+		0 => "無效的驗證碼",
+	],
+	"Mail error" => [
+		0 => "電子郵件錯誤",
+	],
 	"Message sent" => [
 		0 => "訊息發送",
 	],
 	"Contact" => [
 		0 => "聯繫",
+	],
+	"Message sent. We will get in contact soon." => [
+		0 => "訊息已寄出. 我們很快地與您聯絡.",
 	],
 	"If you want to send a message fill the form below." => [
 		0 => "如果您想發出一個訊息, 請填寫下面的表格.",

@@ -155,7 +155,18 @@ if(CHV\Login::isLoggedUser()) {
 				<div data-group="upload-result" data-result="error" class="soft-hidden margin-top-10 text-align-center upload-box-status-text"><?php _se('Check the <a data-modal="simple" data-target="failed-upload-result">error report</a> for more information.'); ?></div>
 			</div>
 
-      <div class="upload-box-allowed-files position-absolute"><span><?php echo str_replace(',', ' ', strtoupper(CHV\getSetting('upload_enabled_image_formats'))); ?></span><span> <?php echo G\format_bytes(G\get_bytes(CHV\getSetting('upload_max_filesize_mb').'MB')); ?></span></div>
+      <div class="upload-box-allowed-files position-absolute">
+				<span><?php echo str_replace(',', ' ', strtoupper(CHV\getSetting('upload_enabled_image_formats'))); ?></span>
+				<span><?php echo G\format_bytes(G\get_bytes(CHV\getSetting('upload_max_filesize_mb').'MB')); ?>
+				<?php
+					if(CHV\getSetting('upload_max_filesize_mb_bak') != NULL && CHV\getSetting('upload_max_filesize_mb') != CHV\getSetting('upload_max_filesize_mb_bak')) {
+				?>
+				<span class="icon icon-warning color-red margin-left-5" rel="tooltip" data-tiptip="top" title="<?php _se('Register to get %s', G\format_bytes(G\get_bytes(CHV\getSetting('upload_max_filesize_mb_bak').'MB'))); ?>"></span>
+				<?php
+					}
+				?>
+				</span>
+			</div>
 
 			<div class="upload-box-close position-absolute">
 				<a data-action="reset-upload" data-button="close-cancel"><span class="btn-icon icon-loop2"></span><span class="btn-text"><?php _se('reset'); ?></span></a>

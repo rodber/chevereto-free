@@ -164,7 +164,7 @@ function check_system_integrity() {
 		}
 	}
 
-	if(count($install_errors) > 0){
+	if(is_array($install_errors) && count($install_errors) > 0){
 		Render\chevereto_die($install_errors);
 	}
 }

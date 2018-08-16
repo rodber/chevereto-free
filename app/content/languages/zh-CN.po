@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-10-10 10:31+0000\n"
-"PO-Revision-Date: 2017-10-10 10:31+0000\n"
+"POT-Creation-Date: 2018-06-06 20:25+0000\n"
+"PO-Revision-Date: 2018-06-06 20:25+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -11,18 +11,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgid "Plugin"
-msgstr "插件"
-
-msgid "Plugin route"
-msgstr "上传插件"
+msgid "To use all the features of this site you must be logged in."
+msgstr "您必须登录才能使用所有的功能."
 
 #, php-format
-msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
-msgstr "启用此功能可在%u页面显示插件说明。这些说明的链接将添加到%s菜单中。此设置不会影响管理员。"
-
-msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
-msgstr "使用它来设置%p的自定义URL。请注意，您需要手动复制此URL中的%s。"
+msgid "If you don't have an account you can <a href=\"%s\">sign up</a> right now."
+msgstr "如果您还没有账号请现在就<a href=\"%s\">注册</a>."
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -200,10 +194,6 @@ msgstr[0] "次浏览"
 msgid "After %n %t"
 msgstr "经过 %n %t"
 
-#: ../../../app/lib/classes/class.image.php:348
-msgid "Don't autodelete"
-msgstr "不自动删除"
-
 #: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
 msgid "minute"
 msgid_plural "minutes"
@@ -219,28 +209,34 @@ msgid "day"
 msgid_plural "days"
 msgstr[0] "天"
 
+#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "周"
+
+#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
+msgid "month"
+msgid_plural "months"
+msgstr[0] "月"
+
+#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
+msgid "year"
+msgid_plural "years"
+msgstr[0] "年"
+
+#: ../../../app/lib/classes/class.image.php:348
+msgid "Don't autodelete"
+msgstr "不自动删除"
+
 #: ../../../app/lib/classes/class.image.php:636
 #: ../../../app/lib/classes/class.image.php:742
 msgid "Duplicated upload"
 msgstr "重复上传"
 
-msgid "Error storing file in external storage server"
-msgstr "在外部存储服务器中存储文件的错误"
-
-msgid "External storage has failed"
-msgstr "外部存储失败"
-
 #: ../../../app/lib/classes/class.image.php:955
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
 msgid "Private upload"
 msgstr "私密（只有本人可见）"
-
-msgid "Upload switched to local storage"
-msgstr "上传切换到本地存储"
-
-#, php-format
-msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
-msgstr "系统已切换到本地存储. 由于在外部存储服务器(s)没有足够的磁盘容量(%c), 图像 %s 已被分配到的本地存储."
 
 #: ../../../app/lib/classes/class.image.php:1231
 msgid "like"
@@ -319,7 +315,7 @@ msgid "Explore"
 msgstr "探索"
 
 msgid "Animated"
-msgstr "动画"
+msgstr "动图"
 
 #: ../../../app/routes/route.search.php:130
 #: ../../../app/themes/Peafowl/header.php:215
@@ -395,21 +391,6 @@ msgstr "已使用"
 msgid "Private profile"
 msgstr "私隐设置"
 
-#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
-msgid "year"
-msgid_plural "years"
-msgstr[0] "年"
-
-#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
-msgid "month"
-msgid_plural "months"
-msgstr[0] "月"
-
-#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
-msgid "week"
-msgid_plural "weeks"
-msgstr[0] "周"
-
 #: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
 msgid "second"
 msgid_plural "seconds"
@@ -423,9 +404,6 @@ msgstr "%s 前"
 #: ../../../app/lib/functions.php:67
 msgid "moments ago"
 msgstr "刚刚"
-
-msgid "System notification"
-msgstr "系统通知"
 
 #: ../../../app/routes/route.dashboard.php:1223
 #: ../../../app/themes/Peafowl/header.php:407
@@ -469,16 +447,18 @@ msgid "You can apply this update directly from your %a or download it from %s an
 msgstr "您可以直接从 %a 安装此更新或从 %s 下载, 然后手动安装更新."
 
 #, php-format
-msgid "Chevereto update available (v%s)"
-msgstr "Chevereto可用更新 (v%s)"
-
-#, php-format
 msgid "view on %s"
 msgstr "%s 已查看"
 
-#: ../../../app/lib/functions.render.php:303
-msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
-msgstr "我们使用自己和第三方Cookies来改善我们的服务浏览体验. 如果您继续使用了解我们的网站, 您需要接受这个Cookie政策."
+msgid "cookie policy"
+msgstr "cookie 政策"
+
+#, php-format
+msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link."
+msgstr "我们使用了第三方的cookie政策来改善你的浏览体验与我们的服务标准；\n如果你要继浏览并使用我们的网站，则你需要理解并接受这个Cookie政策%cookie_policy_link."
+
+msgid "I understand"
+msgstr "\"我\"明白了"
 
 #: ../../../app/loader.php:180
 msgid "You have been forbidden to use this website."
@@ -493,6 +473,9 @@ msgstr "随意浏览, 发现我所有的图片和相册共享."
 #: ../../../app/themes/Peafowl/views/settings.php:447
 msgid "View all my images"
 msgstr "查看我的所有图片"
+
+msgid "Plugin"
+msgstr "插件"
 
 #: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
 msgid "That page doesn't exist"
@@ -1251,6 +1234,10 @@ msgstr "无效的用户最低年龄"
 msgid "Only alphanumeric, hyphen and underscore characters are allowed"
 msgstr "只允许字母, 连字符和下划线字符是允许的"
 
+#: ../../../app/routes/route.dashboard.php:922
+msgid "Invalid URL"
+msgstr "无效URL"
+
 msgid "Routes can't be the same"
 msgstr "路径不能是相同的"
 
@@ -1283,10 +1270,6 @@ msgstr "无效的SMTP服务器"
 #: ../../../app/routes/route.dashboard.php:861
 msgid "Invalid SMTP username"
 msgstr "无效的SMTP用户名"
-
-#: ../../../app/routes/route.dashboard.php:922
-msgid "Invalid URL"
-msgstr "无效URL"
 
 #: ../../../app/routes/route.dashboard.php:960
 #, php-format
@@ -1335,11 +1318,6 @@ msgstr "IP已被屏蔽"
 #: ../../../app/routes/route.image.php:152
 msgid "Upload date"
 msgstr "上传时间"
-
-#: ../../../app/routes/route.image.php:177
-#, php-format
-msgid "%s images"
-msgstr "%s 图片"
 
 #: ../../../app/routes/route.image.php:185
 msgid "Image %i in %a album"
@@ -1486,51 +1464,6 @@ msgstr "登录"
 msgid "Logged out"
 msgstr "注销"
 
-#: ../../../app/routes/route.page.php:61
-#: ../../../content/pages/default/contact.php:7
-msgid "General questions/comments"
-msgstr "一般问题/意见"
-
-#: ../../../app/routes/route.page.php:62
-#: ../../../content/pages/default/contact.php:8
-msgid "DMCA complaint"
-msgstr "DMCA（数字千年版权）投诉"
-
-#: ../../../app/routes/route.page.php:71
-#: ../../../app/routes/route.settings.php:302
-#: ../../../content/pages/default/contact.php:19
-msgid "Invalid name"
-msgstr "无效的名称"
-
-#: ../../../app/routes/route.page.php:74
-#: ../../../content/pages/default/contact.php:22
-msgid "Invalid message"
-msgstr "无效的消息"
-
-#: ../../../app/routes/route.page.php:77
-#: ../../../content/pages/default/contact.php:25
-msgid "Invalid subject"
-msgstr "无效的主题"
-
-#: ../../../app/routes/route.page.php:85
-#: ../../../content/pages/default/contact.php:33
-msgid "Invalid reCAPTCHA"
-msgstr "无效的验证码"
-
-#: ../../../app/routes/route.page.php:90
-#, php-format
-msgid "Can't submit the form: %s"
-msgstr "不能提交表单: %s"
-
-#: ../../../app/routes/route.page.php:119
-msgid "Message sent. We will get in contact soon."
-msgstr "消息已发送. 我们将很快和您取得了联系."
-
-#: ../../../app/routes/route.page.php:122
-#: ../../../content/pages/default/contact.php:69
-msgid "Mail error"
-msgstr "邮件错误"
-
 msgid "Upload images"
 msgstr "上传图片"
 
@@ -1573,6 +1506,12 @@ msgstr "无效的图片失效: %s"
 msgid "An email has been sent to %s with instructions to activate this email"
 msgstr "这封邮件已发送至 %s 请登录邮箱并激活"
 
+#: ../../../app/routes/route.page.php:71
+#: ../../../app/routes/route.settings.php:302
+#: ../../../content/pages/default/contact.php:19
+msgid "Invalid name"
+msgstr "无效的名称"
+
 #: ../../../app/routes/route.settings.php:305
 msgid "Invalid website"
 msgstr "无效的网站"
@@ -1607,6 +1546,9 @@ msgstr "错误的用户名或邮箱"
 #, php-format
 msgid "Settings for %s"
 msgstr "设置为 %s"
+
+msgid "You must agree to the terms and privacy policy"
+msgstr "你必须同意我们的服务条款和隐私政策"
 
 #, php-format
 msgid "You must be at least %s years old to use this website."
@@ -1780,11 +1722,11 @@ msgstr "用户名"
 msgid "I'm at least %s years old"
 msgstr "我已年满 %s 周岁"
 
-#: ../../../app/themes/Peafowl/header.php:341
-#: ../../../app/themes/Peafowl/views/signup.php:65
-#, php-format
-msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
-msgstr "继续则表示已阅读并同意我们的 <a href=\"%s\">服务条款</a>"
+msgid "terms"
+msgstr "服务条款"
+
+msgid "privacy policy"
+msgstr "隐私政策"
 
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
@@ -2015,6 +1957,10 @@ msgstr "了解更多"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:86
 msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
 msgstr "检查 <a data-modal=\"simple\" data-target=\"failed-upload-result\">错误报告</a> 更多信息."
+
+#, php-format
+msgid "Register to get %s"
+msgstr "注册之后可上传大小:%s"
 
 msgid "reset"
 msgstr "重置"
@@ -2336,6 +2282,9 @@ msgstr "简要描述这一类别"
 msgid "Untitled image"
 msgstr "无标题图像"
 
+msgid "You can use wildcard * characters."
+msgstr "你可以使用通配符 * 符号."
+
 #: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
 msgid "Expiration date"
 msgstr "截止日期"
@@ -2374,10 +2323,6 @@ msgstr "新建相册"
 msgid "Storage name"
 msgstr "存储名称"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:7
-msgid "API"
-msgstr "API"
-
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:48
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:96
 msgid "Region"
@@ -2405,7 +2350,7 @@ msgstr "存储秘密"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:73
 msgid "Client email"
-msgstr "客户电子邮件"
+msgstr "用户的电子邮箱"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:74
 msgid "Google Cloud client email"
@@ -2418,11 +2363,7 @@ msgstr "您需要一个 <a %s>服务帐户</a> ."
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:78
 msgid "Private key"
-msgstr "密钥"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:79
-msgid "Google Cloud JSON key"
-msgstr "Google Cloud JSON key"
+msgstr "私钥(Private key)"
 
 msgid "Service name"
 msgstr "服务名称"
@@ -2451,17 +2392,9 @@ msgstr "容器"
 msgid "Storage container"
 msgstr "存储容器"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:104
-msgid "Tenant id"
-msgstr "Tenant id"
-
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:105
 msgid "Tenant id (account id)"
 msgstr "Tenant id (用户id)"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:108
-msgid "Tenant name"
-msgstr "Tenant name"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:109
 msgid "Tenant name (account name)"
@@ -2646,6 +2579,24 @@ msgstr "你真的想删除此内容? 一旦删除将无法恢复."
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:111
 msgid "Do you really want to remove all the selected content? This can't be undone."
 msgstr "你真的想删除所选内容? 一旦删除将无法恢复."
+
+msgid "Fullscreen"
+msgstr "全屏"
+
+msgid "Exit fullscreen"
+msgstr "退出全屏"
+
+#: ../../../app/themes/Peafowl/views/image.php:57
+msgid "Guest"
+msgstr "访客"
+
+msgid "Keyboard shortcuts"
+msgstr "键盘快捷键"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "喜欢"
 
 msgid "Uploaded by guest"
 msgstr "来自访客"
@@ -2856,11 +2807,6 @@ msgstr "删除相册"
 msgid "You like this"
 msgstr "你喜欢它"
 
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "喜欢"
-
 msgid "Upload to album"
 msgstr "上传到相册"
 
@@ -2943,10 +2889,6 @@ msgstr "网站标题"
 msgid "Website description"
 msgstr "网站描述"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:236
-msgid "Website keywords"
-msgstr "网站关键字"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:257
 msgid "Default time zone"
 msgstr "默认时区"
@@ -2961,6 +2903,12 @@ msgstr "可以按特定的内容查询图片, 相册, 和用户."
 
 msgid "Enables to browse public uploaded images. It also enables categories."
 msgstr "启用探索图库功能, 允许查看所有用户上传的图片（不含私隐）,并可以按分类查看."
+
+msgid "guests"
+msgstr "游客"
+
+msgid "Enables explore for guests."
+msgstr "为游客启用探索."
 
 msgid "Enables to browse images randomly."
 msgstr "启用随机浏览图片."
@@ -3170,7 +3118,7 @@ msgstr "不允许上传未经检查的图片格式."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:630
 msgid "Enable uploads"
-msgstr "启动上传"
+msgstr "启用上传"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:636
 msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
@@ -3182,7 +3130,7 @@ msgstr "访客（不需注册）上传"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:645
 msgid "Enable this if you want to allow non registered users to upload."
-msgstr "启用它则允许非注册用户上传"
+msgstr "启用它则允许未注册的用户上传图片"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1353
 msgid "Enable embed codes (uploader)"
@@ -3196,7 +3144,7 @@ msgid "Upload threads"
 msgstr "上传线程"
 
 msgid "Number of simultaneous upload threads (parallel uploads)"
-msgstr "同时上传的线程数(并行上传)"
+msgstr "最大同时上传的线程数(并行上传)"
 
 msgid "Redirect on single upload"
 msgstr "单张图片上传跳转"
@@ -3257,6 +3205,10 @@ msgstr "最大文件大小 (MB)"
 
 msgid "Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)."
 msgstr "服务器最大允许上传%s.因为参数%u和%p(文件:%f)"
+
+#, php-format
+msgid "Same as \"%s\" but for guests."
+msgstr "跟\"%s\"一样，游客允许上传大小."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:695
 msgid "Image path"
@@ -3505,6 +3457,12 @@ msgstr "空"
 msgid "Leave it empty to don't require a minimum age to use the website."
 msgstr "留空则表示不设置最低年龄, 对所有年龄都有效."
 
+msgid "Notify on user signup"
+msgstr "用户注册通知"
+
+msgid "Enable this if you want to get an email notification for each new user signup."
+msgstr "启用之后，如果有人注册就会给你发送邮件通知."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:972
 msgid "Username routing"
 msgstr "用户名链接结构"
@@ -3641,6 +3599,12 @@ msgstr "经典分页模式"
 msgid "What pagination method should be used."
 msgstr "应该用什么分页模式."
 
+msgid "Listing viewer"
+msgstr "列表预览"
+
+msgid "Enable this to use the listing viewer when clicking on an image."
+msgstr "启用之后，你在探索页面点击图片之后会有预览界面."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1127
 msgid "Image listing size"
 msgstr "图片列表样式"
@@ -3656,6 +3620,15 @@ msgstr "固定"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1134
 msgid "Both methods use a fixed width but fluid method uses automatic heights."
 msgstr "首页图片列表样式. 这两种方法都使用固定宽度, 但“自动”的方法是使用自动图片的高度."
+
+msgid "Album listing images requirement"
+msgstr "相册被列出所需图片数量"
+
+msgid "explore"
+msgstr "探索"
+
+msgid "Sets the minimum image count needed to show albums in explore."
+msgstr "设置探索页中可以被展示出的相册所需的最少图像数量."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1140
 msgid "Listing columns number"
@@ -4201,14 +4174,19 @@ msgstr "不使用任何安全模式"
 msgid "Send test email"
 msgstr "发送测试邮件"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1825
-msgid "test@somedomain.com"
-msgstr "test@somedomain.com"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1826
 #, php-format
 msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
 msgstr "使用此来测试你的电子邮件是否已发送. 我们建议您使用 %s."
+
+msgid "Export a user"
+msgstr "导出用户(1个)"
+
+msgid "Export user"
+msgstr "导出"
+
+msgid "This will allow you to download a user's standard personal information in JSON format."
+msgstr "这将让用户信息保存到 .Json 格式的文件中并下载"
 
 msgid "social networks"
 msgstr "社交网络"
@@ -4256,14 +4234,6 @@ msgstr "Google 客户端 secret"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1923
 msgid "You need a <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> for this."
 msgstr "完成此您需要一个 <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a>"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1928
-msgid "VK client id"
-msgstr "VK client id"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1933
-msgid "VK client secret"
-msgstr "VK client secret"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1968
 #, php-format
@@ -4321,14 +4291,20 @@ msgstr "谷歌Analytics（分析）或其他. 它将被添加到主题页脚."
 msgid "For documentation about the API check the <a %s>API documentation</a>"
 msgstr "有关API的文档查看 <a %s>API文档</a>"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:2019
-msgid "API v1 key"
-msgstr "API v1 key"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:2022
 #, php-format
 msgid "Use this key when using the <a %s>API v1</a>."
 msgstr "使用<a %s>API V1</a>时使用此值."
+
+msgid "Plugin route"
+msgstr "上传插件"
+
+#, php-format
+msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
+msgstr "启用此功能可在%u页面显示插件说明。这些说明的链接将添加到%s菜单中。此设置不会影响管理员。"
+
+msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
+msgstr "使用它来设置%p的自定义URL。请注意，您需要手动复制此URL中的%s。"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:2028
 msgid "Cookie law compliance"
@@ -4354,10 +4330,6 @@ msgstr "播放 GIF"
 
 msgid "Load full resolution"
 msgstr "加载原图"
-
-#: ../../../app/themes/Peafowl/views/image.php:57
-msgid "Guest"
-msgstr "访客"
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -4457,10 +4429,10 @@ msgid "Add image uploading to your website, blog or forum by installing our uplo
 msgstr "通过安装我们的上传插件，将图像上传到您的网站，博客或论坛。 它提供图像上传到任何网站，放置一个按钮，将允许您的用户直接上传图像到我们的服务，它将自动处理插入所需的代码。 所有功能包括拖放，远程上传，图像调整大小等。"
 
 msgid "Supported software"
-msgstr "支持的软件"
+msgstr "支持的项目"
 
 msgid "supported software"
-msgstr "支持的软件"
+msgstr "支持的项目"
 
 #, php-format
 msgid "The plugin works in any website with user-editable content and for %sv, it will place an upload button that will match the target editor toolbar so no extra customization is needed."
@@ -4470,11 +4442,11 @@ msgid "Add it to your website"
 msgstr "将其添加到您的网站"
 
 msgid "options"
-msgstr "options"
+msgstr "选项"
 
 #, php-format
 msgid "Copy and paste the plugin code into your website HTML code (preferably inside the head section). There are plenty %o to make it fit better to your needs."
-msgstr "将插件代码复制并粘贴到您的网站HTML代码中（最好在头部内）。 这里有很多%o来使其更加满足你的需求。"
+msgstr "将插件代码复制并粘贴到您的网站HTML代码中（最好在head内）。 这里有更多%o来使其更好的满足您的需求。"
 
 msgid "Basic options"
 msgstr "基本选项"
@@ -4653,7 +4625,7 @@ msgstr "这是你的个性昵称. 不是你的用户名."
 
 #: ../../../app/themes/Peafowl/views/settings.php:371
 msgid "http://yourwebsite.com"
-msgstr "http://yourwebsite.com"
+msgstr "http://YourWebsite.com(你的网站地址)"
 
 #: ../../../app/themes/Peafowl/views/settings.php:375
 msgid "Bio"
@@ -4747,11 +4719,45 @@ msgstr[0] "粉丝"
 msgid "Follow"
 msgstr "关注"
 
+#: ../../../app/routes/route.page.php:61
+#: ../../../content/pages/default/contact.php:7
+msgid "General questions/comments"
+msgstr "一般问题/意见"
+
+#: ../../../app/routes/route.page.php:62
+#: ../../../content/pages/default/contact.php:8
+msgid "DMCA complaint"
+msgstr "DMCA（数字千年版权）投诉"
+
+#: ../../../app/routes/route.page.php:74
+#: ../../../content/pages/default/contact.php:22
+msgid "Invalid message"
+msgstr "无效的消息"
+
+#: ../../../app/routes/route.page.php:77
+#: ../../../content/pages/default/contact.php:25
+msgid "Invalid subject"
+msgstr "无效的主题"
+
+#: ../../../app/routes/route.page.php:85
+#: ../../../content/pages/default/contact.php:33
+msgid "Invalid reCAPTCHA"
+msgstr "无效的验证码"
+
+#: ../../../app/routes/route.page.php:122
+#: ../../../content/pages/default/contact.php:69
+msgid "Mail error"
+msgstr "邮件错误"
+
 msgid "Message sent"
 msgstr "发送消息"
 
 msgid "Contact"
 msgstr "联系"
+
+#: ../../../app/routes/route.page.php:119
+msgid "Message sent. We will get in contact soon."
+msgstr "消息已发送. 我们将很快和您取得了联系."
 
 msgid "If you want to send a message fill the form below."
 msgstr "如果你想发送一个消息, 请填写下面表格."
@@ -4822,6 +4828,9 @@ msgstr "更新失败"
 msgid "Please provide a valid email address"
 msgstr "请提供一个有效的电子邮件地址"
 
+msgid "Please provide a valid username"
+msgstr "请提供正确的用户名"
+
 #: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
 #: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
 #: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
@@ -4887,13 +4896,25 @@ msgstr "现在更新"
 msgid "This website is running latest %s version"
 msgstr "此网站正在运行最新版的%s"
 
+msgid "Toggle select"
+msgstr "选中/取消选中"
+
+msgid "Toggle flag"
+msgstr "标记为安全/不安全"
+
+msgid "Previous"
+msgstr "上一页"
+
+msgid "Next"
+msgstr "下一页"
+
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"
 msgstr "剪贴板图像"
 
 #: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
 msgid "File too big."
-msgstr "文件超出允許上傳的大小"
+msgstr "文件超出允许上传的大小."
 
 msgid "Invalid or unsupported file format."
 msgstr "无效或不支持的文件格式"

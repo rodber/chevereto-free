@@ -20,7 +20,7 @@ $route = function($handler) {
 
 		$logged_user = CHV\Login::getUser();
 
-		if(!CHV\getSetting('website_explore_page') && !$logged_user['is_admin']) {
+		if(!$handler::getCond('explore_enabled') && !$logged_user['is_admin']) {
 			return $handler->issue404();
 		}
 
@@ -50,7 +50,11 @@ $route = function($handler) {
 		$listingParams = [
 			'listing'	=> $listing['list'],
 			'basename'	=> $basename,
-			'params_hidden' => ['hide_empty' => 1, 'hide_banned' => 1],
+			'params_hidden' => [
+				'hide_empty' => 1,
+				'hide_banned' => 1,
+				'album_min_image_count' => CHV\getSetting('explore_albums_min_image_count'),
+			],
 		];
 
 		if($doing == 'animated') {

@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2016-11-01 14:37+0000',
-  'PO-Revision-Date' => '2016-11-01 14:37+0000',
+  'POT-Creation-Date' => '2018-06-03 14:28+0000',
+  'PO-Revision-Date' => '2018-06-03 14:28+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'tr',
@@ -13,11 +13,21 @@ $translation_header = array (
 );
 $translation_plural = array (
   'nplurals' => 2,
-  'plural' => '(n > 1)',
-  'formula' => '($n > 1)',
-  'function' => '$index = (int)(($n > 1)); return ($index < 2) ? $index : 2 - 1;',
+  'function' => '($n != 1)',
 );
 $translation_table = [
+	"To use all the features of this site you must be logged in." => [
+		0 => "Bu sitenin bütün özelliklerinden yararlanabilmeniz için giriş yapmanız gerekmektedir.",
+	],
+	"If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
+		0 => "Eğer hesabınız yok ise, şimdi <a href=\"%s\">Hesap aç</a>bilirsiniz.",
+	],
+	"Decode ID" => [
+		0 => "Kod çözme ID",
+	],
+	"Encode ID" => [
+		0 => "Kodlama ID",
+	],
 	"Invalid email" => [
 		0 => "Geçersiz Mail Adresi. Lütfen Kontrol Ediniz.",
 	],
@@ -57,8 +67,8 @@ $translation_table = [
 	"Update in progress" => [
 		0 => "Güncelleme Devam Ediyor",
 	],
-	"An error occurred. Please try again later." => [
-		0 => "Bir hata oluştu. Lütfen daha sonra tekrar deneyin.",
+	"Missing %s file" => [
+		0 => "%s dosyası eksik",
 	],
 	"Invalid license info" => [
 		0 => "Geçersiz Lisans Bilgisi",
@@ -72,6 +82,15 @@ $translation_table = [
 	"Can't download %s" => [
 		0 => "%s Dosyası İndirilemiyor",
 	],
+	"Can't extract %s" => [
+		0 => "%s çıkartılamıyor",
+	],
+	"Can't create %s directory - %e" => [
+		0 => "%s dizini oluşturulamıyor - %e",
+	],
+	"Can't update %s file - %e" => [
+		0 => "Dosya %s güncellenemedi - %e",
+	],
 	"Untitled" => [
 		0 => "Başlıksız / isimsiz",
 	],
@@ -81,15 +100,37 @@ $translation_table = [
 	"Note: This content is private but anyone with the link will be able to see this." => [
 		0 => "Not: Bu içerik özeldir ama linke sahip olan birisi içeriği görüntüleyebilir.",
 	],
+	"Note: This content is password protected. Remember to pass the content password to share." => [
+		0 => "Not: Bu içerik şifre korumalıdır. İçerigi paylaşmak için şifreyide paylaşmanız gerekir.",
+	],
 	"Note: This content is private. Change privacy to \"public\" to share." => [
 		0 => "Not: Bu içerik Özeldir. Paylaşmak için Gizlilik Ayarlarını Değiştirin",
 	],
-	"Don't autodelete" => [
-		0 => "Otomatik silme",
+	"Private" => [
+		0 => "Özel",
+	],
+	"Public" => [
+		0 => "Genel",
+	],
+	"Me" => [
+		0 => "Ben",
+	],
+	"Link" => [
+		0 => "Link",
+	],
+	"Password" => [
+		0 => "Şifre",
+	],
+	"view" => [
+		0 => "görüntüleme",
+		1 => "görüntülemeler",
+	],
+	"After %n %t" => [
+		0 => "Sonra %n %t",
 	],
 	"minute" => [
 		0 => "dakika",
-		1 => "dakikalar",
+		1 => "dakika",
 	],
 	"hour" => [
 		0 => "saat",
@@ -97,21 +138,93 @@ $translation_table = [
 	],
 	"day" => [
 		0 => "gün",
-		1 => "günler",
+		1 => "gün",
+	],
+	"week" => [
+		0 => "hafta",
+		1 => "hafta",
+	],
+	"month" => [
+		0 => "ay",
+		1 => "ay",
+	],
+	"year" => [
+		0 => "yıl",
+		1 => "yıl",
+	],
+	"Don't autodelete" => [
+		0 => "Otomatik silme",
+	],
+	"Duplicated upload" => [
+		0 => "Çift yüklendi",
 	],
 	"Private upload" => [
 		0 => "Gizli Yükleme",
 	],
-	"view" => [
-		0 => "görüntüleme",
-		1 => "görüntüleme",
+	"like" => [
+		0 => "beğen",
+		1 => "beğeniler",
 	],
 	"image" => [
 		0 => "resim",
 		1 => "resimler",
 	],
-	"Link" => [
-		0 => "Link",
+	"Recent" => [
+		0 => "Son Yüklenen",
+	],
+	"Trending" => [
+		0 => "Trend Olanlar",
+	],
+	"Top users" => [
+		0 => "En İyi Kullanıcılar",
+	],
+	"Most recent" => [
+		0 => "Yeni Yüklenen Resimler",
+	],
+	"Oldest" => [
+		0 => "Eskiler",
+	],
+	"Most viewed" => [
+		0 => "En Çok Görüntülenen Resimler",
+	],
+	"Popular" => [
+		0 => "Popüler",
+	],
+	"Most liked" => [
+		0 => "Çok beğenilen",
+	],
+	"Explore" => [
+		0 => "Araştır (keşfet)",
+	],
+	"Animated" => [
+		0 => "Hareketli",
+	],
+	"Search" => [
+		0 => "Arama",
+	],
+	"People" => [
+		0 => "İnsan",
+	],
+	"Image" => [
+		0 => "Resim",
+		1 => "Resimler",
+	],
+	"Album" => [
+		0 => "Albüm",
+		1 => "Albümler",
+	],
+	"User" => [
+		0 => "Üye",
+		1 => "Üyeler",
+	],
+	"Can't create %s destination dir" => [
+		0 => "%s Hedef dizin oluşturulamıyor",
+	],
+	"Can't open %s for writing" => [
+		0 => "%s yazı için açılamaz",
+	],
+	"Internal" => [
+		0 => "Intern",
 	],
 	"Can't insert storage." => [
 		0 => "Depolama eklenemiyor.",
@@ -122,6 +235,9 @@ $translation_table = [
 	"Can't update storage details." => [
 		0 => "Depolama detayları güncellenemiyor.",
 	],
+	"requires %s" => [
+		0 => "gerektirir %s",
+	],
 	"Unlimited" => [
 		0 => "Sınırsız",
 	],
@@ -131,24 +247,9 @@ $translation_table = [
 	"Private profile" => [
 		0 => "Özel profil",
 	],
-	"Private" => [
-		0 => "Özel",
-	],
-	"year" => [
-		0 => "yıl",
-		1 => "yıllar",
-	],
-	"month" => [
-		0 => "ay",
-		1 => "aylar",
-	],
-	"week" => [
-		0 => "hafta",
-		1 => "haftalar",
-	],
 	"second" => [
 		0 => "saniye",
-		1 => "saniyeler",
+		1 => "saniye",
 	],
 	"%s ago" => [
 		0 => "%s den önce",
@@ -156,11 +257,11 @@ $translation_table = [
 	"moments ago" => [
 		0 => "Dakika Önce",
 	],
-	"System notification" => [
-		0 => "Sistem bildirimi",
-	],
 	"Dashboard" => [
 		0 => "Kullanıcı Kontrol Paneli",
+	],
+	"There is an update available for your system. Go to %s to download and install this update." => [
+		0 => "Sisteminiz için bir güncelleme var. Güncellemeyi indirmek ve yüklemek için %s gidin.",
 	],
 	"System database is outdated. You need to run the <a href=\"%s\">update</a> tool." => [
 		0 => "Veritabanı güncel değil. Güncelleme <a href=\"%s\">update</a> yazılımını çalıştırın.",
@@ -168,11 +269,47 @@ $translation_table = [
 	"Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>." => [
 		0 => "Website bakım modunda. Geri almak için şuraya gidin <a href=\"%s\">Panel> Ayarları</a>.",
 	],
+	"You should disable PHP error reporting for production enviroment. Go to <a href='%s'>System settings</a> to revert this setting." => [
+		0 => "PHP hata bildirimi canlı sistemlerde devre dışı bırakılmalıdır. Bu ayarı değiştirmek için <a href='%s'> sistem ayarlarına </a> gidin.",
+	],
+	"You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this." => [
+		0 => "Varsayılan posta ayarlarını ayarlamadınız. Bunu düzeltmek için  <a href='%s'>e-posta ayarlarına</a> gidininiz.",
+	],
+	"There is an update available for your Chevereto based website." => [
+		0 => "Chevereto tabanlı web siteniz için bir güncelleme var.",
+	],
+	"The release notes for this update are:" => [
+		0 => "Güncelleme için sürüm notları",
+	],
+	"admin dashboard" => [
+		0 => "yönetici paneli",
+	],
+	"You can apply this update directly from your %a or download it from %s and then manually install it." => [
+		0 => "Bu güncellemeyi doğrudan %a 'dan başlayabilir veya manuel olarak indirebilir ve %s 'den yükleyebilirsiniz.",
+	],
+	"view on %s" => [
+		0 => "%s üzerinde izle",
+	],
+	"cookie policy" => [
+		0 => "Çerez Politikası",
+	],
+	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link." => [
+		0 => "Tarama deneyiminizi ve hizmetlerimizi geliştirmek için kendi ve üçüncü taraf çerezleri kullanıyoruz. Web sitemizi kullanmaya devam ederseniz, bu  %cookie_policy_link'i kabul ettiğinizi anlıyoruz.",
+	],
+	"I understand" => [
+		0 => "Anlıyorum",
+	],
 	"You have been forbidden to use this website." => [
 		0 => "Bu siteyi kullanmanız yasaklanmıştır.",
 	],
+	"Feel free to browse and discover all my shared images and albums." => [
+		0 => "Tüm paylaşılan resimlerimi ve albümleri göz atın ve keşfedin",
+	],
 	"View all my images" => [
 		0 => "Bütün resimlerimi göster",
+	],
+	"Plugin" => [
+		0 => "Eklenti",
 	],
 	"That page doesn't exist" => [
 		0 => "Aradığınız sayfa bulunmamaktadır.",
@@ -231,14 +368,8 @@ $translation_table = [
 	"Check the errors in the form to continue." => [
 		0 => "Lütfen devam etmek için hataları kontrol ediniz.",
 	],
-	"Most recent" => [
-		0 => "Yeni Yüklenen Resimler",
-	],
-	"Oldest" => [
-		0 => "Eskiler",
-	],
-	"Most viewed" => [
-		0 => "En Çok Görüntülenen Resimler",
+	"Password required" => [
+		0 => "Şifre gerekli",
 	],
 	"Share" => [
 		0 => "Paylaş",
@@ -248,6 +379,9 @@ $translation_table = [
 	],
 	"Full info" => [
 		0 => "Geniş Bilgi",
+	],
+	"%a album hosted in %w" => [
+		0 => "%a oranında bir albüm saklanır",
 	],
 	"Stats" => [
 		0 => "İstatistikler",
@@ -267,8 +401,17 @@ $translation_table = [
 	"Chevereto version" => [
 		0 => "Chevereto Versiyon",
 	],
+	"install update" => [
+		0 => "Güncelleme yükleniyor",
+	],
 	"check for updates" => [
 		0 => "gücelleştirmeleri kontrol et",
+	],
+	"Support" => [
+		0 => "Destek",
+	],
+	"Need help? Go to %s and you will get help quickly." => [
+		0 => "Yardıma ihtiyacın var mı? %s adresine gidin ve mümkün olan en kısa sürede size yardımcı olacaksınız.",
 	],
 	"PHP version" => [
 		0 => "PHP Versiyon",
@@ -294,8 +437,8 @@ $translation_table = [
 	"Disabled" => [
 		0 => "Kapalı",
 	],
-	"Max. upload size" => [
-		0 => "Maksimum Resim Yükleme Boyutu",
+	"Max. upload file size" => [
+		0 => "Maksimum yükleme dosyası boyutu",
 	],
 	"Max. post size" => [
 		0 => "Maksimum Mesaj Boyutu",
@@ -313,11 +456,29 @@ $translation_table = [
 	"Links" => [
 		0 => "Linkler",
 	],
+	"Documentation" => [
+		0 => "Belgeleme",
+	],
+	"Changelog" => [
+		0 => "Değişiklikler",
+	],
+	"Request new features" => [
+		0 => "Yeni özellikler öner",
+	],
+	"Bug tracking" => [
+		0 => "Hata izleme",
+	],
+	"Blog" => [
+		0 => "Blog",
+	],
 	"Website" => [
 		0 => "Site Adresi",
 	],
 	"Content" => [
 		0 => "İçerik",
+	],
+	"Pages" => [
+		0 => "Sayfalar",
 	],
 	"Listings" => [
 		0 => "Listeler",
@@ -327,6 +488,9 @@ $translation_table = [
 	],
 	"Categories" => [
 		0 => "Kategoriler",
+	],
+	"Consent screen" => [
+		0 => "Onay mesajı",
 	],
 	"Flood protection" => [
 		0 => "Koruma",
@@ -342,6 +506,12 @@ $translation_table = [
 	],
 	"System" => [
 		0 => "Sistem",
+	],
+	"Routing" => [
+		0 => "Yönlendirme",
+	],
+	"Languages" => [
+		0 => "Dil",
 	],
 	"External storage" => [
 		0 => "Harici Depolama",
@@ -361,6 +531,15 @@ $translation_table = [
 	"Additional settings" => [
 		0 => "İlave ayarlar",
 	],
+	"Tools" => [
+		0 => "Araçlar",
+	],
+	"Can't delete all homepage cover images" => [
+		0 => "Tüm başlık resimleri silinemez",
+	],
+	"Homepage cover image deleted" => [
+		0 => "Kapak resmi silinmiş",
+	],
 	"Local" => [
 		0 => "Yerel",
 	],
@@ -373,8 +552,44 @@ $translation_table = [
 	"search content" => [
 		0 => "İçerik Arama",
 	],
+	"Add page" => [
+		0 => "Sayfa ekle",
+	],
+	"Edit page ID %s" => [
+		0 => "Sayfa kimliğini düzenle %s",
+	],
+	"The page has been added successfully." => [
+		0 => "Sayfa başarıyla eklendi.",
+	],
+	"The page has been deleted." => [
+		0 => "Sayfa silindi.",
+	],
+	"homepage" => [
+		0 => "Web sitesi",
+	],
+	"Before main title (%s)" => [
+		0 => "Ana başlıktan önce (%s)",
+	],
+	"After call to action (%s)" => [
+		0 => "Call to Action\" (%s) tarafindan",
+	],
+	"After cover (%s)" => [
+		0 => "Kapak resmine göre (%s)",
+	],
+	"After listing (%s)" => [
+		0 => "Listeleme göre (%s)",
+	],
+	"Before pagination" => [
+		0 => "Sayfa numaralandırmadan önce",
+	],
+	"After pagination" => [
+		0 => "Sayfa numaralandırıldıktan sonra",
+	],
 	"Content (image and album)" => [
 		0 => "İçerik (görüntü ve albüm)",
+	],
+	"Tab about column" => [
+		0 => "Görüntü detaylarına ek olarak",
 	],
 	"Before comments" => [
 		0 => "Yorumlardan önce",
@@ -427,6 +642,9 @@ $translation_table = [
 	"After top (explore page)" => [
 		0 => "Üst sonra (sayfa keşfetmek)",
 	],
+	"NSFW" => [
+		0 => "NSFW",
+	],
 	"Invalid website name" => [
 		0 => "Geçersiz Website Adresi",
 	],
@@ -436,8 +654,8 @@ $translation_table = [
 	"Invalid timezone" => [
 		0 => "Geçersiz Zaman Dilimi",
 	],
-	"Invalid value" => [
-		0 => "Geçersiz Değer",
+	"Invalid value: %s" => [
+		0 => "Geçersiz değer: %s",
 	],
 	"Invalid upload storage mode" => [
 		0 => "Geçersiz Resim Yükleme Modu",
@@ -451,6 +669,9 @@ $translation_table = [
 	"Invalid thumb height" => [
 		0 => "Geçersiz Küçük (trumb) Resim Yüksekliği. Lütfen Ayarlarınızı Kontrol Ediniz.",
 	],
+	"Invalid medium size" => [
+		0 => "Geçersiz medya boyutu",
+	],
 	"Invalid watermark percentage" => [
 		0 => "Watermark yüzdesi geçersiz",
 	],
@@ -460,8 +681,20 @@ $translation_table = [
 	"Invalid theme" => [
 		0 => "Geçersiz Tema ! Lütfen Ayarlarınızı Kontrol Ediniz.",
 	],
+	"Invalid value" => [
+		0 => "Geçersiz Değer",
+	],
 	"Invalid theme tone" => [
 		0 => "Geçersiz tema tonu.",
+	],
+	"Invalid theme main color" => [
+		0 => "Temanın geçersiz ana rengi",
+	],
+	"Invalid theme top bar color" => [
+		0 => "Tema ana çubuğunun geçersiz rengi",
+	],
+	"Invalid theme top bar button color" => [
+		0 => "Tema ana çubuğu düğmelerinin geçersiz rengi",
 	],
 	"Invalid theme image listing size" => [
 		0 => "Geçersiz tema listeleme boyutu.",
@@ -478,14 +711,86 @@ $translation_table = [
 	"Invalid SMTP security" => [
 		0 => "Geçersiz SMTP",
 	],
+	"Invalid personal mode user ID" => [
+		0 => "Özel mod için geçersiz kullanıcı kimliği",
+	],
+	"Invalid or reserved route" => [
+		0 => "Geçersiz veya ayrılmış rota",
+	],
+	"Invalid website privacy mode" => [
+		0 => "Web sitesinin geçersiz gizlilik modu",
+	],
 	"Invalid website content privacy mode" => [
 		0 => "Geçersiz website içerik gizlilik modu.",
+	],
+	"Invalid homepage style" => [
+		0 => "Geçersiz stil",
+	],
+	"Invalid homepage call to action button color" => [
+		0 => "\"Call to Action\" düğmesinin geçersiz rengi",
+	],
+	"Invalid homepage call to action functionality" => [
+		0 => "Geçersiz \"Call to Action\" işlevi",
+	],
+	"Invalid title" => [
+		0 => "Geçersiz başlık",
+	],
+	"Invalid status" => [
+		0 => "Geçersiz durum",
+	],
+	"Invalid type" => [
+		0 => "Geçersiz tür",
+	],
+	"Invalid visibility" => [
+		0 => "Geçersiz görünürlük",
+	],
+	"Invalid target attribute" => [
+		0 => "Geçersiz hedefler özelliği",
+	],
+	"Invalid rel attribute" => [
+		0 => "Geçersiz rel-Attribut",
+	],
+	"Invalid icon" => [
+		0 => "Geçersiz simge",
+	],
+	"Invalid URL key" => [
+		0 => "Geçersiz URL anahtarı",
+	],
+	"Invalid file path" => [
+		0 => "Geçersiz dosya yolu",
+	],
+	"Invalid link URL" => [
+		0 => "Geçersiz bağlantı URL'si",
+	],
+	"Invalid user minimum age" => [
+		0 => "Kullanıcı için geçersiz yaş",
+	],
+	"Only alphanumeric, hyphen and underscore characters are allowed" => [
+		0 => "Yalnızca alfasayısal karakterler, kısa çizgiler ve alt çizgiler girilebilir",
+	],
+	"Invalid URL" => [
+		0 => "Geçersiz URL",
+	],
+	"Routes can't be the same" => [
+		0 => "Yollar aynı olmamalı",
 	],
 	"Invalid upload image path" => [
 		0 => "Hata ! Lütfen Resim Yükleme Klasörünü ve Chmod Değerlerini Kontrol Ediniz.",
 	],
+	"Invalid call to action URL" => [
+		0 => "Geçersiz \"Call to Action\" URL'si",
+	],
 	"Max. allowed %s" => [
 		0 => "Maksimum Resim Yükleme İznini Belirtiniz (%s olarak)",
+	],
+	"Can't map %m to an existing folder (%f)" => [
+		0 => "%m mevcut klasörle eşlenemez (%f)",
+	],
+	"Can't map %m to an existing route (%r)" => [
+		0 => "%m mevcut yolla eşlenemez (%r)",
+	],
+	"Can't map %m to %r (username collision)" => [
+		0 => "%m,%r ile eşleştirilemez (kullanıcı adı çarpışması)",
 	],
 	"Invalid SMTP server" => [
 		0 => "Geçersiz SMTP Server Ayarı ! Lütfen SMTP Server Ayarınızı Kontrol Ediniz.",
@@ -493,14 +798,17 @@ $translation_table = [
 	"Invalid SMTP username" => [
 		0 => "Geçersiz SMTP Kullanıcı Adı Ayarı ! Lütfen SMTP Server Ayarınızı Kontrol Ediniz.",
 	],
-	"Invalid URL" => [
-		0 => "Geçersiz URL",
+	"This URL key is already being used by another page (ID %s)" => [
+		0 => "Bu URL anahtarı zaten başka bir sayfa için kullanılıyor (ID %s)",
 	],
-	"Top users" => [
-		0 => "En İyi Kullanıcılar",
+	"This file path is already being used by another page (ID %s)" => [
+		0 => "Bu dosya yolu zaten başka bir sayfa için kullanılıyor (ID %s)",
 	],
-	"Explore" => [
-		0 => "Araştır (keşfet)",
+	"Can't save page contents: %s." => [
+		0 => "Sayfa içeriği kaydedilemiyor: %s.",
+	],
+	"Following" => [
+		0 => "Takip",
 	],
 	"About" => [
 		0 => "Hakkımızda",
@@ -520,23 +828,41 @@ $translation_table = [
 	"Upload date" => [
 		0 => "Yükleme Zamanı",
 	],
-	"%s images" => [
-		0 => "%s resimler",
+	"Image %i in %a album" => [
+		0 => "Resim %i - %a bir albümde",
+	],
+	"Image %i in %c category" => [
+		0 => "Resim %i - %c kategorisinde",
+	],
+	"Image %i hosted in %w" => [
+		0 => "Resim %i kaydedildi %w",
 	],
 	"Direct links" => [
 		0 => "Direk Linkler",
 	],
-	"Image URL" => [
-		0 => "Resim URL Adresi",
-	],
 	"Image link" => [
 		0 => "Resim Link",
+	],
+	"Image URL" => [
+		0 => "Resim URL Adresi",
 	],
 	"Thumbnail URL" => [
 		0 => "Küçük Resim URL",
 	],
 	"Medium URL" => [
 		0 => "Resim URL",
+	],
+	"Full image" => [
+		0 => "Tam boyut",
+	],
+	"Full image (linked)" => [
+		0 => "Tam görünüm (bağlantılı)",
+	],
+	"Medium image (linked)" => [
+		0 => "Orta resim (bağlantılı)",
+	],
+	"Thumbnail image (linked)" => [
+		0 => "Küçük resim (bağlantılı)",
 	],
 	"Login needed" => [
 		0 => "İşlem Yapmak İçin Giriş Yapmanız Gereklidir",
@@ -553,8 +879,47 @@ $translation_table = [
 	"Username already being used" => [
 		0 => "Kullanıcı adı zaten kullanıyor.",
 	],
+	"Add a password or another social connection before deleting %s" => [
+		0 => "%s’i silmeden önce bir şifre veya sosyal medya bağlantısı ekleyin.",
+	],
+	"Add an email or another social connection before deleting %s" => [
+		0 => "Lütfen %s'i silmeden önce bir e-posta adresi veya başka bir sosyal medya bağlantısı ekleyin.",
+	],
 	"%s has been disconnected." => [
 		0 => "%s bağlantısı kesildi",
+	],
+	"Test email from %s @ %t" => [
+		0 => "E-postayı test %s @ %t",
+	],
+	"This is just a test" => [
+		0 => "Bu sadece bir test.",
+	],
+	"Test email sent to %s." => [
+		0 => "Test e-postası %s adresine gönderildi.",
+	],
+	"Downloading %s data" => [
+		0 => "%s veri indiriliyor",
+	],
+	"User %s followed" => [
+		0 => "%s kullanıcısı takip ediliyor.",
+	],
+	"User %s unfollowed" => [
+		0 => "%s kullanıcısı artık takip edilmiyor.",
+	],
+	"Content liked" => [
+		0 => "Içeriğinizi beğendin",
+	],
+	"Content disliked" => [
+		0 => "Artık içeriği beğenmiyorsun",
+	],
+	"%u liked your %t %c" => [
+		0 => "%u kişi %t %c beğendi",
+	],
+	"%u is now following you" => [
+		0 => "%u seni takip ediyor",
+	],
+	"A private user" => [
+		0 => "Özel kullanıcı",
 	],
 	"Wrong Username/Email password combination" => [
 		0 => "Geçersiz Kullanıcı Adı ve Şifre ! Lütfen Kullanıcı Adı ve Şifre Ayarlarınızı Kontrol Ederek Tekrar Giriş Yapınız. ",
@@ -565,29 +930,20 @@ $translation_table = [
 	"Logged out" => [
 		0 => "Çıkış ",
 	],
-	"General questions/comments" => [
-		0 => "Genel sorular/yorumlar",
+	"Upload images" => [
+		0 => "Resim yükle",
 	],
-	"DMCA complaint" => [
-		0 => "DMCA şikayet",
+	"Upload plugin" => [
+		0 => "Upload-Plugin",
 	],
-	"Invalid name" => [
-		0 => "Geçersiz İsim (Ad) ! Lütfen Kontrol Ediniz.",
+	"Image search results for %s" => [
+		0 => "%s için resim arama sonuçları",
 	],
-	"Invalid message" => [
-		0 => "Geçersiz mesaj (ileti). Lütfen geçerli bir mesaj yazınız.",
+	"Album search results for %s" => [
+		0 => "%s için albüm arama sonuçları",
 	],
-	"Invalid subject" => [
-		0 => "Geçersiz konu. Lütfen geçerli bir konu yazınız.",
-	],
-	"Invalid reCAPTCHA" => [
-		0 => "Geçersiz güvenlik kodu. Lütfen güvenlik kodlarını kontrol ediniz.",
-	],
-	"Mail error" => [
-		0 => "Hatalı (geçersiz) mail adresi.",
-	],
-	"Search" => [
-		0 => "Arama",
+	"User search results for %s" => [
+		0 => "%s için kullanıcı arama sonuçları",
 	],
 	"Account" => [
 		0 => "Hesabım",
@@ -595,14 +951,17 @@ $translation_table = [
 	"Profile" => [
 		0 => "Kullanıcı Profili",
 	],
-	"Password" => [
-		0 => "Kullanıcı Şifresi",
-	],
 	"Linked accounts" => [
 		0 => "Bağlı hesaplar",
 	],
+	"Invalid image expiration: %s" => [
+		0 => "Geçersiz son kullanma tarihi: %s",
+	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "Lütfen %s Adresinize Gönderilen Aktivasyon Kodunu Onaylamanız Gerekmektedir. Aksi Takdirde Üyelik İşleminiz Onaylanmayacaktır.",
+	],
+	"Invalid name" => [
+		0 => "Geçersiz İsim (Ad) ! Lütfen Kontrol Ediniz.",
 	],
 	"Invalid website" => [
 		0 => "Geçersiz Website Adresi ! Lütfen Kontrol Ediniz.",
@@ -628,8 +987,17 @@ $translation_table = [
 	"Settings for %s" => [
 		0 => "%s Ayarları",
 	],
+	"You must agree to the terms and privacy policy" => [
+		0 => "Şartları ve gizlilik politikasını kabul etmeniz gerekiyor",
+	],
+	"You must be at least %s years old to use this website." => [
+		0 => "Bu siteyi kullanabilmeniz için en az %s yaşında olmanız gereklidir.",
+	],
 	"Create account" => [
 		0 => "Kaydol",
+	],
+	"Upload" => [
+		0 => "Resim Yükle",
 	],
 	"%s's Images" => [
 		0 => "%s Resimleri",
@@ -640,6 +1008,24 @@ $translation_table = [
 	"Results for" => [
 		0 => "Sonuçlar",
 	],
+	"Liked by %s" => [
+		0 => "%s tarafından beğenildi",
+	],
+	"Liked" => [
+		0 => "Beğen",
+	],
+	"Followers" => [
+		0 => "Takipciler",
+	],
+	"%n (%u) albums on %w" => [
+		0 => "%n (%u) albümler %w",
+	],
+	"%n (%u) on %w" => [
+		0 => "%n (%u) on %w",
+	],
+	"Discovery" => [
+		0 => "Keşfet",
+	],
 	"Close" => [
 		0 => "Çıkış",
 	],
@@ -647,13 +1033,10 @@ $translation_table = [
 		0 => "Gelişmiş arama",
 	],
 	"Random" => [
-		0 => "Rastgele İsim",
+		0 => "Rastgele",
 	],
 	"Notices (%s)" => [
 		0 => "Bildirimler (%s)",
-	],
-	"Upload" => [
-		0 => "Resim Yükle",
 	],
 	"Sign in with another account" => [
 		0 => "Başka bir hesap ile oturum açın",
@@ -679,11 +1062,26 @@ $translation_table = [
 	"Username" => [
 		0 => "Kullanıcı Adı",
 	],
-	"By signing up you agree to our <a href=\"%s\">Terms of service</a>" => [
-		0 => "Üye olarak <a href=\"%s\">hizmet şartlarını</a> kabul ederim.",
+	"I'm at least %s years old" => [
+		0 => "En az %s yaşındayım",
+	],
+	"terms" => [
+		0 => "şartlar",
+	],
+	"privacy policy" => [
+		0 => "gizlilik politikası",
+	],
+	"I agree to the %terms_link and %privacy_link" => [
+		0 => "%terms_link ve %privacy_link’i kabul ediyorum",
+	],
+	"Notifications" => [
+		0 => "Bildirimler",
 	],
 	"loading" => [
 		0 => "Yükleniyor...",
+	],
+	"You don't have notifications" => [
+		0 => "Bildirim yok :(",
 	],
 	"My Profile" => [
 		0 => "Benim Profilim",
@@ -733,56 +1131,83 @@ $translation_table = [
 	"This email was sent from %w %u" => [
 		0 => "Bu email %w %u tarafından gönderilmiştir",
 	],
+	"Drag and drop or paste images here to upload" => [
+		0 => "Resimleri sürükleyip bırakmak veya kopyalamak için",
+	],
 	"Select the images to upload" => [
 		0 => "Yüklemek istediğiniz resmi seçin.",
 	],
-	"You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "veya <a data-trigger=\"anywhere-upload-input\">Bilgisayarıma Gözat</a> Veya <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">URL ile Resim Ekle</a>.",
+	"browse from your computer" => [
+		0 => "bilgisayardan seç",
 	],
-	"Edit or resize an image by clicking the image preview" => [
-		0 => "Resim ön izlemeye tıklayarak resim üzerinde düzenleme yapabilir veya tekrar boyutlandırabilirsiniz",
+	"add image URLs" => [
+		0 => "Resim URL'leri",
 	],
-	"Edit or resize an image by touching the image preview" => [
-		0 => "Resim ön izlemeye dokunarak resim üzerinde düzenleme yapabilir veya tekrar boyutlandırabilirsiniz",
+	"You can also %i or %u." => [
+		0 => "%i veya %u da kullanabilirsiniz.",
 	],
-	"You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>." => [
-		0 => "Resim eklemeyi <a data-trigger=\"anywhere-upload-input\">Doğrudan bilgisayarınızdan</a> yapabilir veya <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">resimlerin URL'lerini</a> girerek yapabilirsiniz.",
+	"browse from your device" => [
+		0 => "Cihazınızı arayın",
 	],
-	"You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>." => [
-		0 => "<a data-trigger=\"anywhere-upload-input\">Doğrudan bilgisayarınızdan</a> veya <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">yükleyeceğiniz görüntülerin URL'lerini</a> girerek resim ekleyebilirsiniz.",
+	"take a picture" => [
+		0 => "Fotoğraf çekiniz",
 	],
-	"Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>" => [
-		0 => "Yüklenen <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">Resimler</span>",
+	"You can also %i, %c or %u." => [
+		0 => "Ayrıca %i, %c veya %u da olabilir.",
+	],
+	"Edit or resize any image by clicking the image preview" => [
+		0 => "Önizlemeyi tıklayarak bir resmi düzenleyin veya ölçeklendirin",
+	],
+	"Edit any image by touching the image preview" => [
+		0 => "Önizleme dokunarak bir görüntüyü düzenlenleyin",
+	],
+	"your computer" => [
+		0 => "Bilgisayarınız",
+	],
+	"You can add more images from %i or %u." => [
+		0 => "%i veya %u ’dan daha fazla resim ekleyebilirsiniz.",
+	],
+	"your device" => [
+		0 => "Cihazınız",
+	],
+	"You can add more images from %i, %c or %u." => [
+		0 => "%i, %c veya %u ’dan daha fazla resim ekleyebilirsiniz.",
+	],
+	"Uploading %q %o" => [
+		0 => "%q %o yükleniyor",
 	],
 	"complete" => [
 		0 => "tamamlandı",
 	],
-	"The queue is being uploaded. It will take just a few seconds to complete." => [
-		0 => "Resimlerin düzenlenmesi yapılıyor. Bu işlem birkaç saniye sürebilir.",
+	"The queue is being uploaded, it should take just a few seconds to complete." => [
+		0 => "Sıra işlenir, bu birkaç saniye sürer.",
 	],
 	"Upload complete" => [
 		0 => "Yükleme Tamamlandı",
 	],
-	"Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album." => [
-		0 => "Yüklenen Resimlerinizi nerede saklayacaksınız ? <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">Albümsüz genel olarak kullanmak istiyorum.</a>. veya <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">Resimler için yeni bir Albüm oluştur</a> veya <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> Kullandığım albümlerimden birine ekle.",
+	"Uploaded content added to %s." => [
+		0 => "Yüklenen resimler %s öğesine eklendi.",
 	],
-	"You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account." => [
-		0 => "Yüklediginiz resimleri hesabınıza kayit etmek icin buradan <a href=\"%s\">yeni bir hesap oluşturabilirsiniz</a> veya <a href=\"%l\">Giriş yapabilirsiniz</a>",
+	"create a new album" => [
+		0 => "Yeni albüm oluştur",
 	],
-	"No <span data-text=\"queue-objects\">images</span> have been uploaded" => [
-		0 => "Hiçbir <span data-text=\"queue-objects\">resim</span> yüklenmedi.",
+	"move it to an existing album" => [
+		0 => "Mevcut albüme kaydır",
+	],
+	"create an account" => [
+		0 => "Hesap Oluştur",
+	],
+	"sign in" => [
+		0 => "Giriş",
 	],
 	"Some errors have occured and the system couldn't process your request." => [
 		0 => "Hata! Lütfen işlemlerini tekrar deneyiniz",
 	],
+	"Category" => [
+		0 => "Kategori",
+	],
 	"Select category" => [
 		0 => "Kategori Seçin",
-	],
-	"Change upload privacy" => [
-		0 => "Yükleme gizliliği değiştir",
-	],
-	"cancel" => [
-		0 => "İptal Et",
 	],
 	"Mark this if the upload is not family safe" => [
 		0 => "Yükleyeceğiniz resim Aile için uygun değilse bu işareti seç",
@@ -792,6 +1217,9 @@ $translation_table = [
 	],
 	"Uploading" => [
 		0 => "Yükleniyor",
+	],
+	"cancel" => [
+		0 => "İptal Et",
 	],
 	"cancel remaining" => [
 		0 => "Yüklemeyi İptal Et",
@@ -805,11 +1233,17 @@ $translation_table = [
 	"Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information." => [
 		0 => "Daha fazla bilgi için <a data-modal=\"simple\" data-target=\"failed-upload-result\">hata raporunu</a> kontrol ediniz.",
 	],
-	"max" => [
-		0 => "Maksimum",
+	"reset" => [
+		0 => "Dönüştür",
 	],
 	"close" => [
 		0 => "kapat",
+	],
+	"copy" => [
+		0 => "Kopyala",
+	],
+	"insert" => [
+		0 => "Ekle",
 	],
 	"Edit" => [
 		0 => "Düzenle",
@@ -837,6 +1271,15 @@ $translation_table = [
 	],
 	"Note: Animated GIF images won't be resized." => [
 		0 => "Not: Hareket içeren GIF görüntülerin boyutlarını değiştiremezsiniz.",
+	],
+	"Auto delete image" => [
+		0 => "Resimlerin otomatik olarak silinmesi",
+	],
+	"Sign up" => [
+		0 => "Kayıt ol",
+	],
+	"Mark this if the image is not family safe" => [
+		0 => "İçeriğin aile için güvenli olup olmadığını seçin",
 	],
 	"Flag as unsafe" => [
 		0 => "Güvenli değil olarak işaretle",
@@ -878,6 +1321,12 @@ $translation_table = [
 	"HTML Codes" => [
 		0 => "HTML Kodları",
 	],
+	"HTML image" => [
+		0 => "HTML (tam görünüm)",
+	],
+	"HTML full linked" => [
+		0 => "HTML (tam görünüm bağlantısı)",
+	],
 	"HTML medium linked" => [
 		0 => "HTML Standart Resim Link",
 	],
@@ -886,6 +1335,12 @@ $translation_table = [
 	],
 	"BBCodes" => [
 		0 => "BBKodları",
+	],
+	"BBCode full" => [
+		0 => "BBCode (tam görünüm)",
+	],
+	"BBCode full linked" => [
+		0 => "BBCode (tam görünüm bağlantısı)",
 	],
 	"BBCode medium linked" => [
 		0 => "BB Standart resim link",
@@ -908,9 +1363,6 @@ $translation_table = [
 	"None of these words" => [
 		0 => "Bu kelimelerden hiçbiri değil",
 	],
-	"Category" => [
-		0 => "Kategori",
-	],
 	"Storage" => [
 		0 => "Depolama",
 	],
@@ -929,11 +1381,11 @@ $translation_table = [
 	"Brief description of this album" => [
 		0 => "Albüm hakkında kısa tanım",
 	],
+	"Album privacy" => [
+		0 => "Albüm gizliliği",
+	],
 	"Who can view this content" => [
 		0 => "Bu İçeriği Kimler Görüntüleyebilir ?",
-	],
-	"Public" => [
-		0 => "Genel",
 	],
 	"Private (just me)" => [
 		0 => "Özel ve Gizli (Sadece Ben)",
@@ -941,8 +1393,11 @@ $translation_table = [
 	"Private (anyone with the link)" => [
 		0 => "Özel (bağlantıya sahip herkes görebilir)",
 	],
-	"No category" => [
-		0 => "Kategori yok",
+	"Private (password protected)" => [
+		0 => "Özel (şifre korumalı)",
+	],
+	"Album password" => [
+		0 => "Albüm Şifre",
 	],
 	"Name" => [
 		0 => "İsim (Ad)",
@@ -965,6 +1420,9 @@ $translation_table = [
 	"Untitled image" => [
 		0 => "İsimsiz resim",
 	],
+	"You can use wildcard * characters." => [
+		0 => "Joker karakterler kullanabilirsiniz (*).",
+	],
 	"Expiration date" => [
 		0 => "Son kullanma tarihi",
 	],
@@ -974,18 +1432,17 @@ $translation_table = [
 	"Example" => [
 		0 => "Örnek",
 	],
+	"Until which date this IP address will be banned? Leave it empty for no expiration." => [
+		0 => "IP adresi ne zamana kadar engellenmeli? Hiçbir giriş son kullanma tarihi belirtmez.",
+	],
 	"Message" => [
 		0 => "Mesajınız",
 	],
+	"Text message, HTML or a redirect URL" => [
+		0 => "Kısa mesaj, HTML veya yönlendirme URL'si",
+	],
 	"Existing album" => [
 		0 => "Mevcut Albüm",
-	],
-	"Album" => [
-		0 => "Albüm",
-		1 => "Albümler",
-	],
-	"private" => [
-		0 => "Gizli",
 	],
 	"create new album" => [
 		0 => "Yeni Albüm Oluştur",
@@ -1013,6 +1470,39 @@ $translation_table = [
 	],
 	"Storage secret" => [
 		0 => "Depolama gizli",
+	],
+	"Client email" => [
+		0 => "Müşteri e-posta",
+	],
+	"Google Cloud client email" => [
+		0 => "Google Cloud müşteri e-postası",
+	],
+	"You will need a <a %s>service account</a> for this." => [
+		0 => "Bu özellik için bir <a %s> hesabına </a> ihtiyacınız var.",
+	],
+	"Private key" => [
+		0 => "Özel anahtar",
+	],
+	"Google Cloud JSON key" => [
+		0 => "Google Cloud JSON anahtarı",
+	],
+	"Service name" => [
+		0 => "Hizmet adı",
+	],
+	"Identity URL" => [
+		0 => "Kimlik URL",
+	],
+	"Identity API endpoint" => [
+		0 => "Kimlik API son nokta",
+	],
+	"API endpoint for OpenStack identity" => [
+		0 => "OpenStack kimliği için API son noktası",
+	],
+	"Container" => [
+		0 => "Container",
+	],
+	"Storage container" => [
+		0 => "Depolama-Container",
 	],
 	"Hostname or IP of the storage server" => [
 		0 => "Depolama sunucusunun adı veya ip adresi",
@@ -1044,6 +1534,9 @@ $translation_table = [
 	"Storage URL" => [
 		0 => "Depolama URL",
 	],
+	"The system will map the images of this storage to this URL." => [
+		0 => "Sistem bu mağazadaki dosyaları bu URL ile eşler.",
+	],
 	"view more" => [
 		0 => "Daha Fazlası",
 	],
@@ -1074,6 +1567,9 @@ $translation_table = [
 	"Delete" => [
 		0 => "Sil",
 	],
+	"Create new album" => [
+		0 => "Yeni albüm oluştur",
+	],
 	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
 		0 => "Hesabınız varsa lütfen giriş yapınız. Hesabınız yoksa bütün fonksiyonlardan faydalanmak için lütfen <a href=\"%s\">kayıt</a> olunuz.",
 	],
@@ -1101,6 +1597,21 @@ $translation_table = [
 	"All the selected images will be assigned to this category." => [
 		0 => "Seçilen tüm görüntüler bu kategoriye tahsis edilecektir.",
 	],
+	"There is no categories." => [
+		0 => "Kategori yok.",
+	],
+	"Confirm flag content as safe" => [
+		0 => "İşaretli içeriği güvenli olarak onaylayın",
+	],
+	"Do you really want to flag this content as safe?" => [
+		0 => "Bu içeriği gerçekten güvenli olarak işaretlemek istiyor musunuz?",
+	],
+	"Confirm flag content as unsafe" => [
+		0 => "İşaretli içeriği rahatsız edici olarak onaylayın",
+	],
+	"Do you really want to flag this content as unsafe?" => [
+		0 => "Bu içeriği gerçekten rahatsız edici olarak işaretlemek istiyor musunuz?",
+	],
 	"Confirm deletion" => [
 		0 => "Silmek istediğinizden emin misiniz. Eminseniz onaylayınız.",
 	],
@@ -1110,8 +1621,32 @@ $translation_table = [
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "Seçili resimleri silmek istediğinizden eminmisiniz ?. Resimler geri dönüşümü olmaksızın silinecektir.",
 	],
+	"Fullscreen" => [
+		0 => "Tam ekran",
+	],
+	"Exit fullscreen" => [
+		0 => "Tam ekrandan çık",
+	],
+	"Guest" => [
+		0 => "Misafir Kullanıcı",
+	],
+	"Keyboard shortcuts" => [
+		0 => "Klavye Kısayol",
+	],
+	"Like" => [
+		0 => "Beğen",
+	],
+	"Uploaded by guest" => [
+		0 => "Bir misafir tarafından yüklendi",
+	],
 	"From %s" => [
 		0 => "Yükleyen %s",
+	],
+	"Uploaded by private" => [
+		0 => "Özel olarak yüklendi",
+	],
+	"by %u" => [
+		0 => "%u'dan",
 	],
 	"Select" => [
 		0 => "Seçiniz",
@@ -1164,6 +1699,9 @@ $translation_table = [
 	"Resend instructions" => [
 		0 => "Tekrar Gönder",
 	],
+	"An error occurred. Please try again later." => [
+		0 => "Bir hata oluştu. Lütfen daha sonra tekrar deneyin.",
+	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "Önceki gönderilen eposta içerisinde şifrenizi sıfırlama talimatı bulunmaktaydı.Şayet talimatı almadıysanız eposta spam veya önemsiz klasörlerine kontrol ediniz.",
 	],
@@ -1197,6 +1735,9 @@ $translation_table = [
 	"Re-enter your new password" => [
 		0 => "Lütfen Yeni Şifrenizi Tekrardan Yazınız.",
 	],
+	"An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters." => [
+		0 => "Kullanıcı hesabını etkinleştirme talimatları ile %s adresine bir e-posta gönderildi. Talimatlara sahip bir e-posta almadıysanız, lütfen spam filtrenizi kontrol edininiz.",
+	],
 	"Enter the username or email address that you used to create your account to continue." => [
 		0 => "Devam edebilmek için hesabınızı yaratırken girdiğiniz kullanıcı adınızı ve email adresinizi girin.",
 	],
@@ -1209,16 +1750,26 @@ $translation_table = [
 	"Delete album" => [
 		0 => "Albümü Sil",
 	],
+	"You like this" => [
+		0 => "Bunu beğendiniz",
+	],
+	"Upload to album" => [
+		0 => "Albüme yükle",
+	],
 	"Album link" => [
 		0 => "Albüm Link Adresi",
 	],
-	"Image" => [
-		0 => "Resim",
-		1 => "Resimler",
+	"Please read and comply with the following conditions before you continue:" => [
+		0 => "Devam etmeden önce lütfen aşağıdaki koşulları okuyun ve onaylayın:",
 	],
-	"User" => [
-		0 => "Üye",
-		1 => "Üyeler",
+	"This website contains information, links and images of sexually explicit material. If you are under the age of %s, if such material offends you or if it's illegal to view such material in your community please do not continue.\n\nI am at least %s years of age and I believe that as an adult it is my inalienable right to receive/view sexually explicit material. I desire to receive/view sexually explicit material. \n\nI believe that sexual acts between consenting adults are neither offensive nor obscene. The viewing, reading and downloading of sexually explicit materials does not violate the standards of my community, town, city, state or country.\n\nThe sexually explicit material I am viewing is for my own personal use and I will not expose minors to the material.\n\nI am solely responsible for any false disclosures or legal ramifications of viewing, reading or downloading any material in this site. Furthermore this website nor its affiliates will be held responsible for any legal ramifications arising from fraudulent entry into or use of this website.\n\nThis consent screen constitutes a legal agreement between this website and you and/or any business in which you have any legal or equitable interest. If any portion of this agreement is deemed unenforceable by a court of competent jurisdiction it shall not affect the enforceability of the other portions of the agreement." => [
+		0 => "Bu web sitesi cinsel açıdan uygunsuz materyaller içeren bilgiler, bağlantılar ve resimler içermektedir. Eğer %s yıldan daha az iseniz, gösterilen materyallere herhangi bir şekilde katılmamalısınız ya da ülkenizde gösterilen materyaller yasa dışı ise, lütfen bu sayfadan çıkınız.\n\nEn az %s yaşındayım ve bir yetişkin olarak cinsel taciz edici materyalleri görmeye hakkım olduğuna inanıyorum. Cinsel olarak saldırgan materyalleri görmek veya almak istiyorum.\n\nYetişkin cinsel eylemlerinin ne müstehcen ne de saldırgan olduğu kanaatindeyim. Cinsel olarak müstehcen materyalleri görüntülemek, okumak ve indirmek, topluluklarım, şehri, eyaleti veya ülkemi yasaları ihlal etmemektedir.\n\nCinsel olarak rahatsız edici materyaller sadece kişisel kullanımım içindir ve malzemeyi küçüklere teslim etmeyeceğim.\n\nBu sitedeki materyalin görüntülenmesi, okunması ve indirilmesi sonucu ortaya çıkabilecek herhangi bir izinsiz yayın veya hukuki sonuçtan şahsen sorumluyum. Ayrıca, bu sitenin operatörü veya bu sitenin diğer herhangi bir ortakları, bu siteyi ziyaret ettiğim veya bu siteyi kullanmamdan kaynaklanan herhangi bir yasal sonuçtan sorumlu değildir.\n\nBu rıza bildirimi, kullanıcı ile bu web sitesinin operatörü arasında yasal olarak bağlayıcı bir anlaşma teşkil eder. Bu anlaşmanın herhangi bir kısmı yasal olarak geçersiz olursa, diğer tüm bileşenler etkilenmez.",
+	],
+	"By clicking in \"I Agree\" you declare that you have read and understood all the conditions mentioned above." => [
+		0 => "\"Kabul ediyorum\" u tıklayarak, yukarıdaki koşulları okuduğunuzu ve anladığınızı beyan etmiş olursunuz.",
+	],
+	"I Agree" => [
+		0 => "Kabul ediyorum",
 	],
 	"Disk used" => [
 		0 => "Kullanılan Disk Alanı",
@@ -1232,6 +1783,12 @@ $translation_table = [
 	"Administrator" => [
 		0 => "Yönetici",
 	],
+	"This setting is always diabled when using personal website mode." => [
+		0 => "Özel mod etkinse bu ayar her zaman devre dışı bırakılır.",
+	],
+	"documentation" => [
+		0 => "Belgeleme",
+	],
 	"Add category" => [
 		0 => "Kategori ekle",
 	],
@@ -1240,6 +1797,9 @@ $translation_table = [
 	],
 	"Add storage" => [
 		0 => "Depolama ekle",
+	],
+	"Return to pages" => [
+		0 => "Sayfalara dön",
 	],
 	"Website name" => [
 		0 => "Site Adını Yazınız.",
@@ -1250,14 +1810,38 @@ $translation_table = [
 	"Website description" => [
 		0 => "Sitenizin Açıklamasını Yazınız.",
 	],
-	"Website keywords" => [
-		0 => "Websitesi anahtar kelimeler",
-	],
 	"Default time zone" => [
 		0 => "Varsayılan Zaman Dilimi",
 	],
 	"Select region" => [
 		0 => "Bölge Seçiniz.",
+	],
+	"Allows to search images, albums and users based on a given search query." => [
+		0 => "Verilen arama sorgusuna göre resim, albüm ve kullanıcı aramanızı sağlar.",
+	],
+	"Enables to browse public uploaded images. It also enables categories." => [
+		0 => "Herkese açık görsellere göz atmayı sağlar. Kategoriler de aktive edilir.",
+	],
+	"guests" => [
+		0 => "Ziyaretçi",
+	],
+	"Enables explore for guests." => [
+		0 => "Ziyaretçiler için \"Discover\" modunu aktifleştirin.",
+	],
+	"Enables to browse images randomly." => [
+		0 => "Görüntülerin rasgele taranmasını sağlar.",
+	],
+	"Likes" => [
+		0 => "Beğeniler",
+	],
+	"Allows users to like content and populate \"Most liked\" listings." => [
+		0 => "Kullanıcıların içeriği sevmesini ve en popüler içeriği görüntülemesini sağlar.",
+	],
+	"Followers allows users to follow each other." => [
+		0 => "\"Takipçiler\" işlevi diğer kullanıcıların içeriğini takip etmeyi mümkün kılar.",
+	],
+	"Personal mode target user" => [
+		0 => "Kişisel mod hedef kullanıcı",
 	],
 	"User ID" => [
 		0 => "Kullanıcı ID",
@@ -1265,11 +1849,59 @@ $translation_table = [
 	"Your user id is: %s" => [
 		0 => "Kullanıcı kimliğiniz: %s",
 	],
+	"Personal mode routing" => [
+		0 => "Kişisel mod yönlendirmesi",
+	],
+	"Website privacy mode" => [
+		0 => "Web sitesi gizlilik modu",
+	],
 	"Content privacy mode" => [
 		0 => "İçerik gizlilik modu",
 	],
 	"Default" => [
 		0 => "Varsayılan",
+	],
+	"Page title" => [
+		0 => "Sayfa başlığı",
+	],
+	"Page status" => [
+		0 => "Sayfa durumu",
+	],
+	"Active page" => [
+		0 => "Aktif sayfa",
+	],
+	"Inactive page (%s)" => [
+		0 => "Etkin olmayan sayfa (%s)",
+	],
+	"Only active pages will be accessible." => [
+		0 => "Sadece aktif sayfalar erişilebilir olacaktır.",
+	],
+	"Type" => [
+		0 => "Tip",
+	],
+	"Page visibility" => [
+		0 => "Sayfa görünürlüğü",
+	],
+	"Visible page" => [
+		0 => "Görünür sayfa",
+	],
+	"Hidden page" => [
+		0 => "Gizli sayfa",
+	],
+	"Hidden pages won't be show in system menus, but anyone can access to it with the link." => [
+		0 => "Gizli sayfalar sistem menülerinde gösterilmez, ancak herhangi biri buna link üzerinden erişebilir.",
+	],
+	"Only alphanumerics, hyphens and forward slash" => [
+		0 => "Sadece alfanümerik, tire ve eğik çizgi",
+	],
+	"File path" => [
+		0 => "Dosya yolu",
+	],
+	"A %f file relative to %s" => [
+		0 => "%s ile ilişkili bir %f dosya",
+	],
+	"Meta keywords" => [
+		0 => "Anahtar Kelimeler",
 	],
 	"Enable uploads" => [
 		0 => "Desteklenen Formatlar",
@@ -1282,12 +1914,6 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Misafir Kullanıcıların Resim Yüklemesini İstiyorsanız Bunu Etkinleştirmeniz Gerekmektedir. ",
-	],
-	"Max. filesize" => [
-		0 => "Maksimum Resim Boyutu",
-	],
-	"Max. allowed filesize. (Max allowed by server is %s)" => [
-		0 => "Maksimum Yüklenecek Resimlerin Boyutu: %s",
 	],
 	"Image path" => [
 		0 => "Resim Yolu",
@@ -1385,6 +2011,9 @@ $translation_table = [
 	"Expires" => [
 		0 => "Sona ermek",
 	],
+	"Banned IP address will be forbidden to use the entire website." => [
+		0 => "Yasaklı IP adresinin tüm siteyi kullanması yasaktır.",
+	],
 	"Edit IP ban" => [
 		0 => "Banlı İP düzenleme",
 	],
@@ -1393,6 +2022,15 @@ $translation_table = [
 	],
 	"Enable this if you want to allow users to signup." => [
 		0 => "Kullanıcıların kayıt için izin vermek istiyorsanız bunu etkinleştirin.",
+	],
+	"Enable user content delete" => [
+		0 => "Kullanıcı içeriğini sil'i etkinleştir",
+	],
+	"Minimum age required" => [
+		0 => "Minimum yaş gerekli",
+	],
+	"Empty" => [
+		0 => "Boş",
 	],
 	"Username routing" => [
 		0 => "Kullanıcı adı yönlendirme",
@@ -1438,6 +2076,9 @@ $translation_table = [
 	],
 	"Enable this if you want to apply a blur effect on the NSFW images in listings." => [
 		0 => "Eğer sakıncalı bulduğunuz için görüntünün bulanıklaştırılmasını istiyorsanız bunu etkinleştirin.",
+	],
+	"Enable this if you want to show banners in not safe content pages." => [
+		0 => "Banner'ları güvensiz içerik sayfalarında göstermek istiyorsanız bunu etkinleştirin.",
 	],
 	"List items per page" => [
 		0 => "Sayfa başına Liste öğeleri",
@@ -1516,6 +2157,15 @@ $translation_table = [
 	],
 	"Orange" => [
 		0 => "Turuncu",
+	],
+	"Red" => [
+		0 => "Kırmızı",
+	],
+	"Grey" => [
+		0 => "Gri",
+	],
+	"Color for the top bar buttons like the \"Create account\" button." => [
+		0 => "\"Hesap oluştur\" düğmesi gibi en üstteki çubuk düğmeleri için renk.",
 	],
 	"Enable vector logo" => [
 		0 => "Vektorel logo acik",
@@ -1652,12 +2302,6 @@ $translation_table = [
 	"Google client secret" => [
 		0 => "Google client secret kodu",
 	],
-	"reCAPTCHA public key" => [
-		0 => "reCAPTCHA public key",
-	],
-	"reCAPTCHA private key" => [
-		0 => "reCAPTCHA private key",
-	],
 	"reCAPTCHA threshold" => [
 		0 => "reCAPTCHA threshold",
 	],
@@ -1673,14 +2317,14 @@ $translation_table = [
 	"Google Analytics or anything you want. It will be added to the theme footer." => [
 		0 => "Google analitik kodununun özelliklerini sayfanın altında göstermek istiyormusunuz?",
 	],
+	"Plugin route" => [
+		0 => "Eklenti yolu",
+	],
 	"Save changes" => [
 		0 => "Değişiklikler Kaydedildi",
 	],
 	"Check the errors to proceed." => [
 		0 => "Hataları denetlemek için devam edin.",
-	],
-	"Guest" => [
-		0 => "Misafir Kullanıcı",
 	],
 	"Added to %s" => [
 		0 => "Eklenecek Resimler %s",
@@ -1814,6 +2458,15 @@ $translation_table = [
 	"Connect %s" => [
 		0 => "Bağlan %s",
 	],
+	"Button" => [
+		0 => "Buton",
+	],
+	"resend account activation" => [
+		0 => "hesap aktivasyonunu tekrar gönder",
+	],
+	"If you have already signed up maybe you need to request to %s" => [
+		0 => "Daha önce kaydolduysanız, % s için istekte bulunmanız gerekir.",
+	],
 	"Upload profile background" => [
 		0 => "Profilinizin arka planına resim yüklemek ister misiniz ?",
 	],
@@ -1828,6 +2481,88 @@ $translation_table = [
 	],
 	"Edit profile" => [
 		0 => "Profili Düzenle",
+	],
+	"Follower" => [
+		0 => "takipçi",
+		1 => "İzleyiciler",
+	],
+	"Follow" => [
+		0 => "Takip et",
+	],
+	"General questions/comments" => [
+		0 => "Genel sorular/yorumlar",
+	],
+	"DMCA complaint" => [
+		0 => "DMCA şikayet",
+	],
+	"Invalid message" => [
+		0 => "Geçersiz mesaj (ileti). Lütfen geçerli bir mesaj yazınız.",
+	],
+	"Invalid subject" => [
+		0 => "Geçersiz konu. Lütfen geçerli bir konu yazınız.",
+	],
+	"Invalid reCAPTCHA" => [
+		0 => "Geçersiz güvenlik kodu. Lütfen güvenlik kodlarını kontrol ediniz.",
+	],
+	"Mail error" => [
+		0 => "Hatalı (geçersiz) mail adresi.",
+	],
+	"Message sent" => [
+		0 => "Mesaj gönderildi",
+	],
+	"Contact" => [
+		0 => "Temas",
+	],
+	"Message sent. We will get in contact soon." => [
+		0 => "Mesajınız gönderildi. Yakında iletişime geçeceğiz.",
+	],
+	"If you want to send a message fill the form below." => [
+		0 => "Mesaj göndermek istiyorsanız aşağıdaki formu doldurunuz.",
+	],
+	"Your name" => [
+		0 => "Adınız",
+	],
+	"Subject" => [
+		0 => "konu",
+	],
+	"Installed version is v%s" => [
+		0 => "Yüklü sürüm % s",
+	],
+	"Can't connect to %s" => [
+		0 => "% S'ye bağlanılamıyor",
+	],
+	"Last available release is v%s" => [
+		0 => "Son kullanılabilir sürüm % s",
+	],
+	"Update needed, proceeding to download" => [
+		0 => "Güncelleme gerekli, indirmeye devam",
+	],
+	"No update needed" => [
+		0 => "Güncelleme gerekli değil",
+	],
+	"System files already up to date" => [
+		0 => "Sistem dosyaları zaten güncel",
+	],
+	"Starting v%s download" => [
+		0 => "V % s indiriliyor",
+	],
+	"Downloaded v%s, proceeding to extraction" => [
+		0 => "H İndirilen % s ekstraksiyon geçmeden,",
+	],
+	"Attempting to extract v%s" => [
+		0 => "% S çıkarmayı denemek",
+	],
+	"Extraction completed" => [
+		0 => "Ekstraksiyon tamamlandı",
+	],
+	"Proceding to install the update" => [
+		0 => "Güncellemeyi yüklemek için prosedür",
+	],
+	"Update failed" => [
+		0 => "Güncelleme başarısız oldu",
+	],
+	"Please provide a valid email address" => [
+		0 => "Lütfen geçerli bir e-posta adresi girin",
 	],
 	"You must enter the album name." => [
 		0 => "Albüm ismi girmelisiniz.",
@@ -1856,8 +2591,35 @@ $translation_table = [
 	"Error deleting profile background image." => [
 		0 => "Profil arka plan resmi silinirken hata oluştu",
 	],
+	"Update available v%s" => [
+		0 => "Mevcut v % s güncellemesi",
+	],
+	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
+		0 => "Sisteminiz için bir güncelleme var. Bu güncellemeyi otomatik olarak indirebilir ve yükleyebilir veya dosyayı indirmeye devam etmek için % s öğesine gidebilirsiniz .",
+	],
+	"Update now" => [
+		0 => "Şimdi güncelle",
+	],
+	"Toggle select" => [
+		0 => "Seçimi değiştir",
+	],
+	"Toggle flag" => [
+		0 => "Geçiş bayrağı",
+	],
+	"Previous" => [
+		0 => "Önceki",
+	],
+	"Next" => [
+		0 => "Sonraki",
+	],
+	"Clipboard image" => [
+		0 => "Pano resmi",
+	],
 	"File too big." => [
 		0 => "Dosya çok büyük.",
+	],
+	"Invalid or unsupported file format." => [
+		0 => "Geçersiz veya desteklenmeyen dosya formatı.",
 	],
 	"Some files couldn't be added" => [
 		0 => "Bazı dosyalar eklenemedi",
@@ -1865,11 +2627,50 @@ $translation_table = [
 	"Image edited successfully." => [
 		0 => "Resim başarıyla düzenlenmiş.",
 	],
+	"private" => [
+		0 => "Gizli",
+	],
 	"Album edited successfully." => [
 		0 => "Albüm başarıyla düzenlenmiş.",
 	],
 	"Invalid URL key." => [
 		0 => "Geçersiz URL key",
+	],
+	"Category URL key already being used." => [
+		0 => "Kategori URL anahtarı zaten kullanılıyor.",
+	],
+	"Category successfully deleted." => [
+		0 => "Kategori başarıyla silindi.",
+	],
+	"Category %s added." => [
+		0 => "Kategori %s eklendi.",
+	],
+	"Invalid expiration date." => [
+		0 => "Geçersiz son kullanma tarihi.",
+	],
+	"IP %s already banned." => [
+		0 => "İP %s zaten yasaklandı.",
+	],
+	"IP %s banned." => [
+		0 => "İP % yasaklandı.",
+	],
+	"IP ban successfully deleted." => [
+		0 => "IP yasağı başarıyla silindi.",
+	],
+	"Please fill all the required fields." => [
+		0 => "Lütfen tüm gerekli alanları doldurun.",
+	],
+	"Invalid storage capacity value. Make sure to use a valid format." => [
+		0 => "Geçersiz depolama kapasitesi değeri. Geçerli bir format kullandığınızdan emin olun.",
+	],
+	"Invalid URL." => [
+		0 => "Geçersiz URL.",
+	],
+	"Storage successfully edited." => [
+		0 => "Depolama başarıyla düzenlenmiştir.",
+	],
+	"User added successfully." => [
+		0 => "Kullanıcı başarıyla eklendi.",
 	],
 	"The content has been moved." => [
 		0 => "İçerik taşındı.",
@@ -1900,6 +2701,9 @@ $translation_table = [
 	],
 	"Confirm action" => [
 		0 => "Eylemi onayla",
+	],
+	"information" => [
+		0 => "bilgi",
 	],
 ];
 ?>

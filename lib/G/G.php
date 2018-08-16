@@ -18,7 +18,7 @@ namespace G;
 
 if(!defined('access') or !access) die("This file cannot be directly accessed.");
 
-define('G_VERSION', '1.0.39');
+define('G_VERSION', '1.0.42');
 
 // Error reporting setup
 @ini_set('log_errors', TRUE);
@@ -70,7 +70,7 @@ if($settings['session.save_path']) {
 if(!@session_start()) die("G\: Sessions are not working on this server (session_start).");
 
 // Is session save path OK? (you won't believe how many people has session issues!)
-$session_save_path = realpath(session_save_path());
+$session_save_path = @realpath(session_save_path());
 if($session_save_path) { // realpath on this needs pre-webroot directories access
 	foreach(['write'] as $k) {
 		$fn = 'is_' . $k . 'able';
@@ -110,7 +110,9 @@ if(isset($settings['environment'])) {
 
 // Set the HTTP definitions
 define('G_HTTP_HOST', $_SERVER['HTTP_HOST']);
-define('G_HTTP_PROTOCOL', ((!empty($_SERVER['HTTPS']) and strtolower($_SERVER['HTTPS']) == 'on' ) or $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') ? 'https' : 'http');
+define('G_HTTP_PROTOCOL', 'http' . ((((!empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on' ) ||  $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') || $settings['https']) ? 's' : NULL));
+
+// La cumbia me divierte y mesita
 
 // Fix some $_SERVER vars
 $_SERVER['SCRIPT_FILENAME'] = forward_slash($_SERVER['SCRIPT_FILENAME']);

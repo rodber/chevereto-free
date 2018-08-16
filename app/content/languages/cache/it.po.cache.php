@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-09-23 17:30+0000',
-  'PO-Revision-Date' => '2017-09-23 17:30+0000',
+  'POT-Creation-Date' => '2018-06-03 14:28+0000',
+  'PO-Revision-Date' => '2018-06-03 14:28+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'it',
@@ -13,22 +13,14 @@ $translation_header = array (
 );
 $translation_plural = array (
   'nplurals' => 2,
-  'plural' => '(n != 1)',
-  'formula' => '($n != 1)',
-  'function' => '$index = (int)(($n != 1)); return ($index < 2) ? $index : 2 - 1;',
+  'function' => '($n != 1)',
 );
 $translation_table = [
-	"Plugin" => [
-		0 => "Plugin",
+	"To use all the features of this site you must be logged in." => [
+		0 => "Per utilizzare tutte le funzionalità di questo sito devi collegarti.",
 	],
-	"Plugin route" => [
-		0 => "Percorso Plugin",
-	],
-	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
-		0 => "Abilita questo per visualizzare le istruzioni del plugin a %u. Un link a queste istruzioni verrà aggiunto al menu %s. Questa impostazione non riguarda gli amministratori.",
-	],
-	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
-		0 => "Utilizza questo per impostare una URL personalizzato per %p. Tieni presente che devi replicare manualmente %s in questa URL.",
+	"If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
+		0 => "Se non hai un account <a href=\"%s\">iscriviti</a> ora.",
 	],
 	"Invalid email" => [
 		0 => "Indirizzo email non valido",
@@ -130,9 +122,6 @@ $translation_table = [
 	"After %n %t" => [
 		0 => "Dopo %n %t",
 	],
-	"Don't autodelete" => [
-		0 => "No",
-	],
 	"minute" => [
 		0 => "minuto",
 		1 => "minuti",
@@ -145,23 +134,26 @@ $translation_table = [
 		0 => "giorno",
 		1 => "giorni",
 	],
+	"week" => [
+		0 => "settimana",
+		1 => "settimane",
+	],
+	"month" => [
+		0 => "mese",
+		1 => "mesi",
+	],
+	"year" => [
+		0 => "anno",
+		1 => "anni",
+	],
+	"Don't autodelete" => [
+		0 => "No",
+	],
 	"Duplicated upload" => [
 		0 => "Contenuto duplicato",
 	],
-	"Error storing file in external storage server" => [
-		0 => "Errore salvataggio file sul server di archiviazione esterna",
-	],
-	"External storage has failed" => [
-		0 => "Si sono presentati errori nell'archiviazione esterna",
-	],
 	"Private upload" => [
 		0 => "Caricamento privato",
-	],
-	"Upload switched to local storage" => [
-		0 => "Impostata archiviazione locale",
-	],
-	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
-		0 => "Il sistema ha impostato la modalità di archiviazione locale a causa di spazio disco insufficiente (%c) sui server di archiviazione esterna. Immagine %s salvata in locale.",
 	],
 	"like" => [
 		0 => "Mi piace",
@@ -249,18 +241,6 @@ $translation_table = [
 	"Private profile" => [
 		0 => "Profilo privato",
 	],
-	"year" => [
-		0 => "anno",
-		1 => "anni",
-	],
-	"month" => [
-		0 => "mese",
-		1 => "mesi",
-	],
-	"week" => [
-		0 => "settimana",
-		1 => "settimane",
-	],
 	"second" => [
 		0 => "secondo",
 		1 => "secondi",
@@ -270,9 +250,6 @@ $translation_table = [
 	],
 	"moments ago" => [
 		0 => "poco fa",
-	],
-	"System notification" => [
-		0 => "Notifica di sistema",
 	],
 	"Dashboard" => [
 		0 => "Cruscotto",
@@ -304,14 +281,8 @@ $translation_table = [
 	"You can apply this update directly from your %a or download it from %s and then manually install it." => [
 		0 => "Puoi applicare questo aggiornamento direttamente dal tuo %a, oppure scaricarlo dal %s  ed installarlo manualmente.",
 	],
-	"Chevereto update available (v%s)" => [
-		0 => "Aggiornamento Chevereto disponibile (v%s)",
-	],
 	"view on %s" => [
 		0 => "visualizza su %s",
-	],
-	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy." => [
-		0 => "Questo sito usa cookie, anche di terzi, per migliorare l’esperienza di navigazione ed adeguare i nostri servizi alle tue preferenze. Chiudendo questo banner o proseguendo nella navigazione acconsenti al loro utilizzo.",
 	],
 	"You have been forbidden to use this website." => [
 		0 => "Non sei autorizzato ad utilizzare questo sito web.",
@@ -321,6 +292,9 @@ $translation_table = [
 	],
 	"View all my images" => [
 		0 => "Visualizza tutte le mie immagini",
+	],
+	"Plugin" => [
+		0 => "Plugin",
 	],
 	"That page doesn't exist" => [
 		0 => "La pagina non esiste",
@@ -777,7 +751,10 @@ $translation_table = [
 		0 => "Età minima utente non valida",
 	],
 	"Only alphanumeric, hyphen and underscore characters are allowed" => [
-		0 => "Sono consentiti soltanto caratteri alfanumerici, compresi trattini basso ed alto",
+		0 => "Sono consentiti solo caratteri alfanumerici, trattino e trattino basso (underscore)",
+	],
+	"Invalid URL" => [
+		0 => "URL non valido",
 	],
 	"Routes can't be the same" => [
 		0 => "I percorsi non possono essere uguali",
@@ -805,9 +782,6 @@ $translation_table = [
 	],
 	"Invalid SMTP username" => [
 		0 => "Username SMTP non valido",
-	],
-	"Invalid URL" => [
-		0 => "URL non valido",
 	],
 	"This URL key is already being used by another page (ID %s)" => [
 		0 => "Questa chiave URL è già utilizzata da un'altra pagina (ID %s)",
@@ -838,9 +812,6 @@ $translation_table = [
 	],
 	"Upload date" => [
 		0 => "Caricato il",
-	],
-	"%s images" => [
-		0 => "%s immagini",
 	],
 	"Image %i in %a album" => [
 		0 => "Immagine %i in album %a",
@@ -941,33 +912,6 @@ $translation_table = [
 	"Logged out" => [
 		0 => "Disconnesso",
 	],
-	"General questions/comments" => [
-		0 => "Domande generali/commenti",
-	],
-	"DMCA complaint" => [
-		0 => "Reclamo DMCA",
-	],
-	"Invalid name" => [
-		0 => "Nome non valido",
-	],
-	"Invalid message" => [
-		0 => "Messaggio non valido",
-	],
-	"Invalid subject" => [
-		0 => "Soggetto non valido",
-	],
-	"Invalid reCAPTCHA" => [
-		0 => "Codice reCAPTCHA non valido",
-	],
-	"Can't submit the form: %s" => [
-		0 => "Non è possibile inviare il modulo: %s",
-	],
-	"Message sent. We will get in contact soon." => [
-		0 => "Messaggio inviato. Sarai ricontattato il prima possibile.",
-	],
-	"Mail error" => [
-		0 => "Errore email",
-	],
 	"Upload images" => [
 		0 => "Carica immagini",
 	],
@@ -997,6 +941,9 @@ $translation_table = [
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "Email inviata a %s con le istruzioni per attivare il tuo account",
+	],
+	"Invalid name" => [
+		0 => "Nome non valido",
 	],
 	"Invalid website" => [
 		0 => "Sito web non valido",
@@ -1096,9 +1043,6 @@ $translation_table = [
 	],
 	"I'm at least %s years old" => [
 		0 => "Ho più di %s anni",
-	],
-	"By signing up you agree to our <a href=\"%s\">Terms of service</a>" => [
-		0 => "Iscrivendoti accetti i nostri <a href=\"%s\"> Termini del servizio </a>",
 	],
 	"Notifications" => [
 		0 => "Notifiche",
@@ -1689,6 +1633,12 @@ $translation_table = [
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "Vuoi davvero cancellare tutto il contenuto selezionato? Questa azione non può essere annullata.",
 	],
+	"Guest" => [
+		0 => "Ospite\n",
+	],
+	"Like" => [
+		0 => "Mi piace",
+	],
 	"Uploaded by guest" => [
 		0 => "Caricato da ospite",
 	],
@@ -1806,9 +1756,6 @@ $translation_table = [
 	"You like this" => [
 		0 => "Ti piace",
 	],
-	"Like" => [
-		0 => "Mi piace",
-	],
 	"Upload to album" => [
 		0 => "Carica un album",
 	],
@@ -1868,9 +1815,6 @@ $translation_table = [
 	],
 	"Website description" => [
 		0 => "Descrizione sito web",
-	],
-	"Website keywords" => [
-		0 => "Parole chiave del sito web",
 	],
 	"Default time zone" => [
 		0 => "Fuso orario predefinito",
@@ -2035,13 +1979,13 @@ $translation_table = [
 		0 => "Caricamenti",
 	],
 	"Enable this if you want to allow image uploads. This setting doesn't affect administrators." => [
-		0 => "Abilita questa opzione per consentire il caricamento di immagini. Questa impostazione non ha effetto sugli amministratori.",
+		0 => "Abilitare questa opzione se si desidera consentire il caricamento di immagini. Questa impostazione non influisce sugli  amministratori.",
 	],
 	"Guest uploads" => [
 		0 => "Caricamenti anonimi",
 	],
 	"Enable this if you want to allow non registered users to upload." => [
-		0 => "Abilita questa opzione per consentire caricamenti anonimi (utenti non registrati)",
+		0 => "Abilita quest'opzione se vuoi consentire a utenti non registrati di caricare immagini.",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "Attiva i codici embed (uploader)",
@@ -2176,7 +2120,7 @@ $translation_table = [
 		0 => "Abilita filigrana sui caricamenti degli utenti",
 	],
 	"Enable watermark on admin uploads" => [
-		0 => "Abilita filigrana sui caricamenti degli amministratori",
+		0 => "Abilita watermark su  uploads degli Admin",
 	],
 	"Watermark file toggles" => [
 		0 => "Alterna i file Watermark",
@@ -2296,10 +2240,10 @@ $translation_table = [
 		0 => "Lascia vuoto per non richiedono un'età minima per utilizzare il sito.",
 	],
 	"Username routing" => [
-		0 => "Nome utente di routing",
+		0 => "Percorso nome utente",
 	],
 	"Enable this if you want to use %s/username URLs instead of %s/user/username." => [
-		0 => "Abilitare questa opzione se si desidera utilizzare%s/username URLs invece di %s/user/username",
+		0 => "Abilita questa opzione se vuoi usare l'URL %s/username invece di %s/user/username",
 	],
 	"Require email confirmation" => [
 		0 => "Richiede mail di conferma",
@@ -2311,19 +2255,19 @@ $translation_table = [
 		0 => "Richiedi e-mail per inscrizione dei social",
 	],
 	"Enable this if users using social networks to register must provide an email address." => [
-		0 => "Abilitare questa opzione se gli utenti che utilizzano i social network per registrare devono fornire un indirizzo email.",
+		0 => "Abilita questa opzione se gli utenti che usano i social network per registrarsi devono fornire un indirizzo email.",
 	],
 	"User avatar max. filesize" => [
 		0 => "Avatar utente massima  dimensione del file",
 	],
 	"Max. allowed filesize for user avatar image. (Max allowed by server is %s)" => [
-		0 => "Dimensione massima del file consentita dell\\'immagine del tuo utente avatar per. (Max consentito dal server è %s)",
+		0 => "Dimensione massima consentita per l'immagine avatar dell'utente. (Max consentito dal server è %s)",
 	],
 	"User background max. filesize" => [
-		0 => "Sfondo per il tuo Utente max. dimensione del file",
+		0 => "Dimensione massima per lo sfondo dell'utente",
 	],
 	"Max. allowed filesize for user background image. (Max allowed by server is %s)" => [
-		0 => "Massima dimensione del file consentita dell\\'immagine di sfondo per Max. dimensione del file consentita immagine di sfondo per utente. (Max consentito dal server è %s)",
+		0 => "Dimensione massima consentita per l'immagine di sfondo dell'utente. (Max consentito dal server è %s)",
 	],
 	"Shows a consent screen before accessing the website. Useful for adult content websites where minors shouldn't be allowed." => [
 		0 => "Mostra una schermata consenso prima di accedere al sito web. Utile per i siti web di contenuti per adulti in cui non dovrebbe essere consentito minori.",
@@ -2467,7 +2411,7 @@ $translation_table = [
 		0 => "Se si imposta su \"bianco\" sulla barra superiore e tutte le tonalità di nero verranno modificati in toni di bianco.",
 	],
 	"Top bar button color" => [
-		0 => "Pulsante Top barra dei colori",
+		0 => "Colore pulsante della top bar",
 	],
 	"Blue" => [
 		0 => "Blu",
@@ -2485,7 +2429,7 @@ $translation_table = [
 		0 => "Grigio",
 	],
 	"Color for the top bar buttons like the \"Create account\" button." => [
-		0 => "Colore per i pulsanti superiore della barra del pulsante \"Crea account\".",
+		0 => "Colore dei pulsanti come \"Crea account\" della top bar.",
 	],
 	"Enable vector logo" => [
 		0 => "Abilita logo vettoriale",
@@ -2907,6 +2851,15 @@ $translation_table = [
 	"Use this key when using the <a %s>API v1</a>." => [
 		0 => "Utilizzare questo tasto quando si utilizza i <a %s>API v1</a>.",
 	],
+	"Plugin route" => [
+		0 => "Percorso Plugin",
+	],
+	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
+		0 => "Abilita questo per visualizzare le istruzioni del plugin a %u. Un link a queste istruzioni verrà aggiunto al menu %s. Questa impostazione non riguarda gli amministratori.",
+	],
+	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
+		0 => "Utilizza questo per impostare una URL personalizzato per %p. Tieni presente che devi replicare manualmente %s in questa URL.",
+	],
 	"Cookie law compliance" => [
 		0 => "Conformità normativa Cookie",
 	],
@@ -2924,9 +2877,6 @@ $translation_table = [
 	],
 	"Load full resolution" => [
 		0 => "Caricare con una piena risoluzione",
-	],
-	"Guest" => [
-		0 => "Ospite\n",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "Aggiunto a %a e classificati in%c",
@@ -3220,11 +3170,32 @@ $translation_table = [
 	"Follow" => [
 		0 => "Seguire",
 	],
+	"General questions/comments" => [
+		0 => "Domande generali/commenti",
+	],
+	"DMCA complaint" => [
+		0 => "Reclamo DMCA",
+	],
+	"Invalid message" => [
+		0 => "Messaggio non valido",
+	],
+	"Invalid subject" => [
+		0 => "Soggetto non valido",
+	],
+	"Invalid reCAPTCHA" => [
+		0 => "Codice reCAPTCHA non valido",
+	],
+	"Mail error" => [
+		0 => "Errore email",
+	],
 	"Message sent" => [
 		0 => "Messaggio inviato",
 	],
 	"Contact" => [
 		0 => "Contatto",
+	],
+	"Message sent. We will get in contact soon." => [
+		0 => "Messaggio inviato. Sarai ricontattato il prima possibile.",
 	],
 	"If you want to send a message fill the form below." => [
 		0 => "Se si desidera inviare un messaggio compila il form sottostante.",
@@ -3293,13 +3264,13 @@ $translation_table = [
 		0 => "Immagine profilo aggiornato.",
 	],
 	"Profile background image updated." => [
-		0 => "Profilo immagine di sfondo aggiornato.",
+		0 => "Immagine di sfondo del profilo aggiornata.",
 	],
 	"Profile background image deleted." => [
-		0 => "Profilo immagine di sfondo aggiornato.",
+		0 => "Immagine di sfondo del profilo cancellata.",
 	],
 	"Error deleting profile background image." => [
-		0 => "Errore immagine di sfondo del profilo.",
+		0 => "Errore nella cancellazione dell'immagine di sfondo del profilo.",
 	],
 	"Update available v%s" => [
 		0 => "Aggiornamento disponibile v%s",

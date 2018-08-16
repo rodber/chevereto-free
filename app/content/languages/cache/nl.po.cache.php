@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-10-13 22:04+0000',
-  'PO-Revision-Date' => '2017-10-13 22:04+0000',
+  'POT-Creation-Date' => '2018-06-03 14:28+0000',
+  'PO-Revision-Date' => '2018-06-03 14:28+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'nl',
@@ -13,22 +13,14 @@ $translation_header = array (
 );
 $translation_plural = array (
   'nplurals' => 2,
-  'plural' => '(n != 1)',
-  'formula' => '($n != 1)',
-  'function' => '$index = (int)(($n != 1)); return ($index < 2) ? $index : 2 - 1;',
+  'function' => '($n != 1)',
 );
 $translation_table = [
-	"Plugin" => [
-		0 => "Plugin",
+	"To use all the features of this site you must be logged in." => [
+		0 => "Om alle functies van deze site te gebruiken moet u ingelogd zijn.",
 	],
-	"Plugin route" => [
-		0 => "Plugin route",
-	],
-	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
-		0 => "Schakel dit in om de plugin instructies op %u te tonen. Een link naar deze instructies wordt toegevoegd aan het %s menu. Deze instelling is niet van toepassing voor beheerders.",
-	],
-	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
-		0 => "Gebruik dit om een eigen URL in te schakelen voor %p. Let op dat het noodzakelijk is om handmatig %s toe te voegen in deze URL.",
+	"If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
+		0 => "Indien u nog geen account heeft, dan kunt u zich <a href=\"%s\">registreren</a>.",
 	],
 	"Invalid email" => [
 		0 => "Ongeldig e-mailadres",
@@ -130,9 +122,6 @@ $translation_table = [
 	"After %n %t" => [
 		0 => "Na %n %t",
 	],
-	"Don't autodelete" => [
-		0 => "Niet automatisch verwijderen",
-	],
 	"minute" => [
 		0 => "minuut",
 		1 => "minuten",
@@ -145,23 +134,26 @@ $translation_table = [
 		0 => "dag",
 		1 => "dagen",
 	],
+	"week" => [
+		0 => "week",
+		1 => "weken",
+	],
+	"month" => [
+		0 => "maand",
+		1 => "maanden",
+	],
+	"year" => [
+		0 => "jaar",
+		1 => "jaren",
+	],
+	"Don't autodelete" => [
+		0 => "Niet automatisch verwijderen",
+	],
 	"Duplicated upload" => [
 		0 => "Dubbele upload",
 	],
-	"Error storing file in external storage server" => [
-		0 => "Fout tijdens het opslaan op de externe opslaglokatie.",
-	],
-	"External storage has failed" => [
-		0 => "Externe opslag mislukt",
-	],
 	"Private upload" => [
 		0 => "Privé-upload",
-	],
-	"Upload switched to local storage" => [
-		0 => "Upload overgeschakeld naar lokale opslag",
-	],
-	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
-		0 => "Het systeem is overgegaan naar lokale opslag omdat er niet genoeg opslagcapaciteit is (%c) op de externe opslaglokatie(s). De foto %s is opgeslagen op de lokale opslag.",
 	],
 	"like" => [
 		0 => "like",
@@ -249,18 +241,6 @@ $translation_table = [
 	"Private profile" => [
 		0 => "Privéprofiel",
 	],
-	"year" => [
-		0 => "jaar",
-		1 => "jaren",
-	],
-	"month" => [
-		0 => "maand",
-		1 => "maanden",
-	],
-	"week" => [
-		0 => "week",
-		1 => "weken",
-	],
 	"second" => [
 		0 => "seconde",
 		1 => "seconden",
@@ -270,9 +250,6 @@ $translation_table = [
 	],
 	"moments ago" => [
 		0 => "zojuist",
-	],
-	"System notification" => [
-		0 => "Systeemmelding",
 	],
 	"Dashboard" => [
 		0 => "Dashboard",
@@ -304,14 +281,8 @@ $translation_table = [
 	"You can apply this update directly from your %a or download it from %s and then manually install it." => [
 		0 => "Je kunt deze update direct uitvoeren via %a of deze downloaden vanaf %s en dan handmatig installeren.",
 	],
-	"Chevereto update available (v%s)" => [
-		0 => "Chevereto update beschikbaar (v%s)",
-	],
 	"view on %s" => [
 		0 => "Bekijk op %s",
-	],
-	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy." => [
-		0 => "We gebruiken eigen en externe cookies om de bezoekerservaring en onze service te verbeteren . Als je doorgaat met het bezoek aan onze site ga je akkoord met dit cookie beleid.",
 	],
 	"You have been forbidden to use this website." => [
 		0 => "U bent verbannen van deze website.",
@@ -321,6 +292,9 @@ $translation_table = [
 	],
 	"View all my images" => [
 		0 => "Bekijk al mijn foto's",
+	],
+	"Plugin" => [
+		0 => "Plugin",
 	],
 	"That page doesn't exist" => [
 		0 => "Deze pagina is niet beschikbaar",
@@ -779,6 +753,9 @@ $translation_table = [
 	"Only alphanumeric, hyphen and underscore characters are allowed" => [
 		0 => "Enkel alfanumeriek, koppelteken en underscore karakters zijn toegestaan",
 	],
+	"Invalid URL" => [
+		0 => "Ongeldige URL",
+	],
 	"Routes can't be the same" => [
 		0 => "Routes kunnen niet hetzelfde zijn",
 	],
@@ -805,9 +782,6 @@ $translation_table = [
 	],
 	"Invalid SMTP username" => [
 		0 => "Ongeldige SMTP-gebruikernaam",
-	],
-	"Invalid URL" => [
-		0 => "Ongeldige URL",
 	],
 	"This URL key is already being used by another page (ID %s)" => [
 		0 => "Deze URL sleutel is al in gebruik door een andere pagina (ID %s)",
@@ -838,9 +812,6 @@ $translation_table = [
 	],
 	"Upload date" => [
 		0 => "Upload datum",
-	],
-	"%s images" => [
-		0 => "%s plaatjes",
 	],
 	"Image %i in %a album" => [
 		0 => "Afbeelding %i in %a album",
@@ -941,33 +912,6 @@ $translation_table = [
 	"Logged out" => [
 		0 => "Uitgelogd ",
 	],
-	"General questions/comments" => [
-		0 => "Algemene vragen en opmerkingen",
-	],
-	"DMCA complaint" => [
-		0 => "DMCA klacht",
-	],
-	"Invalid name" => [
-		0 => "Ongeldige naam",
-	],
-	"Invalid message" => [
-		0 => "Ongeldig bericht",
-	],
-	"Invalid subject" => [
-		0 => "Ongeldig onderwerp",
-	],
-	"Invalid reCAPTCHA" => [
-		0 => "Ongeldige reCAPTCHA",
-	],
-	"Can't submit the form: %s" => [
-		0 => "Kan het formulier niet verzenden: %s",
-	],
-	"Message sent. We will get in contact soon." => [
-		0 => "Bericht verzonden. We nemen zo spoedig mogelijk contact op.",
-	],
-	"Mail error" => [
-		0 => "Mail fout",
-	],
 	"Upload images" => [
 		0 => "Upload afbeeldingen",
 	],
@@ -997,6 +941,9 @@ $translation_table = [
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "Een e-mail is verzonden naar %s met instructies om dit e-mailadres te activeren.",
+	],
+	"Invalid name" => [
+		0 => "Ongeldige naam",
 	],
 	"Invalid website" => [
 		0 => "Ongeldige website",
@@ -1096,9 +1043,6 @@ $translation_table = [
 	],
 	"I'm at least %s years old" => [
 		0 => "Ik ben minimaal %s jaar oud",
-	],
-	"By signing up you agree to our <a href=\"%s\">Terms of service</a>" => [
-		0 => "Door te registreren gaat u akkoord met onze <a href=\"%s\">Algemene voorwaarden</a>",
 	],
 	"Notifications" => [
 		0 => "Berichten",
@@ -1270,6 +1214,9 @@ $translation_table = [
 	],
 	"Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information." => [
 		0 => "Zie het <a data-modal=\"simple\" data-target=\"failed-upload-result\">foutrapport</a> voor meer informatie!",
+	],
+	"Register to get %s" => [
+		0 => "Registreer om %s te krijgen",
 	],
 	"reset" => [
 		0 => "reset",
@@ -1475,6 +1422,9 @@ $translation_table = [
 	],
 	"Untitled image" => [
 		0 => "Naamloze afbeelding",
+	],
+	"You can use wildcard * characters." => [
+		0 => "Je kunt wildcard * karakters gebruiken.",
 	],
 	"Expiration date" => [
 		0 => "Vervaldatum",
@@ -1689,8 +1639,23 @@ $translation_table = [
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "Wilt u deze selectie echt verwijderen? Dit kan niet ongedaan gemaakt worden.",
 	],
+	"Fullscreen" => [
+		0 => "Volledig scherm",
+	],
+	"Exit fullscreen" => [
+		0 => "Sluit volledig scherm",
+	],
+	"Guest" => [
+		0 => "Bezoeker",
+	],
+	"Keyboard shortcuts" => [
+		0 => "Toetsenbord shortcuts",
+	],
+	"Like" => [
+		0 => "Waardeer",
+	],
 	"Uploaded by guest" => [
-		0 => "Toegevoegd door een gast",
+		0 => "Toegevoegd door een bezoeker",
 	],
 	"From %s" => [
 		0 => "Van %s",
@@ -1806,9 +1771,6 @@ $translation_table = [
 	"You like this" => [
 		0 => "Je waardeert dit",
 	],
-	"Like" => [
-		0 => "Waardeer",
-	],
 	"Upload to album" => [
 		0 => "Upload naar album",
 	],
@@ -1869,9 +1831,6 @@ $translation_table = [
 	"Website description" => [
 		0 => "Website omschrijving",
 	],
-	"Website keywords" => [
-		0 => "Website sleutelwoorden",
-	],
 	"Default time zone" => [
 		0 => "Standaard tijdzone",
 	],
@@ -1883,6 +1842,12 @@ $translation_table = [
 	],
 	"Enables to browse public uploaded images. It also enables categories." => [
 		0 => "Staat toe om te bladeren in publiek toegevoegde afbeeldingen. Het zet ook de categorieën aan.",
+	],
+	"guests" => [
+		0 => "bezoekers",
+	],
+	"Enables explore for guests." => [
+		0 => "Schakel verkennen in voor bezoekers.",
 	],
 	"Enables to browse images randomly." => [
 		0 => "Sta toe om willekeurig afbeeldingen te bladeren.",
@@ -2038,10 +2003,10 @@ $translation_table = [
 		0 => "Schakel dit in indien u het uploaden van afbeeldingen wilt toestaan​​. Deze instelling heeft geen invloed op beheerders.",
 	],
 	"Guest uploads" => [
-		0 => "Gastuploads",
+		0 => "Bezoeker uploads",
 	],
 	"Enable this if you want to allow non registered users to upload." => [
-		0 => "Schakel dit in om gastuploads toe te staan",
+		0 => "Schakel dit in om bezoeker uploads toe te staan",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "Insluitcodes inschakelen (uploader)",
@@ -2074,10 +2039,10 @@ $translation_table = [
 		0 => "Schakel dit in om uploads met automatisch verwijderen toe te staan.",
 	],
 	"Auto delete guest uploads" => [
-		0 => "Automatisch verwijderen van uploads van gasten",
+		0 => "Automatisch verwijderen van uploads van bezoekers",
 	],
 	"Enable this if you want to force guest uploads to be auto deleted after certain time." => [
-		0 => "Schakel dit in om automatisch afbeeldingen van gasten te verwijderen na een bepaalde tijd.",
+		0 => "Schakel dit in om automatisch afbeeldingen van bezoekers te verwijderen na een bepaalde tijd.",
 	],
 	"Maximum image size" => [
 		0 => "Maximale afbeeldingsgrootte",
@@ -2105,6 +2070,9 @@ $translation_table = [
 	],
 	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
 		0 => "Maximum grootte toegestaan door de server is %s. Deze limiet is ingesteld via %u en %p (%f waarden).",
+	],
+	"Same as \"%s\" but for guests." => [
+		0 => "Hetzelfde als \"%s\" maar dan voor bezoekers.",
 	],
 	"Image path" => [
 		0 => "Pad",
@@ -2170,7 +2138,7 @@ $translation_table = [
 		0 => "Watermerk opties t.b.v. gebruikers",
 	],
 	"Enable watermark on guest uploads" => [
-		0 => "Schakel watermerk in bij upload van gasten",
+		0 => "Schakel watermerk in bij upload van bezoekers",
 	],
 	"Enable watermark on user uploads" => [
 		0 => "Schakel watermerk in bij upload van gebruikers",
@@ -2295,6 +2263,12 @@ $translation_table = [
 	"Leave it empty to don't require a minimum age to use the website." => [
 		0 => "Laat leeg als er geen minimum leeftijd is vereist om de website te gebruiken.",
 	],
+	"Notify on user signup" => [
+		0 => "Stuur kennisgeving bij registratie gebruiker",
+	],
+	"Enable this if you want to get an email notification for each new user signup." => [
+		0 => "Schakel dit in als je een email notificatie wilt ontvangen bij registratie van een nieuwe gebruiker.",
+	],
 	"Username routing" => [
 		0 => "Gebruikersnaam routering",
 	],
@@ -2397,6 +2371,12 @@ $translation_table = [
 	"What pagination method should be used." => [
 		0 => "Wat voor paginanummering moet er gebruikt worden?",
 	],
+	"Listing viewer" => [
+		0 => "Lijst viewer",
+	],
+	"Enable this to use the listing viewer when clicking on an image." => [
+		0 => "Schakel dit in om de lijst viewer te gebruiken wanneer er op een afbeelding wordt geklikt.",
+	],
 	"Image listing size" => [
 		0 => "Afbeeldingen lijstgrootte",
 	],
@@ -2408,6 +2388,15 @@ $translation_table = [
 	],
 	"Both methods use a fixed width but fluid method uses automatic heights." => [
 		0 => "Beide methodes gebruiken een vaste breedte maar de niet vaste methode gebruikt automatische hoogte.",
+	],
+	"Album listing images requirement" => [
+		0 => "Album lijst afbeeldingen eis",
+	],
+	"explore" => [
+		0 => "Verken",
+	],
+	"Sets the minimum image count needed to show albums in explore." => [
+		0 => "Geef het minimum aantal afbeeldingen aan om albums weer te geven in verkenner.",
 	],
 	"Listing columns number" => [
 		0 => "Toon aantal kolommen",
@@ -2907,6 +2896,15 @@ $translation_table = [
 	"Use this key when using the <a %s>API v1</a>." => [
 		0 => "Gebruik deze sleutel wanneer de <a %s>API v1</a> gebruikt wordt.",
 	],
+	"Plugin route" => [
+		0 => "Plugin route",
+	],
+	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
+		0 => "Schakel dit in om de plugin instructies op %u te tonen. Een link naar deze instructies wordt toegevoegd aan het %s menu. Deze instelling is niet van toepassing voor beheerders.",
+	],
+	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
+		0 => "Gebruik dit om een eigen URL in te schakelen voor %p. Let op dat het noodzakelijk is om handmatig %s toe te voegen in deze URL.",
+	],
 	"Cookie law compliance" => [
 		0 => "Cookiewet naleving",
 	],
@@ -2924,9 +2922,6 @@ $translation_table = [
 	],
 	"Load full resolution" => [
 		0 => "Laadt de volledige resolutie",
-	],
-	"Guest" => [
-		0 => "Gast",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "Toegevoegd aan %a en gecategoriseerd in %c",
@@ -3220,11 +3215,32 @@ $translation_table = [
 	"Follow" => [
 		0 => "Volgen",
 	],
+	"General questions/comments" => [
+		0 => "Algemene vragen en opmerkingen",
+	],
+	"DMCA complaint" => [
+		0 => "DMCA klacht",
+	],
+	"Invalid message" => [
+		0 => "Ongeldig bericht",
+	],
+	"Invalid subject" => [
+		0 => "Ongeldig onderwerp",
+	],
+	"Invalid reCAPTCHA" => [
+		0 => "Ongeldige reCAPTCHA",
+	],
+	"Mail error" => [
+		0 => "Mail fout",
+	],
 	"Message sent" => [
 		0 => "Bericht verzonden",
 	],
 	"Contact" => [
 		0 => "Contact",
+	],
+	"Message sent. We will get in contact soon." => [
+		0 => "Bericht verzonden. We nemen zo spoedig mogelijk contact op.",
 	],
 	"If you want to send a message fill the form below." => [
 		0 => "Indien u een bericht wilt versturen, vul dan het formulier in.",
@@ -3312,6 +3328,18 @@ $translation_table = [
 	],
 	"This website is running latest %s version" => [
 		0 => "Deze website gebruikt de laatste %s versie",
+	],
+	"Toggle select" => [
+		0 => "Selectiekeuze",
+	],
+	"Toggle flag" => [
+		0 => "Vlagkeuze",
+	],
+	"Previous" => [
+		0 => "Vorige",
+	],
+	"Next" => [
+		0 => "Volgende",
 	],
 	"Clipboard image" => [
 		0 => "Klembord afbeelding",

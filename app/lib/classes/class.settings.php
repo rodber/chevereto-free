@@ -57,8 +57,8 @@ class Settings {
 			if(!$db_settings) {
 				//throw new Exception("Can't find any DB setting. Table seems to be empty.", 400);
 			}
-			
-			// Inject the missing settings (hooks since v3.8.3)
+
+			// Inject the missing settings
 			$injected = [
 				// 1.0.3
 				'upload_enabled_image_formats'	=> 'jpg,png,bmp,gif',
@@ -76,6 +76,12 @@ class Settings {
 				'enable_user_content_delete' => 0,
 				'enable_plugin_route' => 1,
 				'sdk_pup_url' => NULL,
+				// 1.1.0
+				'website_explore_page_guest' => 1,
+				'explore_albums_min_image_count' => 5,
+				'upload_max_filesize_mb_guest' => 0.5,
+				'notify_user_signups' => 0,
+				'listing_viewer' => 1,
 			];
 
 			// Default listing thing

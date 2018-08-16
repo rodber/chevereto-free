@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-10-11 19:51+0000',
-  'PO-Revision-Date' => '2017-10-11 19:51+0000',
+  'POT-Creation-Date' => '2018-06-03 14:28+0000',
+  'PO-Revision-Date' => '2018-06-03 14:28+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'pt_BR',
@@ -13,22 +13,14 @@ $translation_header = array (
 );
 $translation_plural = array (
   'nplurals' => 2,
-  'plural' => '(n != 1)',
-  'formula' => '($n != 1)',
-  'function' => '$index = (int)(($n != 1)); return ($index < 2) ? $index : 2 - 1;',
+  'function' => '($n != 1)',
 );
 $translation_table = [
-	"Plugin" => [
-		0 => "Plugin",
+	"To use all the features of this site you must be logged in." => [
+		0 => "Para usar todos os recursos do nosso site, você deve entrar na sua conta.",
 	],
-	"Plugin route" => [
-		0 => "Rota do plugin",
-	],
-	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
-		0 => "Ative para mostrar instruções do plugin no %u. Um link para as instruções será adicionado para o %s menu. Esta opção não afeta administradores.",
-	],
-	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
-		0 => "Use isto para definir uma URL customizada para %p. Por favor, note que você precisa replicar manualmente %s nessa URL.",
+	"If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
+		0 => "Se você ainda não tem uma conta, você pode <a href=\"%s\">registar</a> uma agora gratuitamente.",
 	],
 	"Invalid email" => [
 		0 => "E-mail inválido",
@@ -130,9 +122,6 @@ $translation_table = [
 	"After %n %t" => [
 		0 => "Depois de %n %t",
 	],
-	"Don't autodelete" => [
-		0 => "Desabilitar apagamento automático",
-	],
 	"minute" => [
 		0 => "minuto",
 		1 => "minutos",
@@ -145,23 +134,26 @@ $translation_table = [
 		0 => "dia",
 		1 => "dias",
 	],
+	"week" => [
+		0 => "semana",
+		1 => "semanas",
+	],
+	"month" => [
+		0 => "mês",
+		1 => "meses",
+	],
+	"year" => [
+		0 => "ano",
+		1 => "anos",
+	],
+	"Don't autodelete" => [
+		0 => "Desabilitar apagamento automático",
+	],
 	"Duplicated upload" => [
 		0 => "Envio duplicado",
 	],
-	"Error storing file in external storage server" => [
-		0 => "Erro ao armazenar o arquivo em um servidor externo",
-	],
-	"External storage has failed" => [
-		0 => "O armazenamento externo falhou",
-	],
 	"Private upload" => [
 		0 => "Envio privado",
-	],
-	"Upload switched to local storage" => [
-		0 => "O envio foi alterado para o armazenamento local",
-	],
-	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
-		0 => "O sistema foi alterado para o armazenamento local devido a capacidade do disco (%c) no armazenamento externo. A imagem %s foi salva no armazenamento local.",
 	],
 	"like" => [
 		0 => "curtir",
@@ -249,18 +241,6 @@ $translation_table = [
 	"Private profile" => [
 		0 => "Perfil privado",
 	],
-	"year" => [
-		0 => "ano",
-		1 => "anos",
-	],
-	"month" => [
-		0 => "mês",
-		1 => "meses",
-	],
-	"week" => [
-		0 => "semana",
-		1 => "semanas",
-	],
 	"second" => [
 		0 => "segundo",
 		1 => "segundos",
@@ -270,9 +250,6 @@ $translation_table = [
 	],
 	"moments ago" => [
 		0 => "a momentos atrás",
-	],
-	"System notification" => [
-		0 => "Notificação do sistema",
 	],
 	"Dashboard" => [
 		0 => "Administração",
@@ -304,14 +281,8 @@ $translation_table = [
 	"You can apply this update directly from your %a or download it from %s and then manually install it." => [
 		0 => "Você pode aplicar essa atualização diretamente da sua %a ou baixa-lá da %s e assim instalar manualmente.",
 	],
-	"Chevereto update available (v%s)" => [
-		0 => "Atualização disponível (v%s)",
-	],
 	"view on %s" => [
 		0 => "ver no %s",
-	],
-	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy." => [
-		0 => "Nós utilizamos nossos cookies e de terceiros para melhorar sua experiência de navegação e os nossos serviços. Se você continuar usando nosso site é entendido que você aceita esta política de cookies.",
 	],
 	"You have been forbidden to use this website." => [
 		0 => "Você foi proibido de usar este site.",
@@ -321,6 +292,9 @@ $translation_table = [
 	],
 	"View all my images" => [
 		0 => "Visualize todas minhas imagens",
+	],
+	"Plugin" => [
+		0 => "Plugin",
 	],
 	"That page doesn't exist" => [
 		0 => "Esta página não existe",
@@ -779,6 +753,9 @@ $translation_table = [
 	"Only alphanumeric, hyphen and underscore characters are allowed" => [
 		0 => "Apenas caracteres alfanuméricos, hífen e caracteres são permitidos",
 	],
+	"Invalid URL" => [
+		0 => "URL inválido",
+	],
 	"Routes can't be the same" => [
 		0 => "As rotas não podem ser iguais",
 	],
@@ -805,9 +782,6 @@ $translation_table = [
 	],
 	"Invalid SMTP username" => [
 		0 => "Nome de usuário SMTP inválido",
-	],
-	"Invalid URL" => [
-		0 => "URL inválido",
 	],
 	"This URL key is already being used by another page (ID %s)" => [
 		0 => "Esta chave de URL já está sendo usado por outra página (ID %s)",
@@ -838,9 +812,6 @@ $translation_table = [
 	],
 	"Upload date" => [
 		0 => "Data de envio",
-	],
-	"%s images" => [
-		0 => "imagens de %s",
 	],
 	"Image %i in %a album" => [
 		0 => "Imagem %i no álbum %a",
@@ -941,33 +912,6 @@ $translation_table = [
 	"Logged out" => [
 		0 => "Você saiu",
 	],
-	"General questions/comments" => [
-		0 => "Questões gerais ou comentários",
-	],
-	"DMCA complaint" => [
-		0 => "Denúncia de DMCA",
-	],
-	"Invalid name" => [
-		0 => "Nome inválido",
-	],
-	"Invalid message" => [
-		0 => "Mensagem inválida",
-	],
-	"Invalid subject" => [
-		0 => "Assunto inválido",
-	],
-	"Invalid reCAPTCHA" => [
-		0 => "reCAPTCHA inválido",
-	],
-	"Can't submit the form: %s" => [
-		0 => "Não foi possível enviar o formulário: %s",
-	],
-	"Message sent. We will get in contact soon." => [
-		0 => "A mensagem foi enviada. Nós entraremos em contato em breve.",
-	],
-	"Mail error" => [
-		0 => "Erro de correio",
-	],
 	"Upload images" => [
 		0 => "Enviar imagens",
 	],
@@ -997,6 +941,9 @@ $translation_table = [
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "Um email foi enviado para %s com instruções para ativar",
+	],
+	"Invalid name" => [
+		0 => "Nome inválido",
 	],
 	"Invalid website" => [
 		0 => "Página inválida",
@@ -1096,9 +1043,6 @@ $translation_table = [
 	],
 	"I'm at least %s years old" => [
 		0 => "Eu tenho ao menos %s anos",
-	],
-	"By signing up you agree to our <a href=\"%s\">Terms of service</a>" => [
-		0 => "Ao criar uma conta você concorda com os nossos <a href=\"%s\">Termos de Serviço</a>",
 	],
 	"Notifications" => [
 		0 => "Notificações",
@@ -1677,6 +1621,12 @@ $translation_table = [
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "Deseja mesmo remover todo o conteúdo seleccionado? Isto não pode ser revertido.",
 	],
+	"Guest" => [
+		0 => "Convidado",
+	],
+	"Like" => [
+		0 => "Curtir",
+	],
 	"Uploaded by guest" => [
 		0 => "Enviado por um visitante",
 	],
@@ -1794,9 +1744,6 @@ $translation_table = [
 	"You like this" => [
 		0 => "Você curtiu isso",
 	],
-	"Like" => [
-		0 => "Curtir",
-	],
 	"Upload to album" => [
 		0 => "Enviar para o álbum",
 	],
@@ -1856,9 +1803,6 @@ $translation_table = [
 	],
 	"Website description" => [
 		0 => "Descrição da página",
-	],
-	"Website keywords" => [
-		0 => "Palavras-chave da página",
 	],
 	"Default time zone" => [
 		0 => "Fuso horário padrão",
@@ -2838,6 +2782,15 @@ $translation_table = [
 	"Use this key when using the <a %s>API v1</a>." => [
 		0 => "Use esta chave quando estiver usando a <a %s>API v1</a>.",
 	],
+	"Plugin route" => [
+		0 => "Rota do plugin",
+	],
+	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
+		0 => "Ative para mostrar instruções do plugin no %u. Um link para as instruções será adicionado para o %s menu. Esta opção não afeta administradores.",
+	],
+	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
+		0 => "Use isto para definir uma URL customizada para %p. Por favor, note que você precisa replicar manualmente %s nessa URL.",
+	],
 	"Cookie law compliance" => [
 		0 => "Cumprimento da legislação de Cookies",
 	],
@@ -2855,9 +2808,6 @@ $translation_table = [
 	],
 	"Load full resolution" => [
 		0 => "Carregar visualização completa",
-	],
-	"Guest" => [
-		0 => "Convidado",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "Adicionado a %a e categorizado em %c",
@@ -3151,11 +3101,32 @@ $translation_table = [
 	"Follow" => [
 		0 => "Seguir",
 	],
+	"General questions/comments" => [
+		0 => "Questões gerais ou comentários",
+	],
+	"DMCA complaint" => [
+		0 => "Denúncia de DMCA",
+	],
+	"Invalid message" => [
+		0 => "Mensagem inválida",
+	],
+	"Invalid subject" => [
+		0 => "Assunto inválido",
+	],
+	"Invalid reCAPTCHA" => [
+		0 => "reCAPTCHA inválido",
+	],
+	"Mail error" => [
+		0 => "Erro de correio",
+	],
 	"Message sent" => [
 		0 => "Enviar mensagem",
 	],
 	"Contact" => [
 		0 => "Contato",
+	],
+	"Message sent. We will get in contact soon." => [
+		0 => "A mensagem foi enviada. Nós entraremos em contato em breve.",
 	],
 	"If you want to send a message fill the form below." => [
 		0 => "Se você quiser enviar uma mensagem preencha o formulário abaixo.",

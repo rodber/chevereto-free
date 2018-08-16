@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-10-01 18:12+0000\n"
-"PO-Revision-Date: 2017-10-01 18:12+0000\n"
+"POT-Creation-Date: 2018-06-03 14:28+0000\n"
+"PO-Revision-Date: 2018-06-03 14:28+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: nb\n"
@@ -11,18 +11,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Plugin"
-msgstr "Utvidelse"
-
-msgid "Plugin route"
-msgstr "Utvidelsesrute"
+msgid "To use all the features of this site you must be logged in."
+msgstr "For å benytte deg av alle funksjonene på denne siden må du være logget inn."
 
 #, php-format
-msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
-msgstr "Aktiver denne for å vise instruksjoner for utvidelsen på %u. En lenke til disse instruksjonene vil bli lagt til %s-menyen. Denne innstillingen påvirker ikke administratorer."
-
-msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
-msgstr "Bruk denne for å sette en egendefinert URL for %p. Påse at du manuelt må replikere %s i denne URLen."
+msgid "If you don't have an account you can <a href=\"%s\">sign up</a> right now."
+msgstr "Hvis du ikke har en konto kan du <a href=\"%s\">registrere</a> deg nå."
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -201,10 +195,6 @@ msgstr[1] "visninger"
 msgid "After %n %t"
 msgstr "Etter %n %t"
 
-#: ../../../app/lib/classes/class.image.php:348
-msgid "Don't autodelete"
-msgstr "Ikke slett automatisk"
-
 #: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
 msgid "minute"
 msgid_plural "minutes"
@@ -223,28 +213,37 @@ msgid_plural "days"
 msgstr[0] "dag"
 msgstr[1] "dager"
 
+#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "uke"
+msgstr[1] "uker"
+
+#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
+msgid "month"
+msgid_plural "months"
+msgstr[0] "måned"
+msgstr[1] "måneder"
+
+#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
+msgid "year"
+msgid_plural "years"
+msgstr[0] "år"
+msgstr[1] "år"
+
+#: ../../../app/lib/classes/class.image.php:348
+msgid "Don't autodelete"
+msgstr "Ikke slett automatisk"
+
 #: ../../../app/lib/classes/class.image.php:636
 #: ../../../app/lib/classes/class.image.php:742
 msgid "Duplicated upload"
 msgstr "Duplikat lastet opp"
 
-msgid "Error storing file in external storage server"
-msgstr "Feil ved lagring av fil på ekstern lagringsserver"
-
-msgid "External storage has failed"
-msgstr "Ekstern lagring feilet"
-
 #: ../../../app/lib/classes/class.image.php:955
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
 msgid "Private upload"
 msgstr "Privat opplasting"
-
-msgid "Upload switched to local storage"
-msgstr "Opplastning endret til lokal lagring"
-
-#, php-format
-msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
-msgstr "Systemet har byttet til lokal lagring grunnet lite diskplass (%c) på den eksterne serveren. Bildet %s har blitt lagret på lokal server."
 
 #: ../../../app/lib/classes/class.image.php:1231
 msgid "like"
@@ -404,24 +403,6 @@ msgstr "brukt"
 msgid "Private profile"
 msgstr "Privat profil"
 
-#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
-msgid "year"
-msgid_plural "years"
-msgstr[0] "år"
-msgstr[1] "år"
-
-#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
-msgid "month"
-msgid_plural "months"
-msgstr[0] "måned"
-msgstr[1] "måneder"
-
-#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
-msgid "week"
-msgid_plural "weeks"
-msgstr[0] "uke"
-msgstr[1] "uker"
-
 #: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
 msgid "second"
 msgid_plural "seconds"
@@ -436,9 +417,6 @@ msgstr "%s siden"
 #: ../../../app/lib/functions.php:67
 msgid "moments ago"
 msgstr "for kort tid siden"
-
-msgid "System notification"
-msgstr "Systemvarsling"
 
 #: ../../../app/routes/route.dashboard.php:1223
 #: ../../../app/themes/Peafowl/header.php:407
@@ -482,16 +460,8 @@ msgid "You can apply this update directly from your %a or download it from %s an
 msgstr "Du kan bruke denne oppdateringen direkte fra %a eller laste den ned fra %s og deretter manuelt installere den."
 
 #, php-format
-msgid "Chevereto update available (v%s)"
-msgstr "Chevereto-oppdatering tilgjengelig (v%s)"
-
-#, php-format
 msgid "view on %s"
 msgstr "sett på %s"
-
-#: ../../../app/lib/functions.render.php:303
-msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
-msgstr "Vi benytter tredjepartscookies for å forbedre din surfeopplevelse og våre tjenester. Hvis du fortsetter å benytte denne siden aksepterer du denne cookiepolicyen."
 
 #: ../../../app/loader.php:180
 msgid "You have been forbidden to use this website."
@@ -506,6 +476,9 @@ msgstr "Føl deg fri til å bla gjennom og oppdage alle mine delte bilder og alb
 #: ../../../app/themes/Peafowl/views/settings.php:447
 msgid "View all my images"
 msgstr "Vis alle mine bilder"
+
+msgid "Plugin"
+msgstr "Utvidelse"
 
 #: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
 msgid "That page doesn't exist"
@@ -1265,6 +1238,10 @@ msgstr "Ugyldig minstealder"
 msgid "Only alphanumeric, hyphen and underscore characters are allowed"
 msgstr "Bare alfanumeriske, bindestrek og understrek-tegn er tillatte"
 
+#: ../../../app/routes/route.dashboard.php:922
+msgid "Invalid URL"
+msgstr "Ugyldig URL"
+
 msgid "Routes can't be the same"
 msgstr "Rutene kan ikke være like"
 
@@ -1297,10 +1274,6 @@ msgstr "Ugyldig SMTP-server"
 #: ../../../app/routes/route.dashboard.php:861
 msgid "Invalid SMTP username"
 msgstr "Ugyldig SMTP-brukernavn"
-
-#: ../../../app/routes/route.dashboard.php:922
-msgid "Invalid URL"
-msgstr "Ugyldig URL"
 
 #: ../../../app/routes/route.dashboard.php:960
 #, php-format
@@ -1349,11 +1322,6 @@ msgstr "IP allerede blokkert"
 #: ../../../app/routes/route.image.php:152
 msgid "Upload date"
 msgstr "Opplastningsdato"
-
-#: ../../../app/routes/route.image.php:177
-#, php-format
-msgid "%s images"
-msgstr "%s bilder"
 
 #: ../../../app/routes/route.image.php:185
 msgid "Image %i in %a album"
@@ -1500,51 +1468,6 @@ msgstr "Logg inn"
 msgid "Logged out"
 msgstr "Logget ut"
 
-#: ../../../app/routes/route.page.php:61
-#: ../../../content/pages/default/contact.php:7
-msgid "General questions/comments"
-msgstr "Generelle spørsmål/kommentarer"
-
-#: ../../../app/routes/route.page.php:62
-#: ../../../content/pages/default/contact.php:8
-msgid "DMCA complaint"
-msgstr "Brudd på opphavsrettigheter"
-
-#: ../../../app/routes/route.page.php:71
-#: ../../../app/routes/route.settings.php:302
-#: ../../../content/pages/default/contact.php:19
-msgid "Invalid name"
-msgstr "Ugyldig navn"
-
-#: ../../../app/routes/route.page.php:74
-#: ../../../content/pages/default/contact.php:22
-msgid "Invalid message"
-msgstr "Ugyldig melding"
-
-#: ../../../app/routes/route.page.php:77
-#: ../../../content/pages/default/contact.php:25
-msgid "Invalid subject"
-msgstr "Ugyldig emne"
-
-#: ../../../app/routes/route.page.php:85
-#: ../../../content/pages/default/contact.php:33
-msgid "Invalid reCAPTCHA"
-msgstr "Ugyldig reCAPTCHA"
-
-#: ../../../app/routes/route.page.php:90
-#, php-format
-msgid "Can't submit the form: %s"
-msgstr "Kan ikke sende skjemaet: %s"
-
-#: ../../../app/routes/route.page.php:119
-msgid "Message sent. We will get in contact soon."
-msgstr "Meldingen er sendt. Vi vil svare deg så fort vi kan."
-
-#: ../../../app/routes/route.page.php:122
-#: ../../../content/pages/default/contact.php:69
-msgid "Mail error"
-msgstr "E-postfeil"
-
 msgid "Upload images"
 msgstr "Last opp bilder"
 
@@ -1586,6 +1509,12 @@ msgstr "Ugyldig utløpsdato for bilde: %s"
 #, php-format
 msgid "An email has been sent to %s with instructions to activate this email"
 msgstr "En e-post har blitt sent til %s med instruksjoner om hvordan man aktiverer denne e-posten."
+
+#: ../../../app/routes/route.page.php:71
+#: ../../../app/routes/route.settings.php:302
+#: ../../../content/pages/default/contact.php:19
+msgid "Invalid name"
+msgstr "Ugyldig navn"
 
 #: ../../../app/routes/route.settings.php:305
 msgid "Invalid website"
@@ -1793,12 +1722,6 @@ msgstr "Brukernavn"
 #, php-format
 msgid "I'm at least %s years old"
 msgstr "Jeg er minst %s år gammel"
-
-#: ../../../app/themes/Peafowl/header.php:341
-#: ../../../app/themes/Peafowl/views/signup.php:65
-#, php-format
-msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
-msgstr "Ved å registrere deg akspeterer du våre <a href=\"%s\">betingelser</a>"
 
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
@@ -2662,6 +2585,15 @@ msgstr "Er du sikker på at du vil slette? Dette kan ikke angres."
 msgid "Do you really want to remove all the selected content? This can't be undone."
 msgstr "Er du sikker på at du vil slette alt det merkede innholdet? Dette kan ikke angres."
 
+#: ../../../app/themes/Peafowl/views/image.php:57
+msgid "Guest"
+msgstr "Gjest"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Like"
+
 msgid "Uploaded by guest"
 msgstr "Lastet opp av gjest"
 
@@ -2871,11 +2803,6 @@ msgstr "Slett album"
 msgid "You like this"
 msgstr "Du liker dette"
 
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "Like"
-
 msgid "Upload to album"
 msgstr "Last opp til album"
 
@@ -2957,10 +2884,6 @@ msgstr "Tittel på nettsted"
 #: ../../../app/themes/Peafowl/views/dashboard.php:231
 msgid "Website description"
 msgstr "Beskrivelse av nettsted"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:236
-msgid "Website keywords"
-msgstr "Nøkkelord for nettsiden"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:257
 msgid "Default time zone"
@@ -4345,6 +4268,16 @@ msgstr "API v1-nøkkel"
 msgid "Use this key when using the <a %s>API v1</a>."
 msgstr "Bruk denne nøkkelen når du bruker <a %s>API v1</a>."
 
+msgid "Plugin route"
+msgstr "Utvidelsesrute"
+
+#, php-format
+msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
+msgstr "Aktiver denne for å vise instruksjoner for utvidelsen på %u. En lenke til disse instruksjonene vil bli lagt til %s-menyen. Denne innstillingen påvirker ikke administratorer."
+
+msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
+msgstr "Bruk denne for å sette en egendefinert URL for %p. Påse at du manuelt må replikere %s i denne URLen."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:2028
 msgid "Cookie law compliance"
 msgstr "Lovgivningssamsvar for bruk av cookies"
@@ -4369,10 +4302,6 @@ msgstr "Spill av GIF-animasjon"
 
 msgid "Load full resolution"
 msgstr "Last fulloppløst bilde"
-
-#: ../../../app/themes/Peafowl/views/image.php:57
-msgid "Guest"
-msgstr "Gjest"
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -4763,11 +4692,45 @@ msgstr[1] "Følgere"
 msgid "Follow"
 msgstr "Følg"
 
+#: ../../../app/routes/route.page.php:61
+#: ../../../content/pages/default/contact.php:7
+msgid "General questions/comments"
+msgstr "Generelle spørsmål/kommentarer"
+
+#: ../../../app/routes/route.page.php:62
+#: ../../../content/pages/default/contact.php:8
+msgid "DMCA complaint"
+msgstr "Brudd på opphavsrettigheter"
+
+#: ../../../app/routes/route.page.php:74
+#: ../../../content/pages/default/contact.php:22
+msgid "Invalid message"
+msgstr "Ugyldig melding"
+
+#: ../../../app/routes/route.page.php:77
+#: ../../../content/pages/default/contact.php:25
+msgid "Invalid subject"
+msgstr "Ugyldig emne"
+
+#: ../../../app/routes/route.page.php:85
+#: ../../../content/pages/default/contact.php:33
+msgid "Invalid reCAPTCHA"
+msgstr "Ugyldig reCAPTCHA"
+
+#: ../../../app/routes/route.page.php:122
+#: ../../../content/pages/default/contact.php:69
+msgid "Mail error"
+msgstr "E-postfeil"
+
 msgid "Message sent"
 msgstr "Melding sendt"
 
 msgid "Contact"
 msgstr "Kontakt"
+
+#: ../../../app/routes/route.page.php:119
+msgid "Message sent. We will get in contact soon."
+msgstr "Meldingen er sendt. Vi vil svare deg så fort vi kan."
 
 msgid "If you want to send a message fill the form below."
 msgstr "Hvis du ønsker å sende en melding, fyll ut skjemaet under."

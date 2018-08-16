@@ -8,15 +8,15 @@
   @author	Rodolfo Berrios A. <http://rodolfoberrios.com/>
 
   Copyright (c) Rodolfo Berrios <inbox@rodolfoberrios.com> All rights reserved.
-  
+
   Licensed under the MIT license
   http://opensource.org/licenses/MIT
-  
+
   --------------------------------------------------------------------- */
 
 /**
  * This class uses code that belongs or was taken from the following:
- * 
+ *
  * David Soria Parra <sn_@gmx.net>
  * https://github.com/dsp/PHP-Gettext
  *
@@ -26,7 +26,7 @@
  * WordPress
  * https://wordpress.org/
  */
-  
+
 /**
  * class.gettext.php
  * This class is a stand-alone implementation of gettext.
@@ -37,14 +37,14 @@ namespace G;
 use Exception;
 
 class Gettext {
-	
+
 	// Magic words in the MO header
     const MO_MAGIC_1 = -569244523; //0xde120495
     const MO_MAGIC_2 = -1794895138; //0x950412de
-	
+
 	// Cache stuff
 	const CACHE_FILE_SUFFIX = '.cache.php';
-	
+
 	protected static $default_options = ['cache' => TRUE, 'cache_type' => 'file', 'cache_filepath' => NULL, 'cache_header' => TRUE];
     protected $source_file;
     protected $parsed = FALSE;
@@ -52,23 +52,23 @@ class Gettext {
 	public $translation_table = [];
 	public $translation_plural = NULL;
 	public $translation_header = NULL;
-	
+
     public function __construct($options=[]) {
 		$this->options = array_merge(static::$default_options, (array)$options);
         $this->source_file = $this->options['file'];
-		
+
 		if(!@is_readable($this->source_file)) {
             throw new GettextException("Can't read source file", 100);
         }
-		
+
 		$file_extension = pathinfo($this->source_file, PATHINFO_EXTENSION);
 		// Only allow MO and PO
 		if(!in_array($file_extension, ['mo', 'po'])) {
 			 throw new GettextException('Invalid file source. This only works with .mo and .po files', 101);
 		}
-		
+
 		$this->parse_method = strtoupper($file_extension);
-		
+
 		if($this->options['cache']) {
 			if($this->options['cache_filepath']) {
 				// Custom whatever filepath cache
@@ -84,7 +84,7 @@ class Gettext {
 			$this->parseFile();
 		}
     }
-	
+
 	/**
 	 * Return a translated string
 	 *
@@ -96,22 +96,22 @@ class Gettext {
     public function gettext($msg) {
 		if(empty($msg)) return NULL;
         if(!$this->parsed) $this->parseFile();
-		
+
 		if($this->mustFixQuotes()) {
 			$msg = $this->fixQuotes($msg, 'escape');
 		}
-		
+
 		$translated = $msg;
-		
+
         if(array_key_exists($msg, $this->translation_table)) {
 			$translated = $this->translation_table[$msg][0];
 			$translated = !empty($translated) ? $translated : $msg;
         }
-		
+
 		if($this->mustFixQuotes()) {
 			$translated = $this->fixQuotes($translated, 'unescape');
 		}
-		
+
 		return $translated;
     }
 
@@ -133,14 +133,14 @@ class Gettext {
 			return $msg;
 		}
         if(!$this->parsed) $this->parseFile();
-		
+
 		if($this->mustFixQuotes()) {
 			$msg = $this->fixQuotes($msg, 'escape');
 			$msg_plural = $this->fixQuotes($msg_plural, 'escape');
 		}
-		
+
 		$translated = $count == 1 ? $msg : $msg_plural; // Failover
-		
+
 		if(array_key_exists($msg, $this->translation_table)) {
 			$plural_index = $this->getPluralIndex($count);
 			$index_id = $plural_index !== FALSE ? $plural_index : ($count - 1);
@@ -148,16 +148,16 @@ class Gettext {
 			if(array_key_exists($index_id, $table)) {
 				$translated = $table[$index_id];
 			}
-        }
-		
+    }
+
 		if($this->mustFixQuotes()) {
 			$translated = $this->fixQuotes($translated, 'unescape');
 		}
-		
+
 		return $translated;
 
     }
-	
+
 	/**
 	 * Parse the source file
 	 * If cache is enabled it will try to cache the result
@@ -259,32 +259,30 @@ class Gettext {
      * Parse the plural data found in the language
      *
      * @param string $header with nplurals and plural declaration
-     */	
+     */
 	private function parsePluralData($header) {
+    // Base english-like plural languages
+    $nplurals = 2;
+    $formula = '(n != 1)';
 		// Detect plural data. If nothing found then use general plural handling
 		if(preg_match('/\s*nplurals\s*=\s*(\d+)\s*;\s*plural\s*=\s*(\({0,1}.*\){0,1})\s*;/', $header, $matches)) {
-			$plurals = [(int)$matches[1], $matches[2]];
-		} else {
-			$plurals = [2, '(n != 1)']; // Base english-like plural languages
+      $nplurals = (int) $matches[1];
+      if(preg_match('/^([!n=<>&\|\?:%\s\(\)\d]+)$/', $matches[2]) === TRUE) {
+        $formula = $matches[2];
+      }
 		}
 
-		list($nplurals, $formula) = $plurals;
-		
 		// Fix the plural formula
 		$formula = $this->parenthesizePluralFormula($formula);
-		
+
 		// Generate the translation_plural array
-		$formula = str_replace('n', '$n', $formula);
-		
-		$function = "\$index = (int)($formula); return (\$index < $nplurals) ? \$index : $nplurals - 1;";
-		
+		$function = str_replace('n', '$n', $formula);
+
 		// Stock everything
 		$this->translation_plural = [
 			'nplurals'	=> $nplurals,
-			'plural'	=> $plurals[1],
-			'formula'	=> $formula,
 			'function'	=> $function,
-		];		
+		];
 	}
 
 	/**
@@ -293,7 +291,7 @@ class Gettext {
 	 *
 	 * @param string $formula the expression without parentheses
 	 * @return string the formula with parentheses added
-	 */	
+	 */
 	private function parenthesizePluralFormula($formula) {
 		$formula .= ';';
 		$return = '';
@@ -321,25 +319,25 @@ class Gettext {
 		$return = str_replace('( ', '(', str_replace(' )', ')', $return)); // Remove extra space around ()
 		return $return;
 	}
-	
+
 	/**
 	 * Get plural index
 	 *
 	 * @param int msg count
 	 * @return int plural index
-	 */	
+	 */
 	function getPluralIndex($count) {
-		// Detect if function exists (raw)
-		if(!array_key_exists('function', $this->translation_plural)) {
-			return FALSE;
-		}
-		// Detect if callable function has been already created
-		if(!array_key_exists('callable', $this->translation_plural)) {
-			$this->translation_plural['callable'] = create_function('$n', $this->translation_plural['function']);
-		}
+    if(!is_callable($this->translation_plural['callable'])) {
+      // So, this is how you interpeter this thing
+      $function = $this->translation_plural['function'];
+      $nplurals = $this->translation_plural['nplurals'];
+      $evil = "\$callable = function(\$n) {\$index = (int)$function; return \$index < $nplurals ? \$index : ($nplurals - 1);};";
+      eval($evil);
+      $this->translation_plural['callable'] = $callable;
+    }
 		return call_user_func($this->translation_plural['callable'], $count);
 	}
-	
+
 	private function parseHeader($header) {
 		$headerTable = [];
         $lines = array_map('trim', explode("\n", $header));
@@ -353,7 +351,7 @@ class Gettext {
         }
         return $headerTable;
 	}
-	
+
 	/**
      * Parse a PO entry chunk
      * @param Array $chunk
@@ -364,17 +362,17 @@ class Gettext {
 		$chunks = explode("\n", $chunk);
 
 		foreach($chunks as $chunk) {
-			
+
 			// Skip #: and empty chunks
 			if(starts_with('#', $chunk) or is_null($chunk)) {
 				continue;
 			}
-			
+
 			// Parse the plural forms
 			if(is_null($this->translation_plural) and starts_with('"Plural-Forms:', $chunk)) {
-				$this->parsePluralData($chunk);				
+				$this->parsePluralData($chunk);
 			}
-			
+
 			// Nasty regexes
 			if(preg_match('/^msgid "(.*)"/', $chunk, $matches)) {
 				$msgid = $matches[1];
@@ -401,9 +399,9 @@ class Gettext {
 				$msgstr[$matches[1]] = $matches[2];
 			}
 		}
-		
+
 		if($msgstr == '') $msgstr = NULL;
-		
+
 		if(empty($msgid)) {
 			return NULL;
 		} else {
@@ -412,7 +410,7 @@ class Gettext {
 				'msgstr'=> is_null($msgstr) ? NULL : (array)$msgstr
 			];
 		}
-		
+
 	}
 
 
@@ -425,14 +423,14 @@ class Gettext {
         if($filesize < 4 * 7) {
             return;
         }
-		
+
 		$fp = @fopen($this->source_file, 'rb');
 		if(!$fp) {
 			throw new GettextException("Can't fopen file for reading", 200);
 		}
 
 		$offsets = $this->parseMOHeader($fp);
-		
+
 		if(NULL == $offsets || $filesize < 4 * ($offsets['num_strings'] + 7)) {
 			fclose($fp);
 			return;
@@ -448,12 +446,12 @@ class Gettext {
 		foreach($table as $idx => $entry) {
 			$transTable[$idx] = $this->parseMOEntry($fp, $entry);
 		}
-		
+
 		$this->translation_header = $this->parseHeader(reset($transTable));
-		
+
 		// Parse plural data
 		$this->parsePluralData($this->translation_header['Plural-Forms']);
-		
+
 		$table = $this->parseMOTableOffset($fp, $offsets['orig_offset'], $offsets['num_strings']);
 
 		foreach($table as $idx => $entry) {
@@ -468,7 +466,7 @@ class Gettext {
 
 		fclose($fp);
 	}
-	
+
 	/**
 	 * Parse text based .po file
 	 */
@@ -490,14 +488,14 @@ class Gettext {
 			}
 		}
 		$this->translation_header = $this->parseHeader(reset($chunks));
-		
+
 		foreach($chunks as $chunk) {
 			$entry = $this->parsePOEntry($chunk);
 			if(!$entry['msgid'] or is_null($entry['msgstr'])) continue;
 			$this->translation_table[$entry['msgid']] = $entry['msgstr'];
 		}
 	}
-	
+
 	/**
 	 * Get cached results (cached file)
 	 *
@@ -525,12 +523,12 @@ class Gettext {
 				$this->is_cached = TRUE;
 				$this->parsed = TRUE;
 				return TRUE;
-			}			
+			}
 		}
 		$this->is_cached = FALSE;
 		return FALSE;
 	}
-	
+
 	/**
 	 * Cache the translation results into a file
 	 */
@@ -543,7 +541,7 @@ class Gettext {
 		}
 		// Cache contents, closer as possible to the mo/po scheme
 		$contents = '<?php' . "\n";
-		
+
 		if($this->options['cache_header']) {
 			if(!is_null($this->translation_header)) {
 				$contents .= '$translation_header = ' . var_export($this->translation_header, TRUE) . ';' . "\n";
@@ -551,10 +549,10 @@ class Gettext {
 			if(!is_null($this->translation_plural)) {
 				$translation_plural = $this->translation_plural;
 				unset($translation_plural['callable']); // Don't cache the callable reference
-				$contents .= '$translation_plural = ' . var_export($this->translation_plural, TRUE) . ';' . "\n";
+				$contents .= '$translation_plural = ' . var_export($translation_plural, TRUE) . ';' . "\n";
 			}
 		}
-		
+
 		// Note that we keep the same "quotes" used by the PO file scheme
 		$contents .= '$translation_table = [';
 		foreach($this->translation_table as $k => $v) {
@@ -575,7 +573,7 @@ class Gettext {
 		@touch($this->source_file); // Make sure to use the correct filemtime next time
 		fclose($fh);
 	}
-	
+
 	private function fixQuotes($msg, $action=NULL) {
 		if($this->is_cached) return $msg;
 		switch($action) {
@@ -588,11 +586,11 @@ class Gettext {
 		}
 		return $msg;
 	}
-	
+
 	private function mustFixQuotes() {
 		return $this->is_cached or $this->parse_method == 'PO';
 	}
-	
+
 }
 
 class GettextException extends Exception {}

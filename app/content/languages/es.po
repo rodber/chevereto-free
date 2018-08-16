@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-09-23 17:30+0000\n"
-"PO-Revision-Date: 2017-09-23 17:30+0000\n"
+"POT-Creation-Date: 2018-06-06 20:25+0000\n"
+"PO-Revision-Date: 2018-06-06 20:25+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -11,18 +11,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Plugin"
-msgstr "Complemento"
-
-msgid "Plugin route"
-msgstr "Ruta de complemento"
+msgid "To use all the features of this site you must be logged in."
+msgstr "Debes ingresar para usar todas las características de este sitio."
 
 #, php-format
-msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
-msgstr "Habilita esto para mostrar las instrucciones del complemento en %u. Un enlace a estas instrucciones será añadido al menu %s. Esta configuración no afecta a los administradores."
+msgid "If you don't have an account you can <a href=\"%s\">sign up</a> right now."
+msgstr "Si no tienes una cuenta puedes <a href=\"%s\">crear cuenta</a> ahora mismo."
 
-msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
-msgstr "Usa esto para establecer una URL personalizada para %p. Ten en cuenta que necesitarás replicar manualmente %s en esta URL."
+msgid "Decode ID"
+msgstr "Descodificar ID"
+
+msgid "Encode ID"
+msgstr "Codificar ID"
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -201,10 +201,6 @@ msgstr[1] "visitas"
 msgid "After %n %t"
 msgstr "Después de %n %t"
 
-#: ../../../app/lib/classes/class.image.php:348
-msgid "Don't autodelete"
-msgstr "No eliminar automáticamente"
-
 #: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
 msgid "minute"
 msgid_plural "minutes"
@@ -223,28 +219,37 @@ msgid_plural "days"
 msgstr[0] "día"
 msgstr[1] "días"
 
+#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "semana"
+msgstr[1] "semanas"
+
+#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
+msgid "month"
+msgid_plural "months"
+msgstr[0] "mes"
+msgstr[1] "meses"
+
+#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
+msgid "year"
+msgid_plural "years"
+msgstr[0] "año"
+msgstr[1] "años"
+
+#: ../../../app/lib/classes/class.image.php:348
+msgid "Don't autodelete"
+msgstr "No eliminar automáticamente"
+
 #: ../../../app/lib/classes/class.image.php:636
 #: ../../../app/lib/classes/class.image.php:742
 msgid "Duplicated upload"
 msgstr "Subida duplicada"
 
-msgid "Error storing file in external storage server"
-msgstr "Error almacenando archivo en el servidor de almacenamiento externo"
-
-msgid "External storage has failed"
-msgstr "Ha fallado el almacenamiento externo"
-
 #: ../../../app/lib/classes/class.image.php:955
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
 msgid "Private upload"
 msgstr "Subida privada"
-
-msgid "Upload switched to local storage"
-msgstr "Subida cambiada a almacenamiento externo"
-
-#, php-format
-msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
-msgstr "El sistema ha cambiado al almacenamiento externo debido a insuficiente capacidad en el disco (%c) en el(los) servidores de almacenamiento externo. La imagen %s ha sido ubicada en el almacenamiento local."
 
 #: ../../../app/lib/classes/class.image.php:1231
 msgid "like"
@@ -404,24 +409,6 @@ msgstr "usado"
 msgid "Private profile"
 msgstr "Perfil privado"
 
-#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
-msgid "year"
-msgid_plural "years"
-msgstr[0] "año"
-msgstr[1] "años"
-
-#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
-msgid "month"
-msgid_plural "months"
-msgstr[0] "mes"
-msgstr[1] "meses"
-
-#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
-msgid "week"
-msgid_plural "weeks"
-msgstr[0] "semana"
-msgstr[1] "semanas"
-
 #: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
 msgid "second"
 msgid_plural "seconds"
@@ -436,9 +423,6 @@ msgstr "hace %s"
 #: ../../../app/lib/functions.php:67
 msgid "moments ago"
 msgstr "hace unos momentos"
-
-msgid "System notification"
-msgstr "Notificación de sistema"
 
 #: ../../../app/routes/route.dashboard.php:1223
 #: ../../../app/themes/Peafowl/header.php:407
@@ -482,16 +466,18 @@ msgid "You can apply this update directly from your %a or download it from %s an
 msgstr "Puedes aplicar esta actualización directamente desde %a o puedes descargarla desde %s e instalar manualmente."
 
 #, php-format
-msgid "Chevereto update available (v%s)"
-msgstr "Actualización de Chevereto disponible (v%s)"
-
-#, php-format
 msgid "view on %s"
 msgstr "ver en %s"
 
-#: ../../../app/lib/functions.render.php:303
-msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
-msgstr "Utilizamos cookies propias y de terceros para mejorar tu experiencia de navegación y de nuestros servicios. Si continúas navegando, entendemos que acepta nuestra política de cookies."
+msgid "cookie policy"
+msgstr "política de cookies"
+
+#, php-format
+msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link."
+msgstr "Utilizamos cookies propias y de terceros para mejorar tu experiencia de navegación y nuestros servicios. Si continúas usando nuestro sitio web, se entiende que aceptas esta %cookie_policy_link."
+
+msgid "I understand"
+msgstr "Entiendo"
 
 #: ../../../app/loader.php:180
 msgid "You have been forbidden to use this website."
@@ -506,6 +492,9 @@ msgstr "Siéntete libre de navegar y descubrir todas mis imágenes y álbumes co
 #: ../../../app/themes/Peafowl/views/settings.php:447
 msgid "View all my images"
 msgstr "Ver todas mis imágenes"
+
+msgid "Plugin"
+msgstr "Complemento"
 
 #: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
 msgid "That page doesn't exist"
@@ -1265,6 +1254,10 @@ msgstr "Edad mínima de usuario inválida"
 msgid "Only alphanumeric, hyphen and underscore characters are allowed"
 msgstr "Solamente se permiten caracteres alfanuméricos, guiones y guion bajo."
 
+#: ../../../app/routes/route.dashboard.php:922
+msgid "Invalid URL"
+msgstr "URL inválida"
+
 msgid "Routes can't be the same"
 msgstr "Las rutas no pueden ser iguales"
 
@@ -1297,10 +1290,6 @@ msgstr "Servidor SMTP inválido"
 #: ../../../app/routes/route.dashboard.php:861
 msgid "Invalid SMTP username"
 msgstr "Usuario SMTP inválido"
-
-#: ../../../app/routes/route.dashboard.php:922
-msgid "Invalid URL"
-msgstr "URL inválida"
 
 #: ../../../app/routes/route.dashboard.php:960
 #, php-format
@@ -1349,11 +1338,6 @@ msgstr "IP ya baneada"
 #: ../../../app/routes/route.image.php:152
 msgid "Upload date"
 msgstr "Fecha de subida"
-
-#: ../../../app/routes/route.image.php:177
-#, php-format
-msgid "%s images"
-msgstr " Imágenes de %s"
 
 #: ../../../app/routes/route.image.php:185
 msgid "Image %i in %a album"
@@ -1453,6 +1437,10 @@ msgstr "Esto es solamente una prueba"
 msgid "Test email sent to %s."
 msgstr "Email de prueba enviado a %s"
 
+#, php-format
+msgid "Downloading %s data"
+msgstr "Descargando datos de %s"
+
 #: ../../../app/routes/route.json.php:1128
 #, php-format
 msgid "User %s followed"
@@ -1500,51 +1488,6 @@ msgstr "Entrar"
 msgid "Logged out"
 msgstr "Desconectado"
 
-#: ../../../app/routes/route.page.php:61
-#: ../../../content/pages/default/contact.php:7
-msgid "General questions/comments"
-msgstr "Preguntas generales/comentarios"
-
-#: ../../../app/routes/route.page.php:62
-#: ../../../content/pages/default/contact.php:8
-msgid "DMCA complaint"
-msgstr "Queja DMCA"
-
-#: ../../../app/routes/route.page.php:71
-#: ../../../app/routes/route.settings.php:302
-#: ../../../content/pages/default/contact.php:19
-msgid "Invalid name"
-msgstr "Nombre inválido"
-
-#: ../../../app/routes/route.page.php:74
-#: ../../../content/pages/default/contact.php:22
-msgid "Invalid message"
-msgstr "Mensaje inválido"
-
-#: ../../../app/routes/route.page.php:77
-#: ../../../content/pages/default/contact.php:25
-msgid "Invalid subject"
-msgstr "Asunto inválido"
-
-#: ../../../app/routes/route.page.php:85
-#: ../../../content/pages/default/contact.php:33
-msgid "Invalid reCAPTCHA"
-msgstr "reCAPTCHA inválido"
-
-#: ../../../app/routes/route.page.php:90
-#, php-format
-msgid "Can't submit the form: %s"
-msgstr "No se puede enviar el formulario: %s"
-
-#: ../../../app/routes/route.page.php:119
-msgid "Message sent. We will get in contact soon."
-msgstr "Mensaje enviado. Nos pondremos en contacto pronto."
-
-#: ../../../app/routes/route.page.php:122
-#: ../../../content/pages/default/contact.php:69
-msgid "Mail error"
-msgstr "Error en mail"
-
 msgid "Upload images"
 msgstr "Subir imágenes"
 
@@ -1587,6 +1530,12 @@ msgstr "Fecha de expiración inválida: %s"
 msgid "An email has been sent to %s with instructions to activate this email"
 msgstr "Un email ha sido enviado a %s con las instrucciones para activar este email"
 
+#: ../../../app/routes/route.page.php:71
+#: ../../../app/routes/route.settings.php:302
+#: ../../../content/pages/default/contact.php:19
+msgid "Invalid name"
+msgstr "Nombre inválido"
+
 #: ../../../app/routes/route.settings.php:305
 msgid "Invalid website"
 msgstr "Sitio web inválido"
@@ -1621,6 +1570,9 @@ msgstr "Nombre de usuario / Email inválidos"
 #, php-format
 msgid "Settings for %s"
 msgstr "Ajustes para %s"
+
+msgid "You must agree to the terms and privacy policy"
+msgstr "Debes aceptar los términos y política de privacidad"
 
 #, php-format
 msgid "You must be at least %s years old to use this website."
@@ -1661,12 +1613,12 @@ msgstr "Resultados para"
 #: ../../../app/routes/route.user.php:94
 #, php-format
 msgid "Liked by %s"
-msgstr "Gustado por %s"
+msgstr "Le gusta a %s"
 
 #: ../../../app/routes/route.user.php:95
 #: ../../../app/themes/Peafowl/header.php:404
 msgid "Liked"
-msgstr "Gustado"
+msgstr "Me gusta"
 
 #: ../../../app/routes/route.user.php:109
 msgid "Followers"
@@ -1794,11 +1746,14 @@ msgstr "Nombre de usuario"
 msgid "I'm at least %s years old"
 msgstr "Tengo al menos %s años"
 
-#: ../../../app/themes/Peafowl/header.php:341
-#: ../../../app/themes/Peafowl/views/signup.php:65
-#, php-format
-msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
-msgstr "Al ingresar aceptas nuestros <a href=\"%s\">Terminos de servicio</a>"
+msgid "terms"
+msgstr "términos"
+
+msgid "privacy policy"
+msgstr "política de privacidad"
+
+msgid "I agree to the %terms_link and %privacy_link"
+msgstr "Estoy de acuerdo con los %terms_link y %privacy_link"
 
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
@@ -2029,6 +1984,10 @@ msgstr "conocer más"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:86
 msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
 msgstr "Revisa el <a data-modal=\"simple\" data-target=\"failed-upload-result\">reporte de error</a> para más información."
+
+#, php-format
+msgid "Register to get %s"
+msgstr "Regístrate para obtener %s"
 
 msgid "reset"
 msgstr "reiniciar"
@@ -2351,6 +2310,9 @@ msgstr "Breve descripción de esta categoría"
 msgid "Untitled image"
 msgstr "Imagen sin título"
 
+msgid "You can use wildcard * characters."
+msgstr "Puedes usar caracteres comodín *."
+
 #: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
 msgid "Expiration date"
 msgstr "Fecha de expiración"
@@ -2662,6 +2624,24 @@ msgstr "¿Realmente deseas remover este contenido? Esto no se podrá deshacer."
 msgid "Do you really want to remove all the selected content? This can't be undone."
 msgstr "¿Realmente deseas remover todo el contenido seleccionado? Esto no se podrá deshacer."
 
+msgid "Fullscreen"
+msgstr "Pantalla completa"
+
+msgid "Exit fullscreen"
+msgstr "Salir de pantalla completa"
+
+#: ../../../app/themes/Peafowl/views/image.php:57
+msgid "Guest"
+msgstr "Invitado"
+
+msgid "Keyboard shortcuts"
+msgstr "Atajos de teclado"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Me gusta"
+
 msgid "Uploaded by guest"
 msgstr "Subido por invitado"
 
@@ -2871,11 +2851,6 @@ msgstr "Eliminar álbum"
 msgid "You like this"
 msgstr "Te gusta esto"
 
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "Me gusta"
-
 msgid "Upload to album"
 msgstr "Subir al ábum"
 
@@ -2958,10 +2933,6 @@ msgstr "Doctitle del sitio"
 msgid "Website description"
 msgstr "Descripción del sitio"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:236
-msgid "Website keywords"
-msgstr "Palabras clave del sitio"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:257
 msgid "Default time zone"
 msgstr "Zona horaria predeterminada"
@@ -2976,6 +2947,12 @@ msgstr "Permite buscar imágenes, álbumes y usuarios basado en una determinada 
 
 msgid "Enables to browse public uploaded images. It also enables categories."
 msgstr "Permite navegar las imágenes subidas de manera publica. También permite categorías."
+
+msgid "guests"
+msgstr "invitados"
+
+msgid "Enables explore for guests."
+msgstr "Habilita explorador para invitados."
 
 msgid "Enables to browse images randomly."
 msgstr "Permite navegar imágenes de manera aleatoria."
@@ -3273,6 +3250,10 @@ msgstr "Tamaño máximo de archivo de subida"
 msgid "Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)."
 msgstr "Tamaño máximo permitido por el servidor es %s. Este límite es regido por %u y %p (valores %f)."
 
+#, php-format
+msgid "Same as \"%s\" but for guests."
+msgstr "Lo mismo que \"%s\" pero para invitados."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:695
 msgid "Image path"
 msgstr "Ruta de las imágenes"
@@ -3520,6 +3501,12 @@ msgstr "Vacío"
 msgid "Leave it empty to don't require a minimum age to use the website."
 msgstr "Dejar vacío para no requerir una edad mínima para usar el sitio web."
 
+msgid "Notify on user signup"
+msgstr "Notificar en registro de usuario"
+
+msgid "Enable this if you want to get an email notification for each new user signup."
+msgstr "Habilita esto si deseas recibir una notificación vía email cada vez que se registre un usuario."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:972
 msgid "Username routing"
 msgstr "Enrutamiento de nombre de usuario"
@@ -3646,7 +3633,7 @@ msgstr "Modo de paginación"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1119
 msgid "Endless scrolling"
-msgstr "Scroll infiinito"
+msgstr "Desplazamiento infinito"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1119
 msgid "Classic pagination"
@@ -3655,6 +3642,12 @@ msgstr "Paginación clasica"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1123
 msgid "What pagination method should be used."
 msgstr "Que modo de paginación se debería usar."
+
+msgid "Listing viewer"
+msgstr "Visualizador de listados"
+
+msgid "Enable this to use the listing viewer when clicking on an image."
+msgstr "Habilita esto para usar el visualizador de imágenes cuando se haga click en una imagen."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1127
 msgid "Image listing size"
@@ -3671,6 +3664,15 @@ msgstr "Fijo"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1134
 msgid "Both methods use a fixed width but fluid method uses automatic heights."
 msgstr "Ambos métodos usan ancho fijo pero el método fluido usa alturas automáticas."
+
+msgid "Album listing images requirement"
+msgstr "Requerimiento de imágenes para listados de álbumes"
+
+msgid "explore"
+msgstr "explorar"
+
+msgid "Sets the minimum image count needed to show albums in explore."
+msgstr "Establece la cantidad mínima de imágenes necesarias para mostrar álbumes en el explorador."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1140
 msgid "Listing columns number"
@@ -4225,6 +4227,15 @@ msgstr "prueba@algundominio.com"
 msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
 msgstr "Usa esto para corroborar la entrega de email. Recomendamos usar %s."
 
+msgid "Export a user"
+msgstr "Exportar un usuario"
+
+msgid "Export user"
+msgstr "Exportar usuario"
+
+msgid "This will allow you to download a user's standard personal information in JSON format."
+msgstr "Esto te permitirá descargar la información estandarizada personal de un usuario en formato JSON."
+
 msgid "social networks"
 msgstr "redes sociales"
 
@@ -4345,6 +4356,16 @@ msgstr "Llave API v1"
 msgid "Use this key when using the <a %s>API v1</a>."
 msgstr "Usa esta llave cuando uses la <a %s>API v1</a>."
 
+msgid "Plugin route"
+msgstr "Ruta de complemento"
+
+#, php-format
+msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
+msgstr "Habilita esto para mostrar las instrucciones del complemento en %u. Un enlace a estas instrucciones será añadido al menú %s. Esta configuración no afecta a los administradores."
+
+msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
+msgstr "Usa esto para establecer una URL personalizada para %p. Ten en cuenta que necesitarás replicar manualmente %s en esta URL."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:2028
 msgid "Cookie law compliance"
 msgstr "Cumplimiento de la Ley de Cookies"
@@ -4369,10 +4390,6 @@ msgstr "Reproducir GIF"
 
 msgid "Load full resolution"
 msgstr "Cargar tamaño completo"
-
-#: ../../../app/themes/Peafowl/views/image.php:57
-msgid "Guest"
-msgstr "Invitado"
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -4763,11 +4780,45 @@ msgstr[1] "Seguidores"
 msgid "Follow"
 msgstr "Seguir"
 
+#: ../../../app/routes/route.page.php:61
+#: ../../../content/pages/default/contact.php:7
+msgid "General questions/comments"
+msgstr "Preguntas generales/comentarios"
+
+#: ../../../app/routes/route.page.php:62
+#: ../../../content/pages/default/contact.php:8
+msgid "DMCA complaint"
+msgstr "Queja DMCA"
+
+#: ../../../app/routes/route.page.php:74
+#: ../../../content/pages/default/contact.php:22
+msgid "Invalid message"
+msgstr "Mensaje inválido"
+
+#: ../../../app/routes/route.page.php:77
+#: ../../../content/pages/default/contact.php:25
+msgid "Invalid subject"
+msgstr "Asunto inválido"
+
+#: ../../../app/routes/route.page.php:85
+#: ../../../content/pages/default/contact.php:33
+msgid "Invalid reCAPTCHA"
+msgstr "reCAPTCHA inválido"
+
+#: ../../../app/routes/route.page.php:122
+#: ../../../content/pages/default/contact.php:69
+msgid "Mail error"
+msgstr "Error en mail"
+
 msgid "Message sent"
 msgstr "Mensaje enviado"
 
 msgid "Contact"
 msgstr "Contacto"
+
+#: ../../../app/routes/route.page.php:119
+msgid "Message sent. We will get in contact soon."
+msgstr "Mensaje enviado. Nos pondremos en contacto pronto."
 
 msgid "If you want to send a message fill the form below."
 msgstr "Rellena este formulario si quieres enviarnos un mensaje."
@@ -4838,6 +4889,9 @@ msgstr "Error en la actualización"
 msgid "Please provide a valid email address"
 msgstr "Por favor introduce un email válido"
 
+msgid "Please provide a valid username"
+msgstr "Por favor introduce un nombre de usuario válido"
+
 #: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
 #: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
 #: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
@@ -4902,6 +4956,18 @@ msgstr "Actualizar ahora"
 #, javascript-format
 msgid "This website is running latest %s version"
 msgstr "Este sitio web está corriendo la última versión de %s"
+
+msgid "Toggle select"
+msgstr "Alternar selección"
+
+msgid "Toggle flag"
+msgstr "Alternar marca"
+
+msgid "Previous"
+msgstr "Anterior"
+
+msgid "Next"
+msgstr "Siguiente"
 
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"

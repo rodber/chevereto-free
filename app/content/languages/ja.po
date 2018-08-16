@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-09-23 17:30+0000\n"
-"PO-Revision-Date: 2017-09-23 17:30+0000\n"
+"POT-Creation-Date: 2018-06-29 19:18+0000\n"
+"PO-Revision-Date: 2018-06-29 19:18+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -11,18 +11,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgid "Plugin"
-msgstr "プラグイン"
-
-msgid "Plugin route"
-msgstr "プラグインルート"
+msgid "To use all the features of this site you must be logged in."
+msgstr "当サイトの全ての機能をご利用頂くにはログインが必要です。"
 
 #, php-format
-msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
-msgstr "%uでプラグインの説明を表示する。これらの説明は、メニューに%sを追加します。この設定は管理者には影響しません。"
+msgid "If you don't have an account you can <a href=\"%s\">sign up</a> right now."
+msgstr "アカウントをお持ちでなければ、今すぐ<a href=\"%s\">アカウントを作成</a>いただくことができます。"
 
-msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
-msgstr "%pのカスタムURLをセットするのに使用。手動でこのURLを%sで複製してください。"
+msgid "Decode ID"
+msgstr "デコードID"
+
+msgid "Encode ID"
+msgstr "エンコードID"
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -200,10 +200,6 @@ msgstr[0] "回"
 msgid "After %n %t"
 msgstr "%n以降%t"
 
-#: ../../../app/lib/classes/class.image.php:348
-msgid "Don't autodelete"
-msgstr "自動削除しない"
-
 #: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
 msgid "minute"
 msgid_plural "minutes"
@@ -219,28 +215,34 @@ msgid "day"
 msgid_plural "days"
 msgstr[0] "日"
 
+#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "週"
+
+#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
+msgid "month"
+msgid_plural "months"
+msgstr[0] "月"
+
+#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
+msgid "year"
+msgid_plural "years"
+msgstr[0] "年"
+
+#: ../../../app/lib/classes/class.image.php:348
+msgid "Don't autodelete"
+msgstr "自動削除しない"
+
 #: ../../../app/lib/classes/class.image.php:636
 #: ../../../app/lib/classes/class.image.php:742
 msgid "Duplicated upload"
 msgstr "重複したアップロード"
 
-msgid "Error storing file in external storage server"
-msgstr "外部ストレージサーバにファイルの保存でエラーが発生しました。"
-
-msgid "External storage has failed"
-msgstr "外部ストレージに問題が発生しています。"
-
 #: ../../../app/lib/classes/class.image.php:955
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
 msgid "Private upload"
 msgstr "非公開アップロード"
-
-msgid "Upload switched to local storage"
-msgstr "アップロード先がローカルストレージに変更されました。"
-
-#, php-format
-msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
-msgstr "外部ストレージサーバのディスクの空き容量が十分にない(%c)ため、システムは自動的にローカルストレージへの保存に変更しました。画像 %s はローカルストレージに配置されています。"
 
 #: ../../../app/lib/classes/class.image.php:1231
 msgid "like"
@@ -395,21 +397,6 @@ msgstr "使用中"
 msgid "Private profile"
 msgstr "非公開プロフィール"
 
-#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
-msgid "year"
-msgid_plural "years"
-msgstr[0] "年"
-
-#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
-msgid "month"
-msgid_plural "months"
-msgstr[0] "月"
-
-#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
-msgid "week"
-msgid_plural "weeks"
-msgstr[0] "週"
-
 #: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
 msgid "second"
 msgid_plural "seconds"
@@ -423,9 +410,6 @@ msgstr "%s前"
 #: ../../../app/lib/functions.php:67
 msgid "moments ago"
 msgstr "少し前"
-
-msgid "System notification"
-msgstr "システム通知"
 
 #: ../../../app/routes/route.dashboard.php:1223
 #: ../../../app/themes/Peafowl/header.php:407
@@ -469,16 +453,18 @@ msgid "You can apply this update directly from your %a or download it from %s an
 msgstr "%aから直接アップデート・ダウンロードは出来ません。%sより手動でインストールしてください。"
 
 #, php-format
-msgid "Chevereto update available (v%s)"
-msgstr "Cheveretoのアップデート(%s)があります。"
-
-#, php-format
 msgid "view on %s"
 msgstr "%sとして表示"
 
-#: ../../../app/lib/functions.render.php:303
-msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
-msgstr "このサイトでは、サイトをより快適にお使いいただけるように当社とサードパーティのCookieを利用しています。当サイトの利用を続けるには当サイトのCookieポリシーに同意いただく必要があります。"
+msgid "cookie policy"
+msgstr "Cookieのポリシー"
+
+#, php-format
+msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link."
+msgstr "当サイトでは、サイトをより快適にお使いいただけるように当社とサードパーティのCookieを利用しています。当サイトのご利用を続行頂いた場合、お客様は%cookie_policy_link に同意頂いたと見なします。"
+
+msgid "I understand"
+msgstr "私は次を理解しました："
 
 #: ../../../app/loader.php:180
 msgid "You have been forbidden to use this website."
@@ -493,6 +479,9 @@ msgstr "お気軽に共有設定しているアルバムと画像をご覧下さ
 #: ../../../app/themes/Peafowl/views/settings.php:447
 msgid "View all my images"
 msgstr "全ての画像を見る"
+
+msgid "Plugin"
+msgstr "プラグイン"
 
 #: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
 msgid "That page doesn't exist"
@@ -1251,6 +1240,10 @@ msgstr "無効なユーザーの最低年齢です。"
 msgid "Only alphanumeric, hyphen and underscore characters are allowed"
 msgstr "使用できるのは、英数字、ハイフン、アンダースコアのみです。"
 
+#: ../../../app/routes/route.dashboard.php:922
+msgid "Invalid URL"
+msgstr "無効なURLです。"
+
 msgid "Routes can't be the same"
 msgstr "ルートは同じではありません。"
 
@@ -1283,10 +1276,6 @@ msgstr "有効なSMTPサーバーではありません。"
 #: ../../../app/routes/route.dashboard.php:861
 msgid "Invalid SMTP username"
 msgstr "有効なSMTPユーザ名ではありません。"
-
-#: ../../../app/routes/route.dashboard.php:922
-msgid "Invalid URL"
-msgstr "無効なURLです。"
 
 #: ../../../app/routes/route.dashboard.php:960
 #, php-format
@@ -1335,11 +1324,6 @@ msgstr "IPアドレスは既にアクセス禁止となっています。"
 #: ../../../app/routes/route.image.php:152
 msgid "Upload date"
 msgstr "アップロード日時"
-
-#: ../../../app/routes/route.image.php:177
-#, php-format
-msgid "%s images"
-msgstr "%sの画像"
 
 #: ../../../app/routes/route.image.php:185
 msgid "Image %i in %a album"
@@ -1439,6 +1423,10 @@ msgstr "これはテストです。"
 msgid "Test email sent to %s."
 msgstr "%sへテストメールを送信しました。"
 
+#, php-format
+msgid "Downloading %s data"
+msgstr "%sのデータをダウンロード中"
+
 #: ../../../app/routes/route.json.php:1128
 #, php-format
 msgid "User %s followed"
@@ -1486,51 +1474,6 @@ msgstr "サインイン"
 msgid "Logged out"
 msgstr "ログアウトしました。"
 
-#: ../../../app/routes/route.page.php:61
-#: ../../../content/pages/default/contact.php:7
-msgid "General questions/comments"
-msgstr "一般的な質問/コメント"
-
-#: ../../../app/routes/route.page.php:62
-#: ../../../content/pages/default/contact.php:8
-msgid "DMCA complaint"
-msgstr "デジタルミレニアム著作権法"
-
-#: ../../../app/routes/route.page.php:71
-#: ../../../app/routes/route.settings.php:302
-#: ../../../content/pages/default/contact.php:19
-msgid "Invalid name"
-msgstr "有効な名前ではありません。"
-
-#: ../../../app/routes/route.page.php:74
-#: ../../../content/pages/default/contact.php:22
-msgid "Invalid message"
-msgstr "有効なメッセージではありません。"
-
-#: ../../../app/routes/route.page.php:77
-#: ../../../content/pages/default/contact.php:25
-msgid "Invalid subject"
-msgstr "有効な件名ではありません。"
-
-#: ../../../app/routes/route.page.php:85
-#: ../../../content/pages/default/contact.php:33
-msgid "Invalid reCAPTCHA"
-msgstr "入力された値は、画像にあるキーではありません。"
-
-#: ../../../app/routes/route.page.php:90
-#, php-format
-msgid "Can't submit the form: %s"
-msgstr "送信できませんでした：%s"
-
-#: ../../../app/routes/route.page.php:119
-msgid "Message sent. We will get in contact soon."
-msgstr "メッセージを送信しました。まもなく私どもから連絡を差し上げます。"
-
-#: ../../../app/routes/route.page.php:122
-#: ../../../content/pages/default/contact.php:69
-msgid "Mail error"
-msgstr "メールでエラーが発生しました。"
-
 msgid "Upload images"
 msgstr "画像をアップロード"
 
@@ -1573,6 +1516,12 @@ msgstr "無効な画像の有効期限: %s"
 msgid "An email has been sent to %s with instructions to activate this email"
 msgstr "この電子メールアドレスは認証され、%s宛に説明書を添付したメールを送信しました。"
 
+#: ../../../app/routes/route.page.php:71
+#: ../../../app/routes/route.settings.php:302
+#: ../../../content/pages/default/contact.php:19
+msgid "Invalid name"
+msgstr "有効な名前ではありません。"
+
 #: ../../../app/routes/route.settings.php:305
 msgid "Invalid website"
 msgstr "有効なWebサイトではありません。"
@@ -1607,6 +1556,9 @@ msgstr "ユーザ名/電子メールアドレスが有効な値ではありま�
 #, php-format
 msgid "Settings for %s"
 msgstr "%sの設定"
+
+msgid "You must agree to the terms and privacy policy"
+msgstr "利用規約とプライバシーポリシーに同意頂く必要があります"
 
 #, php-format
 msgid "You must be at least %s years old to use this website."
@@ -1780,11 +1732,14 @@ msgstr "ユーザ名"
 msgid "I'm at least %s years old"
 msgstr "私は%s歳以上です。"
 
-#: ../../../app/themes/Peafowl/header.php:341
-#: ../../../app/themes/Peafowl/views/signup.php:65
-#, php-format
-msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
-msgstr "登録を行うには、<a href=\"%s\">利用規約</a>への同意が必要です。"
+msgid "terms"
+msgstr "利用規約"
+
+msgid "privacy policy"
+msgstr "プライバシーポリシー"
+
+msgid "I agree to the %terms_link and %privacy_link"
+msgstr "私は、%terms_link と %privacy_link に同意します"
 
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
@@ -2015,6 +1970,10 @@ msgstr "もっと詳しく"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:86
 msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
 msgstr "詳しくは<a data-modal=\"simple\" data-target=\"failed-upload-result\">エラーレポート</a>をご覧下さい。"
+
+#, php-format
+msgid "Register to get %s"
+msgstr "%s を入手するには登録が必要です"
 
 msgid "reset"
 msgstr "リセット"
@@ -2336,6 +2295,9 @@ msgstr "このカテゴリの簡単な説明"
 msgid "Untitled image"
 msgstr "画像のタイトルを入力"
 
+msgid "You can use wildcard * characters."
+msgstr "ワイルドカード * 文字 をご利用いただけます。"
+
 #: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
 msgid "Expiration date"
 msgstr "期限"
@@ -2647,6 +2609,24 @@ msgstr "このコンテンツを本当に削除しますか？一度削除する
 msgid "Do you really want to remove all the selected content? This can't be undone."
 msgstr "選択されたコンテンツを本当に削除しますか？一度削除すると元には戻せません。"
 
+msgid "Fullscreen"
+msgstr "全画面"
+
+msgid "Exit fullscreen"
+msgstr "全画面を終了"
+
+#: ../../../app/themes/Peafowl/views/image.php:57
+msgid "Guest"
+msgstr "ゲスト"
+
+msgid "Keyboard shortcuts"
+msgstr "キーボードショートカット"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "いいね！"
+
 msgid "Uploaded by guest"
 msgstr "ゲストからのアップロード"
 
@@ -2856,11 +2836,6 @@ msgstr "アルバムを削除する"
 msgid "You like this"
 msgstr "いいね！しました"
 
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "いいね！"
-
 msgid "Upload to album"
 msgstr "アルバムにアップロード"
 
@@ -2943,10 +2918,6 @@ msgstr "ウェブサイトのタイトル (ページタイトル)"
 msgid "Website description"
 msgstr "ウェブサイトの詳細"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:236
-msgid "Website keywords"
-msgstr "ウェブサイトのキーワード"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:257
 msgid "Default time zone"
 msgstr "既定のタイムゾーン"
@@ -2961,6 +2932,12 @@ msgstr "検索クエリによる画像、アルバムやユーザーの検索を
 
 msgid "Enables to browse public uploaded images. It also enables categories."
 msgstr "公開状態のアップロードされている画像の閲覧を有効にする。同時にカテゴリーも有効になります。"
+
+msgid "guests"
+msgstr "ゲスト"
+
+msgid "Enables explore for guests."
+msgstr "ゲストに「もっと見る」機能を有効にします。"
 
 msgid "Enables to browse images randomly."
 msgstr "ランダムな画像の閲覧を有効にする"
@@ -3258,6 +3235,10 @@ msgstr "最大アップロードファイルサイズ"
 msgid "Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)."
 msgstr "サーバーが許可している最大サイズは、%sです。この制限は、%u、%p(%f)によって行われたものです。"
 
+#, php-format
+msgid "Same as \"%s\" but for guests."
+msgstr "\"%s\"と同じですが、ゲストです。"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:695
 msgid "Image path"
 msgstr "イメージパス"
@@ -3505,6 +3486,12 @@ msgstr "空白"
 msgid "Leave it empty to don't require a minimum age to use the website."
 msgstr "空白の状態だとこのサイトを利用するのに必要な年齢の要求を行いません。"
 
+msgid "Notify on user signup"
+msgstr "ユーザーの会員登録時に通知する"
+
+msgid "Enable this if you want to get an email notification for each new user signup."
+msgstr "ユーザーが会員登録する際にメールで通知が欲しい場合は有効にしてください。"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:972
 msgid "Username routing"
 msgstr "ユーザのURL形式の選択"
@@ -3641,6 +3628,12 @@ msgstr "通常のページネーション"
 msgid "What pagination method should be used."
 msgstr "どのようなページネーションを使用しますか？"
 
+msgid "Listing viewer"
+msgstr "リスト型ビューワー"
+
+msgid "Enable this to use the listing viewer when clicking on an image."
+msgstr "画像をクリックした際にリスト型のビューワーを使う場合は有効にしてください。"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1127
 msgid "Image listing size"
 msgstr "表示される画像のサイズ"
@@ -3656,6 +3649,15 @@ msgstr "固定"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1134
 msgid "Both methods use a fixed width but fluid method uses automatic heights."
 msgstr "どちらも固定の幅になりますが、フレキシブルを選択すると高さは自動となります。"
+
+msgid "Album listing images requirement"
+msgstr "アルバムをリスト化する際に必要な画像の枚数"
+
+msgid "explore"
+msgstr "もっと見る"
+
+msgid "Sets the minimum image count needed to show albums in explore."
+msgstr "アルバムを「もっと見る」ページに表示するために必要な画像の最低枚数を設定してください。"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1140
 msgid "Listing columns number"
@@ -4210,6 +4212,15 @@ msgstr "test@somedomain.com"
 msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
 msgstr "メールアドレスにどのように送信されるかをテストする場合にこちらを利用してください。%sを使用することをお勧めします。"
 
+msgid "Export a user"
+msgstr "ユーザーをエクスポート"
+
+msgid "Export user"
+msgstr "ユーザーをエクスポート"
+
+msgid "This will allow you to download a user's standard personal information in JSON format."
+msgstr "JSONフォーマットで、ユーザーの標準的な個人情報をダウンロードすることができます。"
+
 msgid "social networks"
 msgstr "ソーシャル・ネットワーク"
 
@@ -4330,6 +4341,16 @@ msgstr "API v1 キー"
 msgid "Use this key when using the <a %s>API v1</a>."
 msgstr "<a %s>API v1</a>を使用するときは、このキーを使用します。"
 
+msgid "Plugin route"
+msgstr "プラグインルート"
+
+#, php-format
+msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
+msgstr "%uでプラグインの説明を表示する。これらの説明は、メニューに%sを追加します。この設定は管理者には影響しません。"
+
+msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
+msgstr "%pのカスタムURLをセットするのに使用。手動でこのURLを%sで複製してください。"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:2028
 msgid "Cookie law compliance"
 msgstr "法律に準拠したクッキー"
@@ -4354,10 +4375,6 @@ msgstr "GIF再生"
 
 msgid "Load full resolution"
 msgstr "最大解像度で表示"
-
-#: ../../../app/themes/Peafowl/views/image.php:57
-msgid "Guest"
-msgstr "ゲスト"
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -4747,11 +4764,45 @@ msgstr[0] "フォロワー"
 msgid "Follow"
 msgstr "フォロー"
 
+#: ../../../app/routes/route.page.php:61
+#: ../../../content/pages/default/contact.php:7
+msgid "General questions/comments"
+msgstr "一般的な質問/コメント"
+
+#: ../../../app/routes/route.page.php:62
+#: ../../../content/pages/default/contact.php:8
+msgid "DMCA complaint"
+msgstr "デジタルミレニアム著作権法"
+
+#: ../../../app/routes/route.page.php:74
+#: ../../../content/pages/default/contact.php:22
+msgid "Invalid message"
+msgstr "有効なメッセージではありません。"
+
+#: ../../../app/routes/route.page.php:77
+#: ../../../content/pages/default/contact.php:25
+msgid "Invalid subject"
+msgstr "有効な件名ではありません。"
+
+#: ../../../app/routes/route.page.php:85
+#: ../../../content/pages/default/contact.php:33
+msgid "Invalid reCAPTCHA"
+msgstr "入力された値は、画像にあるキーではありません。"
+
+#: ../../../app/routes/route.page.php:122
+#: ../../../content/pages/default/contact.php:69
+msgid "Mail error"
+msgstr "メールでエラーが発生しました。"
+
 msgid "Message sent"
 msgstr "メッセージを送信しました。"
 
 msgid "Contact"
 msgstr "コンテンツ"
+
+#: ../../../app/routes/route.page.php:119
+msgid "Message sent. We will get in contact soon."
+msgstr "メッセージを送信しました。まもなく私どもから連絡を差し上げます。"
 
 msgid "If you want to send a message fill the form below."
 msgstr "メッセージを送信するには、以下のフォームに入力してください。"
@@ -4822,6 +4873,9 @@ msgstr "更新に失敗しました。"
 msgid "Please provide a valid email address"
 msgstr "有効なメールアドレスを入力してください。"
 
+msgid "Please provide a valid username"
+msgstr "有効なユーザー名を入力してください"
+
 #: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
 #: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
 #: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
@@ -4886,6 +4940,18 @@ msgstr "今すぐ更新する"
 #, javascript-format
 msgid "This website is running latest %s version"
 msgstr "このサイトは、最新のバージョン %s で構成しています。"
+
+msgid "Toggle select"
+msgstr "選択をトグル"
+
+msgid "Toggle flag"
+msgstr "フラグをトグル"
+
+msgid "Previous"
+msgstr "前へ"
+
+msgid "Next"
+msgstr "次へ"
 
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"

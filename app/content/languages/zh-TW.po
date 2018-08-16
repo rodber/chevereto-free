@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-05-26 16:57+0000\n"
-"PO-Revision-Date: 2017-05-26 16:57+0000\n"
+"POT-Creation-Date: 2018-06-03 14:28+0000\n"
+"PO-Revision-Date: 2018-06-03 14:28+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: zh_TW\n"
@@ -87,20 +87,6 @@ msgstr "個人"
 #: ../../../app/install/update/template/update.php:2
 msgid "Update in progress"
 msgstr "正在更新"
-
-#: ../../../app/install/update/updater.php:62
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
-#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
-#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
-#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
-#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
-#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
-#: ../../../lib/Peafowl/peafowl.min.js:158
-#: ../../../lib/Peafowl/peafowl.min.js:195
-msgid "An error occurred. Please try again later."
-msgstr "發生錯誤. 請稍後再試."
 
 #: ../../../app/install/update/updater.php:72
 #, php-format
@@ -201,10 +187,6 @@ msgstr[0] "瀏覽次數"
 msgid "After %n %t"
 msgstr "經過 %n %t"
 
-#: ../../../app/lib/classes/class.image.php:348
-msgid "Don't autodelete"
-msgstr "不要自動刪除"
-
 #: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
 msgid "minute"
 msgid_plural "minutes"
@@ -220,28 +202,34 @@ msgid "day"
 msgid_plural "days"
 msgstr[0] "天"
 
+#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "週"
+
+#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
+msgid "month"
+msgid_plural "months"
+msgstr[0] "月"
+
+#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
+msgid "year"
+msgid_plural "years"
+msgstr[0] "年"
+
+#: ../../../app/lib/classes/class.image.php:348
+msgid "Don't autodelete"
+msgstr "不要自動刪除"
+
 #: ../../../app/lib/classes/class.image.php:636
 #: ../../../app/lib/classes/class.image.php:742
 msgid "Duplicated upload"
 msgstr "重複的上傳"
 
-msgid "Error storing file in external storage server"
-msgstr "在外部儲存伺服器中有儲存檔案的錯誤"
-
-msgid "External storage has failed"
-msgstr "外部儲存空間失敗"
-
 #: ../../../app/lib/classes/class.image.php:955
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
 msgid "Private upload"
 msgstr "私人上傳"
-
-msgid "Upload switched to local storage"
-msgstr "上傳切換至本地儲存空間"
-
-#, php-format
-msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
-msgstr "系统已切换到本地儲存空間. 由於在外部儲存伺服器沒有足夠的磁碟容量(%c), 圖像 %s 已被分配到本地的儲存空間上."
 
 #: ../../../app/lib/classes/class.image.php:1231
 msgid "like"
@@ -263,9 +251,6 @@ msgstr "最新"
 
 msgid "Trending"
 msgstr "最熱門"
-
-msgid "Popular"
-msgstr "最喜歡"
 
 #: ../../../app/routes/route.dashboard.php:1163
 msgid "Top users"
@@ -301,6 +286,9 @@ msgstr "最舊的"
 #: ../../../app/routes/route.user.php:201
 msgid "Most viewed"
 msgstr "最熱門的"
+
+msgid "Popular"
+msgstr "最喜歡"
 
 #: ../../../app/routes/route.album.php:104
 #: ../../../app/routes/route.category.php:72
@@ -396,21 +384,6 @@ msgstr "已用"
 msgid "Private profile"
 msgstr "私人檔案"
 
-#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
-msgid "year"
-msgid_plural "years"
-msgstr[0] "年"
-
-#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
-msgid "month"
-msgid_plural "months"
-msgstr[0] "月"
-
-#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
-msgid "week"
-msgid_plural "weeks"
-msgstr[0] "週"
-
 #: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
 msgid "second"
 msgid_plural "seconds"
@@ -424,9 +397,6 @@ msgstr "%s 以前"
 #: ../../../app/lib/functions.php:67
 msgid "moments ago"
 msgstr "剛剛"
-
-msgid "System notification"
-msgstr "系統通知"
 
 #: ../../../app/routes/route.dashboard.php:1223
 #: ../../../app/themes/Peafowl/header.php:407
@@ -470,16 +440,11 @@ msgid "You can apply this update directly from your %a or download it from %s an
 msgstr "您可以直接從 %a 安裝此更新或從 %s 下載, 然後手動安裝更新."
 
 #, php-format
-msgid "Chevereto update available (v%s)"
-msgstr "Chevereto 更新已開放 (v%s)"
-
-#, php-format
 msgid "view on %s"
 msgstr "%s 已查看"
 
-#: ../../../app/lib/functions.render.php:303
-msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
-msgstr "我們使用自己和第三方Cookies來改善我們的服務瀏覽體驗. 如果您繼續使用了解我們的網站, 您需要接受這個Cookie政策."
+msgid "I understand"
+msgstr "我明白"
 
 #: ../../../app/loader.php:180
 msgid "You have been forbidden to use this website."
@@ -494,6 +459,9 @@ msgstr "隨意瀏覽, 探索我所有分享的圖片和相冊"
 #: ../../../app/themes/Peafowl/views/settings.php:447
 msgid "View all my images"
 msgstr "查看我所有的圖片"
+
+msgid "Plugin"
+msgstr "插件"
 
 #: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
 msgid "That page doesn't exist"
@@ -1252,6 +1220,10 @@ msgstr "無效的使用者最低年齡"
 msgid "Only alphanumeric, hyphen and underscore characters are allowed"
 msgstr "僅允許字母, 連字符號和下劃線符號是允許的"
 
+#: ../../../app/routes/route.dashboard.php:922
+msgid "Invalid URL"
+msgstr "無效URL"
+
 msgid "Routes can't be the same"
 msgstr "路徑是不能相同的"
 
@@ -1284,10 +1256,6 @@ msgstr "無效的SMTP服務器"
 #: ../../../app/routes/route.dashboard.php:861
 msgid "Invalid SMTP username"
 msgstr "無效的SMTP用戶名"
-
-#: ../../../app/routes/route.dashboard.php:922
-msgid "Invalid URL"
-msgstr "無效URL"
 
 #: ../../../app/routes/route.dashboard.php:960
 #, php-format
@@ -1337,11 +1305,6 @@ msgstr "IP已被阻擋"
 msgid "Upload date"
 msgstr "上傳時間"
 
-#: ../../../app/routes/route.image.php:177
-#, php-format
-msgid "%s images"
-msgstr "%s 圖片"
-
 #: ../../../app/routes/route.image.php:185
 msgid "Image %i in %a album"
 msgstr "圖片 %i 在 %a 相簿"
@@ -1358,13 +1321,13 @@ msgstr "圖片 %i 儲存在 %w"
 msgid "Direct links"
 msgstr "直連URL"
 
-#: ../../../app/themes/Peafowl/views/image.php:279
-msgid "Image URL"
-msgstr "圖片URL"
-
 #: ../../../app/themes/Peafowl/views/image.php:285
 msgid "Image link"
 msgstr "圖片連結"
+
+#: ../../../app/themes/Peafowl/views/image.php:279
+msgid "Image URL"
+msgstr "圖片URL"
 
 #: ../../../app/themes/Peafowl/views/image.php:291
 msgid "Thumbnail URL"
@@ -1487,50 +1450,11 @@ msgstr "登入"
 msgid "Logged out"
 msgstr "登出"
 
-#: ../../../app/routes/route.page.php:61
-#: ../../../content/pages/default/contact.php:7
-msgid "General questions/comments"
-msgstr "一般問題/意見"
+msgid "Upload images"
+msgstr "上傳圖片"
 
-#: ../../../app/routes/route.page.php:62
-#: ../../../content/pages/default/contact.php:8
-msgid "DMCA complaint"
-msgstr "DMCA檢舉"
-
-#: ../../../app/routes/route.page.php:71
-#: ../../../app/routes/route.settings.php:302
-#: ../../../content/pages/default/contact.php:19
-msgid "Invalid name"
-msgstr "無效的名稱"
-
-#: ../../../app/routes/route.page.php:74
-#: ../../../content/pages/default/contact.php:22
-msgid "Invalid message"
-msgstr "無效的訊息"
-
-#: ../../../app/routes/route.page.php:77
-#: ../../../content/pages/default/contact.php:25
-msgid "Invalid subject"
-msgstr "無效的主題"
-
-#: ../../../app/routes/route.page.php:85
-#: ../../../content/pages/default/contact.php:33
-msgid "Invalid reCAPTCHA"
-msgstr "無效的驗證碼"
-
-#: ../../../app/routes/route.page.php:90
-#, php-format
-msgid "Can't submit the form: %s"
-msgstr "無法送出的表單: %s"
-
-#: ../../../app/routes/route.page.php:119
-msgid "Message sent. We will get in contact soon."
-msgstr "訊息已寄出. 我們很快地與您聯絡."
-
-#: ../../../app/routes/route.page.php:122
-#: ../../../content/pages/default/contact.php:69
-msgid "Mail error"
-msgstr "電子郵件錯誤"
+msgid "Upload plugin"
+msgstr "上載插件"
 
 #: ../../../app/routes/route.search.php:120
 #, php-format
@@ -1567,6 +1491,12 @@ msgstr "無效的有效期限: %s"
 #, php-format
 msgid "An email has been sent to %s with instructions to activate this email"
 msgstr "這封郵件已發送至 %s 請登入信箱並啟用"
+
+#: ../../../app/routes/route.page.php:71
+#: ../../../app/routes/route.settings.php:302
+#: ../../../content/pages/default/contact.php:19
+msgid "Invalid name"
+msgstr "無效的名稱"
 
 #: ../../../app/routes/route.settings.php:305
 msgid "Invalid website"
@@ -1615,6 +1545,11 @@ msgstr "您必須年滿 %s 歲才能繼續使用網站."
 #: ../../../app/themes/Peafowl/views/signup.php:63
 msgid "Create account"
 msgstr "註冊帳戶"
+
+#: ../../../app/themes/Peafowl/header.php:258
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Upload"
+msgstr "上傳"
 
 #: ../../../app/routes/route.user.php:84
 #: ../../../app/themes/Peafowl/header.php:56
@@ -1678,11 +1613,6 @@ msgstr "隨機"
 #, php-format
 msgid "Notices (%s)"
 msgstr "通知 (%s)"
-
-#: ../../../app/themes/Peafowl/header.php:258
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-msgid "Upload"
-msgstr "上傳"
 
 #: ../../../app/themes/Peafowl/header.php:281
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:11
@@ -1774,12 +1704,6 @@ msgstr "使用者名稱"
 #, php-format
 msgid "I'm at least %s years old"
 msgstr "我已年滿 %s 歲"
-
-#: ../../../app/themes/Peafowl/header.php:341
-#: ../../../app/themes/Peafowl/views/signup.php:65
-#, php-format
-msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
-msgstr "繼續則表示已閱讀並同意我們的 <a href=\"%s\">服務條款</a>"
 
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
@@ -1893,17 +1817,8 @@ msgstr "截圖"
 msgid "Edit or resize any image by clicking the image preview"
 msgstr "編輯或通過點擊圖像預覽調整圖像大小"
 
-msgid "Edit or resize any image by touching the image preview"
-msgstr "編輯或通過觸摸圖像預覽調整圖像大小"
-
 msgid "your computer"
 msgstr "你的電腦"
-
-msgid "image URLs"
-msgstr "圖片連結"
-
-msgid "You can keep adding more images from %i or from %u."
-msgstr "你可以從%i或%u持續新增更多圖片"
 
 msgid "your device"
 msgstr "你的裝置"
@@ -2004,10 +1919,6 @@ msgstr "了解更多"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:86
 msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
 msgstr "檢查 <a data-modal=\"simple\" data-target=\"failed-upload-result\">錯誤報告</a> 來了解更多訊息."
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:89
-msgid "max"
-msgstr "最大"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:91
 msgid "close"
@@ -2569,9 +2480,6 @@ msgstr "您必須登入才能使用所有的功能. 如果您還未註冊請現�
 msgid "There's nothing to show here."
 msgstr "沒有顯示的內容"
 
-msgid "Upload images"
-msgstr "上傳圖片"
-
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
 #: ../../../app/themes/Peafowl/views/image.php:69
 #: ../../../app/themes/Peafowl/views/image.php:457
@@ -2636,6 +2544,21 @@ msgstr "你真的想刪除此內容? 一旦刪除將無法恢復."
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:111
 msgid "Do you really want to remove all the selected content? This can't be undone."
 msgstr "你真的想刪除所選內容? 一旦刪除將無法恢復."
+
+msgid "Fullscreen"
+msgstr "全螢幕"
+
+msgid "Exit fullscreen"
+msgstr "退出全螢幕"
+
+#: ../../../app/themes/Peafowl/views/image.php:57
+msgid "Guest"
+msgstr "訪客"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "喜歡"
 
 msgid "Uploaded by guest"
 msgstr "由訪客上傳"
@@ -2749,6 +2672,20 @@ msgstr "一封關於重新設定密碼的郵件已發送到您的郵箱. 如果�
 msgid "Resend instructions"
 msgstr "重新發送"
 
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "發生錯誤. 請稍後再試."
+
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
 msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
 msgstr "剛才的電子郵件已發送和說明重置您的密碼. 如果您沒有收到郵件, 請嘗試檢查您的垃圾郵件或垃圾郵件過濾器"
@@ -2832,11 +2769,6 @@ msgstr "刪除相簿"
 msgid "You like this"
 msgstr "您喜歡這個"
 
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "喜歡"
-
 msgid "Upload to album"
 msgstr "上傳至相簿"
 
@@ -2919,10 +2851,6 @@ msgstr "網站標題"
 msgid "Website description"
 msgstr "網站描述"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:236
-msgid "Website keywords"
-msgstr "網站關鍵字"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:257
 msgid "Default time zone"
 msgstr "預設時區"
@@ -2937,6 +2865,9 @@ msgstr "可以按特定的內容查詢圖像, 相簿, 和用戶."
 
 msgid "Enables to browse public uploaded images. It also enables categories."
 msgstr "啟用探索圖庫功能, 允許查看所有用戶上傳的圖像（不含隱私）, 並可以按分類查看."
+
+msgid "guests"
+msgstr "訪客"
 
 msgid "Enables to browse images randomly."
 msgstr "啟用隨機圖像瀏覽"
@@ -4325,10 +4256,6 @@ msgstr "播放 GIF"
 msgid "Load full resolution"
 msgstr "讀取全等解像度"
 
-#: ../../../app/themes/Peafowl/views/image.php:57
-msgid "Guest"
-msgstr "訪客"
-
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
 msgstr "加入 %a 和分類至 %c"
@@ -4657,11 +4584,45 @@ msgstr[0] "粉絲"
 msgid "Follow"
 msgstr "跟隨"
 
+#: ../../../app/routes/route.page.php:61
+#: ../../../content/pages/default/contact.php:7
+msgid "General questions/comments"
+msgstr "一般問題/意見"
+
+#: ../../../app/routes/route.page.php:62
+#: ../../../content/pages/default/contact.php:8
+msgid "DMCA complaint"
+msgstr "DMCA檢舉"
+
+#: ../../../app/routes/route.page.php:74
+#: ../../../content/pages/default/contact.php:22
+msgid "Invalid message"
+msgstr "無效的訊息"
+
+#: ../../../app/routes/route.page.php:77
+#: ../../../content/pages/default/contact.php:25
+msgid "Invalid subject"
+msgstr "無效的主題"
+
+#: ../../../app/routes/route.page.php:85
+#: ../../../content/pages/default/contact.php:33
+msgid "Invalid reCAPTCHA"
+msgstr "無效的驗證碼"
+
+#: ../../../app/routes/route.page.php:122
+#: ../../../content/pages/default/contact.php:69
+msgid "Mail error"
+msgstr "電子郵件錯誤"
+
 msgid "Message sent"
 msgstr "訊息發送"
 
 msgid "Contact"
 msgstr "聯繫"
+
+#: ../../../app/routes/route.page.php:119
+msgid "Message sent. We will get in contact soon."
+msgstr "訊息已寄出. 我們很快地與您聯絡."
 
 msgid "If you want to send a message fill the form below."
 msgstr "如果您想發出一個訊息, 請填寫下面的表格."

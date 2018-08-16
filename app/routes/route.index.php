@@ -17,7 +17,7 @@
 
 $route = function($handler) {
 	try {
-
+		
     // Parse the current query string
 		parse_str($_SERVER['QUERY_STRING'], $querystr);
 
@@ -137,7 +137,7 @@ $route = function($handler) {
 				// Legacy 1.X viewer request (?v=file.ext)
 				case 'v':
 					if(preg_match('{^\w*\.jpg|png|gif$}', $_GET['v'])) {
-						$explode = explode('.', $_GET['v']);
+						$explode = array_filter(explode('.', $_GET['v']));
 						if(count($explode) == 2) {
 							$image = CHV\DB::get('images', ['name' => $explode[0], 'extension' => $explode[1]], 'AND', [], 1);
 							if($image) {

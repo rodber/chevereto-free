@@ -28,8 +28,8 @@ foreach($tabs as $tab) {
 	?>
 	<div class="content-listing-loading"></div>
 	<?php
-		} 
-		
+		}
+
 		if($do_pagination and ($classic or count($list->output) >= $list->limit)) { // pagination
 	?>
 	<?php
@@ -38,16 +38,16 @@ foreach($tabs as $tab) {
 		if($list->has_page_prev || $list->has_page_next) {
 	?>
 	<ul class="content-listing-pagination<?php if($classic) { ?> visible<?php } ?>" data-visibility="<?php echo $classic ? 'visible' : 'hidden'; ?>" data-content="listing-pagination" data-type="<?php echo $classic ? 'classic' : 'endless'; ?>">
-	<?php		
+	<?php
 				$current_url = G\add_ending_slash(preg_replace('/\?.*/', '', G\get_current_url()));
 				$current_url .= '?' . $tab["params"] . '&' . 'pagination';
 
 				preg_match('/page=([0-9]+)/', $tab["params"], $matches);
 				$current_page_qs = $matches[0];
-				
+
 				$page = intval($_GET['page'] ? $_GET['page'] : $matches[1]);
 				$pages = [];
-				
+
 				$pages['prev'] = [
 					'label'		=> '<span class="icon icon-arrow-left7"></span>',
 					'url'		=> $list->has_page_prev ? str_replace($current_page_qs, 'page='.($page - 1), $current_url) : NULL,
@@ -59,14 +59,14 @@ foreach($tabs as $tab) {
 					'url'		=> str_replace($current_page_qs, 'page='.$page, $current_url),
 					'current'	=> TRUE
 				];
-				
+
 				$pages['next'] = [
 					'label'		=> '<span class="icon icon-arrow-right7"></span>',
 					'url'		=> $list->has_page_next ? str_replace($current_page_qs, 'page='.($page + 1), $current_url) : NULL,
 					'load-more' => !$classic,
 					'disabled'	=> !$list->has_page_next
 				];
-				
+
 				foreach($pages as $k => $page) {
 					if(is_numeric($k)) {
 						$li_class = 'pagination-page';
@@ -80,7 +80,7 @@ foreach($tabs as $tab) {
 						$li_class .= ' pagination-disabled';
 					}
 		?>
-		<li class="<?php echo $li_class; ?>"><a <?php if($page['load-more']) { ?>data-action="load-more" <?php } if(!is_null($page['url'])) { ?>href="<?php echo $page['url']; ?>"<?php } ?>><?php echo $page['label']; ?></a></li>
+		<li class="<?php echo $li_class; ?>"><a data-pagination="<?php echo $k; ?>" <?php if($page['load-more']) { ?>data-action="load-more" <?php } if(!is_null($page['url'])) { ?>href="<?php echo $page['url']; ?>"<?php } ?>><?php echo $page['label']; ?></a></li>
 		<?php
 				}
 		?>
@@ -115,5 +115,7 @@ foreach($tabs as $tab) {
 	}
 } // for
 ?>
+
+<?php G\Render\include_theme_file("snippets/viewer_template"); ?>
 
 <?php G\Render\include_theme_file("snippets/templates_content_listing"); ?>

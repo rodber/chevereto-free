@@ -60,6 +60,10 @@ class Album {
 					'user_id'	=> $album_db['album_user_id'],
 				]);
 			}
+
+			if($requester) {
+				$album_db['album_liked'] = (bool) $album_db['like_user_id'];
+			}
 			$return = $album_db;
 			$return = $pretty ? self::formatArray($return) : $return;
 			return $return;
@@ -70,16 +74,10 @@ class Album {
 
 	public static function getMultiple($ids, $pretty=false) {
 		if(!is_array($ids)) {
-			$ids = func_get_args();
-			$aux = array();
-			foreach($ids as $k => $v) {
-				$aux[] = $v;
-			}
-			$ids = $aux;
+			throw new AlbumException('Expecting $ids array in ' . __METHOD__, 100);
 		}
-
 		if(count($ids) == 0) {
-			throw new AlbumException('Null ids provided in ' . __METHOD__, 100);
+			throw new AlbumException('Null $ids provided in ' . __METHOD__, 100);
 		}
 
 		$tables = DB::getTables();

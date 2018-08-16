@@ -13,7 +13,7 @@
 
   --------------------------------------------------------------------- */
 
-$(function(){
+$(function() {
 	// Window listeners
 	$(window).on("resize", function() {
 		CHV.fn.uploader.boxSizer();
@@ -21,6 +21,7 @@ $(function(){
 			user_background_full_fix();
 		}
 		CHV.fn.bindSelectableItems();
+		CHV.fn.listingViewer.placeholderSizing();
 	});
 	if(window.opener) {
 		$(window).on("load", function(e) {
@@ -37,7 +38,6 @@ $(function(){
 			CHV.obj.opener.uploadPlugin[data.id] = data.settings;
 		});
 	}
-
   // Landing fancy load
   if($("#home-cover, #maintenance-wrapper").exists()) {
 		var landing_src = $("#maintenance-wrapper").exists() ? $("#maintenance-wrapper").css("background-image").slice(4, -1).replace(/^\"|\"$/g, "") : $(".home-cover-img", "#home-cover-slideshow").first().attr("data-src");
@@ -131,7 +131,6 @@ $(function(){
 		CHV.fn.uploader.isUploading = false;
 		$("[data-action=cancel]", $anywhere_upload_queue).click();
 		if(Object.size(CHV.fn.uploader.results.success) > 0) {
-			console.log("DISPLAY CANCEL FORCED")
 			CHV.fn.uploader.displayResults();
 			return;
 		} else {
@@ -627,34 +626,76 @@ $(function(){
 		}
 	});
 
-    $(document).on("click", "[data-action=test-email]", function(e){
-        e.preventDefault();
-        var $email = $("input[name=test-email]");
-        if($email.prop("disabled")) {
-            return;
-        }
-        var $parent = $(this).closest(".input-label");
-        var email = $email.val();
-        if(!email.isEmail()) {
-            PF.fn.growl.expirable(PF.fn._s("Please provide a valid email address"));
-            return;
-        }
-        $email.prop("disabled", true);
-        PF.fn.loading.inline($('.loading', $parent), {size: "small", valign: "middle"});
-        $parent.find(".btn .text").hide();
-        $.ajax({
-			data: {action: "test", test: {object: "email"}, email: email},
-			cache: false
-		})
-		.complete(function(XHR) {
-            var response = XHR.responseJSON;
-            $email.prop("disabled", false);
-            $('.loading', $parent).empty();
-            $parent.find(".btn .text").show();
-            PF.fn.growl.call(response[response.status_code == 200 ? "success" : "error"].message);
-		});
+	$(document).on("contextmenu", "html.device-mobile a.image-container", function(e) {
+		e.preventDefault();
+		return false;
+	});
 
-    });
+	$(document).on("keyup", "input[name=decode-id], input[name=encode-id], input[name=test-email], input[name=export-user]", function(e){
+		if (e.keyCode == 13) {
+				var $button = $("[data-action=" + $(this).attr("name") + "]");
+				$button.click();
+		}
+	});
+
+  $(document).on("click", "[data-action=decode-id], [data-action=encode-id], [data-action=test-email], [data-action=export-user]", function(e) {
+      e.preventDefault();
+			var action = $(this).data("action");
+			var tbl = {
+				"decode-id": "id",
+				"encode-id": "id",
+				"test-email": "email",
+				"export-user": "user",
+			};
+			var type = tbl[action];
+      var $input = $("input[name=" + $(this).data('action') + "]");
+			var val = $input.val();
+      if($input.prop("disabled") || !val) {
+          return;
+      }
+      var $parent = $(this).closest(".input-label");
+			var ajaxObj = {
+				cache: false
+			};
+			var validate = true;
+			var message;
+			switch(type) {
+				case 'id':
+					action = action.slice(0,-3);
+					ajaxObj.data = {action: action, id: val};
+					ajaxObj.data[action] = {object: type};
+				break;
+				case 'email':
+					if(!val.isEmail()) {
+						validate = false;
+						message = PF.fn._s("Please provide a valid email address");
+					} else {
+						ajaxObj.data = {action: "test", test: {object: type}, email: val};
+					}
+				break;
+				case 'user':
+					ajaxObj.data = {action: "export", export: {object: type}, username: val};
+				break;
+			}
+			if(validate == false) {
+				PF.fn.growl.expirable(message);
+				return;
+			}
+      $input.prop("disabled", true);
+      PF.fn.loading.inline($('.loading', $parent), {size: "small", valign: "middle"});
+      $parent.find(".btn .text").hide();
+      $.ajax(ajaxObj)
+				.complete(function(XHR) {
+	          var response = XHR.responseJSON;
+	          $input.prop("disabled", false);
+	          $('.loading', $parent).empty();
+	          $parent.find(".btn .text").show();
+	          PF.fn.growl.call(response[response.status_code == 200 ? "success" : "error"].message);
+						if(response.status_code == 200 && typeof response.success.redirURL !== typeof undefined) {
+							window.location.href = response.success.redirURL;
+						}
+				});
+  });
 
 	// Third-party plugin, magic comes in 3...
 	$(document).on("click", "[data-action=openerPostMessage]", function(e) {
@@ -687,9 +728,9 @@ $(function(){
 	 * -------------------------------------------------------------------------------------------------
 	 */
 
-	$(document).on("click", ".list-item, [data-action=list-tools] [data-action]", function(e) {
+	$(document).on("click", "[data-action=list-tools] [data-action]", function(e) {
 		var $this = $(e.target),
-			$list_item = $this.closest(".list-item");
+		$list_item = $this.closest("[data-id]");
 		if($list_item && $list_item.find("[data-action=select]").exists() && (e.ctrlKey || e.metaKey) && e.altKey) {
 			CHV.fn.list_editor.toggleSelectItem($list_item, !$list_item.hasClass("selected"));
 			e.preventDefault();
@@ -719,22 +760,23 @@ $(function(){
 
 		if(e.isPropagationStopped()) return false;
 
-		var $this_list_item = $(this).closest(PF.obj.listing.selectors.list_item),
-			$this_list_item_tools = $(this).closest("[data-action=list-tools]");
+		var $list_item = $(this).closest(PF.obj.listing.selectors.list_item + ", .viewer");
+		var id = $list_item.data("id");
 
-		var $this_icon, this_add_class, this_remove_class, this_label_text, dealing_with;
-
-		if(typeof $this_list_item.data("type") !== "undefined"){
-			dealing_with = $this_list_item.data("type");
+		if(typeof $list_item.data("type") !== "undefined"){
+			dealing_with = $list_item.data("type");
 		} else {
 			console.log("Error: data-type not defined");
 			return;
 		}
 
+		var $targets = $("[data-type=" + dealing_with + "][data-id=" + id + "]");
+		var $this_icon, this_add_class, this_remove_class, this_label_text, dealing_with;
+
 		switch($(this).data("action")){
 
 			case "select":
-				CHV.fn.list_editor.toggleSelectItem($this_list_item, !$this_list_item.hasClass("selected"));
+				CHV.fn.list_editor.toggleSelectItem($list_item, !$list_item.hasClass("selected"));
 			break;
 
 			case "edit":
@@ -744,16 +786,16 @@ $(function(){
 				// Populate the modal before casting it
 				switch(dealing_with) {
 					case "image":
-						$("[name=form-image-title]", modal_source).attr("value", $this_list_item.data("title"));
-						$("[name=form-image-description]", modal_source).html(PF.fn.htmlEncode($this_list_item.data("description")));
+						$("[name=form-image-title]", modal_source).attr("value", $list_item.data("title"));
+						$("[name=form-image-description]", modal_source).html(PF.fn.htmlEncode($list_item.data("description")));
 
 						$("[name=form-album-id]", modal_source).find("option").removeAttr("selected");
-						$("[name=form-album-id]", modal_source).find("[value="+$this_list_item.data(dealing_with == "image" ? "album-id" : "id")+"]").attr("selected", true);
+						$("[name=form-album-id]", modal_source).find("[value="+$list_item.data(dealing_with == "image" ? "album-id" : "id")+"]").attr("selected", true);
 
 						$("[name=form-category-id]", modal_source).find("option").removeAttr("selected");
-						$("[name=form-category-id]", modal_source).find("[value="+$this_list_item.data("category-id") + "]").attr("selected", true);
+						$("[name=form-category-id]", modal_source).find("[value="+$list_item.data("category-id") + "]").attr("selected", true);
 
-						$("[name=form-nsfw]", modal_source).attr("checked", $this_list_item.data("flag") == "unsafe");
+						$("[name=form-nsfw]", modal_source).attr("checked", $list_item.data("flag") == "unsafe");
 
 						// Just in case...
 						$("[name=form-album-name]", modal_source).attr("value", "");
@@ -763,13 +805,13 @@ $(function(){
 					break;
 					case "album":
 						$("[data-action=album-switch]", modal_source).remove();
-						$("[name=form-album-name]", modal_source).attr("value", $this_list_item.data("name"));
-						$("[name=form-album-description]", modal_source).html(PF.fn.htmlEncode($this_list_item.data("description")));
+						$("[name=form-album-name]", modal_source).attr("value", $list_item.data("name"));
+						$("[name=form-album-description]", modal_source).html(PF.fn.htmlEncode($list_item.data("description")));
 						$("[name=form-privacy]", modal_source).find("option").removeAttr("selected");
-						$("[name=form-privacy]", modal_source).find("[value="+$this_list_item.data("privacy")+"]").attr("selected", true);
-						if($this_list_item.data("privacy") == 'password') {
+						$("[name=form-privacy]", modal_source).find("[value="+$list_item.data("privacy")+"]").attr("selected", true);
+						if($list_item.data("privacy") == 'password') {
 							$("[data-combo-value=password]").show();
-							$("[name=form-album-password]", modal_source).attr("value", $this_list_item.data("password"));
+							$("[name=form-album-password]", modal_source).attr("value", $list_item.data("password"));
 						} else {
 							$("[data-combo-value=password]").hide();
 							$("[name=form-album-password]", modal_source).attr("value", "");
@@ -784,7 +826,7 @@ $(function(){
 						url: PF.obj.config.json_api,
 						deferred: {
 							success: function(XHR) {
-								CHV.fn.list_editor.updateItem("[data-id="+$this_list_item.data("id")+"]", XHR.responseJSON[dealing_with], "edit");
+								CHV.fn.list_editor.updateItem("[data-type=" + dealing_with + "][data-id=" + id + "]", XHR.responseJSON[dealing_with], "edit");
 							}
 						}
 					},
@@ -805,11 +847,11 @@ $(function(){
 
 						PF.obj.modal.form_data = {
 							action: "edit", // use the same method applied in viewer
-							edit: $this_list_item.data("type"),
+							edit: $list_item.data("type"),
 							single: true,
 							owner: CHV.obj.resource.user.id,
 							editing: {
-								id: $this_list_item.data("id"),
+								id: id,
 								description: $("[name=form-" + dealing_with + "-description]", $modal).val()
 							}
 						};
@@ -853,7 +895,7 @@ $(function(){
 
 				// Fool the selected album
 				$("[name=form-album-id]", modal_source).find("option").removeAttr("selected");
-				$("[name=form-album-id]", modal_source).find("[value="+$this_list_item.data(dealing_with == "image" ? "album-id" : "id")+"]").attr("selected", true);
+				$("[name=form-album-id]", modal_source).find("[value="+$list_item.data(dealing_with == "image" ? "album-id" : "id")+"]").attr("selected", true);
 
 				// Just in case...
 				$("[name=form-album-name]", modal_source).attr("value", "");
@@ -867,12 +909,12 @@ $(function(){
 						url: PF.obj.config.json_api,
 						deferred: {
 							success: function(XHR) {
-								CHV.fn.list_editor.updateMoveItemLists(XHR.responseJSON, dealing_with, $this_list_item);
+								CHV.fn.list_editor.updateMoveItemLists(XHR.responseJSON, dealing_with, $targets);
 							}
 						}
 					},
 					load: function() {
-						$("[name=form-album-id]", PF.obj.modal.selectors.root).focus();
+						//$("[name=form-album-id]", PF.obj.modal.selectors.root).focus();
 					},
 					confirm: function() {
 
@@ -891,11 +933,11 @@ $(function(){
 
 						PF.obj.modal.form_data = {
 							action: "edit", // use the same method applied in viewer
-							edit: $this_list_item.data("type"),
+							edit: $list_item.data("type"),
 							single: true,
 							owner: CHV.obj.resource.user.id,
 							editing: {
-								id: $this_list_item.data("id")
+								id: id
 							}
 						};
 
@@ -930,25 +972,24 @@ $(function(){
 						deferred: {
 							success: function(XHR) {
 								if(dealing_with == "album") {
-									$("[name=form-album-id]", "[data-modal]").find("[value="+$this_list_item.data("id")+"]").remove();
+									$("[name=form-album-id]", "[data-modal]").find("[value="+id+"]").remove();
 									CHV.fn.list_editor.updateUserCounters("image", XHR.responseJSON.success.affected, "-");
 								}
-								CHV.fn.list_editor.deleteFromList($this_list_item);
+
+								CHV.fn.list_editor.deleteFromList($list_item);
 								CHV.fn.queuePixel();
 							}
 						}
 					},
 					confirm: function() {
-
 						PF.obj.modal.form_data = {
 							action: "delete",
 							single: true,
-							delete: $this_list_item.data("type"),
+							delete: $list_item.data("type"),
 							deleting: {
-								id: $this_list_item.data("id")
+								id: id
 							}
 						};
-
 						return true;
 					}
 				});
@@ -958,11 +999,11 @@ $(function(){
 			case "flag":
 				$.ajax({
 					type: "POST",
-					data: {action: 'edit', edit: 'image', single: true, editing: {id: $this_list_item.data("id"), nsfw: $this_list_item.data("flag") == "unsafe" ? 0 : 1}}
+					data: {action: 'edit', edit: 'image', single: true, editing: {id: id, nsfw: $list_item.data("flag") == "unsafe" ? 0 : 1}}
 				}).complete(function(XHR){
-					var response = XHR.responseJSON,
-						flag = response.image.nsfw == 1 ? "unsafe" : "safe";
-					$this_list_item.removeClass("safe unsafe").addClass(flag).attr("data-flag", flag).data("flag", flag);
+					var response = XHR.responseJSON;
+					var flag = response.image.nsfw == 1 ? "unsafe" : "safe";
+					$targets.attr("data-flag", flag).data("flag", flag);
 					// Remember me gansito
 					CHV.fn.list_editor.selectionCount();
 				});
@@ -1068,7 +1109,7 @@ $(function(){
 					},
 					load: function() {
 						if(template == "form-move-multiple") {
-							$("[name=form-album-id]", PF.obj.modal.selectors.root).focus();
+							//$("[name=form-album-id]", PF.obj.modal.selectors.root).focus();
 						}
 					},
 					confirm: function() {
@@ -1659,13 +1700,14 @@ $(function(){
 		$this.data("XHR", true);
 
 		var $object = $(this).is("[data-liked]") ? $(this) : $(this).closest("[data-liked]");
-		var isSingle = !$object.closest("[data-list]").exists() && typeof CHV.obj.resource !== typeof undefined;
+		var isSingle = !$object.closest("[data-list], .viewer").exists() && typeof CHV.obj.resource !== typeof undefined;
 		var liked = $object.is("[data-liked=1]");
 		var action = !liked ? 'like' : 'dislike';
 		var content = {
-			id: isSingle ? CHV.obj.resource.id : $(this).closest("[data-id]").data("id"),
-			type: isSingle ? CHV.obj.resource.type : $(this).closest("[data-type]").data("type")
+			id: isSingle ? CHV.obj.resource.id : $(this).closest("[data-id]").attr("data-id"),
+			type: isSingle ? CHV.obj.resource.type : $(this).closest("[data-type]").attr("data-type")
 		};
+		var $targets = isSingle ? $this : $("[data-type=" + content.type + "][data-id=" + content.id + "]");
 		var ajax = {
 			data: {action: action},
 			cache: false
@@ -1685,7 +1727,7 @@ $(function(){
 				if(isSingle && typeof response.content !== typeof undefined) {
 					$("[data-text=likes-count]").html(response.content.likes);
 				}
-				$object.attr("data-liked", liked ? 0 : 1); // Toggle indicator
+				$targets.attr("data-liked", liked ? 0 : 1); // Toggle indicator
 			});
 
 	});
@@ -1875,6 +1917,60 @@ $(function(){
 		CHV.fn.uploader.toggle({show: true});
 	}
 
+	$(document).on("keyup", function(e) {
+		if($(PF.obj.modal.selectors.root).exists() || !($(".viewer").exists() && e.which in CHV.fn.listingViewer.keys) ) {
+			return;
+		}
+		var direct = [88, 37, 39]; // X <- ->
+		var action = CHV.fn.listingViewer.keys[e.which];
+		if(direct.indexOf(e.which) == -1) {
+			$("[data-action=" + action + "]", CHV.fn.listingViewer.selectors.root).click();
+		} else {
+			if(action in CHV.fn.listingViewer) {
+				CHV.fn.listingViewer[action]();
+			}
+		}
+	});
+
+	$(document).on("click", CHV.fn.listingViewer.selectors.root + " [data-action^=viewer-]", function() {
+		var action = $(this).data("action").substring("viewer-".length);
+		if(action in CHV.fn.listingViewer) {
+			CHV.fn.listingViewer[action]();
+		}
+	});
+
+	$(document).on("click", "a[data-href]:not([rel=popup-link]):not(.popup-link)", function() {
+		var data = $(this).attr("data-href");
+		var href = $(this).attr("href");
+		if(!data && !href) return;
+		location.href = href ? href : data;
+	});
+
+	if(typeof CHV.obj.config !== typeof undefined && CHV.obj.config.listing.viewer) {
+		$(document).on("click", PF.obj.listing.selectors.list_item + "[data-type=image] a.image-container", function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			var $item = $(this).closest(PF.obj.listing.selectors.list_item);
+			if(!$item.exists()) return;
+			CHV.fn.listingViewer.open($item);
+		});
+	}
+
+	$(document).on("contextmenu", CHV.fn.listingViewer.selectors.src, function(e) {
+		e.preventDefault();
+		return false;
+	});
+
+	var UrlParams = PF.fn.deparam(window.location.search);
+	if(UrlParams && "viewer" in UrlParams) {
+		var $parent = $(PF.obj.listing.selectors.content_listing_visible);
+		console.log($parent)
+		if($parent.data("list") == "images") {
+			var $item = $(PF.obj.listing.selectors.list_item, $parent)[UrlParams.viewer == "next" ? "first" : "last"]();
+			CHV.fn.listingViewer.open($item);
+		}
+	}
+
 });
 
 if(typeof CHV == "undefined") {
@@ -1884,6 +1980,247 @@ if(typeof CHV == "undefined") {
 if(window.opener) {
 	CHV.obj.opener = {uploadPlugin: {}};
 }
+
+CHV.fn.listingViewer = {
+	selectors: {
+		bodyShown: ".--viewer-shown",
+		template: "#viewer-template",
+		root: ".viewer",
+		rootShow: ".viewer--show",
+		rootHide: ".viewer--hide",
+		rootZero: ".viewer--zero",
+		rootNavPrev: ".viewer--nav-prev",
+		rootNavNext: ".viewer--nav-next",
+		src: ".viewer-src",
+		tools: ".viewer-tools",
+		loader: ".viewer-loader",
+		owner: ".viewer-owner",
+		ownerGuest: ".viewer-owner--guest",
+		ownerUser: ".viewer-owner--user",
+		inputMap: ".viewer-kb-input",
+	},
+	keys: {
+		83: 'select',
+		76: 'like',
+		70: 'flag',
+		69: 'edit',
+		65: 'move',
+		46: 'delete',
+		88: 'close',
+		37: 'prev',
+		39: 'next',
+	},
+	keymap: {
+		'select': ['S', PF.fn._s('Toggle select')],
+		'like': ['L', PF.fn._s('Like')],
+		'flag': ['F', PF.fn._s('Toggle flag')],
+		'edit': ['E', PF.fn._s('Edit')],
+		'move': ['A', PF.fn._s('Album')],
+		'delete': ['Del', PF.fn._s('Delete')],
+		'close': ['X', PF.fn._s('Close')],
+		'prev': ['◀', PF.fn._s('Previous')],
+		'next': ['▶', PF.fn._s('Next')],
+	},
+	loading: null,
+	idleTimer: 0,
+	$item: null,
+	show: function() {
+		this.getEl("root").removeClass(this.selectors.rootHide.substring(1)).addClass(this.selectors.rootShow.substring(1));
+		$("body").addClass(this.selectors.bodyShown.substring(1));
+		var hammertime = new Hammer($(CHV.fn.listingViewer.selectors.root).get(0), {direction: Hammer.DIRECTION_VERTICAL});
+		hammertime.on("swipeleft swiperight", function(e) {
+			// left -> next, right -> prev
+			var swipe = e.type.substring("swipe".length) == "left" ? "next" : "prev";
+			CHV.fn.listingViewer[swipe]();
+		});
+		if($("html").hasClass("device-mobile")) {
+			this.fullscreen();
+		}
+	},
+	getItem: function() {
+		return this.$item;
+	},
+	getEl: function(sel) {
+		var context = sel.startsWith("template") || sel.startsWith("root") ? false : this.selectors.root;
+		return context ? $(this.selectors[sel], context) : $(this.selectors[sel]);
+	},
+	getObject: function(fresh) {
+		if(fresh || typeof this.object == typeof undefined) {
+			var json = decodeURIComponent(this.getItem().attr("data-object"));
+			this.object = JSON && JSON.parse(json) || $.parseJSON(json);
+		}
+		return this.object;
+	},
+	placeholderSizing: function() {
+		if(!this.getEl('root').exists()) return;
+		var vW = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+		var vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+		var vR = vW/vH;
+		var eSrc = this.getEl("src")[0];
+		var eW = eSrc.getAttribute("width");
+		var eH = eSrc.getAttribute("height");
+		var eR = eW/eH;
+		var c = vR < eR;
+		eSrc.classList.remove("--width-auto", "--height-auto");
+		eSrc.classList.add("--" + (c ? "height" : "width") + "-auto");
+	},
+	filler: function(isOpened) {
+		var _this = this;
+		var $viewer = this.getEl("root");
+		if(isOpened) {
+			var $parsed = $(this.getParsedTemplate());
+			$viewer.html($parsed.html());
+		}
+		$viewer[(this.getItem().hasClass("selected") ? "add" : "remove") + "Class"]("selected");
+		var navActions = ['prev', 'next'];
+		$.each(navActions, function(i, v) {
+			var navSelector = _this.selectors['rootNav' + (v.charAt(0).toUpperCase() + v.slice(1).toLowerCase())];
+			var action = $( PF.obj.listing.selectors.content_listing_pagination + ":visible").length > 0 ? "add" : (_this.getItem()[v]().exists() ? "add" : "remove");
+			$viewer[action + "Class"](navSelector.substring(1));
+		});
+		$.each(this.getItem().get(0).attributes, function(i, attr) {
+			if(!attr.name.startsWith("data-")) return true;
+			$viewer.attr(attr.name, attr.value);
+		});
+		var handle = typeof this.object.user == typeof undefined ? "user" : "guest";
+		handle = "owner" + (handle.charAt(0).toUpperCase() + handle.slice(1).toLowerCase());
+		this.getEl(handle).remove();
+		if(typeof this.object.user !== typeof undefined) {
+			$(this.object.user.avatar ? ".default-user-image" : "img.user-image", this.getEl("ownerUser")).remove();
+		}
+		var $tools = this.getItem().find(".list-item-image-tools");
+		this.getEl("tools").append($tools.html());
+		$.each($tools.find("[data-action]"), function(i, v) {
+			var action = $(this).attr("data-action");
+			var keymap = _this.keymap[action];
+			$('<div class="viewer-kb-key"><kbd>' + keymap[0] + '</kbd><span>' + keymap[1] + '</span></div>').appendTo(_this.getEl('inputMap'));
+		});
+		this.placeholderSizing();
+		this.trickyLoad();
+	},
+	toggleFullscreen: function(fs) {
+		var viewer = fs ? this.getEl("root")[0] : document;
+		var rFS = fs ? (viewer.requestFullscreen || viewer.mozRequestFullScreen || viewer.webkitRequestFullScreen || viewer.msRequestFullscreen) : (viewer.exitFullscreen || viewer.webkitExitFullscreen || viewer.mozCancelFullScreen || viewer.msExitFullscreen);
+		rFS.call(viewer);
+
+	},
+	fullscreen: function() {
+		this.toggleFullscreen(true);
+	},
+	normalscreen: function() {
+		this.toggleFullscreen(false);
+	},
+	remove: function() {
+		this.getEl('root').remove();
+	},
+	getParsedTemplate: function() {
+		var object = this.getObject(true);
+		var template = this.getEl("template").html();
+		var matches = template.match(/%(\S+)%/g);
+		if(matches) {
+			$.each(matches, function(i, v) {
+				var handle = v.slice(1, -1).split(".");
+				var value;
+				handle.map(function(k) {
+					var aux = !value ? object : value;
+					if(k in aux) {
+						value = aux[k]
+					}
+				});
+				var regex = new RegExp(v, "g");
+				template = template.replace(regex, value);
+			});
+		}
+		return template;
+	},
+	insertEl: function() {
+		var html = this.getParsedTemplate();
+		this.getEl("rootZero").remove();
+		$(html).appendTo("body");
+	},
+	toggleIdle: function(idle, refresh) {
+		var _this = this;
+		var refresh = typeof refresh == typeof undefined ? true : refresh;
+		$("html")[((idle ? "add" : "remove")) + "Class"]("--idle");
+		if(!idle) {
+			clearTimeout(_this.idleTimer);
+			if(refresh) {
+				_this.idleTimer = setTimeout(function() {
+					var $fs = $(".fullscreen");
+					var $el = _this.getEl("root");
+					_this.toggleIdle($el.length > 0 && $fs.length == 0);
+				}, 5000);
+			}
+		}
+	},
+	open: function($item) {
+		this.setItem($item);
+		this.insertEl();
+		this.filler();
+		this.show();
+		this.toggleIdle(false); // init idler
+		var _this = this;
+		this.getEl("root").on("mousemove mouseout", function() {
+			_this.toggleIdle(false);
+		});
+	},
+	setItem: function($item) {
+		this.$item = $item;
+	},
+	trickyLoad: function() {
+		var $loader = this.getEl("loader");
+		if(this.object.image.url == this.object.display_url) {
+			$loader.remove();
+			return;
+		}
+		var srcHtml = this.getEl('src').parent().html();
+		var $src = $(srcHtml).attr("src", this.object.image.url);
+		$src.insertBefore(this.getEl('src'));
+		PF.fn.loading.inline($loader, {color: "white", size: "small", center: true, valign: true});
+		$loader.hide().fadeIn("slow");
+		$src.imagesLoaded(function(){
+			$src.next().remove();
+			PF.fn.loading.destroy($loader);
+		});
+	},
+	close: function() {
+		var _this = this;
+		$(this.selectors.root).removeClass(this.selectors.rootShow.substring(1)).addClass(this.selectors.rootHide.substring(1));
+		$("body").removeClass(this.selectors.bodyShown.substring(1));
+		this.toggleIdle(false, false);
+		setTimeout(function() {
+			_this.remove();
+		}, 200);
+	},
+	browse: function(direction) {
+		var $item = this.getItem()[direction]();
+		if(!$item.exists()) {
+			var $pagination = $("[data-pagination=" + direction + "]", PF.obj.listing.selectors.content_listing_pagination + ":visible");
+			var href = $pagination.attr("href");
+			if(!href) return;
+			var UrlParams = PF.fn.deparam(window.location.search);
+			window.location.href = href + "&viewer=" + direction;
+			return;
+		}
+		//var idle = $("html").hasClass("--idle");
+		this.setItem($item);
+		this.filler(true);
+		//if(idle) {
+			//$("html").addClass("--idle")
+		//}
+		var $loadMore = $(PF.obj.listing.selectors.content_listing_pagination, PF.obj.listing.selectors.content_listing_visible).find("[data-action=load-more]");
+		var padding = $item[direction + "All"]().length;
+		if($loadMore.length > 0 && padding <= 5 && !PF.obj.listing.calling && direction == "next") {
+			$("[data-action=load-more]").click();
+		}
+	},
+	prev: function() {
+		this.browse('prev');
+	},
+	next: function() {
+		this.browse('next');
+	}
+};
 
 CHV.obj.image_viewer = {
 	selector: "#image-viewer",
@@ -2022,7 +2359,7 @@ CHV.fn.uploader = {
 		this.queueSize();
 
 		var $switch = $("[data-action=top-bar-upload]", ".top-bar");
-        var show = !$(CHV.fn.uploader.selectors.root).data("shown");
+    var show = !$(CHV.fn.uploader.selectors.root).data("shown");
 		var options = $.extend({callback: null, reset: true}, options);
 
 		if(typeof options.show !== typeof undefined && options.show) {
@@ -2092,36 +2429,36 @@ CHV.fn.uploader = {
 				$(this).addClass("current");
 			});
 
-            $(CHV.fn.uploader.selectors.fullscreen_mask).css({opacity: 0});
-            setTimeout(function() {
-                $(CHV.fn.uploader.selectors.fullscreen_mask).remove();
-                if($("html").data("followed-scroll")) {
-                    $("html").addClass("followed-scroll");
-                }
-            }, 250);
+      $(CHV.fn.uploader.selectors.fullscreen_mask).css({opacity: 0});
+      setTimeout(function() {
+        $(CHV.fn.uploader.selectors.fullscreen_mask).remove();
+        if($("html").data("followed-scroll")) {
+          $("html").addClass("followed-scroll");
+        }
+      }, 250);
 
-            var _uploadBoxHeight = $(CHV.fn.uploader.selectors.root).outerHeight();
-            var _uploadBoxPush = (_uploadBoxHeight - parseInt($(CHV.fn.uploader.selectors.root).data("initial-height"))) + "px";
-            $(CHV.fn.uploader.selectors.root).css({
-                transform: "translate(0,-"+_uploadBoxPush+")"
-            });
+      var _uploadBoxHeight = $(CHV.fn.uploader.selectors.root).outerHeight();
+      var _uploadBoxPush = (_uploadBoxHeight - parseInt($(CHV.fn.uploader.selectors.root).data("initial-height"))) + "px";
+      $(CHV.fn.uploader.selectors.root).css({
+        transform: "translate(0,-"+_uploadBoxPush+")"
+      });
 
-            setTimeout(function() {
-                $("#top-bar").attr("class", $("#top-bar").data("stock_classes"));
-                $("html").removeClass(($(".follow-scroll-wrapper.position-fixed").exists() ? "" : "top-bar-box-shadow-none"));
-            }, animation.time * 1/3);
+      setTimeout(function() {
+        $("#top-bar").attr("class", $("#top-bar").data("stock_classes"));
+        $("html").removeClass(($(".follow-scroll-wrapper.position-fixed").exists() ? "" : "top-bar-box-shadow-none"));
+      }, animation.time * 1/3);
 
-            setTimeout(function() {
-                $(CHV.fn.uploader.selectors.root).css({top: ""});
+      setTimeout(function() {
+        $(CHV.fn.uploader.selectors.root).css({top: ""});
 				if($("body#image").exists()) {
 					CHV.obj.topBar.transparencyScrollToggle();
 				}
 				callbacks();
-				$("html")
+				$("html,body")
 					.removeClass("overflow-hidden")
 					.data({"top-bar-box-shadow-prevent": false});
-            }, animation.time);
-
+        },
+			animation.time);
 		}
 
 		$(CHV.fn.uploader.selectors.root).data("shown", show);
@@ -2795,7 +3132,6 @@ CHV.fn.uploader = {
 				if(typeof this.results.error[i] !== "object") continue;
 				console.log(this.results.error[i])
 				error_files[i] = this.results.error[i].error.message;
-				//error_files.push(this.results.error[i].error.message);
 			}
 			if(error_files.length > 0) {
 				$(this.selectors.failed_result).html("<li>" + error_files.join("</li><li>") + "</li>");
@@ -3916,6 +4252,12 @@ CHV.fn.complete_resource_delete = {
 
 CHV.fn.list_editor = {
 
+	// viewerPropagate: function($item, fn, obj) {
+	// 	if(fn == ) {
+  //
+	// 	}
+	// },
+
 	// Update all the selection counts
 	selectionCount: function() {
 
@@ -3964,6 +4306,8 @@ CHV.fn.list_editor = {
 
 		$target.promise().done(function() {
 
+			$(document).removeClass(CHV.fn.listingViewer.selectors.bodyShown.substr(1));
+
 			// Get count related to each list
 			var affected_content_lists = {};
 			$target.each(function() {
@@ -3973,7 +4317,6 @@ CHV.fn.list_editor = {
 					if(!affected_content_lists[list_id]) {
 						affected_content_lists[list_id] = 0;
 					}
-
 					affected_content_lists[list_id] += 1;
 				});
 			});
@@ -4049,26 +4392,28 @@ CHV.fn.list_editor = {
 		if(typeof select !== "boolean") {
 			var select = true;
 		}
-		var $icon = $("[data-action=select] .btn-icon", $list_item),
-			add_class, remove_class, label_text;
 
-		if(!select){
-			$list_item.removeClass("selected").find(".list-item-image-tools").css("display", "none");
+		var $target = $(".viewer").is(":visible") ? $("[data-type=image][data-id="+ $list_item.attr("data-id") +"]") : $list_item;
+		var $icon = $("[data-action=select] .btn-icon", $target);
+		var add_class, remove_class, label_text;
+
+		if(!select) {
+			$target.removeClass("selected");
 			add_class = $icon.data("icon-unselected");
 			remove_class = $icon.data("icon-selected");
 			label_text = PF.fn._s("Select");
-			setTimeout(function() { // Nifty hack to prevent flicker
-				  $list_item.find(".list-item-image-tools").css("display", "");
-			}, 0);
+
 		} else {
-			$list_item.addClass("selected");
+			$target.addClass("selected");
 			add_class = $icon.data("icon-selected");
 			remove_class = $icon.data("icon-unselected");
 			label_text = PF.fn._s("Unselect");
 		}
 
-		$("[data-action=select] .label", $list_item).text(label_text);
 		$icon.removeClass(remove_class).addClass(add_class);
+
+		$("[data-action=select] .label", $target).text(label_text);
+
 
 		CHV.fn.list_editor.selectionCount();
 	},
@@ -4102,7 +4447,7 @@ CHV.fn.list_editor = {
 
 		this.addAlbumtoModals(album);
 
-		$("option[value="+album.id_encoded+"]","[name=form-album-id]").html(PF.fn.htmlEncode(album.name));
+		$("option[value="+album.id_encoded+"]","[name=form-album-id]").html(PF.fn.htmlEncode(album.name_with_privacy_readable_html));
 
 		if(typeof action == "undefined") {
 			var action = "edit";
@@ -4113,11 +4458,11 @@ CHV.fn.list_editor = {
 				CHV.fn.list_editor.moveFromList($target, growl);
 				return;
 			}
-			$target.data("description", response.description);
+			$target.attr("data-description", response.description);
 
 			if(dealing_with == "image") {
 				if(typeof response.title !== typeof undefined) {
-					$target.data("title", response.title);
+					$target.attr("data-title", response.title);
 					$target.find("[title]").attr("title", response.title);
 					$("[data-text=image-title]", $target).html(PF.fn.htmlEncode(response.title));
 				}
@@ -4125,16 +4470,18 @@ CHV.fn.list_editor = {
 					$("[data-text=image-title-truncated]", $target).html(PF.fn.htmlEncode(response.title_truncated));
 				}
 				if(typeof response.category_id !== typeof undefined) {
-					$target.data("category-id", response.category_id);
+					$target.attr("data-category-id", response.category_id);
 				}
-				$target.data({"album-id": album.id_encoded, flag: response.nsfw == 1 ? "unsafe" : "safe"}).removeClass("safe unsafe").addClass(response.nsfw == 1 ? "unsafe" : "safe");
+				$target.attr({"data-album-id": album.id_encoded, "data-flag": response.nsfw == 1 ? "unsafe" : "safe"});
 				$("[data-content=album-link]", $target).attr("href", album.url);
 			} else {
-				$target.data("privacy", album.privacy);
-				$target.data("password", album.password);
-				$target.data("name", album.name);
+				$target.attr({
+					"data-privacy": album.privacy,
+					"data-password": album.password,
+					"data-name": album.name,
+				});
 			}
-			$target.removeClass("privacy-public privacy-private privacy-password").addClass("privacy-" + album.privacy);
+			$target.attr("data-privacy", album.privacy);
 			$("[data-text=album-name]", $target).html(PF.fn.htmlEncode(album.name));
 
 			PF.fn.growl.expirable(action == "edit" ? PF.fn._s("The content has been edited.") : PF.fn._s("The content has been moved."));
@@ -4145,7 +4492,7 @@ CHV.fn.list_editor = {
 		var added = false;
 		$("[name=form-album-id]", "[data-modal]").each(function(){
 			if(album.id_encoded && !$("option[value=" + album.id_encoded + "]", this).exists()) {
-				$(this).append('<option value="'+ album.id_encoded +'">'+ album.name + (album.privacy !== "public" ? ' ('+PF.fn._s("private")+')' : '') + '</option>');
+				$(this).append('<option value="'+ album.id_encoded +'">'+ album.name_with_privacy_readable_html + '</option>');
 				added = true;
 			}
 		});
@@ -4211,10 +4558,10 @@ CHV.fn.list_editor = {
 		if(/image/.test(dealing_with)) {
 
 			if(dealing_with == "image") { // single
-				CHV.fn.list_editor.updateItem("[data-id="+$targets.data("id")+"]", response.image, "move");
+				CHV.fn.list_editor.updateItem("[data-type=image][data-id="+$targets.data("id")+"]", response.image, "move");
 			} else {
 				$targets.each(function() {
-					CHV.fn.list_editor.updateItem("[data-id="+$(this).data("id")+"]", response, "move", false);
+					CHV.fn.list_editor.updateItem("[data-type=" + dealing_with + "][data-id="+$(this).data("id")+"]", response, "move", false);
 				});
 				PF.fn.growl.expirable(PF.fn._s("The content has been moved."));
 			}

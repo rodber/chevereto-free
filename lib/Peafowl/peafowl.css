@@ -29,6 +29,17 @@
 	user-select: none;
 }
 
+.animate {
+	-webkit-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+.animate--slow {
+	-webkit-transition-duration: 400ms;
+	-o-transition-duration: 400ms;
+	transition-duration: 400ms;
+}
+
 [type="search"] {
     -moz-appearance: textfield;
     -webkit-appearance:	textfield;
@@ -408,15 +419,14 @@ input[type=checkbox], input[type=radio] {
 .input-line-height {
 	line-height: 36px;
 }
-
-textarea, .text-input, input[type=text] {
+textarea, .text-input, input[type=text]:not(.text-input) {
 	padding: 7px 10px;
-	width: 100%; /* 350 */
 	font-size: 13px;
 	font-size: 0.875rem;
 	/*box-shadow: inset 0 1px 0 #EEE;*/
 	color: #333;
 	background: #FFF;
+	width: 100%; /* 350 */
 }
 
 .tone-dark textarea, .tone-dark .text-input, .tone-dark input[type=text] {
@@ -667,9 +677,14 @@ input:focus, textarea:focus, select:focus, input.search:focus, .input-focus {
 		outline: 0;
 		vertical-align: text-bottom;
 	}
-	input.search.one-icon-padding {
+	input.search.one-icon-padding,
+	input.search.two-icon-padding {
 		padding-right: 30px;
 		padding-right: 2rem;
+	}
+	input.search.two-icon-padding {
+		padding-left: 30px;
+		padding-left: 2rem;
 	}
 
 	.top-bar input.search {
@@ -1418,6 +1433,10 @@ textarea {
 		-webkit-overflow-scrolling: touch;
 		overflow: auto;
 	}
+	.pop-box-inner form {
+		margin-top: -20px;
+		margin-bottom: -20px;
+	}
 	.pop-btn .pop-box {
 		top: 100%;
 		margin-top: 10px;
@@ -1852,7 +1871,8 @@ textarea {
 				text-decoration: none;
 			}
 
-			.top-bar.white .top-bar ul .pop-btn.current .top-btn-text, .top-bar.white  .top-bar ul .top-btn-el.current .top-btn-text {
+			.top-bar.white .top-bar ul .pop-btn.current .top-btn-text,
+			.top-bar.white .top-bar ul .top-btn-el.current .top-btn-text {
 				color: #333;
 			}
 
@@ -2101,6 +2121,7 @@ textarea {
 		}
 		.top-bar .pop-account .or-separator {
 			margin-top: 30px;
+			margin-bottom: 30px;
 		}
 
 	/* create account */
@@ -2137,8 +2158,10 @@ textarea {
 		color: #FFF;
 	}
 
-	.top-bar.white .btn.default, .top-bar.white .btn.default:hover, .top-bar.white .current .btn {
-		color: inherit;
+	.top-bar.white .btn.default,
+	.top-bar.white .btn.default:hover,
+	.top-bar.white .current .btn {
+		color: inherit !important;
 	}
 
 	.current .top-btn-create-account:hover {
@@ -2674,7 +2697,7 @@ textarea {
 	.tabbed-content {
 		display: none;
 		width: 100%;
-		overflow: auto;
+		overflow: hidden;
 	}
 		.title {
 			font-size: 0.93em;
@@ -2751,6 +2774,10 @@ textarea {
 	font-size: 1.43em;
 	line-height: 1.43em;
 	margin: 10px 0;
+}
+
+.viewer-title:empty {
+	margin: 0;
 }
 
 /*
@@ -3296,12 +3323,13 @@ body.upload-box-visible .upload-box {
 		display: none;
 	}
 
+	html.--idle .list-item .hover-display:not(.idle-display),
 	.list-item .hover-display {
 		opacity: 0;
 		-webkit-transition: all 250ms ease;
 		transition: all 250ms ease;
 	}
-	.list-item:hover .hover-display {
+	html:not(.--idle) .list-item:hover .hover-display {
 		opacity: 1;
 	}
 	.phone .list-item .hover-display,
@@ -4084,7 +4112,7 @@ img.user-image.size-40 , .default-user-image.size-40 {
 	top: 55px;
 	margin-left: -325px;
 	line-height: 1.2;
-	z-index: 300;
+	z-index: 600;
 	-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.1);
 	        box-shadow: 2px 2px 3px rgba(0,0,0,.1);
 	cursor: default;

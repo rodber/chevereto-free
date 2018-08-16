@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-10-01 18:12+0000',
-  'PO-Revision-Date' => '2017-10-01 18:12+0000',
+  'POT-Creation-Date' => '2018-06-03 14:28+0000',
+  'PO-Revision-Date' => '2018-06-03 14:28+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'fi',
@@ -13,22 +13,14 @@ $translation_header = array (
 );
 $translation_plural = array (
   'nplurals' => 2,
-  'plural' => '(n != 1)',
-  'formula' => '($n != 1)',
-  'function' => '$index = (int)(($n != 1)); return ($index < 2) ? $index : 2 - 1;',
+  'function' => '($n != 1)',
 );
 $translation_table = [
-	"Plugin" => [
-		0 => "Liitännäinen",
+	"To use all the features of this site you must be logged in." => [
+		0 => "Käyttääksesi kaikkia ominaisuuksia, sinun täytyy olla kirjautunut sisään.",
 	],
-	"Plugin route" => [
-		0 => "Liitännäisen ohjaus",
-	],
-	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
-		0 => "Ota käyttään liitännäisen ohjeet %u. Ohjeet tulee näkymään %s valikossa. Tämä asetus ei vaikuta ylläpitäjiin.",
-	],
-	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
-		0 => "Aseta kustomoitu URL %p. Huomioi, että sinun tulee käsin kopioida se %s URL:iin.",
+	"If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
+		0 => "Jos sinulla ei ole käyttäjätunnusta voit luoda sellaisen <a href=\"%s\">tästä</a>.",
 	],
 	"Invalid email" => [
 		0 => "Virheellinen sähköpostiosoite",
@@ -130,9 +122,6 @@ $translation_table = [
 	"After %n %t" => [
 		0 => "Jälkeen %n %t",
 	],
-	"Don't autodelete" => [
-		0 => "Älä poista automaattisesti",
-	],
 	"minute" => [
 		0 => "minuutti",
 		1 => "minuuttia",
@@ -145,23 +134,26 @@ $translation_table = [
 		0 => "päivä",
 		1 => "päivää",
 	],
+	"week" => [
+		0 => "viikko",
+		1 => "viikkoa",
+	],
+	"month" => [
+		0 => "kuukausi",
+		1 => "kuukautta",
+	],
+	"year" => [
+		0 => "vuosi",
+		1 => "vuotta",
+	],
+	"Don't autodelete" => [
+		0 => "Älä poista automaattisesti",
+	],
 	"Duplicated upload" => [
 		0 => "Kaksinkertainen lataus",
 	],
-	"Error storing file in external storage server" => [
-		0 => "Virhe tallentaessa tiedosto ulkoiseen tallennustilaan",
-	],
-	"External storage has failed" => [
-		0 => "Ulkoinen tallennustila epäonnistui",
-	],
 	"Private upload" => [
 		0 => "Yksityinen lähetys",
-	],
-	"Upload switched to local storage" => [
-		0 => "Lataus vaihdettu paikalliseen tallennustilaan",
-	],
-	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
-		0 => "Järjestelmä vaihtoi paikalliseen tallennustilaan, kun ulkoisesta tallennustilasta loppui tila (%c). Kuva %s on tallennettu paikalliseen tallennustilaan.",
 	],
 	"like" => [
 		0 => "tykkäys",
@@ -249,18 +241,6 @@ $translation_table = [
 	"Private profile" => [
 		0 => "Yksityinen profiili",
 	],
-	"year" => [
-		0 => "vuosi",
-		1 => "vuotta",
-	],
-	"month" => [
-		0 => "kuukausi",
-		1 => "kuukautta",
-	],
-	"week" => [
-		0 => "viikko",
-		1 => "viikkoa",
-	],
 	"second" => [
 		0 => "sekunti",
 		1 => "sekuntia",
@@ -270,9 +250,6 @@ $translation_table = [
 	],
 	"moments ago" => [
 		0 => "hetki sitten",
-	],
-	"System notification" => [
-		0 => "Järjestelmän ilmoitukset",
 	],
 	"Dashboard" => [
 		0 => "Hallintapaneeli",
@@ -304,14 +281,8 @@ $translation_table = [
 	"You can apply this update directly from your %a or download it from %s and then manually install it." => [
 		0 => "Voit päivittää järjestelmän automaattisesti %a tai ladata sen %s ja asentaa käsin.",
 	],
-	"Chevereto update available (v%s)" => [
-		0 => "Chevereto päivitys saatavilla (v%s)",
-	],
 	"view on %s" => [
 		0 => "näyttöä %s",
-	],
-	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy." => [
-		0 => "Käytämme omia ja kolmannen osapuolen evästeitä parantaaksemme palveluamme ja sen käytettävyyttä. Käyttämällä palvelujamme hyväksyt evästeiden käytön.",
 	],
 	"You have been forbidden to use this website." => [
 		0 => "Sinulla ei ole oikeuksia käyttää tätä sivustoa.",
@@ -321,6 +292,9 @@ $translation_table = [
 	],
 	"View all my images" => [
 		0 => "Näytä kaikki kuvani",
+	],
+	"Plugin" => [
+		0 => "Liitännäinen",
 	],
 	"That page doesn't exist" => [
 		0 => "Sivua ei ole olemassa",
@@ -779,6 +753,9 @@ $translation_table = [
 	"Only alphanumeric, hyphen and underscore characters are allowed" => [
 		0 => "Vain aakkosnumeerisia, tavuviiva ja alaviivat ovat sallittuja",
 	],
+	"Invalid URL" => [
+		0 => "Virheellinen osoite",
+	],
 	"Routes can't be the same" => [
 		0 => "Ohjaukset ei voi olla samoja",
 	],
@@ -805,9 +782,6 @@ $translation_table = [
 	],
 	"Invalid SMTP username" => [
 		0 => "Virheellinen SMTP:n käyttäjänimi",
-	],
-	"Invalid URL" => [
-		0 => "Virheellinen osoite",
 	],
 	"This URL key is already being used by another page (ID %s)" => [
 		0 => "URL avain on jo käytössä toisella sivulla (ID %s)",
@@ -838,9 +812,6 @@ $translation_table = [
 	],
 	"Upload date" => [
 		0 => "Lähetetty",
-	],
-	"%s images" => [
-		0 => "%s kuvaa",
 	],
 	"Image %i in %a album" => [
 		0 => "Kuva %i albumissa %a",
@@ -941,33 +912,6 @@ $translation_table = [
 	"Logged out" => [
 		0 => "Kirjauduttu ulos",
 	],
-	"General questions/comments" => [
-		0 => "Yleiset kysymykset/kommentit",
-	],
-	"DMCA complaint" => [
-		0 => "Tekijänoikeusrikkomus",
-	],
-	"Invalid name" => [
-		0 => "Virheellinen nimi",
-	],
-	"Invalid message" => [
-		0 => "Virheellinen viesti",
-	],
-	"Invalid subject" => [
-		0 => "Virheellinen aihe",
-	],
-	"Invalid reCAPTCHA" => [
-		0 => "Virheellinen reCAPTCHA",
-	],
-	"Can't submit the form: %s" => [
-		0 => "Lomakkeet %s lähetys ei onnistunut",
-	],
-	"Message sent. We will get in contact soon." => [
-		0 => "Viesti lähetetty. Olemme sinuun yhteydessä pian.",
-	],
-	"Mail error" => [
-		0 => "Sähköpostivirhe",
-	],
 	"Upload images" => [
 		0 => "Lataa kuvia",
 	],
@@ -997,6 +941,9 @@ $translation_table = [
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "Sähköposti lähetetty osoitteeseen %s aktivointi-ohjeiden kera",
+	],
+	"Invalid name" => [
+		0 => "Virheellinen nimi",
 	],
 	"Invalid website" => [
 		0 => "Virheellinen verkkosivu",
@@ -1096,9 +1043,6 @@ $translation_table = [
 	],
 	"I'm at least %s years old" => [
 		0 => "Olen vähintään %s vuotta vanha",
-	],
-	"By signing up you agree to our <a href=\"%s\">Terms of service</a>" => [
-		0 => "Rekisteröitymällä hyväksyt <a href=\"%s\">käyttöehdot</a>",
 	],
 	"Notifications" => [
 		0 => "Ilmoitukset",
@@ -1689,6 +1633,12 @@ $translation_table = [
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "Haluatko varmasti poistaa kaiken valitun sisällön? Toimintoa ei voi perua.",
 	],
+	"Guest" => [
+		0 => "Vieras",
+	],
+	"Like" => [
+		0 => "Tykkäys",
+	],
 	"Uploaded by guest" => [
 		0 => "Ladannut vieras",
 	],
@@ -1806,9 +1756,6 @@ $translation_table = [
 	"You like this" => [
 		0 => "Tykkäsit tästä",
 	],
-	"Like" => [
-		0 => "Tykkäys",
-	],
 	"Upload to album" => [
 		0 => "Lataa albumiin",
 	],
@@ -1868,9 +1815,6 @@ $translation_table = [
 	],
 	"Website description" => [
 		0 => "Verkkosivuston kuvaus",
-	],
-	"Website keywords" => [
-		0 => "Verkkosivun avainsanat",
 	],
 	"Default time zone" => [
 		0 => "Oletusaikavyöhyke",
@@ -2907,6 +2851,15 @@ $translation_table = [
 	"Use this key when using the <a %s>API v1</a>." => [
 		0 => "Käytä tätä avainta käyttäessäsi <a %s>API v1</a>.",
 	],
+	"Plugin route" => [
+		0 => "Liitännäisen ohjaus",
+	],
+	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
+		0 => "Ota käyttään liitännäisen ohjeet %u. Ohjeet tulee näkymään %s valikossa. Tämä asetus ei vaikuta ylläpitäjiin.",
+	],
+	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
+		0 => "Aseta kustomoitu URL %p. Huomioi, että sinun tulee käsin kopioida se %s URL:iin.",
+	],
 	"Cookie law compliance" => [
 		0 => "Evästeiden lakiteksti",
 	],
@@ -2924,9 +2877,6 @@ $translation_table = [
 	],
 	"Load full resolution" => [
 		0 => "Lataa täydessä resoluutiossa",
-	],
-	"Guest" => [
-		0 => "Vieras",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "Lisätty %a ja kategorioitu %c",
@@ -3220,11 +3170,32 @@ $translation_table = [
 	"Follow" => [
 		0 => "Seuraa",
 	],
+	"General questions/comments" => [
+		0 => "Yleiset kysymykset/kommentit",
+	],
+	"DMCA complaint" => [
+		0 => "Tekijänoikeusrikkomus",
+	],
+	"Invalid message" => [
+		0 => "Virheellinen viesti",
+	],
+	"Invalid subject" => [
+		0 => "Virheellinen aihe",
+	],
+	"Invalid reCAPTCHA" => [
+		0 => "Virheellinen reCAPTCHA",
+	],
+	"Mail error" => [
+		0 => "Sähköpostivirhe",
+	],
 	"Message sent" => [
 		0 => "Viesti lähetetty",
 	],
 	"Contact" => [
 		0 => "Ota yhteyttä",
+	],
+	"Message sent. We will get in contact soon." => [
+		0 => "Viesti lähetetty. Olemme sinuun yhteydessä pian.",
 	],
 	"If you want to send a message fill the form below." => [
 		0 => "Ota yhteyttä alla olevan lomakkeen kautta.",

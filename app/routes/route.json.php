@@ -60,7 +60,7 @@ $route = function($handler) {
 					try {
 						$user_picture_upload = CHV\User::uploadPicture($owner_id == $logged_user['id'] ? $logged_user : $owner_id, $_REQUEST['what'], $source);
 						$json_array['success'] = ['image' => $user_picture_upload, 'message' => sprintf('%s picture uploaded', ucfirst($type)), 'code' => 200];
-                        // image inside success??
+          	// image inside success??
 					} catch(Exception $e) {
 						throw new Exception($e->getMessage(), $e->getCode());
 					}
@@ -161,7 +161,7 @@ $route = function($handler) {
 							if($album['user']['id']) {
 								$owner_id = $album['user']['id'];
 							}
-							if((!$handler::getCond('admin') || $owner_id !== $logged_user['id']) && $album['privacy'] == 'password' && !CHV\Album::checkSessionPassword($album)) {
+							if($album['privacy'] == 'password' && (!$handler::getCond('admin') && $owner_id !== $logged_user['id'] &&  !CHV\Album::checkSessionPassword($album))) {
 								throw new Exception(_s('Request denied'), 403);
 							}
 						}
@@ -187,10 +187,11 @@ $route = function($handler) {
 						$where = '';
 
 						if(!empty($_REQUEST['userid'])) {
+							$owner_id = CHV\decodeID($_REQUEST['userid']);
 							$where .= ($where == '' ? 'WHERE' : ' AND') . ' album_user_id=:album_user_id';
 							$binds[] = array(
 								'param' => ':album_user_id',
-								'value'	=> CHV\decodeID($_REQUEST['userid'])
+								'value'	=> $owner_id
 							);
 						}
 
@@ -258,6 +259,9 @@ $route = function($handler) {
 				$list->setWhere($where);
 				$list->setOwner($owner_id);
 				$list->setRequester($logged_user);
+				if(in_array($list_request, ['images', 'albums']) && (CHV\Login::isAdmin() || ($logged_user !== NULL && $owner_id == $logged_user['id']))) {
+					$list->setTools(TRUE);
+				}
 				if(!empty($params_hidden)) {
 					$list->setParamsHidden($params_hidden);
 				}
@@ -299,7 +303,8 @@ $route = function($handler) {
 					throw new Exception(_s('Login needed'), 403);
 				}
 
-				$editing = $_REQUEST['editing'];
+				$editing_request = $_REQUEST['editing'];
+				$editing = $editing_request;
 				$type = $_REQUEST['edit'];
 				$owner_id = !empty($_REQUEST['owner']) ? CHV\decodeID($_REQUEST['owner']) : $logged_user['id'];
 
@@ -391,7 +396,7 @@ $route = function($handler) {
 						$json_array['success'] = ['message' => 'Image edited', 'code' => 200];
 
 						// Editing response
-						$json_array['editing'] = $editing;
+						$json_array['editing'] = $editing_request;
 						$json_array['image'] = CHV\Image::formatArray($image_edit_db, true); // Safe formatted image
 
 						// Append the HTML slice
@@ -817,19 +822,19 @@ $route = function($handler) {
 				$album_id = $album['new'] ? CHV\Album::insert($album['name'], $owner_id, $album['privacy'], $album['description'], $album['password']) : CHV\decodeID($album['id']);
 				$album_db = CHV\Album::getSingle($album_id, FALSE, FALSE);
 
-				if(is_array($album['ids']) && count($album['ids']) == 0) {
-					throw new Exception('Invalid source album ids ' . ($_REQUEST['action'] == 'move' ? 'move' : 'create') . ' request', 100);
-				}
-
-				if(count($album['ids']) > 0) {
-					$ids = array();
-					foreach($album['ids'] as $id) {
-						$ids[] = CHV\decodeID($id);
+				if(is_array($album['ids'])) {
+					if(count($album['ids']) == 0) {
+						throw new Exception('Invalid source album ids ' . ($_REQUEST['action'] == 'move' ? 'move' : 'create') . ' request', 100);
+					}
+					if(count($album['ids']) > 0) {
+						$ids = array();
+						foreach($album['ids'] as $id) {
+							$ids[] = CHV\decodeID($id);
+						}
 					}
 				}
-
 				// IF $ids then append those contents
-				if($ids && count($ids) > 0) {
+				if(is_array($ids) && count($ids) > 0) {
 
 					// Move by type
 					if($type == 'images') {
@@ -922,7 +927,7 @@ $route = function($handler) {
 				if(in_array($type, ['avatar', 'background'])) {
 					try {
 						CHV\User::deletePicture($owner_id == $logged_user['id'] ? $logged_user : $owner_id, $type);
-                        $json_array['status_code'] = 200;
+              $json_array['status_code'] = 200;
 						$json_array['success'] = ['message' => 'Profile background deleted', 'code' => 200];
 					} catch(Exception $e) {
 						throw new Exception($e->getMessage(), $e->getCode());
@@ -940,7 +945,7 @@ $route = function($handler) {
 						throw new Exception('Missing delete target id', 100);
 					}
 				} else {
-					if(count($deleting['ids']) == 0) {
+					if(is_array($deleting['ids']) && count($deleting['ids']) == 0) {
 						throw new Exception('Missing delete target ids', 100);
 					}
 				}
@@ -1006,15 +1011,15 @@ $route = function($handler) {
 
 				} else {
 
+					if(!is_array($deleting['ids'])) {
+						throw new Exception('Expecting ids array values, '.gettype($deleting['ids']).' given', 100);
+					}
+
 					if(count($deleting['ids']) > 0) {
 						$ids = array();
 						foreach($deleting['ids'] as $id) {
 							$ids[] = CHV\decodeID($id);
 						}
-					}
-
-					if(!is_array($deleting['ids'])) {
-						throw new Exception('Expecting ids array values, '.gettype($deleting['ids']).' given', 100);
 					}
 
 					$contents_db = $Class_fn::getMultiple($ids);
@@ -1055,10 +1060,74 @@ $route = function($handler) {
                       throw new Exception(_s('Invalid email'), 100);
                   }
                   CHV\send_mail($_REQUEST['email'], _s('Test email from %s @ %t', ['%s' => CHV\getSetting('website_name'), '%t' => G\datetime()]), '<p>' . _s('This is just a test') . '</p>');
-                  $json_array['success'] = ['message' => _s('Test email sent to %s.', $_REQUEST['email']), 'code' => 200];
+                  $json_array['success'] = [
+										'message' => _s('Test email sent to %s.', $_REQUEST['email']),
+										'code' => 200
+									];
               break;
           }
       break;
+
+			case 'encode':
+			case 'decode':
+				if(!$logged_user['is_admin']) {
+					throw new Exception('Invalid request', 403);
+				}
+				if($_REQUEST['id'] == NULL) {
+					throw new Exception('Invalid request', 100);
+				}
+				switch($_REQUEST[$doing]['object']) {
+					case 'id':
+						$id = $_REQUEST['id'];
+						$fn = 'CHV\\' . $doing . 'ID';
+						$res = $fn($id);
+						$json_array['success'] = [
+							'message' => $id . ' == ' . $res,
+							'code' => 200,
+							$doing => $res,
+						];
+					break;
+				}
+			break;
+
+			case 'export':
+					if(!$logged_user['is_admin']) {
+							throw new Exception('Invalid request', 403);
+					}
+					switch($_REQUEST['export']['object']) {
+					case 'user':
+						// Validate id
+						if($_REQUEST['username'] == NULL) {
+							throw new Exception(_s('Invalid username'), 100);
+						}
+								$user =  CHV\User::getSingle($_REQUEST['username'], 'username', FALSE);
+								if($user == FALSE) {
+										throw new Exception(_s('Invalid username'), 101);
+								}
+								$user = CHV\DB::formatRow($user);
+								if($_REQUEST['download'] == 0) {
+									$json_array['success'] = [
+										'message' => _s("Downloading %s data", "'" . $user['username'] . "'"),
+										'code' => 200,
+										'redirURL' => G\get_current_url() . '&download=1',
+									];
+								} else {
+									$filename = $user['username'] . '.json';
+									$user = G\array_filter_array($user, ['name', 'username', 'email', 'facebook_username', 'twitter_username', 'website', 'bio', 'timezone', 'language', 'is_private', 'newsletter_subscribe']);
+									$user = json_encode($user, JSON_PRETTY_PRINT);
+									header('Content-type: application/json');
+									header('Content-Disposition: attachment; filename=' . $filename);
+									header('Last-Modified: '.G\datetimegmt('D, d M Y H:i:s') . ' UTC');
+									header('Cache-Control: must-revalidate, pre-check=0, post-check=0, max-age=0');
+									header('Pragma: anytextexeptno-cache', TRUE);
+									header('Cache-control: private', FALSE);
+									header('Expires: 0');
+									print $user;
+									die();
+								}
+					break;
+				}
+			break;
 
 			case 'upgrade':
 				try {

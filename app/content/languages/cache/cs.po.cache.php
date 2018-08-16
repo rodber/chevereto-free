@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-10-01 18:12+0000',
-  'PO-Revision-Date' => '2017-10-01 18:12+0000',
+  'POT-Creation-Date' => '2018-06-03 14:28+0000',
+  'PO-Revision-Date' => '2018-06-03 14:28+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'cs',
@@ -13,22 +13,14 @@ $translation_header = array (
 );
 $translation_plural = array (
   'nplurals' => 2,
-  'plural' => '(n != 1)',
-  'formula' => '($n != 1)',
-  'function' => '$index = (int)(($n != 1)); return ($index < 2) ? $index : 2 - 1;',
+  'function' => '($n != 1)',
 );
 $translation_table = [
-	"Plugin" => [
-		0 => "Plugin",
+	"To use all the features of this site you must be logged in." => [
+		0 => "Aby jste mohli používat všechny funkce, musíte být přihlášen(a).",
 	],
-	"Plugin route" => [
-		0 => "Směrování Pluginu",
-	],
-	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
-		0 => "Toto aktivujte, aby jste zobrazili instrukce pluginu na %u. Odkaz na tyto pokyny bude přidán do nabídky %s.Toto nastavení nemá vliv na administrátory.",
-	],
-	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
-		0 => "Toto použijte pro nastavení vlastní URL adresy pro %p. Upozorňujeme, že musíte v této URL adrese ručně zkopírovat %s.",
+	"If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
+		0 => "Pokud ještě nemáte svůj účet můžete se <a href=\"%s\">registrovat</a> právě teď.",
 	],
 	"Invalid email" => [
 		0 => "Neplatný e-mail",
@@ -132,9 +124,6 @@ $translation_table = [
 	"After %n %t" => [
 		0 => "Po %n %t",
 	],
-	"Don't autodelete" => [
-		0 => "Automaticky nemazat",
-	],
 	"minute" => [
 		0 => "minuta",
 		1 => "minut",
@@ -153,23 +142,32 @@ $translation_table = [
 		2 => "dnů",
 		3 => "dny",
 	],
+	"week" => [
+		0 => "týden",
+		1 => "týdnů",
+		2 => "týdnů",
+		3 => "týdny",
+	],
+	"month" => [
+		0 => "měsíc",
+		1 => "měsíců",
+		2 => "měsíců",
+		3 => "měsíce",
+	],
+	"year" => [
+		0 => "rok",
+		1 => "let",
+		2 => "let",
+		3 => "let",
+	],
+	"Don't autodelete" => [
+		0 => "Automaticky nemazat",
+	],
 	"Duplicated upload" => [
 		0 => "Duplicitně nahráno",
 	],
-	"Error storing file in external storage server" => [
-		0 => "Chyba uloženého souboru na serveru externího úložiště",
-	],
-	"External storage has failed" => [
-		0 => "Externí úložiště selhalo",
-	],
 	"Private upload" => [
 		0 => "Soukromé nahrávání",
-	],
-	"Upload switched to local storage" => [
-		0 => "Nahrávání se přepne do místního úložiště",
-	],
-	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
-		0 => "Systém se přepne do lokálního úložiště kvůli nedostatečně diskové kapacitě (%c) na úložišti externího serveru (serverech). Obrázek %s bude přemístěn do místního úložiště.",
 	],
 	"like" => [
 		0 => "líbí se",
@@ -217,7 +215,7 @@ $translation_table = [
 		0 => "Hledat",
 	],
 	"People" => [
-		0 => "Lidi",
+		0 => "Lidé",
 	],
 	"Image" => [
 		0 => "Obrázek",
@@ -267,24 +265,6 @@ $translation_table = [
 	"Private profile" => [
 		0 => "Soukromý profil",
 	],
-	"year" => [
-		0 => "rok",
-		1 => "let",
-		2 => "let",
-		3 => "let",
-	],
-	"month" => [
-		0 => "měsíc",
-		1 => "měsíců",
-		2 => "měsíců",
-		3 => "měsíce",
-	],
-	"week" => [
-		0 => "týden",
-		1 => "týdnů",
-		2 => "týdnů",
-		3 => "týdny",
-	],
 	"second" => [
 		0 => "sekunda",
 		1 => "sekund",
@@ -296,9 +276,6 @@ $translation_table = [
 	],
 	"moments ago" => [
 		0 => "před několika okamžiky",
-	],
-	"System notification" => [
-		0 => "Systémová oznámení",
 	],
 	"Dashboard" => [
 		0 => "Administrace",
@@ -330,14 +307,8 @@ $translation_table = [
 	"You can apply this update directly from your %a or download it from %s and then manually install it." => [
 		0 => "Tuto aktualizaci můžete nainstalovat automaticky přímo ze svého %a nebo si ji stáhnout z %s a nainstalovat manuálně.",
 	],
-	"Chevereto update available (v%s)" => [
-		0 => "Je k dispozici aktualizace Chevereta (v%s)",
-	],
 	"view on %s" => [
 		0 => "zobrazit na %s",
-	],
-	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy." => [
-		0 => "Za účelem vylepšení vašeho komfortu při prohlížení a užívání našich služeb používáme cookies. Používáním našich stránek s tímto souhlasíte.",
 	],
 	"You have been forbidden to use this website." => [
 		0 => "Máte zakázáno používat tuto webovou stránku.",
@@ -347,6 +318,9 @@ $translation_table = [
 	],
 	"View all my images" => [
 		0 => "Zobrazit všechny mé obrázky",
+	],
+	"Plugin" => [
+		0 => "Plugin",
 	],
 	"That page doesn't exist" => [
 		0 => "Tato stránka neexistuje",
@@ -807,6 +781,9 @@ $translation_table = [
 	"Only alphanumeric, hyphen and underscore characters are allowed" => [
 		0 => "Povoleny jsou pouze alfanumerické znaky, pomlčka a podtržítko",
 	],
+	"Invalid URL" => [
+		0 => "Neplatná URL adresa",
+	],
 	"Routes can't be the same" => [
 		0 => "Cesty nemůžou být stejné",
 	],
@@ -833,9 +810,6 @@ $translation_table = [
 	],
 	"Invalid SMTP username" => [
 		0 => "Špatné SMTP uživatelské jméno",
-	],
-	"Invalid URL" => [
-		0 => "Neplatná URL adresa",
 	],
 	"This URL key is already being used by another page (ID %s)" => [
 		0 => "Tato URL adresa klíče je již používána jinou stránkou (ID %s)",
@@ -866,9 +840,6 @@ $translation_table = [
 	],
 	"Upload date" => [
 		0 => "Datum nahrání",
-	],
-	"%s images" => [
-		0 => "%s obrázků",
 	],
 	"Image %i in %a album" => [
 		0 => "Obrázek %i v %a albu",
@@ -969,33 +940,6 @@ $translation_table = [
 	"Logged out" => [
 		0 => "Odhlášeno",
 	],
-	"General questions/comments" => [
-		0 => "Obecné dotazy a komentáře",
-	],
-	"DMCA complaint" => [
-		0 => "Nahlásit porušení autorského zákona",
-	],
-	"Invalid name" => [
-		0 => "Neplatné jméno",
-	],
-	"Invalid message" => [
-		0 => "Neplatná zpráva",
-	],
-	"Invalid subject" => [
-		0 => "Neplatný předmět",
-	],
-	"Invalid reCAPTCHA" => [
-		0 => "Špatně opsaný kód reCAPTCHA",
-	],
-	"Can't submit the form: %s" => [
-		0 => "Nelze odeslat formulář: %s",
-	],
-	"Message sent. We will get in contact soon." => [
-		0 => "Zpráva byla odeslána. Budeme Vás brzy kontaktovat.",
-	],
-	"Mail error" => [
-		0 => "Chyba e-mailu.",
-	],
 	"Upload images" => [
 		0 => "Nahrát obrázky",
 	],
@@ -1025,6 +969,9 @@ $translation_table = [
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "Email byl odeslán %s s instrukcemi pro aktivaci tohoto emailu",
+	],
+	"Invalid name" => [
+		0 => "Neplatné jméno",
 	],
 	"Invalid website" => [
 		0 => "Neplatná webová stránka",
@@ -1124,9 +1071,6 @@ $translation_table = [
 	],
 	"I'm at least %s years old" => [
 		0 => "Je mi minimálně %s let.",
-	],
-	"By signing up you agree to our <a href=\"%s\">Terms of service</a>" => [
-		0 => "Přihlášením vyjadřujete souhlas s našimi <a href=\"%s\">Podmínkami užívání</a>",
 	],
 	"Notifications" => [
 		0 => "Oznámení",
@@ -1298,6 +1242,9 @@ $translation_table = [
 	],
 	"Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information." => [
 		0 => "Zkontrolujte <a data-modal=\"simple\" data-target=\"failed-upload-result\">chybovou zprávu</a> kde se dozvíte více informací.",
+	],
+	"Register to get %s" => [
+		0 => "Zaregistrujte se pro získání %s",
 	],
 	"reset" => [
 		0 => "resetovat",
@@ -1505,6 +1452,9 @@ $translation_table = [
 	],
 	"Untitled image" => [
 		0 => "Obrázek bez názvu",
+	],
+	"You can use wildcard * characters." => [
+		0 => "Můžete použít zástupné znaky *.",
 	],
 	"Expiration date" => [
 		0 => "Datum platnosti",
@@ -1719,6 +1669,21 @@ $translation_table = [
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "Opravdu si přejete odstranit vybraný obsah?  (Nelze vrátit zpět)",
 	],
+	"Fullscreen" => [
+		0 => "Na celou obrazovku",
+	],
+	"Exit fullscreen" => [
+		0 => "Ukončit režim celé obrazovky",
+	],
+	"Guest" => [
+		0 => "Host",
+	],
+	"Keyboard shortcuts" => [
+		0 => "Klávesové zkratky",
+	],
+	"Like" => [
+		0 => "Líbí se",
+	],
 	"Uploaded by guest" => [
 		0 => "Nahráno návštěvníkem",
 	],
@@ -1836,9 +1801,6 @@ $translation_table = [
 	"You like this" => [
 		0 => "Toto se vám líbí",
 	],
-	"Like" => [
-		0 => "Líbí se",
-	],
 	"Upload to album" => [
 		0 => "Nahrát do alba",
 	],
@@ -1899,9 +1861,6 @@ $translation_table = [
 	"Website description" => [
 		0 => "Popis webu",
 	],
-	"Website keywords" => [
-		0 => "Kličová slova stránky",
-	],
 	"Default time zone" => [
 		0 => "Výchozí časové pásmo",
 	],
@@ -1913,6 +1872,12 @@ $translation_table = [
 	],
 	"Enables to browse public uploaded images. It also enables categories." => [
 		0 => "Umožňuje procházet veřejně nahrané obrázky. Také umožňuje procházet veřejné kategorie.",
+	],
+	"guests" => [
+		0 => "hosté",
+	],
+	"Enables explore for guests." => [
+		0 => "Umožňuje procházet veřejně nahrané obrázky i neregistrovaným uživatelům.",
 	],
 	"Enables to browse images randomly." => [
 		0 => "Umožňuje prohlížet obrázky v náhodném pořadí.",
@@ -2136,6 +2101,9 @@ $translation_table = [
 	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
 		0 => "Maximální velikost povolená serverem je %s. Tato velikost je limitována %u a %p (%f hodnoty).",
 	],
+	"Same as \"%s\" but for guests." => [
+		0 => "Stejné jako \"%s\" ale platné pouze pro neregistrované uživatele.",
+	],
 	"Image path" => [
 		0 => "Cesta k obrázku",
 	],
@@ -2325,6 +2293,12 @@ $translation_table = [
 	"Leave it empty to don't require a minimum age to use the website." => [
 		0 => "Zanechte pole prázdné, pokud nevyžadujete minimální věk uživatele pro používání této webové stránky.",
 	],
+	"Notify on user signup" => [
+		0 => "Upozornit na registraci uživatele",
+	],
+	"Enable this if you want to get an email notification for each new user signup." => [
+		0 => "Povolte to, pokud chcete dostat e-mailové upozornění pro každou novou registraci uživatele.",
+	],
 	"Username routing" => [
 		0 => "Routování uživatelského jména",
 	],
@@ -2427,6 +2401,9 @@ $translation_table = [
 	"What pagination method should be used." => [
 		0 => "Jaká metoda stránkování má být použita?",
 	],
+	"Enable this to use the listing viewer when clicking on an image." => [
+		0 => "Povolte to, chcete-li kliknutím na obrázek otevřít prohlížeč seznamu obrázků.",
+	],
 	"Image listing size" => [
 		0 => "Velikost náhledu",
 	],
@@ -2438,6 +2415,15 @@ $translation_table = [
 	],
 	"Both methods use a fixed width but fluid method uses automatic heights." => [
 		0 => "Obě metody používají pevnou šířku, ale plynulá využívá proměnnou výšku.",
+	],
+	"Album listing images requirement" => [
+		0 => "Požadavek na seznam obrázků v albu",
+	],
+	"explore" => [
+		0 => "průzkumník",
+	],
+	"Sets the minimum image count needed to show albums in explore." => [
+		0 => "Nastavte minimální počet obrázků potřebných pro zobrazení alb v průzkumníkovi.",
 	],
 	"Listing columns number" => [
 		0 => "Počet sloupců výpisu",
@@ -2916,6 +2902,15 @@ $translation_table = [
 	"Use this key when using the <a %s>API v1</a>." => [
 		0 => "Použít tento klíč při použití <a %s>API v1</a>.",
 	],
+	"Plugin route" => [
+		0 => "Směrování Pluginu",
+	],
+	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
+		0 => "Toto aktivujte, aby jste zobrazili instrukce pluginu na %u. Odkaz na tyto pokyny bude přidán do nabídky %s.Toto nastavení nemá vliv na administrátory.",
+	],
+	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
+		0 => "Toto použijte pro nastavení vlastní URL adresy pro %p. Upozorňujeme, že musíte v této URL adrese ručně zkopírovat %s.",
+	],
 	"Cookie law compliance" => [
 		0 => "Vyžádání EU cookie politiky",
 	],
@@ -2933,9 +2928,6 @@ $translation_table = [
 	],
 	"Load full resolution" => [
 		0 => "Načíst v plném rozlišení",
-	],
-	"Guest" => [
-		0 => "Host",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "Přidáno do alba %a a zařazeno do kategorie %c",
@@ -3219,11 +3211,32 @@ $translation_table = [
 	"Follow" => [
 		0 => "Sledovat",
 	],
+	"General questions/comments" => [
+		0 => "Obecné dotazy a komentáře",
+	],
+	"DMCA complaint" => [
+		0 => "Nahlásit porušení autorského zákona",
+	],
+	"Invalid message" => [
+		0 => "Neplatná zpráva",
+	],
+	"Invalid subject" => [
+		0 => "Neplatný předmět",
+	],
+	"Invalid reCAPTCHA" => [
+		0 => "Špatně opsaný kód reCAPTCHA",
+	],
+	"Mail error" => [
+		0 => "Chyba e-mailu.",
+	],
 	"Message sent" => [
 		0 => "Zpráva byla odeslána",
 	],
 	"Contact" => [
 		0 => "Kontakt",
+	],
+	"Message sent. We will get in contact soon." => [
+		0 => "Zpráva byla odeslána. Budeme Vás brzy kontaktovat.",
 	],
 	"If you want to send a message fill the form below." => [
 		0 => "Chcete-li poslat zprávu, vyplňte níže uvedený formulář.",
@@ -3311,6 +3324,18 @@ $translation_table = [
 	],
 	"This website is running latest %s version" => [
 		0 => "Tato webová stránka používá nejnovější verzi %s",
+	],
+	"Toggle select" => [
+		0 => "Označit vybraný obrázek",
+	],
+	"Toggle flag" => [
+		0 => "Označit štítkem",
+	],
+	"Previous" => [
+		0 => "Předchozí",
+	],
+	"Next" => [
+		0 => "Další",
 	],
 	"Clipboard image" => [
 		0 => "Kopírovat obrázek do schránky",

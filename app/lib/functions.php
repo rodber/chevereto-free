@@ -68,7 +68,7 @@ function time_elapsed_string($datetime, $full=false) {
 
 function missing_values_to_exception($object, $exception=Exception, $values_array, $code=100) {
 	if(!is_object($object)) return;
-	for($i=0; $i<count($values_array); $i++) {
+	for($i=0; $i<count((array) $values_array); $i++) {
 		if(!G\check_value($object->{$values_array[$i]})) {
 			throw new $exception('Missing $' . $values_array[$i], ($code+$i));
 			break;
@@ -78,7 +78,7 @@ function missing_values_to_exception($object, $exception=Exception, $values_arra
 
 function system_notification_email($args=[]) {
 	try {
-		$subject = _s('System notification') . ': ' . $args['subject'] . ' [' . G\get_base_url() . ']';
+		$subject = 'System notification: ' . $args['subject'] . ' [' . G\get_base_url() . ']';
 		$report = $args['message'];
 		send_mail(getSetting('email_incoming_email'), $subject, $report);
 	} catch(Exception $e) {
@@ -404,8 +404,8 @@ function cheveretoID($in, $action="encode") {
 		  $bcpow = bcpow($base, $len - $t);
 		  $out   = $out + strpos($index, substr($in, $t, 1)) * $bcpow;
 		}
-		$out = sprintf("%F", $out);
-		$out = substr($out, 0, strpos($out, '.'));
+		$out = sprintf("%d", $out);
+		// $out = substr($out, 0, strpos($out, '.'));
 		if($id_padding > 0) {
 			$out = (string) ($out / $id_padding); // Always return as string
 		}
@@ -702,7 +702,7 @@ function checkUpdates() {
 				$message .= _s('You can apply this update directly from your %a or download it from %s and then manually install it.', ['%a' => '<a href="' . G\get_base_url('dashboard?checkUpdates') . '" target="_blank">'._s('admin dashboard').'</a>', '%s' => '<a href="' . $CHEVERETO['source']['url'] . '" target="_blank">' . $CHEVERETO['source']['label'] . '</a>']) . "\n\n";
 				$message .= '--' . "\n" . 'Chevereto' . "\n" . G\get_base_url();
 				$message = nl2br($message);
-				system_notification_email(['subject' => _s('Chevereto update available (v%s)', $latest_release), $latest_release, 'message' => $message]);
+				system_notification_email(['subject' => sprintf('Chevereto update available (v%s)', $latest_release), $latest_release, 'message' => $message]);
 				$settings_update = [
 					'update_check_notified_release'	=> $latest_release,
 					'update_check_datetimegmt'		=> G\datetimegmt(),

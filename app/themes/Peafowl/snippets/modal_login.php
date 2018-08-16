@@ -2,7 +2,11 @@
 
 <div data-modal="login" class="hidden">
 	<span class="modal-box-title"><?php _se('Login needed'); ?></span>
-	<p><?php _se("To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now.", G\get_base_url("signup")); ?></p>
+	<p><?php _se("To use all the features of this site you must be logged in."); ?><?php
+		if(CHV\getSetting('enable_signups')) {
+			echo ' ' . _s("If you don't have an account you can <a href=\"%s\">sign up</a> right now.", G\get_base_url("signup"));
+		}
+	?></p>
 	<div class="position-relative overflow-auto margin-top-20">
     	<?php
 			if(CHV\getSetting('social_signin')) {

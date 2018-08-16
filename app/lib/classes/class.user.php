@@ -184,11 +184,37 @@ class User {
 				$db->query('SELECT COUNT(*) c FROM ' . DB::getTable('users') . ' WHERE user_registration_ip=:ip AND user_status != "valid" AND user_date_gmt >= DATE_SUB(UTC_TIMESTAMP(), INTERVAL 2 DAY)');
 				$db->bind(':ip', $values['registration_ip']);
 				if($db->fetchSingle()['c'] > 5) {
-					throw new Exception('Flood detected', 666); // I left alone, my mind was blank...
+					throw new Exception('Flood detected', 666);
 				}
 			}
 
 			$user_id = DB::insert('users', $values);
+
+			// Email notify
+			if(!Login::getUser()['is_admin'] && Settings::get('notify_user_signups')) {
+				$message = implode('<br>', [
+					'A new user has just signed up %user (%edit)',
+					'',
+					'Username: %username',
+					'Email: %email',
+					'Status: %status',
+					'IP: %registration_ip',
+					'Date (GMT): %date_gmt',
+					'',
+					'You can disable these notifications on %configure'
+				]);
+				foreach(['username', 'email', 'status', 'registration_ip', 'date_gmt'] as $k) {
+					$table['%' . $k] = $values[$k];
+				}
+				$table['%edit'] = '<a href="' . G\get_base_url('dashboard/user/' . $user_id) . '">edit</a>';
+				$table['%user'] = '<a href="' . self::getUrl($values['username']) . '">' . $values['username'] . '</a>';
+				$table['%configure'] = '<a href="'. G\get_base_url('dashboard/settings/users') .'">dashboard/settings/users</a>';
+				system_notification_email([
+					'subject' => sprintf('New user signup %s', $values['username']),
+					'message' => strtr($message, $table),
+				]);
+			}
+
 			// Track stats
 			Stat::track([
 				'action'	=> 'insert',
@@ -196,20 +222,20 @@ class User {
 				'value'		=> '+1',
 				'date_gmt'	=> $values['date_gmt']
 			]);
-            if(isset($_SESSION['guest_uploads']) and count($_SESSION['guest_uploads']) > 0) {
-                try {
-                    $db = DB::getInstance();
-                    $db->query('UPDATE ' . DB::getTable('images') . ' SET image_user_id=' . $user_id . ' WHERE image_id IN (' . implode(',', $_SESSION['guest_uploads']) . ')');
-                    $db->exec();
-                    // Get user actual image count
-                    $real_image_count = $db->queryFetchSingle('SELECT COUNT(*) as cnt FROM ' .DB::getTable('images').' WHERE image_user_id='. $user_id)['cnt'];
-                    if($real_image_count) {
-                        self::update($user_id, ['image_count' => $real_image_count]);
-                    }
-                } catch(Exception $e) {} // Silence
-                unset($_SESSION['guest_uploads']);
-            }
-            return $user_id;
+      if(isset($_SESSION['guest_uploads']) and count((array) $_SESSION['guest_uploads']) > 0) {
+        try {
+          $db = DB::getInstance();
+          $db->query('UPDATE ' . DB::getTable('images') . ' SET image_user_id=' . $user_id . ' WHERE image_id IN (' . implode(',', $_SESSION['guest_uploads']) . ')');
+          $db->exec();
+          // Get user actual image count
+          $real_image_count = $db->queryFetchSingle('SELECT COUNT(*) as cnt FROM ' .DB::getTable('images').' WHERE image_user_id='. $user_id)['cnt'];
+          if($real_image_count) {
+            self::update($user_id, ['image_count' => $real_image_count]);
+          }
+        } catch(Exception $e) {} // Silence
+        unset($_SESSION['guest_uploads']);
+      }
+      return $user_id;
 		} catch(Exception $e) {
 			throw new UserException($e->getMessage(), 400);
 		}

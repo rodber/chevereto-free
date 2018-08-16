@@ -59,6 +59,9 @@ document.getElementById("chevereto-js").addEventListener("load", function () {
 			enabled: <?php echo CHV\getSettings()['recaptcha'] ? 'true' : 'false'; ?>,
 			sitekey: "<?php echo CHV\getSetting('recaptcha_public_key'); ?>",
 		},
+		listing: {
+			viewer: <?php echo CHV\Settings::get('listing_viewer') ? 'true' : 'false'; ?>,
+		}
 	};
 
 	<?php

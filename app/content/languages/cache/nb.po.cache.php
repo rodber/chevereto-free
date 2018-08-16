@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-10-01 18:12+0000',
-  'PO-Revision-Date' => '2017-10-01 18:12+0000',
+  'POT-Creation-Date' => '2018-06-03 14:28+0000',
+  'PO-Revision-Date' => '2018-06-03 14:28+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'nb',
@@ -13,22 +13,14 @@ $translation_header = array (
 );
 $translation_plural = array (
   'nplurals' => 2,
-  'plural' => '(n != 1)',
-  'formula' => '($n != 1)',
-  'function' => '$index = (int)(($n != 1)); return ($index < 2) ? $index : 2 - 1;',
+  'function' => '($n != 1)',
 );
 $translation_table = [
-	"Plugin" => [
-		0 => "Utvidelse",
+	"To use all the features of this site you must be logged in." => [
+		0 => "For å benytte deg av alle funksjonene på denne siden må du være logget inn.",
 	],
-	"Plugin route" => [
-		0 => "Utvidelsesrute",
-	],
-	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
-		0 => "Aktiver denne for å vise instruksjoner for utvidelsen på %u. En lenke til disse instruksjonene vil bli lagt til %s-menyen. Denne innstillingen påvirker ikke administratorer.",
-	],
-	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
-		0 => "Bruk denne for å sette en egendefinert URL for %p. Påse at du manuelt må replikere %s i denne URLen.",
+	"If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
+		0 => "Hvis du ikke har en konto kan du <a href=\"%s\">registrere</a> deg nå.",
 	],
 	"Invalid email" => [
 		0 => "Ugyldig e-post",
@@ -130,9 +122,6 @@ $translation_table = [
 	"After %n %t" => [
 		0 => "Etter %n %t",
 	],
-	"Don't autodelete" => [
-		0 => "Ikke slett automatisk",
-	],
 	"minute" => [
 		0 => "minutt",
 		1 => "minutter",
@@ -145,23 +134,26 @@ $translation_table = [
 		0 => "dag",
 		1 => "dager",
 	],
+	"week" => [
+		0 => "uke",
+		1 => "uker",
+	],
+	"month" => [
+		0 => "måned",
+		1 => "måneder",
+	],
+	"year" => [
+		0 => "år",
+		1 => "år",
+	],
+	"Don't autodelete" => [
+		0 => "Ikke slett automatisk",
+	],
 	"Duplicated upload" => [
 		0 => "Duplikat lastet opp",
 	],
-	"Error storing file in external storage server" => [
-		0 => "Feil ved lagring av fil på ekstern lagringsserver",
-	],
-	"External storage has failed" => [
-		0 => "Ekstern lagring feilet",
-	],
 	"Private upload" => [
 		0 => "Privat opplasting",
-	],
-	"Upload switched to local storage" => [
-		0 => "Opplastning endret til lokal lagring",
-	],
-	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
-		0 => "Systemet har byttet til lokal lagring grunnet lite diskplass (%c) på den eksterne serveren. Bildet %s har blitt lagret på lokal server.",
 	],
 	"like" => [
 		0 => "Liker",
@@ -249,18 +241,6 @@ $translation_table = [
 	"Private profile" => [
 		0 => "Privat profil",
 	],
-	"year" => [
-		0 => "år",
-		1 => "år",
-	],
-	"month" => [
-		0 => "måned",
-		1 => "måneder",
-	],
-	"week" => [
-		0 => "uke",
-		1 => "uker",
-	],
 	"second" => [
 		0 => "sekund",
 		1 => "sekunder",
@@ -270,9 +250,6 @@ $translation_table = [
 	],
 	"moments ago" => [
 		0 => "for kort tid siden",
-	],
-	"System notification" => [
-		0 => "Systemvarsling",
 	],
 	"Dashboard" => [
 		0 => "Kontrollpanel",
@@ -304,14 +281,8 @@ $translation_table = [
 	"You can apply this update directly from your %a or download it from %s and then manually install it." => [
 		0 => "Du kan bruke denne oppdateringen direkte fra %a eller laste den ned fra %s og deretter manuelt installere den.",
 	],
-	"Chevereto update available (v%s)" => [
-		0 => "Chevereto-oppdatering tilgjengelig (v%s)",
-	],
 	"view on %s" => [
 		0 => "sett på %s",
-	],
-	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy." => [
-		0 => "Vi benytter tredjepartscookies for å forbedre din surfeopplevelse og våre tjenester. Hvis du fortsetter å benytte denne siden aksepterer du denne cookiepolicyen.",
 	],
 	"You have been forbidden to use this website." => [
 		0 => "Du har blitt sperret fra å benytte denne siden.",
@@ -321,6 +292,9 @@ $translation_table = [
 	],
 	"View all my images" => [
 		0 => "Vis alle mine bilder",
+	],
+	"Plugin" => [
+		0 => "Utvidelse",
 	],
 	"That page doesn't exist" => [
 		0 => "Denne siden eksisterer ikke",
@@ -779,6 +753,9 @@ $translation_table = [
 	"Only alphanumeric, hyphen and underscore characters are allowed" => [
 		0 => "Bare alfanumeriske, bindestrek og understrek-tegn er tillatte",
 	],
+	"Invalid URL" => [
+		0 => "Ugyldig URL",
+	],
 	"Routes can't be the same" => [
 		0 => "Rutene kan ikke være like",
 	],
@@ -805,9 +782,6 @@ $translation_table = [
 	],
 	"Invalid SMTP username" => [
 		0 => "Ugyldig SMTP-brukernavn",
-	],
-	"Invalid URL" => [
-		0 => "Ugyldig URL",
 	],
 	"This URL key is already being used by another page (ID %s)" => [
 		0 => "Denne URL-nøkkelen brukes allerede av en annen side  (ID %s)",
@@ -838,9 +812,6 @@ $translation_table = [
 	],
 	"Upload date" => [
 		0 => "Opplastningsdato",
-	],
-	"%s images" => [
-		0 => "%s bilder",
 	],
 	"Image %i in %a album" => [
 		0 => "Bilde %i i %a album",
@@ -941,33 +912,6 @@ $translation_table = [
 	"Logged out" => [
 		0 => "Logget ut",
 	],
-	"General questions/comments" => [
-		0 => "Generelle spørsmål/kommentarer",
-	],
-	"DMCA complaint" => [
-		0 => "Brudd på opphavsrettigheter",
-	],
-	"Invalid name" => [
-		0 => "Ugyldig navn",
-	],
-	"Invalid message" => [
-		0 => "Ugyldig melding",
-	],
-	"Invalid subject" => [
-		0 => "Ugyldig emne",
-	],
-	"Invalid reCAPTCHA" => [
-		0 => "Ugyldig reCAPTCHA",
-	],
-	"Can't submit the form: %s" => [
-		0 => "Kan ikke sende skjemaet: %s",
-	],
-	"Message sent. We will get in contact soon." => [
-		0 => "Meldingen er sendt. Vi vil svare deg så fort vi kan.",
-	],
-	"Mail error" => [
-		0 => "E-postfeil",
-	],
 	"Upload images" => [
 		0 => "Last opp bilder",
 	],
@@ -997,6 +941,9 @@ $translation_table = [
 	],
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "En e-post har blitt sent til %s med instruksjoner om hvordan man aktiverer denne e-posten.",
+	],
+	"Invalid name" => [
+		0 => "Ugyldig navn",
 	],
 	"Invalid website" => [
 		0 => "Ugyldig nettadresse",
@@ -1096,9 +1043,6 @@ $translation_table = [
 	],
 	"I'm at least %s years old" => [
 		0 => "Jeg er minst %s år gammel",
-	],
-	"By signing up you agree to our <a href=\"%s\">Terms of service</a>" => [
-		0 => "Ved å registrere deg akspeterer du våre <a href=\"%s\">betingelser</a>",
 	],
 	"Notifications" => [
 		0 => "Varsler",
@@ -1689,6 +1633,12 @@ $translation_table = [
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "Er du sikker på at du vil slette alt det merkede innholdet? Dette kan ikke angres.",
 	],
+	"Guest" => [
+		0 => "Gjest",
+	],
+	"Like" => [
+		0 => "Like",
+	],
 	"Uploaded by guest" => [
 		0 => "Lastet opp av gjest",
 	],
@@ -1806,9 +1756,6 @@ $translation_table = [
 	"You like this" => [
 		0 => "Du liker dette",
 	],
-	"Like" => [
-		0 => "Like",
-	],
 	"Upload to album" => [
 		0 => "Last opp til album",
 	],
@@ -1868,9 +1815,6 @@ $translation_table = [
 	],
 	"Website description" => [
 		0 => "Beskrivelse av nettsted",
-	],
-	"Website keywords" => [
-		0 => "Nøkkelord for nettsiden",
 	],
 	"Default time zone" => [
 		0 => "Standard tidssone",
@@ -2907,6 +2851,15 @@ $translation_table = [
 	"Use this key when using the <a %s>API v1</a>." => [
 		0 => "Bruk denne nøkkelen når du bruker <a %s>API v1</a>.",
 	],
+	"Plugin route" => [
+		0 => "Utvidelsesrute",
+	],
+	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
+		0 => "Aktiver denne for å vise instruksjoner for utvidelsen på %u. En lenke til disse instruksjonene vil bli lagt til %s-menyen. Denne innstillingen påvirker ikke administratorer.",
+	],
+	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
+		0 => "Bruk denne for å sette en egendefinert URL for %p. Påse at du manuelt må replikere %s i denne URLen.",
+	],
 	"Cookie law compliance" => [
 		0 => "Lovgivningssamsvar for bruk av cookies",
 	],
@@ -2924,9 +2877,6 @@ $translation_table = [
 	],
 	"Load full resolution" => [
 		0 => "Last fulloppløst bilde",
-	],
-	"Guest" => [
-		0 => "Gjest",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "Lagt til i %a og kategorisert i %c",
@@ -3220,11 +3170,32 @@ $translation_table = [
 	"Follow" => [
 		0 => "Følg",
 	],
+	"General questions/comments" => [
+		0 => "Generelle spørsmål/kommentarer",
+	],
+	"DMCA complaint" => [
+		0 => "Brudd på opphavsrettigheter",
+	],
+	"Invalid message" => [
+		0 => "Ugyldig melding",
+	],
+	"Invalid subject" => [
+		0 => "Ugyldig emne",
+	],
+	"Invalid reCAPTCHA" => [
+		0 => "Ugyldig reCAPTCHA",
+	],
+	"Mail error" => [
+		0 => "E-postfeil",
+	],
 	"Message sent" => [
 		0 => "Melding sendt",
 	],
 	"Contact" => [
 		0 => "Kontakt",
+	],
+	"Message sent. We will get in contact soon." => [
+		0 => "Meldingen er sendt. Vi vil svare deg så fort vi kan.",
 	],
 	"If you want to send a message fill the form below." => [
 		0 => "Hvis du ønsker å sende en melding, fyll ut skjemaet under.",

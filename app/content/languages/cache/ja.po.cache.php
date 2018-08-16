@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2017-09-23 17:30+0000',
-  'PO-Revision-Date' => '2017-09-23 17:30+0000',
+  'POT-Creation-Date' => '2018-06-29 19:18+0000',
+  'PO-Revision-Date' => '2018-06-29 19:18+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ja',
@@ -13,22 +13,20 @@ $translation_header = array (
 );
 $translation_plural = array (
   'nplurals' => 1,
-  'plural' => '0',
-  'formula' => '0',
-  'function' => '$index = (int)(0); return ($index < 1) ? $index : 1 - 1;',
+  'function' => '($n != 1)',
 );
 $translation_table = [
-	"Plugin" => [
-		0 => "プラグイン",
+	"To use all the features of this site you must be logged in." => [
+		0 => "当サイトの全ての機能をご利用頂くにはログインが必要です。",
 	],
-	"Plugin route" => [
-		0 => "プラグインルート",
+	"If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
+		0 => "アカウントをお持ちでなければ、今すぐ<a href=\"%s\">アカウントを作成</a>いただくことができます。",
 	],
-	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
-		0 => "%uでプラグインの説明を表示する。これらの説明は、メニューに%sを追加します。この設定は管理者には影響しません。",
+	"Decode ID" => [
+		0 => "デコードID",
 	],
-	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
-		0 => "%pのカスタムURLをセットするのに使用。手動でこのURLを%sで複製してください。",
+	"Encode ID" => [
+		0 => "エンコードID",
 	],
 	"Invalid email" => [
 		0 => "有効なメールアドレスではありません。",
@@ -129,9 +127,6 @@ $translation_table = [
 	"After %n %t" => [
 		0 => "%n以降%t",
 	],
-	"Don't autodelete" => [
-		0 => "自動削除しない",
-	],
 	"minute" => [
 		0 => "分",
 	],
@@ -141,23 +136,23 @@ $translation_table = [
 	"day" => [
 		0 => "日",
 	],
+	"week" => [
+		0 => "週",
+	],
+	"month" => [
+		0 => "月",
+	],
+	"year" => [
+		0 => "年",
+	],
+	"Don't autodelete" => [
+		0 => "自動削除しない",
+	],
 	"Duplicated upload" => [
 		0 => "重複したアップロード",
 	],
-	"Error storing file in external storage server" => [
-		0 => "外部ストレージサーバにファイルの保存でエラーが発生しました。",
-	],
-	"External storage has failed" => [
-		0 => "外部ストレージに問題が発生しています。",
-	],
 	"Private upload" => [
 		0 => "非公開アップロード",
-	],
-	"Upload switched to local storage" => [
-		0 => "アップロード先がローカルストレージに変更されました。",
-	],
-	"System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage." => [
-		0 => "外部ストレージサーバのディスクの空き容量が十分にない(%c)ため、システムは自動的にローカルストレージへの保存に変更しました。画像 %s はローカルストレージに配置されています。",
 	],
 	"like" => [
 		0 => "いいね！",
@@ -240,15 +235,6 @@ $translation_table = [
 	"Private profile" => [
 		0 => "非公開プロフィール",
 	],
-	"year" => [
-		0 => "年",
-	],
-	"month" => [
-		0 => "月",
-	],
-	"week" => [
-		0 => "週",
-	],
 	"second" => [
 		0 => "秒",
 	],
@@ -257,9 +243,6 @@ $translation_table = [
 	],
 	"moments ago" => [
 		0 => "少し前",
-	],
-	"System notification" => [
-		0 => "システム通知",
 	],
 	"Dashboard" => [
 		0 => "ダッシュボード",
@@ -291,14 +274,17 @@ $translation_table = [
 	"You can apply this update directly from your %a or download it from %s and then manually install it." => [
 		0 => "%aから直接アップデート・ダウンロードは出来ません。%sより手動でインストールしてください。",
 	],
-	"Chevereto update available (v%s)" => [
-		0 => "Cheveretoのアップデート(%s)があります。",
-	],
 	"view on %s" => [
 		0 => "%sとして表示",
 	],
-	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy." => [
-		0 => "このサイトでは、サイトをより快適にお使いいただけるように当社とサードパーティのCookieを利用しています。当サイトの利用を続けるには当サイトのCookieポリシーに同意いただく必要があります。",
+	"cookie policy" => [
+		0 => "Cookieのポリシー",
+	],
+	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link." => [
+		0 => "当サイトでは、サイトをより快適にお使いいただけるように当社とサードパーティのCookieを利用しています。当サイトのご利用を続行頂いた場合、お客様は%cookie_policy_link に同意頂いたと見なします。",
+	],
+	"I understand" => [
+		0 => "私は次を理解しました：",
 	],
 	"You have been forbidden to use this website." => [
 		0 => "あなたは、このウェブサイトを使うことができません。",
@@ -308,6 +294,9 @@ $translation_table = [
 	],
 	"View all my images" => [
 		0 => "全ての画像を見る",
+	],
+	"Plugin" => [
+		0 => "プラグイン",
 	],
 	"That page doesn't exist" => [
 		0 => "ページが存在しません。",
@@ -765,6 +754,9 @@ $translation_table = [
 	"Only alphanumeric, hyphen and underscore characters are allowed" => [
 		0 => "使用できるのは、英数字、ハイフン、アンダースコアのみです。",
 	],
+	"Invalid URL" => [
+		0 => "無効なURLです。",
+	],
 	"Routes can't be the same" => [
 		0 => "ルートは同じではありません。",
 	],
@@ -791,9 +783,6 @@ $translation_table = [
 	],
 	"Invalid SMTP username" => [
 		0 => "有効なSMTPユーザ名ではありません。",
-	],
-	"Invalid URL" => [
-		0 => "無効なURLです。",
 	],
 	"This URL key is already being used by another page (ID %s)" => [
 		0 => "このURLキーは、すでに他のページで使用されています (ID %s)。",
@@ -824,9 +813,6 @@ $translation_table = [
 	],
 	"Upload date" => [
 		0 => "アップロード日時",
-	],
-	"%s images" => [
-		0 => "%sの画像",
 	],
 	"Image %i in %a album" => [
 		0 => "アルバム：%aに存在する画像：%i",
@@ -897,6 +883,9 @@ $translation_table = [
 	"Test email sent to %s." => [
 		0 => "%sへテストメールを送信しました。",
 	],
+	"Downloading %s data" => [
+		0 => "%sのデータをダウンロード中",
+	],
 	"User %s followed" => [
 		0 => "ユーザー\"%s\"さんをフォローしました。",
 	],
@@ -926,33 +915,6 @@ $translation_table = [
 	],
 	"Logged out" => [
 		0 => "ログアウトしました。",
-	],
-	"General questions/comments" => [
-		0 => "一般的な質問/コメント",
-	],
-	"DMCA complaint" => [
-		0 => "デジタルミレニアム著作権法",
-	],
-	"Invalid name" => [
-		0 => "有効な名前ではありません。",
-	],
-	"Invalid message" => [
-		0 => "有効なメッセージではありません。",
-	],
-	"Invalid subject" => [
-		0 => "有効な件名ではありません。",
-	],
-	"Invalid reCAPTCHA" => [
-		0 => "入力された値は、画像にあるキーではありません。",
-	],
-	"Can't submit the form: %s" => [
-		0 => "送信できませんでした：%s",
-	],
-	"Message sent. We will get in contact soon." => [
-		0 => "メッセージを送信しました。まもなく私どもから連絡を差し上げます。",
-	],
-	"Mail error" => [
-		0 => "メールでエラーが発生しました。",
 	],
 	"Upload images" => [
 		0 => "画像をアップロード",
@@ -984,6 +946,9 @@ $translation_table = [
 	"An email has been sent to %s with instructions to activate this email" => [
 		0 => "この電子メールアドレスは認証され、%s宛に説明書を添付したメールを送信しました。",
 	],
+	"Invalid name" => [
+		0 => "有効な名前ではありません。",
+	],
 	"Invalid website" => [
 		0 => "有効なWebサイトではありません。",
 	],
@@ -1007,6 +972,9 @@ $translation_table = [
 	],
 	"Settings for %s" => [
 		0 => "%sの設定",
+	],
+	"You must agree to the terms and privacy policy" => [
+		0 => "利用規約とプライバシーポリシーに同意頂く必要があります",
 	],
 	"You must be at least %s years old to use this website." => [
 		0 => "このサイトを利用するには、あなたが%s歳以上である必要があります。",
@@ -1083,8 +1051,14 @@ $translation_table = [
 	"I'm at least %s years old" => [
 		0 => "私は%s歳以上です。",
 	],
-	"By signing up you agree to our <a href=\"%s\">Terms of service</a>" => [
-		0 => "登録を行うには、<a href=\"%s\">利用規約</a>への同意が必要です。",
+	"terms" => [
+		0 => "利用規約",
+	],
+	"privacy policy" => [
+		0 => "プライバシーポリシー",
+	],
+	"I agree to the %terms_link and %privacy_link" => [
+		0 => "私は、%terms_link と %privacy_link に同意します",
 	],
 	"Notifications" => [
 		0 => "通知",
@@ -1256,6 +1230,9 @@ $translation_table = [
 	],
 	"Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information." => [
 		0 => "詳しくは<a data-modal=\"simple\" data-target=\"failed-upload-result\">エラーレポート</a>をご覧下さい。",
+	],
+	"Register to get %s" => [
+		0 => "%s を入手するには登録が必要です",
 	],
 	"reset" => [
 		0 => "リセット",
@@ -1460,6 +1437,9 @@ $translation_table = [
 	],
 	"Untitled image" => [
 		0 => "画像のタイトルを入力",
+	],
+	"You can use wildcard * characters." => [
+		0 => "ワイルドカード * 文字 をご利用いただけます。",
 	],
 	"Expiration date" => [
 		0 => "期限",
@@ -1674,6 +1654,21 @@ $translation_table = [
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "選択されたコンテンツを本当に削除しますか？一度削除すると元には戻せません。",
 	],
+	"Fullscreen" => [
+		0 => "全画面",
+	],
+	"Exit fullscreen" => [
+		0 => "全画面を終了",
+	],
+	"Guest" => [
+		0 => "ゲスト",
+	],
+	"Keyboard shortcuts" => [
+		0 => "キーボードショートカット",
+	],
+	"Like" => [
+		0 => "いいね！",
+	],
 	"Uploaded by guest" => [
 		0 => "ゲストからのアップロード",
 	],
@@ -1791,9 +1786,6 @@ $translation_table = [
 	"You like this" => [
 		0 => "いいね！しました",
 	],
-	"Like" => [
-		0 => "いいね！",
-	],
 	"Upload to album" => [
 		0 => "アルバムにアップロード",
 	],
@@ -1854,9 +1846,6 @@ $translation_table = [
 	"Website description" => [
 		0 => "ウェブサイトの詳細",
 	],
-	"Website keywords" => [
-		0 => "ウェブサイトのキーワード",
-	],
 	"Default time zone" => [
 		0 => "既定のタイムゾーン",
 	],
@@ -1868,6 +1857,12 @@ $translation_table = [
 	],
 	"Enables to browse public uploaded images. It also enables categories." => [
 		0 => "公開状態のアップロードされている画像の閲覧を有効にする。同時にカテゴリーも有効になります。",
+	],
+	"guests" => [
+		0 => "ゲスト",
+	],
+	"Enables explore for guests." => [
+		0 => "ゲストに「もっと見る」機能を有効にします。",
 	],
 	"Enables to browse images randomly." => [
 		0 => "ランダムな画像の閲覧を有効にする",
@@ -2091,6 +2086,9 @@ $translation_table = [
 	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
 		0 => "サーバーが許可している最大サイズは、%sです。この制限は、%u、%p(%f)によって行われたものです。",
 	],
+	"Same as \"%s\" but for guests." => [
+		0 => "\"%s\"と同じですが、ゲストです。",
+	],
 	"Image path" => [
 		0 => "イメージパス",
 	],
@@ -2280,6 +2278,12 @@ $translation_table = [
 	"Leave it empty to don't require a minimum age to use the website." => [
 		0 => "空白の状態だとこのサイトを利用するのに必要な年齢の要求を行いません。",
 	],
+	"Notify on user signup" => [
+		0 => "ユーザーの会員登録時に通知する",
+	],
+	"Enable this if you want to get an email notification for each new user signup." => [
+		0 => "ユーザーが会員登録する際にメールで通知が欲しい場合は有効にしてください。",
+	],
 	"Username routing" => [
 		0 => "ユーザのURL形式の選択",
 	],
@@ -2382,6 +2386,12 @@ $translation_table = [
 	"What pagination method should be used." => [
 		0 => "どのようなページネーションを使用しますか？",
 	],
+	"Listing viewer" => [
+		0 => "リスト型ビューワー",
+	],
+	"Enable this to use the listing viewer when clicking on an image." => [
+		0 => "画像をクリックした際にリスト型のビューワーを使う場合は有効にしてください。",
+	],
 	"Image listing size" => [
 		0 => "表示される画像のサイズ",
 	],
@@ -2393,6 +2403,15 @@ $translation_table = [
 	],
 	"Both methods use a fixed width but fluid method uses automatic heights." => [
 		0 => "どちらも固定の幅になりますが、フレキシブルを選択すると高さは自動となります。",
+	],
+	"Album listing images requirement" => [
+		0 => "アルバムをリスト化する際に必要な画像の枚数",
+	],
+	"explore" => [
+		0 => "もっと見る",
+	],
+	"Sets the minimum image count needed to show albums in explore." => [
+		0 => "アルバムを「もっと見る」ページに表示するために必要な画像の最低枚数を設定してください。",
 	],
 	"Listing columns number" => [
 		0 => "表示する列数",
@@ -2802,6 +2821,15 @@ $translation_table = [
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "メールアドレスにどのように送信されるかをテストする場合にこちらを利用してください。%sを使用することをお勧めします。",
 	],
+	"Export a user" => [
+		0 => "ユーザーをエクスポート",
+	],
+	"Export user" => [
+		0 => "ユーザーをエクスポート",
+	],
+	"This will allow you to download a user's standard personal information in JSON format." => [
+		0 => "JSONフォーマットで、ユーザーの標準的な個人情報をダウンロードすることができます。",
+	],
 	"social networks" => [
 		0 => "ソーシャル・ネットワーク",
 	],
@@ -2892,6 +2920,15 @@ $translation_table = [
 	"Use this key when using the <a %s>API v1</a>." => [
 		0 => "<a %s>API v1</a>を使用するときは、このキーを使用します。",
 	],
+	"Plugin route" => [
+		0 => "プラグインルート",
+	],
+	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
+		0 => "%uでプラグインの説明を表示する。これらの説明は、メニューに%sを追加します。この設定は管理者には影響しません。",
+	],
+	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
+		0 => "%pのカスタムURLをセットするのに使用。手動でこのURLを%sで複製してください。",
+	],
 	"Cookie law compliance" => [
 		0 => "法律に準拠したクッキー",
 	],
@@ -2909,9 +2946,6 @@ $translation_table = [
 	],
 	"Load full resolution" => [
 		0 => "最大解像度で表示",
-	],
-	"Guest" => [
-		0 => "ゲスト",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "%a へ追加してカテゴリ名: %c に分類",
@@ -3204,11 +3238,32 @@ $translation_table = [
 	"Follow" => [
 		0 => "フォロー",
 	],
+	"General questions/comments" => [
+		0 => "一般的な質問/コメント",
+	],
+	"DMCA complaint" => [
+		0 => "デジタルミレニアム著作権法",
+	],
+	"Invalid message" => [
+		0 => "有効なメッセージではありません。",
+	],
+	"Invalid subject" => [
+		0 => "有効な件名ではありません。",
+	],
+	"Invalid reCAPTCHA" => [
+		0 => "入力された値は、画像にあるキーではありません。",
+	],
+	"Mail error" => [
+		0 => "メールでエラーが発生しました。",
+	],
 	"Message sent" => [
 		0 => "メッセージを送信しました。",
 	],
 	"Contact" => [
 		0 => "コンテンツ",
+	],
+	"Message sent. We will get in contact soon." => [
+		0 => "メッセージを送信しました。まもなく私どもから連絡を差し上げます。",
 	],
 	"If you want to send a message fill the form below." => [
 		0 => "メッセージを送信するには、以下のフォームに入力してください。",
@@ -3258,6 +3313,9 @@ $translation_table = [
 	"Please provide a valid email address" => [
 		0 => "有効なメールアドレスを入力してください。",
 	],
+	"Please provide a valid username" => [
+		0 => "有効なユーザー名を入力してください",
+	],
 	"You must enter the album name." => [
 		0 => "アルバム名を入力して下さい。",
 	],
@@ -3296,6 +3354,18 @@ $translation_table = [
 	],
 	"This website is running latest %s version" => [
 		0 => "このサイトは、最新のバージョン %s で構成しています。",
+	],
+	"Toggle select" => [
+		0 => "選択をトグル",
+	],
+	"Toggle flag" => [
+		0 => "フラグをトグル",
+	],
+	"Previous" => [
+		0 => "前へ",
+	],
+	"Next" => [
+		0 => "次へ",
 	],
 	"Clipboard image" => [
 		0 => "クリップボードの画像",

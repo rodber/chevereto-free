@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-10-01 18:12+0000\n"
-"PO-Revision-Date: 2017-10-01 18:12+0000\n"
+"POT-Creation-Date: 2018-06-03 14:28+0000\n"
+"PO-Revision-Date: 2018-06-03 14:28+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: cs\n"
@@ -11,18 +11,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
-msgid "Plugin"
-msgstr "Plugin"
-
-msgid "Plugin route"
-msgstr "Směrování Pluginu"
+msgid "To use all the features of this site you must be logged in."
+msgstr "Aby jste mohli používat všechny funkce, musíte být přihlášen(a)."
 
 #, php-format
-msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
-msgstr "Toto aktivujte, aby jste zobrazili instrukce pluginu na %u. Odkaz na tyto pokyny bude přidán do nabídky %s.Toto nastavení nemá vliv na administrátory."
-
-msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
-msgstr "Toto použijte pro nastavení vlastní URL adresy pro %p. Upozorňujeme, že musíte v této URL adrese ručně zkopírovat %s."
+msgid "If you don't have an account you can <a href=\"%s\">sign up</a> right now."
+msgstr "Pokud ještě nemáte svůj účet můžete se <a href=\"%s\">registrovat</a> právě teď."
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -203,10 +197,6 @@ msgstr[3] "zobrazení"
 msgid "After %n %t"
 msgstr "Po %n %t"
 
-#: ../../../app/lib/classes/class.image.php:348
-msgid "Don't autodelete"
-msgstr "Automaticky nemazat"
-
 #: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
 msgid "minute"
 msgid_plural "minutes"
@@ -231,28 +221,43 @@ msgstr[1] "dnů"
 msgstr[2] "dnů"
 msgstr[3] "dny"
 
+#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "týden"
+msgstr[1] "týdnů"
+msgstr[2] "týdnů"
+msgstr[3] "týdny"
+
+#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
+msgid "month"
+msgid_plural "months"
+msgstr[0] "měsíc"
+msgstr[1] "měsíců"
+msgstr[2] "měsíců"
+msgstr[3] "měsíce"
+
+#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
+msgid "year"
+msgid_plural "years"
+msgstr[0] "rok"
+msgstr[1] "let"
+msgstr[2] "let"
+msgstr[3] "let"
+
+#: ../../../app/lib/classes/class.image.php:348
+msgid "Don't autodelete"
+msgstr "Automaticky nemazat"
+
 #: ../../../app/lib/classes/class.image.php:636
 #: ../../../app/lib/classes/class.image.php:742
 msgid "Duplicated upload"
 msgstr "Duplicitně nahráno"
 
-msgid "Error storing file in external storage server"
-msgstr "Chyba uloženého souboru na serveru externího úložiště"
-
-msgid "External storage has failed"
-msgstr "Externí úložiště selhalo"
-
 #: ../../../app/lib/classes/class.image.php:955
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
 msgid "Private upload"
 msgstr "Soukromé nahrávání"
-
-msgid "Upload switched to local storage"
-msgstr "Nahrávání se přepne do místního úložiště"
-
-#, php-format
-msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
-msgstr "Systém se přepne do lokálního úložiště kvůli nedostatečně diskové kapacitě (%c) na úložišti externího serveru (serverech). Obrázek %s bude přemístěn do místního úložiště."
 
 #: ../../../app/lib/classes/class.image.php:1231
 msgid "like"
@@ -347,7 +352,7 @@ msgid "Search"
 msgstr "Hledat"
 
 msgid "People"
-msgstr "Lidi"
+msgstr "Lidé"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:22
 msgid "Image"
@@ -422,30 +427,6 @@ msgstr "využíváno"
 msgid "Private profile"
 msgstr "Soukromý profil"
 
-#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
-msgid "year"
-msgid_plural "years"
-msgstr[0] "rok"
-msgstr[1] "let"
-msgstr[2] "let"
-msgstr[3] "let"
-
-#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
-msgid "month"
-msgid_plural "months"
-msgstr[0] "měsíc"
-msgstr[1] "měsíců"
-msgstr[2] "měsíců"
-msgstr[3] "měsíce"
-
-#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
-msgid "week"
-msgid_plural "weeks"
-msgstr[0] "týden"
-msgstr[1] "týdnů"
-msgstr[2] "týdnů"
-msgstr[3] "týdny"
-
 #: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
 msgid "second"
 msgid_plural "seconds"
@@ -462,9 +443,6 @@ msgstr "před %s"
 #: ../../../app/lib/functions.php:67
 msgid "moments ago"
 msgstr "před několika okamžiky"
-
-msgid "System notification"
-msgstr "Systémová oznámení"
 
 #: ../../../app/routes/route.dashboard.php:1223
 #: ../../../app/themes/Peafowl/header.php:407
@@ -508,16 +486,8 @@ msgid "You can apply this update directly from your %a or download it from %s an
 msgstr "Tuto aktualizaci můžete nainstalovat automaticky přímo ze svého %a nebo si ji stáhnout z %s a nainstalovat manuálně."
 
 #, php-format
-msgid "Chevereto update available (v%s)"
-msgstr "Je k dispozici aktualizace Chevereta (v%s)"
-
-#, php-format
 msgid "view on %s"
 msgstr "zobrazit na %s"
-
-#: ../../../app/lib/functions.render.php:303
-msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
-msgstr "Za účelem vylepšení vašeho komfortu při prohlížení a užívání našich služeb používáme cookies. Používáním našich stránek s tímto souhlasíte."
 
 #: ../../../app/loader.php:180
 msgid "You have been forbidden to use this website."
@@ -532,6 +502,9 @@ msgstr "Neváhejte a prohlédněte si všechny mé sdílené obrázky a alba."
 #: ../../../app/themes/Peafowl/views/settings.php:447
 msgid "View all my images"
 msgstr "Zobrazit všechny mé obrázky"
+
+msgid "Plugin"
+msgstr "Plugin"
 
 #: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
 msgid "That page doesn't exist"
@@ -1293,6 +1266,10 @@ msgstr "Neplatný minimální věk uživatele"
 msgid "Only alphanumeric, hyphen and underscore characters are allowed"
 msgstr "Povoleny jsou pouze alfanumerické znaky, pomlčka a podtržítko"
 
+#: ../../../app/routes/route.dashboard.php:922
+msgid "Invalid URL"
+msgstr "Neplatná URL adresa"
+
 msgid "Routes can't be the same"
 msgstr "Cesty nemůžou být stejné"
 
@@ -1325,10 +1302,6 @@ msgstr "Špatný SMTP server"
 #: ../../../app/routes/route.dashboard.php:861
 msgid "Invalid SMTP username"
 msgstr "Špatné SMTP uživatelské jméno"
-
-#: ../../../app/routes/route.dashboard.php:922
-msgid "Invalid URL"
-msgstr "Neplatná URL adresa"
 
 #: ../../../app/routes/route.dashboard.php:960
 #, php-format
@@ -1377,11 +1350,6 @@ msgstr "IP je již zakázána"
 #: ../../../app/routes/route.image.php:152
 msgid "Upload date"
 msgstr "Datum nahrání"
-
-#: ../../../app/routes/route.image.php:177
-#, php-format
-msgid "%s images"
-msgstr "%s obrázků"
 
 #: ../../../app/routes/route.image.php:185
 msgid "Image %i in %a album"
@@ -1528,51 +1496,6 @@ msgstr "Přihlásit se"
 msgid "Logged out"
 msgstr "Odhlášeno"
 
-#: ../../../app/routes/route.page.php:61
-#: ../../../content/pages/default/contact.php:7
-msgid "General questions/comments"
-msgstr "Obecné dotazy a komentáře"
-
-#: ../../../app/routes/route.page.php:62
-#: ../../../content/pages/default/contact.php:8
-msgid "DMCA complaint"
-msgstr "Nahlásit porušení autorského zákona"
-
-#: ../../../app/routes/route.page.php:71
-#: ../../../app/routes/route.settings.php:302
-#: ../../../content/pages/default/contact.php:19
-msgid "Invalid name"
-msgstr "Neplatné jméno"
-
-#: ../../../app/routes/route.page.php:74
-#: ../../../content/pages/default/contact.php:22
-msgid "Invalid message"
-msgstr "Neplatná zpráva"
-
-#: ../../../app/routes/route.page.php:77
-#: ../../../content/pages/default/contact.php:25
-msgid "Invalid subject"
-msgstr "Neplatný předmět"
-
-#: ../../../app/routes/route.page.php:85
-#: ../../../content/pages/default/contact.php:33
-msgid "Invalid reCAPTCHA"
-msgstr "Špatně opsaný kód reCAPTCHA"
-
-#: ../../../app/routes/route.page.php:90
-#, php-format
-msgid "Can't submit the form: %s"
-msgstr "Nelze odeslat formulář: %s"
-
-#: ../../../app/routes/route.page.php:119
-msgid "Message sent. We will get in contact soon."
-msgstr "Zpráva byla odeslána. Budeme Vás brzy kontaktovat."
-
-#: ../../../app/routes/route.page.php:122
-#: ../../../content/pages/default/contact.php:69
-msgid "Mail error"
-msgstr "Chyba e-mailu."
-
 msgid "Upload images"
 msgstr "Nahrát obrázky"
 
@@ -1614,6 +1537,12 @@ msgstr "Chybná doba platnosti obrázku: %s"
 #, php-format
 msgid "An email has been sent to %s with instructions to activate this email"
 msgstr "Email byl odeslán %s s instrukcemi pro aktivaci tohoto emailu"
+
+#: ../../../app/routes/route.page.php:71
+#: ../../../app/routes/route.settings.php:302
+#: ../../../content/pages/default/contact.php:19
+msgid "Invalid name"
+msgstr "Neplatné jméno"
 
 #: ../../../app/routes/route.settings.php:305
 msgid "Invalid website"
@@ -1821,12 +1750,6 @@ msgstr "Uživatelské jméno"
 #, php-format
 msgid "I'm at least %s years old"
 msgstr "Je mi minimálně %s let."
-
-#: ../../../app/themes/Peafowl/header.php:341
-#: ../../../app/themes/Peafowl/views/signup.php:65
-#, php-format
-msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
-msgstr "Přihlášením vyjadřujete souhlas s našimi <a href=\"%s\">Podmínkami užívání</a>"
 
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
@@ -2057,6 +1980,10 @@ msgstr "dozvědět se více"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:86
 msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
 msgstr "Zkontrolujte <a data-modal=\"simple\" data-target=\"failed-upload-result\">chybovou zprávu</a> kde se dozvíte více informací."
+
+#, php-format
+msgid "Register to get %s"
+msgstr "Zaregistrujte se pro získání %s"
 
 msgid "reset"
 msgstr "resetovat"
@@ -2381,6 +2308,9 @@ msgstr "Stručný popis této kategorie"
 msgid "Untitled image"
 msgstr "Obrázek bez názvu"
 
+msgid "You can use wildcard * characters."
+msgstr "Můžete použít zástupné znaky *."
+
 #: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
 msgid "Expiration date"
 msgstr "Datum platnosti"
@@ -2692,6 +2622,24 @@ msgstr "Opravdu chcete odstranit tento obsah? (Nelze vrátit zpět)"
 msgid "Do you really want to remove all the selected content? This can't be undone."
 msgstr "Opravdu si přejete odstranit vybraný obsah?  (Nelze vrátit zpět)"
 
+msgid "Fullscreen"
+msgstr "Na celou obrazovku"
+
+msgid "Exit fullscreen"
+msgstr "Ukončit režim celé obrazovky"
+
+#: ../../../app/themes/Peafowl/views/image.php:57
+msgid "Guest"
+msgstr "Host"
+
+msgid "Keyboard shortcuts"
+msgstr "Klávesové zkratky"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Líbí se"
+
 msgid "Uploaded by guest"
 msgstr "Nahráno návštěvníkem"
 
@@ -2901,11 +2849,6 @@ msgstr "Smazat album"
 msgid "You like this"
 msgstr "Toto se vám líbí"
 
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "Líbí se"
-
 msgid "Upload to album"
 msgstr "Nahrát do alba"
 
@@ -2988,10 +2931,6 @@ msgstr "Nadpis webové stránky (title)"
 msgid "Website description"
 msgstr "Popis webu"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:236
-msgid "Website keywords"
-msgstr "Kličová slova stránky"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:257
 msgid "Default time zone"
 msgstr "Výchozí časové pásmo"
@@ -3006,6 +2945,12 @@ msgstr "Umožňuje vyhledávat obrázky, alba a uživatele na základě daného 
 
 msgid "Enables to browse public uploaded images. It also enables categories."
 msgstr "Umožňuje procházet veřejně nahrané obrázky. Také umožňuje procházet veřejné kategorie."
+
+msgid "guests"
+msgstr "hosté"
+
+msgid "Enables explore for guests."
+msgstr "Umožňuje procházet veřejně nahrané obrázky i neregistrovaným uživatelům."
 
 msgid "Enables to browse images randomly."
 msgstr "Umožňuje prohlížet obrázky v náhodném pořadí."
@@ -3303,6 +3248,10 @@ msgstr "Maximální velikost nahrávaného souboru"
 msgid "Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)."
 msgstr "Maximální velikost povolená serverem je %s. Tato velikost je limitována %u a %p (%f hodnoty)."
 
+#, php-format
+msgid "Same as \"%s\" but for guests."
+msgstr "Stejné jako \"%s\" ale platné pouze pro neregistrované uživatele."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:695
 msgid "Image path"
 msgstr "Cesta k obrázku"
@@ -3550,6 +3499,12 @@ msgstr "Prázdné"
 msgid "Leave it empty to don't require a minimum age to use the website."
 msgstr "Zanechte pole prázdné, pokud nevyžadujete minimální věk uživatele pro používání této webové stránky."
 
+msgid "Notify on user signup"
+msgstr "Upozornit na registraci uživatele"
+
+msgid "Enable this if you want to get an email notification for each new user signup."
+msgstr "Povolte to, pokud chcete dostat e-mailové upozornění pro každou novou registraci uživatele."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:972
 msgid "Username routing"
 msgstr "Routování uživatelského jména"
@@ -3686,6 +3641,9 @@ msgstr "Klasické stránkování"
 msgid "What pagination method should be used."
 msgstr "Jaká metoda stránkování má být použita?"
 
+msgid "Enable this to use the listing viewer when clicking on an image."
+msgstr "Povolte to, chcete-li kliknutím na obrázek otevřít prohlížeč seznamu obrázků."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1127
 msgid "Image listing size"
 msgstr "Velikost náhledu"
@@ -3701,6 +3659,15 @@ msgstr "Pevný"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1134
 msgid "Both methods use a fixed width but fluid method uses automatic heights."
 msgstr "Obě metody používají pevnou šířku, ale plynulá využívá proměnnou výšku."
+
+msgid "Album listing images requirement"
+msgstr "Požadavek na seznam obrázků v albu"
+
+msgid "explore"
+msgstr "průzkumník"
+
+msgid "Sets the minimum image count needed to show albums in explore."
+msgstr "Nastavte minimální počet obrázků potřebných pro zobrazení alb v průzkumníkovi."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1140
 msgid "Listing columns number"
@@ -4348,6 +4315,16 @@ msgstr "API v1 klíč"
 msgid "Use this key when using the <a %s>API v1</a>."
 msgstr "Použít tento klíč při použití <a %s>API v1</a>."
 
+msgid "Plugin route"
+msgstr "Směrování Pluginu"
+
+#, php-format
+msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
+msgstr "Toto aktivujte, aby jste zobrazili instrukce pluginu na %u. Odkaz na tyto pokyny bude přidán do nabídky %s.Toto nastavení nemá vliv na administrátory."
+
+msgid "Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL."
+msgstr "Toto použijte pro nastavení vlastní URL adresy pro %p. Upozorňujeme, že musíte v této URL adrese ručně zkopírovat %s."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:2028
 msgid "Cookie law compliance"
 msgstr "Vyžádání EU cookie politiky"
@@ -4372,10 +4349,6 @@ msgstr "Přehrát GIF"
 
 msgid "Load full resolution"
 msgstr "Načíst v plném rozlišení"
-
-#: ../../../app/themes/Peafowl/views/image.php:57
-msgid "Guest"
-msgstr "Host"
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -4756,11 +4729,45 @@ msgstr[3] "Sledující"
 msgid "Follow"
 msgstr "Sledovat"
 
+#: ../../../app/routes/route.page.php:61
+#: ../../../content/pages/default/contact.php:7
+msgid "General questions/comments"
+msgstr "Obecné dotazy a komentáře"
+
+#: ../../../app/routes/route.page.php:62
+#: ../../../content/pages/default/contact.php:8
+msgid "DMCA complaint"
+msgstr "Nahlásit porušení autorského zákona"
+
+#: ../../../app/routes/route.page.php:74
+#: ../../../content/pages/default/contact.php:22
+msgid "Invalid message"
+msgstr "Neplatná zpráva"
+
+#: ../../../app/routes/route.page.php:77
+#: ../../../content/pages/default/contact.php:25
+msgid "Invalid subject"
+msgstr "Neplatný předmět"
+
+#: ../../../app/routes/route.page.php:85
+#: ../../../content/pages/default/contact.php:33
+msgid "Invalid reCAPTCHA"
+msgstr "Špatně opsaný kód reCAPTCHA"
+
+#: ../../../app/routes/route.page.php:122
+#: ../../../content/pages/default/contact.php:69
+msgid "Mail error"
+msgstr "Chyba e-mailu."
+
 msgid "Message sent"
 msgstr "Zpráva byla odeslána"
 
 msgid "Contact"
 msgstr "Kontakt"
+
+#: ../../../app/routes/route.page.php:119
+msgid "Message sent. We will get in contact soon."
+msgstr "Zpráva byla odeslána. Budeme Vás brzy kontaktovat."
 
 msgid "If you want to send a message fill the form below."
 msgstr "Chcete-li poslat zprávu, vyplňte níže uvedený formulář."
@@ -4895,6 +4902,18 @@ msgstr "Aktualizovat nyní"
 #, javascript-format
 msgid "This website is running latest %s version"
 msgstr "Tato webová stránka používá nejnovější verzi %s"
+
+msgid "Toggle select"
+msgstr "Označit vybraný obrázek"
+
+msgid "Toggle flag"
+msgstr "Označit štítkem"
+
+msgid "Previous"
+msgstr "Předchozí"
+
+msgid "Next"
+msgstr "Další"
 
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"

@@ -11,7 +11,7 @@ $owner = function_exists('get_owner') ? get_owner() : G\get_global("owner");
 		<span class="user-image default-user-image"><span class="icon icon-user"></span></span>
 		<?php } ?>
 	</a>
-	<span class="breadcrum-text float-left"><a class="user-link" href="<?php echo $owner['url']; ?>"><?php if($owner['is_private']) { ?><span class="user-meta font-size-small"><span class="icon icon-lock"></span></span><?php } ?><?php echo $owner['name_short']; ?><span class="arrow arrow-down"></span></a></span>
+	<span class="breadcrum-text float-left"><a class="user-link" href="<?php echo $owner['url']; ?>"><?php if($owner['is_private']) { ?><span class="user-meta font-size-small"><span class="icon icon-lock"></span></span><?php } ?><?php echo $owner['name_short_html']; ?><span class="arrow arrow-down"></span></a></span>
 	<div class="pop-box pop-box-userdetails" style="display: none;">
 		<div class="pop-box-inner">
 			<div class="user-card no-avatar">

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2016-04-16 16:12+0000\n"
-"PO-Revision-Date: 2016-04-16 16:12+0000\n"
+"POT-Creation-Date: 2018-06-01 21:51+0000\n"
+"PO-Revision-Date: 2018-06-01 21:51+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: ../../../app/routes/route.signup.php:97
 #: ../../../content/pages/default/contact.php:28
 msgid "Invalid email"
-msgstr "Невірна адреса електронної пошти"
+msgstr "Неправильна адреса електронної пошти"
 
 #: ../../../app/install/installer.php:1171
 #: ../../../app/routes/route.json.php:574
@@ -42,7 +42,7 @@ msgstr "Неправильний пароль"
 #: ../../../app/install/installer.php:1183
 #: ../../../app/routes/route.dashboard.php:667
 msgid "Invalid website mode"
-msgstr "Невірний режим веб-сайту"
+msgstr "Неправильний режим веб-сайту"
 
 #: ../../../app/install/template/ready.php:31
 #: ../../../app/themes/Peafowl/views/dashboard.php:1760
@@ -72,7 +72,7 @@ msgstr "Режим роботи сайту"
 #: ../../../app/install/template/ready.php:45
 #: ../../../app/themes/Peafowl/views/dashboard.php:334
 msgid "You can switch the website mode anytime."
-msgstr "Ви можете переключити режим веб-сайту в будь-який час."
+msgstr "Ви можете перемкнути режим веб-сайту в будь-який час."
 
 #: ../../../app/install/template/ready.php:47
 #: ../../../app/themes/Peafowl/views/dashboard.php:330
@@ -88,20 +88,6 @@ msgstr "Особистий"
 msgid "Update in progress"
 msgstr "Оновлення в процесі"
 
-#: ../../../app/install/update/updater.php:62
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
-#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
-#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
-#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
-#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
-#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
-#: ../../../lib/Peafowl/peafowl.min.js:158
-#: ../../../lib/Peafowl/peafowl.min.js:195
-msgid "An error occurred. Please try again later."
-msgstr "У процесі виконання сталася помилка. Будь ласка спробуйте пізніше."
-
 #: ../../../app/install/update/updater.php:72
 #, php-format
 msgid "Missing %s file"
@@ -109,11 +95,11 @@ msgstr "Відсутній %s файл"
 
 #: ../../../app/install/update/updater.php:78
 msgid "Invalid license info"
-msgstr "Невірна інформація про ліцензію"
+msgstr "Неправильна інформація про ліцензію"
 
 #: ../../../app/install/update/updater.php:84
 msgid "Invalid license key"
-msgstr "Невірний ліцензійний ключ"
+msgstr "Неправильний ключ ліцензії"
 
 #: ../../../app/install/update/updater.php:87
 msgid "Can't save file"
@@ -129,9 +115,11 @@ msgstr "Неможливо завантажити %s"
 msgid "Can't extract %s"
 msgstr "Неможливо витягнути %s"
 
+#, php-format
 msgid "Can't create %s directory - %e"
 msgstr "Неможливо створити %s директорію - %e"
 
+#, php-format
 msgid "Can't update %s file - %e"
 msgstr "Неможливо оновити %s файл - %e"
 
@@ -145,37 +133,107 @@ msgstr "Безіменний"
 msgid "%s's images"
 msgstr "%s зображень"
 
+msgid "Note: This content is private but anyone with the link will be able to see this."
+msgstr "Примітка. Цей вміст є приватним, але кожен, хто має посилання, зможе це бачити."
+
+msgid "Note: This content is password protected. Remember to pass the content password to share."
+msgstr "Примітка. Цей вміст захищений паролем. Не забувайте передавати пароль для доступу до вмісту."
+
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:14
+#: ../../../app/themes/Peafowl/views/album.php:74
+#: ../../../app/themes/Peafowl/views/image.php:272
+msgid "Note: This content is private. Change privacy to \"public\" to share."
+msgstr "Примітка. Цей вміст є приватним. Змініть конфіденційність на «публічний», щоб поділитися."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Private"
+msgstr "Приватний"
+
+#: ../../../app/themes/Peafowl/snippets/form_album.php:20
+#: ../../../app/themes/Peafowl/views/dashboard.php:366
+msgid "Public"
+msgstr "Публічне"
+
+msgid "Me"
+msgstr "Я"
+
+#: ../../../app/lib/classes/class.page.php:137
+#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
+#: ../../../app/themes/Peafowl/views/dashboard.php:461
+msgid "Link"
+msgstr "Посилання"
+
+#: ../../../app/routes/route.settings.php:64
+#: ../../../app/themes/Peafowl/header.php:292
+#: ../../../app/themes/Peafowl/header.php:340
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:92
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:93
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:126
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:104
+#: ../../../app/themes/Peafowl/views/dashboard.php:105
+#: ../../../app/themes/Peafowl/views/login.php:39
+#: ../../../app/themes/Peafowl/views/settings.php:322
+#: ../../../app/themes/Peafowl/views/signup.php:49
+#: ../../../app/themes/Peafowl/views/signup.php:50
+msgid "Password"
+msgstr "Пароль"
+
+#: ../../../app/lib/classes/class.image.php:1230
+msgid "view"
+msgid_plural "views"
+msgstr[0] "перегляд"
+msgstr[1] "перегляда"
+msgstr[2] "переглядів"
+
+msgid "After %n %t"
+msgstr "Після  %n %t"
+
+#: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "хвилина"
+msgstr[1] "хвилин"
+msgstr[2] "хвилин"
+
+#: ../../../app/lib/functions.php:41 ../../../app/lib/functions.php:53
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "година"
+msgstr[1] "годин"
+msgstr[2] "годин"
+
+#: ../../../app/lib/functions.php:40 ../../../app/lib/functions.php:52
+msgid "day"
+msgid_plural "days"
+msgstr[0] "день"
+msgstr[1] "днів"
+msgstr[2] "днів"
+
+#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "тиждень"
+msgstr[1] "тижнів"
+msgstr[2] "тижнів"
+
+#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
+msgid "month"
+msgid_plural "months"
+msgstr[0] "місяць"
+msgstr[1] "місяців"
+msgstr[2] "місяців"
+
+#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
+msgid "year"
+msgid_plural "years"
+msgstr[0] "рік"
+msgstr[1] "років"
+msgstr[2] "років"
+
 #: ../../../app/lib/classes/class.image.php:348
 msgid "Don't autodelete"
 msgstr "Не видаляти автоматично"
-
-#: ../../../app/lib/classes/class.image.php:349
-#: ../../../app/lib/classes/class.image.php:350
-#, php-format
-msgid "After %s minutes"
-msgstr "Після %s хвилин"
-
-#: ../../../app/lib/classes/class.image.php:351
-#, php-format
-msgid "After %s hour"
-msgstr "Після %s години"
-
-#: ../../../app/lib/classes/class.image.php:352
-#: ../../../app/lib/classes/class.image.php:353
-#: ../../../app/lib/classes/class.image.php:354
-#, php-format
-msgid "After %s hours"
-msgstr "Після %s годин"
-
-#: ../../../app/lib/classes/class.image.php:355
-#, php-format
-msgid "After %s day"
-msgstr "Після %s дня"
-
-#: ../../../app/lib/classes/class.image.php:356
-#, php-format
-msgid "After %s days"
-msgstr "Після %s днів"
 
 #: ../../../app/lib/classes/class.image.php:636
 #: ../../../app/lib/classes/class.image.php:742
@@ -185,14 +243,7 @@ msgstr "Подвійне завантаження"
 #: ../../../app/lib/classes/class.image.php:955
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
 msgid "Private upload"
-msgstr "Приховане завантаження"
-
-#: ../../../app/lib/classes/class.image.php:1230
-msgid "view"
-msgid_plural "views"
-msgstr[0] "перегляд"
-msgstr[1] "перегляда"
-msgstr[2] "переглядів"
+msgstr "Приватне завантаження"
 
 #: ../../../app/lib/classes/class.image.php:1231
 msgid "like"
@@ -213,14 +264,104 @@ msgstr[0] "зображення"
 msgstr[1] "зображень"
 msgstr[2] "зображень"
 
-#: ../../../app/lib/classes/class.notification.php:75
-msgid "%u liked your %t %c"
-msgstr "%u сподобалася ваша %t %c"
+msgid "Recent"
+msgstr "Недавні"
 
-#: ../../../app/lib/classes/class.notification.php:81
-#, php-format
-msgid "%u is now following you"
-msgstr "%u тепер слідкує за Вами"
+msgid "Trending"
+msgstr "Популярні"
+
+#: ../../../app/routes/route.dashboard.php:1163
+msgid "Top users"
+msgstr "Топ користувачів"
+
+#: ../../../app/routes/route.album.php:80
+#: ../../../app/routes/route.category.php:48
+#: ../../../app/routes/route.dashboard.php:1105
+#: ../../../app/routes/route.dashboard.php:1142
+#: ../../../app/routes/route.dashboard.php:1171
+#: ../../../app/routes/route.explore.php:34
+#: ../../../app/routes/route.following.php:21
+#: ../../../app/routes/route.user.php:187
+#: ../../../app/routes/route.user.php:232
+#: ../../../app/routes/route.user.php:255
+#: ../../../app/themes/Peafowl/views/index.php:46
+msgid "Most recent"
+msgstr "Нові"
+
+#: ../../../app/routes/route.dashboard.php:1113
+#: ../../../app/routes/route.dashboard.php:1150
+#: ../../../app/routes/route.dashboard.php:1179
+#: ../../../app/routes/route.user.php:238
+#: ../../../app/routes/route.user.php:261
+msgid "Oldest"
+msgstr "Старі"
+
+#: ../../../app/routes/route.album.php:96
+#: ../../../app/routes/route.category.php:64
+#: ../../../app/routes/route.dashboard.php:1121
+#: ../../../app/routes/route.explore.php:50
+#: ../../../app/routes/route.following.php:29
+#: ../../../app/routes/route.user.php:201
+msgid "Most viewed"
+msgstr "Найпопулярніші"
+
+msgid "Popular"
+msgstr "Популярні"
+
+#: ../../../app/routes/route.album.php:104
+#: ../../../app/routes/route.category.php:72
+#: ../../../app/routes/route.dashboard.php:1129
+#: ../../../app/routes/route.explore.php:58
+#: ../../../app/routes/route.following.php:37
+#: ../../../app/routes/route.user.php:207
+msgid "Most liked"
+msgstr "Найбільш сподобались"
+
+#: ../../../app/routes/route.explore.php:89
+#: ../../../app/themes/Peafowl/header.php:188
+#: ../../../app/themes/Peafowl/header.php:206
+#: ../../../app/themes/Peafowl/views/dashboard.php:305
+#: ../../../app/themes/Peafowl/views/explore.php:9
+msgid "Explore"
+msgstr "Огляд"
+
+#: ../../../app/routes/route.search.php:130
+#: ../../../app/themes/Peafowl/header.php:215
+#: ../../../app/themes/Peafowl/header.php:220
+#: ../../../app/themes/Peafowl/views/dashboard.php:295
+msgid "Search"
+msgstr "Пошук"
+
+msgid "People"
+msgstr "Люди"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:22
+msgid "Image"
+msgid_plural "Images"
+msgstr[0] "Зображення"
+msgstr[1] "Зображень"
+msgstr[2] "Зображень"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "Альбом"
+msgstr[1] "Альбоми"
+msgstr[2] "Альбомів"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:34
+#: ../../../app/themes/Peafowl/views/dashboard.php:90
+#: ../../../app/themes/Peafowl/views/settings.php:126
+msgid "User"
+msgid_plural "Users"
+msgstr[0] "Користувача"
+msgstr[1] "Користувачів"
+msgstr[2] "Користувачів"
 
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
@@ -237,12 +378,6 @@ msgstr "Неможливо відкрити %s для запису"
 msgid "Internal"
 msgstr "Внутрішній"
 
-#: ../../../app/lib/classes/class.page.php:137
-#: ../../../app/themes/Peafowl/snippets/modal_share.php:10
-#: ../../../app/themes/Peafowl/views/dashboard.php:461
-msgid "Link"
-msgstr "Посилання"
-
 msgid "Can't insert storage."
 msgstr "Неможливо додати сховище"
 
@@ -255,6 +390,10 @@ msgstr "Ємність не може бути нижчою, ніж його по
 msgid "Can't update storage details."
 msgstr "Неможливо оновити дані сховища"
 
+#, php-format
+msgid "requires %s"
+msgstr "вимагається %s"
+
 #: ../../../app/lib/classes/class.storage.php:720
 msgid "Unlimited"
 msgstr "Необмежений"
@@ -263,47 +402,8 @@ msgstr "Необмежений"
 msgid "used"
 msgstr "використано"
 
-#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
-msgid "year"
-msgid_plural "years"
-msgstr[0] "рік"
-msgstr[1] "років"
-msgstr[2] "років"
-
-#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
-msgid "month"
-msgid_plural "months"
-msgstr[0] "місяць"
-msgstr[1] "місяців"
-msgstr[2] "місяців"
-
-#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
-msgid "week"
-msgid_plural "weeks"
-msgstr[0] "тиждень"
-msgstr[1] "тижнів"
-msgstr[2] "тижнів"
-
-#: ../../../app/lib/functions.php:40 ../../../app/lib/functions.php:52
-msgid "day"
-msgid_plural "days"
-msgstr[0] "день"
-msgstr[1] "днів"
-msgstr[2] "днів"
-
-#: ../../../app/lib/functions.php:41 ../../../app/lib/functions.php:53
-msgid "hour"
-msgid_plural "hours"
-msgstr[0] "година"
-msgstr[1] "годин"
-msgstr[2] "годин"
-
-#: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
-msgid "minute"
-msgid_plural "minutes"
-msgstr[0] "хвилина"
-msgstr[1] "хвилин"
-msgstr[2] "хвилин"
+msgid "Private profile"
+msgstr "Прихований профіль"
 
 #: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
 msgid "second"
@@ -321,6 +421,16 @@ msgstr "%s тому"
 msgid "moments ago"
 msgstr "хвилин тому"
 
+#: ../../../app/routes/route.dashboard.php:1223
+#: ../../../app/themes/Peafowl/header.php:407
+#: ../../../app/themes/Peafowl/views/dashboard.php:9
+msgid "Dashboard"
+msgstr "Панель керування"
+
+#, php-format
+msgid "There is an update available for your system. Go to %s to download and install this update."
+msgstr "Доступне оновлення для вашої системи. Перейдіть до %s, щоб завантажити та встановити це оновлення."
+
 #: ../../../app/lib/functions.php:218
 #, php-format
 msgid "System database is outdated. You need to run the <a href=\"%s\">update</a> tool."
@@ -329,17 +439,32 @@ msgstr "Системна база даних застаріла. Вам необ
 #: ../../../app/lib/functions.php:221
 #, php-format
 msgid "Website is in maintenance mode. To revert this setting go to <a href=\"%s\">Dashboard > Settings</a>."
-msgstr "Сайт знаходиться в режимі обслуговування. Щоб змінити параметри перейдіть в <a href=\"%s\">Панель управління> Налаштування</a>"
+msgstr "Сайт перебуває в режимі обслуговування. Щоб змінити параметри перейдіть у <a href=\"%s\">Панель управління> Налаштування</a>"
 
+#, php-format
 msgid "You should disable PHP error reporting for production enviroment. Go to <a href='%s'>System settings</a> to revert this setting."
-msgstr "Вам потрібно виключити вивід PHP помилок. Для цього перейдіть у <a href='%s'>Налаштування</a> для зміни."
+msgstr "Вам потрібно вимкнути показ помилок PHP. Для цього перейдіть у <a href='%s'>Налаштування</a> для зміни."
 
+#, php-format
 msgid "You haven't changed the default email settings. Go to <a href='%s'>Email settings</a> to fix this."
-msgstr "Ви не змінили налаштування електронної пошти за замовчуванням. Перейдіть <a href='%s'>Email налаштування</a> для зміни."
+msgstr "Ви не змінили налаштування електронної пошти за замовчуванням. Перейдіть у <a href='%s'>Налаштування Email</a> для зміни."
 
-#: ../../../app/lib/functions.render.php:303
-msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
-msgstr "Ми використовуємо наші власні і сторонні куки для поліпшення роботи нашого сайту в Інтернеті. Якщо ви продовжуєте використовувати наш сайт, відповідно ви приймаєте цю політику."
+msgid "There is an update available for your Chevereto based website."
+msgstr "Існує оновлення для вашого веб-сайту на основі Chevereto."
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "The release notes for this update are:"
+msgstr "Нотатки про випуск для цього оновлення:"
+
+msgid "admin dashboard"
+msgstr "панель адміністратора"
+
+msgid "You can apply this update directly from your %a or download it from %s and then manually install it."
+msgstr "Ви можете застосувати це оновлення безпосередньо зі свого %a або завантажити його з %s, і потім встановити його вручну."
+
+#, php-format
+msgid "view on %s"
+msgstr "перегляд на %s"
 
 #: ../../../app/loader.php:180
 msgid "You have been forbidden to use this website."
@@ -355,9 +480,12 @@ msgstr "Не соромтеся, щоб переглянути всі мої з�
 msgid "View all my images"
 msgstr "Переглянути всі мої зображення"
 
+msgid "Plugin"
+msgstr "Плаґін"
+
 #: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
 msgid "That page doesn't exist"
-msgstr "Ця сторінка не існує"
+msgstr "Такої сторінки не існує"
 
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
@@ -393,13 +521,13 @@ msgstr "Адреса електронної пошти змінена"
 #: ../../../app/routes/route.settings.php:140
 #: ../../../app/routes/route.signup.php:73
 msgid "The reCAPTCHA wasn't entered correctly"
-msgstr "Ви невірно ввели капчу"
+msgstr "Ви ввели неправильну капчу"
 
 #: ../../../app/routes/route.account.php:119
 #: ../../../app/routes/route.account.php:164
 #: ../../../app/routes/route.account.php:271
 msgid "Invalid Username/Email"
-msgstr "Невірне Ім'я користувача / Email"
+msgstr "Неправильне ім'я користувача або email"
 
 #: ../../../app/routes/route.account.php:129
 msgid "User doesn't have an email."
@@ -421,11 +549,11 @@ msgstr "У запиті відмовлено"
 
 #: ../../../app/routes/route.account.php:145
 msgid "Account needs to be activated to use this feature"
-msgstr "Для використання цієї функції, аккаунт повинен бути активований"
+msgstr "Для використання цієї функції, акаунт повинен бути активований"
 
 #: ../../../app/routes/route.account.php:151
 msgid "Account already activated"
-msgstr "Аккаунт вже активований"
+msgstr "Акаунт вже активований"
 
 #: ../../../app/routes/route.account.php:192
 msgid "Allow up to 15 minutes for the email. You can try again later."
@@ -472,47 +600,10 @@ msgstr "Адреса вже використовується"
 #: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
 #: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
 msgid "Check the errors in the form to continue."
-msgstr "Перед продовження перевірте форму на наявність помилок"
+msgstr "Перед продовженням перевірте форму на наявність помилок"
 
-#: ../../../app/routes/route.album.php:80
-#: ../../../app/routes/route.category.php:48
-#: ../../../app/routes/route.dashboard.php:1105
-#: ../../../app/routes/route.dashboard.php:1142
-#: ../../../app/routes/route.dashboard.php:1171
-#: ../../../app/routes/route.explore.php:34
-#: ../../../app/routes/route.following.php:21
-#: ../../../app/routes/route.user.php:187
-#: ../../../app/routes/route.user.php:232
-#: ../../../app/routes/route.user.php:255
-#: ../../../app/themes/Peafowl/views/index.php:46
-msgid "Most recent"
-msgstr "Нові"
-
-#: ../../../app/routes/route.dashboard.php:1113
-#: ../../../app/routes/route.dashboard.php:1150
-#: ../../../app/routes/route.dashboard.php:1179
-#: ../../../app/routes/route.user.php:238
-#: ../../../app/routes/route.user.php:261
-msgid "Oldest"
-msgstr "Старі"
-
-#: ../../../app/routes/route.album.php:96
-#: ../../../app/routes/route.category.php:64
-#: ../../../app/routes/route.dashboard.php:1121
-#: ../../../app/routes/route.explore.php:50
-#: ../../../app/routes/route.following.php:29
-#: ../../../app/routes/route.user.php:201
-msgid "Most viewed"
-msgstr "Найпопулярніші"
-
-#: ../../../app/routes/route.album.php:104
-#: ../../../app/routes/route.category.php:72
-#: ../../../app/routes/route.dashboard.php:1129
-#: ../../../app/routes/route.explore.php:58
-#: ../../../app/routes/route.following.php:37
-#: ../../../app/routes/route.user.php:207
-msgid "Most liked"
-msgstr "Найбільш сподобались"
+msgid "Password required"
+msgstr "Пароль обов'язковий"
 
 #: ../../../app/routes/route.album.php:115
 #: ../../../app/themes/Peafowl/snippets/modal_share.php:4
@@ -520,6 +611,12 @@ msgstr "Найбільш сподобались"
 #: ../../../app/themes/Peafowl/views/image.php:89
 msgid "Share"
 msgstr "Поділитися"
+
+#: ../../../app/routes/route.image.php:127
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
+msgid "Embed codes"
+msgstr "Коди для вбудовування"
 
 #: ../../../app/routes/route.album.php:124
 #: ../../../app/routes/route.image.php:134
@@ -573,6 +670,13 @@ msgstr "Інсталювати оновлення"
 #: ../../../app/routes/route.dashboard.php:162
 msgid "check for updates"
 msgstr "перевірити оновлення"
+
+msgid "Support"
+msgstr "Підтримка"
+
+#, php-format
+msgid "Need help? Go to %s and you will get help quickly."
+msgstr "Потрібна допомога? Перейдіть до %s, і ви швидко отримаєте допомогу."
 
 #: ../../../app/routes/route.dashboard.php:169
 msgid "PHP version"
@@ -642,7 +746,7 @@ msgstr "Завантаження файлів"
 #: ../../../app/themes/Peafowl/views/dashboard.php:2010
 #: ../../../app/themes/Peafowl/views/dashboard.php:2031
 msgid "Enabled"
-msgstr "Вкл."
+msgstr "Увімк."
 
 #: ../../../app/routes/route.dashboard.php:190
 #: ../../../app/themes/Peafowl/views/dashboard.php:298
@@ -686,11 +790,10 @@ msgstr "Вкл."
 #: ../../../app/themes/Peafowl/views/dashboard.php:2010
 #: ../../../app/themes/Peafowl/views/dashboard.php:2031
 msgid "Disabled"
-msgstr "Викл."
+msgstr "Вимк."
 
-#: ../../../app/routes/route.dashboard.php:193
-msgid "Max. upload size"
-msgstr "Макс. розмір файлу"
+msgid "Max. upload file size"
+msgstr "Макс. розмір файлу що завантажується"
 
 #: ../../../app/routes/route.dashboard.php:197
 msgid "Max. post size"
@@ -712,6 +815,25 @@ msgstr[2] "%d секунди"
 msgid "Memory limit"
 msgstr "Обмеження пам'яті"
 
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
+msgid "Links"
+msgstr "Посилання"
+
+msgid "Documentation"
+msgstr "Документація"
+
+msgid "Changelog"
+msgstr "Список змін"
+
+msgid "Request new features"
+msgstr "Запит нових функцій"
+
+msgid "Bug tracking"
+msgstr "Простежування помилок"
+
+msgid "Blog"
+msgstr "Блоґ"
+
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
 msgid "Website"
@@ -732,11 +854,14 @@ msgstr "Списки"
 
 #: ../../../app/routes/route.dashboard.php:231
 msgid "Image upload"
-msgstr "Завантаж. і зберігання"
+msgstr "Завантаження зображення"
 
 #: ../../../app/routes/route.dashboard.php:232
 msgid "Categories"
 msgstr "Категорії"
+
+msgid "Consent screen"
+msgstr "Екран угоди"
 
 #: ../../../app/routes/route.dashboard.php:234
 #: ../../../app/themes/Peafowl/views/dashboard.php:1021
@@ -761,6 +886,9 @@ msgstr "Банери"
 #: ../../../app/routes/route.dashboard.php:238
 msgid "System"
 msgstr "Система"
+
+msgid "Routing"
+msgstr "Маршрутизація"
 
 #: ../../../app/routes/route.dashboard.php:239
 msgid "Languages"
@@ -795,6 +923,12 @@ msgstr "Додаткові налаштування"
 #: ../../../app/routes/route.dashboard.php:247
 msgid "Tools"
 msgstr "Інструменти"
+
+msgid "Can't delete all homepage cover images"
+msgstr "Не вдалося видалити всі зображення обкладинки домашньої сторінки"
+
+msgid "Homepage cover image deleted"
+msgstr "Зображення обкладинки домашньої сторінки видалено"
 
 #: ../../../app/routes/route.dashboard.php:278
 msgid "Local"
@@ -835,17 +969,16 @@ msgstr "Ця сторінка була успішно додана"
 msgid "The page has been deleted."
 msgstr "Ця сторінка видалена"
 
-#: ../../../app/routes/route.dashboard.php:376
-msgid "Before cover (homepage)"
-msgstr "До обкладинки (на головній)"
+msgid "homepage"
+msgstr "домашня сторінка"
 
-#: ../../../app/routes/route.dashboard.php:379
-msgid "After cover (homepage)"
-msgstr "Після обкладинки (на головній)"
+#, php-format
+msgid "Before main title (%s)"
+msgstr "Перед основним заголовком (%s)"
 
-#: ../../../app/routes/route.dashboard.php:382
-msgid "After listing (homepage)"
-msgstr "Після списку зображень (на головній)"
+#, php-format
+msgid "After call to action (%s)"
+msgstr "Після заклику до дії (%s)"
 
 #: ../../../app/routes/route.dashboard.php:390
 msgid "Before pagination"
@@ -938,7 +1071,7 @@ msgstr "NSFW"
 
 #: ../../../app/routes/route.dashboard.php:557
 msgid "Invalid website name"
-msgstr "Невірна назва сайту"
+msgstr "Некоректна назва сайту"
 
 #: ../../../app/routes/route.dashboard.php:562
 msgid "Invalid language"
@@ -946,7 +1079,38 @@ msgstr "Неправильна мова"
 
 #: ../../../app/routes/route.dashboard.php:567
 msgid "Invalid timezone"
-msgstr "Невірний часовий пояс"
+msgstr "Неправильний часовий пояс"
+
+#: ../../../app/routes/route.dashboard.php:577
+msgid "Invalid upload storage mode"
+msgstr "Неправильний спосіб зберігання файлів."
+
+#: ../../../app/routes/route.dashboard.php:582
+msgid "Invalid upload filenaming"
+msgstr "Неправильний метод зберігання імен файлів"
+
+#: ../../../app/routes/route.dashboard.php:587
+msgid "Invalid thumb width"
+msgstr "Неправильна ширина мініатюри"
+
+#: ../../../app/routes/route.dashboard.php:592
+msgid "Invalid thumb height"
+msgstr "Неправильна висота мініатюри"
+
+msgid "Invalid medium size"
+msgstr "Неправильний середній розмір"
+
+#: ../../../app/routes/route.dashboard.php:602
+msgid "Invalid watermark percentage"
+msgstr "Неправильний відсоток водяного знаку"
+
+#: ../../../app/routes/route.dashboard.php:607
+msgid "Invalid watermark opacity"
+msgstr "Неправильна прозорість водяного знаку"
+
+#: ../../../app/routes/route.dashboard.php:612
+msgid "Invalid theme"
+msgstr "Неправильний стиль"
 
 #: ../../../app/routes/route.dashboard.php:572
 #: ../../../app/routes/route.dashboard.php:617
@@ -955,56 +1119,25 @@ msgstr "Невірний часовий пояс"
 msgid "Invalid value"
 msgstr "Некоректне значення"
 
-#: ../../../app/routes/route.dashboard.php:577
-msgid "Invalid upload storage mode"
-msgstr "Невірний спосіб зберігання файлів."
-
-#: ../../../app/routes/route.dashboard.php:582
-msgid "Invalid upload filenaming"
-msgstr "Невірний метод зберігання імен файлів"
-
-#: ../../../app/routes/route.dashboard.php:587
-msgid "Invalid thumb width"
-msgstr "Невірна ширина мініатюри"
-
-#: ../../../app/routes/route.dashboard.php:592
-msgid "Invalid thumb height"
-msgstr "Неправильна висота мініатюри"
-
-msgid "Invalid medium size"
-msgstr "Невірний середній розмір"
-
-#: ../../../app/routes/route.dashboard.php:602
-msgid "Invalid watermark percentage"
-msgstr "Невірний відсоток водяного знаку"
-
-#: ../../../app/routes/route.dashboard.php:607
-msgid "Invalid watermark opacity"
-msgstr "Невірна прозорість водяного знаку"
-
-#: ../../../app/routes/route.dashboard.php:612
-msgid "Invalid theme"
-msgstr "Неправильний стиль"
-
 #: ../../../app/routes/route.dashboard.php:622
 msgid "Invalid theme tone"
 msgstr "Неправильний стиль теми"
 
 #: ../../../app/routes/route.dashboard.php:627
 msgid "Invalid theme main color"
-msgstr "Невірний основний колір теми"
+msgstr "Неправильний основний колір теми"
 
 #: ../../../app/routes/route.dashboard.php:632
 msgid "Invalid theme top bar color"
-msgstr "Невірний колір верхньої панелі теми"
+msgstr "Неправильний колір верхньої панелі теми"
 
 #: ../../../app/routes/route.dashboard.php:637
 msgid "Invalid theme top bar button color"
-msgstr "Невірний колір кнопки верхньої панелі теми"
+msgstr "Неправильний колір кнопки верхньої панелі теми"
 
 #: ../../../app/routes/route.dashboard.php:642
 msgid "Invalid theme image listing size"
-msgstr "Невірний розмір зображення для списків"
+msgstr "Неправильний розмір зображення для списків"
 
 #: ../../../app/routes/route.dashboard.php:647
 msgid "Invalid user id"
@@ -1020,28 +1153,28 @@ msgstr "Неправильний SMTP порт"
 
 #: ../../../app/routes/route.dashboard.php:662
 msgid "Invalid SMTP security"
-msgstr "Невірні налаштування безпеки SMTP сервера"
+msgstr "Неправильні налаштування безпеки SMTP сервера"
 
 #: ../../../app/routes/route.dashboard.php:672
 #: ../../../app/routes/route.dashboard.php:838
 msgid "Invalid personal mode user ID"
-msgstr "Невірний персональний режим користувача з ідентифікатором"
+msgstr "Неправильний персональний режим користувача з ідентифікатором"
 
 #: ../../../app/routes/route.dashboard.php:677
 msgid "Invalid or reserved route"
-msgstr "Невірний або зарезервований шлях"
+msgstr "Неправильний або зарезервований шлях"
 
 #: ../../../app/routes/route.dashboard.php:682
 msgid "Invalid website privacy mode"
-msgstr "Невірний режим конфіденційності сайту"
+msgstr "Неправильний режим конфіденційності сайту"
 
 #: ../../../app/routes/route.dashboard.php:687
 msgid "Invalid website content privacy mode"
-msgstr "Невірний режим видимості вмісту"
+msgstr "Неправильний режим видимості вмісту"
 
 #: ../../../app/routes/route.dashboard.php:692
 msgid "Invalid homepage style"
-msgstr "Невірний стиль домашньої сторінки"
+msgstr "Неправильний стиль домашньої сторінки"
 
 #: ../../../app/routes/route.dashboard.php:697
 msgid "Invalid homepage call to action button color"
@@ -1049,47 +1182,54 @@ msgstr "Неправильний колір кнопки виклику дома
 
 #: ../../../app/routes/route.dashboard.php:702
 msgid "Invalid homepage call to action functionality"
-msgstr "Невірний виклик дії"
+msgstr "Неправильний виклик дії"
 
 #: ../../../app/routes/route.dashboard.php:708
 msgid "Invalid title"
-msgstr "Не правильна назва"
+msgstr "Неправильна назва"
 
 #: ../../../app/routes/route.dashboard.php:713
 msgid "Invalid status"
-msgstr "Не вірний статус"
+msgstr "Неправильний статус"
 
 #: ../../../app/routes/route.dashboard.php:718
 msgid "Invalid type"
-msgstr "Не вірний тип"
+msgstr "Неправильний тип"
 
 #: ../../../app/routes/route.dashboard.php:723
 msgid "Invalid visibility"
-msgstr "Не вірна видимість"
+msgstr "Неправильна видимість"
 
 #: ../../../app/routes/route.dashboard.php:728
 msgid "Invalid target attribute"
-msgstr "Не вірний атрибут"
+msgstr "Неправильний атрибут target"
 
 #: ../../../app/routes/route.dashboard.php:733
 msgid "Invalid rel attribute"
-msgstr "Невірний rel атрибут"
+msgstr "Неправильний атрибут rel"
 
 #: ../../../app/routes/route.dashboard.php:738
 msgid "Invalid icon"
-msgstr "Не вірна іконка"
+msgstr "Неправильнf іконка"
 
 #: ../../../app/routes/route.dashboard.php:743
 msgid "Invalid URL key"
-msgstr "Не вірний ключ посилання"
+msgstr "Неправильний ключ посилання"
 
 #: ../../../app/routes/route.dashboard.php:748
 msgid "Invalid file path"
-msgstr "Не вірний шлях до файлу"
+msgstr "Неправильний шлях до файлу"
 
 #: ../../../app/routes/route.dashboard.php:753
 msgid "Invalid link URL"
-msgstr "Не вірне посилання URL"
+msgstr "Неправильне посилання URL"
+
+msgid "Invalid user minimum age"
+msgstr "Неправильний мінімальний вік користувача"
+
+#: ../../../app/routes/route.dashboard.php:922
+msgid "Invalid URL"
+msgstr "Неправильне посилання"
 
 #: ../../../app/routes/route.dashboard.php:769
 msgid "Invalid upload image path"
@@ -1097,7 +1237,7 @@ msgstr "Неправильна папка завантаження зображ�
 
 #: ../../../app/routes/route.dashboard.php:783
 msgid "Invalid call to action URL"
-msgstr "Невірна дія для посилання"
+msgstr "Неправильна дія для посилання"
 
 #: ../../../app/routes/route.dashboard.php:797
 #, php-format
@@ -1112,10 +1252,6 @@ msgstr "Неправильний SMTP сервер"
 msgid "Invalid SMTP username"
 msgstr "Неправильне SMTP ім'я"
 
-#: ../../../app/routes/route.dashboard.php:922
-msgid "Invalid URL"
-msgstr "Невірне посилання"
-
 #: ../../../app/routes/route.dashboard.php:960
 #, php-format
 msgid "This URL key is already being used by another page (ID %s)"
@@ -1129,25 +1265,7 @@ msgstr "Цей шлях вже використовується іншою ст�
 #: ../../../app/routes/route.dashboard.php:992
 #, php-format
 msgid "Can't save page contents: %s."
-msgstr "Не можливо зберегти контент сторінки: %s."
-
-#: ../../../app/routes/route.dashboard.php:1163
-msgid "Top users"
-msgstr "Топ користувачів"
-
-#: ../../../app/routes/route.dashboard.php:1223
-#: ../../../app/themes/Peafowl/header.php:407
-#: ../../../app/themes/Peafowl/views/dashboard.php:9
-msgid "Dashboard"
-msgstr "Панель керування"
-
-#: ../../../app/routes/route.explore.php:89
-#: ../../../app/themes/Peafowl/header.php:188
-#: ../../../app/themes/Peafowl/header.php:206
-#: ../../../app/themes/Peafowl/views/dashboard.php:305
-#: ../../../app/themes/Peafowl/views/explore.php:9
-msgid "Explore"
-msgstr "Огляд"
+msgstr "Не можливо зберегти вміст сторінки: %s."
 
 #: ../../../app/routes/route.following.php:73
 #: ../../../app/routes/route.user.php:104
@@ -1161,12 +1279,6 @@ msgstr "Слідувати"
 #: ../../../app/themes/Peafowl/header.php:424
 msgid "About"
 msgstr "Інформація"
-
-#: ../../../app/routes/route.image.php:127
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:99
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:110
-msgid "Embed codes"
-msgstr "Коди для вбудовування"
 
 #: ../../../app/routes/route.image.php:144
 msgid "Image ID"
@@ -1188,11 +1300,6 @@ msgstr "IP адреса вже заблокована"
 msgid "Upload date"
 msgstr "Дата завантаження"
 
-#: ../../../app/routes/route.image.php:177
-#, php-format
-msgid "%s images"
-msgstr "%s зображень"
-
 #: ../../../app/routes/route.image.php:185
 msgid "Image %i in %a album"
 msgstr "Картинка %i в %a альбомі"
@@ -1209,13 +1316,13 @@ msgstr "Картинка %i розміщена в %w"
 msgid "Direct links"
 msgstr "Прямі посилання"
 
-#: ../../../app/themes/Peafowl/views/image.php:279
-msgid "Image URL"
-msgstr "Пряме посилання"
-
 #: ../../../app/themes/Peafowl/views/image.php:285
 msgid "Image link"
 msgstr "Посилання "
+
+#: ../../../app/themes/Peafowl/views/image.php:279
+msgid "Image URL"
+msgstr "Пряме посилання"
 
 #: ../../../app/themes/Peafowl/views/image.php:291
 msgid "Thumbnail URL"
@@ -1259,15 +1366,17 @@ msgstr "Відсутні значення"
 
 #: ../../../app/routes/route.json.php:589
 msgid "Invalid role"
-msgstr "Невірна роль"
+msgstr "Неправильна роль"
 
 #: ../../../app/routes/route.json.php:594
 msgid "Username already being used"
 msgstr "Користувач з таким ім'ям вже існує."
 
+#, php-format
 msgid "Add a password or another social connection before deleting %s"
 msgstr "Додайте пароль або інакше соц. підключення перед видаленням %s"
 
+#, php-format
 msgid "Add an email or another social connection before deleting %s"
 msgstr "Додати електронну пошту або інше соц. підключення перед видаленням %s"
 
@@ -1292,12 +1401,12 @@ msgstr "Тестове повідомлення надіслано %s."
 #: ../../../app/routes/route.json.php:1128
 #, php-format
 msgid "User %s followed"
-msgstr "Користувач %s слідкує"
+msgstr "Користувач %s стежить"
 
 #: ../../../app/routes/route.json.php:1128
 #, php-format
 msgid "User %s unfollowed"
-msgstr "Користувач %s не слідкує"
+msgstr "Користувач %s не стежить"
 
 #: ../../../app/routes/route.json.php:1150
 msgid "Content liked"
@@ -1306,6 +1415,15 @@ msgstr "Вміст сподобався"
 #: ../../../app/routes/route.json.php:1150
 msgid "Content disliked"
 msgstr "Вміст не сподобався"
+
+#: ../../../app/lib/classes/class.notification.php:75
+msgid "%u liked your %t %c"
+msgstr "%u сподобалася ваша %t %c"
+
+#: ../../../app/lib/classes/class.notification.php:81
+#, php-format
+msgid "%u is now following you"
+msgstr "%u тепер стежить за вами"
 
 #: ../../../app/routes/route.login.php:133
 msgid "Wrong Username/Email password combination"
@@ -1324,50 +1442,11 @@ msgstr "Вхід"
 msgid "Logged out"
 msgstr "Вийти"
 
-#: ../../../app/routes/route.page.php:61
-#: ../../../content/pages/default/contact.php:7
-msgid "General questions/comments"
-msgstr "Загальні питання / коментарі"
+msgid "Upload images"
+msgstr "Завантажити зображення"
 
-#: ../../../app/routes/route.page.php:62
-#: ../../../content/pages/default/contact.php:8
-msgid "DMCA complaint"
-msgstr "DMCA скарга"
-
-#: ../../../app/routes/route.page.php:71
-#: ../../../app/routes/route.settings.php:302
-#: ../../../content/pages/default/contact.php:19
-msgid "Invalid name"
-msgstr "Неправильне ім'я"
-
-#: ../../../app/routes/route.page.php:74
-#: ../../../content/pages/default/contact.php:22
-msgid "Invalid message"
-msgstr "Неправильне повідомлення"
-
-#: ../../../app/routes/route.page.php:77
-#: ../../../content/pages/default/contact.php:25
-msgid "Invalid subject"
-msgstr "Неправильна тема"
-
-#: ../../../app/routes/route.page.php:85
-#: ../../../content/pages/default/contact.php:33
-msgid "Invalid reCAPTCHA"
-msgstr "Неправильна reCAPTCHA"
-
-#: ../../../app/routes/route.page.php:90
-#, php-format
-msgid "Can't submit the form: %s"
-msgstr "Неможливо відправити форму: %s"
-
-#: ../../../app/routes/route.page.php:119
-msgid "Message sent. We will get in contact soon."
-msgstr "Повідомлення надіслано. Ми зв'яжемося найближчим часом."
-
-#: ../../../app/routes/route.page.php:122
-#: ../../../content/pages/default/contact.php:69
-msgid "Mail error"
-msgstr "Помилка електронної пошти"
+msgid "Upload plugin"
+msgstr "Завантажити плагін"
 
 #: ../../../app/routes/route.search.php:120
 #, php-format
@@ -1384,13 +1463,6 @@ msgstr "Результат пошуку альбома для %s"
 msgid "User search results for %s"
 msgstr "Результат пошуку користувача для %s"
 
-#: ../../../app/routes/route.search.php:130
-#: ../../../app/themes/Peafowl/header.php:215
-#: ../../../app/themes/Peafowl/header.php:220
-#: ../../../app/themes/Peafowl/views/dashboard.php:295
-msgid "Search"
-msgstr "Пошук"
-
 #: ../../../app/routes/route.settings.php:62
 msgid "Account"
 msgstr "Акаунт"
@@ -1399,34 +1471,20 @@ msgstr "Акаунт"
 msgid "Profile"
 msgstr "Профіль"
 
-#: ../../../app/routes/route.settings.php:64
-#: ../../../app/themes/Peafowl/header.php:292
-#: ../../../app/themes/Peafowl/header.php:340
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:92
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:93
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:126
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:21
-#: ../../../app/themes/Peafowl/views/dashboard.php:104
-#: ../../../app/themes/Peafowl/views/dashboard.php:105
-#: ../../../app/themes/Peafowl/views/login.php:39
-#: ../../../app/themes/Peafowl/views/settings.php:322
-#: ../../../app/themes/Peafowl/views/signup.php:49
-#: ../../../app/themes/Peafowl/views/signup.php:50
-msgid "Password"
-msgstr "Пароль"
-
 #: ../../../app/routes/route.settings.php:65
 msgid "Linked accounts"
 msgstr "Пов'язані акаунти"
-
-#: ../../../app/routes/route.settings.php:191
-msgid "Invalid image expiration"
-msgstr "Невірне закінчення терміну дії зображення"
 
 #: ../../../app/routes/route.settings.php:269
 #, php-format
 msgid "An email has been sent to %s with instructions to activate this email"
 msgstr "На %s було надіслано повідомлення з інструкціями щодо активації"
+
+#: ../../../app/routes/route.page.php:71
+#: ../../../app/routes/route.settings.php:302
+#: ../../../content/pages/default/contact.php:19
+msgid "Invalid name"
+msgstr "Неправильне ім'я"
 
 #: ../../../app/routes/route.settings.php:305
 msgid "Invalid website"
@@ -1456,7 +1514,7 @@ msgstr "Пароль успішно створений."
 
 #: ../../../app/routes/route.settings.php:455
 msgid "Wrong Username/Email values"
-msgstr "Невірне Ім'я користувача / Email"
+msgstr "Неправильне ім'я користувача або email"
 
 #: ../../../app/routes/route.settings.php:498
 #, php-format
@@ -1472,6 +1530,11 @@ msgstr "Налаштування %s"
 msgid "Create account"
 msgstr "Створити обліковий запис"
 
+#: ../../../app/themes/Peafowl/header.php:258
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Upload"
+msgstr "Завантаження"
+
 #: ../../../app/routes/route.user.php:84
 #: ../../../app/themes/Peafowl/header.php:56
 #: ../../../app/themes/Peafowl/views/index.php:46
@@ -1481,9 +1544,9 @@ msgstr "%s Зображень"
 
 #: ../../../app/routes/route.user.php:89
 #: ../../../app/themes/Peafowl/header.php:56
-#, php-format
+#, php-format, javascript-format
 msgid "%s's Albums"
-msgstr "Альбоми %s"
+msgstr "%s Альбомів"
 
 #: ../../../app/routes/route.user.php:99
 #: ../../../app/themes/Peafowl/views/search.php:8
@@ -1502,7 +1565,7 @@ msgstr "Сподобалось"
 
 #: ../../../app/routes/route.user.php:109
 msgid "Followers"
-msgstr "Послідовники"
+msgstr "Стежать"
 
 #: ../../../app/routes/route.user.php:379
 msgid "%n (%u) albums on %w"
@@ -1531,11 +1594,6 @@ msgstr "Випадкове"
 #, php-format
 msgid "Notices (%s)"
 msgstr "Повідомлення (%s)"
-
-#: ../../../app/themes/Peafowl/header.php:258
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-msgid "Upload"
-msgstr "Завантаження"
 
 #: ../../../app/themes/Peafowl/header.php:281
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:11
@@ -1595,7 +1653,7 @@ msgstr "Запам'ятати мене"
 #: ../../../app/themes/Peafowl/header.php:301
 #, php-format
 msgid "Don't have an account? <a href='%s'>Sign up</a> now."
-msgstr "У вас ще немає аккаунта? <a href='%s'>Зареєструйтесь</a> зараз."
+msgstr "У вас ще немає акаунта? <a href='%s'>Зареєструйтесь</a> зараз."
 
 #: ../../../app/themes/Peafowl/header.php:328
 msgid "Sign up with another account"
@@ -1623,12 +1681,6 @@ msgstr "Адреса електронної пошти"
 #: ../../../app/themes/Peafowl/views/signup.php:40
 msgid "Username"
 msgstr "Ім'я користувача"
-
-#: ../../../app/themes/Peafowl/header.php:341
-#: ../../../app/themes/Peafowl/views/signup.php:65
-#, php-format
-msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
-msgstr "Реєструючись на цьому сайті, ви погоджуєтеся з <a href=\"%s\">Правилами</a>"
 
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
@@ -1659,7 +1711,7 @@ msgstr "Ми отримали запит на зміну адреси елект
 #: ../../../app/themes/Peafowl/mails/account-change-email.php:6
 #, php-format
 msgid "To complete the process you must <a href=\"%s\">activate your email</a>."
-msgstr "Чтобы завершить это действие вы должны <a href=\"%s\">активировать свой Email</a>."
+msgstr "Щоб завершити процес, ви повинні <a href=\"%s\">активувати</a> свою електронну пошту ."
 
 #: ../../../app/themes/Peafowl/mails/account-change-email.php:8
 #: ../../../app/themes/Peafowl/mails/account-confirm.php:8
@@ -1683,7 +1735,7 @@ msgstr "IP-адресу, з якої було зроблено запит:%s"
 
 #: ../../../app/themes/Peafowl/mails/account-confirm.php:4
 msgid "We received a request to register the %n account at %w."
-msgstr "Ми отримали запит на реєстрацію аккаунта %n на %w."
+msgstr "Ми отримали запит на реєстрацію акаунта %n на %w."
 
 #: ../../../app/themes/Peafowl/mails/account-confirm.php:6
 #, php-format
@@ -1701,11 +1753,11 @@ msgstr "Щоб скинути пароль, <a href=\"%s\">перейдіть з
 
 #: ../../../app/themes/Peafowl/mails/account-welcome.php:4
 msgid "Hi %n, welcome to %w"
-msgstr "Привіт %n, Ласкаво просимо на %w"
+msgstr "Привіт, %n. Ласкаво просимо на %w"
 
 #: ../../../app/themes/Peafowl/mails/account-welcome.php:6
 msgid "Now that your account is ready you can enjoy uploading your images, creating albums and setting the privacy of your content as well as many more cool things that you will discover."
-msgstr "Тепер коли реєстрація завершена, ви можете насолоджуватися завантаженням зображень, створенням альбомів, зміною налаштувань видимості вмісту, а також багатьма іншими перевагами."
+msgstr "Тепер, коли реєстрація завершена, ви можете насолоджуватися завантаженням зображень, створенням альбомів, зміною налаштувань видимості вмісту, а також багатьма іншими перевагами."
 
 #: ../../../app/themes/Peafowl/mails/account-welcome.php:8
 msgid "By the way, here is you very own awesome profile page: <a href=\"%u\">%n</a>. Go ahead and customize it, its yours!."
@@ -1717,91 +1769,45 @@ msgstr "Спасибі за те, що ви з нами"
 
 #: ../../../app/themes/Peafowl/mails/footer.php:3
 msgid "This email was sent from %w %u"
-msgstr "Це повідомлення було відправлено з %w %u"
+msgstr "Це повідомлення було надіслане з %w %u"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:13
 msgid "Drag and drop or paste images here to upload"
-msgstr "Перетягніть або вставте зображення тут для загрузки"
+msgstr "Перетягніть або вставте зображення тут для відвантаження"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:14
 msgid "Select the images to upload"
-msgstr "Виберіть зображення для завантаження"
+msgstr "Виберіть зображення для відвантаження"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:15
-msgid "You can also <a data-trigger=\"anywhere-upload-input\">browse from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "Ви також можете завантажити зображення <a data-trigger=\"anywhere-upload-input\">зі свого комп'ютера</a> або вказати <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">прямі посилання</a>."
+msgid "Edit or resize any image by clicking the image preview"
+msgstr "Відредагувати або змінити розмір будь-якого зображення натиснувши на попередній перегляд"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:16
-msgid "You can also <a data-trigger=\"anywhere-upload-input-camera\">take a picture</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "Ви також можете<a data-trigger=\"anywhere-upload-input-camera\">взяти зображення</a> або <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">додати посилання на зображення</a>."
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:20
-msgid "Edit or resize an image by clicking the image preview"
-msgstr "Відредагувати або змінити розмір зображення натиснувши на попередній перегляд"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:21
-msgid "Edit or resize an image by touching the image preview"
-msgstr "Відредагувати або змінити розмір зображення торкнувшись попередній перегляд"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:22
-msgid "You can add more images <a data-trigger=\"anywhere-upload-input\">from your computer</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">from image URLs</a>."
-msgstr "Ви можете додати більше зображень<a data-trigger=\"anywhere-upload-input\">зі свого комп'ютера</a> або <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">з посилання на зображення</a>."
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:23
-msgid "You can <a data-trigger=\"anywhere-upload-input\">add more images</a> or <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">add image URLs</a>."
-msgstr "Ви можете <a data-trigger=\"anywhere-upload-input\">додати більше зображень</a> або <a data-modal=\"form\" data-target=\"anywhere-upload-paste-url\">додати посилання на зображення</a>."
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
-msgid "Uploading <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">images</span>"
-msgstr "Завантажується <span data-text=\"queue-size\">0</span> <span data-text=\"queue-objects\">зображення</span>"
+msgid "Edit any image by touching the image preview"
+msgstr "Відредагувати будь-яке зображення натиснувши на попередній перегляд"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
 msgid "complete"
-msgstr "повністю"
+msgstr "завершено"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:28
-msgid "The queue is being uploaded. It will take just a few seconds to complete."
+msgid "The queue is being uploaded, it should take just a few seconds to complete."
 msgstr "Завантажується черга зображень. Це може зайняти деякий час."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:32
 msgid "Upload complete"
 msgstr "Завантаження завершено"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:34
-#, php-format
-msgid "Content added to <a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">public stream</a>. You can <a data-modal=\"form\" data-target=\"form-uploaded-create-album\">create an album</a> or <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">move the <span data-text=\"queue-objects\">images</span></a> to an existing album."
-msgstr "Вміст добавлено в<a data-text=\"upload-target\" data-link=\"upload-target\" href=\"%s\">загальний доступ</a>. ви можете<a data-modal=\"form\" data-target=\"form-uploaded-create-album\">створити альбом</a> або <a data-modal=\"form\" data-target=\"form-uploaded-move-album\">перемістити <span data-text=\"queue-objects\">зображення</span></a> у вже існуючий."
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:35
-msgid "You can <a href=\"%s\">create an account</a> or <a href=\"%l\">sign in</a> to save future uploads in your account."
-msgstr "Ви можете <a href=\"%s\">зареєструватися</a> або <a href=\"%l\">знак в</a>, щоб зберегти в майбутньому додавання у вашому обліковому записі."
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:40
-msgid "No <span data-text=\"queue-objects\">images</span> have been uploaded"
-msgstr "Не було завантажено жодного <span data-text=\"queue-objects\">зображення</span>"
-
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:41
 msgid "Some errors have occured and the system couldn't process your request."
 msgstr "У процесі обробки запиту сталася помилка."
 
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
+#: ../../../app/themes/Peafowl/snippets/form_category.php:3
+msgid "Category"
+msgstr "Категорія"
+
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:61
 msgid "Select category"
 msgstr "Виберіть категорію"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-msgid "Change upload privacy"
-msgstr "Змінити видимість завантаження"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
-msgid "cancel"
-msgstr "скасувати"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:77
 msgid "Mark this if the upload is not family safe"
@@ -1814,6 +1820,17 @@ msgstr "Небезпечний вміст"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 msgid "Uploading"
 msgstr "Завантажується"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "скасувати"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
@@ -1831,10 +1848,6 @@ msgstr "детальніше"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:86
 msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
 msgstr "Перевірте <a data-modal=\"simple\" data-target=\"failed-upload-result\">звіт про помилки</a> для отримання більш докладної інформації."
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:89
-msgid "max"
-msgstr "макс."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:91
 msgid "close"
@@ -1976,10 +1989,6 @@ msgstr[0] "альбом"
 msgstr[1] "альбомів"
 msgstr[2] "альбомів"
 
-#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
-msgid "Links"
-msgstr "Посилання"
-
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
 msgstr "Посилання на перегляд"
@@ -2064,11 +2073,6 @@ msgstr "Без слів"
 msgid "Put a minus sign just before words you don't want: -rodent -\"Jack Russell\""
 msgstr "Поставте знак мінуса перед словами: -колір - \"український той\""
 
-#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:41
-#: ../../../app/themes/Peafowl/snippets/form_category.php:3
-msgid "Category"
-msgstr "Категорія"
-
 #: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:66
 msgid "Storage"
 msgstr "Сховище"
@@ -2094,18 +2098,9 @@ msgstr "Опис альбому"
 msgid "Brief description of this album"
 msgstr "Короткий опис цього альбому"
 
-#: ../../../app/themes/Peafowl/snippets/form_album.php:18
-msgid "Album Privacy"
-msgstr "Видимість альбому"
-
 #: ../../../app/themes/Peafowl/snippets/form_album.php:19
 msgid "Who can view this content"
 msgstr "Хто може переглядати цей контент"
-
-#: ../../../app/themes/Peafowl/snippets/form_album.php:20
-#: ../../../app/themes/Peafowl/views/dashboard.php:366
-msgid "Public"
-msgstr "Публічне"
 
 #: ../../../app/themes/Peafowl/snippets/form_album.php:21
 msgid "Private (just me)"
@@ -2114,10 +2109,6 @@ msgstr "Приховане (тільки я)"
 #: ../../../app/themes/Peafowl/snippets/form_album.php:22
 msgid "Private (anyone with the link)"
 msgstr "Приховане (тільки за посиланням)"
-
-#: ../../../app/themes/Peafowl/snippets/form_category.php:9
-msgid "No category"
-msgstr "Без категорії"
 
 #: ../../../app/themes/Peafowl/snippets/form_category_edit.php:4
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:3
@@ -2184,24 +2175,6 @@ msgstr "Текстове повідомлення, HTML або перенапр�
 #: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
 msgid "Existing album"
 msgstr "Існуючий альбом"
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
-#: ../../../app/themes/Peafowl/views/dashboard.php:28
-msgid "Album"
-msgid_plural "Albums"
-msgstr[0] "Альбом"
-msgstr[1] "Альбоми"
-msgstr[2] "Альбомів"
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
-#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
-#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
-msgid "private"
-msgstr "приховане"
 
 #: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
 msgid "create new album"
@@ -2355,14 +2328,6 @@ msgstr "показати ще"
 msgid "Load more"
 msgstr "Завантажити ще"
 
-#: ../../../app/themes/Peafowl/snippets/listing.php:91
-msgid "Previous"
-msgstr "Попередня"
-
-#: ../../../app/themes/Peafowl/snippets/listing.php:98
-msgid "Next"
-msgstr "Наступна"
-
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:10
 msgid "Select all"
 msgstr "виділити все"
@@ -2414,12 +2379,6 @@ msgstr "Видалити"
 #, php-format
 msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
 msgstr "Ви повинні увійти, щоб використовувати всі можливості цього сайту. Якщо у вас ще немає облікового запису, ви можете <a href=\"%s\">зареєструватися</a> просто зараз."
-
-#: ../../../app/themes/Peafowl/snippets/modal_share.php:14
-#: ../../../app/themes/Peafowl/views/album.php:74
-#: ../../../app/themes/Peafowl/views/image.php:272
-msgid "Note: This content is private. Change privacy to \"public\" to share."
-msgstr "Увага: Це прихований вміст. Щоб поділиться ним, поміняйте налаштування видимості на \"Публічне\"."
 
 #: ../../../app/themes/Peafowl/snippets/template_content_empty.php:5
 #: ../../../app/themes/Peafowl/views/dashboard.php:618
@@ -2492,9 +2451,14 @@ msgstr "Ви дійсно хочете видалити даний вміст? �
 msgid "Do you really want to remove all the selected content? This can't be undone."
 msgstr "Ви дійсно хочете видалити всі виділені зображення? Ця дія є незворотня."
 
-#: ../../../app/themes/Peafowl/tpl_list_item/image_description_guest.php:2
-msgid "Uploaded by guest to Public"
-msgstr "Завантажено гостем в загальний доступ"
+#: ../../../app/themes/Peafowl/views/image.php:57
+msgid "Guest"
+msgstr "Гість"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Сподобалось"
 
 #: ../../../app/themes/Peafowl/tpl_list_item/image_description_owner.php:2
 #, php-format
@@ -2602,6 +2566,20 @@ msgstr "Інструкції по скиданню паролю були над�
 msgid "Resend instructions"
 msgstr "Повторити відправку інструкцій"
 
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "У процесі виконання сталася помилка. Будь ласка спробуйте пізніше."
+
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
 msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
 msgstr "Вам вже було надіслано повідомлення з інструкціями щодо скидання пароля. Якщо ви не отримали повідомлення, перевірте папку Спам."
@@ -2681,25 +2659,13 @@ msgstr "Ви дійсно хочете видалити цей альбом з �
 msgid "Delete album"
 msgstr "Видалити альбом"
 
+#: ../../../app/themes/Peafowl/views/image.php:85
+msgid "You like this"
+msgstr "Вам подобається це"
+
 #: ../../../app/themes/Peafowl/views/album.php:86
 msgid "Album link"
 msgstr "Посилання на альбом"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:22
-msgid "Image"
-msgid_plural "Images"
-msgstr[0] "Зображення"
-msgstr[1] "Зображень"
-msgstr[2] "Зображень"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:34
-#: ../../../app/themes/Peafowl/views/dashboard.php:90
-#: ../../../app/themes/Peafowl/views/settings.php:126
-msgid "User"
-msgid_plural "Users"
-msgstr[0] "Користувача"
-msgstr[1] "Користувачів"
-msgstr[2] "Користувачів"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:40
 #: ../../../app/themes/Peafowl/views/dashboard.php:1732
@@ -2753,10 +2719,6 @@ msgstr "Заголовок сайту"
 msgid "Website description"
 msgstr "Опис сайту"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:236
-msgid "Website keywords"
-msgstr "Ключові слова"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:257
 msgid "Default time zone"
 msgstr "Часовий пояс  за замовчуванням"
@@ -2796,10 +2758,6 @@ msgstr "Звичайне перенаправлення з /ім'я-корист
 #: ../../../app/themes/Peafowl/views/dashboard.php:363
 msgid "Website privacy mode"
 msgstr "Режим конфіденційності сайту"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:366
-msgid "Private"
-msgstr "Приватний"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:370
 msgid "Private mode will make the website only available for registered users."
@@ -2872,11 +2830,6 @@ msgstr "Схована сторінка не буде відображатись
 #: ../../../app/themes/Peafowl/views/dashboard.php:487
 msgid "Only alphanumerics, hyphens and forward slash"
 msgstr "Тільки латинські букви і цифри, дефіс і коса риска"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:489
-#, php-format
-msgid "Page URL key relative to %s"
-msgstr "Ключ посилання сторінки щодо %s"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:493
 msgid "File path"
@@ -2979,6 +2932,14 @@ msgstr "Гостьові завантаження"
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "Увімкніть цю опцію, якщо хочете дозволити завантажувати зображення незареєстрованим користувачам."
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1353
+msgid "Enable embed codes (uploader)"
+msgstr "Коди для вбудовування (у завантажувачі)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1359
+msgid "Enable this if you want to show embed codes when upload gets completed."
+msgstr "Ввімкніть цю опцію, якщо ви хочете показувати коди для вбудовування після завершення завантаження."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:649
 msgid "Enable expirable uploads"
 msgstr "Включити автовидалення для завантажень"
@@ -3008,15 +2969,6 @@ msgstr "Exif дані зображення (налаштування)"
 #: ../../../app/themes/Peafowl/views/dashboard.php:683
 msgid "Enable this if you want to allow each user to configure how image Exif data will be handled."
 msgstr "Включити, якщо ви хочете, щоб кожен користувач для налаштування зображення даних Exif були оброблені."
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:689
-msgid "Max. filesize"
-msgstr "Макс. розмір файлу"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:692
-#, php-format
-msgid "Max. allowed filesize. (Max allowed by server is %s)"
-msgstr "Макс. дозволений розмір файлу (Обмеження серверу: %s)"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:695
 msgid "Image path"
@@ -3584,14 +3536,6 @@ msgstr "Коди для вбудовування (в перегляді)"
 msgid "Enable this if you want to show embed codes for the content."
 msgstr "Ввімкніть цю опцію, якщо ви хочете показувати коди для вбудовування в перегляді зображень."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1353
-msgid "Enable embed codes (uploader)"
-msgstr "Коди для вбудовування (у завантажувачі)"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1359
-msgid "Enable this if you want to show embed codes when upload gets completed."
-msgstr "Ввімкніть цю опцію, якщо ви хочете показувати коди для вбудовування після завершення завантаження."
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1365
 msgid "Not safe content checkbox in uploader"
 msgstr "Показувати у завантажувачі настройку для небезпечного змісту"
@@ -3640,6 +3584,14 @@ msgstr "Виберіть стиль головної сторінки. Щоб н
 #: ../../../app/themes/Peafowl/views/dashboard.php:1406
 msgid "Cover image"
 msgstr "Зображення обкладинки"
+
+#: ../../../app/themes/Peafowl/views/image.php:72
+msgid "Do you really want to delete this image? This can't be undone."
+msgstr "Ви дійсно хочете видалити дане зображення? Ця дія є незворотньою"
+
+#: ../../../app/themes/Peafowl/views/image.php:72
+msgid "Delete image"
+msgstr "Видалити зображення"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1424
 msgid "Vector version or your website logo in SVG format (only for homepage)."
@@ -3712,18 +3664,6 @@ msgstr "Це буде додано в дію для тега <a>. Залиште
 msgid "User IDs"
 msgstr "ID користувача"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1524
-msgid "Here you can set the codes for the predefined ad spaces."
-msgstr "Тут ви можете ввести коди для заданих місць розміщення реклами."
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1565
-msgid "Crypt salt"
-msgstr "Криптографічна сіль"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1567
-msgid "This is the salt used to convert numeric ID to alphanumeric. It was generated on install."
-msgstr "Ця сіль використовується для перетворення цифрових ID в літерні. Вона була створена при установці."
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1570
 msgid "Minify code"
 msgstr "Мінімізувати код"
@@ -3739,6 +3679,14 @@ msgstr "Обслуговування"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1585
 msgid "When enabled the website will show a maintenance message. This setting doesn't affect administrators."
 msgstr "При включенні, відображає на сайті повідомлення про технічне обслуговування. Ця установка не впливає на адміністраторів."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1565
+msgid "Crypt salt"
+msgstr "Криптографічна сіль"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1567
+msgid "This is the salt used to convert numeric ID to alphanumeric. It was generated on install."
+msgstr "Ця сіль використовується для перетворення цифрових ID в літерні. Вона була створена при установці."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1589
 msgid "PHP error reporting"
@@ -3945,23 +3893,10 @@ msgstr "Для ID клієнта ВКонтакті"
 msgid "VK client secret"
 msgstr "Секретний ключ клієнта ВКонтакті"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1949
-#, php-format
-msgid "CDN allows you to offload static content to several edge servers making your website faster. If you don't have a CDN provider you should try %s."
-msgstr "CDN дозволяє збільшити швидкість роботи сайту і знизити навантаження на сервер шляхом перенесення статичного вмісту на кілька переферейних серверів. Якщо ви ще не використовуєте CDN, спробуйте %s."
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1968
 #, php-format
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "Для цього вам необхідний <a href=\"%s\" target=\"_blank\">ключ reCAPTCHA</a>."
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1974
-msgid "reCAPTCHA public key"
-msgstr "Публічний ключ reCAPTCHA"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1979
-msgid "reCAPTCHA private key"
-msgstr "Закритий ключ reCAPTCHA"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1986
 msgid "reCAPTCHA threshold"
@@ -4019,27 +3954,6 @@ msgstr "Зберегти зміни"
 #: ../../../app/themes/Peafowl/views/settings.php:477
 msgid "Check the errors to proceed."
 msgstr "Перед тим як продовжити, перевірте правильність заповнення."
-
-#: ../../../app/themes/Peafowl/views/image.php:57
-msgid "Guest"
-msgstr "Гість"
-
-#: ../../../app/themes/Peafowl/views/image.php:72
-msgid "Do you really want to delete this image? This can't be undone."
-msgstr "Ви дійсно хочете видалити дане зображення? Ця дія є незворотньою"
-
-#: ../../../app/themes/Peafowl/views/image.php:72
-msgid "Delete image"
-msgstr "Видалити зображення"
-
-#: ../../../app/themes/Peafowl/views/image.php:85
-msgid "You like this"
-msgstr "Вам подобається це"
-
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "Сподобалось"
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -4353,33 +4267,39 @@ msgstr[2] ""
 msgid "Follow"
 msgstr "Слідкувати"
 
-#: ../../../content/pages/default/contact.php:79
-msgid "Message sent"
-msgstr "Повідомлення надіслано"
+#: ../../../app/routes/route.page.php:61
+#: ../../../content/pages/default/contact.php:7
+msgid "General questions/comments"
+msgstr "Загальні питання / коментарі"
 
-#: ../../../content/pages/default/contact.php:79
-msgid "Contact"
-msgstr "Зворотній зв'язок"
+#: ../../../app/routes/route.page.php:62
+#: ../../../content/pages/default/contact.php:8
+msgid "DMCA complaint"
+msgstr "DMCA скарга"
 
-#: ../../../content/pages/default/contact.php:85
-msgid "We will be in touch soon."
-msgstr "Ми скоро з вами зв'яжемося."
+#: ../../../app/routes/route.page.php:74
+#: ../../../content/pages/default/contact.php:22
+msgid "Invalid message"
+msgstr "Неправильне повідомлення"
 
-#: ../../../content/pages/default/contact.php:85
-msgid "If you want to send a message fill the form below."
-msgstr "Якщо ви хочете відправити повідомлення, заповніть форму нижче."
+#: ../../../app/routes/route.page.php:77
+#: ../../../content/pages/default/contact.php:25
+msgid "Invalid subject"
+msgstr "Неправильна тема"
 
-#: ../../../content/pages/default/contact.php:88
-msgid "Your name"
-msgstr "Ваше ім'я"
+#: ../../../app/routes/route.page.php:85
+#: ../../../content/pages/default/contact.php:33
+msgid "Invalid reCAPTCHA"
+msgstr "Неправильна reCAPTCHA"
 
-#: ../../../content/pages/default/contact.php:97
-msgid "Subject"
-msgstr "Тема"
+#: ../../../app/routes/route.page.php:122
+#: ../../../content/pages/default/contact.php:69
+msgid "Mail error"
+msgstr "Помилка електронної пошти"
 
-#: ../../../content/pages/default/contact.php:123
-msgid "Send message"
-msgstr "Надіслати повідомлення"
+#: ../../../app/routes/route.page.php:119
+msgid "Message sent. We will get in contact soon."
+msgstr "Повідомлення надіслано. Ми зв'яжемося найближчим часом."
 
 #: ../../../app/install/update/template/update.js:19
 #, javascript-format
@@ -4499,27 +4419,19 @@ msgid "There is an update available for your system. You can automatic download 
 msgstr "Є поновлення для вашої системи. Ви можете автоматично скачати і встановити його або піти до %s для того щоб скачати його вручну."
 
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "The release notes for this update are:"
-msgstr "Нотатки про випуск для цього оновлення:"
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 msgid "Update now"
 msgstr "Оновити зараз"
-
-#: ../../../app/lib/chevereto.js:1552 ../../../app/lib/chevereto.min.js:71
-msgid "Your website is running the latest version of Chevereto."
-msgstr "Ви використовуєте останню версію Chevereto."
 
 #: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
 msgid "Clipboard image"
 msgstr "Зображення у буфері обміну"
 
-msgid "Invalid or unsupported file format."
-msgstr "Невірний або підтримуваний формат файлу."
-
 #: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
 msgid "File too big."
 msgstr "Файл занадто великий."
+
+msgid "Invalid or unsupported file format."
+msgstr "Невірний або підтримуваний формат файлу."
 
 #: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
 #: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
@@ -4529,6 +4441,12 @@ msgstr "Деякі файли не були додані."
 #: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
 msgid "Image edited successfully."
 msgstr "Зображення успішно змінене."
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "приховане"
 
 #: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
 msgid "Album edited successfully."

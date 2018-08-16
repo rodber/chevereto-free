@@ -9,23 +9,23 @@
 			<inbox@rodolfoberrios.com>
 
   Copyright (C) Rodolfo Berrios A. All rights reserved.
-  
+
   BY USING THIS SOFTWARE YOU DECLARE TO ACCEPT THE CHEVERETO EULA
   http://chevereto.com/license
 
   --------------------------------------------------------------------- */
 
 $route = function($handler) {
-	try {		
+	try {
 		// 0 -> username
 		// 1 -> ?QS | albums | search
 		// 2 -> albums/?QS | search/?QS
-		
+
 		if($handler->isRequestLevel($handler::getCond('mapped_route') ? 4 : 5)) return $handler->issue404(); // Allow only N levels
-		
+
 		// Handle the request for /user and /username routing
 		$request_handle = $handler::getCond('mapped_route') ? $handler->request_array : $handler->request;
-		
+
 		// Handle the request for /album or /search (personal mode ON + '/' routing)
 		if(CHV\getSetting('website_mode') == 'personal' and CHV\getSetting('website_mode_personal_routing') == '/' and in_array($request_handle[0], ['albums', 'search', 'following', 'followers'])) {
 			$request_handle = [1 => $request_handle[0]];
@@ -33,49 +33,49 @@ $route = function($handler) {
 
 		// Username handle
 		$username = $request_handle[0];
-		
+
 		// Detect mapped args
 		if($handler::getCond('mapped_route') and $handler::$mapped_args) {
-			$mapped_args = $handler::$mapped_args;	
+			$mapped_args = $handler::$mapped_args;
 		}
-		
+
 		if($mapped_args['id']) {
 			$id = $handler::$mapped_args['id'];
 		}
-		
+
 		if(is_null($username) and is_null($id)) {
 			return $handler->issue404();
 		}
-		
+
 		// User routing redirect
 		if(CHV\getSetting('user_routing') and $handler->request_array[0] == 'user') {
 			G\redirect(preg_replace('#/user/#', '/', G\get_current_url(), 1));
 		}
-		
+
 		$logged_user = CHV\Login::getUser();
-		
+
 		// Logged user status override redirect
 		CHV\User::statusRedirect($logged_user['status']);
-		
+
 		$userhandle = is_null($id) ? 'username' : 'id';
 		$user = CHV\User::getSingle($$userhandle, $userhandle);
 		$is_owner = $user['id'] == $logged_user['id'];
-		
+
 		// No user or invalid status
 		if(!$user OR $user['status'] !== 'valid' AND (!$logged_user OR !$logged_user['is_admin'])) {
 			return $handler->issue404();
 		}
-		
+
 		// Single user mode redirect
 		if(CHV\getSetting('website_mode') == 'personal' and $user['id'] == CHV\getSetting('website_mode_personal_uid') and $handler->request_array[0] == 'user') {
 			G\redirect(CHV\getSetting('website_mode_personal_routing'));
 		}
-		
+
 		// Private gate
 		if(!($is_owner || $logged_user['is_admin']) && $user['is_private']) {
 			return $handler->issue404();
 		}
-		
+
 		$user_routes = [];
 		$user_views = [
 			'images'	=> [
@@ -94,7 +94,7 @@ $route = function($handler) {
 				'doctitle'		=> '',
 			],
 		];
-		
+
 		foreach($user_views as $k => $v) { // Need to use $k => $v to fetch array key easily
 			array_push($user_routes, $k == 'images' ? $username : $k);
 		}
@@ -102,16 +102,16 @@ $route = function($handler) {
 		foreach($user_views as $k => $v) {
 			$user_views[$k]['current'] = FALSE;
 		}
-		
+
 		if($request_handle[1]) {
-			
+
 			// Sub path user
 			if($request_handle[1] !== $_SERVER['QUERY_STRING']) {
 				if(!in_array($request_handle[1], $user_routes)) {
 					return $handler->issue404();
 				}
 			}
-			
+
 			// Search in user
 			if($request_handle[1] == 'search') {
 				if(!$_SERVER['QUERY_STRING']) {
@@ -122,7 +122,7 @@ $route = function($handler) {
 					return $handler->issue404();
 				}
 			}
-			
+
 		} else {
 			$user_views['images']['current'] = TRUE;
 		}
@@ -133,7 +133,7 @@ $route = function($handler) {
 		$handler::setCond('show_follow_button', $show_follow_button);
 
 		$albums = CHV\User::getAlbums($user["id"]);
-		
+
 		$pre_doctitle = $user['name'];
 		if(CHV\getSetting('website_mode') == 'community' or $user['id'] !== CHV\getSetting('website_mode_personal_uid')) {
 			$pre_doctitle .= ' ('.$user['username'].')';
@@ -143,7 +143,7 @@ $route = function($handler) {
 		if(array_key_exists($request_handle[1], $user_views)) {
 			$user_views[$request_handle[1]]['current'] = TRUE;
 		}
-		
+
 		if($request_handle[1] == 'search') {
 			if(!$_REQUEST['q']) {
 				G\redirect($user['url']);
@@ -154,10 +154,11 @@ $route = function($handler) {
 				'd'		=> strlen($_REQUEST['q']) >= 25 ? (substr($_REQUEST['q'], 0, 22) . '...') : $_REQUEST['q']
 			];
 		}
-		
+
 		// Tabs
 
 		$base_user_url = $user['url'];
+
 		foreach($user_views as $k => $v) {
 			$handler::setCond('user_' . $k, $v['current']);
 			if($v['current']) {
@@ -167,23 +168,22 @@ $route = function($handler) {
 				}
 			}
 		}
-		$base_user_url = rtrim($base_user_url, '/');
-		
+
 		$safe_html_user = G\safe_html($user);
-	
+
 		switch($current_view) {
-			
+
 			case 'images':
 			case 'liked':
 				$type = "images";
 				$tools = $is_owner || $logged_user['is_admin'];
 				$current = FALSE;
 				if($current_view == 'liked') {
-					$tools_available = $handler::getCond('admin') ? ['delete', 'category', 'flag'] : [];
+					$tools_available = $handler::getCond('admin') ? ['delete', 'category', 'flag'] : ['embed'];
 				}
-				
+
 			break;
-			
+
 			case 'following':
 			case 'followers':
 				$type = 'users';
@@ -191,12 +191,12 @@ $route = function($handler) {
 				$params_hidden = [$current_view . '_user_id' => $user['id_encoded']];
 				$params_remove_keys = ['list'];
 			break;
-			
+
 			case 'albums':
 				$type = "albums";
 				$tools = TRUE;
 			break;
-			
+
 			case 'search':
 				$type = $user['search']['type'];
 				$tabs = [
@@ -221,23 +221,23 @@ $route = function($handler) {
 						'page'	=> '1',
 					];
 					$tabs[$k]['params'] = http_build_query($params);
-					$tabs[$k]['url'] = G\get_base_url($base_user_url) . '/?' . $tabs[$k]['params'];
+					$tabs[$k]['url'] = $base_user_url . '/?' . $tabs[$k]['params'];
 				}
 			break;
 		}
-		
+
 		if($user_views['albums']['current']) {
 			$params_hidden['list'] = 'albums';
 		}
-
+		$params_hidden['userid'] = $user['id_encoded'];
 		$params_hidden['from'] = 'user';
-		
+
 		if(!$tabs) {
 			$tabs = CHV\Listing::getTabs([
 				'listing'	=> $type,
 				'basename'	=> $base_user_url,
 				'tools'		=> $tools,
-				'tools_available'	=> $tools_available, 
+				'tools_available'	=> $tools_available,
 				'params_hidden'		=> $params_hidden,
 				'params_remove_keys'=> $params_remove_keys,
 			]);
@@ -248,7 +248,7 @@ $route = function($handler) {
 			}
 			$v['disabled'] = $user[($user_views['images']['current'] ? 'image' : 'album') . '_count'] == 0 ? !$v['current'] : FALSE;
 		}
-		
+
 		// Listings
 		if($user["image_count"] > 0 OR $user["album_count"] > 0 OR in_array($current_view, ['liked', 'following', 'followers'])) {
 
@@ -257,9 +257,9 @@ $route = function($handler) {
 			if($list_params['sort'][0] == 'likes') {
 				$handler->issue404();
 			}
-			
+
 			$tpl = $type;
-			
+
 			switch($current_view) {
 				case 'liked':
 					$where = 'WHERE like_user_id=:user_id';
@@ -275,20 +275,20 @@ $route = function($handler) {
 					$where = $type == 'images' ? 'WHERE image_user_id=:user_id' : 'WHERE album_user_id=:user_id';
 				break;
 			}
-			
+
 			$output_tpl = 'user/' . $tpl;
-			
+
 			if($user_views['search']['current']) {
 				$type = $user["search"]["type"];
 				$where = $user["search"]["type"] == "images" ? "WHERE image_user_id=:user_id AND MATCH(image_name, image_title, image_description, image_original_filename) AGAINST(:q)" : "WHERE album_user_id=:user_id AND MATCH(album_name, album_description) AGAINST(:q)";
 			}
-			
+
 			$show_user_items_editor = CHV\Login::getUser() ? TRUE : FALSE;
-			
+
 			if($type == 'albums') {
 				$show_user_items_editor = FALSE;
 			}
-			
+
 			try {
 				$list = new CHV\Listing;
 				$list->setType($type); // images | users | albums
@@ -311,7 +311,7 @@ $route = function($handler) {
 							$list->setTools(TRUE);
 						}
 					}
-				} 
+				}
 				$list->bind(":user_id", $user["id"]);
 				if($user_views['search']['current'] AND !empty($user['search']['q'])) {
 					$list->bind(':q', $q ?: $user['search']['q']);
@@ -320,10 +320,10 @@ $route = function($handler) {
 				$list->exec();
 			} catch(Exception $e) {} // Silence to avoid wrong input queries
 		}
-		
+
 		$title = sprintf($user_views[$current_view]['title'], $user['firstname_html']);
 		$title_short = sprintf($user_views[$current_view]['title_short'], $user['firstname_html']);
-		
+
 		$handler::setCond('owner', $is_owner);
 		$handler::setCond('show_user_items_editor', $show_user_items_editor);
 		$handler::setVar('user', $user);
@@ -332,7 +332,7 @@ $route = function($handler) {
 		$handler::setVar('title_short', $title_short);
 		$handler::setVar('tabs', $tabs);
 		$handler::setVar('list', $list);
-		
+
 		// Note, _s must be call like this to bind the PO crawler
 		if($user_views['albums']['current']) {
 			$meta_description = _s('%n (%u) albums on %w');
@@ -344,14 +344,14 @@ $route = function($handler) {
 			}
 		}
 		$handler::setVar('meta_description', strtr($meta_description, ['%n' => $user['name'], '%u' => $user['username'], '%w' => CHV\getSetting('website_name')]));
-		
+
 		if($handler::getCond('admin') or $is_owner) {
 			$handler::setVar('user_items_editor', [
 				"user_albums"	=> CHV\User::getAlbums($user["id"]),
 				"type"			=> $user_views['albums']['current'] ? "albums": "images"
 			]);
 		}
-		
+
 	} catch(Exception $e) {
 		G\exception_to_error($e);
 	}

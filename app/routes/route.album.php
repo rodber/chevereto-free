@@ -120,6 +120,7 @@ $route = function($handler) {
 		}
 
 		$safe_html_album = G\safe_html($album);
+		$safe_html_album['description'] = preg_replace('/[ \t]+/', ' ', preg_replace('/\s*$^\s*/m', "\n", $safe_html_album['description']));
 
 		// List
 		$list_params = CHV\Listing::getParams(); // Use CHV magic params
