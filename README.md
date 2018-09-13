@@ -21,7 +21,7 @@ The paid version includes all features, it gets frequent updates, and it is alwa
 | Features delay								| +6 months			| Zero	        	      	|
 | One-click system update                       | Yes              	| Yes                    	|
 | Upload plugin	                            	| Yes              	| Yes                    	|
-| Community Support                                 	| Yes 	            | Yes 						|
+| [Community Support](https://chevereto.com/community-support)                                 	| Yes 	            | Yes 						|
 | External storage support                     	| No              	| Yes                    	|
 | Manage banners                               	| No              	| Yes                    	|
 | Likes + Followers                            	| No              	| Yes                    	|
@@ -67,7 +67,7 @@ Chevereto has a built-in system that checks for new updates every day via the [C
 To upgrade to our paid edition, simply navigate to your dashboard panel and click on the `upgrade` button.
 
 ## Support
-Chevereto Free is forked from previous paid releases, meaning that it inherits the bugs at that prior stage of development. Since this edition is always several months behind the paid edition, **any bug reporting is ignored**. For any other issue, feel free to ask in our <a href="https://chevereto.com/community/forums/community-support.93/">Community Support</a>.
+Chevereto Free is forked from previous paid releases, meaning that it inherits the bugs at that prior stage of development. Since this edition is always several months behind the paid edition, **any bug reporting is ignored**. For any other issue, feel free to ask in our <a href="https://chevereto.com/community-support">Community Support</a>.
 
 ## License
 Copyright [Rodolfo Berríos](http://rodolfoberrios.com) - Released under the AGPLv3 license.
