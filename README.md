@@ -47,6 +47,9 @@ The installer is a single `.php` file which will download and extract the latest
 2. Upload this file to your target destination (usually the `public_html` folder)
 3. Go to your website and follow the instructions
 
+### 🐳Install using Docker
+Docker allows you to easily install and maintain all the server dependencies with ease by using automated application containers. The ready-to-use Docker images are under [nmtan/chevereto](https://hub.docker.com/r/nmtan/chevereto/) (many thanks to [Tan Nguyen](https://github.com/tanmng) for making these!)
+
 ### ✨Install using Softaculous/Fantastico
 If your web hosting includes [Softaculous](https://softaculous.com/)/[Fantastico](https://netenberg.com/fantastico.php), you can install Chevereto Free with just one click. Chevereto Free should be available for one-click install under the "Image Galleries" category.
 
