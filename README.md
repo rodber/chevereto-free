@@ -47,8 +47,8 @@ The installer is a single `.php` file which will download and extract the latest
 2. Upload this file to your target destination (usually the `public_html` folder)
 3. Go to your website and follow the instructions
 
-### ✨Install using Softaculous
-If your web hosting includes [Softaculous](https://softaculous.com/), you can install Chevereto Free with just one click. Chevereto Free should be available for one-click install under the "[Image Galleries](https://www.softaculous.com/apps/galleries/Chevereto_Free)" category.
+### ✨Install using Softaculous/Fantastico
+If your web hosting includes [Softaculous](https://softaculous.com/)/[Fantastico](https://netenberg.com/fantastico.php), you can install Chevereto Free with just one click. Chevereto Free should be available for one-click install under the "Image Galleries" category.
 
 ### 📦Install via zip/tarball
  1. Download the [latest release](https://github.com/Chevereto/Chevereto-Free/releases/latest) of Chevereto Free
