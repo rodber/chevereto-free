@@ -515,6 +515,10 @@ foreach ($twitter_card as $k => $v) {
 							<?php
                                 } ?>
                             <li><a href="<?php echo G\get_base_url(sprintf("logout?auth_token=%s", get_auth_token())); ?>"><?php _se('Sign out'); ?></a></li>
+                            <?php if (is_admin()) { ?>
+                            <div class="or-separator margin-0" style="height: 1px;"></div>
+                            <li><a data-action="upgrade">💎 Upgrade</a></li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>

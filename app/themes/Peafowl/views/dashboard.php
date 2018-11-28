@@ -12,6 +12,18 @@
 			<?php G\Render\include_theme_file("snippets/tabs"); ?>
 		</div>
 
+		<script>
+			$(document).ready(function(e) {
+				$("#upgrade-link").attr("data-action", "upgrade").removeAttr("href");
+				var $currentTab = $("li.current", ".content-tabs");
+				$(document).on("click", "#upgrade-link", function(e) {
+					$("#upgrade-link").closest("li").removeClass("current");
+					var $tab_menu = $("[data-action=tab-menu]");
+					$tab_menu.find("[data-content=current-tab-label]").text($currentTab.text());
+				});
+			});
+		</script>
+
 		<?php
             switch (get_dashboard()) {
                 case 'stats':
@@ -66,44 +78,8 @@
 					</span>
 				</li>
 			</ul>
-			<style>
-				.btn-upgrade {
-					line-height: inherit;
-				}
-			</style>
 			<script async defer src="https://buttons.github.io/buttons.js"></script>
-			<script>
-				$(document).ready(function() {
-					$(document).on("click", "[data-action=upgrade]", function() {
-						PF.fn.modal.call({
-							template: $("[data-modal=form-upgrade]").html(),
-							buttons: true,
-							button_submit: "Upgrade now",
-							ajax: {
-								data: {action: 'upgrade'},
-								deferred: {
-									success: function(XHR) {
-										window.location.href = XHR.responseJSON.redir.url;
-									},
-									error: function(XHR) {
-										PF.fn.growl.call(XHR.responseJSON.error.message);
-									}
-								}
-							},
-						});
-					});
-				});
-			</script>
-
-			<div data-modal="form-upgrade" class="hidden" data-is-xhr data-submit-fn="CHV.fn.submit_upgradeToPaid" data-ajax-deferred="CHV.fn.complete_upgradeToPaid">
-				<div class="text-align-center margin-top-30 margin-bottom-30">
-					<img class="c8 replace-svg" src="<?php echo G\absolute_to_url(CHV_PATH_CONTENT_IMAGES_SYSTEM . 'default/logo.svg'); ?>" alt="Chevereto" height="auto">
-				</div>
-				<p>Upgrading to paid edition not only allows you to get all features, support and early access to all new additions and fixes. It also helps to keep development ongoing which is the most important asset of your purchase.</p>
-				<p>Don't worry, we don't sell each paid feature as a separate plugin. Everything is included and we don't charge any yearly-based fees.</p>
-				<p>You will need a <a href="https://chevereto.com/panel/license" target="_blank">license key</a> for this process. If you don't have a license you can <a href="https://chevereto.com/pricing" target="_blank">purchase</a> it right now.</p>
-			</div>
-
+			
 		</div>
 
 		<?php
@@ -129,7 +105,7 @@
 			<?php if (get_dashboard() == 'users') {
                 ?>
 			<div class="header-content-right phone-float-none">
-				<div class="list-selection">
+				<div class="list-selection header--centering">
 					<a class="header-link" data-modal="form" data-target="modal-add-user"><?php _se('Add user'); ?></a>
 				</div>
 			</div>
@@ -197,7 +173,7 @@
 
 			<?php echo G\Render\get_input_auth_token(); ?>
 
-			<div class="header default-margin-bottom">
+			<div class="header header--centering default-margin-bottom">
 				<h1>
 					<span class="icon icon-cog phablet-hide tablet-hide laptop-hide desktop-hide"></span>
 					<span class="phone-hide"><?php echo get_dashboard_menu()[get_dashboard()]['label']; ?></span>
@@ -223,7 +199,7 @@
 				<?php if (get_settings()['key'] == 'categories') {
                                     ?>
 				<div class="header-content-right phone-float-none">
-					<div class="list-selection">
+					<div class="list-selection header--centering">
 						<a class="header-link" data-modal="form" data-target="modal-add-category"><?php _se('Add category'); ?></a>
 					</div>
 				</div>
@@ -238,7 +214,7 @@
 				<?php if (get_settings()['key'] == 'ip-bans') {
                                     ?>
 				<div class="header-content-right phone-float-none">
-					<div class="list-selection">
+					<div class="list-selection header--centering">
 						<a class="header-link" data-modal="form" data-target="modal-add-ip_ban"><?php _se('Add IP ban'); ?></a>
 					</div>
 				</div>
@@ -269,7 +245,7 @@
                             break;
                         } ?>
 				<div class="header-content-right phone-hide">
-					<div class="list-selection">
+					<div class="list-selection header--centering">
 						<a class="header-link" href="<?php echo G\get_base_url($pages_top_link['href']); ?>"><?php echo $pages_top_link['text']; ?></a>
 					</div>
 				</div>

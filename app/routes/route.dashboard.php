@@ -72,6 +72,10 @@ $route = function ($handler) {
                 'current' => $handler::getCond($route_prefix.'_'.$aux)
             );
         }
+        $route_menu['upgrade'] = [
+            'label' => '💎 Upgrade to premium',
+            'id' => 'upgrade'
+        ];
 
         $handler::setVar($route_prefix.'_menu', $route_menu);
         $handler::setVar('tabs', $route_menu);
@@ -119,13 +123,16 @@ $route = function ($handler) {
 
                 $system_values = [
                     'chv_version'	=> [
-                        'label'		=> _s('Chevereto Free'),
-                        'content'	=>  (version_compare($chv_version['files'], $chv_version['db'], '<=') ? $chv_version['files'] : $chv_version['files'] . ' ('.$chv_version['db'].' DB) <a href="'.G\get_base_url('install').'">'._s('install update').'</a>') . ' – <a data-action="check-for-updates">' . _s("check for updates") . '</a>' . '<p><a class="btn btn-capsule btn-upgrade red" data-action="upgrade">Upgrade</a> Upgrade to paid edition to get more features and Tech support assistance.
-						</p>'
+                        'label'		=> 'Chevereto (Free)',
+                        'content'	=>  (version_compare($chv_version['files'], $chv_version['db'], '<=') ? $chv_version['files'] : $chv_version['files'] . ' ('.$chv_version['db'].' DB) <a href="'.G\get_base_url('install').'">'._s('install update').'</a>') . ' – <a data-action="check-for-updates">' . _s("check for updates") . '</a>',
+                    ],
+                    'donate'		=> [
+                        'label'		=> 'Donate',
+                        'content'	=> 'Chevereto Free cost you nothing to use, but that doesn\'t mean it costs nothing to make. Chevereto needs your support to grow and thrive.<p>If you feel that Chevereto Free suits you, please consider <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RCA2MU7DYMJJW&source=url" target="_blank">donating</a> or purchasing our <a href="https://chevereto.com/pricing" target="_blank">premium edition</a>. Every penny will help.</p>'
                     ],
                     'support'		=> [
-                        'label'		=> _s('Support'),
-                        'content'	=> strtr('%s available.', ['%s' => '<a href="https://chevereto.com/community/forums/chevereto-free-support.90/" target="_blank">Community support</a>'])
+                        'label'		=> 'Support',
+                        'content'	=> _s('Need help? Go to %s and you will get help quickly.', ['%s' => '<a href="https://chevereto.com/support" target="_blank">'._s('Support').'</a>'])
                     ],
                     'g_version'		=> [
                         'label'		=> 'G\\',
@@ -177,12 +184,13 @@ $route = function ($handler) {
                 ];
 
                 $chevereto_urls = [
-                    _s('Community')				=> 'https://chevereto.com/community',
-                    _s('Support') . ' (paid)'	=> 'https://chevereto.com/support',
+                    _s('Support')				=> 'https://chevereto.com/support',
                     _s('Documentation')			=> 'https://chevereto.com/docs',
-                    _s('Releases')	. ' (paid)' => 'https://chevereto.com/releases',
-                    _s('Releases')	. ' (free)' => 'https://github.com/Chevereto/Chevereto-Free/releases',
+                    _s('Changelog')				=> 'https://chevereto.com/changelog',
+                    _s('Request new features')	=> 'https://chevereto.com/request-new-features',
                     _s('Bug tracking')			=> 'https://chevereto.com/bug-tracking',
+                    _s('Community')				=> 'https://chevereto.com/community',
+                    'Discord'					=> 'https://chevereto.com/go/discord',
                     'GitHub' 					=> 'https://github.com/Chevereto',
                 ];
                 $chevereto_links = [];

@@ -31,7 +31,7 @@
 				if(is_dashboard_user()) {
 			?>
 			<div class="header-content-right phone-float-none">
-				<div class="list-selection">
+				<div class="list-selection header--centering">
 					<a href="<?php echo get_user()['url']; ?>" class="header-link"><?php echo get_user()['username']; ?></a>
 					<a class="delete-link margin-left-5" data-confirm="<?php _se("Do you really want to delete this user? This can't be undone."); ?>" data-submit-fn="CHV.fn.user.delete.submit" data-ajax-deferred="CHV.fn.complete_resource_delete" data-ajax-url="<?php echo G\get_base_url("json"); ?>"><?php _se('Delete user'); ?></a>
 				</div>
