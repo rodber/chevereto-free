@@ -58,9 +58,6 @@ If your web hosting includes [Softaculous](https://softaculous.com/)/[Fantastico
  2. Upload the contents of your download to your server (usually the `public_html` folder)
  3. Go to your website and follow the instructions
 
-### 🤙Install service (free) for cPanel hosting
-We will be happy to install Chevereto for you. Just send us an [installation request](https://chevereto.com/panel/request-installation),  and we will do all the installation for you for free. This service is only available for cPanel-based web hosting.
-
 For additional installation instructions, refer to our [official documentation](https://chevereto.com/docs/install).
 
 ## Updates
