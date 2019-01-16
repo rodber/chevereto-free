@@ -67,7 +67,7 @@ Chevereto has a built-in system that checks for new updates every day via the [C
 To upgrade to our paid edition, simply navigate to your dashboard panel and click on the `upgrade` button.
 
 ## Support
-Chevereto Free is forked from previous paid releases, meaning that it inherits the bugs at that prior stage of development. Since this edition is always several months behind the paid edition, **any bug reporting is ignored**. For any other issue, feel free to ask in our <a href="https://chevereto.com/community-support">Community Support</a>.
+Use our [Bug Tracking](https://chevereto.com/bug-tracking) to report bugs and our [Community Support](https://chevereto.com/community-support) forums for any support concern. Keep in mind that Chevereto Free is always forked from a previous paid release and it inherits the bugs at that prior stage of development. Due to this, **pull requests are ignored** in this repo. 
 
 ## License
 Copyright [Rodolfo Berríos](http://rodolfoberrios.com) - Released under the AGPLv3 license.
