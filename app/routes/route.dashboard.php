@@ -136,7 +136,7 @@ $route = function ($handler) {
                     ],
                     'g_version'		=> [
                         'label'		=> 'G\\',
-                        'content'	=> '<a href="http://gbackslash.com" target="_blank">G\\ Library '.G\get_version().'</a>'
+                        'content'	=> '<a href="https://g.chevereto.com" target="_blank">G\\ Library '.G\get_version().'</a>'
                     ],
                     'php_version' => [
                         'label'		=> _s('PHP version'),

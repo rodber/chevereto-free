@@ -3,7 +3,7 @@
 /* --------------------------------------------------------------------
 
   G\ library
-  http://gbackslash.com
+  https://g.chevereto.com
 
   @author	Rodolfo Berrios A. <http://rodolfoberrios.com/>
 

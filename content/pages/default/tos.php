@@ -1,4 +1,6 @@
-<?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
+<?php if (!defined('access') or !access) {
+    die('This file cannot be directly accessed.');
+} ?>
 <?php G\Render\include_theme_header(); ?>
 
 <div class="content-width">
@@ -20,7 +22,7 @@
 			
 			<h2>More help</h2>
 			
-			<p>If you need more help we suggest you to go to <a href="https://goo.gl/WL85Wx">Chevereto</a> support and read the <a href="http://gbackslash.com/docs">G\ Library documentation</a>. View the code of this file will also help you to understand the magic behind this system.</p>
+			<p>If you need more help we suggest you to go to <a href="https://chevereto.com/support">Chevereto support</a> and read the <a href="https://g.chevereto.com/docs">G\ Library documentation</a>. View the code of this file will also help you to understand the magic behind this system.</p>
 			
 		</div>
 	</div>

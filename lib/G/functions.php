@@ -3,7 +3,7 @@
 /* --------------------------------------------------------------------
 
   G\ library
-  http://gbackslash.com
+  https://g.chevereto.com
 
   @author	Rodolfo Berrios A. <http://rodolfoberrios.com/>
 
@@ -310,9 +310,12 @@ namespace G {
      */
     function abbreviate_number($number)
     {
-
-        // strip any formatting
-        $number = (0+str_replace(',', '', $number));
+        if ($number === null) {
+            $number = 0;
+        } else {
+            // strip any formatting
+            $number = (0+str_replace(',', '', $number));
+        }
 
         // Not a number, keep it "as is"
         if (!is_numeric($number) or $number == 0) {
@@ -560,7 +563,7 @@ namespace G {
     function exception_to_error($e, $die=true)
     {
         $internal_code = 500;
-        $internal_error = '<b>'.G_APP_NAME.' error:</b> ' . get_set_status_header_desc($internal_code);
+        $internal_error = '<b>Aw, snap!</b> ' . get_set_status_header_desc($internal_code) . ' - Check your error_log or enable debug_mode = 3 (chevereto.com/docs/debug).';
 
         set_status_header($internal_code);
 
@@ -816,18 +819,20 @@ namespace G {
 
     function get_client_ip()
     {
-        $client_ip = !empty($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : (!empty($_ENV['REMOTE_ADDR']) ? $_ENV['REMOTE_ADDR'] : null);
-
-        if (array_key_exists('HTTP_CF_CONNECTING_IP', $_SERVER) && $_SERVER['HTTP_CF_CONNECTING_IP'] == $_SERVER['REMOTE_ADDR']) {
-            return $_SERVER['HTTP_CF_CONNECTING_IP'];
+        if(isset($_SERVER['G_CLIENT_IP'])) {
+            return $_SERVER['G_CLIENT_IP'];
         }
-
-        if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        if (isset($_SERVER['HTTP_CF_CONNECTING_IP'])) {
+            $client_ip = $_SERVER['HTTP_CF_CONNECTING_IP'];
+        } else {
+            $client_ip = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : null;
+        }
+        if (isset($_SERVER['HTTP_X_FORWARDED_FOR']) && $client_ip != $_SERVER['HTTP_X_FORWARDED_FOR']) {
             $entries = preg_split('/[\s,]/', $_SERVER['HTTP_X_FORWARDED_FOR'], -1, PREG_SPLIT_NO_EMPTY);
 
             reset($entries);
 
-            while (list(, $entry) = each($entries)) {
+            foreach ($entries as $entry) {
                 $entry = trim($entry);
                 if (preg_match('/^([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)/', $entry, $ip_list)) {
                     $private_ip = array(
@@ -838,7 +843,6 @@ namespace G {
                           '/^10\..*/');
 
                     $found_ip = preg_replace($private_ip, $client_ip, $ip_list[1]);
-
                     if ($client_ip != $found_ip) { //  and !isset($_SERVER['HTTP_CF_CONNECTING_IP']
                         $client_ip = $found_ip;
                         break;
@@ -846,7 +850,7 @@ namespace G {
                 }
             }
         }
-
+        $_SERVER['G_CLIENT_IP'] = $client_ip;
         return $client_ip;
     }
 
@@ -1127,6 +1131,23 @@ namespace G {
         $path = preg_replace('#(\.+/)+#', '', $path);
         $path = sanitize_path_slashes($path);
         return $path;
+    }
+
+    function rrmdir($dir)
+    {
+        if (is_dir($dir)) {
+            $objects = scandir($dir);
+            foreach ($objects as $object) {
+                if ($object != "." && $object != "..") {
+                    if (is_dir($dir."/".$object)) {
+                        rrmdir($dir."/".$object);
+                    } else {
+                        unlink($dir."/".$object);
+                    }
+                }
+            }
+            rmdir($dir);
+        }
     }
 
     /**
@@ -1438,7 +1459,7 @@ namespace G {
     function relative_to_url($filepath, $root_url=null)
     {
         if (!check_value($root_url)) {
-            $root_url = G_ROOT_URL;
+            $root_url = get_root_url();
         }
         return str_replace(G_ROOT_PATH_RELATIVE, $root_url, forward_slash($filepath));
     }
@@ -1447,7 +1468,7 @@ namespace G {
     function url_to_relative($url, $root_url=null)
     {
         if (!check_value($root_url)) {
-            $root_url = G_ROOT_URL;
+            $root_url = get_root_url();
         }
         return str_replace($root_url, G_ROOT_PATH_RELATIVE, $url);
     }
@@ -1462,7 +1483,7 @@ namespace G {
     function absolute_to_url($filepath, $root_url=null)
     {
         if (!check_value($root_url)) {
-            $root_url = G_ROOT_URL;
+            $root_url = get_root_url();
         }
         if (G_ROOT_PATH === G_ROOT_PATH_RELATIVE) {
             return $root_url . ltrim($filepath, '/');
@@ -1474,7 +1495,7 @@ namespace G {
     function url_to_absolute($url, $root_url=null)
     {
         if (!check_value($root_url)) {
-            $root_url = G_ROOT_URL;
+            $root_url = get_root_url();
         }
         return str_replace($root_url, G_ROOT_PATH, $url);
     }
@@ -1508,21 +1529,43 @@ namespace G {
         return get_global('settings')[$key];
     }
 
-    function get_domain()
-    {
-        return HTTP_HOST;
-    }
-
     function get_base_url($path='')
     {
         $path = sanitize_relative_path($path);
-        $return = G_ROOT_URL . ltrim($path, '/');
+        $return = get_root_url() . ltrim($path, '/');
         return rtrim($return, '/');
     }
 
-    function get_current_url()
+    function get_host()
     {
-        return get_base_url(preg_replace('#'.G_ROOT_PATH_RELATIVE.'#', '', $_SERVER['REQUEST_URI'], 1));
+        return defined('APP_G_HTTP_HOST') ? APP_G_HTTP_HOST : G_HTTP_HOST;
+    }
+
+    function get_root_url()
+    {
+        return defined('APP_G_ROOT_URL') ? APP_G_ROOT_URL : G_ROOT_URL;
+    }
+
+    /**
+     * @param string Querystring keys to remove (comma separated)
+     */
+    function get_current_url($safe=true, $removeQs=[])
+    {
+        $request_uri = $_SERVER['REQUEST_URI'];
+        $request_path = rtrim(strtok($request_uri, '?'), '/');
+        if ($_SERVER['QUERY_STRING'] && $removeQs) {
+            parse_str($_SERVER['QUERY_STRING'], $parse);
+            foreach ($removeQs as $v) {
+                unset($parse[$v]);
+            }
+            $querystring = $parse ? http_build_query($parse) : null;
+            $request_uri = $request_path;
+            if ($querystring) {
+                $request_uri .= '/?' . $querystring;
+            }
+        }
+        $path = preg_replace('#'.G_ROOT_PATH_RELATIVE.'#', '', rtrim($request_uri, '/') . '/', 1);
+        return get_base_url($path);
     }
 
     function settings_has_db_info()
@@ -1894,9 +1937,26 @@ namespace G {
         return basename($file);
     }
 
-    function get_filename_without_extension($file)
+    function get_basename_without_extension($filename)
     {
-        return preg_replace('/\\.[^.\\s]{2,4}$/', '', basename($file));
+        $extension = pathinfo($filename, PATHINFO_EXTENSION);
+        $filename = basename($filename);
+        return str_replace_last(".$extension", null, $filename);
+    }
+
+    function get_pathname_without_extension($filename)
+    {
+        $extension = pathinfo($filename, PATHINFO_EXTENSION);
+        return str_replace_last(".$extension", null, $filename);
+    }
+
+    function change_pathname_extension($filename, $extension)
+    {
+        $chop = get_pathname_without_extension($filename);
+        if ($chop == $filename) {
+            return $filename;
+        }
+        return "$chop.$extension";
     }
 
     /**
@@ -2202,9 +2262,9 @@ namespace G {
     // https://github.com/Chevereto/Chevereto-Free/pull/35
     function imagecreatefrombmp($file)
     {
-        if (function_exists('imagecreatefrombmp')) {
-            return imagecreatefrombmp($file);
-        }
+        // if (function_exists('imagecreatefrombmp')) {
+        //     return imagecreatefrombmp($file);
+        // }
         // version 1.00
         if (!($fh = fopen($file, 'rb'))) {
             trigger_error('imagecreatefrombmp: Can not open ' . $file, E_USER_WARNING);
@@ -2525,6 +2585,126 @@ namespace G {
         return trim(preg_replace('/\s*(?:\*\/|\?>).*/', '', $string));
     }
 
+    /**
+     * function xml2array
+     *
+     * This function is part of the PHP manual.
+     *
+     * The PHP manual text and comments are covered by the Creative Commons
+     * Attribution 3.0 License, copyright (c) the PHP Documentation Group
+     *
+     * @author  k dot antczak at livedata dot pl
+     * @date    2011-04-22 06:08 UTC
+     * @link    http://www.php.net/manual/en/ref.simplexml.php#103617
+     * @license http://www.php.net/license/index.php#doc-lic
+     * @license http://creativecommons.org/licenses/by/3.0/
+     * @license CC-BY-3.0 <http://spdx.org/licenses/CC-BY-3.0>
+     */
+    function xml2array($xmlObject, $out = array())
+    {
+        foreach ((array) $xmlObject as $index => $node) {
+            $out[$index] = (is_object($node)) ? xml2array($node) : $node;
+        }
+
+        return $out;
+    }
+
+    /**
+     * @param string $domain Pass $_SERVER['SERVER_NAME'] here
+     * @param bool $debug
+     *
+     * @debug bool $debug
+     * @return string
+     * 
+     * @link https://gist.github.com/pocesar/5366899
+     */
+    function get_domain($domain, $debug = false)
+    {
+        $original = $domain = strtolower($domain);
+        if (filter_var($domain, FILTER_VALIDATE_IP)) { return $domain; }
+        $debug ? print('<strong style="color:green">&raquo;</strong> Parsing: '.$original) : false;
+        $arr = array_slice(array_filter(explode('.', $domain, 4), function($value){
+            return $value !== 'www';
+        }), 0); //rebuild array indexes
+        if (count($arr) > 2)
+        {
+            $count = count($arr);
+            $_sub = explode('.', $count === 4 ? $arr[3] : $arr[2]);
+            $debug ? print(" (parts count: {$count})") : false;
+            if (count($_sub) === 2) // two level TLD
+            {
+                $removed = array_shift($arr);
+                if ($count === 4) // got a subdomain acting as a domain
+                {
+                    $removed = array_shift($arr);
+                }
+                $debug ? print("<br>\n" . '[*] Two level TLD: <strong>' . join('.', $_sub) . '</strong> ') : false;
+            }
+            elseif (count($_sub) === 1) // one level TLD
+            {
+                $removed = array_shift($arr); //remove the subdomain
+                if (strlen($_sub[0]) === 2 && $count === 3) // TLD domain must be 2 letters
+                {
+                    array_unshift($arr, $removed);
+                }
+                else
+                {
+                    // non country TLD according to IANA
+                    $tlds = array(
+                        'aero',
+                        'arpa',
+                        'asia',
+                        'biz',
+                        'cat',
+                        'com',
+                        'coop',
+                        'edu',
+                        'gov',
+                        'info',
+                        'jobs',
+                        'mil',
+                        'mobi',
+                        'museum',
+                        'name',
+                        'net',
+                        'org',
+                        'post',
+                        'pro',
+                        'tel',
+                        'travel',
+                        'xxx',
+                    );
+                    if (count($arr) > 2 && in_array($_sub[0], $tlds) !== false) //special TLD don't have a country
+                    {
+                        array_shift($arr);
+                    }
+                }
+                $debug ? print("<br>\n" .'[*] One level TLD: <strong>'.join('.', $_sub).'</strong> ') : false;
+            }
+            else // more than 3 levels, something is wrong
+            {
+                for ($i = count($_sub); $i > 1; $i--)
+                {
+                    $removed = array_shift($arr);
+                }
+                $debug ? print("<br>\n" . '[*] Three level TLD: <strong>' . join('.', $_sub) . '</strong> ') : false;
+            }
+        }
+        elseif (count($arr) === 2)
+        {
+            $arr0 = array_shift($arr);
+            if (strpos(join('.', $arr), '.') === false
+                && in_array($arr[0], array('localhost','test','invalid')) === false) // not a reserved domain
+            {
+                $debug ? print("<br>\n" .'Seems invalid domain: <strong>'.join('.', $arr).'</strong> re-adding: <strong>'.$arr0.'</strong> ') : false;
+                // seems invalid domain, restore it
+                array_unshift($arr, $arr0);
+            }
+        }
+        $debug ? print("<br>\n".'<strong style="color:gray">&laquo;</strong> Done parsing: <span style="color:red">' . $original . '</span> as <span style="color:blue">'. join('.', $arr) ."</span><br>\n") : false;
+        return join('.', $arr);
+    }
+
 } // G Namespace
 
 // Global namespace
@@ -2767,5 +2947,4 @@ namespace {
             return $status === 0;
         }
     }
-
 }
