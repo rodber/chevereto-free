@@ -1,18 +1,23 @@
+<p align="center">Stay tunned to <a href="https://chevereto.com/community/forums/announcements-and-news.3/">Chevereto Announcements and news</a>.</p>
+
 <p align="center"><a href="https://chevereto.com/"><img src="https://chevereto.com/app/themes/v3/img/chevereto-blue.svg" alt="Chevereto"></a></p>
 
-<p align="center"><a href="https://chevereto.com">Chevereto</a> is an image hosting script that allows you to create a beautiful and full-featured image hosting website on your own server. It's your hosting and your rules, so say goodbye to closures and restrictions.</p>
+<p align="center">Chevereto is an image hosting script that allows you to create a beautiful and full-featured image hosting website on your own server. It's your hosting and your rules, so say goodbye to closures and restrictions.</p>
 
 <p align="center"><a href="https://chevereto.com/"><img src="https://chevereto.com/app/themes/v3/img/devices.png" alt="" vspace="20"></a></p>
 
 Chevereto Free
 =
+Chevereto is a web application that allows the creation of image hosting websites. The first public release was in early 2009 ([archive](https://code.google.com/archive/p/chevereto/)) and the current major version is V3. This repo here is Chevereto Free, which is a fork of Chevereto V3 in which only the most essential features are preserved and it is released as Open Source software.
 
-<a href="https://chevereto.com/free" title="♫♪ Ha llegado tu tiempo, es el momento de Freeeeeeeeeeeeeeee"><img src="https://chevereto.com/app/themes/v3/img/chevereto-free-cover.jpg" alt="Chevereto Sugar Free Cola"></a>
+Chevereto Free has the same look and feel of the [paid version](https://chevereto.com). Most likely it will fit all your personal needs. The features removed in this fork are those business-oriented like external storage servers or banner management to name a few.
 
-### About this repo
-This is the repository of Chevereto Free, forked from Chevereto 3.X. Chevereto Free has the same look and feel of our [paid version](https://chevereto.com), but it packs only the most essential features. It is Open Source software licensed under the AGPLv3 license.
+Chevereto was created and still mainteined by just one person: [Rodolfo Berrios](https://github.com/rodolfoberrios).
 
-### Free vs Paid Chevereto
+### Building the next-gen Chevereto
+Chevereto is being modernized by introducing new coding standards and turning towards a common Open Source base release which you will be able to add plugins and modifications. [Learn more](https://chevereto.com/community/threads/building-the-next-gen-chevereto.11140/).
+
+### Chevereto Free vs Chevereto (paid)
 The paid version includes all features, it gets frequent updates, and it is always up to six months ahead of the free edition. The table below shows the distinctions between both versions.
 
 | Item                                         	| Free            	| Paid                   	|
@@ -39,7 +44,7 @@ Make sure your server meets the minimum system requirements which are:
 On most servers, that's all you need. The system has a built-in system check that will tell you right away when you need to fix something on your server.
 
 ## Installation
-Chevereto Free can be installed in several different ways, it all depends on what suits you best.
+Chevereto can be installed in several different ways, it all depends on what suits you best.
 
 ### 🐳Install using Docker
 Docker allows you to easily install and maintain all the server dependencies with ease by using automated application containers. The ready-to-use Docker images are under [nmtan/chevereto](https://hub.docker.com/r/nmtan/chevereto/) (many thanks to [Tan Nguyen](https://github.com/tanmng))
