@@ -92,7 +92,7 @@ class Upload {
 		}
 
 		// Save the source name
-		$this->source_name = G\get_filename_without_extension($this->type == "url" ? $this->source : $this->source["name"]);
+		$this->source_name = G\get_filename_without_extension($this->type == "url" ? $this->getNameFromURL($this->source) : $this->source["name"]);
 
 		// Set file extension
 		$this->extension = $this->source_image_fileinfo["extension"];
@@ -183,7 +183,17 @@ class Upload {
 		$formats = Settings::get('upload_available_image_formats');
 		return explode(',', $formats);
 	}
-
+	
+	//remove query string from url to get correct image name
+	public function getNameFromURL()
+	{
+		$source_url=$this->source;
+		if(strpos($source_url,"?"))
+			return substr($source_url,0,strpos($source_url,"?"));
+		else
+			return $source_url;
+	}
+	
 	// Failover since v3.8.12
 	public static function getEnabledImageFormats() {
 		return Image::getEnabledImageFormats();
