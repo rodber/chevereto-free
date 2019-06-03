@@ -463,6 +463,17 @@ function get_users_image_url($filename) {
 	return get_content_url('images/users/'.$filename);
 }
 
+function getLatestImage($user)
+{
+       
+            $db = DB::getInstance();
+            $db->query('select image_name,image_extension,image_date FROM '.DB::getTable('images').' where `image_user_id`='.$user.' order by image_date desc limit 1');
+            $user_images = $db->fetchAll();
+            $st=strtotime($user_images[0]['image_date']);
+            $dloc='/'.getSetting('upload_image_path').date("/Y/m/d/",$st);
+            return array($user_images[0]['image_name'],$dloc.$user_images[0]['image_name'].'.'.$user_images[0]['image_extension']);
+}
+
 /**
  * Some G\ overrides
  */
