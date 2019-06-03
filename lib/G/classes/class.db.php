@@ -318,7 +318,7 @@ class DB {
 
 		$query = 'SELECT * FROM '.$table;
 
-		if($join) {
+		if(isset($join) && $join) {
 			$query .= ' ' . $join . ' ';
 		}
 
