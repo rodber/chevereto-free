@@ -204,7 +204,10 @@ class Listing
                     if (array_key_exists($table_key, $tables)) {
                         $where_arr[] = $table . '.' . $clause;
                     } else {
-                        $where_arr[] = $clause;
+                        if(substr($clause,0,3)=="xxx")
+                              $where_arr[]=substr($clause,3);
+                        else
+                              $where_arr[] = $clause;
                     }
                 } else {
                     $where_arr[] = $clause; // Let it be
