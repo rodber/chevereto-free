@@ -124,6 +124,7 @@ function send_mail($to, $subject, $body) {
 		if($mail->Mailer == 'smtp') {
 			$mail->IsSMTP();
 			$mail->SMTPAuth = true;
+			$mail->XMailer = ' '; //Removes any PHPMailer versions. FOR SECURITY REASONS
 			$mail->SMTPSecure = getSettings()['email_smtp_server_security'];
 			$mail->SMTPAutoTLS = in_array(getSettings()['email_smtp_server_security'], ['ssl', 'tls']);
 			$mail->Port	= getSettings()['email_smtp_server_port'];
