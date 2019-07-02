@@ -24,7 +24,7 @@ Chevereto can be installed in several different ways, it all depends on what sui
 
 ### ⚡Install using Installer
 
-The installer is a single `.php` file which will download and extract the latest release for you. Automatic database setup for cPanel based web servers.
+The [installer](https://github.com/Chevereto/Installer) is a single `.php` file which will download and extract the latest release for you. Automatic database setup for cPanel based web servers.
 
 1. Download the [Chevereto Installer](https://chevereto.com/download/file/installer)
 2. Upload the `installer.php` file to your target `public_html` folder.
