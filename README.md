@@ -1,6 +1,6 @@
 # Chevereto Free
 
-Chevereto is an image hosting script that allows you to create a beautiful and full-featured image hosting website on your own server. It's your hosting and your rules, so say goodbye to closures and restrictions. This repo here is Chevereto Free, which is a fork of Chevereto V3 in which only the most essential features are preserved and it is released as Open Source software.
+Chevereto is an image hosting software that allows you to create a beautiful and full-featured image hosting website on your own server. It's your hosting and your rules, so say goodbye to closures and restrictions. This repo here is Chevereto Free, which is a fork of Chevereto V3 in which only the most essential features are preserved and it is released as Open Source software.
 
 Chevereto Free has the same look and feel of the [paid version](https://chevereto.com). Most likely it will fit all your personal needs. The features removed in this fork are those business-oriented like external storage servers or banner management to name a few.
 
