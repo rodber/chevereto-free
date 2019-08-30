@@ -6,7 +6,9 @@ Chevereto Free has the same look and feel of the [paid version](https://cheveret
 
 ## Building the next-gen Chevereto
 
-Chevereto is being modernized by introducing new coding standards and turning towards a common Open Source base release which you will be able to add plugins and modifications. [Learn more](https://chevereto.com/community/threads/building-the-next-gen-chevereto.11140/).
+Chevereto is being modernized by introducing new coding standards and turning towards a common Open Source base. [View all updates](https://chevereto.com/community/threads/building-the-next-gen-chevereto.11140/).
+
+Take [the survey](https://forms.gle/B3tU2V7CSykJCpoA6) and help me to shape a better Chevereto.
 
 ## Minimum system requirements
 
