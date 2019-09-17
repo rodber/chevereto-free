@@ -2,8 +2,6 @@
 
 Chevereto is an image hosting software that allows you to create a beautiful and full-featured image hosting website on your own server. It's your hosting and your rules, so say goodbye to closures and restrictions. This repo here is Chevereto Free, which is a fork of Chevereto V3 in which only the most essential features are preserved and it is released as Open Source software.
 
-Chevereto Free has the same look and feel of the [paid version](https://chevereto.com). Most likely it will fit all your personal needs. The features removed in this fork are those business-oriented like external storage servers or banner management to name a few.
-
 ## Building the next-gen Chevereto
 
 Chevereto is being modernized by introducing new coding standards and turning towards a common Open Source base. [Read all updates](https://chevereto.com/community/threads/building-the-next-gen-chevereto.11140/) and check my [Chevere + Chevereto V4 Trello board](https://trello.com/b/DCZhECwN/chevere-chevereto-v4).
@@ -54,7 +52,7 @@ Chevereto has a built-in system that checks for new updates every day via the [C
 
 ## Upgrade to paid edition
 
-To upgrade to our paid edition, simply navigate to your dashboard panel and click on the `upgrade` button.
+Chevereto Free has the same look and feel of the [paid version](https://chevereto.com). Most likely it will fit all your personal needs. The features removed in this fork are those business-oriented like external storage servers or banner management to name a few. To upgrade to our paid edition, simply navigate to your dashboard panel and click on the `upgrade` button.
 
 ## Support
 
