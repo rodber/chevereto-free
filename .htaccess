@@ -6,7 +6,6 @@ ServerSignature Off
 # Disable directory listing (-indexes), Multiviews (-MultiViews) and enable Follow system links (+FollowSymLinks)
 Options -Indexes
 Options -MultiViews
-Options +FollowSymLinks
 
 <IfModule mod_rewrite.c>
 
