@@ -6,8 +6,6 @@ Chevereto is an image hosting software that allows you to create a beautiful and
 
 Chevereto is being modernized by introducing new coding standards and turning towards a common Open Source base. [Read all updates](https://chevereto.com/community/threads/building-the-next-gen-chevereto.11140/) and check my [Chevere + Chevereto V4 Trello board](https://trello.com/b/DCZhECwN/chevere-chevereto-v4).
 
-Take [the survey](https://forms.gle/B3tU2V7CSykJCpoA6) and help me to shape a better Chevereto.
-
 ## Minimum system requirements
 
 Make sure your server meets the minimum system requirements which are:
