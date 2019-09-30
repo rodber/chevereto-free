@@ -185,13 +185,13 @@ class Upload {
 	}
 	
 	//remove query string from url to get correct image name
-	public function getNameFromURL()
+	protected function getNameFromURL()
 	{
-		$source_url=$this->source;
-		if(strpos($source_url,"?"))
-			return substr($source_url,0,strpos($source_url,"?"));
-		else
-			return $source_url;
+		if(strpos($this->source, '?')) {
+			return substr($this->source, 0, strpos($this->source, '?'));
+		} else {
+			return $this->source;
+		}
 	}
 	
 	// Failover since v3.8.12
