@@ -555,13 +555,6 @@ class User {
 				);
 			}
 		}
-		else 
-            	{
-               		$user['avatar'] = array(
-                    		'filename'	=> getLatestImage($user['id'])[0],
-                    		'url'		=> getLatestImage($user['id'])[1]
-                	);
-            	}
 		unset($user['avatar_filename']);
 
 		if($user['background_filename']) {
