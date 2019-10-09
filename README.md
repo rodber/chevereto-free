@@ -1,5 +1,7 @@
 # Chevereto Free
 
+[![Discord badge](https://img.shields.io/discord/494235589416189974)](https://chevereto.com/go/discord)
+
 Chevereto is an image hosting software that allows you to create a beautiful and full-featured image hosting website on your own server. It's your hosting and your rules, so say goodbye to closures and restrictions. This repo here is Chevereto Free, which is a fork of Chevereto V3 in which only the most essential features are preserved and it is released as Open Source software.
 
 ## Building the next-gen Chevereto
