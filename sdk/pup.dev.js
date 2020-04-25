@@ -207,16 +207,14 @@
 			},
 			phpbb: {
 				settings: {
-					html: (document.querySelector('#format-buttons *:first-child') && document.querySelector('#format-buttons *:first-child').tagName == 'BUTTON') ? ' <button %x type="button" class="button button-icon-only" title="%text"><i class="icon fa-cloud-upload fa-fw" aria-hidden="true"></i></button> ' : ' <input %x type="button" class="button2" value="%text"> ',
-					sibling: '.bbcode-img',
+					html: '<div class="%cClass"><button %x class="%bClass"><span class="%iClass">%iconSvg</span><span class="%tClass">%text</span></button></div>',
+					css: '.%cClass{display:inline-block;margin-top:5px;margin-bottom:5px}.%bClass{line-height:normal;-webkit-transition:all .2s;-o-transition:all .2s;transition:all .2s;outline:0;color:%2;border:none;cursor:pointer;border:1px solid rgba(0,0,0,.15);background:%1;border-radius:.2em;padding:.5em 1em;font-size:12px;font-weight:700;text-shadow:none}.%bClass:hover{background:%3;color:%4;border-color:rgba(0,0,0,.1)}.%iClass,.%tClass{display:inline-block;vertical-align:middle}.%iClass svg{display:block;width:1em;height:1em;fill:currentColor}.%tClass{margin-left:.25em}',
+					sibling: '#message-box textarea.inputbox',
 					siblingPos: 'before'
 				},
 				check: 'phpbb',
 				getEditor: function() {
-					if(typeof form_name == typeof undefined || typeof text_name == typeof undefined) {
-						return;
-					}
-					return document.forms[form_name].elements[text_name];
+					return document.querySelector('#message-box textarea.inputbox');
 				},
 			},
 			smf: {
