@@ -6,8 +6,14 @@ function read_the_docs($args = [])
 {
     return _s('Learn more about %s at our %d.', [
         '%s' => $args['%s'],
-        '%d' => '<a href="https://chevereto.com/docs/' . $args['%k'] . '" target="_blank">' . _s('documentation') . '</a>',
+        '%d' => '<a href="https://v3-docs.chevereto.com/' . $args['%k'] . '" target="_blank">' . _s('documentation') . '</a>',
     ]);
+}
+
+function free_version_waring($wrap=true)
+{
+    $message = _s("This functionality is not part of Chevereto Free. %s to obtain this feature.", ['%s' => '<a href="https://chevereto.com/pricing" target="_blank">' . _s('Upgrade to paid version') . '</a>']);
+    echo($wrap ? ('<div class="input-below">' . $message . '</div>') : $message);
 }
 ?>
 
@@ -19,6 +25,18 @@ function read_the_docs($args = [])
 			<h1><?php _se('Dashboard'); ?></h1>
 			<?php G\Render\include_theme_file('snippets/tabs'); ?>
 		</div>
+
+		<script>
+			$(document).ready(function(e) {
+				$("#upgrade-link").attr("data-action", "upgrade").removeAttr("href");
+				var $currentTab = $("li.current", ".content-tabs");
+				$(document).on("click", "#upgrade-link", function(e) {
+					$("#upgrade-link").closest("li").removeClass("current");
+					var $tab_menu = $("[data-action=tab-menu]");
+					$tab_menu.find("[data-content=current-tab-label]").text($currentTab.text());
+				});
+			});
+		</script>
 
 		<?php
         switch (get_dashboard()) {
@@ -69,6 +87,13 @@ function read_the_docs($args = [])
 					</div>
 
 					<ul class="tabbed-content-list table-li margin-top-20">
+                        <li>
+                            <span class="c6 display-table-cell padding-right-10">GitHub<span style="opacity: 0;">:</span></span>
+                            <span class="display-table-cell vertical-align-middle" style="line-height: 1;">
+                                <a class="github-button" href="https://github.com/chevereto/chevereto-free/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch Cchevereto/chevereto-free on GitHub">Watch</a>
+                                <a class="github-button" href="https://github.com/chevereto/chevereto-free" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star chevereto/chevereto-free on GitHub">Star</a>
+                            </span>
+                        </li>
 						<?php
                         foreach (get_system_values() as $v) {
                             ?>
@@ -79,359 +104,13 @@ function read_the_docs($args = [])
 					</ul>
 
 				</div>
+				
+			</ul>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+			
+		</div>
 
-			<?php
-                break;
-            case 'bulk':
-            ?>
-				<div class="header header--centering default-margin-bottom">
-					<h1><?php _se('Bulk importer'); ?></h1>
-					<div class="header-content-right phone-float-none">
-						<div class="list-selection header--centering">
-							<a class="header-link" href="https://goo.gl/q5poeY" target="_blank"><?php _se('documentation'); ?></a>
-						</div>
-					</div>
-                </div>
-                <div class="text-content">
-                    <p><?php _se('This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure.'); ?></p>
-                </div>
-                <div class ="text-content margin-bottom-20">
-                <h3>🤖 <?php _se('Automatic importing'); ?></h3>
-                    <p><?php _se('The system automatically parses any content by a continuous observation of the %path% path.', ['%path%' => '<b>' . G_ROOT_PATH . 'importing</b>']); ?> <?php _se('Completed jobs will be automatically re-started after %n %m.', [
-                        '%n' => '1',
-                        '%m' => _n('minute', 'minutes', '1')
-                    ]); ?> <?php _se('Reset to clear stats and logs.'); ?></p>
-                </div>
-                <div data-content="dashboard-imports" class="margin-top-0 margin-bottom-20">
-                <?php
-                $statusesDisplay = [
-                    'queued' => _s('Queued'),
-                    'working' => _s('Working'),
-                    'paused' => _s('Paused'),
-                    'canceled' => _s('Canceled'),
-                    'completed' => _s('Completed'),
-                ];
-                if ($continuous = CHV\Import::getContinuous()) {
-                    foreach ($continuous as $v) {
-                        $boxTpl = '<div class="importing phone-c1 phablet-c1 c8 fluid-column display-inline-block" data-status="%status%" data-id="%id%" data-object="%object%" data-errors="%errors%" data-started="%started%">
-                        <h3 class="margin-bottom-5">Path <b title="%path%">%pathRelative%</b></h3>
-                        <span data-content="log-errors" class="icon icon-warning color-red position-absolute top-10 right-10"></span>
-                        <div data-content="pop-selection" class="pop-btn">
-                        <span class="pop-btn-text">' . _s('Actions') . '<span class="arrow-down"></span></span>
-                            <div class="pop-box arrow-box arrow-box-top anchor-left">
-                                <div class="pop-box-inner pop-box-menu">
-                                    <ul>
-                                        <li data-action="reset"><a>' . _s('Reset') . '</a></li>
-                                        <li data-action="pause"><a>' . _s('Pause') . '</a></li>
-                                        <li data-action="resume"><a>' . _s('Resume') . '</a></li>
-                                        <li data-content="log-process"><a href="' . G\get_base_url('importer-jobs/%id%/process') . '" target="_blank">' . _s('Process log') . '</a></li>
-                                        <li data-content="log-errors"><a href="' . G\get_base_url('importer-jobs/%id%/errors') . '" target="_blank"><span class="icon icon-warning color-red"></span> ' . _s('Errors') . '</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="importing-stats">
-                            <span class="figure"><span data-content="images">%images%</span> images</span>
-                            <span class="figure"><span data-content="albums">%albums%</span> albums</span>
-                            <span class="figure"><span data-content="users">%users%</span> users</span>
-                        </div>
-                        <div class="importing-status">' . _s('Status') . ': <span data-content="status">%displayStatus%</span></div>
-                        <div class="importing-status">@<span data-content="dateTime">%dateTime%</span> UTC</div>
-                        <div class="loading-container position-absolute right-10 bottom-10"><div class="loading"></div></div>
-                        </div>';
-                        echo strtr($boxTpl, [
-                            '%id%' => $v['id'],
-                            '%dateTime%' => $v['time_updated'],
-                            '%object%' => htmlspecialchars(json_encode($v), ENT_QUOTES, 'UTF-8'),
-                            '%status%' => $v['status'],
-                            '%parse%' => $v['options']['root'],
-                            '%shortParse%' => $v['options']['root'][0],
-                            '%displayStatus%' => $statusesDisplay[$v['status']],
-                            '%path%' => $v['path'],
-                            '%pathRelative%' => '.' . G\absolute_to_relative($v['path']),
-                            '%users%' => $v['users'] ?: 0,
-                            '%images%' => $v['images'] ?: 0,
-                            '%albums%' => $v['albums'] ?: 0,
-                            '%errors%' => $v['errors'] ?: 0,
-                            '%started%' => $v['started'] ?: 0,
-                        ]);
-                    }
-                } ?>
-                </div>
-                <div class="margin-bottom-40">
-                    <div class="margin-bottom-10"><?php _se('The system works with a scheduled command to continuously process the importing. It requires a crontab entry.'); ?></div>
-                    <div class="margin-bottom-10">
-                        <code class="code">* * * * * IS_CRON=1 THREAD_ID=1 /usr/bin/php <?php echo G_ROOT_PATH . 'importing.php'; ?> >/dev/null 2>&1</code>
-                    </div>
-                    <div class="margin-bottom-10"><?php _se('You can run the command in parallel by changing the integer value of %s%.', ['%s%' => '<code>THREAD_ID</code>']); ?></div>
-                    <div class="margin-bottom-10">
-                        <span class="highlight padding-5 display-inline-block">⚠ <?php _se('All file-system permissions must be granted for the crontab user at %path%', ['%path%' => G_ROOT_PATH . 'importing']);  ?></span>
-                    </div>
-                </div>
-            </div>
-
-				<div data-modal="modal-add-import" class="hidden" data-submit-fn="CHV.fn.import.add.submit" data-ajax-deferred="CHV.fn.import.add.deferred">
-					<span class="modal-box-title"><?php _se('Add import job'); ?></span>
-					<div class="modal-form">
-						<?php G\Render\include_theme_file('snippets/form_import_add'); ?>
-					</div>
-				</div>
-				<div data-modal="modal-process-import" data-prompt="skip" class="hidden" data-load-fn="CHV.fn.import.process.load" data-submit-fn="CHV.fn.import.process.submit" data-ajax-deferred="CHV.fn.import.process.deferred">
-					<span class="modal-box-title"><?php _se('Process import'); ?></span>
-					<div class="modal-form">
-						<?php G\Render\include_theme_file('snippets/form_import_process'); ?>
-					</div>
-				</div>
-				<?php
-                if ($imports = CHV\Import::getOneTime()) {
-                    foreach ($imports as $k => &$v) {
-                        if ($v['status'] != 'working') {
-                            continue;
-                        }
-                        $then = strtotime($v['time_updated']);
-                        $now = strtotime(G\datetimegmt());
-                        if ($now > ($then + 300)) { // 5 min
-                            $v['status'] = 'paused';
-                            CHV\DB::update('imports', ['status' => 'paused'], ['id' => $v['id']]);
-                        }
-                    }
-                    $imports = array_reverse($imports);
-                }
-                $rowTpl = '<li data-status="%status%" data-id="%id%" data-object="%object%" data-errors="%errors%" data-started="%started%">
-			<span class="fluid-column c2 col-2-max display-table-cell padding-right-10">%id%</span>
-			<span class="fluid-column c2 col-2-max display-table-cell padding-right-10 text-transform-uppercase" title="' . _s('Top level folders as %s', '%parse%') . '">%shortParse%</span>
-			<span class="fluid-column c3 col-3-max display-table-cell padding-right-10">
-				<span class="icon icon-warning2 color-red" data-result="error"></span>
-				<span class="icon icon-checkmark-circle color-green" data-result="success"></span>
-				<span class="status-text">%displayStatus%</span>
-			</span>
-			<span class="fluid-column c7 col-7-max col-7-min display-table-cell padding-right-10 text-overflow-ellipsis phone-display-block" title="%path%">%path%</span>
-			<span class="fluid-column c2 display-table-cell padding-right-10"><span>%users%</span><span class="table-li--mobile-display"> ' . _s('Users') . '</span></span>
-			<span class="fluid-column c2 display-table-cell padding-right-10"><span>%albums%</span><span class="table-li--mobile-display"> ' . _s('Albums') . '</span></span>
-			<span class="fluid-column c3 display-table-cell padding-right-10"><span>%images%</span><span class="table-li--mobile-display"> ' . _s('Images') . '</span></span>
-			<div class="fluid-column c3 display-table-cell margin-bottom-0 phone-display-block">
-				<div class="loading"></div>
-				<div data-content="pop-selection" class="pop-btn">
-					<span class="pop-btn-text">' . _s('Actions') . '<span class="arrow-down"></span></span>
-					<div class="pop-box arrow-box arrow-box-top anchor-left">
-						<div class="pop-box-inner pop-box-menu">
-							<ul>
-								<li data-args="%id%" data-modal="form" data-target="modal-process-import"><a>' . _s('Process') . '</a></li>
-								<li data-action="pause"><a>' . _s('Pause') . '</a></li>
-								<li data-action="cancel"><a>' . _s('Cancel') . '</a></li>
-								<li data-content="log-process"><a href="' . G\get_base_url('importer-jobs/%id%/process') . '" target="_blank">' . _s('Process log') . '</a></li>
-								<li data-content="log-errors"><a href="' . G\get_base_url('importer-jobs/%id%/errors') . '" target="_blank">' . _s('Errors') . '</a></li>
-								<li data-args="%id%" data-confirm="' . _s('Do you really want to remove the import ID %s?', '%id%') . '" data-submit-fn="CHV.fn.import.delete.submit" data-ajax-deferred="CHV.fn.import.delete.deferred"><a>' . _s('Delete') . '</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-        </li>';
-                $manualImportingClass = is_array($imports) == false ? ' hidden' : '';
-                ?>
-                <div class="text-content">
-                    <h3>⚙ <?php _se('Manual importing'); ?></h3>
-                    <p><?php _se('The system will parse the contents of any available filesystem path.'); ?> <?php _se('These processes must be manually created and handled with the web browser tab open.'); ?> <a data-modal="form" data-target="modal-add-import"><?php _se('Add import job'); ?></a></p>
-                </div>
-                
-				<ul data-content="dashboard-imports" class="tabbed-content-list table-li-hover table-li margin-top-20 margin-bottom-20<?php echo $manualImportingClass; ?>">
-					<li class="table-li-header phone-hide">
-						<span class="fluid-column c2 display-table-cell">ID</span>
-						<span class="fluid-column c2 display-table-cell"><?php _se('Parser'); ?></span>
-						<span class="fluid-column c3 display-table-cell"><?php _se('Status'); ?></span>
-						<span class="fluid-column c7 col-7-max col-7-min display-table-cell"><?php _se('Path'); ?></span>
-						<span class="fluid-column c2 display-table-cell"><?php _se('Users'); ?></span>
-						<span class="fluid-column c2 display-table-cell"><?php _se('Albums'); ?></span>
-						<span class="fluid-column c3 display-table-cell"><?php _se('Images'); ?></span>
-						<span class="fluid-column c3 display-table-cell">&nbsp;</span>
-					</li>
-					<?php
-                    if (is_array($imports)) {
-                        foreach ($imports as $k => $v) {
-                            echo strtr($rowTpl, [
-                                '%id%' => $v['id'],
-                                '%object%' => htmlspecialchars(json_encode($v), ENT_QUOTES, 'UTF-8'),
-                                '%status%' => $v['status'],
-                                '%parse%' => $v['options']['root'],
-                                '%shortParse%' => $v['options']['root'][0],
-                                '%displayStatus%' => $statusesDisplay[$v['status']],
-                                '%path%' => $v['path'],
-                                '%users%' => $v['users'] ?: 0,
-                                '%images%' => $v['images'] ?: 0,
-                                '%albums%' => $v['albums'] ?: 0,
-                                '%errors%' => $v['errors'] ?: 0,
-                                '%started%' => $v['started'] ?: 0,
-                            ]);
-                        }
-                    }
-                    ?>
-				</ul>
-				<script>
-					$(document).ready(function() {
-						CHV.obj.import = {
-							working: {
-								// importId: {
-								// 	threads: {threadId: xhr},
-								// 	interval: interval,
-								// 	stats: xhr
-								// }
-							},
-							aborted: [],
-							boxTpl: <?php echo json_encode($boxTpl); ?>,
-							rowTpl: <?php echo json_encode($rowTpl); ?>,
-							importTr: {
-								'id': null,
-								// 'object' : null,
-								'status': null,
-								'parse': null,
-								'shortParse': null,
-								'displayStatus': null,
-								'path': null,
-								'users': null,
-								'images': null,
-								'albums': null,
-								'errors': null,
-								'started': null,
-							},
-							sel: {
-								root: "[data-content=dashboard-imports]",
-								header: ".table-li-header"
-							},
-							statusesDisplay: <?php echo json_encode($statusesDisplay); ?>
-                        };
-                        var updateContinuous = function( object) {
-                            var $sel = $("[data-id=" + object.id + "]", CHV.obj.import.sel.root);
-                            $sel.attr({
-                                "data-status": object.status,
-                                "data-object": JSON.stringify(object),
-                                "data-errors": object.errors,
-                                "data-started": object.started,
-                            });
-                            $("[data-content=images]", $sel).text(object.images);
-                            $("[data-content=dateTime]", $sel).text(object.time_updated);
-                            $("[data-content=users]", $sel).text(object.users);
-                            $("[data-content=albums]", $sel).text(object.albums);
-                            $("[data-content=status]", $sel).text(CHV.obj.import.statusesDisplay[object.status]);
-                        };
-                        $('.importing', '[data-content=dashboard-imports]').each(function(i, v) {
-                            var id = $(this).data("id");
-                            var $this = $(this);
-                            CHV.obj.import.working[id] = {
-                                threads: {},
-                                interval: setInterval(function() {
-                                    var $loading = $this.find(".loading");
-                                    if($loading.html() !== "") {
-                                        $loading.removeClass("hidden");
-                                    } else {
-                                        PF.fn.loading.inline($loading, {
-                                            size: "small"
-                                        });
-                                    }
-                                    CHV.obj.import.working[id].stats = $.ajax({
-                                        type: "POST",
-                                        data: {
-                                            action: "importStats",
-                                            id: id
-                                        }
-                                    });
-                                    CHV.obj.import.working[id].stats.complete(function (XHR) {
-                                        var response = XHR.responseJSON;
-                                        if (response) {
-                                            updateContinuous(response.import);
-                                        }
-                                        $loading.addClass("hidden");
-                                    });
-                                }, 10000),
-                                stats: {}
-                            };
-                            
-                        });
-                        $(document).on("click", CHV.obj.import.sel.root + " [data-action]", function() {
-                            var $el = $(this).closest("[data-object]");
-                            var $loading = $el.find(".loading");
-                            var $actions = $el.find("[data-content=pop-selection]");
-                            var localData = $el.data("object");
-                            var backupData = $.extend({}, localData);
-                            var action = $(this).data("action");
-                            var data = {};
-                            if (localData.id) {
-                                data.id = localData.id;
-                            }
-                            if($el.is("li")) {
-                                CHV.fn.import.process.abortAll(data.id);
-                            }
-                            switch (action) {
-                                case "resume":
-                                    data.action = "importResume";
-                                    localData.status = "working";
-                                    break;
-                                case "reset":
-                                    data.action = "importReset";
-                                    localData.status = "working";
-                                    break;
-                                case "pause":
-                                    data.action = "importEdit";
-                                    localData.status = "paused";
-                                    data.values = {
-                                        status: localData.status
-                                    };
-                                    break;
-                                case "cancel":
-                                    localData.status = "canceled";
-                                    data.action = "importEdit";
-                                    data.values = {
-                                        status: localData.status
-                                    };
-                                    break;
-                                case "process":
-                                    localData.status = "working";
-                                    data.action = "importEdit";
-                                    data.values = {
-                                        status: localData.status
-                                    };
-                                    break;
-                                default:
-                                    alert('null');
-                                    return;
-                                    break;
-                            }
-                            if($loading.html() !== "") {
-                                $loading.removeClass("hidden");
-                            } else {
-                                PF.fn.loading.inline($loading, {
-                                    size: "small"
-                                });
-                            }
-                            $actions.addClass("pointer-events-none");
-                            $.ajax({
-                                type: "POST",
-                                data: data
-                            }).complete(function(XHR) {
-                                var response = XHR.responseJSON;
-                                if (XHR.status == 200) {
-                                    var dataset = response.import;
-                                    if($el.is("li")) {
-                                        var $html = CHV.fn.import.parseTemplate(dataset);
-                                        $el.replaceWith($html);
-                                        if (action == "process") {
-                                            CHV.fn.import.process.deferred.success(XHR);
-                                        }
-                                    } else {
-                                        updateContinuous(response.import);
-                                    }
-                                } else {
-                                    PF.fn.growl.call(response.error.message);
-                                }
-                                
-                                $loading.addClass("hidden");
-                                $actions.removeClass("pointer-events-none");
-                            });
-                        });
-                    });
-                    
-				</script>
-			<?php
+		<?php
                 break;
 
             case 'images':
@@ -564,22 +243,7 @@ function read_the_docs($args = [])
 							</div>
 						<?php
                                             } ?>
-						<?php if (get_settings()['key'] == 'external-storage') {
-                                                ?>
-							<div class="header-content-right phone-float-none">
-								<div class="list-selection header--centering">
-									<a class="header-link" data-modal="form" data-target="modal-add-storage"><?php _se('Add storage'); ?></a>
-								</div>
-							</div>
-							<div data-modal="modal-add-storage" class="hidden" data-submit-fn="CHV.fn.storage.add.submit" data-before-fn="CHV.fn.storage.add.before" data-ajax-deferred="CHV.fn.storage.add.complete">
-								<span class="modal-box-title"><?php _se('Add storage'); ?></span>
-								<div class="modal-form">
-									<?php G\Render\include_theme_file('snippets/form_storage_edit'); ?>
-								</div>
-							</div>
-						<?php
-                                            } ?>
-						<?php
+				<?php
                         if (get_settings()['key'] == 'pages') {
                             switch (get_settings_pages()['doing']) {
                                 case 'add':
@@ -748,27 +412,23 @@ function read_the_docs($args = [])
 
 							<div class="input-label">
 								<label for="enable_likes"><?php _se('Likes'); ?></label>
-								<div class="c5 phablet-c1"><select type="text" name="enable_likes" id="enable_likes" class="text-input" <?php if (CHV\getSetting('website_mode') == 'personal') {
-                                            echo ' disabled';
-                                        } ?>>
-										<?php
-                                        echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('enable_likes')); ?>
-									</select></div>
-								<div class="input-below"><?php _se('Allows users to like content and populate "Most liked" listings.'); ?></div>
-								<?php personal_mode_warning(); ?>
-							</div>
+				<div class="c5 phablet-c1"><select type="text" class="text-input" disabled>
+					<?php
+                        echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('enable_likes')); ?>
+				</select></div>
+				<?php free_version_waring(); ?>
+				<?php personal_mode_warning(); ?>
+			</div>
 
-							<div class="input-label">
-								<label for="enable_followers"><?php _se('Followers'); ?></label>
-								<div class="c5 phablet-c1"><select type="text" name="enable_followers" id="enable_followers" class="text-input" <?php if (CHV\getSetting('website_mode') == 'personal') {
-                                            echo ' disabled';
-                                        } ?>>
-										<?php
-                                        echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('enable_followers')); ?>
-									</select></div>
-								<div class="input-below"><?php _se('Followers allows users to follow each other.'); ?></div>
-								<?php personal_mode_warning(); ?>
-							</div>
+			<div class="input-label">
+				<label for="enable_followers"><?php _se('Followers'); ?></label>
+				<div class="c5 phablet-c1"><select type="text" class="text-input" disabled>
+					<?php
+                        echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('enable_followers')); ?>
+				</select></div>
+				<?php free_version_waring(); ?>
+				<?php personal_mode_warning(); ?>
+			</div>
 
 							<hr class="line-separator">
 
@@ -1760,13 +1420,13 @@ function read_the_docs($args = [])
 								<div class="input-below"><?php _se('Enable this if you want to apply a blur effect on the NSFW images in listings.'); ?></div>
 							</div>
 							<div class="input-label">
-								<label for="show_banners_in_nsfw"><?php _se('Show banners in not safe content'); ?></label>
-								<div class="c5 phablet-c1"><select type="text" name="show_banners_in_nsfw" id="show_banners_in_nsfw" class="text-input">
-										<?php
-                                        echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('show_banners_in_nsfw')); ?>
-									</select></div>
-								<div class="input-below"><?php _se('Enable this if you want to show banners in not safe content pages.'); ?></div>
-							</div>
+				<label><?php _se('Show banners in not safe content'); ?></label>
+				<div class="c5 phablet-c1"><select type="text" class="text-input" disabled>
+					<?php
+                        echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('show_banners_in_nsfw')); ?>
+				</select></div>
+				<?php free_version_waring(); ?>
+			</div>
 
 							<div class="input-label">
 								<label for="show_nsfw_in_random_mode"><?php _se('Show not safe content in random mode'); ?></label>
@@ -2223,46 +1883,14 @@ function read_the_docs($args = [])
 										<div class="input-below"><?php _se('Comma-separated list of target user IDs (integers) to show most recent images on homepage. Leave it empty to display trending images.'); ?></div>
 									</div>
 								</div>
-							</div>
-
-						<?php
-                        } ?>
-
-						<?php if (get_settings()['key'] == 'banners') {
-                            ?>
-							<p><?php echo read_the_docs(['%s' => _s('banners'), '%k' => 'banners']); ?></p>
-							<?php
-                            $banners = get_banners();
-                            $banner_keys = array_keys($banners);
-                            $last_banner = end($banner_keys);
-                            foreach ($banners as $k => $group) {
-                                ?>
-								<h3 class="margin-top-20"><?php echo $group['label']; ?></h3>
-								<?php
-                                foreach ($group['placements'] as $id => $banner) {
-                                    ?>
-									<div class="input-label">
-										<label for="<?php echo $id; ?>"><?php echo $banner['label']; ?></label>
-										<div class="c12 phablet-c1"><textarea type="text" id="<?php echo $id; ?>" name="<?php echo $id; ?>" class="text-input r3" placeholder="<?php echo $banner['placeholder']; ?>" </textarea><?php echo CHV\get_banner_code($id); ?> </textarea> </div> <?php
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                if ($banner['hint']) {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ?> <div class="input-below"><?php echo $banner['hint']; ?></div>
-				<?php
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                } ?>
 			</div>
-			<?php
-                                } ?>
-			<?php
-                                if ($k !== $last_banner) {
-                                    ?>
-			<hr class="line-separator">
-			<?php
-                                } ?>
-			<?php
-                            } ?>
 
 			<?php
                         } ?>
 
+            <?php if (get_settings()['key'] == 'banners') {
+                            free_version_waring();
+                        } ?>
 			<?php if (get_settings()['key'] == 'system') {
                             ?>
 			<div class="input-label">
@@ -2464,98 +2092,9 @@ function read_the_docs($args = [])
 			<?php
                         } ?>
 
-			<?php
-                        if (get_settings()['key'] == 'external-storage') {
-                            $getStorages = CHV\Storage::getAll();
-                            $storages = [];
-                            if ($getStorages) {
-                                foreach ($getStorages as $k => $v) {
-                                    $storages[$v['id']] = $v;
-                                }
-                            }
-                            $checkbox_icons = [
-                                0 => 'icon-checkbox-unchecked',
-                                1 => 'icon-checkbox-checked',
-                            ];
-                            $storage_messages = [
-                                'is_https' => _s('Toggle this to enable or disable HTTPS'),
-                                'is_active' => _s('Toggle this to enable or disable this storage'),
-                            ];
-                            $icon_template = '<span rel="toolTip" data-tipTip="right" title="%TITLE%" class="cursor-pointer icon %ICON%" data-checked-icon="' . $checkbox_icons[1] . '" data-unchecked-icon="' . $checkbox_icons[0] . '" data-action="toggle-storage-%PROP%" data-checkbox></span>'; ?>
-			<script>
-				$(document).ready(function() {
-					CHV.obj.storages = <?php echo json_encode($storages); ?>;
-					CHV.obj.storageTemplate = <?php echo json_encode(['messages' => $storage_messages, 'icon' => $icon_template, 'checkboxes' => $checkbox_icons]); ?>;
-				});
-			</script>
-			<ul data-content="dashboard-storages-list" class="tabbed-content-list table-li margin-top-20 margin-bottom-20">
-				<li class="table-li-header phone-hide">
-					<span class="c2 display-table-cell padding-right-10">ID</span>
-					<span class="c4 display-table-cell padding-right-10"><?php _se('Name'); ?></span>
-					<span class="c4 display-table-cell padding-right-10">API</span>
-					<!--<span class="c10 display-table-cell phone-hide">URL</span>-->
-					<span class="c7 display-table-cell padding-right-10"><?php _se('Quota'); ?></span>
-					<span class="c2 display-table-cell padding-right-10">HTTPS</span>
-					<span class="c2 display-table-cell padding-right-10"><?php _se('Active'); ?></span>
-					<span class="c4 display-table-cell padding-right-10"></span>
-				</li>
-				<?php
-                            $li_template = '<li data-content="storage" data-storage-id="%ID%">
-					<span class="c2 display-table-cell padding-right-10" data-content="storage-id">%ID%</span>
-					<span class="c4 display-table-cell padding-right-10"><a data-modal="edit" data-target="form-modal" data-storage-id="%ID%" data-content="storage-name">%NAME%</a></span>
-					<span class="c4 display-table-cell padding-right-10" data-content="storage-api_name">%API_NAME%</span>
-					<!--<span class="c10 display-table-cell padding-right-10" data-content="storage-url">%URL%</span>-->
-					<span class="c7 display-table-cell padding-right-10" data-content="storage-usage_label">%USAGE_LABEL%</span>
-					<span class="c2 display-table-cell padding-right-10" data-content="storage-https">%IS_HTTPS%</span>
-					<span class="c2 display-table-cell padding-right-10" data-content="storage-active">%IS_ACTIVE%</span>
-					<span class="c4 display-table-cell padding-right-10"><a href="' . G\get_base_url('search/images/?q=storage:%ID%') . '" target="_blank">' . _s('search content') . '</a></span>
-				</li>';
-
-                            if ($storages) {
-                                foreach ($storages as $storage) {
-                                    $replaces = [];
-                                    foreach ($storage as $k => $v) {
-                                        if (in_array($k, ['is_https', 'is_active'])) {
-                                            $v = strtr($icon_template, ['%TITLE%' => $storage_messages[$k], '%ICON%' => $checkbox_icons[(int) $v], '%PROP%' => str_replace('is_', '', $k)]);
-                                        }
-                                        $replaces['%' . strtoupper($k) . '%'] = $v;
-                                    }
-                                    echo strtr($li_template, $replaces);
-                                }
-                            } ?>
-			</ul>
-			<div class="hidden" data-content="storage-dashboard-template">
-				<?php echo $li_template; ?>
-			</div>
-			<p class="font-weight-bold">
-				<span class="c6 display-table-cell"><?php _se('Storage method'); ?></span>
-				<span class="c3 display-table-cell"><?php _se('Disk used'); ?></span>
-			</p>
-			<?php foreach (get_storage_usage() as $k => $v) {
-                                ?>
-			<p>
-				<span class="c6 display-table-cell"><?php echo $v['label']; ?></span>
-				<span class="c3 display-table-cell"><?php echo $v['formatted_size']; ?></span>
-				<?php if ($k == 'all') {
-                                    continue;
-                                } ?><span class="c6 display-table-cell"><?php echo $v['link']; ?></span>
-			</p>
-			<?php
-                            } ?>
-			<hr class="line-separator">
-			<p><?php _se('Local storage is used by default or when no external storage is active.');
-                            echo ' ';
-                            _se('If you need help check the <a %s>storage documentation</a>.', 'href="https://goo.gl/jH5Dqx" target="_blank"'); ?></p>
-			<div data-modal="form-modal" class="hidden" data-submit-fn="CHV.fn.storage.edit.submit" data-before-fn="CHV.fn.storage.edit.before" data-ajax-deferred="CHV.fn.storage.edit.complete" data-ajax-url="<?php echo G\get_base_url('json'); ?>">
-				<span class="modal-box-title"><?php _se('Edit storage'); ?></span>
-				<div class="modal-form">
-					<input type="hidden" name="form-storage-id">
-					<?php G\Render\include_theme_file('snippets/form_storage_edit'); ?>
-				</div>
-			</div>
-			<?php
+            <?php if (get_settings()['key'] == 'external-storage') {
+                            free_version_waring();
                         } ?>
-
 			<?php if (get_settings()['key'] == 'email') {
                             ?>
 			<div class="input-label">
@@ -2687,156 +2226,11 @@ function read_the_docs($args = [])
                         } ?>
 
 			<?php if (get_settings()['key'] == 'social-networks') {
-                            ?>
-			<p><?php echo read_the_docs(['%s' => _s('social networks'), '%k' => 'social-networks']); ?></p>
-			<div class="input-label">
-				<label for="facebook">Facebook</label>
-				<div class="c5 phablet-c1"><select type="text" name="facebook" id="facebook" class="text-input" data-combo="facebook-combo">
-					<?php
-                            echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], get_safe_post() ? get_safe_post()['facebook'] : CHV\Settings::get('facebook')); ?>
-				</select></div>
-				<div class="input-below"><?php _se('You need a <a href="https://developers.facebook.com/" target="_blank">Facebook app</a> for this.'); ?></div>
-			</div>
-			<div id="facebook-combo">
-				<div data-combo-value="1" class="switch-combo c9 phablet-c1<?php if (!(get_safe_post() ? get_safe_post()['facebook'] : CHV\Settings::get('facebook'))) {
-                                echo ' soft-hidden';
-                            } ?>">
-					<div class="input-label">
-						<label for="facebook_app_id"><?php _se('Facebook app id'); ?></label>
-						<input type="text" name="facebook_app_id" id="facebook_app_id" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['facebook_app_id'] : CHV\Settings::get('facebook_app_id', true); ?>">
-						<div class="input-warning red-warning"><?php echo get_input_errors()['facebook_app_id']; ?></div>
-					</div>
-					<div class="input-label">
-						<label for="facebook_app_secret"><?php _se('Facebook app secret'); ?></label>
-						<input type="text" name="facebook_app_secret" id="facebook_app_secret" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['facebook_app_secret'] : CHV\Settings::get('facebook_app_secret', true); ?>">
-						<div class="input-warning red-warning"><?php echo get_input_errors()['facebook_app_secret']; ?></div>
-					</div>
-				</div>
-			</div>
-
-			<div class="input-label">
-				<label for="twitter">Twitter</label>
-				<div class="c5 phablet-c1"><select type="text" name="twitter" id="twitter" class="text-input" data-combo="twitter-combo">
-					<?php
-                            echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], get_safe_post() ? get_safe_post()['twitter'] : CHV\Settings::get('twitter')); ?>
-				</select></div>
-				<div class="input-below"><?php _se('You need a <a href="https://apps.twitter.com" target="_blank">Twitter app</a> for this.'); ?></div>
-			</div>
-			<div id="twitter-combo">
-				<div data-combo-value="1" class="switch-combo c9 phablet-c1<?php if (!(get_safe_post() ? get_safe_post()['twitter'] : CHV\Settings::get('twitter'))) {
-                                echo ' soft-hidden';
-                            } ?>">
-					<div class="input-label">
-						<label for="twitter_api_key"><?php _se('Twitter API key'); ?></label>
-						<input type="text" name="twitter_api_key" id="twitter_api_key" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['twitter_api_key'] : CHV\Settings::get('twitter_api_key', true); ?>">
-						<div class="input-warning red-warning"><?php echo get_input_errors()['twitter_api_key']; ?></div>
-					</div>
-					<div class="input-label">
-						<label for="twitter_api_secret"><?php _se('Twitter API secret'); ?></label>
-						<input type="text" name="twitter_api_secret" id="twitter_api_secret" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['twitter_api_secret'] : CHV\Settings::get('twitter_api_secret', true); ?>">
-						<div class="input-warning red-warning"><?php echo get_input_errors()['twitter_api_secret']; ?></div>
-					</div>
-				</div>
-			</div>
-			<div class="input-label">
-				<label for="twitter_account"><?php _se('Twitter account'); ?></label>
-				<div class="c5 phablet-c1">
-					<input type="text" name="twitter_account" id="twitter_account" class="text-input" placeholder="chevereto" value="<?php echo get_safe_post() ? get_safe_post()['twitter_account'] : CHV\Settings::get('twitter_account', true); ?>">
-				</div>
-				<div class="input-warning red-warning"><?php echo get_input_errors()['twitter_account']; ?></div>
-			</div>
-
-			<div class="input-label">
-				<label for="google">Google</label>
-				<div class="c5 phablet-c1"><select type="text" name="google" id="google" class="text-input" data-combo="google-combo">
-					<?php
-                            echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], get_safe_post() ? get_safe_post()['google'] : CHV\Settings::get('google')); ?>
-				</select></div>
-				<div class="input-below"><?php _se('You need a <a href="https://cloud.google.com/console" target="_blank">Google app</a> for this.'); ?></div>
-			</div>
-			<div id="google-combo">
-				<div data-combo-value="1" class="switch-combo c9 phablet-c1<?php if (!(get_safe_post() ? get_safe_post()['google'] : CHV\Settings::get('google'))) {
-                                echo ' soft-hidden';
-                            } ?>">
-					<div class="input-label">
-						<label for="google_client_id"><?php _se('Google client id'); ?></label>
-						<input type="text" name="google_client_id" id="google_client_id" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['google_client_id'] : CHV\Settings::get('google_client_id', true); ?>">
-						<div class="input-warning red-warning"><?php echo get_input_errors()['google_client_id']; ?></div>
-					</div>
-					<div class="input-label">
-						<label for="google_client_secret"><?php _se('Google client secret'); ?></label>
-						<input type="text" name="google_client_secret" id="google_client_secret" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['google_client_secret'] : CHV\Settings::get('google_client_secret', true); ?>">
-						<div class="input-warning red-warning"><?php echo get_input_errors()['google_client_secret']; ?></div>
-					</div>
-				</div>
-			</div>
-
-			<div class="input-label">
-				<label for="vk">VK</label>
-				<div class="c5 phablet-c1"><select type="text" name="vk" id="vk" class="text-input" data-combo="vk-combo">
-					<?php
-                            echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], get_safe_post() ? get_safe_post()['vk'] : CHV\Settings::get('vk')); ?>
-				</select></div>
-				<div class="input-below"><?php _se('You need a <a href="http://vk.com/dev" target="_blank">VK app</a> for this.'); ?></div>
-			</div>
-			<div id="vk-combo">
-				<div data-combo-value="1" class="switch-combo c9 phablet-c1<?php if (!(get_safe_post() ? get_safe_post()['vk'] : CHV\Settings::get('vk'))) {
-                                echo ' soft-hidden';
-                            } ?>">
-					<div class="input-label">
-						<label for="vk_client_id"><?php _se('VK client id'); ?></label>
-						<input type="text" name="vk_client_id" id="vk_client_id" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['vk_client_id'] : CHV\Settings::get('vk_client_id', true); ?>">
-						<div class="input-warning red-warning"><?php echo get_input_errors()['vk_client_id']; ?></div>
-					</div>
-					<div class="input-label">
-						<label for="vk_client_secret"><?php _se('VK client secret'); ?></label>
-						<input type="text" name="vk_client_secret" id="vk_client_secret" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['vk_client_secret'] : CHV\Settings::get('vk_client_secret', true); ?>">
-						<div class="input-warning red-warning"><?php echo get_input_errors()['vk_client_secret']; ?></div>
-					</div>
-				</div>
-			</div>
-			<?php
+                            free_version_waring();
                         } ?>
-
 			<?php if (get_settings()['key'] == 'external-services') {
                             ?>
 			
-			<div class="input-label">
-				<label for="akismet"><?php _se('%s spam protection', 'Akismet'); ?></label>
-				<div class="c5 phablet-c1"><select type="text" name="akismet" id="akismet" class="text-input" data-combo="akismet-combo">
-					<?php
-                            echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], get_safe_post() ? get_safe_post()['akismet'] : CHV\Settings::get('akismet')); ?>
-				</select></div>
-				<div class="input-below"><?php _se('Enable this to use %l to block spam on %c.', [
-                                                                        '%l' => '<a href="https://akismet.com/" target="_blank">Akismet</a>',
-                                                                        '%c' => _s('user generated content')
-                                                                    ]); ?></div>
-			</div>
-			<div id="akismet-combo" class="c9 phablet-c1">
-				<div data-combo-value="1" class="switch-combo<?php if (!(get_safe_post() ? get_safe_post()['akismet'] : CHV\Settings::get('akismet'))) {
-                                                                        echo ' soft-hidden';
-                                                                    } ?>">
-					<div class="input-label">
-						<label for="akismet_api_key"><?php _se('%s API key', 'Akismet'); ?></label>
-						<input type="text" name="akismet_api_key" id="akismet_api_key" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['akismet_api_key'] : CHV\Settings::get('akismet_api_key', true); ?>" >
-						<div class="input-warning red-warning"><?php echo get_input_errors()['akismet_api_key']; ?></div>
-					</div>
-				</div>
-			</div>
-
-			<div class="input-label">
-				<label for="stopforumspam"><?php _se('%s spam protection', 'StopForumSpam'); ?></label>
-				<div class="c5 phablet-c1"><select type="text" name="stopforumspam" id="stopforumspam" class="text-input">
-					<?php
-                            echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], get_safe_post() ? get_safe_post()['stopforumspam'] : CHV\Settings::get('stopforumspam')); ?>
-				</select></div>
-				<div class="input-below"><?php _se('Enable this to use %l to block spam on %c.', [
-                                                                        '%l' => '<a href="https://stopforumspam.com/" target="_blank">StopForumSpam</a>',
-                                                                        '%c' => _s('user signup')
-                                                                    ]); ?></div>
-			</div>
-
-			<hr class="line-separator">
 			<div class="input-label">
 				<label for="cdn">CDN</label>
 				<div class="c5 phablet-c1"><select type="text" name="cdn" id="cdn" class="text-input" data-combo="cdn-combo">

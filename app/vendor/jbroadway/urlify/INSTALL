@@ -1,0 +1,13 @@
+To install URLify, you can add it as a dependency by downloading Composer, the PHP package manager.
+
+`$ curl -s http://getcomposer.org/installer | php`
+
+Then run this command to install Composer:
+
+`$ php composer.phar install`
+
+For more details, see https://getcomposer.org/
+
+Then run this command to install the URLify library:
+
+`$ composer require jbroadway/urlify`

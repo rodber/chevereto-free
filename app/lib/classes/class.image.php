@@ -664,32 +664,6 @@ class Image
                 throw new Exception(_s('Duplicated upload'), 101);
             }
 
-            $get_active_storages = Storage::getAll(['is_active' => 1]); // Get all active storages
-
-            if ($get_active_storages) {
-                // Sequential storage thing
-                $sequential_storage = count($get_active_storages) > 1;
-                if ($sequential_storage) {
-                    $storage_id = null;
-                    $last_used_storage = getSetting('last_used_storage');
-                } else {
-                    $storage_id = $get_active_storages[0]['id'];
-                }
-
-                $active_storages = [];
-                for ($i = 0; $i < count($get_active_storages); $i++) {
-                    $storage_pointer = $get_active_storages[$i]['id']; // id
-                    $active_storages[$storage_pointer] = $get_active_storages[$i]; // key fixed array
-
-                    if (is_null($storage_id) && $last_used_storage == $storage_pointer) {
-                        $storage_id = $get_active_storages[$i + 1]['id'] ?: $get_active_storages[0]['id'];
-                    }
-                }
-
-                // Set the storage array
-                $storage = $active_storages[$storage_id];
-            }
-
             $storage_mode = getSetting('upload_storage_mode');
             switch ($storage_mode) {
                 case 'direct':

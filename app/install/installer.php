@@ -650,7 +650,7 @@ ALTER TABLE `%table_prefix%pages` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8m
 ALTER TABLE `%table_prefix%settings` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE `%table_prefix%storages` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE `%table_prefix%users` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;' : null) .
-'ALTER TABLE `%table_prefix%logins` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;' . 
+'ALTER TABLE `%table_prefix%logins` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;' .
 "INSERT INTO `%table_prefix%imports` (`import_path`, `import_options`, `import_status`, `import_users`, `import_images`, `import_albums`, `import_time_created`, `import_time_updated`, `import_errors`, `import_started`, `import_continuous`)
 SELECT '%rootPath%importing/no-parse', 'a:1:{s:4:\"root\";s:5:\"plain\";}', 'working', '0', '0', '0', NOW(), NOW(), '0', '0', '1' FROM DUAL
 WHERE NOT EXISTS (SELECT * FROM `%table_prefix%imports` WHERE `import_path`='%rootPath%importing/no-parse' AND `import_continuous`=1 LIMIT 1);
@@ -659,7 +659,7 @@ SELECT '%rootPath%importing/parse-users', 'a:1:{s:4:\"root\";s:5:\"users\";}', '
 WHERE NOT EXISTS (SELECT * FROM `%table_prefix%imports` WHERE `import_path`='%rootPath%importing/parse-users' AND `import_continuous`=1 LIMIT 1);
 INSERT INTO `%table_prefix%imports` (`import_path`, `import_options`, `import_status`, `import_users`, `import_images`, `import_albums`, `import_time_created`, `import_time_updated`, `import_errors`, `import_started`, `import_continuous`)
 SELECT '%rootPath%importing/parse-albums', 'a:1:{s:4:\"root\";s:6:\"albums\";}', 'working', '0', '0', '0', NOW(), NOW(), '0', '0', '1' FROM DUAL
-WHERE NOT EXISTS (SELECT * FROM `%table_prefix%imports` WHERE `import_path`='%rootPath%importing/parse-albums' AND `import_continuous`=1 LIMIT 1);,
+WHERE NOT EXISTS (SELECT * FROM `%table_prefix%imports` WHERE `import_path`='%rootPath%importing/parse-albums' AND `import_continuous`=1 LIMIT 1);",
                 ],
             ];
 

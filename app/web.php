@@ -29,20 +29,6 @@ if (G\ends_with('/lib/Peafowl/js/hammer.min.js.map', $_SERVER['REQUEST_URI'])) {
     die();
 }
 
-// Proccess queues
-if (class_exists('CHV\Lock') && array_key_exists('queue', $_REQUEST) && $_REQUEST['r']) {
-    try {
-        $lock = new Lock('storage-delete');
-        if (!$lock->check() && $lock->create()) {
-            Queue::process(['type' => 'storage-delete']);
-            $lock->destroy();
-        }
-        Render\displayEmptyPixel();
-    } catch (Exception $e) {
-        error_log($e);
-    }
-}
-
 // Not installed
 if (!Settings::get('chevereto_version_installed')) {
     new G\Handler([

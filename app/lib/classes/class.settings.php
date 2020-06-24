@@ -393,19 +393,29 @@ class Settings
         $api = 'https://chevereto.com/api/';
         include_once G_APP_PATH . 'license/key.php';
         $id = explode(':', $license)[0];
+        $info = $api . 'get/info/';
+        if (!defined('G_APP_GITHUB_REPO_URL')) {
+            $info .= '?id=' . $id;
+            $label = 'chevereto.com/panel/downloads';
+            $url = 'https://chevereto.com/panel/downloads';
+        } else {
+            $info .= 'free';
+            $label = G_APP_GITHUB_OWNER . '/' . G_APP_GITHUB_REPO;
+            $url = G_APP_GITHUB_REPO_URL;
+        }
 
         return [
             'id' => $id,
             'edition' => G_APP_NAME,
             'version' => G_APP_VERSION,
             'source' => [
-                'label' => !defined('G_APP_GITHUB_REPO_URL') ? 'Chevereto.com/panel/downloads' : (G_APP_GITHUB_OWNER . '/' . G_APP_GITHUB_REPO),
-                'url' => !defined('G_APP_GITHUB_REPO_URL') ? 'https://chevereto.com/panel/downloads' : G_APP_GITHUB_REPO_URL,
+                'label' => $label,
+                'url' => $url,
             ],
             'api' => [
                 'download' => $api . 'download',
                 'get' => [
-                    'info' => ($api . 'get/info/?id=' . $id) . (defined('G_APP_GITHUB_REPO_URL') ? '/free' : null),
+                    'info' => $info,
                 ],
             ],
         ];

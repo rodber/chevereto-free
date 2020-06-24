@@ -134,7 +134,7 @@ $route = function ($handler) {
                     ],
                     'php_version' => [
                         'label'        => _s('PHP version'),
-                        'content'    => PHP_VERSION . ' �' . php_ini_loaded_file()
+                        'content'    => PHP_VERSION . ' 🐘 '. php_ini_loaded_file()
                     ],
                     'server' => [
                         'label'        => _s('Server'),
@@ -188,14 +188,11 @@ $route = function ($handler) {
                 $chevereto_urls = [
                     'Chevereto'                => 'https://chevereto.com',
                     _s('Community')                => 'https://chevereto.com/community/',
-                    _s('Collaboration')            => 'https://chevereto.com/community/collaboration/',
                     _s('Support')                => 'https://chevereto.com/support',
-                    _s('Documentation')            => 'https://chevereto.com/docs',
+                    _s('Documentation')            => 'https://v3-docs.chevereto.com/',
                     _s('Changelog')                => 'https://chevereto.com/changelog',
                     _s('Bug tracking')            => 'https://chevereto.com/bug-tracking',
-                    'Trello'                    => 'https://chevereto.com/go/trello',
-                    'Discord'                    => 'https://chevereto.com/go/discord',
-                    'GitHub'                     => 'https://github.com/Chevereto',
+                    'GitHub'                     => 'https://github.com/chevereto',
                 ];
                 $chevereto_links = [];
                 foreach ($chevereto_urls as $k => $v) {

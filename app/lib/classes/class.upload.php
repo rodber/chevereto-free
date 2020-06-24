@@ -151,16 +151,7 @@ class Upload
             }
         }
 
-        /*
-         * Set uploaded_file
-         * Local storage uploads will be allocated at the target destination
-         * External storage will be allocated to the temp directory
-         */
-        if ($this->storage_id) {
-            $this->uploaded_file = G\forward_slash(dirname($this->downstream)) . '/' . Storage::getStorageValidFilename($this->fixed_filename, $this->storage_id, $this->options['filenaming'], $this->destination);
-        } else {
-            $this->uploaded_file = G\name_unique_file($this->destination, $this->options['filenaming'], $this->fixed_filename);
-        }
+        $this->uploaded_file = G\name_unique_file($this->destination, $this->options['filenaming'], $this->fixed_filename);
 
         $this->source = [
             'filename' => $this->source_filename, // file.ext
