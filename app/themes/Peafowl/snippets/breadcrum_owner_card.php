@@ -1,23 +1,33 @@
-<?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
+<?php if (!defined('access') or !access) {
+    die('This file cannot be directly accessed.');
+} ?>
 
 <?php
 $owner = function_exists('get_owner') ? get_owner() : G\get_global("owner");
 ?>
 <div class="breadcrum-item pop-btn pop-btn-auto pop-keep-click pop-btn-desktop">
 	<a href="<?php echo $owner['url']; ?>" class="user-image">
-		<?php if($owner['avatar']['url']) { ?>
+		<?php if ($owner['avatar']['url']) {
+    ?>
 		<img class="user-image" src="<?php echo $owner['avatar']['url']; ?>" alt="<?php echo $owner['username']; ?>">
-		<?php } else { ?>
-		<span class="user-image default-user-image"><span class="icon icon-user"></span></span>
-		<?php } ?>
+		<?php
+} else {
+        ?>
+		<span class="user-image default-user-image"><span class="icon icon-user2"></span></span>
+		<?php
+    } ?>
 	</a>
-	<span class="breadcrum-text float-left"><a class="user-link" href="<?php echo $owner['url']; ?>"><?php if($owner['is_private']) { ?><span class="user-meta font-size-small"><span class="icon icon-lock"></span></span><?php } ?><?php echo $owner['name_short_html']; ?><span class="arrow arrow-down"></span></a></span>
+	<span class="breadcrum-text float-left"><a class="user-link" href="<?php echo $owner['url']; ?>"><?php if ($owner['is_private']) {
+        ?><span class="user-meta font-size-small"><span class="icon icon-lock"></span></span><?php
+    } ?><?php echo $owner['name_short_html']; ?><span class="arrow arrow-down"></span></a></span>
 	<div class="pop-box pop-box-userdetails" style="display: none;">
 		<div class="pop-box-inner">
 			<div class="user-card no-avatar">
 				<div class="user-card-header">
 					<h2><a href="<?php echo $owner['url']; ?>" rel="author"><?php echo $owner['name']; ?></a></h2>
-					<?php if($owner['is_private']) { ?><span class="user-meta font-size-small"><span class="icon icon-lock"></span><?php _se('Private profile'); ?></span><?php } ?>
+					<?php if ($owner['is_private']) {
+        ?><span class="user-meta font-size-small"><span class="icon icon-lock"></span><?php _se('Private profile'); ?></span><?php
+    } ?>
 				</div>
 				<div><a class="user-link" href="<?php echo $owner['url']; ?>" rel="author"><?php echo $owner['username']; ?></a></div>
 				<div class="or-separator"></div>

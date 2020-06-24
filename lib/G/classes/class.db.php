@@ -16,13 +16,12 @@
 
 /**
  * class.db.php
- * This class does all the DB handling of the G\ app
+ * This class does all the DB handling of the G\ app.
  */
 
 namespace G;
 
 use PDO;
-use PDOException;
 use Exception;
 
 class DB
@@ -42,9 +41,9 @@ class DB
 
     /**
      * Connect to the DB server
-     * Throws an Exception on error (tay weando? en serio?)
+     * Throws an Exception on error (tay weando? en serio?).
      */
-    public function __construct($conn=[])
+    public function __construct($conn = [])
     {
         try {
             // PDO already connected
@@ -59,17 +58,17 @@ class DB
                 }
             }
 
-            $pdo_connect = $this->driver . ':host=' . $this->host . ';dbname=' . $this->name;
+            $pdo_connect = $this->driver.':host='.$this->host.';dbname='.$this->name;
             if ($this->port) {
-                $pdo_connect .= ';port=' . $this->port;
+                $pdo_connect .= ';port='.$this->port;
             }
+            // $pdo_connect .= ';charset=UTF8';
 
             $this->pdo_attrs = @unserialize($this->pdo_attrs) ?: $this->pdo_attrs;
 
             // PDO defaults
             $this->pdo_default_attrs = [
-                PDO::ATTR_TIMEOUT		=> 30,
-                //PDO::ATTR_PERSISTENT	=> FALSE
+                PDO::ATTR_TIMEOUT => 30,
             ];
 
             // Override PDO defaults ?
@@ -77,7 +76,7 @@ class DB
 
             // PDO hard overrides
             $this->pdo_attrs[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-            $this->pdo_attrs[PDO::MYSQL_ATTR_INIT_COMMAND] = "SET NAMES 'UTF8'";
+            $this->pdo_attrs[PDO::MYSQL_ATTR_INIT_COMMAND] = "SET time_zone = '+00:00', NAMES 'utf8mb4'"; // UTC for timestamps
 
             // Turn off PHP error reporting just for the connection here (invalid host names will trigger a PHP warning)
             $error_reporting = error_reporting();
@@ -103,19 +102,20 @@ class DB
 
     /**
      * Singleton instance handler
-     * Used for the static methods of this class
+     * Used for the static methods of this class.
      */
     public static function getInstance()
     {
         if (is_null(self::$instance)) {
-            self::$instance = new self;
+            self::$instance = new self();
         }
+
         return self::$instance;
     }
 
     /**
      * Populates the class DB own PDO attributes array with an entire array
-     * Attribute list here: http://php.net/manual/en/pdo.setattribute.php
+     * Attribute list here: http://php.net/manual/en/pdo.setattribute.php.
      */
     public function setPDOAttrs($attributes)
     {
@@ -124,7 +124,7 @@ class DB
 
     /**
      * Populates the class DB own PDO attributes array with a single key
-     * Attributes list here: http://php.net/manual/en/pdo.setattribute.php
+     * Attributes list here: http://php.net/manual/en/pdo.setattribute.php.
      */
     public function setPDOAttr($key, $value)
     {
@@ -138,7 +138,7 @@ class DB
 
     /**
      * Prepares an SQL statement to be executed by the PDOStatement::execute() method
-     * http://php.net/manual/en/pdo.prepare.php
+     * http://php.net/manual/en/pdo.prepare.php.
      */
     public function query($query)
     {
@@ -152,7 +152,7 @@ class DB
 
     /**
      * Binds a value to a corresponding named or question mark placeholder in the SQL statement that was used to prepare the statement
-     * http://php.net/manual/en/pdostatement.bindvalue.php
+     * http://php.net/manual/en/pdostatement.bindvalue.php.
      */
     public function bind($param, $value, $type = null)
     {
@@ -190,30 +190,33 @@ class DB
         return $this->query->closeCursor();
     }
 
-    public function fetchAll($mode=PDO::FETCH_ASSOC)
+    public function fetchAll($mode = PDO::FETCH_ASSOC)
     {
         $this->exec();
+
         return $this->query->fetchAll(is_int($mode) ? $mode : PDO::FETCH_ASSOC);
     }
 
     /**
      * Execute and returns the single result from the prepared statement
-     * http://php.net/manual/en/pdostatement.fetch.php
+     * http://php.net/manual/en/pdostatement.fetch.php.
      */
-    public function fetchSingle($mode=PDO::FETCH_ASSOC)
+    public function fetchSingle($mode = PDO::FETCH_ASSOC)
     {
         $this->exec();
+
         return $this->query->fetch(is_int($mode) ? $mode : PDO::FETCH_ASSOC);
     }
 
     /**
-     * Query and exec, return number of affected rows or FALSE
+     * Query and exec, return number of affected rows or FALSE.
      */
     public static function queryExec($query)
     {
         try {
             $db = self::getInstance();
             $db->query($query);
+
             return $db->exec() ? $db->rowCount() : false;
         } catch (Exception $e) {
             throw new DBException($e->getMessage(), 400);
@@ -221,9 +224,9 @@ class DB
     }
 
     /**
-     * Query and fetch single record
+     * Query and fetch single record.
      */
-    public static function queryFetchSingle($query, $fetch_style=null)
+    public static function queryFetchSingle($query, $fetch_style = null)
     {
         try {
             return self::queryFetch($query, 1, $fetch_style);
@@ -233,9 +236,9 @@ class DB
     }
 
     /**
-     * Query and fetch all records
+     * Query and fetch all records.
      */
-    public static function queryFetchAll($query, $fetch_style=null)
+    public static function queryFetchAll($query, $fetch_style = null)
     {
         try {
             return self::queryFetch($query, null, $fetch_style);
@@ -245,13 +248,14 @@ class DB
     }
 
     /**
-     * Query fetch (core version)
+     * Query fetch (core version).
      */
-    public static function queryFetch($query, $limit=1, $fetch_style=null)
+    public static function queryFetch($query, $limit = 1, $fetch_style = null)
     {
         try {
             $db = self::getInstance();
             $db->query($query);
+
             return $limit == 1 ? $db->fetchSingle($fetch_style) : $db->fetchAll($fetch_style);
         } catch (Exception $e) {
             throw new DBException($e->getMessage(), 400);
@@ -260,7 +264,7 @@ class DB
 
     /**
      * Returns the number of rows affected by the last DELETE, INSERT, or UPDATE statement executed
-     * http://php.net/manual/en/pdostatement.rowcount.php
+     * http://php.net/manual/en/pdostatement.rowcount.php.
      */
     public function rowCount()
     {
@@ -269,7 +273,7 @@ class DB
 
     /**
      * Returns the ID of the last inserted row, or the last value from a sequence object, depending on the underlying driver
-     * http://php.net/manual/en/pdo.lastinsertid.php
+     * http://php.net/manual/en/pdo.lastinsertid.php.
      */
     public function lastInsertId()
     {
@@ -278,7 +282,7 @@ class DB
 
     /**
      * Turns off autocommit mode
-     * http://php.net/manual/en/pdo.begintransaction.php
+     * http://php.net/manual/en/pdo.begintransaction.php.
      */
     public function beginTransaction()
     {
@@ -287,7 +291,7 @@ class DB
 
     /**
      * Commits a transaction, returning the database connection to autocommit mode until the next call to PDO::beginTransaction() starts a new transaction
-     * http://php.net/manual/en/pdo.commit.php
+     * http://php.net/manual/en/pdo.commit.php.
      */
     public function endTransaction()
     {
@@ -296,7 +300,7 @@ class DB
 
     /**
      * Rolls back the current transaction, as initiated by PDO::beginTransaction()
-     * http://php.net/manual/en/pdo.rollback.php
+     * http://php.net/manual/en/pdo.rollback.php.
      */
     public function cancelTransaction()
     {
@@ -305,7 +309,7 @@ class DB
 
     /**
      * Dumps the informations contained by a prepared statement directly on the output
-     * http://php.net/manual/en/pdostatement.debugdumpparams.php
+     * http://php.net/manual/en/pdostatement.debugdumpparams.php.
      */
     public function debugDumpParams()
     {
@@ -315,20 +319,20 @@ class DB
     /* Now the G\ fast DB methods, presented by Chevereto */
 
     /**
-     * Get the table with its prefix
+     * Get the table with its prefix.
      */
     public static function getTable($table)
     {
-        return get_app_setting('db_table_prefix') . $table;
+        return get_app_setting('db_table_prefix').$table;
     }
 
     /**
-     * Get values from DB
+     * Get values from DB.
      */
-    public static function get($table, $values, $clause='AND', $sort=[], $limit=null, $fetch_style=null)
+    public static function get($table, $values, $clause = 'AND', $sort = [], $limit = null, $fetch_style = null)
     {
         if (!is_array($values) and $values !== 'all') {
-            throw new DBException('Expecting array values, '.gettype($values).' given in ' . __METHOD__, 100);
+            throw new DBException('Expecting array values, '.gettype($values).' given in '.__METHOD__, 100);
         }
 
         self::validateClause($clause, __METHOD__);
@@ -342,8 +346,8 @@ class DB
 
         $query = 'SELECT * FROM '.$table;
 
-        if (isset($join) && $join) {
-            $query .= ' ' . $join . ' ';
+        if ($join) {
+            $query .= ' '.$join.' ';
         }
 
         if (is_array($values) and !empty($values)) {
@@ -357,7 +361,7 @@ class DB
             }
         }
 
-        $query = rtrim($query, $clause . ' ');
+        $query = rtrim($query, $clause.' ');
 
         if (is_array($sort) and !empty($sort)) {
             if (!$sort['field']) {
@@ -381,6 +385,7 @@ class DB
                     $db->bind(':'.$k, $v);
                 }
             }
+
             return $limit == 1 ? $db->fetchSingle($fetch_style) : $db->fetchAll($fetch_style);
         } catch (Exception $e) {
             throw new DBException($e->getMessage(), 400);
@@ -389,15 +394,15 @@ class DB
 
     /**
      * Update target table row(s)
-     * Returns the number of affected rows or false
+     * Returns the number of affected rows or false.
      */
-    public static function update($table, $values, $wheres, $clause='AND')
+    public static function update($table, $values, $wheres, $clause = 'AND')
     {
         if (!is_array($values)) {
-            throw new DBException('Expecting array values, '.gettype($values).' given in '. __METHOD__, 100);
+            throw new DBException('Expecting array values, '.gettype($values).' given in '.__METHOD__, 100);
         }
         if (!is_array($wheres)) {
-            throw new DBException('Expecting array values, '.gettype($wheres).' given in '. __METHOD__, 100);
+            throw new DBException('Expecting array values, '.gettype($wheres).' given in '.__METHOD__, 100);
         }
 
         self::validateClause($clause, __METHOD__);
@@ -408,9 +413,9 @@ class DB
 
         // Set the value pairs
         foreach ($values as $k => $v) {
-            $query .= '`' . $k . '`=:value_' . $k . ',';
+            $query .= '`'.$k.'`=:value_'.$k.',';
         }
-        $query = rtrim($query, ',') . ' WHERE ';
+        $query = rtrim($query, ',').' WHERE ';
 
         // Set the where pairs
         foreach ($wheres as $k => $v) {
@@ -437,12 +442,12 @@ class DB
     }
 
     /**
-     * Insert single row to the table
+     * Insert single row to the table.
      */
     public static function insert($table, $values)
     {
         if (!is_array($values)) {
-            throw new DBException('Expecting array values, '.gettype($values).' given in '. __METHOD__, 100);
+            throw new DBException('Expecting array values, '.gettype($values).' given in '.__METHOD__, 100);
         }
 
         $table = DB::getTable($table);
@@ -453,8 +458,8 @@ class DB
         }
 
         $query = 'INSERT INTO
-					`'.$table.'` (`' . ltrim(implode('`,`', $table_fields), '`,`') . '`)
-					VALUES (' . ':' . str_replace(':', ',:', implode(':', $table_fields)) . ')';
+					`'.$table.'` (`'.ltrim(implode('`,`', $table_fields), '`,`').'`)
+					VALUES ('.':'.str_replace(':', ',:', implode(':', $table_fields)).')';
 
         try {
             $db = self::getInstance();
@@ -462,6 +467,7 @@ class DB
             foreach ($values as $k => $v) {
                 $db->bind(':'.$k, $v);
             }
+
             return $db->exec() ? $db->lastInsertId() : false;
         } catch (Exception $e) {
             throw new DBException($e->getMessage(), 400);
@@ -471,13 +477,13 @@ class DB
     /**
      * Update target numecic table row(s) with and increment (positive or negative)
      * Returns the number of affected rows or false
-     * Note: Minimum value to be set is zero, no negative values here
+     * Note: Minimum value to be set is zero, no negative values here.
      */
-    public static function increment($table, $values, $wheres, $clause='AND')
+    public static function increment($table, $values, $wheres, $clause = 'AND')
     {
         foreach (['values', 'wheres'] as $k) {
             if (!is_array(${$k})) {
-                throw new DBException('Expecting array values, '.gettype(${$k}).' given in '. __METHOD__, 100);
+                throw new DBException('Expecting array values, '.gettype(${$k}).' given in '.__METHOD__, 100);
             }
         }
 
@@ -485,10 +491,10 @@ class DB
         $query = 'UPDATE `'.$table.'` SET ';
 
         foreach ($values as $k => $v) {
-            if (preg_match('/^([+-]{1})\s*([\d]+)$/', $v, $matches)) { // 1-> op 2-> number
-                $query .= '`' . $k . '`=';
+            if (preg_match('/^([\+\-]{1})\s*([\d]+)$/', $v, $matches)) { // 1-> op 2-> number
+                $query .= '`'.$k.'`=';
                 if ($matches[1] == '+') {
-                    $query .= '`' . $k . '`' . $matches[1] . $matches[2] . ',';
+                    $query .= '`'.$k.'`'.$matches[1].$matches[2].',';
                 }
                 if ($matches[1] == '-') {
                     $query .= 'GREATEST(cast(`'.$k.'` AS SIGNED) - '.$matches[2].', 0),';
@@ -496,7 +502,7 @@ class DB
             }
         }
 
-        $query = rtrim($query, ',') . ' WHERE ';
+        $query = rtrim($query, ',').' WHERE ';
 
         // Set the where pairs
         foreach ($wheres as $k => $v) {
@@ -510,6 +516,7 @@ class DB
             foreach ($wheres as $k => $v) {
                 $db->bind(':where_'.$k, $v);
             }
+
             return $db->exec() ? $db->rowCount() : false;
         } catch (Exception $e) {
             throw new DBException($e->getMessage(), 400);
@@ -518,12 +525,12 @@ class DB
 
     /**
      * Delete row(s) from table
-     * Returns the number of affected rows or false
+     * Returns the number of affected rows or false.
      */
-    public static function delete($table, $values, $clause='AND')
+    public static function delete($table, $values, $clause = 'AND')
     {
         if (!is_array($values)) {
-            throw new DBException('Expecting array values, '.gettype($values).' given in '. __METHOD__, 100);
+            throw new DBException('Expecting array values, '.gettype($values).' given in '.__METHOD__, 100);
         }
 
         self::validateClause($clause, __METHOD__);
@@ -543,6 +550,7 @@ class DB
             foreach ($values as $k => $v) {
                 $db->bind(':'.$k, $v);
             }
+
             return $db->exec() ? $db->rowCount() : false;
         } catch (Exception $e) {
             throw new DBException($e->getMessage(), 400);
@@ -550,14 +558,14 @@ class DB
     }
 
     /**
-     * Validate clause
+     * Validate clause.
      */
-    private static function validateClause($clause, $method=null)
+    private static function validateClause($clause, $method = null)
     {
         if (!is_null($clause)) {
             $clause = strtoupper($clause);
             if (!in_array($clause, ['AND', 'OR'])) {
-                throw new DBException('Expecting clause string \'AND\' or \'OR\' in ' . (!is_null($method) ? $method : __CLASS__), 100);
+                throw new DBException('Expecting clause string \'AND\' or \'OR\' in '.(!is_null($method) ? $method : __CLASS__), 100);
             }
         }
     }

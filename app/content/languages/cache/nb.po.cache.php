@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2018-06-03 14:28+0000',
-  'PO-Revision-Date' => '2018-06-03 14:28+0000',
+  'POT-Creation-Date' => '2019-12-12 15:27+0000',
+  'PO-Revision-Date' => '2019-12-12 15:27+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'nb',
@@ -16,12 +16,6 @@ $translation_plural = array (
   'function' => '($n != 1)',
 );
 $translation_table = [
-	"To use all the features of this site you must be logged in." => [
-		0 => "For å benytte deg av alle funksjonene på denne siden må du være logget inn.",
-	],
-	"If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
-		0 => "Hvis du ikke har en konto kan du <a href=\"%s\">registrere</a> deg nå.",
-	],
 	"Invalid email" => [
 		0 => "Ugyldig e-post",
 	],
@@ -58,6 +52,42 @@ $translation_table = [
 	"Personal" => [
 		0 => "Personlig",
 	],
+	"Installed version is v%s" => [
+		0 => "Installert versjon er v%s",
+	],
+	"Can't connect to %s" => [
+		0 => "Kan ikke koble til %s",
+	],
+	"Last available release is v%s" => [
+		0 => "Siste tilgjengelige versjon er v%s",
+	],
+	"Update needed, proceeding to download" => [
+		0 => "Oppdatering nødvendig, fortsetter til nedlasting",
+	],
+	"No update needed" => [
+		0 => "Ingen oppdatering er nødvendig",
+	],
+	"System files already up to date" => [
+		0 => "Systemfiler er allerede oppdaterte",
+	],
+	"Starting v%s download" => [
+		0 => "Starter nedlasting av v%s",
+	],
+	"Downloaded v%s, proceeding to extraction" => [
+		0 => "Lastet ned v%s, fortsetter til utpakking",
+	],
+	"Attempting to extract v%s" => [
+		0 => "Forsøker å pakke ut v%s",
+	],
+	"Extraction completed" => [
+		0 => "Utpakking fullført",
+	],
+	"Proceding to install the update" => [
+		0 => "Fortsetter installasjon av oppdateringen",
+	],
+	"Update failed" => [
+		0 => "Oppdatering mislyktes",
+	],
 	"Update in progress" => [
 		0 => "Oppdatering pågår",
 	],
@@ -85,6 +115,179 @@ $translation_table = [
 	"Can't update %s file - %e" => [
 		0 => "Kan ikke oppdatere %s - %e",
 	],
+	"Check the errors in the form to continue." => [
+		0 => "Sjekk feil i skjemaet for å fortsette.",
+	],
+	"You must enter the album name." => [
+		0 => "Du må skrive inn et albumnavn.",
+	],
+	"Confirm" => [
+		0 => "Bekreft",
+	],
+	"Select existing album" => [
+		0 => "Velg eksisterende album",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "En feil oppsto. Vennligst forsøk senere.",
+	],
+	"Please select a valid image file type." => [
+		0 => "Velg en gyldig bildefil.",
+	],
+	"Please select a picture of at most %s size." => [
+		0 => "Velg et bilde på maksimalt %s størrelse.",
+	],
+	"Profile image updated." => [
+		0 => "Profilbilde oppdatert.",
+	],
+	"Profile background image updated." => [
+		0 => "Profilbakgrunnsbilde oppdatert.",
+	],
+	"Profile background image deleted." => [
+		0 => "Profilbakgrunnsbilde slettet.",
+	],
+	"Error deleting profile background image." => [
+		0 => "Feil ved sletting av profilbakgrunnsbilde.",
+	],
+	"Passwords don't match" => [
+		0 => "Passordene er ikke like",
+	],
+	"Update available v%s" => [
+		0 => "Oppdatering tilgjengelig v%s",
+	],
+	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
+		0 => "En oppdatering for systemet er tilgjengelig. Du kan automatisk laste ned og installere denne oppdateringen eller gå til %s for å laste ned filen manuelt.",
+	],
+	"The release notes for this update are:" => [
+		0 => "Utgivelsesnotat for denne oppdateringen er:",
+	],
+	"Update now" => [
+		0 => "Oppdater nå",
+	],
+	"or" => [
+		0 => "eller",
+	],
+	"cancel" => [
+		0 => "avbryt",
+	],
+	"This website is running latest %s version" => [
+		0 => "Nettstedet kjører siste %s versjon.",
+	],
+	"loading" => [
+		0 => "Laster inn",
+	],
+	"Toggle select" => [
+		0 => "Merk valg",
+	],
+	"Like" => [
+		0 => "Like",
+	],
+	"Toggle flag" => [
+		0 => "Merk flagg",
+	],
+	"Edit" => [
+		0 => "Rediger",
+	],
+	"Album" => [
+		0 => "Album",
+		1 => "Album",
+	],
+	"Delete" => [
+		0 => "Slett",
+	],
+	"Close" => [
+		0 => "Lukk",
+	],
+	"Previous" => [
+		0 => "Forrige",
+	],
+	"Next" => [
+		0 => "Neste",
+	],
+	"Clipboard image" => [
+		0 => "Utklippstavlebilde",
+	],
+	"File too big." => [
+		0 => "Fil for stor.",
+	],
+	"Invalid or unsupported file format." => [
+		0 => "Ugyldig eller ikke støttet filformat.",
+	],
+	"Some files couldn't be added" => [
+		0 => "Noen filer kunne ikke legges til",
+	],
+	"image" => [
+		0 => "bilde",
+		1 => "bilder",
+	],
+	"%s's Albums" => [
+		0 => "%ss album",
+	],
+	"Image edited successfully." => [
+		0 => "Bilderedigering fullført.",
+	],
+	"private" => [
+		0 => "privat",
+	],
+	"Album edited successfully." => [
+		0 => "Album oppdatert uten problemer.",
+	],
+	"Invalid URL key." => [
+		0 => "Ugyldig URL-nøkkel.",
+	],
+	"Category URL key already being used." => [
+		0 => "Kategori-URL-nøkkel er allerede i bruk.",
+	],
+	"Category successfully deleted." => [
+		0 => "Kategorien er slettet.",
+	],
+	"Category %s added." => [
+		0 => "Kategori %s lagt til.",
+	],
+	"Invalid expiration date." => [
+		0 => "Ugyldig utløpsdato.",
+	],
+	"IP %s already banned." => [
+		0 => "IP %s er allerede blokkert.",
+	],
+	"IP %s banned." => [
+		0 => "IP %s blokkert.",
+	],
+	"IP ban successfully deleted." => [
+		0 => "IP-blokkering slettet.",
+	],
+	"Please fill all the required fields." => [
+		0 => "Vennligst fyll ut alle de påkrevde feltene.",
+	],
+	"Invalid storage capacity value. Make sure to use a valid format." => [
+		0 => "Ugyldig verdi for lagringskapasitet. Sørg for å bruke et gyldig format.",
+	],
+	"Storage capacity can't be lower than its current usage (%s)." => [
+		0 => "Lagringskapasiteten kan ikke være lavere enn dagens bruk (%s).",
+	],
+	"Invalid URL." => [
+		0 => "Ugyldig URL.",
+	],
+	"Storage successfully edited." => [
+		0 => "Lagring er vellykket redigert.",
+	],
+	"User added successfully." => [
+		0 => "Bruker vellykket lagt til.",
+	],
+	"The content has been deleted." => [
+		0 => "Innholdet er slettet.",
+	],
+	"The content has been moved." => [
+		0 => "Innholdet har blitt flyttet.",
+	],
+	"Select" => [
+		0 => "Velg",
+	],
+	"Unselect" => [
+		0 => "Fjern merking",
+	],
+	"The content has been edited." => [
+		0 => "Innholdet har blitt redigert.",
+	],
 	"Untitled" => [
 		0 => "Uten navn",
 	],
@@ -110,7 +313,7 @@ $translation_table = [
 		0 => "Meg",
 	],
 	"Link" => [
-		0 => "Link",
+		0 => "Lenke",
 	],
 	"Password" => [
 		0 => "Passord",
@@ -159,10 +362,6 @@ $translation_table = [
 		0 => "Liker",
 		1 => "Liker",
 	],
-	"image" => [
-		0 => "bilde",
-		1 => "bilder",
-	],
 	"Recent" => [
 		0 => "Nylig",
 	],
@@ -203,10 +402,6 @@ $translation_table = [
 		0 => "Bilde",
 		1 => "Bilder",
 	],
-	"Album" => [
-		0 => "Album",
-		1 => "Album",
-	],
 	"User" => [
 		0 => "Bruker",
 		1 => "Brukere",
@@ -222,9 +417,6 @@ $translation_table = [
 	],
 	"Can't insert storage." => [
 		0 => "Kan ikke sette lagring.",
-	],
-	"Storage capacity can't be lower than its current usage (%s)." => [
-		0 => "Lagringskapasiteten kan ikke være lavere enn dagens bruk (%s).",
 	],
 	"Can't update storage details." => [
 		0 => "Kan ikke oppdatere lagringsdetaljer.",
@@ -272,9 +464,6 @@ $translation_table = [
 	"There is an update available for your Chevereto based website." => [
 		0 => "Det er en oppdatering tilgjengelig for ditt Chevereto-baserte nettsted.",
 	],
-	"The release notes for this update are:" => [
-		0 => "Utgivelsesnotat for denne oppdateringen er:",
-	],
 	"admin dashboard" => [
 		0 => "administratordashboard",
 	],
@@ -283,6 +472,15 @@ $translation_table = [
 	],
 	"view on %s" => [
 		0 => "sett på %s",
+	],
+	"cookie policy" => [
+		0 => "retningslinjer for informasjonskapsler",
+	],
+	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link." => [
+		0 => "Vi bruker våre egne samt tredjeparts informasjonskapsler for å forbedre din opplevelse av nettstedet og tjenestene våre. Hvis du fortsetter å bruke nettstedet betyr det at du aksepterer våre %cookie_policy_link.",
+	],
+	"I understand" => [
+		0 => "Jeg forstår",
 	],
 	"You have been forbidden to use this website." => [
 		0 => "Du har blitt sperret fra å benytte denne siden.",
@@ -295,6 +493,9 @@ $translation_table = [
 	],
 	"Plugin" => [
 		0 => "Utvidelse",
+	],
+	"Request denied" => [
+		0 => "Forespørsel avslått",
 	],
 	"That page doesn't exist" => [
 		0 => "Denne siden eksisterer ikke",
@@ -314,17 +515,14 @@ $translation_table = [
 	"Email changed" => [
 		0 => "E-post endret",
 	],
-	"The reCAPTCHA wasn't entered correctly" => [
-		0 => "reCAPTCHA er ikke korrekt",
+	"%s says you are a robot" => [
+		0 => "%s sier du er en robot",
 	],
 	"Invalid Username/Email" => [
 		0 => "Ugyldig brukernavn/e-postadresse",
 	],
 	"User doesn't have an email." => [
 		0 => "Brukeren har ikke registrert e-postadresse.",
-	],
-	"Request denied" => [
-		0 => "Forespørsel avslått",
 	],
 	"Account needs to be activated to use this feature" => [
 		0 => "Kontoen må aktiveres for å benytte denne funksjonen",
@@ -344,14 +542,8 @@ $translation_table = [
 	"Welcome to %s" => [
 		0 => "Velkommen til %s",
 	],
-	"Passwords don't match" => [
-		0 => "Passordene er ikke like",
-	],
 	"Email already being used" => [
 		0 => "E-postadressen er allerede i bruk",
-	],
-	"Check the errors in the form to continue." => [
-		0 => "Sjekk feil i skjemaet for å fortsette.",
 	],
 	"Password required" => [
 		0 => "Passord kreves",
@@ -382,6 +574,9 @@ $translation_table = [
 	],
 	"Settings" => [
 		0 => "Innstillinger",
+	],
+	"Bulk importer" => [
+		0 => "Masseimportering",
 	],
 	"Chevereto version" => [
 		0 => "Chevereto-versjon",
@@ -447,14 +642,8 @@ $translation_table = [
 	"Changelog" => [
 		0 => "Endringslogg",
 	],
-	"Request new features" => [
-		0 => "Foreslå nye funksjoner",
-	],
 	"Bug tracking" => [
 		0 => "Problemsporing",
-	],
-	"Blog" => [
-		0 => "Blogg",
 	],
 	"Website" => [
 		0 => "Nettside",
@@ -729,6 +918,9 @@ $translation_table = [
 	"Invalid visibility" => [
 		0 => "Ugyldig synlighet",
 	],
+	"Invalid internal type" => [
+		0 => "Ugyldig intern type",
+	],
 	"Invalid target attribute" => [
 		0 => "Ugyldig målattributt",
 	],
@@ -882,6 +1074,9 @@ $translation_table = [
 	"Test email sent to %s." => [
 		0 => "Test e-post sendt til %s.",
 	],
+	"Downloading %s data" => [
+		0 => "Laster ned %s data",
+	],
 	"User %s followed" => [
 		0 => "Følger bruker %s.",
 	],
@@ -908,9 +1103,6 @@ $translation_table = [
 	],
 	"Sign in" => [
 		0 => "Logg inn",
-	],
-	"Logged out" => [
-		0 => "Logget ut",
 	],
 	"Upload images" => [
 		0 => "Last opp bilder",
@@ -969,6 +1161,9 @@ $translation_table = [
 	"Settings for %s" => [
 		0 => "Innstillinger for %s",
 	],
+	"You must agree to the terms and privacy policy" => [
+		0 => "Du må akseptere retningslinjene for bruk",
+	],
 	"You must be at least %s years old to use this website." => [
 		0 => "Du må være minst %s år for å benytte denne websiden.",
 	],
@@ -980,9 +1175,6 @@ $translation_table = [
 	],
 	"%s's Images" => [
 		0 => "%ss bilder",
-	],
-	"%s's Albums" => [
-		0 => "%ss album",
 	],
 	"Results for" => [
 		0 => "Resultater for",
@@ -1005,9 +1197,6 @@ $translation_table = [
 	"Discovery" => [
 		0 => "Oppdagelse",
 	],
-	"Close" => [
-		0 => "Lukk",
-	],
 	"Advanced search" => [
 		0 => "Avansert søk",
 	],
@@ -1017,38 +1206,8 @@ $translation_table = [
 	"Notices (%s)" => [
 		0 => "Notiser (%s)",
 	],
-	"Sign in with another account" => [
-		0 => "Logg inn med en annen konto",
-	],
-	"or" => [
-		0 => "eller",
-	],
-	"Username or Email address" => [
-		0 => "Brukernavn eller e-postadresse",
-	],
-	"Keep me logged in" => [
-		0 => "Forbli innlogget",
-	],
-	"Don't have an account? <a href='%s'>Sign up</a> now." => [
-		0 => "Har du ikke en konto? <a href='%s'>Registrer</a> deg nå.",
-	],
-	"Sign up with another account" => [
-		0 => "Registrer deg med en annen konto",
-	],
-	"Email address" => [
-		0 => "E-postadresse",
-	],
-	"Username" => [
-		0 => "Brukernavn",
-	],
-	"I'm at least %s years old" => [
-		0 => "Jeg er minst %s år gammel",
-	],
 	"Notifications" => [
 		0 => "Varsler",
-	],
-	"loading" => [
-		0 => "Laster inn",
 	],
 	"You don't have notifications" => [
 		0 => "Du har ingen varsler",
@@ -1170,14 +1329,14 @@ $translation_table = [
 	"move it to an existing album" => [
 		0 => "flytt til eksisterende album",
 	],
+	"You must %s or %l to save this content into your account." => [
+		0 => "Du må %s eller %l for å lagre dette innholdet til kontoen din.",
+	],
 	"create an account" => [
 		0 => "opprett konto",
 	],
 	"sign in" => [
 		0 => "logg inn",
-	],
-	"You can %s or %l to save this content into your account." => [
-		0 => "Du kan %s eller %l for å lagre dette innholdet til din konto.",
 	],
 	"No %s have been uploaded" => [
 		0 => "Ingen %s ble lastet opp.",
@@ -1200,9 +1359,6 @@ $translation_table = [
 	"Uploading" => [
 		0 => "Laster opp",
 	],
-	"cancel" => [
-		0 => "avbryt",
-	],
 	"cancel remaining" => [
 		0 => "avbryt gjenstående",
 	],
@@ -1215,6 +1371,9 @@ $translation_table = [
 	"Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information." => [
 		0 => "Sjekk <a data-modal=\"simple\" data-target=\"failed-upload-result\">feilmeldingen</a> for mer informasjon.",
 	],
+	"Register to get %s" => [
+		0 => "Registrer deg for å få %s",
+	],
 	"reset" => [
 		0 => "nullstill",
 	],
@@ -1226,9 +1385,6 @@ $translation_table = [
 	],
 	"insert" => [
 		0 => "sett inn",
-	],
-	"Edit" => [
-		0 => "Rediger",
 	],
 	"Remove" => [
 		0 => "Fjern",
@@ -1284,8 +1440,17 @@ $translation_table = [
 	"Create album" => [
 		0 => "Opprett album",
 	],
-	"The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
-		0 => "Bildene du lastet opp vil bli flyttet til dette nyopprettede albumet. Du kan også flytte bildene til et <a class=\"modal-switch\" data-switch=\"move-existing-album\">eksisterende album</a>.",
+	"The uploaded content will be moved to this newly created album." => [
+		0 => "Det opplastede innholdet vil bli flyttet til det nylig opprettede albumet.",
+	],
+	"existing album" => [
+		0 => "eksisterende album",
+	],
+	"You can also move the content to an %a." => [
+		0 => "Du kan også flytte innholdet til en %a.",
+	],
+	"You must %s or %l if you want to edit this album later on." => [
+		0 => "Du må %s eller %l hvis du ønsker å endre dette albumet senere.",
 	],
 	"Move to album" => [
 		0 => "Flytt til album",
@@ -1334,7 +1499,7 @@ $translation_table = [
 		0 => "BBkode (miniatyrbilde med lenke)",
 	],
 	"Markdown full" => [
-		0 => "Markdown full",
+		0 => "Full markdown",
 	],
 	"Markdown full linked" => [
 		0 => "Markdown full linket",
@@ -1420,6 +1585,39 @@ $translation_table = [
 	"Untitled image" => [
 		0 => "Bilde uten navn",
 	],
+	"Path" => [
+		0 => "Sti",
+	],
+	"Local path (absolute)" => [
+		0 => "Lokal sti (absolutt)",
+	],
+	"Directory structure" => [
+		0 => "Mappestruktur",
+	],
+	"Parse top level folders as users (username)" => [
+		0 => "Tolk toppnivåmapper som brukere (brukernavn)",
+	],
+	"Parse top level folders as albums" => [
+		0 => "Tolk toppnivåmapper som album",
+	],
+	"Don't parse folders" => [
+		0 => "Ikke tolk mapper",
+	],
+	"When parsing top level folders as users, second level folders will be parsed as user albums. Parsing top level folders as albums adds these as guest albums." => [
+		0 => "Når toppnivåmapper tolkes som brukere, vil andrenivåmapper bli tolket som brukeralbum. Tolking av toppnivåmapper som album legger disse til som gjestealbum.",
+	],
+	"Threads" => [
+		0 => "Tråder",
+	],
+	"Select number of threads" => [
+		0 => "Velg antall tråder",
+	],
+	"This determines how intensive and fast will be the import process. Don't use more than %s threads on a shared server." => [
+		0 => "Dette avgjør hvor intensiv og rask importeringsprosessen vil være. Ikke bruk flere enn %s tråder på en delt server.",
+	],
+	"You can use wildcard * characters." => [
+		0 => "Du kan bruke jokertegn (*).",
+	],
 	"Expiration date" => [
 		0 => "Utløpsdato",
 	],
@@ -1453,6 +1651,9 @@ $translation_table = [
 	"Region" => [
 		0 => "Region",
 	],
+	"Storage region" => [
+		0 => "lagringsregion",
+	],
 	"Storage bucket" => [
 		0 => "Lagringsplass",
 	],
@@ -1468,20 +1669,14 @@ $translation_table = [
 	"Storage secret" => [
 		0 => "Lagringshemmelighet",
 	],
-	"Client email" => [
-		0 => "kunde-e-post",
-	],
-	"Google Cloud client email" => [
-		0 => "klient-e-post Google Cloud",
-	],
-	"You will need a <a %s>service account</a> for this." => [
-		0 => "Du trenger en <a %s>tjenestekonto</a> for dette.",
-	],
 	"Private key" => [
 		0 => "Privatnøkkel",
 	],
 	"Google Cloud JSON key" => [
 		0 => "Google Cloud JSON-nøkkel",
+	],
+	"You will need a <a %s>service account</a> for this." => [
+		0 => "Du trenger en <a %s>tjenestekonto</a> for dette.",
 	],
 	"Service name" => [
 		0 => "tjenestenavn",
@@ -1495,8 +1690,8 @@ $translation_table = [
 	"API endpoint for OpenStack identity" => [
 		0 => "API-endepunkt for Openstack-identitet",
 	],
-	"Storage region" => [
-		0 => "lagringsregion",
+	"Username" => [
+		0 => "Brukernavn",
 	],
 	"Container" => [
 		0 => "Beholder",
@@ -1516,23 +1711,32 @@ $translation_table = [
 	"Tenant name (account name)" => [
 		0 => "Leietakers navn (brukernavn)",
 	],
+	"Storage endpoint" => [
+		0 => "Endepunkt for lagring",
+	],
+	"Server address" => [
+		0 => "Serveradresse",
+	],
 	"Hostname or IP of the storage server" => [
 		0 => "Hostnavn eller IP-adresse til lagringsserveren",
-	],
-	"Path" => [
-		0 => "Sti",
 	],
 	"Server path" => [
 		0 => "Serversti",
 	],
-	"Server path where the files will be stored" => [
-		0 => "Serverstien hvor filene skal lagres",
+	"Absolute path where the files will be stored in the context of the %p login. Use %s for root path." => [
+		0 => "Absolutt sti hvor filene vil lagres i kontekst av %p-innloggingen. Bruk %s for rotsti.",
 	],
-	"Server username" => [
-		0 => "Serverbrukernavn",
+	"Server login" => [
+		0 => "Serverinnlogging",
 	],
 	"Server password" => [
 		0 => "Serverpassord",
+	],
+	"Local path" => [
+		0 => "Lokal sti",
+	],
+	"Local path where the files will be stored" => [
+		0 => "Lokal sti hvor filene vil bli lagret",
 	],
 	"Storage capacity" => [
 		0 => "Lagringskapasitet",
@@ -1576,14 +1780,14 @@ $translation_table = [
 	"Flag as safe" => [
 		0 => "Merk som trygt",
 	],
-	"Delete" => [
-		0 => "Slett",
-	],
 	"Create new album" => [
 		0 => "Opprett nytt album",
 	],
-	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
-		0 => "For å benytte deg av alle funksjonene på denne siden må du være logget inn. Hvis du ikke har en konto kan du <a href=\"%s\">registrere</a> deg nå.",
+	"Sign in with another account" => [
+		0 => "Logg inn med en annen konto",
+	],
+	"Home" => [
+		0 => "Hjem",
 	],
 	"There's nothing to show here." => [
 		0 => "Ingenting å vise her.",
@@ -1633,11 +1837,17 @@ $translation_table = [
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "Er du sikker på at du vil slette alt det merkede innholdet? Dette kan ikke angres.",
 	],
+	"Fullscreen" => [
+		0 => "Fullskjerm",
+	],
+	"Exit fullscreen" => [
+		0 => "Avslutt fullskjerm",
+	],
 	"Guest" => [
 		0 => "Gjest",
 	],
-	"Like" => [
-		0 => "Like",
+	"Keyboard shortcuts" => [
+		0 => "Tastatursnarveier",
 	],
 	"Uploaded by guest" => [
 		0 => "Lastet opp av gjest",
@@ -1651,9 +1861,6 @@ $translation_table = [
 	"by %u" => [
 		0 => "av %u",
 	],
-	"Select" => [
-		0 => "Velg",
-	],
 	"Toggle unsafe flag" => [
 		0 => "Merk som utrygt innhold",
 	],
@@ -1666,17 +1873,11 @@ $translation_table = [
 	"The user has been deleted" => [
 		0 => "Denne brukeren har blitt slettet",
 	],
-	"The content has been deleted." => [
-		0 => "Innholdet er slettet.",
-	],
 	"Your account is almost ready" => [
 		0 => "Kontoen din er nesten klar",
 	],
 	"An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "En e-post har har blitt sendt til %s med instruksjoner for aktivering av konto. Aktiveringslinken er gyldig i 48 timer. Hvis du ikke har mottatt e-posten, sjekk spamfilteret ditt.",
-	],
-	"Go to homepage" => [
-		0 => "Tilbake til startsiden",
 	],
 	"Resend activation" => [
 		0 => "Send e-post med aktiveringslink på nytt",
@@ -1693,26 +1894,23 @@ $translation_table = [
 	"Your email address" => [
 		0 => "Din e-postadresse",
 	],
-	"Add email" => [
-		0 => "Legg til e-post",
+	"Submit" => [
+		0 => "Utfør",
 	],
 	"An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "En e-post med instruksjoner for å nullstille passordet ditt har blitt sendt til e-postadressen du har registrert. Hvis du ikke mottar instruksjonene, sjekk spamfilteret ditt.",
 	],
-	"Resend instructions" => [
-		0 => "Send på nytt",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "En feil oppsto. Vennligst forsøk senere.",
-	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "Det har allerede blitt sendt en e-post for å nullstille ditt passord. Hvis du ikke har mottatt e-posten, sjekk spamfilteret ditt.",
 	],
-	"Enter your username or the email address that you used to create your account." => [
-		0 => "Skriv inn brukernavnet ditt, eller e-postadressen du oppga da du registrerte deg.",
+	"Resend instructions" => [
+		0 => "Send på nytt",
 	],
-	"Submit" => [
-		0 => "Utfør",
+	"Enter your username or email address to continue. You may need to check your spam folder or whitelist %s" => [
+		0 => "Angi brukernavn eller epostadresse for å fortsette. Du kan måtte sjekke søppelpostmappen din eller legge til %s på en klareringsliste (whitelist)",
+	],
+	"Username or Email address" => [
+		0 => "Brukernavn eller e-postadresse",
 	],
 	"Your password has been changed. You can now try logging in using your new password." => [
 		0 => "Passordet ditt er endret. Du kan nå logge inn med det nye passordet.",
@@ -1720,29 +1918,20 @@ $translation_table = [
 	"Login now" => [
 		0 => "Logg inn nå",
 	],
-	"Enter the new password that you want to use." => [
-		0 => "Skriv inn nytt passord",
-	],
-	"New Password" => [
-		0 => "Nytt passord",
+	"Enter your new password" => [
+		0 => "Skriv inn ditt nye passord",
 	],
 	"%d characters min" => [
 		0 => "minst %d tegn",
 	],
-	"Enter your new password" => [
-		0 => "Skriv inn ditt nye passord",
-	],
-	"Confirm password" => [
-		0 => "Bekreft passord",
+	"Password strength" => [
+		0 => "Passordstyrke",
 	],
 	"Re-enter your new password" => [
 		0 => "Skriv inn ditt nye passord igjen",
 	],
 	"An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "En e-post til %s er sendt med instruksjoner for å aktivere kontoen din. Hvis du ikke mottar instruksjonene prøve å sjekke søppelpost eller spam-filtre.",
-	],
-	"Enter the username or email address that you used to create your account to continue." => [
-		0 => "Skriv inn brukernavnet ditt, eller e-postadressen du oppga ved registrering for å fortsette.",
 	],
 	"This content is private" => [
 		0 => "Dette innholdet er privat",
@@ -1774,8 +1963,68 @@ $translation_table = [
 	"I Agree" => [
 		0 => "Jeg aksepterer",
 	],
+	"documentation" => [
+		0 => "dokumentasjon",
+	],
+	"Learn more about %s at our %d." => [
+		0 => "Lær mer om %s på vår %d.",
+	],
 	"Disk used" => [
 		0 => "Diskplass brukt",
+	],
+	"Add import job" => [
+		0 => "Legg til importeringsjobb",
+	],
+	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d." => [
+		0 => "Dette verktøyet lar deg masseimportere innhold til nettstedet ved å angi en systemsti der innholdet du ønsker å importere, ligger. Det støtter importering av brukere, album og bilder basert på en mappestruktur. Du kan lære mer om mappestrukturen, å legge til metadata og alt annet om dette verktøyet i %d.",
+	],
+	"Process import" => [
+		0 => "Prosessér importering",
+	],
+	"Top level folders as %s" => [
+		0 => "Toppnivåmapper som %s",
+	],
+	"Actions" => [
+		0 => "Handlinger",
+	],
+	"Process" => [
+		0 => "Prosessér",
+	],
+	"Pause" => [
+		0 => "Pause",
+	],
+	"Cancel" => [
+		0 => "Avbryt",
+	],
+	"Process log" => [
+		0 => "Progresjonslogg",
+	],
+	"Errors" => [
+		0 => "Feil",
+	],
+	"Do you really want to remove the import ID %s?" => [
+		0 => "Vil du virkelig fjerne import-IDen %s?",
+	],
+	"Queued" => [
+		0 => "I kø",
+	],
+	"Working" => [
+		0 => "Jobber",
+	],
+	"Paused" => [
+		0 => "Pauset",
+	],
+	"Canceled" => [
+		0 => "Avbrutt",
+	],
+	"Completed" => [
+		0 => "Fullført",
+	],
+	"Parser" => [
+		0 => "Tolker",
+	],
+	"Status" => [
+		0 => "Status",
 	],
 	"Add user" => [
 		0 => "Legg til bruker",
@@ -1783,17 +2032,17 @@ $translation_table = [
 	"Role" => [
 		0 => "Rolle",
 	],
+	"Manager" => [
+		0 => "Håndterer",
+	],
 	"Administrator" => [
 		0 => "Administrator",
 	],
+	"Email address" => [
+		0 => "E-postadresse",
+	],
 	"This setting is always diabled when using personal website mode." => [
 		0 => "Denne innstillingen er deaktivert når personlig webside modus benyttes.",
-	],
-	"documentation" => [
-		0 => "dokumentasjon",
-	],
-	"Learn more about %s at our %d." => [
-		0 => "Lær mer om %s på vår %d.",
 	],
 	"Add category" => [
 		0 => "Legg til kategori",
@@ -1816,6 +2065,18 @@ $translation_table = [
 	"Website description" => [
 		0 => "Beskrivelse av nettsted",
 	],
+	"Automatic" => [
+		0 => "Automatisk",
+	],
+	"Forced" => [
+		0 => "Tvunget",
+	],
+	"%a will use HTTPS detection on the server side (recommended). %f will use HTTPS regardless of your server setup. %d to don't use HTTPS at all." => [
+		0 => "%a vil bruke HTTPS-deteksjon på serversiden (anbefalt). %f vil bruke HTTPS uavhengig av serveroppsettet ditt. %d for å ikke bruke HTTPS i det hele tatt.",
+	],
+	"This only controls the protocol used in the URLs, it won't turn your website into a valid HTTPS website unless your server is configured to support and use HTTPS." => [
+		0 => "Dette kontrollerer kun protokollen brukt i URLer, det vil ikke forvandle nettstedet ditt til et gyldig HTTPS-nettsted med mindre serveren er satt opp til å støtte og bruke HTTPS.",
+	],
 	"Default time zone" => [
 		0 => "Standard tidssone",
 	],
@@ -1827,6 +2088,12 @@ $translation_table = [
 	],
 	"Enables to browse public uploaded images. It also enables categories." => [
 		0 => "Aktiverer visning av offentlige bilder. Det aktiverer også kategorier.",
+	],
+	"guests" => [
+		0 => "gjester",
+	],
+	"Enables explore for guests." => [
+		0 => "Aktiverer utforsking for gjester.",
 	],
 	"Enables to browse images randomly." => [
 		0 => "Aktiverer mulighet for å bla tilfeldig i bilder",
@@ -1896,6 +2163,24 @@ $translation_table = [
 	],
 	"Type" => [
 		0 => "Type",
+	],
+	"Terms of service" => [
+		0 => "Betingelser for bruk",
+	],
+	"Privacy" => [
+		0 => "Personvern",
+	],
+	"Contact" => [
+		0 => "Kontakt",
+	],
+	"Extra page" => [
+		0 => "Ekstra side",
+	],
+	"Internal page type" => [
+		0 => "Intern sidetype",
+	],
+	"You can have multiple extra pages, but only one of the other special internal types." => [
+		0 => "Du kan ha flere ekstra sider, men kun én av de andre spesielle interne typene.",
 	],
 	"Page visibility" => [
 		0 => "Sidesynlighet",
@@ -1972,6 +2257,9 @@ $translation_table = [
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "Er du sikker på at du vil slette sideID %s? Dette kan ikke angres.",
 	],
+	"Enabled image formats" => [
+		0 => "Aktiverte bildeformater",
+	],
 	"Unchecked image formats won't be allowed to be uploaded." => [
 		0 => "Uavkryssede bildeformater vil ikke bli tillatt lastet opp.",
 	],
@@ -1986,6 +2274,15 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Aktiver dersom du vil at uregistrerte brukere skal kunne laste opp.",
+	],
+	"Upload user interface" => [
+		0 => "Last opp brukergrensesnitt",
+	],
+	"On-page container" => [
+		0 => "På-side beholder",
+	],
+	"route" => [
+		0 => "rute",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "Aktiver integrasjonskoder (opplastning)",
@@ -2049,6 +2346,9 @@ $translation_table = [
 	],
 	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
 		0 => "Den maksimale størrelsen tillatt av serveren er %s. Denne begrensningen er avkortet av %u og %p (%f-verdier).",
+	],
+	"Same as \"%s\" but for guests." => [
+		0 => "Samme som \"%s\", men for gjester.",
 	],
 	"Image path" => [
 		0 => "Bildesti",
@@ -2239,6 +2539,12 @@ $translation_table = [
 	"Leave it empty to don't require a minimum age to use the website." => [
 		0 => "La denne være blank dersom det ikke er noen aldersbegrensning for å benytte nettstedet.",
 	],
+	"Notify on user signup" => [
+		0 => "Varsle ved brukerregistrering",
+	],
+	"Enable this if you want to get an email notification for each new user signup." => [
+		0 => "Aktiver dette hvis du ønsker å få en epostvarsling for hver ny brukerregistrering.",
+	],
 	"Username routing" => [
 		0 => "Brukernavn-ruting",
 	],
@@ -2341,6 +2647,12 @@ $translation_table = [
 	"What pagination method should be used." => [
 		0 => "Hvilken sideinndelingsmodus som skal brukes.",
 	],
+	"Listing viewer" => [
+		0 => "Listeviser",
+	],
+	"Enable this to use the listing viewer when clicking on an image." => [
+		0 => "Aktiver dette for å bruke listeviseren når et bilde klikkes.",
+	],
 	"Image listing size" => [
 		0 => "Bildeoppføringsstørrelse",
 	],
@@ -2352,6 +2664,15 @@ $translation_table = [
 	],
 	"Both methods use a fixed width but fluid method uses automatic heights." => [
 		0 => "Begge metodene bruker en fast bredde, men den flytende metoden regner automatisk ut høyden.",
+	],
+	"Album listing images requirement" => [
+		0 => "Albumlistekrav for bilder",
+	],
+	"explore" => [
+		0 => "utforsk",
+	],
+	"Sets the minimum image count needed to show albums in explore." => [
+		0 => "Angir minimum antall bilder som trengs for å vise et album i utforskingsmodus",
 	],
 	"Listing columns number" => [
 		0 => "Antall kolonner for oppføringer",
@@ -2518,6 +2839,9 @@ $translation_table = [
 	"Put your custom JS code here. It will be placed as <script> just before the closing </head> tag." => [
 		0 => "Legg inn din egendefinerte JS-kode her. Den vil bli plassert som en <script>-tag rett for </head>-tagen.",
 	],
+	"Do not use %s markup here. This is for plain JS code, not for HTML script tags. If you use script tags here you will break your website." => [
+		0 => "Ikke bruk %s-markup her. Dette er for ren JS-kode, ikke for HTML-tags. Hvis du bruker scripttags her vil det føre til at nettstedet slutter å fungere.",
+	],
 	"Style" => [
 		0 => "Stil",
 	],
@@ -2596,9 +2920,6 @@ $translation_table = [
 	"User IDs" => [
 		0 => "BrukerIDer",
 	],
-	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
-		0 => "Kommaseparert liste for målbruker-ID for å vise bilder på hjemmesiden. La stå tom for å vise alle nylige bilder.",
-	],
 	"banners" => [
 		0 => "bannere",
 	],
@@ -2613,6 +2934,12 @@ $translation_table = [
 	],
 	"Enable this to show a notice on top warning you about new available system updates." => [
 		0 => "Aktiver for å vise en melding på toppen med informasjon om tilgjengelige systemoppdateringer.",
+	],
+	"SEO %s URLs" => [
+		0 => "SEO %s URLer",
+	],
+	"Enable this if you want to use SEO %s URLs." => [
+		0 => "Aktiver dette hvis du ønsker å bruke SEO %s URLer.",
 	],
 	"Minify code" => [
 		0 => "Minify-kode",
@@ -2667,6 +2994,18 @@ $translation_table = [
 	],
 	"Album routing" => [
 		0 => "Album-ruting",
+	],
+	"Language subdomains" => [
+		0 => "Språk for underdomener",
+	],
+	"Enable to use %s for %t." => [
+		0 => "Aktiver dette for å bruke %s for %t.",
+	],
+	"Username subdomains" => [
+		0 => "Brukernavn for underdomener",
+	],
+	"user profiles" => [
+		0 => "brukerprofiler",
 	],
 	"Custom language strings" => [
 		0 => "Egendefinerte språkstrenger",
@@ -2752,14 +3091,53 @@ $translation_table = [
 	"Unsecured" => [
 		0 => "Usikret",
 	],
+	"Decode ID" => [
+		0 => "Dekodings-ID",
+	],
+	"Encode ID" => [
+		0 => "Kodings-ID",
+	],
 	"Send test email" => [
 		0 => "Send test-e-post",
 	],
-	"test@somedomain.com" => [
-		0 => "test@example.com",
-	],
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "Bruk denne for å teste hvordan e-post blir levert. Vi anbefaler å bruke %s.",
+	],
+	"Export a user" => [
+		0 => "Eksporter en bruker",
+	],
+	"Export user" => [
+		0 => "Eksporter bruker",
+	],
+	"This will allow you to download a user's standard personal information in JSON format." => [
+		0 => "Dette lar deg laste ned en brukers personlige standardinformasjon i JSON-format.",
+	],
+	"Regenerate external storage stats" => [
+		0 => "Regenerer ekstern lagringsstatus",
+	],
+	"Storage id" => [
+		0 => "LagringsID",
+	],
+	"Regenerate" => [
+		0 => "Regenerer",
+	],
+	"This will re-calculate the sum of all the image records associated to the target external storage." => [
+		0 => "Dette vil rekalkulere summen av alle bildeoppføringer assosiert med den eksterne lagringen.",
+	],
+	"Migrate image records from one external storage to another" => [
+		0 => "Migrer bildeoppføringer fra en ekstern lagring til en annen",
+	],
+	"Source storage id" => [
+		0 => "LagringsID for kilde",
+	],
+	"Target storage id" => [
+		0 => "LagringsID for mål",
+	],
+	"Migrate" => [
+		0 => "Migrer",
+	],
+	"This only updates the database. You must transfer the actual files to target storage container on your own. URL rewriting is strongly recommended. Use zero (0) for local storage." => [
+		0 => "Dette oppdaterer bare databasen. Du må overføre de faktiske filene til mållagringsområdet selv. URL-omskriving er sterkt anbefalt. Bruk null (0) for lokal lagring.",
 	],
 	"social networks" => [
 		0 => "sosiale nettverk",
@@ -2805,6 +3183,9 @@ $translation_table = [
 	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Du trenger en <a href=\"%s\" target=\"_blank\">reCAPTCHA-nøkkel</a> for dette.",
+	],
+	"Please note that each reCAPTCHA version require its own set of keys. Don't forget to update the keys if you change versions." => [
+		0 => "Merk at hver reCAPTCHA-versjon trenger sitt eget sett nøkler. Ikke glem å oppdatere nøklene hvis du bytter mellom versjoner.",
 	],
 	"%s site key" => [
 		0 => "%s sidenøkkel",
@@ -2914,20 +3295,26 @@ $translation_table = [
 	"Start uploading" => [
 		0 => "Start opplasting",
 	],
-	"Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings." => [
-		0 => "Fyll ut denne delen, last opp bilder til %s kontoen.<br>Du kan redigere målbrukeren i dashbordinnstillingene.",
-	],
 	"Sign up to unlock all the features" => [
 		0 => "Registrer deg for å låse opp alle funksjonene",
 	],
 	"Manage your content, create private albums, customize your profile and more." => [
 		0 => "Administrer ditt innhold, opprett private album, tilpass din profil og mer.",
 	],
-	"Enter your password" => [
-		0 => "Skriv inn ditt passord",
+	"Sign in with your account" => [
+		0 => "Logg inn med din konto",
+	],
+	"Don't have an account? <a href='%s'>Sign up</a> now." => [
+		0 => "Har du ikke en konto? <a href='%s'>Registrer</a> deg nå.",
+	],
+	"Logged out" => [
+		0 => "Logget ut",
 	],
 	"You have been logged off %s. Hope to see you soon." => [
 		0 => "Du har blitt logget ut fra %s. Velkommen tilbake!",
+	],
+	"Go to homepage" => [
+		0 => "Tilbake til startsiden",
 	],
 	"Website under maintenance" => [
 		0 => "Nettstedet er under vedlikehold",
@@ -3019,9 +3406,6 @@ $translation_table = [
 	"Registration IP" => [
 		0 => "Registrerings-IP",
 	],
-	"Status" => [
-		0 => "Status",
-	],
 	"Valid" => [
 		0 => "Gyldig",
 	],
@@ -3082,6 +3466,12 @@ $translation_table = [
 	"This user doesn't have a password. Add one using this form." => [
 		0 => "Denne brukeren har ikke passord. Legg til et ved å bruke dette skjemaet.",
 	],
+	"Enter your password" => [
+		0 => "Skriv inn ditt passord",
+	],
+	"Confirm password" => [
+		0 => "Bekreft passord",
+	],
 	"Re-enter your password" => [
 		0 => "Skriv inn ditt passord på nytt",
 	],
@@ -3090,9 +3480,6 @@ $translation_table = [
 	],
 	"Delete existing image" => [
 		0 => "Slett eksisterende bilde",
-	],
-	"Privacy" => [
-		0 => "Personvern",
 	],
 	"Make my profile and identity totally private" => [
 		0 => "Gjør min profil og identitet fullstendig privat",
@@ -3142,11 +3529,32 @@ $translation_table = [
 	"Button" => [
 		0 => "Knapp",
 	],
+	"Login" => [
+		0 => "Logg inn",
+	],
+	"Already have an account? %s now." => [
+		0 => "Har du allerede en konto? %s nå.",
+	],
 	"resend account activation" => [
 		0 => "send konto-aktivering på nytt",
 	],
-	"If you have already signed up maybe you need to request to %s" => [
-		0 => "Hvis du allerede har registrert deg kanskje du trenger å be om %s",
+	"If you have already signed up maybe you need to request to %s to activate your account." => [
+		0 => "Hvis du allerede har registrert deg, trenger du kanskje å be om %s for å aktivere kontoen din.",
+	],
+	"You can also %s." => [
+		0 => "Du kan også %s.",
+	],
+	"I'm at least %s years old" => [
+		0 => "Jeg er minst %s år gammel",
+	],
+	"terms" => [
+		0 => "betingelser",
+	],
+	"privacy policy" => [
+		0 => "behandling av personopplysninger",
+	],
+	"I agree to the %terms_link and %privacy_link" => [
+		0 => "Jeg aksepterer %terms_link og %privacy_link",
 	],
 	"Upload profile background" => [
 		0 => "Last opp nytt profilbakgrunnsbilde",
@@ -3182,17 +3590,11 @@ $translation_table = [
 	"Invalid subject" => [
 		0 => "Ugyldig emne",
 	],
-	"Invalid reCAPTCHA" => [
-		0 => "Ugyldig reCAPTCHA",
-	],
 	"Mail error" => [
 		0 => "E-postfeil",
 	],
 	"Message sent" => [
 		0 => "Melding sendt",
-	],
-	"Contact" => [
-		0 => "Kontakt",
 	],
 	"Message sent. We will get in contact soon." => [
 		0 => "Meldingen er sendt. Vi vil svare deg så fort vi kan.",
@@ -3205,153 +3607,6 @@ $translation_table = [
 	],
 	"Subject" => [
 		0 => "Emne",
-	],
-	"Installed version is v%s" => [
-		0 => "Installert versjon er v%s",
-	],
-	"Can't connect to %s" => [
-		0 => "Kan ikke koble til %s",
-	],
-	"Last available release is v%s" => [
-		0 => "Siste tilgjengelige versjon er v%s",
-	],
-	"Update needed, proceeding to download" => [
-		0 => "Oppdatering nødvendig, fortsetter til nedlasting",
-	],
-	"No update needed" => [
-		0 => "Ingen oppdatering er nødvendig",
-	],
-	"System files already up to date" => [
-		0 => "Systemfiler er allerede oppdaterte",
-	],
-	"Starting v%s download" => [
-		0 => "Starter nedlasting av v%s",
-	],
-	"Downloaded v%s, proceeding to extraction" => [
-		0 => "Lastet ned v%s, fortsetter til utpakking",
-	],
-	"Attempting to extract v%s" => [
-		0 => "Forsøker å pakke ut v%s",
-	],
-	"Extraction completed" => [
-		0 => "Utpakking fullført",
-	],
-	"Proceding to install the update" => [
-		0 => "Fortsetter installasjon av oppdateringen",
-	],
-	"Update failed" => [
-		0 => "Oppdatering mislyktes",
-	],
-	"Please provide a valid email address" => [
-		0 => "Vennligst legg inn en gyldig epostadresse",
-	],
-	"You must enter the album name." => [
-		0 => "Du må skrive inn et albumnavn.",
-	],
-	"Confirm" => [
-		0 => "Bekreft",
-	],
-	"Select existing album" => [
-		0 => "Velg eksisterende album",
-	],
-	"Please select a valid image file type." => [
-		0 => "Velg en gyldig bildefil.",
-	],
-	"Please select a picture of at most %s size." => [
-		0 => "Velg et bilde på maksimalt %s størrelse.",
-	],
-	"Profile image updated." => [
-		0 => "Profilbilde oppdatert.",
-	],
-	"Profile background image updated." => [
-		0 => "Profilbakgrunnsbilde oppdatert.",
-	],
-	"Profile background image deleted." => [
-		0 => "Profilbakgrunnsbilde slettet.",
-	],
-	"Error deleting profile background image." => [
-		0 => "Feil ved sletting av profilbakgrunnsbilde.",
-	],
-	"Update available v%s" => [
-		0 => "Oppdatering tilgjengelig v%s",
-	],
-	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
-		0 => "En oppdatering for systemet er tilgjengelig. Du kan automatisk laste ned og installere denne oppdateringen eller gå til %s for å laste ned filen manuelt.",
-	],
-	"Update now" => [
-		0 => "Oppdater nå",
-	],
-	"This website is running latest %s version" => [
-		0 => "Nettstedet kjører siste %s versjon.",
-	],
-	"Clipboard image" => [
-		0 => "Utklippstavlebilde",
-	],
-	"File too big." => [
-		0 => "Fil for stor.",
-	],
-	"Invalid or unsupported file format." => [
-		0 => "Ugyldig eller ikke støttet filformat.",
-	],
-	"Some files couldn't be added" => [
-		0 => "Noen filer kunne ikke legges til",
-	],
-	"Image edited successfully." => [
-		0 => "Bilderedigering fullført.",
-	],
-	"private" => [
-		0 => "privat",
-	],
-	"Album edited successfully." => [
-		0 => "Album oppdatert uten problemer.",
-	],
-	"Invalid URL key." => [
-		0 => "Ugyldig URL-nøkkel.",
-	],
-	"Category URL key already being used." => [
-		0 => "Kategori-URL-nøkkel er allerede i bruk.",
-	],
-	"Category successfully deleted." => [
-		0 => "Kategorien er slettet.",
-	],
-	"Category %s added." => [
-		0 => "Kategori %s lagt til.",
-	],
-	"Invalid expiration date." => [
-		0 => "Ugyldig utløpsdato.",
-	],
-	"IP %s already banned." => [
-		0 => "IP %s er allerede blokkert.",
-	],
-	"IP %s banned." => [
-		0 => "IP %s blokkert.",
-	],
-	"IP ban successfully deleted." => [
-		0 => "IP-blokkering slettet.",
-	],
-	"Please fill all the required fields." => [
-		0 => "Vennligst fyll ut alle de påkrevde feltene.",
-	],
-	"Invalid storage capacity value. Make sure to use a valid format." => [
-		0 => "Ugyldig verdi for lagringskapasitet. Sørg for å bruke et gyldig format.",
-	],
-	"Invalid URL." => [
-		0 => "Ugyldig URL.",
-	],
-	"Storage successfully edited." => [
-		0 => "Lagring er vellykket redigert.",
-	],
-	"User added successfully." => [
-		0 => "Bruker vellykket lagt til.",
-	],
-	"The content has been moved." => [
-		0 => "Innholdet har blitt flyttet.",
-	],
-	"Unselect" => [
-		0 => "Fjern merking",
-	],
-	"The content has been edited." => [
-		0 => "Innholdet har blitt redigert.",
 	],
 	"All the changes that you have made will be lost if you continue." => [
 		0 => "Alle endringene du har gjort vil gå tapt hvis du fortsetter.",

@@ -1,4 +1,6 @@
-<?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
+<?php if (!defined('access') or !access) {
+    die('This file cannot be directly accessed.');
+} ?>
 
 <div class="input-label c7">
 	 <label for="form-category-name"><?php _se('Name'); ?></label>

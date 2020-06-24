@@ -7,6 +7,6 @@ CREATE TABLE `%table_prefix%confirmations` (
   `confirmation_date_gmt` datetime NOT NULL,
   `confirmation_token_hash` varchar(255) NOT NULL,
   `confirmation_status` enum('active','valid','invalid') NOT NULL,
-  `confirmation_extra` text,
+  `confirmation_extra` mediumtext,
   PRIMARY KEY (`confirmation_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

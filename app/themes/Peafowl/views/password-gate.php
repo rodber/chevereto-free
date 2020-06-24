@@ -1,4 +1,6 @@
-<?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
+<?php if (!defined('access') or !access) {
+    die('This file cannot be directly accessed.');
+} ?>
 <?php G\Render\include_theme_header(); ?>
 
 <div class="content-width">
@@ -13,19 +15,27 @@
 					<label for="content-password"><?php _se('Password'); ?></label>
 					<input type="password" id="content-password" name="content-password" class="text-input" required>
 				</div>
-				<?php if(is_captcha_needed()) { ?>
+				<?php if (is_captcha_needed() && function_exists('get_recaptcha_html')) {
+    ?>
 				<div class="input-label center-box">
 					<?php echo get_recaptcha_html(); ?>
 				</div>
-				<?php } ?>
+				<?php
+} ?>
 				<div class="btn-container margin-bottom-0"><button class="btn btn-input default" type="submit"><?php _se('Send'); ?></button> <span class="btn-alt"><?php _se('or'); ?><a class="cancel" href="<?php echo G\get_base_url(); ?>"><?php _se('cancel'); ?></a></span></div>
 			</form>
 		</div>
 	</div>
 </div>
 
-<?php G\Render\include_theme_footer(); ?>
+<?php if (is_error() && get_error() !== null) {
+        ?>
+<script>
+$(function() {
+	PF.fn.growl.call("<?php echo get_error(); ?>");
+});
+</script>
+<?php
+    } ?>
 
-<?php if(is_error() && get_error() !== NULL) { ?>
-<script>PF.fn.growl.call("<?php echo get_error(); ?>");</script>
-<?php } ?>
+<?php G\Render\include_theme_footer(); ?>

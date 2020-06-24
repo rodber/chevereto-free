@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2018-06-03 14:28+0000\n"
-"PO-Revision-Date: 2018-06-03 14:28+0000\n"
+"POT-Creation-Date: 2019-12-12 15:27+0000\n"
+"PO-Revision-Date: 2019-12-12 15:27+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: nb\n"
@@ -10,13 +10,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-msgid "To use all the features of this site you must be logged in."
-msgstr "For å benytte deg av alle funksjonene på denne siden må du være logget inn."
-
-#, php-format
-msgid "If you don't have an account you can <a href=\"%s\">sign up</a> right now."
-msgstr "Hvis du ikke har en konto kan du <a href=\"%s\">registrere</a> deg nå."
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -91,6 +84,62 @@ msgstr "Samfunn"
 msgid "Personal"
 msgstr "Personlig"
 
+#: ../../../app/install/update/template/update.js:19
+#, javascript-format
+msgid "Installed version is v%s"
+msgstr "Installert versjon er v%s"
+
+#: ../../../app/install/update/template/update.js:26
+#: ../../../app/install/update/template/update.js:55
+#: ../../../app/install/update/template/update.js:78
+#, javascript-format
+msgid "Can't connect to %s"
+msgstr "Kan ikke koble til %s"
+
+#: ../../../app/install/update/template/update.js:30
+#, javascript-format
+msgid "Last available release is v%s"
+msgstr "Siste tilgjengelige versjon er v%s"
+
+#: ../../../app/install/update/template/update.js:33
+msgid "Update needed, proceeding to download"
+msgstr "Oppdatering nødvendig, fortsetter til nedlasting"
+
+#: ../../../app/install/update/template/update.js:40
+msgid "No update needed"
+msgstr "Ingen oppdatering er nødvendig"
+
+#: ../../../app/install/update/template/update.js:41
+msgid "System files already up to date"
+msgstr "Systemfiler er allerede oppdaterte"
+
+#: ../../../app/install/update/template/update.js:49
+#, javascript-format
+msgid "Starting v%s download"
+msgstr "Starter nedlasting av v%s"
+
+#: ../../../app/install/update/template/update.js:60
+#, javascript-format
+msgid "Downloaded v%s, proceeding to extraction"
+msgstr "Lastet ned v%s, fortsetter til utpakking"
+
+#: ../../../app/install/update/template/update.js:72
+#, javascript-format
+msgid "Attempting to extract v%s"
+msgstr "Forsøker å pakke ut v%s"
+
+#: ../../../app/install/update/template/update.js:82
+msgid "Extraction completed"
+msgstr "Utpakking fullført"
+
+#: ../../../app/install/update/template/update.js:84
+msgid "Proceding to install the update"
+msgstr "Fortsetter installasjon av oppdateringen"
+
+#: ../../../app/install/update/template/update.js:111
+msgid "Update failed"
+msgstr "Oppdatering mislyktes"
+
 #: ../../../app/install/update/template/update.php:2
 msgid "Update in progress"
 msgstr "Oppdatering pågår"
@@ -130,6 +179,353 @@ msgstr "Kan ikke opprette %s mappen - %e"
 msgid "Can't update %s file - %e"
 msgstr "Kan ikke oppdatere %s - %e"
 
+#: ../../../app/routes/route.account.php:508
+#: ../../../app/routes/route.signup.php:236
+#: ../../../content/pages/default/contact.php:132
+#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
+#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
+msgid "Check the errors in the form to continue."
+msgstr "Sjekk feil i skjemaet for å fortsette."
+
+#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
+#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
+#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
+#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
+#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
+#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
+msgid "You must enter the album name."
+msgstr "Du må skrive inn et albumnavn."
+
+#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
+#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
+#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
+#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
+msgid "Confirm"
+msgstr "Bekreft"
+
+#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
+msgid "Select existing album"
+msgstr "Velg eksisterende album"
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "En feil oppsto. Vennligst forsøk senere."
+
+#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
+#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
+msgid "Please select a valid image file type."
+msgstr "Velg en gyldig bildefil."
+
+#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
+#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
+#, javascript-format
+msgid "Please select a picture of at most %s size."
+msgstr "Velg et bilde på maksimalt %s størrelse."
+
+#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
+msgid "Profile image updated."
+msgstr "Profilbilde oppdatert."
+
+#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
+msgid "Profile background image updated."
+msgstr "Profilbakgrunnsbilde oppdatert."
+
+#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
+msgid "Profile background image deleted."
+msgstr "Profilbakgrunnsbilde slettet."
+
+#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
+msgid "Error deleting profile background image."
+msgstr "Feil ved sletting av profilbakgrunnsbilde."
+
+#: ../../../app/routes/route.account.php:360
+#: ../../../app/routes/route.settings.php:327
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
+#: ../../../app/themes/Peafowl/views/settings.php:313
+#: ../../../app/themes/Peafowl/views/settings.php:330
+#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
+msgid "Passwords don't match"
+msgstr "Passordene er ikke like"
+
+#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "Update available v%s"
+msgstr "Oppdatering tilgjengelig v%s"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
+msgstr "En oppdatering for systemet er tilgjengelig. Du kan automatisk laste ned og installere denne oppdateringen eller gå til %s for å laste ned filen manuelt."
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "The release notes for this update are:"
+msgstr "Utgivelsesnotat for denne oppdateringen er:"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "Update now"
+msgstr "Oppdater nå"
+
+#: ../../../app/themes/Peafowl/header.php:285
+#: ../../../app/themes/Peafowl/header.php:332
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/form_album.php:9
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/login.php:22
+#: ../../../app/themes/Peafowl/views/login.php:62
+#: ../../../app/themes/Peafowl/views/settings.php:354
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../app/themes/Peafowl/views/signup.php:22
+#: ../../../app/themes/Peafowl/views/signup.php:73
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
+#: ../../../lib/Peafowl/peafowl.min.js:31
+#: ../../../lib/Peafowl/peafowl.min.js:140
+msgid "or"
+msgstr "eller"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "avbryt"
+
+#, javascript-format
+msgid "This website is running latest %s version"
+msgstr "Nettstedet kjører siste %s versjon."
+
+#: ../../../app/themes/Peafowl/header.php:381
+#: ../../../app/themes/Peafowl/views/settings.php:348
+#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
+msgid "loading"
+msgstr "Laster inn"
+
+msgid "Toggle select"
+msgstr "Merk valg"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Like"
+
+msgid "Toggle flag"
+msgstr "Merk flagg"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
+msgid "Edit"
+msgstr "Rediger"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "Album"
+msgstr[1] "Album"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:607
+#: ../../../app/themes/Peafowl/views/dashboard.php:884
+#: ../../../app/themes/Peafowl/views/dashboard.php:933
+msgid "Delete"
+msgstr "Slett"
+
+#: ../../../app/themes/Peafowl/header.php:222
+msgid "Close"
+msgstr "Lukk"
+
+msgid "Previous"
+msgstr "Forrige"
+
+msgid "Next"
+msgstr "Neste"
+
+#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
+msgid "Clipboard image"
+msgstr "Utklippstavlebilde"
+
+#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
+msgid "File too big."
+msgstr "Fil for stor."
+
+msgid "Invalid or unsupported file format."
+msgstr "Ugyldig eller ikke støttet filformat."
+
+#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
+#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
+msgid "Some files couldn't be added"
+msgstr "Noen filer kunne ikke legges til"
+
+#: ../../../app/lib/classes/class.listing.php:296
+#: ../../../app/routes/route.album.php:177
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
+#: ../../../app/themes/Peafowl/views/album.php:34
+#: ../../../app/themes/Peafowl/views/user.php:98
+#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
+msgid "image"
+msgid_plural "images"
+msgstr[0] "bilde"
+msgstr[1] "bilder"
+
+#: ../../../app/routes/route.user.php:89
+#: ../../../app/themes/Peafowl/header.php:56
+#, php-format, javascript-format
+msgid "%s's Albums"
+msgstr "%ss album"
+
+#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
+msgid "Image edited successfully."
+msgstr "Bilderedigering fullført."
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "privat"
+
+#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
+msgid "Album edited successfully."
+msgstr "Album oppdatert uten problemer."
+
+#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
+msgid "Invalid URL key."
+msgstr "Ugyldig URL-nøkkel."
+
+#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
+msgid "Category URL key already being used."
+msgstr "Kategori-URL-nøkkel er allerede i bruk."
+
+#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
+msgid "Category successfully deleted."
+msgstr "Kategorien er slettet."
+
+#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
+#, javascript-format
+msgid "Category %s added."
+msgstr "Kategori %s lagt til."
+
+#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
+msgid "Invalid expiration date."
+msgstr "Ugyldig utløpsdato."
+
+#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
+#, javascript-format
+msgid "IP %s already banned."
+msgstr "IP %s er allerede blokkert."
+
+#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
+#, javascript-format
+msgid "IP %s banned."
+msgstr "IP %s blokkert."
+
+#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
+msgid "IP ban successfully deleted."
+msgstr "IP-blokkering slettet."
+
+#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
+#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
+#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
+msgid "Please fill all the required fields."
+msgstr "Vennligst fyll ut alle de påkrevde feltene."
+
+#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
+msgid "Invalid storage capacity value. Make sure to use a valid format."
+msgstr "Ugyldig verdi for lagringskapasitet. Sørg for å bruke et gyldig format."
+
+#: ../../../app/lib/classes/class.storage.php:450
+#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
+#, php-format, javascript-format
+msgid "Storage capacity can't be lower than its current usage (%s)."
+msgstr "Lagringskapasiteten kan ikke være lavere enn dagens bruk (%s)."
+
+#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
+msgid "Invalid URL."
+msgstr "Ugyldig URL."
+
+#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
+msgid "Storage successfully edited."
+msgstr "Lagring er vellykket redigert."
+
+#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
+msgid "User added successfully."
+msgstr "Bruker vellykket lagt til."
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+#: ../../../app/themes/Peafowl/views/album.php:134
+#: ../../../app/themes/Peafowl/views/user.php:171
+#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
+msgid "The content has been deleted."
+msgstr "Innholdet er slettet."
+
+#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
+#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
+#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
+#: ../../../app/lib/chevereto.min.js:205
+msgid "The content has been moved."
+msgstr "Innholdet har blitt flyttet."
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
+#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
+#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
+msgid "Select"
+msgstr "Velg"
+
+#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
+msgid "Unselect"
+msgstr "Fjern merking"
+
+#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
+msgid "The content has been edited."
+msgstr "Innholdet har blitt redigert."
+
 #: ../../../app/lib/classes/class.album.php:100
 msgid "Untitled"
 msgstr "Uten navn"
@@ -168,7 +564,7 @@ msgstr "Meg"
 #: ../../../app/themes/Peafowl/snippets/modal_share.php:10
 #: ../../../app/themes/Peafowl/views/dashboard.php:461
 msgid "Link"
-msgstr "Link"
+msgstr "Lenke"
 
 #: ../../../app/routes/route.settings.php:64
 #: ../../../app/themes/Peafowl/header.php:292
@@ -251,17 +647,6 @@ msgid_plural "likes"
 msgstr[0] "Liker"
 msgstr[1] "Liker"
 
-#: ../../../app/lib/classes/class.listing.php:296
-#: ../../../app/routes/route.album.php:177
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
-#: ../../../app/themes/Peafowl/views/album.php:34
-#: ../../../app/themes/Peafowl/views/user.php:98
-#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
-msgid "image"
-msgid_plural "images"
-msgstr[0] "bilde"
-msgstr[1] "bilder"
-
 msgid "Recent"
 msgstr "Nylig"
 
@@ -342,17 +727,6 @@ msgid_plural "Images"
 msgstr[0] "Bilde"
 msgstr[1] "Bilder"
 
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
-#: ../../../app/themes/Peafowl/views/dashboard.php:28
-msgid "Album"
-msgid_plural "Albums"
-msgstr[0] "Album"
-msgstr[1] "Album"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:34
 #: ../../../app/themes/Peafowl/views/dashboard.php:90
 #: ../../../app/themes/Peafowl/views/settings.php:126
@@ -378,12 +752,6 @@ msgstr "Lokalt"
 
 msgid "Can't insert storage."
 msgstr "Kan ikke sette lagring."
-
-#: ../../../app/lib/classes/class.storage.php:450
-#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
-#, php-format, javascript-format
-msgid "Storage capacity can't be lower than its current usage (%s)."
-msgstr "Lagringskapasiteten kan ikke være lavere enn dagens bruk (%s)."
 
 msgid "Can't update storage details."
 msgstr "Kan ikke oppdatere lagringsdetaljer."
@@ -449,10 +817,6 @@ msgstr "Du har ikke endret standard e-postinnstillinger. Gå til <a href='%s'>E-
 msgid "There is an update available for your Chevereto based website."
 msgstr "Det er en oppdatering tilgjengelig for ditt Chevereto-baserte nettsted."
 
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "The release notes for this update are:"
-msgstr "Utgivelsesnotat for denne oppdateringen er:"
-
 msgid "admin dashboard"
 msgstr "administratordashboard"
 
@@ -462,6 +826,16 @@ msgstr "Du kan bruke denne oppdateringen direkte fra %a eller laste den ned fra 
 #, php-format
 msgid "view on %s"
 msgstr "sett på %s"
+
+msgid "cookie policy"
+msgstr "retningslinjer for informasjonskapsler"
+
+#, php-format
+msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link."
+msgstr "Vi bruker våre egne samt tredjeparts informasjonskapsler for å forbedre din opplevelse av nettstedet og tjenestene våre. Hvis du fortsetter å bruke nettstedet betyr det at du aksepterer våre %cookie_policy_link."
+
+msgid "I understand"
+msgstr "Jeg forstår"
 
 #: ../../../app/loader.php:180
 msgid "You have been forbidden to use this website."
@@ -479,6 +853,20 @@ msgstr "Vis alle mine bilder"
 
 msgid "Plugin"
 msgstr "Utvidelse"
+
+#: ../../../app/routes/route.account.php:140
+#: ../../../app/routes/route.account.php:299
+#: ../../../app/routes/route.account.php:321
+#: ../../../app/routes/route.account.php:388
+#: ../../../app/routes/route.json.php:24 ../../../app/routes/route.json.php:37
+#: ../../../app/routes/route.json.php:49 ../../../app/routes/route.json.php:561
+#: ../../../app/routes/route.json.php:623
+#: ../../../app/routes/route.json.php:672
+#: ../../../app/routes/route.json.php:719 ../../../app/routes/route.page.php:66
+#: ../../../app/themes/Peafowl/views/request-denied.php:8
+#: ../../../content/pages/default/contact.php:14
+msgid "Request denied"
+msgstr "Forespørsel avslått"
 
 #: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
 msgid "That page doesn't exist"
@@ -513,12 +901,9 @@ msgstr "Legg inn din e-postadresse"
 msgid "Email changed"
 msgstr "E-post endret"
 
-#: ../../../app/routes/route.account.php:95
-#: ../../../app/routes/route.login.php:71
-#: ../../../app/routes/route.settings.php:140
-#: ../../../app/routes/route.signup.php:73
-msgid "The reCAPTCHA wasn't entered correctly"
-msgstr "reCAPTCHA er ikke korrekt"
+#, php-format
+msgid "%s says you are a robot"
+msgstr "%s sier du er en robot"
 
 #: ../../../app/routes/route.account.php:119
 #: ../../../app/routes/route.account.php:164
@@ -529,20 +914,6 @@ msgstr "Ugyldig brukernavn/e-postadresse"
 #: ../../../app/routes/route.account.php:129
 msgid "User doesn't have an email."
 msgstr "Brukeren har ikke registrert e-postadresse."
-
-#: ../../../app/routes/route.account.php:140
-#: ../../../app/routes/route.account.php:299
-#: ../../../app/routes/route.account.php:321
-#: ../../../app/routes/route.account.php:388
-#: ../../../app/routes/route.json.php:24 ../../../app/routes/route.json.php:37
-#: ../../../app/routes/route.json.php:49 ../../../app/routes/route.json.php:561
-#: ../../../app/routes/route.json.php:623
-#: ../../../app/routes/route.json.php:672
-#: ../../../app/routes/route.json.php:719 ../../../app/routes/route.page.php:66
-#: ../../../app/themes/Peafowl/views/request-denied.php:8
-#: ../../../content/pages/default/contact.php:14
-msgid "Request denied"
-msgstr "Forespørsel avslått"
 
 #: ../../../app/routes/route.account.php:145
 msgid "Account needs to be activated to use this feature"
@@ -575,29 +946,12 @@ msgstr "Bekreftelse kreves på %s"
 msgid "Welcome to %s"
 msgstr "Velkommen til %s"
 
-#: ../../../app/routes/route.account.php:360
-#: ../../../app/routes/route.settings.php:327
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
-#: ../../../app/themes/Peafowl/views/settings.php:313
-#: ../../../app/themes/Peafowl/views/settings.php:330
-#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
-msgid "Passwords don't match"
-msgstr "Passordene er ikke like"
-
 #: ../../../app/routes/route.account.php:422
 #: ../../../app/routes/route.json.php:599
 #: ../../../app/routes/route.settings.php:243
 #: ../../../app/routes/route.signup.php:141
 msgid "Email already being used"
 msgstr "E-postadressen er allerede i bruk"
-
-#: ../../../app/routes/route.account.php:508
-#: ../../../app/routes/route.signup.php:236
-#: ../../../content/pages/default/contact.php:132
-#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
-#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
-msgid "Check the errors in the form to continue."
-msgstr "Sjekk feil i skjemaet for å fortsette."
 
 msgid "Password required"
 msgstr "Passord kreves"
@@ -655,6 +1009,9 @@ msgstr "Brukere"
 #: ../../../app/themes/Peafowl/header.php:405
 msgid "Settings"
 msgstr "Innstillinger"
+
+msgid "Bulk importer"
+msgstr "Masseimportering"
 
 #: ../../../app/routes/route.dashboard.php:161
 msgid "Chevereto version"
@@ -821,14 +1178,8 @@ msgstr "Dokumentasjon"
 msgid "Changelog"
 msgstr "Endringslogg"
 
-msgid "Request new features"
-msgstr "Foreslå nye funksjoner"
-
 msgid "Bug tracking"
 msgstr "Problemsporing"
-
-msgid "Blog"
-msgstr "Blogg"
 
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
@@ -1208,6 +1559,9 @@ msgstr "Ugyldig type"
 msgid "Invalid visibility"
 msgstr "Ugyldig synlighet"
 
+msgid "Invalid internal type"
+msgstr "Ugyldig intern type"
+
 #: ../../../app/routes/route.dashboard.php:728
 msgid "Invalid target attribute"
 msgstr "Ugyldig målattributt"
@@ -1421,6 +1775,10 @@ msgstr "Dette er bare en test"
 msgid "Test email sent to %s."
 msgstr "Test e-post sendt til %s."
 
+#, php-format
+msgid "Downloading %s data"
+msgstr "Laster ned %s data"
+
 #: ../../../app/routes/route.json.php:1128
 #, php-format
 msgid "User %s followed"
@@ -1462,11 +1820,6 @@ msgstr "Feil kombinasjon av brukernavn/e-postadresse og passord"
 #: ../../../app/themes/Peafowl/views/login.php:52
 msgid "Sign in"
 msgstr "Logg inn"
-
-#: ../../../app/routes/route.logout.php:29
-#: ../../../app/themes/Peafowl/views/logout.php:8
-msgid "Logged out"
-msgstr "Logget ut"
 
 msgid "Upload images"
 msgstr "Last opp bilder"
@@ -1551,6 +1904,9 @@ msgstr "Ugyldige verdier for brukernavn/e-postadresse"
 msgid "Settings for %s"
 msgstr "Innstillinger for %s"
 
+msgid "You must agree to the terms and privacy policy"
+msgstr "Du må akseptere retningslinjene for bruk"
+
 #, php-format
 msgid "You must be at least %s years old to use this website."
 msgstr "Du må være minst %s år for å benytte denne websiden."
@@ -1575,12 +1931,6 @@ msgstr "Last opp bilde"
 #, php-format
 msgid "%s's Images"
 msgstr "%ss bilder"
-
-#: ../../../app/routes/route.user.php:89
-#: ../../../app/themes/Peafowl/header.php:56
-#, php-format, javascript-format
-msgid "%s's Albums"
-msgstr "%ss album"
 
 #: ../../../app/routes/route.user.php:99
 #: ../../../app/themes/Peafowl/views/search.php:8
@@ -1613,10 +1963,6 @@ msgid "Discovery"
 msgstr "Oppdagelse"
 
 #: ../../../app/themes/Peafowl/header.php:222
-msgid "Close"
-msgstr "Lukk"
-
-#: ../../../app/themes/Peafowl/header.php:222
 #: ../../../app/themes/Peafowl/header.php:226
 msgid "Advanced search"
 msgstr "Avansert søk"
@@ -1632,106 +1978,9 @@ msgstr "Tilfeldig"
 msgid "Notices (%s)"
 msgstr "Notiser (%s)"
 
-#: ../../../app/themes/Peafowl/header.php:281
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
-#: ../../../app/themes/Peafowl/views/login.php:18
-#: ../../../app/themes/Peafowl/views/login.php:65
-#: ../../../app/themes/Peafowl/views/signup.php:18
-#: ../../../app/themes/Peafowl/views/signup.php:76
-msgid "Sign in with another account"
-msgstr "Logg inn med en annen konto"
-
-#: ../../../app/themes/Peafowl/header.php:285
-#: ../../../app/themes/Peafowl/header.php:332
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/form_album.php:9
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
-#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
-#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/login.php:22
-#: ../../../app/themes/Peafowl/views/login.php:62
-#: ../../../app/themes/Peafowl/views/settings.php:354
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../app/themes/Peafowl/views/signup.php:22
-#: ../../../app/themes/Peafowl/views/signup.php:73
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
-#: ../../../lib/Peafowl/peafowl.min.js:31
-#: ../../../lib/Peafowl/peafowl.min.js:140
-msgid "or"
-msgstr "eller"
-
-#: ../../../app/themes/Peafowl/header.php:291
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
-#: ../../../app/themes/Peafowl/views/login.php:34
-#: ../../../app/themes/Peafowl/views/login.php:35
-msgid "Username or Email address"
-msgstr "Brukernavn eller e-postadresse"
-
-#: ../../../app/themes/Peafowl/header.php:294
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:23
-#: ../../../app/themes/Peafowl/views/login.php:53
-msgid "Keep me logged in"
-msgstr "Forbli innlogget"
-
-#: ../../../app/themes/Peafowl/header.php:301
-#, php-format
-msgid "Don't have an account? <a href='%s'>Sign up</a> now."
-msgstr "Har du ikke en konto? <a href='%s'>Registrer</a> deg nå."
-
-#: ../../../app/themes/Peafowl/header.php:328
-msgid "Sign up with another account"
-msgstr "Registrer deg med en annen konto"
-
-#: ../../../app/themes/Peafowl/header.php:338
-#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
-#: ../../../app/themes/Peafowl/views/dashboard.php:100
-#: ../../../app/themes/Peafowl/views/settings.php:155
-#: ../../../app/themes/Peafowl/views/signup.php:34
-#: ../../../app/themes/Peafowl/views/signup.php:35
-#: ../../../content/pages/default/contact.php:92
-msgid "Email address"
-msgstr "E-postadresse"
-
-#: ../../../app/themes/Peafowl/header.php:339
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
-#: ../../../app/themes/Peafowl/views/dashboard.php:94
-#: ../../../app/themes/Peafowl/views/dashboard.php:95
-#: ../../../app/themes/Peafowl/views/settings.php:143
-#: ../../../app/themes/Peafowl/views/settings.php:144
-#: ../../../app/themes/Peafowl/views/signup.php:39
-#: ../../../app/themes/Peafowl/views/signup.php:40
-msgid "Username"
-msgstr "Brukernavn"
-
-#, php-format
-msgid "I'm at least %s years old"
-msgstr "Jeg er minst %s år gammel"
-
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
 msgstr "Varsler"
-
-#: ../../../app/themes/Peafowl/header.php:381
-#: ../../../app/themes/Peafowl/views/settings.php:348
-#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
-msgid "loading"
-msgstr "Laster inn"
 
 #: ../../../app/themes/Peafowl/header.php:384
 msgid "You don't have notifications"
@@ -1887,14 +2136,14 @@ msgstr "opprett nytt album"
 msgid "move it to an existing album"
 msgstr "flytt til eksisterende album"
 
+msgid "You must %s or %l to save this content into your account."
+msgstr "Du må %s eller %l for å lagre dette innholdet til kontoen din."
+
 msgid "create an account"
 msgstr "opprett konto"
 
 msgid "sign in"
 msgstr "logg inn"
-
-msgid "You can %s or %l to save this content into your account."
-msgstr "Du kan %s eller %l for å lagre dette innholdet til din konto."
 
 #, php-format
 msgid "No %s have been uploaded"
@@ -1925,17 +2174,6 @@ msgstr "Ikke egnet for barn"
 msgid "Uploading"
 msgstr "Laster opp"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
-msgid "cancel"
-msgstr "avbryt"
-
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
 msgid "cancel remaining"
@@ -1953,6 +2191,10 @@ msgstr "Lær mer"
 msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
 msgstr "Sjekk <a data-modal=\"simple\" data-target=\"failed-upload-result\">feilmeldingen</a> for mer informasjon."
 
+#, php-format
+msgid "Register to get %s"
+msgstr "Registrer deg for å få %s"
+
 msgid "reset"
 msgstr "nullstill"
 
@@ -1965,13 +2207,6 @@ msgstr "kopier"
 
 msgid "insert"
 msgstr "sett inn"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
-msgid "Edit"
-msgstr "Rediger"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:148
 #: ../../../app/themes/Peafowl/views/dashboard.php:666
@@ -2082,9 +2317,17 @@ msgstr "Lim inn bildeadressen her"
 msgid "Create album"
 msgstr "Opprett album"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:224
-msgid "The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
-msgstr "Bildene du lastet opp vil bli flyttet til dette nyopprettede albumet. Du kan også flytte bildene til et <a class=\"modal-switch\" data-switch=\"move-existing-album\">eksisterende album</a>."
+msgid "The uploaded content will be moved to this newly created album."
+msgstr "Det opplastede innholdet vil bli flyttet til det nylig opprettede albumet."
+
+msgid "existing album"
+msgstr "eksisterende album"
+
+msgid "You can also move the content to an %a."
+msgstr "Du kan også flytte innholdet til en %a."
+
+msgid "You must %s or %l if you want to edit this album later on."
+msgstr "Du må %s eller %l hvis du ønsker å endre dette albumet senere."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:235
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:28
@@ -2154,7 +2397,7 @@ msgstr "BBkode (miniatyrbilde med lenke)"
 
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:74
 msgid "Markdown full"
-msgstr "Markdown full"
+msgstr "Full markdown"
 
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:79
 msgid "Markdown full linked"
@@ -2274,6 +2517,41 @@ msgstr "Kort beskrivelse av denne kategorien"
 msgid "Untitled image"
 msgstr "Bilde uten navn"
 
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
+msgid "Path"
+msgstr "Sti"
+
+msgid "Local path (absolute)"
+msgstr "Lokal sti (absolutt)"
+
+msgid "Directory structure"
+msgstr "Mappestruktur"
+
+msgid "Parse top level folders as users (username)"
+msgstr "Tolk toppnivåmapper som brukere (brukernavn)"
+
+msgid "Parse top level folders as albums"
+msgstr "Tolk toppnivåmapper som album"
+
+msgid "Don't parse folders"
+msgstr "Ikke tolk mapper"
+
+msgid "When parsing top level folders as users, second level folders will be parsed as user albums. Parsing top level folders as albums adds these as guest albums."
+msgstr "Når toppnivåmapper tolkes som brukere, vil andrenivåmapper bli tolket som brukeralbum. Tolking av toppnivåmapper som album legger disse til som gjestealbum."
+
+msgid "Threads"
+msgstr "Tråder"
+
+msgid "Select number of threads"
+msgstr "Velg antall tråder"
+
+#, php-format
+msgid "This determines how intensive and fast will be the import process. Don't use more than %s threads on a shared server."
+msgstr "Dette avgjør hvor intensiv og rask importeringsprosessen vil være. Ikke bruk flere enn %s tråder på en delt server."
+
+msgid "You can use wildcard * characters."
+msgstr "Du kan bruke jokertegn (*)."
+
 #: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
 msgid "Expiration date"
 msgstr "Utløpsdato"
@@ -2321,6 +2599,10 @@ msgstr "API"
 msgid "Region"
 msgstr "Region"
 
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
+msgid "Storage region"
+msgstr "lagringsregion"
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:58
 msgid "Storage bucket"
 msgstr "Lagringsplass"
@@ -2341,19 +2623,6 @@ msgstr "Hemmelig"
 msgid "Storage secret"
 msgstr "Lagringshemmelighet"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:73
-msgid "Client email"
-msgstr "kunde-e-post"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:74
-msgid "Google Cloud client email"
-msgstr "klient-e-post Google Cloud"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:75
-#, php-format
-msgid "You will need a <a %s>service account</a> for this."
-msgstr "Du trenger en <a %s>tjenestekonto</a> for dette."
-
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:78
 msgid "Private key"
 msgstr "Privatnøkkel"
@@ -2361,6 +2630,11 @@ msgstr "Privatnøkkel"
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:79
 msgid "Google Cloud JSON key"
 msgstr "Google Cloud JSON-nøkkel"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:75
+#, php-format
+msgid "You will need a <a %s>service account</a> for this."
+msgstr "Du trenger en <a %s>tjenestekonto</a> for dette."
 
 msgid "Service name"
 msgstr "tjenestenavn"
@@ -2377,9 +2651,18 @@ msgstr "Identitet API-endepunkt"
 msgid "API endpoint for OpenStack identity"
 msgstr "API-endepunkt for Openstack-identitet"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
-msgid "Storage region"
-msgstr "lagringsregion"
+#: ../../../app/themes/Peafowl/header.php:339
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
+#: ../../../app/themes/Peafowl/views/dashboard.php:94
+#: ../../../app/themes/Peafowl/views/dashboard.php:95
+#: ../../../app/themes/Peafowl/views/settings.php:143
+#: ../../../app/themes/Peafowl/views/settings.php:144
+#: ../../../app/themes/Peafowl/views/signup.php:39
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "Username"
+msgstr "Brukernavn"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:100
 msgid "Container"
@@ -2405,29 +2688,35 @@ msgstr "Leietakers navn"
 msgid "Tenant name (account name)"
 msgstr "Leietakers navn (brukernavn)"
 
+msgid "Storage endpoint"
+msgstr "Endepunkt for lagring"
+
+msgid "Server address"
+msgstr "Serveradresse"
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:115
 msgid "Hostname or IP of the storage server"
 msgstr "Hostnavn eller IP-adresse til lagringsserveren"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
-msgid "Path"
-msgstr "Sti"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
 msgid "Server path"
 msgstr "Serversti"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
-msgid "Server path where the files will be stored"
-msgstr "Serverstien hvor filene skal lagres"
+msgid "Absolute path where the files will be stored in the context of the %p login. Use %s for root path."
+msgstr "Absolutt sti hvor filene vil lagres i kontekst av %p-innloggingen. Bruk %s for rotsti."
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:123
-msgid "Server username"
-msgstr "Serverbrukernavn"
+msgid "Server login"
+msgstr "Serverinnlogging"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:127
 msgid "Server password"
 msgstr "Serverpassord"
+
+msgid "Local path"
+msgstr "Lokal sti"
+
+msgid "Local path where the files will be stored"
+msgstr "Lokal sti hvor filene vil bli lagret"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:132
 msgid "Storage capacity"
@@ -2491,28 +2780,21 @@ msgstr "Tildel kategori"
 msgid "Flag as safe"
 msgstr "Merk som trygt"
 
-#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
-#: ../../../app/themes/Peafowl/views/dashboard.php:607
-#: ../../../app/themes/Peafowl/views/dashboard.php:884
-#: ../../../app/themes/Peafowl/views/dashboard.php:933
-msgid "Delete"
-msgstr "Slett"
-
 msgid "Create new album"
 msgstr "Opprett nytt album"
 
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:5
-#, php-format
-msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
-msgstr "For å benytte deg av alle funksjonene på denne siden må du være logget inn. Hvis du ikke har en konto kan du <a href=\"%s\">registrere</a> deg nå."
+#: ../../../app/themes/Peafowl/header.php:281
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
+#: ../../../app/themes/Peafowl/views/login.php:18
+#: ../../../app/themes/Peafowl/views/login.php:65
+#: ../../../app/themes/Peafowl/views/signup.php:18
+#: ../../../app/themes/Peafowl/views/signup.php:76
+msgid "Sign in with another account"
+msgstr "Logg inn med en annen konto"
+
+msgid "Home"
+msgstr "Hjem"
 
 #: ../../../app/themes/Peafowl/snippets/template_content_empty.php:5
 #: ../../../app/themes/Peafowl/views/dashboard.php:618
@@ -2585,14 +2867,18 @@ msgstr "Er du sikker på at du vil slette? Dette kan ikke angres."
 msgid "Do you really want to remove all the selected content? This can't be undone."
 msgstr "Er du sikker på at du vil slette alt det merkede innholdet? Dette kan ikke angres."
 
+msgid "Fullscreen"
+msgstr "Fullskjerm"
+
+msgid "Exit fullscreen"
+msgstr "Avslutt fullskjerm"
+
 #: ../../../app/themes/Peafowl/views/image.php:57
 msgid "Guest"
 msgstr "Gjest"
 
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "Like"
+msgid "Keyboard shortcuts"
+msgstr "Tastatursnarveier"
 
 msgid "Uploaded by guest"
 msgstr "Lastet opp av gjest"
@@ -2609,21 +2895,6 @@ msgstr "Lastet opp av privat"
 #, php-format
 msgid "by %u"
 msgstr "av %u"
-
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
-#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
-#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
-msgid "Select"
-msgstr "Velg"
 
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:7
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:7
@@ -2642,13 +2913,6 @@ msgstr "Søk etter noe annet"
 msgid "The user has been deleted"
 msgstr "Denne brukeren har blitt slettet"
 
-#: ../../../app/themes/Peafowl/views/404.php:22
-#: ../../../app/themes/Peafowl/views/album.php:134
-#: ../../../app/themes/Peafowl/views/user.php:171
-#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
-msgid "The content has been deleted."
-msgstr "Innholdet er slettet."
-
 #: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:7
 msgid "Your account is almost ready"
 msgstr "Kontoen din er nesten klar"
@@ -2657,17 +2921,6 @@ msgstr "Kontoen din er nesten klar"
 #, php-format
 msgid "An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters."
 msgstr "En e-post har har blitt sendt til %s med instruksjoner for aktivering av konto. Aktiveringslinken er gyldig i 48 timer. Hvis du ikke har mottatt e-posten, sjekk spamfilteret ditt."
-
-#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
-#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/logout.php:13
-#: ../../../app/themes/Peafowl/views/request-denied.php:13
-msgid "Go to homepage"
-msgstr "Tilbake til startsiden"
 
 #: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
@@ -2693,41 +2946,6 @@ msgstr "En bekreftelseslenke vil bli sendt til denne e-posten med detaljer for �
 msgid "Your email address"
 msgstr "Din e-postadresse"
 
-#: ../../../app/themes/Peafowl/views/account/email-needed.php:26
-msgid "Add email"
-msgstr "Legg til e-post"
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
-msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
-msgstr "En e-post med instruksjoner for å nullstille passordet ditt har blitt sendt til e-postadressen du har registrert. Hvis du ikke mottar instruksjonene, sjekk spamfilteret ditt."
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-msgid "Resend instructions"
-msgstr "Send på nytt"
-
-#: ../../../app/install/update/updater.php:62
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
-#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
-#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
-#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
-#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
-#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
-#: ../../../lib/Peafowl/peafowl.min.js:158
-#: ../../../lib/Peafowl/peafowl.min.js:195
-msgid "An error occurred. Please try again later."
-msgstr "En feil oppsto. Vennligst forsøk senere."
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
-msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
-msgstr "Det har allerede blitt sendt en e-post for å nullstille ditt passord. Hvis du ikke har mottatt e-posten, sjekk spamfilteret ditt."
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:32
-msgid "Enter your username or the email address that you used to create your account."
-msgstr "Skriv inn brukernavnet ditt, eller e-postadressen du oppga da du registrerte deg."
-
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:52
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:47
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:37
@@ -2737,6 +2955,33 @@ msgstr "Skriv inn brukernavnet ditt, eller e-postadressen du oppga da du registr
 msgid "Submit"
 msgstr "Utfør"
 
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
+msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "En e-post med instruksjoner for å nullstille passordet ditt har blitt sendt til e-postadressen du har registrert. Hvis du ikke mottar instruksjonene, sjekk spamfilteret ditt."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
+msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
+msgstr "Det har allerede blitt sendt en e-post for å nullstille ditt passord. Hvis du ikke har mottatt e-posten, sjekk spamfilteret ditt."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+msgid "Resend instructions"
+msgstr "Send på nytt"
+
+#, php-format
+msgid "Enter your username or email address to continue. You may need to check your spam folder or whitelist %s"
+msgstr "Angi brukernavn eller epostadresse for å fortsette. Du kan måtte sjekke søppelpostmappen din eller legge til %s på en klareringsliste (whitelist)"
+
+#: ../../../app/themes/Peafowl/header.php:291
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
+#: ../../../app/themes/Peafowl/views/login.php:34
+#: ../../../app/themes/Peafowl/views/login.php:35
+msgid "Username or Email address"
+msgstr "Brukernavn eller e-postadresse"
+
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:15
 msgid "Your password has been changed. You can now try logging in using your new password."
 msgstr "Passordet ditt er endret. Du kan nå logge inn med det nye passordet."
@@ -2745,13 +2990,10 @@ msgstr "Passordet ditt er endret. Du kan nå logge inn med det nye passordet."
 msgid "Login now"
 msgstr "Logg inn nå"
 
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:22
-msgid "Enter the new password that you want to use."
-msgstr "Skriv inn nytt passord"
-
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:28
-msgid "New Password"
-msgstr "Nytt passord"
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/settings.php:306
+msgid "Enter your new password"
+msgstr "Skriv inn ditt nye passord"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:29
 #: ../../../app/themes/Peafowl/views/dashboard.php:105
@@ -2762,15 +3004,8 @@ msgstr "Nytt passord"
 msgid "%d characters min"
 msgstr "minst %d tegn"
 
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
-#: ../../../app/themes/Peafowl/views/settings.php:306
-msgid "Enter your new password"
-msgstr "Skriv inn ditt nye passord"
-
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
-#: ../../../app/themes/Peafowl/views/settings.php:328
-msgid "Confirm password"
-msgstr "Bekreft passord"
+msgid "Password strength"
+msgstr "Passordstyrke"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:35
 #: ../../../app/themes/Peafowl/views/settings.php:312
@@ -2781,10 +3016,6 @@ msgstr "Skriv inn ditt nye passord igjen"
 #, php-format
 msgid "An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters."
 msgstr "En e-post til %s er sendt med instruksjoner for å aktivere kontoen din. Hvis du ikke mottar instruksjonene prøve å sjekke søppelpost eller spam-filtre."
-
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:19
-msgid "Enter the username or email address that you used to create your account to continue."
-msgstr "Skriv inn brukernavnet ditt, eller e-postadressen du oppga ved registrering for å fortsette."
 
 #: ../../../app/themes/Peafowl/views/album.php:16
 #: ../../../app/themes/Peafowl/views/image.php:63
@@ -2823,10 +3054,75 @@ msgstr "Ved å klikke på \"Jeg aksepterer\" erklærer du at du har lest og fors
 msgid "I Agree"
 msgstr "Jeg aksepterer"
 
+msgid "documentation"
+msgstr "dokumentasjon"
+
+#, php-format
+msgid "Learn more about %s at our %d."
+msgstr "Lær mer om %s på vår %d."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:40
 #: ../../../app/themes/Peafowl/views/dashboard.php:1732
 msgid "Disk used"
 msgstr "Diskplass brukt"
+
+msgid "Add import job"
+msgstr "Legg til importeringsjobb"
+
+#, php-format
+msgid "This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d."
+msgstr "Dette verktøyet lar deg masseimportere innhold til nettstedet ved å angi en systemsti der innholdet du ønsker å importere, ligger. Det støtter importering av brukere, album og bilder basert på en mappestruktur. Du kan lære mer om mappestrukturen, å legge til metadata og alt annet om dette verktøyet i %d."
+
+msgid "Process import"
+msgstr "Prosessér importering"
+
+#, php-format
+msgid "Top level folders as %s"
+msgstr "Toppnivåmapper som %s"
+
+msgid "Actions"
+msgstr "Handlinger"
+
+msgid "Process"
+msgstr "Prosessér"
+
+msgid "Pause"
+msgstr "Pause"
+
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgid "Process log"
+msgstr "Progresjonslogg"
+
+msgid "Errors"
+msgstr "Feil"
+
+#, php-format
+msgid "Do you really want to remove the import ID %s?"
+msgstr "Vil du virkelig fjerne import-IDen %s?"
+
+msgid "Queued"
+msgstr "I kø"
+
+msgid "Working"
+msgstr "Jobber"
+
+msgid "Paused"
+msgstr "Pauset"
+
+msgid "Canceled"
+msgstr "Avbrutt"
+
+msgid "Completed"
+msgstr "Fullført"
+
+msgid "Parser"
+msgstr "Tolker"
+
+#: ../../../app/themes/Peafowl/views/settings.php:105
+msgid "Status"
+msgstr "Status"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:80
 #: ../../../app/themes/Peafowl/views/dashboard.php:84
@@ -2838,20 +3134,26 @@ msgstr "Legg til bruker"
 msgid "Role"
 msgstr "Rolle"
 
+msgid "Manager"
+msgstr "Håndterer"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:89
 #: ../../../app/themes/Peafowl/views/settings.php:125
 msgid "Administrator"
 msgstr "Administrator"
 
+#: ../../../app/themes/Peafowl/header.php:338
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:100
+#: ../../../app/themes/Peafowl/views/settings.php:155
+#: ../../../app/themes/Peafowl/views/signup.php:34
+#: ../../../app/themes/Peafowl/views/signup.php:35
+#: ../../../content/pages/default/contact.php:92
+msgid "Email address"
+msgstr "E-postadresse"
+
 msgid "This setting is always diabled when using personal website mode."
 msgstr "Denne innstillingen er deaktivert når personlig webside modus benyttes."
-
-msgid "documentation"
-msgstr "dokumentasjon"
-
-#, php-format
-msgid "Learn more about %s at our %d."
-msgstr "Lær mer om %s på vår %d."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
@@ -2885,6 +3187,18 @@ msgstr "Tittel på nettsted"
 msgid "Website description"
 msgstr "Beskrivelse av nettsted"
 
+msgid "Automatic"
+msgstr "Automatisk"
+
+msgid "Forced"
+msgstr "Tvunget"
+
+msgid "%a will use HTTPS detection on the server side (recommended). %f will use HTTPS regardless of your server setup. %d to don't use HTTPS at all."
+msgstr "%a vil bruke HTTPS-deteksjon på serversiden (anbefalt). %f vil bruke HTTPS uavhengig av serveroppsettet ditt. %d for å ikke bruke HTTPS i det hele tatt."
+
+msgid "This only controls the protocol used in the URLs, it won't turn your website into a valid HTTPS website unless your server is configured to support and use HTTPS."
+msgstr "Dette kontrollerer kun protokollen brukt i URLer, det vil ikke forvandle nettstedet ditt til et gyldig HTTPS-nettsted med mindre serveren er satt opp til å støtte og bruke HTTPS."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:257
 msgid "Default time zone"
 msgstr "Standard tidssone"
@@ -2899,6 +3213,12 @@ msgstr "Tillat søk etter bilder, album og brukere basert på en egendefinert s�
 
 msgid "Enables to browse public uploaded images. It also enables categories."
 msgstr "Aktiverer visning av offentlige bilder. Det aktiverer også kategorier."
+
+msgid "guests"
+msgstr "gjester"
+
+msgid "Enables explore for guests."
+msgstr "Aktiverer utforsking for gjester."
 
 msgid "Enables to browse images randomly."
 msgstr "Aktiverer mulighet for å bla tilfeldig i bilder"
@@ -2994,6 +3314,24 @@ msgstr "bare aktive sider vil være tilgjengelige."
 #: ../../../app/themes/Peafowl/views/dashboard.php:595
 msgid "Type"
 msgstr "Type"
+
+msgid "Terms of service"
+msgstr "Betingelser for bruk"
+
+msgid "Privacy"
+msgstr "Personvern"
+
+msgid "Contact"
+msgstr "Kontakt"
+
+msgid "Extra page"
+msgstr "Ekstra side"
+
+msgid "Internal page type"
+msgstr "Intern sidetype"
+
+msgid "You can have multiple extra pages, but only one of the other special internal types."
+msgstr "Du kan ha flere ekstra sider, men kun én av de andre spesielle interne typene."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:475
 msgid "Page visibility"
@@ -3103,6 +3441,9 @@ msgstr "sider"
 msgid "Do you really want to delete the page ID %s? This can't be undone."
 msgstr "Er du sikker på at du vil slette sideID %s? Dette kan ikke angres."
 
+msgid "Enabled image formats"
+msgstr "Aktiverte bildeformater"
+
 msgid "Unchecked image formats won't be allowed to be uploaded."
 msgstr "Uavkryssede bildeformater vil ikke bli tillatt lastet opp."
 
@@ -3121,6 +3462,15 @@ msgstr "Gjesteopplastinger"
 #: ../../../app/themes/Peafowl/views/dashboard.php:645
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "Aktiver dersom du vil at uregistrerte brukere skal kunne laste opp."
+
+msgid "Upload user interface"
+msgstr "Last opp brukergrensesnitt"
+
+msgid "On-page container"
+msgstr "På-side beholder"
+
+msgid "route"
+msgstr "rute"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1353
 msgid "Enable embed codes (uploader)"
@@ -3195,6 +3545,10 @@ msgstr "Maks filstørrelse for opplasting."
 
 msgid "Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)."
 msgstr "Den maksimale størrelsen tillatt av serveren er %s. Denne begrensningen er avkortet av %u og %p (%f-verdier)."
+
+#, php-format
+msgid "Same as \"%s\" but for guests."
+msgstr "Samme som \"%s\", men for gjester."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:695
 msgid "Image path"
@@ -3443,6 +3797,12 @@ msgstr "Tom"
 msgid "Leave it empty to don't require a minimum age to use the website."
 msgstr "La denne være blank dersom det ikke er noen aldersbegrensning for å benytte nettstedet."
 
+msgid "Notify on user signup"
+msgstr "Varsle ved brukerregistrering"
+
+msgid "Enable this if you want to get an email notification for each new user signup."
+msgstr "Aktiver dette hvis du ønsker å få en epostvarsling for hver ny brukerregistrering."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:972
 msgid "Username routing"
 msgstr "Brukernavn-ruting"
@@ -3579,6 +3939,12 @@ msgstr "Klassisk sideinndeling"
 msgid "What pagination method should be used."
 msgstr "Hvilken sideinndelingsmodus som skal brukes."
 
+msgid "Listing viewer"
+msgstr "Listeviser"
+
+msgid "Enable this to use the listing viewer when clicking on an image."
+msgstr "Aktiver dette for å bruke listeviseren når et bilde klikkes."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1127
 msgid "Image listing size"
 msgstr "Bildeoppføringsstørrelse"
@@ -3594,6 +3960,15 @@ msgstr "Fast"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1134
 msgid "Both methods use a fixed width but fluid method uses automatic heights."
 msgstr "Begge metodene bruker en fast bredde, men den flytende metoden regner automatisk ut høyden."
+
+msgid "Album listing images requirement"
+msgstr "Albumlistekrav for bilder"
+
+msgid "explore"
+msgstr "utforsk"
+
+msgid "Sets the minimum image count needed to show albums in explore."
+msgstr "Angir minimum antall bilder som trengs for å vise et album i utforskingsmodus"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1140
 msgid "Listing columns number"
@@ -3826,6 +4201,10 @@ msgstr "Egendefinert JS-kode"
 msgid "Put your custom JS code here. It will be placed as <script> just before the closing </head> tag."
 msgstr "Legg inn din egendefinerte JS-kode her. Den vil bli plassert som en <script>-tag rett for </head>-tagen."
 
+#, php-format
+msgid "Do not use %s markup here. This is for plain JS code, not for HTML script tags. If you use script tags here you will break your website."
+msgstr "Ikke bruk %s-markup her. Dette er for ren JS-kode, ikke for HTML-tags. Hvis du bruker scripttags her vil det føre til at nettstedet slutter å fungere."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1390
 msgid "Style"
 msgstr "Stil"
@@ -3933,9 +4312,6 @@ msgstr "Dette vil bli lagt inn i handlingsknappens <a>-tag. La stå tomt for å 
 msgid "User IDs"
 msgstr "BrukerIDer"
 
-msgid "Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images."
-msgstr "Kommaseparert liste for målbruker-ID for å vise bilder på hjemmesiden. La stå tom for å vise alle nylige bilder."
-
 msgid "banners"
 msgstr "bannere"
 
@@ -3950,6 +4326,14 @@ msgstr "Vis varsler for tilgjengelige oppdateringer"
 
 msgid "Enable this to show a notice on top warning you about new available system updates."
 msgstr "Aktiver for å vise en melding på toppen med informasjon om tilgjengelige systemoppdateringer."
+
+#, php-format
+msgid "SEO %s URLs"
+msgstr "SEO %s URLer"
+
+#, php-format
+msgid "Enable this if you want to use SEO %s URLs."
+msgstr "Aktiver dette hvis du ønsker å bruke SEO %s URLer."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1570
 msgid "Minify code"
@@ -4022,6 +4406,18 @@ msgstr "Rute for %s"
 
 msgid "Album routing"
 msgstr "Album-ruting"
+
+msgid "Language subdomains"
+msgstr "Språk for underdomener"
+
+msgid "Enable to use %s for %t."
+msgstr "Aktiver dette for å bruke %s for %t."
+
+msgid "Username subdomains"
+msgstr "Brukernavn for underdomener"
+
+msgid "user profiles"
+msgstr "brukerprofiler"
 
 msgid "Custom language strings"
 msgstr "Egendefinerte språkstrenger"
@@ -4134,19 +4530,57 @@ msgstr "SMTP-sikkerhet"
 msgid "Unsecured"
 msgstr "Usikret"
 
+msgid "Decode ID"
+msgstr "Dekodings-ID"
+
+msgid "Encode ID"
+msgstr "Kodings-ID"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1824
 #: ../../../app/themes/Peafowl/views/dashboard.php:1825
 msgid "Send test email"
 msgstr "Send test-e-post"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1825
-msgid "test@somedomain.com"
-msgstr "test@example.com"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1826
 #, php-format
 msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
 msgstr "Bruk denne for å teste hvordan e-post blir levert. Vi anbefaler å bruke %s."
+
+msgid "Export a user"
+msgstr "Eksporter en bruker"
+
+msgid "Export user"
+msgstr "Eksporter bruker"
+
+msgid "This will allow you to download a user's standard personal information in JSON format."
+msgstr "Dette lar deg laste ned en brukers personlige standardinformasjon i JSON-format."
+
+msgid "Regenerate external storage stats"
+msgstr "Regenerer ekstern lagringsstatus"
+
+msgid "Storage id"
+msgstr "LagringsID"
+
+msgid "Regenerate"
+msgstr "Regenerer"
+
+msgid "This will re-calculate the sum of all the image records associated to the target external storage."
+msgstr "Dette vil rekalkulere summen av alle bildeoppføringer assosiert med den eksterne lagringen."
+
+msgid "Migrate image records from one external storage to another"
+msgstr "Migrer bildeoppføringer fra en ekstern lagring til en annen"
+
+msgid "Source storage id"
+msgstr "LagringsID for kilde"
+
+msgid "Target storage id"
+msgstr "LagringsID for mål"
+
+msgid "Migrate"
+msgstr "Migrer"
+
+msgid "This only updates the database. You must transfer the actual files to target storage container on your own. URL rewriting is strongly recommended. Use zero (0) for local storage."
+msgstr "Dette oppdaterer bare databasen. Du må overføre de faktiske filene til mållagringsområdet selv. URL-omskriving er sterkt anbefalt. Bruk null (0) for lokal lagring."
 
 msgid "social networks"
 msgstr "sosiale nettverk"
@@ -4207,6 +4641,9 @@ msgstr "VK-klient-hemmelighet"
 #, php-format
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "Du trenger en <a href=\"%s\" target=\"_blank\">reCAPTCHA-nøkkel</a> for dette."
+
+msgid "Please note that each reCAPTCHA version require its own set of keys. Don't forget to update the keys if you change versions."
+msgstr "Merk at hver reCAPTCHA-versjon trenger sitt eget sett nøkler. Ikke glem å oppdatere nøklene hvis du bytter mellom versjoner."
 
 #, php-format
 msgid "%s site key"
@@ -4357,11 +4794,6 @@ msgstr "Dra og slipp bildene hvor som helst og start opplastning med en gang. Be
 msgid "Start uploading"
 msgstr "Start opplasting"
 
-#: ../../../app/themes/Peafowl/views/index.php:63
-#, php-format
-msgid "Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings."
-msgstr "Fyll ut denne delen, last opp bilder til %s kontoen.<br>Du kan redigere målbrukeren i dashbordinnstillingene."
-
 #: ../../../app/themes/Peafowl/views/index.php:79
 msgid "Sign up to unlock all the features"
 msgstr "Registrer deg for å låse opp alle funksjonene"
@@ -4370,15 +4802,34 @@ msgstr "Registrer deg for å låse opp alle funksjonene"
 msgid "Manage your content, create private albums, customize your profile and more."
 msgstr "Administrer ditt innhold, opprett private album, tilpass din profil og mer."
 
-#: ../../../app/themes/Peafowl/views/login.php:40
-#: ../../../app/themes/Peafowl/views/settings.php:323
-msgid "Enter your password"
-msgstr "Skriv inn ditt passord"
+msgid "Sign in with your account"
+msgstr "Logg inn med din konto"
+
+#: ../../../app/themes/Peafowl/header.php:301
+#, php-format
+msgid "Don't have an account? <a href='%s'>Sign up</a> now."
+msgstr "Har du ikke en konto? <a href='%s'>Registrer</a> deg nå."
+
+#: ../../../app/routes/route.logout.php:29
+#: ../../../app/themes/Peafowl/views/logout.php:8
+msgid "Logged out"
+msgstr "Logget ut"
 
 #: ../../../app/themes/Peafowl/views/logout.php:12
 #, php-format
 msgid "You have been logged off %s. Hope to see you soon."
 msgstr "Du har blitt logget ut fra %s. Velkommen tilbake!"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/logout.php:13
+#: ../../../app/themes/Peafowl/views/request-denied.php:13
+msgid "Go to homepage"
+msgstr "Tilbake til startsiden"
 
 #: ../../../app/themes/Peafowl/views/maintenance.php:7
 msgid "Website under maintenance"
@@ -4482,10 +4933,6 @@ msgstr "Registreringsdato"
 msgid "Registration IP"
 msgstr "Registrerings-IP"
 
-#: ../../../app/themes/Peafowl/views/settings.php:105
-msgid "Status"
-msgstr "Status"
-
 #: ../../../app/themes/Peafowl/views/settings.php:109
 msgid "Valid"
 msgstr "Gyldig"
@@ -4569,6 +5016,16 @@ msgstr "Skriv inn et passord for å kunne logge inn med ditt brukernavn eller e-
 msgid "This user doesn't have a password. Add one using this form."
 msgstr "Denne brukeren har ikke passord. Legg til et ved å bruke dette skjemaet."
 
+#: ../../../app/themes/Peafowl/views/login.php:40
+#: ../../../app/themes/Peafowl/views/settings.php:323
+msgid "Enter your password"
+msgstr "Skriv inn ditt passord"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
+#: ../../../app/themes/Peafowl/views/settings.php:328
+msgid "Confirm password"
+msgstr "Bekreft passord"
+
 #: ../../../app/themes/Peafowl/views/settings.php:329
 msgid "Re-enter your password"
 msgstr "Skriv inn ditt passord på nytt"
@@ -4581,9 +5038,6 @@ msgstr "Last opp nytt profilbilde"
 #: ../../../app/themes/Peafowl/views/settings.php:354
 msgid "Delete existing image"
 msgstr "Slett eksisterende bilde"
-
-msgid "Privacy"
-msgstr "Personvern"
 
 msgid "Make my profile and identity totally private"
 msgstr "Gjør min profil og identitet fullstendig privat"
@@ -4653,14 +5107,37 @@ msgstr "koble til %s"
 msgid "Button"
 msgstr "Knapp"
 
+msgid "Login"
+msgstr "Logg inn"
+
+#, php-format
+msgid "Already have an account? %s now."
+msgstr "Har du allerede en konto? %s nå."
+
 #: ../../../app/themes/Peafowl/views/signup.php:45
 msgid "resend account activation"
 msgstr "send konto-aktivering på nytt"
 
-#: ../../../app/themes/Peafowl/views/signup.php:45
 #, php-format
-msgid "If you have already signed up maybe you need to request to %s"
-msgstr "Hvis du allerede har registrert deg kanskje du trenger å be om %s"
+msgid "If you have already signed up maybe you need to request to %s to activate your account."
+msgstr "Hvis du allerede har registrert deg, trenger du kanskje å be om %s for å aktivere kontoen din."
+
+#, php-format
+msgid "You can also %s."
+msgstr "Du kan også %s."
+
+#, php-format
+msgid "I'm at least %s years old"
+msgstr "Jeg er minst %s år gammel"
+
+msgid "terms"
+msgstr "betingelser"
+
+msgid "privacy policy"
+msgstr "behandling av personopplysninger"
+
+msgid "I agree to the %terms_link and %privacy_link"
+msgstr "Jeg aksepterer %terms_link og %privacy_link"
 
 #: ../../../app/themes/Peafowl/views/user.php:15
 msgid "Upload profile background"
@@ -4712,11 +5189,6 @@ msgstr "Ugyldig melding"
 msgid "Invalid subject"
 msgstr "Ugyldig emne"
 
-#: ../../../app/routes/route.page.php:85
-#: ../../../content/pages/default/contact.php:33
-msgid "Invalid reCAPTCHA"
-msgstr "Ugyldig reCAPTCHA"
-
 #: ../../../app/routes/route.page.php:122
 #: ../../../content/pages/default/contact.php:69
 msgid "Mail error"
@@ -4724,9 +5196,6 @@ msgstr "E-postfeil"
 
 msgid "Message sent"
 msgstr "Melding sendt"
-
-msgid "Contact"
-msgstr "Kontakt"
 
 #: ../../../app/routes/route.page.php:119
 msgid "Message sent. We will get in contact soon."
@@ -4740,233 +5209,6 @@ msgstr "Ditt navn"
 
 msgid "Subject"
 msgstr "Emne"
-
-#: ../../../app/install/update/template/update.js:19
-#, javascript-format
-msgid "Installed version is v%s"
-msgstr "Installert versjon er v%s"
-
-#: ../../../app/install/update/template/update.js:26
-#: ../../../app/install/update/template/update.js:55
-#: ../../../app/install/update/template/update.js:78
-#, javascript-format
-msgid "Can't connect to %s"
-msgstr "Kan ikke koble til %s"
-
-#: ../../../app/install/update/template/update.js:30
-#, javascript-format
-msgid "Last available release is v%s"
-msgstr "Siste tilgjengelige versjon er v%s"
-
-#: ../../../app/install/update/template/update.js:33
-msgid "Update needed, proceeding to download"
-msgstr "Oppdatering nødvendig, fortsetter til nedlasting"
-
-#: ../../../app/install/update/template/update.js:40
-msgid "No update needed"
-msgstr "Ingen oppdatering er nødvendig"
-
-#: ../../../app/install/update/template/update.js:41
-msgid "System files already up to date"
-msgstr "Systemfiler er allerede oppdaterte"
-
-#: ../../../app/install/update/template/update.js:49
-#, javascript-format
-msgid "Starting v%s download"
-msgstr "Starter nedlasting av v%s"
-
-#: ../../../app/install/update/template/update.js:60
-#, javascript-format
-msgid "Downloaded v%s, proceeding to extraction"
-msgstr "Lastet ned v%s, fortsetter til utpakking"
-
-#: ../../../app/install/update/template/update.js:72
-#, javascript-format
-msgid "Attempting to extract v%s"
-msgstr "Forsøker å pakke ut v%s"
-
-#: ../../../app/install/update/template/update.js:82
-msgid "Extraction completed"
-msgstr "Utpakking fullført"
-
-#: ../../../app/install/update/template/update.js:84
-msgid "Proceding to install the update"
-msgstr "Fortsetter installasjon av oppdateringen"
-
-#: ../../../app/install/update/template/update.js:111
-msgid "Update failed"
-msgstr "Oppdatering mislyktes"
-
-#: ../../../app/lib/chevereto.js:592 ../../../app/lib/chevereto.min.js:36
-msgid "Please provide a valid email address"
-msgstr "Vennligst legg inn en gyldig epostadresse"
-
-#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
-#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
-#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
-#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
-#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
-#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
-msgid "You must enter the album name."
-msgstr "Du må skrive inn et albumnavn."
-
-#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
-#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
-#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
-#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
-msgid "Confirm"
-msgstr "Bekreft"
-
-#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
-msgid "Select existing album"
-msgstr "Velg eksisterende album"
-
-#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
-#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
-msgid "Please select a valid image file type."
-msgstr "Velg en gyldig bildefil."
-
-#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
-#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
-#, javascript-format
-msgid "Please select a picture of at most %s size."
-msgstr "Velg et bilde på maksimalt %s størrelse."
-
-#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
-msgid "Profile image updated."
-msgstr "Profilbilde oppdatert."
-
-#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
-msgid "Profile background image updated."
-msgstr "Profilbakgrunnsbilde oppdatert."
-
-#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
-msgid "Profile background image deleted."
-msgstr "Profilbakgrunnsbilde slettet."
-
-#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
-msgid "Error deleting profile background image."
-msgstr "Feil ved sletting av profilbakgrunnsbilde."
-
-#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
-#, javascript-format
-msgid "Update available v%s"
-msgstr "Oppdatering tilgjengelig v%s"
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#, javascript-format
-msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
-msgstr "En oppdatering for systemet er tilgjengelig. Du kan automatisk laste ned og installere denne oppdateringen eller gå til %s for å laste ned filen manuelt."
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "Update now"
-msgstr "Oppdater nå"
-
-#, javascript-format
-msgid "This website is running latest %s version"
-msgstr "Nettstedet kjører siste %s versjon."
-
-#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
-msgid "Clipboard image"
-msgstr "Utklippstavlebilde"
-
-#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
-msgid "File too big."
-msgstr "Fil for stor."
-
-msgid "Invalid or unsupported file format."
-msgstr "Ugyldig eller ikke støttet filformat."
-
-#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
-#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
-msgid "Some files couldn't be added"
-msgstr "Noen filer kunne ikke legges til"
-
-#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
-msgid "Image edited successfully."
-msgstr "Bilderedigering fullført."
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
-#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
-#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
-msgid "private"
-msgstr "privat"
-
-#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
-msgid "Album edited successfully."
-msgstr "Album oppdatert uten problemer."
-
-#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
-msgid "Invalid URL key."
-msgstr "Ugyldig URL-nøkkel."
-
-#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
-msgid "Category URL key already being used."
-msgstr "Kategori-URL-nøkkel er allerede i bruk."
-
-#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
-msgid "Category successfully deleted."
-msgstr "Kategorien er slettet."
-
-#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
-#, javascript-format
-msgid "Category %s added."
-msgstr "Kategori %s lagt til."
-
-#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
-msgid "Invalid expiration date."
-msgstr "Ugyldig utløpsdato."
-
-#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
-#, javascript-format
-msgid "IP %s already banned."
-msgstr "IP %s er allerede blokkert."
-
-#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
-#, javascript-format
-msgid "IP %s banned."
-msgstr "IP %s blokkert."
-
-#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
-msgid "IP ban successfully deleted."
-msgstr "IP-blokkering slettet."
-
-#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
-#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
-#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
-msgid "Please fill all the required fields."
-msgstr "Vennligst fyll ut alle de påkrevde feltene."
-
-#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
-msgid "Invalid storage capacity value. Make sure to use a valid format."
-msgstr "Ugyldig verdi for lagringskapasitet. Sørg for å bruke et gyldig format."
-
-#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
-msgid "Invalid URL."
-msgstr "Ugyldig URL."
-
-#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
-msgid "Storage successfully edited."
-msgstr "Lagring er vellykket redigert."
-
-#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
-msgid "User added successfully."
-msgstr "Bruker vellykket lagt til."
-
-#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
-#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
-#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
-#: ../../../app/lib/chevereto.min.js:205
-msgid "The content has been moved."
-msgstr "Innholdet har blitt flyttet."
-
-#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
-msgid "Unselect"
-msgstr "Fjern merking"
-
-#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
-msgid "The content has been edited."
-msgstr "Innholdet har blitt redigert."
 
 #: ../../../lib/Peafowl/peafowl.js:25 ../../../lib/Peafowl/peafowl.js:492
 #: ../../../lib/Peafowl/peafowl.min.js:1 ../../../lib/Peafowl/peafowl.min.js:31

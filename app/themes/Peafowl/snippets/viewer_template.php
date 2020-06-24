@@ -1,4 +1,6 @@
-<?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
+<?php if (!defined('access') or !access) {
+    die('This file cannot be directly accessed.');
+} ?>
 <script id="viewer-template" type="text/x-chv-template">
 	<div class="viewer viewer--hide list-item">
 		<div class="viewer-content no-select">
@@ -38,12 +40,12 @@
 			<div class="viewer-kb phone-hide phablet-hide tablet-hide no-select">
 				<div class="viewer-kb-input" title="<?php _se('Keyboard shortcuts'); ?>">
 					<?php
-						if(CHV\getSetting('enable_likes')) {
-					?>
+                        if (CHV\getSetting('enable_likes')) {
+                            ?>
 					<div class="viewer-kb-key"><kbd>L</kbd><span><?php _se('Like'); ?></span></div>
 					<?php
-						}
-					?>
+                        }
+                    ?>
 					<div class="viewer-kb-key"><kbd>X</kbd><span><?php _se('Close'); ?></span></div>
 				</div>
 			</div>
@@ -52,14 +54,14 @@
 			<span class="btn-lock icon-eye-blocked"></span>
 		</div>
 		<?php
-			if(CHV\getSetting('enable_likes')) {
-		?>
+            if (CHV\getSetting('enable_likes')) {
+                ?>
 		<div class="viewer-like list-item-like" data-action="like">
 			<span class="btn-like btn-liked icon-heart3"></span>
 			<span class="btn-like btn-unliked icon-heart4"></span>
 		</div>
 		<?php
-			}
-		?>
+            }
+        ?>
 	</div>
 </script>

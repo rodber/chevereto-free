@@ -15,6 +15,8 @@
 
   --------------------------------------------------------------------- */
 
+use TijsVerkoyen\Akismet\Akismet;
+
 $route = function ($handler) {
     try {
         if ($_POST and !$handler::checkAuthToken($_REQUEST['auth_token'])) {
@@ -22,10 +24,18 @@ $route = function ($handler) {
             return;
         }
 
+        $doing = $handler->request[0];
         $logged_user = CHV\Login::getUser();
 
         if (!$logged_user) {
             G\redirect(G\get_base_url('login'));
+        }
+
+        // Hack the user settings route
+        if ($doing == 'user' && $handler::getCond('content_manager')) {
+            $route = $handler->getRouteFn('settings');
+            $handler::setCond('dashboard_user', true);
+            return $route($handler);
         }
 
         if (!$logged_user['is_admin']) {
@@ -42,14 +52,6 @@ $route = function ($handler) {
         ];
 
         $default_route = 'stats';
-        $doing = $handler->request[0];
-
-        // Hack the user settings route
-        if ($doing == 'user') {
-            $route = $handler->getRouteFn('settings');
-            $handler::setCond('dashboard_user', true);
-            return $route($handler);
-        }
 
         if (!is_null($doing) and !array_key_exists($doing, $sub_routes)) {
             return $handler->issue404();
@@ -62,14 +64,14 @@ $route = function ($handler) {
         // Populate the routes
         foreach ($sub_routes as $route => $label) {
             $aux = str_replace('_', '-', $route);
-            $handler::setCond($route_prefix.'_'.$aux, $doing == $aux);
-            if ($handler::getCond($route_prefix.'_'.$aux)) {
+            $handler::setCond($route_prefix . '_' . $aux, $doing == $aux);
+            if ($handler::getCond($route_prefix . '_' . $aux)) {
                 $handler::setVar($route_prefix, $aux);
             }
             $route_menu[$route] = array(
                 'label' => $label,
-                'url'	=> G\get_base_url($route_prefix . ($route == $default_route ? '' : '/'.$route)),
-                'current' => $handler::getCond($route_prefix.'_'.$aux)
+                'url'    => G\get_base_url($route_prefix . ($route == $default_route ? '' : '/' . $route)),
+                'current' => $handler::getCond($route_prefix . '_' . $aux)
             );
         }
         $route_menu['upgrade'] = [
@@ -77,7 +79,7 @@ $route = function ($handler) {
             'id' => 'upgrade'
         ];
 
-        $handler::setVar($route_prefix.'_menu', $route_menu);
+        $handler::setVar($route_prefix . '_menu', $route_menu);
         $handler::setVar('tabs', $route_menu);
 
         // conds
@@ -117,8 +119,8 @@ $route = function ($handler) {
                 $db = CHV\DB::getInstance();
 
                 $chv_version = [
-                    'files'	=> G\get_app_version(),
-                    'db'	=> CHV\getSetting('chevereto_version_installed')
+                    'files'    => G\get_app_version(),
+                    'db'    => CHV\getSetting('chevereto_version_installed')
                 ];
 
                 $system_values = [
@@ -126,76 +128,78 @@ $route = function ($handler) {
                         'label'		=> 'Chevereto (Free)',
                         'content'	=>  (version_compare($chv_version['files'], $chv_version['db'], '<=') ? $chv_version['files'] : $chv_version['files'] . ' ('.$chv_version['db'].' DB) <a href="'.G\get_base_url('install').'">'._s('install update').'</a>') . ' – <a data-action="check-for-updates">' . _s("check for updates") . '</a>',
                     ],
-                    'donate'		=> [
-                        'label'		=> 'Donate',
-                        'content'	=> 'Chevereto Free cost you nothing to use, but that doesn\'t mean it costs nothing to make. Chevereto needs your support to grow and thrive.<p>If you feel that Chevereto Free suits you, please consider <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RCA2MU7DYMJJW&source=url" target="_blank">donating</a> or purchasing our <a href="https://chevereto.com/pricing" target="_blank">premium edition</a>. Every penny will help.</p>'
-                    ],
-                    'support'		=> [
-                        'label'		=> 'Support',
-                        'content'	=> _s('Need help? Go to %s and you will get help quickly.', ['%s' => '<a href="https://chevereto.com/support" target="_blank">'._s('Support').'</a>'])
-                    ],
-                    'g_version'		=> [
-                        'label'		=> 'G\\',
-                        'content'	=> '<a href="https://g.chevereto.com" target="_blank">G\\ Library '.G\get_version().'</a>'
+                    'support'        => [
+                        'label'        => 'Support',
+                        'content'    => _s('Need help? Go to %s and you will get help quickly.', ['%s' => '<a href="https://chevereto.com/support" target="_blank">' . _s('Support') . '</a>'])
                     ],
                     'php_version' => [
-                        'label'		=> _s('PHP version'),
-                        'content'	=> PHP_VERSION
+                        'label'        => _s('PHP version'),
+                        'content'    => PHP_VERSION . ' �' . php_ini_loaded_file()
                     ],
                     'server' => [
-                        'label'		=> _s('Server'),
-                        'content'	=> gethostname() . ' ' . PHP_OS . '/' . PHP_SAPI
+                        'label'        => _s('Server'),
+                        'content'    => gethostname() . ' ' . PHP_OS . '/' . PHP_SAPI
                     ],
                     'mysql_version' => [
-                        'label'		=> _s('MySQL version'),
-                        'content'	=> $db->getAttr(PDO::ATTR_SERVER_VERSION)
+                        'label'        => _s('MySQL version'),
+                        'content'    => $db->getAttr(PDO::ATTR_SERVER_VERSION)
                     ],
                     'mysql_server_info' => [
-                        'label'		=> _s('MySQL server info'),
-                        'content'	=> $db->getAttr(PDO::ATTR_SERVER_INFO)
+                        'label'        => _s('MySQL server info'),
+                        'content'    => $db->getAttr(PDO::ATTR_SERVER_INFO)
                     ],
                     'gdversion' => [
-                        'label'		=> _s('GD Library'),
-                        'content'	=> 'Version ' . gd_info()['GD Version'] . ' JPEG:'.gd_info()['JPEG Support'].' GIF:'.gd_info()['GIF Read Support'].'/'.gd_info()['GIF Create Support'].' PNG:'.gd_info()['PNG Support'].' WBMP:'.gd_info()['WBMP Support'].' XBM:'.gd_info()['XBM Support']
+                        'label'        => _s('GD Library'),
+                        'content'    => 'Version ' . gd_info()['GD Version'] . ' JPEG:' . gd_info()['JPEG Support'] . ' GIF:' . gd_info()['GIF Read Support'] . '/' . gd_info()['GIF Create Support'] . ' PNG:' . gd_info()['PNG Support'] . ' WBMP:' . gd_info()['WBMP Support'] . ' XBM:' . gd_info()['XBM Support']
                     ],
                     'file_uploads' => [
-                        'label'		=> _s('File uploads'),
-                        'content'	=> ini_get('file_uploads') == 1 ? _s('Enabled') : _s('Disabled')
+                        'label'        => _s('File uploads'),
+                        'content'    => ini_get('file_uploads') == 1 ? _s('Enabled') : _s('Disabled')
                     ],
                     'max_upload_size' => [
-                        'label'		=> _s('Max. upload file size'),
-                        'content'	=> G\format_bytes(G\get_ini_bytes(ini_get('upload_max_filesize')))
+                        'label'        => _s('Max. upload file size'),
+                        'content'    => G\format_bytes(G\get_ini_bytes(ini_get('upload_max_filesize')))
                     ],
                     'max_post_size' => [
-                        'label'		=> _s('Max. post size'),
-                        'content'	=> ini_get('post_max_size') == 0 ? _s('Unlimited') : G\format_bytes(G\get_ini_bytes(ini_get('post_max_size')))
+                        'label'        => _s('Max. post size'),
+                        'content'    => ini_get('post_max_size') == 0 ? _s('Unlimited') : G\format_bytes(G\get_ini_bytes(ini_get('post_max_size')))
                     ],
                     'max_execution_time' => [
-                        'label'		=> _s('Max. execution time'),
-                        'content'	=> strtr(_n('%d second', '%d seconds', ini_get('max_execution_time')), ['%d' => ini_get('max_execution_time')])
+                        'label'        => _s('Max. execution time'),
+                        'content'    => strtr(_n('%d second', '%d seconds', ini_get('max_execution_time')), ['%d' => ini_get('max_execution_time')])
                     ],
                     'memory_limit' => [
-                        'label'		=> _s('Memory limit'),
-                        'content'	=> G\format_bytes(G\get_ini_bytes(ini_get('memory_limit')))
+                        'label'        => _s('Memory limit'),
+                        'content'    => G\format_bytes(G\get_ini_bytes(ini_get('memory_limit')))
+                    ],
+                    'rebuild_stats' => [
+                        'label' => _s('Stats'),
+                        'content' => '<a data-action="dashboardTool" data-tool="rebuildStats">'. _s('Rebuild stats') .'</a>'
+                    ],
+                    'connecting_ip' => [
+                        'label'        => _s('Connecting IP'),
+                        'content'    => G\get_client_ip() . ' <a data-modal="simple" data-target="modal-connecting-ip">' . _s('Not your IP?') . '</a>'
                     ],
                     'links' => [
-                        'label'		=> _s('Links'),
+                        'label'        => _s('Links'),
                     ],
                 ];
 
                 $chevereto_urls = [
-                    _s('Support')				=> 'https://chevereto.com/support',
-                    _s('Documentation')			=> 'https://chevereto.com/docs',
-                    _s('Changelog')				=> 'https://chevereto.com/changelog',
-                    _s('Request new features')	=> 'https://chevereto.com/request-new-features',
-                    _s('Bug tracking')			=> 'https://chevereto.com/bug-tracking',
-                    _s('Community')				=> 'https://chevereto.com/community',
-                    'Discord'					=> 'https://chevereto.com/go/discord',
-                    'GitHub' 					=> 'https://github.com/Chevereto',
+                    'Chevereto'                => 'https://chevereto.com',
+                    _s('Community')                => 'https://chevereto.com/community/',
+                    _s('Collaboration')            => 'https://chevereto.com/community/collaboration/',
+                    _s('Support')                => 'https://chevereto.com/support',
+                    _s('Documentation')            => 'https://chevereto.com/docs',
+                    _s('Changelog')                => 'https://chevereto.com/changelog',
+                    _s('Bug tracking')            => 'https://chevereto.com/bug-tracking',
+                    'Trello'                    => 'https://chevereto.com/go/trello',
+                    'Discord'                    => 'https://chevereto.com/go/discord',
+                    'GitHub'                     => 'https://github.com/Chevereto',
                 ];
                 $chevereto_links = [];
                 foreach ($chevereto_urls as $k => $v) {
-                    $chevereto_links[] = '<a href="'.$v.'" target="_blank">'.$k.'</a>';
+                    $chevereto_links[] = '<a href="' . $v . '" target="_blank">' . $k . '</a>';
                 }
 
                 $system_values['links']['content'] = implode(' · ', $chevereto_links);
@@ -204,7 +208,7 @@ $route = function ($handler) {
                 $handler::setVar('totals', $totals);
                 $handler::setVar('totals_display', $totals_display);
 
-            break;
+                break;
 
             case 'settings':
 
@@ -217,42 +221,42 @@ $route = function ($handler) {
                 $handler::setCond('show_submit', true);
 
                 $settings_sections = [
-                    'website'				=> _s('Website'),
-                    'content'				=> _s('Content'),
-                    'pages'					=> _s('Pages'),
-                    'listings'				=> _s('Listings'),
-                    'image-upload'			=> _s('Image upload'),
-                    'categories'			=> _s('Categories'),
-                    'users'					=> _s('Users'),
-                    'consent-screen'		=> _s('Consent screen'),
-                    'flood-protection'		=> _s('Flood protection'),
-                    'theme'					=> _s('Theme'),
-                    'homepage'				=> _s('Homepage'),
-                    'banners'				=> _s('Banners'),
-                    'system'				=> _s('System'),
-                    'routing'				=> _s('Routing'),
-                    'languages'				=> _s('Languages'),
-                    'external-storage'		=> _s('External storage'),
-                    'email'					=> _s('Email'),
-                    'social-networks'		=> _s('Social networks'),
-                    'external-services'		=> _s('External services'),
-                    'ip-bans'				=> _s('IP bans'),
-                    'api'					=> 'API',
-                    'additional-settings'	=> _s('Additional settings'),
-                    'tools'				    => _s('Tools'),
+                    'website'                => _s('Website'),
+                    'content'                => _s('Content'),
+                    'pages'                    => _s('Pages'),
+                    'listings'                => _s('Listings'),
+                    'image-upload'            => _s('Image upload'),
+                    'categories'            => _s('Categories'),
+                    'users'                    => _s('Users'),
+                    'consent-screen'        => _s('Consent screen'),
+                    'flood-protection'        => _s('Flood protection'),
+                    'theme'                    => _s('Theme'),
+                    'homepage'                => _s('Homepage'),
+                    'banners'                => _s('Banners'),
+                    'system'                => _s('System'),
+                    'routing'                => _s('Routing'),
+                    'languages'                => _s('Languages'),
+                    'external-storage'        => _s('External storage'),
+                    'email'                    => _s('Email'),
+                    'social-networks'        => _s('Social networks'),
+                    'external-services'        => _s('External services'),
+                    'ip-bans'                => _s('IP bans'),
+                    'api'                    => 'API',
+                    'additional-settings'    => _s('Additional settings'),
+                    'tools'                    => _s('Tools'),
                 ];
 
                 foreach ($settings_sections as $k => $v) {
                     $current = $handler->request[1] ? ($handler->request[1] == $k) : ($k == 'website');
                     $settings_sections[$k] = [
-                        'key'		=> $k,
-                        'label'		=> $v,
-                        'url'		=> G\get_base_url($route_prefix.'/settings/'.$k),
-                        'current'	=> $current
+                        'key'        => $k,
+                        'label'        => $v,
+                        'url'        => G\get_base_url($route_prefix . '/settings/' . $k),
+                        'current'    => $current
                     ];
                     if ($current) {
                         $handler::setVar('settings', $settings_sections[$k]);
-                        if (in_array($k, ['categories', 'ip-bans', 'banners', 'external-storage', 'social-networks'])) {
+                        if (in_array($k, ['categories', 'ip-bans'])) {
                             $handler::setCond('show_submit', false);
                         }
                     }
@@ -270,7 +274,7 @@ $route = function ($handler) {
 
                     case 'homepage':
                         if ($_GET['action'] == 'delete-cover' && isset($_GET['cover'])) {
-                            $cover_index = $_GET['cover']-1;
+                            $cover_index = $_GET['cover'] - 1;
                             $homecovers = CHV\getSetting('homepage_cover_images');
                             $cover_target = $homecovers[$cover_index];
                             if (!G\is_integer($_GET['cover'], ['min' => 0]) || !isset($cover_target)) {
@@ -303,7 +307,7 @@ $route = function ($handler) {
                             $changed_message = _s('Homepage cover image deleted');
                             unset($_SESSION['is_changed']);
                         }
-                    break;
+                        break;
 
                     case 'tools':
                         $handler::setCond('show_submit', false);
@@ -317,7 +321,7 @@ $route = function ($handler) {
                                 case 'add':
                                     $settings_pages['title'] = _s('Add page');
                                     $settings_pages['doing'] = 'add';
-                                break;
+                                    break;
                                 case 'edit':
                                 case 'delete':
                                     if (!filter_var($handler->request[3], FILTER_VALIDATE_INT)) {
@@ -355,10 +359,10 @@ $route = function ($handler) {
                                         ];
                                         G\redirect('dashboard/settings/pages');
                                     }
-                                break;
+                                    break;
                                 default:
                                     return $handler->issue404();
-                                break;
+                                    break;
                             }
                         } else {
                             $pages = CHV\Page::getAll([], ['field' => 'sort_display', 'order' => 'asc']);
@@ -437,267 +441,267 @@ $route = function ($handler) {
                             $_POST['page_is_link_visible'] = $_POST['page_is_active'];
                         }
                         $handler::updateVar('safe_post', [
-                            'page_is_active'			=> $_POST['page_is_active'],
-                            'page_is_link_visible'		=> $_POST['page_is_link_visible'],
-                            'page_file_path_absolute'	=> $_POST['page_file_path_absolute'],
+                            'page_is_active'            => $_POST['page_is_active'],
+                            'page_is_link_visible'        => $_POST['page_is_link_visible'],
+                            'page_file_path_absolute'    => $_POST['page_file_path_absolute'],
                         ]);
                     }
 
                     // Validations
                     $validations = [
-                        'website_name'	=>
-                            [
-                                'validate'	=> $_POST['website_name'] ? true : false,
-                                'error_msg'	=> _s('Invalid website name')
-                            ],
-                        'default_language'	=>
-                            [
-                                'validate'	=> CHV\get_available_languages()[$_POST['default_language']] ? true : false,
-                                'error_msg'	=> _s('Invalid language')
-                            ],
-                        'default_timezone'	=>
-                            [
-                                'validate'	=> in_array($_POST['default_timezone'], timezone_identifiers_list()),
-                                'error_msg'	=> _s('Invalid timezone')
-                            ],
+                        'website_name'    =>
+                        [
+                            'validate'    => $_POST['website_name'] ? true : false,
+                            'error_msg'    => _s('Invalid website name')
+                        ],
+                        'default_language'    =>
+                        [
+                            'validate'    => CHV\get_available_languages()[$_POST['default_language']] ? true : false,
+                            'error_msg'    => _s('Invalid language')
+                        ],
+                        'default_timezone'    =>
+                        [
+                            'validate'    => in_array($_POST['default_timezone'], timezone_identifiers_list()),
+                            'error_msg'    => _s('Invalid timezone')
+                        ],
                         'listing_items_per_page' =>
-                            [
-                                'validate'	=> G\is_integer($_POST['listing_items_per_page'], ['min' => 1]),
-                                'error_msg'	=> _s('Invalid value: %s', $_POST['listing_items_per_page'])
-                            ],
+                        [
+                            'validate'    => G\is_integer($_POST['listing_items_per_page'], ['min' => 1]),
+                            'error_msg'    => _s('Invalid value: %s', $_POST['listing_items_per_page'])
+                        ],
                         'upload_threads' =>
-                            [
-                                'validate'	=> G\is_integer($_POST['upload_threads'], ['min' => 1, 'max' => 5]),
-                                'error_msg'	=> _s('Invalid value: %s', $_POST['upload_threads'])
-                            ],
-                        'upload_storage_mode'	=>
-                            [
-                                'validate'	=> in_array($_POST['upload_storage_mode'], ['datefolder', 'direct']),
-                                'error_msg'	=> _s('Invalid upload storage mode')
-                            ],
-                        'upload_filenaming'	=>
-                            [
-                                'validate'	=> in_array($_POST['upload_filenaming'], ['original', 'random', 'mixed', 'id']),
-                                'error_msg'	=> _s('Invalid upload filenaming')
-                            ],
-                        'upload_thumb_width'=>
-                            [
-                                'validate'	=> G\is_integer($_POST['upload_thumb_width'], ['min' => 16]),
-                                'error_msg'	=> _s('Invalid thumb width')
-                            ],
-                        'upload_thumb_height'=>
-                            [
-                                'validate'	=> G\is_integer($_POST['upload_thumb_height'], ['min' => 16]),
-                                'error_msg'	=> _s('Invalid thumb height')
-                            ],
-                        'upload_medium_size'=>
-                            [
-                                'validate'	=> G\is_integer($_POST['upload_medium_size'], ['min' => 16]),
-                                'error_msg'	=> _s('Invalid medium size')
-                            ],
+                        [
+                            'validate'    => G\is_integer($_POST['upload_threads'], ['min' => 1, 'max' => 5]),
+                            'error_msg'    => _s('Invalid value: %s', $_POST['upload_threads'])
+                        ],
+                        'upload_storage_mode'    =>
+                        [
+                            'validate'    => in_array($_POST['upload_storage_mode'], ['datefolder', 'direct']),
+                            'error_msg'    => _s('Invalid upload storage mode')
+                        ],
+                        'upload_filenaming'    =>
+                        [
+                            'validate'    => in_array($_POST['upload_filenaming'], ['original', 'random', 'mixed', 'id']),
+                            'error_msg'    => _s('Invalid upload filenaming')
+                        ],
+                        'upload_thumb_width' =>
+                        [
+                            'validate'    => G\is_integer($_POST['upload_thumb_width'], ['min' => 16]),
+                            'error_msg'    => _s('Invalid thumb width')
+                        ],
+                        'upload_thumb_height' =>
+                        [
+                            'validate'    => G\is_integer($_POST['upload_thumb_height'], ['min' => 16]),
+                            'error_msg'    => _s('Invalid thumb height')
+                        ],
+                        'upload_medium_size' =>
+                        [
+                            'validate'    => G\is_integer($_POST['upload_medium_size'], ['min' => 16]),
+                            'error_msg'    => _s('Invalid medium size')
+                        ],
                         'watermark_percentage' =>
-                            [
-                                'validate' 	=> G\is_integer($_POST['watermark_percentage'], ['min' => 1, 'max' => 100]),
-                                'error_msg'	=> _s('Invalid watermark percentage')
-                            ],
+                        [
+                            'validate'     => G\is_integer($_POST['watermark_percentage'], ['min' => 1, 'max' => 100]),
+                            'error_msg'    => _s('Invalid watermark percentage')
+                        ],
                         'watermark_opacity' =>
-                            [
-                                'validate' 	=> G\is_integer($_POST['watermark_opacity'], ['min' => 0, 'max' => 100]),
-                                'error_msg'	=> _s('Invalid watermark opacity')
-                            ],
-                        'theme'	=>
-                            [
-                                'validate'	=> file_exists(G_APP_PATH_THEMES . $_POST['theme']),
-                                'error_msg'	=> _s('Invalid theme')
-                            ],
+                        [
+                            'validate'     => G\is_integer($_POST['watermark_opacity'], ['min' => 0, 'max' => 100]),
+                            'error_msg'    => _s('Invalid watermark opacity')
+                        ],
+                        'theme'    =>
+                        [
+                            'validate'    => file_exists(G_APP_PATH_THEMES . $_POST['theme']),
+                            'error_msg'    => _s('Invalid theme')
+                        ],
                         'theme_logo_height' =>
-                            [
-                                'validate'	=> !empty($_POST['theme_logo_height']) ? (G\is_integer($_POST['theme_logo_height'], ['min' => 0])) : true,
-                                'error_msg'	=> _s('Invalid value')
-                            ],
+                        [
+                            'validate'    => !empty($_POST['theme_logo_height']) ? (G\is_integer($_POST['theme_logo_height'], ['min' => 0])) : true,
+                            'error_msg'    => _s('Invalid value')
+                        ],
                         'theme_tone' =>
-                            [
-                                'validate'	=> in_array($_POST['theme_tone'], ['light', 'dark']),
-                                'error_msg'	=> _s('Invalid theme tone')
-                            ],
+                        [
+                            'validate'    => in_array($_POST['theme_tone'], ['light', 'dark']),
+                            'error_msg'    => _s('Invalid theme tone')
+                        ],
                         'theme_main_color' =>
-                            [
-                                'validate'	=> G\check_value($_POST['theme_main_color']) ? G\is_valid_hex_color($_POST['theme_main_color']) : true,
-                                'error_msg'	=> _s('Invalid theme main color')
-                            ],
-                        'theme_top_bar_color' =>
-                            [
-                                'validate'	=> in_array($_POST['theme_top_bar_color'], ['black', 'white']),
-                                'error_msg'	=> _s('Invalid theme top bar color')
-                            ],
+                        [
+                            'validate'    => G\check_value($_POST['theme_main_color']) ? G\is_valid_hex_color($_POST['theme_main_color']) : true,
+                            'error_msg'    => _s('Invalid theme main color')
+                        ],
                         'theme_top_bar_button_color' =>
-                            [
-                                'validate'	=> in_array($_POST['theme_top_bar_button_color'], CHV\getSetting('available_button_colors')),
-                                'error_msg'	=> _s('Invalid theme top bar button color')
-                            ],
+                        [
+                            'validate'    => in_array($_POST['theme_top_bar_button_color'], CHV\getSetting('available_button_colors')),
+                            'error_msg'    => _s('Invalid theme top bar button color')
+                        ],
                         'theme_image_listing_sizing' =>
-                            [
-                                'validate'	=> in_array($_POST['theme_image_listing_sizing'], ['fluid', 'fixed']),
-                                'error_msg'	=> _s('Invalid theme image listing size')
-                            ],
+                        [
+                            'validate'    => in_array($_POST['theme_image_listing_sizing'], ['fluid', 'fixed']),
+                            'error_msg'    => _s('Invalid theme image listing size')
+                        ],
                         'theme_home_uids' =>
-                            [
-                                'validate'	=> !empty($_POST['theme_home_uids']) ? preg_match('/^[0-9]+(,[0-9]+)*$/', $_POST['theme_home_uids']) : true,
-                                'error_msg'	=> _s('Invalid user id')
-                            ],
-                        'email_mode'		=>
-                            [
-                                'validate'	=> in_array($_POST['email_mode'], ['smtp', 'mail']),
-                                'error_msg'	=> _s('Invalid email mode')
-                            ],
+                        [
+                            'validate'    => !empty($_POST['theme_home_uids']) ? preg_match('/^[0-9]+(\,[0-9]+)*$/', $_POST['theme_home_uids']) : true,
+                            'error_msg'    => _s('Invalid user id')
+                        ],
+                        'email_mode'        =>
+                        [
+                            'validate'    => in_array($_POST['email_mode'], ['smtp', 'mail']),
+                            'error_msg'    => _s('Invalid email mode')
+                        ],
                         'email_smtp_server_port' =>
-                            [
-                                'validate'	=> in_array($_POST['email_smtp_server_port'], [25, 80, 465, 587]),
-                                'error_msg'	=> _s('Invalid SMTP port')
-                            ],
-                        'email_smtp_server_security'	=>
-                            [
-                                'validate'	=> in_array($_POST['email_smtp_server_security'], ['tls', 'ssl', 'unsecured']),
-                                'error_msg'	=> _s('Invalid SMTP security')
-                            ],
+                        [
+                            'validate'    => in_array($_POST['email_smtp_server_port'], [25, 80, 465, 587]),
+                            'error_msg'    => _s('Invalid SMTP port')
+                        ],
+                        'email_smtp_server_security'    =>
+                        [
+                            'validate'    => in_array($_POST['email_smtp_server_security'], ['tls', 'ssl', 'unsecured']),
+                            'error_msg'    => _s('Invalid SMTP security')
+                        ],
                         'website_mode' =>
-                            [
-                                'validate'	=> in_array($_POST['website_mode'], ['community', 'personal']),
-                                'error_msg'	=> _s('Invalid website mode')
-                            ],
+                        [
+                            'validate'    => in_array($_POST['website_mode'], ['community', 'personal']),
+                            'error_msg'    => _s('Invalid website mode')
+                        ],
                         'website_mode_personal_uid' =>
-                            [
-                                'validate'	=> $_POST['website_mode'] == 'personal' ? (G\is_integer($_POST['website_mode_personal_uid'], ['min' => 0])) : true,
-                                'error_msg'	=> _s('Invalid personal mode user ID')
-                            ],
+                        [
+                            'validate'    => $_POST['website_mode'] == 'personal' ? (G\is_integer($_POST['website_mode_personal_uid'], ['min' => 0])) : true,
+                            'error_msg'    => _s('Invalid personal mode user ID')
+                        ],
                         'website_mode_personal_routing' =>
-                            [
-                                'validate'	=> $_POST['website_mode'] == 'personal' ? !G\is_route_available($_POST['website_mode_personal_routing']) : true,
-                                'error_msg'	=> _s('Invalid or reserved route')
-                            ],
+                        [
+                            'validate'    => $_POST['website_mode'] == 'personal' ? !G\is_route_available($_POST['website_mode_personal_routing']) : true,
+                            'error_msg'    => _s('Invalid or reserved route')
+                        ],
                         'website_privacy_mode' =>
-                            [
-                                'validate'	=> in_array($_POST['website_privacy_mode'], ['public', 'private']),
-                                'error_msg'	=> _s('Invalid website privacy mode')
-                            ],
-                        'website_content_privacy_mode'	=>
-                            [
-                                'validate'	=> in_array($_POST['website_content_privacy_mode'], ['default', 'private', 'private_but_link']),
-                                'error_msg'	=> _s('Invalid website content privacy mode')
-                            ],
+                        [
+                            'validate'    => in_array($_POST['website_privacy_mode'], ['public', 'private']),
+                            'error_msg'    => _s('Invalid website privacy mode')
+                        ],
+                        'website_content_privacy_mode'    =>
+                        [
+                            'validate'    => in_array($_POST['website_content_privacy_mode'], ['default', 'private', 'private_but_link']),
+                            'error_msg'    => _s('Invalid website content privacy mode')
+                        ],
                         'homepage_style' =>
-                            [
-                                'validate'	=> in_array($_POST['homepage_style'], ['landing', 'split', 'route_explore']),
-                                'error_msg'	=> _s('Invalid homepage style')
-                            ],
+                        [
+                            'validate'    => in_array($_POST['homepage_style'], ['landing', 'split', 'route_explore']),
+                            'error_msg'    => _s('Invalid homepage style')
+                        ],
                         'homepage_cta_color' =>
-                            [
-                                'validate'	=> in_array($_POST['homepage_cta_color'], CHV\getSetting('available_button_colors')),
-                                'error_msg'	=> _s('Invalid homepage call to action button color')
-                            ],
+                        [
+                            'validate'    => in_array($_POST['homepage_cta_color'], CHV\getSetting('available_button_colors')),
+                            'error_msg'    => _s('Invalid homepage call to action button color')
+                        ],
                         'homepage_cta_fn' =>
-                            [
-                                'validate'	=> $_POST['homepage_style'] == 'route_explore' ? true : in_array($_POST['homepage_cta_fn'], ['cta-upload', 'cta-link']),
-                                'error_msg'	=> _s('Invalid homepage call to action functionality')
-                            ],
+                        [
+                            'validate'    => $_POST['homepage_style'] == 'route_explore' ? true : in_array($_POST['homepage_cta_fn'], ['cta-upload', 'cta-link']),
+                            'error_msg'    => _s('Invalid homepage call to action functionality')
+                        ],
                         // PAGES
                         'page_title' =>
-                            [
-                                'validate'	=> !empty($_POST['page_title']),
-                                'error_msg'	=> _s('Invalid title')
-                            ],
+                        [
+                            'validate'    => !empty($_POST['page_title']),
+                            'error_msg'    => _s('Invalid title')
+                        ],
                         'page_is_active' =>
-                            [
-                                'validate'	=> in_array($_POST['page_is_active'], ['1', '0']),
-                                'error_msg'	=> _s('Invalid status')
-                            ],
+                        [
+                            'validate'    => in_array($_POST['page_is_active'], ['1', '0']),
+                            'error_msg'    => _s('Invalid status')
+                        ],
                         'page_type' =>
-                            [
-                                'validate'	=> in_array($_POST['page_type'], ['internal', 'link']),
-                                'error_msg'	=> _s('Invalid type')
-                            ],
+                        [
+                            'validate'    => in_array($_POST['page_type'], ['internal', 'link']),
+                            'error_msg'    => _s('Invalid type')
+                        ],
                         'page_is_link_visible' =>
-                            [
-                                'validate'	=> $_POST['page_type'] == 'internal' ? in_array($_POST['page_is_link_visible'], ['1', '0']) : true,
-                                'error_msg'	=> _s('Invalid visibility')
-                            ],
+                        [
+                            'validate'    => $_POST['page_type'] == 'internal' ? in_array($_POST['page_is_link_visible'], ['1', '0']) : true,
+                            'error_msg'    => _s('Invalid visibility')
+                        ],
+                        'page_internal' =>
+                        [
+                            'validate'    => ($_POST['page_type'] == 'internal' && $_POST['page_internal']) ? in_array($_POST['page_internal'], ['tos', 'privacy', 'contact']) : true,
+                            'error_msg'    => _s('Invalid internal type')
+                        ],
                         'page_attr_target' =>
-                            [
-                                'validate'	=> in_array($_POST['page_attr_target'], ['_self', '_blank']),
-                                'error_msg'	=> _s('Invalid target attribute')
-                            ],
+                        [
+                            'validate'    => in_array($_POST['page_attr_target'], ['_self', '_blank']),
+                            'error_msg'    => _s('Invalid target attribute')
+                        ],
                         'page_attr_rel' =>
-                            [
-                                'validate'	=> !empty($_POST['page_attr_rel']) ? preg_match('/^[\w\s\-]+$/', $_POST['page_attr_rel']) : true,
-                                'error_msg'	=> _s('Invalid rel attribute')
-                            ],
+                        [
+                            'validate'    => !empty($_POST['page_attr_rel']) ? preg_match('/^[\w\s\-]+$/', $_POST['page_attr_rel']) : true,
+                            'error_msg'    => _s('Invalid rel attribute')
+                        ],
                         'page_icon' =>
-                            [
-                                'validate'	=> !empty($_POST['page_icon']) ? preg_match('/^[\w\s\-]+$/', $_POST['page_icon']) : true,
-                                'error_msg'	=> _s('Invalid icon')
-                            ],
+                        [
+                            'validate'    => !empty($_POST['page_icon']) ? preg_match('/^[\w\s\-]+$/', $_POST['page_icon']) : true,
+                            'error_msg'    => _s('Invalid icon')
+                        ],
                         'page_url_key' =>
-                            [
-                                'validate'	=> $_POST['page_type'] == 'internal' ? preg_match('/^[\w\-\_\/]+$/', $_POST['page_url_key']) : true,
-                                'error_msg'	=> _s('Invalid URL key')
-                            ],
+                        [
+                            'validate'    => $_POST['page_type'] == 'internal' ? preg_match('/^[\w\-\_\/]+$/', $_POST['page_url_key']) : true,
+                            'error_msg'    => _s('Invalid URL key')
+                        ],
                         'page_file_path' =>
-                            [
-                                'validate'	=> $_POST['page_type'] == 'internal' ? preg_match('/^[\w\-\_\/]+\.php$/', $_POST['page_file_path']) : true,
-                                'error_msg'	=> _s('Invalid file path')
-                            ],
+                        [
+                            'validate'    => $_POST['page_type'] == 'internal' ? preg_match('/^[\w\-\_\/]+\.php$/', $_POST['page_file_path']) : true,
+                            'error_msg'    => _s('Invalid file path')
+                        ],
                         'page_link_url' =>
-                            [
-                                'validate'	=> $_POST['page_type'] == 'link' ? filter_var($_POST['page_link_url'], FILTER_VALIDATE_URL) : true,
-                                'error_msg'	=> _s('Invalid link URL')
-                            ],
+                        [
+                            'validate'    => $_POST['page_type'] == 'link' ? filter_var($_POST['page_link_url'], FILTER_VALIDATE_URL) : true,
+                            'error_msg'    => _s('Invalid link URL')
+                        ],
                         'user_minimum_age' =>
-                            [
-                                'validate'	=> $_POST['user_minimum_age'] !== '' ? G\is_integer($_POST['user_minimum_age'], ['min' => 0]) : true,
-                                'error_msg'	=> _s('Invalid user minimum age')
-                            ],
+                        [
+                            'validate'    => $_POST['user_minimum_age'] !== '' ? G\is_integer($_POST['user_minimum_age'], ['min' => 0]) : true,
+                            'error_msg'    => _s('Invalid user minimum age')
+                        ],
                         'route_image' =>
-                            [
-                                'validate'	=> preg_match('/^[\w\d-_]+$/', $_POST['route_image']),
-                                'error_msg'	=> _s('Only alphanumeric, hyphen and underscore characters are allowed')
-                            ],
+                        [
+                            'validate'    => preg_match('/^[\w\d\-\_]+$/', $_POST['route_image']),
+                            'error_msg'    => _s('Only alphanumeric, hyphen and underscore characters are allowed')
+                        ],
                         'route_album' =>
-                            [
-                                'validate'	=> preg_match('/^[\w\d-_]+$/', $_POST['route_album']),
-                                'error_msg'	=> _s('Only alphanumeric, hyphen and underscore characters are allowed')
-                            ],
+                        [
+                            'validate'    => preg_match('/^[\w\d\-\_]+$/', $_POST['route_album']),
+                            'error_msg'    => _s('Only alphanumeric, hyphen and underscore characters are allowed')
+                        ],
                         'image_load_max_filesize_mb' =>
-                            [
-                                'validate'	=> $_POST['image_load_max_filesize_mb'] !== '' ? G\is_integer($_POST['image_load_max_filesize_mb'], ['min' => 0]) : true,
-                                'error_msg'	=> _s('Invalid value: %s', $_POST['image_load_max_filesize_mb'])
-                            ],
+                        [
+                            'validate'    => $_POST['image_load_max_filesize_mb'] !== '' ? G\is_integer($_POST['image_load_max_filesize_mb'], ['min' => 0]) : true,
+                            'error_msg'    => _s('Invalid value: %s', $_POST['image_load_max_filesize_mb'])
+                        ],
                         'upload_max_image_width' =>
-                            [
-                                'validate'	=> G\is_integer($_POST['upload_max_image_width'], ['min' => 0]),
-                                'error_msg'	=> _s('Invalid value: %s', $_POST['upload_max_image_width'])
-                            ],
+                        [
+                            'validate'    => G\is_integer($_POST['upload_max_image_width'], ['min' => 0]),
+                            'error_msg'    => _s('Invalid value: %s', $_POST['upload_max_image_width'])
+                        ],
                         'upload_max_image_height' =>
-                            [
-                                'validate'	=> G\is_integer($_POST['upload_max_image_height'], ['min' => 0]),
-                                'error_msg'	=> _s('Invalid value: %s', $_POST['upload_max_image_height'])
-                            ],
+                        [
+                            'validate'    => G\is_integer($_POST['upload_max_image_height'], ['min' => 0]),
+                            'error_msg'    => _s('Invalid value: %s', $_POST['upload_max_image_height'])
+                        ],
                         'auto_delete_guest_uploads' =>
-                            [
-                                'validate'	=> $_POST['auto_delete_guest_uploads'] !== null && array_key_exists($_POST['auto_delete_guest_uploads'], CHV\Image::getAvailableExpirations()),
-                                'error_msg'	=> _s('Invalid value: %s', $_POST['auto_delete_guest_uploads'])
-                            ],
+                        [
+                            'validate'    => $_POST['auto_delete_guest_uploads'] !== null && array_key_exists($_POST['auto_delete_guest_uploads'], CHV\Image::getAvailableExpirations()),
+                            'error_msg'    => _s('Invalid value: %s', $_POST['auto_delete_guest_uploads'])
+                        ],
                         'sdk_pup_url' =>
-                            [
-                                'validate'	=> $_POST['sdk_pup_url'] ? filter_var($_POST['sdk_pup_url'], FILTER_VALIDATE_URL) : true,
-                                'error_msg'	=> _s('Invalid URL')
-                            ],
+                        [
+                            'validate'    => $_POST['sdk_pup_url'] ? filter_var($_POST['sdk_pup_url'], FILTER_VALIDATE_URL) : true,
+                            'error_msg'    => _s('Invalid URL')
+                        ],
                     ];
 
                     // Detect funny stuff
                     if (isset($_POST['route_image'], $_POST['route_album']) && $_POST['route_image'] == $_POST['route_album']) {
                         $validations['route_image'] = [
-                            'validate'	=> false,
-                            'error_msg'	=> _s("Routes can't be the same")
+                            'validate'    => false,
+                            'error_msg'    => _s("Routes can't be the same")
                         ];
                         $validations['route_album'] = $validations['route_image'];
                     }
@@ -708,7 +712,7 @@ $route = function ($handler) {
                         $image_path = G_ROOT_PATH . $_POST['upload_image_path'];
                         if (!file_exists($image_path)) {
                             $validations['upload_image_path'] = [
-                                'validate'	=> false,
+                                'validate'    => false,
                                 'error_msg' => _s('Invalid upload image path')
                             ];
                         }
@@ -722,7 +726,7 @@ $route = function ($handler) {
                             $_POST['homepage_cta_fn_extra'] = G\get_regex_match(CHV\getSetting('routing_regex_path'), '#', $_POST['homepage_cta_fn_extra'], 1);
                         } else {
                             $validations['homepage_cta_fn_extra'] = [
-                                'validate'	=> false,
+                                'validate'    => false,
                                 'error_msg' => _s('Invalid call to action URL')
                             ];
                         }
@@ -735,7 +739,7 @@ $route = function ($handler) {
                             if (!is_numeric($_POST[$k]) or $_POST[$k] == 0) {
                                 $error_max_filesize = _s('Invalid value');
                             } else {
-                                if (G\get_bytes($_POST[$k].'MB') > CHV\Settings::get('true_upload_max_filesize')) {
+                                if (G\get_bytes($_POST[$k] . 'MB') > CHV\Settings::get('true_upload_max_filesize')) {
                                     $error_max_filesize = _s('Max. allowed %s', G\format_bytes(CHV\Settings::get('true_upload_max_filesize')));
                                 }
                             }
@@ -749,7 +753,7 @@ $route = function ($handler) {
                         $route = 'route_' . $k;
                         if (file_exists(G_ROOT_PATH . $_POST[$route])) {
                             $validations[$route] = [
-                                'validate'	=> false,
+                                'validate'    => false,
                                 'error_msg' => _s("Can't map %m to an existing folder (%f)", ['%m' => '/' . $k, '%f' => '/' . $_POST[$route]])
                             ];
                             continue;
@@ -757,7 +761,7 @@ $route = function ($handler) {
                         if (isset($_POST[$route]) && $_POST[$route] !== $k && $validations[$route]['validate']) {
                             if (G\is_route_available($_POST[$route])) {
                                 $validations[$route] = [
-                                    'validate'	=> false,
+                                    'validate'    => false,
                                     'error_msg' => _s("Can't map %m to an existing route (%r)", ['%m' => '/' . $k, '%r' => '/' . $_POST[$route]])
                                 ];
                             } else {
@@ -765,7 +769,7 @@ $route = function ($handler) {
                                 $user_exists = CHV\User::getSingle($_POST[$route], 'username', false);
                                 if ($user_exists) {
                                     $validations[$route] = [
-                                        'validate'	=> false,
+                                        'validate'    => false,
                                         'error_msg' => _s("Can't map %m to %r (username collision)", ['%m' => '/' . $k, '%r' => '/' . $_POST[$route]])
                                     ];
                                 }
@@ -824,7 +828,7 @@ $route = function ($handler) {
                         } elseif (!CHV\User::getSingle($_POST['website_mode_personal_uid'])) { // Is a valid user id anyway?
                             $validations['website_mode_personal_uid'] = [
                                 'validate' => false,
-                                'error_msg'=> _s('Invalid personal mode user ID')
+                                'error_msg' => _s('Invalid personal mode user ID')
                             ];
                         }
                     }
@@ -851,8 +855,8 @@ $route = function ($handler) {
                     // Validate SMTP credentials
                     if ($_POST['email_mode'] == 'smtp') {
                         $email_smtp_validate = [
-                            'email_smtp_server' 			=> _s('Invalid SMTP server'),
-                            'email_smtp_server_username'	=> _s('Invalid SMTP username'),
+                            'email_smtp_server'             => _s('Invalid SMTP server'),
+                            'email_smtp_server_username'    => _s('Invalid SMTP username'),
                             //'email_smtp_server_password'	=> _s('Invalid SMTP password')
                         ];
                         foreach ($email_smtp_validate as $k => $v) {
@@ -901,9 +905,9 @@ $route = function ($handler) {
 
                     // Validate social networks
                     $social_validate = [
-                        'facebook'	=> ['facebook_app_id', 'facebook_app_secret'],
-                        'twitter'	=> ['twitter_api_key', 'twitter_api_secret'],
-                        'google'	=> ['google_client_id', 'google_client_secret'],
+                        'facebook'    => ['facebook_app_id', 'facebook_app_secret'],
+                        'twitter'    => ['twitter_api_key', 'twitter_api_secret'],
+                        'google'    => ['google_client_id', 'google_client_secret'],
                     ];
                     foreach ($social_validate as $k => $v) {
                         if ($_POST[$k] == 1) {
@@ -911,6 +915,15 @@ $route = function ($handler) {
                                 $validations[$vv] = ['validate' => $_POST[$vv] ? true : false];
                             }
                         }
+                    }
+
+                    // Validate Akismet
+                    if ($_POST['akismet'] == 1) {
+                        $akismet = new Akismet($_POST['akismet_api_key'], G\get_base_url());
+                        $validations['akismet_api_key'] = [
+                            'validate' => $akismet->verifyKey(),
+                            'error_msg' => _s('Invalid key')
+                        ];
                     }
 
                     // Validate CDN
@@ -960,8 +973,8 @@ $route = function ($handler) {
                             if ($page_fetch_db) {
                                 foreach ($page_fetch_db as $k => $v) {
                                     foreach ([
-                                        'page_url_key'		=> _s('This URL key is already being used by another page (ID %s)'),
-                                        'page_file_path'	=> _s('This file path is already being used by another page (ID %s)')
+                                        'page_url_key'        => _s('This URL key is already being used by another page (ID %s)'),
+                                        'page_file_path'    => _s('This file path is already being used by another page (ID %s)')
                                     ] as $kk => $vv) {
                                         if ($page and $page['id'] == $v['page_id']) {
                                             continue; // Skip on same thing
@@ -994,6 +1007,13 @@ $route = function ($handler) {
                                     $input_errors['page_code'] = _s("Can't save page contents: %s.", $e->getMessage());
                                 }
                             }
+
+                            // Nullify needed for 5.6
+                            // Go home 5.6, you are drunk.
+                            if (isset($_POST['page_internal']) && $_POST['page_internal'] == '') {
+                                $_POST['page_internal'] = null;
+                            }
+
 
                             $page_fields = CHV\Page::getFields();
 
@@ -1084,92 +1104,15 @@ $route = function ($handler) {
                     }
                 }
 
-            break;
+                break;
 
             case 'images':
             case 'albums':
             case 'users':
-                switch ($doing) {
-                    case 'images':
-                        $tabs = [
-                            [
-                                'list'		=> true,
-                                'tools'		=> true,
-                                'label'		=> _s('Most recent'),
-                                'id'		=> 'list-most-recent',
-                                'params'	=> 'list=images&sort=date_desc&page=1',
-                                'current'	=> $_REQUEST['sort'] == 'date_desc' or !$_REQUEST['sort'] ? true : false,
-                            ],
-                            [
-                                'list'		=> true,
-                                'tools'		=> true,
-                                'label'		=> _s('Oldest'),
-                                'id'		=> 'list-most-oldest',
-                                'params'	=> 'list=images&sort=date_asc&page=1',
-                                'current'	=> $_REQUEST['sort'] == 'date_asc',
-                            ],
-                            [
-                                'list'		=> true,
-                                'tools'		=> true,
-                                'label'		=> _s('Most viewed'),
-                                'id'		=> 'list-most-viewed',
-                                'params'	=> 'list=images&sort=views_desc&page=1',
-                                'current'	=> $_REQUEST['sort'] == 'views_desc',
-                            ],
-                        ];
-                    break;
-
-                    case 'albums':
-                        $tabs = [
-                            [
-                                'list'		=> true,
-                                'tools'		=> true,
-                                'label'		=> _s('Most recent'),
-                                'id'		=> 'list-most-recent',
-                                'params'	=> 'list=albums&sort=date_desc&page=1',
-                                'current'	=> $_REQUEST['sort'] == 'date_desc' or !$_REQUEST['sort'] ? true : false,
-                            ],
-                            [
-                                'list'		=> true,
-                                'tools'		=> true,
-                                'label'		=> _s('Oldest'),
-                                'id'		=> 'list-most-oldest',
-                                'params'	=> 'list=albums&sort=date_asc&page=1',
-                                'current'	=> $_REQUEST['sort'] == 'date_asc',
-                            ]
-                        ];
-                    break;
-
-                    case 'users':
-                        $tabs = [
-                            [
-                                'list'		=> true,
-                                'tools'		=> false,
-                                'label'		=> _s('Top users'),
-                                'id'		=> 'list-top-users',
-                                'params'	=> 'list=users&sort=image_count_desc&page=1',
-                                'current'	=> $_REQUEST['sort'] == 'image_count_desc' or !$_REQUEST['sort'] ? true : false,
-                            ],
-                            [
-                                'list'		=> true,
-                                'tools'		=> false,
-                                'label'		=> _s('Most recent'),
-                                'id'		=> 'list-most-recent',
-                                'params'	=> 'list=users&sort=date_desc&page=1',
-                                'current'	=> $_REQUEST['sort'] == 'date_desc',
-                            ],
-                            [
-                                'list'		=> true,
-                                'tools'		=> false,
-                                'label'		=> _s('Oldest'),
-                                'id'		=> 'list-most-oldest',
-                                'params'	=> 'list=users&sort=date_asc&page=1',
-                                'current'	=> $_REQUEST['sort'] == 'date_asc',
-                            ]
-                        ];
-                    break;
-                }
-
+                $tabs = CHV\Listing::getTabs([
+                    'listing'    => $doing,
+                    'tools'        => true,
+                ]);
                 $type = $doing;
                 $current = false;
                 foreach ($tabs as $k => $v) {
@@ -1177,7 +1120,7 @@ $route = function ($handler) {
                         $current = $k;
                     }
                     $tabs[$k]['type'] = $type;
-                    $tabs[$k]['url'] = G\get_base_url('dashboard/'.$type.'/?' . $tabs[$k]['params']);
+                    $tabs[$k]['url'] = G\get_base_url('dashboard/' . $type . '/?' . $tabs[$k]['params']);
                 }
                 if (!$current) {
                     $current = 0;
@@ -1186,12 +1129,15 @@ $route = function ($handler) {
 
                 // Use CHV magic params
                 $list_params = CHV\Listing::getParams();
+                $handler::setVar('list_params', $list_params);
                 parse_str($tabs[$current]['params'], $tab_params);
-                preg_match('/(.*)_(asc|desc)/', !empty($_REQUEST['sort']) ? $_REQUEST['sort'] : $tab_params['sort'], $sort_matches);
+                preg_match('/(.*)\_(asc|desc)/', !empty($_REQUEST['sort']) ? $_REQUEST['sort'] : $tab_params['sort'], $sort_matches);
                 $list_params['sort'] = array_slice($sort_matches, 1);
 
                 $list = new CHV\Listing;
                 $list->setType($type); // images | users | albums
+                $list->setReverse($list_params['reverse']);
+                $list->setSeek($list_params['seek']);
                 $list->setOffset($list_params['offset']);
                 $list->setLimit($list_params['limit']); // how many results?
                 $list->setItemsPerPage($list_params['items_per_page']); // must
@@ -1201,11 +1147,24 @@ $route = function ($handler) {
                 $list->output_tpl = $type;
                 $list->exec();
 
-            break;
-
+                break;
         }
 
-        $handler::setVar('pre_doctitle', _s('Dashboard'));
+        $pre_doctitle = [_s('Dashboard')];
+
+        if ($doing != 'stats') {
+            $pre_doctitle[] = $sub_routes[$doing];
+            if ($doing == 'settings') {
+                reset($settings_sections);
+                $firstKey = key($settings_sections);
+                $dashSettingsProp = $handler::getVar('settings');
+                if ($dashSettingsProp['key'] != $firstKey) {
+                    $pre_doctitle[] = $dashSettingsProp['label'];
+                }
+            }
+        }
+
+        $handler::setVar('pre_doctitle', implode(' - ', $pre_doctitle));
 
         $handler::setCond('error', $is_error);
         $handler::setCond('changed', $is_changed);

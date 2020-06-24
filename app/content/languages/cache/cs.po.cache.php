@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2018-06-03 14:28+0000',
-  'PO-Revision-Date' => '2018-06-03 14:28+0000',
+  'POT-Creation-Date' => '2020-04-16 20:33+0000',
+  'PO-Revision-Date' => '2020-04-16 20:33+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'cs',
@@ -16,12 +16,6 @@ $translation_plural = array (
   'function' => '($n != 1)',
 );
 $translation_table = [
-	"To use all the features of this site you must be logged in." => [
-		0 => "Aby jste mohli používat všechny funkce, musíte být přihlášen(a).",
-	],
-	"If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
-		0 => "Pokud ještě nemáte svůj účet můžete se <a href=\"%s\">registrovat</a> právě teď.",
-	],
 	"Invalid email" => [
 		0 => "Neplatný e-mail",
 	],
@@ -58,6 +52,42 @@ $translation_table = [
 	"Personal" => [
 		0 => "Osobní",
 	],
+	"Installed version is v%s" => [
+		0 => "Instalovaná verze je v%s",
+	],
+	"Can't connect to %s" => [
+		0 => "Nelze se připojit k %s",
+	],
+	"Last available release is v%s" => [
+		0 => "Poslední dostupná verze je v%s",
+	],
+	"Update needed, proceeding to download" => [
+		0 => "Je nutná aktualizace, přecházím ke stažení",
+	],
+	"No update needed" => [
+		0 => "Aktualizace není nutná",
+	],
+	"System files already up to date" => [
+		0 => "Systémové soubory jsou již aktuální",
+	],
+	"Starting v%s download" => [
+		0 => "Začínám stahovat v%s",
+	],
+	"Downloaded v%s, proceeding to extraction" => [
+		0 => "Verze v%s je stažena, přecházím k rozbalování",
+	],
+	"Attempting to extract v%s" => [
+		0 => "Pokouším se rozbalit verzi v%s",
+	],
+	"Extraction completed" => [
+		0 => "Rozbalování bylo dokončeno",
+	],
+	"Proceding to install the update" => [
+		0 => "Přecházím k instalaci aktualizace",
+	],
+	"Update failed" => [
+		0 => "Aktualizace selhala",
+	],
 	"Update in progress" => [
 		0 => "Probíhá aktualizace",
 	],
@@ -84,6 +114,207 @@ $translation_table = [
 	],
 	"Can't update %s file - %e" => [
 		0 => "Nelze aktualizovat %s soubor - %e",
+	],
+	"Check the errors in the form to continue." => [
+		0 => "Aby jste mohli pokračovat, zkontrolujte chyby ve formuláři.",
+	],
+	"You must enter the album name." => [
+		0 => "Musíte zadat název alba.",
+	],
+	"Confirm" => [
+		0 => "Potvrdit",
+	],
+	"Select existing album" => [
+		0 => "Vyberte stávající album",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "Došlo k chybě. Prosím zkuste opakovat akci později.",
+	],
+	"Please select a valid image file type." => [
+		0 => "Prosím vyberte přípustné typy souborů obrázků.",
+	],
+	"Please select a picture of at most %s size." => [
+		0 => "Prosím vyberte obrázek s největší %s velikostí.",
+	],
+	"Profile image updated." => [
+		0 => "Profilový obrázek byl aktualizován.",
+	],
+	"Profile background image updated." => [
+		0 => "Pozadí profilu bylo aktualizováno.",
+	],
+	"Profile background image deleted." => [
+		0 => "Pozadí profilu bylo odstraněno.",
+	],
+	"Error deleting profile background image." => [
+		0 => "Nastala chyba při odstraňování obrázku pozadí profilu.",
+	],
+	"Passwords don't match" => [
+		0 => "Hesla se neshodují",
+	],
+	"Update available v%s" => [
+		0 => "Je dostupná aktualizace v%s",
+	],
+	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
+		0 => "Je k dispozici aktualizace pro váš systém. Můžete ji automaticky stáhnout a instalovat, nebo běžte na %s a stáhněte si instalační soubor.",
+	],
+	"The release notes for this update are:" => [
+		0 => "Poznámky k verzi této aktualizace:",
+	],
+	"Update now" => [
+		0 => "Aktualizovat nyní",
+	],
+	"or" => [
+		0 => "nebo",
+	],
+	"cancel" => [
+		0 => "zrušit",
+	],
+	"This website is running latest %s version" => [
+		0 => "Tato webová stránka používá nejnovější verzi %s",
+	],
+	"loading" => [
+		0 => "načítání",
+	],
+	"Toggle select" => [
+		0 => "Označit vybraný obrázek",
+	],
+	"Like" => [
+		0 => "Líbí se",
+	],
+	"Toggle flag" => [
+		0 => "Označit štítkem",
+	],
+	"Edit" => [
+		0 => "Uprav",
+	],
+	"Album" => [
+		0 => "Album",
+		1 => "Alb",
+		2 => "Alb",
+		3 => "Alba",
+	],
+	"Delete" => [
+		0 => "Smazat",
+	],
+	"Close" => [
+		0 => "Zavřít",
+	],
+	"Previous" => [
+		0 => "Předchozí",
+	],
+	"Next" => [
+		0 => "Další",
+	],
+	"Clipboard image" => [
+		0 => "Kopírovat obrázek do schránky",
+	],
+	"File too big." => [
+		0 => "Soubor je příliš velký.",
+	],
+	"Invalid or unsupported file format." => [
+		0 => "Neplatný nebo nepodporovaný formát souboru.",
+	],
+	"Some files couldn't be added" => [
+		0 => "Některé soubory nemohly být přidány.",
+	],
+	"image" => [
+		0 => "obrázek",
+		1 => "obrázků",
+		2 => "obrázků",
+		3 => "obrázky",
+	],
+	"%s's Albums" => [
+		0 => "%s Alb",
+	],
+	"Image edited successfully." => [
+		0 => "Obrázek byl úspěšně upraven.",
+	],
+	"private" => [
+		0 => "soukromý",
+	],
+	"Album edited successfully." => [
+		0 => "Album úspěšně upraveno.",
+	],
+	"Invalid URL key." => [
+		0 => "Neplatný klíč URL.",
+	],
+	"Category URL key already being used." => [
+		0 => "URL klíč kategorie se již používá.",
+	],
+	"Category successfully deleted." => [
+		0 => "Kategorie byla úspěšně odstraněna.",
+	],
+	"Category %s added." => [
+		0 => "Kategorie %s byla přidána.",
+	],
+	"Invalid expiration date." => [
+		0 => "Neplatné datum ukončení platnosti.",
+	],
+	"IP %s already banned." => [
+		0 => "IP %s je již zakázána.",
+	],
+	"IP %s banned." => [
+		0 => "IP %s je zakázána.",
+	],
+	"IP ban successfully deleted." => [
+		0 => "IP zákaz byl úspěšně odstraněn.",
+	],
+	"Please fill all the required fields." => [
+		0 => "Prosím vyplňte všechny požadované kolonky.",
+	],
+	"Invalid storage capacity value. Make sure to use a valid format." => [
+		0 => "Neplatná velikost úložiště. Prosím ověřte, že je ve správném formátu.",
+	],
+	"Storage capacity can't be lower than its current usage (%s)." => [
+		0 => "Velikost úložiště nemůže být menší než ta, kterou používáte nyní (%s).",
+	],
+	"Invalid URL." => [
+		0 => "Neplatné URL.",
+	],
+	"Storage successfully edited." => [
+		0 => "Úložiště bylo úspěšně upraveno.",
+	],
+	"User added successfully." => [
+		0 => "Uživatel byl úspěšně přidán.",
+	],
+	"The content has been deleted." => [
+		0 => "Obsah byl smazán.",
+	],
+	"The content has been moved." => [
+		0 => "Obsah byl přesunut.",
+	],
+	"Select" => [
+		0 => "Vybrat",
+	],
+	"Unselect" => [
+		0 => "Odebrat",
+	],
+	"The content has been edited." => [
+		0 => "Obsah byl upraven.",
+	],
+	"Import job ID %s added successfully, you can process the import now" => [
+		0 => "Import úlohy ID %s byl úspěšně přidán, nyní můžete import zpracovat",
+	],
+	"Select number of threads" => [
+		0 => "Vyberte počet vláken",
+	],
+	"Import job ID %s is being processed now" => [
+		0 => "Import úlohy ID %s se nyní zpracovává",
+	],
+	"Import ID %s removed" => [
+		0 => "Import ID %s byl odstraněn",
+	],
+	"Spam detected" => [
+		0 => "Byl detekován spam",
+	],
+	"album" => [
+		0 => "album",
+		1 => "alba",
+		2 => "alba",
+		3 => "alba",
+	],
+	"Flooding detected. You can only upload %limit% %content% per %time%" => [
+		0 => "Bylo zjištěno zahlcení. Můžete nahrát pouze %limit% %content% za %time%",
 	],
 	"Untitled" => [
 		0 => "Nepojmenováno",
@@ -175,12 +406,6 @@ $translation_table = [
 		2 => "se líbí",
 		3 => "líbí se",
 	],
-	"image" => [
-		0 => "obrázek",
-		1 => "obrázků",
-		2 => "obrázků",
-		3 => "obrázky",
-	],
 	"Recent" => [
 		0 => "Nedávné",
 	],
@@ -223,12 +448,6 @@ $translation_table = [
 		2 => "Obrázků",
 		3 => "Obrázky",
 	],
-	"Album" => [
-		0 => "Album",
-		1 => "Alb",
-		2 => "Alb",
-		3 => "Alba",
-	],
 	"User" => [
 		0 => "Uřivatel",
 		1 => "Uživatelů",
@@ -246,9 +465,6 @@ $translation_table = [
 	],
 	"Can't insert storage." => [
 		0 => "Nelze vložit úložiště.",
-	],
-	"Storage capacity can't be lower than its current usage (%s)." => [
-		0 => "Velikost úložiště nemůže být menší než ta, kterou používáte nyní (%s).",
 	],
 	"Can't update storage details." => [
 		0 => "Nelze aktualizovat podrobnosti o úložišti.",
@@ -298,9 +514,6 @@ $translation_table = [
 	"There is an update available for your Chevereto based website." => [
 		0 => "Je zde dostupná aktualizace pro vaši Chevereto webovou stránku.",
 	],
-	"The release notes for this update are:" => [
-		0 => "Poznámky k verzi této aktualizace:",
-	],
 	"admin dashboard" => [
 		0 => "Nástěnka admina",
 	],
@@ -310,26 +523,20 @@ $translation_table = [
 	"view on %s" => [
 		0 => "zobrazit na %s",
 	],
-	"You have been forbidden to use this website." => [
-		0 => "Máte zakázáno používat tuto webovou stránku.",
+	"cookie policy" => [
+		0 => "zásady cookie",
 	],
-	"Feel free to browse and discover all my shared images and albums." => [
-		0 => "Neváhejte a prohlédněte si všechny mé sdílené obrázky a alba.",
+	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link." => [
+		0 => "Používáme naše vlastní cookies a cookies třetích stran, abychom zlepšili vaše zážitky z prohlížení a s používáním našich služeb. Pokud budete pokračovat v používání našich webových stránek, souhlasíte a přijímáte naše %cookie_policy_link.",
 	],
-	"View all my images" => [
-		0 => "Zobrazit všechny mé obrázky",
-	],
-	"Plugin" => [
-		0 => "Plugin",
-	],
-	"That page doesn't exist" => [
-		0 => "Tato stránka neexistuje",
+	"I understand" => [
+		0 => "Rozumím",
 	],
 	"Forgot password?" => [
 		0 => "Zapoměli jste heslo?",
 	],
 	"Reset password" => [
-		0 => "Resetovat heslo",
+		0 => "Obnovit heslo",
 	],
 	"Resend account activation" => [
 		0 => "Znovu zaslat aktivační informace",
@@ -340,8 +547,8 @@ $translation_table = [
 	"Email changed" => [
 		0 => "E-mail změněn",
 	],
-	"The reCAPTCHA wasn't entered correctly" => [
-		0 => "Kód reCAPTCHA nebyl opsán v pořádku.",
+	"%s says you are a robot" => [
+		0 => "%s říká, že jste robot",
 	],
 	"Invalid Username/Email" => [
 		0 => "Neplatné uživatelské jméno nebo e-mail.",
@@ -370,14 +577,8 @@ $translation_table = [
 	"Welcome to %s" => [
 		0 => "Vítejte do %s",
 	],
-	"Passwords don't match" => [
-		0 => "Hesla se neshodují",
-	],
 	"Email already being used" => [
 		0 => "E-mailová adresa již v systému existuje",
-	],
-	"Check the errors in the form to continue." => [
-		0 => "Aby jste mohli pokračovat, zkontrolujte chyby ve formuláři.",
 	],
 	"Password required" => [
 		0 => "Je vyžadováno heslo",
@@ -408,6 +609,9 @@ $translation_table = [
 	],
 	"Settings" => [
 		0 => "Nastavení",
+	],
+	"Bulk importer" => [
+		0 => "Hromadný import",
 	],
 	"Chevereto version" => [
 		0 => "Verze Chevereta",
@@ -466,8 +670,20 @@ $translation_table = [
 	"Memory limit" => [
 		0 => "Limit paměti (mem. limit)",
 	],
+	"Rebuild stats" => [
+		0 => "Znovu sestavit statistiky",
+	],
+	"Connecting IP" => [
+		0 => "Připojení IP",
+	],
+	"Not your IP?" => [
+		0 => "Není vaše IP?",
+	],
 	"Links" => [
 		0 => "Odkazy",
+	],
+	"Collaboration" => [
+		0 => "Spolupráce",
 	],
 	"Documentation" => [
 		0 => "Dokumentace",
@@ -475,14 +691,8 @@ $translation_table = [
 	"Changelog" => [
 		0 => "Seznam změn",
 	],
-	"Request new features" => [
-		0 => "Požádat o nové funkce",
-	],
 	"Bug tracking" => [
 		0 => "Nachlášení chyb",
-	],
-	"Blog" => [
-		0 => "Blog",
 	],
 	"Website" => [
 		0 => "Webová stránka",
@@ -494,7 +704,7 @@ $translation_table = [
 		0 => "Stránky",
 	],
 	"Listings" => [
-		0 => "Výpis",
+		0 => "Výpisy",
 	],
 	"Image upload" => [
 		0 => "Nahrávání obrázků",
@@ -757,6 +967,9 @@ $translation_table = [
 	"Invalid visibility" => [
 		0 => "Neplatná viditelnost",
 	],
+	"Invalid internal type" => [
+		0 => "Neplatný interní typ",
+	],
 	"Invalid target attribute" => [
 		0 => "Neplatný cílový atribut",
 	],
@@ -810,6 +1023,9 @@ $translation_table = [
 	],
 	"Invalid SMTP username" => [
 		0 => "Špatné SMTP uživatelské jméno",
+	],
+	"Invalid key" => [
+		0 => "Neplatný klíč",
 	],
 	"This URL key is already being used by another page (ID %s)" => [
 		0 => "Tato URL adresa klíče je již používána jinou stránkou (ID %s)",
@@ -910,6 +1126,9 @@ $translation_table = [
 	"Test email sent to %s." => [
 		0 => "Testovací email byl odeslán na %s.",
 	],
+	"Downloading %s data" => [
+		0 => "Stahování dat %s",
+	],
 	"User %s followed" => [
 		0 => "Uživatel %s začal sledovat",
 	],
@@ -936,9 +1155,6 @@ $translation_table = [
 	],
 	"Sign in" => [
 		0 => "Přihlásit se",
-	],
-	"Logged out" => [
-		0 => "Odhlášeno",
 	],
 	"Upload images" => [
 		0 => "Nahrát obrázky",
@@ -997,6 +1213,9 @@ $translation_table = [
 	"Settings for %s" => [
 		0 => "Nastavení pro %s",
 	],
+	"You must agree to the terms and privacy policy" => [
+		0 => "Musíte souhlasit s podmínkami a zásadami ochrany osobních údajů",
+	],
 	"You must be at least %s years old to use this website." => [
 		0 => "Pro možnost používat tuto webovou stránku vám musí být alespoň %s let.",
 	],
@@ -1008,9 +1227,6 @@ $translation_table = [
 	],
 	"%s's Images" => [
 		0 => "%s Obrázků",
-	],
-	"%s's Albums" => [
-		0 => "%s Alb",
 	],
 	"Results for" => [
 		0 => "Výsledky pro",
@@ -1033,9 +1249,6 @@ $translation_table = [
 	"Discovery" => [
 		0 => "Objevit",
 	],
-	"Close" => [
-		0 => "Zavřít",
-	],
 	"Advanced search" => [
 		0 => "Pokročilé vyhledávání",
 	],
@@ -1045,38 +1258,11 @@ $translation_table = [
 	"Notices (%s)" => [
 		0 => "Oznámení (%s)",
 	],
-	"Sign in with another account" => [
-		0 => "Přihlásit se pomocí jiného účtu",
-	],
-	"or" => [
-		0 => "nebo",
-	],
-	"Username or Email address" => [
-		0 => "Uživatelské jméno nebo e-mailová adresa",
-	],
-	"Keep me logged in" => [
-		0 => "Zůstat přihlášen(a)",
-	],
-	"Don't have an account? <a href='%s'>Sign up</a> now." => [
-		0 => "Nemáte účet? <a href='%s'>Registrujte se</a>.",
-	],
-	"Sign up with another account" => [
-		0 => "Zaregistrovat se pomocí jiného účtu",
-	],
-	"Email address" => [
-		0 => "E-mailová adresa",
-	],
-	"Username" => [
-		0 => "Uživatelské jméno",
-	],
-	"I'm at least %s years old" => [
-		0 => "Je mi minimálně %s let.",
+	"Lights" => [
+		0 => "Světla",
 	],
 	"Notifications" => [
 		0 => "Oznámení",
-	],
-	"loading" => [
-		0 => "načítání",
 	],
 	"You don't have notifications" => [
 		0 => "Nemáte žádná oznámení",
@@ -1198,14 +1384,14 @@ $translation_table = [
 	"move it to an existing album" => [
 		0 => "přesunout do již existujícího alba",
 	],
+	"You must %s or %l to save this content into your account." => [
+		0 => "Musíte se %s nebo %l pro uložení tohoto obsahu do svého účtu.",
+	],
 	"create an account" => [
 		0 => "vytvořit účet",
 	],
 	"sign in" => [
 		0 => "přihlásit se",
-	],
-	"You can %s or %l to save this content into your account." => [
-		0 => "Můžete použít %s nebo %l pro uložení tohoto obsahu do vašeho účtu.",
 	],
 	"No %s have been uploaded" => [
 		0 => "Žádné %s nebyly nahrány",
@@ -1227,9 +1413,6 @@ $translation_table = [
 	],
 	"Uploading" => [
 		0 => "Nahrávám",
-	],
-	"cancel" => [
-		0 => "zrušit",
 	],
 	"cancel remaining" => [
 		0 => "zrušit zbývající",
@@ -1257,9 +1440,6 @@ $translation_table = [
 	],
 	"insert" => [
 		0 => "vložit",
-	],
-	"Edit" => [
-		0 => "Uprav",
 	],
 	"Remove" => [
 		0 => "Odstranit",
@@ -1315,8 +1495,17 @@ $translation_table = [
 	"Create album" => [
 		0 => "Vytvořit album",
 	],
-	"The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
-		0 => "Nahrané obrázky budou přesunuty do tohoto nově vytvořeného alba. Samozřejmě můžete přesunout obrázky i do <a class=\"modal-switch\" data-switch=\"move-existing-album\">stávajícího alba</a>.",
+	"The uploaded content will be moved to this newly created album." => [
+		0 => "Nahraný obsah bude přesunut do tohoto nově vytvořeného alba.",
+	],
+	"existing album" => [
+		0 => "existujícího alba",
+	],
+	"You can also move the content to an %a." => [
+		0 => "Obsah můžete také přesunout do %a.",
+	],
+	"You must %s or %l if you want to edit this album later on." => [
+		0 => "Pokud chcete album později upravit, musíte se nejdříve %s nebo %l.",
 	],
 	"Move to album" => [
 		0 => "Přesunout do alba",
@@ -1326,12 +1515,6 @@ $translation_table = [
 	],
 	"Error report" => [
 		0 => "Chybová zpráva",
-	],
-	"album" => [
-		0 => "album",
-		1 => "alba",
-		2 => "alba",
-		3 => "alba",
 	],
 	"Viewer links" => [
 		0 => "Odkaz s náhledem",
@@ -1453,6 +1636,33 @@ $translation_table = [
 	"Untitled image" => [
 		0 => "Obrázek bez názvu",
 	],
+	"Path" => [
+		0 => "Cesta",
+	],
+	"Local path (absolute)" => [
+		0 => "Lokální cesta (absolutní)",
+	],
+	"Directory structure" => [
+		0 => "Adresářová struktura",
+	],
+	"Parse top level folders as users (username)" => [
+		0 => "Přiřadit složky nejvyšší úrovně jako uživatele (uživatelské jméno)",
+	],
+	"Parse top level folders as albums" => [
+		0 => "Přiřadit složky nejvyšší úrovně jako alba",
+	],
+	"Don't parse folders" => [
+		0 => "Nepřiřazovat složky",
+	],
+	"When parsing top level folders as users, second level folders will be parsed as user albums. Parsing top level folders as albums adds these as guest albums." => [
+		0 => "Při přiřazení složek nejvyšší úrovně jako uživatelé budou složky druhé úrovně přiřazeny jako uživatelské alba. Přiřazení složek nejvyšší úrovně jako alba přidává tyto složky jako alba pro návštěvníky.",
+	],
+	"Threads" => [
+		0 => "Vlákna",
+	],
+	"This determines how intensive and fast will be the import process. Don't use more than %s threads on a shared server." => [
+		0 => "Toto určuje, jak intenzivní a rychlý bude proces importu. Na sdíleném serveru nepoužívejte více než %s vláken.",
+	],
 	"You can use wildcard * characters." => [
 		0 => "Můžete použít zástupné znaky *.",
 	],
@@ -1489,6 +1699,9 @@ $translation_table = [
 	"Region" => [
 		0 => "Region",
 	],
+	"Storage region" => [
+		0 => "Region úložiště (Storage region)",
+	],
 	"Storage bucket" => [
 		0 => "Bucket úložiště",
 	],
@@ -1504,20 +1717,14 @@ $translation_table = [
 	"Storage secret" => [
 		0 => "Secret úložiště",
 	],
-	"Client email" => [
-		0 => "E-mail klienta",
-	],
-	"Google Cloud client email" => [
-		0 => "E-mail klienta Google Cloud",
-	],
-	"You will need a <a %s>service account</a> for this." => [
-		0 => "Pro toto potřebujete <a %s>service account</a>.",
-	],
 	"Private key" => [
 		0 => "Soukromý klíč",
 	],
 	"Google Cloud JSON key" => [
 		0 => "Google Cloud JSON klíč",
+	],
+	"You will need a <a %s>service account</a> for this." => [
+		0 => "Pro toto potřebujete <a %s>service account</a>.",
 	],
 	"Service name" => [
 		0 => "Název služby",
@@ -1531,8 +1738,8 @@ $translation_table = [
 	"API endpoint for OpenStack identity" => [
 		0 => "Koncový bod API OpenStack identity (API endpoint for OpenStack identity)",
 	],
-	"Storage region" => [
-		0 => "Region úložiště (Storage region)",
+	"Username" => [
+		0 => "Uživatelské jméno",
 	],
 	"Container" => [
 		0 => "Kontejner (Container)",
@@ -1552,23 +1759,32 @@ $translation_table = [
 	"Tenant name (account name)" => [
 		0 => "uživatelský účet",
 	],
+	"Storage endpoint" => [
+		0 => "Koncový bod úložiště",
+	],
+	"Server address" => [
+		0 => "Adresa serveru",
+	],
 	"Hostname or IP of the storage server" => [
 		0 => "Hostname nebo IP serveru s úložištěm.",
-	],
-	"Path" => [
-		0 => "Cesta",
 	],
 	"Server path" => [
 		0 => "Serverová cesta",
 	],
-	"Server path where the files will be stored" => [
-		0 => "Serverová cesta, kde se budou ukládat soubory",
+	"Absolute path where the files will be stored in the context of the %p login. Use %s for root path." => [
+		0 => "Absolutní cesta, kde budou soubory uloženy v souvislosti s přihlášením %p. Pro kořenovou (root) cestu použijte %s.",
 	],
-	"Server username" => [
-		0 => "Serverové uživatelské jméno",
+	"Server login" => [
+		0 => "Přihlášení k serveru",
 	],
 	"Server password" => [
 		0 => "Serverové heslo",
+	],
+	"Local path" => [
+		0 => "Místní cesta",
+	],
+	"Local path where the files will be stored" => [
+		0 => "Místní cesta, kde budou soubory uloženy",
 	],
 	"Storage capacity" => [
 		0 => "Kapacita úložiště",
@@ -1612,14 +1828,17 @@ $translation_table = [
 	"Flag as safe" => [
 		0 => "Označit jako bezpečné",
 	],
-	"Delete" => [
-		0 => "Smazat",
-	],
 	"Create new album" => [
 		0 => "Vytvořit nové album",
 	],
-	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
-		0 => "Aby jste mohli používat všechny funkce, musíte být přihlášen(a). Pokud ještě nemáte svůj účet můžete se <a href=\"%s\">registrovat</a> právě teď.",
+	"Sign in with another account" => [
+		0 => "Přihlásit se pomocí jiného účtu",
+	],
+	"Continue with %label%" => [
+		0 => "Pokračovat s %label%",
+	],
+	"Home" => [
+		0 => "Domů",
 	],
 	"There's nothing to show here." => [
 		0 => "Zde se nenachází nic k zobrazení.",
@@ -1681,8 +1900,11 @@ $translation_table = [
 	"Keyboard shortcuts" => [
 		0 => "Klávesové zkratky",
 	],
-	"Like" => [
-		0 => "Líbí se",
+	"Private album" => [
+		0 => "Soukromé album",
+	],
+	"Password protected" => [
+		0 => "Chráněno heslem",
 	],
 	"Uploaded by guest" => [
 		0 => "Nahráno návštěvníkem",
@@ -1696,11 +1918,11 @@ $translation_table = [
 	"by %u" => [
 		0 => "od %u",
 	],
-	"Select" => [
-		0 => "Vybrat",
-	],
 	"Toggle unsafe flag" => [
 		0 => "Označit obrázek jako nevhodný",
+	],
+	"That page doesn't exist" => [
+		0 => "Tato stránka neexistuje",
 	],
 	"The requested page was not found." => [
 		0 => "Požadovaná stránka nebyla nalezena.",
@@ -1711,17 +1933,11 @@ $translation_table = [
 	"The user has been deleted" => [
 		0 => "Uživatel byl smazán",
 	],
-	"The content has been deleted." => [
-		0 => "Obsah byl smazán.",
-	],
 	"Your account is almost ready" => [
 		0 => "Váš účet je téměř připraven",
 	],
 	"An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "E-mail pro %s byl právě odeslán. E-mail obsahuje instrukce o tom jak aktivovat váš účet. Aktivaci je možné provést do 48 hodin. Pokud e-mailovou zprávu neobdržíte, pak prosím zkontrolujte vaši složku se spamem.",
-	],
-	"Go to homepage" => [
-		0 => "Jít na úvodní stránku",
 	],
 	"Resend activation" => [
 		0 => "Znovu odeslat aktivaci",
@@ -1738,26 +1954,23 @@ $translation_table = [
 	"Your email address" => [
 		0 => "Vaše e-mailová adresa",
 	],
-	"Add email" => [
-		0 => "Přidat e-mail",
+	"Submit" => [
+		0 => "Odeslat",
 	],
 	"An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "E-mail s instrukcemi jak resetovat vaše heslo byl právě odeslán na e-mailovou adresu, kterou jste uvedli při registraci. Pokud jste e-mail s instrukcemi neobdrželi, pak prosím zkontrolujte vaši složku se spamem či ostatní filtrovanou poštu.",
 	],
-	"Resend instructions" => [
-		0 => "Zaslat instrukce znova.",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "Došlo k chybě. Prosím zkuste opakovat akci později.",
-	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "E-mail s instrukcemi k resetování vašeho hesla jsme již odeslali. Pokud vám nedorazil pak si prosím zkontrolujte vaši složku se spamem.",
 	],
-	"Enter your username or the email address that you used to create your account." => [
-		0 => "Vložte vaše přihlašovací jméno, nebo e-mailovou adresu, kterou jste uvedli během registrace.",
+	"Resend instructions" => [
+		0 => "Zaslat instrukce znova.",
 	],
-	"Submit" => [
-		0 => "Odeslat",
+	"Enter your username or email address to continue. You may need to check your spam folder or whitelist %s" => [
+		0 => "Chcete-li pokračovat, zadejte své uživatelské jméno nebo e-mailovou adresu. Možná budete muset zkontrolovat složku spamu nebo whitelist %s",
+	],
+	"Username or Email address" => [
+		0 => "Uživatelské jméno nebo e-mailová adresa",
 	],
 	"Your password has been changed. You can now try logging in using your new password." => [
 		0 => "Vaše heslo bylo úspěšně změněno. Nyní se můžete přihlásit s vašim novým heslem.",
@@ -1765,29 +1978,20 @@ $translation_table = [
 	"Login now" => [
 		0 => "Přihlásit se",
 	],
-	"Enter the new password that you want to use." => [
-		0 => "Vložte nové heslo, které chcete používat.",
-	],
-	"New Password" => [
-		0 => "Nové heslo",
+	"Enter your new password" => [
+		0 => "Vložte vaše nové heslo",
 	],
 	"%d characters min" => [
 		0 => "%d znaků minimálně",
 	],
-	"Enter your new password" => [
-		0 => "Vložte vaše nové heslo",
-	],
-	"Confirm password" => [
-		0 => "Potvrďte heslo",
+	"Password strength" => [
+		0 => "Síla hesla",
 	],
 	"Re-enter your new password" => [
 		0 => "Znovu vyplňte nové heslo",
 	],
 	"An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "Na adresu %s byl zaslán email s instrukcemi pro aktivaci Vašeho účtu. Pokud jste neobdrželi žádné instrukce, zkontrolujte prosím Vaši nevyžádanou poštu nebo spamové filtry.",
-	],
-	"Enter the username or email address that you used to create your account to continue." => [
-		0 => "Pro pokračování zadejte uživatelské jméno nebo e-mailovou adresu, kterou jste použili k vytvoření svého účtu.",
 	],
 	"This content is private" => [
 		0 => "Tento obsah je soukromý",
@@ -1819,8 +2023,122 @@ $translation_table = [
 	"I Agree" => [
 		0 => "Souhlasím",
 	],
+	"documentation" => [
+		0 => "dokumentace",
+	],
+	"Learn more about %s at our %d." => [
+		0 => "Přečtěte si více o %s na našich stránkách %d.",
+	],
+	"The connecting IP is determined using the server variable %var%. If the detected IP doesn't match yours, it means that your web server is under a proxy and you need to tweak your server to set the real connecting IP." => [
+		0 => "Připojovací IP adresa je určena pomocí proměnné serveru %var%. Pokud zjištěná IP neodpovídá vaší, znamená to, že váš webový server je za proxy a je potřeba vyladit váš server pro nastavení skutečné spojující IP.",
+	],
+	"For Nginx, you must use %nginx%. For Apache, %apache%." => [
+		0 => "Pro Nginx musíte použít %nginx%. Pro Apache, %apache%.",
+	],
+	"Make sure that you address this issue as the system relies on accurate IP detections to provide basic functionalities and to protect against spam, flooding, and brute force attacks." => [
+		0 => "Ujistěte se, že tento problém řešíte, protože systém spoléhá na přesné detekce IP, aby poskytoval základní funkce a chránil před spamem, záplavami a útoky brutální silou.",
+	],
 	"Disk used" => [
 		0 => "Využití disku",
+	],
+	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure." => [
+		0 => "Tento nástroj umožňuje hromadně přidávat obsah na váš web tím, že ukazuje systémovou cestu s obsahem, který chcete importovat. Podporuje přidávání uživatelů, alb a obrázků pomocí struktury založené na složkách.",
+	],
+	"Automatic importing" => [
+		0 => "Automatický import",
+	],
+	"The system automatically parses any content by a continuous observation of the %path% path." => [
+		0 => "Systém automaticky analyzuje veškerý obsah kontinuálním sledováním cesty %path%.",
+	],
+	"The system automatically parses any content by a continous observation of the %path% path." => [
+		0 => "Systém automaticky analyzuje veškerý obsah nepřetržitým sledováním cesty %path%.",
+	],
+	"Completed jobs will be automatically re-started after %n %m." => [
+		0 => "Dokončené úlohy budou automaticky znovu spuštěny po %n %m.",
+	],
+	"Reset to clear stats and logs." => [
+		0 => "Resetovat pro vymazání statistik a protokolů.",
+	],
+	"Queued" => [
+		0 => "Ve frontě",
+	],
+	"Working" => [
+		0 => "Spuštěno",
+	],
+	"Paused" => [
+		0 => "Pozastaveno",
+	],
+	"Canceled" => [
+		0 => "Zrušeno",
+	],
+	"Completed" => [
+		0 => "Dokončeno",
+	],
+	"Actions" => [
+		0 => "Akce",
+	],
+	"Reset" => [
+		0 => "Resetovat",
+	],
+	"Pause" => [
+		0 => "Pauza",
+	],
+	"Resume" => [
+		0 => "Pokračovat",
+	],
+	"Process log" => [
+		0 => "Protokol procesu",
+	],
+	"Errors" => [
+		0 => "Chyby",
+	],
+	"Status" => [
+		0 => "Stav",
+	],
+	"The system works with a scheduled command to continuously process the importing. It requires a crontab entry." => [
+		0 => "Systém pracuje s naplánovaným příkazem pro nepřetržité zpracování importu. Vyžaduje záznam cronu.",
+	],
+	"You can run the command in parallel by changing the integer value of %s%." => [
+		0 => "Příkaz můžete spustit paralelně změnou celočíselné hodnoty %s%.",
+	],
+	"All file-system permissions must be granted for the crontab user at %path%" => [
+		0 => "Všechna oprávnění systému souborů musí být udělena uživateli crontab v %path%",
+	],
+	"Required crontab entry:" => [
+		0 => "Požadovaný záznam cronu:",
+	],
+	"Add import job" => [
+		0 => "Přidat úlohu importu",
+	],
+	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d." => [
+		0 => "Tento nástroj umožňuje hromadně přidávat obsah na vaše webové stránky tím, že zadává systémovou cestu s obsahem, který chcete importovat. Podporuje přidávání uživatelů, alb a obrázků pomocí struktury založené na složkách. Další informace o struktuře složek, přidání metadat a vše o tomto nástroji naleznete v naší %d.",
+	],
+	"Process import" => [
+		0 => "Proces importu",
+	],
+	"Top level folders as %s" => [
+		0 => "Složky nejvyšší úrovně jako %s",
+	],
+	"Process" => [
+		0 => "Proces",
+	],
+	"Cancel" => [
+		0 => "Zrušit",
+	],
+	"Do you really want to remove the import ID %s?" => [
+		0 => "Opravdu chcete odstranit import ID %s?",
+	],
+	"Manual importing" => [
+		0 => "Ruční import",
+	],
+	"The system will parse the contents of any available filesystem path." => [
+		0 => "Systém bude analyzovat obsah jakékoli dostupné cesty k souborovému systému.",
+	],
+	"These processes must be manually created and handled with the web browser tab open." => [
+		0 => "Tyto procesy musí být vytvořeny ručně a musí se s nimi manipulovat při otevřené kartě webového prohlížeče.",
+	],
+	"Parser" => [
+		0 => "Přiřazení",
 	],
 	"Add user" => [
 		0 => "Přidat uživatele",
@@ -1828,17 +2146,17 @@ $translation_table = [
 	"Role" => [
 		0 => "Úloha",
 	],
+	"Manager" => [
+		0 => "Správce",
+	],
 	"Administrator" => [
 		0 => "Administrátor",
 	],
+	"Email address" => [
+		0 => "E-mailová adresa",
+	],
 	"This setting is always diabled when using personal website mode." => [
 		0 => "Toto nastavení je vždy zakázáno při použití režimu osobní webové stránky.",
-	],
-	"documentation" => [
-		0 => "dokumentace",
-	],
-	"Learn more about %s at our %d." => [
-		0 => "Přečtěte si více o %s na našich stránkách %d.",
 	],
 	"Add category" => [
 		0 => "Přidat kategorii",
@@ -1860,6 +2178,24 @@ $translation_table = [
 	],
 	"Website description" => [
 		0 => "Popis webu",
+	],
+	"Powered by" => [
+		0 => "Běží na systému",
+	],
+	"Enable this if you want to show a \"%s\" link at the footer." => [
+		0 => "Aktivujte tuto možnost, pokud chcete zobrazit tlačítka sociálních sítí pro sdílení obsahu.",
+	],
+	"Automatic" => [
+		0 => "Automaticky",
+	],
+	"Forced" => [
+		0 => "Vynucené",
+	],
+	"%a will use HTTPS detection on the server side (recommended). %f will use HTTPS regardless of your server setup. %d to don't use HTTPS at all." => [
+		0 => "%a použije detekci HTTPS na straně serveru (doporučeno). %f bude používat protokol HTTPS bez ohledu na nastavení vašeho serveru. %d nepoužije protokol HTTPS vůbec.",
+	],
+	"This only controls the protocol used in the URLs, it won't turn your website into a valid HTTPS website unless your server is configured to support and use HTTPS." => [
+		0 => "Tímto se řídí pouze protokol používaný v URL adresách, nebude to vaše webové stránky přeměňovat na platné HTTPS webové stránky, pokud nebude váš server nakonfigurován pro podporu a použití protokolu HTTPS.",
 	],
 	"Default time zone" => [
 		0 => "Výchozí časové pásmo",
@@ -1948,6 +2284,24 @@ $translation_table = [
 	"Type" => [
 		0 => "Typ",
 	],
+	"Terms of service" => [
+		0 => "Podmínky používání služby",
+	],
+	"Privacy" => [
+		0 => "Soukromí",
+	],
+	"Contact" => [
+		0 => "Kontakt",
+	],
+	"Extra page" => [
+		0 => "Zvláštní stránka",
+	],
+	"Internal page type" => [
+		0 => "Typ interní stránky",
+	],
+	"You can have multiple extra pages, but only one of the other special internal types." => [
+		0 => "Můžete mít několik dalších stránek, ale pouze jeden z dalších speciálních interních typů.",
+	],
 	"Page visibility" => [
 		0 => "Viditelnost stránky",
 	],
@@ -2023,6 +2377,9 @@ $translation_table = [
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "Opravdu chcete smazat stránku ID %s? Tato akce nelze vrátit zpátky.",
 	],
+	"Enabled image formats" => [
+		0 => "Povolené formáty obrázků",
+	],
 	"Unchecked image formats won't be allowed to be uploaded." => [
 		0 => "Nezaškrtnuté formáty obrázkových souborů nebudou moci být nahrány.",
 	],
@@ -2037,6 +2394,15 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Povol pokud chceš umožnit neregistrovaným uživatelům nahrávání.",
+	],
+	"Upload user interface" => [
+		0 => "Rozhraní uživatelského nahrávání",
+	],
+	"On-page container" => [
+		0 => "On-page kontejner",
+	],
+	"route" => [
+		0 => "trasa",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "Povolit vkládací odkazy (v nahrávacím nástroji)",
@@ -2401,6 +2767,9 @@ $translation_table = [
 	"What pagination method should be used." => [
 		0 => "Jaká metoda stránkování má být použita?",
 	],
+	"Listing viewer" => [
+		0 => "Prohlížeč seznamu obrázků",
+	],
 	"Enable this to use the listing viewer when clicking on an image." => [
 		0 => "Povolte to, chcete-li kliknutím na obrázek otevřít prohlížeč seznamu obrázků.",
 	],
@@ -2569,6 +2938,12 @@ $translation_table = [
 	"Enable embed codes (content)" => [
 		0 => "Povolit vkládací odkazy (obsah)",
 	],
+	"Everybody" => [
+		0 => "Všichni",
+	],
+	"Users only" => [
+		0 => "Pouze uživatelé",
+	],
 	"Enable this if you want to show embed codes for the content." => [
 		0 => "Povolte pokud chcete v obsahu zobrazovat vkládací obsahy.",
 	],
@@ -2590,11 +2965,17 @@ $translation_table = [
 	"Put your custom JS code here. It will be placed as <script> just before the closing </head> tag." => [
 		0 => "Vložte váš vlastní JS kód zde. Bude umístěný jako <script> těsně před koncem hlavičky (</head>) html kódu.",
 	],
+	"Do not use %s markup here. This is for plain JS code, not for HTML script tags. If you use script tags here you will break your website." => [
+		0 => "Zde nepoužívejte značku %s. Toto je pro jednoduchý kód JS, ne pro značky skriptů HTML. Používáte-li zde značky skriptů, narušíte své webové stránky.",
+	],
 	"Style" => [
 		0 => "Styl",
 	],
 	"Landing page" => [
 		0 => "Vstupní stránka",
+	],
+	"Split landing + images" => [
+		0 => "Split landing + obrázky",
 	],
 	"Route explore" => [
 		0 => "Prozkoumejte trasu",
@@ -2629,8 +3010,20 @@ $translation_table = [
 	"Call to action button color" => [
 		0 => "Barva tlačítka \"Call to action\"",
 	],
+	"Color of the homepage call to action button." => [
+		0 => "Barva tlačítka s výzvou k akci na domovské stránce.",
+	],
+	"Call to action outline style button" => [
+		0 => "okraje tlačítek",
+	],
 	"Enable this to use outline style for the homepage call to action button." => [
 		0 => "Zapněte, pokud chcete aktivovat rámeček kolem tlačítka akce na titulce",
+	],
+	"Call to action functionality" => [
+		0 => "Funkce tlačítka Call to action",
+	],
+	"Trigger uploader" => [
+		0 => "Spouštění nahrávání",
 	],
 	"Open URL" => [
 		0 => "Otevřít URL adresu",
@@ -2644,14 +3037,17 @@ $translation_table = [
 	"A relative URL like %r will be mapped to %l" => [
 		0 => "Relativní URL jako %r bude namapována na %l",
 	],
+	"Call to action HTML" => [
+		0 => "Výzva k akci HTML",
+	],
 	"This will be added inside the call to action <a> tag. Leave it blank to use the default contents." => [
 		0 => "Toto bude přidáno uvnitř výzvy k akci <a> tagu. Zanechte prázdné pro použití výchozího obsahu.",
 	],
 	"User IDs" => [
 		0 => "ID uživatele(ů)",
 	],
-	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
-		0 => "Čárkami oddělený seznam cílových uživatelských ID, kteří mohou prohlížet obrázky na domovské stránce. Ponechte pole prázdné pro zobrazování všech nedávných obrázků.",
+	"Comma-separated list of target user IDs (integers) to show most recent images on homepage. Leave it empty to display trending images." => [
+		0 => "Seznam ID cílových uživatelů oddělených čárkami pro zobrazení jejich obrázků na domovské stránce. Chcete-li zobrazit všechny poslední obrázky, ponechte pole prázdné nebo zadejte nulu.",
 	],
 	"banners" => [
 		0 => "bannery",
@@ -2667,6 +3063,18 @@ $translation_table = [
 	],
 	"Enable this to show a notice on top warning you about new available system updates." => [
 		0 => "Povolte, pokud chcete zobrazit oznámení při dostupné aktualizaci Chevereta.",
+	],
+	"Dump update query" => [
+		0 => "Dotaz na aktualizaci výpisu",
+	],
+	"Enable this if you want to dump the update query to run it manually." => [
+		0 => "Aktivujte tuto možnost, pokud chcete automaticky zjistit a nastavit správný jazyk pro každého uživatele.",
+	],
+	"SEO %s URLs" => [
+		0 => "SEO URL adresy pro %s",
+	],
+	"Enable this if you want to use SEO %s URLs." => [
+		0 => "Povolte tuto možnost, pokud chcete používat SEO URL adresy pro %s.",
 	],
 	"Minify code" => [
 		0 => "Minimalizovat kód",
@@ -2721,6 +3129,30 @@ $translation_table = [
 	],
 	"Album routing" => [
 		0 => "Směrování alba",
+	],
+	"Hostname" => [
+		0 => "Název hostitele",
+	],
+	"Hostname on which sub-domain wildcards will be added." => [
+		0 => "Název hostitele, ke kterému budou přidány zástupné znaky subdomény.",
+	],
+	"This setting may be overridden by %s." => [
+		0 => "Toto nastavení může být přepsáno pomocí %s.",
+	],
+	"Language subdomains" => [
+		0 => "Jazykové subdomény",
+	],
+	"languages" => [
+		0 => "jazyky",
+	],
+	"Enable to use %s for %t." => [
+		0 => "Povolit použití %s pro %t.",
+	],
+	"Username subdomains" => [
+		0 => "Subdomény uživatelského jména",
+	],
+	"user profiles" => [
+		0 => "uživatelských profilů",
 	],
 	"Custom language strings" => [
 		0 => "Vlastní jazykové řetězce",
@@ -2806,14 +3238,53 @@ $translation_table = [
 	"Unsecured" => [
 		0 => "Nezabezpečeno",
 	],
+	"Decode ID" => [
+		0 => "ID dekódování",
+	],
+	"Encode ID" => [
+		0 => "ID kódování",
+	],
 	"Send test email" => [
 		0 => "Odeslat testovací email",
 	],
-	"test@somedomain.com" => [
-		0 => "test@vasedomena.cz",
-	],
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "Pomocí této funkce lze otestovat, jak jsou vaše e-maily doručovány. Doporučujeme použít %s.",
+	],
+	"Export a user" => [
+		0 => "Exportujte uživatele",
+	],
+	"Export user" => [
+		0 => "Exportovat uživatele",
+	],
+	"This will allow you to download a user's standard personal information in JSON format." => [
+		0 => "To vám umožní stahovat standardní osobní údaje uživatele ve formátu JSON.",
+	],
+	"Regenerate external storage stats" => [
+		0 => "Regenerovat statistiky externího úložiště",
+	],
+	"Storage id" => [
+		0 => "ID úložiště",
+	],
+	"Regenerate" => [
+		0 => "Regenerovat",
+	],
+	"This will re-calculate the sum of all the image records associated to the target external storage." => [
+		0 => "Tím se přepočítá součet všech záznamů obrázků přidružených k cílovému externímu úložišti.",
+	],
+	"Migrate image records from one external storage to another" => [
+		0 => "Migrujte záznamy obrázků z jednoho externího úložiště do jiného",
+	],
+	"Source storage id" => [
+		0 => "ID zdrojového úložiště",
+	],
+	"Target storage id" => [
+		0 => "ID cílového úložiště",
+	],
+	"Migrate" => [
+		0 => "Migrovat",
+	],
+	"This only updates the database. You must transfer the actual files to target storage container on your own. URL rewriting is strongly recommended. Use zero (0) for local storage." => [
+		0 => "Toto pouze aktualizuje databázi. Musíte přenést skutečné soubory do cílového úložného kontejneru. Přepis URL je důrazně doporučen. Použijte nulu (0) pro místní úložiště.",
 	],
 	"social networks" => [
 		0 => "sociální sítě",
@@ -2857,8 +3328,26 @@ $translation_table = [
 	"VK client secret" => [
 		0 => "VK client secret",
 	],
+	"%s spam protection" => [
+		0 => "Ochrana proti spamu %s",
+	],
+	"user generated content" => [
+		0 => "uživatelem vytvořený obsah",
+	],
+	"Enable this to use %l to block spam on %c." => [
+		0 => "Povolte tuto možnost, chcete-li pomocí %s blokovat spam na %c.",
+	],
+	"%s API key" => [
+		0 => "API klíč %s",
+	],
+	"user signup" => [
+		0 => "registrace uživatele",
+	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Potřebujete <a href=\"%s\" target=\"_blank\">reCAPTCHA klíč</a>.",
+	],
+	"Please note that each reCAPTCHA version require its own set of keys. Don't forget to update the keys if you change versions." => [
+		0 => "Vezměte prosím na vědomí, že každá verze reCAPTCHA vyžaduje vlastní sadu klíčů. Nezapomeňte aktualizovat klíče, pokud měníte verze.",
 	],
 	"%s site key" => [
 		0 => "%s kód stránky",
@@ -2872,11 +3361,20 @@ $translation_table = [
 	"How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA." => [
 		0 => "Kolik neúspěšných pokusů je zapotřebí k vyžadování reCAPTCHA? Zadejte nula (0), aby se reCAPTCHA zobrazovala vždy.",
 	],
+	"Force %s on contact page" => [
+		0 => "Vynutit %s na kontaktní stránce",
+	],
+	"Enable this to always show %s on contact page." => [
+		0 => "Aktivací této funkce se bude %s vždy zobrazovat na kontaktní stránce.",
+	],
 	"Comments API" => [
 		0 => "API komentářů",
 	],
 	"Disqus API works with %s." => [
 		0 => "Disqus API pracuje s %s.",
+	],
+	"Disqus shortname" => [
+		0 => "Vaše krátké jméno na Disqus",
 	],
 	"%s public key" => [
 		0 => "%s veřejný kód",
@@ -2965,20 +3463,26 @@ $translation_table = [
 	"Start uploading" => [
 		0 => "Začít nahrávat",
 	],
-	"Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings." => [
-		0 => "Vyplňte tuto část nahrávání obrázků do %s účtu.<br> Cíl můžete editovat v administraci webu (dašbórdu :).",
-	],
 	"Sign up to unlock all the features" => [
 		0 => "Zaregistrujte se pro zpřístupnění všech funkcí",
 	],
 	"Manage your content, create private albums, customize your profile and more." => [
 		0 => "Spravujte váš obsah, vytvářejte soukromá alba, nastavujte váš profil a spoustu dalšího.",
 	],
-	"Enter your password" => [
-		0 => "Vložte vaše heslo",
+	"Sign in with your account" => [
+		0 => "Přihlaste se pomocí svého účtu",
+	],
+	"Don't have an account? <a href='%s'>Sign up</a> now." => [
+		0 => "Nemáte účet? <a href='%s'>Registrujte se</a>.",
+	],
+	"Logged out" => [
+		0 => "Odhlášeno",
 	],
 	"You have been logged off %s. Hope to see you soon." => [
 		0 => "Odhlášení z webu %s proběhlo úspěšně. Brzy na shledanou.",
+	],
+	"Go to homepage" => [
+		0 => "Jít na úvodní stránku",
 	],
 	"Website under maintenance" => [
 		0 => "Na webové stránce probíhá údržba",
@@ -3028,11 +3532,23 @@ $translation_table = [
 	"Embed codes that will be auto-inserted in editor box" => [
 		0 => "Kódy pro sdílení, které budou automaticky vloženy do pole editoru",
 	],
+	"Sibling selector" => [
+		0 => "Sibling selektor",
+	],
+	"Sibling element selector where to place the button next to" => [
+		0 => "Sibling selektor vedle kterého se má umístit tlačítko",
+	],
+	"Sibling position" => [
+		0 => "Pozice Siblingu",
+	],
 	"After" => [
 		0 => "Po",
 	],
 	"Before" => [
 		0 => "Před",
+	],
+	"Position relative to sibling element" => [
+		0 => "Relativní pozice vedle Siblingu",
 	],
 	"Advanced options" => [
 		0 => "Pokročilé možnosti",
@@ -3057,9 +3573,6 @@ $translation_table = [
 	],
 	"Registration IP" => [
 		0 => "IP při registraci",
-	],
-	"Status" => [
-		0 => "Stav",
 	],
 	"Valid" => [
 		0 => "Platný",
@@ -3121,6 +3634,12 @@ $translation_table = [
 	"This user doesn't have a password. Add one using this form." => [
 		0 => "Tento uživatel nemá uložené žádné heslo. Heslo přidejte tímto formulářem.",
 	],
+	"Enter your password" => [
+		0 => "Vložte vaše heslo",
+	],
+	"Confirm password" => [
+		0 => "Potvrďte heslo",
+	],
 	"Re-enter your password" => [
 		0 => "Napište heslo znovu",
 	],
@@ -3129,9 +3648,6 @@ $translation_table = [
 	],
 	"Delete existing image" => [
 		0 => "Smazat existující obrázek",
-	],
-	"Privacy" => [
-		0 => "Soukromí",
 	],
 	"Make my profile and identity totally private" => [
 		0 => "Zachovat můj profil a identitu zcela soukromou",
@@ -3154,8 +3670,8 @@ $translation_table = [
 	"User has no connections." => [
 		0 => "Uživatel nemá žádné propojení.",
 	],
-	"Link your account to external services to be able to login and share content." => [
-		0 => "Propojte váš účet s externími službami pro přihlášení a sdílení obsahu.",
+	"Link your account to external services to be able to login here." => [
+		0 => "Propojte svůj účet s externími službami, abyste se mohli přihlásit a sdílet obsah.",
 	],
 	"Do you really want to disconnect %s from this account?" => [
 		0 => "Opravdu se chcete odpojit %s od tohoto účtu?",
@@ -3178,14 +3694,41 @@ $translation_table = [
 	"Connect %s" => [
 		0 => "Propojit %s",
 	],
+	"Feel free to browse and discover all my shared images and albums." => [
+		0 => "Neváhejte a prohlédněte si všechny mé sdílené obrázky a alba.",
+	],
 	"Button" => [
 		0 => "Tlačítko",
+	],
+	"View all my images" => [
+		0 => "Zobrazit všechny mé obrázky",
+	],
+	"Login" => [
+		0 => "Přihlásit se",
+	],
+	"Already have an account? %s now." => [
+		0 => "Máte již účet? %s nyní.",
 	],
 	"resend account activation" => [
 		0 => "znovu poslat aktivaci účtu",
 	],
-	"If you have already signed up maybe you need to request to %s" => [
-		0 => "Pokud jste se již zaregistrovali, možná budete muset požádat o %s",
+	"If you have already signed up maybe you need to request to %s to activate your account." => [
+		0 => "Pokud jste se již zaregistrovali, možná budete muset požádat %s o aktivaci Vašeho účtu.",
+	],
+	"You can also %s." => [
+		0 => "Můžete také %s.",
+	],
+	"I'm at least %s years old" => [
+		0 => "Je mi minimálně %s let.",
+	],
+	"terms" => [
+		0 => "Podmínky",
+	],
+	"privacy policy" => [
+		0 => "Zásady ochrany osobních údajů",
+	],
+	"I agree to the %terms_link and %privacy_link" => [
+		0 => "Souhlasím s %terms_link a %privacy_link",
 	],
 	"Upload profile background" => [
 		0 => "Nahrát pozadí profilu",
@@ -3211,6 +3754,15 @@ $translation_table = [
 	"Follow" => [
 		0 => "Sledovat",
 	],
+	"You have been forbidden to use this website." => [
+		0 => "Máte zakázáno používat tuto webovou stránku.",
+	],
+	"Plugin" => [
+		0 => "Plugin",
+	],
+	"Page %s" => [
+		0 => "Stránka %s",
+	],
 	"General questions/comments" => [
 		0 => "Obecné dotazy a komentáře",
 	],
@@ -3223,17 +3775,11 @@ $translation_table = [
 	"Invalid subject" => [
 		0 => "Neplatný předmět",
 	],
-	"Invalid reCAPTCHA" => [
-		0 => "Špatně opsaný kód reCAPTCHA",
-	],
 	"Mail error" => [
 		0 => "Chyba e-mailu.",
 	],
 	"Message sent" => [
 		0 => "Zpráva byla odeslána",
-	],
-	"Contact" => [
-		0 => "Kontakt",
 	],
 	"Message sent. We will get in contact soon." => [
 		0 => "Zpráva byla odeslána. Budeme Vás brzy kontaktovat.",
@@ -3246,165 +3792,6 @@ $translation_table = [
 	],
 	"Subject" => [
 		0 => "Předmět zprávy",
-	],
-	"Installed version is v%s" => [
-		0 => "Instalovaná verze je v%s",
-	],
-	"Can't connect to %s" => [
-		0 => "Nelze se připojit k %s",
-	],
-	"Last available release is v%s" => [
-		0 => "Poslední dostupná verze je v%s",
-	],
-	"Update needed, proceeding to download" => [
-		0 => "Je nutná aktualizace, přecházím ke stažení",
-	],
-	"No update needed" => [
-		0 => "Aktualizace není nutná",
-	],
-	"System files already up to date" => [
-		0 => "Systémové soubory jsou již aktuální",
-	],
-	"Starting v%s download" => [
-		0 => "Začínám stahovat v%s",
-	],
-	"Downloaded v%s, proceeding to extraction" => [
-		0 => "Verze v%s je stažena, přecházím k rozbalování",
-	],
-	"Attempting to extract v%s" => [
-		0 => "Pokouším se rozbalit verzi v%s",
-	],
-	"Extraction completed" => [
-		0 => "Rozbalování bylo dokončeno",
-	],
-	"Proceding to install the update" => [
-		0 => "Přecházím k instalaci aktualizace",
-	],
-	"Update failed" => [
-		0 => "Aktualizace selhala",
-	],
-	"Please provide a valid email address" => [
-		0 => "Zadejte prosím platnou e-mailovou adresu",
-	],
-	"You must enter the album name." => [
-		0 => "Musíte zadat název alba.",
-	],
-	"Confirm" => [
-		0 => "Potvrdit",
-	],
-	"Select existing album" => [
-		0 => "Vyberte stávající album",
-	],
-	"Please select a valid image file type." => [
-		0 => "Prosím vyberte přípustné typy souborů obrázků.",
-	],
-	"Please select a picture of at most %s size." => [
-		0 => "Prosím vyberte obrázek s největší %s velikostí.",
-	],
-	"Profile image updated." => [
-		0 => "Profilový obrázek byl aktualizován.",
-	],
-	"Profile background image updated." => [
-		0 => "Pozadí profilu bylo aktualizováno.",
-	],
-	"Profile background image deleted." => [
-		0 => "Pozadí profilu bylo odstraněno.",
-	],
-	"Error deleting profile background image." => [
-		0 => "Nastala chyba při odstraňování obrázku pozadí profilu.",
-	],
-	"Update available v%s" => [
-		0 => "Je dostupná aktualizace v%s",
-	],
-	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
-		0 => "Je k dispozici aktualizace pro váš systém. Můžete ji automaticky stáhnout a instalovat, nebo běžte na %s a stáhněte si instalační soubor.",
-	],
-	"Update now" => [
-		0 => "Aktualizovat nyní",
-	],
-	"This website is running latest %s version" => [
-		0 => "Tato webová stránka používá nejnovější verzi %s",
-	],
-	"Toggle select" => [
-		0 => "Označit vybraný obrázek",
-	],
-	"Toggle flag" => [
-		0 => "Označit štítkem",
-	],
-	"Previous" => [
-		0 => "Předchozí",
-	],
-	"Next" => [
-		0 => "Další",
-	],
-	"Clipboard image" => [
-		0 => "Kopírovat obrázek do schránky",
-	],
-	"File too big." => [
-		0 => "Soubor je příliš velký.",
-	],
-	"Invalid or unsupported file format." => [
-		0 => "Neplatný nebo nepodporovaný formát souboru.",
-	],
-	"Some files couldn't be added" => [
-		0 => "Některé soubory nemohly být přidány.",
-	],
-	"Image edited successfully." => [
-		0 => "Obrázek byl úspěšně upraven.",
-	],
-	"private" => [
-		0 => "soukromý",
-	],
-	"Album edited successfully." => [
-		0 => "Album úspěšně upraveno.",
-	],
-	"Invalid URL key." => [
-		0 => "Neplatný klíč URL.",
-	],
-	"Category URL key already being used." => [
-		0 => "URL klíč kategorie se již používá.",
-	],
-	"Category successfully deleted." => [
-		0 => "Kategorie byla úspěšně odstraněna.",
-	],
-	"Category %s added." => [
-		0 => "Kategorie %s byla přidána.",
-	],
-	"Invalid expiration date." => [
-		0 => "Neplatné datum ukončení platnosti.",
-	],
-	"IP %s already banned." => [
-		0 => "IP %s je již zakázána.",
-	],
-	"IP %s banned." => [
-		0 => "IP %s je zakázána.",
-	],
-	"IP ban successfully deleted." => [
-		0 => "IP zákaz byl úspěšně odstraněn.",
-	],
-	"Please fill all the required fields." => [
-		0 => "Prosím vyplňte všechny požadované kolonky.",
-	],
-	"Invalid storage capacity value. Make sure to use a valid format." => [
-		0 => "Neplatná velikost úložiště. Prosím ověřte, že je ve správném formátu.",
-	],
-	"Invalid URL." => [
-		0 => "Neplatné URL.",
-	],
-	"Storage successfully edited." => [
-		0 => "Úložiště bylo úspěšně upraveno.",
-	],
-	"User added successfully." => [
-		0 => "Uživatel byl úspěšně přidán.",
-	],
-	"The content has been moved." => [
-		0 => "Obsah byl přesunut.",
-	],
-	"Unselect" => [
-		0 => "Odebrat",
-	],
-	"The content has been edited." => [
-		0 => "Obsah byl upraven.",
 	],
 	"All the changes that you have made will be lost if you continue." => [
 		0 => "Všechny změny, které jste provedl(a), budou ztraceny",

@@ -1,4 +1,6 @@
-<?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
+<?php if (!defined('access') or !access) {
+    die('This file cannot be directly accessed.');
+} ?>
 <script>
 var hasClass = function(element, cls) {
 	return (" " + element.className + " ").indexOf(" " + cls + " ") > -1;
@@ -8,11 +10,19 @@ var top_bar = {
 	},
 	html = document.getElementsByTagName("html")[0];
 
-if(!hasClass(html, "phone") && !hasClass(top_bar.node, "white")) {
+if(!hasClass(top_bar.node, "white")) {
+	<?php
+    if (function_exists('get_list')) {
+        $list = get_list();
+        $hasPrev = $list->has_page_prev;
+    }
+    if ($hasPrev == false) {
+        ?>
 	if(!hasClass(top_bar.node, "background-transparent")) {
 		top_bar.node.className = top_bar.node.className + " transparent background-transparent";
 	}
-	
+	<?php
+    } ?>
 	if(!document.getElementById("top-bar-shade")) {
 		var top_bar_placeholder = document.createElement("div");
 		

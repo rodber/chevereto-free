@@ -20,8 +20,8 @@ namespace CHV\Render;
 use G;
 use CHV;
 
-if (!defined("access") or !access) {
-    die("This file cannot be directly accessed.");
+if (!defined('access') or !access) {
+    die('This file cannot be directly accessed.');
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -33,11 +33,12 @@ function get_email_body_str($file)
     G\Render\include_theme_file($file);
     $mail_body = ob_get_contents();
     ob_end_clean();
+
     return $mail_body;
 }
 
 // For inline JS and CSS code from a given file
-function get_theme_inline_code($file, $type=null)
+function get_theme_inline_code($file, $type = null)
 {
     if (!isset($type)) {
         $type = pathinfo(rtrim($file, '.php'), PATHINFO_EXTENSION);
@@ -56,7 +57,7 @@ function get_theme_inline_code($file, $type=null)
         }
     }
 }
-function show_theme_inline_code($file, $type=null)
+function show_theme_inline_code($file, $type = null)
 {
     G\Render\include_theme_file($file);
     // echo get_theme_inline_code($file, $type); // Don't minify this (saves execution time and is not needed)
@@ -65,17 +66,18 @@ function show_theme_inline_code($file, $type=null)
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 /*** THEME DATA FUNCTIONS ***/
 
-function get_theme_file_url($file, $options=[])
+function get_theme_file_url($file, $options = [])
 {
     $filepath = G_APP_PATH_THEME . $file;
     $filepath_override = G_APP_PATH_THEME . 'overrides/' . $file;
     if (file_exists($filepath_override)) {
         $filepath = $filepath_override;
     }
+
     return get_static_url($filepath, $options);
 }
 
-function get_static_url($filepath, $options=[])
+function get_static_url($filepath, $options = [])
 {
     $options = array_merge(['versionize' => true, 'minify' => null], $options);
     if ($options['minify'] !== false) {
@@ -85,10 +87,11 @@ function get_static_url($filepath, $options=[])
     if ($options['versionize']) {
         $return = versionize_src($return);
     }
+
     return $return;
 }
 
-function get_cond_minified_file($filepath, $forced=false)
+function get_cond_minified_file($filepath, $forced = false)
 {
     // Check for theme override
     if (G\starts_with(G_APP_PATH_THEME, $filepath)) {
@@ -100,28 +103,31 @@ function get_cond_minified_file($filepath, $forced=false)
     if (!CHV\getSetting('minify_enable')) {
         return $filepath;
     }
+
     return get_minified($filepath, ['forced' => $forced, 'output' => 'file']);
 }
-function get_cond_minified_code($code, $type='js')
+function get_cond_minified_code($code, $type = 'js')
 {
     if (!CHV\getSetting('minify_enable')) {
         return $code;
     }
+
     return get_minified($code, ['source_method' => 'inline', 'source_type' => $type, 'output' => 'inline']);
 }
 
-function get_minified($var, $options=[])
+function get_minified($var, $options = [])
 {
     $options = array_merge(['source_method' => 'file', 'forced' => false], (array) $options);
     try {
         $minify = new G\Minify(array_merge($options, [
-            'source' => $var
+            'source' => $var,
         ]));
         $minify->exec();
         $var = $minify->result;
     } catch (G\MinifyException $e) {
         error_log($e->getMessage());
     }
+
     return $var;
 }
 
@@ -135,10 +141,10 @@ function theme_file_exists($var)
 
 function get_html_tags()
 {
-    $classes = 'device-' . (G\Handler::getCond('mobile_device') ? 'mobile' : 'nonmobile') . ' tone-' . CHV\getSetting('theme_tone') . ' top-bar-' . CHV\getSetting('theme_top_bar_color') . ' unsafe-blur-' . (CHV\getSetting('theme_nsfw_blur') ? 'on' : 'off');
+    $classes = 'device-' . (G\Handler::getCond('mobile_device') ? 'mobile' : 'nonmobile') . ' tone-' . G\Handler::getVar('theme_tone') . ' top-bar-' . G\Handler::getVar('theme_top_bar_color') . ' unsafe-blur-' . (CHV\getSetting('theme_nsfw_blur') ? 'on' : 'off');
+
     return get_lang_html_tags() . ' class="' . $classes . '"';
 }
-
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 /*** LANGUAGE TAGS ***/
@@ -146,7 +152,8 @@ function get_html_tags()
 function get_lang_html_tags()
 {
     $lang = CHV\get_language_used();
-    return 'xml:lang="'.$lang['base'].'" lang="'.$lang['base'].'" dir="'.$lang['dir'].'"';
+
+    return 'xml:lang="' . $lang['base'] . '" lang="' . $lang['base'] . '" dir="' . $lang['dir'] . '"';
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -157,66 +164,91 @@ function get_select_options_html($arr, $selected)
     $html = '';
     foreach ($arr as $k => $v) {
         $selected = is_bool($selected) ? ($selected ? 1 : 0) : $selected;
-        $html .= '<option value="'.$k.'"'.($selected == $k ? ' selected' : '').'>'.$v.'</option>'."\n";
+        $html .= '<option value="' . $k . '"' . ($selected == $k ? ' selected' : '') . '>' . $v . '</option>' . "\n";
     }
+
     return $html;
 }
 
-function get_checkbox_html($options=[])
+function get_checkbox_html($options = [])
 {
     if (!array_key_exists('name', $options)) {
         return 'ERR:CHECKBOX_NAME_MISSING';
     }
 
     $options = array_merge([
-        'value_checked'		=> 1,
-        'value_unchecked'	=> 0,
-        'label'				=> $options['name'],
-        'checked'			=> false
+        'value_checked' => 1,
+        'value_unchecked' => 0,
+        'label' => $options['name'],
+        'checked' => false,
     ], $options);
 
-    $tooltip = $options['tooltip'] ? (' rel="tooltip" title="'.$options['tooltip'].'"') : null;
+    $tooltip = $options['tooltip'] ? (' rel="tooltip" title="' . $options['tooltip'] . '"') : null;
 
     $html = '<div class="checkbox-label">' . "\n" .
-            '	<label for="'.$options['name'].'"' . $tooltip  . '>'  . "\n" .
-            '		<input type="hidden" name="'.$options['name'].'" value="'.$options['value_unchecked'].'">' . "\n" .
-            '		<input type="checkbox" name="'.$options['name'].'" id="'.$options['name'].'" ' . ((bool)$options['checked'] ? ' checked' : null) .' value="'.$options['value_checked'].'">' . $options['label'] . "\n" .
-            '	</label>' . "\n" .
-            '</div>';
+        '	<label for="' . $options['name'] . '"' . $tooltip . '>' . "\n" .
+        '		<input type="hidden" name="' . $options['name'] . '" value="' . $options['value_unchecked'] . '">' . "\n" .
+        '		<input type="checkbox" name="' . $options['name'] . '" id="' . $options['name'] . '" ' . ((bool) $options['checked'] ? ' checked' : null) . ' value="' . $options['value_checked'] . '">' . $options['label'] . "\n" .
+        '	</label>' . "\n" .
+        '</div>';
 
     return $html;
 }
 
-function get_recaptcha_html($id='g-recaptcha')
+function get_recaptcha_component($id = 'g-recaptcha')
 {
-    // v2 only
-    return strtr('<div id="%id" data-recaptcha-element class="g-recaptcha"></div>', ['%id' => $id]);
+    if (CHV\getSetting('recaptcha_version') == 3) {
+        return ['recaptcha_invisible_html', get_recaptcha_invisible_html()];
+    }
+
+    return ['recaptcha_html', get_recaptcha_html($id)];
 }
 
+function get_recaptcha_invisible_html()
+{
+    return '<script>
+    const recaptchaAction = "' . G\get_route_name() . '";
+    const recaptchaLocal = "' . G\get_base_url('recaptcha-verify') . '";
+    grecaptcha.ready(function() {
+        grecaptcha.execute("' . CHV\getSetting('recaptcha_public_key') . '", {action: recaptchaAction})
+        .then(function(token) {
+            fetch(recaptchaLocal + "/?action=" + recaptchaAction + "&token="+token).then(function(response) {
+                response.json().then(function(data) {
+                    console.log(data);
+                });
+            });
+        });
+    });
+    </script>';
+}
+
+function get_recaptcha_html($id = 'g-recaptcha')
+{
+    return strtr('<div id="%id" data-recaptcha-element class="g-recaptcha"></div>', ['%id' => $id]);
+}
 
 /**
  * ----------------------------------------------------------------------------------------------------------------------------------------
  * ----------------------------------------------------------------------------------------------------------------------------------------
- * ----------------------------------------------------------------------------------------------------------------------------------------
+ * ----------------------------------------------------------------------------------------------------------------------------------------.
  */
-
 function get_share_links($share_element)
 {
-    if (function_exists("get_share_links")) {
+    if (function_exists('get_share_links')) {
         return \get_share_links($share_element);
     }
 
-    if (!$share_element["twitter"]) {
-        $share_element["twitter"] = CHV\getSetting('twitter_account');
+    if (!$share_element['twitter']) {
+        $share_element['twitter'] = CHV\getSetting('twitter_account');
     }
 
-    $share_element["urlencoded"] = array();
+    $share_element['urlencoded'] = array();
 
     foreach ($share_element as $key => $value) {
-        if ($key == "urlencoded") {
+        if ($key == 'urlencoded') {
             continue;
         }
-        $share_element["urlencoded"][$key] = rawurlencode($value);
+        $share_element['urlencoded'][$key] = rawurlencode($value);
     }
 
     global $share_links_networks;
@@ -224,50 +256,46 @@ function get_share_links($share_element)
 
     if (!$share_links_networks) {
         $share_links_networks = array(
-            'facebook'	=> array(
-                'url'	=> 'http://www.facebook.com/share.php?u=%URL%',
-                'label' => 'Facebook'
+            'facebook' => array(
+                'url' => 'http://www.facebook.com/share.php?u=%URL%',
+                'label' => 'Facebook',
             ),
-            'twitter'	=> array(
-                'url'	=> 'https://twitter.com/intent/tweet?original_referer=%URL%&url=%URL%&text=%TITLE%' . ($share_element['twitter'] ? '&via=%TWITTER%' : null),
-                'label' => 'Twitter'
+            'twitter' => array(
+                'url' => 'https://twitter.com/intent/tweet?original_referer=%URL%&url=%URL%&text=%TITLE%' . ($share_element['twitter'] ? '&via=%TWITTER%' : null),
+                'label' => 'Twitter',
             ),
-            'google-plus' => array(
-                'url'	=> 'https://plus.google.com/u/0/share?url=%URL%',
-                'label'	=> 'Google+'
-            ),
-            'whatsapp'	=> array(
-                'url'	=> 'whatsapp://send?text=%TITLE% - ' . _s('view on %s', CHV\getSetting('website_name')) . ': %URL%',
+            'whatsapp'    => array(
+                'url'    => 'whatsapp://send?text=%TITLE% - ' . _s('view on %s', G\safe_html(CHV\getSetting('website_name'))) . ': %URL%',
                 'label' => 'WhatsApp',
                 'mobileonly' => true,
             ),
-            'reddit'	=> array(
-                'url'	=> 'http://reddit.com/submit?url=%URL%',
-                'label' => 'reddit'
+            'reddit' => array(
+                'url' => 'http://reddit.com/submit?url=%URL%',
+                'label' => 'reddit',
             ),
-            'vk'		=> array(
-                'url'	=> 'http://vk.com/share.php?url=%URL%',
-                'label' => 'VK'
+            'vk' => array(
+                'url' => 'http://vk.com/share.php?url=%URL%',
+                'label' => 'VK',
             ),
-            'blogger'	=> array(
-                'url'	=> 'http://www.blogger.com/blog-this.g?n=%TITLE%&source=&b=%HTML%',
-                'label'	=> 'Blogger'
+            'blogger' => array(
+                'url' => 'http://www.blogger.com/blog-this.g?n=%TITLE%&source=&b=%HTML%',
+                'label' => 'Blogger',
             ),
-            'tumblr'	=> array(
-                'url'	=> 'http://www.tumblr.com/share/photo?source=%PHOTO_URL%&caption=%TITLE%&clickthru=%URL%&title=%TITLE%',
-                'label'	=> 'Tumblr.'
+            'tumblr' => array(
+                'url' => 'http://www.tumblr.com/share/photo?source=%PHOTO_URL%&caption=%TITLE%&clickthru=%URL%&title=%TITLE%',
+                'label' => 'Tumblr.',
             ),
-            'pinterest'	=> array(
-                'url'	=> 'http://www.pinterest.com/pin/create/bookmarklet/?media=%PHOTO_URL%&url=%URL%&is_video=false&description=%DESCRIPTION%&title=%TITLE%',
-                'label' => 'Pinterest'
+            'pinterest' => array(
+                'url' => 'http://www.pinterest.com/pin/create/bookmarklet/?media=%PHOTO_URL%&url=%URL%&is_video=false&description=%DESCRIPTION%&title=%TITLE%',
+                'label' => 'Pinterest',
             ),
             'stumbleupon' => array(
-                'url'	=> 'http://www.stumbleupon.com/submit?url=%URL%',
-                'label'	=> 'StumbleUpon'
+                'url' => 'http://www.stumbleupon.com/submit?url=%URL%',
+                'label' => 'StumbleUpon',
             ),
-            'mail'		=> array(
-                'url' 	=> 'mailto:?subject=%TITLE%&body=%URL%',
-                'label' => 'Email'
+            'mail' => array(
+                'url' => 'mailto:?subject=%TITLE%&body=%URL%',
+                'label' => 'Email',
             ),
         );
     }
@@ -275,18 +303,18 @@ function get_share_links($share_element)
     $return = array();
 
     foreach ($share_links_networks as $key => $value) {
-        $search = array("%URL%", "%TITLE%", "%DESCRIPTION%", "%HTML%", "%PHOTO_URL%", "%TWITTER%");
-        $replace= array("url", "title", "description", "HTML", "image", "twitter");
+        $search = array('%URL%', '%TITLE%', '%DESCRIPTION%', '%HTML%', '%PHOTO_URL%', '%TWITTER%');
+        $replace = array('url', 'title', 'description', 'HTML', 'image', 'twitter');
 
-        for ($i=0; $i<count($replace); $i++) {
-            if (array_key_exists($replace[$i], $share_element["urlencoded"])) {
-                $replace[$i] = $share_element["urlencoded"][$replace[$i]];
+        for ($i = 0; $i < count($replace); ++$i) {
+            if (array_key_exists($replace[$i], $share_element['urlencoded'])) {
+                $replace[$i] = $share_element['urlencoded'][$replace[$i]];
             }
         }
 
-        $value["url"] = str_replace($search, $replace, $value["url"]);
+        $value['url'] = str_replace($search, $replace, $value['url']);
 
-        $return[] = '<li'.($value['mobileonly'] ? ' class="hidden phone-show"' : null).'><a data-href="'.$value["url"].'" class="popup-link btn-32 btn-social btn-'.$key.'" rel="tooltip" data-tiptip="top" title="'.$value["label"].'"><span class="btn-icon icon-'.$key.'"></span></a></li>';
+        $return[] = '<li' . ($value['mobileonly'] ? ' class="hidden phone-show"' : null) . '><a data-href="' . $value['url'] . '" class="popup-link btn-32 btn-social btn-' . $key . '" rel="tooltip" data-tiptip="top" title="' . $value['label'] . '"><span class="btn-icon icon-' . $key . '"></span></a></li>';
     }
 
     return $return;
@@ -294,16 +322,18 @@ function get_share_links($share_element)
 
 /**
  * PEAFOWL FRAMEWORK
- * ----------------------------------------------------------------------------------------------------------------------------------------
+ * ----------------------------------------------------------------------------------------------------------------------------------------.
  */
 function include_peafowl_head()
 {
-    echo	'<meta name="generator" content="Chevereto Free ' . CHV\get_chevereto_version() . '">' . "\n" .
-            '<link rel="stylesheet" href="' . get_static_url(CHV_PATH_PEAFOWL . 'peafowl.css') . '">' . "\n" .
-            '<link rel="stylesheet" href="' . get_static_url(CHV_PATH_PEAFOWL . 'fonts/opensans/opensans.css') . '">' . "\n" .
-            '<link rel="stylesheet" href="' . get_theme_file_url('style.css') . '">' . "\n\n" .
-            '<script data-cfasync="false">document.documentElement.className+=" js";var devices=["phone","phablet","tablet","laptop","desktop","largescreen"],window_to_device=function(){for(var e=[480,768,992,1200,1880,2180],t=[],n="",d=document.documentElement.clientWidth||document.getElementsByTagName("body")[0].clientWidth||window.innerWidth,c=0;c<devices.length;++c)d>=e[c]&&t.push(devices[c]);for(0==t.length&&t.push(devices[0]),n=t[t.length-1],c=0;c<devices.length;++c)document.documentElement.className=document.documentElement.className.replace(devices[c],""),c==devices.length-1&&(document.documentElement.className+=" "+n),document.documentElement.className=document.documentElement.className.replace(/\s+/g," ");if("laptop"==n||"desktop"==n){var o=document.getElementById("pop-box-mask");null!==o&&o.parentNode.removeChild(o)}};window_to_device(),window.onresize=window_to_device;function jQueryLoaded(){!function(n,d){n.each(readyQ,function(d,e){n(e)}),n.each(bindReadyQ,function(e,i){n(d).bind("ready",i)})}(jQuery,document)}!function(n,d,e){function i(d,e){"ready"==d?n.bindReadyQ.push(e):n.readyQ.push(d)}n.readyQ=[],n.bindReadyQ=[];var u={ready:i,bind:i};n.$=n.jQuery=function(n){return n===d||void 0===n?u:void i(n)}}(window,document);
-			</script>' . "\n\n";
+    echo    '<meta name="generator" content="' . G_APP_NAME . ' ' . CHV\get_chevereto_version() . '">' . "\n" .
+        '<link rel="stylesheet" href="' . get_static_url(CHV_PATH_PEAFOWL . 'peafowl.css') . '">' . "\n" .
+        '<link rel="stylesheet" href="' . get_theme_file_url('style.css') . '">' . "\n\n" .
+        '<script data-cfasync="false">document.documentElement.className+=" js";var devices=["phone","phablet","tablet","laptop","desktop","largescreen"],window_to_device=function(){for(var e=[480,768,992,1200,1880,2180],t=[],n="",d=document.documentElement.clientWidth||document.getElementsByTagName("body")[0].clientWidth||window.innerWidth,c=0;c<devices.length;++c)d>=e[c]&&t.push(devices[c]);for(0==t.length&&t.push(devices[0]),n=t[t.length-1],c=0;c<devices.length;++c)document.documentElement.className=document.documentElement.className.replace(devices[c],""),c==devices.length-1&&(document.documentElement.className+=" "+n),document.documentElement.className=document.documentElement.className.replace(/\s+/g," ");if("laptop"==n||"desktop"==n){var o=document.getElementById("pop-box-mask");null!==o&&o.parentNode.removeChild(o)}};window_to_device(),window.onresize=window_to_device;function jQueryLoaded(){!function(n,d){n.each(readyQ,function(d,e){n(e)}),n.each(bindReadyQ,function(e,i){n(d).bind("ready",i)})}(jQuery,document)}!function(n,d,e){function i(d,e){"ready"==d?n.bindReadyQ.push(e):n.readyQ.push(d)}n.readyQ=[],n.bindReadyQ=[];var u={ready:i,bind:i};n.$=n.jQuery=function(n){return n===d||void 0===n?u:void i(n)}}(window,document);
+            </script>' . "\n\n";
+    if (G\Handler::getCond('captcha_show') && CHV\getSetting('recaptcha_version') == 3) {
+        echo '<script src="https://www.google.com/recaptcha/api.js?render=' . CHV\getSetting('recaptcha_public_key') . '"></script>';
+    }
 }
 // Get cookie law banner
 function get_cookie_law_banner()
@@ -318,7 +348,7 @@ function display_cookie_law_banner()
         return;
     }
     // No user logged in and cookie law has not been accepted
-    if (!isset($_COOKIE['CHV_COOKIE_LAW_DISPLAY']) or (bool)$_COOKIE['CHV_COOKIE_LAW_DISPLAY'] !== false) {
+    if (!isset($_COOKIE['CHV_COOKIE_LAW_DISPLAY']) or (bool) $_COOKIE['CHV_COOKIE_LAW_DISPLAY'] !== false) {
         echo get_cookie_law_banner();
     }
 }
@@ -327,8 +357,8 @@ function include_peafowl_foot()
 {
     display_cookie_law_banner();
     $resources = [
-        'peafowl'	=> CHV_PATH_PEAFOWL . 'peafowl.js',
-        'chevereto' => G_APP_PATH_LIB . 'chevereto.js'
+        'peafowl' => CHV_PATH_PEAFOWL . 'peafowl.js',
+        'chevereto' => G_APP_PATH_LIB . 'chevereto.js',
     ];
     foreach ($resources as $k => &$v) {
         $v = get_static_url($v);
@@ -339,7 +369,7 @@ function include_peafowl_foot()
         '<script defer data-cfasync="false" src="' . $resources['peafowl'] . '" id="peafowl-js"></script>',
         '<script defer data-cfasync="false" src="' . $resources['chevereto'] . '" id="chevereto-js"></script>',
     ];
-    if (G\Handler::getCond('captcha_needed')) {
+    if (G\Handler::getCond('captcha_needed') && CHV\getSetting('recaptcha_version') != 3) {
         $echo[] = strtr('<script>
 		var PFrecaptchaCallback = function() {
 			$("[data-recaptcha-element]:empty:visible").each(function() {
@@ -351,8 +381,8 @@ function include_peafowl_foot()
 			});
 		};
 		</script>', [
-            '%k'	=> CHV\getSetting('recaptcha_public_key'),
-            '%t'	=> in_array(CHV\getSetting('theme_tone'), ['light', 'dark']) ? CHV\getSetting('theme_tone') : 'light', // Esto es MongoCodeQl (en camel case)
+            '%k' => CHV\getSetting('recaptcha_public_key'),
+            '%t' => in_array(G\Handler::getVar('theme_tone'), ['light', 'dark']) ? G\Handler::getVar('theme_tone') : 'light', // Esto es MongoCodeQl (en camel case)
         ]);
         $echo[] = '<script defer src="https://www.google.com/recaptcha/api.js?onload=PFrecaptchaCallback&render=explicit"></script>';
     }
@@ -363,10 +393,8 @@ function include_peafowl_foot()
     echo implode("\n", $echo);
 }
 
-function get_peafowl_item_list($tpl="image", $item, $template, $requester=null, $tools)
+function get_peafowl_item_list($tpl = 'image', $item, $template, $requester = null, $tools)
 {
-
-    // todo: pass requester permissions
     if (empty($requester)) {
         $requester = CHV\Login::getUser();
     } elseif (!is_array($requester) and !is_null($requester)) {
@@ -377,12 +405,12 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=null, 
     $stock_tpl = 'IMAGE';
 
     if ($tpl == 'album' || $tpl == 'user/album') {
-        $stock_tpl = "ALBUM";
+        $stock_tpl = 'ALBUM';
     }
     if ($tpl == 'user' || $tpl == 'user/user') {
         $stock_tpl = 'USER';
         if ($item['is_private']) {
-            if ($requester['is_admin']) {
+            if ($requester['is_admin'] || $requester['is_manager']) {
                 $item['name'] = '🔒 ' . $item['name'];
             } else {
                 unset($item);
@@ -391,7 +419,7 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=null, 
         }
     } else {
         if (array_key_exists('user', $item)) {
-            CHV\User::fill($item["user"]);
+            CHV\User::fill($item['user']);
         }
     }
 
@@ -407,16 +435,19 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=null, 
         $conditional_replaces['tpl_list_item/item_image_play_gif'] = null;
     }
 
-    $filled_template = $template["tpl_list_item/$tpl"]; // Stock the unfilled template
+    $fill_tpl = $tpl;
 
-    // Missing template file cause uncaught error
-    $tpl_replacements = $template;
+    if ($stock_tpl == 'ALBUM' && $requester['is_admin'] == false && $item['privacy'] == 'password' && !($item['user']['id'] && $item['user']['id'] == $requester['id']) && CHV\Album::checkSessionPassword($item) == false) {
+        $fill_tpl = 'album_password';
+    }
+
+    $filled_template = $template["tpl_list_item/$fill_tpl"]; // Stock the unfilled template
 
     if (!CHV\getSetting('enable_likes') || $requester['is_private']/* || $item['user']['is_private']*/) {
         $conditional_replaces['tpl_list_item/item_like'] = null;
     }
 
-    if ($item['user']['is_private'] && !$requester['is_admin'] && $item["user"]["id"] !== $requester['id']) {
+    if ($item['user']['is_private'] && !$requester['is_admin'] && $item['user']['id'] !== $requester['id']) {
         unset($item['user']);
         $item['user'] = CHV\User::getPrivate();
         $conditional_replaces['tpl_list_item/image_description_user'] = null;
@@ -425,49 +456,52 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=null, 
         $conditional_replaces['tpl_list_item/image_description_private'] = null;
     }
 
-    if ($item['user']['is_private'] && $requester['is_admin']) {
+    if ($item['user']['is_private'] && ($requester['is_admin'] || $requester['is_manager'])) {
         $item['user']['name'] = '🔒 ' . $item['user']['name'];
     }
 
-    $conditional_replaces[$item["user"]["id"] == null ? "tpl_list_item/image_description_user" : "tpl_list_item/image_description_guest"] = null;
-    $conditional_replaces[$item["user"]["avatar"] == null ? "tpl_list_item/image_description_user_avatar" : "tpl_list_item/image_description_user_no_avatar"] = null;
+    $conditional_replaces[$item['user']['id'] == null ? 'tpl_list_item/image_description_user' : 'tpl_list_item/image_description_guest'] = null;
+    $conditional_replaces[$item['user']['avatar'] == null ? 'tpl_list_item/image_description_user_avatar' : 'tpl_list_item/image_description_user_no_avatar'] = null;
 
-    if ($stock_tpl == "IMAGE") {
+    if ($stock_tpl == 'IMAGE') {
         $conditional_replaces['tpl_list_item/' . (!$item['file_resource']['chain']['image'] ? 'image_cover_image' : 'image_cover_empty')] = null;
     }
 
-    if ($stock_tpl == "ALBUM") {
-        if ($item['privacy'] !== 'password' || (!$requester['is_admin'] || $item["user"]["id"] !== $requester['id'])) {
+    if ($stock_tpl == 'ALBUM') {
+        if ($item['privacy'] !== 'password' || (!$requester['is_admin'] || $item['user']['id'] !== $requester['id'])) {
             $item['password'] = null;
+        }
+
+        if ($fill_tpl == 'album_password') {
+            unset($item['images_slice']);
         }
 
         $conditional_replaces['tpl_list_item/' . (($item['image_count'] == 0 or !$item['images_slice'][0]['file_resource']) ? 'album_cover_image' : 'album_cover_empty')] = null;
 
-        for ($i=1; $i<count((array) $item["images_slice"]); $i++) {
+        for ($i = 1; $i < count((array) $item['images_slice']); ++$i) {
             if (!$item['images_slice'][$i]['file_resource']['chain']['thumb']) {
                 continue;
             }
-            $template["tpl_list_item/album_thumbs"] = str_replace("%$i", "", $template["tpl_list_item/album_thumbs"]);
+            $template['tpl_list_item/album_thumbs'] = str_replace("%$i", '', $template['tpl_list_item/album_thumbs']);
         }
-        $template["tpl_list_item/album_thumbs"] = preg_replace("/%[0-9]+(.*)%[0-9]+/", "", $template["tpl_list_item/album_thumbs"]);
+        $template['tpl_list_item/album_thumbs'] = preg_replace('/%[0-9]+(.*)%[0-9]+/', '', $template['tpl_list_item/album_thumbs']);
     }
 
-    if ($stock_tpl == "USER") {
-        $conditional_replaces[$item["avatar"] ? "tpl_list_item/user_no_avatar" : "tpl_list_item/user_avatar"] = null;
-        foreach (array("twitter", "facebook", "website") as $social) {
+    if ($stock_tpl == 'USER') {
+        $conditional_replaces[$item['avatar'] ? 'tpl_list_item/user_no_avatar' : 'tpl_list_item/user_avatar'] = null;
+        foreach (array('twitter', 'facebook', 'website') as $social) {
             if (!$item[$social]) {
-                $conditional_replaces["tpl_list_item/user_" . $social] = null;
+                $conditional_replaces['tpl_list_item/user_' . $social] = null;
             }
         }
-        $conditional_replaces[empty($item["avatar"]['url']) ? "tpl_list_item/user_cover_image" : "tpl_list_item/user_cover_empty"] = null;
-        $conditional_replaces[empty($item["background"]['url']) ? "tpl_list_item/user_background_image" : "tpl_list_item/user_background_empty"] = null;
+        $conditional_replaces[empty($item['avatar']['url']) ? 'tpl_list_item/user_cover_image' : 'tpl_list_item/user_cover_empty'] = null;
+        $conditional_replaces[empty($item['background']['url']) ? 'tpl_list_item/user_background_image' : 'tpl_list_item/user_background_empty'] = null;
     }
 
     if (is_null($requester)) {
         $show_item_edit_tools = false;
         $show_item_public_tools = false;
     } else {
-
         //$show_item_edit_tools = $item["user"]["id"] == $requester['id'];
         if (!is_null($tools)) {
             $show_item_edit_tools = !is_array($tools);
@@ -477,29 +511,29 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=null, 
             $show_item_public_tools = false;
         }
 
-        if ($requester['is_admin']) {
+        if ($requester['is_admin'] || $requester['is_manager']) {
             $show_item_edit_tools = true;
             $show_item_public_tools = false;
         }
     }
 
     if (!$show_item_public_tools) {
-        $template['tpl_list_item/item_'.strtolower($stock_tpl).'_public_tools'] = null;
+        $template['tpl_list_item/item_' . strtolower($stock_tpl) . '_public_tools'] = null;
     }
 
     if (!$show_item_edit_tools) {
-        $template['tpl_list_item/item_'.strtolower($stock_tpl).'_edit_tools'] = null;
+        $template['tpl_list_item/item_' . strtolower($stock_tpl) . '_edit_tools'] = null;
     }
 
-    if (!$requester['is_admin']) {
-        $template['tpl_list_item/item_'.strtolower($stock_tpl).'_admin_tools'] = null;
+    if (!($requester['is_admin'] || $requester['is_manager'])) {
+        $template['tpl_list_item/item_' . strtolower($stock_tpl) . '_admin_tools'] = null;
     }
 
     foreach ($conditional_replaces as $k => $v) {
         $template[$k] = $v;
     }
 
-    preg_match_all("#%(tpl_list_item/.*)%#", $filled_template, $matches);
+    preg_match_all('#%(tpl_list_item/.*)%#', $filled_template, $matches);
 
     if (is_array($matches[1])) {
         foreach ($matches[1] as $k => $v) {
@@ -514,35 +548,15 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=null, 
     // Get rid of the useless keys
     unset($item['original_exifdata']);
 
-    // Get rid of any empty property
-    //$item = G\array_remove_empty($item);
-
-    // Sensitive utf8 encode
-    $utf8_encodes = [
-        'image'	=> ['title', 'title_truncated', 'original_filename'],
-        'album' => ['name', 'name_truncated', 'description'],
-        'user'	=> ['name', 'bio'],
-    ];
-
-    foreach ($utf8_encodes as $k => $v) {
-        if ($k == strtolower($stock_tpl)) {
-            foreach ($v as $encode) {
-                //$item[$encode] = mb_detect_encoding($item[$encode]);
-            }
-        } else {
-            foreach ($v as $encode) {
-                //$item[$k][$encode] = mb_convert_encoding($item[$encode], 'UTF-8', "Windows-1252");
-            }
-        }
-    }
-
     // Now stock the item values
-    $replacements = array_change_key_case(flatten_array($item, $stock_tpl."_"), CASE_UPPER);
+    $replacements = array_change_key_case(flatten_array($item, $stock_tpl . '_'), CASE_UPPER);
+
+    // G\debug($replacements);
 
     unset($replacements['IMAGE_ORIGINAL_EXIFDATA']);
 
-    if ($stock_tpl == "IMAGE" or $stock_tpl == "ALBUM") {
-        $replacements["ITEM_URL_EDIT"] = ($stock_tpl == "IMAGE" ? $item["url_viewer"] : $item["url"]) . "#edit";
+    if ($stock_tpl == 'IMAGE' or $stock_tpl == 'ALBUM') {
+        $replacements['ITEM_URL_EDIT'] = ($stock_tpl == 'IMAGE' ? $item['url_viewer'] : $item['url']) . '#edit';
     }
 
     // Public for the guest
@@ -560,7 +574,7 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=null, 
     $show_object = true;
 
     if ($show_object) {
-        $object = G\array_filter_array($item, ['image', 'medium', 'thumb', 'name', 'title', 'display_url', 'extension', 'filename', 'height', 'how_long_ago', 'size_formatted', 'url', 'url_viewer', 'width']);
+        $object = G\array_filter_array($item, ['id_encoded', 'image', 'medium', 'thumb', 'name', 'title', 'display_url', 'extension', 'filename', 'height', 'how_long_ago', 'size_formatted', 'url', 'url_viewer', 'url_short', 'width']);
         if ($item['user']) {
             $object['user'] = [];
             foreach (['avatar', 'url', 'username', 'name_short_html'] as $k) {
@@ -581,13 +595,13 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=null, 
     }
 
     $column_sizes = array(
-        "image"	=> 8,
-        "album"	=> 8,
-        "user"	=> 8
+        'image' => 8,
+        'album' => 8,
+        'user' => 8,
     );
 
     foreach ($column_sizes as $k => $v) {
-        $filled_template = replace_tpl_string("COLUMN_SIZE_".strtoupper($k), $v, $filled_template);
+        $filled_template = replace_tpl_string('COLUMN_SIZE_' . strtoupper($k), $v, $filled_template);
     }
 
     return $filled_template;
@@ -595,7 +609,7 @@ function get_peafowl_item_list($tpl="image", $item, $template, $requester=null, 
 
 function replace_tpl_string($search, $replace, $subject)
 {
-    return str_replace("%".$search."%", is_null($replace) ? "" : $replace, $subject);
+    return str_replace('%' . $search . '%', is_null($replace) ? '' : $replace, $subject);
 }
 
 // http://stackoverflow.com/a/9546215
@@ -609,11 +623,12 @@ function flatten_array($array, $prefix = '')
             $result[$prefix . $key] = $value;
         }
     }
+
     return $result;
 }
 
 // This function is sort of an alias of php die() but with html error display
-function chevereto_die($error_msg, $paragraph=null, $title=null)
+function chevereto_die($error_msg, $paragraph = null, $title = null)
 {
     if (!is_array($error_msg) && G\check_value($error_msg)) {
         $error_msg = array($error_msg);
@@ -624,17 +639,17 @@ function chevereto_die($error_msg, $paragraph=null, $title=null)
     }
     $solution = "Need help or questions about this? Go to <a href='http://chevereto.com/support' target='_blank'>Chevereto support<a/>.";
     $title = (!is_null($title)) ? $title : 'System error';
-    $doctitle = $title . " - Chevereto";
+    $doctitle = $title . ' - Chevereto';
 
-    $handled_request = G_ROOT_PATH == '/' ? sanitize_path_slashes($_SERVER["REQUEST_URI"]) : str_ireplace(G_ROOT_PATH_RELATIVE, "", G\add_trailing_slashes($_SERVER["REQUEST_URI"]));
-    $base_request = explode('/', rtrim(str_replace("//", "/", str_replace("?", "/", $handled_request)), '/'))[0];
+    $handled_request = G_ROOT_PATH == '/' ? sanitize_path_slashes($_SERVER['REQUEST_URI']) : str_ireplace(G_ROOT_PATH_RELATIVE, '', G\add_trailing_slashes($_SERVER['REQUEST_URI']));
+    $base_request = explode('/', rtrim(str_replace('//', '/', str_replace('?', '/', $handled_request)), '/'))[0];
 
     if ($base_request == 'json' || $base_request == 'api') {
         $output = array(
             'status_code' => 500,
             'status_txt' => G\get_set_status_header_desc(500),
             'error' => $title,
-            'errors' => $error_msg
+            'errors' => $error_msg,
         );
         G\set_status_header(500);
         G\json_prepare();
@@ -642,20 +657,20 @@ function chevereto_die($error_msg, $paragraph=null, $title=null)
     }
 
     $html = [
-        '<h1>'.$title.'</h1>',
-        '<p>'.$paragraph.'</p>'
+        '<h1>' . $title . '</h1>',
+        '<p>' . $paragraph . '</p>',
     ];
 
     if (is_array($error_msg)) {
         $html[] = '<ul class="errors">';
         foreach ($error_msg as $error) {
-            $html[] = '<li>'.$error.'</li>';
+            $html[] = '<li>' . $error . '</li>';
         }
         $html[] = '</ul>';
     }
 
-    $html[] = '<p>'.$solution.'</p>';
-    $html = join("", $html);
+    $html[] = '<p>' . $solution . '</p>';
+    $html = join('', $html);
     $template = CHV_APP_PATH_CONTENT_SYSTEM . 'template.php';
 
     if (!require_once($template)) {
@@ -716,11 +731,11 @@ function getFriendlyExif($Exif)
             'ExifVersion',
             'DateTimeModified',
             'DateTimeOriginal',
-            'DateTimeDigitized'
+            'DateTimeDigitized',
         ];
         $ExifRelevant = [];
         foreach ($exif_relevant as $k) {
-            if (array_key_exists($k, $Exif)) {
+            if (property_exists($Exif, $k)) {
                 $exifReadableValue = exifReadableValue($Exif, $k);
                 if ($exifReadableValue !== null && !is_array($exifReadableValue)) { // Just make sure to avoid this array
                     $ExifRelevant[$k] = $exifReadableValue;
@@ -728,18 +743,18 @@ function getFriendlyExif($Exif)
             }
         }
         $return = (object) [
-            'Simple'	=> (object) [
-                'Camera'			=> $Exif->Make . ' ' . $Exif->Model,
-                'Capture'			=> implode(' ', $exif_one_line)
+            'Simple' => (object) [
+                'Camera' => $Exif->Make . ' ' . $Exif->Model,
+                'Capture' => implode(' ', $exif_one_line),
             ],
-            'Full'		=> (object) array_merge([
-                'Manufacturer'		=> $Exif->Make,
-                'Model'				=> $Exif->Model,
-                'ExposureTime'		=> $Exposure,
-                'Aperture'			=> $Aperture,
-                'ISO'				=> preg_replace('/iso/i', '', $ISO),
-                'FocalLength' 		=> $FocalLength
-            ], $ExifRelevant)
+            'Full' => (object) array_merge([
+                'Manufacturer' => $Exif->Make,
+                'Model' => $Exif->Model,
+                'ExposureTime' => $Exposure,
+                'Aperture' => $Aperture,
+                'ISO' => preg_replace('/iso/i', '', $ISO),
+                'FocalLength' => $FocalLength,
+            ], $ExifRelevant),
         ];
         // Clean all this stuff
         foreach ($return as $k => &$v) {
@@ -750,15 +765,17 @@ function getFriendlyExif($Exif)
                 $return->{$k}->{$kk} = G\safe_html(strip_tags($vv));
             }
         }
+
         return $return;
     }
+
     return null;
 }
 
 function exifReadableValue($Exif, $key)
 {
     $table = [
-        'PhotometricInterpretation'	=> [
+        'PhotometricInterpretation' => [
             0 => 'WhiteIsZero',
             1 => 'BlackIsZero',
             2 => 'RGB',
@@ -772,14 +789,14 @@ function exifReadableValue($Exif, $key)
             32803 => 'Color Filter Array',
             32844 => 'Pixar LogL',
             32845 => 'Pixar LogLuv',
-            34892 => 'Linear Raw'
+            34892 => 'Linear Raw',
         ],
         'ColorSpace' => [
             1 => 'sRGB',
             2 => 'Adobe RGB',
             65533 => 'Wide Gamut RGB',
             65534 => 'ICC Profile',
-            65535 => 'Uncalibrated'
+            65535 => 'Uncalibrated',
         ],
         'Orientation' => [
             1 => 'Horizontal (normal)',
@@ -789,12 +806,12 @@ function exifReadableValue($Exif, $key)
             5 => 'Mirror horizontal and rotate 270 CW',
             6 => 'Rotate 90 CW',
             7 => 'Mirror horizontal and rotate 90 CW',
-            8 => 'Rotate 270 CW'
+            8 => 'Rotate 270 CW',
         ],
         'ResolutionUnit' => [
             1 => 'None',
             2 => 'inches',
-            3 => 'cm'
+            3 => 'cm',
         ],
         'ExposureProgram' => [
             0 => 'Not Defined',
@@ -806,7 +823,7 @@ function exifReadableValue($Exif, $key)
             6 => 'Action (High speed)',
             7 => 'Portrait',
             8 => 'Landscape',
-            9 => 'Bulb'
+            9 => 'Bulb',
         ],
         'MeteringMode' => [
             0 => 'Unknown',
@@ -816,12 +833,12 @@ function exifReadableValue($Exif, $key)
             4 => 'Multi-spot',
             5 => 'Multi-segment',
             6 => 'Partial',
-            255 => 'Other'
+            255 => 'Other',
         ],
         'ExposureMode' => [
             0 => 'Auto',
             1 => 'Manual',
-            2 => 'Auto bracket'
+            2 => 'Auto bracket',
         ],
         'SensingMethod' => [
             1 => 'Monochrome area',
@@ -831,84 +848,84 @@ function exifReadableValue($Exif, $key)
             5 => 'Color sequential area',
             6 => 'Monochrome linear',
             7 => 'Trilinear',
-            8 => 'Color sequential linear'
+            8 => 'Color sequential linear',
         ],
         'SceneCaptureType' => [
             0 => 'Standard',
             1 => 'Landscape',
             2 => 'Portrait',
-            3 => 'Night'
+            3 => 'Night',
         ],
         'GainControl' => [
             0 => 'None',
             1 => 'Low gain up',
             2 => 'High gain up',
             3 => 'Low gain down',
-            4 => 'High gain down'
+            4 => 'High gain down',
         ],
         'Saturation' => [
             0 => 'Normal',
             1 => 'Low',
-            2 => 'High'
+            2 => 'High',
         ],
-        'Sharpness'	=>  [
+        'Sharpness' => [
             0 => 'Normal',
             1 => 'Soft',
-            2 => 'Hard'
+            2 => 'Hard',
         ],
         'Flash' => [
-            0	=> 'No Flash',
-            1	=> 'Fired',
-            5	=> 'Fired, Return not detected',
-            7	=> 'Fired, Return detected',
-            8	=> 'On, Did not fire',
-            9	=> 'On, Fired',
-            13	=> 'On, Return not detected',
-            15	=> 'On, Return detected',
-            16	=> 'Off, Did not fire',
-            20	=> 'Off, Did not fire, Return not detected',
-            24	=> 'Auto, Did not fire',
-            25	=> 'Auto, Fired',
-            29	=> 'Auto, Fired, Return not detected',
-            31	=> 'Auto, Fired, Return detected',
-            32	=> 'No flash function',
-            48	=> 'Off, No flash function',
-            65	=> 'Fired, Red-eye reduction',
-            69	=> 'Fired, Red-eye reduction, Return not detected',
-            71	=> 'Fired, Red-eye reduction, Return detected',
-            73	=> 'On, Red-eye reduction',
-            77	=> 'On, Red-eye reduction, Return not detected',
-            79	=> 'On, Red-eye reduction, Return detected',
-            80	=> 'Off, Red-eye reduction',
-            88	=> 'Auto, Did not fire, Red-eye reduction',
-            89	=> 'Auto, Fired, Red-eye reduction',
-            93	=> 'Auto, Fired, Red-eye reduction, Return not detected',
-            95	=> 'Auto, Fired, Red-eye reduction, Return detected'
+            0 => 'No Flash',
+            1 => 'Fired',
+            5 => 'Fired, Return not detected',
+            7 => 'Fired, Return detected',
+            8 => 'On, Did not fire',
+            9 => 'On, Fired',
+            13 => 'On, Return not detected',
+            15 => 'On, Return detected',
+            16 => 'Off, Did not fire',
+            20 => 'Off, Did not fire, Return not detected',
+            24 => 'Auto, Did not fire',
+            25 => 'Auto, Fired',
+            29 => 'Auto, Fired, Return not detected',
+            31 => 'Auto, Fired, Return detected',
+            32 => 'No flash function',
+            48 => 'Off, No flash function',
+            65 => 'Fired, Red-eye reduction',
+            69 => 'Fired, Red-eye reduction, Return not detected',
+            71 => 'Fired, Red-eye reduction, Return detected',
+            73 => 'On, Red-eye reduction',
+            77 => 'On, Red-eye reduction, Return not detected',
+            79 => 'On, Red-eye reduction, Return detected',
+            80 => 'Off, Red-eye reduction',
+            88 => 'Auto, Did not fire, Red-eye reduction',
+            89 => 'Auto, Fired, Red-eye reduction',
+            93 => 'Auto, Fired, Red-eye reduction, Return not detected',
+            95 => 'Auto, Fired, Red-eye reduction, Return detected',
         ],
         'LightSource' => [
-            0	=> 'Unknown',
-            1	=> 'Daylight',
-            2	=> 'Fluorescent',
-            3	=> 'Tungsten (Incandescent)',
-            4	=> 'Flash',
-            9	=> 'Fine Weather',
-            10	=> 'Cloudy',
-            11	=> 'Shade',
-            12	=> 'Daylight Fluorescent',
-            13	=> 'Day White Fluorescent',
-            14	=> 'Cool White Fluorescent',
-            15	=> 'White Fluorescent',
-            16	=> 'Warm White Fluorescent',
-            17	=> 'Standard Light A',
-            18	=> 'Standard Light B',
-            19	=> 'Standard Light C',
-            20	=> 'D55',
-            21	=> 'D65',
-            22	=> 'D75',
-            23	=> 'D50',
-            24	=> 'ISO Studio Tungsten',
-            255	=> 'Other'
-        ]
+            0 => 'Unknown',
+            1 => 'Daylight',
+            2 => 'Fluorescent',
+            3 => 'Tungsten (Incandescent)',
+            4 => 'Flash',
+            9 => 'Fine Weather',
+            10 => 'Cloudy',
+            11 => 'Shade',
+            12 => 'Daylight Fluorescent',
+            13 => 'Day White Fluorescent',
+            14 => 'Cool White Fluorescent',
+            15 => 'White Fluorescent',
+            16 => 'Warm White Fluorescent',
+            17 => 'Standard Light A',
+            18 => 'Standard Light B',
+            19 => 'Standard Light C',
+            20 => 'D55',
+            21 => 'D65',
+            22 => 'D75',
+            23 => 'D50',
+            24 => 'ISO Studio Tungsten',
+            255 => 'Other',
+        ],
     ];
     $table['Contrast'] = $table['Saturation'];
 
@@ -919,32 +936,34 @@ function exifReadableValue($Exif, $key)
         }
         $value = implode(', ', $value_arr);
     } else {
-        $value = $table[$key][$Exif->$key];
+        // Set $value from table above (translator) if exists
+        $value = $table[$key][$Exif->$key] ?: $Exif->$key;
     }
 
     switch ($key) {
         case 'DateTime':
         case 'DateTimeOriginal':
         case 'DateTimeDigitized':
-            $value =  preg_replace('/(\d{4})(:)(\d{2})(:)(\d{2})/', '$1-$3-$5', $value);
-        break;
+        case 'DateTimeModified':
+            $value = $value !== null ? preg_replace('/(\d{4})(:)(\d{2})(:)(\d{2})/', '$1-$3-$5', $value) : null;
+            break;
         case 'WhiteBalance':
             $value = $value == 0 ? 'Auto' : $value;
-        break;
+            break;
         case 'BrightnessValue':
         case 'MaxApertureValue':
             $value = $value ? G\fraction_to_decimal($value) : null;
-        break;
+            break;
         case 'XResolution':
         case 'YResolution':
             $value = $value ? (floor(G\fraction_to_decimal($value)) . ' dpi') : null;
-        break;
+            break;
     }
 
     return $value ?: null;
 }
 
-function arr_printer($arr, $tpl='', $wrap=[])
+function arr_printer($arr, $tpl = '', $wrap = [])
 {
     ksort($arr);
     $rtn = '';
@@ -957,17 +976,24 @@ function arr_printer($arr, $tpl='', $wrap=[])
         }
     }
     $rtn .= $wrap[1];
+
     return $rtn;
 }
 
 function versionize_src($src)
 {
-    return $src.'?'.md5(CHV\get_chevereto_version());
+    return $src . '?' . md5(CHV\get_chevereto_version());
 }
 
-function show_banner($banner, $sfw=true)
+function show_banner($banner, $sfw = true)
 {
-    return null;
+    if (!$sfw) {
+        $banner .= '_nsfw';
+    }
+    $banner_code = CHV\get_banner_code($banner, false);
+    if ($banner_code) {
+        echo '<div id="' . $banner . '" class="ad-banner">' . $banner_code . '</div>';
+    }
 }
 
 function getPixel($type)
@@ -975,14 +1001,15 @@ function getPixel($type)
     if (!in_array($type, ['queue', 'ping'])) {
         return;
     }
-    return '<img data-content="'.$type.'-pixel" src="'. G\get_base_url('?'.$type.'&r=' . md5(G\datetimegmt())) .'" width="1" height="1" alt="" style="display: none;">';
+
+    return '<img data-content="' . $type . '-pixel" src="' . G\get_base_url('?' . $type . '&r=' . md5(G\datetimegmt())) . '" width="1" height="1" alt="" style="display: none;">';
 }
 
 function showQueuePixel()
 {
-    if (version_compare(CHV\getSetting('chevereto_version_installed'), '3.5.5', '<') || CHV\DB::queryFetchSingle('SELECT EXISTS(SELECT 1 FROM '.CHV\DB::getTable('queues').' WHERE queue_status = "pending") as has')['has'] == 0) {
+    if (version_compare(CHV\getSetting('chevereto_version_installed'), '3.5.5', '<') || CHV\DB::queryFetchSingle('SELECT EXISTS(SELECT 1 FROM ' . CHV\DB::getTable('queues') . ' WHERE queue_status = "pending") as has')['has'] == 0) {
         return;
-    };
+    }
     echo getPixel('queue');
 }
 
@@ -1001,7 +1028,7 @@ function showPingPixel()
 function displayEmptyPixel()
 {
     header('Content-Type: image/gif');
-    Header('Content-Length: 43');
+    header('Content-Length: 43');
     echo base64_decode('R0lGODlhAQABAIAAAAAAAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
     die();
 }
@@ -1011,30 +1038,31 @@ function showComments()
     switch (CHV\getSetting('comments_api')) {
         case 'js':
             $html = CHV\getSetting('comment_code');
-        break;
+            break;
         case 'disqus':
             $disqus_secret = CHV\getSetting('disqus_secret_key');
             $disqus_public = CHV\getSetting('disqus_public_key');
             if (!empty($disqus_secret) && !empty($disqus_public)) {
                 $logged_user = CHV\Login::getuser();
                 $data = [
-                    'id'		=> $logged_user['id_encoded'],
-                    'username'	=> $logged_user['name'],
-                    'email'		=> $logged_user['email'],
-                    'avatar'	=> $logged_user['avatar']['url'],
-                    'url'		=> $logged_user['url']
+                    'id' => $logged_user['id_encoded'],
+                    'username' => $logged_user['name'],
+                    'email' => $logged_user['email'],
+                    'avatar' => $logged_user['avatar']['url'],
+                    'url' => $logged_user['url'],
                 ];
                 function dsq_hmacsha1($data, $key)
                 {
                     $blocksize = 64;
                     $hashfunc = 'sha1';
-                    if (strlen($key)>$blocksize) {
+                    if (strlen($key) > $blocksize) {
                         $key = pack('H*', $hashfunc($key));
                     }
                     $key = str_pad($key, $blocksize, chr(0x00));
                     $ipad = str_repeat(chr(0x36), $blocksize);
                     $opad = str_repeat(chr(0x5c), $blocksize);
-                    $hmac = pack('H*', $hashfunc(($key^$opad).pack('H*', $hashfunc(($key^$ipad).$data))));
+                    $hmac = pack('H*', $hashfunc(($key ^ $opad) . pack('H*', $hashfunc(($key ^ $ipad) . $data))));
+
                     return bin2hex($hmac);
                 }
                 $message = base64_encode(json_encode($data));
@@ -1061,14 +1089,14 @@ var disqus_config = function () {
 };
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>', [
-    '%page_url'		=> G\get_current_url(),
-    '%page_id'		=> G\str_replace_first(G\get_route_path(), G\get_route_name(), G\get_route_path(true)), // image.ID
-    '%shortname'	=> CHV\getSetting('disqus_shortname'),
-    '%language_code'=> CHV\get_language_used()['base'],
-    '%auth'			=> isset($auth) ? $auth : null,
-    '%api_key'		=> $disqus_public,
-]);
-        break;
+                '%page_url' => G\get_current_url(),
+                '%page_id' => G\str_replace_first(G\get_route_path(), G\get_route_name(), G\get_route_path(true)), // image.ID
+                '%shortname' => CHV\getSetting('disqus_shortname'),
+                '%language_code' => CHV\get_language_used()['base'],
+                '%auth' => isset($auth) ? $auth : null,
+                '%api_key' => $disqus_public,
+            ]);
+            break;
     }
     echo $html;
 }

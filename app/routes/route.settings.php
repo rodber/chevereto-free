@@ -41,7 +41,7 @@ $route = function ($handler) {
         }
 
         // Editable values
-        $allowed_to_edit = ['name', 'username', 'email', 'avatar_filename', 'website', 'background_filename', 'timezone', 'language', 'status', 'is_admin', 'image_keep_exif', 'image_expiration', 'newsletter_subscribe', 'bio', 'show_nsfw_listings', 'is_private'];
+        $allowed_to_edit = ['name', 'username', 'email', 'avatar_filename', 'website', 'background_filename', 'timezone', 'language', 'status', 'is_admin', 'is_manager', 'image_keep_exif', 'image_expiration', 'newsletter_subscribe', 'bio', 'show_nsfw_listings', 'is_private'];
 
         if (CHV\getSetting('enable_expirable_uploads')) {
             unset($allowed_to_edit['image_expiration']);
@@ -50,6 +50,11 @@ $route = function ($handler) {
         // User handle
         $user = $is_dashboard_user ? CHV\User::getSingle($handler->request[1], 'id') : $logged_user;
         $is_owner = $user['id'] == CHV\Login::getUser()['id'];
+
+        // Only admins can touch other admins and managers
+        if ($is_dashboard_user && $user['is_content_manager'] && CHV\Login::isAdmin() == false) {
+            $handler->issue404();
+        }
 
         // Update the lang displayed on change
         if (in_array('language', $allowed_to_edit) and isset($_POST['language']) and $logged_user['language'] !== $_POST['language'] and $logged_user['id'] == $user['id'] and array_key_exists($_POST['language'], CHV\L10n::getEnabledLanguages())) {
@@ -71,18 +76,23 @@ $route = function ($handler) {
 
         $is_email_required = CHV\getSetting('require_user_email_confirmation');
         // Don't require email for admin when editing users
-        if ($handler::getCond('admin') && $is_owner == false) {
+        if ($handler::getCond('content_manager') && $is_owner == false) {
             $is_email_required = false;
         }
-		// Don't require email for admin when editing users
-		if($handler::getCond('admin') AND !$is_owner) {
-			$is_email_required = FALSE;
-		}
+        // Don't require email for those using social login and no email mandatory needed
+        if ($is_email_required && CHV\getSetting('require_user_email_social_signup') == false) {
+            foreach (CHV\Login::getSocialServices(['flat' => true]) as $k) {
+                if (array_key_exists($k, $user['login'])) {
+                    $is_email_required = false;
+                    break;
+                }
+            }
+        }
 
         $doing_level = $is_dashboard_user ? 2 : 0;
         $doing = $handler->request[$doing_level];
 
-        if (!$user or $handler->request[$doing_level+1] or (!is_null($doing) and !array_key_exists($doing, $routes))) {
+        if (!$user or $handler->request[$doing_level + 1] or (!is_null($doing) and !array_key_exists($doing, $routes))) {
             return $handler->issue404();
         }
 
@@ -93,8 +103,8 @@ $route = function ($handler) {
         // Populate the routes
         foreach ($routes as $route => $label) {
             $aux = str_replace('_', '-', $route);
-            $handler::setCond('settings_'.$aux, $doing == $aux);
-            if ($handler::getCond('settings_'.$aux)) {
+            $handler::setCond('settings_' . $aux, $doing == $aux);
+            if ($handler::getCond('settings_' . $aux)) {
                 $handler::setVar('setting', $aux);
             }
             if ($aux == 'homepage' and !$route_homepage) {
@@ -102,9 +112,15 @@ $route = function ($handler) {
             }
             $settings_menu[$aux] = array(
                 'label' => $label,
-                'url'	=> G\get_base_url(($is_dashboard_user ? ('dashboard/user/' . $user['id']) : 'settings') . ($route == $default_route ? '' : '/'.$route)),
-                'current' => $handler::getCond('settings_'.$aux)
+                'url'    => G\get_base_url(($is_dashboard_user ? ('dashboard/user/' . $user['id']) : 'settings') . ($route == $default_route ? '' : '/' . $route)),
+                'current' => $handler::getCond('settings_' . $aux)
             );
+        }
+
+        // Managers can't see user social connections
+        if (count(CHV\Login::getSocialServices(['get' => 'enabled'])) == 0 || ($is_dashboard_user && CHV\Login::isAdmin() == false)) {
+            unset($routes['linked-accounts']);
+            $settings_menu = G\array_filter_array($settings_menu, ['linked-accounts'], 'rest');
         }
 
         $handler::setVar('settings_menu', $settings_menu);
@@ -224,8 +240,10 @@ $route = function ($handler) {
                                     $input_errors['username'] = 'Username already being used';
                                 }
                                 // Email taken?
-                                if (!empty($_POST['email']) && G\timing_safe_compare($row['user_email'], $_POST['email']) &&
-                                   $user['email'] !== $row['user_email']) {
+                                if (
+                                    !empty($_POST['email']) && G\timing_safe_compare($row['user_email'], $_POST['email']) &&
+                                    $user['email'] !== $row['user_email']
+                                ) {
                                     $input_errors['email'] = _s('Email already being used');
                                 }
                             }
@@ -245,13 +263,13 @@ $route = function ($handler) {
                         // Generate the thing
                         $hashed_token = CHV\generate_hashed_token($user['id']);
                         $insert_email_confirm = CHV\Confirmation::insert([
-                            'type'			=> 'account-change-email',
-                            'user_id'		=> $user['id'],
-                            'token_hash'	=> $hashed_token['hash'],
-                            'status'		=> 'active',
-                            'extra'			=> $_POST['email']
+                            'type'            => 'account-change-email',
+                            'user_id'        => $user['id'],
+                            'token_hash'    => $hashed_token['hash'],
+                            'status'        => 'active',
+                            'extra'            => $_POST['email']
                         ]);
-                        $email_confirm_link = G\get_base_url('account/change-email-confirm/?token='.$hashed_token['public_token_format']);
+                        $email_confirm_link = G\get_base_url('account/change-email-confirm/?token=' . $hashed_token['public_token_format']);
                         $changed_email_message = _s('An email has been sent to %s with instructions to activate this email', $SAFE_POST['email']);
 
                         // Build the mail global
@@ -274,27 +292,35 @@ $route = function ($handler) {
                                 //$is_changed = true;
                             }
                         } catch (Exception $e) {
-                            echo($e->getMessage());
+                            echo ($e->getMessage());
                         }
 
                         unset($_POST['email']);
                     }
 
-                break;
+                    break;
 
                 case 'profile':
                     if (!preg_match('/^.{1,60}$/', $_POST['name'])) {
                         $input_errors['name'] = _s('Invalid name');
                     }
-                    if ($_POST['website'] and !filter_var($_POST['website'], FILTER_VALIDATE_URL)) {
-                        $input_errors['website'] = _s('Invalid website');
+                    if ($_POST['website']) {
+                        if (!filter_var($_POST['website'], FILTER_VALIDATE_URL)) {
+                            $input_errors['website'] = _s('Invalid website');
+                        }
                     }
-                break;
+                    if (CHV\getSetting('akismet')) {
+                        $akismet = new CHV\Akismet();
+                        $isSpam = $akismet->isSpam($_POST['bio'], $_POST['name'], $user['email'], $_POST['website']);
+                        $is_error = $isSpam;
+                        $error_message = _s('Spam detected');
+                    }
+                    break;
 
                 case 'password':
 
                     if (!$is_dashboard_user) {
-                        if ($user['login']['password'] && !password_verify($_POST['current-password'], $user['login']['password']['secret'])) {
+                        if ($user['login']['password'] && $user['login']['password'][0] && !password_verify($_POST['current-password'], $user['login']['password'][0]['secret'])) {
                             $input_errors['current-password'] = _s('Wrong password');
                         } else {
                             if ($_POST['current-password'] == $_POST['new-password']) {
@@ -304,7 +330,7 @@ $route = function ($handler) {
                         }
                     }
 
-                    if (!preg_match('/'.CHV\getSetting('user_password_pattern').'/', $_POST['new-password'])) {
+                    if (!preg_match('/' . CHV\getSetting('user_password_pattern') . '/', $_POST['new-password'])) {
                         $input_errors['new-password'] = _s('Invalid password');
                     }
 
@@ -312,7 +338,7 @@ $route = function ($handler) {
                         $input_errors['new-password-confirm'] = _s("Passwords don't match");
                     }
 
-                break;
+                    break;
 
                 case 'homepage':
                     if (!array_key_exists($doing, $routes)) { // Nope
@@ -347,11 +373,11 @@ $route = function ($handler) {
                             }
                         }
                     }
-                break;
+                    break;
 
                 default:
                     $handler->issue404();
-                break;
+                    break;
             }
 
             if (is_array($input_errors) && count($input_errors) > 0) {
@@ -376,18 +402,40 @@ $route = function ($handler) {
                         $editing_array = G\array_filter_array($_POST, $allowed_to_edit, 'exclusion');
 
                         if (!$is_dashboard_user) {
-                            unset($editing_array['status'], $editing_array['is_admin']);
+                            unset($editing_array['status'], $editing_array['is_admin'], $editing_array['is_manager']);
                         } else {
                             if (!in_array($editing_array['status'], ['valid', 'banned', 'awaiting-confirmation', 'awaiting-email'])) {
                                 unset($editing_array['status']);
                             }
-                            if ($_POST['role']) {
-                                $editing_array['is_admin'] = $_POST['role'] == 'admin' ? 1 : 0;
-                                if ($_POST['is_admin']) {
-                                    $editing_array['status'] = 'valid';
-                                }
-                                unset($_POST['role']);
+                            // Manager can't manage emails
+                            if ($logged_user['is_manager']) {
+                                unset($_POST['email']);
+                                unset($editing_array['email']);
                             }
+                        }
+
+                        if ($logged_user['is_admin'] && $_POST['role']) {
+                            $is_manager = 0;
+                            $is_admin = 0;
+                            switch ($_POST['role']) {
+                                case 'manager':
+                                    $is_manager = 1;
+                                    break;
+                                case 'admin':
+                                    $is_admin = 1;
+                                    break;
+                            }
+                            if ($user['is_admin'] != $is_admin) {
+                                $handler::setCond('admin', $is_admin);
+                                $editing_array['is_admin'] = $is_admin;
+                            }
+                            if ($user['is_manager'] != $is_manager) {
+                                $editing_array['is_manager'] = $is_manager;
+                            }
+                            if ($_POST['role'] == 'admin') {
+                                $editing_array['status'] = 'valid';
+                            }
+                            unset($_POST['role']);
                         }
 
                         if (empty($_POST['email'])) {
@@ -403,7 +451,7 @@ $route = function ($handler) {
                         }
 
                         if (!$is_dashboard_user) {
-                            $logged_user = CHV\Login::login($user['id'], $_SESSION['login']['type']);
+                            $logged_user = CHV\User::getSingle($user['id']);
                         } else {
                             $user = CHV\User::getSingle($user['id'], 'id');
                         }
@@ -414,27 +462,21 @@ $route = function ($handler) {
                 // Update/create password
                 if ($doing == 'password') {
                     if ($user['login']['password']) {
-
                         // Delete any old cookie/session login for this user
                         CHV\Login::delete(['type' => 'cookie', 'user_id' => $user['id']]);
                         CHV\Login::delete(['type' => 'session', 'user_id' => $user['id']]);
-
-                        // Insert the new login DB if needed
-                        if (!$is_dashboard_user and $_COOKIE['KEEP_LOGIN']) {
-                            CHV\Login::insert(['type' => 'cookie', 'user_id' => $user['id']]);
-                        }
-
                         $is_changed = CHV\Login::changePassword($user['id'], $_POST['new-password']); // This inserts the session login
                         $changed_message = _s('Password has been changed');
                     } else { // Insert
-
                         $is_changed = CHV\Login::addPassword($user['id'], $_POST['new-password']);
                         $changed_message = _s('Password has been created.');
                         if (!$is_dashboard_user or $logged_user['id'] == $user['id']) {
-                            $logged_user = CHV\Login::login($user['id'], 'password');
+                            $logged_user = CHV\Login::login($user['id']);
                         }
                     }
-
+                    if (!$is_dashboard_user) {
+                        CHV\Login::insert(['type' => 'cookie', 'user_id' => $user['id']]);
+                    }
                     $unsets = array('current-password', 'new-password', 'new-password-confirm');
                     foreach ($unsets as $unset) {
                         $handler::updateVar('safe_post', [$unset => null]);
@@ -446,21 +488,23 @@ $route = function ($handler) {
                     $error_message = _s('Wrong Username/Email values');
                 }
             }
+        }
 
-		}
-
-		$handler::setCond('settings_linked_accounts', FALSE);
+        $handler::setCond('settings_linked_accounts', false);
 
         $handler::setCond('owner', $is_owner);
         $handler::setCond('error', $is_error);
         $handler::setCond('changed', $is_changed);
-        $handler::setCond('captcha_needed', $captcha_needed);
         $handler::setCond('dashboard_user', $is_dashboard_user);
         $handler::setCond('email_required', $is_email_required);
 
-        if ($captcha_needed and !$handler::getVar('recaptcha_html')) {
-            $handler::setVar('recaptcha_html', CHV\Render\get_recaptcha_html());
+        $handler::setVar('content_ip', $user['registration_ip']);
+
+        if ($captcha_needed) {
+            $handler::setCond('captcha_show', true);
+            $handler::setVar(...CHV\Render\get_recaptcha_component());
         }
+        $handler::setCond('captcha_needed', $captcha_needed);
 
         $handler::setVar('pre_doctitle', $is_dashboard_user ? _s('Settings for %s', $user['username']) : _s('Settings'));
 

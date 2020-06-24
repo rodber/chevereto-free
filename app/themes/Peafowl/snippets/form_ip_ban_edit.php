@@ -1,8 +1,14 @@
-<?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
+<?php if (!defined('access') or !access) {
+    die('This file cannot be directly accessed.');
+} ?>
 
 <div class="input-label c7">
 	 <label for="form-ip_ban-ip"><?php _se('IP address'); ?></label>
-	 <input type="text" <?php if(function_exists('get_image')) { echo 'readonly'; } ?> id="form-ip_ban-ip" name="form-ip_ban-ip" class="text-input" value="<?php if(function_exists('get_image')) { echo get_image()['uploader_ip']; } ?>" placeholder="127.0.0.1" required>
+	 <input type="text" <?php if (function_exists('get_image')) {
+    echo 'readonly';
+} ?> id="form-ip_ban-ip" name="form-ip_ban-ip" class="text-input" value="<?php if (function_exists('get_content_ip')) {
+    echo get_content_ip();
+} ?>" placeholder="127.0.0.1" required>
 	 <div class="input-below font-size-small"><?php _se('You can use wildcard * characters.'); ?></div>
 </div>
 <div class="input-label">

@@ -1,12 +1,15 @@
 <?php
 
-// Hail PHPMailer
-require_once CHV_APP_PATH_LIB_VENDOR . 'phpmailer/class.phpmailer.php';
-require_once CHV_APP_PATH_LIB_VENDOR . 'phpmailer/class.smtp.php';
+use PHPMailer\PHPMailer\PHPMailer;
 
-class Mailer extends PHPMailer {
-	public $DbgOut = '';
-	protected function edebug($str) {
-		$this->DbgOut .= $str;
-	}
+class Mailer extends PHPMailer
+{
+    public $DbgOut = '';
+
+    public $XMailer = ' ';
+
+    protected function edebug($str)
+    {
+        $this->DbgOut .= $str;
+    }
 }

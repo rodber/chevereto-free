@@ -1,11 +1,13 @@
-<?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
+<?php if (!defined('access') or !access) {
+    die('This file cannot be directly accessed.');
+} ?>
 <?php
-	$default_color = '#00A7DA';
-	$color = CHV\getSetting('theme_main_color');
-	
-	if(!G\is_valid_hex_color($color)) {
-		$color = $default_color;
-	}
+    $default_color = '#00A7DA';
+    $color = CHV\getSetting('theme_main_color');
+    
+    if (!G\is_valid_hex_color($color)) {
+        $color = $default_color;
+    }
 ?>
 <style>
 a,
@@ -23,6 +25,7 @@ a.number-figures:hover, a.number-figures:hover *,
 	color: <?php echo $color; ?>;
 }
 
+.menu-box [role=button]:hover,
 input:focus, textarea:focus, select:focus, input.search:focus, .input-focus,
 .tone-dark input:focus, .tone-dark textarea:focus, .tone-dark select:focus, .tone-dark input.search:focus, .tone-dark .input-focus,
 .btn.default.outline,
@@ -57,7 +60,7 @@ html:not(.phone) .pop-box-menu a:hover, .pop-box-menu a.focus,
 	border-left-color: <?php echo $color; ?>;
 }
 
-<?php if($default_color !== $color) { ?>
+<?php if ($default_color !== $color) { ?>
 input:focus, textarea:focus, select:focus, input.search:focus, .input-focus {
 	box-shadow: 0 0 8px 0 rgba(<?php echo implode(',', G\hex_to_rgb($color)); ?>,.45);
 }

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2018-06-03 14:28+0000\n"
-"PO-Revision-Date: 2018-06-03 14:28+0000\n"
+"POT-Creation-Date: 2020-04-16 20:33+0000\n"
+"PO-Revision-Date: 2020-04-16 20:33+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: cs\n"
@@ -10,13 +10,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
-
-msgid "To use all the features of this site you must be logged in."
-msgstr "Aby jste mohli používat všechny funkce, musíte být přihlášen(a)."
-
-#, php-format
-msgid "If you don't have an account you can <a href=\"%s\">sign up</a> right now."
-msgstr "Pokud ještě nemáte svůj účet můžete se <a href=\"%s\">registrovat</a> právě teď."
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -91,6 +84,62 @@ msgstr "Komunita"
 msgid "Personal"
 msgstr "Osobní"
 
+#: ../../../app/install/update/template/update.js:19
+#, javascript-format
+msgid "Installed version is v%s"
+msgstr "Instalovaná verze je v%s"
+
+#: ../../../app/install/update/template/update.js:26
+#: ../../../app/install/update/template/update.js:55
+#: ../../../app/install/update/template/update.js:78
+#, javascript-format
+msgid "Can't connect to %s"
+msgstr "Nelze se připojit k %s"
+
+#: ../../../app/install/update/template/update.js:30
+#, javascript-format
+msgid "Last available release is v%s"
+msgstr "Poslední dostupná verze je v%s"
+
+#: ../../../app/install/update/template/update.js:33
+msgid "Update needed, proceeding to download"
+msgstr "Je nutná aktualizace, přecházím ke stažení"
+
+#: ../../../app/install/update/template/update.js:40
+msgid "No update needed"
+msgstr "Aktualizace není nutná"
+
+#: ../../../app/install/update/template/update.js:41
+msgid "System files already up to date"
+msgstr "Systémové soubory jsou již aktuální"
+
+#: ../../../app/install/update/template/update.js:49
+#, javascript-format
+msgid "Starting v%s download"
+msgstr "Začínám stahovat v%s"
+
+#: ../../../app/install/update/template/update.js:60
+#, javascript-format
+msgid "Downloaded v%s, proceeding to extraction"
+msgstr "Verze v%s je stažena, přecházím k rozbalování"
+
+#: ../../../app/install/update/template/update.js:72
+#, javascript-format
+msgid "Attempting to extract v%s"
+msgstr "Pokouším se rozbalit verzi v%s"
+
+#: ../../../app/install/update/template/update.js:82
+msgid "Extraction completed"
+msgstr "Rozbalování bylo dokončeno"
+
+#: ../../../app/install/update/template/update.js:84
+msgid "Proceding to install the update"
+msgstr "Přecházím k instalaci aktualizace"
+
+#: ../../../app/install/update/template/update.js:111
+msgid "Update failed"
+msgstr "Aktualizace selhala"
+
 #: ../../../app/install/update/template/update.php:2
 msgid "Update in progress"
 msgstr "Probíhá aktualizace"
@@ -129,6 +178,387 @@ msgstr "Nelze vytvořit %s adresář - %e"
 #, php-format
 msgid "Can't update %s file - %e"
 msgstr "Nelze aktualizovat %s soubor - %e"
+
+#: ../../../app/routes/route.account.php:508
+#: ../../../app/routes/route.signup.php:236
+#: ../../../content/pages/default/contact.php:132
+#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
+#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
+msgid "Check the errors in the form to continue."
+msgstr "Aby jste mohli pokračovat, zkontrolujte chyby ve formuláři."
+
+#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
+#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
+#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
+#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
+#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
+#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
+msgid "You must enter the album name."
+msgstr "Musíte zadat název alba."
+
+#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
+#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
+#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
+#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
+msgid "Confirm"
+msgstr "Potvrdit"
+
+#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
+msgid "Select existing album"
+msgstr "Vyberte stávající album"
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "Došlo k chybě. Prosím zkuste opakovat akci později."
+
+#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
+#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
+msgid "Please select a valid image file type."
+msgstr "Prosím vyberte přípustné typy souborů obrázků."
+
+#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
+#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
+#, javascript-format
+msgid "Please select a picture of at most %s size."
+msgstr "Prosím vyberte obrázek s největší %s velikostí."
+
+#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
+msgid "Profile image updated."
+msgstr "Profilový obrázek byl aktualizován."
+
+#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
+msgid "Profile background image updated."
+msgstr "Pozadí profilu bylo aktualizováno."
+
+#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
+msgid "Profile background image deleted."
+msgstr "Pozadí profilu bylo odstraněno."
+
+#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
+msgid "Error deleting profile background image."
+msgstr "Nastala chyba při odstraňování obrázku pozadí profilu."
+
+#: ../../../app/routes/route.account.php:360
+#: ../../../app/routes/route.settings.php:327
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
+#: ../../../app/themes/Peafowl/views/settings.php:313
+#: ../../../app/themes/Peafowl/views/settings.php:330
+#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
+msgid "Passwords don't match"
+msgstr "Hesla se neshodují"
+
+#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "Update available v%s"
+msgstr "Je dostupná aktualizace v%s"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
+msgstr "Je k dispozici aktualizace pro váš systém. Můžete ji automaticky stáhnout a instalovat, nebo běžte na %s a stáhněte si instalační soubor."
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "The release notes for this update are:"
+msgstr "Poznámky k verzi této aktualizace:"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "Update now"
+msgstr "Aktualizovat nyní"
+
+#: ../../../app/themes/Peafowl/header.php:285
+#: ../../../app/themes/Peafowl/header.php:332
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/form_album.php:9
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/login.php:22
+#: ../../../app/themes/Peafowl/views/login.php:62
+#: ../../../app/themes/Peafowl/views/settings.php:354
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../app/themes/Peafowl/views/signup.php:22
+#: ../../../app/themes/Peafowl/views/signup.php:73
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
+#: ../../../lib/Peafowl/peafowl.min.js:31
+#: ../../../lib/Peafowl/peafowl.min.js:140
+msgid "or"
+msgstr "nebo"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "zrušit"
+
+#, javascript-format
+msgid "This website is running latest %s version"
+msgstr "Tato webová stránka používá nejnovější verzi %s"
+
+#: ../../../app/themes/Peafowl/header.php:381
+#: ../../../app/themes/Peafowl/views/settings.php:348
+#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
+msgid "loading"
+msgstr "načítání"
+
+msgid "Toggle select"
+msgstr "Označit vybraný obrázek"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Líbí se"
+
+msgid "Toggle flag"
+msgstr "Označit štítkem"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
+msgid "Edit"
+msgstr "Uprav"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "Album"
+msgstr[1] "Alb"
+msgstr[2] "Alb"
+msgstr[3] "Alba"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:607
+#: ../../../app/themes/Peafowl/views/dashboard.php:884
+#: ../../../app/themes/Peafowl/views/dashboard.php:933
+msgid "Delete"
+msgstr "Smazat"
+
+#: ../../../app/themes/Peafowl/header.php:222
+msgid "Close"
+msgstr "Zavřít"
+
+msgid "Previous"
+msgstr "Předchozí"
+
+msgid "Next"
+msgstr "Další"
+
+#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
+msgid "Clipboard image"
+msgstr "Kopírovat obrázek do schránky"
+
+#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
+msgid "File too big."
+msgstr "Soubor je příliš velký."
+
+msgid "Invalid or unsupported file format."
+msgstr "Neplatný nebo nepodporovaný formát souboru."
+
+#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
+#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
+msgid "Some files couldn't be added"
+msgstr "Některé soubory nemohly být přidány."
+
+#: ../../../app/lib/classes/class.listing.php:296
+#: ../../../app/routes/route.album.php:177
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
+#: ../../../app/themes/Peafowl/views/album.php:34
+#: ../../../app/themes/Peafowl/views/user.php:98
+#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
+msgid "image"
+msgid_plural "images"
+msgstr[0] "obrázek"
+msgstr[1] "obrázků"
+msgstr[2] "obrázků"
+msgstr[3] "obrázky"
+
+#: ../../../app/routes/route.user.php:89
+#: ../../../app/themes/Peafowl/header.php:56
+#, php-format, javascript-format
+msgid "%s's Albums"
+msgstr "%s Alb"
+
+#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
+msgid "Image edited successfully."
+msgstr "Obrázek byl úspěšně upraven."
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "soukromý"
+
+#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
+msgid "Album edited successfully."
+msgstr "Album úspěšně upraveno."
+
+#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
+msgid "Invalid URL key."
+msgstr "Neplatný klíč URL."
+
+#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
+msgid "Category URL key already being used."
+msgstr "URL klíč kategorie se již používá."
+
+#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
+msgid "Category successfully deleted."
+msgstr "Kategorie byla úspěšně odstraněna."
+
+#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
+#, javascript-format
+msgid "Category %s added."
+msgstr "Kategorie %s byla přidána."
+
+#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
+msgid "Invalid expiration date."
+msgstr "Neplatné datum ukončení platnosti."
+
+#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
+#, javascript-format
+msgid "IP %s already banned."
+msgstr "IP %s je již zakázána."
+
+#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
+#, javascript-format
+msgid "IP %s banned."
+msgstr "IP %s je zakázána."
+
+#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
+msgid "IP ban successfully deleted."
+msgstr "IP zákaz byl úspěšně odstraněn."
+
+#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
+#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
+#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
+msgid "Please fill all the required fields."
+msgstr "Prosím vyplňte všechny požadované kolonky."
+
+#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
+msgid "Invalid storage capacity value. Make sure to use a valid format."
+msgstr "Neplatná velikost úložiště. Prosím ověřte, že je ve správném formátu."
+
+#: ../../../app/lib/classes/class.storage.php:450
+#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
+#, php-format, javascript-format
+msgid "Storage capacity can't be lower than its current usage (%s)."
+msgstr "Velikost úložiště nemůže být menší než ta, kterou používáte nyní (%s)."
+
+#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
+msgid "Invalid URL."
+msgstr "Neplatné URL."
+
+#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
+msgid "Storage successfully edited."
+msgstr "Úložiště bylo úspěšně upraveno."
+
+#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
+msgid "User added successfully."
+msgstr "Uživatel byl úspěšně přidán."
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+#: ../../../app/themes/Peafowl/views/album.php:134
+#: ../../../app/themes/Peafowl/views/user.php:171
+#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
+msgid "The content has been deleted."
+msgstr "Obsah byl smazán."
+
+#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
+#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
+#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
+#: ../../../app/lib/chevereto.min.js:205
+msgid "The content has been moved."
+msgstr "Obsah byl přesunut."
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
+#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
+#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
+msgid "Select"
+msgstr "Vybrat"
+
+#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
+msgid "Unselect"
+msgstr "Odebrat"
+
+#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
+msgid "The content has been edited."
+msgstr "Obsah byl upraven."
+
+#, javascript-format
+msgid "Import job ID %s added successfully, you can process the import now"
+msgstr "Import úlohy ID %s byl úspěšně přidán, nyní můžete import zpracovat"
+
+msgid "Select number of threads"
+msgstr "Vyberte počet vláken"
+
+#, javascript-format
+msgid "Import job ID %s is being processed now"
+msgstr "Import úlohy ID %s se nyní zpracovává"
+
+#, javascript-format
+msgid "Import ID %s removed"
+msgstr "Import ID %s byl odstraněn"
+
+msgid "Spam detected"
+msgstr "Byl detekován spam"
+
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
+#: ../../../app/themes/Peafowl/views/user.php:99
+msgid "album"
+msgid_plural "albums"
+msgstr[0] "album"
+msgstr[1] "alba"
+msgstr[2] "alba"
+msgstr[3] "alba"
+
+msgid "Flooding detected. You can only upload %limit% %content% per %time%"
+msgstr "Bylo zjištěno zahlcení. Můžete nahrát pouze %limit% %content% za %time%"
 
 #: ../../../app/lib/classes/class.album.php:100
 msgid "Untitled"
@@ -267,19 +697,6 @@ msgstr[1] "se líbí"
 msgstr[2] "se líbí"
 msgstr[3] "líbí se"
 
-#: ../../../app/lib/classes/class.listing.php:296
-#: ../../../app/routes/route.album.php:177
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
-#: ../../../app/themes/Peafowl/views/album.php:34
-#: ../../../app/themes/Peafowl/views/user.php:98
-#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
-msgid "image"
-msgid_plural "images"
-msgstr[0] "obrázek"
-msgstr[1] "obrázků"
-msgstr[2] "obrázků"
-msgstr[3] "obrázky"
-
 msgid "Recent"
 msgstr "Nedávné"
 
@@ -362,19 +779,6 @@ msgstr[1] "Obrázků"
 msgstr[2] "Obrázků"
 msgstr[3] "Obrázky"
 
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
-#: ../../../app/themes/Peafowl/views/dashboard.php:28
-msgid "Album"
-msgid_plural "Albums"
-msgstr[0] "Album"
-msgstr[1] "Alb"
-msgstr[2] "Alb"
-msgstr[3] "Alba"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:34
 #: ../../../app/themes/Peafowl/views/dashboard.php:90
 #: ../../../app/themes/Peafowl/views/settings.php:126
@@ -402,12 +806,6 @@ msgstr "Interní"
 
 msgid "Can't insert storage."
 msgstr "Nelze vložit úložiště."
-
-#: ../../../app/lib/classes/class.storage.php:450
-#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
-#, php-format, javascript-format
-msgid "Storage capacity can't be lower than its current usage (%s)."
-msgstr "Velikost úložiště nemůže být menší než ta, kterou používáte nyní (%s)."
 
 msgid "Can't update storage details."
 msgstr "Nelze aktualizovat podrobnosti o úložišti."
@@ -475,10 +873,6 @@ msgstr "Dosud jste nezměnili výchozí nastavení e-mailu. Pro změnu tohoto na
 msgid "There is an update available for your Chevereto based website."
 msgstr "Je zde dostupná aktualizace pro vaši Chevereto webovou stránku."
 
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "The release notes for this update are:"
-msgstr "Poznámky k verzi této aktualizace:"
-
 msgid "admin dashboard"
 msgstr "Nástěnka admina"
 
@@ -489,26 +883,15 @@ msgstr "Tuto aktualizaci můžete nainstalovat automaticky přímo ze svého %a 
 msgid "view on %s"
 msgstr "zobrazit na %s"
 
-#: ../../../app/loader.php:180
-msgid "You have been forbidden to use this website."
-msgstr "Máte zakázáno používat tuto webovou stránku."
+msgid "cookie policy"
+msgstr "zásady cookie"
 
-#: ../../../app/loader.php:279
-#: ../../../app/themes/Peafowl/views/settings.php:441
-msgid "Feel free to browse and discover all my shared images and albums."
-msgstr "Neváhejte a prohlédněte si všechny mé sdílené obrázky a alba."
+#, php-format
+msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link."
+msgstr "Používáme naše vlastní cookies a cookies třetích stran, abychom zlepšili vaše zážitky z prohlížení a s používáním našich služeb. Pokud budete pokračovat v používání našich webových stránek, souhlasíte a přijímáte naše %cookie_policy_link."
 
-#: ../../../app/loader.php:282
-#: ../../../app/themes/Peafowl/views/settings.php:447
-msgid "View all my images"
-msgstr "Zobrazit všechny mé obrázky"
-
-msgid "Plugin"
-msgstr "Plugin"
-
-#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
-msgid "That page doesn't exist"
-msgstr "Tato stránka neexistuje"
+msgid "I understand"
+msgstr "Rozumím"
 
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
@@ -522,7 +905,7 @@ msgstr "Zapoměli jste heslo?"
 #: ../../../app/routes/route.account.php:73
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:8
 msgid "Reset password"
-msgstr "Resetovat heslo"
+msgstr "Obnovit heslo"
 
 #: ../../../app/routes/route.account.php:74
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:8
@@ -539,12 +922,9 @@ msgstr "Přidejte vaši e-mailovou adresu."
 msgid "Email changed"
 msgstr "E-mail změněn"
 
-#: ../../../app/routes/route.account.php:95
-#: ../../../app/routes/route.login.php:71
-#: ../../../app/routes/route.settings.php:140
-#: ../../../app/routes/route.signup.php:73
-msgid "The reCAPTCHA wasn't entered correctly"
-msgstr "Kód reCAPTCHA nebyl opsán v pořádku."
+#, php-format
+msgid "%s says you are a robot"
+msgstr "%s říká, že jste robot"
 
 #: ../../../app/routes/route.account.php:119
 #: ../../../app/routes/route.account.php:164
@@ -601,29 +981,12 @@ msgstr "Je vyžadován souhlas na %s"
 msgid "Welcome to %s"
 msgstr "Vítejte do %s"
 
-#: ../../../app/routes/route.account.php:360
-#: ../../../app/routes/route.settings.php:327
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
-#: ../../../app/themes/Peafowl/views/settings.php:313
-#: ../../../app/themes/Peafowl/views/settings.php:330
-#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
-msgid "Passwords don't match"
-msgstr "Hesla se neshodují"
-
 #: ../../../app/routes/route.account.php:422
 #: ../../../app/routes/route.json.php:599
 #: ../../../app/routes/route.settings.php:243
 #: ../../../app/routes/route.signup.php:141
 msgid "Email already being used"
 msgstr "E-mailová adresa již v systému existuje"
-
-#: ../../../app/routes/route.account.php:508
-#: ../../../app/routes/route.signup.php:236
-#: ../../../content/pages/default/contact.php:132
-#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
-#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
-msgid "Check the errors in the form to continue."
-msgstr "Aby jste mohli pokračovat, zkontrolujte chyby ve formuláři."
 
 msgid "Password required"
 msgstr "Je vyžadováno heslo"
@@ -681,6 +1044,9 @@ msgstr "Uživatelé"
 #: ../../../app/themes/Peafowl/header.php:405
 msgid "Settings"
 msgstr "Nastavení"
+
+msgid "Bulk importer"
+msgstr "Hromadný import"
 
 #: ../../../app/routes/route.dashboard.php:161
 msgid "Chevereto version"
@@ -839,9 +1205,21 @@ msgstr[3] "%d sekundy"
 msgid "Memory limit"
 msgstr "Limit paměti (mem. limit)"
 
+msgid "Rebuild stats"
+msgstr "Znovu sestavit statistiky"
+
+msgid "Connecting IP"
+msgstr "Připojení IP"
+
+msgid "Not your IP?"
+msgstr "Není vaše IP?"
+
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
 msgid "Links"
 msgstr "Odkazy"
+
+msgid "Collaboration"
+msgstr "Spolupráce"
 
 msgid "Documentation"
 msgstr "Dokumentace"
@@ -849,14 +1227,8 @@ msgstr "Dokumentace"
 msgid "Changelog"
 msgstr "Seznam změn"
 
-msgid "Request new features"
-msgstr "Požádat o nové funkce"
-
 msgid "Bug tracking"
 msgstr "Nachlášení chyb"
-
-msgid "Blog"
-msgstr "Blog"
 
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
@@ -874,7 +1246,7 @@ msgstr "Stránky"
 #: ../../../app/routes/route.dashboard.php:230
 #: ../../../app/routes/route.dashboard.php:387
 msgid "Listings"
-msgstr "Výpis"
+msgstr "Výpisy"
 
 #: ../../../app/routes/route.dashboard.php:231
 msgid "Image upload"
@@ -1236,6 +1608,9 @@ msgstr "Neplatný typ"
 msgid "Invalid visibility"
 msgstr "Neplatná viditelnost"
 
+msgid "Invalid internal type"
+msgstr "Neplatný interní typ"
+
 #: ../../../app/routes/route.dashboard.php:728
 msgid "Invalid target attribute"
 msgstr "Neplatný cílový atribut"
@@ -1302,6 +1677,9 @@ msgstr "Špatný SMTP server"
 #: ../../../app/routes/route.dashboard.php:861
 msgid "Invalid SMTP username"
 msgstr "Špatné SMTP uživatelské jméno"
+
+msgid "Invalid key"
+msgstr "Neplatný klíč"
 
 #: ../../../app/routes/route.dashboard.php:960
 #, php-format
@@ -1449,6 +1827,10 @@ msgstr "Toto je pouze testovací zpráva."
 msgid "Test email sent to %s."
 msgstr "Testovací email byl odeslán na %s."
 
+#, php-format
+msgid "Downloading %s data"
+msgstr "Stahování dat %s"
+
 #: ../../../app/routes/route.json.php:1128
 #, php-format
 msgid "User %s followed"
@@ -1490,11 +1872,6 @@ msgstr "Špatná kombinace přihlašovacího jména nebo e-mailu a hesla"
 #: ../../../app/themes/Peafowl/views/login.php:52
 msgid "Sign in"
 msgstr "Přihlásit se"
-
-#: ../../../app/routes/route.logout.php:29
-#: ../../../app/themes/Peafowl/views/logout.php:8
-msgid "Logged out"
-msgstr "Odhlášeno"
 
 msgid "Upload images"
 msgstr "Nahrát obrázky"
@@ -1579,6 +1956,9 @@ msgstr "Špatné hodnoty přihlašovacího jména  nebo e-mailu"
 msgid "Settings for %s"
 msgstr "Nastavení pro %s"
 
+msgid "You must agree to the terms and privacy policy"
+msgstr "Musíte souhlasit s podmínkami a zásadami ochrany osobních údajů"
+
 #, php-format
 msgid "You must be at least %s years old to use this website."
 msgstr "Pro možnost používat tuto webovou stránku vám musí být alespoň %s let."
@@ -1603,12 +1983,6 @@ msgstr "Nahrát"
 #, php-format
 msgid "%s's Images"
 msgstr "%s Obrázků"
-
-#: ../../../app/routes/route.user.php:89
-#: ../../../app/themes/Peafowl/header.php:56
-#, php-format, javascript-format
-msgid "%s's Albums"
-msgstr "%s Alb"
 
 #: ../../../app/routes/route.user.php:99
 #: ../../../app/themes/Peafowl/views/search.php:8
@@ -1641,10 +2015,6 @@ msgid "Discovery"
 msgstr "Objevit"
 
 #: ../../../app/themes/Peafowl/header.php:222
-msgid "Close"
-msgstr "Zavřít"
-
-#: ../../../app/themes/Peafowl/header.php:222
 #: ../../../app/themes/Peafowl/header.php:226
 msgid "Advanced search"
 msgstr "Pokročilé vyhledávání"
@@ -1660,106 +2030,12 @@ msgstr "Náhodně"
 msgid "Notices (%s)"
 msgstr "Oznámení (%s)"
 
-#: ../../../app/themes/Peafowl/header.php:281
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
-#: ../../../app/themes/Peafowl/views/login.php:18
-#: ../../../app/themes/Peafowl/views/login.php:65
-#: ../../../app/themes/Peafowl/views/signup.php:18
-#: ../../../app/themes/Peafowl/views/signup.php:76
-msgid "Sign in with another account"
-msgstr "Přihlásit se pomocí jiného účtu"
-
-#: ../../../app/themes/Peafowl/header.php:285
-#: ../../../app/themes/Peafowl/header.php:332
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/form_album.php:9
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
-#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
-#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/login.php:22
-#: ../../../app/themes/Peafowl/views/login.php:62
-#: ../../../app/themes/Peafowl/views/settings.php:354
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../app/themes/Peafowl/views/signup.php:22
-#: ../../../app/themes/Peafowl/views/signup.php:73
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
-#: ../../../lib/Peafowl/peafowl.min.js:31
-#: ../../../lib/Peafowl/peafowl.min.js:140
-msgid "or"
-msgstr "nebo"
-
-#: ../../../app/themes/Peafowl/header.php:291
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
-#: ../../../app/themes/Peafowl/views/login.php:34
-#: ../../../app/themes/Peafowl/views/login.php:35
-msgid "Username or Email address"
-msgstr "Uživatelské jméno nebo e-mailová adresa"
-
-#: ../../../app/themes/Peafowl/header.php:294
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:23
-#: ../../../app/themes/Peafowl/views/login.php:53
-msgid "Keep me logged in"
-msgstr "Zůstat přihlášen(a)"
-
-#: ../../../app/themes/Peafowl/header.php:301
-#, php-format
-msgid "Don't have an account? <a href='%s'>Sign up</a> now."
-msgstr "Nemáte účet? <a href='%s'>Registrujte se</a>."
-
-#: ../../../app/themes/Peafowl/header.php:328
-msgid "Sign up with another account"
-msgstr "Zaregistrovat se pomocí jiného účtu"
-
-#: ../../../app/themes/Peafowl/header.php:338
-#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
-#: ../../../app/themes/Peafowl/views/dashboard.php:100
-#: ../../../app/themes/Peafowl/views/settings.php:155
-#: ../../../app/themes/Peafowl/views/signup.php:34
-#: ../../../app/themes/Peafowl/views/signup.php:35
-#: ../../../content/pages/default/contact.php:92
-msgid "Email address"
-msgstr "E-mailová adresa"
-
-#: ../../../app/themes/Peafowl/header.php:339
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
-#: ../../../app/themes/Peafowl/views/dashboard.php:94
-#: ../../../app/themes/Peafowl/views/dashboard.php:95
-#: ../../../app/themes/Peafowl/views/settings.php:143
-#: ../../../app/themes/Peafowl/views/settings.php:144
-#: ../../../app/themes/Peafowl/views/signup.php:39
-#: ../../../app/themes/Peafowl/views/signup.php:40
-msgid "Username"
-msgstr "Uživatelské jméno"
-
-#, php-format
-msgid "I'm at least %s years old"
-msgstr "Je mi minimálně %s let."
+msgid "Lights"
+msgstr "Světla"
 
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
 msgstr "Oznámení"
-
-#: ../../../app/themes/Peafowl/header.php:381
-#: ../../../app/themes/Peafowl/views/settings.php:348
-#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
-msgid "loading"
-msgstr "načítání"
 
 #: ../../../app/themes/Peafowl/header.php:384
 msgid "You don't have notifications"
@@ -1915,14 +2191,14 @@ msgstr "vytvořit nové album"
 msgid "move it to an existing album"
 msgstr "přesunout do již existujícího alba"
 
+msgid "You must %s or %l to save this content into your account."
+msgstr "Musíte se %s nebo %l pro uložení tohoto obsahu do svého účtu."
+
 msgid "create an account"
 msgstr "vytvořit účet"
 
 msgid "sign in"
 msgstr "přihlásit se"
-
-msgid "You can %s or %l to save this content into your account."
-msgstr "Můžete použít %s nebo %l pro uložení tohoto obsahu do vašeho účtu."
 
 #, php-format
 msgid "No %s have been uploaded"
@@ -1952,17 +2228,6 @@ msgstr "Obrázek není vhodný pro děti a mladistvé."
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 msgid "Uploading"
 msgstr "Nahrávám"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
-msgid "cancel"
-msgstr "zrušit"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
@@ -1997,13 +2262,6 @@ msgstr "kopírovat"
 
 msgid "insert"
 msgstr "vložit"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
-msgid "Edit"
-msgstr "Uprav"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:148
 #: ../../../app/themes/Peafowl/views/dashboard.php:666
@@ -2114,9 +2372,17 @@ msgstr "Přidejte URL obrázku zde"
 msgid "Create album"
 msgstr "Vytvořit album"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:224
-msgid "The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
-msgstr "Nahrané obrázky budou přesunuty do tohoto nově vytvořeného alba. Samozřejmě můžete přesunout obrázky i do <a class=\"modal-switch\" data-switch=\"move-existing-album\">stávajícího alba</a>."
+msgid "The uploaded content will be moved to this newly created album."
+msgstr "Nahraný obsah bude přesunut do tohoto nově vytvořeného alba."
+
+msgid "existing album"
+msgstr "existujícího alba"
+
+msgid "You can also move the content to an %a."
+msgstr "Obsah můžete také přesunout do %a."
+
+msgid "You must %s or %l if you want to edit this album later on."
+msgstr "Pokud chcete album později upravit, musíte se nejdříve %s nebo %l."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:235
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:28
@@ -2132,15 +2398,6 @@ msgstr "Vyberte existující album k nahrání obrázků. Samozřejmě můžete 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:252
 msgid "Error report"
 msgstr "Chybová zpráva"
-
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
-#: ../../../app/themes/Peafowl/views/user.php:99
-msgid "album"
-msgid_plural "albums"
-msgstr[0] "album"
-msgstr[1] "alba"
-msgstr[2] "alba"
-msgstr[3] "alba"
 
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
@@ -2308,6 +2565,35 @@ msgstr "Stručný popis této kategorie"
 msgid "Untitled image"
 msgstr "Obrázek bez názvu"
 
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
+msgid "Path"
+msgstr "Cesta"
+
+msgid "Local path (absolute)"
+msgstr "Lokální cesta (absolutní)"
+
+msgid "Directory structure"
+msgstr "Adresářová struktura"
+
+msgid "Parse top level folders as users (username)"
+msgstr "Přiřadit složky nejvyšší úrovně jako uživatele (uživatelské jméno)"
+
+msgid "Parse top level folders as albums"
+msgstr "Přiřadit složky nejvyšší úrovně jako alba"
+
+msgid "Don't parse folders"
+msgstr "Nepřiřazovat složky"
+
+msgid "When parsing top level folders as users, second level folders will be parsed as user albums. Parsing top level folders as albums adds these as guest albums."
+msgstr "Při přiřazení složek nejvyšší úrovně jako uživatelé budou složky druhé úrovně přiřazeny jako uživatelské alba. Přiřazení složek nejvyšší úrovně jako alba přidává tyto složky jako alba pro návštěvníky."
+
+msgid "Threads"
+msgstr "Vlákna"
+
+#, php-format
+msgid "This determines how intensive and fast will be the import process. Don't use more than %s threads on a shared server."
+msgstr "Toto určuje, jak intenzivní a rychlý bude proces importu. Na sdíleném serveru nepoužívejte více než %s vláken."
+
 msgid "You can use wildcard * characters."
 msgstr "Můžete použít zástupné znaky *."
 
@@ -2358,6 +2644,10 @@ msgstr "API"
 msgid "Region"
 msgstr "Region"
 
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
+msgid "Storage region"
+msgstr "Region úložiště (Storage region)"
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:58
 msgid "Storage bucket"
 msgstr "Bucket úložiště"
@@ -2378,19 +2668,6 @@ msgstr "Secret"
 msgid "Storage secret"
 msgstr "Secret úložiště"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:73
-msgid "Client email"
-msgstr "E-mail klienta"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:74
-msgid "Google Cloud client email"
-msgstr "E-mail klienta Google Cloud"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:75
-#, php-format
-msgid "You will need a <a %s>service account</a> for this."
-msgstr "Pro toto potřebujete <a %s>service account</a>."
-
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:78
 msgid "Private key"
 msgstr "Soukromý klíč"
@@ -2398,6 +2675,11 @@ msgstr "Soukromý klíč"
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:79
 msgid "Google Cloud JSON key"
 msgstr "Google Cloud JSON klíč"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:75
+#, php-format
+msgid "You will need a <a %s>service account</a> for this."
+msgstr "Pro toto potřebujete <a %s>service account</a>."
 
 msgid "Service name"
 msgstr "Název služby"
@@ -2414,9 +2696,18 @@ msgstr "Koncový bod API Identity (Identity API endpoint)"
 msgid "API endpoint for OpenStack identity"
 msgstr "Koncový bod API OpenStack identity (API endpoint for OpenStack identity)"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
-msgid "Storage region"
-msgstr "Region úložiště (Storage region)"
+#: ../../../app/themes/Peafowl/header.php:339
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
+#: ../../../app/themes/Peafowl/views/dashboard.php:94
+#: ../../../app/themes/Peafowl/views/dashboard.php:95
+#: ../../../app/themes/Peafowl/views/settings.php:143
+#: ../../../app/themes/Peafowl/views/settings.php:144
+#: ../../../app/themes/Peafowl/views/signup.php:39
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "Username"
+msgstr "Uživatelské jméno"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:100
 msgid "Container"
@@ -2442,29 +2733,35 @@ msgstr "Jméno nájemce (Tenant name)"
 msgid "Tenant name (account name)"
 msgstr "uživatelský účet"
 
+msgid "Storage endpoint"
+msgstr "Koncový bod úložiště"
+
+msgid "Server address"
+msgstr "Adresa serveru"
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:115
 msgid "Hostname or IP of the storage server"
 msgstr "Hostname nebo IP serveru s úložištěm."
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
-msgid "Path"
-msgstr "Cesta"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
 msgid "Server path"
 msgstr "Serverová cesta"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
-msgid "Server path where the files will be stored"
-msgstr "Serverová cesta, kde se budou ukládat soubory"
+msgid "Absolute path where the files will be stored in the context of the %p login. Use %s for root path."
+msgstr "Absolutní cesta, kde budou soubory uloženy v souvislosti s přihlášením %p. Pro kořenovou (root) cestu použijte %s."
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:123
-msgid "Server username"
-msgstr "Serverové uživatelské jméno"
+msgid "Server login"
+msgstr "Přihlášení k serveru"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:127
 msgid "Server password"
 msgstr "Serverové heslo"
+
+msgid "Local path"
+msgstr "Místní cesta"
+
+msgid "Local path where the files will be stored"
+msgstr "Místní cesta, kde budou soubory uloženy"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:132
 msgid "Storage capacity"
@@ -2528,28 +2825,24 @@ msgstr "Přiřadit kategorii"
 msgid "Flag as safe"
 msgstr "Označit jako bezpečné"
 
-#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
-#: ../../../app/themes/Peafowl/views/dashboard.php:607
-#: ../../../app/themes/Peafowl/views/dashboard.php:884
-#: ../../../app/themes/Peafowl/views/dashboard.php:933
-msgid "Delete"
-msgstr "Smazat"
-
 msgid "Create new album"
 msgstr "Vytvořit nové album"
 
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:5
-#, php-format
-msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
-msgstr "Aby jste mohli používat všechny funkce, musíte být přihlášen(a). Pokud ještě nemáte svůj účet můžete se <a href=\"%s\">registrovat</a> právě teď."
+#: ../../../app/themes/Peafowl/header.php:281
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
+#: ../../../app/themes/Peafowl/views/login.php:18
+#: ../../../app/themes/Peafowl/views/login.php:65
+#: ../../../app/themes/Peafowl/views/signup.php:18
+#: ../../../app/themes/Peafowl/views/signup.php:76
+msgid "Sign in with another account"
+msgstr "Přihlásit se pomocí jiného účtu"
+
+msgid "Continue with %label%"
+msgstr "Pokračovat s %label%"
+
+msgid "Home"
+msgstr "Domů"
 
 #: ../../../app/themes/Peafowl/snippets/template_content_empty.php:5
 #: ../../../app/themes/Peafowl/views/dashboard.php:618
@@ -2635,10 +2928,11 @@ msgstr "Host"
 msgid "Keyboard shortcuts"
 msgstr "Klávesové zkratky"
 
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "Líbí se"
+msgid "Private album"
+msgstr "Soukromé album"
+
+msgid "Password protected"
+msgstr "Chráněno heslem"
 
 msgid "Uploaded by guest"
 msgstr "Nahráno návštěvníkem"
@@ -2656,25 +2950,14 @@ msgstr "Nahráno soukromě"
 msgid "by %u"
 msgstr "od %u"
 
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
-#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
-#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
-msgid "Select"
-msgstr "Vybrat"
-
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:7
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:7
 msgid "Toggle unsafe flag"
 msgstr "Označit obrázek jako nevhodný"
+
+#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
+msgid "That page doesn't exist"
+msgstr "Tato stránka neexistuje"
 
 #: ../../../app/themes/Peafowl/views/404.php:7
 msgid "The requested page was not found."
@@ -2688,13 +2971,6 @@ msgstr "Hledejte něco jiného"
 msgid "The user has been deleted"
 msgstr "Uživatel byl smazán"
 
-#: ../../../app/themes/Peafowl/views/404.php:22
-#: ../../../app/themes/Peafowl/views/album.php:134
-#: ../../../app/themes/Peafowl/views/user.php:171
-#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
-msgid "The content has been deleted."
-msgstr "Obsah byl smazán."
-
 #: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:7
 msgid "Your account is almost ready"
 msgstr "Váš účet je téměř připraven"
@@ -2703,17 +2979,6 @@ msgstr "Váš účet je téměř připraven"
 #, php-format
 msgid "An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters."
 msgstr "E-mail pro %s byl právě odeslán. E-mail obsahuje instrukce o tom jak aktivovat váš účet. Aktivaci je možné provést do 48 hodin. Pokud e-mailovou zprávu neobdržíte, pak prosím zkontrolujte vaši složku se spamem."
-
-#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
-#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/logout.php:13
-#: ../../../app/themes/Peafowl/views/request-denied.php:13
-msgid "Go to homepage"
-msgstr "Jít na úvodní stránku"
 
 #: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
@@ -2739,41 +3004,6 @@ msgstr "Odkaz k potvrzení bude zaslán na e-mail spolu s detaily k aktivaci ú�
 msgid "Your email address"
 msgstr "Vaše e-mailová adresa"
 
-#: ../../../app/themes/Peafowl/views/account/email-needed.php:26
-msgid "Add email"
-msgstr "Přidat e-mail"
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
-msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
-msgstr "E-mail s instrukcemi jak resetovat vaše heslo byl právě odeslán na e-mailovou adresu, kterou jste uvedli při registraci. Pokud jste e-mail s instrukcemi neobdrželi, pak prosím zkontrolujte vaši složku se spamem či ostatní filtrovanou poštu."
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-msgid "Resend instructions"
-msgstr "Zaslat instrukce znova."
-
-#: ../../../app/install/update/updater.php:62
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
-#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
-#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
-#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
-#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
-#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
-#: ../../../lib/Peafowl/peafowl.min.js:158
-#: ../../../lib/Peafowl/peafowl.min.js:195
-msgid "An error occurred. Please try again later."
-msgstr "Došlo k chybě. Prosím zkuste opakovat akci později."
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
-msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
-msgstr "E-mail s instrukcemi k resetování vašeho hesla jsme již odeslali. Pokud vám nedorazil pak si prosím zkontrolujte vaši složku se spamem."
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:32
-msgid "Enter your username or the email address that you used to create your account."
-msgstr "Vložte vaše přihlašovací jméno, nebo e-mailovou adresu, kterou jste uvedli během registrace."
-
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:52
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:47
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:37
@@ -2783,6 +3013,33 @@ msgstr "Vložte vaše přihlašovací jméno, nebo e-mailovou adresu, kterou jst
 msgid "Submit"
 msgstr "Odeslat"
 
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
+msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "E-mail s instrukcemi jak resetovat vaše heslo byl právě odeslán na e-mailovou adresu, kterou jste uvedli při registraci. Pokud jste e-mail s instrukcemi neobdrželi, pak prosím zkontrolujte vaši složku se spamem či ostatní filtrovanou poštu."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
+msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
+msgstr "E-mail s instrukcemi k resetování vašeho hesla jsme již odeslali. Pokud vám nedorazil pak si prosím zkontrolujte vaši složku se spamem."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+msgid "Resend instructions"
+msgstr "Zaslat instrukce znova."
+
+#, php-format
+msgid "Enter your username or email address to continue. You may need to check your spam folder or whitelist %s"
+msgstr "Chcete-li pokračovat, zadejte své uživatelské jméno nebo e-mailovou adresu. Možná budete muset zkontrolovat složku spamu nebo whitelist %s"
+
+#: ../../../app/themes/Peafowl/header.php:291
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
+#: ../../../app/themes/Peafowl/views/login.php:34
+#: ../../../app/themes/Peafowl/views/login.php:35
+msgid "Username or Email address"
+msgstr "Uživatelské jméno nebo e-mailová adresa"
+
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:15
 msgid "Your password has been changed. You can now try logging in using your new password."
 msgstr "Vaše heslo bylo úspěšně změněno. Nyní se můžete přihlásit s vašim novým heslem."
@@ -2791,13 +3048,10 @@ msgstr "Vaše heslo bylo úspěšně změněno. Nyní se můžete přihlásit s 
 msgid "Login now"
 msgstr "Přihlásit se"
 
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:22
-msgid "Enter the new password that you want to use."
-msgstr "Vložte nové heslo, které chcete používat."
-
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:28
-msgid "New Password"
-msgstr "Nové heslo"
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/settings.php:306
+msgid "Enter your new password"
+msgstr "Vložte vaše nové heslo"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:29
 #: ../../../app/themes/Peafowl/views/dashboard.php:105
@@ -2808,15 +3062,8 @@ msgstr "Nové heslo"
 msgid "%d characters min"
 msgstr "%d znaků minimálně"
 
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
-#: ../../../app/themes/Peafowl/views/settings.php:306
-msgid "Enter your new password"
-msgstr "Vložte vaše nové heslo"
-
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
-#: ../../../app/themes/Peafowl/views/settings.php:328
-msgid "Confirm password"
-msgstr "Potvrďte heslo"
+msgid "Password strength"
+msgstr "Síla hesla"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:35
 #: ../../../app/themes/Peafowl/views/settings.php:312
@@ -2827,10 +3074,6 @@ msgstr "Znovu vyplňte nové heslo"
 #, php-format
 msgid "An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters."
 msgstr "Na adresu %s byl zaslán email s instrukcemi pro aktivaci Vašeho účtu. Pokud jste neobdrželi žádné instrukce, zkontrolujte prosím Vaši nevyžádanou poštu nebo spamové filtry."
-
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:19
-msgid "Enter the username or email address that you used to create your account to continue."
-msgstr "Pro pokračování zadejte uživatelské jméno nebo e-mailovou adresu, kterou jste použili k vytvoření svého účtu."
 
 #: ../../../app/themes/Peafowl/views/album.php:16
 #: ../../../app/themes/Peafowl/views/image.php:63
@@ -2869,10 +3112,129 @@ msgstr "Kliknutím na \"Souhlasím \" prohlašujete, že jste si přečetli a po
 msgid "I Agree"
 msgstr "Souhlasím"
 
+msgid "documentation"
+msgstr "dokumentace"
+
+#, php-format
+msgid "Learn more about %s at our %d."
+msgstr "Přečtěte si více o %s na našich stránkách %d."
+
+msgid "The connecting IP is determined using the server variable %var%. If the detected IP doesn't match yours, it means that your web server is under a proxy and you need to tweak your server to set the real connecting IP."
+msgstr "Připojovací IP adresa je určena pomocí proměnné serveru %var%. Pokud zjištěná IP neodpovídá vaší, znamená to, že váš webový server je za proxy a je potřeba vyladit váš server pro nastavení skutečné spojující IP."
+
+msgid "For Nginx, you must use %nginx%. For Apache, %apache%."
+msgstr "Pro Nginx musíte použít %nginx%. Pro Apache, %apache%."
+
+msgid "Make sure that you address this issue as the system relies on accurate IP detections to provide basic functionalities and to protect against spam, flooding, and brute force attacks."
+msgstr "Ujistěte se, že tento problém řešíte, protože systém spoléhá na přesné detekce IP, aby poskytoval základní funkce a chránil před spamem, záplavami a útoky brutální silou."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:40
 #: ../../../app/themes/Peafowl/views/dashboard.php:1732
 msgid "Disk used"
 msgstr "Využití disku"
+
+msgid "This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure."
+msgstr "Tento nástroj umožňuje hromadně přidávat obsah na váš web tím, že ukazuje systémovou cestu s obsahem, který chcete importovat. Podporuje přidávání uživatelů, alb a obrázků pomocí struktury založené na složkách."
+
+msgid "Automatic importing"
+msgstr "Automatický import"
+
+msgid "The system automatically parses any content by a continuous observation of the %path% path."
+msgstr "Systém automaticky analyzuje veškerý obsah kontinuálním sledováním cesty %path%."
+
+msgid "The system automatically parses any content by a continous observation of the %path% path."
+msgstr "Systém automaticky analyzuje veškerý obsah nepřetržitým sledováním cesty %path%."
+
+msgid "Completed jobs will be automatically re-started after %n %m."
+msgstr "Dokončené úlohy budou automaticky znovu spuštěny po %n %m."
+
+msgid "Reset to clear stats and logs."
+msgstr "Resetovat pro vymazání statistik a protokolů."
+
+msgid "Queued"
+msgstr "Ve frontě"
+
+msgid "Working"
+msgstr "Spuštěno"
+
+msgid "Paused"
+msgstr "Pozastaveno"
+
+msgid "Canceled"
+msgstr "Zrušeno"
+
+msgid "Completed"
+msgstr "Dokončeno"
+
+msgid "Actions"
+msgstr "Akce"
+
+msgid "Reset"
+msgstr "Resetovat"
+
+msgid "Pause"
+msgstr "Pauza"
+
+msgid "Resume"
+msgstr "Pokračovat"
+
+msgid "Process log"
+msgstr "Protokol procesu"
+
+msgid "Errors"
+msgstr "Chyby"
+
+#: ../../../app/themes/Peafowl/views/settings.php:105
+msgid "Status"
+msgstr "Stav"
+
+msgid "The system works with a scheduled command to continuously process the importing. It requires a crontab entry."
+msgstr "Systém pracuje s naplánovaným příkazem pro nepřetržité zpracování importu. Vyžaduje záznam cronu."
+
+msgid "You can run the command in parallel by changing the integer value of %s%."
+msgstr "Příkaz můžete spustit paralelně změnou celočíselné hodnoty %s%."
+
+msgid "All file-system permissions must be granted for the crontab user at %path%"
+msgstr "Všechna oprávnění systému souborů musí být udělena uživateli crontab v %path%"
+
+msgid "Required crontab entry:"
+msgstr "Požadovaný záznam cronu:"
+
+msgid "Add import job"
+msgstr "Přidat úlohu importu"
+
+#, php-format
+msgid "This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d."
+msgstr "Tento nástroj umožňuje hromadně přidávat obsah na vaše webové stránky tím, že zadává systémovou cestu s obsahem, který chcete importovat. Podporuje přidávání uživatelů, alb a obrázků pomocí struktury založené na složkách. Další informace o struktuře složek, přidání metadat a vše o tomto nástroji naleznete v naší %d."
+
+msgid "Process import"
+msgstr "Proces importu"
+
+#, php-format
+msgid "Top level folders as %s"
+msgstr "Složky nejvyšší úrovně jako %s"
+
+msgid "Process"
+msgstr "Proces"
+
+msgid "Cancel"
+msgstr "Zrušit"
+
+#, php-format
+msgid "Do you really want to remove the import ID %s?"
+msgstr "Opravdu chcete odstranit import ID %s?"
+
+msgid "Manual importing"
+msgstr "Ruční import"
+
+msgid "The system will parse the contents of any available filesystem path."
+msgstr "Systém bude analyzovat obsah jakékoli dostupné cesty k souborovému systému."
+
+msgid "These processes must be manually created and handled with the web browser tab open."
+msgstr "Tyto procesy musí být vytvořeny ručně a musí se s nimi manipulovat při otevřené kartě webového prohlížeče."
+
+msgid "Parser"
+msgstr "Přiřazení"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:80
 #: ../../../app/themes/Peafowl/views/dashboard.php:84
@@ -2884,20 +3246,26 @@ msgstr "Přidat uživatele"
 msgid "Role"
 msgstr "Úloha"
 
+msgid "Manager"
+msgstr "Správce"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:89
 #: ../../../app/themes/Peafowl/views/settings.php:125
 msgid "Administrator"
 msgstr "Administrátor"
 
+#: ../../../app/themes/Peafowl/header.php:338
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:100
+#: ../../../app/themes/Peafowl/views/settings.php:155
+#: ../../../app/themes/Peafowl/views/signup.php:34
+#: ../../../app/themes/Peafowl/views/signup.php:35
+#: ../../../content/pages/default/contact.php:92
+msgid "Email address"
+msgstr "E-mailová adresa"
+
 msgid "This setting is always diabled when using personal website mode."
 msgstr "Toto nastavení je vždy zakázáno při použití režimu osobní webové stránky."
-
-msgid "documentation"
-msgstr "dokumentace"
-
-#, php-format
-msgid "Learn more about %s at our %d."
-msgstr "Přečtěte si více o %s na našich stránkách %d."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
@@ -2930,6 +3298,25 @@ msgstr "Nadpis webové stránky (title)"
 #: ../../../app/themes/Peafowl/views/dashboard.php:231
 msgid "Website description"
 msgstr "Popis webu"
+
+msgid "Powered by"
+msgstr "Běží na systému"
+
+#, php-format
+msgid "Enable this if you want to show a \"%s\" link at the footer."
+msgstr "Aktivujte tuto možnost, pokud chcete zobrazit tlačítka sociálních sítí pro sdílení obsahu."
+
+msgid "Automatic"
+msgstr "Automaticky"
+
+msgid "Forced"
+msgstr "Vynucené"
+
+msgid "%a will use HTTPS detection on the server side (recommended). %f will use HTTPS regardless of your server setup. %d to don't use HTTPS at all."
+msgstr "%a použije detekci HTTPS na straně serveru (doporučeno). %f bude používat protokol HTTPS bez ohledu na nastavení vašeho serveru. %d nepoužije protokol HTTPS vůbec."
+
+msgid "This only controls the protocol used in the URLs, it won't turn your website into a valid HTTPS website unless your server is configured to support and use HTTPS."
+msgstr "Tímto se řídí pouze protokol používaný v URL adresách, nebude to vaše webové stránky přeměňovat na platné HTTPS webové stránky, pokud nebude váš server nakonfigurován pro podporu a použití protokolu HTTPS."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:257
 msgid "Default time zone"
@@ -3047,6 +3434,24 @@ msgstr "Pouze aktivní stránky budou přístupné."
 msgid "Type"
 msgstr "Typ"
 
+msgid "Terms of service"
+msgstr "Podmínky používání služby"
+
+msgid "Privacy"
+msgstr "Soukromí"
+
+msgid "Contact"
+msgstr "Kontakt"
+
+msgid "Extra page"
+msgstr "Zvláštní stránka"
+
+msgid "Internal page type"
+msgstr "Typ interní stránky"
+
+msgid "You can have multiple extra pages, but only one of the other special internal types."
+msgstr "Můžete mít několik dalších stránek, ale pouze jeden z dalších speciálních interních typů."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:475
 msgid "Page visibility"
 msgstr "Viditelnost stránky"
@@ -3155,6 +3560,9 @@ msgstr "stránky"
 msgid "Do you really want to delete the page ID %s? This can't be undone."
 msgstr "Opravdu chcete smazat stránku ID %s? Tato akce nelze vrátit zpátky."
 
+msgid "Enabled image formats"
+msgstr "Povolené formáty obrázků"
+
 msgid "Unchecked image formats won't be allowed to be uploaded."
 msgstr "Nezaškrtnuté formáty obrázkových souborů nebudou moci být nahrány."
 
@@ -3173,6 +3581,15 @@ msgstr "Nahráno hostem"
 #: ../../../app/themes/Peafowl/views/dashboard.php:645
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "Povol pokud chceš umožnit neregistrovaným uživatelům nahrávání."
+
+msgid "Upload user interface"
+msgstr "Rozhraní uživatelského nahrávání"
+
+msgid "On-page container"
+msgstr "On-page kontejner"
+
+msgid "route"
+msgstr "trasa"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1353
 msgid "Enable embed codes (uploader)"
@@ -3641,6 +4058,9 @@ msgstr "Klasické stránkování"
 msgid "What pagination method should be used."
 msgstr "Jaká metoda stránkování má být použita?"
 
+msgid "Listing viewer"
+msgstr "Prohlížeč seznamu obrázků"
+
 msgid "Enable this to use the listing viewer when clicking on an image."
 msgstr "Povolte to, chcete-li kliknutím na obrázek otevřít prohlížeč seznamu obrázků."
 
@@ -3872,6 +4292,12 @@ msgstr "Zapněte pokud chcete povolit zobrazování tlačítek sociálních sít
 msgid "Enable embed codes (content)"
 msgstr "Povolit vkládací odkazy (obsah)"
 
+msgid "Everybody"
+msgstr "Všichni"
+
+msgid "Users only"
+msgstr "Pouze uživatelé"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1349
 msgid "Enable this if you want to show embed codes for the content."
 msgstr "Povolte pokud chcete v obsahu zobrazovat vkládací obsahy."
@@ -3900,6 +4326,10 @@ msgstr "Vlastní JS kód"
 msgid "Put your custom JS code here. It will be placed as <script> just before the closing </head> tag."
 msgstr "Vložte váš vlastní JS kód zde. Bude umístěný jako <script> těsně před koncem hlavičky (</head>) html kódu."
 
+#, php-format
+msgid "Do not use %s markup here. This is for plain JS code, not for HTML script tags. If you use script tags here you will break your website."
+msgstr "Zde nepoužívejte značku %s. Toto je pro jednoduchý kód JS, ne pro značky skriptů HTML. Používáte-li zde značky skriptů, narušíte své webové stránky."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1390
 msgid "Style"
 msgstr "Styl"
@@ -3907,6 +4337,10 @@ msgstr "Styl"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1394
 msgid "Landing page"
 msgstr "Vstupní stránka"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1395
+msgid "Split landing + images"
+msgstr "Split landing + obrázky"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1396
 msgid "Route explore"
@@ -3955,9 +4389,25 @@ msgstr "Odstavec"
 msgid "Call to action button color"
 msgstr "Barva tlačítka \"Call to action\""
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1468
+msgid "Color of the homepage call to action button."
+msgstr "Barva tlačítka s výzvou k akci na domovské stránce."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1472
+msgid "Call to action outline style button"
+msgstr "okraje tlačítek"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1479
 msgid "Enable this to use outline style for the homepage call to action button."
 msgstr "Zapněte, pokud chcete aktivovat rámeček kolem tlačítka akce na titulce"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1483
+msgid "Call to action functionality"
+msgstr "Funkce tlačítka Call to action"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1487
+msgid "Trigger uploader"
+msgstr "Spouštění nahrávání"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1488
 msgid "Open URL"
@@ -3975,6 +4425,10 @@ msgstr "Zadat absolutní nebo relativní URL"
 msgid "A relative URL like %r will be mapped to %l"
 msgstr "Relativní URL jako %r bude namapována na %l"
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1506
+msgid "Call to action HTML"
+msgstr "Výzva k akci HTML"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1507
 msgid "This will be added inside the call to action <a> tag. Leave it blank to use the default contents."
 msgstr "Toto bude přidáno uvnitř výzvy k akci <a> tagu. Zanechte prázdné pro použití výchozího obsahu."
@@ -3983,8 +4437,8 @@ msgstr "Toto bude přidáno uvnitř výzvy k akci <a> tagu. Zanechte prázdné p
 msgid "User IDs"
 msgstr "ID uživatele(ů)"
 
-msgid "Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images."
-msgstr "Čárkami oddělený seznam cílových uživatelských ID, kteří mohou prohlížet obrázky na domovské stránce. Ponechte pole prázdné pro zobrazování všech nedávných obrázků."
+msgid "Comma-separated list of target user IDs (integers) to show most recent images on homepage. Leave it empty to display trending images."
+msgstr "Seznam ID cílových uživatelů oddělených čárkami pro zobrazení jejich obrázků na domovské stránce. Chcete-li zobrazit všechny poslední obrázky, ponechte pole prázdné nebo zadejte nulu."
 
 msgid "banners"
 msgstr "bannery"
@@ -4000,6 +4454,20 @@ msgstr "Zobrazení oznámení o dostupné aktualizaci Chevereta"
 
 msgid "Enable this to show a notice on top warning you about new available system updates."
 msgstr "Povolte, pokud chcete zobrazit oznámení při dostupné aktualizaci Chevereta."
+
+msgid "Dump update query"
+msgstr "Dotaz na aktualizaci výpisu"
+
+msgid "Enable this if you want to dump the update query to run it manually."
+msgstr "Aktivujte tuto možnost, pokud chcete automaticky zjistit a nastavit správný jazyk pro každého uživatele."
+
+#, php-format
+msgid "SEO %s URLs"
+msgstr "SEO URL adresy pro %s"
+
+#, php-format
+msgid "Enable this if you want to use SEO %s URLs."
+msgstr "Povolte tuto možnost, pokud chcete používat SEO URL adresy pro %s."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1570
 msgid "Minify code"
@@ -4072,6 +4540,31 @@ msgstr "Směrování pro %s"
 
 msgid "Album routing"
 msgstr "Směrování alba"
+
+msgid "Hostname"
+msgstr "Název hostitele"
+
+msgid "Hostname on which sub-domain wildcards will be added."
+msgstr "Název hostitele, ke kterému budou přidány zástupné znaky subdomény."
+
+#, php-format
+msgid "This setting may be overridden by %s."
+msgstr "Toto nastavení může být přepsáno pomocí %s."
+
+msgid "Language subdomains"
+msgstr "Jazykové subdomény"
+
+msgid "languages"
+msgstr "jazyky"
+
+msgid "Enable to use %s for %t."
+msgstr "Povolit použití %s pro %t."
+
+msgid "Username subdomains"
+msgstr "Subdomény uživatelského jména"
+
+msgid "user profiles"
+msgstr "uživatelských profilů"
 
 msgid "Custom language strings"
 msgstr "Vlastní jazykové řetězce"
@@ -4184,19 +4677,57 @@ msgstr "SMTP zabezpečení"
 msgid "Unsecured"
 msgstr "Nezabezpečeno"
 
+msgid "Decode ID"
+msgstr "ID dekódování"
+
+msgid "Encode ID"
+msgstr "ID kódování"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1824
 #: ../../../app/themes/Peafowl/views/dashboard.php:1825
 msgid "Send test email"
 msgstr "Odeslat testovací email"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1825
-msgid "test@somedomain.com"
-msgstr "test@vasedomena.cz"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1826
 #, php-format
 msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
 msgstr "Pomocí této funkce lze otestovat, jak jsou vaše e-maily doručovány. Doporučujeme použít %s."
+
+msgid "Export a user"
+msgstr "Exportujte uživatele"
+
+msgid "Export user"
+msgstr "Exportovat uživatele"
+
+msgid "This will allow you to download a user's standard personal information in JSON format."
+msgstr "To vám umožní stahovat standardní osobní údaje uživatele ve formátu JSON."
+
+msgid "Regenerate external storage stats"
+msgstr "Regenerovat statistiky externího úložiště"
+
+msgid "Storage id"
+msgstr "ID úložiště"
+
+msgid "Regenerate"
+msgstr "Regenerovat"
+
+msgid "This will re-calculate the sum of all the image records associated to the target external storage."
+msgstr "Tím se přepočítá součet všech záznamů obrázků přidružených k cílovému externímu úložišti."
+
+msgid "Migrate image records from one external storage to another"
+msgstr "Migrujte záznamy obrázků z jednoho externího úložiště do jiného"
+
+msgid "Source storage id"
+msgstr "ID zdrojového úložiště"
+
+msgid "Target storage id"
+msgstr "ID cílového úložiště"
+
+msgid "Migrate"
+msgstr "Migrovat"
+
+msgid "This only updates the database. You must transfer the actual files to target storage container on your own. URL rewriting is strongly recommended. Use zero (0) for local storage."
+msgstr "Toto pouze aktualizuje databázi. Musíte přenést skutečné soubory do cílového úložného kontejneru. Přepis URL je důrazně doporučen. Použijte nulu (0) pro místní úložiště."
 
 msgid "social networks"
 msgstr "sociální sítě"
@@ -4253,10 +4784,30 @@ msgstr "VK client id"
 msgid "VK client secret"
 msgstr "VK client secret"
 
+#, php-format
+msgid "%s spam protection"
+msgstr "Ochrana proti spamu %s"
+
+msgid "user generated content"
+msgstr "uživatelem vytvořený obsah"
+
+msgid "Enable this to use %l to block spam on %c."
+msgstr "Povolte tuto možnost, chcete-li pomocí %s blokovat spam na %c."
+
+#, php-format
+msgid "%s API key"
+msgstr "API klíč %s"
+
+msgid "user signup"
+msgstr "registrace uživatele"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1968
 #, php-format
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "Potřebujete <a href=\"%s\" target=\"_blank\">reCAPTCHA klíč</a>."
+
+msgid "Please note that each reCAPTCHA version require its own set of keys. Don't forget to update the keys if you change versions."
+msgstr "Vezměte prosím na vědomí, že každá verze reCAPTCHA vyžaduje vlastní sadu klíčů. Nezapomeňte aktualizovat klíče, pokud měníte verze."
 
 #, php-format
 msgid "%s site key"
@@ -4274,12 +4825,23 @@ msgstr "reCAPTCHA threshold (práh)"
 msgid "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA."
 msgstr "Kolik neúspěšných pokusů je zapotřebí k vyžadování reCAPTCHA? Zadejte nula (0), aby se reCAPTCHA zobrazovala vždy."
 
+#, php-format
+msgid "Force %s on contact page"
+msgstr "Vynutit %s na kontaktní stránce"
+
+#, php-format
+msgid "Enable this to always show %s on contact page."
+msgstr "Aktivací této funkce se bude %s vždy zobrazovat na kontaktní stránce."
+
 msgid "Comments API"
 msgstr "API komentářů"
 
 #, php-format
 msgid "Disqus API works with %s."
 msgstr "Disqus API pracuje s %s."
+
+msgid "Disqus shortname"
+msgstr "Vaše krátké jméno na Disqus"
 
 #, php-format
 msgid "%s public key"
@@ -4404,11 +4966,6 @@ msgstr "Chyťte a přetáhněte obrázky kamkoli budete chtít a začněte ihned
 msgid "Start uploading"
 msgstr "Začít nahrávat"
 
-#: ../../../app/themes/Peafowl/views/index.php:63
-#, php-format
-msgid "Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings."
-msgstr "Vyplňte tuto část nahrávání obrázků do %s účtu.<br> Cíl můžete editovat v administraci webu (dašbórdu :)."
-
 #: ../../../app/themes/Peafowl/views/index.php:79
 msgid "Sign up to unlock all the features"
 msgstr "Zaregistrujte se pro zpřístupnění všech funkcí"
@@ -4417,15 +4974,34 @@ msgstr "Zaregistrujte se pro zpřístupnění všech funkcí"
 msgid "Manage your content, create private albums, customize your profile and more."
 msgstr "Spravujte váš obsah, vytvářejte soukromá alba, nastavujte váš profil a spoustu dalšího."
 
-#: ../../../app/themes/Peafowl/views/login.php:40
-#: ../../../app/themes/Peafowl/views/settings.php:323
-msgid "Enter your password"
-msgstr "Vložte vaše heslo"
+msgid "Sign in with your account"
+msgstr "Přihlaste se pomocí svého účtu"
+
+#: ../../../app/themes/Peafowl/header.php:301
+#, php-format
+msgid "Don't have an account? <a href='%s'>Sign up</a> now."
+msgstr "Nemáte účet? <a href='%s'>Registrujte se</a>."
+
+#: ../../../app/routes/route.logout.php:29
+#: ../../../app/themes/Peafowl/views/logout.php:8
+msgid "Logged out"
+msgstr "Odhlášeno"
 
 #: ../../../app/themes/Peafowl/views/logout.php:12
 #, php-format
 msgid "You have been logged off %s. Hope to see you soon."
 msgstr "Odhlášení z webu %s proběhlo úspěšně. Brzy na shledanou."
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/logout.php:13
+#: ../../../app/themes/Peafowl/views/request-denied.php:13
+msgid "Go to homepage"
+msgstr "Jít na úvodní stránku"
 
 #: ../../../app/themes/Peafowl/views/maintenance.php:7
 msgid "Website under maintenance"
@@ -4479,11 +5055,23 @@ msgstr "Barevné schéma tlačítka"
 msgid "Embed codes that will be auto-inserted in editor box"
 msgstr "Kódy pro sdílení, které budou automaticky vloženy do pole editoru"
 
+msgid "Sibling selector"
+msgstr "Sibling selektor"
+
+msgid "Sibling element selector where to place the button next to"
+msgstr "Sibling selektor vedle kterého se má umístit tlačítko"
+
+msgid "Sibling position"
+msgstr "Pozice Siblingu"
+
 msgid "After"
 msgstr "Po"
 
 msgid "Before"
 msgstr "Před"
+
+msgid "Position relative to sibling element"
+msgstr "Relativní pozice vedle Siblingu"
 
 msgid "Advanced options"
 msgstr "Pokročilé možnosti"
@@ -4516,10 +5104,6 @@ msgstr "Datum registrace"
 #: ../../../app/themes/Peafowl/views/settings.php:91
 msgid "Registration IP"
 msgstr "IP při registraci"
-
-#: ../../../app/themes/Peafowl/views/settings.php:105
-msgid "Status"
-msgstr "Stav"
 
 #: ../../../app/themes/Peafowl/views/settings.php:109
 msgid "Valid"
@@ -4604,6 +5188,16 @@ msgstr "K tomu aby jste byli schopni se přihlásit uživatelským jménem nebo 
 msgid "This user doesn't have a password. Add one using this form."
 msgstr "Tento uživatel nemá uložené žádné heslo. Heslo přidejte tímto formulářem."
 
+#: ../../../app/themes/Peafowl/views/login.php:40
+#: ../../../app/themes/Peafowl/views/settings.php:323
+msgid "Enter your password"
+msgstr "Vložte vaše heslo"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
+#: ../../../app/themes/Peafowl/views/settings.php:328
+msgid "Confirm password"
+msgstr "Potvrďte heslo"
+
 #: ../../../app/themes/Peafowl/views/settings.php:329
 msgid "Re-enter your password"
 msgstr "Napište heslo znovu"
@@ -4616,9 +5210,6 @@ msgstr "Nahrát nový soubor"
 #: ../../../app/themes/Peafowl/views/settings.php:354
 msgid "Delete existing image"
 msgstr "Smazat existující obrázek"
-
-msgid "Privacy"
-msgstr "Soukromí"
 
 msgid "Make my profile and identity totally private"
 msgstr "Zachovat můj profil a identitu zcela soukromou"
@@ -4646,9 +5237,8 @@ msgstr "Řekněte nám něco o vás..."
 msgid "User has no connections."
 msgstr "Uživatel nemá žádné propojení."
 
-#: ../../../app/themes/Peafowl/views/settings.php:391
-msgid "Link your account to external services to be able to login and share content."
-msgstr "Propojte váš účet s externími službami pro přihlášení a sdílení obsahu."
+msgid "Link your account to external services to be able to login here."
+msgstr "Propojte svůj účet s externími službami, abyste se mohli přihlásit a sdílet obsah."
 
 #: ../../../app/themes/Peafowl/views/settings.php:398
 #, php-format
@@ -4684,18 +5274,51 @@ msgstr "odpojit"
 msgid "Connect %s"
 msgstr "Propojit %s"
 
+#: ../../../app/loader.php:279
+#: ../../../app/themes/Peafowl/views/settings.php:441
+msgid "Feel free to browse and discover all my shared images and albums."
+msgstr "Neváhejte a prohlédněte si všechny mé sdílené obrázky a alba."
+
 #: ../../../app/themes/Peafowl/views/settings.php:446
 msgid "Button"
 msgstr "Tlačítko"
+
+#: ../../../app/loader.php:282
+#: ../../../app/themes/Peafowl/views/settings.php:447
+msgid "View all my images"
+msgstr "Zobrazit všechny mé obrázky"
+
+msgid "Login"
+msgstr "Přihlásit se"
+
+#, php-format
+msgid "Already have an account? %s now."
+msgstr "Máte již účet? %s nyní."
 
 #: ../../../app/themes/Peafowl/views/signup.php:45
 msgid "resend account activation"
 msgstr "znovu poslat aktivaci účtu"
 
-#: ../../../app/themes/Peafowl/views/signup.php:45
 #, php-format
-msgid "If you have already signed up maybe you need to request to %s"
-msgstr "Pokud jste se již zaregistrovali, možná budete muset požádat o %s"
+msgid "If you have already signed up maybe you need to request to %s to activate your account."
+msgstr "Pokud jste se již zaregistrovali, možná budete muset požádat %s o aktivaci Vašeho účtu."
+
+#, php-format
+msgid "You can also %s."
+msgstr "Můžete také %s."
+
+#, php-format
+msgid "I'm at least %s years old"
+msgstr "Je mi minimálně %s let."
+
+msgid "terms"
+msgstr "Podmínky"
+
+msgid "privacy policy"
+msgstr "Zásady ochrany osobních údajů"
+
+msgid "I agree to the %terms_link and %privacy_link"
+msgstr "Souhlasím s %terms_link a %privacy_link"
 
 #: ../../../app/themes/Peafowl/views/user.php:15
 msgid "Upload profile background"
@@ -4729,6 +5352,17 @@ msgstr[3] "Sledující"
 msgid "Follow"
 msgstr "Sledovat"
 
+#: ../../../app/loader.php:180
+msgid "You have been forbidden to use this website."
+msgstr "Máte zakázáno používat tuto webovou stránku."
+
+msgid "Plugin"
+msgstr "Plugin"
+
+#, php-format
+msgid "Page %s"
+msgstr "Stránka %s"
+
 #: ../../../app/routes/route.page.php:61
 #: ../../../content/pages/default/contact.php:7
 msgid "General questions/comments"
@@ -4749,11 +5383,6 @@ msgstr "Neplatná zpráva"
 msgid "Invalid subject"
 msgstr "Neplatný předmět"
 
-#: ../../../app/routes/route.page.php:85
-#: ../../../content/pages/default/contact.php:33
-msgid "Invalid reCAPTCHA"
-msgstr "Špatně opsaný kód reCAPTCHA"
-
 #: ../../../app/routes/route.page.php:122
 #: ../../../content/pages/default/contact.php:69
 msgid "Mail error"
@@ -4761,9 +5390,6 @@ msgstr "Chyba e-mailu."
 
 msgid "Message sent"
 msgstr "Zpráva byla odeslána"
-
-msgid "Contact"
-msgstr "Kontakt"
 
 #: ../../../app/routes/route.page.php:119
 msgid "Message sent. We will get in contact soon."
@@ -4777,245 +5403,6 @@ msgstr "Vaše jméno"
 
 msgid "Subject"
 msgstr "Předmět zprávy"
-
-#: ../../../app/install/update/template/update.js:19
-#, javascript-format
-msgid "Installed version is v%s"
-msgstr "Instalovaná verze je v%s"
-
-#: ../../../app/install/update/template/update.js:26
-#: ../../../app/install/update/template/update.js:55
-#: ../../../app/install/update/template/update.js:78
-#, javascript-format
-msgid "Can't connect to %s"
-msgstr "Nelze se připojit k %s"
-
-#: ../../../app/install/update/template/update.js:30
-#, javascript-format
-msgid "Last available release is v%s"
-msgstr "Poslední dostupná verze je v%s"
-
-#: ../../../app/install/update/template/update.js:33
-msgid "Update needed, proceeding to download"
-msgstr "Je nutná aktualizace, přecházím ke stažení"
-
-#: ../../../app/install/update/template/update.js:40
-msgid "No update needed"
-msgstr "Aktualizace není nutná"
-
-#: ../../../app/install/update/template/update.js:41
-msgid "System files already up to date"
-msgstr "Systémové soubory jsou již aktuální"
-
-#: ../../../app/install/update/template/update.js:49
-#, javascript-format
-msgid "Starting v%s download"
-msgstr "Začínám stahovat v%s"
-
-#: ../../../app/install/update/template/update.js:60
-#, javascript-format
-msgid "Downloaded v%s, proceeding to extraction"
-msgstr "Verze v%s je stažena, přecházím k rozbalování"
-
-#: ../../../app/install/update/template/update.js:72
-#, javascript-format
-msgid "Attempting to extract v%s"
-msgstr "Pokouším se rozbalit verzi v%s"
-
-#: ../../../app/install/update/template/update.js:82
-msgid "Extraction completed"
-msgstr "Rozbalování bylo dokončeno"
-
-#: ../../../app/install/update/template/update.js:84
-msgid "Proceding to install the update"
-msgstr "Přecházím k instalaci aktualizace"
-
-#: ../../../app/install/update/template/update.js:111
-msgid "Update failed"
-msgstr "Aktualizace selhala"
-
-#: ../../../app/lib/chevereto.js:592 ../../../app/lib/chevereto.min.js:36
-msgid "Please provide a valid email address"
-msgstr "Zadejte prosím platnou e-mailovou adresu"
-
-#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
-#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
-#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
-#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
-#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
-#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
-msgid "You must enter the album name."
-msgstr "Musíte zadat název alba."
-
-#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
-#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
-#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
-#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
-msgid "Confirm"
-msgstr "Potvrdit"
-
-#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
-msgid "Select existing album"
-msgstr "Vyberte stávající album"
-
-#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
-#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
-msgid "Please select a valid image file type."
-msgstr "Prosím vyberte přípustné typy souborů obrázků."
-
-#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
-#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
-#, javascript-format
-msgid "Please select a picture of at most %s size."
-msgstr "Prosím vyberte obrázek s největší %s velikostí."
-
-#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
-msgid "Profile image updated."
-msgstr "Profilový obrázek byl aktualizován."
-
-#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
-msgid "Profile background image updated."
-msgstr "Pozadí profilu bylo aktualizováno."
-
-#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
-msgid "Profile background image deleted."
-msgstr "Pozadí profilu bylo odstraněno."
-
-#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
-msgid "Error deleting profile background image."
-msgstr "Nastala chyba při odstraňování obrázku pozadí profilu."
-
-#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
-#, javascript-format
-msgid "Update available v%s"
-msgstr "Je dostupná aktualizace v%s"
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#, javascript-format
-msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
-msgstr "Je k dispozici aktualizace pro váš systém. Můžete ji automaticky stáhnout a instalovat, nebo běžte na %s a stáhněte si instalační soubor."
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "Update now"
-msgstr "Aktualizovat nyní"
-
-#, javascript-format
-msgid "This website is running latest %s version"
-msgstr "Tato webová stránka používá nejnovější verzi %s"
-
-msgid "Toggle select"
-msgstr "Označit vybraný obrázek"
-
-msgid "Toggle flag"
-msgstr "Označit štítkem"
-
-msgid "Previous"
-msgstr "Předchozí"
-
-msgid "Next"
-msgstr "Další"
-
-#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
-msgid "Clipboard image"
-msgstr "Kopírovat obrázek do schránky"
-
-#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
-msgid "File too big."
-msgstr "Soubor je příliš velký."
-
-msgid "Invalid or unsupported file format."
-msgstr "Neplatný nebo nepodporovaný formát souboru."
-
-#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
-#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
-msgid "Some files couldn't be added"
-msgstr "Některé soubory nemohly být přidány."
-
-#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
-msgid "Image edited successfully."
-msgstr "Obrázek byl úspěšně upraven."
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
-#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
-#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
-msgid "private"
-msgstr "soukromý"
-
-#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
-msgid "Album edited successfully."
-msgstr "Album úspěšně upraveno."
-
-#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
-msgid "Invalid URL key."
-msgstr "Neplatný klíč URL."
-
-#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
-msgid "Category URL key already being used."
-msgstr "URL klíč kategorie se již používá."
-
-#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
-msgid "Category successfully deleted."
-msgstr "Kategorie byla úspěšně odstraněna."
-
-#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
-#, javascript-format
-msgid "Category %s added."
-msgstr "Kategorie %s byla přidána."
-
-#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
-msgid "Invalid expiration date."
-msgstr "Neplatné datum ukončení platnosti."
-
-#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
-#, javascript-format
-msgid "IP %s already banned."
-msgstr "IP %s je již zakázána."
-
-#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
-#, javascript-format
-msgid "IP %s banned."
-msgstr "IP %s je zakázána."
-
-#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
-msgid "IP ban successfully deleted."
-msgstr "IP zákaz byl úspěšně odstraněn."
-
-#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
-#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
-#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
-msgid "Please fill all the required fields."
-msgstr "Prosím vyplňte všechny požadované kolonky."
-
-#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
-msgid "Invalid storage capacity value. Make sure to use a valid format."
-msgstr "Neplatná velikost úložiště. Prosím ověřte, že je ve správném formátu."
-
-#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
-msgid "Invalid URL."
-msgstr "Neplatné URL."
-
-#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
-msgid "Storage successfully edited."
-msgstr "Úložiště bylo úspěšně upraveno."
-
-#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
-msgid "User added successfully."
-msgstr "Uživatel byl úspěšně přidán."
-
-#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
-#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
-#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
-#: ../../../app/lib/chevereto.min.js:205
-msgid "The content has been moved."
-msgstr "Obsah byl přesunut."
-
-#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
-msgid "Unselect"
-msgstr "Odebrat"
-
-#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
-msgid "The content has been edited."
-msgstr "Obsah byl upraven."
 
 #: ../../../lib/Peafowl/peafowl.js:25 ../../../lib/Peafowl/peafowl.js:492
 #: ../../../lib/Peafowl/peafowl.min.js:1 ../../../lib/Peafowl/peafowl.min.js:31

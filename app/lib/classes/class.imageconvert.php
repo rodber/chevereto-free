@@ -30,7 +30,7 @@ class ImageConvert
         $source_info = G\get_image_fileinfo($source);
         switch ($source_info['extension']) {
             case 'bmp':
-                $temp_image = function_exists('imagecreatefrombmp') ? imagecreatefrombmp($source) : G\imagecreatefrombmp($source);
+                $temp_image = G\imagecreatefrombmp($source);
             break;
             case 'jpg':
                 $temp_image = imagecreatefromjpeg($source);

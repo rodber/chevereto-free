@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2018-06-03 14:28+0000',
-  'PO-Revision-Date' => '2018-06-03 14:28+0000',
+  'POT-Creation-Date' => '2020-04-24 15:39+0000',
+  'PO-Revision-Date' => '2020-04-24 15:39+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'zh_TW',
@@ -29,13 +29,13 @@ $translation_table = [
 		0 => "無效的網站模式",
 	],
 	"From email address" => [
-		0 => "發送到此電子郵件地址",
+		0 => "發件人的電子郵件地址",
 	],
 	"Sender email for emails sent to users." => [
-		0 => "接收到郵件顯示的發送人電子信箱",
+		0 => "發信給用戶的電郵來源地址",
 	],
 	"Incoming email address" => [
-		0 => "電子郵件地址",
+		0 => "接收郵件的電郵地址",
 	],
 	"Recipient for contact form and system alerts." => [
 		0 => "\"聯絡我們\"和\"系統通知\"的收件者",
@@ -51,6 +51,42 @@ $translation_table = [
 	],
 	"Personal" => [
 		0 => "個人",
+	],
+	"Installed version is v%s" => [
+		0 => "已安裝的版本為 v%s",
+	],
+	"Can't connect to %s" => [
+		0 => "無法連接到 %s",
+	],
+	"Last available release is v%s" => [
+		0 => "最新的發布版本為 v%s",
+	],
+	"Update needed, proceeding to download" => [
+		0 => "需要更新, 請繼續下載",
+	],
+	"No update needed" => [
+		0 => "目前沒有更新",
+	],
+	"System files already up to date" => [
+		0 => "系統檔案已是最新版本",
+	],
+	"Starting v%s download" => [
+		0 => "開始 v%s 下載",
+	],
+	"Downloaded v%s, proceeding to extraction" => [
+		0 => "下載 v%s 中, 程序正在匯出",
+	],
+	"Attempting to extract v%s" => [
+		0 => "嘗試解壓 v%s",
+	],
+	"Extraction completed" => [
+		0 => "匯出已完成",
+	],
+	"Proceding to install the update" => [
+		0 => "正在安裝此更新",
+	],
+	"Update failed" => [
+		0 => "更新已失敗",
 	],
 	"Update in progress" => [
 		0 => "正在更新",
@@ -78,6 +114,198 @@ $translation_table = [
 	],
 	"Can't update %s file - %e" => [
 		0 => "無法更新 %s 檔案 - %e",
+	],
+	"Check the errors in the form to continue." => [
+		0 => "請檢查表單中的錯誤以繼續",
+	],
+	"You must enter the album name." => [
+		0 => "您必須輸入相簿名稱",
+	],
+	"Confirm" => [
+		0 => "確認",
+	],
+	"Select existing album" => [
+		0 => "選擇現有的相簿",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "發生錯誤. 請稍後再試.",
+	],
+	"Please select a valid image file type." => [
+		0 => "請選擇一個有效的圖片格式",
+	],
+	"Please select a picture of at most %s size." => [
+		0 => "請選擇最大允許 %s 大小的圖像.",
+	],
+	"Profile image updated." => [
+		0 => "個人頭像已更新",
+	],
+	"Profile background image updated." => [
+		0 => "個人主頁背景已更新",
+	],
+	"Profile background image deleted." => [
+		0 => "個人主頁背景已刪除",
+	],
+	"Error deleting profile background image." => [
+		0 => "在刪除個人主頁背景時發生錯誤",
+	],
+	"Passwords don't match" => [
+		0 => "密碼不合",
+	],
+	"Update available v%s" => [
+		0 => "更新 v%s 已開放",
+	],
+	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
+		0 => "有可用的系統更新. 您可以自動下載並安裝此更新或者前往 %s 繼續下載該更新檔案.",
+	],
+	"The release notes for this update are:" => [
+		0 => "本次發布的主要更新說明:",
+	],
+	"Update now" => [
+		0 => "立刻更新",
+	],
+	"or" => [
+		0 => "或",
+	],
+	"cancel" => [
+		0 => "取消",
+	],
+	"This website is running latest %s version" => [
+		0 => "網站正在使用最新的%s版本",
+	],
+	"loading" => [
+		0 => "載入中",
+	],
+	"Toggle select" => [
+		0 => "切換選擇",
+	],
+	"Like" => [
+		0 => "喜歡",
+	],
+	"Toggle flag" => [
+		0 => "切換標誌",
+	],
+	"Edit" => [
+		0 => "編輯",
+	],
+	"Album" => [
+		0 => "相簿",
+	],
+	"Delete" => [
+		0 => "刪除",
+	],
+	"Close" => [
+		0 => "關閉",
+	],
+	"Previous" => [
+		0 => "前一個",
+	],
+	"Next" => [
+		0 => "下一個",
+	],
+	"Clipboard image" => [
+		0 => "剪貼板圖像",
+	],
+	"File too big." => [
+		0 => "文件超出允許上傳的大小",
+	],
+	"Invalid or unsupported file format." => [
+		0 => "無效或是不支援的檔案格式.",
+	],
+	"Some files couldn't be added" => [
+		0 => "有些文件無法加入",
+	],
+	"image" => [
+		0 => "圖片",
+	],
+	"%s's Albums" => [
+		0 => "%s 的相簿",
+	],
+	"Image edited successfully." => [
+		0 => "圖片編輯成功",
+	],
+	"private" => [
+		0 => "私密",
+	],
+	"Album edited successfully." => [
+		0 => "相簿編輯成功.",
+	],
+	"Invalid URL key." => [
+		0 => "無效的URL key",
+	],
+	"Category URL key already being used." => [
+		0 => "此分類URL已被使用",
+	],
+	"Category successfully deleted." => [
+		0 => "分類成功刪除",
+	],
+	"Category %s added." => [
+		0 => "分類 %s 已增加.",
+	],
+	"Invalid expiration date." => [
+		0 => "無效的有效期限",
+	],
+	"IP %s already banned." => [
+		0 => "IP %s 已經被禁止訪問",
+	],
+	"IP %s banned." => [
+		0 => "IP %s 禁止訪問",
+	],
+	"IP ban successfully deleted." => [
+		0 => "IP已從阻擋列表中刪除",
+	],
+	"Please fill all the required fields." => [
+		0 => "請填寫所有必填字段",
+	],
+	"Invalid storage capacity value. Make sure to use a valid format." => [
+		0 => "無效的儲存容量值. 請務必使用一個有效的格式",
+	],
+	"Storage capacity can't be lower than its current usage (%s)." => [
+		0 => "儲存空間不能少於當前的使用情形（%s）.",
+	],
+	"Invalid URL." => [
+		0 => "無效URL",
+	],
+	"Storage successfully edited." => [
+		0 => "儲存空間編輯成功",
+	],
+	"User added successfully." => [
+		0 => "成功新增用戶",
+	],
+	"The content has been deleted." => [
+		0 => "該內容已被刪除",
+	],
+	"The content has been moved." => [
+		0 => "該內容已被移動",
+	],
+	"Select" => [
+		0 => "選擇",
+	],
+	"Unselect" => [
+		0 => "未選取",
+	],
+	"The content has been edited." => [
+		0 => "該內容已被編輯",
+	],
+	"Import job ID %s added successfully, you can process the import now" => [
+		0 => "ID %s 導入作業已成功添加，您可以立即處理導入",
+	],
+	"Select number of threads" => [
+		0 => "選擇線程數",
+	],
+	"Import job ID %s is being processed now" => [
+		0 => "正在處理ID %s 導入作業ID %s",
+	],
+	"Import ID %s removed" => [
+		0 => "已刪除ID %s 的導入作業",
+	],
+	"Spam detected" => [
+		0 => "檢測到SPAM",
+	],
+	"album" => [
+		0 => "相簿",
+	],
+	"Flooding detected. You can only upload %limit% %content% per %time%" => [
+		0 => "檢測到短時間內大量圖片上傳。 您只能每%time%上傳%limit%%content%",
 	],
 	"Untitled" => [
 		0 => "未命名標題",
@@ -145,9 +373,6 @@ $translation_table = [
 	"like" => [
 		0 => "喜歡",
 	],
-	"image" => [
-		0 => "圖片",
-	],
 	"Recent" => [
 		0 => "最新",
 	],
@@ -187,9 +412,6 @@ $translation_table = [
 	"Image" => [
 		0 => "圖片",
 	],
-	"Album" => [
-		0 => "相簿",
-	],
 	"User" => [
 		0 => "使用者",
 	],
@@ -204,9 +426,6 @@ $translation_table = [
 	],
 	"Can't insert storage." => [
 		0 => "無法增加儲存空間",
-	],
-	"Storage capacity can't be lower than its current usage (%s)." => [
-		0 => "儲存空間不能少於當前的使用情形（%s）.",
 	],
 	"Can't update storage details." => [
 		0 => "無法更新儲存空間訊息",
@@ -253,9 +472,6 @@ $translation_table = [
 	"There is an update available for your Chevereto based website." => [
 		0 => "Chevereto 基礎網站有可用的更新",
 	],
-	"The release notes for this update are:" => [
-		0 => "本次發布的主要更新說明:",
-	],
 	"admin dashboard" => [
 		0 => "管理員主控台",
 	],
@@ -265,23 +481,14 @@ $translation_table = [
 	"view on %s" => [
 		0 => "%s 已查看",
 	],
+	"cookie policy" => [
+		0 => "cookie 政策",
+	],
+	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link." => [
+		0 => "我們使用了第三方cookie來改善您的瀏覽體驗和服務。如果您繼續使用我們的網站，則你需要理解並接受這個Cookie政策%cookie_policy_link。",
+	],
 	"I understand" => [
 		0 => "我明白",
-	],
-	"You have been forbidden to use this website." => [
-		0 => "你被禁止進入這個網站",
-	],
-	"Feel free to browse and discover all my shared images and albums." => [
-		0 => "隨意瀏覽, 探索我所有分享的圖片和相冊",
-	],
-	"View all my images" => [
-		0 => "查看我所有的圖片",
-	],
-	"Plugin" => [
-		0 => "插件",
-	],
-	"That page doesn't exist" => [
-		0 => "該網頁不存在",
 	],
 	"Forgot password?" => [
 		0 => "忘記密碼?",
@@ -298,8 +505,8 @@ $translation_table = [
 	"Email changed" => [
 		0 => "電子郵件已修改",
 	],
-	"The reCAPTCHA wasn't entered correctly" => [
-		0 => "驗證碼錯誤",
+	"%s says you are a robot" => [
+		0 => "%s 認為你是機器人",
 	],
 	"Invalid Username/Email" => [
 		0 => "無效的帳號或電子郵件",
@@ -328,14 +535,8 @@ $translation_table = [
 	"Welcome to %s" => [
 		0 => "歡迎到%s",
 	],
-	"Passwords don't match" => [
-		0 => "密碼不合",
-	],
 	"Email already being used" => [
 		0 => "此電子郵件已被使用",
-	],
-	"Check the errors in the form to continue." => [
-		0 => "請檢查表單中的錯誤以繼續",
 	],
 	"Password required" => [
 		0 => "需要密碼",
@@ -366,6 +567,9 @@ $translation_table = [
 	],
 	"Settings" => [
 		0 => "設定",
+	],
+	"Bulk importer" => [
+		0 => "批量導入工具",
 	],
 	"Chevereto version" => [
 		0 => "Chevereto版本",
@@ -421,8 +625,20 @@ $translation_table = [
 	"Memory limit" => [
 		0 => "記憶體限制",
 	],
+	"Rebuild stats" => [
+		0 => "重建統計",
+	],
+	"Connecting IP" => [
+		0 => "連接中的IP",
+	],
+	"Not your IP?" => [
+		0 => "不是您的IP ?",
+	],
 	"Links" => [
 		0 => "連結",
+	],
+	"Collaboration" => [
+		0 => "合作",
 	],
 	"Documentation" => [
 		0 => "文件",
@@ -430,14 +646,8 @@ $translation_table = [
 	"Changelog" => [
 		0 => "改版日誌",
 	],
-	"Request new features" => [
-		0 => "請求新功能",
-	],
 	"Bug tracking" => [
 		0 => "錯誤跟踪",
-	],
-	"Blog" => [
-		0 => "部落格",
 	],
 	"Website" => [
 		0 => "網站名稱",
@@ -638,7 +848,7 @@ $translation_table = [
 		0 => "無效的縮圖高度",
 	],
 	"Invalid medium size" => [
-		0 => "無效的中等大小",
+		0 => "無效的中等圖像大小",
 	],
 	"Invalid watermark percentage" => [
 		0 => "無效的水印百分比",
@@ -712,6 +922,9 @@ $translation_table = [
 	"Invalid visibility" => [
 		0 => "无效的可见度",
 	],
+	"Invalid internal type" => [
+		0 => "內部類型無效",
+	],
 	"Invalid target attribute" => [
 		0 => "無效的目標屬性",
 	],
@@ -765,6 +978,9 @@ $translation_table = [
 	],
 	"Invalid SMTP username" => [
 		0 => "無效的SMTP用戶名",
+	],
+	"Invalid key" => [
+		0 => "無效的密鑰",
 	],
 	"This URL key is already being used by another page (ID %s)" => [
 		0 => "此鏈接值已被另壹個頁面使用 (ID %s)",
@@ -865,6 +1081,9 @@ $translation_table = [
 	"Test email sent to %s." => [
 		0 => "測試電子郵件發送到 %s.",
 	],
+	"Downloading %s data" => [
+		0 => "正在下載 %s 數據",
+	],
 	"User %s followed" => [
 		0 => "使用者 %s 已跟隨",
 	],
@@ -891,9 +1110,6 @@ $translation_table = [
 	],
 	"Sign in" => [
 		0 => "登入",
-	],
-	"Logged out" => [
-		0 => "登出",
 	],
 	"Upload images" => [
 		0 => "上傳圖片",
@@ -952,6 +1168,9 @@ $translation_table = [
 	"Settings for %s" => [
 		0 => "%s 的設定",
 	],
+	"You must agree to the terms and privacy policy" => [
+		0 => "您必須同意條款和隱私政策",
+	],
 	"You must be at least %s years old to use this website." => [
 		0 => "您必須年滿 %s 歲才能繼續使用網站.",
 	],
@@ -963,9 +1182,6 @@ $translation_table = [
 	],
 	"%s's Images" => [
 		0 => "%s 的圖片",
-	],
-	"%s's Albums" => [
-		0 => "%s 的相簿",
 	],
 	"Results for" => [
 		0 => "結果",
@@ -988,9 +1204,6 @@ $translation_table = [
 	"Discovery" => [
 		0 => "探索",
 	],
-	"Close" => [
-		0 => "關閉",
-	],
 	"Advanced search" => [
 		0 => "進階搜尋",
 	],
@@ -1000,38 +1213,11 @@ $translation_table = [
 	"Notices (%s)" => [
 		0 => "通知 (%s)",
 	],
-	"Sign in with another account" => [
-		0 => "登入其他帳號",
-	],
-	"or" => [
-		0 => "或",
-	],
-	"Username or Email address" => [
-		0 => "使用者名稱或電子郵件地址",
-	],
-	"Keep me logged in" => [
-		0 => "保持登入狀態",
-	],
-	"Don't have an account? <a href='%s'>Sign up</a> now." => [
-		0 => "沒有帳號? <a href='%s'>馬上註冊</a>.",
-	],
-	"Sign up with another account" => [
-		0 => "註冊另一個帳號",
-	],
-	"Email address" => [
-		0 => "電子郵件地址",
-	],
-	"Username" => [
-		0 => "使用者名稱",
-	],
-	"I'm at least %s years old" => [
-		0 => "我已年滿 %s 歲",
+	"Lights" => [
+		0 => "燈光",
 	],
 	"Notifications" => [
 		0 => "通知",
-	],
-	"loading" => [
-		0 => "載入中",
 	],
 	"You don't have notifications" => [
 		0 => "您沒有任何通知",
@@ -1099,17 +1285,32 @@ $translation_table = [
 	"You can also %i or %u." => [
 		0 => "你可以從%i或%u",
 	],
+	"browse from your device" => [
+		0 => "從您的設備瀏覽",
+	],
 	"take a picture" => [
 		0 => "截圖",
+	],
+	"You can also %i, %c or %u." => [
+		0 => "你也可以 %i, %c 或者 %u.",
 	],
 	"Edit or resize any image by clicking the image preview" => [
 		0 => "編輯或通過點擊圖像預覽調整圖像大小",
 	],
+	"Edit any image by touching the image preview" => [
+		0 => "通過點擊圖像預覽來調整任意圖像",
+	],
 	"your computer" => [
 		0 => "你的電腦",
 	],
+	"You can add more images from %i or %u." => [
+		0 => "您可以從 %i 或 %u 添加更多圖像.",
+	],
 	"your device" => [
 		0 => "你的裝置",
+	],
+	"You can add more images from %i, %c or %u." => [
+		0 => "您可以從 %i, %c 或%u添加更多圖像.",
 	],
 	"Uploading %q %o" => [
 		0 => "上傳中 %q %o",
@@ -1138,14 +1339,14 @@ $translation_table = [
 	"move it to an existing album" => [
 		0 => "移動到現有的相簿",
 	],
+	"You must %s or %l to save this content into your account." => [
+		0 => "您必須 %s 或 %l 才能將此內容保存到您的帳戶中。",
+	],
 	"create an account" => [
 		0 => "建立新帳號",
 	],
 	"sign in" => [
 		0 => "登入",
-	],
-	"You can %s or %l to save this content into your account." => [
-		0 => "您可以%s或%l來保存圖片到您的帳戶",
 	],
 	"No %s have been uploaded" => [
 		0 => "沒有%s已經上傳",
@@ -1168,9 +1369,6 @@ $translation_table = [
 	"Uploading" => [
 		0 => "上傳中",
 	],
-	"cancel" => [
-		0 => "取消",
-	],
 	"cancel remaining" => [
 		0 => "取消剩下的",
 	],
@@ -1183,14 +1381,20 @@ $translation_table = [
 	"Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information." => [
 		0 => "檢查 <a data-modal=\"simple\" data-target=\"failed-upload-result\">錯誤報告</a> 來了解更多訊息.",
 	],
+	"Register to get %s" => [
+		0 => "註冊之後可上傳大小:%s",
+	],
+	"reset" => [
+		0 => "重置",
+	],
 	"close" => [
 		0 => "關閉",
 	],
 	"copy" => [
 		0 => "複製",
 	],
-	"Edit" => [
-		0 => "編輯",
+	"insert" => [
+		0 => "插入",
 	],
 	"Remove" => [
 		0 => "移除",
@@ -1246,8 +1450,17 @@ $translation_table = [
 	"Create album" => [
 		0 => "建立相簿",
 	],
-	"The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
-		0 => "上傳的圖片將被移動到這個新建立的相簿. 你也可以移動內容到<a class=\"modal-switch\" data-switch=\"move-existing-album\">現有的相簿</a>.",
+	"The uploaded content will be moved to this newly created album." => [
+		0 => "上傳的內容將被移動到此新創建的相冊。",
+	],
+	"existing album" => [
+		0 => "現有相冊",
+	],
+	"You can also move the content to an %a." => [
+		0 => "您還可以將內容移動到%a",
+	],
+	"You must %s or %l if you want to edit this album later on." => [
+		0 => "如果你想稍後編輯此相冊，則必須為 %s 或 %l。",
 	],
 	"Move to album" => [
 		0 => "移動到相簿",
@@ -1257,9 +1470,6 @@ $translation_table = [
 	],
 	"Error report" => [
 		0 => "錯誤報告",
-	],
-	"album" => [
-		0 => "相簿",
 	],
 	"Viewer links" => [
 		0 => "觀看者連結",
@@ -1381,6 +1591,36 @@ $translation_table = [
 	"Untitled image" => [
 		0 => "未命名圖片",
 	],
+	"Path" => [
+		0 => "路徑",
+	],
+	"Local path (absolute)" => [
+		0 => "絕對路徑",
+	],
+	"Directory structure" => [
+		0 => "目錄結構",
+	],
+	"Parse top level folders as users (username)" => [
+		0 => "將頂級文件夾解析為用戶（用戶名）",
+	],
+	"Parse top level folders as albums" => [
+		0 => "將頂級文件夾解析為相冊",
+	],
+	"Don't parse folders" => [
+		0 => "不解析文件夾",
+	],
+	"When parsing top level folders as users, second level folders will be parsed as user albums. Parsing top level folders as albums adds these as guest albums." => [
+		0 => "當將頂級文件夾解析為用戶時，第二級文件夾將被解析為用戶相冊。 將頂級文件夾解析為相冊會將其添加為來賓相冊。",
+	],
+	"Threads" => [
+		0 => "主題",
+	],
+	"This determines how intensive and fast will be the import process. Don't use more than %s threads on a shared server." => [
+		0 => "這決定了導入過程的強度和速度。 在共享服務器上使用的線程不要超過 %s 個。",
+	],
+	"You can use wildcard * characters." => [
+		0 => "您可以使用通配符*字符.",
+	],
 	"Expiration date" => [
 		0 => "到期日",
 	],
@@ -1414,6 +1654,9 @@ $translation_table = [
 	"Region" => [
 		0 => "地區",
 	],
+	"Storage region" => [
+		0 => "儲存空間區域",
+	],
 	"Storage bucket" => [
 		0 => "儲存bucket",
 	],
@@ -1429,20 +1672,14 @@ $translation_table = [
 	"Storage secret" => [
 		0 => "儲存空間秘密",
 	],
-	"Client email" => [
-		0 => "用戶電子郵件",
-	],
-	"Google Cloud client email" => [
-		0 => "Google Cloud用戶電子郵件",
-	],
-	"You will need a <a %s>service account</a> for this." => [
-		0 => "您需要一個 <a %s>服務帳戶</a> ",
-	],
 	"Private key" => [
 		0 => "私密金鑰",
 	],
 	"Google Cloud JSON key" => [
 		0 => "Google Cloud JSON key",
+	],
+	"You will need a <a %s>service account</a> for this." => [
+		0 => "您需要一個 <a %s>服務帳戶</a> ",
 	],
 	"Service name" => [
 		0 => "服務名稱",
@@ -1456,8 +1693,8 @@ $translation_table = [
 	"API endpoint for OpenStack identity" => [
 		0 => "OpenStack identity 的 API endpoint ",
 	],
-	"Storage region" => [
-		0 => "儲存空間區域",
+	"Username" => [
+		0 => "使用者名稱",
 	],
 	"Container" => [
 		0 => "儲存器",
@@ -1477,23 +1714,32 @@ $translation_table = [
 	"Tenant name (account name)" => [
 		0 => "Tenant name (account name)",
 	],
+	"Storage endpoint" => [
+		0 => "存儲端點",
+	],
+	"Server address" => [
+		0 => "服務器地址",
+	],
 	"Hostname or IP of the storage server" => [
 		0 => "儲存服務器主機名或IP",
-	],
-	"Path" => [
-		0 => "路徑",
 	],
 	"Server path" => [
 		0 => "伺服器路徑",
 	],
-	"Server path where the files will be stored" => [
-		0 => "伺服器上檔案儲存的位置",
+	"Absolute path where the files will be stored in the context of the %p login. Use %s for root path." => [
+		0 => "絕對路徑存儲在 %p 登錄中，使用 %s 將其設置為根路徑。",
 	],
-	"Server username" => [
-		0 => "伺服器名稱",
+	"Server login" => [
+		0 => "伺服器登錄",
 	],
 	"Server password" => [
 		0 => "伺服器密碼",
+	],
+	"Local path" => [
+		0 => "本地路徑",
+	],
+	"Local path where the files will be stored" => [
+		0 => "文件存儲的本地路徑",
 	],
 	"Storage capacity" => [
 		0 => "儲存容量",
@@ -1537,14 +1783,17 @@ $translation_table = [
 	"Flag as safe" => [
 		0 => "標記為安全",
 	],
-	"Delete" => [
-		0 => "刪除",
-	],
 	"Create new album" => [
 		0 => "建立新的相簿",
 	],
-	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
-		0 => "您必須登入才能使用所有的功能. 如果您還未註冊請現在就<a href=\"%s\">註冊</a>.",
+	"Sign in with another account" => [
+		0 => "登入其他帳號",
+	],
+	"Continue with %label%" => [
+		0 => "用 %label% 賬號登錄",
+	],
+	"Home" => [
+		0 => "主頁",
 	],
 	"There's nothing to show here." => [
 		0 => "沒有顯示的內容",
@@ -1603,8 +1852,14 @@ $translation_table = [
 	"Guest" => [
 		0 => "訪客",
 	],
-	"Like" => [
-		0 => "喜歡",
+	"Keyboard shortcuts" => [
+		0 => "鍵盤快捷鍵",
+	],
+	"Private album" => [
+		0 => "私人相簿",
+	],
+	"Password protected" => [
+		0 => "密碼保護",
 	],
 	"Uploaded by guest" => [
 		0 => "由訪客上傳",
@@ -1618,11 +1873,11 @@ $translation_table = [
 	"by %u" => [
 		0 => "by %u",
 	],
-	"Select" => [
-		0 => "選擇",
-	],
 	"Toggle unsafe flag" => [
 		0 => "切換不安全標記",
+	],
+	"That page doesn't exist" => [
+		0 => "該網頁不存在",
 	],
 	"The requested page was not found." => [
 		0 => "所請求的頁面不存在",
@@ -1633,17 +1888,11 @@ $translation_table = [
 	"The user has been deleted" => [
 		0 => "該使用者已被刪除",
 	],
-	"The content has been deleted." => [
-		0 => "該內容已被刪除",
-	],
 	"Your account is almost ready" => [
 		0 => "您的帳戶已經準備好",
 	],
 	"An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "啟用的電子郵件已發送到您的帳戶 %s. 啟用連結只適用於48小時以內. 如果您沒有收到請檢查您的垃圾郵件或垃圾郵件過濾器.",
-	],
-	"Go to homepage" => [
-		0 => "轉到主頁",
 	],
 	"Resend activation" => [
 		0 => "重新啟用",
@@ -1660,26 +1909,23 @@ $translation_table = [
 	"Your email address" => [
 		0 => "您的電子郵件",
 	],
-	"Add email" => [
-		0 => "增加電子郵件",
+	"Submit" => [
+		0 => "送出",
 	],
 	"An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "一封關於重新設定密碼的郵件已發送到您的郵箱. 如果你收不到請檢查你的垃圾郵件.",
 	],
-	"Resend instructions" => [
-		0 => "重新發送",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "發生錯誤. 請稍後再試.",
-	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "剛才的電子郵件已發送和說明重置您的密碼. 如果您沒有收到郵件, 請嘗試檢查您的垃圾郵件或垃圾郵件過濾器",
 	],
-	"Enter your username or the email address that you used to create your account." => [
-		0 => "請輸入您的帳戶名稱或您註冊帳戶的電子郵件地址.",
+	"Resend instructions" => [
+		0 => "重新發送",
 	],
-	"Submit" => [
-		0 => "送出",
+	"Enter your username or email address to continue. You may need to check your spam folder or whitelist %s" => [
+		0 => "輸入您的用戶名或電子郵件地址以繼續。 您可能需要檢查垃圾郵件文件夾或將 %s 列入白名單",
+	],
+	"Username or Email address" => [
+		0 => "使用者名稱或電子郵件地址",
 	],
 	"Your password has been changed. You can now try logging in using your new password." => [
 		0 => "您的密碼已被更改. 現在, 您可以嘗試使用您的新密碼登入.",
@@ -1687,29 +1933,20 @@ $translation_table = [
 	"Login now" => [
 		0 => "現在登入",
 	],
-	"Enter the new password that you want to use." => [
-		0 => "請輸入您要使用的新密碼.",
-	],
-	"New Password" => [
-		0 => "新密碼",
+	"Enter your new password" => [
+		0 => "輸入新密碼",
 	],
 	"%d characters min" => [
 		0 => "最少 %d 個字元",
 	],
-	"Enter your new password" => [
-		0 => "輸入新密碼",
-	],
-	"Confirm password" => [
-		0 => "確認密碼",
+	"Password strength" => [
+		0 => "密碼強度",
 	],
 	"Re-enter your new password" => [
 		0 => "重新輸入新密碼",
 	],
 	"An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "一封啟用郵件已經發送至您的郵箱 %s . n\\ 如果你收不到請檢查你的垃圾郵件.",
-	],
-	"Enter the username or email address that you used to create your account to continue." => [
-		0 => "輸入您用於繼續建立您的帳戶的用戶名稱及電子郵件地址.",
 	],
 	"This content is private" => [
 		0 => "此內容是私人的",
@@ -1741,8 +1978,122 @@ $translation_table = [
 	"I Agree" => [
 		0 => "我同意",
 	],
+	"documentation" => [
+		0 => "文件",
+	],
+	"Learn more about %s at our %d." => [
+		0 => "在我們的 %d 知道更多關於 %s 的資料",
+	],
+	"The connecting IP is determined using the server variable %var%. If the detected IP doesn't match yours, it means that your web server is under a proxy and you need to tweak your server to set the real connecting IP." => [
+		0 => "使用服務器變量 %var% 獲取真實IP。如果檢測到的IP與您的不匹配，這意味著您的Web服務器在代理下，您需要調整您的服務器設置，以便獲取真實IP。使用服務器變量 %var% 獲取真實IP。如果檢測到的IP與您的不匹配，這意味著您的Web服務器在代理下，您需要調整您的服務器設置，以便獲取真實IP。",
+	],
+	"For Nginx, you must use %nginx%. For Apache, %apache%." => [
+		0 => "對於nginx，您必須使用 %nginx% ；對於Apache，%apache% 。",
+	],
+	"Make sure that you address this issue as the system relies on accurate IP detections to provide basic functionalities and to protect against spam, flooding, and brute force attacks." => [
+		0 => "由於系統依賴準確的IP檢測來提供基本功能並防止SPAM、泛濫式圖片上傳及暴力破解，因此請確保您已解決此問題。",
+	],
 	"Disk used" => [
 		0 => "已用大小",
+	],
+	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure." => [
+		0 => "該工具允許您通過指向要導入內容的系統路徑來向網站批量添加內容。 它支持使用基於文件夾的結構添加用戶，相冊和圖像。",
+	],
+	"Automatic importing" => [
+		0 => "自動導入",
+	],
+	"The system automatically parses any content by a continuous observation of the %path% path." => [
+		0 => "系統通過連續觀察 %path% 路徑來自動解析任何內容。",
+	],
+	"The system automatically parses any content by a continous observation of the %path% path." => [
+		0 => "系統通過連續觀察 %path% 路徑來自動解析任何內容。",
+	],
+	"Completed jobs will be automatically re-started after %n %m." => [
+		0 => "%n %m 之後，已完成的作業將自動重新啟動。",
+	],
+	"Reset to clear stats and logs." => [
+		0 => "重置以清除統計信息和日誌。",
+	],
+	"Queued" => [
+		0 => "已排定",
+	],
+	"Working" => [
+		0 => "工作中",
+	],
+	"Paused" => [
+		0 => "已暫停",
+	],
+	"Canceled" => [
+		0 => "取消",
+	],
+	"Completed" => [
+		0 => "已完成",
+	],
+	"Actions" => [
+		0 => "動作",
+	],
+	"Reset" => [
+		0 => "重置",
+	],
+	"Pause" => [
+		0 => "暫停",
+	],
+	"Resume" => [
+		0 => "恢復",
+	],
+	"Process log" => [
+		0 => "流程日誌",
+	],
+	"Errors" => [
+		0 => "錯誤",
+	],
+	"Status" => [
+		0 => "狀態",
+	],
+	"The system works with a scheduled command to continuously process the importing. It requires a crontab entry." => [
+		0 => "系統使用計劃的命令來連續處理導入。 它需要使用crontab。",
+	],
+	"You can run the command in parallel by changing the integer value of %s%." => [
+		0 => "您可以通過更改 %s% 的整數值來並行運行命令。女",
+	],
+	"All file-system permissions must be granted for the crontab user at %path%" => [
+		0 => "必須在 %path% 為crontab用戶授予所有文件系統權限",
+	],
+	"Required crontab entry:" => [
+		0 => "必需的crontab指令：",
+	],
+	"Add import job" => [
+		0 => "加入導入作業",
+	],
+	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d." => [
+		0 => "該工具允許您通過指向要導入內容的系統路徑來為網站批量添加內容。 它支持使用基於文件夾的結構添加用戶，相冊和圖像。 您可以在我們的 %d 中了解有關文件夾結構、添加元數據以及有關此工具的所有信息。",
+	],
+	"Process import" => [
+		0 => "流程導入",
+	],
+	"Top level folders as %s" => [
+		0 => "頂級文件夾為 %s",
+	],
+	"Process" => [
+		0 => "處理",
+	],
+	"Cancel" => [
+		0 => "取消",
+	],
+	"Do you really want to remove the import ID %s?" => [
+		0 => "您是否真的要刪除導入ID %s ?",
+	],
+	"Manual importing" => [
+		0 => "手動導入中",
+	],
+	"The system will parse the contents of any available filesystem path." => [
+		0 => "系統將解析任何可用文件系統路徑的內容。",
+	],
+	"These processes must be manually created and handled with the web browser tab open." => [
+		0 => "必須在打開Web瀏覽器分頁的情況下手動創建和處理這些過程。",
+	],
+	"Parser" => [
+		0 => "解析工具",
 	],
 	"Add user" => [
 		0 => "新增使用者",
@@ -1750,17 +2101,17 @@ $translation_table = [
 	"Role" => [
 		0 => "規則",
 	],
+	"Manager" => [
+		0 => "管理程式",
+	],
 	"Administrator" => [
 		0 => "管理員",
 	],
+	"Email address" => [
+		0 => "電子郵件地址",
+	],
 	"This setting is always diabled when using personal website mode." => [
 		0 => "個人網站模式被開啟時, 該設置始終禁用.",
-	],
-	"documentation" => [
-		0 => "文件",
-	],
-	"Learn more about %s at our %d." => [
-		0 => "在我們的 %d 知道更多關於 %s 的資料",
 	],
 	"Add category" => [
 		0 => "新增分類",
@@ -1783,6 +2134,24 @@ $translation_table = [
 	"Website description" => [
 		0 => "網站描述",
 	],
+	"Powered by" => [
+		0 => "加持自",
+	],
+	"Enable this if you want to show a \"%s\" link at the footer." => [
+		0 => "如果要顯示社交網絡按鈕以共享內容，請啟用此選項。",
+	],
+	"Automatic" => [
+		0 => "自動",
+	],
+	"Forced" => [
+		0 => "強制",
+	],
+	"%a will use HTTPS detection on the server side (recommended). %f will use HTTPS regardless of your server setup. %d to don't use HTTPS at all." => [
+		0 => "%a 將在服務器端檢測並自動使用HTTPS(推薦)， %f 無論您的服務器如何設置，都將使用HTTPS， %d 禁用且完全不使用HTTPS。",
+	],
+	"This only controls the protocol used in the URLs, it won't turn your website into a valid HTTPS website unless your server is configured to support and use HTTPS." => [
+		0 => "這僅控制URL中使用的協議，除非將服務器配置為支持和使用HTTPS，否則它不會將您的網站變成有效的HTTPS網站。",
+	],
 	"Default time zone" => [
 		0 => "預設時區",
 	],
@@ -1797,6 +2166,9 @@ $translation_table = [
 	],
 	"guests" => [
 		0 => "訪客",
+	],
+	"Enables explore for guests." => [
+		0 => "為遊客啟用探索.",
 	],
 	"Enables to browse images randomly." => [
 		0 => "啟用隨機圖像瀏覽",
@@ -1866,6 +2238,24 @@ $translation_table = [
 	],
 	"Type" => [
 		0 => "類型",
+	],
+	"Terms of service" => [
+		0 => "服務條款",
+	],
+	"Privacy" => [
+		0 => "隱私",
+	],
+	"Contact" => [
+		0 => "聯繫",
+	],
+	"Extra page" => [
+		0 => "額外頁面",
+	],
+	"Internal page type" => [
+		0 => "內部頁面類型",
+	],
+	"You can have multiple extra pages, but only one of the other special internal types." => [
+		0 => "您可以有多個額外的頁面，但只能是其他特殊內部類型之一。",
 	],
 	"Page visibility" => [
 		0 => "頁面可見度",
@@ -1942,6 +2332,9 @@ $translation_table = [
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "你真的要刪除頁面 ID %s ? 這動作不能被復原",
 	],
+	"Enabled image formats" => [
+		0 => "啟用的圖像格式",
+	],
 	"Unchecked image formats won't be allowed to be uploaded." => [
 		0 => "不允許上傳未經檢查的圖片格式。",
 	],
@@ -1956,6 +2349,15 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "允許非註冊用戶上傳",
+	],
+	"Upload user interface" => [
+		0 => "上載使用者介面",
+	],
+	"On-page container" => [
+		0 => "相同頁面中的上傳工具",
+	],
+	"route" => [
+		0 => "路由",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "啟用嵌入代碼（上傳者）",
@@ -2019,6 +2421,9 @@ $translation_table = [
 	],
 	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
 		0 => "主機限制最大上傳大小是%s這個限制是因為%u以及%p(%f的數值)",
+	],
+	"Same as \"%s\" but for guests." => [
+		0 => "跟\"%s\"一樣，遊客允許上傳大小.",
 	],
 	"Image path" => [
 		0 => "圖片路徑",
@@ -2194,6 +2599,12 @@ $translation_table = [
 	"Enable this if you want to allow users to signup." => [
 		0 => "啟用此代表您允許用戶自行註冊賬號.",
 	],
+	"Enable user content delete" => [
+		0 => "啟用用戶內容刪除",
+	],
+	"Enable this if you want to allow users to delete their own content. This setting doesn't affect administrators." => [
+		0 => "如果要允許用戶刪除自己的內容，請啟用此選項。 此設置不會影響管理員。",
+	],
 	"Minimum age required" => [
 		0 => "最低年齡要求",
 	],
@@ -2202,6 +2613,12 @@ $translation_table = [
 	],
 	"Leave it empty to don't require a minimum age to use the website." => [
 		0 => "留空則表示不設置最低年齡, 對所有年齡都有效.",
+	],
+	"Notify on user signup" => [
+		0 => "用户注册通知",
+	],
+	"Enable this if you want to get an email notification for each new user signup." => [
+		0 => "如果要為每個新用戶註冊獲取電子郵件通知，請啟用此選項。",
 	],
 	"Username routing" => [
 		0 => "用戶名連結結構",
@@ -2305,6 +2722,12 @@ $translation_table = [
 	"What pagination method should be used." => [
 		0 => "選擇使用什麼分頁模式.",
 	],
+	"Listing viewer" => [
+		0 => "列表預覽",
+	],
+	"Enable this to use the listing viewer when clicking on an image." => [
+		0 => "啟用之後，你在探索頁麵點擊圖片之後會有預覽界面.",
+	],
 	"Image listing size" => [
 		0 => "圖片列表大小樣式",
 	],
@@ -2315,7 +2738,16 @@ $translation_table = [
 		0 => "固定",
 	],
 	"Both methods use a fixed width but fluid method uses automatic heights." => [
-		0 => "首頁圖片列表樣式. 這兩種方法都使用固定寬度, 但「浮動」的方法是使用自動圖片的高度.",
+		0 => "首頁圖片列表樣式. 這兩種方法都使用固定寬度, 但“自動”的方法是使用自動圖片的高度.",
+	],
+	"Album listing images requirement" => [
+		0 => "相冊被列出所需圖片數量",
+	],
+	"explore" => [
+		0 => "探索",
+	],
+	"Sets the minimum image count needed to show albums in explore." => [
+		0 => "設置在探索中顯示相冊所需的最小圖像數。",
 	],
 	"Listing columns number" => [
 		0 => "頁面顯示列數",
@@ -2461,6 +2893,12 @@ $translation_table = [
 	"Enable embed codes (content)" => [
 		0 => "啟用嵌入代碼（內容）",
 	],
+	"Everybody" => [
+		0 => "任何人",
+	],
+	"Users only" => [
+		0 => "用戶限定",
+	],
 	"Enable this if you want to show embed codes for the content." => [
 		0 => "啟用此選項, 允許用戶取得嵌入代碼 .",
 	],
@@ -2481,6 +2919,9 @@ $translation_table = [
 	],
 	"Put your custom JS code here. It will be placed as <script> just before the closing </head> tag." => [
 		0 => "把你的自訂JS代碼在這裡. 它會被放在 <script> 標籤 </head> 前的位置.",
+	],
+	"Do not use %s markup here. This is for plain JS code, not for HTML script tags. If you use script tags here you will break your website." => [
+		0 => "不要在這裡使用 %s 標記。 這適用於普通的JS代碼，不適用於HTML script標籤。 如果您在此處使用script標籤，則會破壞您的網站。",
 	],
 	"Style" => [
 		0 => "样式",
@@ -2560,8 +3001,8 @@ $translation_table = [
 	"User IDs" => [
 		0 => "用户IDs",
 	],
-	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
-		0 => "在網站主頁顯示指定多個用戶的最新圖片, 請用逗號分隔開. 留空則顯示全站最新圖片（不含隱私圖像）.",
+	"Comma-separated list of target user IDs (integers) to show most recent images on homepage. Leave it empty to display trending images." => [
+		0 => "用逗號分隔的目標用戶ID列表，以在首頁上顯示圖像。 保留為空白或零以顯示所有最近的圖像。",
 	],
 	"banners" => [
 		0 => "橫幅",
@@ -2577,6 +3018,18 @@ $translation_table = [
 	],
 	"Enable this to show a notice on top warning you about new available system updates." => [
 		0 => "啟用此則顯示一個通知, 提示您關於新的可用系統更新.",
+	],
+	"Dump update query" => [
+		0 => "轉儲更新查詢",
+	],
+	"Enable this if you want to dump the update query to run it manually." => [
+		0 => "如果要自動檢測並為每個用戶設置正確的語言，請啟用此選項。",
+	],
+	"SEO %s URLs" => [
+		0 => "SEO %s 的網址",
+	],
+	"Enable this if you want to use SEO %s URLs." => [
+		0 => "如果要使用SEO %s URL，請啟用此選項。",
 	],
 	"Minify code" => [
 		0 => "最小化代碼",
@@ -2631,6 +3084,30 @@ $translation_table = [
 	],
 	"Album routing" => [
 		0 => "相簿路徑",
+	],
+	"Hostname" => [
+		0 => "主機名",
+	],
+	"Hostname on which sub-domain wildcards will be added." => [
+		0 => "將在其上添加子域通配符的主機名。",
+	],
+	"This setting may be overridden by %s." => [
+		0 => "此設置可能被 %s 覆蓋。",
+	],
+	"Language subdomains" => [
+		0 => "語言子域名",
+	],
+	"languages" => [
+		0 => "語言",
+	],
+	"Enable to use %s for %t." => [
+		0 => "啟用將 %s 用於 %t 。",
+	],
+	"Username subdomains" => [
+		0 => "用戶子域名",
+	],
+	"user profiles" => [
+		0 => "用戶資料",
 	],
 	"Custom language strings" => [
 		0 => "其他語言字串",
@@ -2716,14 +3193,53 @@ $translation_table = [
 	"Unsecured" => [
 		0 => "非安全",
 	],
+	"Decode ID" => [
+		0 => "解碼 ID",
+	],
+	"Encode ID" => [
+		0 => "編碼 ID",
+	],
 	"Send test email" => [
 		0 => "寄出測試郵件",
 	],
-	"test@somedomain.com" => [
-		0 => "test@somedomain.com",
-	],
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "使用這個來測試您的電子郵件是否已寄出. 我們建議您使用 %s.",
+	],
+	"Export a user" => [
+		0 => "導出用戶(1個)",
+	],
+	"Export user" => [
+		0 => "導出",
+	],
+	"This will allow you to download a user's standard personal information in JSON format." => [
+		0 => "這將讓用戶信息保存到 .Json 格式的文件中並下載",
+	],
+	"Regenerate external storage stats" => [
+		0 => "重新生成外部存儲統計信息",
+	],
+	"Storage id" => [
+		0 => "儲存編號",
+	],
+	"Regenerate" => [
+		0 => "重新生成",
+	],
+	"This will re-calculate the sum of all the image records associated to the target external storage." => [
+		0 => "這將重新計算與目標外部存儲關聯的所有圖像記錄的總和。",
+	],
+	"Migrate image records from one external storage to another" => [
+		0 => "將圖像記錄從一個外部存儲遷移到另一個",
+	],
+	"Source storage id" => [
+		0 => "來源存儲ID",
+	],
+	"Target storage id" => [
+		0 => "目標存儲ID",
+	],
+	"Migrate" => [
+		0 => "遷移",
+	],
+	"This only updates the database. You must transfer the actual files to target storage container on your own. URL rewriting is strongly recommended. Use zero (0) for local storage." => [
+		0 => "這只會更新數據庫。 您必須自行將實際文件傳輸到目標存儲容器。 強烈建議使用URL rewriting。 使用零（0）進行本地存儲。",
 	],
 	"social networks" => [
 		0 => "社交網絡",
@@ -2767,8 +3283,26 @@ $translation_table = [
 	"VK client secret" => [
 		0 => "VK client secret",
 	],
+	"%s spam protection" => [
+		0 => "%s SPAM防護",
+	],
+	"user generated content" => [
+		0 => "用戶生成的內容",
+	],
+	"Enable this to use %l to block spam on %c." => [
+		0 => "啟用它以使用 %l 阻止%c 上的SPAM。",
+	],
+	"%s API key" => [
+		0 => "%s API密鑰",
+	],
+	"user signup" => [
+		0 => "用戶註冊",
+	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "你需要一個 <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a>",
+	],
+	"Please note that each reCAPTCHA version require its own set of keys. Don't forget to update the keys if you change versions." => [
+		0 => "請注意，每個reCAPTCHA版本都需要其自己的密鑰組合。 如果更改版本，請不要忘記更新密鑰。",
 	],
 	"%s site key" => [
 		0 => "%s 網站鑰匙",
@@ -2781,6 +3315,12 @@ $translation_table = [
 	],
 	"How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA." => [
 		0 => "登入失敗多少次後顯示驗證碼? 鍵入\"0\"零則始終顯示驗證碼.",
+	],
+	"Force %s on contact page" => [
+		0 => "在聯繫頁面強制開啟 %s",
+	],
+	"Enable this to always show %s on contact page." => [
+		0 => "啟用此選項可始終在聯繫頁面上顯示 %s 。",
 	],
 	"Comments API" => [
 		0 => "評論 API",
@@ -2814,6 +3354,15 @@ $translation_table = [
 	],
 	"Use this key when using the <a %s>API v1</a>." => [
 		0 => "欲使用 <a %s>API v1</a>請用這個金鑰",
+	],
+	"Plugin route" => [
+		0 => "上傳插件",
+	],
+	"Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators." => [
+		0 => "啟用此選項可在%u顯示插件說明。 這些說明的鏈接將添加到%s菜單中。 此設置不會影響管理員。",
+	],
+	"Use this to set a custom URL for %p. Please note that you need to manually replicate %s in this URL." => [
+		0 => "使用此選項可為%p設置自定義URL。 請注意，您需要在此URL中手動複製%s。",
 	],
 	"Cookie law compliance" => [
 		0 => "Cookie的法規",
@@ -2869,20 +3418,26 @@ $translation_table = [
 	"Start uploading" => [
 		0 => "開始上傳",
 	],
-	"Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings." => [
-		0 => "填寫此字段上傳圖片到 %s 帳戶. <br> 你可以到主控台編輯目標用戶",
-	],
 	"Sign up to unlock all the features" => [
 		0 => "註冊即可啟用所有的功能",
 	],
 	"Manage your content, create private albums, customize your profile and more." => [
 		0 => "管理您的內容, 建立您的個人相簿, 自訂您的個人資料, 展示您的個人主頁和更多",
 	],
-	"Enter your password" => [
-		0 => "請輸入您的密碼",
+	"Sign in with your account" => [
+		0 => "使用您的帳戶登錄",
+	],
+	"Don't have an account? <a href='%s'>Sign up</a> now." => [
+		0 => "沒有帳號? <a href='%s'>馬上註冊</a>.",
+	],
+	"Logged out" => [
+		0 => "登出",
 	],
 	"You have been logged off %s. Hope to see you soon." => [
 		0 => "您已登出 %s , 希望很快再見到您",
+	],
+	"Go to homepage" => [
+		0 => "轉到主頁",
 	],
 	"Website under maintenance" => [
 		0 => "網站正在維護中",
@@ -2898,6 +3453,63 @@ $translation_table = [
 	],
 	"Send" => [
 		0 => "寄出",
+	],
+	"Add image uploading to your website, blog or forum by installing our upload plugin. It provides image uploading to any website by placing a button that will allow your users to directly upload images to our service and it will automatically handle the codes needed for insertion. All features included like drag and drop, remote upload, image resizing and more." => [
+		0 => "通過安裝我們的上傳插件，將圖片上傳到您的網站，博客或論壇。 它通過放置一個按鈕，允許您的用戶直接將圖像上傳到我們的服務，並將自動處理插入所需的代碼，從而將圖像上傳到任何網站。 所有功能包括拖放，遠程上傳，圖像大小調整等。",
+	],
+	"Supported software" => [
+		0 => "支持的軟件",
+	],
+	"supported software" => [
+		0 => "支持的軟件",
+	],
+	"The plugin works in any website with user-editable content and for %sv, it will place an upload button that will match the target editor toolbar so no extra customization is needed." => [
+		0 => "該插件適用於任何具有用戶可編輯內容的網站，對於%sv，它將放置一個與目標編輯器工具欄匹配的上傳按鈕，因此無需額外的自定義。",
+	],
+	"Add it to your website" => [
+		0 => "將其添加到您的網站",
+	],
+	"options" => [
+		0 => "選項",
+	],
+	"Copy and paste the plugin code into your website HTML code (preferably inside the head section). There are plenty %o to make it fit better to your needs." => [
+		0 => "將插件代碼複製並粘貼到您的網站HTML代碼中（最好在head內）。 有足夠的%o使它更適合您的需求。",
+	],
+	"Basic options" => [
+		0 => "基本選項",
+	],
+	"Color palette" => [
+		0 => "調色板",
+	],
+	"Button color scheme" => [
+		0 => "按鈕配色方案",
+	],
+	"Embed codes that will be auto-inserted in editor box" => [
+		0 => "嵌入代碼將自動插入到編輯框中",
+	],
+	"Sibling selector" => [
+		0 => "Sibling 選擇器",
+	],
+	"Sibling element selector where to place the button next to" => [
+		0 => "Sibling元素選擇器的旁邊放置按鈕",
+	],
+	"Sibling position" => [
+		0 => "Sibling順序",
+	],
+	"After" => [
+		0 => "後",
+	],
+	"Before" => [
+		0 => "先",
+	],
+	"Position relative to sibling element" => [
+		0 => "相對於sibling元素的位置",
+	],
+	"Advanced options" => [
+		0 => "高級選項",
+	],
+	"The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options." => [
+		0 => "該插件有一大堆附加選項，可以完全自定義。 您可以使用自定義HTML，CSS，自己的調色板，設置监控服务等。 檢查%d和插件源以更好地了解這些高級選項。",
 	],
 	"You either don't have permission to access this page or the link has expired." => [
 		0 => "您沒有權限訪問此網頁或連結已過期",
@@ -2916,9 +3528,6 @@ $translation_table = [
 	],
 	"Registration IP" => [
 		0 => "註冊 IP",
-	],
-	"Status" => [
-		0 => "狀態",
 	],
 	"Valid" => [
 		0 => "有效",
@@ -2980,6 +3589,12 @@ $translation_table = [
 	"This user doesn't have a password. Add one using this form." => [
 		0 => "這個用戶沒有輸入密碼. 新增一個密碼使用這種形式登入",
 	],
+	"Enter your password" => [
+		0 => "請輸入您的密碼",
+	],
+	"Confirm password" => [
+		0 => "確認密碼",
+	],
 	"Re-enter your password" => [
 		0 => "請再輸入您的密碼",
 	],
@@ -2988,9 +3603,6 @@ $translation_table = [
 	],
 	"Delete existing image" => [
 		0 => "刪除已存在的照片",
-	],
-	"Privacy" => [
-		0 => "隱私",
 	],
 	"Make my profile and identity totally private" => [
 		0 => "僅自己可見我的個人資料",
@@ -3013,8 +3625,8 @@ $translation_table = [
 	"User has no connections." => [
 		0 => "用戶沒有任何連結",
 	],
-	"Link your account to external services to be able to login and share content." => [
-		0 => "將您的帳戶連結至外部服務, 可以藉此登入和分享內容.",
+	"Link your account to external services to be able to login here." => [
+		0 => "將您的帳戶鏈接到外部服務，以便能夠登錄和共享內容。",
 	],
 	"Do you really want to disconnect %s from this account?" => [
 		0 => "你真的想從這個帳戶斷開 %s 嗎？",
@@ -3037,14 +3649,41 @@ $translation_table = [
 	"Connect %s" => [
 		0 => "連結%s",
 	],
+	"Feel free to browse and discover all my shared images and albums." => [
+		0 => "隨意瀏覽, 探索我所有分享的圖片和相冊",
+	],
 	"Button" => [
 		0 => "按鈕",
+	],
+	"View all my images" => [
+		0 => "查看我所有的圖片",
+	],
+	"Login" => [
+		0 => "登錄",
+	],
+	"Already have an account? %s now." => [
+		0 => "已有帳號？ 立即 %s。",
 	],
 	"resend account activation" => [
 		0 => "重寄帳號驗證",
 	],
-	"If you have already signed up maybe you need to request to %s" => [
-		0 => "假如您已經註冊完畢, 您可以請求於 %s",
+	"If you have already signed up maybe you need to request to %s to activate your account." => [
+		0 => "如果您已經註冊，則可能需要請求 %s 以激活您的帳戶。",
+	],
+	"You can also %s." => [
+		0 => "您也可以 %s 。",
+	],
+	"I'm at least %s years old" => [
+		0 => "我已年滿 %s 歲",
+	],
+	"terms" => [
+		0 => "條款",
+	],
+	"privacy policy" => [
+		0 => "隱私政策",
+	],
+	"I agree to the %terms_link and %privacy_link" => [
+		0 => "我同意%terms_link和%privacy_link",
 	],
 	"Upload profile background" => [
 		0 => "上傳背景圖片",
@@ -3067,6 +3706,15 @@ $translation_table = [
 	"Follow" => [
 		0 => "跟隨",
 	],
+	"You have been forbidden to use this website." => [
+		0 => "你被禁止進入這個網站",
+	],
+	"Plugin" => [
+		0 => "插件",
+	],
+	"Page %s" => [
+		0 => "第 %s 頁",
+	],
 	"General questions/comments" => [
 		0 => "一般問題/意見",
 	],
@@ -3079,17 +3727,11 @@ $translation_table = [
 	"Invalid subject" => [
 		0 => "無效的主題",
 	],
-	"Invalid reCAPTCHA" => [
-		0 => "無效的驗證碼",
-	],
 	"Mail error" => [
 		0 => "電子郵件錯誤",
 	],
 	"Message sent" => [
 		0 => "訊息發送",
-	],
-	"Contact" => [
-		0 => "聯繫",
 	],
 	"Message sent. We will get in contact soon." => [
 		0 => "訊息已寄出. 我們很快地與您聯絡.",
@@ -3102,153 +3744,6 @@ $translation_table = [
 	],
 	"Subject" => [
 		0 => "主題",
-	],
-	"Installed version is v%s" => [
-		0 => "已安裝的版本為 v%s",
-	],
-	"Can't connect to %s" => [
-		0 => "無法連接到 %s",
-	],
-	"Last available release is v%s" => [
-		0 => "最新的發布版本為 v%s",
-	],
-	"Update needed, proceeding to download" => [
-		0 => "需要更新, 請繼續下載",
-	],
-	"No update needed" => [
-		0 => "目前沒有更新",
-	],
-	"System files already up to date" => [
-		0 => "系統檔案已是最新版本",
-	],
-	"Starting v%s download" => [
-		0 => "開始 v%s 下載",
-	],
-	"Downloaded v%s, proceeding to extraction" => [
-		0 => "下載 v%s 中, 程序正在匯出",
-	],
-	"Attempting to extract v%s" => [
-		0 => "試圖解壓 v%s",
-	],
-	"Extraction completed" => [
-		0 => "匯出已完成",
-	],
-	"Proceding to install the update" => [
-		0 => "正在安裝此更新",
-	],
-	"Update failed" => [
-		0 => "更新已失敗",
-	],
-	"Please provide a valid email address" => [
-		0 => "請提供一個有效的電子郵件地址",
-	],
-	"You must enter the album name." => [
-		0 => "您必須輸入相簿名稱",
-	],
-	"Confirm" => [
-		0 => "確認",
-	],
-	"Select existing album" => [
-		0 => "選擇現有的相簿",
-	],
-	"Please select a valid image file type." => [
-		0 => "請選擇一個有效的圖片格式",
-	],
-	"Please select a picture of at most %s size." => [
-		0 => "請選擇最大允許 %s 大小的圖像.",
-	],
-	"Profile image updated." => [
-		0 => "個人主頁已更新",
-	],
-	"Profile background image updated." => [
-		0 => "個人主頁背景已更新",
-	],
-	"Profile background image deleted." => [
-		0 => "個人主頁背景已刪除",
-	],
-	"Error deleting profile background image." => [
-		0 => "在刪除個人主頁背景時發生錯誤",
-	],
-	"Update available v%s" => [
-		0 => "更新 v%s 已開放",
-	],
-	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
-		0 => "有可用的系統更新. 您可以自動下載並安裝此更新或者前往 %s 繼續下載該更新檔案.",
-	],
-	"Update now" => [
-		0 => "立刻更新",
-	],
-	"This website is running latest %s version" => [
-		0 => "網站正在使用最新的%s版本",
-	],
-	"Clipboard image" => [
-		0 => "剪貼板圖像",
-	],
-	"File too big." => [
-		0 => "文件超出允許上傳的大小",
-	],
-	"Invalid or unsupported file format." => [
-		0 => "無效或是不支援的檔案格式.",
-	],
-	"Some files couldn't be added" => [
-		0 => "有些文件無法加入",
-	],
-	"Image edited successfully." => [
-		0 => "圖片編輯成功",
-	],
-	"private" => [
-		0 => "私密",
-	],
-	"Album edited successfully." => [
-		0 => "相簿編輯成功.",
-	],
-	"Invalid URL key." => [
-		0 => "無效的URL key",
-	],
-	"Category URL key already being used." => [
-		0 => "此分類URL已被使用",
-	],
-	"Category successfully deleted." => [
-		0 => "分類成功刪除",
-	],
-	"Category %s added." => [
-		0 => "分類 %s 已增加.",
-	],
-	"Invalid expiration date." => [
-		0 => "無效的有效期限",
-	],
-	"IP %s already banned." => [
-		0 => "IP %s 已經被禁止訪問",
-	],
-	"IP %s banned." => [
-		0 => "IP %s 禁止訪問",
-	],
-	"IP ban successfully deleted." => [
-		0 => "IP已從阻擋列表中刪除",
-	],
-	"Please fill all the required fields." => [
-		0 => "請填寫所有必填字段",
-	],
-	"Invalid storage capacity value. Make sure to use a valid format." => [
-		0 => "無效的儲存容量值. 請務必使用一個有效的格式",
-	],
-	"Invalid URL." => [
-		0 => "無效URL",
-	],
-	"Storage successfully edited." => [
-		0 => "儲存空間編輯成功",
-	],
-	"User added successfully." => [
-		0 => "成功新增用戶",
-	],
-	"The content has been moved." => [
-		0 => "該內容已被移動",
-	],
-	"Unselect" => [
-		0 => "未選取",
-	],
-	"The content has been edited." => [
-		0 => "該內容已被編輯",
 	],
 	"All the changes that you have made will be lost if you continue." => [
 		0 => "如果你繼續你所做的所有更改將消失",

@@ -5,9 +5,9 @@ CREATE TABLE `%table_prefix%ip_bans` (
   `ip_ban_date_gmt` datetime NOT NULL,
   `ip_ban_expires` datetime DEFAULT NULL,
   `ip_ban_expires_gmt` datetime DEFAULT NULL,
-  `ip_ban_ip` varchar(255) NOT NULL,
-  `ip_ban_message` longtext,
+  `ip_ban_ip` varchar(191) NOT NULL,
+  `ip_ban_message` text,
   PRIMARY KEY (`ip_ban_id`),
   KEY `ip_ban_date_gmt` (`ip_ban_date_gmt`),
   UNIQUE KEY `ip_ban_ip` (`ip_ban_ip`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

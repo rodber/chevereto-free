@@ -23,7 +23,7 @@ use Exception;
 class Listing
 {
     protected static $valid_types = ['images', 'albums', 'users'];
-    protected static $valid_sort_types = ['date', 'size', 'views', 'id', 'image_count', 'name'];
+    protected static $valid_sort_types = ['date', 'size', 'views', 'id', 'image_count', 'name', 'title', 'username'];
 
     // Set the type of list
     public function setListing($listing)
@@ -41,6 +41,25 @@ class Listing
     public function setOffset($offset)
     {
         $this->offset = intval($offset);
+    }
+    public function setSeek($seek)
+    {
+        if (strpos($seek, '.') !== false) {
+            $explode = explode('.', $seek);
+            $explode[1] = decodeID($explode[1]);
+            $this->seek = $explode;
+            return;
+        }
+        $decodeID = decodeID($seek);
+        if (ctype_digit($decodeID)) {
+            $this->seek = $decodeID;
+            return;
+        }
+        $this->seek = $seek;
+    }
+    public function setReverse($bool)
+    {
+        $this->reverse = $bool;
     }
 
     public function setParamsHidden($params)
@@ -92,7 +111,7 @@ class Listing
     // Sets the category
     public function setCategory($category)
     {
-        $this->category = (int)$category;
+        $this->category = (int) $category;
     }
 
     // Sets the privacy layer of this listing
@@ -102,7 +121,7 @@ class Listing
     }
 
     // Sets the tools available for this listing (only if applies)
-    public function setTools($tools=[])
+    public function setTools($tools = [])
     {
         $this->tools = $tools;
     }
@@ -125,7 +144,7 @@ class Listing
      * Do the thing
      * @Exeption 4xx
      */
-    public function exec($get_total_count=false)
+    public function exec($get_total_count = false)
     {
         $this->validateInput();
 
@@ -140,14 +159,14 @@ class Listing
         $joins = [
             // Get image + storage + parent album + user uploader
             'images' => [
-                'storages'	=> 'LEFT JOIN '.$tables['storages'].' ON '.$tables['images'].'.image_storage_id = '.$tables['storages'].'.storage_id',
-                'users'		=> 'LEFT JOIN '.$tables['users'].' ON '.$tables['images'].'.image_user_id = '.$tables['users'].'.user_id',
-                'albums'	=> 'LEFT JOIN '.$tables['albums'].' ON '.$tables['images'].'.image_album_id = '.$tables['albums'].'.album_id',
-                'categories'=> 'LEFT JOIN '.$tables['categories'].' ON '.$tables['images'].'.image_category_id = '.$tables['categories'].'.category_id',
+                'storages'    => 'LEFT JOIN ' . $tables['storages'] . ' ON ' . $tables['images'] . '.image_storage_id = ' . $tables['storages'] . '.storage_id',
+                'users'        => 'LEFT JOIN ' . $tables['users'] . ' ON ' . $tables['images'] . '.image_user_id = ' . $tables['users'] . '.user_id',
+                'albums'    => 'LEFT JOIN ' . $tables['albums'] . ' ON ' . $tables['images'] . '.image_album_id = ' . $tables['albums'] . '.album_id',
+                'categories' => 'LEFT JOIN ' . $tables['categories'] . ' ON ' . $tables['images'] . '.image_category_id = ' . $tables['categories'] . '.category_id',
             ],
             'users' => [],
             'albums' => [
-                'users'		=> 'LEFT JOIN '.$tables['users'].' ON '.$tables['albums'].'.album_user_id = '.$tables['users'].'.user_id'
+                'users'        => 'LEFT JOIN ' . $tables['users'] . ' ON ' . $tables['albums'] . '.album_user_id = ' . $tables['users'] . '.user_id'
             ]
         ];
 
@@ -160,19 +179,22 @@ class Listing
         if (!is_null($this->params_hidden)) {
 
             // hide_empty
-            $emptyTypeClauses = [
-                'users'		=> 'user_image_count > 0 OR user_avatar_filename IS NOT NULL OR user_background_filename IS NOT NULL'
-            ];
+            $emptyTypeClauses['users'][] = 'user_image_count > 0 OR user_avatar_filename IS NOT NULL OR user_background_filename IS NOT NULL';
+            if ($this->sort_type == 'views') {
+                $emptyTypeClauses['albums'][] = 'album_views > 0';
+                $emptyTypeClauses['images'][] = 'image_views > 0';
+                $emptyTypeClauses['users'][] = 'user_content_views > 0';
+            }
             // Conditional album image count
             if ($this->type == 'albums') {
                 if ($this->params_hidden['album_min_image_count'] > 0) {
                     $whereClauses[] = sprintf('album_image_count >= %d', $this->params_hidden['album_min_image_count']);
                 } else {
-                    $emptyTypeClauses['albums'] = 'album_image_count > 0';
+                    $emptyTypeClauses['albums'][] = 'album_image_count > 0';
                 }
             }
             if (array_key_exists($this->type, $emptyTypeClauses) && $this->params_hidden['hide_empty'] == 1) {
-                $whereClauses[] = $emptyTypeClauses[$this->type];
+                $whereClauses[] = '(' . implode(') AND (', $emptyTypeClauses[$this->type]) . ')';
             }
             // hide_banned
             if ($this->params_hidden['hide_banned'] == 1) {
@@ -245,34 +267,73 @@ class Listing
             switch ($this->type) {
                 case 'images':
                     if ($nsfw_off) {
-                        $nsfw_off_clause = $tables['images'].'.image_nsfw = 0';
+                        $nsfw_off_clause = $tables['images'] . '.image_nsfw = 0';
                         if ($this->requester) {
                             $this->where .= '(' . $nsfw_off_clause .  ' OR (' .  $tables['images'] . '.image_nsfw = 1 AND ' .  $tables['images'] . '.image_user_id = ' . $this->requester['id'] . ')) AND ';
                         } else {
                             $this->where .= $nsfw_off_clause . ' AND ';
                         }
                     }
-                break;
+                    break;
                 case 'users':
-                    $this->where .= $tables['users'].'.user_is_private = 0';
-                break;
+                    $this->where .= $tables['users'] . '.user_is_private = 0';
+                    break;
             }
 
             if ($this->type !== 'users') {
                 if (getSetting('website_privacy_mode') == 'public' || $this->privacy == 'private_but_link' || getSetting('website_content_privacy_mode') == 'default') {
-                    $this->where .= '(' . $tables['albums'].'.album_privacy NOT IN';
-                    $privacy_modes = ['private', 'private_but_link', 'password', 'custom'];
+                    $this->where .= '(' . $tables['albums'] . '.album_privacy NOT IN';
+                    $privacy_modes = ['private', 'private_but_link', 'custom'];
+                    if ($this->type != 'albums') {
+                        $privacy_modes[] = 'password';
+                    }
                     if (in_array($this->privacy, $privacy_modes)) {
                         unset($privacy_modes[array_search($this->privacy, $privacy_modes)]);
                     }
                     $this->where .= " (" . "'" . implode("','", $privacy_modes) . "'" . ") ";
-                    $this->where .=  "OR ".$tables['albums'].'.album_privacy IS NULL OR '.$tables['albums'].'.album_user_id';
-                    $this->where .= (!$this->requester ? ' IS NULL' : '='.$this->requester['id']) . ')';
+                    $this->where .=  "OR " . $tables['albums'] . '.album_privacy IS NULL';
+                    if ($this->requester) {
+                        $this->where .= ' OR ' . $tables['albums'] . '.album_user_id =' . $this->requester['id'];
+                    }
+                    $this->where .= ')';
                 } else {
                     $injected_requester = !$this->requester['id'] ? 0 : $this->requester['id'];
-                    $this->where .= '(' . $tables['albums'].'.album_user_id = '.$injected_requester;
-                    $this->where .= $this->type == 'albums' ? ')' : (' OR ' . $tables['images'].'.image_user_id = '.$injected_requester . ')');
+                    $this->where .= '(' . $tables['albums'] . '.album_user_id = ' . $injected_requester;
+                    $this->where .= $this->type == 'albums' ? ')' : (' OR ' . $tables['images'] . '.image_user_id = ' . $injected_requester . ')');
                 }
+            }
+        }
+
+        $sort_field = $type_singular . '_' . $this->sort_type;
+        $key_field = $type_singular . '_id';
+
+        if ($this->seek) {
+            if (empty($this->where)) {
+                $this->where = 'WHERE ';
+            } else {
+                $this->where .= ' AND ';
+            }
+            if ($this->reverse) {
+                $this->sort_order = $this->sort_order == 'asc' ? 'desc' : 'asc';
+            }
+            $signo = $this->sort_order == 'desc' ? '<=' : '>=';
+            if ($this->sort_type == 'id') {
+                $this->where .= $sort_field . ' ' . $signo . ' :seek';
+                $this->binds[] = [
+                    'param' => 'seek',
+                    'value' => $this->seek
+                ];
+            } else {
+                $signo = $this->sort_order == 'desc' ? '<' : '>';
+                $this->where .= '((' . $sort_field . ' ' . $signo . ' :seekSort) OR (' . $sort_field . ' = :seekSort AND ' . $key_field . ' ' . $signo . '= :seekKey))';
+                $this->binds[] = [
+                    'param' => 'seekSort',
+                    'value' => $this->seek[0],
+                ];
+                $this->binds[] = [
+                    'param' => 'seekKey',
+                    'value' => $this->seek[1],
+                ];
             }
         }
 
@@ -280,9 +341,16 @@ class Listing
             $this->where = "\n" . $this->where;
         }
 
-        $order_by = "\n" . 'ORDER BY ' . DB::getTableFromFieldPrefix($type_singular) . '.' . $type_singular . '_' . $this->sort_type . ' ' . strtoupper($this->sort_order);
+        $sort_order = strtoupper($this->sort_order);
+        $table_order = DB::getTableFromFieldPrefix($type_singular);
+        $order_by = "\n" . 'ORDER BY ' . $table_order . '.' . $sort_field . ' ' . $sort_order;
 
-        $limit = "\n" . 'LIMIT ' . $this->offset . ',' . ($this->limit + 1);
+        if ($this->sort_type != 'id') {
+            $order_by .= ', ' . $table_order . '.' . $key_field . ' ' . $sort_order;
+        }
+
+        // $limit = "\n" . 'LIMIT ' . $this->offset . ',' . ($this->limit + 1);
+        $limit = "\n" . 'LIMIT ' . ($this->limit + 1); // +1 allows to fetch "one extra" to detect prev/next pages
 
         $base_table = $tables[$this->type];
 
@@ -325,6 +393,7 @@ class Listing
 
         try {
             $db = DB::getInstance();
+            // G\debug($query);
             $db->query($query);
             if (is_array($this->binds)) {
                 foreach ($this->binds as $bind) {
@@ -334,10 +403,28 @@ class Listing
             $this->output = $db->fetchAll();
             $this->output_count = $db->rowCount();
             $this->has_page_next = $db->rowCount() > $this->limit;
+            if ($this->reverse) {
+                $this->output = array_reverse($this->output);
+            }
+            $start = current($this->output);
+            $end = end($this->output);
+            $seekEnd = $end[$sort_field];
+            $seekStart = $start[$sort_field];
+            if ($this->sort_type == 'id') {
+                $seekEnd = encodeID($seekEnd);
+                $seekStart = encodeID($seekStart);
+            } else {
+                $seekEnd .= '.' . encodeID($end[$key_field]);
+                $seekStart .= '.' . encodeID($start[$key_field]);
+            }
+            $this->seekEnd = $seekEnd;
+            $this->seekStart = $seekStart;
             if ($db->rowCount() > $this->limit) {
+                $array_fn = 'array_' . ($this->reverse ? 'shift' : 'pop');
                 array_pop($this->output);
             }
             $this->output = G\safe_html($this->output);
+            $this->count = count($this->output);
             $this->nsfw = false;
             $this->output_assoc = [];
             $formatfn = 'CHV\\' . ucfirst(substr($this->type, 0, -1));
@@ -392,85 +479,85 @@ class Listing
         }
     }
 
-    public static function getTabs($args=[], $expanded=false)
+    public static function getTabs($args = [], $expanded = false)
     {
         $default = [
-            'list'		=> true,
-            'REQUEST'	=> $_REQUEST,
-            'listing'	=> 'explore',
-            'basename'	=> G\get_route_name(),
-            'tools'		=> true,
+            'list'        => true,
+            'REQUEST'    => $_REQUEST,
+            'listing'    => 'explore',
+            'basename'    => G\get_route_name(),
+            'tools'        => true,
             'tools_available' => [],
         ];
         $args = array_merge($default, $args);
         // Fix lazy basenames
         if (strpos($args['basename'], G\get_base_url()) !== false) {
-            $args['basename'] = G\get_base_url() == $args['basename'] ? null : G\str_replace_first(G\get_base_url() .'/', null, $args['basename']);
+            $args['basename'] = G\get_base_url() == $args['basename'] ? null : G\str_replace_first(G\get_base_url() . '/', null, $args['basename']);
         }
         // Semantics -> trending | popular | recent
         $semantics = [
-            'recent'	=> [
-                'label'		=> _s('Recent'),
-                'content' 	=> 'all',
-                'sort'		=> 'date_desc',
+            'recent'    => [
+                'label'        => _s('Recent'),
+                'content'     => 'all',
+                'sort'        => 'date_desc',
             ],
-            'trending'	=> [
-                'label'		=> _s('Trending'),
-                'content' 	=> 'all',
-                'sort'		=> 'views_desc',
+            'trending'    => [
+                'label'        => _s('Trending'),
+                'content'     => 'all',
+                'sort'        => 'views_desc',
             ],
         ];
 
         // Criteria -> images | albums | users
         // Criteria -> [CONTENT TABS]
         $criterias = [
-            'top-users'		=> [
-                'label'		=> _s('Top users'),
-                'sort'		=> 'image_count_desc',
-                'content'	=> 'users',
+            'top-users'        => [
+                'label'        => _s('Top users'),
+                'sort'        => 'image_count_desc',
+                'content'    => 'users',
             ],
-            'most-recent'	=> [
-                'label'		=> _s('Most recent'),
-                'sort'		=> 'date_desc',
-                'content'	=> 'all',
+            'most-recent'    => [
+                'label'        => _s('Most recent'),
+                'sort'        => 'date_desc',
+                'content'    => 'all',
             ],
-            'most-oldest'	=> [
-                'label' 	=> _s('Oldest'),
-                'sort'		=> 'date_asc',
-                'content'	=> 'all',
+            'most-oldest'    => [
+                'label'     => _s('Oldest'),
+                'sort'        => 'date_asc',
+                'content'    => 'all',
             ],
-            'most-viewed'	=> [
-                'label'		=> _s('Most viewed'),
-                'sort'		=> 'views_desc',
-                'content'	=> 'all',
+            'most-viewed'    => [
+                'label'        => _s('Most viewed'),
+                'sort'        => 'views_desc',
+                'content'    => 'all',
             ],
         ];
         $listings = [
-            'explore'	=> [
-                'label'		=> _s('Explore'),
-                'content'	=> 'images',
+            'explore'    => [
+                'label'        => _s('Explore'),
+                'content'    => 'images',
             ],
-            'animated'	=> [
-                'label'		=> _s('Animated'),
-                'content'	=> 'images',
-                'where'		=> 'image_is_animated = 1',
-                'semantic'	=> true,
+            'animated'    => [
+                'label'        => _s('Animated'),
+                'content'    => 'images',
+                'where'        => 'image_is_animated = 1',
+                'semantic'    => true,
             ],
-            'search'	=> [
-                'label'		=> _s('Search'),
-                'content'	=> 'all',
+            'search'    => [
+                'label'        => _s('Search'),
+                'content'    => 'all',
             ],
-            'users'	=> [
-                'label'		=> _s('People'),
-                'content'	=> 'users',
+            'users'    => [
+                'label'        => _s('People'),
+                'content'    => 'users',
             ],
-            'images'	=> [
-                'label'		=> _n('Image', 'Images', 2),
-                'content'	=> 'images',
+            'images'    => [
+                'label'        => _n('Image', 'Images', 2),
+                'content'    => 'images',
             ],
-            'albums'	=> [
-                'label'		=> _n('Album', 'Albums', 2),
-                'content'	=> 'albums',
+            'albums'    => [
+                'label'        => _n('Album', 'Albums', 2),
+                'content'    => 'albums',
             ],
         ];
         $listings = array_merge($listings, $semantics);
@@ -524,23 +611,23 @@ class Listing
                 'page' => '1',
             ];
             $params = $args['params'] ?: $default_params;
-            foreach ((array)$args['params_remove_keys'] as $key) {
+            foreach ((array) $args['params_remove_keys'] as $key) {
                 unset($params[$key]);
             }
             if (is_array($args['params']) && array_key_exists('q', $args['params']) && $args['listing'] == 'search') {
                 $args['params_hidden']['list'] = $content;
                 $basename .= '/' . $content;
             }
-            foreach ((array)$args['params_hidden'] as $kk => $vv) {
+            foreach ((array) $args['params_hidden'] as $kk => $vv) {
                 if (array_key_exists($kk, $params)) {
                     unset($params[$kk]);
                 }
             }
             $http_build_query = http_build_query($params);
-            $url = G\get_base_url($basename) . '/?' . $http_build_query;
+            $url = (filter_var($basename, FILTER_VALIDATE_URL) ? rtrim($basename, '/') : G\get_base_url($basename)) . '/?' . $http_build_query;
 
             $current = isset($args['REQUEST']['sort']) ? $args['REQUEST']['sort'] == $v['sort'] : false;
-            if ($i==0 && !$current) {
+            if ($i == 0 && !$current) {
                 $current = !$args['REQUEST']['sort'];
             }
             if ($current && is_null($currentKey)) {
@@ -548,15 +635,15 @@ class Listing
             }
 
             $tab = [
-        'list'				=> (bool) $args['list'],
-                'tools'				=> $content == 'users' ? false : (bool) $args['tools'],
-                'tools_available'	=> $args['tools_available'],
-                'label'				=> $v['label'],
-                'id'					=> $id,
-                'params'			=> $http_build_query, // Es que como explicar la magia que tiene su manera de enamorar...
-                'current'			=> (bool) $current,
-                'type'				=> $content,
-                'url'					=> $url
+                'list'                => (bool) $args['list'],
+                'tools'                => $content == 'users' ? false : (bool) $args['tools'],
+                'tools_available'    => $args['tools_available'],
+                'label'                => $v['label'],
+                'id'                    => $id,
+                'params'            => $http_build_query, // Es que como explicar la magia que tiene su manera de enamorar...
+                'current'            => (bool) $current,
+                'type'                => $content,
+                'url'                    => $url
             ];
 
             if ($args['tools_available'] && !G\Handler::getCond('allowed_to_delete_content') && array_key_exists('delete', $args['tools_available'])) {
@@ -616,7 +703,7 @@ class Listing
 
         // Validate type
         if (!in_array($this->type, self::$valid_types)) {
-            throw new ListingException('Invalid $type "'.$this->type.'"', 110);
+            throw new ListingException('Invalid $type "' . $this->type . '"', 110);
         }
 
         // Validate limits
@@ -629,12 +716,12 @@ class Listing
 
         // Validate sort type
         if (!in_array($this->sort_type, self::$valid_sort_types)) {
-            throw new ListingException('Invalid $sort_type "'.$this->sort_type.'"', 130);
+            throw new ListingException('Invalid $sort_type "' . $this->sort_type . '"', 130);
         }
 
         // Validate sort order
         if (!preg_match('/^(asc|desc)$/', $this->sort_order)) {
-            throw new ListingException('Invalid $sort_order "'.$this->sort_order.'"', 140);
+            throw new ListingException('Invalid $sort_order "' . $this->sort_order . '"', 140);
         }
     }
 
@@ -643,7 +730,7 @@ class Listing
     {
     }
 
-    public function htmlOutput($tpl_list=null)
+    public function htmlOutput($tpl_list = null)
     {
         if (!is_array($this->output)) {
             return;
@@ -675,6 +762,13 @@ class Listing
 
         $html_output = '';
         $tpl_list = preg_replace('/s$/', '', $tpl_list);
+        if (function_exists('get_peafowl_item_list')) {
+            $render = 'get_peafowl_item_list';
+        } else {
+            $render = 'CHV\Render\get_peafowl_item_list';
+        }
+        $tools = $this->tools ?: null;
+        $requester = Login::getUser();
 
         foreach ($this->output as $row) {
             switch ($tpl_list) {
@@ -683,34 +777,24 @@ class Listing
                 case 'album/image':
                 default: // key thing here...
                     $Class = 'CHV\Image';
-                break;
+                    break;
                 case 'album':
                 case 'user/album':
                     $Class = 'CHV\Album';
-                break;
+                    break;
                 case 'user':
                 case 'user/user':
                     $Class = 'CHV\User';
-                break;
+                    break;
             }
-
             $item = $Class::formatArray($row);
-
-            $tools = $this->tools ?: null;
-
-            if (function_exists('get_peafowl_item_list')) {
-                $render = 'get_peafowl_item_list';
-            } else {
-                $render = 'CHV\Render\get_peafowl_item_list';
-            }
-
-            $html_output .= $render($tpl_list, $item, $list_item_template, Login::getUser()['id'], $tools);
+            $html_output .= $render($tpl_list, $item, $list_item_template, $requester, $tools);
         }
 
         return $html_output;
     }
 
-    public static function getAlbumHtml($album_id, $template='user/albums')
+    public static function getAlbumHtml($album_id, $template = 'user/albums')
     {
         try {
             $album = new Listing;
@@ -728,7 +812,7 @@ class Listing
         }
     }
 
-    public static function getParams($json_call=false)
+    public static function getParams($json_call = false)
     {
         self::setValidSortTypes();
 
@@ -736,12 +820,13 @@ class Listing
         $listing_pagination_mode = getSetting('listing_pagination_mode');
 
         $params = [];
+        $params['offset'] = 0;
         $params['items_per_page'] = $items_per_page;
 
         if (!$json_call and $listing_pagination_mode == 'endless') {
             $params['page'] = max(intval($_REQUEST['page']), 1);
             $params['limit'] = $params['items_per_page'] * $params['page'];
-            $params['offset'] = 0;
+            // $params['offset'] = 0;
 
             // Switch endless to classic if we are dealing with large listings (from GET)
             if ($params['limit'] > getSetting('listing_safe_count')) {
@@ -753,15 +838,15 @@ class Listing
         if (isset($_REQUEST['pagination']) or $listing_pagination_mode == 'classic') { // Static single page display
             $params['page'] = $_REQUEST['page'] ? intval($_REQUEST['page']) - 1 : 0;
             $params['limit'] = $params['items_per_page'];
-            $params['offset'] = $params['page']*$params['limit'];
+            $params['offset'] = $params['page'] * $params['limit']; // TODO: Get rid
         }
 
         if ($json_call) {
             $params = array_merge($params, [
-                'page'	=> $_REQUEST['page'] ? $_REQUEST['page'] - 1 : 0,
-                'limit'	=> $items_per_page
+                'page'    => $_REQUEST['page'] ? $_REQUEST['page'] - 1 : 0,
+                'limit'    => $items_per_page
             ]);
-            $params['offset'] = $params['page'] * $params['limit'] + ($_REQUEST['offset'] ? $_REQUEST['offset'] : 0);
+            $params['offset'] = $params['page'] * $params['limit'] + ($_REQUEST['offset'] ? $_REQUEST['offset'] : 0); // TODO: Get rid
         }
 
         $default_sort = [
@@ -785,6 +870,16 @@ class Listing
         if (!in_array($params['sort'][1], ['asc', 'desc'])) {
             $params['sort'][1] = $default_sort[1];
         }
+
+        // $_REQUEST is already urldecoded
+        if ($_REQUEST['seek']) {
+            $params['seek'] = $_REQUEST['seek'];
+        } elseif ($_REQUEST['peek']) {
+            $params['seek'] = $_REQUEST['peek'];
+            $params['reverse'] = true;
+        }
+
+        $params['page_show'] = isset($_REQUEST['page']) ? intval($_REQUEST['page']) : null;
 
         return $params;
     }

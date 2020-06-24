@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2018-06-03 14:28+0000',
-  'PO-Revision-Date' => '2018-06-03 14:28+0000',
+  'POT-Creation-Date' => '2020-05-16 19:37+0000',
+  'PO-Revision-Date' => '2020-05-16 19:37+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'nl',
@@ -16,12 +16,6 @@ $translation_plural = array (
   'function' => '($n != 1)',
 );
 $translation_table = [
-	"To use all the features of this site you must be logged in." => [
-		0 => "Om alle functies van deze site te gebruiken moet u ingelogd zijn.",
-	],
-	"If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
-		0 => "Indien u nog geen account heeft, dan kunt u zich <a href=\"%s\">registreren</a>.",
-	],
 	"Invalid email" => [
 		0 => "Ongeldig e-mailadres",
 	],
@@ -58,6 +52,42 @@ $translation_table = [
 	"Personal" => [
 		0 => "Persoonlijk",
 	],
+	"Installed version is v%s" => [
+		0 => "Geïnstalleerde versie: v%s",
+	],
+	"Can't connect to %s" => [
+		0 => "Kan niet verbinden met %s",
+	],
+	"Last available release is v%s" => [
+		0 => "Laatst beschikbare release is v%s",
+	],
+	"Update needed, proceeding to download" => [
+		0 => "Update nodig, doorgestuurd naar downloaden",
+	],
+	"No update needed" => [
+		0 => "Geen update nodig",
+	],
+	"System files already up to date" => [
+		0 => "Systeembestanden zijn reeds bijgewerkt.",
+	],
+	"Starting v%s download" => [
+		0 => "Start downloaden van v%s",
+	],
+	"Downloaded v%s, proceeding to extraction" => [
+		0 => "v%s is gedownload, verder met uitpakken",
+	],
+	"Attempting to extract v%s" => [
+		0 => "Bezig met uitpakken van v%s",
+	],
+	"Extraction completed" => [
+		0 => "Uitpakken gereed",
+	],
+	"Proceding to install the update" => [
+		0 => "Bezig met installeren van de update",
+	],
+	"Update failed" => [
+		0 => "Bijwerken mislukt",
+	],
 	"Update in progress" => [
 		0 => "Bezig met bijwerken",
 	],
@@ -84,6 +114,201 @@ $translation_table = [
 	],
 	"Can't update %s file - %e" => [
 		0 => "Kan bestand %s niet updaten - %e",
+	],
+	"Check the errors in the form to continue." => [
+		0 => "Controleer de fouten in de tekstvelden om verder te gaan.",
+	],
+	"You must enter the album name." => [
+		0 => "U moet nog een albumnaam invoeren.",
+	],
+	"Confirm" => [
+		0 => "Bevestigen",
+	],
+	"Select existing album" => [
+		0 => "Selecteer bestaand album",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "Er is een fout opgetreden. Probeer het later nog eens.",
+	],
+	"Please select a valid image file type." => [
+		0 => "Selecteer a.u.b. een geldig afbeeldingformaat",
+	],
+	"Please select a picture of at most %s size." => [
+		0 => "Selecteer a.u.b. een foto met maximale grootte %s.",
+	],
+	"Profile image updated." => [
+		0 => "Profielfoto is geüpdatet.",
+	],
+	"Profile background image updated." => [
+		0 => "Achtergrondafbeelding is geüpdatet.",
+	],
+	"Profile background image deleted." => [
+		0 => "Achtergrondafbeelding is verwijderd.",
+	],
+	"Error deleting profile background image." => [
+		0 => "Fout bij het verwijderen van uw profielachtergrond.",
+	],
+	"Passwords don't match" => [
+		0 => "Wachtwoorden komen niet overeen",
+	],
+	"Update available v%s" => [
+		0 => "Update naar v%s beschikbaar",
+	],
+	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
+		0 => "Er is een update beschikbaar voor uw systeem. U kunt deze automatisch downloaden installeren of ga naar %s om het updatebestand te downloaden.",
+	],
+	"The release notes for this update are:" => [
+		0 => "De releaseopmerkingen voor deze update zijn:",
+	],
+	"Update now" => [
+		0 => "Nu bijwerken",
+	],
+	"or" => [
+		0 => "of",
+	],
+	"cancel" => [
+		0 => "annuleren",
+	],
+	"This website is running latest %s version" => [
+		0 => "Deze website gebruikt de laatste %s versie",
+	],
+	"loading" => [
+		0 => "laden",
+	],
+	"Toggle select" => [
+		0 => "Selectiekeuze",
+	],
+	"Like" => [
+		0 => "Waardeer",
+	],
+	"Toggle flag" => [
+		0 => "Vlagkeuze",
+	],
+	"Edit" => [
+		0 => "Bewerken",
+	],
+	"Album" => [
+		0 => "Album",
+		1 => "Albums",
+	],
+	"Delete" => [
+		0 => "Verwijder",
+	],
+	"Close" => [
+		0 => "Sluiten",
+	],
+	"Previous" => [
+		0 => "Vorige",
+	],
+	"Next" => [
+		0 => "Volgende",
+	],
+	"Clipboard image" => [
+		0 => "Klembord afbeelding",
+	],
+	"File too big." => [
+		0 => "Bestand is te groot.",
+	],
+	"Invalid or unsupported file format." => [
+		0 => "Ongeldig of niet ondersteund bestandsformaat.",
+	],
+	"Some files couldn't be added" => [
+		0 => "Sommige bestanden kunnen niet toegevoegd worden",
+	],
+	"image" => [
+		0 => "afbeelding",
+		1 => "afbeeldingen",
+	],
+	"%s's Albums" => [
+		0 => "%s's albums",
+	],
+	"Image edited successfully." => [
+		0 => "Afbeelding is aangepast",
+	],
+	"private" => [
+		0 => "privé",
+	],
+	"Album edited successfully." => [
+		0 => "Album is aangepast",
+	],
+	"Invalid URL key." => [
+		0 => "Ongeldige URL sleutel.",
+	],
+	"Category URL key already being used." => [
+		0 => "Categorie URL sleutel is al in gebruik.",
+	],
+	"Category successfully deleted." => [
+		0 => "Categorie succesvol verwijderd.",
+	],
+	"Category %s added." => [
+		0 => "Categorie %s is toegevoegd.",
+	],
+	"Invalid expiration date." => [
+		0 => "Ongeldige vervaldatum.",
+	],
+	"IP %s already banned." => [
+		0 => "IP %s is reeds geblokkeerd.",
+	],
+	"IP %s banned." => [
+		0 => "IP %s is geblokkeerd.",
+	],
+	"IP ban successfully deleted." => [
+		0 => "IP blokkering is verwijderd.",
+	],
+	"Please fill all the required fields." => [
+		0 => "Vul alstublieft de verplichte velden in.",
+	],
+	"Invalid storage capacity value. Make sure to use a valid format." => [
+		0 => "Ongeldige waarde voor de opslagcapaciteit. Controleer op juistheid formaat.",
+	],
+	"Storage capacity can't be lower than its current usage (%s)." => [
+		0 => "Opslagcapaciteit kan niet lager zijn dan wat er nu in gebruik is (%s).",
+	],
+	"Invalid URL." => [
+		0 => "Ongeldige URL.",
+	],
+	"Storage successfully edited." => [
+		0 => "Opslag succesvol gewijzigd.",
+	],
+	"User added successfully." => [
+		0 => "Gebruiker is toegevoegd.",
+	],
+	"The content has been deleted." => [
+		0 => "De inhoud is verwijderd",
+	],
+	"The content has been moved." => [
+		0 => "De inhoud is verplaatst",
+	],
+	"Select" => [
+		0 => "Selecteer",
+	],
+	"Unselect" => [
+		0 => "Deselecteer",
+	],
+	"The content has been edited." => [
+		0 => "De inhoud is aangepast",
+	],
+	"Import job ID %s added successfully, you can process the import now" => [
+		0 => "Importeeropdracht nummer %s succesvol toegevoegd, u kunt de import nu verwerken",
+	],
+	"Select number of threads" => [
+		0 => "Selecteer aantal threads",
+	],
+	"Import job ID %s is being processed now" => [
+		0 => "Importeeropdracht nummer %s wordt nu verwerkt",
+	],
+	"Import ID %s removed" => [
+		0 => "Import nummer %s verwijderd",
+	],
+	"Spam detected" => [
+		0 => "Spam gedetecteerd",
+	],
+	"album" => [
+		0 => "album",
+		1 => "albums",
+	],
+	"Flooding detected. You can only upload %limit% %content% per %time%" => [
+		0 => "Flooding gedetecteerd. U kunt enkel %limit%%content% uploaden per %time%",
 	],
 	"Untitled" => [
 		0 => "Naamloos",
@@ -159,10 +384,6 @@ $translation_table = [
 		0 => "like",
 		1 => "likes",
 	],
-	"image" => [
-		0 => "afbeelding",
-		1 => "afbeeldingen",
-	],
 	"Recent" => [
 		0 => "Recent",
 	],
@@ -203,10 +424,6 @@ $translation_table = [
 		0 => "Afbeelding",
 		1 => "Afbeeldingen",
 	],
-	"Album" => [
-		0 => "Album",
-		1 => "Albums",
-	],
 	"User" => [
 		0 => "Gebruiker",
 		1 => "Gebruikers",
@@ -222,9 +439,6 @@ $translation_table = [
 	],
 	"Can't insert storage." => [
 		0 => "Kan deze opslag niet toevoegen.",
-	],
-	"Storage capacity can't be lower than its current usage (%s)." => [
-		0 => "Opslagcapaciteit kan niet lager zijn dan wat er nu in gebruik is (%s).",
 	],
 	"Can't update storage details." => [
 		0 => "Kan opslagdetails niet bijwerken.",
@@ -272,32 +486,23 @@ $translation_table = [
 	"There is an update available for your Chevereto based website." => [
 		0 => "Er is een update beschikbaar voor uw Chevereto website.",
 	],
-	"The release notes for this update are:" => [
-		0 => "De releaseopmerkingen voor deze update zijn:",
-	],
 	"admin dashboard" => [
 		0 => "Beheer dashboard",
 	],
 	"You can apply this update directly from your %a or download it from %s and then manually install it." => [
-		0 => "Je kunt deze update direct uitvoeren via %a of deze downloaden vanaf %s en dan handmatig installeren.",
+		0 => "U kunt deze update direct uitvoeren via %a of deze downloaden vanaf %s en dan handmatig installeren.",
 	],
 	"view on %s" => [
 		0 => "Bekijk op %s",
 	],
-	"You have been forbidden to use this website." => [
-		0 => "U bent verbannen van deze website.",
+	"cookie policy" => [
+		0 => "Cookie beleid",
 	],
-	"Feel free to browse and discover all my shared images and albums." => [
-		0 => "Voel je vrij om mijn gedeelde foto's en albums door te bladeren.",
+	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link." => [
+		0 => "Wij gebruiken onze eigen cookies en cookies van derden om uw surfervaring en onze services te verbeteren. Als u doorgaat met het gebruik van onze website betekent dit dat u deze %cookie_policy_link accepteert.",
 	],
-	"View all my images" => [
-		0 => "Bekijk al mijn foto's",
-	],
-	"Plugin" => [
-		0 => "Plugin",
-	],
-	"That page doesn't exist" => [
-		0 => "Deze pagina is niet beschikbaar",
+	"I understand" => [
+		0 => "Ik begrijp het",
 	],
 	"Forgot password?" => [
 		0 => "Wachtwoord vergeten?",
@@ -314,8 +519,8 @@ $translation_table = [
 	"Email changed" => [
 		0 => "E-mailadres veranderd",
 	],
-	"The reCAPTCHA wasn't entered correctly" => [
-		0 => "reCAPTCHA is foutief ingevoerd",
+	"%s says you are a robot" => [
+		0 => "%s geeft aan dat u een robot bent",
 	],
 	"Invalid Username/Email" => [
 		0 => "Ongeldige gebruikersnaam of e-mailadres",
@@ -344,14 +549,8 @@ $translation_table = [
 	"Welcome to %s" => [
 		0 => "Welkom bij %s.",
 	],
-	"Passwords don't match" => [
-		0 => "Wachtwoorden komen niet overeen",
-	],
 	"Email already being used" => [
 		0 => "E-mailadres wordt al gebruikt door iemand anders",
-	],
-	"Check the errors in the form to continue." => [
-		0 => "Controleer de fouten in de tekstvelden om verder te gaan.",
 	],
 	"Password required" => [
 		0 => "Wachtwoord vereist",
@@ -383,6 +582,9 @@ $translation_table = [
 	"Settings" => [
 		0 => "Instellingen",
 	],
+	"Bulk importer" => [
+		0 => "Invoer in bulk",
+	],
 	"Chevereto version" => [
 		0 => "Versie",
 	],
@@ -396,7 +598,7 @@ $translation_table = [
 		0 => "Ondersteuning",
 	],
 	"Need help? Go to %s and you will get help quickly." => [
-		0 => "Hulp nodig? Ga naar %s en je krijgt deze zo snel mogelijk.",
+		0 => "Hulp nodig? Ga naar %s en u krijgt deze zo snel mogelijk.",
 	],
 	"PHP version" => [
 		0 => "PHP versie",
@@ -438,8 +640,20 @@ $translation_table = [
 	"Memory limit" => [
 		0 => "Geheugenlimiet",
 	],
+	"Rebuild stats" => [
+		0 => "Statistieken verversen",
+	],
+	"Connecting IP" => [
+		0 => "Verbonden IP",
+	],
+	"Not your IP?" => [
+		0 => "Niet jouw IP?",
+	],
 	"Links" => [
 		0 => "Links",
+	],
+	"Collaboration" => [
+		0 => "Samenwerking",
 	],
 	"Documentation" => [
 		0 => "Documentatie",
@@ -447,14 +661,8 @@ $translation_table = [
 	"Changelog" => [
 		0 => "Wijzigingen",
 	],
-	"Request new features" => [
-		0 => "Vraag nieuwe functies",
-	],
 	"Bug tracking" => [
 		0 => "Bug tracking",
-	],
-	"Blog" => [
-		0 => "Blog",
 	],
 	"Website" => [
 		0 => "Website",
@@ -729,6 +937,9 @@ $translation_table = [
 	"Invalid visibility" => [
 		0 => "Ongeldige zichtbaarheid",
 	],
+	"Invalid internal type" => [
+		0 => "Ongeldig intern type",
+	],
 	"Invalid target attribute" => [
 		0 => "Ongeldig doelattribuut",
 	],
@@ -782,6 +993,9 @@ $translation_table = [
 	],
 	"Invalid SMTP username" => [
 		0 => "Ongeldige SMTP-gebruikernaam",
+	],
+	"Invalid key" => [
+		0 => "Ongeldige sleutel",
 	],
 	"This URL key is already being used by another page (ID %s)" => [
 		0 => "Deze URL sleutel is al in gebruik door een andere pagina (ID %s)",
@@ -882,6 +1096,9 @@ $translation_table = [
 	"Test email sent to %s." => [
 		0 => "Test email verzonden naar %s.",
 	],
+	"Downloading %s data" => [
+		0 => "Download %s data",
+	],
 	"User %s followed" => [
 		0 => "Gebruiker %s wordt gevolgd.",
 	],
@@ -895,10 +1112,10 @@ $translation_table = [
 		0 => "Inhoud niet meer gewaardeerd",
 	],
 	"%u liked your %t %c" => [
-		0 => "%u waardeerd jouw %t %c",
+		0 => "%u waardeert uw %t %c",
 	],
 	"%u is now following you" => [
-		0 => "%u volgt je nu",
+		0 => "%u volgt u nu",
 	],
 	"A private user" => [
 		0 => "Een prive-gebruiker",
@@ -908,9 +1125,6 @@ $translation_table = [
 	],
 	"Sign in" => [
 		0 => "Inloggen",
-	],
-	"Logged out" => [
-		0 => "Uitgelogd ",
 	],
 	"Upload images" => [
 		0 => "Upload afbeeldingen",
@@ -969,6 +1183,9 @@ $translation_table = [
 	"Settings for %s" => [
 		0 => "Instellingen voor %s",
 	],
+	"You must agree to the terms and privacy policy" => [
+		0 => "U moet akkoord gaan met de voorwaarden en het privacybeleid",
+	],
 	"You must be at least %s years old to use this website." => [
 		0 => "U moet minimaal %s jaar oud zijn om deze website te gebruiken.",
 	],
@@ -980,9 +1197,6 @@ $translation_table = [
 	],
 	"%s's Images" => [
 		0 => "%s's Afbeeldingen",
-	],
-	"%s's Albums" => [
-		0 => "%s's albums",
 	],
 	"Results for" => [
 		0 => "Resultaten voor",
@@ -1005,9 +1219,6 @@ $translation_table = [
 	"Discovery" => [
 		0 => "Ontdekken",
 	],
-	"Close" => [
-		0 => "Sluiten",
-	],
 	"Advanced search" => [
 		0 => "Geavanceerd zoeken",
 	],
@@ -1017,41 +1228,14 @@ $translation_table = [
 	"Notices (%s)" => [
 		0 => "Mededelingen (%s)",
 	],
-	"Sign in with another account" => [
-		0 => "Met een ander account inloggen",
-	],
-	"or" => [
-		0 => "of",
-	],
-	"Username or Email address" => [
-		0 => "Gebruikersnaam of e-mailadres",
-	],
-	"Keep me logged in" => [
-		0 => "Onthoud mijn gegevens",
-	],
-	"Don't have an account? <a href='%s'>Sign up</a> now." => [
-		0 => "Nog geen account? <a href='%s'>Registreer</a> nu.",
-	],
-	"Sign up with another account" => [
-		0 => "Met een ander account inloggen",
-	],
-	"Email address" => [
-		0 => "E-mailadres",
-	],
-	"Username" => [
-		0 => "Gebruikersnaam",
-	],
-	"I'm at least %s years old" => [
-		0 => "Ik ben minimaal %s jaar oud",
+	"Lights" => [
+		0 => "Donker/licht",
 	],
 	"Notifications" => [
 		0 => "Berichten",
 	],
-	"loading" => [
-		0 => "laden",
-	],
 	"You don't have notifications" => [
-		0 => "Je hebt geen berichten",
+		0 => "U hebt geen berichten",
 	],
 	"My Profile" => [
 		0 => "Mijn profiel",
@@ -1063,13 +1247,13 @@ $translation_table = [
 		0 => "Wij hebben een aanvraag ontvangen om het volgende e-mailadres <a href=\"%u\">%n</a> te wijzigen op %w.",
 	],
 	"To complete the process you must <a href=\"%s\">activate your email</a>." => [
-		0 => "Om jouw e-mailadres te activeren, klik op <a href=\"%s\">deze link</a>.",
+		0 => "Om uw e-mailadres te activeren, klik op <a href=\"%s\">deze link</a>.",
 	],
 	"Alternatively you can copy and paste the URL into your browser: <a href=\"%s\">%s</a>" => [
-		0 => "Je kunt ook deze link in uw adresbalk plakken: <a href=\"%s\">%s</a>",
+		0 => "U kunt ook deze link in uw adresbalk plakken: <a href=\"%s\">%s</a>",
 	],
 	"If you didn't intend this just ignore this message." => [
-		0 => "Heb je niet om dit bericht gevraagd, dan kun je dit bericht negeren.",
+		0 => "Heeft u niet om dit bericht gevraagd, dan kunt u dit bericht negeren.",
 	],
 	"This request was made from IP: %s" => [
 		0 => "Deze aanvraag is gedaan vanaf IP adres: %s",
@@ -1078,7 +1262,7 @@ $translation_table = [
 		0 => "Wij hebben een aanvraag ontvangen om het account %n te registreren op %w.",
 	],
 	"To complete the process you must <a href=\"%s\">activate your account</a>." => [
-		0 => "Om jouw account te activeren, klik op <a href=\"%s\">deze link</a>.",
+		0 => "Om uw account te activeren, klik op <a href=\"%s\">deze link</a>.",
 	],
 	"We received a request to reset the password for your <a href=\"%u\">%n</a> account." => [
 		0 => "Wij hebben een aanvraag ontvangen om het wachtwoord <a href=\"%u\">%n</a> te wijzigen.",
@@ -1090,10 +1274,10 @@ $translation_table = [
 		0 => "Hallo %n, welkom bij %w.",
 	],
 	"Now that your account is ready you can enjoy uploading your images, creating albums and setting the privacy of your content as well as many more cool things that you will discover." => [
-		0 => "Nu je account klaar is, kun je foto's gaan uploaden, albums aanmaken , krijg je de mogelijkheid om de privacy-instellingen te kiezen voor je foto's en kun je verder nog veel meer leuke dingen gaan ontdekken.",
+		0 => "Nu uw account klaar is, kunt u foto's gaan uploaden, albums aanmaken , krijgt u  de mogelijkheid om de privacy-instellingen te kiezen voor uw foto's en kunt u verder nog veel meer leuke dingen gaan ontdekken.",
 	],
 	"By the way, here is you very own awesome profile page: <a href=\"%u\">%n</a>. Go ahead and customize it, its yours!." => [
-		0 => "Hier is jouw eigen profiel: <a href=\"%u\">%n</a>. Ga nu snel aan de slag en maak deze meer persoonlijk.",
+		0 => "Hier is uw eigen profiel: <a href=\"%u\">%n</a>. Ga nu snel aan de slag en maak deze meer persoonlijk.",
 	],
 	"Thank you for joining" => [
 		0 => "Bedankt voor het registreren",
@@ -1114,7 +1298,7 @@ $translation_table = [
 		0 => "voeg afbeeldingen URL's toe",
 	],
 	"You can also %i or %u." => [
-		0 => "Je kunt ook %i of %u.",
+		0 => "U kunt ook %i of %u.",
 	],
 	"browse from your device" => [
 		0 => "vanaf uw toestel bladeren",
@@ -1123,7 +1307,7 @@ $translation_table = [
 		0 => "neem een foto",
 	],
 	"You can also %i, %c or %u." => [
-		0 => "Je kunt ook %i, %c of %u.",
+		0 => "U kunt ook %i, %c of %u.",
 	],
 	"Edit or resize any image by clicking the image preview" => [
 		0 => "Bewerk of pas formaat aan van de afbeelding door op de voorvertoning te klikken",
@@ -1132,16 +1316,16 @@ $translation_table = [
 		0 => "Bewerk iedere afbeelding door het voorbeeld aan te raken",
 	],
 	"your computer" => [
-		0 => "jouw computer",
+		0 => "uw computer",
 	],
 	"You can add more images from %i or %u." => [
-		0 => "Je kunt meer afbeeldingen toevoegen vanaf %i of %u.",
+		0 => "U kunt meer afbeeldingen toevoegen vanaf %i of %u.",
 	],
 	"your device" => [
-		0 => "jouw apparaat",
+		0 => "uw apparaat",
 	],
 	"You can add more images from %i, %c or %u." => [
-		0 => "Je kunt meer afbeeldingen toevoegen vanaf %i, %c of %u.",
+		0 => "U kunt meer afbeeldingen toevoegen vanaf %i, %c of %u.",
 	],
 	"Uploading %q %o" => [
 		0 => "Uploading %q %o",
@@ -1159,10 +1343,10 @@ $translation_table = [
 		0 => "Geuploade afbeeldingen toegevoegd aan %s.",
 	],
 	"You can %c with the content just uploaded or %m." => [
-		0 => "Je kunt %c met de afbeeldingen die net zijn geupload of %m.",
+		0 => "U kunt %c met de afbeeldingen die net zijn geupload of %m.",
 	],
 	"You can %c with the content just uploaded." => [
-		0 => "Je kunt %c met de afbeeldingen die net zijn geupload.",
+		0 => "U kunt %c met de afbeeldingen die net zijn geupload.",
 	],
 	"create a new album" => [
 		0 => "een nieuw album maken",
@@ -1170,14 +1354,14 @@ $translation_table = [
 	"move it to an existing album" => [
 		0 => "verplaats naar een bestaand album",
 	],
+	"You must %s or %l to save this content into your account." => [
+		0 => "U moet %s of %l om de informatie op te slaan in uw account.",
+	],
 	"create an account" => [
 		0 => "Maak een account",
 	],
 	"sign in" => [
 		0 => "Log in",
-	],
-	"You can %s or %l to save this content into your account." => [
-		0 => "Je kunt %s of %l om deze gegevens op te slaan in jouw account.",
 	],
 	"No %s have been uploaded" => [
 		0 => "Geen %s is geupload",
@@ -1199,9 +1383,6 @@ $translation_table = [
 	],
 	"Uploading" => [
 		0 => "Uploaden",
-	],
-	"cancel" => [
-		0 => "annuleren",
 	],
 	"cancel remaining" => [
 		0 => "annuleer resterende",
@@ -1229,9 +1410,6 @@ $translation_table = [
 	],
 	"insert" => [
 		0 => "invoegen",
-	],
-	"Edit" => [
-		0 => "Bewerken",
 	],
 	"Remove" => [
 		0 => "Verwijder",
@@ -1287,8 +1465,17 @@ $translation_table = [
 	"Create album" => [
 		0 => "Nieuw album",
 	],
-	"The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
-		0 => "De geüploade inhoud wordt verplaatst naar dit nieuwe album. U kunt ook de inhoud verplaatsen naar een <a class=\"modal-switch\" data-switch=\"move-existing-album\">bestaand album</a>.",
+	"The uploaded content will be moved to this newly created album." => [
+		0 => "De geuploade gegevens worden verplaatst naar dit nieuw aangemaakte album.",
+	],
+	"existing album" => [
+		0 => "Bestaand album",
+	],
+	"You can also move the content to an %a." => [
+		0 => "U kunt de gegevens ook verplaatsten naar een %a.",
+	],
+	"You must %s or %l if you want to edit this album later on." => [
+		0 => "U moet %s of %l als u dit album later aan wilt passen.",
 	],
 	"Move to album" => [
 		0 => "Verplaats naar album",
@@ -1298,10 +1485,6 @@ $translation_table = [
 	],
 	"Error report" => [
 		0 => "Foutrapport",
-	],
-	"album" => [
-		0 => "album",
-		1 => "albums",
 	],
 	"Viewer links" => [
 		0 => "Kijker",
@@ -1364,7 +1547,7 @@ $translation_table = [
 		0 => "Geen van deze woorden",
 	],
 	"Put a minus sign just before words you don't want: -rodent -\"Jack Russell\"" => [
-		0 => "Voer een minteken in voor de woorden die je niet wilt: -rodent - Jack Russell\".",
+		0 => "Voer een minteken in voor de woorden die u niet wilt: -rodent - Jack Russell\".",
 	],
 	"Storage" => [
 		0 => "Opslag",
@@ -1423,8 +1606,35 @@ $translation_table = [
 	"Untitled image" => [
 		0 => "Naamloze afbeelding",
 	],
+	"Path" => [
+		0 => "Pad",
+	],
+	"Local path (absolute)" => [
+		0 => "Lokaal pad (absoluut)",
+	],
+	"Directory structure" => [
+		0 => "Mapstructuur",
+	],
+	"Parse top level folders as users (username)" => [
+		0 => "Parse top level folders als gebruikers (gebruikersnaam)",
+	],
+	"Parse top level folders as albums" => [
+		0 => "Parse top level mappen als album",
+	],
+	"Don't parse folders" => [
+		0 => "Parseer geen mappen",
+	],
+	"When parsing top level folders as users, second level folders will be parsed as user albums. Parsing top level folders as albums adds these as guest albums." => [
+		0 => "Bij het parseren van mappen op het hoogste niveau als gebruiker, worden mappen op het tweede niveau geparsed als gebruikersalbums. Het parseren van mappen op het hoogste niveau als albums voegt deze toe als gastalbums.",
+	],
+	"Threads" => [
+		0 => "Threads",
+	],
+	"This determines how intensive and fast will be the import process. Don't use more than %s threads on a shared server." => [
+		0 => "Dit bepaalt hoe intensief en snel het importproces zal zijn. Gebruik niet meer dan %s threads op een gedeelde server.",
+	],
 	"You can use wildcard * characters." => [
-		0 => "Je kunt wildcard * karakters gebruiken.",
+		0 => "U kunt wildcard * karakters gebruiken.",
 	],
 	"Expiration date" => [
 		0 => "Vervaldatum",
@@ -1459,6 +1669,9 @@ $translation_table = [
 	"Region" => [
 		0 => "Regio",
 	],
+	"Storage region" => [
+		0 => "Opslagregio",
+	],
 	"Storage bucket" => [
 		0 => "Opslagvoorraad",
 	],
@@ -1474,20 +1687,14 @@ $translation_table = [
 	"Storage secret" => [
 		0 => "Opslag secret",
 	],
-	"Client email" => [
-		0 => "Klant email",
-	],
-	"Google Cloud client email" => [
-		0 => "Google Cloud klant email",
-	],
-	"You will need a <a %s>service account</a> for this." => [
-		0 => "Je hebt hiervoor een <a %s>service abonnement</a> nodig.",
-	],
 	"Private key" => [
 		0 => "Privé sleutel",
 	],
 	"Google Cloud JSON key" => [
 		0 => "Google Cloud JSON sleutel",
+	],
+	"You will need a <a %s>service account</a> for this." => [
+		0 => "U hebt hiervoor een <a %s>service abonnement</a> nodig.",
 	],
 	"Service name" => [
 		0 => "Service name",
@@ -1501,8 +1708,8 @@ $translation_table = [
 	"API endpoint for OpenStack identity" => [
 		0 => "API endpoint for OpenStack identity",
 	],
-	"Storage region" => [
-		0 => "Opslagregio",
+	"Username" => [
+		0 => "Gebruikersnaam",
 	],
 	"Container" => [
 		0 => "Container",
@@ -1522,23 +1729,32 @@ $translation_table = [
 	"Tenant name (account name)" => [
 		0 => "Tenant name (account name)",
 	],
+	"Storage endpoint" => [
+		0 => "Opslageindpunt",
+	],
+	"Server address" => [
+		0 => "Serveradres",
+	],
 	"Hostname or IP of the storage server" => [
 		0 => "Hostname of IP van de opslagserver",
-	],
-	"Path" => [
-		0 => "Pad",
 	],
 	"Server path" => [
 		0 => "Serverpad",
 	],
-	"Server path where the files will be stored" => [
-		0 => "Serverpad waar de bestanden worden opgeslagen",
+	"Absolute path where the files will be stored in the context of the %p login. Use %s for root path." => [
+		0 => "Absoluut pad waar de bestanden worden opgeslagen in de context van de %p login. Gebruik %s voor root pad.",
 	],
-	"Server username" => [
-		0 => "Server gebruikersnaam",
+	"Server login" => [
+		0 => "Server login",
 	],
 	"Server password" => [
 		0 => "Server wachtwoord",
+	],
+	"Local path" => [
+		0 => "Lokaal pad",
+	],
+	"Local path where the files will be stored" => [
+		0 => "Lokaal pad waar de bestanden zullen worden opgeslagen",
 	],
 	"Storage capacity" => [
 		0 => "Opslagcapaciteit",
@@ -1582,14 +1798,17 @@ $translation_table = [
 	"Flag as safe" => [
 		0 => "Markeer als vellig",
 	],
-	"Delete" => [
-		0 => "Verwijder",
-	],
 	"Create new album" => [
 		0 => "Maak een nieuw album",
 	],
-	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
-		0 => "Om alle functies van deze site te gebruiken moet u ingelogd zijn. Indien u nog geen account heeft, dan kunt u zich <a href=\"%s\">registreren</a>.",
+	"Sign in with another account" => [
+		0 => "Met een ander account inloggen",
+	],
+	"Continue with %label%" => [
+		0 => "Doorgaan met %label%",
+	],
+	"Home" => [
+		0 => "Home",
 	],
 	"There's nothing to show here." => [
 		0 => "Er is hier niets te zien",
@@ -1622,13 +1841,13 @@ $translation_table = [
 		0 => "Bevestig dat content veilig is",
 	],
 	"Do you really want to flag this content as safe?" => [
-		0 => "Weet je zeker dat je deze inhoud als veilig wilt markeren?",
+		0 => "Weet u zeker dat u deze inhoud als veilig wilt markeren?",
 	],
 	"Confirm flag content as unsafe" => [
 		0 => "Bevestig dat deze content onveilig is",
 	],
 	"Do you really want to flag this content as unsafe?" => [
-		0 => "Weet je zeker dat je deze inhoud als onveilig wilt markeren?",
+		0 => "Weet u zeker dat u deze inhoud als onveilig wilt markeren?",
 	],
 	"Confirm deletion" => [
 		0 => "Bevestig verwijderen",
@@ -1651,8 +1870,11 @@ $translation_table = [
 	"Keyboard shortcuts" => [
 		0 => "Toetsenbord shortcuts",
 	],
-	"Like" => [
-		0 => "Waardeer",
+	"Private album" => [
+		0 => "Privé-album",
+	],
+	"Password protected" => [
+		0 => "Wachtwoord beschermd",
 	],
 	"Uploaded by guest" => [
 		0 => "Toegevoegd door een bezoeker",
@@ -1666,11 +1888,11 @@ $translation_table = [
 	"by %u" => [
 		0 => "door %u",
 	],
-	"Select" => [
-		0 => "Selecteer",
-	],
 	"Toggle unsafe flag" => [
 		0 => "Selecteer onveilig",
+	],
+	"That page doesn't exist" => [
+		0 => "Deze pagina is niet beschikbaar",
 	],
 	"The requested page was not found." => [
 		0 => "De gevraagde pagina is niet gevonden",
@@ -1681,17 +1903,11 @@ $translation_table = [
 	"The user has been deleted" => [
 		0 => "De gebruiker is verwijderd",
 	],
-	"The content has been deleted." => [
-		0 => "De inhoud is verwijderd",
-	],
 	"Your account is almost ready" => [
 		0 => "Uw account is bijna klaar voor gebruik",
 	],
 	"An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "Een e-mail werd verstuurd naar %s met instructies om uw account te activeren. De activatielink is slechts 48 uur geldig. Indien u deze niet heeft ontvangen, controleer dan uw spam-folder.",
-	],
-	"Go to homepage" => [
-		0 => "Naar de startpagina",
 	],
 	"Resend activation" => [
 		0 => "Activatie opnieuw verzenden",
@@ -1708,26 +1924,23 @@ $translation_table = [
 	"Your email address" => [
 		0 => "Uw e-mailadres",
 	],
-	"Add email" => [
-		0 => "Email toevoegen",
+	"Submit" => [
+		0 => "Versturen",
 	],
 	"An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "Een e-mail met instructies om uw wachtwoord te resetten is verstuurd naar het opgegeven e-mailadres. Indien u deze niet heeft ontvangen, controleer dan uw spam-folder.",
 	],
-	"Resend instructions" => [
-		0 => "Instructies opnieuw verzenden",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "Er is een fout opgetreden. Probeer het later nog eens.",
-	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "Een eerdere e-mail is verstuurd met instructies om uw wachtwoord te resetten. Indien u deze niet heeft ontvangen, controleer dan uw spam-folder.",
 	],
-	"Enter your username or the email address that you used to create your account." => [
-		0 => "Voer je gebruikersnaam of e-mailadres in.",
+	"Resend instructions" => [
+		0 => "Instructies opnieuw verzenden",
 	],
-	"Submit" => [
-		0 => "Versturen",
+	"Enter your username or email address to continue. You may need to check your spam folder or whitelist %s" => [
+		0 => "Voer uw gebruikersnaam of emailadres in om verder te gaan. Mogelijk dat u de spam map na moet kijken of whitelist %s",
+	],
+	"Username or Email address" => [
+		0 => "Gebruikersnaam of e-mailadres",
 	],
 	"Your password has been changed. You can now try logging in using your new password." => [
 		0 => "Uw wachtwoord is aangepast. U kunt vanaf nu inloggen met uw nieuw wachtwoord.",
@@ -1735,29 +1948,20 @@ $translation_table = [
 	"Login now" => [
 		0 => "Nu inloggen",
 	],
-	"Enter the new password that you want to use." => [
-		0 => "Voer een nieuw wachtwoord in.",
-	],
-	"New Password" => [
-		0 => "Nieuw wachtwoord",
+	"Enter your new password" => [
+		0 => "Voer een nieuw wachtwoord in",
 	],
 	"%d characters min" => [
 		0 => "minimaal %d tekens",
 	],
-	"Enter your new password" => [
-		0 => "Voer een nieuw wachtwoord in",
-	],
-	"Confirm password" => [
-		0 => "Wachtwoord bevestigen",
+	"Password strength" => [
+		0 => "Wachtwoord sterkte",
 	],
 	"Re-enter your new password" => [
 		0 => "Wachtwoord nogmaals invoeren",
 	],
 	"An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters." => [
-		0 => "Een email is verzonden naar %s met instructies om je account te activeren. Mocht je deze instructies niet ontvangen, kijk dan ook in de junk of spammail",
-	],
-	"Enter the username or email address that you used to create your account to continue." => [
-		0 => "Voer de gebruikersnaam of het email adres in dat je hebt gebruikt tijdens de registratie, om verder te gaan.",
+		0 => "Een email is verzonden naar %s met instructies om uw account te activeren. Mocht u deze instructies niet ontvangen, kijk dan ook in de junk of spammail",
 	],
 	"This content is private" => [
 		0 => "Deze inhoud is privé",
@@ -1769,7 +1973,7 @@ $translation_table = [
 		0 => "Verwijder album",
 	],
 	"You like this" => [
-		0 => "Je waardeert dit",
+		0 => "U waardeert dit",
 	],
 	"Upload to album" => [
 		0 => "Upload naar album",
@@ -1781,7 +1985,7 @@ $translation_table = [
 		0 => "Lees en voldoen aan de volgende voorwaarden voordat u verder gaat:",
 	],
 	"This website contains information, links and images of sexually explicit material. If you are under the age of %s, if such material offends you or if it's illegal to view such material in your community please do not continue.\n\nI am at least %s years of age and I believe that as an adult it is my inalienable right to receive/view sexually explicit material. I desire to receive/view sexually explicit material. \n\nI believe that sexual acts between consenting adults are neither offensive nor obscene. The viewing, reading and downloading of sexually explicit materials does not violate the standards of my community, town, city, state or country.\n\nThe sexually explicit material I am viewing is for my own personal use and I will not expose minors to the material.\n\nI am solely responsible for any false disclosures or legal ramifications of viewing, reading or downloading any material in this site. Furthermore this website nor its affiliates will be held responsible for any legal ramifications arising from fraudulent entry into or use of this website.\n\nThis consent screen constitutes a legal agreement between this website and you and/or any business in which you have any legal or equitable interest. If any portion of this agreement is deemed unenforceable by a court of competent jurisdiction it shall not affect the enforceability of the other portions of the agreement." => [
-		0 => "Deze website bevat informatie, links en afbeeldingen van seksueel expliciet materiaal. Als je jonger bent dan de leeftijd van %s, als dergelijk materiaal u beledigt of als het illegaal is om dergelijk materiaal te bekijken in uw gemeenschap, ga dan niet verder.\n\nIk ben ten minste %s jaar en ik geloof dat als volwassene het mijn onvervreemdbaar recht is om seksueel expliciet materiaal te ontvangen en te bekijken. Ik wens seksueel expliciet materiaal te ontvangen en te bekijken.\n\nIk geloof dat seksuele handelingen tussen instemmende volwassenen niet beledigend zijn, noch obsceen. Het bekijken, lezen en downloaden van seksueel expliciete materiaal schend niet de normen van mijn gemeenschap, stad, staat of land.\n\nHet seksueel expliciet materiaal dat ik bekijk is voor mijn eigen persoonlijk gebruik en ik zal niet minderjarigen blootstellen aan het materiaal.\n\nIk ben als enige verantwoordelijk voor valse onthullingen of juridische gevolgen van het bekijken, lezen of downloaden van materiaal op deze site. Bovendien is deze website, noch haar gelieerde ondernemingen verantwoordelijk voor enige juridische gevolgen als gevolg van frauduleuze toegang tot of gebruik van deze website.\n\nDit toestemming scherm vormt een wettelijke overeenkomst tussen deze website en u en/of elk bedrijf waarin u een wettelijk of billijk belang heeft . Als enig deel van deze overeenkomst niet afdwingbaar wordt geacht door een bevoegde rechtbank, zal niet van invloed zijn op de afdwingbaarheid van de andere delen van de overeenkomst.",
+		0 => "Deze website bevat informatie, links en afbeeldingen van seksueel expliciet materiaal. Als u jonger bent dan de leeftijd van %s, als dergelijk materiaal u beledigt of als het illegaal is om dergelijk materiaal te bekijken in uw gemeenschap, ga dan niet verder.\n\nIk ben ten minste %s jaar en ik geloof dat als volwassene het mijn onvervreemdbaar recht is om seksueel expliciet materiaal te ontvangen en te bekijken. Ik wens seksueel expliciet materiaal te ontvangen en te bekijken.\n\nIk geloof dat seksuele handelingen tussen instemmende volwassenen niet beledigend zijn, noch obsceen. Het bekijken, lezen en downloaden van seksueel expliciete materiaal schend niet de normen van mijn gemeenschap, stad, staat of land.\n\nHet seksueel expliciet materiaal dat ik bekijk is voor mijn eigen persoonlijk gebruik en ik zal niet minderjarigen blootstellen aan het materiaal.\n\nIk ben als enige verantwoordelijk voor valse onthullingen of juridische gevolgen van het bekijken, lezen of downloaden van materiaal op deze site. Bovendien is deze website, noch haar gelieerde ondernemingen verantwoordelijk voor enige juridische gevolgen als gevolg van frauduleuze toegang tot of gebruik van deze website.\n\nDit toestemming scherm vormt een wettelijke overeenkomst tussen deze website en u en/of elk bedrijf waarin u een wettelijk of billijk belang heeft . Als enig deel van deze overeenkomst niet afdwingbaar wordt geacht door een bevoegde rechtbank, zal niet van invloed zijn op de afdwingbaarheid van de andere delen van de overeenkomst.",
 	],
 	"By clicking in \"I Agree\" you declare that you have read and understood all the conditions mentioned above." => [
 		0 => "Middels klikken op 'Ik bevestig' verklaart u alle bovengenoemde voorwaarden als gelezen en begrepen.",
@@ -1789,8 +1993,122 @@ $translation_table = [
 	"I Agree" => [
 		0 => "Ik bevestig",
 	],
+	"documentation" => [
+		0 => "documentatie",
+	],
+	"Learn more about %s at our %d." => [
+		0 => "Leer meer over %s in onze %d.",
+	],
+	"The connecting IP is determined using the server variable %var%. If the detected IP doesn't match yours, it means that your web server is under a proxy and you need to tweak your server to set the real connecting IP." => [
+		0 => "Het verbindende IP wordt bepaald met behulp van de servervariabele %var%. Als het gedetecteerde IP niet overeenkomt met het uwe, betekent dit dat uw webserver onder een proxy staat en dat u uw server moet aanpassen om het echte verbindende IP in te stellen.",
+	],
+	"For Nginx, you must use %nginx%. For Apache, %apache%." => [
+		0 => "Voor Nginx moet u %nginx% gebruiken, voor Apache %apache%.",
+	],
+	"Make sure that you address this issue as the system relies on accurate IP detections to provide basic functionalities and to protect against spam, flooding, and brute force attacks." => [
+		0 => "Zorg ervoor dat u dit probleem aanpakt, want het systeem vertrouwt op nauwkeurige IP-detecties om basisfunctionaliteiten te bieden en te beschermen tegen spam, flooding en brute force-aanvallen.",
+	],
 	"Disk used" => [
 		0 => "Schijfverbruik",
+	],
+	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure." => [
+		0 => "Deze tool maakt het mogelijk om grote hoeveelheden content aan uw website toe te voegen door een systeempad aan te wijzen met de content die u wilt importeren. Het ondersteunt het toevoegen van gebruikers, albums en afbeeldingen met behulp van een op mappen gebaseerde structuur.",
+	],
+	"Automatic importing" => [
+		0 => "Automatisch importeren",
+	],
+	"The system automatically parses any content by a continuous observation of the %path% path." => [
+		0 => "Het systeem verwerkt automatisch iedere inhoud door een continue monitoring van het %path% pad.",
+	],
+	"The system automatically parses any content by a continous observation of the %path% path." => [
+		0 => "Het systeem ontleedt automatisch elke inhoud door een continue observatie van het %path% pad.",
+	],
+	"Completed jobs will be automatically re-started after %n %m." => [
+		0 => "Voltooide jobs worden automatisch opnieuw opgestart na %n %m.",
+	],
+	"Reset to clear stats and logs." => [
+		0 => "Reset om de statistieken en logboeken te wissen.",
+	],
+	"Queued" => [
+		0 => "In de wachtrij",
+	],
+	"Working" => [
+		0 => "Werken",
+	],
+	"Paused" => [
+		0 => "Gepauzeerd",
+	],
+	"Canceled" => [
+		0 => "Geannuleerd",
+	],
+	"Completed" => [
+		0 => "Afgerond",
+	],
+	"Actions" => [
+		0 => "Acties",
+	],
+	"Reset" => [
+		0 => "Reset",
+	],
+	"Pause" => [
+		0 => "Pauze",
+	],
+	"Resume" => [
+		0 => "Hervatten",
+	],
+	"Process log" => [
+		0 => "Proceslogboek",
+	],
+	"Errors" => [
+		0 => "Fouten",
+	],
+	"Status" => [
+		0 => "Status",
+	],
+	"The system works with a scheduled command to continuously process the importing. It requires a crontab entry." => [
+		0 => "Het systeem werkt met een ingeplande opdracht om de import continu te verwerken. Het vereist een crontab-invoer.",
+	],
+	"You can run the command in parallel by changing the integer value of %s%." => [
+		0 => "U kunt het commando parallel uitvoeren door de cijferwaarde van %s% te wijzigen.",
+	],
+	"All file-system permissions must be granted for the crontab user at %path%" => [
+		0 => "Alle permissies voor het bestandssysteem moeten voor de crontab-gebruiker worden verleend op %path%.",
+	],
+	"Required crontab entry:" => [
+		0 => "Vereiste crontab voorwaarde:",
+	],
+	"Add import job" => [
+		0 => "Voeg importeeropdracht toe",
+	],
+	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d." => [
+		0 => "Deze tool maakt het mogelijk om massaal inhoud aan uw website toe te voegen door een systeempad aan te wijzen met de inhoud die u wilt importeren. Het ondersteunt het toevoegen van gebruikers, albums en afbeeldingen met behulp van een mapstructuur. U kunt meer te weten komen over de mappenstructuur, het toevoegen van metadata, en alles over deze tool in onze %d.",
+	],
+	"Process import" => [
+		0 => "Procesimport",
+	],
+	"Top level folders as %s" => [
+		0 => "Top level mappen als %s",
+	],
+	"Process" => [
+		0 => "Proces",
+	],
+	"Cancel" => [
+		0 => "Annuleer",
+	],
+	"Do you really want to remove the import ID %s?" => [
+		0 => "Wilt u echt de import ID %s verwijderen?",
+	],
+	"Manual importing" => [
+		0 => "Handmatig importeren",
+	],
+	"The system will parse the contents of any available filesystem path." => [
+		0 => "Het systeem zal de inhoud van elk beschikbaar bestandssysteempad parsen.",
+	],
+	"These processes must be manually created and handled with the web browser tab open." => [
+		0 => "Deze processen moeten handmatig worden aangemaakt en afgehandeld met het webbrowser tabblad geopend.",
+	],
+	"Parser" => [
+		0 => "Parser",
 	],
 	"Add user" => [
 		0 => "Gebruiker toevoegen",
@@ -1798,17 +2116,17 @@ $translation_table = [
 	"Role" => [
 		0 => "Rol",
 	],
+	"Manager" => [
+		0 => "Manager",
+	],
 	"Administrator" => [
 		0 => "Beheerder",
 	],
+	"Email address" => [
+		0 => "E-mailadres",
+	],
 	"This setting is always diabled when using personal website mode." => [
 		0 => "Deze instelling is altijd uitgeschakeld bij persoonlijk gebruik van de website.",
-	],
-	"documentation" => [
-		0 => "documentatie",
-	],
-	"Learn more about %s at our %d." => [
-		0 => "Leer meer over %s in onze %d.",
 	],
 	"Add category" => [
 		0 => "Categorie toevoegen",
@@ -1830,6 +2148,24 @@ $translation_table = [
 	],
 	"Website description" => [
 		0 => "Website omschrijving",
+	],
+	"Powered by" => [
+		0 => "Ondersteunt door",
+	],
+	"Enable this if you want to show a \"%s\" link at the footer." => [
+		0 => "Activeer dit als u sociale netwerkknoppen wilt tonen om inhoud te delen.",
+	],
+	"Automatic" => [
+		0 => "Automatisch",
+	],
+	"Forced" => [
+		0 => "Geforceerd",
+	],
+	"%a will use HTTPS detection on the server side (recommended). %f will use HTTPS regardless of your server setup. %d to don't use HTTPS at all." => [
+		0 => "%a gebruikt HTTPS-detectie aan de serverzijde (aanbevolen). %f zal HTTPS gebruiken ongeacht de configuratie van uw server. %d om helemaal geen HTTPS te gebruiken.",
+	],
+	"This only controls the protocol used in the URLs, it won't turn your website into a valid HTTPS website unless your server is configured to support and use HTTPS." => [
+		0 => "Dit regelt alleen het protocol dat in de URL's wordt gebruikt, het maakt van uw website geen geldige HTTPS-website, tenzij uw server is geconfigureerd voor ondersteuning en gebruik van HTTPS.",
 	],
 	"Default time zone" => [
 		0 => "Standaard tijdzone",
@@ -1868,7 +2204,7 @@ $translation_table = [
 		0 => "Gebruikers ID",
 	],
 	"Your user id is: %s" => [
-		0 => "Jouw gebruikersnummer is: %s",
+		0 => "Uuw gebruikersnummer is: %s",
 	],
 	"Numeric ID of the target user for personal mode." => [
 		0 => "Numeriek nummer  van de doelgebruiker voor persoonlijke modus.",
@@ -1917,6 +2253,24 @@ $translation_table = [
 	],
 	"Type" => [
 		0 => "Type",
+	],
+	"Terms of service" => [
+		0 => "Gebruikersvoorwaarden",
+	],
+	"Privacy" => [
+		0 => "Privacy",
+	],
+	"Contact" => [
+		0 => "Contact",
+	],
+	"Extra page" => [
+		0 => "Extra pagina",
+	],
+	"Internal page type" => [
+		0 => "Intern paginatype",
+	],
+	"You can have multiple extra pages, but only one of the other special internal types." => [
+		0 => "U kunt meerdere extra pagina's hebben, maar slechts één van de andere speciale interne types.",
 	],
 	"Page visibility" => [
 		0 => "Zichtbaarheid pagina",
@@ -1991,7 +2345,10 @@ $translation_table = [
 		0 => "pagina's",
 	],
 	"Do you really want to delete the page ID %s? This can't be undone." => [
-		0 => "Wil je echt pagina ID %s verwijderen? Dit kan niet ongedaan worden gemaakt.",
+		0 => "Wilt u echt pagina ID %s verwijderen? Dit kan niet ongedaan worden gemaakt.",
+	],
+	"Enabled image formats" => [
+		0 => "Ingeschakelde afbeeldingsformaten",
 	],
 	"Unchecked image formats won't be allowed to be uploaded." => [
 		0 => "Niet geselecteerde bestandsformaten zijn niet toegestaan om te uploaden.",
@@ -2007,6 +2364,15 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Schakel dit in om bezoeker uploads toe te staan",
+	],
+	"Upload user interface" => [
+		0 => "Gebruikersinterface uploaden",
+	],
+	"On-page container" => [
+		0 => "Container op pagina",
+	],
+	"route" => [
+		0 => "route",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "Insluitcodes inschakelen (uploader)",
@@ -2273,7 +2639,7 @@ $translation_table = [
 		0 => "Gebruikersnaam routering",
 	],
 	"Enable this if you want to use %s/username URLs instead of %s/user/username." => [
-		0 => "Selecteer indien je %s/gebruikersnaam wilt gebruiken in plaats van %s/gebruiker/gebruikersnaam.",
+		0 => "Selecteer indien u %s/gebruikersnaam wilt gebruiken in plaats van %s/gebruiker/gebruikersnaam.",
 	],
 	"Require email confirmation" => [
 		0 => "Verplicht email bevestiging",
@@ -2342,7 +2708,7 @@ $translation_table = [
 		0 => "Vervaag NSFW inhoud in lijstoverzicht",
 	],
 	"Enable this if you want to apply a blur effect on the NSFW images in listings." => [
-		0 => "Schakel dit in als je het vervaag effect wilt inschakelen in lijstoverzicht.",
+		0 => "Schakel dit in als u het vervaag effect wilt inschakelen in lijstoverzicht.",
 	],
 	"Show banners in not safe content" => [
 		0 => "Geef banners weer bij onveilige (NFSW) inhoud",
@@ -2402,7 +2768,7 @@ $translation_table = [
 		0 => "Toon aantal kolommen",
 	],
 	"Here you can set how many columns are used based on each target device." => [
-		0 => "Hier kun je instellen hoeveel kolommen er gebruikt moeten worden, gebaseerd op het gebruikte apparaat.",
+		0 => "Hier kunt u instellen hoeveel kolommen er gebruikt moeten worden, gebaseerd op het gebruikte apparaat.",
 	],
 	"Phone" => [
 		0 => "Telefoon",
@@ -2542,6 +2908,12 @@ $translation_table = [
 	"Enable embed codes (content)" => [
 		0 => "Insluitcodes inschakelen (inhoud)",
 	],
+	"Everybody" => [
+		0 => "Iedereen",
+	],
+	"Users only" => [
+		0 => "Alleen gebruikers",
+	],
 	"Enable this if you want to show embed codes for the content." => [
 		0 => "Selecteer dit om de insluitcodes voor de inhoud te tonen.",
 	],
@@ -2562,6 +2934,9 @@ $translation_table = [
 	],
 	"Put your custom JS code here. It will be placed as <script> just before the closing </head> tag." => [
 		0 => "Zet uw aangepaste JS-code hier. Het zal als <script> geplaatst worden net vóór de afsluitende </head>-tag.",
+	],
+	"Do not use %s markup here. This is for plain JS code, not for HTML script tags. If you use script tags here you will break your website." => [
+		0 => "Gebruik hier geen %s markup. Dit is voor gewone JS-code, niet voor HTML-scripttags. Als u hier scripttags gebruikt zal u u website breken.",
 	],
 	"Style" => [
 		0 => "Stijl",
@@ -2641,8 +3016,8 @@ $translation_table = [
 	"User IDs" => [
 		0 => "Gebruikers ID's",
 	],
-	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
-		0 => "Komma gescheiden lijst van doel gebruikers ID's om afbeeldingen op de startpagina te tonen. Laat het leeg om alle recente afbeeldingen weer te geven.",
+	"Comma-separated list of target user IDs (integers) to show most recent images on homepage. Leave it empty to display trending images." => [
+		0 => "Een vergelijkende lijst van gebruikers-ID's om afbeeldingen op de homepage te tonen. Laat het leeg of nul om alle recente afbeeldingen weer te geven.",
 	],
 	"banners" => [
 		0 => "advertenties",
@@ -2659,11 +3034,23 @@ $translation_table = [
 	"Enable this to show a notice on top warning you about new available system updates." => [
 		0 => "Schakel in om bovenaan de pagina een waarschuwing te krijgen als er een nieuwe systeemupdate is.",
 	],
+	"Dump update query" => [
+		0 => "Dump update zoekopdracht",
+	],
+	"Enable this if you want to dump the update query to run it manually." => [
+		0 => "Schakel dit in als u automatisch de juiste taal voor elke gebruiker wilt detecteren en instellen.",
+	],
+	"SEO %s URLs" => [
+		0 => "SEO %s URL's",
+	],
+	"Enable this if you want to use SEO %s URLs." => [
+		0 => "Activeer deze optie als u SEO %s URL's wilt gebruiken.",
+	],
 	"Minify code" => [
 		0 => "Verkleincode",
 	],
 	"Enable this if you want to auto minify CSS and JS code." => [
-		0 => "Schakel dit in als je automatisch CSS en JS code wilt verkleinen.",
+		0 => "Schakel dit in als u automatisch CSS en JS code wilt verkleinen.",
 	],
 	"Maintenance" => [
 		0 => "Onderhoud",
@@ -2713,6 +3100,30 @@ $translation_table = [
 	"Album routing" => [
 		0 => "Album routering",
 	],
+	"Hostname" => [
+		0 => "Hostnaam",
+	],
+	"Hostname on which sub-domain wildcards will be added." => [
+		0 => "Hostnaam waarop sub-domein wildcards zullen worden toegevoegd.",
+	],
+	"This setting may be overridden by %s." => [
+		0 => "Deze instelling kan met %s worden overschreven.",
+	],
+	"Language subdomains" => [
+		0 => "Taal subdomeinen",
+	],
+	"languages" => [
+		0 => "talen",
+	],
+	"Enable to use %s for %t." => [
+		0 => "Inschakelen van %s voor %t.",
+	],
+	"Username subdomains" => [
+		0 => "Gebruikersnaam subdomeinen",
+	],
+	"user profiles" => [
+		0 => "Gebruikersprofielen",
+	],
 	"Custom language strings" => [
 		0 => "Aangepaste taalreeksen",
 	],
@@ -2735,7 +3146,7 @@ $translation_table = [
 		0 => "Taalkeuze",
 	],
 	"Enable this if you want to allow language selection." => [
-		0 => "Schakel dit in als je taalkeuze toe wilt staan.",
+		0 => "Schakel dit in als u taalkeuze toe wilt staan.",
 	],
 	"Enabled languages" => [
 		0 => "Ingeschakelde talen",
@@ -2777,7 +3188,7 @@ $translation_table = [
 		0 => "E-mail modus",
 	],
 	"How to send emails? SMTP recommended." => [
-		0 => "Hoe wil je e-mails verzenden? SMTP wordt aangeraden.",
+		0 => "Hoe wilt u e-mails verzenden? SMTP wordt aangeraden.",
 	],
 	"SMTP server and port" => [
 		0 => "SMTP server en -poort",
@@ -2797,14 +3208,53 @@ $translation_table = [
 	"Unsecured" => [
 		0 => "Onbewaakt",
 	],
+	"Decode ID" => [
+		0 => "Decodeer ID",
+	],
+	"Encode ID" => [
+		0 => "Codeer ID",
+	],
 	"Send test email" => [
 		0 => "Verstuur test e-mail",
 	],
-	"test@somedomain.com" => [
-		0 => "test@willekeurigdomein.nl",
-	],
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "Gebruik dit om te testen hoe e-mails worden afgeleverd. We adviseren u om %s te gebruiken.",
+	],
+	"Export a user" => [
+		0 => "Exporteer een gebruiker",
+	],
+	"Export user" => [
+		0 => "Exporteer gebruiker",
+	],
+	"This will allow you to download a user's standard personal information in JSON format." => [
+		0 => "Hiermee kunt u de standaard persoonlijke gegevens van een gebruiker downloaden in JSON-formaat.",
+	],
+	"Regenerate external storage stats" => [
+		0 => "Regenereren van externe opslagstatistieken",
+	],
+	"Storage id" => [
+		0 => "Opslag id",
+	],
+	"Regenerate" => [
+		0 => "Regenereer",
+	],
+	"This will re-calculate the sum of all the image records associated to the target external storage." => [
+		0 => "Hiermee wordt het aantal van alle beeldrecords die bij de externe opslag van het doel horen, opnieuw berekend.",
+	],
+	"Migrate image records from one external storage to another" => [
+		0 => "Beeldrecords van de ene externe opslag naar de andere migreren",
+	],
+	"Source storage id" => [
+		0 => "Bron opslag id",
+	],
+	"Target storage id" => [
+		0 => "Doel opslag id",
+	],
+	"Migrate" => [
+		0 => "Migreer",
+	],
+	"This only updates the database. You must transfer the actual files to target storage container on your own. URL rewriting is strongly recommended. Use zero (0) for local storage." => [
+		0 => "Hiermee wordt alleen de database bijgewerkt. U moet de eigenlijke bestanden overbrengen naar de doelcontainer op uw eigenlijke opslagcontainer. URL-herschrijven wordt sterk aanbevolen. Gebruik nul (0) voor lokale opslag.",
 	],
 	"social networks" => [
 		0 => "Sociale netwerken",
@@ -2848,8 +3298,26 @@ $translation_table = [
 	"VK client secret" => [
 		0 => "VK gebruikers secret",
 	],
+	"%s spam protection" => [
+		0 => "%s spam bescherming",
+	],
+	"user generated content" => [
+		0 => "door de gebruiker gegenereerde inhoud",
+	],
+	"Enable this to use %l to block spam on %c." => [
+		0 => "Schakel dit in om %l te gebruiken om spam te blokkeren op %c.",
+	],
+	"%s API key" => [
+		0 => "%s API sleutel",
+	],
+	"user signup" => [
+		0 => "gebruikersregistratie",
+	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Er is een <a href=\"%s\" target=\"_blank\">reCAPTCHA code</a> nodig om dit te kunnen gebruiken.",
+	],
+	"Please note that each reCAPTCHA version require its own set of keys. Don't forget to update the keys if you change versions." => [
+		0 => "Houd er rekening mee dat elke reCAPTCHA-versie een eigen set sleutels nodig heeft. Vergeet niet om de sleutels bij te werken als u van versie verandert.",
 	],
 	"%s site key" => [
 		0 => "%s site sleutel",
@@ -2862,6 +3330,12 @@ $translation_table = [
 	],
 	"How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA." => [
 		0 => "Hoeveel foute pogingen zijn nodig om te vragen om reCAPTCHA? Voer 0 (nul) in om er altijd om te vragen.",
+	],
+	"Force %s on contact page" => [
+		0 => "Dwing %s op contactpagina",
+	],
+	"Enable this to always show %s on contact page." => [
+		0 => "Activeer dit om altijd %s te tonen op de contactpagina.",
 	],
 	"Comments API" => [
 		0 => "Opmerkingen API",
@@ -2879,13 +3353,13 @@ $translation_table = [
 		0 => "Opmerking code",
 	],
 	"Disqus, Facebook or anything you want. It will be used in image view." => [
-		0 => "Disqus, Facebook of wat je maar wilt. Het zal worden gebruikt in de afbeelding viewer.",
+		0 => "Disqus, Facebook of wat u maar wilt. Het zal worden gebruikt in de afbeelding viewer.",
 	],
 	"Analytics code" => [
 		0 => "Google Analytics-code",
 	],
 	"Google Analytics or anything you want. It will be added to the theme footer." => [
-		0 => "Google Analytics of wat je maar wilt. Het zal worden toegevoegd aan de footer.",
+		0 => "Google Analytics of wat u maar wilt. Het zal worden toegevoegd aan de footer.",
 	],
 	"For documentation about the API check the <a %s>API documentation</a>" => [
 		0 => "Voor documentatie over de API, bekijk de <a %s>API documentatie</a>",
@@ -2951,28 +3425,34 @@ $translation_table = [
 		0 => "In dit album",
 	],
 	"Upload and share your images." => [
-		0 => "Upload en deel jouw afbeeldingen",
+		0 => "Upload en deel uw afbeeldingen",
 	],
 	"Drag and drop anywhere you want and start uploading your images now. %s limit. Direct image links, BBCode and HTML thumbnails." => [
-		0 => "Sleep en plak waar je wilt en start het uploaden van de afbeeldingen direct. %s limiet. Directe afbeeldingen links, BB code en HTML thumbnails.",
+		0 => "Sleep en plak waar u wil en start het uploaden van de afbeeldingen direct. %s limiet. Directe afbeeldingen links, BB code en HTML thumbnails.",
 	],
 	"Start uploading" => [
 		0 => "Start uploaden",
-	],
-	"Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings." => [
-		0 => "Vul deze sectie met foto's van %s account .<br>Je kan deze gebruiker ook aanpassen in het dashboard.",
 	],
 	"Sign up to unlock all the features" => [
 		0 => "Registreer om gebruik te maken van de mogelijkheden van deze website.",
 	],
 	"Manage your content, create private albums, customize your profile and more." => [
-		0 => "Beheer uw inhoud, maak privé-albums, personaliseer je profiel en nog veel meer.",
+		0 => "Beheer uw inhoud, maak privé-albums, personaliseer uw profiel en nog veel meer.",
 	],
-	"Enter your password" => [
-		0 => "Voer uw wachtwoord in",
+	"Sign in with your account" => [
+		0 => "Log in met uw account",
+	],
+	"Don't have an account? <a href='%s'>Sign up</a> now." => [
+		0 => "Nog geen account? <a href='%s'>Registreer</a> nu.",
+	],
+	"Logged out" => [
+		0 => "Uitgelogd ",
 	],
 	"You have been logged off %s. Hope to see you soon." => [
 		0 => "U bent nu uitgelogd van %s. Hopelijk tot snel.",
+	],
+	"Go to homepage" => [
+		0 => "Naar de startpagina",
 	],
 	"Website under maintenance" => [
 		0 => "Website is in onderhoud.",
@@ -2987,10 +3467,10 @@ $translation_table = [
 		0 => "Voer het wachtwoord in om verder te gaan.",
 	],
 	"Send" => [
-		0 => "Verstuur.",
+		0 => "Verzenden",
 	],
 	"Add image uploading to your website, blog or forum by installing our upload plugin. It provides image uploading to any website by placing a button that will allow your users to directly upload images to our service and it will automatically handle the codes needed for insertion. All features included like drag and drop, remote upload, image resizing and more." => [
-		0 => "Voeg het uploaden van afbeeldingen toe aan jouw website, blog of forum door onze upload plugin te installeren. Het biedt het uploaden van afbeeldingen naar elke website door een knop te plaatsen waarmee jouw gebruikers direct afbeeldingen kunnen uploaden naar onze service en het zal automatisch de codes verwerken die nodig zijn voor het invoegen. Alle functies zijn inbegrepen, zoals slepen en neerzetten, uploaden op afstand, beeldvergroting en nog veel meer.",
+		0 => "Voeg het uploaden van afbeeldingen toe aan uw website, blog of forum door onze upload plugin te installeren. Het biedt het uploaden van afbeeldingen naar elke website door een knop te plaatsen waarmee jouw gebruikers direct afbeeldingen kunnen uploaden naar onze service en het zal automatisch de codes verwerken die nodig zijn voor het invoegen. Alle functies zijn inbegrepen, zoals slepen en neerzetten, uploaden op afstand, beeldvergroting en nog veel meer.",
 	],
 	"Supported software" => [
 		0 => "Ondersteunde software",
@@ -3002,13 +3482,13 @@ $translation_table = [
 		0 => "De plugin werkt in elke website met een gebruiker aanpasbare inhoud en voor %sv, het zal een upload knop plaatsen die overeenkomt met de doel editor werkbalk zodat er geen extra aanpassing nodig is.",
 	],
 	"Add it to your website" => [
-		0 => "Toevoegen aan jouw website",
+		0 => "Toevoegen aan uw website",
 	],
 	"options" => [
 		0 => "opties",
 	],
 	"Copy and paste the plugin code into your website HTML code (preferably inside the head section). There are plenty %o to make it fit better to your needs." => [
-		0 => "Kopieer en plak de plugin code in jouw website HTML-code (bij voorkeur in de kopsectie). Er zijn tal van %o om het beter op jouw behoeften af te stemmen.",
+		0 => "Kopieer en plak de plugin code in uw website HTML-code (bij voorkeur in de kopsectie). Er zijn tal van %o om het beter op uw behoeften af te stemmen.",
 	],
 	"Basic options" => [
 		0 => "Basis opties",
@@ -3044,7 +3524,7 @@ $translation_table = [
 		0 => "Geavanceerde opties",
 	],
 	"The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options." => [
-		0 => "De plugin heeft een grote set extra opties die volledige aanpassing mogelijk maken. Je kunt aangepaste HTML, CSS, eigen kleurenpalet, waarnemers en meer gebruiken. Controleer de %d en plugin bron om een beter beeld te krijgen van deze geavanceerde opties.",
+		0 => "De plugin heeft een grote set extra opties die volledige aanpassing mogelijk maken. U kunt aangepaste HTML, CSS, eigen kleurenpalet, waarnemers en meer gebruiken. Controleer de %d en plugin bron om een beter beeld te krijgen van deze geavanceerde opties.",
 	],
 	"You either don't have permission to access this page or the link has expired." => [
 		0 => "U heeft geen toegang tot deze pagina of de link is verlopen.",
@@ -3063,9 +3543,6 @@ $translation_table = [
 	],
 	"Registration IP" => [
 		0 => "Registratie IP",
-	],
-	"Status" => [
-		0 => "Status",
 	],
 	"Valid" => [
 		0 => "Geldig",
@@ -3086,7 +3563,7 @@ $translation_table = [
 		0 => "Automatisch verwijderen uploads",
 	],
 	"This setting will apply to all your image uploads by default. You can override this setting on each upload." => [
-		0 => "Deze instelling geldt standaard voor al jouw geuploade afbeeldingen. Je kunt dit overrulen bij iedere upload.",
+		0 => "Deze instelling geldt standaard voor al uw geuploade afbeeldingen. U kunt dit overrulen bij iedere upload.",
 	],
 	"Keep image <a %s>Exif data</a> on upload" => [
 		0 => "Behoud <a %s>Exif data</a> van afbeelding bij uploaden",
@@ -3113,7 +3590,7 @@ $translation_table = [
 		0 => "Huidig wachtwoord",
 	],
 	"Enter your current password" => [
-		0 => "Voer uw huidig wachtwoord in",
+		0 => "Voer uw huidige wachtwoord in",
 	],
 	"New password" => [
 		0 => "Nieuw wachtwoord",
@@ -3127,6 +3604,12 @@ $translation_table = [
 	"This user doesn't have a password. Add one using this form." => [
 		0 => "Deze gebruiker heeft geen wachtwoord. Gebruik dit tekstveld om een wachtwoord aan te maken.",
 	],
+	"Enter your password" => [
+		0 => "Voer uw wachtwoord in",
+	],
+	"Confirm password" => [
+		0 => "Wachtwoord bevestigen",
+	],
 	"Re-enter your password" => [
 		0 => "Wachtwoord opnieuw invoeren",
 	],
@@ -3136,9 +3619,6 @@ $translation_table = [
 	"Delete existing image" => [
 		0 => "Verwijder bestaande afbeelding",
 	],
-	"Privacy" => [
-		0 => "Privacy",
-	],
 	"Make my profile and identity totally private" => [
 		0 => "Maak mijn profiel en identiteit geheim",
 	],
@@ -3146,22 +3626,22 @@ $translation_table = [
 		0 => "Schakel dit in om als anonieme gebruiker getoond te worden",
 	],
 	"This is your real name, not your username." => [
-		0 => "Dit is je echte naam, niet je gebruikersnaam.",
+		0 => "Dit is uw echte naam, niet uw gebruikersnaam.",
 	],
 	"http://yourwebsite.com" => [
-		0 => "http://uwwebsite.be",
+		0 => "http://uwwebsite.domein",
 	],
 	"Bio" => [
 		0 => "Biografie",
 	],
 	"Tell us a little bit about you" => [
-		0 => "Vertel meer over jezelf",
+		0 => "Vertel meer over uzelf",
 	],
 	"User has no connections." => [
 		0 => "Deze gebruiker heeft geen connecties.",
 	],
-	"Link your account to external services to be able to login and share content." => [
-		0 => "Koppel uw account aan externe diensten. Zo kunt u gemakkelijk inhoud delen.",
+	"Link your account to external services to be able to login here." => [
+		0 => "Koppel uw account aan externe diensten om in te kunnen loggen en inhoud te kunnen delen.",
 	],
 	"Do you really want to disconnect %s from this account?" => [
 		0 => "Wilt u %s echt van dit account ontkoppelen?",
@@ -3184,14 +3664,41 @@ $translation_table = [
 	"Connect %s" => [
 		0 => "Verbind %s",
 	],
+	"Feel free to browse and discover all my shared images and albums." => [
+		0 => "Voel u vrij om mijn gedeelde foto's en albums door te bladeren.",
+	],
 	"Button" => [
 		0 => "Knop",
+	],
+	"View all my images" => [
+		0 => "Bekijk al mijn foto's",
+	],
+	"Login" => [
+		0 => "Inloggen",
+	],
+	"Already have an account? %s now." => [
+		0 => "Heeft u reeds een account? %s nu.",
 	],
 	"resend account activation" => [
 		0 => "activatie opnieuw verzenden",
 	],
-	"If you have already signed up maybe you need to request to %s" => [
-		0 => "Als u zich al hebt ingeschreven, moet u misschien vragen om %s",
+	"If you have already signed up maybe you need to request to %s to activate your account." => [
+		0 => "Als u zich al hebt aangemeld, moet u misschien een verzoek indienen bij %s om uw account te activeren.",
+	],
+	"You can also %s." => [
+		0 => "U kunt ook %s.",
+	],
+	"I'm at least %s years old" => [
+		0 => "Ik ben minimaal %s jaar oud",
+	],
+	"terms" => [
+		0 => "voorwaarden",
+	],
+	"privacy policy" => [
+		0 => "privacybeleid",
+	],
+	"I agree to the %terms_link and %privacy_link" => [
+		0 => "Ik ga akkoord met de %terms_link en het %privacy_link",
 	],
 	"Upload profile background" => [
 		0 => "Upload een achtergrondafbeelding",
@@ -3215,6 +3722,15 @@ $translation_table = [
 	"Follow" => [
 		0 => "Volgen",
 	],
+	"You have been forbidden to use this website." => [
+		0 => "U bent verbannen van deze website.",
+	],
+	"Plugin" => [
+		0 => "Plugin",
+	],
+	"Page %s" => [
+		0 => "Pagina %s",
+	],
 	"General questions/comments" => [
 		0 => "Algemene vragen en opmerkingen",
 	],
@@ -3227,17 +3743,11 @@ $translation_table = [
 	"Invalid subject" => [
 		0 => "Ongeldig onderwerp",
 	],
-	"Invalid reCAPTCHA" => [
-		0 => "Ongeldige reCAPTCHA",
-	],
 	"Mail error" => [
 		0 => "Mail fout",
 	],
 	"Message sent" => [
 		0 => "Bericht verzonden",
-	],
-	"Contact" => [
-		0 => "Contact",
 	],
 	"Message sent. We will get in contact soon." => [
 		0 => "Bericht verzonden. We nemen zo spoedig mogelijk contact op.",
@@ -3251,167 +3761,8 @@ $translation_table = [
 	"Subject" => [
 		0 => "Onderwerp",
 	],
-	"Installed version is v%s" => [
-		0 => "Geïnstalleerde versie: v%s",
-	],
-	"Can't connect to %s" => [
-		0 => "Kan niet verbinden met %s",
-	],
-	"Last available release is v%s" => [
-		0 => "Laatst beschikbare release is v%s",
-	],
-	"Update needed, proceeding to download" => [
-		0 => "Update nodig, doorgestuurd naar downloaden",
-	],
-	"No update needed" => [
-		0 => "Geen update nodig",
-	],
-	"System files already up to date" => [
-		0 => "Systeembestanden zijn reeds bijgewerkt.",
-	],
-	"Starting v%s download" => [
-		0 => "Start downloaden van v%s",
-	],
-	"Downloaded v%s, proceeding to extraction" => [
-		0 => "v%s is gedownload, verder met uitpakken",
-	],
-	"Attempting to extract v%s" => [
-		0 => "Bezig met uitpakken van v%s",
-	],
-	"Extraction completed" => [
-		0 => "Uitpakken gereed",
-	],
-	"Proceding to install the update" => [
-		0 => "Bezig met installeren van de update",
-	],
-	"Update failed" => [
-		0 => "Bijwerken mislukt",
-	],
-	"Please provide a valid email address" => [
-		0 => "Voer een geldig e-mailadres in",
-	],
-	"You must enter the album name." => [
-		0 => "U moet nog een albumnaam invoeren.",
-	],
-	"Confirm" => [
-		0 => "Bevestigen",
-	],
-	"Select existing album" => [
-		0 => "Selecteer bestaand album",
-	],
-	"Please select a valid image file type." => [
-		0 => "Selecteer a.u.b. een geldig afbeeldingformaat",
-	],
-	"Please select a picture of at most %s size." => [
-		0 => "Selecteer a.u.b. een foto met maximale grootte %s.",
-	],
-	"Profile image updated." => [
-		0 => "Profielfoto is geüpdatet.",
-	],
-	"Profile background image updated." => [
-		0 => "Achtergrondafbeelding is geüpdatet.",
-	],
-	"Profile background image deleted." => [
-		0 => "Achtergrondafbeelding is verwijderd.",
-	],
-	"Error deleting profile background image." => [
-		0 => "Fout bij het verwijderen van je profielachtergrond.",
-	],
-	"Update available v%s" => [
-		0 => "Update naar v%s beschikbaar",
-	],
-	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
-		0 => "Er is een update beschikbaar voor uw systeem. U kunt deze automatisch downloaden installeren of ga naar %s om het updatebestand te downloaden.",
-	],
-	"Update now" => [
-		0 => "Nu bijwerken",
-	],
-	"This website is running latest %s version" => [
-		0 => "Deze website gebruikt de laatste %s versie",
-	],
-	"Toggle select" => [
-		0 => "Selectiekeuze",
-	],
-	"Toggle flag" => [
-		0 => "Vlagkeuze",
-	],
-	"Previous" => [
-		0 => "Vorige",
-	],
-	"Next" => [
-		0 => "Volgende",
-	],
-	"Clipboard image" => [
-		0 => "Klembord afbeelding",
-	],
-	"File too big." => [
-		0 => "Bestand is te groot.",
-	],
-	"Invalid or unsupported file format." => [
-		0 => "Ongeldig of niet ondersteund bestandsformaat.",
-	],
-	"Some files couldn't be added" => [
-		0 => "Sommige bestanden kunnen niet toegevoegd worden",
-	],
-	"Image edited successfully." => [
-		0 => "Afbeelding is aangepast",
-	],
-	"private" => [
-		0 => "privé",
-	],
-	"Album edited successfully." => [
-		0 => "Album is aangepast",
-	],
-	"Invalid URL key." => [
-		0 => "Ongeldige URL sleutel.",
-	],
-	"Category URL key already being used." => [
-		0 => "Categorie URL sleutel is al in gebruik.",
-	],
-	"Category successfully deleted." => [
-		0 => "Categorie succesvol verwijderd.",
-	],
-	"Category %s added." => [
-		0 => "Categorie %s is toegevoegd.",
-	],
-	"Invalid expiration date." => [
-		0 => "Ongeldige vervaldatum.",
-	],
-	"IP %s already banned." => [
-		0 => "IP %s is reeds geblokkeerd.",
-	],
-	"IP %s banned." => [
-		0 => "IP %s is geblokkeerd.",
-	],
-	"IP ban successfully deleted." => [
-		0 => "IP blokkering is verwijderd.",
-	],
-	"Please fill all the required fields." => [
-		0 => "Vul alsjeblieft de gevraagde velden in.",
-	],
-	"Invalid storage capacity value. Make sure to use a valid format." => [
-		0 => "Ongeldige waarde voor de opslagcapaciteit. Controleer op juistheid formaat.",
-	],
-	"Invalid URL." => [
-		0 => "Ongeldige URL.",
-	],
-	"Storage successfully edited." => [
-		0 => "Opslag succesvol gewijzigd.",
-	],
-	"User added successfully." => [
-		0 => "Gebruiker is toegevoegd.",
-	],
-	"The content has been moved." => [
-		0 => "De inhoud is verplaatst",
-	],
-	"Unselect" => [
-		0 => "Deselecteer",
-	],
-	"The content has been edited." => [
-		0 => "De inhoud is aangepast",
-	],
 	"All the changes that you have made will be lost if you continue." => [
-		0 => "De wijzigingen gaan verloren als je verder gaat.",
+		0 => "De wijzigingen gaan verloren als u verder gaat.",
 	],
 	"Changes saved successfully." => [
 		0 => "De wijzigingen zijn opgeslagen.",

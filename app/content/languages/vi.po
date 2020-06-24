@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2018-06-29 19:18+0000\n"
-"PO-Revision-Date: 2018-06-29 19:18+0000\n"
+"POT-Creation-Date: 2018-12-19 20:57+0000\n"
+"PO-Revision-Date: 2018-12-19 20:57+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: vi\n"
@@ -10,19 +10,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-msgid "To use all the features of this site you must be logged in."
-msgstr "Bạn cần đăng nhập để sử dụng tất cả tính năng của website."
-
-#, php-format
-msgid "If you don't have an account you can <a href=\"%s\">sign up</a> right now."
-msgstr "Bạn có thể <a href=\"%s\">đăng ký</a> tài khoản."
-
-msgid "Decode ID"
-msgstr "Decode ID"
-
-msgid "Encode ID"
-msgstr "Encode ID"
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -444,7 +431,7 @@ msgstr "Đã có sẵn bản cập nhật cho trang Chevereto của bạn."
 
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 msgid "The release notes for this update are:"
-msgstr "CHú ý cho bản cập nhật này là:"
+msgstr "Chú ý cho bản cập nhật này là:"
 
 msgid "admin dashboard"
 msgstr "bảng điều khiển "
@@ -458,6 +445,10 @@ msgstr "xem trên %s\n"
 
 msgid "cookie policy"
 msgstr "chính sách cookie"
+
+#, php-format
+msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link."
+msgstr "Chúng tôi sử dụng cookie của mình và các bên thứ ba để tối ưu hoá trải nghiệm người dùng của bạn cũng như các dịch vụ của mình. Nếu bạn tiếp tục truy cập website, đồng nghĩa với việc bạn hiểu và chấp nhận %cookie_policy_link."
 
 msgid "I understand"
 msgstr "Tôi hiểu"
@@ -512,12 +503,9 @@ msgstr "Thêm email của bạn"
 msgid "Email changed"
 msgstr "Email đã đổi"
 
-#: ../../../app/routes/route.account.php:95
-#: ../../../app/routes/route.login.php:71
-#: ../../../app/routes/route.settings.php:140
-#: ../../../app/routes/route.signup.php:73
-msgid "The reCAPTCHA wasn't entered correctly"
-msgstr "reCAPTCHA chưa nhập đúng"
+#, php-format
+msgid "%s says you are a robot"
+msgstr "%s cho rằng bạn là robot"
 
 #: ../../../app/routes/route.account.php:119
 #: ../../../app/routes/route.account.php:164
@@ -654,6 +642,9 @@ msgstr "Người dùng"
 #: ../../../app/themes/Peafowl/header.php:405
 msgid "Settings"
 msgstr "Cài đặt"
+
+msgid "Bulk importer"
+msgstr "Công cụ import số lượng lớn"
 
 #: ../../../app/routes/route.dashboard.php:161
 msgid "Chevereto version"
@@ -825,9 +816,6 @@ msgstr "Yêu cầu thêm tính năng mới"
 msgid "Bug tracking"
 msgstr "Theo dõi lỗi"
 
-msgid "Blog"
-msgstr "Blog"
-
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
 msgid "Website"
@@ -994,6 +982,10 @@ msgstr "Phía sau phân trang"
 msgid "Content (image and album)"
 msgstr "Nội dung (trong xem ảnh và album)"
 
+#: ../../../app/routes/route.dashboard.php:401
+msgid "Tab about column"
+msgstr "Tab cột giới thiệu"
+
 #: ../../../app/routes/route.dashboard.php:404
 msgid "Before comments"
 msgstr "Phía dưới bình luận"
@@ -1002,10 +994,18 @@ msgstr "Phía dưới bình luận"
 msgid "Image page"
 msgstr "Tranh hình ảnh"
 
+#: ../../../app/routes/route.dashboard.php:412
+msgid "Inside viewer top (image page)"
+msgstr "Trong phần trên của trình duyệt ảnh (trang xem ảnh)"
+
 #: ../../../app/routes/route.dashboard.php:413
 #: ../../../app/routes/route.dashboard.php:417
 msgid "Expected banner size 728x90"
 msgstr "Size tốt nhất 728x90"
+
+#: ../../../app/routes/route.dashboard.php:416
+msgid "Inside viewer foot (image page)"
+msgstr "Trong phần chân của trình duyệt ảnh (trang xem ảnh)"
 
 #: ../../../app/routes/route.dashboard.php:423
 msgid "Before header (image page)"
@@ -1039,6 +1039,10 @@ msgstr "Sai ngôn ngữ"
 msgid "Invalid timezone"
 msgstr "Sai múi giờ"
 
+#, php-format
+msgid "Invalid value: %s"
+msgstr "Giá trị không hợp lệ: %s"
+
 #: ../../../app/routes/route.dashboard.php:577
 msgid "Invalid upload storage mode"
 msgstr "Sai chế độ lưu trữ"
@@ -1054,6 +1058,9 @@ msgstr "Chiều rộng thumb bị sai"
 #: ../../../app/routes/route.dashboard.php:592
 msgid "Invalid thumb height"
 msgstr "Chiều cao thumb bị sai"
+
+msgid "Invalid medium size"
+msgstr "Kích thước trung bình không hợp lệ"
 
 #: ../../../app/routes/route.dashboard.php:602
 msgid "Invalid watermark percentage"
@@ -1088,7 +1095,7 @@ msgstr "sai màu của top bar"
 
 #: ../../../app/routes/route.dashboard.php:637
 msgid "Invalid theme top bar button color"
-msgstr "sai màu nút trên topbar"
+msgstr "Sai màu nút trên topbar"
 
 #: ../../../app/routes/route.dashboard.php:642
 msgid "Invalid theme image listing size"
@@ -1110,6 +1117,15 @@ msgstr "Sai cổng SMTP"
 msgid "Invalid SMTP security"
 msgstr "Sai bảo mật SMTP"
 
+#: ../../../app/routes/route.dashboard.php:672
+#: ../../../app/routes/route.dashboard.php:838
+msgid "Invalid personal mode user ID"
+msgstr "ID người dùng chế độ cá nhân không hợp lệ"
+
+#: ../../../app/routes/route.dashboard.php:682
+msgid "Invalid website privacy mode"
+msgstr "Chế độ bảo mật website không hợp lệ"
+
 #: ../../../app/routes/route.dashboard.php:687
 msgid "Invalid website content privacy mode"
 msgstr "sai chết độ riêng tư"
@@ -1120,7 +1136,49 @@ msgstr "sai style trang chủ"
 
 #: ../../../app/routes/route.dashboard.php:697
 msgid "Invalid homepage call to action button color"
-msgstr "sai màu của nút kêu gọi trang chủ"
+msgstr "Sai màu của nút nhấp trên trang chủ"
+
+#: ../../../app/routes/route.dashboard.php:702
+msgid "Invalid homepage call to action functionality"
+msgstr "Hàm gọi hành động trên homepage không hợp lệ"
+
+#: ../../../app/routes/route.dashboard.php:708
+msgid "Invalid title"
+msgstr "Tiêu đề không hợp lệ"
+
+#: ../../../app/routes/route.dashboard.php:718
+msgid "Invalid type"
+msgstr "nhập không hợp lệ"
+
+#: ../../../app/routes/route.dashboard.php:723
+msgid "Invalid visibility"
+msgstr "Hiển thị không hợp lệ"
+
+#: ../../../app/routes/route.dashboard.php:733
+msgid "Invalid rel attribute"
+msgstr "Thuộc tính rel không hợp lệ"
+
+#: ../../../app/routes/route.dashboard.php:738
+msgid "Invalid icon"
+msgstr "icon không hợp lệ"
+
+#: ../../../app/routes/route.dashboard.php:743
+msgid "Invalid URL key"
+msgstr "URL key không hợp lệ"
+
+#: ../../../app/routes/route.dashboard.php:748
+msgid "Invalid file path"
+msgstr "Đường dẫn file không hợp lệ"
+
+#: ../../../app/routes/route.dashboard.php:753
+msgid "Invalid link URL"
+msgstr "URL liên kết không hợp lệ"
+
+msgid "Invalid user minimum age"
+msgstr "Độ tuổi tối thiểu của người dùng không hợp lệ"
+
+msgid "Only alphanumeric, hyphen and underscore characters are allowed"
+msgstr "Chỉ chữ cái a-z, dấu gạch dưới và kí tự gạch ngang được chấp nhận"
 
 #: ../../../app/routes/route.dashboard.php:922
 msgid "Invalid URL"
@@ -1146,6 +1204,16 @@ msgstr "Sai máy chủ SMTP"
 #: ../../../app/routes/route.dashboard.php:861
 msgid "Invalid SMTP username"
 msgstr "Sai tên người dùng SMTP"
+
+#: ../../../app/routes/route.dashboard.php:960
+#, php-format
+msgid "This URL key is already being used by another page (ID %s)"
+msgstr "URL key này đã được một trang khác sử dụng (ID %s)"
+
+#: ../../../app/routes/route.dashboard.php:961
+#, php-format
+msgid "This file path is already being used by another page (ID %s)"
+msgstr "Đường dẫn file này đã được một trang khác sử dụng (ID %s)"
 
 #: ../../../app/routes/route.image.php:120
 #: ../../../app/themes/Peafowl/header.php:424
@@ -1178,7 +1246,11 @@ msgstr "ảnh %i trong %a album"
 
 #: ../../../app/routes/route.image.php:187
 msgid "Image %i in %c category"
-msgstr "ảnh %i trong %c chuyên mục"
+msgstr "Ảnh %i trong %c chuyên mục"
+
+#: ../../../app/routes/route.image.php:189
+msgid "Image %i hosted in %w"
+msgstr "Ảnh %i lưu trữ tại %w"
 
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:14
 msgid "Direct links"
@@ -1200,6 +1272,18 @@ msgstr "URL ảnh thumbnail"
 msgid "Medium URL"
 msgstr "URL ảnh trung bình"
 
+msgid "Full image"
+msgstr "Ảnh gốc"
+
+msgid "Full image (linked)"
+msgstr "Ảnh gốc (có liên kết)"
+
+msgid "Medium image (linked)"
+msgstr "Ảnh cỡ vừa (có liên kết)"
+
+msgid "Thumbnail image (linked)"
+msgstr "Ảnh thu nhỏ (có liên kết)"
+
 #: ../../../app/routes/route.json.php:44 ../../../app/routes/route.json.php:59
 #: ../../../app/routes/route.json.php:260
 #: ../../../app/routes/route.json.php:746
@@ -1210,6 +1294,11 @@ msgstr "URL ảnh trung bình"
 msgid "Login needed"
 msgstr "Cần đăng nhập"
 
+#: ../../../app/routes/route.json.php:499
+#: ../../../app/routes/route.json.php:690
+msgid "IP address already banned"
+msgstr "Địa chỉ IP đã bị cấm"
+
 #: ../../../app/routes/route.json.php:568
 #: ../../../app/routes/route.json.php:630
 msgid "Missing values"
@@ -1219,15 +1308,53 @@ msgstr "Thiếu dữ liệu"
 msgid "Username already being used"
 msgstr "Tên tài khoản đã có người sử dụng"
 
+#, php-format
+msgid "Add a password or another social connection before deleting %s"
+msgstr "Nhập mật khẩu hoặc kết nối mạng xã hội khác trước khi xoá %s"
+
+#, php-format
+msgid "Add an email or another social connection before deleting %s"
+msgstr "Nhập email hoặc kết nối mạng xã hội khác trước khi xoá %s"
+
 #: ../../../app/routes/route.json.php:1092
 #, php-format
 msgid "%s has been disconnected."
 msgstr "%s đã bị ngắt"
 
+#: ../../../app/routes/route.json.php:1109
+msgid "Test email from %s @ %t"
+msgstr "Email kiểm tra từ %s @ %t"
+
+#: ../../../app/routes/route.json.php:1109
+msgid "This is just a test"
+msgstr "Đây chỉ là nội dung kiểm tra"
+
+#: ../../../app/routes/route.json.php:1110
+#, php-format
+msgid "Test email sent to %s."
+msgstr "Email kiểm tra đã gửi đến %s."
+
+#, php-format
+msgid "Downloading %s data"
+msgstr "Đang tải %s dữ liệu"
+
 #: ../../../app/routes/route.json.php:1128
 #, php-format
 msgid "User %s followed"
 msgstr "Người dùng %s quan tâm"
+
+#: ../../../app/routes/route.json.php:1128
+#, php-format
+msgid "User %s unfollowed"
+msgstr "Người dùng %s bỏ theo dõi"
+
+#: ../../../app/routes/route.json.php:1150
+msgid "Content liked"
+msgstr "Đã like"
+
+#: ../../../app/routes/route.json.php:1150
+msgid "Content disliked"
+msgstr "Đã disliked"
 
 #: ../../../app/lib/classes/class.notification.php:75
 msgid "%u liked your %t %c"
@@ -1237,6 +1364,9 @@ msgstr "%u đã thích %t %c của bạn"
 #, php-format
 msgid "%u is now following you"
 msgstr "%u quan tâm ảnh của bạn"
+
+msgid "A private user"
+msgstr "Người dùng RIêng tư"
 
 #: ../../../app/routes/route.login.php:133
 msgid "Wrong Username/Email password combination"
@@ -1254,6 +1384,12 @@ msgstr "Đăng nhập"
 #: ../../../app/themes/Peafowl/views/logout.php:8
 msgid "Logged out"
 msgstr "Đã đăng xuất"
+
+msgid "Upload images"
+msgstr "Upload ảnh"
+
+msgid "Upload plugin"
+msgstr "Upload plugin"
 
 #: ../../../app/routes/route.search.php:120
 #, php-format
@@ -1328,6 +1464,13 @@ msgstr "Tên người dùng/Email không chính xác"
 msgid "Settings for %s"
 msgstr "Thiết lập cho %s"
 
+msgid "You must agree to the terms and privacy policy"
+msgstr "Bạn phải đồng ý với các điều khoản và chính sách bảo mật"
+
+#, php-format
+msgid "You must be at least %s years old to use this website."
+msgstr "Bạn phải có ít nhất %s tuổi để sử dụng website này"
+
 #: ../../../app/routes/route.signup.php:251
 #: ../../../app/themes/Peafowl/header.php:316
 #: ../../../app/themes/Peafowl/header.php:322
@@ -1374,6 +1517,21 @@ msgstr "Đã thích"
 msgid "Followers"
 msgstr "Người quan tâm"
 
+#: ../../../app/routes/route.user.php:379
+msgid "%n (%u) albums on %w"
+msgstr "%n (%u) albums trên %w"
+
+#: ../../../app/routes/route.user.php:384
+msgid "%n (%u) on %w"
+msgstr "%n (%u) trên %w"
+
+msgid "Discovery"
+msgstr "Khám phá"
+
+#: ../../../app/themes/Peafowl/header.php:222
+msgid "Close"
+msgstr "Đóng"
+
 #: ../../../app/themes/Peafowl/header.php:222
 #: ../../../app/themes/Peafowl/header.php:226
 msgid "Advanced search"
@@ -1389,93 +1547,6 @@ msgstr "Hình ngẫu nhiên"
 #, php-format
 msgid "Notices (%s)"
 msgstr "Thông báo (%s)"
-
-#: ../../../app/themes/Peafowl/header.php:281
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
-#: ../../../app/themes/Peafowl/views/login.php:18
-#: ../../../app/themes/Peafowl/views/login.php:65
-#: ../../../app/themes/Peafowl/views/signup.php:18
-#: ../../../app/themes/Peafowl/views/signup.php:76
-msgid "Sign in with another account"
-msgstr "Đăng nhập với tài khoản khác"
-
-#: ../../../app/themes/Peafowl/header.php:285
-#: ../../../app/themes/Peafowl/header.php:332
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/form_album.php:9
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
-#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
-#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/login.php:22
-#: ../../../app/themes/Peafowl/views/login.php:62
-#: ../../../app/themes/Peafowl/views/settings.php:354
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../app/themes/Peafowl/views/signup.php:22
-#: ../../../app/themes/Peafowl/views/signup.php:73
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
-#: ../../../lib/Peafowl/peafowl.min.js:31
-#: ../../../lib/Peafowl/peafowl.min.js:140
-msgid "or"
-msgstr "hoặc"
-
-#: ../../../app/themes/Peafowl/header.php:291
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
-#: ../../../app/themes/Peafowl/views/login.php:34
-#: ../../../app/themes/Peafowl/views/login.php:35
-msgid "Username or Email address"
-msgstr "Tên người dùng hoặc Email"
-
-#: ../../../app/themes/Peafowl/header.php:294
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:23
-#: ../../../app/themes/Peafowl/views/login.php:53
-msgid "Keep me logged in"
-msgstr "Giữ nguyên trạng thái đăng nhập"
-
-#: ../../../app/themes/Peafowl/header.php:301
-#, php-format
-msgid "Don't have an account? <a href='%s'>Sign up</a> now."
-msgstr "Chưa có tài khoản? <a href='%s'>Đăng ký </a> ngay!"
-
-#: ../../../app/themes/Peafowl/header.php:328
-msgid "Sign up with another account"
-msgstr "Đăng kí vơi tài khoản khác"
-
-#: ../../../app/themes/Peafowl/header.php:338
-#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
-#: ../../../app/themes/Peafowl/views/dashboard.php:100
-#: ../../../app/themes/Peafowl/views/settings.php:155
-#: ../../../app/themes/Peafowl/views/signup.php:34
-#: ../../../app/themes/Peafowl/views/signup.php:35
-#: ../../../content/pages/default/contact.php:92
-msgid "Email address"
-msgstr "Địa chỉ email"
-
-#: ../../../app/themes/Peafowl/header.php:339
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
-#: ../../../app/themes/Peafowl/views/dashboard.php:94
-#: ../../../app/themes/Peafowl/views/dashboard.php:95
-#: ../../../app/themes/Peafowl/views/settings.php:143
-#: ../../../app/themes/Peafowl/views/settings.php:144
-#: ../../../app/themes/Peafowl/views/signup.php:39
-#: ../../../app/themes/Peafowl/views/signup.php:40
-msgid "Username"
-msgstr "Tên tài khoản"
 
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
@@ -1574,13 +1645,68 @@ msgstr "Kéo thả hoặc paste (Ctrl + V) ảnh vào đây để upload"
 msgid "Select the images to upload"
 msgstr "Chọn ảnh để upload"
 
+msgid "browse from your computer"
+msgstr "tải lên từ máy tính"
+
+msgid "add image URLs"
+msgstr "thêm địa chỉ ảnh"
+
+msgid "You can also %i or %u."
+msgstr "Bạn có thể %i hoặc %u."
+
+msgid "browse from your device"
+msgstr "tải từ thiết bị"
+
+msgid "take a picture"
+msgstr "chụp ảnh"
+
+msgid "You can also %i, %c or %u."
+msgstr "Bạn còn có thể %i, %c hoặc %u."
+
+msgid "Edit or resize any image by clicking the image preview"
+msgstr "Sửa hoặc chỉnh cỡ bất kì ảnh nào bởi nhấp vào xem thử"
+
+msgid "Edit any image by touching the image preview"
+msgstr "Sửa bất kì ảnh nào bởi chạm vào xem thử"
+
+msgid "your computer"
+msgstr "máy tính của bạn"
+
+msgid "You can add more images from %i or %u."
+msgstr "Bạn có thể thêm nhiều ảnh nữa từ %i hoặc %u."
+
+msgid "your device"
+msgstr "thiết bị của bạn"
+
+msgid "Uploading %q %o"
+msgstr "Đang tải lên %q %o"
+
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:27
 msgid "complete"
 msgstr "Hoàn tất"
 
+msgid "The queue is being uploaded, it should take just a few seconds to complete."
+msgstr "Danh sách đang được tải lên, nó có thể mất đôi chút thời gian để hoàn thành."
+
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:32
 msgid "Upload complete"
 msgstr "Upload xong rồi!"
+
+#, php-format
+msgid "Uploaded content added to %s."
+msgstr "Đã tải nội dung lên %s."
+
+msgid "create a new album"
+msgstr "tạo album mới"
+
+msgid "move it to an existing album"
+msgstr "chuyển nó đến album đã có sẵn"
+
+msgid "create an account"
+msgstr "tạo tài khoản"
+
+msgid "sign in"
+msgstr "đăng nhập"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:41
 msgid "Some errors have occured and the system couldn't process your request."
@@ -1606,6 +1732,35 @@ msgstr "Đây là hình ảnh nhạy cảm hoặc18+"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 msgid "Uploading"
 msgstr "Đang đăng"
+
+#: ../../../app/themes/Peafowl/header.php:285
+#: ../../../app/themes/Peafowl/header.php:332
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/form_album.php:9
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/login.php:22
+#: ../../../app/themes/Peafowl/views/login.php:62
+#: ../../../app/themes/Peafowl/views/settings.php:354
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../app/themes/Peafowl/views/signup.php:22
+#: ../../../app/themes/Peafowl/views/signup.php:73
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
+#: ../../../lib/Peafowl/peafowl.min.js:31
+#: ../../../lib/Peafowl/peafowl.min.js:140
+msgid "or"
+msgstr "hoặc"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
@@ -1635,9 +1790,18 @@ msgstr "xem tiếp"
 msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
 msgstr "Chọn <a data-modal=\"simple\" data-target=\"failed-upload-result\">thông báo lỗi</a> để biết thêm chi tiết."
 
+msgid "reset"
+msgstr "reset"
+
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:91
 msgid "close"
 msgstr "đóng"
+
+msgid "copy"
+msgstr "sao chép"
+
+msgid "insert"
+msgstr "chèn"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
 #: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
@@ -1645,6 +1809,10 @@ msgstr "đóng"
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
 msgid "Edit"
 msgstr "Sửa"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:154
+msgid "Edit image"
+msgstr "Sửa ảnh"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
 #: ../../../app/themes/Peafowl/snippets/form_image.php:4
@@ -1700,6 +1868,9 @@ msgstr "Lưu ý: Ảnh động dạng gif sẽ không được resize."
 msgid "Auto delete image"
 msgstr "Tự động xoá ảnh"
 
+msgid "Sign up"
+msgstr "Đăng ký"
+
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:192
 #: ../../../app/themes/Peafowl/snippets/form_image.php:25
 msgid "Mark this if the image is not family safe"
@@ -1738,10 +1909,6 @@ msgstr "Thêm URLs ảnh vào đây"
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:31
 msgid "Create album"
 msgstr "Tạo Album"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:224
-msgid "The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
-msgstr "Hình ảnh vừa upload sẽ được chuyển vào Album mới tạo này. Hoặc bạn có thể chuyển những hình ảnh mới upload vào <a class=\"modal-switch\" data-switch=\"move-existing-album\">Album sẵn có</a>."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:235
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:28
@@ -1784,6 +1951,14 @@ msgstr "HTML thumbnail linked"
 msgid "BBCodes"
 msgstr "BBCodes"
 
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:49
+msgid "BBCode full"
+msgstr "Nhúng diễn đàn BBCode"
+
+#: ../../../app/themes/Peafowl/snippets/embed_tpl.php:54
+msgid "BBCode full linked"
+msgstr "Nhúng diễn đàn BBCode kèm liên kết"
+
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:59
 msgid "BBCode medium linked"
 msgstr "BBCode medium linked"
@@ -1791,6 +1966,14 @@ msgstr "BBCode medium linked"
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:64
 msgid "BBCode thumbnail linked"
 msgstr "BBCode thumbnail linked"
+
+#: ../../../app/themes/Peafowl/snippets/form_advanced_search.php:66
+msgid "Storage"
+msgstr "Lưu trữ"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:4
+msgid "IP address"
+msgstr "Địa chỉ IP"
 
 #: ../../../app/themes/Peafowl/snippets/form_album.php:7
 #: ../../../app/themes/Peafowl/snippets/form_album.php:8
@@ -1849,11 +2032,23 @@ msgstr "Từ khóa URL của danh sách"
 msgid "Brief description of this category"
 msgstr "Mô tả tóm tắt của danh sách này"
 
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
+msgid "Path"
+msgstr "Đường dẫn"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:12
+msgid "Until which date this IP address will be banned? Leave it empty for no expiration."
+msgstr "Đến ngày nào sẽ cấm IP này? để trống nếu muốn không thời hạn"
+
 #: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:15
 #: ../../../app/themes/Peafowl/views/dashboard.php:926
 #: ../../../content/pages/default/contact.php:111
 msgid "Message"
 msgstr "Nội dung"
+
+#: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:16
+msgid "Text message, HTML or a redirect URL"
+msgstr "Tin nhắn Text, HTML hoặc URL chuyển hướng"
 
 #: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
 msgid "Existing album"
@@ -1862,6 +2057,140 @@ msgstr "Album hiện có"
 #: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
 msgid "create new album"
 msgstr "tạo album mới"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:4
+msgid "Storage name"
+msgstr "Tên bộ nhớ"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:7
+msgid "API"
+msgstr "API"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:48
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:96
+msgid "Region"
+msgstr "Region"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
+msgid "Storage region"
+msgstr "Storage region"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:58
+msgid "Storage bucket"
+msgstr "Storage bucket\n"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:63
+msgid "Key"
+msgstr "Key"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:64
+msgid "Storage key"
+msgstr "Storage key"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:67
+msgid "Secret"
+msgstr "Secret"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:68
+msgid "Storage secret"
+msgstr "Storage secret"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:78
+msgid "Private key"
+msgstr "Private key"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:79
+msgid "Google Cloud JSON key"
+msgstr "Google Cloud JSON key"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:75
+#, php-format
+msgid "You will need a <a %s>service account</a> for this."
+msgstr "Bạn cần một <a %s>service account</a> cho việc này"
+
+msgid "Service name"
+msgstr "Service name"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:84
+msgid "Identity URL"
+msgstr "Identity URL"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:85
+msgid "Identity API endpoint"
+msgstr "Identity API endpoint"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:85
+msgid "API endpoint for OpenStack identity"
+msgstr "API endpoint for OpenStack identity"
+
+#: ../../../app/themes/Peafowl/header.php:339
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
+#: ../../../app/themes/Peafowl/views/dashboard.php:94
+#: ../../../app/themes/Peafowl/views/dashboard.php:95
+#: ../../../app/themes/Peafowl/views/settings.php:143
+#: ../../../app/themes/Peafowl/views/settings.php:144
+#: ../../../app/themes/Peafowl/views/signup.php:39
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "Username"
+msgstr "Tên tài khoản"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:100
+msgid "Container"
+msgstr "Container"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:101
+msgid "Storage container"
+msgstr "Storage container"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:104
+msgid "Tenant id"
+msgstr "Tenant id"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:105
+msgid "Tenant id (account id)"
+msgstr "Tenant id (account id)"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:108
+msgid "Tenant name"
+msgstr "Tenant name"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:109
+msgid "Tenant name (account name)"
+msgstr "Tenant name (account name)"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:115
+msgid "Hostname or IP of the storage server"
+msgstr "Hostname or IP of the storage server"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
+msgid "Server path"
+msgstr "Đường dẫn Server"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:127
+msgid "Server password"
+msgstr "Server password"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:132
+msgid "Storage capacity"
+msgstr "Storage capacity"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:133
+msgid "Example: 20 GB, 1 TB, etc."
+msgstr "Ví dụ: 20 GB, 1 TB, v.v."
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:135
+msgid "This storage will be disabled when it reach this capacity. Leave it blank or zero for no limit."
+msgstr "Bộ nhớ sẽ bị disabled khi nó đạt đến dung lượng này. Để trống hoặc điền 0 nếu không giới hạn."
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:139
+msgid "Storage URL"
+msgstr "Storage URL"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:140
+msgid "The system will map the images of this storage to this URL."
+msgstr "Hệ thống sẽ sử dụng địa chỉ này khi tạo link đến hình ảnh từ storage này."
 
 #: ../../../app/themes/Peafowl/snippets/image_album_slice.php:14
 msgid "view more"
@@ -1915,10 +2244,18 @@ msgstr "Ảnh an toàn"
 msgid "Delete"
 msgstr "Xóa"
 
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:5
-#, php-format
-msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
-msgstr "Bạn phải đăng nhập để xem đầy đủ. Nếu chưa có tài khoản hãy <a href=\"%s\">sign up</a> ngay."
+msgid "Create new album"
+msgstr "Tạo album mới"
+
+#: ../../../app/themes/Peafowl/header.php:281
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
+#: ../../../app/themes/Peafowl/views/login.php:18
+#: ../../../app/themes/Peafowl/views/login.php:65
+#: ../../../app/themes/Peafowl/views/signup.php:18
+#: ../../../app/themes/Peafowl/views/signup.php:76
+msgid "Sign in with another account"
+msgstr "Đăng nhập với tài khoản khác"
 
 #: ../../../app/themes/Peafowl/snippets/template_content_empty.php:5
 #: ../../../app/themes/Peafowl/views/dashboard.php:618
@@ -1954,6 +2291,14 @@ msgstr "Chọn album để chuyển nội dung. Bạn còn có thể <a class=\"
 msgid "Select an existing album to move the images. You can also <a class=\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and move the images there."
 msgstr "Chọn album để chuyển hình đến đó. Bạn có thể <a class=\"modal-switch\" data-switch=\"move-new-album\">tạo album mới</a> và chuyển hình đến đó."
 
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:87
+msgid "All the selected images will be assigned to this category."
+msgstr "Tất cả hình ảnh được chọn sẽ được gán cho danh mục này."
+
+#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:92
+msgid "There is no categories."
+msgstr "Không có danh mục nào."
+
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:97
 msgid "Confirm flag content as safe"
 msgstr "Xác nhận đánh dấu hình ảnh an toàn"
@@ -1983,14 +2328,39 @@ msgstr "Bạn có thực sự muốn xóa nội dung này? Việc này không th
 msgid "Do you really want to remove all the selected content? This can't be undone."
 msgstr "Bạn có thực sự muốn xóa các nội dụng được chọn? Việc này không thể hoàn tác."
 
+msgid "Fullscreen"
+msgstr "Full screen"
+
+msgid "Exit fullscreen"
+msgstr "Thoát full screen\n"
+
 #: ../../../app/themes/Peafowl/views/image.php:57
 msgid "Guest"
 msgstr "Khách"
+
+msgid "Keyboard shortcuts"
+msgstr "Phím tắt"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Thích"
+
+msgid "Uploaded by guest"
+msgstr "Upload by khách"
 
 #: ../../../app/themes/Peafowl/tpl_list_item/image_description_owner.php:2
 #, php-format
 msgid "From %s"
 msgstr "Từ %s"
+
+msgid "Uploaded by private"
+msgstr "Upload by ẩn danh"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/image_description_user.php:2
+#, php-format
+msgid "by %u"
+msgstr "bởi %u"
 
 #: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
 #: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
@@ -2006,6 +2376,11 @@ msgstr "Từ %s"
 #: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
 msgid "Select"
 msgstr "Chọn"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:7
+msgid "Toggle unsafe flag"
+msgstr "Bật kiểm tra nội dung không an toàn"
 
 #: ../../../app/themes/Peafowl/views/404.php:7
 msgid "The requested page was not found."
@@ -2036,17 +2411,6 @@ msgid "An email to %s has been sent with instructions to activate your account. 
 msgstr "Một email đến %s đã gửi. Link kích hoạt chỉ tồn tại trong 48 tiếng. Kiểm tra trong Spam nếu không có."
 
 #: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
-#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/logout.php:13
-#: ../../../app/themes/Peafowl/views/request-denied.php:13
-msgid "Go to homepage"
-msgstr "Về trang chủ"
-
-#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
 msgid "Resend activation"
 msgstr "Gửi kích hoạt lại"
@@ -2070,41 +2434,6 @@ msgstr "Đã gửi email link kích hoạt tài khoản."
 msgid "Your email address"
 msgstr "Địa chỉ email của bạn"
 
-#: ../../../app/themes/Peafowl/views/account/email-needed.php:26
-msgid "Add email"
-msgstr "Thêm email"
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
-msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
-msgstr "Chúng tôi đã gửi 1 email chứa mã reset và hướng dẫn cách reset lại mật khẩu đến địa chỉ email đăng ký tài khoản. Nếu không nhận được email nào trong vòng 10 phút, hãy kiểm tra lại hộp thư rác và Spam"
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-msgid "Resend instructions"
-msgstr "Gửi lại hướng dẫn"
-
-#: ../../../app/install/update/updater.php:62
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
-#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
-#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
-#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
-#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
-#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
-#: ../../../lib/Peafowl/peafowl.min.js:158
-#: ../../../lib/Peafowl/peafowl.min.js:195
-msgid "An error occurred. Please try again later."
-msgstr "Có lỗi xảy ra, hãy quay lại sau."
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
-msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
-msgstr "Chúng tôi đã gửi email chứa mã reset mật khẩu và hướng dẫn. Nếu không nhận được email nào trong vòng 10 phút, hãy kiểm tra lại hộp thư rác và Spam"
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:32
-msgid "Enter your username or the email address that you used to create your account."
-msgstr "Nhập tên đăng nhập hoặc tài khoản email bạn đã dùng lúc tạo tài khoản."
-
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:52
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:47
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:37
@@ -2114,6 +2443,29 @@ msgstr "Nhập tên đăng nhập hoặc tài khoản email bạn đã dùng lú
 msgid "Submit"
 msgstr "Gửi"
 
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
+msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "Chúng tôi đã gửi 1 email chứa mã reset và hướng dẫn cách reset lại mật khẩu đến địa chỉ email đăng ký tài khoản. Nếu không nhận được email nào trong vòng 10 phút, hãy kiểm tra lại hộp thư rác và Spam"
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
+msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
+msgstr "Chúng tôi đã gửi email chứa mã reset mật khẩu và hướng dẫn. Nếu không nhận được email nào trong vòng 10 phút, hãy kiểm tra lại hộp thư rác và Spam"
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+msgid "Resend instructions"
+msgstr "Gửi lại hướng dẫn"
+
+#: ../../../app/themes/Peafowl/header.php:291
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
+#: ../../../app/themes/Peafowl/views/login.php:34
+#: ../../../app/themes/Peafowl/views/login.php:35
+msgid "Username or Email address"
+msgstr "Tên người dùng hoặc Email"
+
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:15
 msgid "Your password has been changed. You can now try logging in using your new password."
 msgstr "Mật khẩu của bạn đã đổi thành công. Từ giờ bạn có thể đăng nhập bằng mật khẩu mới."
@@ -2122,13 +2474,10 @@ msgstr "Mật khẩu của bạn đã đổi thành công. Từ giờ bạn có 
 msgid "Login now"
 msgstr "Đăng nhập"
 
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:22
-msgid "Enter the new password that you want to use."
-msgstr "Nhập mật khẩu mới mà bạn muốn sử dụng."
-
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:28
-msgid "New Password"
-msgstr "Mật khẩu mới"
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/settings.php:306
+msgid "Enter your new password"
+msgstr "Nhập mật khẩu mới của bạn"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:29
 #: ../../../app/themes/Peafowl/views/dashboard.php:105
@@ -2139,20 +2488,15 @@ msgstr "Mật khẩu mới"
 msgid "%d characters min"
 msgstr "tối thiểu phải %d ký tự"
 
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
-#: ../../../app/themes/Peafowl/views/settings.php:306
-msgid "Enter your new password"
-msgstr "Nhập mật khẩu mới của bạn"
-
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
-#: ../../../app/themes/Peafowl/views/settings.php:328
-msgid "Confirm password"
-msgstr "Xác nhận lại mật khẩu"
-
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:35
 #: ../../../app/themes/Peafowl/views/settings.php:312
 msgid "Re-enter your new password"
 msgstr "Nhập lại mật khẩu mới"
+
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:12
+#, php-format
+msgid "An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "Email đã gửi đến %s kèm theo hướng dẫn để kích hoạt tài khoản của bạn. Nếu bạn không nhận được hướng dẫn, hãy thử kiểm tra thư mục spam của bạn."
 
 #: ../../../app/themes/Peafowl/views/album.php:16
 #: ../../../app/themes/Peafowl/views/image.php:63
@@ -2167,14 +2511,38 @@ msgstr "Bạn có muốn xoá tất cả hình ảnh album? Không phục hồi 
 msgid "Delete album"
 msgstr "Xóa album"
 
+#: ../../../app/themes/Peafowl/views/image.php:85
+msgid "You like this"
+msgstr "Bạn đã like"
+
+msgid "Upload to album"
+msgstr "Tải lên album"
+
 #: ../../../app/themes/Peafowl/views/album.php:86
 msgid "Album link"
 msgstr "Album link"
+
+msgid "Please read and comply with the following conditions before you continue:"
+msgstr "Vui lòng đọc và chấp nhận với các điều khoản sau trước khi tiếp tục:"
+
+#, php-format
+msgid "This website contains information, links and images of sexually explicit material. If you are under the age of %s, if such material offends you or if it's illegal to view such material in your community please do not continue.\n\nI am at least %s years of age and I believe that as an adult it is my inalienable right to receive/view sexually explicit material. I desire to receive/view sexually explicit material. \n\nI believe that sexual acts between consenting adults are neither offensive nor obscene. The viewing, reading and downloading of sexually explicit materials does not violate the standards of my community, town, city, state or country.\n\nThe sexually explicit material I am viewing is for my own personal use and I will not expose minors to the material.\n\nI am solely responsible for any false disclosures or legal ramifications of viewing, reading or downloading any material in this site. Furthermore this website nor its affiliates will be held responsible for any legal ramifications arising from fraudulent entry into or use of this website.\n\nThis consent screen constitutes a legal agreement between this website and you and/or any business in which you have any legal or equitable interest. If any portion of this agreement is deemed unenforceable by a court of competent jurisdiction it shall not affect the enforceability of the other portions of the agreement."
+msgstr "Website này bao gồm các thông tin, liên kết và hình ảnh giới hạn độ tuổi. Nếu bạn dưới %s tuổi, hoặc nếu bạn cảm thấy các nội dung này không phù hợp hay là bất hợp pháp tại cộng đồng của mình, vui lòng không tiếp tục truy cập.\n\nTrong trường hợp bạn trên %s tuổi, và với tư cách là một người trưởng thành như một quyền lợi chính đáng và hợp pháp, bạn mong muốn được tiếp cận các nội dung này một cách tự nguyện.\n\nNgoài ra, bạn tin rằng hành vi tình dục giữa người lớn là hành vi không gây phản cảm hay khó chịu. Việc xem, đọc và tải các nội dung tình dục này không vi phạm các tiêu chuẩn của cộng đồng, khu vực, thành phố hay quốc gia sở tại nơi bạn phải chịu trách nhiệm pháp luật.\n\nBạn cũng phải cam kết sử dụng các tài liệu giới hạn độ tuổi trong website này chỉ cho bản thân, không phát tán và đặc biệt là chia sẻ với trẻ vị thành viên.\n\nMột khi bạn truy cập website và sử dụng các tính năng của website, bao gồm cả việc lưu trữ và chia sẻ, bạn đồng ý rằng bạn chịu trách nhiệm về mọi thông tin tiết lộ sai hoặc các quy định pháp lý về đọc, xem hoặc tải xuống bất kì tài liệu nào trong trang web này.\n\nMàn hình xác nhận này được coi như thoả thuận hợp pháp giữa website này và bạn hoặc bất kì tổ chức nào mà bạn có lợi ích hợp pháp liên quan. Nếu bất kì phần nào của thoả thuận này được coi là không thể thi hành bởi Toà án có thẩm quyền thì nó sẽ không ảnh hưởng tới các phần thực thi khác của thoả thuận này."
+
+msgid "By clicking in \"I Agree\" you declare that you have read and understood all the conditions mentioned above."
+msgstr "Bằng việc đánh dấu \"Tôi đồng ý\", bạn xác nhận rằng bạn đã đọc và hiểu tất cả quy định ở trên."
+
+msgid "I Agree"
+msgstr "Tôi đồng ý"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:40
 #: ../../../app/themes/Peafowl/views/dashboard.php:1732
 msgid "Disk used"
 msgstr "Dung lượng đã sử dụng"
+
+#: ../../../app/themes/Peafowl/views/settings.php:105
+msgid "Status"
+msgstr "Tình trạng"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:80
 #: ../../../app/themes/Peafowl/views/dashboard.php:84
@@ -2190,6 +2558,16 @@ msgstr "Quyền"
 #: ../../../app/themes/Peafowl/views/settings.php:125
 msgid "Administrator"
 msgstr "Administrator"
+
+#: ../../../app/themes/Peafowl/header.php:338
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:100
+#: ../../../app/themes/Peafowl/views/settings.php:155
+#: ../../../app/themes/Peafowl/views/signup.php:34
+#: ../../../app/themes/Peafowl/views/signup.php:35
+#: ../../../content/pages/default/contact.php:92
+msgid "Email address"
+msgstr "Địa chỉ email"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
@@ -2243,6 +2621,12 @@ msgstr "Bắt buộc bí mật (bản thân)"
 #: ../../../app/themes/Peafowl/views/dashboard.php:382
 msgid "Force private (anyone with the link)"
 msgstr "Bắt buộc bí mất (bất cứ ai có link)"
+
+msgid "Contact"
+msgstr "Liên hệ"
+
+msgid "pages"
+msgstr "các trang"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:630
 msgid "Enable uploads"
@@ -2636,6 +3020,12 @@ msgstr "Chế độ bảo mật của SMTP"
 msgid "Unsecured"
 msgstr "Unsecured"
 
+msgid "Decode ID"
+msgstr "Decode ID"
+
+msgid "Encode ID"
+msgstr "Encode ID"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1838
 msgid "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank\">Facebook app</a> for this."
 msgstr "Bạn cần <a href=\"https://developers.facebook.com/\" target=\"_blank\">Ứng Dụng Facebook</a> cho việc này."
@@ -2740,11 +3130,6 @@ msgstr "Trong tập ảnh này"
 msgid "Upload and share your images."
 msgstr "Đăng và chia sẻ những bức ảnh của bạn"
 
-#: ../../../app/themes/Peafowl/views/index.php:63
-#, php-format
-msgid "Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings."
-msgstr "Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings."
-
 #: ../../../app/themes/Peafowl/views/index.php:79
 msgid "Sign up to unlock all the features"
 msgstr "Đăng ký để sử dụng mọi chức năng của website"
@@ -2753,15 +3138,26 @@ msgstr "Đăng ký để sử dụng mọi chức năng của website"
 msgid "Manage your content, create private albums, customize your profile and more."
 msgstr "Quản lý hình ảnh, tạo album riêng tư, tùy chỉnh trang hồ sơ và hơn thế nữa"
 
-#: ../../../app/themes/Peafowl/views/login.php:40
-#: ../../../app/themes/Peafowl/views/settings.php:323
-msgid "Enter your password"
-msgstr "Nhập mật khẩu của bạn"
+#: ../../../app/themes/Peafowl/header.php:301
+#, php-format
+msgid "Don't have an account? <a href='%s'>Sign up</a> now."
+msgstr "Chưa có tài khoản? <a href='%s'>Đăng ký </a> ngay!"
 
 #: ../../../app/themes/Peafowl/views/logout.php:12
 #, php-format
 msgid "You have been logged off %s. Hope to see you soon."
 msgstr "Bạn đã thoát khỏi tài khoản %s. Hẹn gặp lại sau!"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/logout.php:13
+#: ../../../app/themes/Peafowl/views/request-denied.php:13
+msgid "Go to homepage"
+msgstr "Về trang chủ"
 
 #: ../../../app/themes/Peafowl/views/request-denied.php:12
 msgid "You either don't have permission to access this page or the link has expired."
@@ -2780,10 +3176,6 @@ msgstr "Xóa tài khoản"
 #: ../../../app/themes/Peafowl/views/settings.php:81
 msgid "Register date"
 msgstr "Ngày đăng ký"
-
-#: ../../../app/themes/Peafowl/views/settings.php:105
-msgid "Status"
-msgstr "Tình trạng"
 
 #: ../../../app/themes/Peafowl/views/settings.php:109
 msgid "Valid"
@@ -2838,6 +3230,16 @@ msgstr "Thêm mật khẩu để có thể đăng nhập bằng Tài khoản ho�
 msgid "This user doesn't have a password. Add one using this form."
 msgstr "Người dùng này chưa nhập mật khẩu. Hãy thêm mật khẩu bằng mẫu bên dưới"
 
+#: ../../../app/themes/Peafowl/views/login.php:40
+#: ../../../app/themes/Peafowl/views/settings.php:323
+msgid "Enter your password"
+msgstr "Nhập mật khẩu của bạn"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
+#: ../../../app/themes/Peafowl/views/settings.php:328
+msgid "Confirm password"
+msgstr "Xác nhận lại mật khẩu"
+
 #: ../../../app/themes/Peafowl/views/settings.php:329
 msgid "Re-enter your password"
 msgstr "Nhập lại mật khẩu mới"
@@ -2851,6 +3253,9 @@ msgstr "Tải lên ảnh mới"
 msgid "Delete existing image"
 msgstr "Xóa ảnh có sẵn"
 
+msgid "Enable this if you want to act like an anonymous user"
+msgstr "Bật tính năng này nếu bạn muốn sử dụng ẩn danh"
+
 #: ../../../app/themes/Peafowl/views/settings.php:367
 msgid "This is your real name, not your username."
 msgstr "Đây là tên thật của bạn chứ không phải tên Tài khoản đăng nhập đâu nha."
@@ -2858,6 +3263,14 @@ msgstr "Đây là tên thật của bạn chứ không phải tên Tài khoản 
 #: ../../../app/themes/Peafowl/views/settings.php:371
 msgid "http://yourwebsite.com"
 msgstr "http://trang-web-của-bạn.com"
+
+#: ../../../app/themes/Peafowl/views/settings.php:375
+msgid "Bio"
+msgstr "Tiểu sử"
+
+#: ../../../app/themes/Peafowl/views/settings.php:376
+msgid "Tell us a little bit about you"
+msgstr "Cho chúng tôi biết một chút về bạn"
 
 #: ../../../app/themes/Peafowl/views/settings.php:387
 msgid "User has no connections."
@@ -2909,10 +3322,18 @@ msgstr "Nút"
 msgid "resend account activation"
 msgstr "gửi lại email kích hoạt tài khoản"
 
-#: ../../../app/themes/Peafowl/views/signup.php:45
 #, php-format
-msgid "If you have already signed up maybe you need to request to %s"
-msgstr "Nếu bạn đã đăng ký, có thể bạn cần yêu cầu %s"
+msgid "I'm at least %s years old"
+msgstr "Tôi ít nhất %s tuổi"
+
+msgid "terms"
+msgstr "quy định"
+
+msgid "privacy policy"
+msgstr "chính sách bảo mật"
+
+msgid "I agree to the %terms_link and %privacy_link"
+msgstr "Tôi đồng ý với %terms_link và %privacy_link"
 
 #: ../../../app/themes/Peafowl/views/user.php:15
 msgid "Upload profile background"
@@ -2939,6 +3360,10 @@ msgid "Follower"
 msgid_plural "Followers"
 msgstr[0] "Người theo dõi"
 
+#: ../../../app/themes/Peafowl/views/user.php:81
+msgid "Follow"
+msgstr "Theo dõi"
+
 #: ../../../app/routes/route.page.php:61
 #: ../../../content/pages/default/contact.php:7
 msgid "General questions/comments"
@@ -2958,11 +3383,6 @@ msgstr "Tin nhắn không hợp lệ"
 #: ../../../content/pages/default/contact.php:25
 msgid "Invalid subject"
 msgstr "Tiêu đề không hợp lệ"
-
-#: ../../../app/routes/route.page.php:85
-#: ../../../content/pages/default/contact.php:33
-msgid "Invalid reCAPTCHA"
-msgstr "Sai mã reCAPTCHA"
 
 #: ../../../app/routes/route.page.php:122
 #: ../../../content/pages/default/contact.php:69
@@ -2984,6 +3404,11 @@ msgstr "Tên bạn"
 
 msgid "Subject"
 msgstr "Chủ đề"
+
+#: ../../../app/install/update/template/update.js:19
+#, javascript-format
+msgid "Installed version is v%s"
+msgstr "Phiên bản đã cài là v%s"
 
 #: ../../../app/install/update/template/update.js:26
 #: ../../../app/install/update/template/update.js:55
@@ -3028,6 +3453,10 @@ msgstr "Đang giải nén v%s\n"
 msgid "Extraction completed"
 msgstr "Giải nén thành công"
 
+#: ../../../app/install/update/template/update.js:84
+msgid "Proceding to install the update"
+msgstr "Tiến hành cài đặt bản cập nhật"
+
 #: ../../../app/install/update/template/update.js:111
 msgid "Update failed"
 msgstr "Cập nhật thất bại"
@@ -3051,6 +3480,20 @@ msgstr "Xác nhận"
 #: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
 msgid "Select existing album"
 msgstr "Chọn album sẵn có"
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "Có lỗi xảy ra, hãy quay lại sau."
 
 #: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
 #: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
@@ -3079,6 +3522,16 @@ msgstr "Hình nền cá nhân đã xóa."
 msgid "Error deleting profile background image."
 msgstr "Xóa hình nền bị lỗi."
 
+#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "Update available v%s"
+msgstr "Cập nhật có sẵn v%s"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
+msgstr "Có bản update mới cho hệ thống của bạn. Bạn có thể tự động tải xuống và cài đặt bản update này hoặc truy cập %s để tải file xuống"
+
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 msgid "Update now"
 msgstr "Cập nhật ngay"
@@ -3086,6 +3539,19 @@ msgstr "Cập nhật ngay"
 #, javascript-format
 msgid "This website is running latest %s version"
 msgstr "Trang web này đang chạy phiên bản %s mới nhất"
+
+msgid "Toggle select"
+msgstr "Chọn chuyển đổi"
+
+msgid "Previous"
+msgstr "Trước"
+
+msgid "Next"
+msgstr "Tiếp"
+
+#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
+msgid "Clipboard image"
+msgstr "Lưu tạm ảnh"
 
 #: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
 msgid "File too big."

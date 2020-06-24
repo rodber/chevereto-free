@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2018-06-29 19:18+0000\n"
-"PO-Revision-Date: 2018-06-29 19:18+0000\n"
+"POT-Creation-Date: 2020-05-16 19:37+0000\n"
+"PO-Revision-Date: 2020-05-16 19:37+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -10,19 +10,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-msgid "To use all the features of this site you must be logged in."
-msgstr "Um alle Funktionen dieser Seite nutzen zu können, müssen Sie angemeldet sein."
-
-#, php-format
-msgid "If you don't have an account you can <a href=\"%s\">sign up</a> right now."
-msgstr "Wenn Sie bisher noch kein Konto erstellt haben, können Sie sich jetzt <a href=\"%s\">registrieren</a>."
-
-msgid "Decode ID"
-msgstr "Dekodierungs-ID"
-
-msgid "Encode ID"
-msgstr "Enkodierungs-ID"
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -97,6 +84,62 @@ msgstr "Community"
 msgid "Personal"
 msgstr "Privat-Modus"
 
+#: ../../../app/install/update/template/update.js:19
+#, javascript-format
+msgid "Installed version is v%s"
+msgstr "Installierte Version: v%s"
+
+#: ../../../app/install/update/template/update.js:26
+#: ../../../app/install/update/template/update.js:55
+#: ../../../app/install/update/template/update.js:78
+#, javascript-format
+msgid "Can't connect to %s"
+msgstr "Es kann keine Verbindung zu %s aufgebaut werden"
+
+#: ../../../app/install/update/template/update.js:30
+#, javascript-format
+msgid "Last available release is v%s"
+msgstr "v%s ist die aktuellste verfügbare Version"
+
+#: ../../../app/install/update/template/update.js:33
+msgid "Update needed, proceeding to download"
+msgstr "Update notwendig, Download wird ausgeführt"
+
+#: ../../../app/install/update/template/update.js:40
+msgid "No update needed"
+msgstr "Kein Update notwendig"
+
+#: ../../../app/install/update/template/update.js:41
+msgid "System files already up to date"
+msgstr "System-Dateien sind bereit zum Update"
+
+#: ../../../app/install/update/template/update.js:49
+#, javascript-format
+msgid "Starting v%s download"
+msgstr "Starte Download der Version v%s"
+
+#: ../../../app/install/update/template/update.js:60
+#, javascript-format
+msgid "Downloaded v%s, proceeding to extraction"
+msgstr "v%s wurde heruntergeladen, Entpacken wird fortgeführt"
+
+#: ../../../app/install/update/template/update.js:72
+#, javascript-format
+msgid "Attempting to extract v%s"
+msgstr "Versuche v%s zu entpacken"
+
+#: ../../../app/install/update/template/update.js:82
+msgid "Extraction completed"
+msgstr "Entpacken abgeschlossen"
+
+#: ../../../app/install/update/template/update.js:84
+msgid "Proceding to install the update"
+msgstr "Installation des Updates wird fortgeführt"
+
+#: ../../../app/install/update/template/update.js:111
+msgid "Update failed"
+msgstr "Update fehlgeschlagen"
+
 #: ../../../app/install/update/template/update.php:2
 msgid "Update in progress"
 msgstr "Update in Arbeit..."
@@ -135,6 +178,381 @@ msgstr "Verzeichnis %s kann nicht erstellt werden - %e"
 #, php-format
 msgid "Can't update %s file - %e"
 msgstr "Datei %s kann nicht aktualisiert werden - %e"
+
+#: ../../../app/routes/route.account.php:508
+#: ../../../app/routes/route.signup.php:236
+#: ../../../content/pages/default/contact.php:132
+#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
+#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
+msgid "Check the errors in the form to continue."
+msgstr "Beachten Sie die angezeigten Fehler im Formular, bevor Sie fortfahren."
+
+#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
+#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
+#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
+#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
+#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
+#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
+msgid "You must enter the album name."
+msgstr "Sie müssen einen Namen für das Album eingeben."
+
+#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
+#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
+#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
+#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
+msgid "Confirm"
+msgstr "Bestätigen"
+
+#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
+msgid "Select existing album"
+msgstr "Wähle ein bestehendes Album"
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später noch einmal."
+
+#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
+#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
+msgid "Please select a valid image file type."
+msgstr "Bitte wählen Sie ein gültiges Dateiformat."
+
+#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
+#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
+#, javascript-format
+msgid "Please select a picture of at most %s size."
+msgstr "Bitte wählen Sie ein Bild mit höchstens %s Dateigröße."
+
+#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
+msgid "Profile image updated."
+msgstr "Profilbild aktualisiert."
+
+#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
+msgid "Profile background image updated."
+msgstr "Hintergrundbild aktualisiert."
+
+#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
+msgid "Profile background image deleted."
+msgstr "Hintergrundbild gelöscht."
+
+#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
+msgid "Error deleting profile background image."
+msgstr "Fehler beim Löschen des Hintergrundbildes."
+
+#: ../../../app/routes/route.account.php:360
+#: ../../../app/routes/route.settings.php:327
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
+#: ../../../app/themes/Peafowl/views/settings.php:313
+#: ../../../app/themes/Peafowl/views/settings.php:330
+#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
+msgid "Passwords don't match"
+msgstr "Passwörter stimmen nicht überein"
+
+#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "Update available v%s"
+msgstr "Update v%s verfügbar"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
+msgstr "Es steht ein Update für Ihr System zur Verfügung. Sie können das Update automatisch herutnerladen und installieren oder unter %s einen manuellen Download der Datei starten."
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "The release notes for this update are:"
+msgstr "Release-Notes für das Update:"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "Update now"
+msgstr "Jetzt updaten"
+
+#: ../../../app/themes/Peafowl/header.php:285
+#: ../../../app/themes/Peafowl/header.php:332
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/form_album.php:9
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/login.php:22
+#: ../../../app/themes/Peafowl/views/login.php:62
+#: ../../../app/themes/Peafowl/views/settings.php:354
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../app/themes/Peafowl/views/signup.php:22
+#: ../../../app/themes/Peafowl/views/signup.php:73
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
+#: ../../../lib/Peafowl/peafowl.min.js:31
+#: ../../../lib/Peafowl/peafowl.min.js:140
+msgid "or"
+msgstr "oder"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "Abbrechen"
+
+#, javascript-format
+msgid "This website is running latest %s version"
+msgstr "Die Internetseite läuft mit der aktuellsten %s Version."
+
+#: ../../../app/themes/Peafowl/header.php:381
+#: ../../../app/themes/Peafowl/views/settings.php:348
+#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
+msgid "loading"
+msgstr "Laden"
+
+msgid "Toggle select"
+msgstr "Markieren umschalten"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Like"
+
+msgid "Toggle flag"
+msgstr "Anstößig umschalten"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "Album"
+msgstr[1] "Alben"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:607
+#: ../../../app/themes/Peafowl/views/dashboard.php:884
+#: ../../../app/themes/Peafowl/views/dashboard.php:933
+msgid "Delete"
+msgstr "Löschen"
+
+#: ../../../app/themes/Peafowl/header.php:222
+msgid "Close"
+msgstr "Schließen"
+
+msgid "Previous"
+msgstr "Voherige"
+
+msgid "Next"
+msgstr "Nächste"
+
+#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
+msgid "Clipboard image"
+msgstr "Bild in Zwischenablage"
+
+#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
+msgid "File too big."
+msgstr "Die Datei ist zu groß."
+
+msgid "Invalid or unsupported file format."
+msgstr "Ungültiges oder nicht unterstütztes Dateiformat."
+
+#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
+#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
+msgid "Some files couldn't be added"
+msgstr "Einige Dateien konnten nicht hinzugefügt werden"
+
+#: ../../../app/lib/classes/class.listing.php:296
+#: ../../../app/routes/route.album.php:177
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
+#: ../../../app/themes/Peafowl/views/album.php:34
+#: ../../../app/themes/Peafowl/views/user.php:98
+#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
+msgid "image"
+msgid_plural "images"
+msgstr[0] "Bild"
+msgstr[1] "Bilder"
+
+#: ../../../app/routes/route.user.php:89
+#: ../../../app/themes/Peafowl/header.php:56
+#, php-format, javascript-format
+msgid "%s's Albums"
+msgstr "%ss Alben"
+
+#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
+msgid "Image edited successfully."
+msgstr "Das Bild wurde erfolgreich bearbeitet."
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "Privat"
+
+#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
+msgid "Album edited successfully."
+msgstr "Das Album wurde erfolgreich bearbeitet."
+
+#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
+msgid "Invalid URL key."
+msgstr "Ungültiger URL-Schlüssel."
+
+#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
+msgid "Category URL key already being used."
+msgstr "Der URL-Schlüssel der Kategorie wird bereits verwendet."
+
+#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
+msgid "Category successfully deleted."
+msgstr "Kategorie wurde gelöscht."
+
+#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
+#, javascript-format
+msgid "Category %s added."
+msgstr "Kategorie \"%s\" hinzugefügt."
+
+#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
+msgid "Invalid expiration date."
+msgstr "Ungültiges Ablaufdatum."
+
+#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
+#, javascript-format
+msgid "IP %s already banned."
+msgstr "IP-Adresse %s wurde bereits gesperrt."
+
+#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
+#, javascript-format
+msgid "IP %s banned."
+msgstr "IP-Adresse %s gesperrt."
+
+#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
+msgid "IP ban successfully deleted."
+msgstr "IP-Bann wurde erfolgreich gelöscht."
+
+#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
+#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
+#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
+msgid "Please fill all the required fields."
+msgstr "Bitte füllen Sie alle notwendigen Felder aus."
+
+#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
+msgid "Invalid storage capacity value. Make sure to use a valid format."
+msgstr "Ungültiger Wert für die Speicherkapazität. Bitte geben Sie einen gültigen Wert an."
+
+#: ../../../app/lib/classes/class.storage.php:450
+#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
+#, php-format, javascript-format
+msgid "Storage capacity can't be lower than its current usage (%s)."
+msgstr "Die Speicherkapazität darf den aktuellen Verbrauch nicht unterschreiten (%s)."
+
+#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
+msgid "Invalid URL."
+msgstr "Ungültige URL."
+
+#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
+msgid "Storage successfully edited."
+msgstr "Datenspeicher erfolgreich bearbeitet."
+
+#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
+msgid "User added successfully."
+msgstr "Benutzer wurde hinzugefügt."
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+#: ../../../app/themes/Peafowl/views/album.php:134
+#: ../../../app/themes/Peafowl/views/user.php:171
+#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
+msgid "The content has been deleted."
+msgstr "Der Inhalt wurde gelöscht."
+
+#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
+#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
+#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
+#: ../../../app/lib/chevereto.min.js:205
+msgid "The content has been moved."
+msgstr "Der Inhalt wurde verschoben."
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
+#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
+#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
+msgid "Select"
+msgstr "Markieren"
+
+#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
+msgid "Unselect"
+msgstr "Demarkieren"
+
+#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
+msgid "The content has been edited."
+msgstr "Der Inhalt wurde bearbeitet."
+
+#, javascript-format
+msgid "Import job ID %s added successfully, you can process the import now"
+msgstr "Import mit der Job-ID %s wurde erfolgreich hinzugefügt. Sie können den Import nun verarbeiten."
+
+msgid "Select number of threads"
+msgstr "Anzahl der Threads auswählen"
+
+#, javascript-format
+msgid "Import job ID %s is being processed now"
+msgstr "Import mit der Job-ID %s wird verarbeitet"
+
+#, javascript-format
+msgid "Import ID %s removed"
+msgstr "Import mit der ID %s entfernt"
+
+msgid "Spam detected"
+msgstr "Spam entdeckt"
+
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
+#: ../../../app/themes/Peafowl/views/user.php:99
+msgid "album"
+msgid_plural "albums"
+msgstr[0] "Album"
+msgstr[1] "Alben"
+
+msgid "Flooding detected. You can only upload %limit% %content% per %time%"
+msgstr "Spam erkannt. Sie können nur %limit% %content% in %time% hochladen."
 
 #: ../../../app/lib/classes/class.album.php:100
 msgid "Untitled"
@@ -257,17 +675,6 @@ msgid_plural "likes"
 msgstr[0] "Like"
 msgstr[1] "Likes"
 
-#: ../../../app/lib/classes/class.listing.php:296
-#: ../../../app/routes/route.album.php:177
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
-#: ../../../app/themes/Peafowl/views/album.php:34
-#: ../../../app/themes/Peafowl/views/user.php:98
-#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
-msgid "image"
-msgid_plural "images"
-msgstr[0] "Bild"
-msgstr[1] "Bilder"
-
 msgid "Recent"
 msgstr "Aktuell"
 
@@ -348,17 +755,6 @@ msgid_plural "Images"
 msgstr[0] "Bild"
 msgstr[1] "Bilder"
 
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
-#: ../../../app/themes/Peafowl/views/dashboard.php:28
-msgid "Album"
-msgid_plural "Albums"
-msgstr[0] "Album"
-msgstr[1] "Alben"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:34
 #: ../../../app/themes/Peafowl/views/dashboard.php:90
 #: ../../../app/themes/Peafowl/views/settings.php:126
@@ -384,12 +780,6 @@ msgstr "Intern"
 
 msgid "Can't insert storage."
 msgstr "Datenspeicher kann nicht eingefügt werden."
-
-#: ../../../app/lib/classes/class.storage.php:450
-#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
-#, php-format, javascript-format
-msgid "Storage capacity can't be lower than its current usage (%s)."
-msgstr "Die Speicherkapazität darf den aktuellen Verbrauch nicht unterschreiten (%s)."
 
 msgid "Can't update storage details."
 msgstr "Details zum Datenspeicher können nicht aktualisiert werden."
@@ -455,10 +845,6 @@ msgstr "Sie haben die Standard-Mail-Einstellungen nicht angepasst. Gehen Sie zu 
 msgid "There is an update available for your Chevereto based website."
 msgstr "Es gibt ein Update für Ihre auf Chevereto basierende Internetseite."
 
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "The release notes for this update are:"
-msgstr "Release-Notes für das Update:"
-
 msgid "admin dashboard"
 msgstr "Admin-Dashboard"
 
@@ -478,27 +864,6 @@ msgstr "Wir nutzen eigene Cookies und Cookies von Drittanbietern um den Nutzungs
 
 msgid "I understand"
 msgstr "Ich stimme zu"
-
-#: ../../../app/loader.php:180
-msgid "You have been forbidden to use this website."
-msgstr "Die Nutzung dieser Seite ist Ihnen nicht gestattet."
-
-#: ../../../app/loader.php:279
-#: ../../../app/themes/Peafowl/views/settings.php:441
-msgid "Feel free to browse and discover all my shared images and albums."
-msgstr "Durchsuchen und entdecke alle meine geteilten Bilder und Alben."
-
-#: ../../../app/loader.php:282
-#: ../../../app/themes/Peafowl/views/settings.php:447
-msgid "View all my images"
-msgstr "Alle meine Bilder anzeigen"
-
-msgid "Plugin"
-msgstr "Plugin"
-
-#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
-msgid "That page doesn't exist"
-msgstr "Diese Seite existiert nicht"
 
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
@@ -529,12 +894,9 @@ msgstr "E-Mail-Adresse hinzufügen"
 msgid "Email changed"
 msgstr "E-Mail-Adresse geändert"
 
-#: ../../../app/routes/route.account.php:95
-#: ../../../app/routes/route.login.php:71
-#: ../../../app/routes/route.settings.php:140
-#: ../../../app/routes/route.signup.php:73
-msgid "The reCAPTCHA wasn't entered correctly"
-msgstr "Das reCAPTCHA wurde nicht korrekt eingegeben"
+#, php-format
+msgid "%s says you are a robot"
+msgstr "%s sagt Sie sind ein Robot."
 
 #: ../../../app/routes/route.account.php:119
 #: ../../../app/routes/route.account.php:164
@@ -591,29 +953,12 @@ msgstr "Bestätigung für %s benötigt"
 msgid "Welcome to %s"
 msgstr "Willkommen bei %s"
 
-#: ../../../app/routes/route.account.php:360
-#: ../../../app/routes/route.settings.php:327
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
-#: ../../../app/themes/Peafowl/views/settings.php:313
-#: ../../../app/themes/Peafowl/views/settings.php:330
-#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
-msgid "Passwords don't match"
-msgstr "Passwörter stimmen nicht überein"
-
 #: ../../../app/routes/route.account.php:422
 #: ../../../app/routes/route.json.php:599
 #: ../../../app/routes/route.settings.php:243
 #: ../../../app/routes/route.signup.php:141
 msgid "Email already being used"
 msgstr "Diese E-Mail wird bereits verwendet"
-
-#: ../../../app/routes/route.account.php:508
-#: ../../../app/routes/route.signup.php:236
-#: ../../../content/pages/default/contact.php:132
-#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
-#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
-msgid "Check the errors in the form to continue."
-msgstr "Beachten Sie die angezeigten Fehler im Formular, bevor Sie fortfahren."
 
 msgid "Password required"
 msgstr "Passwort erforderlich"
@@ -671,6 +1016,9 @@ msgstr "Benutzer"
 #: ../../../app/themes/Peafowl/header.php:405
 msgid "Settings"
 msgstr "Einstellungen"
+
+msgid "Bulk importer"
+msgstr "Bulk-Import"
 
 #: ../../../app/routes/route.dashboard.php:161
 msgid "Chevereto version"
@@ -827,9 +1175,21 @@ msgstr[1] "%d Sekunden"
 msgid "Memory limit"
 msgstr "PHP-Speicherlimit"
 
+msgid "Rebuild stats"
+msgstr "Statistiken berechnen"
+
+msgid "Connecting IP"
+msgstr "Verbundene IP"
+
+msgid "Not your IP?"
+msgstr "Nicht Ihre IP-Adresse?"
+
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
 msgid "Links"
 msgstr "Links"
+
+msgid "Collaboration"
+msgstr "Zusammenarbeit"
 
 msgid "Documentation"
 msgstr "Dokumentation"
@@ -837,14 +1197,8 @@ msgstr "Dokumentation"
 msgid "Changelog"
 msgstr "Changelog"
 
-msgid "Request new features"
-msgstr "Neue Features vorschlagen"
-
 msgid "Bug tracking"
 msgstr "Bug-Tracking"
-
-msgid "Blog"
-msgstr "Blog"
 
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
@@ -1224,6 +1578,9 @@ msgstr "Ungültiger Typ"
 msgid "Invalid visibility"
 msgstr "Ungültige Sichtbarkeit"
 
+msgid "Invalid internal type"
+msgstr "Ungültiger interner Seitentyp"
+
 #: ../../../app/routes/route.dashboard.php:728
 msgid "Invalid target attribute"
 msgstr "Ungültige Zieleigenschaft"
@@ -1290,6 +1647,9 @@ msgstr "Ungültiger SMTP-Server"
 #: ../../../app/routes/route.dashboard.php:861
 msgid "Invalid SMTP username"
 msgstr "Ungültiger SMTP-Benutzername"
+
+msgid "Invalid key"
+msgstr "Ungültiger Schlüssel"
 
 #: ../../../app/routes/route.dashboard.php:960
 #, php-format
@@ -1391,7 +1751,7 @@ msgstr "Vorschaubild (Verlinkt)"
 #: ../../../app/routes/route.json.php:1055
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:4
 msgid "Login needed"
-msgstr "Login notwendig"
+msgstr "Anmeldung notwendig"
 
 #: ../../../app/routes/route.json.php:499
 #: ../../../app/routes/route.json.php:690
@@ -1482,11 +1842,6 @@ msgstr "Falsche Kombination aus Benutzername / E-Mail und Passwort"
 #: ../../../app/themes/Peafowl/views/login.php:52
 msgid "Sign in"
 msgstr "Anmelden"
-
-#: ../../../app/routes/route.logout.php:29
-#: ../../../app/themes/Peafowl/views/logout.php:8
-msgid "Logged out"
-msgstr "Abmeldung erfolgreich"
 
 msgid "Upload images"
 msgstr "Bilder hochladen"
@@ -1590,7 +1945,7 @@ msgstr "Konto erstellen"
 #: ../../../app/themes/Peafowl/header.php:258
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
 msgid "Upload"
-msgstr "Upload"
+msgstr "Hochladen"
 
 #: ../../../app/routes/route.user.php:84
 #: ../../../app/themes/Peafowl/header.php:56
@@ -1598,12 +1953,6 @@ msgstr "Upload"
 #, php-format
 msgid "%s's Images"
 msgstr "%ss Bilder"
-
-#: ../../../app/routes/route.user.php:89
-#: ../../../app/themes/Peafowl/header.php:56
-#, php-format, javascript-format
-msgid "%s's Albums"
-msgstr "%ss Alben"
 
 #: ../../../app/routes/route.user.php:99
 #: ../../../app/themes/Peafowl/views/search.php:8
@@ -1636,10 +1985,6 @@ msgid "Discovery"
 msgstr "Entdecken"
 
 #: ../../../app/themes/Peafowl/header.php:222
-msgid "Close"
-msgstr "Schließen"
-
-#: ../../../app/themes/Peafowl/header.php:222
 #: ../../../app/themes/Peafowl/header.php:226
 msgid "Advanced search"
 msgstr "Erweiterte Suche"
@@ -1655,115 +2000,12 @@ msgstr "Zufall-Modus"
 msgid "Notices (%s)"
 msgstr "Anmerkungen (%s)"
 
-#: ../../../app/themes/Peafowl/header.php:281
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
-#: ../../../app/themes/Peafowl/views/login.php:18
-#: ../../../app/themes/Peafowl/views/login.php:65
-#: ../../../app/themes/Peafowl/views/signup.php:18
-#: ../../../app/themes/Peafowl/views/signup.php:76
-msgid "Sign in with another account"
-msgstr "Mit externen Diensten anmelden"
-
-#: ../../../app/themes/Peafowl/header.php:285
-#: ../../../app/themes/Peafowl/header.php:332
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/form_album.php:9
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
-#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
-#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/login.php:22
-#: ../../../app/themes/Peafowl/views/login.php:62
-#: ../../../app/themes/Peafowl/views/settings.php:354
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../app/themes/Peafowl/views/signup.php:22
-#: ../../../app/themes/Peafowl/views/signup.php:73
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
-#: ../../../lib/Peafowl/peafowl.min.js:31
-#: ../../../lib/Peafowl/peafowl.min.js:140
-msgid "or"
-msgstr "oder"
-
-#: ../../../app/themes/Peafowl/header.php:291
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
-#: ../../../app/themes/Peafowl/views/login.php:34
-#: ../../../app/themes/Peafowl/views/login.php:35
-msgid "Username or Email address"
-msgstr "Benutzername / E-Mail"
-
-#: ../../../app/themes/Peafowl/header.php:294
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:23
-#: ../../../app/themes/Peafowl/views/login.php:53
-msgid "Keep me logged in"
-msgstr "Angemeldet bleiben"
-
-#: ../../../app/themes/Peafowl/header.php:301
-#, php-format
-msgid "Don't have an account? <a href='%s'>Sign up</a> now."
-msgstr "Sie haben kein Konto? Jetzt <a href='%s'>anmelden</a>!"
-
-#: ../../../app/themes/Peafowl/header.php:328
-msgid "Sign up with another account"
-msgstr "Mit externen Diensten registrieren"
-
-#: ../../../app/themes/Peafowl/header.php:338
-#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
-#: ../../../app/themes/Peafowl/views/dashboard.php:100
-#: ../../../app/themes/Peafowl/views/settings.php:155
-#: ../../../app/themes/Peafowl/views/signup.php:34
-#: ../../../app/themes/Peafowl/views/signup.php:35
-#: ../../../content/pages/default/contact.php:92
-msgid "Email address"
-msgstr "E-Mail-Adresse"
-
-#: ../../../app/themes/Peafowl/header.php:339
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
-#: ../../../app/themes/Peafowl/views/dashboard.php:94
-#: ../../../app/themes/Peafowl/views/dashboard.php:95
-#: ../../../app/themes/Peafowl/views/settings.php:143
-#: ../../../app/themes/Peafowl/views/settings.php:144
-#: ../../../app/themes/Peafowl/views/signup.php:39
-#: ../../../app/themes/Peafowl/views/signup.php:40
-msgid "Username"
-msgstr "Benutzername"
-
-#, php-format
-msgid "I'm at least %s years old"
-msgstr "Ich bin mindestens %s Jahre alt"
-
-msgid "terms"
-msgstr "Nutzungsregeln"
-
-msgid "privacy policy"
-msgstr "Datenschutzbestimmungen"
-
-msgid "I agree to the %terms_link and %privacy_link"
-msgstr "Ich stimme den %terms_link und %privacy_link zu"
+msgid "Lights"
+msgstr "Lichtmodus"
 
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
 msgstr "Benachrichtigungen"
-
-#: ../../../app/themes/Peafowl/header.php:381
-#: ../../../app/themes/Peafowl/views/settings.php:348
-#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
-msgid "loading"
-msgstr "Laden"
 
 #: ../../../app/themes/Peafowl/header.php:384
 msgid "You don't have notifications"
@@ -1859,7 +2101,7 @@ msgid "add image URLs"
 msgstr "Bild-URLs"
 
 msgid "You can also %i or %u."
-msgstr "Sie können auch %i oder %u."
+msgstr "Sie können auch %i oder %u einfügen."
 
 msgid "browse from your device"
 msgstr "Durchsuchen Sie Ihr Gerät"
@@ -1900,7 +2142,7 @@ msgstr "Die Warteschlange wird abgearbeitet, dies dauert einige Sekunden."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:32
 msgid "Upload complete"
-msgstr "Upload abgeschlossen"
+msgstr "Hochladen abgeschlossen"
 
 #, php-format
 msgid "Uploaded content added to %s."
@@ -1919,14 +2161,14 @@ msgstr "Neues Album erstellen"
 msgid "move it to an existing album"
 msgstr "In bestehendes Album verschieben"
 
+msgid "You must %s or %l to save this content into your account."
+msgstr "Sie müssen %s oder %l um diese Inhalte in Ihrem Konto zu speichern."
+
 msgid "create an account"
 msgstr "Neuen Account erstellen"
 
 msgid "sign in"
 msgstr "Einloggen"
-
-msgid "You can %s or %l to save this content into your account."
-msgstr "Sie können %s oder %l um den Inhalt in Ihrem Account zu speichern."
 
 #, php-format
 msgid "No %s have been uploaded"
@@ -1955,18 +2197,7 @@ msgstr "Nicht jugendfreier Inhalt"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 msgid "Uploading"
-msgstr "Uploading"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
-msgid "cancel"
-msgstr "Abbrechen"
+msgstr "Hochladen"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
@@ -2001,13 +2232,6 @@ msgstr "Kopieren"
 
 msgid "insert"
 msgstr "Einfügen"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
-msgid "Edit"
-msgstr "Bearbeiten"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:148
 #: ../../../app/themes/Peafowl/views/dashboard.php:666
@@ -2118,9 +2342,17 @@ msgstr "Bild-URLs hier einfügen"
 msgid "Create album"
 msgstr "Album erstellen"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:224
-msgid "The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
-msgstr "Die hochgeladenen Inhalte werden in das neue Album verschoben. Sie können die Inhalte außerdem in ein <a class=\"modal-switch\" data-switch=\"move-existing-album\">bestehendes Album</a> verschieben."
+msgid "The uploaded content will be moved to this newly created album."
+msgstr "Der hochgeladene Inhalt wird in das neu erstellte Album verschoben."
+
+msgid "existing album"
+msgstr "Bestehendes Album"
+
+msgid "You can also move the content to an %a."
+msgstr "Sie können den Inhalt auch in ein %a verschieben."
+
+msgid "You must %s or %l if you want to edit this album later on."
+msgstr "Sie müssen %s oder %l wenn Sie das Album später bearbeiten wollen."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:235
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:28
@@ -2136,13 +2368,6 @@ msgstr "Markieren Sie ein bestehendes Album um die hochgeladenen Inhalte zu vers
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:252
 msgid "Error report"
 msgstr "Fehlermeldung"
-
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
-#: ../../../app/themes/Peafowl/views/user.php:99
-msgid "album"
-msgid_plural "albums"
-msgstr[0] "Album"
-msgstr[1] "Alben"
 
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
@@ -2310,6 +2535,35 @@ msgstr "Kurze Beschreibung der Kategorie"
 msgid "Untitled image"
 msgstr "Unbetiteltes Bild"
 
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
+msgid "Path"
+msgstr "Pfad"
+
+msgid "Local path (absolute)"
+msgstr "Lokaler Pfad (Absolut)"
+
+msgid "Directory structure"
+msgstr "Verzeichnisstruktur"
+
+msgid "Parse top level folders as users (username)"
+msgstr "Top-Level-Ordner als Nutzer (Nutzername) parsen"
+
+msgid "Parse top level folders as albums"
+msgstr "Top-Level-Ordner als Alben parsen"
+
+msgid "Don't parse folders"
+msgstr "Ordner nicht parsen"
+
+msgid "When parsing top level folders as users, second level folders will be parsed as user albums. Parsing top level folders as albums adds these as guest albums."
+msgstr "Wenn Top-Level-Ordner als Nutzer geparsed werden, werden Ordner auf der zweiten Ebene als Nutzeralben geparsed. Werden Top-Level-Ordner als Alben geparsed, werden diese als Gästealben hinzugefügt."
+
+msgid "Threads"
+msgstr "Threads"
+
+#, php-format
+msgid "This determines how intensive and fast will be the import process. Don't use more than %s threads on a shared server."
+msgstr "Diese Einstellung bestimmt, wie schnell der Import-Vorgang abgeschlossen sein wird. Nutzen Sie nicht mehr als %s Threads auf einem Managed Server."
+
 msgid "You can use wildcard * characters."
 msgstr "Sie können Platzhalter (*) verwenden."
 
@@ -2360,6 +2614,10 @@ msgstr "API"
 msgid "Region"
 msgstr "Region"
 
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
+msgid "Storage region"
+msgstr "Datenspeicher-Region"
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:58
 msgid "Storage bucket"
 msgstr "Datenspeicher-Bucket"
@@ -2380,19 +2638,6 @@ msgstr "Secret"
 msgid "Storage secret"
 msgstr "Datenspeicher-Secret"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:73
-msgid "Client email"
-msgstr "Kunden E-Mail"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:74
-msgid "Google Cloud client email"
-msgstr "Google Cloud Kunden E-Mail"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:75
-#, php-format
-msgid "You will need a <a %s>service account</a> for this."
-msgstr "Sie benötigen einen <a %s>Account</a> für diese Funktion."
-
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:78
 msgid "Private key"
 msgstr "Privater Schlüssel"
@@ -2400,6 +2645,11 @@ msgstr "Privater Schlüssel"
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:79
 msgid "Google Cloud JSON key"
 msgstr "Google Cloud JSON Schlüssel"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:75
+#, php-format
+msgid "You will need a <a %s>service account</a> for this."
+msgstr "Sie benötigen einen <a %s>Account</a> für diese Funktion."
 
 msgid "Service name"
 msgstr "Dienstname"
@@ -2410,15 +2660,24 @@ msgstr "Identifizierungs-URL"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:85
 msgid "Identity API endpoint"
-msgstr "Identifizierungs-API-Endpunkt"
+msgstr "Identität des API-Endpunkt"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:85
 msgid "API endpoint for OpenStack identity"
-msgstr "API-Endounkt für OpenStack-Indentifizierung"
+msgstr "API-Endpunkt für OpenStack-Identität"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
-msgid "Storage region"
-msgstr "Datenspeicher-Region"
+#: ../../../app/themes/Peafowl/header.php:339
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
+#: ../../../app/themes/Peafowl/views/dashboard.php:94
+#: ../../../app/themes/Peafowl/views/dashboard.php:95
+#: ../../../app/themes/Peafowl/views/settings.php:143
+#: ../../../app/themes/Peafowl/views/settings.php:144
+#: ../../../app/themes/Peafowl/views/signup.php:39
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "Username"
+msgstr "Benutzername"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:100
 msgid "Container"
@@ -2444,29 +2703,35 @@ msgstr "Mietername"
 msgid "Tenant name (account name)"
 msgstr "Mietername (Kontoname)"
 
+msgid "Storage endpoint"
+msgstr "Datenspeicher Endpunkt"
+
+msgid "Server address"
+msgstr "Serveradresse"
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:115
 msgid "Hostname or IP of the storage server"
 msgstr "Hostname oder IP des Datenspeicher-Server"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
-msgid "Path"
-msgstr "Pfad"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
 msgid "Server path"
 msgstr "Server-Pfad"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
-msgid "Server path where the files will be stored"
-msgstr "Server-Pfad auf dem die Dateien gespeichert werden"
+msgid "Absolute path where the files will be stored in the context of the %p login. Use %s for root path."
+msgstr "Absoluter Pfad für die Speicherung im Kontext des %p Login. Nutzen Sie %s für den Root-Pfad."
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:123
-msgid "Server username"
-msgstr "Server-Benutzername"
+msgid "Server login"
+msgstr "Server-Login"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:127
 msgid "Server password"
 msgstr "Server-Passwort"
+
+msgid "Local path"
+msgstr "Lokaler Pfad"
+
+msgid "Local path where the files will be stored"
+msgstr "Lokaler Pfad in dem die Daten gespeichert werden."
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:132
 msgid "Storage capacity"
@@ -2530,28 +2795,24 @@ msgstr "Kategorie zuweisen"
 msgid "Flag as safe"
 msgstr "Als sicher markieren"
 
-#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
-#: ../../../app/themes/Peafowl/views/dashboard.php:607
-#: ../../../app/themes/Peafowl/views/dashboard.php:884
-#: ../../../app/themes/Peafowl/views/dashboard.php:933
-msgid "Delete"
-msgstr "Löschen"
-
 msgid "Create new album"
 msgstr "Neues Album erstellen"
 
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:5
-#, php-format
-msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
-msgstr "Um alle Funktionen dieser Seite nutzen zu können, müssen Sie angemeldet sein. Wenn Sie bisher noch kein Konto erstellt haben, können Sie sich jetzt <a href=\"%s\">registrieren</a>."
+#: ../../../app/themes/Peafowl/header.php:281
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
+#: ../../../app/themes/Peafowl/views/login.php:18
+#: ../../../app/themes/Peafowl/views/login.php:65
+#: ../../../app/themes/Peafowl/views/signup.php:18
+#: ../../../app/themes/Peafowl/views/signup.php:76
+msgid "Sign in with another account"
+msgstr "Mit externen Diensten anmelden"
+
+msgid "Continue with %label%"
+msgstr "Mit %label% fortfahren"
+
+msgid "Home"
+msgstr "Home"
 
 #: ../../../app/themes/Peafowl/snippets/template_content_empty.php:5
 #: ../../../app/themes/Peafowl/views/dashboard.php:618
@@ -2637,10 +2898,11 @@ msgstr "Gast"
 msgid "Keyboard shortcuts"
 msgstr "Tastatur-Shortcut"
 
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "Like"
+msgid "Private album"
+msgstr "Privates Album"
+
+msgid "Password protected"
+msgstr "Passwortgeschützt"
 
 msgid "Uploaded by guest"
 msgstr "Hochgeladen von einem Gast"
@@ -2658,25 +2920,14 @@ msgstr "Hochgeladen von Privat"
 msgid "by %u"
 msgstr "Von %u"
 
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
-#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
-#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
-msgid "Select"
-msgstr "Markieren"
-
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:7
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:7
 msgid "Toggle unsafe flag"
 msgstr "Als anstößig markieren"
+
+#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
+msgid "That page doesn't exist"
+msgstr "Diese Seite existiert nicht"
 
 #: ../../../app/themes/Peafowl/views/404.php:7
 msgid "The requested page was not found."
@@ -2690,13 +2941,6 @@ msgstr "Etwas anderes suchen"
 msgid "The user has been deleted"
 msgstr "Der Benutzer wurde gelöscht."
 
-#: ../../../app/themes/Peafowl/views/404.php:22
-#: ../../../app/themes/Peafowl/views/album.php:134
-#: ../../../app/themes/Peafowl/views/user.php:171
-#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
-msgid "The content has been deleted."
-msgstr "Der Inhalt wurde gelöscht."
-
 #: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:7
 msgid "Your account is almost ready"
 msgstr "Ihr Konto ist fast fertig"
@@ -2705,17 +2949,6 @@ msgstr "Ihr Konto ist fast fertig"
 #, php-format
 msgid "An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters."
 msgstr "Es wurde eine E-Mail an %s mit Informationen zur Aktivierung Ihres Kontos gesendet. Der Aktivierungslink ist nur für einen Zeitraum von 48 Stunden gültig. Falls Sie keine E-Mail erhalten haben, sollten Sie Ihren Junk- oder Spam-Filter überprüfen."
-
-#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
-#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/logout.php:13
-#: ../../../app/themes/Peafowl/views/request-denied.php:13
-msgid "Go to homepage"
-msgstr "Zur Startseite"
 
 #: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
@@ -2741,41 +2974,6 @@ msgstr "Ein Bestätigungslink mit Anweisungen zur Aktivierung Ihres Kontos wird 
 msgid "Your email address"
 msgstr "Ihre E-Mail-Adresse"
 
-#: ../../../app/themes/Peafowl/views/account/email-needed.php:26
-msgid "Add email"
-msgstr "E-Mail hinzufügen"
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
-msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
-msgstr "Es wurde eine E-Mail mit Anweisungen zum Zurücksetzen Ihres Passworts an die hinterlegte E-Mail-Adresse gesendet. Falls Sie keine E-Mail erhalten haben, sollten Sie Ihren Junk- oder Spam-Filter überprüfen."
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-msgid "Resend instructions"
-msgstr "Anweisungen erneut senden"
-
-#: ../../../app/install/update/updater.php:62
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
-#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
-#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
-#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
-#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
-#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
-#: ../../../lib/Peafowl/peafowl.min.js:158
-#: ../../../lib/Peafowl/peafowl.min.js:195
-msgid "An error occurred. Please try again later."
-msgstr "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später noch einmal."
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
-msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
-msgstr "Es wurde bereits eine E-Mail mit Anweisungen an die hinterlegte E-Mail-Adresse versendet. Falls Sie keine E-Mail erhalten haben, sollten Sie Ihren Junk- oder Spam-Filter überprüfen."
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:32
-msgid "Enter your username or the email address that you used to create your account."
-msgstr "Bitte geben Sie Ihren Benutzernamen oder die E-Mail-Adresse an, die Sie bei der Erstellung des Kontos benutzt haben."
-
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:52
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:47
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:37
@@ -2785,6 +2983,33 @@ msgstr "Bitte geben Sie Ihren Benutzernamen oder die E-Mail-Adresse an, die Sie 
 msgid "Submit"
 msgstr "Senden"
 
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
+msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "Es wurde eine E-Mail mit Anweisungen zum Zurücksetzen Ihres Passworts an die hinterlegte E-Mail-Adresse gesendet. Falls Sie keine E-Mail erhalten haben, sollten Sie Ihren Junk- oder Spam-Filter überprüfen."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
+msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
+msgstr "Es wurde bereits eine E-Mail mit Anweisungen an die hinterlegte E-Mail-Adresse versendet. Falls Sie keine E-Mail erhalten haben, sollten Sie Ihren Junk- oder Spam-Filter überprüfen."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+msgid "Resend instructions"
+msgstr "Anweisungen erneut senden"
+
+#, php-format
+msgid "Enter your username or email address to continue. You may need to check your spam folder or whitelist %s"
+msgstr "Geben Sie Ihren Nutzernamen und Ihre E-Mail-Adresse ein, um fortzufahren. Überprüfen Sie ggf. Ihren Spam-Ordner oder setzen Sie %s auf Ihre Whitelist."
+
+#: ../../../app/themes/Peafowl/header.php:291
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
+#: ../../../app/themes/Peafowl/views/login.php:34
+#: ../../../app/themes/Peafowl/views/login.php:35
+msgid "Username or Email address"
+msgstr "Benutzername / E-Mail"
+
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:15
 msgid "Your password has been changed. You can now try logging in using your new password."
 msgstr "Ihr Passwort wurde geändert. Sie können nun versuchen, sich mit Ihrem neuen Passwort anzumelden."
@@ -2793,13 +3018,10 @@ msgstr "Ihr Passwort wurde geändert. Sie können nun versuchen, sich mit Ihrem 
 msgid "Login now"
 msgstr "Jetzt anmelden"
 
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:22
-msgid "Enter the new password that you want to use."
-msgstr "Bitte geben Sie ein neues Passwort ein."
-
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:28
-msgid "New Password"
-msgstr "Neues Passwort"
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/settings.php:306
+msgid "Enter your new password"
+msgstr "Neues Passwort eingeben"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:29
 #: ../../../app/themes/Peafowl/views/dashboard.php:105
@@ -2810,15 +3032,8 @@ msgstr "Neues Passwort"
 msgid "%d characters min"
 msgstr "Mindestens %d Zeichen"
 
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
-#: ../../../app/themes/Peafowl/views/settings.php:306
-msgid "Enter your new password"
-msgstr "Neues Passwort eingeben"
-
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
-#: ../../../app/themes/Peafowl/views/settings.php:328
-msgid "Confirm password"
-msgstr "Passwort bestätigen"
+msgid "Password strength"
+msgstr "Passwortstärke"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:35
 #: ../../../app/themes/Peafowl/views/settings.php:312
@@ -2829,10 +3044,6 @@ msgstr "Passwort wiederholen"
 #, php-format
 msgid "An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters."
 msgstr "Es wurde eine E-Mail an %s mit Anweisungen zur Aktivierung des Benutzerkontos versendet. Sollten Sie keine E-Mail mit Anweisungen erhalten haben, überprüfen Sie bitte Ihren Spam-Filter."
-
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:19
-msgid "Enter the username or email address that you used to create your account to continue."
-msgstr "Geben Sie den Benutzername oder die E-Mail-Adresse, die bei der Erstellung des Benutzeraccounts benutzt wurden ein, um fortzufahren."
 
 #: ../../../app/themes/Peafowl/views/album.php:16
 #: ../../../app/themes/Peafowl/views/image.php:63
@@ -2871,10 +3082,129 @@ msgstr "Mit dem Klick auf \"Ich stimme zu\" erklären Sie, dass Sie die oben gen
 msgid "I Agree"
 msgstr "Ich stimme zu"
 
+msgid "documentation"
+msgstr "Dokumentation"
+
+#, php-format
+msgid "Learn more about %s at our %d."
+msgstr "Lernen Sie mehr über %s in unserer %d."
+
+msgid "The connecting IP is determined using the server variable %var%. If the detected IP doesn't match yours, it means that your web server is under a proxy and you need to tweak your server to set the real connecting IP."
+msgstr "Die verbundene IP-Adresse ist darauf festgelegt, die Server-Variable %var% zu nutzen. Wenn die erkannte IP-Adresse nicht mit Ihrer übereinstimmt, bedeutet dies, dass Ihr Server hinter einem Proxy liegt und Sie Ihren Server so konfigurieren müssen, dass die tatsächlich verbundene IP-Adresse gesetzt wird."
+
+msgid "For Nginx, you must use %nginx%. For Apache, %apache%."
+msgstr "Für Nginx, müssen Sie %nginx% nutzen. Für Apache, %apache%."
+
+msgid "Make sure that you address this issue as the system relies on accurate IP detections to provide basic functionalities and to protect against spam, flooding, and brute force attacks."
+msgstr "Stellen Sie sicher, dass dieses Problem gelöst wird. Das System ist auf eine korrekte Erkennung der IP-Adressen angewiesen, um grundsätzliche Funktionen und den Schutz gegen Spam, Flooding und Brute-Force-Attacken zu gewährleisten."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:40
 #: ../../../app/themes/Peafowl/views/dashboard.php:1732
 msgid "Disk used"
 msgstr "Speicherverbrauch"
+
+msgid "This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure."
+msgstr "Dieses Werkzeug erlaubt die Massenverarbeitung von Inhalten, um sie der Internetseite hinzuzufügen. Hierzu wird auf einen Systempfad gezeigt, der den Inhalt enthält, der importiert werden soll. Es wird das Hinzufügen von Benutzern, Alben und Bildern auf Basis einer ordnerbasierten Struktur unterstützt."
+
+msgid "Automatic importing"
+msgstr "Automatisches Importieren"
+
+msgid "The system automatically parses any content by a continuous observation of the %path% path."
+msgstr "Dieses System analysiert automatisch fortlaufend jeden Inhalt im Pfad %path%."
+
+msgid "The system automatically parses any content by a continous observation of the %path% path."
+msgstr "Das System analysiert automatisch jeden Inhalt über eine fortlaufende Boebachtung des %path% Pfades."
+
+msgid "Completed jobs will be automatically re-started after %n %m."
+msgstr "Abgeschlossene Aufgaben werden automatisch nach %n %m neugestartet."
+
+msgid "Reset to clear stats and logs."
+msgstr "Statistiken und Logs werden zurückgesetzt."
+
+msgid "Queued"
+msgstr "In Warteschlange"
+
+msgid "Working"
+msgstr "In Arbeit"
+
+msgid "Paused"
+msgstr "Pausiert"
+
+msgid "Canceled"
+msgstr "Abgebrochen"
+
+msgid "Completed"
+msgstr "Abgeschlossen"
+
+msgid "Actions"
+msgstr "Aktionen"
+
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+msgid "Pause"
+msgstr "Pausieren"
+
+msgid "Resume"
+msgstr "Fortsetzen"
+
+msgid "Process log"
+msgstr "Log"
+
+msgid "Errors"
+msgstr "Fehler"
+
+#: ../../../app/themes/Peafowl/views/settings.php:105
+msgid "Status"
+msgstr "Status"
+
+msgid "The system works with a scheduled command to continuously process the importing. It requires a crontab entry."
+msgstr "Das System arbeitet mit einem geplanten Befehl um das Importieren fortlaufend zu verarbeiten. Hierzu ist ein Crontab Eintrag notwendig."
+
+msgid "You can run the command in parallel by changing the integer value of %s%."
+msgstr "Sie können den Befehl parallel starten indem Sie den Integer Wert auf %s% setzen."
+
+msgid "All file-system permissions must be granted for the crontab user at %path%"
+msgstr "Alle Berechtigung des Dateisystems müssen für den Crontab Benutzer im Pfad %path% gesetzt sein."
+
+msgid "Required crontab entry:"
+msgstr "Notwendiger Crontab Eintrag:"
+
+msgid "Add import job"
+msgstr "Import-Aufgabe hinzufügen"
+
+#, php-format
+msgid "This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d."
+msgstr "Dieses Werkzeug erlaubt die Massenverarbeitung und das Hinzufügen von Inhalte für Ihre Internetseite, in dem auf einen Systempfad mit den zu importierten Inhalten verwiesen wird. Es unterstützt den Import von Nutzern, Alben und Bildern über eine ordnerbasierte Struktur. Sie können mehr über die Ordnerstruktur, das Hinzufügen von Metadaten und weitere Informationen über dieses Werkzeug in der %d erfahren."
+
+msgid "Process import"
+msgstr "Import verarbeiten"
+
+#, php-format
+msgid "Top level folders as %s"
+msgstr "Top-Level-Ordner als %s"
+
+msgid "Process"
+msgstr "Verarbeiten"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#, php-format
+msgid "Do you really want to remove the import ID %s?"
+msgstr "Wollen Sie wirklich die Import-ID %s entfernen?"
+
+msgid "Manual importing"
+msgstr "Manuelles Importieren"
+
+msgid "The system will parse the contents of any available filesystem path."
+msgstr "Das System analysiert die Inhalte eines jeden verfügbaren Dateisystem-Pfades."
+
+msgid "These processes must be manually created and handled with the web browser tab open."
+msgstr "Dieser Prozess muss manuell erstellt und mit geöffnetem Web-Browser Tab ausgeführt werden."
+
+msgid "Parser"
+msgstr "Parser"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:80
 #: ../../../app/themes/Peafowl/views/dashboard.php:84
@@ -2886,20 +3216,26 @@ msgstr "Benutzer hinzufügen"
 msgid "Role"
 msgstr "Berechtigung"
 
+msgid "Manager"
+msgstr "Manager"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:89
 #: ../../../app/themes/Peafowl/views/settings.php:125
 msgid "Administrator"
 msgstr "Administrator"
 
+#: ../../../app/themes/Peafowl/header.php:338
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:100
+#: ../../../app/themes/Peafowl/views/settings.php:155
+#: ../../../app/themes/Peafowl/views/signup.php:34
+#: ../../../app/themes/Peafowl/views/signup.php:35
+#: ../../../content/pages/default/contact.php:92
+msgid "Email address"
+msgstr "E-Mail-Adresse"
+
 msgid "This setting is always diabled when using personal website mode."
 msgstr "Diese Einstellung ist immer deaktivert, wenn Sie den Privat-Modus aktiviert habe."
-
-msgid "documentation"
-msgstr "Dokumentation"
-
-#, php-format
-msgid "Learn more about %s at our %d."
-msgstr "Lernen Sie mehr über %s in unserer %d."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
@@ -2932,6 +3268,25 @@ msgstr "Titel der Internetseite"
 #: ../../../app/themes/Peafowl/views/dashboard.php:231
 msgid "Website description"
 msgstr "Beschreibung der Internetseite"
+
+msgid "Powered by"
+msgstr "Unterstützt von"
+
+#, php-format
+msgid "Enable this if you want to show a \"%s\" link at the footer."
+msgstr "Aktivieren, falls Teilen-Button für soziale Netzwerke angezeigt werden sollen."
+
+msgid "Automatic"
+msgstr "Automatisch"
+
+msgid "Forced"
+msgstr "Erzwingen"
+
+msgid "%a will use HTTPS detection on the server side (recommended). %f will use HTTPS regardless of your server setup. %d to don't use HTTPS at all."
+msgstr "%a nutzt die serverseitige HTTPS-Erkennung (empfohlen). %f nutzt HTTPS unabhängig Ihrer Server-Einstellungen. %d deaktiviert die Nutzung von HTTPS vollständig."
+
+msgid "This only controls the protocol used in the URLs, it won't turn your website into a valid HTTPS website unless your server is configured to support and use HTTPS."
+msgstr "Diese Einstellung beeinflusst nur das Protokoll, welches in URLs genutzt wird. Sie verwandelt Ihre Internetseite nicht in eine echte HTTPS-Seite, solange Ihr Server nicht für HTTPS konfiguriert wurde."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:257
 msgid "Default time zone"
@@ -3049,6 +3404,24 @@ msgstr "Nur aktive Seiten werden angezeigt."
 msgid "Type"
 msgstr "Typ"
 
+msgid "Terms of service"
+msgstr "Nutzungsbedingungen"
+
+msgid "Privacy"
+msgstr "Privatsphäre"
+
+msgid "Contact"
+msgstr "Kontakt"
+
+msgid "Extra page"
+msgstr "Zusätzliche Seite"
+
+msgid "Internal page type"
+msgstr "Interner Seitentyp"
+
+msgid "You can have multiple extra pages, but only one of the other special internal types."
+msgstr "Sie können mehrere zusätzliche Seiten erstellen, allerdings nur jeweils einen der speziellen internen Seitentypen."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:475
 msgid "Page visibility"
 msgstr "Seitensichtbarkeit"
@@ -3157,12 +3530,15 @@ msgstr "Seiten"
 msgid "Do you really want to delete the page ID %s? This can't be undone."
 msgstr "Wollen Sie wirklich die Seite mit der ID %s löschen? Dies kann nicht rückgängig gemacht werden."
 
+msgid "Enabled image formats"
+msgstr "Aktivierte Bildformate"
+
 msgid "Unchecked image formats won't be allowed to be uploaded."
 msgstr "Nicht markierte Bildformate sind nicht für das Hochladen zugelassen."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:630
 msgid "Enable uploads"
-msgstr "Uploads aktivieren"
+msgstr "Hochladen aktivieren"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:636
 msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
@@ -3175,6 +3551,15 @@ msgstr "Gast-Uploads"
 #: ../../../app/themes/Peafowl/views/dashboard.php:645
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "Aktivieren, falls nicht registrierten Benutzern das Hochladen von Bildern erlaubt sein soll."
+
+msgid "Upload user interface"
+msgstr "Upload-Benutzeroberfläche"
+
+msgid "On-page container"
+msgstr "On-Page Container"
+
+msgid "route"
+msgstr "Route"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1353
 msgid "Enable embed codes (uploader)"
@@ -3493,7 +3878,7 @@ msgid "Enable this if you want to allow users to delete their own content. This 
 msgstr "Aktivieren, falls Nutzern erlaubt werden soll, ihre eigenen Inhalte zu löschen. Diese Einstellung hat keine Auswirkung auf Administratoren."
 
 msgid "Minimum age required"
-msgstr "Mindestalter erforderlich"
+msgstr "Mindestalter"
 
 msgid "Empty"
 msgstr "Leer"
@@ -3877,6 +4262,12 @@ msgstr "Aktivieren, falls Buttons von sozialen Netzwerken angezeigt werden solle
 msgid "Enable embed codes (content)"
 msgstr "Aktiviere Embed-Codes (Inhalt)"
 
+msgid "Everybody"
+msgstr "Jeder"
+
+msgid "Users only"
+msgstr "Nur Benutzer"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1349
 msgid "Enable this if you want to show embed codes for the content."
 msgstr "Aktivieren, falls Embed-Codes auf den Inhalt-Seiten angezeigt werden sollen."
@@ -3904,6 +4295,10 @@ msgstr "Eigener JS-Code"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1383
 msgid "Put your custom JS code here. It will be placed as <script> just before the closing </head> tag."
 msgstr "Eigener JS-Code kann hier eingefügt werden. Der Code wird als <script> platziert bevor der </head> Tag geschlossen wird."
+
+#, php-format
+msgid "Do not use %s markup here. This is for plain JS code, not for HTML script tags. If you use script tags here you will break your website."
+msgstr "Nutzen hier Sie keinen %s Markup. Dieses Feld ist nur für reinen JS-Code und nicht for HTML-Script-Tags gedacht. Sollten Script-Tags genutzt werden, wird dies Ihre Internetseite funktionsuntüchtig machen."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1390
 msgid "Style"
@@ -4012,8 +4407,8 @@ msgstr "Dies wird innerhalb des \"Call to Action\" <a> Tag eingefügt. Lassen Si
 msgid "User IDs"
 msgstr "Benutzer-IDs"
 
-msgid "Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images."
-msgstr "Kommagetrennte Liste der Zielbenutzer-IDs, deren Bilder auf der Startseite angezeigt werden sollen. Lassen Sie dieses Feld leer oder auf Null, um die zuletzt hinzugefügten Bilder anzuzeigen."
+msgid "Comma-separated list of target user IDs (integers) to show most recent images on homepage. Leave it empty to display trending images."
+msgstr "Komma-separierte Liste von Benutzer-IDs um Bilder auf der Internetseite anzuzeugen. Lassen Sie diese Einstellung frei oder auf Null um alle aktuellen Bilder anzuzeigen."
 
 msgid "banners"
 msgstr "Banner"
@@ -4029,6 +4424,20 @@ msgstr "Anzeigen der verfügbaren Update-Benachrichtigungen"
 
 msgid "Enable this to show a notice on top warning you about new available system updates."
 msgstr "Aktivieren, wenn Sie einen Hinweis über verfügbare System-Updates wünschen."
+
+msgid "Dump update query"
+msgstr "Aktualisierungsanfrage verwerfen"
+
+msgid "Enable this if you want to dump the update query to run it manually."
+msgstr "Aktivieren, wenn automatisch die korrekte Sprache für jeden Nutzer gesetzt werden soll."
+
+#, php-format
+msgid "SEO %s URLs"
+msgstr "SEO %s URLs"
+
+#, php-format
+msgid "Enable this if you want to use SEO %s URLs."
+msgstr "Aktivieren, falls SEO %s URLs genutzt werden sollen."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1570
 msgid "Minify code"
@@ -4102,11 +4511,36 @@ msgstr "Routing für %s"
 msgid "Album routing"
 msgstr "Album-Routing"
 
+msgid "Hostname"
+msgstr "Hostname"
+
+msgid "Hostname on which sub-domain wildcards will be added."
+msgstr "Hostname, auf den Subdomain-Wildcards hinzugefügt werden."
+
+#, php-format
+msgid "This setting may be overridden by %s."
+msgstr "Diese Einstellung wird eventuell durch %s überschrieben-"
+
+msgid "Language subdomains"
+msgstr "Subdomains für Sprachen"
+
+msgid "languages"
+msgstr "Sprachen"
+
+msgid "Enable to use %s for %t."
+msgstr "Aktivieren, um %s für %t zu nutzen."
+
+msgid "Username subdomains"
+msgstr "Subdomains für Nutzernamen"
+
+msgid "user profiles"
+msgstr "Nutzerprofile"
+
 msgid "Custom language strings"
 msgstr "Eigene Sprachen-Strings"
 
 msgid "language strings"
-msgstr "Sprachen-String"
+msgstr "Sprachen-Strings"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1611
 msgid "Default language"
@@ -4213,14 +4647,16 @@ msgstr "SMTP-Sicherheit"
 msgid "Unsecured"
 msgstr "Ungesichert"
 
+msgid "Decode ID"
+msgstr "Dekodierungs-ID"
+
+msgid "Encode ID"
+msgstr "Enkodierungs-ID"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1824
 #: ../../../app/themes/Peafowl/views/dashboard.php:1825
 msgid "Send test email"
 msgstr "Test-E-Mail senden"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1825
-msgid "test@somedomain.com"
-msgstr "test@domain.de"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1826
 #, php-format
@@ -4235,6 +4671,33 @@ msgstr "Exportieren"
 
 msgid "This will allow you to download a user's standard personal information in JSON format."
 msgstr "Diese Funktion ermöglicht es, die persönlichen Informationen eines Nutzers als JSON-Datei herunterzuladen."
+
+msgid "Regenerate external storage stats"
+msgstr "Statistiken der externen Datenspeicher erneuern"
+
+msgid "Storage id"
+msgstr "Datenspeicher-ID"
+
+msgid "Regenerate"
+msgstr "Erneuern"
+
+msgid "This will re-calculate the sum of all the image records associated to the target external storage."
+msgstr "Dies berechnet die Summe aller Bild-Datensätze neu, die mit dem externen Datenspeicher verbunden sind."
+
+msgid "Migrate image records from one external storage to another"
+msgstr "Migriert alle Bild-Datensätze von einem externen Datenspeicher auf einen anderen"
+
+msgid "Source storage id"
+msgstr "ID des Quell-Datenspeichers"
+
+msgid "Target storage id"
+msgstr "ID des Ziel-Datenspeichers"
+
+msgid "Migrate"
+msgstr "Migrieren"
+
+msgid "This only updates the database. You must transfer the actual files to target storage container on your own. URL rewriting is strongly recommended. Use zero (0) for local storage."
+msgstr "Diese Aktion aktualisiert nur die Datenbank. Sie müssen die tatsächlichen Dateien zum Zielspeicherort eigenständig transferieren. URL-Überschreibungen werden empfohlen. Setzten Sie Null (0) für eine lokale Speicherung."
 
 msgid "social networks"
 msgstr "Soziale Netzwerke"
@@ -4269,7 +4732,7 @@ msgstr "Twitter Konto"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1897
 msgid "You need a <a href=\"https://cloud.google.com/console\" target=\"_blank\">Google app</a> for this."
-msgstr "Sie benötigen zunächst eine <a href=\"https://cloud.google.com/console\" target=\"_blank\">Google App</a> für diese Funktion."
+msgstr "Sie benötigen eine <a href=\"https://cloud.google.com/console\" target=\"_blank\">Google App</a> für diese Funktion."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1902
 msgid "Google client id"
@@ -4291,10 +4754,30 @@ msgstr "VK Client-ID"
 msgid "VK client secret"
 msgstr "VK Client-Secret"
 
+#, php-format
+msgid "%s spam protection"
+msgstr "%s Spamschutz"
+
+msgid "user generated content"
+msgstr "Benutzergenerierte Inhalte"
+
+msgid "Enable this to use %l to block spam on %c."
+msgstr "Aktivieren, um mit %l Spam auf %c zu blockieren."
+
+#, php-format
+msgid "%s API key"
+msgstr "%s API-Schlüssel"
+
+msgid "user signup"
+msgstr "Benutzeranmeldung"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1968
 #, php-format
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "Sie benötigen einen <a href=\"%s\" target=\"_blank\">reCAPTCHA Schlüssel</a> für diese Funktion."
+
+msgid "Please note that each reCAPTCHA version require its own set of keys. Don't forget to update the keys if you change versions."
+msgstr "Bitte beachten Sie, dass für jede reCAPTCHA-Version ein eigener API-Schlüssel erforderlich ist. Vergessen Sie nicht, die API-Schlüssel zu aktualisieren, wenn Sie die Version geändert haben."
 
 #, php-format
 msgid "%s site key"
@@ -4311,6 +4794,14 @@ msgstr "reCAPTCHA Schwelle"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1991
 msgid "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA."
 msgstr "Ab wie vielen Fehlversuchen beim Login soll eine reCAPTCHA-Abfrage notwendig werden? Bei Null (0) wird immer eine reCAPTCHA-Eingabe verlangt."
+
+#, php-format
+msgid "Force %s on contact page"
+msgstr "%s auf Kontaktseite erzwingen"
+
+#, php-format
+msgid "Enable this to always show %s on contact page."
+msgstr "Aktivieren Sie diese Option, um %s immer auf der Kontaktseite anzuzeigen."
 
 msgid "Comments API"
 msgstr "Kommentare-API"
@@ -4445,11 +4936,6 @@ msgstr "Jetzt ganz leicht per Drag & Drop! Bis %s Bildgröße. Inklusive direkte
 msgid "Start uploading"
 msgstr "Upload starten"
 
-#: ../../../app/themes/Peafowl/views/index.php:63
-#, php-format
-msgid "Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings."
-msgstr "Laden Sie Bilder zu %ss Benutzerkonto hoch, um diesen Bereich mit Inhalten zu füllen.<br>Die Basis-User-ID kann im Dashboard bearbeitet werden."
-
 #: ../../../app/themes/Peafowl/views/index.php:79
 msgid "Sign up to unlock all the features"
 msgstr "Jetzt registrieren, um alle Funktionen nutzen zu können"
@@ -4458,15 +4944,34 @@ msgstr "Jetzt registrieren, um alle Funktionen nutzen zu können"
 msgid "Manage your content, create private albums, customize your profile and more."
 msgstr "Verwalten Sie Ihre Inhalte, erstellen Sie private Alben, personalisieren Sie Ihr Profil und vieles mehr."
 
-#: ../../../app/themes/Peafowl/views/login.php:40
-#: ../../../app/themes/Peafowl/views/settings.php:323
-msgid "Enter your password"
-msgstr "Passwort eingeben"
+msgid "Sign in with your account"
+msgstr "Mit Ihrem Konto anmelden"
+
+#: ../../../app/themes/Peafowl/header.php:301
+#, php-format
+msgid "Don't have an account? <a href='%s'>Sign up</a> now."
+msgstr "Sie haben kein Konto? Jetzt <a href='%s'>anmelden</a>!"
+
+#: ../../../app/routes/route.logout.php:29
+#: ../../../app/themes/Peafowl/views/logout.php:8
+msgid "Logged out"
+msgstr "Abmeldung erfolgreich"
 
 #: ../../../app/themes/Peafowl/views/logout.php:12
 #, php-format
 msgid "You have been logged off %s. Hope to see you soon."
 msgstr "Sie wurden von %s abgemeldet. Wir freuen uns auf Ihren nächsten Besuch!"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/logout.php:13
+#: ../../../app/themes/Peafowl/views/request-denied.php:13
+msgid "Go to homepage"
+msgstr "Zur Startseite"
 
 #: ../../../app/themes/Peafowl/views/maintenance.php:7
 msgid "Website under maintenance"
@@ -4570,10 +5075,6 @@ msgstr "Registrierungsdatum"
 msgid "Registration IP"
 msgstr "Registrierungs-IP"
 
-#: ../../../app/themes/Peafowl/views/settings.php:105
-msgid "Status"
-msgstr "Status"
-
 #: ../../../app/themes/Peafowl/views/settings.php:109
 msgid "Valid"
 msgstr "Aktiv"
@@ -4657,6 +5158,16 @@ msgstr "Sie müssen ein Passwort angeben, um sich mit Ihrem Benutznamen oder Ihr
 msgid "This user doesn't have a password. Add one using this form."
 msgstr "Diesem Benutzer wurde kein Passwort zugewiesen. Teilen Sie dem Nutzer ein Passwort über das Eingabefeld zu."
 
+#: ../../../app/themes/Peafowl/views/login.php:40
+#: ../../../app/themes/Peafowl/views/settings.php:323
+msgid "Enter your password"
+msgstr "Passwort eingeben"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
+#: ../../../app/themes/Peafowl/views/settings.php:328
+msgid "Confirm password"
+msgstr "Passwort bestätigen"
+
 #: ../../../app/themes/Peafowl/views/settings.php:329
 msgid "Re-enter your password"
 msgstr "Passwort wiederholen"
@@ -4669,9 +5180,6 @@ msgstr "Neues Bild hochladen"
 #: ../../../app/themes/Peafowl/views/settings.php:354
 msgid "Delete existing image"
 msgstr "Bild löschen"
-
-msgid "Privacy"
-msgstr "Privatsphäre"
 
 msgid "Make my profile and identity totally private"
 msgstr "Schalten Sie Ihr Profil und Ihre Identität in den \"Privat\"-Modus"
@@ -4699,9 +5207,8 @@ msgstr "Informationen über Ihre Person"
 msgid "User has no connections."
 msgstr "Benutzer hat keine Verbindungen."
 
-#: ../../../app/themes/Peafowl/views/settings.php:391
-msgid "Link your account to external services to be able to login and share content."
-msgstr "Verbinden Sie Ihr Konto mit externen Diensten um sich damit einzuloggen und Inhalte zu teilen."
+msgid "Link your account to external services to be able to login here."
+msgstr "Verbinden Sie Ihr Konto mit externen Diensten um sich anzumelden und Inhalte zu teilen."
 
 #: ../../../app/themes/Peafowl/views/settings.php:398
 #, php-format
@@ -4737,18 +5244,51 @@ msgstr "Trennen"
 msgid "Connect %s"
 msgstr "Verbinde %s"
 
+#: ../../../app/loader.php:279
+#: ../../../app/themes/Peafowl/views/settings.php:441
+msgid "Feel free to browse and discover all my shared images and albums."
+msgstr "Durchsuchen und entdecke alle meine geteilten Bilder und Alben."
+
 #: ../../../app/themes/Peafowl/views/settings.php:446
 msgid "Button"
 msgstr "Button"
+
+#: ../../../app/loader.php:282
+#: ../../../app/themes/Peafowl/views/settings.php:447
+msgid "View all my images"
+msgstr "Alle meine Bilder anzeigen"
+
+msgid "Login"
+msgstr "anmelden"
+
+#, php-format
+msgid "Already have an account? %s now."
+msgstr "Sie haben bereits ein Konto? Jetzt %s."
 
 #: ../../../app/themes/Peafowl/views/signup.php:45
 msgid "resend account activation"
 msgstr "Account-Aktivierung erneut senden"
 
-#: ../../../app/themes/Peafowl/views/signup.php:45
 #, php-format
-msgid "If you have already signed up maybe you need to request to %s"
-msgstr "Falls Sie sich bereits registriert haben, sollten Sie sich eventuell an %s wenden"
+msgid "If you have already signed up maybe you need to request to %s to activate your account."
+msgstr "Wenn Sie sich bereits angemeldet haben, müssen Sie eventuell %s anfragen, um Ihr Konto zu aktivieren."
+
+#, php-format
+msgid "You can also %s."
+msgstr "Sie können auch %s."
+
+#, php-format
+msgid "I'm at least %s years old"
+msgstr "Ich bin mindestens %s Jahre alt"
+
+msgid "terms"
+msgstr "Nutzungsregeln"
+
+msgid "privacy policy"
+msgstr "Datenschutzbestimmungen"
+
+msgid "I agree to the %terms_link and %privacy_link"
+msgstr "Ich stimme den %terms_link und %privacy_link zu"
 
 #: ../../../app/themes/Peafowl/views/user.php:15
 msgid "Upload profile background"
@@ -4780,6 +5320,17 @@ msgstr[1] "Followers"
 msgid "Follow"
 msgstr "Folgen"
 
+#: ../../../app/loader.php:180
+msgid "You have been forbidden to use this website."
+msgstr "Die Nutzung dieser Seite ist Ihnen nicht gestattet."
+
+msgid "Plugin"
+msgstr "Plugin"
+
+#, php-format
+msgid "Page %s"
+msgstr "Seite %s"
+
 #: ../../../app/routes/route.page.php:61
 #: ../../../content/pages/default/contact.php:7
 msgid "General questions/comments"
@@ -4800,11 +5351,6 @@ msgstr "Ungültige Nachricht"
 msgid "Invalid subject"
 msgstr "Ungültiger Titel"
 
-#: ../../../app/routes/route.page.php:85
-#: ../../../content/pages/default/contact.php:33
-msgid "Invalid reCAPTCHA"
-msgstr "Ungültiges reCAPTCHA"
-
 #: ../../../app/routes/route.page.php:122
 #: ../../../content/pages/default/contact.php:69
 msgid "Mail error"
@@ -4812,9 +5358,6 @@ msgstr "E-Mail Fehler"
 
 msgid "Message sent"
 msgstr "Nachricht gesendet"
-
-msgid "Contact"
-msgstr "Kontakt"
 
 #: ../../../app/routes/route.page.php:119
 msgid "Message sent. We will get in contact soon."
@@ -4828,248 +5371,6 @@ msgstr "Ihr Name"
 
 msgid "Subject"
 msgstr "Betreff"
-
-#: ../../../app/install/update/template/update.js:19
-#, javascript-format
-msgid "Installed version is v%s"
-msgstr "Installierte Version: v%s"
-
-#: ../../../app/install/update/template/update.js:26
-#: ../../../app/install/update/template/update.js:55
-#: ../../../app/install/update/template/update.js:78
-#, javascript-format
-msgid "Can't connect to %s"
-msgstr "Es kann keine Verbindung zu %s aufgebaut werden"
-
-#: ../../../app/install/update/template/update.js:30
-#, javascript-format
-msgid "Last available release is v%s"
-msgstr "v%s ist die aktuellste verfügbare Version"
-
-#: ../../../app/install/update/template/update.js:33
-msgid "Update needed, proceeding to download"
-msgstr "Update notwendig, Download wird ausgeführt"
-
-#: ../../../app/install/update/template/update.js:40
-msgid "No update needed"
-msgstr "Kein Update notwendig"
-
-#: ../../../app/install/update/template/update.js:41
-msgid "System files already up to date"
-msgstr "System-Dateien sind bereit zum Update"
-
-#: ../../../app/install/update/template/update.js:49
-#, javascript-format
-msgid "Starting v%s download"
-msgstr "Starte Download der Version v%s"
-
-#: ../../../app/install/update/template/update.js:60
-#, javascript-format
-msgid "Downloaded v%s, proceeding to extraction"
-msgstr "v%s wurde heruntergeladen, Entpacken wird fortgeführt"
-
-#: ../../../app/install/update/template/update.js:72
-#, javascript-format
-msgid "Attempting to extract v%s"
-msgstr "Versuche v%s zu entpacken"
-
-#: ../../../app/install/update/template/update.js:82
-msgid "Extraction completed"
-msgstr "Entpacken abgeschlossen"
-
-#: ../../../app/install/update/template/update.js:84
-msgid "Proceding to install the update"
-msgstr "Installation des Updates wird fortgeführt"
-
-#: ../../../app/install/update/template/update.js:111
-msgid "Update failed"
-msgstr "Update fehlgeschlagen"
-
-#: ../../../app/lib/chevereto.js:592 ../../../app/lib/chevereto.min.js:36
-msgid "Please provide a valid email address"
-msgstr "Bitte geben Sie eine gültige E-Mail-Adresse an"
-
-msgid "Please provide a valid username"
-msgstr "Bitte geben Sie einen gülten Benutzernamen ein."
-
-#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
-#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
-#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
-#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
-#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
-#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
-msgid "You must enter the album name."
-msgstr "Sie müssen einen Namen für das Album eingeben."
-
-#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
-#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
-#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
-#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
-msgid "Confirm"
-msgstr "Bestätigen"
-
-#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
-msgid "Select existing album"
-msgstr "Wähle ein bestehendes Album"
-
-#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
-#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
-msgid "Please select a valid image file type."
-msgstr "Bitte wählen Sie ein gültiges Dateiformat."
-
-#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
-#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
-#, javascript-format
-msgid "Please select a picture of at most %s size."
-msgstr "Bitte wählen Sie ein Bild mit höchstens %s Dateigröße."
-
-#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
-msgid "Profile image updated."
-msgstr "Profilbild aktualisiert."
-
-#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
-msgid "Profile background image updated."
-msgstr "Hintergrundbild aktualisiert."
-
-#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
-msgid "Profile background image deleted."
-msgstr "Hintergrundbild gelöscht."
-
-#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
-msgid "Error deleting profile background image."
-msgstr "Fehler beim Löschen des Hintergrundbildes."
-
-#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
-#, javascript-format
-msgid "Update available v%s"
-msgstr "Update v%s verfügbar"
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#, javascript-format
-msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
-msgstr "Es steht ein Update für Ihr System zur Verfügung. Sie können das Update automatisch herutnerladen und installieren oder unter %s einen manuellen Download der Datei starten."
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "Update now"
-msgstr "Jetzt updaten"
-
-#, javascript-format
-msgid "This website is running latest %s version"
-msgstr "Die Internetseite läuft mit der aktuellsten %s Version."
-
-msgid "Toggle select"
-msgstr "Markieren umschalten"
-
-msgid "Toggle flag"
-msgstr "Anstößig umschalten"
-
-msgid "Previous"
-msgstr "Voherige"
-
-msgid "Next"
-msgstr "Nächste"
-
-#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
-msgid "Clipboard image"
-msgstr "Bild in Zwischenablage"
-
-#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
-msgid "File too big."
-msgstr "Die Datei ist zu groß."
-
-msgid "Invalid or unsupported file format."
-msgstr "Ungültiges oder nicht unterstütztes Dateiformat."
-
-#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
-#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
-msgid "Some files couldn't be added"
-msgstr "Einige Dateien konnten nicht hinzugefügt werden"
-
-#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
-msgid "Image edited successfully."
-msgstr "Das Bild wurde erfolgreich bearbeitet."
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
-#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
-#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
-msgid "private"
-msgstr "Privat"
-
-#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
-msgid "Album edited successfully."
-msgstr "Das Album wurde erfolgreich bearbeitet."
-
-#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
-msgid "Invalid URL key."
-msgstr "Ungültiger URL-Schlüssel."
-
-#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
-msgid "Category URL key already being used."
-msgstr "Der URL-Schlüssel der Kategorie wird bereits verwendet."
-
-#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
-msgid "Category successfully deleted."
-msgstr "Kategorie wurde gelöscht."
-
-#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
-#, javascript-format
-msgid "Category %s added."
-msgstr "Kategorie \"%s\" hinzugefügt."
-
-#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
-msgid "Invalid expiration date."
-msgstr "Ungültiges Ablaufdatum."
-
-#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
-#, javascript-format
-msgid "IP %s already banned."
-msgstr "IP-Adresse %s wurde bereits gesperrt."
-
-#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
-#, javascript-format
-msgid "IP %s banned."
-msgstr "IP-Adresse %s gesperrt."
-
-#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
-msgid "IP ban successfully deleted."
-msgstr "IP-Bann wurde erfolgreich gelöscht."
-
-#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
-#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
-#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
-msgid "Please fill all the required fields."
-msgstr "Bitte füllen Sie alle notwendigen Felder aus."
-
-#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
-msgid "Invalid storage capacity value. Make sure to use a valid format."
-msgstr "Ungültiger Wert für die Speicherkapazität. Bitte geben Sie einen gültigen Wert an."
-
-#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
-msgid "Invalid URL."
-msgstr "Ungültige URL."
-
-#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
-msgid "Storage successfully edited."
-msgstr "Datenspeicher erfolgreich bearbeitet."
-
-#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
-msgid "User added successfully."
-msgstr "Benutzer wurde hinzugefügt."
-
-#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
-#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
-#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
-#: ../../../app/lib/chevereto.min.js:205
-msgid "The content has been moved."
-msgstr "Der Inhalt wurde verschoben."
-
-#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
-msgid "Unselect"
-msgstr "Demarkieren"
-
-#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
-msgid "The content has been edited."
-msgstr "Der Inhalt wurde bearbeitet."
 
 #: ../../../lib/Peafowl/peafowl.js:25 ../../../lib/Peafowl/peafowl.js:492
 #: ../../../lib/Peafowl/peafowl.min.js:1 ../../../lib/Peafowl/peafowl.min.js:31

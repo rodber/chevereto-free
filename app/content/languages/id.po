@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2017-05-23 17:56+0000\n"
-"PO-Revision-Date: 2017-05-23 17:56+0000\n"
+"POT-Creation-Date: 2020-04-24 15:39+0000\n"
+"PO-Revision-Date: 2020-04-24 15:39+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: id\n"
@@ -84,23 +84,65 @@ msgstr "Komunitas"
 msgid "Personal"
 msgstr "perseorangan"
 
+#: ../../../app/install/update/template/update.js:19
+#, javascript-format
+msgid "Installed version is v%s"
+msgstr "Versi terpasang ialah v%s"
+
+#: ../../../app/install/update/template/update.js:26
+#: ../../../app/install/update/template/update.js:55
+#: ../../../app/install/update/template/update.js:78
+#, javascript-format
+msgid "Can't connect to %s"
+msgstr "Tidak dapat terhubung ke %s"
+
+#: ../../../app/install/update/template/update.js:30
+#, javascript-format
+msgid "Last available release is v%s"
+msgstr "Rilis terakhir yang tersedia ialah v%s"
+
+#: ../../../app/install/update/template/update.js:33
+msgid "Update needed, proceeding to download"
+msgstr "Pembaruan diperlukan, melanjutkan untuk mengunduh"
+
+#: ../../../app/install/update/template/update.js:40
+msgid "No update needed"
+msgstr "Pembaruan tidak diperlukan"
+
+#: ../../../app/install/update/template/update.js:41
+msgid "System files already up to date"
+msgstr "Sistem file telah terbaru"
+
+#: ../../../app/install/update/template/update.js:49
+#, javascript-format
+msgid "Starting v%s download"
+msgstr "Memulai unduhan v%s"
+
+#: ../../../app/install/update/template/update.js:60
+#, javascript-format
+msgid "Downloaded v%s, proceeding to extraction"
+msgstr "v%s terunduh, melanjutkan ekstraksi"
+
+#: ../../../app/install/update/template/update.js:72
+#, javascript-format
+msgid "Attempting to extract v%s"
+msgstr "Mencoba mengekstrak v%s"
+
+#: ../../../app/install/update/template/update.js:82
+msgid "Extraction completed"
+msgstr "Ekstraksi selesai"
+
+#: ../../../app/install/update/template/update.js:84
+msgid "Proceding to install the update"
+msgstr "Melanjutkan pemasangan pembaruan"
+
+#: ../../../app/install/update/template/update.js:111
+msgid "Update failed"
+msgstr "Pembaruan gagal"
+
 #: ../../../app/install/update/template/update.php:2
 msgid "Update in progress"
 msgstr "Pembaharuan sedang berlangsung"
-
-#: ../../../app/install/update/updater.php:62
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
-#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
-#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
-#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
-#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
-#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
-#: ../../../lib/Peafowl/peafowl.min.js:158
-#: ../../../lib/Peafowl/peafowl.min.js:195
-msgid "An error occurred. Please try again later."
-msgstr "Terjadi sebuah kesalahan. Harap coba lagi lain kali."
 
 #: ../../../app/install/update/updater.php:72
 #, php-format
@@ -136,6 +178,357 @@ msgstr "Tidak dapat membuat direktori %s - %e"
 #, php-format
 msgid "Can't update %s file - %e"
 msgstr "Tidak dapat memperbarui berkas %s - %e"
+
+#: ../../../app/routes/route.account.php:508
+#: ../../../app/routes/route.signup.php:236
+#: ../../../content/pages/default/contact.php:132
+#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
+#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
+msgid "Check the errors in the form to continue."
+msgstr "Periksa kesalahan pada kotak isian untuk melanjutkan"
+
+#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
+#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
+#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
+#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
+#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
+#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
+msgid "You must enter the album name."
+msgstr "Anada harus mengisi nama album."
+
+#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
+#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
+#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
+#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
+msgid "Confirm"
+msgstr "Konfirmasi"
+
+#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
+msgid "Select existing album"
+msgstr "Pilih album yang telah ada"
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "Terjadi sebuah kesalahan. Harap coba lagi lain kali."
+
+#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
+#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
+msgid "Please select a valid image file type."
+msgstr "Silakan pilih tipe berkas yang benar."
+
+#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
+#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
+#, javascript-format
+msgid "Please select a picture of at most %s size."
+msgstr "Silakan pilih gambar dengan ukuran %s ."
+
+#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
+msgid "Profile image updated."
+msgstr "Gambar profil baru saja diperbaharui."
+
+#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
+msgid "Profile background image updated."
+msgstr "Gambar latar belakang baru saja diperbaharui."
+
+#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
+msgid "Profile background image deleted."
+msgstr "Gambar latar belakang baru saja dihapus."
+
+#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
+msgid "Error deleting profile background image."
+msgstr "Gagal menghapus gambar latar belakang di profil."
+
+#: ../../../app/routes/route.account.php:360
+#: ../../../app/routes/route.settings.php:327
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
+#: ../../../app/themes/Peafowl/views/settings.php:313
+#: ../../../app/themes/Peafowl/views/settings.php:330
+#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
+msgid "Passwords don't match"
+msgstr "Password tidak cocok"
+
+#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "Update available v%s"
+msgstr "Pembaruan yang tersedia v%s"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
+msgstr "Terdapat pembaruan untuk sistem anda. Anda dapat mengunduh otomatis dan memasang pembaruan ini atau pergi ke %s untuk melanjutkan mengunduh file."
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "The release notes for this update are:"
+msgstr "Catatan rilis untuk pembaruan ini diantaranya:"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "Update now"
+msgstr "Perbarui sekarang"
+
+#: ../../../app/themes/Peafowl/header.php:285
+#: ../../../app/themes/Peafowl/header.php:332
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/form_album.php:9
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/login.php:22
+#: ../../../app/themes/Peafowl/views/login.php:62
+#: ../../../app/themes/Peafowl/views/settings.php:354
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../app/themes/Peafowl/views/signup.php:22
+#: ../../../app/themes/Peafowl/views/signup.php:73
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
+#: ../../../lib/Peafowl/peafowl.min.js:31
+#: ../../../lib/Peafowl/peafowl.min.js:140
+msgid "or"
+msgstr "atau"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "batal"
+
+#, javascript-format
+msgid "This website is running latest %s version"
+msgstr "Situs web ini menjalankan versi %s terbaru"
+
+#: ../../../app/themes/Peafowl/header.php:381
+#: ../../../app/themes/Peafowl/views/settings.php:348
+#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
+msgid "loading"
+msgstr "menunggu"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Suka"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
+msgid "Edit"
+msgstr "Edit"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "Album"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:607
+#: ../../../app/themes/Peafowl/views/dashboard.php:884
+#: ../../../app/themes/Peafowl/views/dashboard.php:933
+msgid "Delete"
+msgstr "Hapus"
+
+#: ../../../app/themes/Peafowl/header.php:222
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Previous"
+msgstr "Sebelumnya"
+
+msgid "Next"
+msgstr "Berikutnya"
+
+#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
+msgid "Clipboard image"
+msgstr "Gambar papan klip"
+
+#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
+msgid "File too big."
+msgstr "Berkas terlalu besar."
+
+msgid "Invalid or unsupported file format."
+msgstr "Format berkas tidak valid atau tidak didukung."
+
+#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
+#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
+msgid "Some files couldn't be added"
+msgstr "Beberapa berkas tidak dapat ditambahkan."
+
+#: ../../../app/lib/classes/class.listing.php:296
+#: ../../../app/routes/route.album.php:177
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
+#: ../../../app/themes/Peafowl/views/album.php:34
+#: ../../../app/themes/Peafowl/views/user.php:98
+#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
+msgid "image"
+msgid_plural "images"
+msgstr[0] "foto"
+
+#: ../../../app/routes/route.user.php:89
+#: ../../../app/themes/Peafowl/header.php:56
+#, php-format, javascript-format
+msgid "%s's Albums"
+msgstr "Album %s"
+
+#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
+msgid "Image edited successfully."
+msgstr "Gambar berhasil diubah."
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "pribadi"
+
+#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
+msgid "Album edited successfully."
+msgstr "Album berhasil diubah."
+
+#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
+msgid "Invalid URL key."
+msgstr "URL key tidak benar."
+
+#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
+msgid "Category URL key already being used."
+msgstr "Kategori URL key telah digunakan."
+
+#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
+msgid "Category successfully deleted."
+msgstr "Kategori berhasil dihapus."
+
+#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
+#, javascript-format
+msgid "Category %s added."
+msgstr "Kategori %s telah ditambahkan."
+
+#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
+msgid "Invalid expiration date."
+msgstr "Tanggal kadaluarsa tidak benar."
+
+#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
+#, javascript-format
+msgid "IP %s already banned."
+msgstr "IP %s telah diblokir."
+
+#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
+#, javascript-format
+msgid "IP %s banned."
+msgstr "IP %s diblokir."
+
+#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
+msgid "IP ban successfully deleted."
+msgstr "Larangan terhadap IP telah dihapus dari daftar."
+
+#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
+#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
+#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
+msgid "Please fill all the required fields."
+msgstr "Silakan isi semua kolom yang dibutuhkan."
+
+#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
+msgid "Invalid storage capacity value. Make sure to use a valid format."
+msgstr "Kapasitas penyimpanan tidak benar. Pastikan menggunakan bentuk yang baku."
+
+#: ../../../app/lib/classes/class.storage.php:450
+#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
+#, php-format, javascript-format
+msgid "Storage capacity can't be lower than its current usage (%s)."
+msgstr "Kapasitas penyimpanan tidak bisa lebih rendah dari penggunaan sekarang (%s)."
+
+#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
+msgid "Invalid URL."
+msgstr "URL tidak benar."
+
+#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
+msgid "Storage successfully edited."
+msgstr "Kapasitas penyimpanan berhasil diubah."
+
+#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
+msgid "User added successfully."
+msgstr "Nama pengguna berhasil ditambahkan."
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+#: ../../../app/themes/Peafowl/views/album.php:134
+#: ../../../app/themes/Peafowl/views/user.php:171
+#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
+msgid "The content has been deleted."
+msgstr "Konten telah dihapus."
+
+#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
+#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
+#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
+#: ../../../app/lib/chevereto.min.js:205
+msgid "The content has been moved."
+msgstr "Isi telah dipindahkan."
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
+#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
+#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
+msgid "Select"
+msgstr "Pilih"
+
+#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
+msgid "Unselect"
+msgstr "Buang seleksi"
+
+#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
+msgid "The content has been edited."
+msgstr "Isi telah diubah."
+
+msgid "Spam detected"
+msgstr "Spam terdeteksi"
+
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
+#: ../../../app/themes/Peafowl/views/user.php:99
+msgid "album"
+msgid_plural "albums"
+msgstr[0] "album"
+
+msgid "Flooding detected. You can only upload %limit% %content% per %time%"
+msgstr "Flooding terdeteksi. Anda hanya dapat mengunggah %limit% %content% per %time%"
 
 #: ../../../app/lib/classes/class.album.php:100
 msgid "Untitled"
@@ -175,7 +568,7 @@ msgstr "Aku"
 #: ../../../app/themes/Peafowl/snippets/modal_share.php:10
 #: ../../../app/themes/Peafowl/views/dashboard.php:461
 msgid "Link"
-msgstr "Sambungan"
+msgstr "Tautan"
 
 #: ../../../app/routes/route.settings.php:64
 #: ../../../app/themes/Peafowl/header.php:292
@@ -201,10 +594,6 @@ msgstr[0] "dilihat"
 msgid "After %n %t"
 msgstr "Setelah %n %t"
 
-#: ../../../app/lib/classes/class.image.php:348
-msgid "Don't autodelete"
-msgstr "Jangan hapus otomatis"
-
 #: ../../../app/lib/functions.php:42 ../../../app/lib/functions.php:54
 msgid "minute"
 msgid_plural "minutes"
@@ -220,43 +609,45 @@ msgid "day"
 msgid_plural "days"
 msgstr[0] "hari"
 
+#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "minggu"
+
+#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
+msgid "month"
+msgid_plural "months"
+msgstr[0] "bulan"
+
+#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
+msgid "year"
+msgid_plural "years"
+msgstr[0] "tahun"
+
+#: ../../../app/lib/classes/class.image.php:348
+msgid "Don't autodelete"
+msgstr "Jangan hapus otomatis"
+
 #: ../../../app/lib/classes/class.image.php:636
 #: ../../../app/lib/classes/class.image.php:742
 msgid "Duplicated upload"
 msgstr "Gandakan unggahan"
-
-msgid "Error storing file in external storage server"
-msgstr "Kesalahan menyimpan berkas di server penyimpanan eksternal"
-
-msgid "External storage has failed"
-msgstr "Penyimpanan eksternal gagal"
 
 #: ../../../app/lib/classes/class.image.php:955
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
 msgid "Private upload"
 msgstr "Unggahan pribadi"
 
-msgid "Upload switched to local storage"
-msgstr "Pengunggahan dialihkan ke penyimpanan lokal"
-
-#, php-format
-msgid "System has switched to local storage due to not enough disk capacity (%c) in the external storage server(s). The image %s has been allocated to local storage."
-msgstr "Sistem telah beralih ke penyimpanan lokal dikarenakan kapasitas disk tidak mencukupi (%c) di server penyimpanan eksternal. Gambar %s telah dialokasikan ke penyimpanan lokal."
-
 #: ../../../app/lib/classes/class.image.php:1231
 msgid "like"
 msgid_plural "likes"
 msgstr[0] "suka"
 
-#: ../../../app/lib/classes/class.listing.php:296
-#: ../../../app/routes/route.album.php:177
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
-#: ../../../app/themes/Peafowl/views/album.php:34
-#: ../../../app/themes/Peafowl/views/user.php:98
-#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
-msgid "image"
-msgid_plural "images"
-msgstr[0] "foto"
+msgid "Recent"
+msgstr "Baru-baru ini"
+
+msgid "Trending"
+msgstr "Tren"
 
 #: ../../../app/routes/route.dashboard.php:1163
 msgid "Top users"
@@ -293,6 +684,9 @@ msgstr "Terlama"
 msgid "Most viewed"
 msgstr "Paling dilihat"
 
+msgid "Popular"
+msgstr "Populer"
+
 #: ../../../app/routes/route.album.php:104
 #: ../../../app/routes/route.category.php:72
 #: ../../../app/routes/route.dashboard.php:1129
@@ -310,6 +704,9 @@ msgstr "Paling disukai"
 msgid "Explore"
 msgstr "Jelajahi"
 
+msgid "Animated"
+msgstr "Beranimasi"
+
 #: ../../../app/routes/route.search.php:130
 #: ../../../app/themes/Peafowl/header.php:215
 #: ../../../app/themes/Peafowl/header.php:220
@@ -317,20 +714,13 @@ msgstr "Jelajahi"
 msgid "Search"
 msgstr "Cari"
 
+msgid "People"
+msgstr "Orang"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:22
 msgid "Image"
 msgid_plural "Images"
 msgstr[0] "Gambar"
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
-#: ../../../app/themes/Peafowl/views/dashboard.php:28
-msgid "Album"
-msgid_plural "Albums"
-msgstr[0] "Album"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:34
 #: ../../../app/themes/Peafowl/views/dashboard.php:90
@@ -357,14 +747,12 @@ msgstr "Internal"
 msgid "Can't insert storage."
 msgstr "Tidak dapat menyisipkan penyimpanan."
 
-#: ../../../app/lib/classes/class.storage.php:450
-#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
-#, php-format, javascript-format
-msgid "Storage capacity can't be lower than its current usage (%s)."
-msgstr "Kapasitas penyimpanan tidak bisa lebih rendah dari penggunaan sekarang (%s)."
-
 msgid "Can't update storage details."
 msgstr "Tidak dapat memperbarui detail penyimpanan."
+
+#, php-format
+msgid "requires %s"
+msgstr "Memerlukan %s"
 
 #: ../../../app/lib/classes/class.storage.php:720
 msgid "Unlimited"
@@ -376,21 +764,6 @@ msgstr "digunakan"
 
 msgid "Private profile"
 msgstr "Profil pribadi"
-
-#: ../../../app/lib/functions.php:37 ../../../app/lib/functions.php:49
-msgid "year"
-msgid_plural "years"
-msgstr[0] "tahun"
-
-#: ../../../app/lib/functions.php:38 ../../../app/lib/functions.php:50
-msgid "month"
-msgid_plural "months"
-msgstr[0] "bulan"
-
-#: ../../../app/lib/functions.php:39 ../../../app/lib/functions.php:51
-msgid "week"
-msgid_plural "weeks"
-msgstr[0] "minggu"
 
 #: ../../../app/lib/functions.php:43 ../../../app/lib/functions.php:55
 msgid "second"
@@ -405,9 +778,6 @@ msgstr "%s yang lalu"
 #: ../../../app/lib/functions.php:67
 msgid "moments ago"
 msgstr "beberapa waktu lalu"
-
-msgid "System notification"
-msgstr "Notifikasi sistem"
 
 #: ../../../app/routes/route.dashboard.php:1223
 #: ../../../app/themes/Peafowl/header.php:407
@@ -440,10 +810,6 @@ msgstr "Anda belum mengubah pengaturan email bawaan. Pergi ke <a href='%s'>Penga
 msgid "There is an update available for your Chevereto based website."
 msgstr "Terdapat pembaruan untuk website berbasis Chevereto anda."
 
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "The release notes for this update are:"
-msgstr "Catatan rilis untuk pembaruan ini diantaranya:"
-
 msgid "admin dashboard"
 msgstr "dasbor admin"
 
@@ -451,34 +817,18 @@ msgid "You can apply this update directly from your %a or download it from %s an
 msgstr "Anda dapat menerapkan pembaruan ini secara langsung dari %a anda atau mengunduhnya dari %s dan kemudian secara manual memasangnya."
 
 #, php-format
-msgid "Chevereto update available (v%s)"
-msgstr "Pembaruan Chevereto tersedia (v%s)"
-
-#, php-format
 msgid "view on %s"
 msgstr "Ditampilkan pad %s"
 
-#: ../../../app/lib/functions.render.php:303
-msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this cookie policy."
-msgstr "Kami menggunakan kuki sendiri dan pihak ke tiga untuk meningkatkan pengalaman pencarian dan layanan kami. Jika anda melanjutkan menggunakan website kami, berarti anda menyetujui kebijakan kuki ini."
+msgid "cookie policy"
+msgstr "kebijakan cookie"
 
-#: ../../../app/loader.php:180
-msgid "You have been forbidden to use this website."
-msgstr "Anda telah diblokir dari website ini."
+#, php-format
+msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link."
+msgstr "Kami menggunakan cookie kami sendiri dan pihak ketiga untuk meningkatkan pengalaman menjelajah Anda dan layanan kami. Jika Anda terus menggunakan situs web kami, dipahami bahwa Anda menerima ini %cookie_policy_link."
 
-#: ../../../app/loader.php:279
-#: ../../../app/themes/Peafowl/views/settings.php:441
-msgid "Feel free to browse and discover all my shared images and albums."
-msgstr "Silahkan mencari dan menemukan semua gambar dan album yang saya bagikan."
-
-#: ../../../app/loader.php:282
-#: ../../../app/themes/Peafowl/views/settings.php:447
-msgid "View all my images"
-msgstr "Tampilkan semua gambarku"
-
-#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
-msgid "That page doesn't exist"
-msgstr "Halaman tersebut tidak tersedia."
+msgid "I understand"
+msgstr "Saya mengerti"
 
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
@@ -509,12 +859,9 @@ msgstr "Masukkan alamat email anda"
 msgid "Email changed"
 msgstr "Email telah berubah"
 
-#: ../../../app/routes/route.account.php:95
-#: ../../../app/routes/route.login.php:71
-#: ../../../app/routes/route.settings.php:140
-#: ../../../app/routes/route.signup.php:73
-msgid "The reCAPTCHA wasn't entered correctly"
-msgstr "Kode reCAPTCHA salah"
+#, php-format
+msgid "%s says you are a robot"
+msgstr "%s bilang kamu adalah robot"
 
 #: ../../../app/routes/route.account.php:119
 #: ../../../app/routes/route.account.php:164
@@ -571,29 +918,12 @@ msgstr "Konfirmasi diperlukan di %s"
 msgid "Welcome to %s"
 msgstr "Selamat datang di %s"
 
-#: ../../../app/routes/route.account.php:360
-#: ../../../app/routes/route.settings.php:327
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
-#: ../../../app/themes/Peafowl/views/settings.php:313
-#: ../../../app/themes/Peafowl/views/settings.php:330
-#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
-msgid "Passwords don't match"
-msgstr "Password tidak cocok"
-
 #: ../../../app/routes/route.account.php:422
 #: ../../../app/routes/route.json.php:599
 #: ../../../app/routes/route.settings.php:243
 #: ../../../app/routes/route.signup.php:141
 msgid "Email already being used"
 msgstr "Email telah digunakan"
-
-#: ../../../app/routes/route.account.php:508
-#: ../../../app/routes/route.signup.php:236
-#: ../../../content/pages/default/contact.php:132
-#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
-#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
-msgid "Check the errors in the form to continue."
-msgstr "Periksa kesalahan pada kotak isian untuk melanjutkan"
 
 msgid "Password required"
 msgstr "Kata sandi diperlukan"
@@ -651,6 +981,9 @@ msgstr "Pengguna"
 #: ../../../app/themes/Peafowl/header.php:405
 msgid "Settings"
 msgstr "Pengaturan"
+
+msgid "Bulk importer"
+msgstr "Import massal"
 
 #: ../../../app/routes/route.dashboard.php:161
 msgid "Chevereto version"
@@ -806,9 +1139,21 @@ msgstr[0] "%d detik"
 msgid "Memory limit"
 msgstr "Batas memori"
 
+msgid "Rebuild stats"
+msgstr "Bangun kembali statistik"
+
+msgid "Connecting IP"
+msgstr "Menghubungkan IP"
+
+msgid "Not your IP?"
+msgstr "Bukan IP Anda?"
+
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
 msgid "Links"
 msgstr "Tautan"
+
+msgid "Collaboration"
+msgstr "Kolaborasi"
 
 msgid "Documentation"
 msgstr "Dokumentasi"
@@ -816,14 +1161,8 @@ msgstr "Dokumentasi"
 msgid "Changelog"
 msgstr "Catatan perubahan"
 
-msgid "Request new features"
-msgstr "Minta fitur baru"
-
 msgid "Bug tracking"
 msgstr "Pelacakan bug"
-
-msgid "Blog"
-msgstr "Blog"
 
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
@@ -1183,6 +1522,10 @@ msgstr "gaya beranda tidak valid"
 msgid "Invalid homepage call to action button color"
 msgstr "Panggilan beranda untuk warna tombol aksi tidak valid"
 
+#: ../../../app/routes/route.dashboard.php:702
+msgid "Invalid homepage call to action functionality"
+msgstr "Fungsionalitas panggilan ke tindakan beranda tidak valid"
+
 #: ../../../app/routes/route.dashboard.php:708
 msgid "Invalid title"
 msgstr "Judul tidak valid"
@@ -1198,6 +1541,9 @@ msgstr "Tipe tidak valid"
 #: ../../../app/routes/route.dashboard.php:723
 msgid "Invalid visibility"
 msgstr "Visibilitas tidak valid"
+
+msgid "Invalid internal type"
+msgstr "Jenis internal tidak valid"
 
 #: ../../../app/routes/route.dashboard.php:728
 msgid "Invalid target attribute"
@@ -1221,13 +1567,17 @@ msgstr "Jalur file tidak valid"
 
 #: ../../../app/routes/route.dashboard.php:753
 msgid "Invalid link URL"
-msgstr "Link URL tidak valid"
+msgstr "URL tautan tidak valid"
 
 msgid "Invalid user minimum age"
 msgstr "Usia minimal pengguna tidak valid"
 
 msgid "Only alphanumeric, hyphen and underscore characters are allowed"
 msgstr "Hanya karakter alfanumerik, tanda hubung dan garis bawah yang diperbolehkan"
+
+#: ../../../app/routes/route.dashboard.php:922
+msgid "Invalid URL"
+msgstr "URL tidak valid"
 
 msgid "Routes can't be the same"
 msgstr "Pengarahan tidak boleh sama"
@@ -1262,9 +1612,8 @@ msgstr "Server SMTP tidak valid"
 msgid "Invalid SMTP username"
 msgstr "username SMTP tidak valid"
 
-#: ../../../app/routes/route.dashboard.php:922
-msgid "Invalid URL"
-msgstr "URL tidak valid"
+msgid "Invalid key"
+msgstr "Kunci tidak sesuai"
 
 #: ../../../app/routes/route.dashboard.php:960
 #, php-format
@@ -1312,12 +1661,7 @@ msgstr "IP telah diblokir"
 
 #: ../../../app/routes/route.image.php:152
 msgid "Upload date"
-msgstr "Tanggal uplad"
-
-#: ../../../app/routes/route.image.php:177
-#, php-format
-msgid "%s images"
-msgstr "%s gambar"
+msgstr "Tanggal upload"
 
 #: ../../../app/routes/route.image.php:185
 msgid "Image %i in %a album"
@@ -1335,13 +1679,13 @@ msgstr "Gambar %i tersimpan di %w"
 msgid "Direct links"
 msgstr "Tautan langsung"
 
-#: ../../../app/themes/Peafowl/views/image.php:279
-msgid "Image URL"
-msgstr "URL gambar"
-
 #: ../../../app/themes/Peafowl/views/image.php:285
 msgid "Image link"
 msgstr "Tautan gambar"
+
+#: ../../../app/themes/Peafowl/views/image.php:279
+msgid "Image URL"
+msgstr "URL gambar"
 
 #: ../../../app/themes/Peafowl/views/image.php:291
 msgid "Thumbnail URL"
@@ -1417,6 +1761,10 @@ msgstr "Ini hanya sebuah percobaan"
 msgid "Test email sent to %s."
 msgstr "Email percobaan telah terkirim ke %s."
 
+#, php-format
+msgid "Downloading %s data"
+msgstr "Mengunduh data %s"
+
 #: ../../../app/routes/route.json.php:1128
 #, php-format
 msgid "User %s followed"
@@ -1459,55 +1807,11 @@ msgstr "Kombinasi Username/password email salah"
 msgid "Sign in"
 msgstr "Masuk"
 
-#: ../../../app/routes/route.logout.php:29
-#: ../../../app/themes/Peafowl/views/logout.php:8
-msgid "Logged out"
-msgstr "Keluar"
+msgid "Upload images"
+msgstr "Unggah gambar"
 
-#: ../../../app/routes/route.page.php:61
-#: ../../../content/pages/default/contact.php:7
-msgid "General questions/comments"
-msgstr "Pertanyaan/komentar umum"
-
-#: ../../../app/routes/route.page.php:62
-#: ../../../content/pages/default/contact.php:8
-msgid "DMCA complaint"
-msgstr "Pengaduan DCMA"
-
-#: ../../../app/routes/route.page.php:71
-#: ../../../app/routes/route.settings.php:302
-#: ../../../content/pages/default/contact.php:19
-msgid "Invalid name"
-msgstr "Nama tidak valid"
-
-#: ../../../app/routes/route.page.php:74
-#: ../../../content/pages/default/contact.php:22
-msgid "Invalid message"
-msgstr "Pesan tidak valid"
-
-#: ../../../app/routes/route.page.php:77
-#: ../../../content/pages/default/contact.php:25
-msgid "Invalid subject"
-msgstr "Judul tidak valid"
-
-#: ../../../app/routes/route.page.php:85
-#: ../../../content/pages/default/contact.php:33
-msgid "Invalid reCAPTCHA"
-msgstr "reCAPTCHA tidak valid"
-
-#: ../../../app/routes/route.page.php:90
-#, php-format
-msgid "Can't submit the form: %s"
-msgstr "Tidak dapat mengirim formulir: %s"
-
-#: ../../../app/routes/route.page.php:119
-msgid "Message sent. We will get in contact soon."
-msgstr "Pesan terkirim. Kami akan menghubungi segera."
-
-#: ../../../app/routes/route.page.php:122
-#: ../../../content/pages/default/contact.php:69
-msgid "Mail error"
-msgstr "Pos galat"
+msgid "Upload plugin"
+msgstr "Unggah plugin"
 
 #: ../../../app/routes/route.search.php:120
 #, php-format
@@ -1545,6 +1849,12 @@ msgstr "Kadaluarsa gambar tidak valid: %s"
 msgid "An email has been sent to %s with instructions to activate this email"
 msgstr "Sebuah email telah terrkirim ke %s dengan instruksi untuk mengaktifkan email ini"
 
+#: ../../../app/routes/route.page.php:71
+#: ../../../app/routes/route.settings.php:302
+#: ../../../content/pages/default/contact.php:19
+msgid "Invalid name"
+msgstr "Nama tidak valid"
+
 #: ../../../app/routes/route.settings.php:305
 msgid "Invalid website"
 msgstr "Website tidak valid"
@@ -1580,6 +1890,9 @@ msgstr "Nilai Nama pengguna/Email salah"
 msgid "Settings for %s"
 msgstr "Pengaturan untuk %s"
 
+msgid "You must agree to the terms and privacy policy"
+msgstr "Anda harus menyetujui persyaratan dan kebijakan privasi"
+
 #, php-format
 msgid "You must be at least %s years old to use this website."
 msgstr "Anda paling tidak harus berumur %s tahun untuk bisa menggunakan website ini."
@@ -1593,18 +1906,17 @@ msgstr "Anda paling tidak harus berumur %s tahun untuk bisa menggunakan website 
 msgid "Create account"
 msgstr "Buat akun"
 
+#: ../../../app/themes/Peafowl/header.php:258
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+msgid "Upload"
+msgstr "Unggah"
+
 #: ../../../app/routes/route.user.php:84
 #: ../../../app/themes/Peafowl/header.php:56
 #: ../../../app/themes/Peafowl/views/index.php:46
 #, php-format
 msgid "%s's Images"
 msgstr "Gambar %s"
-
-#: ../../../app/routes/route.user.php:89
-#: ../../../app/themes/Peafowl/header.php:56
-#, php-format, javascript-format
-msgid "%s's Albums"
-msgstr "Album %s"
 
 #: ../../../app/routes/route.user.php:99
 #: ../../../app/themes/Peafowl/views/search.php:8
@@ -1633,9 +1945,8 @@ msgstr "%n (%u) album pada %w"
 msgid "%n (%u) on %w"
 msgstr "%n (%u) pada %w"
 
-#: ../../../app/themes/Peafowl/header.php:222
-msgid "Close"
-msgstr "Tutup"
+msgid "Discovery"
+msgstr "Penemuan"
 
 #: ../../../app/themes/Peafowl/header.php:222
 #: ../../../app/themes/Peafowl/header.php:226
@@ -1653,117 +1964,12 @@ msgstr "Acak"
 msgid "Notices (%s)"
 msgstr "Pemberitahuan (%s)"
 
-#: ../../../app/themes/Peafowl/header.php:258
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-msgid "Upload"
-msgstr "Unggah"
-
-#: ../../../app/themes/Peafowl/header.php:281
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
-#: ../../../app/themes/Peafowl/views/login.php:18
-#: ../../../app/themes/Peafowl/views/login.php:65
-#: ../../../app/themes/Peafowl/views/signup.php:18
-#: ../../../app/themes/Peafowl/views/signup.php:76
-msgid "Sign in with another account"
-msgstr "Masuk dengan akun lain"
-
-#: ../../../app/themes/Peafowl/header.php:285
-#: ../../../app/themes/Peafowl/header.php:332
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/form_album.php:9
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
-#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
-#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/login.php:22
-#: ../../../app/themes/Peafowl/views/login.php:62
-#: ../../../app/themes/Peafowl/views/settings.php:354
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../app/themes/Peafowl/views/signup.php:22
-#: ../../../app/themes/Peafowl/views/signup.php:73
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
-#: ../../../lib/Peafowl/peafowl.min.js:31
-#: ../../../lib/Peafowl/peafowl.min.js:140
-msgid "or"
-msgstr "atau"
-
-#: ../../../app/themes/Peafowl/header.php:291
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
-#: ../../../app/themes/Peafowl/views/login.php:34
-#: ../../../app/themes/Peafowl/views/login.php:35
-msgid "Username or Email address"
-msgstr "Username atau alamat email"
-
-#: ../../../app/themes/Peafowl/header.php:294
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:23
-#: ../../../app/themes/Peafowl/views/login.php:53
-msgid "Keep me logged in"
-msgstr "Biarkan saya tetap masuk"
-
-#: ../../../app/themes/Peafowl/header.php:301
-#, php-format
-msgid "Don't have an account? <a href='%s'>Sign up</a> now."
-msgstr "Tidak memiliki sebuah akun? <a href='%s'>Daftar</a> Sekarang."
-
-#: ../../../app/themes/Peafowl/header.php:328
-msgid "Sign up with another account"
-msgstr "Daftar menggunakan akun lain"
-
-#: ../../../app/themes/Peafowl/header.php:338
-#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
-#: ../../../app/themes/Peafowl/views/dashboard.php:100
-#: ../../../app/themes/Peafowl/views/settings.php:155
-#: ../../../app/themes/Peafowl/views/signup.php:34
-#: ../../../app/themes/Peafowl/views/signup.php:35
-#: ../../../content/pages/default/contact.php:92
-msgid "Email address"
-msgstr "Alamat surel"
-
-#: ../../../app/themes/Peafowl/header.php:339
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
-#: ../../../app/themes/Peafowl/views/dashboard.php:94
-#: ../../../app/themes/Peafowl/views/dashboard.php:95
-#: ../../../app/themes/Peafowl/views/settings.php:143
-#: ../../../app/themes/Peafowl/views/settings.php:144
-#: ../../../app/themes/Peafowl/views/signup.php:39
-#: ../../../app/themes/Peafowl/views/signup.php:40
-msgid "Username"
-msgstr "Nama pengguna"
-
-#, php-format
-msgid "I'm at least %s years old"
-msgstr "Saya telah berumur %s tahun"
-
-#: ../../../app/themes/Peafowl/header.php:341
-#: ../../../app/themes/Peafowl/views/signup.php:65
-#, php-format
-msgid "By signing up you agree to our <a href=\"%s\">Terms of service</a>"
-msgstr "Dengan mendaftar, berarti anda menyetujui <a href=\"%s\">Persyaratan layanan</a> Kami"
+msgid "Lights"
+msgstr "Lampu"
 
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
 msgstr "Notifikasi"
-
-#: ../../../app/themes/Peafowl/header.php:381
-#: ../../../app/themes/Peafowl/views/settings.php:348
-#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
-msgid "loading"
-msgstr "menunggu"
 
 #: ../../../app/themes/Peafowl/header.php:384
 msgid "You don't have notifications"
@@ -1822,7 +2028,7 @@ msgstr "Kami menerima sebuah permintaan untuk mengganti kata sandi untuk <a href
 #: ../../../app/themes/Peafowl/mails/account-password-reset.php:6
 #, php-format
 msgid "To reset your password <a href=\"%s\">follow this link</a>."
-msgstr "Untuk mengganti kata sandi  <a href=\"%s\">ikuti link ini</a>."
+msgstr "Untuk mengganti kata sandi  <a href=\"%s\">ikuti tautan ini</a>."
 
 #: ../../../app/themes/Peafowl/mails/account-welcome.php:4
 msgid "Hi %n, welcome to %w"
@@ -1861,26 +2067,32 @@ msgstr "tambah URL gambar"
 msgid "You can also %i or %u."
 msgstr "Anda dapat %i atau %u."
 
+msgid "browse from your device"
+msgstr "telusuri dari perangkat Anda"
+
 msgid "take a picture"
 msgstr "ambil sebuah gambar"
+
+msgid "You can also %i, %c or %u."
+msgstr "Anda juga dapat %i, %c atau %u."
 
 msgid "Edit or resize any image by clicking the image preview"
 msgstr "Ubah atau ukur ulang gambar apapun dengan mengklik pratinjau gambar"
 
-msgid "Edit or resize any image by touching the image preview"
-msgstr "Ubah atau ukur ulang gambar apapun dengan menyentuh pratinjau gambar"
+msgid "Edit any image by touching the image preview"
+msgstr "Edit gambar apa pun dengan menyentuh pratinjau gambar"
 
 msgid "your computer"
 msgstr "komputer anda"
 
-msgid "image URLs"
-msgstr "URL gambar"
-
-msgid "You can keep adding more images from %i or from %u."
-msgstr "Anda dapat tetap menambahkan lebih banyak gambar dari %i atau dari %u."
+msgid "You can add more images from %i or %u."
+msgstr "Anda dapat menambahkan lebih banyak gambar dari %i atau %u."
 
 msgid "your device"
 msgstr "perangkat anda"
+
+msgid "You can add more images from %i, %c or %u."
+msgstr "Anda dapat menambahkan lebih banyak gambar dari %i, %c atau %u."
 
 msgid "Uploading %q %o"
 msgstr "Mengunggah %q %o"
@@ -1913,14 +2125,14 @@ msgstr "buat sebuah album baru"
 msgid "move it to an existing album"
 msgstr "pindahkan ke album yang sudah ada"
 
+msgid "You must %s or %l to save this content into your account."
+msgstr "Anda harus %s atau %l untuk menyimpan konten ini ke akun Anda."
+
 msgid "create an account"
 msgstr "buat sebuah akun"
 
 msgid "sign in"
 msgstr "masuk"
-
-msgid "You can %s or %l to save this content into your account."
-msgstr "anda dapat %s atau %l untuk menyimpan konten ini ke akun anda."
 
 #, php-format
 msgid "No %s have been uploaded"
@@ -1951,17 +2163,6 @@ msgstr "Upload tidak aman untuk keluarga"
 msgid "Uploading"
 msgstr "mengunggah"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
-msgid "cancel"
-msgstr "batal"
-
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
 msgid "cancel remaining"
@@ -1979,9 +2180,12 @@ msgstr "pelajari lebih banyak"
 msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
 msgstr "Periksa <a data-modal=\"simple\" data-target=\"failed-upload-result\">laporan kesalahan</a> untuk informasi lebih lanjut."
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:89
-msgid "max"
-msgstr "maks"
+#, php-format
+msgid "Register to get %s"
+msgstr "Daftar untuk mendapatkan %s"
+
+msgid "reset"
+msgstr "atur ulang"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:91
 msgid "close"
@@ -1990,12 +2194,8 @@ msgstr "tutup"
 msgid "copy"
 msgstr "salin"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
-msgid "Edit"
-msgstr "Edit"
+msgid "insert"
+msgstr "memasukkan"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:148
 #: ../../../app/themes/Peafowl/views/dashboard.php:666
@@ -2106,9 +2306,17 @@ msgstr "Tambahkan URL gambar disini"
 msgid "Create album"
 msgstr "Buat album"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:224
-msgid "The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
-msgstr "Konten yang terupload akan dipindahkan ke album baru yang terbuat. Anda juga dapan memindah kontek ke <a class=\"modal-switch\" data-switch=\"move-existing-album\">album yang telah ada</a>."
+msgid "The uploaded content will be moved to this newly created album."
+msgstr "Konten yang diunggah akan dipindahkan ke album yang baru dibuat ini."
+
+msgid "existing album"
+msgstr "album yang ada"
+
+msgid "You can also move the content to an %a."
+msgstr "Anda juga dapat memindahkan konten ke %a."
+
+msgid "You must %s or %l if you want to edit this album later on."
+msgstr "Anda harus %s atau %l jika ingin mengedit album ini nanti."
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:235
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:28
@@ -2124,12 +2332,6 @@ msgstr "Pilih sebuah album yang ada untuk memindah konten yang telah diupload An
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:252
 msgid "Error report"
 msgstr "Laporan error"
-
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
-#: ../../../app/themes/Peafowl/views/user.php:99
-msgid "album"
-msgid_plural "albums"
-msgstr[0] "album"
 
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
@@ -2297,6 +2499,31 @@ msgstr "Deskripsi singkat dari kategori ini"
 msgid "Untitled image"
 msgstr "gambar belum berjudul"
 
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
+msgid "Path"
+msgstr "Jalur"
+
+msgid "Local path (absolute)"
+msgstr "Jalur lokal (absolut)"
+
+msgid "Directory structure"
+msgstr "Struktur direktori"
+
+msgid "Parse top level folders as users (username)"
+msgstr "Parse folder tingkat atas sebagai pengguna (nama pengguna)"
+
+msgid "Parse top level folders as albums"
+msgstr "Parse folder tingkat atas sebagai album"
+
+msgid "Don't parse folders"
+msgstr "Jangan parse folder"
+
+msgid "When parsing top level folders as users, second level folders will be parsed as user albums. Parsing top level folders as albums adds these as guest albums."
+msgstr "Saat mem-parsing folder tingkat atas sebagai pengguna, folder tingkat kedua akan diurai sebagai album pengguna. Memilah folder tingkat atas saat album menambahkan ini sebagai album tamu."
+
+msgid "You can use wildcard * characters."
+msgstr "Anda dapat menggunakan karakter wildcard *."
+
 #: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
 msgid "Expiration date"
 msgstr "Tanggal kadaluarsa"
@@ -2344,6 +2571,10 @@ msgstr "API"
 msgid "Region"
 msgstr "Region"
 
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
+msgid "Storage region"
+msgstr "Region Penyimpanan"
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:58
 msgid "Storage bucket"
 msgstr "Keranjang penyimpanan"
@@ -2364,19 +2595,6 @@ msgstr "Rahasia"
 msgid "Storage secret"
 msgstr "Rahasia Penyimpanan"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:73
-msgid "Client email"
-msgstr "Email klien"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:74
-msgid "Google Cloud client email"
-msgstr "klien email google cloud"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:75
-#, php-format
-msgid "You will need a <a %s>service account</a> for this."
-msgstr "Anda memerlukan sebuah <a %s>layanan akun</a> untuk hal ini."
-
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:78
 msgid "Private key"
 msgstr "Kunci pribadi"
@@ -2385,6 +2603,11 @@ msgstr "Kunci pribadi"
 msgid "Google Cloud JSON key"
 msgstr "Kunci JSON Google Cloud"
 
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:75
+#, php-format
+msgid "You will need a <a %s>service account</a> for this."
+msgstr "Anda memerlukan sebuah <a %s>layanan akun</a> untuk hal ini."
+
 msgid "Service name"
 msgstr "Nama layanan"
 
@@ -2392,9 +2615,18 @@ msgstr "Nama layanan"
 msgid "Identity URL"
 msgstr "Identitas URL"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
-msgid "Storage region"
-msgstr "Region Penyimpanan"
+#: ../../../app/themes/Peafowl/header.php:339
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
+#: ../../../app/themes/Peafowl/views/dashboard.php:94
+#: ../../../app/themes/Peafowl/views/dashboard.php:95
+#: ../../../app/themes/Peafowl/views/settings.php:143
+#: ../../../app/themes/Peafowl/views/settings.php:144
+#: ../../../app/themes/Peafowl/views/signup.php:39
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "Username"
+msgstr "Nama pengguna"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:100
 msgid "Container"
@@ -2420,29 +2652,29 @@ msgstr "Nama Penyewa"
 msgid "Tenant name (account name)"
 msgstr "Nama Penyewa (nama akun)"
 
+msgid "Storage endpoint"
+msgstr "Titik akhir penyimpanan"
+
+msgid "Server address"
+msgstr "Alamat server"
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:115
 msgid "Hostname or IP of the storage server"
 msgstr "Hostname atau IP server penyimpanan"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
-msgid "Path"
-msgstr "Jalur"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
 msgid "Server path"
 msgstr "Jalur server"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
-msgid "Server path where the files will be stored"
-msgstr "Jalur server dimana berkas akan disimpan"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:123
-msgid "Server username"
-msgstr "Nama pengguna Server"
+msgid "Server login"
+msgstr "Login server"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:127
 msgid "Server password"
 msgstr "Kata sandi Server"
+
+msgid "Local path"
+msgstr "Jalur lokal"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:132
 msgid "Storage capacity"
@@ -2506,37 +2738,30 @@ msgstr "Tetapkan kategori"
 msgid "Flag as safe"
 msgstr "Tandai aman"
 
-#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
-#: ../../../app/themes/Peafowl/views/dashboard.php:607
-#: ../../../app/themes/Peafowl/views/dashboard.php:884
-#: ../../../app/themes/Peafowl/views/dashboard.php:933
-msgid "Delete"
-msgstr "Hapus"
-
 msgid "Create new album"
 msgstr "Buat album baru"
 
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:5
-#, php-format
-msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
-msgstr "Untuk menggunakan semua fitur dari situs ini anda harus masuk. Jika tidak memiliki akun anda dapat <a href=\"%s\">mendaftar</a> sekarang."
+#: ../../../app/themes/Peafowl/header.php:281
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
+#: ../../../app/themes/Peafowl/views/login.php:18
+#: ../../../app/themes/Peafowl/views/login.php:65
+#: ../../../app/themes/Peafowl/views/signup.php:18
+#: ../../../app/themes/Peafowl/views/signup.php:76
+msgid "Sign in with another account"
+msgstr "Masuk dengan akun lain"
+
+msgid "Continue with %label%"
+msgstr "Lanjutkan dengan %label%"
+
+msgid "Home"
+msgstr "Beranda"
 
 #: ../../../app/themes/Peafowl/snippets/template_content_empty.php:5
 #: ../../../app/themes/Peafowl/views/dashboard.php:618
 #: ../../../app/themes/Peafowl/views/index.php:63
 msgid "There's nothing to show here."
 msgstr "Tidak ada yang ditampilkan disini."
-
-msgid "Upload images"
-msgstr "Unggah gambar"
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
 #: ../../../app/themes/Peafowl/views/image.php:69
@@ -2603,6 +2828,25 @@ msgstr "Apakah anda benar-benar ingin menghapus konten ini? Hal ini tidak dapat 
 msgid "Do you really want to remove all the selected content? This can't be undone."
 msgstr "Apakah anda benar-benar ingin menghapus semua konten yang dipilih? Hal ini tidak dapat dibatalkan"
 
+msgid "Fullscreen"
+msgstr "Layar penuh"
+
+msgid "Exit fullscreen"
+msgstr "Keluar dari layar penuh"
+
+#: ../../../app/themes/Peafowl/views/image.php:57
+msgid "Guest"
+msgstr "Tamu"
+
+msgid "Keyboard shortcuts"
+msgstr "Pintasan keyboard"
+
+msgid "Private album"
+msgstr "Album pribadi"
+
+msgid "Password protected"
+msgstr "Dilindungi kata sandi"
+
 msgid "Uploaded by guest"
 msgstr "Diunggah oleh pengunjung"
 
@@ -2619,20 +2863,9 @@ msgstr "Diunggah oleh pribadi"
 msgid "by %u"
 msgstr "oleh %u"
 
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
-#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
-#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
-msgid "Select"
-msgstr "Pilih"
+#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
+msgid "That page doesn't exist"
+msgstr "Halaman tersebut tidak tersedia."
 
 #: ../../../app/themes/Peafowl/views/404.php:7
 msgid "The requested page was not found."
@@ -2646,13 +2879,6 @@ msgstr "Cari sesuatu yang lain"
 msgid "The user has been deleted"
 msgstr "Pengguna telah dihapus"
 
-#: ../../../app/themes/Peafowl/views/404.php:22
-#: ../../../app/themes/Peafowl/views/album.php:134
-#: ../../../app/themes/Peafowl/views/user.php:171
-#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
-msgid "The content has been deleted."
-msgstr "Konten telah dihapus."
-
 #: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:7
 msgid "Your account is almost ready"
 msgstr "Akun anda hampir siap"
@@ -2661,17 +2887,6 @@ msgstr "Akun anda hampir siap"
 #, php-format
 msgid "An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters."
 msgstr "Sebuah email ke %s telah dikirim dengan instruksi untuk mengaktifkan akun. Tautan aktivasi hanya berlaku untuk 48 jam. Jika anda tidak menerima instruksi coba periksa sampah atau penyaring spam anda."
-
-#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
-#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/logout.php:13
-#: ../../../app/themes/Peafowl/views/request-denied.php:13
-msgid "Go to homepage"
-msgstr "Pergi ke beranda"
 
 #: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
@@ -2697,27 +2912,6 @@ msgstr "Sebuah tautan konfirmasi akan dikirim ke email ini dengan detail untuk m
 msgid "Your email address"
 msgstr "Alamat email anda"
 
-#: ../../../app/themes/Peafowl/views/account/email-needed.php:26
-msgid "Add email"
-msgstr "Tambahkan email"
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
-msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
-msgstr "Sebuah email dengan instruksi mengatur ulang kata sandi anda telah dikirim ke email yang terdaftar. Jika anda tidak menerima instruksi cobalah periksa sampah atau penyaring spam."
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-msgid "Resend instructions"
-msgstr "Kirim ulang instruksi"
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
-msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
-msgstr "Email sebelumnya telah dikirim dengan instruksi untuk mengubah kata sandi anda. Jika anda tidak menerima instruksi cobalah periksa sampah atau penyaring spam."
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:32
-msgid "Enter your username or the email address that you used to create your account."
-msgstr "Masukkan username atau alamat email yang anda gunakan untuk membuat akun anda."
-
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:52
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:47
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:37
@@ -2727,6 +2921,29 @@ msgstr "Masukkan username atau alamat email yang anda gunakan untuk membuat akun
 msgid "Submit"
 msgstr "Kirimkan"
 
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
+msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "Sebuah email dengan instruksi mengatur ulang kata sandi anda telah dikirim ke email yang terdaftar. Jika anda tidak menerima instruksi cobalah periksa sampah atau penyaring spam."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
+msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
+msgstr "Email sebelumnya telah dikirim dengan instruksi untuk mengubah kata sandi anda. Jika anda tidak menerima instruksi cobalah periksa sampah atau penyaring spam."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+msgid "Resend instructions"
+msgstr "Kirim ulang instruksi"
+
+#: ../../../app/themes/Peafowl/header.php:291
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
+#: ../../../app/themes/Peafowl/views/login.php:34
+#: ../../../app/themes/Peafowl/views/login.php:35
+msgid "Username or Email address"
+msgstr "Username atau alamat email"
+
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:15
 msgid "Your password has been changed. You can now try logging in using your new password."
 msgstr "Kata sandi anda telah diubah. Kini anda dapat mencoba masuk dengan kata sandi baru anda."
@@ -2735,13 +2952,10 @@ msgstr "Kata sandi anda telah diubah. Kini anda dapat mencoba masuk dengan kata 
 msgid "Login now"
 msgstr "Masuk sekarang"
 
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:22
-msgid "Enter the new password that you want to use."
-msgstr "Masukkan kata sandi yang ingin anda gukanan."
-
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:28
-msgid "New Password"
-msgstr "Kata sandi baru"
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/settings.php:306
+msgid "Enter your new password"
+msgstr "Masukkan kata sandi baru anda"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:29
 #: ../../../app/themes/Peafowl/views/dashboard.php:105
@@ -2752,15 +2966,8 @@ msgstr "Kata sandi baru"
 msgid "%d characters min"
 msgstr "Min. %d karakter"
 
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
-#: ../../../app/themes/Peafowl/views/settings.php:306
-msgid "Enter your new password"
-msgstr "Masukkan kata sandi baru anda"
-
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
-#: ../../../app/themes/Peafowl/views/settings.php:328
-msgid "Confirm password"
-msgstr "Konfirmasi kata sandi"
+msgid "Password strength"
+msgstr "Kekuatan kata sandi"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:35
 #: ../../../app/themes/Peafowl/views/settings.php:312
@@ -2771,10 +2978,6 @@ msgstr "Masukkan kembali kata sandi baru anda"
 #, php-format
 msgid "An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters."
 msgstr "Sebuah email ke %s telah dikirimkan dengan instruksi untuk mengaktifkan akun. Jika anda tidak menerima instruksi cobalah periksa sampah atau penyaring spam anda."
-
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:19
-msgid "Enter the username or email address that you used to create your account to continue."
-msgstr "Masukkan username atau alamat email yang anda pakai untuk mendaftar untuk melanjutkan."
 
 #: ../../../app/themes/Peafowl/views/album.php:16
 #: ../../../app/themes/Peafowl/views/image.php:63
@@ -2793,11 +2996,6 @@ msgstr "Hapus album"
 msgid "You like this"
 msgstr "Anda menyukai ini"
 
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "Suka"
-
 msgid "Upload to album"
 msgstr "Unggah ke album"
 
@@ -2808,16 +3006,98 @@ msgstr "Tautan album"
 msgid "Please read and comply with the following conditions before you continue:"
 msgstr "Harap baca dan patuhi kondisi berikut ini sebelum anda melanjutkan:"
 
+#, php-format
+msgid "This website contains information, links and images of sexually explicit material. If you are under the age of %s, if such material offends you or if it's illegal to view such material in your community please do not continue.\n\nI am at least %s years of age and I believe that as an adult it is my inalienable right to receive/view sexually explicit material. I desire to receive/view sexually explicit material. \n\nI believe that sexual acts between consenting adults are neither offensive nor obscene. The viewing, reading and downloading of sexually explicit materials does not violate the standards of my community, town, city, state or country.\n\nThe sexually explicit material I am viewing is for my own personal use and I will not expose minors to the material.\n\nI am solely responsible for any false disclosures or legal ramifications of viewing, reading or downloading any material in this site. Furthermore this website nor its affiliates will be held responsible for any legal ramifications arising from fraudulent entry into or use of this website.\n\nThis consent screen constitutes a legal agreement between this website and you and/or any business in which you have any legal or equitable interest. If any portion of this agreement is deemed unenforceable by a court of competent jurisdiction it shall not affect the enforceability of the other portions of the agreement."
+msgstr "Situs web ini berisi informasi, tautan, dan gambar materi yang eksplisit secara seksual. Jika Anda berusia di bawah %s, jika materi tersebut menyinggung Anda atau jika ilegal melihat materi tersebut di komunitas Anda, jangan lanjutkan.\n\nSaya setidaknya %s tahun dan saya percaya bahwa sebagai orang dewasa itu adalah hak saya yang tidak dapat dicabut untuk menerima / melihat materi yang eksplisit secara seksual. Saya ingin menerima / melihat materi yang eksplisit secara seksual.\n\nSaya percaya bahwa tindakan seksual antara orang dewasa yang menyetujui tidak menyinggung atau tidak senonoh. Melihat, membaca, dan mengunduh materi yang eksplisit secara seksual tidak melanggar standar komunitas saya, kota, kota, negara bagian atau negara.\n\nMateri yang eksplisit secara seksual yang saya lihat adalah untuk penggunaan pribadi saya dan saya tidak akan mengekspos anak di bawah umur untuk materi tersebut.\n\nSaya bertanggung jawab penuh atas segala pengungkapan palsu atau konsekuensi hukum dari melihat, membaca, atau mengunduh materi apa pun di situs ini. Lebih lanjut, situs web ini atau afiliasinya tidak akan bertanggung jawab atas konsekuensi hukum yang timbul dari penipuan yang masuk ke dalam atau penggunaan situs web ini.\n\nLayar persetujuan ini merupakan perjanjian hukum antara situs web ini dan Anda dan / atau bisnis di mana Anda memiliki kepentingan hukum atau kepentingan yang adil. Jika ada bagian dari perjanjian ini yang dianggap tidak dapat diberlakukan oleh pengadilan dengan yurisdiksi yang kompeten, maka tidak akan mempengaruhi keberlakuan bagian-bagian lain dari perjanjian."
+
 msgid "By clicking in \"I Agree\" you declare that you have read and understood all the conditions mentioned above."
 msgstr "Dengan mengklik di \"Saya Setuju\" nda menyatakan bahwa Anda telah membaca dan memahami semua kondisi yang disebutkan di atas."
 
 msgid "I Agree"
 msgstr "Saya Setuju"
 
+msgid "documentation"
+msgstr "dokumentasi"
+
+#, php-format
+msgid "Learn more about %s at our %d."
+msgstr "Pelajari lebih lanjut tentang %s di %d kami."
+
+msgid "The connecting IP is determined using the server variable %var%. If the detected IP doesn't match yours, it means that your web server is under a proxy and you need to tweak your server to set the real connecting IP."
+msgstr "IP penghubung ditentukan menggunakan variabel server %var%. Jika IP yang terdeteksi tidak cocok dengan Anda, itu berarti bahwa server web Anda berada di bawah proxy dan Anda perlu mengubah server Anda untuk mengatur IP penghubung yang sebenarnya."
+
+msgid "For Nginx, you must use %nginx%. For Apache, %apache%."
+msgstr "Untuk Nginx, Anda harus menggunakan %nginx%. Untuk Apache, %apache%."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:40
 #: ../../../app/themes/Peafowl/views/dashboard.php:1732
 msgid "Disk used"
 msgstr "Ruang disk digunakan"
+
+msgid "Automatic importing"
+msgstr "Mengimpor otomatis"
+
+msgid "Completed jobs will be automatically re-started after %n %m."
+msgstr "Pekerjaan yang selesai akan dimulai kembali secara otomatis setelah %n%m."
+
+msgid "Reset to clear stats and logs."
+msgstr "Setel ulang untuk menghapus statistik dan log."
+
+msgid "Queued"
+msgstr "Antri"
+
+msgid "Working"
+msgstr "Kerja"
+
+msgid "Paused"
+msgstr "Dijeda"
+
+msgid "Canceled"
+msgstr "Dibatalkan"
+
+msgid "Completed"
+msgstr "Selesai"
+
+msgid "Actions"
+msgstr "Tindakan"
+
+msgid "Reset"
+msgstr "Setel ulang"
+
+msgid "Pause"
+msgstr "Jeda"
+
+msgid "Resume"
+msgstr "Lanjut"
+
+msgid "Process log"
+msgstr "Log proses"
+
+msgid "Errors"
+msgstr "Kesalahan"
+
+#: ../../../app/themes/Peafowl/views/settings.php:105
+msgid "Status"
+msgstr "Status"
+
+msgid "Process import"
+msgstr "Proses impor"
+
+#, php-format
+msgid "Top level folders as %s"
+msgstr "Folder tingkat atas sebagai %s"
+
+msgid "Process"
+msgstr "Proses"
+
+msgid "Cancel"
+msgstr "Membatalkan"
+
+msgid "Manual importing"
+msgstr "Mengimpor manual"
+
+msgid "These processes must be manually created and handled with the web browser tab open."
+msgstr "Proses-proses ini harus dibuat secara manual dan ditangani dengan tab browser web terbuka."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:80
 #: ../../../app/themes/Peafowl/views/dashboard.php:84
@@ -2829,20 +3109,26 @@ msgstr "Tambahkan pengguna"
 msgid "Role"
 msgstr "Peran"
 
+msgid "Manager"
+msgstr "Pengelola"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:89
 #: ../../../app/themes/Peafowl/views/settings.php:125
 msgid "Administrator"
 msgstr "Administrator"
 
+#: ../../../app/themes/Peafowl/header.php:338
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:100
+#: ../../../app/themes/Peafowl/views/settings.php:155
+#: ../../../app/themes/Peafowl/views/signup.php:34
+#: ../../../app/themes/Peafowl/views/signup.php:35
+#: ../../../content/pages/default/contact.php:92
+msgid "Email address"
+msgstr "Alamat surel"
+
 msgid "This setting is always diabled when using personal website mode."
 msgstr "Pengaturan ini akan selalu dinonaktifkan ketika menggunakan mode website pribadi."
-
-msgid "documentation"
-msgstr "dokumentasi"
-
-#, php-format
-msgid "Learn more about %s at our %d."
-msgstr "Pelajari lebih lanjut tentang %s di %d kami."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
@@ -2876,9 +3162,21 @@ msgstr "Doctitle website"
 msgid "Website description"
 msgstr "Deskripsi website"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:236
-msgid "Website keywords"
-msgstr "Kata kunci website"
+msgid "Powered by"
+msgstr "Dipersembahkan oleh"
+
+#, php-format
+msgid "Enable this if you want to show a \"%s\" link at the footer."
+msgstr "Aktifkan ini jika Anda ingin menampilkan tombol jaringan sosial untuk berbagi konten."
+
+msgid "Automatic"
+msgstr "Otomatis"
+
+msgid "Forced"
+msgstr "Dipaksa"
+
+msgid "This only controls the protocol used in the URLs, it won't turn your website into a valid HTTPS website unless your server is configured to support and use HTTPS."
+msgstr "Ini hanya mengontrol protokol yang digunakan dalam URL, hal tersebut tidak akan mengubah situs web Anda menjadi situs web HTTPS yang valid kecuali server Anda dikonfigurasi untuk mendukung dan menggunakan HTTPS."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:257
 msgid "Default time zone"
@@ -2891,6 +3189,15 @@ msgstr "Pilih region"
 
 msgid "Allows to search images, albums and users based on a given search query."
 msgstr "Bolehkan pencarian gambar, album dan pengguna berdasarkan permintaan pencarian yang diberikan."
+
+msgid "Enables to browse public uploaded images. It also enables categories."
+msgstr "Memungkinkan untuk menelusuri gambar yang diunggah publik. Ini juga memungkinkan kategori."
+
+msgid "guests"
+msgstr "tamu"
+
+msgid "Enables explore for guests."
+msgstr "Memungkinkan penjelajahan untuk para tamu."
 
 msgid "Enables to browse images randomly."
 msgstr "Aktifkan mencari gambar secara acak."
@@ -2974,6 +3281,21 @@ msgstr "Hanya halaman aktif yang dapat diakses."
 #: ../../../app/themes/Peafowl/views/dashboard.php:595
 msgid "Type"
 msgstr "Tipe"
+
+msgid "Terms of service"
+msgstr "Ketentuan layanan"
+
+msgid "Privacy"
+msgstr "Privasi"
+
+msgid "Contact"
+msgstr "Kontak"
+
+msgid "Extra page"
+msgstr "Halaman tambahan"
+
+msgid "Internal page type"
+msgstr "Jenis halaman internal"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:475
 msgid "Page visibility"
@@ -3071,6 +3393,9 @@ msgstr "halaman"
 msgid "Do you really want to delete the page ID %s? This can't be undone."
 msgstr "Apakah anda yakin ingin menghapus halaman dengan ID %s? Hal ini tidak dapat dibatalkan."
 
+msgid "Enabled image formats"
+msgstr "Format gambar yang diaktifkan"
+
 msgid "Unchecked image formats won't be allowed to be uploaded."
 msgstr "format gambar yang tidak diperiksa tidak akan diperbolehkan untuk diunggah."
 
@@ -3090,9 +3415,22 @@ msgstr "Unggahan pengunjung"
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "Aktifkan ini jika anda mengizinkan pengguna tidak terdaftar menunggah."
 
+msgid "route"
+msgstr "rute"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1353
+msgid "Enable embed codes (uploader)"
+msgstr "Aktifkan kode semat (pengunggah)"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1359
 msgid "Enable this if you want to show embed codes when upload gets completed."
 msgstr "Aktifkan ini jika anda ingin menampilkan kode sematkan ketika unggahan akan selesai."
+
+msgid "Upload threads"
+msgstr "Rangkaian unduhan"
+
+msgid "Number of simultaneous upload threads (parallel uploads)"
+msgstr "Jumlah rangkaian unggahan bersasamaan (unggahan pararel)"
 
 msgid "Redirect on single upload"
 msgstr "Arahkan pada unggahan tunggal"
@@ -3154,6 +3492,10 @@ msgstr "Ukuran unggah berkas maksimum"
 msgid "Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)."
 msgstr "Ukuran maksumum yang diperbolehkan serever adalah %s. Ukuran ini dibatasi oleh %u dan %p (nilai %f)."
 
+#, php-format
+msgid "Same as \"%s\" but for guests."
+msgstr "Sama seperti \"%s\" tetapi untuk tamu."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:695
 msgid "Image path"
 msgstr "Jalur gambar"
@@ -3202,6 +3544,16 @@ msgstr "\"Asli\" akan mencoba menjaga nama sumber gambar sedangkan \"Acak\" akan
 #: ../../../app/themes/Peafowl/views/dashboard.php:722
 msgid "Thumb size"
 msgstr "Ukuran Thumb"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:733
+msgid "Thumbnails will be fixed to this size."
+msgstr "Thumbnails akan ditentukan menurut ukuran ini."
+
+msgid "Medium image fixed dimension"
+msgstr "Dimensi gambar tetap sedang"
+
+msgid "Width or height will be automatically calculated."
+msgstr "Lebar atau tinggi akan secara otomatis terhitung."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:747
 msgid "Watermarks"
@@ -3346,6 +3698,12 @@ msgstr "Aktifkan mendaftar"
 msgid "Enable this if you want to allow users to signup."
 msgstr "Aktifkan ini jika anda ingin membolehkan pengguna untuk mendaftar."
 
+msgid "Enable user content delete"
+msgstr "Aktifkan penghapusan konten pengguna"
+
+msgid "Enable this if you want to allow users to delete their own content. This setting doesn't affect administrators."
+msgstr "Aktifkan ini jika Anda ingin mengizinkan pengguna untuk menghapus konten mereka sendiri. Pengaturan ini tidak memengaruhi administrator."
+
 msgid "Minimum age required"
 msgstr "Usia minimum dibutuhkan"
 
@@ -3355,6 +3713,16 @@ msgstr "Kosong"
 msgid "Leave it empty to don't require a minimum age to use the website."
 msgstr "Biarkan kosong jika anda tidak memerlukan usia minimum untuk bisa menggunakan website."
 
+msgid "Notify on user signup"
+msgstr "Beri tahu saat mendaftar"
+
+msgid "Enable this if you want to get an email notification for each new user signup."
+msgstr "Aktifkan ini jika Anda ingin mendapatkan pemberitahuan email untuk setiap pendaftaran pengguna baru."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:972
+msgid "Username routing"
+msgstr "Perutean nama pengguna"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:983
 msgid "Require email confirmation"
 msgstr "Konfirmasi email dibutuhkan"
@@ -3363,15 +3731,44 @@ msgstr "Konfirmasi email dibutuhkan"
 msgid "Enable this if users must validate their email address on sign up."
 msgstr "Aktifkan ini jika pengguna harus memvalidasi alamat email mereka untuk mendaftar."
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:992
+msgid "Require email for social signup"
+msgstr "Memerlukan email untuk pendaftaran sosial"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:998
+msgid "Enable this if users using social networks to register must provide an email address."
+msgstr "Aktifkan ini jika pengguna menggunakan jaringan sosial untuk mendaftar harus menyertakan sebuah alamat email."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1004
+msgid "User avatar max. filesize"
+msgstr "Avatar pengguna maks. ukuran file"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1007
+#, php-format
+msgid "Max. allowed filesize for user avatar image. (Max allowed by server is %s)"
+msgstr "ukuran berkas maks. yang diperbolehkan untuk gambar avatar pengguna. (Maks. yang diperbolehkan server adalah %s)"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1010
+msgid "User background max. filesize"
+msgstr "ukuran berkas maks. latar belakang pengguna"
+
 msgid "Shows a consent screen before accessing the website. Useful for adult content websites where minors shouldn't be allowed."
 msgstr "Menampilkan sebuah layar persetujuan sebelum mengakses website. Sangat berguna untuk website konten dewasa dimana anak dibawah umur harusnya tidak diperbolehkan."
 
 msgid "Enable consent screen"
 msgstr "Aktifkan layar persetujuan"
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1019
+msgid "Block image uploads by IP if the system notice a flood  behavior based on the number of uploads per time period. This setting doesn't affect administrators."
+msgstr "Blok unggahan gambar dari IP jika sistem memperhatikan perilaku membanjiri berdasarkan periode jumlah  unggahan per detik. Pengaturan ini tidak berdampak pada administrator."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1031
 msgid "Notify to email"
 msgstr "Beritahu lewat surel"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1037
+msgid "If enabled the system will send an email on flood incidents."
+msgstr "Jika diaktifkan sistem akan mengirim sebuah email pada insiden pembanjiran."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1040
 msgid "Minute limit"
@@ -3397,6 +3794,22 @@ msgstr "Batas bulanan"
 msgid "Show not safe content in listings"
 msgstr "Perlihatkan isi yang tidak aman"
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1079
+msgid "Blur NSFW content in listings"
+msgstr "Kaburkan konten NSFW dalam daftar"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1088
+msgid "Show banners in not safe content"
+msgstr "Tampilkan spanduk dalam konten yang tidak aman"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1098
+msgid "Show not safe content in random mode"
+msgstr "Perlihatkan konten tidak aman di mode acak"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1109
+msgid "List items per page"
+msgstr "Daftar item per halaman"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1119
 msgid "Classic pagination"
 msgstr "Penomoran halaman klasik"
@@ -3404,6 +3817,9 @@ msgstr "Penomoran halaman klasik"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1123
 msgid "What pagination method should be used."
 msgstr "Metode penomoran apa yang harusnya digunakan."
+
+msgid "Listing viewer"
+msgstr "Penampil daftar"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1127
 msgid "Image listing size"
@@ -3416,6 +3832,9 @@ msgstr "Tetap"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1134
 msgid "Both methods use a fixed width but fluid method uses automatic heights."
 msgstr "kedua metode menggunakan lebar tetap tapi metode tidak pasti menggunakan tinggi otomatis."
+
+msgid "explore"
+msgstr "jelajahi"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1140
 msgid "Listing columns number"
@@ -3573,6 +3992,9 @@ msgstr "Gambar favicon"
 msgid "Favicon image. Image must have same width and height."
 msgstr "Gambar favicon. Gambar harus memiliki lebar dan tinggi yang sama."
 
+msgid "Image load max. filesize"
+msgstr "Maksimal ukuran file untuk memuat gambar."
+
 msgid "Images greater than this size will show a button to load full resolution image."
 msgstr "Gambar lebih besar dari ukuran ini akan ditampilkan sebagai sebuah tombol untuk ditampilkan dalam resolusi penuh."
 
@@ -3611,6 +4033,12 @@ msgstr "Aktifkan ini jika anda ingin menampilkan tombol jaringan sosial untuk me
 #: ../../../app/themes/Peafowl/views/dashboard.php:1343
 msgid "Enable embed codes (content)"
 msgstr "Aktifkan kode sematkan (konten)"
+
+msgid "Everybody"
+msgstr "Semua orang"
+
+msgid "Users only"
+msgstr "Hanya pengguna"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1349
 msgid "Enable this if you want to show embed codes for the content."
@@ -3695,9 +4123,29 @@ msgstr "ini akan ditambahkan kedalam tag halaman depan %s. Biarkan kosong untuk 
 msgid "Paragraph"
 msgstr "Paragraf"
 
+#: ../../../app/themes/Peafowl/views/dashboard.php:1452
+msgid "Call to action button color"
+msgstr "Warna tombol ajakan bertindak"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1468
+msgid "Color of the homepage call to action button."
+msgstr "Warna tombol ajakan bertindak beranda."
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1472
+msgid "Call to action outline style button"
+msgstr "Tombol gaya garis besar ajakan untuk bertindak"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1483
+msgid "Call to action functionality"
+msgstr "Fungsi ajakan bertindak"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1488
 msgid "Open URL"
 msgstr "Buka URL"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1497
+msgid "Call to action URL"
+msgstr "URL ajakan untuk bertindak"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1498
 msgid "Enter an absolute or relative URL"
@@ -3706,6 +4154,10 @@ msgstr "Masukkan sebuah URL absolut atau relatif"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1500
 msgid "A relative URL like %r will be mapped to %l"
 msgstr "Sebuah URL relatif seperti %r akan dipetakan ke %l"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1506
+msgid "Call to action HTML"
+msgstr "Ajakan untuk bertindak HTML"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1513
 msgid "User IDs"
@@ -3725,6 +4177,14 @@ msgstr "Tampilkan notifikasi pembaruan yang tersedia"
 
 msgid "Enable this to show a notice on top warning you about new available system updates."
 msgstr "Aktifkan untuk menampilkan sebuah pemberitahuan memperingatkan anda tentang pembaruan sistem yang ada."
+
+#, php-format
+msgid "SEO %s URLs"
+msgstr "SEO %s URL"
+
+#, php-format
+msgid "Enable this if you want to use SEO %s URLs."
+msgstr "Aktifkan ini jika Anda ingin menggunakan URL SEO %s."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1570
 msgid "Minify code"
@@ -3783,6 +4243,28 @@ msgstr "Pengarahan untuk %s"
 
 msgid "Album routing"
 msgstr "Pengarahan Album"
+
+msgid "Hostname"
+msgstr "Nama host"
+
+#, php-format
+msgid "This setting may be overridden by %s."
+msgstr "Pengaturan ini mungkin ditimpa oleh %s."
+
+msgid "Language subdomains"
+msgstr "Subdomain bahasa\n"
+
+msgid "languages"
+msgstr "bahasa"
+
+msgid "Enable to use %s for %t."
+msgstr "Aktifkan untuk menggunakan %s untuk %t."
+
+msgid "Username subdomains"
+msgstr "Subdomain nama pengguna"
+
+msgid "user profiles"
+msgstr "Profil pengguna"
 
 msgid "Custom language strings"
 msgstr "string bahasa kustom"
@@ -3895,19 +4377,42 @@ msgstr "Keamanan SMTP"
 msgid "Unsecured"
 msgstr "Tidak aman"
 
+msgid "Decode ID"
+msgstr "ID decode"
+
+msgid "Encode ID"
+msgstr "ID Encode"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1824
 #: ../../../app/themes/Peafowl/views/dashboard.php:1825
 msgid "Send test email"
 msgstr "Kirim email percobaan"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1825
-msgid "test@somedomain.com"
-msgstr "tes@sebuahdomain.com"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1826
 #, php-format
 msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
 msgstr "Gunakan ini untuk memeriksa apakan email sedang dikirimkan. Kami merekomendasikan anda untuk menggunakan %s."
+
+msgid "Export a user"
+msgstr "Ekspor pengguna"
+
+msgid "Export user"
+msgstr "Ekspor pengguna"
+
+msgid "Storage id"
+msgstr "Id penyimpanan"
+
+msgid "Regenerate"
+msgstr "Diperbaiki"
+
+msgid "Source storage id"
+msgstr "ID penyimpanan sumber"
+
+msgid "Target storage id"
+msgstr "Target id penyimpanan"
+
+msgid "Migrate"
+msgstr "Migrasi"
 
 msgid "social networks"
 msgstr "jaringan sosial"
@@ -3964,10 +4469,30 @@ msgstr "id klien VK"
 msgid "VK client secret"
 msgstr "rahasia klien VK"
 
+#, php-format
+msgid "%s spam protection"
+msgstr "%s perlindungan spam"
+
+msgid "user generated content"
+msgstr "konten yang dibuat pengguna"
+
+msgid "Enable this to use %l to block spam on %c."
+msgstr "Aktifkan ini untuk menggunakan %l untuk memblokir spam di %c."
+
+#, php-format
+msgid "%s API key"
+msgstr "Kunci %s API"
+
+msgid "user signup"
+msgstr "pendaftaran pengguna"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1968
 #, php-format
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "Anda memerlukan sebuah <a href=\"%s\" target=\"_blank\"> kunci reCAPTCHA</a> untuk hal ini."
+
+msgid "Please note that each reCAPTCHA version require its own set of keys. Don't forget to update the keys if you change versions."
+msgstr "Harap dicatat bahwa setiap versi reCAPTCHA memerlukan set kunci sendiri. Jangan lupa untuk memperbarui kunci jika Anda mengubah versi."
 
 #, php-format
 msgid "%s site key"
@@ -3984,6 +4509,14 @@ msgstr "batas reCAPTCHA"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1991
 msgid "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA."
 msgstr "Berapa kali percobaan yang diperbolehkan untuk meminta reCAPTCHA? Gunakan Nol (0) untuk selalu memperlihatkan reCAPTCHA."
+
+#, php-format
+msgid "Force %s on contact page"
+msgstr "Paksa %s di halaman kontak"
+
+#, php-format
+msgid "Enable this to always show %s on contact page."
+msgstr "Aktifkan ini untuk selalu menampilkan %s di halaman kontak."
 
 msgid "Comments API"
 msgstr "API Komentar"
@@ -4029,6 +4562,13 @@ msgstr "Kunci API V1"
 msgid "Use this key when using the <a %s>API v1</a>."
 msgstr "Gunakan kunci ini ketika menggunakan <a %s>API v1</a>."
 
+msgid "Plugin route"
+msgstr "Rute plugin"
+
+#, php-format
+msgid "Enable this to display plugin instructions at %u. A link to these instructions will be added to the %s menu. This setting doesn't affect administrators."
+msgstr "Aktifkan ini untuk menampilkan instruksi plugin di %u. Tautan ke petunjuk ini akan ditambahkan ke menu %s. Pengaturan ini tidak mempengaruhi administrator."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:2028
 msgid "Cookie law compliance"
 msgstr "Kesesuaian aturan kuki"
@@ -4053,10 +4593,6 @@ msgstr "Mainkan GIF"
 
 msgid "Load full resolution"
 msgstr "Muat resolusi penuh"
-
-#: ../../../app/themes/Peafowl/views/image.php:57
-msgid "Guest"
-msgstr "Tamu"
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -4112,11 +4648,6 @@ msgstr "Tarik dan taruh dimanapun dan mulai unggah gambar anda sekarang. %s ters
 msgid "Start uploading"
 msgstr "Mulai mengunggah"
 
-#: ../../../app/themes/Peafowl/views/index.php:63
-#, php-format
-msgid "Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings."
-msgstr "Isi sesi pengunggahan gambar ini ke akun %s .<br>Anda dapat mengubah target pengguna di ruang kontrol."
-
 #: ../../../app/themes/Peafowl/views/index.php:79
 msgid "Sign up to unlock all the features"
 msgstr "Daftarlah untuk mendapatkan semua kelebihan yang ada"
@@ -4125,15 +4656,34 @@ msgstr "Daftarlah untuk mendapatkan semua kelebihan yang ada"
 msgid "Manage your content, create private albums, customize your profile and more."
 msgstr "Mengelola konten Anda, membuat album pribadi, menyesuaikan profil Anda dan banyak lagi."
 
-#: ../../../app/themes/Peafowl/views/login.php:40
-#: ../../../app/themes/Peafowl/views/settings.php:323
-msgid "Enter your password"
-msgstr "Masukkan password anda"
+msgid "Sign in with your account"
+msgstr "Masuk dengan akun Anda"
+
+#: ../../../app/themes/Peafowl/header.php:301
+#, php-format
+msgid "Don't have an account? <a href='%s'>Sign up</a> now."
+msgstr "Tidak memiliki sebuah akun? <a href='%s'>Daftar</a> Sekarang."
+
+#: ../../../app/routes/route.logout.php:29
+#: ../../../app/themes/Peafowl/views/logout.php:8
+msgid "Logged out"
+msgstr "Keluar"
 
 #: ../../../app/themes/Peafowl/views/logout.php:12
 #, php-format
 msgid "You have been logged off %s. Hope to see you soon."
 msgstr "Anda telah keluar %s. Sampai bertemu kembali."
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/logout.php:13
+#: ../../../app/themes/Peafowl/views/request-denied.php:13
+msgid "Go to homepage"
+msgstr "Pergi ke beranda"
 
 #: ../../../app/themes/Peafowl/views/maintenance.php:7
 msgid "Website under maintenance"
@@ -4151,6 +4701,30 @@ msgstr "harap masukkan kata sandi anda untuk melanjutkan"
 
 msgid "Send"
 msgstr "Terkirim"
+
+msgid "Supported software"
+msgstr "Perangkat lunak yang didukung"
+
+msgid "supported software"
+msgstr "perangkat lunak yang didukung"
+
+msgid "Add it to your website"
+msgstr "Tambahkan ke situs web Anda"
+
+msgid "options"
+msgstr "pilihan"
+
+msgid "Basic options"
+msgstr "Pilihan dasar"
+
+msgid "After"
+msgstr "Setelah"
+
+msgid "Before"
+msgstr "Sebelum"
+
+msgid "Advanced options"
+msgstr "Opsi lanjutan"
 
 #: ../../../app/themes/Peafowl/views/request-denied.php:12
 msgid "You either don't have permission to access this page or the link has expired."
@@ -4176,10 +4750,6 @@ msgstr "Tanggal pendaftaran"
 #: ../../../app/themes/Peafowl/views/settings.php:91
 msgid "Registration IP"
 msgstr "Pendaftaran IP"
-
-#: ../../../app/themes/Peafowl/views/settings.php:105
-msgid "Status"
-msgstr "Status"
 
 #: ../../../app/themes/Peafowl/views/settings.php:109
 msgid "Valid"
@@ -4264,6 +4834,16 @@ msgstr "Ketik password untuk masuk menggunakan username atau email."
 msgid "This user doesn't have a password. Add one using this form."
 msgstr "Pengguna ini tidak memiliki password. Tambahkan melalui form berikut."
 
+#: ../../../app/themes/Peafowl/views/login.php:40
+#: ../../../app/themes/Peafowl/views/settings.php:323
+msgid "Enter your password"
+msgstr "Masukkan password anda"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
+#: ../../../app/themes/Peafowl/views/settings.php:328
+msgid "Confirm password"
+msgstr "Konfirmasi kata sandi"
+
 #: ../../../app/themes/Peafowl/views/settings.php:329
 msgid "Re-enter your password"
 msgstr "Ketik ulang password"
@@ -4276,9 +4856,6 @@ msgstr "Unggah gambar baru"
 #: ../../../app/themes/Peafowl/views/settings.php:354
 msgid "Delete existing image"
 msgstr "Hapus gambar sekarang"
-
-msgid "Privacy"
-msgstr "Privasi"
 
 msgid "Make my profile and identity totally private"
 msgstr "Buat profil dan identitas saya sepenuhnya pribadi."
@@ -4305,10 +4882,6 @@ msgstr "Ceritakan sedikit mengenai anda"
 #: ../../../app/themes/Peafowl/views/settings.php:387
 msgid "User has no connections."
 msgstr "Pengguna tidak mempunyai koneksi."
-
-#: ../../../app/themes/Peafowl/views/settings.php:391
-msgid "Link your account to external services to be able to login and share content."
-msgstr "Sambungkan akun ke layanan luar untuk dapat masuk dan berbagi konten."
 
 #: ../../../app/themes/Peafowl/views/settings.php:398
 #, php-format
@@ -4344,18 +4917,44 @@ msgstr "terputus"
 msgid "Connect %s"
 msgstr "Menghubungkan dengan %s"
 
+#: ../../../app/loader.php:279
+#: ../../../app/themes/Peafowl/views/settings.php:441
+msgid "Feel free to browse and discover all my shared images and albums."
+msgstr "Silahkan mencari dan menemukan semua gambar dan album yang saya bagikan."
+
 #: ../../../app/themes/Peafowl/views/settings.php:446
 msgid "Button"
 msgstr "Tombol"
+
+#: ../../../app/loader.php:282
+#: ../../../app/themes/Peafowl/views/settings.php:447
+msgid "View all my images"
+msgstr "Tampilkan semua gambarku"
+
+msgid "Login"
+msgstr "Masuk"
+
+#, php-format
+msgid "Already have an account? %s now."
+msgstr "Sudah memiliki akun? %s sekarang."
 
 #: ../../../app/themes/Peafowl/views/signup.php:45
 msgid "resend account activation"
 msgstr "Kirim ulang aktivasi akun"
 
-#: ../../../app/themes/Peafowl/views/signup.php:45
 #, php-format
-msgid "If you have already signed up maybe you need to request to %s"
-msgstr "Jika anda telah terdaftar mungkin anda perlu meminta ke %s"
+msgid "You can also %s."
+msgstr "Anda juga dapat %s."
+
+#, php-format
+msgid "I'm at least %s years old"
+msgstr "Saya telah berumur %s tahun"
+
+msgid "terms"
+msgstr "ketentuan"
+
+msgid "privacy policy"
+msgstr "kebijakan privasi"
 
 #: ../../../app/themes/Peafowl/views/user.php:15
 msgid "Upload profile background"
@@ -4386,11 +4985,48 @@ msgstr[0] "Pengikut"
 msgid "Follow"
 msgstr "Ikuti"
 
+#: ../../../app/loader.php:180
+msgid "You have been forbidden to use this website."
+msgstr "Anda telah diblokir dari website ini."
+
+msgid "Plugin"
+msgstr "Plugin"
+
+#, php-format
+msgid "Page %s"
+msgstr "Laman %s"
+
+#: ../../../app/routes/route.page.php:61
+#: ../../../content/pages/default/contact.php:7
+msgid "General questions/comments"
+msgstr "Pertanyaan/komentar umum"
+
+#: ../../../app/routes/route.page.php:62
+#: ../../../content/pages/default/contact.php:8
+msgid "DMCA complaint"
+msgstr "Pengaduan DCMA"
+
+#: ../../../app/routes/route.page.php:74
+#: ../../../content/pages/default/contact.php:22
+msgid "Invalid message"
+msgstr "Pesan tidak valid"
+
+#: ../../../app/routes/route.page.php:77
+#: ../../../content/pages/default/contact.php:25
+msgid "Invalid subject"
+msgstr "Judul tidak valid"
+
+#: ../../../app/routes/route.page.php:122
+#: ../../../content/pages/default/contact.php:69
+msgid "Mail error"
+msgstr "Pos galat"
+
 msgid "Message sent"
 msgstr "Pesan terkirim"
 
-msgid "Contact"
-msgstr "Kontak"
+#: ../../../app/routes/route.page.php:119
+msgid "Message sent. We will get in contact soon."
+msgstr "Pesan terkirim. Kami akan menghubungi segera."
 
 msgid "If you want to send a message fill the form below."
 msgstr "Jika anda ingin mengirim sebuah pesan isi form dibawah ini."
@@ -4400,229 +5036,6 @@ msgstr "Nama anda"
 
 msgid "Subject"
 msgstr "Judul"
-
-#: ../../../app/install/update/template/update.js:19
-#, javascript-format
-msgid "Installed version is v%s"
-msgstr "Versi terpasang ialah v%s"
-
-#: ../../../app/install/update/template/update.js:26
-#: ../../../app/install/update/template/update.js:55
-#: ../../../app/install/update/template/update.js:78
-#, javascript-format
-msgid "Can't connect to %s"
-msgstr "Tidak dapat terhubung ke %s"
-
-#: ../../../app/install/update/template/update.js:30
-#, javascript-format
-msgid "Last available release is v%s"
-msgstr "Rilis terakhir yang tersedia ialah v%s"
-
-#: ../../../app/install/update/template/update.js:33
-msgid "Update needed, proceeding to download"
-msgstr "Pembaruan diperlukan, melanjutkan untuk mengunduh"
-
-#: ../../../app/install/update/template/update.js:40
-msgid "No update needed"
-msgstr "Pembaruan tidak diperlukan"
-
-#: ../../../app/install/update/template/update.js:41
-msgid "System files already up to date"
-msgstr "Sistem file telah terbaru"
-
-#: ../../../app/install/update/template/update.js:49
-#, javascript-format
-msgid "Starting v%s download"
-msgstr "Memulai unduhan v%s"
-
-#: ../../../app/install/update/template/update.js:60
-#, javascript-format
-msgid "Downloaded v%s, proceeding to extraction"
-msgstr "v%s terunduh, melanjutkan ekstraksi"
-
-#: ../../../app/install/update/template/update.js:72
-#, javascript-format
-msgid "Attempting to extract v%s"
-msgstr "Mencoba mengekstrak v%s"
-
-#: ../../../app/install/update/template/update.js:82
-msgid "Extraction completed"
-msgstr "Ekstraksi selesai"
-
-#: ../../../app/install/update/template/update.js:84
-msgid "Proceding to install the update"
-msgstr "Melanjutkan pemasangan pembaruan"
-
-#: ../../../app/install/update/template/update.js:111
-msgid "Update failed"
-msgstr "Pembaruan gagal"
-
-#: ../../../app/lib/chevereto.js:592 ../../../app/lib/chevereto.min.js:36
-msgid "Please provide a valid email address"
-msgstr "Harap sertakan email yang berlaku"
-
-#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
-#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
-#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
-#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
-#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
-#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
-msgid "You must enter the album name."
-msgstr "Anada harus mengisi nama album."
-
-#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
-#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
-#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
-#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
-msgid "Confirm"
-msgstr "Konfirmasi"
-
-#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
-msgid "Select existing album"
-msgstr "Pilih album yang telah ada"
-
-#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
-#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
-msgid "Please select a valid image file type."
-msgstr "Silakan pilih tipe berkas yang benar."
-
-#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
-#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
-#, javascript-format
-msgid "Please select a picture of at most %s size."
-msgstr "Silakan pilih gambar dengan ukuran %s ."
-
-#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
-msgid "Profile image updated."
-msgstr "Gambar profil baru saja diperbaharui."
-
-#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
-msgid "Profile background image updated."
-msgstr "Gambar latar belakang baru saja diperbaharui."
-
-#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
-msgid "Profile background image deleted."
-msgstr "Gambar latar belakang baru saja dihapus."
-
-#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
-msgid "Error deleting profile background image."
-msgstr "Gagal menghapus gambar latar belakang di profil."
-
-#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
-#, javascript-format
-msgid "Update available v%s"
-msgstr "Pembaruan yang tersedia v%s"
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#, javascript-format
-msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
-msgstr "Terdapat pembaruan untuk sistem anda. Anda dapat mengunduh otomatis dan memasang pembaruan ini atau pergi ke %s untuk melanjutkan mengunduh file."
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "Update now"
-msgstr "Perbarui sekarang"
-
-#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
-msgid "Clipboard image"
-msgstr "Gambar papan klip"
-
-#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
-msgid "File too big."
-msgstr "Berkas terlalu besar."
-
-msgid "Invalid or unsupported file format."
-msgstr "Format berkas tidak valid atau tidak didukung."
-
-#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
-#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
-msgid "Some files couldn't be added"
-msgstr "Beberapa berkas tidak dapat ditambahkan."
-
-#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
-msgid "Image edited successfully."
-msgstr "Gambar berhasil diubah."
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
-#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
-#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
-msgid "private"
-msgstr "pribadi"
-
-#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
-msgid "Album edited successfully."
-msgstr "Album berhasil diubah."
-
-#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
-msgid "Invalid URL key."
-msgstr "URL key tidak benar."
-
-#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
-msgid "Category URL key already being used."
-msgstr "Kategori URL key telah digunakan."
-
-#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
-msgid "Category successfully deleted."
-msgstr "Kategori berhasil dihapus."
-
-#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
-#, javascript-format
-msgid "Category %s added."
-msgstr "Kategori %s telah ditambahkan."
-
-#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
-msgid "Invalid expiration date."
-msgstr "Tanggal kadaluarsa tidak benar."
-
-#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
-#, javascript-format
-msgid "IP %s already banned."
-msgstr "IP %s telah diblokir."
-
-#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
-#, javascript-format
-msgid "IP %s banned."
-msgstr "IP %s diblokir."
-
-#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
-msgid "IP ban successfully deleted."
-msgstr "Larangan terhadap IP telah dihapus dari daftar."
-
-#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
-#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
-#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
-msgid "Please fill all the required fields."
-msgstr "Silakan isi semua kolom yang dibutuhkan."
-
-#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
-msgid "Invalid storage capacity value. Make sure to use a valid format."
-msgstr "Kapasitas penyimpanan tidak benar. Pastikan menggunakan bentuk yang baku."
-
-#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
-msgid "Invalid URL."
-msgstr "URL tidak benar."
-
-#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
-msgid "Storage successfully edited."
-msgstr "Kapasitas penyimpanan berhasil diubah."
-
-#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
-msgid "User added successfully."
-msgstr "Nama pengguna berhasil ditambahkan."
-
-#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
-#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
-#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
-#: ../../../app/lib/chevereto.min.js:205
-msgid "The content has been moved."
-msgstr "Isi telah dipindahkan."
-
-#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
-msgid "Unselect"
-msgstr "Buang seleksi"
-
-#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
-msgid "The content has been edited."
-msgstr "Isi telah diubah."
 
 #: ../../../lib/Peafowl/peafowl.js:25 ../../../lib/Peafowl/peafowl.js:492
 #: ../../../lib/Peafowl/peafowl.min.js:1 ../../../lib/Peafowl/peafowl.min.js:31

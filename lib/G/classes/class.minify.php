@@ -417,7 +417,7 @@ class Minify {
                             // check for some regex that breaks stuff
                             if ($this->a == '/' && ($this->b == '\'' || $this->b == '"')) {
                                 $this->saveRegex();
-                                continue;
+                                break;
                             }
 
                             echo $this->a;
@@ -734,7 +734,7 @@ class Minify {
         $lock = '"LOCK---' . crc32(time()) . '"';
 
         $matches = array();
-        preg_match('/([+-])(\s+)([+-])/', $js, $matches);
+        preg_match('/([\+\-])(\s+)([\+\-])/', $js, $matches);
         if (empty($matches)) {
             return $js;
         }

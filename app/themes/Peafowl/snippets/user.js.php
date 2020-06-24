@@ -1,4 +1,6 @@
-<?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
+<?php if (!defined('access') or !access) {
+    die('This file cannot be directly accessed.');
+} ?>
 <script>
 	var hasClass = function(element, cls) {
 		return (" " + element.className + " ").indexOf(" " + cls + " ") > -1;
@@ -29,29 +31,7 @@
 			min: 300
 		}
 		
-		cover.style.height = Math.max(cover_size_chart.min, cover_size_chart.ratio*(canvas.height - top_user.outerHeight)) + "px";
-		
-		if(!hasClass(top_bar.node, "white")) {
-			if(!hasClass(top_bar.node, "background-transparent")) {
-				top_bar.node.className += " background-transparent";
-			}
-			if(!hasClass(top_bar.node, "transparent")) {
-				top_bar.node.className += " transparent";
-			}
-			if(!document.getElementById("top-bar-shade")) {
-				var top_bar_placeholder = document.createElement('div');
-				
-				top_bar_placeholder.className = "top-bar";
-				if(top_bar.node.className.indexOf("white") > -1) {
-					top_bar_placeholder.className += " white";
-				}
-				
-				top_bar_placeholder.setAttribute("id", "top-bar-shade");
-				
-				document.getElementsByTagName("body")[0].insertBefore(top_bar_placeholder, document.getElementsByTagName("body")[0].firstChild);
-			}
-		}
-	
+		cover.style.height = Math.max(cover_size_chart.min, cover_size_chart.ratio*(canvas.height - top_user.outerHeight)) + "px";	
 	}
 	user_background_full_fix();
 </script>

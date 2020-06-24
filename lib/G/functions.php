@@ -20,7 +20,7 @@ namespace G {
 
     /**
      * ROUTE HELPERS
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
 
     // Returns true if the $route is current /route or mapped-route -> /route
@@ -32,7 +32,8 @@ namespace G {
     // Returns true if the $route is has route file
     function is_route_available($route)
     {
-        $route_file = 'route.'.$route.'.php';
+        $route_file = 'route.' . $route . '.php';
+
         return file_exists(G_APP_PATH_ROUTES . $route_file) or file_exists(G_APP_PATH_ROUTES_OVERRIDES . $route_file);
     }
 
@@ -44,7 +45,7 @@ namespace G {
 
     // Get the route path
     // $full=true returns route/and/sub/routes, $full=false returns just the /route base
-    function get_route_path($full=false)
+    function get_route_path($full = false)
     {
         return Handler::getRoutePath($full);
     }
@@ -63,7 +64,7 @@ namespace G {
 
     /**
      * GLOBAL HELPERS
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
 
     // Outputs a well formatted HTML output of anything (strings, arrays, comma separated "things", anything)
@@ -82,7 +83,7 @@ namespace G {
     // Universal check for setted values for strings and arrays
     function check_value($anything)
     {
-        if ((@count($anything)>0 and !@empty($anything) and @isset($anything)) || $anything=='0') {
+        if ((@count($anything) > 0 and !@empty($anything) and @isset($anything)) || $anything == '0') {
             return true;
         }
     }
@@ -90,18 +91,18 @@ namespace G {
     function get_global($var)
     {
         global ${$var};
+
         return ${$var};
     }
 
     function is_apache()
     {
-        return (isset($_SERVER['SERVER_SOFTWARE']) and preg_match('/Apache/i', $_SERVER['SERVER_SOFTWARE']));
+        return isset($_SERVER['SERVER_SOFTWARE']) and preg_match('/Apache/i', $_SERVER['SERVER_SOFTWARE']);
     }
 
     // Fixed from the original (not working) at: http://stackoverflow.com/a/7859707
     function random_values($min, $max, $limit)
     {
-
         // Numbers?
         if (!is_numeric($min) or !is_numeric($max)) {
             return null;
@@ -122,20 +123,21 @@ namespace G {
             $limit = $minmax_limit;
         }
 
-
         $array = array();
-        for ($i = 0; $i < $limit; $i++) {
+        for ($i = 0; $i < $limit; ++$i) {
             $rand = rand($min, $max);
             while (in_array($rand, $array)) {
                 $rand = mt_rand($min, $max);
             }
             $array[$i] = $rand;
         }
+
         return $array;
     }
 
     /**
-     * Generates a random string
+     * Generates a random string.
+     *
      * @autor Baba
      * @url http://stackoverflow.com/a/17267718
      */
@@ -144,26 +146,27 @@ namespace G {
         switch (true) {
             case function_exists('random_bytes'):
                 $r = random_bytes($length);
-            break;
+                break;
             case function_exists('openssl_random_pseudo_bytes'):
                 $r = openssl_random_pseudo_bytes($length);
-            break;
+                break;
             case is_readable('/dev/urandom'): // deceze
                 $r = file_get_contents('/dev/urandom', false, null, 0, $length);
-            break;
+                break;
             default:
                 $i = 0;
                 $r = '';
-                while ($i ++ < $length) {
+                while ($i++ < $length) {
                     $r .= chr(mt_rand(0, 255));
                 }
-            break;
+                break;
         }
+
         return substr(bin2hex($r), 0, $length);
     }
 
     /**
-     * A timing safe equals comparison
+     * A timing safe equals comparison.
      *
      * To prevent leaking length information, it is important
      * that user input is always used as the second parameter.
@@ -171,7 +174,7 @@ namespace G {
      * @param string $safe The internal (safe) value to be checked
      * @param string $user The user submitted (unsafe) value
      *
-     * @return boolean True if the two strings are identical.
+     * @return bool true if the two strings are identical
      */
     function timing_safe_compare($safe, $user)
     {
@@ -187,7 +190,7 @@ namespace G {
 
         // Note that we ALWAYS iterate over the user-supplied length
         // This is to prevent leaking length information
-        for ($i = 0; $i < $userLen; $i++) {
+        for ($i = 0; $i < $userLen; ++$i) {
             // Using % here is a trick to prevent notices
             // It's safe, since if the lengths are different
             // $result is already non-0
@@ -204,6 +207,7 @@ namespace G {
         if ($pos !== false) {
             $subject = substr_replace($subject, $replace, $pos, strlen($search));
         }
+
         return $subject;
     }
 
@@ -213,6 +217,7 @@ namespace G {
         if ($pos !== false) {
             $subject = substr_replace($subject, $replace, $pos, strlen($search));
         }
+
         return $subject;
     }
 
@@ -220,7 +225,8 @@ namespace G {
     function starts_with($needle, $haystack)
     {
         $length = strlen($needle);
-        return (substr($haystack, 0, $length) === $needle);
+
+        return substr($haystack, 0, $length) === $needle;
     }
 
     // Taken from http://stackoverflow.com/a/834355
@@ -230,16 +236,17 @@ namespace G {
         if ($length == 0) {
             return true;
         }
-        return (substr($haystack, -$length) === $needle);
+
+        return substr($haystack, -$length) === $needle;
     }
 
     /**
      * DATA HANDLING
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
 
     // Filter array with another array
-    function array_filter_array($array, $filter_keys, $get='exclusion')
+    function array_filter_array($array, $filter_keys, $get = 'exclusion')
     {
         $arr = $array;
         $return = [];
@@ -248,18 +255,20 @@ namespace G {
 
         foreach ($filter_keys as $k => $v) {
             switch ($get) {
-                default: case $default_get:
+                default:
+                case $default_get:
                     $get = $default_get;
                     if (!array_key_exists($v, $array)) {
-                        continue;
+                        continue 2;
                     }
                     $return[$v] = $array[$v];
-                break;
+                    break;
                 case 'rest':
                     unset($array[$v]);
-                break;
+                    break;
             }
         }
+
         return $get == $default_get ? $return : $array;
     }
 
@@ -279,18 +288,24 @@ namespace G {
     }
 
     /**
-     * Recursive UTF-8 encode array
+     * Recursive UTF-8 encode array.
      */
     function array_utf8encode(&$arr)
     {
         array_walk_recursive($arr, function (&$val, $key) {
-            $val = mb_convert_encoding($val, 'UTF-8', 'auto');
+            $encoding = mb_detect_encoding($val);
+            if ($encoding == false) {
+                $val = null;
+            } else {
+                $val = mb_convert_encoding($val, 'UTF-8', $encoding);
+            }
         });
+
         return $arr;
     }
 
     /**
-     * Recursive remove empty properties
+     * Recursive remove empty properties.
      */
     function array_remove_empty($haystack)
     {
@@ -302,17 +317,21 @@ namespace G {
                 unset($haystack[$key]);
             }
         }
+
         return $haystack;
     }
 
     /**
-     * Abbreviate a number with suffix output
+     * Abbreviate a number with suffix output.
      */
     function abbreviate_number($number)
     {
-
-        // strip any formatting
-        $number = (0+str_replace(',', '', $number));
+        if ($number === null) {
+            $number = 0;
+        } else {
+            // strip any formatting
+            $number = (0 + str_replace(',', '', $number));
+        }
 
         // Not a number, keep it "as is"
         if (!is_numeric($number) or $number == 0) {
@@ -328,7 +347,7 @@ namespace G {
             9 => 'G',
             6 => 'M',
             3 => 'K',
-            0 => null
+            0 => null,
         ];
         foreach ($abbreviations as $exponent => $abbreviation) {
             if ($number >= pow(10, $exponent)) {
@@ -349,15 +368,16 @@ namespace G {
     {
         $hex = str_replace('#', '', $hex);
         if (strlen($hex) == 3) {
-            $r = hexdec(substr($hex, 0, 1).substr($hex, 0, 1));
-            $g = hexdec(substr($hex, 1, 1).substr($hex, 1, 1));
-            $b = hexdec(substr($hex, 2, 1).substr($hex, 2, 1));
+            $r = hexdec(substr($hex, 0, 1) . substr($hex, 0, 1));
+            $g = hexdec(substr($hex, 1, 1) . substr($hex, 1, 1));
+            $b = hexdec(substr($hex, 2, 1) . substr($hex, 2, 1));
         } else {
             $r = hexdec(substr($hex, 0, 2));
             $g = hexdec(substr($hex, 2, 2));
             $b = hexdec(substr($hex, 4, 2));
         }
         $rgb = array($r, $g, $b);
+
         return $rgb; // returns an array with the rgb values
     }
     function rgb_to_hex($rgb)
@@ -366,12 +386,13 @@ namespace G {
         $hex .= str_pad(dechex($rgb[0]), 2, '0', STR_PAD_LEFT);
         $hex .= str_pad(dechex($rgb[1]), 2, '0', STR_PAD_LEFT);
         $hex .= str_pad(dechex($rgb[2]), 2, '0', STR_PAD_LEFT);
+
         return $hex; // returns the hex value including the number sign (#)
     }
 
     /**
      * Convert HTML code to BBCode
-     * http://kuikie.com/snippets/snippet.php/90-17/php-function-to-convert-bbcode-to-html
+     * http://kuikie.com/snippets/snippet.php/90-17/php-function-to-convert-bbcode-to-html.
      */
     function html_to_bbcode($text)
     {
@@ -397,7 +418,7 @@ namespace G {
             '/\<em\>(.*?)\<\/em\>/is',
             '/\<a href=\"mailto:(.*?)\"(.*?)\>(.*?)\<\/a\>/is',
             '/\<a .*?href=\"(.*?)\"(.*?)\>http:\/\/(.*?)\<\/a\>/is',
-            '/\<a .*?href=\"(.*?)\"(.*?)\>(.*?)\<\/a\>/is'
+            '/\<a .*?href=\"(.*?)\"(.*?)\>(.*?)\<\/a\>/is',
         );
         $bbtags = array(
             '[b]$1[/b]',
@@ -421,7 +442,7 @@ namespace G {
             '[i]$1[/i]',
             '[email=$1]$3[/email]',
             '[url]$1[/url]',
-            '[url=$1]$3[/url]'
+            '[url=$1]$3[/url]',
         );
 
         $text = str_replace("\n", ' ', $text);
@@ -437,6 +458,7 @@ namespace G {
 
         $ntext = strip_tags($ntext);
         $ntext = trim(html_entity_decode($ntext, ENT_QUOTES, 'UTF-8'));
+
         return $ntext;
     }
 
@@ -456,7 +478,7 @@ namespace G {
         $ignoreTags = array('head', 'link', 'a', 'script', 'style', 'code', 'pre', 'select', 'textarea', 'button');
         $chunks = preg_split('/(<.+?>)/is', $text, 0, PREG_SPLIT_DELIM_CAPTURE);
         $openTag = null;
-        for ($i = 0; $i < count($chunks); $i++) {
+        for ($i = 0; $i < count($chunks); ++$i) {
             if ($i % 2 === 0) { // even numbers are text
                 // Only process this chunk if there are no unclosed $ignoreTags
                 if (null === $openTag) {
@@ -467,7 +489,7 @@ namespace G {
                 // Only process this tag if there are no unclosed $ignoreTags
                 if (null === $openTag) {
                     // Check whether this tag is contained in $ignoreTags and is not self-closing
-                    if (preg_match("`<(" . implode('|', $ignoreTags) . ").*(?<!/)>$`is", $chunks[$i], $matches)) {
+                    if (preg_match('`<(' . implode('|', $ignoreTags) . ').*(?<!/)>$`is', $chunks[$i], $matches)) {
                         $openTag = $matches[1];
                     }
                 } else {
@@ -479,6 +501,7 @@ namespace G {
             }
         }
         $text = implode($chunks);
+
         return $text;
     }
 
@@ -500,8 +523,10 @@ namespace G {
                     return $cb;
                 }
             }
+
             return '<a href="mailto:' . $match[0] . '"' . $options['attr'] . '>' . $match[0] . '</a>';
         };
+
         return preg_replace_callback($pattern, $callback, $text);
     }
 
@@ -530,7 +555,7 @@ namespace G {
         ~';
         $callback = function ($match) use ($options) {
             $caption = $match[0];
-            $pattern = "~^(ht|f)tps?://~";
+            $pattern = '~^(ht|f)tps?://~';
             if (0 === preg_match($pattern, $match[0])) {
                 $match[0] = 'http://' . $match[0];
             }
@@ -540,27 +565,30 @@ namespace G {
                     return $cb;
                 }
             }
+
             return '<a href="' . $match[0] . '"' . $options['attr'] . '>' . $caption . '</a>';
         };
+
         return preg_replace_callback($pattern, $callback, $text);
     }
 
-    function linkify_safe($text, $options=[])
+    function linkify_safe($text, $options = [])
     {
         $options = array_merge(['attr' => ['rel' => 'nofollow', 'target' => '_blank']], $options);
+
         return linkify(htmlspecialchars($text), $options);
     }
 
     /**
      * ERROR HANDLING
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
 
     // Converts an Exception to a formatted PHP like error
-    function exception_to_error($e, $die=true)
+    function exception_to_error($e, $die = true)
     {
         $internal_code = 500;
-        $internal_error = '<b>'.G_APP_NAME.' error:</b> ' . get_set_status_header_desc($internal_code);
+        $internal_error = '<b>Aw, snap!</b> ' . get_set_status_header_desc($internal_code) . ' - Check your error_log or enable debug_mode = 3 (chevereto.com/docs/debug).';
 
         set_status_header($internal_code);
 
@@ -569,20 +597,20 @@ namespace G {
 
         $debug_level = get_app_setting('debug_level');
 
-        if (!in_array($debug_level, [0,1,2,3])) {
+        if (!in_array($debug_level, [0, 1, 2, 3])) {
             $debug_level = 1;
         }
 
-        if (in_array($debug_level, [1,3])) {
+        if (in_array($debug_level, [1, 3])) {
             error_log($e);
         }
 
-        if (!in_array($debug_level, [2,3])) { // No print here
+        if (!in_array($debug_level, [2, 3])) { // No print here
             die($internal_error);
         }
 
         $message = [];
-        $message[] = '<b>Fatal error ['.$e->getCode().']:</b> ' . safe_html($e->getMessage());
+        $message[] = '<b>Fatal error [' . $e->getCode() . ']:</b> ' . safe_html($e->getMessage());
         $message[] = 'Triggered in ' . absolute_to_relative($e->getFile()) . ' at line ' . $e->getLine() . "\n";
         $message[] = '<b>Stack trace:</b>';
 
@@ -599,25 +627,25 @@ namespace G {
                                 $arg = absolute_to_relative($arg);
                             }
                             $args[] = "'" . $arg . "'";
-                        break;
+                            break;
                         case is_array($arg):
                             $args[] = 'Array';
-                        break;
+                            break;
                         case is_null($arg):
                             $args[] = 'NULL';
-                        break;
+                            break;
                         case is_bool($arg):
                             $args[] = ($arg) ? 'true' : 'false';
-                        break;
+                            break;
                         case is_object($arg):
                             $args[] = get_class($arg);
-                        break;
+                            break;
                         case is_resource($arg):
                             $args[] = get_resource_type($arg);
-                        break;
+                            break;
                         default:
                             $args[] = $arg;
-                        break;
+                            break;
                     }
                 }
                 $args = join(', ', $args);
@@ -625,13 +653,13 @@ namespace G {
 
             $rtn .= sprintf(
                 "#%s %s(%s): %s(%s)\n",
-                        $count,
-                        isset($frame['file']) ? absolute_to_relative($frame['file']) : 'unknown file',
-                        isset($frame['line']) ? $frame['line'] : 'unknown line',
-                        (isset($frame['class'])) ? $frame['class'].$frame['type'].$frame['function'] : $frame['function'],
-                        $args
+                $count,
+                isset($frame['file']) ? absolute_to_relative($frame['file']) : 'unknown file',
+                isset($frame['line']) ? $frame['line'] : 'unknown line',
+                (isset($frame['class'])) ? $frame['class'] . $frame['type'] . $frame['function'] : $frame['function'],
+                $args
             );
-            $count++;
+            ++$count;
         }
         $message[] = $rtn;
 
@@ -647,36 +675,37 @@ namespace G {
 
     /**
      * MATH
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
-
     function fraction_to_decimal($fraction)
     {
         list($top, $bottom) = explode('/', $fraction);
+
         return $bottom == 0 ? $fraction : ($top / $bottom);
     }
 
     /**
      * TIME
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
 
     // Returns current GMT datetime
-    function datetimegmt($format=null)
+    function datetimegmt($format = null)
     {
         return gmdate(!is_null($format) ? $format : 'Y-m-d H:i:s');
     }
 
     // Returns current datetime (for the system timezone)
-    function datetime($format=null)
+    function datetime($format = null)
     {
         return date(!is_null($format) ? $format : 'Y-m-d H:i:s');
     }
 
     // Returns current datetime in the specified timezone
-    function datetime_tz($tz, $format=null)
+    function datetime_tz($tz, $format = null)
     {
         $date = date_create(null, timezone_open($tz));
+
         return date_format($date, !is_null($format) ? $format : 'Y-m-d H:i:s');
     }
 
@@ -691,11 +720,12 @@ namespace G {
             }
         }
         unset($valid['']);
-        return !!$valid[$tzid];
+
+        return (bool) $valid[$tzid];
     }
 
     // http://stackoverflow.com/a/18602474
-    function time_elapsed_string($datetime, $full=false)
+    function time_elapsed_string($datetime, $full = false)
     {
         $now = new \DateTime(datetimegmt());
         $ago = new \DateTime($datetime);
@@ -724,6 +754,7 @@ namespace G {
         if (!$full) {
             $string = array_slice($string, 0, 1);
         }
+
         return $string ? implode(', ', $string) . ' ago' : 'just now';
     }
 
@@ -732,13 +763,14 @@ namespace G {
         if (!is_valid_timezone($tz)) {
             return $datetimegmt;
         }
-        $date = new \DateTime($datetimegmt . "+00");
+        $date = new \DateTime($datetimegmt . '+00');
         $date->setTimezone(new \DateTimeZone($tz));
+
         return $date->format('Y-m-d H:i:s');
     }
 
     // Returns the difference between two dates in the given format (default seconds)
-    function datetime_diff($older, $newer=null, $format='s')
+    function datetime_diff($older, $newer = null, $format = 's')
     {
         if (!in_array($format, ['s', 'm', 'h', 'd'])) {
             $format = 's';
@@ -756,10 +788,10 @@ namespace G {
             's' => 1,
             'm' => 60,
             'h' => 3600,
-            'd' => 86400
+            'd' => 86400,
         ];
 
-        return $diff/$timeconstant[$format];
+        return $diff / $timeconstant[$format];
     }
 
     function datetime_add($datetime, $add)
@@ -777,14 +809,14 @@ namespace G {
         return datetime_alter($datetime, $var, 'modify');
     }
 
-    function datetime_alter($datetime, $var, $action='add')
+    function datetime_alter($datetime, $var, $action = 'add')
     {
         if (!in_array($action, ['add', 'sub', 'modify'])) {
             return $datetime;
         }
         try {
             $DateTime = new \DateTime($datetime);
-            if ($action=='modify') {
+            if ($action == 'modify') {
                 $DateTime->$action($var);
             } else {
                 $interval = dateinterval($var); // validation
@@ -793,6 +825,7 @@ namespace G {
                 }
                 $DateTime->$action($interval);
             }
+
             return $DateTime->format('Y-m-d H:i:s');
         } catch (Exception $e) {
             throw new Exception($e->getMessage() . ' in ' . __FUNCTION__ . ' (' . $action . ')', $e->getCode());
@@ -803,54 +836,24 @@ namespace G {
     {
         try {
             $di = new \DateInterval($var);
+
             return $di;
         } catch (Exception $e) {
         }
+
         return false;
     }
 
     /**
      * CLIENT
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
-
     function get_client_ip()
     {
-        $client_ip = !empty($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : (!empty($_ENV['REMOTE_ADDR']) ? $_ENV['REMOTE_ADDR'] : null);
-
-        if (array_key_exists('HTTP_CF_CONNECTING_IP', $_SERVER) && $_SERVER['HTTP_CF_CONNECTING_IP'] == $_SERVER['REMOTE_ADDR']) {
-            return $_SERVER['HTTP_CF_CONNECTING_IP'];
-        }
-
-        if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-            $entries = preg_split('/[\s,]/', $_SERVER['HTTP_X_FORWARDED_FOR'], -1, PREG_SPLIT_NO_EMPTY);
-
-            reset($entries);
-
-            while (list(, $entry) = each($entries)) {
-                $entry = trim($entry);
-                if (preg_match('/^([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)/', $entry, $ip_list)) {
-                    $private_ip = array(
-                          '/^0\./',
-                          '/^127\.0\.0\.1/',
-                          '/^192\.168\..*/',
-                          '/^172\.((1[6-9])|(2[0-9])|(3[0-1]))\..*/',
-                          '/^10\..*/');
-
-                    $found_ip = preg_replace($private_ip, $client_ip, $ip_list[1]);
-
-                    if ($client_ip != $found_ip) { //  and !isset($_SERVER['HTTP_CF_CONNECTING_IP']
-                        $client_ip = $found_ip;
-                        break;
-                    }
-                }
-            }
-        }
-
-        return $client_ip;
+        return $_SERVER['REMOTE_ADDR'];
     }
 
-    function get_client_languages($getSortedList=true, $acceptedLanguages=false)
+    function get_client_languages($getSortedList = true, $acceptedLanguages = false)
     {
         if (empty($acceptedLanguages)) {
             $acceptedLanguages = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
@@ -863,7 +866,7 @@ namespace G {
 
         // (create an associative array 'language' => 'preference')
         $lang2pref = array();
-        for ($i=0; $i<count($langs); $i++) {
+        for ($i = 0; $i < count($langs); ++$i) {
             $lang2pref[$langs[$i]] = (float) (!empty($ranks[$i]) ? $ranks[$i] : 1);
         }
 
@@ -891,16 +894,20 @@ namespace G {
         }
         // return the first value's key
         reset($lang2pref);
+
         return key($lang2pref);
     }
 
     /**
-     * Parses a user agent string into its important parts
+     * Parses a user agent string into its important parts.
      *
      * @author Jesse G. Donat <donatj@gmail.com>
-     * @link https://github.com/donatj/PhpUserAgent
-     * @link http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT
+     *
+     * @see https://github.com/donatj/PhpUserAgent
+     * @see http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT
+     *
      * @param string|null $u_agent
+     *
      * @return array an array with browser, version and platform keys
      */
     function parse_user_agent($u_agent = null)
@@ -910,10 +917,10 @@ namespace G {
         }
 
         $platform = null;
-        $browser  = null;
-        $version  = null;
+        $browser = null;
+        $version = null;
 
-        $empty = array( 'platform' => $platform, 'browser' => $browser, 'version' => $version );
+        $empty = array('platform' => $platform, 'browser' => $browser, 'version' => $version);
 
         if (!$u_agent) {
             return $empty;
@@ -924,7 +931,7 @@ namespace G {
 				(?:\ [^;]*)?
 				(?:;|$)/imx', $parent_matches[1], $result, PREG_PATTERN_ORDER);
 
-            $priority           = array( 'Android', 'Xbox' );
+            $priority = array('Android', 'Xbox');
             $result['platform'] = array_unique($result['platform']);
             if (count($result['platform']) > 1) {
                 if ($keys = array_intersect($priority, $result['platform'])) {
@@ -952,7 +959,6 @@ namespace G {
             PREG_PATTERN_ORDER
         );
 
-
         // If nothing matched, return null (to avoid undefined index errors)
         if (!isset($result['browser'][0]) || !isset($result['version'][0])) {
             return $empty;
@@ -977,9 +983,9 @@ namespace G {
             $browser = 'Firefox';
         } elseif ($find('Playstation Vita', $key)) {
             $platform = 'PlayStation Vita';
-            $browser  = 'Browser';
+            $browser = 'Browser';
         } elseif ($find('Kindle Fire Build', $key) || $find('Silk', $key)) {
-            $browser  = $result['browser'][$key] == 'Silk' ? 'Silk' : 'Kindle';
+            $browser = $result['browser'][$key] == 'Silk' ? 'Silk' : 'Kindle';
             $platform = 'Kindle Fire';
             if (!($version = $result['version'][$key]) || !is_numeric($version[0])) {
                 $version = $result['version'][array_search('Version', $result['browser'])];
@@ -988,9 +994,9 @@ namespace G {
             $browser = 'NintendoBrowser';
             $version = $result['version'][$key];
         } elseif ($find('Kindle', $key)) {
-            $browser  = $result['browser'][$key];
+            $browser = $result['browser'][$key];
             $platform = 'Kindle';
-            $version  = $result['version'][$key];
+            $version = $result['version'][$key];
         } elseif ($find('OPR', $key)) {
             $browser = 'Opera Next';
             $version = $result['version'][$key];
@@ -1021,23 +1027,22 @@ namespace G {
                 $browser = 'IEMobile';
             } else {
                 $browser = 'MSIE';
-                $key     = 0;
+                $key = 0;
             }
             $version = $result['version'][$key];
         } elseif ($key = preg_grep("/playstation \d/i", array_map('strtolower', $result['browser']))) {
             $key = reset($key);
 
             $platform = 'PlayStation ' . preg_replace('/[^\d]/i', '', $key);
-            $browser  = 'NetFront';
+            $browser = 'NetFront';
         }
 
-        return array( 'platform' => $platform, 'browser' => $browser, 'version' => $version );
+        return array('platform' => $platform, 'browser' => $browser, 'version' => $version);
     }
-
 
     /**
      * MISC. VALIDATIONS
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
 
     // This checks for real email address.
@@ -1048,7 +1053,7 @@ namespace G {
         if (is_bool($atIndex) && !$atIndex) {
             $valid = false;
         } else {
-            $domain = substr($email, $atIndex+1);
+            $domain = substr($email, $atIndex + 1);
             $local = substr($email, 0, $atIndex);
             $localLen = strlen($local);
             $domainLen = strlen($domain);
@@ -1058,7 +1063,7 @@ namespace G {
             } elseif ($domainLen < 1 || $domainLen > 255) {
                 // domain part length exceeded
                 $valid = false;
-            } elseif ($local[0] == '.' || $local[$localLen-1] == '.') {
+            } elseif ($local[0] == '.' || $local[$localLen - 1] == '.') {
                 // local part starts or ends with '.'
                 $valid = false;
             } elseif (preg_match('/\\.\\./', $local)) {
@@ -1072,11 +1077,11 @@ namespace G {
                 $valid = false;
             } elseif (!preg_match(
                 '/^(\\\\.|[A-Za-z0-9!#%&`_=\\/$\'*+?^{}|~.-])+$/',
-            str_replace('\\\\', '', $local)
+                str_replace('\\\\', '', $local)
             )) {
                 // character not valid in local part unless
                 // local part is quoted
-                if (!preg_match('/^"(\\\\"|[^"])+"$/', str_replace("\\\\", "", $local))) {
+                if (!preg_match('/^"(\\\\"|[^"])+"$/', str_replace('\\\\', '', $local))) {
                     $valid = false;
                 }
             }
@@ -1085,10 +1090,11 @@ namespace G {
                 $valid = false;
             }
         }
+
         return $valid;
     }
 
-    function is_valid_hex_color($string, $prefix=true)
+    function is_valid_hex_color($string, $prefix = true)
     {
         return preg_match('/#' . ($prefix ? '?' : null) . '([\da-fA-F]{2})([\da-fA-F]{2})([\da-fA-F]{2})/', $string);
     }
@@ -1100,7 +1106,7 @@ namespace G {
 
     /**
      * SANITIZATION
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
 
     // Removes all the spaces on a given string
@@ -1126,27 +1132,48 @@ namespace G {
         $path = sanitize_path_slashes($path);
         $path = preg_replace('#(\.+/)+#', '', $path);
         $path = sanitize_path_slashes($path);
+
         return $path;
+    }
+
+    function rrmdir($dir)
+    {
+        if (is_dir($dir)) {
+            $objects = scandir($dir);
+            foreach ($objects as $object) {
+                if ($object != '.' && $object != '..') {
+                    if (is_dir($dir . '/' . $object)) {
+                        rrmdir($dir . '/' . $object);
+                    } else {
+                        unlink($dir . '/' . $object);
+                    }
+                }
+            }
+            rmdir($dir);
+        }
     }
 
     /**
      * Returns a sanitized string, typically for URLs
-     * This function was borrowed from chyrp.net (MIT License)
+     * This function was borrowed from chyrp.net (MIT License).
      */
     function sanitize_string($string, $force_lowercase = true, $only_alphanumerics = false, $truncate = 100)
     {
-        $strip = array('~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '=', '+', '{',
-                       '}', '\\', '|', ';', ':', '\'', "'", '&#8216;', '&#8217;', '&#8220;', '&#8221;', '&#8211;', '&#8212;',
-                       'â€”', 'â€“', ',', '<', '.', '>', '/', '?');
-        $clean = trim(str_replace($strip, "", strip_tags($string)));
+        $strip = array(
+            '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '=', '+', '{',
+            '}', '\\', '|', ';', ':', '\'', "'", '&#8216;', '&#8217;', '&#8220;', '&#8221;', '&#8211;', '&#8212;',
+            'â€”', 'â€“', ',', '<', '.', '>', '/', '?',
+        );
+        $clean = trim(str_replace($strip, '', strip_tags($string)));
         $clean = preg_replace('/\s+/', '-', $clean);
         $clean = ($only_alphanumerics ? preg_replace('/[^a-zA-Z0-9]/', '', $clean) : $clean);
         $clean = ($truncate ? substr($clean, 0, $truncate) : $clean);
+
         return ($force_lowercase) ? (function_exists('mb_strtolower')) ? mb_strtolower($clean, 'UTF-8') : strtolower($clean) : $clean;
     }
 
     // Original PHP code by Chirp Internet: www.chirp.com.au
-    function truncate($string, $limit, $break=null, $pad='...')
+    function truncate($string, $limit, $break = null, $pad = '...')
     {
         $encoding = 'UTF-8';
         if (mb_strlen($string, $encoding) <= $limit) {
@@ -1161,45 +1188,47 @@ namespace G {
                 }
             }
         }
+
         return $string;
     }
 
     // Thanks to http://www.evaisse.net/2008/php-translit-remove-accent-unaccent-21001
     function unaccent_string($string)
     {
-        $string = (string)$string;
+        $string = (string) $string;
 
         if (function_exists('mb_detect_encoding')) {
             $utf8 = strtolower(mb_detect_encoding($string)) == 'utf-8';
         } else {
             $length = strlen($string);
             $utf8 = true;
-            for ($i=0; $i < $length; $i++) {
+            for ($i = 0; $i < $length; ++$i) {
                 $c = ord($string[$i]);
                 if ($c < 0x80) {
                     $n = 0;
-                } # 0bbbbbbb
+                } // 0bbbbbbb
                 elseif (($c & 0xE0) == 0xC0) {
-                    $n=1;
-                } # 110bbbbb
+                    $n = 1;
+                } // 110bbbbb
                 elseif (($c & 0xF0) == 0xE0) {
-                    $n=2;
-                } # 1110bbbb
+                    $n = 2;
+                } // 1110bbbb
                 elseif (($c & 0xF8) == 0xF0) {
-                    $n=3;
-                } # 11110bbb
+                    $n = 3;
+                } // 11110bbb
                 elseif (($c & 0xFC) == 0xF8) {
-                    $n=4;
-                } # 111110bb
+                    $n = 4;
+                } // 111110bb
                 elseif (($c & 0xFE) == 0xFC) {
-                    $n=5;
-                } # 1111110b
+                    $n = 5;
+                } // 1111110b
                 else {
                     return false;
-                } # Does not match any model
-                for ($j=0; $j<$n; $j++) { # n bytes matching 10bbbbbb follow ?
+                } // Does not match any model
+                for ($j = 0; $j < $n; ++$j) { // n bytes matching 10bbbbbb follow ?
                     if ((++$i == $length)
-                        || ((ord($string[$i]) & 0xC0) != 0x80)) {
+                        || ((ord($string[$i]) & 0xC0) != 0x80)
+                    ) {
                         $utf8 = false;
                         break;
                     }
@@ -1308,7 +1337,7 @@ namespace G {
             'ị' => 'i', 'ậ' => 'a', 'ệ' => 'e', 'ỉ' => 'i', 'ộ' => 'o', 'ồ' => 'o',
             'ề' => 'e', 'ơ' => 'o', 'ạ' => 'a', 'ẵ' => 'a', 'ư' => 'u', 'ắ' => 'a',
             'ằ' => 'a', 'ầ' => 'a', 'ḑ' => 'd', 'Ḩ' => 'H', 'Ḑ' => 'D', 'ḑ' => 'd',
-            'ş' => 's', 'ā' => 'a', 'ţ' => 't', 'ễ'	=> 'e'
+            'ş' => 's', 'ā' => 'a', 'ţ' => 't', 'ễ' => 'e',
         );
         $string = str_replace(array_keys($transliteration), array_values($transliteration), $string);
 
@@ -1316,11 +1345,12 @@ namespace G {
         if (strpos($string = htmlentities($string, ENT_QUOTES, 'UTF-8'), '&') !== false) {
             $string = html_entity_decode(preg_replace('~&([a-z]{1,2})(?:acute|cedil|circ|grave|lig|orn|ring|slash|tilde|uml);~i', '$1', $string), ENT_QUOTES, 'UTF-8');
         }
+
         return $string;
     }
 
     // Safe for HTML output
-    function safe_html($var, $flag=ENT_QUOTES)
+    function safe_html($var, $flag = ENT_QUOTES)
     {
         if (!is_array($var)) {
             return $var === null ? null : htmlspecialchars($var, $flag, 'UTF-8'); // htmlspecialchars keeps ñ, á and all the UTF-8 valid chars
@@ -1329,16 +1359,17 @@ namespace G {
         foreach ($var as $k => $v) {
             $safe_array[$k] = is_array($v) ? safe_html($v) : ($v === null ? null : htmlspecialchars($v, $flag, 'UTF-8'));
         }
+
         return $safe_array;
     }
 
     /**
      * BYTE AND NUMBER HANDLING
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
 
     // Converts bytes to whatever
-    function format_bytes($bytes, $round=1)
+    function format_bytes($bytes, $round = 1)
     {
         if (!is_numeric($bytes)) {
             return false;
@@ -1352,13 +1383,14 @@ namespace G {
             $threshold = $multiplier * 1000;
             if ($bytes < $threshold) {
                 $size = round($bytes / $multiplier, $round);
+
                 return "$size $v";
             }
         }
     }
 
     // Returns bytes for SIZE + Suffix format (dec + bin)
-    function get_bytes($size, $cut=null)
+    function get_bytes($size, $cut = null)
     {
         if ($cut == null) {
             $suffix = substr($size, -3);
@@ -1385,6 +1417,7 @@ namespace G {
             return $size;
         }
         $pow_factor = array_search($suffix, $units) + 1;
+
         return $size * pow(strlen($suffix) == 2 ? 1000 : 1024, $pow_factor);
     }
 
@@ -1400,10 +1433,9 @@ namespace G {
         return get_bytes($size, -1);
     }
 
-
     /**
      * PATHS AND URL HANDLING
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
 
     // Add trailing slashes
@@ -1435,20 +1467,22 @@ namespace G {
     }
 
     // Converts relative path to url
-    function relative_to_url($filepath, $root_url=null)
+    function relative_to_url($filepath, $root_url = null)
     {
         if (!check_value($root_url)) {
-            $root_url = G_ROOT_URL;
+            $root_url = get_root_url();
         }
+
         return str_replace(G_ROOT_PATH_RELATIVE, $root_url, forward_slash($filepath));
     }
 
     // Converts app URL to relative path
-    function url_to_relative($url, $root_url=null)
+    function url_to_relative($url, $root_url = null)
     {
         if (!check_value($root_url)) {
-            $root_url = G_ROOT_URL;
+            $root_url = get_root_url();
         }
+
         return str_replace($root_url, G_ROOT_PATH_RELATIVE, $url);
     }
 
@@ -1459,30 +1493,31 @@ namespace G {
     }
 
     // Converts absolute path to URL
-    function absolute_to_url($filepath, $root_url=null)
+    function absolute_to_url($filepath, $root_url = null)
     {
         if (!check_value($root_url)) {
-            $root_url = G_ROOT_URL;
+            $root_url = get_root_url();
         }
         if (G_ROOT_PATH === G_ROOT_PATH_RELATIVE) {
             return $root_url . ltrim($filepath, '/');
         }
+
         return str_replace(G_ROOT_PATH, $root_url, forward_slash($filepath));
     }
 
     // Converts app URL to absolute path
-    function url_to_absolute($url, $root_url=null)
+    function url_to_absolute($url, $root_url = null)
     {
         if (!check_value($root_url)) {
-            $root_url = G_ROOT_URL;
+            $root_url = get_root_url();
         }
+
         return str_replace($root_url, G_ROOT_PATH, $url);
     }
 
-
     /**
      * GET AND FETCH SOME DATA
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
 
     // Get current G\ version
@@ -1492,12 +1527,13 @@ namespace G {
     }
 
     // Get the current app version
-    function get_app_version($full=true)
+    function get_app_version($full = true)
     {
         if ($full) {
             return G_APP_VERSION;
         } else {
             preg_match('/\d\.\d/', G_APP_VERSION, $return);
+
             return $return[0];
         }
     }
@@ -1508,21 +1544,52 @@ namespace G {
         return get_global('settings')[$key];
     }
 
-    function get_domain()
-    {
-        return HTTP_HOST;
-    }
-
-    function get_base_url($path='')
+    function get_base_url($path = '')
     {
         $path = sanitize_relative_path($path);
-        $return = G_ROOT_URL . ltrim($path, '/');
+        $return = get_root_url() . ltrim($path, '/');
+
         return rtrim($return, '/');
     }
 
-    function get_current_url()
+    function get_host()
     {
-        return get_base_url(preg_replace('#'.G_ROOT_PATH_RELATIVE.'#', '', $_SERVER['REQUEST_URI'], 1));
+        return defined('APP_G_HTTP_HOST') ? APP_G_HTTP_HOST : G_HTTP_HOST;
+    }
+
+    function get_host_domain()
+    {
+        $url = get_root_url();
+
+        return parse_url($url)['host'];
+    }
+
+    function get_root_url()
+    {
+        return defined('APP_G_ROOT_URL') ? APP_G_ROOT_URL : G_ROOT_URL;
+    }
+
+    /**
+     * @param string Querystring keys to remove (comma separated)
+     */
+    function get_current_url($safe = true, $removeQs = [])
+    {
+        $request_uri = $_SERVER['REQUEST_URI'];
+        $request_path = rtrim(strtok($request_uri, '?'), '/');
+        if ($_SERVER['QUERY_STRING'] && $removeQs) {
+            parse_str($_SERVER['QUERY_STRING'], $parse);
+            foreach ($removeQs as $v) {
+                unset($parse[$v]);
+            }
+            $querystring = $parse ? http_build_query($parse) : null;
+            $request_uri = $request_path;
+            if ($querystring) {
+                $request_uri .= '/?' . $querystring;
+            }
+        }
+        $path = preg_replace('#' . G_ROOT_PATH_RELATIVE . '#', '', rtrim($request_uri, '/') . '/', 1);
+
+        return get_base_url($path);
     }
 
     function settings_has_db_info()
@@ -1538,10 +1605,11 @@ namespace G {
                 break;
             }
         }
+
         return $has;
     }
 
-    function get_regex_match($regex, $delimiter='/', $subject, $key=null)
+    function get_regex_match($regex, $delimiter = '/', $subject, $key = null)
     {
         preg_match($delimiter . $regex . $delimiter, $subject, $matches);
         if (array_key_exists($key, $matches)) {
@@ -1553,17 +1621,19 @@ namespace G {
 
     /**
      * Fetch the contents from an URL
-     * if $file is set the downloaed file will be saved there
+     * if $file is set the downloaed file will be saved there.
      */
-    function fetch_url($url, $file=null, $options=[])
+    function fetch_url($url, $file = null, $options = [])
     {
         if (!$url) {
             throw new Exception('missing $url in ' . __FUNCTION__);
+
             return false;
         }
 
         if (ini_get('allow_url_fopen') !== 1 && !function_exists('curl_init')) {
-            throw new Exception("Fatal error in " .__FUNCTION__. ": cURL isn't installed and allow_url_fopen is disabled. Can't perform HTTP requests.");
+            throw new Exception('Fatal error in ' . __FUNCTION__ . ": cURL isn't installed and allow_url_fopen is disabled. Can't perform HTTP requests.");
+
             return false;
         }
 
@@ -1593,7 +1663,8 @@ namespace G {
                 // Save the file to $file destination
                 $out = @fopen($file, 'wb');
                 if (!$out) {
-                    throw new Exception("Can't open " . __FUNCTION__ . "() file for read and write");
+                    throw new Exception("Can't open " . __FUNCTION__ . '() file for read and write');
+
                     return false;
                 }
                 curl_setopt($ch, CURLOPT_FILE, $out);
@@ -1607,24 +1678,28 @@ namespace G {
                 $curl_error = curl_error($ch);
                 curl_close($ch);
                 throw new Exception('Curl error ' . $curl_error);
+
                 return false;
             }
             if ($file == null) {
                 curl_close($ch);
+
                 return $file_get_contents;
             }
         } else {
             $context = stream_context_create([
-        'http' => ['ignore_errors' => true],
-      ]);
+                'http' => ['ignore_errors' => true],
+            ]);
             $result = @file_get_contents($url, false, $context);
             if (!$result) {
                 throw new Exception("Can't fetch target URL (file_get_contents)");
+
                 return false;
             }
             if ($file) {
                 if (file_put_contents($file, $result) === false) {
                     throw new Exception("Can't fetch target URL (file_put_contents)");
+
                     return false;
                 }
             } else {
@@ -1634,7 +1709,7 @@ namespace G {
     }
 
     /* get complete raw, add success + error properties */
-    function getUrlHeaders($url, $options=[])
+    function getUrlHeaders($url, $options = [])
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -1660,6 +1735,7 @@ namespace G {
             $return['raw'] = $raw;
         }
         curl_close($ch);
+
         return $return;
     }
 
@@ -1670,10 +1746,10 @@ namespace G {
     }
 
     // Get bcrypt optimal cost
-    function bcrypt_cost($time=0.2, $cost=9)
+    function bcrypt_cost($time = 0.2, $cost = 9)
     {
         do {
-            $cost++;
+            ++$cost;
             $inicio = microtime(true);
             password_hash('test', PASSWORD_BCRYPT, ['cost' => $cost]);
             $fin = microtime(true);
@@ -1684,11 +1760,11 @@ namespace G {
 
     /**
      * CONDITIONALS
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
 
     // Checks if $var is a positive integer using filter_var
-    function is_integer($var, $range=[])
+    function is_integer($var, $range = [])
     {
         $options = [];
         if (!empty($range) && is_array($range)) {
@@ -1698,6 +1774,7 @@ namespace G {
                 }
             }
         }
+
         return filter_var($var, FILTER_VALIDATE_INT, $options) !== false;
     }
 
@@ -1728,6 +1805,7 @@ namespace G {
             // At this point this thing looks like an URL
             return true;
         }
+
         return false;
     }
 
@@ -1757,10 +1835,12 @@ namespace G {
             curl_setopt($ch, CURLOPT_TIMEOUT, 120);
             $result = @curl_exec($ch);
             curl_close($ch);
+
             return $result !== false ? true : false;
         } else {
             if (ini_get('allow_url_fopen')) {
                 $result = file_get_contents($url);
+
                 return $result === false ? false : true;
             }
         }
@@ -1772,6 +1852,7 @@ namespace G {
         if (!is_string($string)) {
             return false;
         }
+
         return preg_match('/(?:ftp|https?):\/\/(\w+:\w+@)?([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}(:[0-9]{1,4}){0,1}|(?:[\w\-]+\.)+[a-z]{2,6})(?:\/[^\/#\?]+)+\.(?:jpe?g|gif|png|bmp)/i', $string);
     }
 
@@ -1784,11 +1865,30 @@ namespace G {
 
     function is_windows_os()
     {
-        return (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN' ? true : false);
+        return strtoupper(substr(PHP_OS, 0, 3)) === 'WIN' ? true : false;
+    }
+
+    function is_animated_image($filename)
+    {
+        $extension = get_file_extension($filename);
+        switch ($extension) {
+            case 'gif':
+                return is_animated_gif($filename);
+                break;
+            case 'png':
+                return is_animated_png($filename);
+                break;
+            case 'webp':
+                return is_animated_webp($filename);
+                break;
+            default:
+                return false;
+                break;
+        }
     }
 
     // Taken from http://php.net/manual/en/function.imagecreatefromgif.php#104473
-    function is_animated_image($filename)
+    function is_animated_gif($filename)
     {
         if (!($fh = @fopen($filename, 'rb'))) {
             return false;
@@ -1799,13 +1899,42 @@ namespace G {
             $count += preg_match_all('#\x00\x21\xF9\x04.{4}\x00(\x2C|\x21)#s', $chunk, $matches);
         }
         fclose($fh);
+
         return $count > 1;
     }
 
+    // Taken from https://stackoverflow.com/a/4525194/1145912
+    function is_animated_png($filename)
+    {
+        $img_bytes = file_get_contents($filename);
+        if ($img_bytes) {
+            if (strpos(
+                substr($img_bytes, 0, strpos($img_bytes, 'IDAT')),
+                'acTL'
+            ) !== false) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function is_animated_webp($filename)
+    {
+        $result = false;
+        $fh = fopen($filename, "rb");
+        fseek($fh, 12);
+        if (fread($fh, 4) === 'VP8X') {
+            fseek($fh, 16);
+            $myByte = fread($fh, 1);
+            $result = ((ord($myByte) >> 1) & 1) ? true : false;
+        }
+        fclose($fh);
+        return $result;
+    }
 
     /**
      * FILE RELATED
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
 
     // Get mimetype of $file according to your php version
@@ -1823,21 +1952,22 @@ namespace G {
     }
 
     // For now this only works for images
-    function mime_to_extension($mime, $reverse=false)
+    function mime_to_extension($mime, $reverse = false)
     {
         $mime_to_extension = array(
-            'image/x-windows-bmp'	=> 'bmp',
-            'image/x-ms-bmp'		=> 'bmp',
-            'image/bmp'				=> 'bmp',
-            'image/gif'				=> 'gif',
-            'image/pjpeg'			=> 'jpg',
-            'image/jpeg'			=> 'jpg',
-            'image/x-png'			=> 'png',
-            'image/png'				=> 'png',
-            'image/x-tiff'			=> 'tiff',
-            'image/tiff'			=> 'tiff',
-            'image/x-icon'			=> 'ico',
-            'image/x-rgb'			=> 'rgb'
+            'image/x-windows-bmp' => 'bmp',
+            'image/x-ms-bmp' => 'bmp',
+            'image/bmp' => 'bmp',
+            'image/gif' => 'gif',
+            'image/pjpeg' => 'jpg',
+            'image/jpeg' => 'jpg',
+            'image/x-png' => 'png',
+            'image/png' => 'png',
+            'image/x-tiff' => 'tiff',
+            'image/tiff' => 'tiff',
+            'image/x-icon' => 'ico',
+            'image/x-rgb' => 'rgb',
+            'image/webp' => 'webp',
         );
 
         // Used to get ext -> mime
@@ -1868,19 +1998,19 @@ namespace G {
         $mime = strtolower($info['mime']);
 
         return array(
-            'filename'	=> basename($file), // image.jpg
-            'name'		=> basename($file, '.' . get_file_extension($file)), // image
-            'width'		=> intval($info[0]),
-            'height'	=> intval($info[1]),
-            'ratio'		=> $info[0] / $info[1],
-            'size'		=> intval($filesize),
+            'filename' => basename($file), // image.jpg
+            'name' => basename($file, '.' . get_file_extension($file)), // image
+            'width' => intval($info[0]),
+            'height' => intval($info[1]),
+            'ratio' => $info[0] / $info[1],
+            'size' => intval($filesize),
             'size_formatted' => format_bytes($filesize),
-            'mime'		=> $mime,
+            'mime' => $mime,
             'extension' => mime_to_extension($mime),
-            'bits'		=> $info['bits'],
-            'channels'	=> $info['channels'],
-            'url'		=> absolute_to_url($file),
-            'md5'		=> md5_file($file)
+            'bits' => $info['bits'],
+            'channels' => $info['channels'],
+            'url' => absolute_to_url($file),
+            'md5' => md5_file($file),
         );
     }
 
@@ -1894,33 +2024,53 @@ namespace G {
         return basename($file);
     }
 
-    function get_filename_without_extension($file)
+    function get_basename_without_extension($filename)
     {
-        return preg_replace('/\\.[^.\\s]{2,4}$/', '', basename($file));
+        $extension = pathinfo($filename, PATHINFO_EXTENSION);
+        $filename = basename($filename);
+
+        return str_replace_last(".$extension", null, $filename);
+    }
+
+    function get_pathname_without_extension($filename)
+    {
+        $extension = pathinfo($filename, PATHINFO_EXTENSION);
+
+        return str_replace_last(".$extension", null, $filename);
+    }
+
+    function change_pathname_extension($filename, $extension)
+    {
+        $chop = get_pathname_without_extension($filename);
+        if ($chop == $filename) {
+            return $filename;
+        }
+
+        return "$chop.$extension";
     }
 
     /**
      * This creates .htaccess file on the target dir using the param rules
-     * This can be also used to add rules to a existing .htaccess file
+     * This can be also used to add rules to a existing .htaccess file.
      */
-    function generate_htaccess($rules, $directory, $before=null, $output=false)
+    function generate_htaccess($rules, $directory, $before = null, $output = false)
     {
-        $htaccess = $directory.'.htaccess';
+        $htaccess = $directory . '.htaccess';
 
         $rules_stock = [
-            'static'	=>  '<Files .*>'."\n".
-                            'order allow,deny'."\n".
-                            'deny from all'."\n".
-                            '</Files>'."\n\n".
-                            'AddHandler cgi-script .php .php3 .phtml .pl .py .jsp .asp .htm .shtml .sh .cgi .fcgi'."\n".
-                            'Options -ExecCGI',
+            'static' => '<Files .*>' . "\n" .
+                'order allow,deny' . "\n" .
+                'deny from all' . "\n" .
+                '</Files>' . "\n\n" .
+                'AddHandler cgi-script .php .php3 .phtml .pl .py .jsp .asp .htm .shtml .sh .cgi .fcgi' . "\n" .
+                'Options -ExecCGI',
 
-            'deny_php'	=>	'<FilesMatch "\.php$">'."\n".
-                            'Order Deny,Allow'."\n".
-                            'Deny from all'."\n".
-                            '</FilesMatch>',
+            'deny_php' => '<FilesMatch "\.php$">' . "\n" .
+                'Order Deny,Allow' . "\n" .
+                'Deny from all' . "\n" .
+                '</FilesMatch>',
 
-            'deny'		=>	'deny from all'
+            'deny' => 'deny from all',
         ];
 
         if (array_key_exists($rules, $rules_stock)) {
@@ -1933,10 +2083,10 @@ namespace G {
                 $done = true;
             } else {
                 if (!is_null($before)) {
-                    $rules = str_replace($before, $rules."\n".$before, $fgc);
+                    $rules = str_replace($before, $rules . "\n" . $before, $fgc);
                     $f = 'w';
                 } else {
-                    $rules = "\n\n".$rules;
+                    $rules = "\n\n" . $rules;
                     $f = 'a';
                 }
             }
@@ -1951,9 +2101,11 @@ namespace G {
             }
             if (fwrite($fh, $rules)) {
                 @fclose($fh);
+
                 return $output ? $rules : true;
             } else {
                 @fclose($fh);
+
                 return $output ? $rules : false;
             }
         } else {
@@ -1964,14 +2116,14 @@ namespace G {
     /**
      * Get a safe filename
      * $method: original | random | mixed | id
-     * $filename: name of the original file
+     * $filename: name of the original file.
      */
     function get_filename_by_method($method, $filename)
     {
         $max_length = 200; // Safe limit, ideally this should be 255 - 4
 
         $extension = get_file_extension($filename);
-        $clean_filename = substr($filename, 0, -(strlen($extension) + 1));
+        $clean_filename = substr($filename, 0, - (strlen($extension) + 1));
         $clean_filename = unaccent_string($clean_filename); // change áéíóú to aeiou
         $clean_filename = preg_replace('/\s+/', '-', $clean_filename); // change all spaces with dash
         $clean_filename = trim($clean_filename, '-'); // get rid of those ugly dashes
@@ -1989,10 +2141,10 @@ namespace G {
             default:
             case 'original':
                 $name = $capped_filename;
-            break;
+                break;
             case 'random':
                 $name = random_string(32);
-            break;
+                break;
             case 'mixed':
                 $mixed_chars_length = 16;
                 $mixed_chars = random_string($mixed_chars_length);
@@ -2002,16 +2154,16 @@ namespace G {
                     // Well done Morty you little piece of shit
                 }
                 $name = $capped_filename . $mixed_chars;
-            break;
+                break;
             case 'id':
                 $name = $unlimited_filename;
-            break;
+                break;
         }
 
         return $name . '.' . $extension; // 200 + 4
     }
 
-    function name_unique_file($path, $method='original', $filename)
+    function name_unique_file($path, $method = 'original', $filename)
     {
         $file = $path . get_filename_by_method($method, $filename);
         if ($method == 'id') {
@@ -2023,18 +2175,18 @@ namespace G {
             }
             $file = $path . get_filename_by_method($method, $filename);
         }
+
         return $file;
     }
 
-
     /**
      * IMAGE RELATED
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
 
     /**
      * PNG ALPHA CHANNEL SUPPORT for imagecopymerge();
-     * by Sina Salek
+     * by Sina Salek.
      *
      * Bugfix by Ralph Voigt (bug which causes it
      * to work only for $src_x = $src_y = 0.
@@ -2044,7 +2196,7 @@ namespace G {
      **/
     function imagecopymerge_alpha($dst_im, $src_im, $dst_x, $dst_y, $src_x, $src_y, $src_w, $src_h, $pct, $dst_im_ext)
     {
-        if ($dst_im_ext=='jpg' && $pct==100) {
+        if ($dst_im_ext == 'jpg' && $pct == 100) {
             imagealphablending($dst_im, true);
             imagealphablending($src_im, true);
             imagecopy($dst_im, $src_im, $dst_x, $dst_y, 0, 0, $src_w, $src_h);
@@ -2063,22 +2215,28 @@ namespace G {
                 imagefill($cut, 0, 0, $color);
             }
 
-            if ($dst_im_ext=='png') {
+            if ($dst_im_ext == 'png') {
                 imagealphablending($dst_im, false);
-                imagesavealpha($dst_im, true);
+                $imagesavealpha = true;
             } else {
-                if ($dst_im_ext!=='jpg') {
-                    imagetruecolortopalette($dst_im, true, 255);
-                    imagesavealpha($dst_im, false);
+                if ($dst_im_ext == 'webp') {
+                    imagepalettetotruecolor($dst_im);
+                    $imagesavealpha = true;
+                } else {
+                    if ($dst_im_ext !== 'jpg') {
+                        imagetruecolortopalette($dst_im, true, 255);
+                        $imagesavealpha = false;
+                    }
                 }
             }
 
-            if ($dst_im_ext=='png' && $colors_total==0) {
-                if ($pct<100) {
+            imagesavealpha($dst_im, $imagesavealpha);
+
+            if (in_array($dst_im_ext, ['png', 'webp']) && $colors_total == 0) {
+                if ($pct < 100) {
                     imagefilteropacity($src_im, $pct);
                 }
                 imagealphablending($dst_im, true);
-                imagesavealpha($dst_im, true);
                 imagecopy($dst_im, $src_im, $dst_x, $dst_y, 0, 0, $src_w, $src_h);
                 imagealphablending($dst_im, false);
             } else {
@@ -2108,8 +2266,8 @@ namespace G {
 
         //find the most opaque pixel in the image (the one with the smallest alpha value)
         $minalpha = 127;
-        for ($x = 0; $x < $w; $x++) {
-            for ($y = 0; $y < $h; $y++) {
+        for ($x = 0; $x < $w; ++$x) {
+            for ($y = 0; $y < $h; ++$y) {
                 $alpha = (imagecolorat($img, $x, $y) >> 24) & 0xFF;
                 if ($alpha < $minalpha) {
                     $minalpha = $alpha;
@@ -2118,8 +2276,8 @@ namespace G {
         }
 
         //loop through image pixels and modify alpha for each
-        for ($x = 0; $x < $w; $x++) {
-            for ($y = 0; $y < $h; $y++) {
+        for ($x = 0; $x < $w; ++$x) {
+            for ($y = 0; $y < $h; ++$y) {
                 //get current alpha value (represents the TANSPARENCY!)
                 $colorxy = imagecolorat($img, $x, $y);
                 $alpha = ($colorxy >> 24) & 0xFF;
@@ -2137,6 +2295,7 @@ namespace G {
                 }
             }
         }
+
         return true;
     }
 
@@ -2194,6 +2353,7 @@ namespace G {
                 return 8;
             }
         }
+
         return 0;
     }
 
@@ -2202,12 +2362,13 @@ namespace G {
     // https://github.com/Chevereto/Chevereto-Free/pull/35
     function imagecreatefrombmp($file)
     {
-        if (function_exists('imagecreatefrombmp')) {
-            return imagecreatefrombmp($file);
-        }
+        // if (function_exists('imagecreatefrombmp')) {
+        //     return imagecreatefrombmp($file);
+        // }
         // version 1.00
         if (!($fh = fopen($file, 'rb'))) {
             trigger_error('imagecreatefrombmp: Can not open ' . $file, E_USER_WARNING);
+
             return false;
         }
         // read file header
@@ -2215,6 +2376,7 @@ namespace G {
         // check for bitmap
         if ($meta['type'] != 19778) {
             trigger_error('imagecreatefrombmp: ' . $file . ' is not a bitmap!', E_USER_WARNING);
+
             return false;
         }
         // read image header
@@ -2238,7 +2400,7 @@ namespace G {
         }
         // set bytes and padding
         $meta['bytes'] = $meta['bits'] / 8;
-        $meta['decal'] = 4 - (4 * (($meta['width'] * $meta['bytes'] / 4)- floor($meta['width'] * $meta['bytes'] / 4)));
+        $meta['decal'] = 4 - (4 * (($meta['width'] * $meta['bytes'] / 4) - floor($meta['width'] * $meta['bytes'] / 4)));
         if ($meta['decal'] == 4) {
             $meta['decal'] = 0;
         }
@@ -2250,6 +2412,7 @@ namespace G {
                 $meta['imagesize'] = @filesize($file) - $meta['offset'];
                 if ($meta['imagesize'] < 1) {
                     trigger_error('imagecreatefrombmp: Can not obtain filesize of ' . $file . '!', E_USER_WARNING);
+
                     return false;
                 }
             }
@@ -2286,41 +2449,38 @@ namespace G {
                     case 32:
                         if (!($part = substr($data, $p, 4))) {
                             trigger_error($error, E_USER_WARNING);
+
                             return $im;
                         }
                         $color = unpack('V', $part);
-                        $color[1] = (($color[1] & $meta['rMask']) >> get_mask_bit_shift(32, $meta['rMask'])) * 65536 +
-                                (($color[1] & $meta['gMask']) >> get_mask_bit_shift(32, $meta['gMask'])) * 256 +
-                                (($color[1] & $meta['bMask']) >> get_mask_bit_shift(32, $meta['bMask']));
-                    break;
+                        $color[1] = (($color[1] & $meta['rMask']) >> get_mask_bit_shift(32, $meta['rMask'])) * 65536 + (($color[1] & $meta['gMask']) >> get_mask_bit_shift(32, $meta['gMask'])) * 256 + (($color[1] & $meta['bMask']) >> get_mask_bit_shift(32, $meta['bMask']));
+                        break;
                     case 24:
                         if (!($part = substr($data, $p, 3))) {
                             trigger_error($error, E_USER_WARNING);
+
                             return $im;
                         }
                         $color = unpack('V', $part . $vide);
-                        $color[1] = (($color[1] & $meta['rMask']) >> get_mask_bit_shift(24, $meta['rMask'])) * 65536 +
-                                (($color[1] & $meta['gMask']) >> get_mask_bit_shift(24, $meta['gMask'])) * 256 +
-                                (($color[1] & $meta['bMask']) >> get_mask_bit_shift(24, $meta['bMask']));
+                        $color[1] = (($color[1] & $meta['rMask']) >> get_mask_bit_shift(24, $meta['rMask'])) * 65536 + (($color[1] & $meta['gMask']) >> get_mask_bit_shift(24, $meta['gMask'])) * 256 + (($color[1] & $meta['bMask']) >> get_mask_bit_shift(24, $meta['bMask']));
                         break;
                     case 16:
                         if (!($part = substr($data, $p, 2))) {
                             trigger_error($error, E_USER_WARNING);
+
                             return $im;
                         }
                         $color = unpack('v', $part);
-                        $color[1] = (($color[1] & $meta['rMask']) >> get_mask_bit_shift(16, $meta['rMask'])) * 65536 +
-                                (($color[1] & $meta['gMask']) >> get_mask_bit_shift(16, $meta['gMask'])) * 256 +
-                                (($color[1] & $meta['bMask']) << 3);
+                        $color[1] = (($color[1] & $meta['rMask']) >> get_mask_bit_shift(16, $meta['rMask'])) * 65536 + (($color[1] & $meta['gMask']) >> get_mask_bit_shift(16, $meta['gMask'])) * 256 + (($color[1] & $meta['bMask']) << 3);
                         break;
                     case 8:
                         $color = unpack('n', $vide . substr($data, $p, 1));
-                        $color[1] = $palette[ $color[1] + 1 ];
+                        $color[1] = $palette[$color[1] + 1];
                         break;
                     case 4:
                         $color = unpack('n', $vide . substr($data, floor($p), 1));
                         $color[1] = ($p * 2) % 2 == 0 ? $color[1] >> 4 : $color[1] & 0x0F;
-                        $color[1] = $palette[ $color[1] + 1 ];
+                        $color[1] = $palette[$color[1] + 1];
                         break;
                     case 1:
                         $color = unpack('n', $vide . substr($data, floor($p), 1));
@@ -2350,26 +2510,28 @@ namespace G {
                                 $color[1] = ($color[1] & 0x1);
                                 break;
                         }
-                        $color[1] = $palette[ $color[1] + 1 ];
+                        $color[1] = $palette[$color[1] + 1];
                         break;
                     default:
                         trigger_error('imagecreatefrombmp: ' . $file . ' has ' . $meta['bits'] . ' bits and this is not supported!', E_USER_WARNING);
+
                         return false;
                 }
                 imagesetpixel($im, $x, $y, $color[1]);
-                $x++;
+                ++$x;
                 $p += $meta['bytes'];
             }
-            $y--;
+            --$y;
             $p += $meta['decal'];
         }
         fclose($fh);
+
         return $im;
     }
 
     /**
      * JSON
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
 
     // Prepare json to only serve XMLHttpRequest
@@ -2385,7 +2547,7 @@ namespace G {
 
     function json_error($args)
     {
-        if (func_num_args($args) == 1 and is_object($args)) {
+        if (func_num_args() == 1 and is_object($args)) {
             if (method_exists($args, 'getMessage') and method_exists($args, 'getCode')) {
                 $message = $args->getMessage();
                 $code = $args->getCode();
@@ -2395,7 +2557,7 @@ namespace G {
                 return;
             }
         } else {
-            if (func_num_args($args) == 1) {
+            if (func_num_args() == 1) {
                 $message = $args;
                 $code = null;
                 $context = null;
@@ -2411,20 +2573,20 @@ namespace G {
             'error' => array(
                 'message' => $message,
                 'code' => $code,
-                'context' => $context
-            )
+                'context' => $context,
+            ),
         );
     }
 
     /**
      * HTTP
-     * ---------------------------------------------------------------------
+     * ---------------------------------------------------------------------.
      */
 
     /**
-     * Redirects to another URL
+     * Redirects to another URL.
      */
-    function redirect($to='', $status=301)
+    function redirect($to = '', $status = 301)
     {
         if (!filter_var($to, FILTER_VALIDATE_URL)) {
             $to = get_base_url($to);
@@ -2438,7 +2600,8 @@ namespace G {
     }
 
     /**
-     * Set HTTP status header from status code
+     * Set HTTP status header from status code.
+     *
      * @Inspired from WordPress
      */
     function set_status_header($code)
@@ -2452,67 +2615,69 @@ namespace G {
             $protocol = 'HTTP/1.0';
         }
         $set_status_header = "$protocol $code $desc";
+
         return @header($set_status_header, true, $code);
     }
 
     /**
-     * Gets header description according to its code
+     * Gets header description according to its code.
+     *
      * @Inspired from WordPress
      */
     function get_set_status_header_desc($code)
     {
         $codes_to_desc = array(
-                100 => 'Continue',
-                101 => 'Switching Protocols',
-                102 => 'Processing',
-                200 => 'OK',
-                201 => 'Created',
-                202 => 'Accepted',
-                203 => 'Non-Authoritative Information',
-                204 => 'No Content',
-                205 => 'Reset Content',
-                206 => 'Partial Content',
-                207 => 'Multi-Status',
-                226 => 'IM Used',
-                300 => 'Multiple Choices',
-                301 => 'Moved Permanently',
-                302 => 'Found',
-                303 => 'See Other',
-                304 => 'Not Modified',
-                305 => 'Use Proxy',
-                306 => 'Reserved',
-                307 => 'Temporary Redirect',
-                400 => 'Bad Request',
-                401 => 'Unauthorized',
-                402 => 'Payment Required',
-                403 => 'Forbidden',
-                404 => 'Not Found',
-                405 => 'Method Not Allowed',
-                406 => 'Not Acceptable',
-                407 => 'Proxy Authentication Required',
-                408 => 'Request Timeout',
-                409 => 'Conflict',
-                410 => 'Gone',
-                411 => 'Length Required',
-                412 => 'Precondition Failed',
-                413 => 'Request Entity Too Large',
-                414 => 'Request-URI Too Long',
-                415 => 'Unsupported Media Type',
-                416 => 'Requested Range Not Satisfiable',
-                417 => 'Expectation Failed',
-                422 => 'Unprocessable Entity',
-                423 => 'Locked',
-                424 => 'Failed Dependency',
-                426 => 'Upgrade Required',
-                500 => 'Internal Server Error',
-                501 => 'Not Implemented',
-                502 => 'Bad Gateway',
-                503 => 'Service Unavailable',
-                504 => 'Gateway Timeout',
-                505 => 'HTTP Version Not Supported',
-                506 => 'Variant Also Negotiates',
-                507 => 'Insufficient Storage',
-                510 => 'Not Extended'
+            100 => 'Continue',
+            101 => 'Switching Protocols',
+            102 => 'Processing',
+            200 => 'OK',
+            201 => 'Created',
+            202 => 'Accepted',
+            203 => 'Non-Authoritative Information',
+            204 => 'No Content',
+            205 => 'Reset Content',
+            206 => 'Partial Content',
+            207 => 'Multi-Status',
+            226 => 'IM Used',
+            300 => 'Multiple Choices',
+            301 => 'Moved Permanently',
+            302 => 'Found',
+            303 => 'See Other',
+            304 => 'Not Modified',
+            305 => 'Use Proxy',
+            306 => 'Reserved',
+            307 => 'Temporary Redirect',
+            400 => 'Bad Request',
+            401 => 'Unauthorized',
+            402 => 'Payment Required',
+            403 => 'Forbidden',
+            404 => 'Not Found',
+            405 => 'Method Not Allowed',
+            406 => 'Not Acceptable',
+            407 => 'Proxy Authentication Required',
+            408 => 'Request Timeout',
+            409 => 'Conflict',
+            410 => 'Gone',
+            411 => 'Length Required',
+            412 => 'Precondition Failed',
+            413 => 'Request Entity Too Large',
+            414 => 'Request-URI Too Long',
+            415 => 'Unsupported Media Type',
+            416 => 'Requested Range Not Satisfiable',
+            417 => 'Expectation Failed',
+            422 => 'Unprocessable Entity',
+            423 => 'Locked',
+            424 => 'Failed Dependency',
+            426 => 'Upgrade Required',
+            500 => 'Internal Server Error',
+            501 => 'Not Implemented',
+            502 => 'Bad Gateway',
+            503 => 'Service Unavailable',
+            504 => 'Gateway Timeout',
+            505 => 'HTTP Version Not Supported',
+            506 => 'Variant Also Negotiates',
+            507 => 'Insufficient Storage',
+            510 => 'Not Extended',
         );
         if (check_value($codes_to_desc[$code])) {
             return $codes_to_desc[$code];
@@ -2525,11 +2690,133 @@ namespace G {
         return trim(preg_replace('/\s*(?:\*\/|\?>).*/', '', $string));
     }
 
+    /**
+     * function xml2array.
+     *
+     * This function is part of the PHP manual.
+     *
+     * The PHP manual text and comments are covered by the Creative Commons
+     * Attribution 3.0 License, copyright (c) the PHP Documentation Group
+     *
+     * @author  k dot antczak at livedata dot pl
+     * @date    2011-04-22 06:08 UTC
+     *
+     * @see    http://www.php.net/manual/en/ref.simplexml.php#103617
+     *
+     * @license http://www.php.net/license/index.php#doc-lic
+     * @license http://creativecommons.org/licenses/by/3.0/
+     * @license CC-BY-3.0 <http://spdx.org/licenses/CC-BY-3.0>
+     */
+    function xml2array($xmlObject, $out = array())
+    {
+        foreach ((array) $xmlObject as $index => $node) {
+            $out[$index] = (is_object($node)) ? xml2array($node) : $node;
+        }
+
+        return $out;
+    }
+
+    /**
+     * @param string $domain Pass $_SERVER['SERVER_NAME'] here
+     * @param bool   $debug
+     *
+     * @debug bool $debug
+     *
+     * @return string
+     *
+     * @see https://gist.github.com/pocesar/5366899
+     */
+    function get_domain($domain, $debug = false)
+    {
+        $original = $domain = strtolower($domain);
+        if (filter_var($domain, FILTER_VALIDATE_IP)) {
+            return $domain;
+        }
+        $debug ? print('<strong style="color:green">&raquo;</strong> Parsing: ' . $original) : false;
+        $arr = array_slice(array_filter(explode('.', $domain, 4), function ($value) {
+            return $value !== 'www';
+        }), 0); //rebuild array indexes
+        if (count($arr) > 2) {
+            $count = count($arr);
+            $_sub = explode('.', $count === 4 ? $arr[3] : $arr[2]);
+            $debug ? print(" (parts count: {$count})") : false;
+            if (count($_sub) === 2) { // two level TLD
+                $removed = array_shift($arr);
+                if ($count === 4) { // got a subdomain acting as a domain
+                    $removed = array_shift($arr);
+                }
+                $debug ? print("<br>\n" . '[*] Two level TLD: <strong>' . join('.', $_sub) . '</strong> ') : false;
+            } elseif (count($_sub) === 1) { // one level TLD
+                $removed = array_shift($arr); //remove the subdomain
+                if (strlen($_sub[0]) === 2 && $count === 3) { // TLD domain must be 2 letters
+                    array_unshift($arr, $removed);
+                } else {
+                    // non country TLD according to IANA
+                    $tlds = array(
+                        'aero',
+                        'arpa',
+                        'asia',
+                        'biz',
+                        'cat',
+                        'com',
+                        'coop',
+                        'edu',
+                        'gov',
+                        'info',
+                        'jobs',
+                        'mil',
+                        'mobi',
+                        'museum',
+                        'name',
+                        'net',
+                        'org',
+                        'post',
+                        'pro',
+                        'tel',
+                        'travel',
+                        'xxx',
+                    );
+                    if (count($arr) > 2 && in_array($_sub[0], $tlds) !== false) { //special TLD don't have a country
+                        array_shift($arr);
+                    }
+                }
+                $debug ? print("<br>\n" . '[*] One level TLD: <strong>' . join('.', $_sub) . '</strong> ') : false;
+            } else { // more than 3 levels, something is wrong
+                for ($i = count($_sub); $i > 1; --$i) {
+                    $removed = array_shift($arr);
+                }
+                $debug ? print("<br>\n" . '[*] Three level TLD: <strong>' . join('.', $_sub) . '</strong> ') : false;
+            }
+        } elseif (count($arr) === 2) {
+            $arr0 = array_shift($arr);
+            if (
+                strpos(join('.', $arr), '.') === false
+                && in_array($arr[0], array('localhost', 'test', 'invalid')) === false
+            ) { // not a reserved domain
+                $debug ? print("<br>\n" . 'Seems invalid domain: <strong>' . join('.', $arr) . '</strong> re-adding: <strong>' . $arr0 . '</strong> ') : false;
+                // seems invalid domain, restore it
+                array_unshift($arr, $arr0);
+            }
+        }
+        $debug ? print("<br>\n" . '<strong style="color:gray">&laquo;</strong> Done parsing: <span style="color:red">' . $original . '</span> as <span style="color:blue">' . join('.', $arr) . "</span><br>\n") : false;
+
+        return join('.', $arr);
+    }
+    
+    function getQsParams()
+    {
+        $a = array();
+        foreach (explode("&", $_SERVER["QUERY_STRING"]) as $q) {
+            $p = explode('=', $q, 2);
+            $a[$p[0]] = isset($p[1]) ? $p[1] : '';
+        }
+        return $a;
+    }
 } // G Namespace
 
 // Global namespace
-namespace {
 
+namespace {
     function class_autoloader($class)
     {
         $array = ['class' => $class, 'exists' => class_exists($class)];
@@ -2537,7 +2824,7 @@ namespace {
         $last_key = key(array_slice($explode, -1, 1, true));
         $file = ($explode[0] == 'G' ? G_PATH_CLASSES : G_APP_PATH_CLASSES) . 'class.' . strtolower($explode[$last_key]) . '.php';
         if (file_exists($file)) {
-            require_once($file);
+            require_once $file;
         } else {
             //trigger_error("Can't autoload ".$class.' class. Class should be at '. $file, E_USER_ERROR);
             // Don't trigger an error so it allows multiple autoloaders to be called
@@ -2545,7 +2832,7 @@ namespace {
     }
     spl_autoload_register('class_autoloader');
 
-    /**
+    /*
      * A Compatibility library with PHP 5.5's simplified password hashing API.
      *
      * @author Anthony Ferrara <ircmaxell@php.net>
@@ -2558,26 +2845,29 @@ namespace {
         define('PASSWORD_DEFAULT', PASSWORD_BCRYPT);
 
         /**
-         * Hash the password using the specified algorithm
+         * Hash the password using the specified algorithm.
          *
          * @param string $password The password to hash
          * @param int    $algo     The algorithm to use (Defined by PASSWORD_* constants)
          * @param array  $options  The options for the algorithm to use
          *
-         * @return string|false The hashed password, or false on error.
+         * @return string|false the hashed password, or false on error
          */
         function password_hash($password, $algo, array $options = array())
         {
             if (!function_exists('crypt')) {
-                trigger_error("Crypt must be loaded for password_hash to function", E_USER_WARNING);
+                trigger_error('Crypt must be loaded for password_hash to function', E_USER_WARNING);
+
                 return null;
             }
             if (!is_string($password)) {
-                trigger_error("password_hash(): Password must be a string", E_USER_WARNING);
+                trigger_error('password_hash(): Password must be a string', E_USER_WARNING);
+
                 return null;
             }
             if (!is_int($algo)) {
-                trigger_error("password_hash() expects parameter 2 to be long, " . gettype($algo) . " given", E_USER_WARNING);
+                trigger_error('password_hash() expects parameter 2 to be long, ' . gettype($algo) . ' given', E_USER_WARNING);
+
                 return null;
             }
             switch ($algo) {
@@ -2588,6 +2878,7 @@ namespace {
                         $cost = $options['cost'];
                         if ($cost < 4 || $cost > 31) {
                             trigger_error(sprintf('password_hash(): Invalid bcrypt cost parameter specified: %d', $cost), E_USER_WARNING);
+
                             return null;
                         }
                     }
@@ -2595,10 +2886,11 @@ namespace {
                     $raw_salt_len = 16;
                     // The length required in the final serialization
                     $required_salt_len = 22;
-                    $hash_format = sprintf("$2y$%02d$", $cost);
+                    $hash_format = sprintf('$2y$%02d$', $cost);
                     break;
                 default:
                     trigger_error(sprintf('password_hash(): Unknown password hashing algorithm: %s', $algo), E_USER_WARNING);
+
                     return null;
             }
             if (isset($options['salt'])) {
@@ -2620,10 +2912,12 @@ namespace {
                     case 'resource':
                     default:
                         trigger_error('password_hash(): Non-string salt parameter supplied', E_USER_WARNING);
+
                         return null;
                 }
                 if (strlen($salt) < $required_salt_len) {
                     trigger_error(sprintf('password_hash(): Provided salt is too short: %d expecting %d', strlen($salt), $required_salt_len), E_USER_WARNING);
+
                     return null;
                 } elseif (0 == preg_match('#^[a-zA-Z0-9./]+$#D', $salt)) {
                     $salt = str_replace('+', '.', base64_encode($salt));
@@ -2657,7 +2951,7 @@ namespace {
                 }
                 if (!$buffer_valid || strlen($buffer) < $raw_salt_len) {
                     $bl = strlen($buffer);
-                    for ($i = 0; $i < $raw_salt_len; $i++) {
+                    for ($i = 0; $i < $raw_salt_len; ++$i) {
                         if ($i < $bl) {
                             $buffer[$i] = $buffer[$i] ^ chr(mt_rand(0, 255));
                         } else {
@@ -2694,7 +2988,7 @@ namespace {
          *
          * @param string $hash The password hash to extract info from
          *
-         * @return array The array of information about the hash.
+         * @return array the array of information about the hash
          */
         function password_get_info($hash)
         {
@@ -2706,14 +3000,15 @@ namespace {
             if (substr($hash, 0, 4) == '$2y$' && strlen($hash) == 60) {
                 $return['algo'] = PASSWORD_BCRYPT;
                 $return['algoName'] = 'bcrypt';
-                list($cost) = sscanf($hash, "$2y$%d$");
+                list($cost) = sscanf($hash, '$2y$%d$');
                 $return['options']['cost'] = $cost;
             }
+
             return $return;
         }
 
         /**
-         * Determine if the password hash needs to be rehashed according to the options provided
+         * Determine if the password hash needs to be rehashed according to the options provided.
          *
          * If the answer is true, after validating the password using password_verify, rehash it.
          *
@@ -2721,7 +3016,7 @@ namespace {
          * @param int    $algo    The algorithm used for new password hashes
          * @param array  $options The options array passed to password_hash
          *
-         * @return boolean True if the password needs to be rehashed.
+         * @return bool true if the password needs to be rehashed
          */
         function password_needs_rehash($hash, $algo, array $options = array())
         {
@@ -2737,21 +3032,23 @@ namespace {
                     }
                     break;
             }
+
             return false;
         }
 
         /**
-         * Verify a password against a hash using a timing attack resistant approach
+         * Verify a password against a hash using a timing attack resistant approach.
          *
          * @param string $password The password to verify
          * @param string $hash     The hash to verify against
          *
-         * @return boolean If the password matches the hash
+         * @return bool If the password matches the hash
          */
         function password_verify($password, $hash)
         {
             if (!function_exists('crypt')) {
                 trigger_error('Crypt must be loaded for password_verify to function', E_USER_WARNING);
+
                 return false;
             }
             $ret = crypt($password, $hash);
@@ -2760,12 +3057,11 @@ namespace {
             }
 
             $status = 0;
-            for ($i = 0; $i < strlen($ret); $i++) {
+            for ($i = 0; $i < strlen($ret); ++$i) {
                 $status |= (ord($ret[$i]) ^ ord($hash[$i]));
             }
 
             return $status === 0;
         }
     }
-
 }

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2018-06-29 19:18+0000\n"
-"PO-Revision-Date: 2018-06-29 19:18+0000\n"
+"POT-Creation-Date: 2020-04-16 20:33+0000\n"
+"PO-Revision-Date: 2020-04-16 20:33+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -10,19 +10,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-msgid "To use all the features of this site you must be logged in."
-msgstr "当サイトの全ての機能をご利用頂くにはログインが必要です。"
-
-#, php-format
-msgid "If you don't have an account you can <a href=\"%s\">sign up</a> right now."
-msgstr "アカウントをお持ちでなければ、今すぐ<a href=\"%s\">アカウントを作成</a>いただくことができます。"
-
-msgid "Decode ID"
-msgstr "デコードID"
-
-msgid "Encode ID"
-msgstr "エンコードID"
 
 #: ../../../app/install/installer.php:1168
 #: ../../../app/install/installer.php:1177
@@ -97,6 +84,62 @@ msgstr "コミュニティ"
 msgid "Personal"
 msgstr "個人"
 
+#: ../../../app/install/update/template/update.js:19
+#, javascript-format
+msgid "Installed version is v%s"
+msgstr "インストールされているバージョンは v%s"
+
+#: ../../../app/install/update/template/update.js:26
+#: ../../../app/install/update/template/update.js:55
+#: ../../../app/install/update/template/update.js:78
+#, javascript-format
+msgid "Can't connect to %s"
+msgstr "%s に接続できません。"
+
+#: ../../../app/install/update/template/update.js:30
+#, javascript-format
+msgid "Last available release is v%s"
+msgstr "最新版は v%s です"
+
+#: ../../../app/install/update/template/update.js:33
+msgid "Update needed, proceeding to download"
+msgstr "更新が必要です、ダウンロードをおこないます。"
+
+#: ../../../app/install/update/template/update.js:40
+msgid "No update needed"
+msgstr "更新の必要はありません。"
+
+#: ../../../app/install/update/template/update.js:41
+msgid "System files already up to date"
+msgstr "システムファイルは既に更新されています。"
+
+#: ../../../app/install/update/template/update.js:49
+#, javascript-format
+msgid "Starting v%s download"
+msgstr "v%sのダウンロードを開始しています。"
+
+#: ../../../app/install/update/template/update.js:60
+#, javascript-format
+msgid "Downloaded v%s, proceeding to extraction"
+msgstr "v%sのダウンロードが完了しました。抽出しています。"
+
+#: ../../../app/install/update/template/update.js:72
+#, javascript-format
+msgid "Attempting to extract v%s"
+msgstr "v%sの抽出を試みています。"
+
+#: ../../../app/install/update/template/update.js:82
+msgid "Extraction completed"
+msgstr "抽出が完了しました。"
+
+#: ../../../app/install/update/template/update.js:84
+msgid "Proceding to install the update"
+msgstr "更新のインストールが進行中"
+
+#: ../../../app/install/update/template/update.js:111
+msgid "Update failed"
+msgstr "更新に失敗しました。"
+
 #: ../../../app/install/update/template/update.php:2
 msgid "Update in progress"
 msgstr "進行中の更新"
@@ -135,6 +178,378 @@ msgstr "%sディレクトリを作成できません - %e"
 #, php-format
 msgid "Can't update %s file - %e"
 msgstr "%sファイルを更新できません - %e"
+
+#: ../../../app/routes/route.account.php:508
+#: ../../../app/routes/route.signup.php:236
+#: ../../../content/pages/default/contact.php:132
+#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
+#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
+msgid "Check the errors in the form to continue."
+msgstr "先に進むためには、フォーム内のエラーを修正してください。"
+
+#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
+#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
+#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
+#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
+#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
+#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
+msgid "You must enter the album name."
+msgstr "アルバム名を入力して下さい。"
+
+#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
+#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
+#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
+#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
+msgid "Confirm"
+msgstr "確認"
+
+#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
+msgid "Select existing album"
+msgstr "既に存在するアルバムを選択"
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "エラーが発生しました。後ほど、再度お試し下さい。"
+
+#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
+#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
+msgid "Please select a valid image file type."
+msgstr "有効な画像ファイル形式を選択して下さい。"
+
+#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
+#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
+#, javascript-format
+msgid "Please select a picture of at most %s size."
+msgstr "%s以内の画像を選択して下さい。"
+
+#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
+msgid "Profile image updated."
+msgstr "プロフィール画像をアップロード"
+
+#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
+msgid "Profile background image updated."
+msgstr "プロフィールの背景画像をアップロード"
+
+#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
+msgid "Profile background image deleted."
+msgstr "プロフィールの背景画像が削除されました。"
+
+#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
+msgid "Error deleting profile background image."
+msgstr "プロフィールページの背景画像の削除でエラーが発生しました。"
+
+#: ../../../app/routes/route.account.php:360
+#: ../../../app/routes/route.settings.php:327
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
+#: ../../../app/themes/Peafowl/views/settings.php:313
+#: ../../../app/themes/Peafowl/views/settings.php:330
+#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
+msgid "Passwords don't match"
+msgstr "パスワードが一致しません。"
+
+#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "Update available v%s"
+msgstr "v%sの更新が利用可能です。"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
+msgstr "このシステムで利用可能な更新が存在します。このアップデートを自動でダウンロードしてインストールするか、%sにアクセスしてダウンロードをすることができます。"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "The release notes for this update are:"
+msgstr "このアップデートのリリースノート："
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "Update now"
+msgstr "今すぐ更新する"
+
+#: ../../../app/themes/Peafowl/header.php:285
+#: ../../../app/themes/Peafowl/header.php:332
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/form_album.php:9
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/login.php:22
+#: ../../../app/themes/Peafowl/views/login.php:62
+#: ../../../app/themes/Peafowl/views/settings.php:354
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../app/themes/Peafowl/views/signup.php:22
+#: ../../../app/themes/Peafowl/views/signup.php:73
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
+#: ../../../lib/Peafowl/peafowl.min.js:31
+#: ../../../lib/Peafowl/peafowl.min.js:140
+msgid "or"
+msgstr "または"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "キャンセル"
+
+#, javascript-format
+msgid "This website is running latest %s version"
+msgstr "このサイトは、最新の %s 版で動作しています"
+
+#: ../../../app/themes/Peafowl/header.php:381
+#: ../../../app/themes/Peafowl/views/settings.php:348
+#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
+msgid "loading"
+msgstr "読み込み中"
+
+msgid "Toggle select"
+msgstr "選択をトグル"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "いいね！"
+
+msgid "Toggle flag"
+msgstr "フラグをトグル"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
+msgid "Edit"
+msgstr "編集"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "アルバム"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:607
+#: ../../../app/themes/Peafowl/views/dashboard.php:884
+#: ../../../app/themes/Peafowl/views/dashboard.php:933
+msgid "Delete"
+msgstr "削除"
+
+#: ../../../app/themes/Peafowl/header.php:222
+msgid "Close"
+msgstr "閉じる"
+
+msgid "Previous"
+msgstr "前へ"
+
+msgid "Next"
+msgstr "次へ"
+
+#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
+msgid "Clipboard image"
+msgstr "クリップボードの画像"
+
+#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
+msgid "File too big."
+msgstr "ファイルが大きすぎます。"
+
+msgid "Invalid or unsupported file format."
+msgstr "無効か非対応のファイル形式です。"
+
+#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
+#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
+msgid "Some files couldn't be added"
+msgstr "いくつかのファイルが追加できませんでした。"
+
+#: ../../../app/lib/classes/class.listing.php:296
+#: ../../../app/routes/route.album.php:177
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
+#: ../../../app/themes/Peafowl/views/album.php:34
+#: ../../../app/themes/Peafowl/views/user.php:98
+#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
+msgid "image"
+msgid_plural "images"
+msgstr[0] "画像"
+
+#: ../../../app/routes/route.user.php:89
+#: ../../../app/themes/Peafowl/header.php:56
+#, php-format, javascript-format
+msgid "%s's Albums"
+msgstr "%sさんのアルバム"
+
+#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
+msgid "Image edited successfully."
+msgstr "画像の編集が完了しました。"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "非公開"
+
+#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
+msgid "Album edited successfully."
+msgstr "アルバムの編集が完了しました。"
+
+#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
+msgid "Invalid URL key."
+msgstr "無効なURLキーです。"
+
+#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
+msgid "Category URL key already being used."
+msgstr "このカテゴリURLキーは、既に使用されています。"
+
+#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
+msgid "Category successfully deleted."
+msgstr "カテゴリの削除が完了しました。"
+
+#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
+#, javascript-format
+msgid "Category %s added."
+msgstr "カテゴリ： %s を追加しました。"
+
+#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
+msgid "Invalid expiration date."
+msgstr "無効な期限です。"
+
+#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
+#, javascript-format
+msgid "IP %s already banned."
+msgstr "IPアドレス： %s はアクセス禁止となっています。"
+
+#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
+#, javascript-format
+msgid "IP %s banned."
+msgstr "IPアドレス： %s はアクセス禁止となっています。"
+
+#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
+msgid "IP ban successfully deleted."
+msgstr "このIPアドレスのアクセス禁止を解除しました。"
+
+#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
+#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
+#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
+msgid "Please fill all the required fields."
+msgstr "必須の項目全てに入力して下さい。"
+
+#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
+msgid "Invalid storage capacity value. Make sure to use a valid format."
+msgstr "ストレージ容量が不正です。有効なフォーマットかを確認して下さい。"
+
+#: ../../../app/lib/classes/class.storage.php:450
+#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
+#, php-format, javascript-format
+msgid "Storage capacity can't be lower than its current usage (%s)."
+msgstr "ストレージ容量は現在の使用量 (%s)より小さくできません。"
+
+#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
+msgid "Invalid URL."
+msgstr "無効なURLです。"
+
+#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
+msgid "Storage successfully edited."
+msgstr "ストレージの編集が完了しました。"
+
+#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
+msgid "User added successfully."
+msgstr "ユーザの追加が完了しました。"
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+#: ../../../app/themes/Peafowl/views/album.php:134
+#: ../../../app/themes/Peafowl/views/user.php:171
+#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
+msgid "The content has been deleted."
+msgstr "コンテンツは削除されました。"
+
+#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
+#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
+#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
+#: ../../../app/lib/chevereto.min.js:205
+msgid "The content has been moved."
+msgstr "コンテンツは移動しました。"
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
+#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
+#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
+msgid "Select"
+msgstr "選択"
+
+#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
+msgid "Unselect"
+msgstr "選択を解除"
+
+#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
+msgid "The content has been edited."
+msgstr "コンテンツの編集が完了しました。"
+
+#, javascript-format
+msgid "Import job ID %s added successfully, you can process the import now"
+msgstr "インポートジョブID %s の追加に成功しました、インポートを行えます"
+
+msgid "Select number of threads"
+msgstr "スレッドの数を選択"
+
+#, javascript-format
+msgid "Import job ID %s is being processed now"
+msgstr "インポートジョブID %s は、現在処理中です"
+
+#, javascript-format
+msgid "Import ID %s removed"
+msgstr "インポートID %s は削除されました"
+
+msgid "Spam detected"
+msgstr "迷惑行為を検知しました"
+
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
+#: ../../../app/themes/Peafowl/views/user.php:99
+msgid "album"
+msgid_plural "albums"
+msgstr[0] "アルバム"
+
+msgid "Flooding detected. You can only upload %limit% %content% per %time%"
+msgstr "不正な動作を検知しました。%time%回に%content%を%limit%までアップロードできます。"
 
 #: ../../../app/lib/classes/class.album.php:100
 msgid "Untitled"
@@ -249,16 +664,6 @@ msgid "like"
 msgid_plural "likes"
 msgstr[0] "いいね！"
 
-#: ../../../app/lib/classes/class.listing.php:296
-#: ../../../app/routes/route.album.php:177
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
-#: ../../../app/themes/Peafowl/views/album.php:34
-#: ../../../app/themes/Peafowl/views/user.php:98
-#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
-msgid "image"
-msgid_plural "images"
-msgstr[0] "画像"
-
 msgid "Recent"
 msgstr "最新"
 
@@ -281,7 +686,7 @@ msgstr "トップユーザ"
 #: ../../../app/routes/route.user.php:255
 #: ../../../app/themes/Peafowl/views/index.php:46
 msgid "Most recent"
-msgstr "新しい順"
+msgstr "最も最新"
 
 #: ../../../app/routes/route.dashboard.php:1113
 #: ../../../app/routes/route.dashboard.php:1150
@@ -338,16 +743,6 @@ msgid "Image"
 msgid_plural "Images"
 msgstr[0] "画像"
 
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
-#: ../../../app/themes/Peafowl/views/dashboard.php:28
-msgid "Album"
-msgid_plural "Albums"
-msgstr[0] "アルバム"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:34
 #: ../../../app/themes/Peafowl/views/dashboard.php:90
 #: ../../../app/themes/Peafowl/views/settings.php:126
@@ -372,12 +767,6 @@ msgstr "内部"
 
 msgid "Can't insert storage."
 msgstr "ストレージを追加できません"
-
-#: ../../../app/lib/classes/class.storage.php:450
-#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
-#, php-format, javascript-format
-msgid "Storage capacity can't be lower than its current usage (%s)."
-msgstr "ストレージ容量は現在の使用量 (%s)より小さくできません。"
 
 msgid "Can't update storage details."
 msgstr "ストレージの詳細を更新できません"
@@ -442,10 +831,6 @@ msgstr "デフォルトのメール設定を変更していません。<a href='
 msgid "There is an update available for your Chevereto based website."
 msgstr "あなたのCheveretoベースのサイトへ必要なアップデートがあります。"
 
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "The release notes for this update are:"
-msgstr "このアップデートのリリースノート："
-
 msgid "admin dashboard"
 msgstr "管理者用ダッシュボード"
 
@@ -465,27 +850,6 @@ msgstr "当サイトでは、サイトをより快適にお使いいただける
 
 msgid "I understand"
 msgstr "私は次を理解しました："
-
-#: ../../../app/loader.php:180
-msgid "You have been forbidden to use this website."
-msgstr "あなたは、このウェブサイトを使うことができません。"
-
-#: ../../../app/loader.php:279
-#: ../../../app/themes/Peafowl/views/settings.php:441
-msgid "Feel free to browse and discover all my shared images and albums."
-msgstr "お気軽に共有設定しているアルバムと画像をご覧下さい。"
-
-#: ../../../app/loader.php:282
-#: ../../../app/themes/Peafowl/views/settings.php:447
-msgid "View all my images"
-msgstr "全ての画像を見る"
-
-msgid "Plugin"
-msgstr "プラグイン"
-
-#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
-msgid "That page doesn't exist"
-msgstr "ページが存在しません。"
 
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
@@ -516,12 +880,9 @@ msgstr "メールアドレスの追加"
 msgid "Email changed"
 msgstr "メールアドレスが変更されました。"
 
-#: ../../../app/routes/route.account.php:95
-#: ../../../app/routes/route.login.php:71
-#: ../../../app/routes/route.settings.php:140
-#: ../../../app/routes/route.signup.php:73
-msgid "The reCAPTCHA wasn't entered correctly"
-msgstr "画像認証が正しくありません。"
+#, php-format
+msgid "%s says you are a robot"
+msgstr "%s は、あなたはボットだと言っています。"
 
 #: ../../../app/routes/route.account.php:119
 #: ../../../app/routes/route.account.php:164
@@ -578,29 +939,12 @@ msgstr "%sに確認が必要です。"
 msgid "Welcome to %s"
 msgstr "ようこそ、%sさん"
 
-#: ../../../app/routes/route.account.php:360
-#: ../../../app/routes/route.settings.php:327
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
-#: ../../../app/themes/Peafowl/views/settings.php:313
-#: ../../../app/themes/Peafowl/views/settings.php:330
-#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
-msgid "Passwords don't match"
-msgstr "パスワードが一致しません。"
-
 #: ../../../app/routes/route.account.php:422
 #: ../../../app/routes/route.json.php:599
 #: ../../../app/routes/route.settings.php:243
 #: ../../../app/routes/route.signup.php:141
 msgid "Email already being used"
 msgstr "このメールアドレスは既に使用されています。"
-
-#: ../../../app/routes/route.account.php:508
-#: ../../../app/routes/route.signup.php:236
-#: ../../../content/pages/default/contact.php:132
-#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
-#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
-msgid "Check the errors in the form to continue."
-msgstr "先に進むためには、フォーム内のエラーを修正してください。"
 
 msgid "Password required"
 msgstr "パスワードが必要です。"
@@ -629,7 +973,7 @@ msgstr "%a アルバムは %w　にてホストされます。"
 
 #: ../../../app/routes/route.dashboard.php:38
 msgid "Stats"
-msgstr "最新状況"
+msgstr "統計"
 
 #: ../../../app/routes/route.dashboard.php:39
 #: ../../../app/routes/route.search.php:85
@@ -658,6 +1002,9 @@ msgstr "ユーザ"
 #: ../../../app/themes/Peafowl/header.php:405
 msgid "Settings"
 msgstr "設定"
+
+msgid "Bulk importer"
+msgstr "一括インポート"
 
 #: ../../../app/routes/route.dashboard.php:161
 msgid "Chevereto version"
@@ -813,9 +1160,21 @@ msgstr[0] "%d 秒"
 msgid "Memory limit"
 msgstr "メモリ制限"
 
+msgid "Rebuild stats"
+msgstr "統計を再構築"
+
+msgid "Connecting IP"
+msgstr "接続中のIP"
+
+msgid "Not your IP?"
+msgstr "あなたのIPアドレスではありませんか？"
+
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
 msgid "Links"
 msgstr "リンク"
+
+msgid "Collaboration"
+msgstr "コラボレーション"
 
 msgid "Documentation"
 msgstr "ドキュメント"
@@ -823,14 +1182,8 @@ msgstr "ドキュメント"
 msgid "Changelog"
 msgstr "変更履歴"
 
-msgid "Request new features"
-msgstr "新機能のリクエスト"
-
 msgid "Bug tracking"
 msgstr "バグ修正過程"
-
-msgid "Blog"
-msgstr "ブログ"
 
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
@@ -1210,6 +1563,9 @@ msgstr "タイプが不正です。"
 msgid "Invalid visibility"
 msgstr "可視性が不正です。"
 
+msgid "Invalid internal type"
+msgstr "不正なタイプです。"
+
 #: ../../../app/routes/route.dashboard.php:728
 msgid "Invalid target attribute"
 msgstr "ターゲットの属性が不正です。"
@@ -1277,6 +1633,9 @@ msgstr "有効なSMTPサーバーではありません。"
 msgid "Invalid SMTP username"
 msgstr "有効なSMTPユーザ名ではありません。"
 
+msgid "Invalid key"
+msgstr "無効なキー"
+
 #: ../../../app/routes/route.dashboard.php:960
 #, php-format
 msgid "This URL key is already being used by another page (ID %s)"
@@ -1327,7 +1686,7 @@ msgstr "アップロード日時"
 
 #: ../../../app/routes/route.image.php:185
 msgid "Image %i in %a album"
-msgstr "アルバム：%aに存在する画像：%i"
+msgstr "アルバム「%a」に存在する「%i」"
 
 #: ../../../app/routes/route.image.php:187
 msgid "Image %i in %c category"
@@ -1469,11 +1828,6 @@ msgstr "ユーザ名/電子メールアドレスとパスワードの組合せ�
 msgid "Sign in"
 msgstr "サインイン"
 
-#: ../../../app/routes/route.logout.php:29
-#: ../../../app/themes/Peafowl/views/logout.php:8
-msgid "Logged out"
-msgstr "ログアウトしました。"
-
 msgid "Upload images"
 msgstr "画像をアップロード"
 
@@ -1585,12 +1939,6 @@ msgstr "アップロード"
 msgid "%s's Images"
 msgstr "%sさんの画像"
 
-#: ../../../app/routes/route.user.php:89
-#: ../../../app/themes/Peafowl/header.php:56
-#, php-format, javascript-format
-msgid "%s's Albums"
-msgstr "%sさんのアルバム"
-
 #: ../../../app/routes/route.user.php:99
 #: ../../../app/themes/Peafowl/views/search.php:8
 msgid "Results for"
@@ -1622,10 +1970,6 @@ msgid "Discovery"
 msgstr "発見"
 
 #: ../../../app/themes/Peafowl/header.php:222
-msgid "Close"
-msgstr "閉じる"
-
-#: ../../../app/themes/Peafowl/header.php:222
 #: ../../../app/themes/Peafowl/header.php:226
 msgid "Advanced search"
 msgstr "高度な検索"
@@ -1641,115 +1985,12 @@ msgstr "ランダム"
 msgid "Notices (%s)"
 msgstr "通知 (%s)"
 
-#: ../../../app/themes/Peafowl/header.php:281
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
-#: ../../../app/themes/Peafowl/views/login.php:18
-#: ../../../app/themes/Peafowl/views/login.php:65
-#: ../../../app/themes/Peafowl/views/signup.php:18
-#: ../../../app/themes/Peafowl/views/signup.php:76
-msgid "Sign in with another account"
-msgstr "別のアカウントでサインイン"
-
-#: ../../../app/themes/Peafowl/header.php:285
-#: ../../../app/themes/Peafowl/header.php:332
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/form_album.php:9
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
-#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
-#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/login.php:22
-#: ../../../app/themes/Peafowl/views/login.php:62
-#: ../../../app/themes/Peafowl/views/settings.php:354
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../app/themes/Peafowl/views/signup.php:22
-#: ../../../app/themes/Peafowl/views/signup.php:73
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
-#: ../../../lib/Peafowl/peafowl.min.js:31
-#: ../../../lib/Peafowl/peafowl.min.js:140
-msgid "or"
-msgstr "または"
-
-#: ../../../app/themes/Peafowl/header.php:291
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
-#: ../../../app/themes/Peafowl/views/login.php:34
-#: ../../../app/themes/Peafowl/views/login.php:35
-msgid "Username or Email address"
-msgstr "ユーザ名　又は　電子メールアドレス"
-
-#: ../../../app/themes/Peafowl/header.php:294
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:23
-#: ../../../app/themes/Peafowl/views/login.php:53
-msgid "Keep me logged in"
-msgstr "ログインしたままにする"
-
-#: ../../../app/themes/Peafowl/header.php:301
-#, php-format
-msgid "Don't have an account? <a href='%s'>Sign up</a> now."
-msgstr "アカウントがありませんか？今すぐ<a href='%s'>アカウントを作成</a>しましょう。"
-
-#: ../../../app/themes/Peafowl/header.php:328
-msgid "Sign up with another account"
-msgstr "別なアカウントを作成"
-
-#: ../../../app/themes/Peafowl/header.php:338
-#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
-#: ../../../app/themes/Peafowl/views/dashboard.php:100
-#: ../../../app/themes/Peafowl/views/settings.php:155
-#: ../../../app/themes/Peafowl/views/signup.php:34
-#: ../../../app/themes/Peafowl/views/signup.php:35
-#: ../../../content/pages/default/contact.php:92
-msgid "Email address"
-msgstr "メールアドレス"
-
-#: ../../../app/themes/Peafowl/header.php:339
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
-#: ../../../app/themes/Peafowl/views/dashboard.php:94
-#: ../../../app/themes/Peafowl/views/dashboard.php:95
-#: ../../../app/themes/Peafowl/views/settings.php:143
-#: ../../../app/themes/Peafowl/views/settings.php:144
-#: ../../../app/themes/Peafowl/views/signup.php:39
-#: ../../../app/themes/Peafowl/views/signup.php:40
-msgid "Username"
-msgstr "ユーザ名"
-
-#, php-format
-msgid "I'm at least %s years old"
-msgstr "私は%s歳以上です。"
-
-msgid "terms"
-msgstr "利用規約"
-
-msgid "privacy policy"
-msgstr "プライバシーポリシー"
-
-msgid "I agree to the %terms_link and %privacy_link"
-msgstr "私は、%terms_link と %privacy_link に同意します"
+msgid "Lights"
+msgstr "明るい"
 
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
 msgstr "通知"
-
-#: ../../../app/themes/Peafowl/header.php:381
-#: ../../../app/themes/Peafowl/views/settings.php:348
-#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
-msgid "loading"
-msgstr "読み込み中"
 
 #: ../../../app/themes/Peafowl/header.php:384
 msgid "You don't have notifications"
@@ -1905,14 +2146,14 @@ msgstr "新規アルバムを作成"
 msgid "move it to an existing album"
 msgstr "既に存在するアルバムに移動"
 
+msgid "You must %s or %l to save this content into your account."
+msgstr "このコンテンツをアカウントに保存するには、%s または %l である必要があります。"
+
 msgid "create an account"
 msgstr "アカウントを作成"
 
 msgid "sign in"
 msgstr "サインイン"
-
-msgid "You can %s or %l to save this content into your account."
-msgstr "このコンテンツをアカウントに保存するために、%sまたは%lが利用できます。"
 
 #, php-format
 msgid "No %s have been uploaded"
@@ -1942,17 +2183,6 @@ msgstr "ファミリーセーフティではない"
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 msgid "Uploading"
 msgstr "アップロード中"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
-msgid "cancel"
-msgstr "キャンセル"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
@@ -1987,13 +2217,6 @@ msgstr "コピー"
 
 msgid "insert"
 msgstr "挿入"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
-msgid "Edit"
-msgstr "編集"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:148
 #: ../../../app/themes/Peafowl/views/dashboard.php:666
@@ -2104,9 +2327,17 @@ msgstr "ここへ画像URLを追加"
 msgid "Create album"
 msgstr "アルバムの作成"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:224
-msgid "The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
-msgstr "アップロードされたものは、最新のアルバムに貼付けられます。 また、 <a class=\"modal-switch\" data-switch=\"move-existing-album\">お持ちのアルバム</a>へ貼付けることもできます。"
+msgid "The uploaded content will be moved to this newly created album."
+msgstr "アップロードされたコンテンツは最も新しいアルバムに移動されます。"
+
+msgid "existing album"
+msgstr "既に存在するアルバム"
+
+msgid "You can also move the content to an %a."
+msgstr "コンテンツを %a に移動することも可能です。"
+
+msgid "You must %s or %l if you want to edit this album later on."
+msgstr "このアルバムを後で編集するには、%s または %l である必要があります。"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:235
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:28
@@ -2122,12 +2353,6 @@ msgstr "アップロードされたコンテンツを移動するお持ちのア
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:252
 msgid "Error report"
 msgstr "エラーレポート"
-
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
-#: ../../../app/themes/Peafowl/views/user.php:99
-msgid "album"
-msgid_plural "albums"
-msgstr[0] "アルバム"
 
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
@@ -2295,6 +2520,35 @@ msgstr "このカテゴリの簡単な説明"
 msgid "Untitled image"
 msgstr "画像のタイトルを入力"
 
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
+msgid "Path"
+msgstr "パス"
+
+msgid "Local path (absolute)"
+msgstr "ローカルパス （絶対パス）"
+
+msgid "Directory structure"
+msgstr "ディレクトリ構造"
+
+msgid "Parse top level folders as users (username)"
+msgstr "トップレベルフォルダーをユーザー名にする"
+
+msgid "Parse top level folders as albums"
+msgstr "トップレベルフォルダーをアルバムにする"
+
+msgid "Don't parse folders"
+msgstr "フォルダーを構成しない"
+
+msgid "When parsing top level folders as users, second level folders will be parsed as user albums. Parsing top level folders as albums adds these as guest albums."
+msgstr "トップレベルフォルダーをユーザー名として構成すると、セカンドレベルフォルダーはユーザーのアルバムとして構成されます。トップレベルフォルダーをアルバムとして構成すると"
+
+msgid "Threads"
+msgstr "スレッド"
+
+#, php-format
+msgid "This determines how intensive and fast will be the import process. Don't use more than %s threads on a shared server."
+msgstr "これは、インポート処理をどの程度集中的かつ高速に行われるかを設定できます。共有サーバーでは、%s スレッド以上利用しないでください。"
+
 msgid "You can use wildcard * characters."
 msgstr "ワイルドカード * 文字 をご利用いただけます。"
 
@@ -2345,6 +2599,10 @@ msgstr "API"
 msgid "Region"
 msgstr "リージョン"
 
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
+msgid "Storage region"
+msgstr "ストレージ地域"
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:58
 msgid "Storage bucket"
 msgstr "ストレージのバケット"
@@ -2365,19 +2623,6 @@ msgstr "秘密鍵"
 msgid "Storage secret"
 msgstr "ストレージ秘密鍵"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:73
-msgid "Client email"
-msgstr "クライアントE-Mail"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:74
-msgid "Google Cloud client email"
-msgstr "グーグルクラウド用クライアントE-mail"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:75
-#, php-format
-msgid "You will need a <a %s>service account</a> for this."
-msgstr "<a %s>サービスアカウント</a>が必要です。"
-
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:78
 msgid "Private key"
 msgstr "プライベートキー"
@@ -2385,6 +2630,11 @@ msgstr "プライベートキー"
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:79
 msgid "Google Cloud JSON key"
 msgstr "グーグルクラウド用JOSNキー"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:75
+#, php-format
+msgid "You will need a <a %s>service account</a> for this."
+msgstr "<a %s>サービスアカウント</a>が必要です。"
 
 msgid "Service name"
 msgstr "サービス名"
@@ -2401,9 +2651,18 @@ msgstr "Identity API エンドポイント"
 msgid "API endpoint for OpenStack identity"
 msgstr "OpenStack用identityのAPIエンドポイント"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
-msgid "Storage region"
-msgstr "ストレージ地域"
+#: ../../../app/themes/Peafowl/header.php:339
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
+#: ../../../app/themes/Peafowl/views/dashboard.php:94
+#: ../../../app/themes/Peafowl/views/dashboard.php:95
+#: ../../../app/themes/Peafowl/views/settings.php:143
+#: ../../../app/themes/Peafowl/views/settings.php:144
+#: ../../../app/themes/Peafowl/views/signup.php:39
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "Username"
+msgstr "ユーザ名"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:100
 msgid "Container"
@@ -2429,29 +2688,35 @@ msgstr "テナント名"
 msgid "Tenant name (account name)"
 msgstr "テナント名(アカウント名)"
 
+msgid "Storage endpoint"
+msgstr "ストレージのエンドポイント"
+
+msgid "Server address"
+msgstr "サーバーのアドレス"
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:115
 msgid "Hostname or IP of the storage server"
 msgstr "外部ストレージサーバーのホスト名、または、IPアドレス"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
-msgid "Path"
-msgstr "パス"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
 msgid "Server path"
 msgstr "サーバーのパス"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
-msgid "Server path where the files will be stored"
-msgstr "ファイルを保存するサーバーへのパス"
+msgid "Absolute path where the files will be stored in the context of the %p login. Use %s for root path."
+msgstr "絶対パスは、%p ログインで保管されます。ルートパスにする場合は、%s を利用してください。"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:123
-msgid "Server username"
-msgstr "サーバーのユーザ名"
+msgid "Server login"
+msgstr "サーバーログイン"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:127
 msgid "Server password"
 msgstr "サーバーのパスワード"
+
+msgid "Local path"
+msgstr "ローカルパス"
+
+msgid "Local path where the files will be stored"
+msgstr "ファイルを保管する場所となるローカルパスです"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:132
 msgid "Storage capacity"
@@ -2515,28 +2780,24 @@ msgstr "カテゴリを適用"
 msgid "Flag as safe"
 msgstr "ファミリーセーフティを満たすとしてマーク"
 
-#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
-#: ../../../app/themes/Peafowl/views/dashboard.php:607
-#: ../../../app/themes/Peafowl/views/dashboard.php:884
-#: ../../../app/themes/Peafowl/views/dashboard.php:933
-msgid "Delete"
-msgstr "削除"
-
 msgid "Create new album"
 msgstr "新規アルバムを作成"
 
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:5
-#, php-format
-msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
-msgstr "このサイトの機能を全て利用するためには、ログインが必要です。 アカウントをお持ちでない場合は、<a href=\"%s\">こちら</a>でアカウントを作成することができます。"
+#: ../../../app/themes/Peafowl/header.php:281
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
+#: ../../../app/themes/Peafowl/views/login.php:18
+#: ../../../app/themes/Peafowl/views/login.php:65
+#: ../../../app/themes/Peafowl/views/signup.php:18
+#: ../../../app/themes/Peafowl/views/signup.php:76
+msgid "Sign in with another account"
+msgstr "別のアカウントでサインイン"
+
+msgid "Continue with %label%"
+msgstr "%label%で続ける"
+
+msgid "Home"
+msgstr "ホーム"
 
 #: ../../../app/themes/Peafowl/snippets/template_content_empty.php:5
 #: ../../../app/themes/Peafowl/views/dashboard.php:618
@@ -2622,10 +2883,11 @@ msgstr "ゲスト"
 msgid "Keyboard shortcuts"
 msgstr "キーボードショートカット"
 
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "いいね！"
+msgid "Private album"
+msgstr "個人用アルバム"
+
+msgid "Password protected"
+msgstr "パスワードで保護"
 
 msgid "Uploaded by guest"
 msgstr "ゲストからのアップロード"
@@ -2643,25 +2905,14 @@ msgstr "プライベートモードでアップロード"
 msgid "by %u"
 msgstr "%u　により"
 
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
-#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
-#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
-msgid "Select"
-msgstr "選択"
-
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:7
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:7
 msgid "Toggle unsafe flag"
 msgstr "ファミリーセーフ　ON/OFF"
+
+#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
+msgid "That page doesn't exist"
+msgstr "ページが存在しません。"
 
 #: ../../../app/themes/Peafowl/views/404.php:7
 msgid "The requested page was not found."
@@ -2675,13 +2926,6 @@ msgstr "他のものを検索"
 msgid "The user has been deleted"
 msgstr "そのユーザは削除されています。"
 
-#: ../../../app/themes/Peafowl/views/404.php:22
-#: ../../../app/themes/Peafowl/views/album.php:134
-#: ../../../app/themes/Peafowl/views/user.php:171
-#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
-msgid "The content has been deleted."
-msgstr "コンテンツは削除されました。"
-
 #: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:7
 msgid "Your account is almost ready"
 msgstr "アカウントの設定が完了するまで、あと少しです。"
@@ -2690,17 +2934,6 @@ msgstr "アカウントの設定が完了するまで、あと少しです。"
 #, php-format
 msgid "An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters."
 msgstr "%s宛にアカウント認証のためのメールを送信しました。 アカウント認証のためのリンクは48時間以内有効です。届いていない場合には迷惑メールフォルダをチェックして下さい。"
-
-#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
-#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/logout.php:13
-#: ../../../app/themes/Peafowl/views/request-denied.php:13
-msgid "Go to homepage"
-msgstr "ホームへ戻る"
 
 #: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
@@ -2726,41 +2959,6 @@ msgstr "アカウントを有効化するための詳細と確認用リンクを
 msgid "Your email address"
 msgstr "メールアドレス"
 
-#: ../../../app/themes/Peafowl/views/account/email-needed.php:26
-msgid "Add email"
-msgstr "メールアドレスを追加"
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
-msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
-msgstr "パスワードのリセット方法を登録されているメールアドレス宛に送信しました。もし届いていない場合には、迷惑メールフォルダをチェックして下さい。"
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-msgid "Resend instructions"
-msgstr "手順を再送信"
-
-#: ../../../app/install/update/updater.php:62
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
-#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
-#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
-#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
-#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
-#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
-#: ../../../lib/Peafowl/peafowl.min.js:158
-#: ../../../lib/Peafowl/peafowl.min.js:195
-msgid "An error occurred. Please try again later."
-msgstr "エラーが発生しました。後ほど、再度お試し下さい。"
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
-msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
-msgstr "パスワードのリセットの手順をメールで送信しました。届いていない場合には、迷惑メールフォルダをチェックして下さい。"
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:32
-msgid "Enter your username or the email address that you used to create your account."
-msgstr "アカウント作成時のユーザ名、または、メールアドレスを入力して下さい。"
-
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:52
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:47
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:37
@@ -2770,6 +2968,33 @@ msgstr "アカウント作成時のユーザ名、または、メールアドレ
 msgid "Submit"
 msgstr "送信"
 
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
+msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "パスワードのリセット方法を登録されているメールアドレス宛に送信しました。もし届いていない場合には、迷惑メールフォルダをチェックして下さい。"
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
+msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
+msgstr "パスワードのリセットの手順をメールで送信しました。届いていない場合には、迷惑メールフォルダをチェックして下さい。"
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+msgid "Resend instructions"
+msgstr "手順を再送信"
+
+#, php-format
+msgid "Enter your username or email address to continue. You may need to check your spam folder or whitelist %s"
+msgstr "続行するにはユーザー名またはパスワードを入力してください。迷惑メールフォルダーの確認と、%s をホワイトリストに追加するのも合わせてご確認ください。"
+
+#: ../../../app/themes/Peafowl/header.php:291
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
+#: ../../../app/themes/Peafowl/views/login.php:34
+#: ../../../app/themes/Peafowl/views/login.php:35
+msgid "Username or Email address"
+msgstr "ユーザ名　又は　電子メールアドレス"
+
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:15
 msgid "Your password has been changed. You can now try logging in using your new password."
 msgstr "パスワードの変更が完了しました。新しいパスワードでログインして下さい。"
@@ -2778,13 +3003,10 @@ msgstr "パスワードの変更が完了しました。新しいパスワード
 msgid "Login now"
 msgstr "今すぐログイン"
 
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:22
-msgid "Enter the new password that you want to use."
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/settings.php:306
+msgid "Enter your new password"
 msgstr "新しいパスワードを入力して下さい。"
-
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:28
-msgid "New Password"
-msgstr "新しいパスワード"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:29
 #: ../../../app/themes/Peafowl/views/dashboard.php:105
@@ -2795,15 +3017,8 @@ msgstr "新しいパスワード"
 msgid "%d characters min"
 msgstr "最低%d文字"
 
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
-#: ../../../app/themes/Peafowl/views/settings.php:306
-msgid "Enter your new password"
-msgstr "新しいパスワードを入力して下さい。"
-
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
-#: ../../../app/themes/Peafowl/views/settings.php:328
-msgid "Confirm password"
-msgstr "新しいパスワード（確認）"
+msgid "Password strength"
+msgstr "パスワードの強さ"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:35
 #: ../../../app/themes/Peafowl/views/settings.php:312
@@ -2814,10 +3029,6 @@ msgstr "新しいパスワードを再度入力して下さい。"
 #, php-format
 msgid "An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters."
 msgstr "有効なアカウント %s 　宛にE-mailを送信しました。届いていない場合には迷惑フォルダを確認してください。"
-
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:19
-msgid "Enter the username or email address that you used to create your account to continue."
-msgstr "アカウントを作成を続ける場合、ユーザ名、または、メールアドレスを入力してください。"
 
 #: ../../../app/themes/Peafowl/views/album.php:16
 #: ../../../app/themes/Peafowl/views/image.php:63
@@ -2856,10 +3067,129 @@ msgstr "”同意します”をクリックした時点で、あなたは上記
 msgid "I Agree"
 msgstr "同意します"
 
+msgid "documentation"
+msgstr "ドキュメント"
+
+#, php-format
+msgid "Learn more about %s at our %d."
+msgstr "%sについての詳細は、 %dから。"
+
+msgid "The connecting IP is determined using the server variable %var%. If the detected IP doesn't match yours, it means that your web server is under a proxy and you need to tweak your server to set the real connecting IP."
+msgstr "接続 IP は、サーバ変数 %var% を使用して決定されます。検出されたIPがあなたのものと一致しない場合、それはあなたのウェブサーバがプロキシの下にあることを意味し、実際の接続IPを設定するためにサーバを調整する必要があります。"
+
+msgid "For Nginx, you must use %nginx%. For Apache, %apache%."
+msgstr "Nginxでは %nginx% 、Apacheでは %apache%を使用します。"
+
+msgid "Make sure that you address this issue as the system relies on accurate IP detections to provide basic functionalities and to protect against spam, flooding, and brute force attacks."
+msgstr "システムは基本的な機能を提供し、スパム、フラッディング、ブルートフォース攻撃から保護するために、正確な IP 検出に依存しているため、この問題に対処することを確認してください。"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:40
 #: ../../../app/themes/Peafowl/views/dashboard.php:1732
 msgid "Disk used"
 msgstr "ディスク使用量"
+
+msgid "This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure."
+msgstr "インポートしたいコンテンツをシステムパスを指し示すことで、Webサイトにコンテンツを大量に追加することができるツールです。フォルダベースの構造を利用したユーザー、アルバム、画像の追加に対応しています。"
+
+msgid "Automatic importing"
+msgstr "自動インポート"
+
+msgid "The system automatically parses any content by a continuous observation of the %path% path."
+msgstr "システムは、 パス %path% を継続的に観測することで自動的にコンテンツの解析を行います。"
+
+msgid "The system automatically parses any content by a continous observation of the %path% path."
+msgstr "システムは、継続的にパス %path% 内のコンテンツを自動的に解析します。"
+
+msgid "Completed jobs will be automatically re-started after %n %m."
+msgstr "完了したジョブは、%n %m 後に自動的に開始します。"
+
+msgid "Reset to clear stats and logs."
+msgstr "統計とログをクリアします"
+
+msgid "Queued"
+msgstr "キューに追加済み"
+
+msgid "Working"
+msgstr "お待ちください。"
+
+msgid "Paused"
+msgstr "一時停止中"
+
+msgid "Canceled"
+msgstr "キャンセルされました。"
+
+msgid "Completed"
+msgstr "完了しました。"
+
+msgid "Actions"
+msgstr "アクション"
+
+msgid "Reset"
+msgstr "リセット"
+
+msgid "Pause"
+msgstr "一時停止"
+
+msgid "Resume"
+msgstr "再開する"
+
+msgid "Process log"
+msgstr "プロセスログ"
+
+msgid "Errors"
+msgstr "エラー"
+
+#: ../../../app/themes/Peafowl/views/settings.php:105
+msgid "Status"
+msgstr "ステータス"
+
+msgid "The system works with a scheduled command to continuously process the importing. It requires a crontab entry."
+msgstr "スケジュール化されたコマンドでインポート処理を継続的に行います。これにはcrontabのエントリが必要です。"
+
+msgid "You can run the command in parallel by changing the integer value of %s%."
+msgstr "%s% の値でコマンドを並列実行することができます。"
+
+msgid "All file-system permissions must be granted for the crontab user at %path%"
+msgstr "crontabユーザーへ %path% へのファイルシステムにアクセスする権利を付与してください。"
+
+msgid "Required crontab entry:"
+msgstr "crontabが必要です"
+
+msgid "Add import job"
+msgstr "インポートジョブに追加"
+
+#, php-format
+msgid "This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d."
+msgstr "このツールは、インポートするコンテンツのパスが指定された場合、一括でサイトに追加をします。また、ユーザー、アルバム、画像をフォルダ形式として使用できます。メタデータやツール内で提供されるものについてのフォルダ形式は、%dに詳細があります。"
+
+msgid "Process import"
+msgstr "インポート処理"
+
+#, php-format
+msgid "Top level folders as %s"
+msgstr "トップ階層 %s"
+
+msgid "Process"
+msgstr "処理"
+
+msgid "Cancel"
+msgstr "キャンセル"
+
+#, php-format
+msgid "Do you really want to remove the import ID %s?"
+msgstr "インポートID: %s を削除してもよろしいですか？"
+
+msgid "Manual importing"
+msgstr "手動インポート"
+
+msgid "The system will parse the contents of any available filesystem path."
+msgstr "システムは、利用可能なファイルシステムのパスの内容を解析します。"
+
+msgid "These processes must be manually created and handled with the web browser tab open."
+msgstr "これらのプロセスは、手動で作成し、ウェブブラウザのタブを開いた状態で処理する必要があります。"
+
+msgid "Parser"
+msgstr "パーサー"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:80
 #: ../../../app/themes/Peafowl/views/dashboard.php:84
@@ -2871,20 +3201,26 @@ msgstr "ユーザの追加"
 msgid "Role"
 msgstr "権限"
 
+msgid "Manager"
+msgstr "マネージャー"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:89
 #: ../../../app/themes/Peafowl/views/settings.php:125
 msgid "Administrator"
 msgstr "管理者"
 
+#: ../../../app/themes/Peafowl/header.php:338
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:100
+#: ../../../app/themes/Peafowl/views/settings.php:155
+#: ../../../app/themes/Peafowl/views/signup.php:34
+#: ../../../app/themes/Peafowl/views/signup.php:35
+#: ../../../content/pages/default/contact.php:92
+msgid "Email address"
+msgstr "メールアドレス"
+
 msgid "This setting is always diabled when using personal website mode."
 msgstr "この設定は個人Webサイトモードを利用している時は常に無効です。"
-
-msgid "documentation"
-msgstr "ドキュメント"
-
-#, php-format
-msgid "Learn more about %s at our %d."
-msgstr "%sについての詳細は、 %dから。"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
@@ -2917,6 +3253,25 @@ msgstr "ウェブサイトのタイトル (ページタイトル)"
 #: ../../../app/themes/Peafowl/views/dashboard.php:231
 msgid "Website description"
 msgstr "ウェブサイトの詳細"
+
+msgid "Powered by"
+msgstr "提供元"
+
+#, php-format
+msgid "Enable this if you want to show a \"%s\" link at the footer."
+msgstr "コンテンツをSNSで共有するためにSNSボタンを表示するためにONにします。"
+
+msgid "Automatic"
+msgstr "自動的"
+
+msgid "Forced"
+msgstr "強制的"
+
+msgid "%a will use HTTPS detection on the server side (recommended). %f will use HTTPS regardless of your server setup. %d to don't use HTTPS at all."
+msgstr "%a は、サーバー側でHTTPSの検出をするために利用されます (推奨)。%f は、サーバーの設定がされていない場合に利用されます。 HTTPSを絶対に使用しない場合は、%d にしてください。"
+
+msgid "This only controls the protocol used in the URLs, it won't turn your website into a valid HTTPS website unless your server is configured to support and use HTTPS."
+msgstr "お使いのサーバーがHTTPSのサポート設定が完了するまで、有効なHTTPSにはならず、URLで指定されたプロトコルで通信します。"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:257
 msgid "Default time zone"
@@ -3034,6 +3389,24 @@ msgstr "アクティブページのみがアクセス可能です。"
 msgid "Type"
 msgstr "タイプ"
 
+msgid "Terms of service"
+msgstr "利用規約"
+
+msgid "Privacy"
+msgstr "非公開"
+
+msgid "Contact"
+msgstr "コンテンツ"
+
+msgid "Extra page"
+msgstr "追加ページ"
+
+msgid "Internal page type"
+msgstr "内部ページタイプ"
+
+msgid "You can have multiple extra pages, but only one of the other special internal types."
+msgstr "別なタイプとしてのみ複数の追加ページを作成できます。"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:475
 msgid "Page visibility"
 msgstr "ページ可視性"
@@ -3142,6 +3515,9 @@ msgstr "ページ"
 msgid "Do you really want to delete the page ID %s? This can't be undone."
 msgstr "ページID %s を本当に削除しますか？削除すると元に戻せません。"
 
+msgid "Enabled image formats"
+msgstr "画像フォーマット可"
+
 msgid "Unchecked image formats won't be allowed to be uploaded."
 msgstr "未確認の画像フォーマットでは、アップロードが行えません。"
 
@@ -3160,6 +3536,15 @@ msgstr "ゲストとしてアップロード"
 #: ../../../app/themes/Peafowl/views/dashboard.php:645
 msgid "Enable this if you want to allow non registered users to upload."
 msgstr "未登録ユーザのアップロードを許可するときに有効にしてください。"
+
+msgid "Upload user interface"
+msgstr "アップロード用ユーザインターフェース"
+
+msgid "On-page container"
+msgstr "ページ上のコンテナー"
+
+msgid "route"
+msgstr "ルート"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1353
 msgid "Enable embed codes (uploader)"
@@ -3862,6 +4247,12 @@ msgstr "ソーシャルネットワークでコンテンツを共有するボタ
 msgid "Enable embed codes (content)"
 msgstr "埋込みコード(コンテンツへのリンク)を有効にする"
 
+msgid "Everybody"
+msgstr "すべての人"
+
+msgid "Users only"
+msgstr "ユーザーのみ"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1349
 msgid "Enable this if you want to show embed codes for the content."
 msgstr "コンテンツへの埋込みコードを表示したい場合に有効にします。"
@@ -3889,6 +4280,10 @@ msgstr "カスタムJSコード"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1383
 msgid "Put your custom JS code here. It will be placed as <script> just before the closing </head> tag."
 msgstr "カスタムJSコードをここへ入力します。ヘッダタグの閉じられる寸前の</head>前に<script>タグとして挿入されます。"
+
+#, php-format
+msgid "Do not use %s markup here. This is for plain JS code, not for HTML script tags. If you use script tags here you will break your website."
+msgstr "マークアップ %s は、ここでは使用できません。ここはjavascriptコードのためで、HTML用ではありません。HTMLタグを使用するとサイトに不具合が発生します。"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1390
 msgid "Style"
@@ -3997,8 +4392,8 @@ msgstr " <a> タグを追加する機能です。既定のコンテンツを使�
 msgid "User IDs"
 msgstr "ユーザID"
 
-msgid "Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images."
-msgstr "ホームページに表示したい画像のユーザーIDをコンマで区切って入力してください。空白の情愛で全ての最近の画像を表示します。"
+msgid "Comma-separated list of target user IDs (integers) to show most recent images on homepage. Leave it empty to display trending images."
+msgstr "コンマ区切りの対象ユーザーIDにホームページの画像を表示します。空欄、またはゼロの場合は、最近の画像を表示します。"
 
 msgid "banners"
 msgstr "広告バナー"
@@ -4014,6 +4409,20 @@ msgstr "アップデートの通知を有効化"
 
 msgid "Enable this to show a notice on top warning you about new available system updates."
 msgstr "システムアップデートがリリースされた場合に歳重用通知として表示を有効化"
+
+msgid "Dump update query"
+msgstr "アップデートクエリーを削除"
+
+msgid "Enable this if you want to dump the update query to run it manually."
+msgstr "ユーザーごとに適切な言語を自動的に検出したい場合に有効にします。"
+
+#, php-format
+msgid "SEO %s URLs"
+msgstr "%s のSEO対応URL"
+
+#, php-format
+msgid "Enable this if you want to use SEO %s URLs."
+msgstr "%s URLsのSEOを有効化"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1570
 msgid "Minify code"
@@ -4086,6 +4495,31 @@ msgstr "%sへのルート"
 
 msgid "Album routing"
 msgstr "アルバムへのルーティング"
+
+msgid "Hostname"
+msgstr "ホスト名"
+
+msgid "Hostname on which sub-domain wildcards will be added."
+msgstr "ホスト名のサブドメインをワイルドカードで追加します。"
+
+#, php-format
+msgid "This setting may be overridden by %s."
+msgstr "この設定は、%s で上書されます。"
+
+msgid "Language subdomains"
+msgstr "サブドメインの言語"
+
+msgid "languages"
+msgstr "言語"
+
+msgid "Enable to use %s for %t."
+msgstr "%t 用に %s を使用"
+
+msgid "Username subdomains"
+msgstr "サブドメインのユーザ名"
+
+msgid "user profiles"
+msgstr "ユーザープロファイル"
 
 msgid "Custom language strings"
 msgstr "個別の言語文字列"
@@ -4198,14 +4632,16 @@ msgstr "SMTPセキュリティ"
 msgid "Unsecured"
 msgstr "セキュリティで保護されていません"
 
+msgid "Decode ID"
+msgstr "デコードID"
+
+msgid "Encode ID"
+msgstr "エンコードID"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1824
 #: ../../../app/themes/Peafowl/views/dashboard.php:1825
 msgid "Send test email"
 msgstr "テストメールを送信する"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1825
-msgid "test@somedomain.com"
-msgstr "test@somedomain.com"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1826
 #, php-format
@@ -4220,6 +4656,33 @@ msgstr "ユーザーをエクスポート"
 
 msgid "This will allow you to download a user's standard personal information in JSON format."
 msgstr "JSONフォーマットで、ユーザーの標準的な個人情報をダウンロードすることができます。"
+
+msgid "Regenerate external storage stats"
+msgstr "外部ストレージの統計情報を再構築"
+
+msgid "Storage id"
+msgstr "ストレージID"
+
+msgid "Regenerate"
+msgstr "再構築"
+
+msgid "This will re-calculate the sum of all the image records associated to the target external storage."
+msgstr "指定された外部ストレージと再計算された保存画像の合計を紐付けます。"
+
+msgid "Migrate image records from one external storage to another"
+msgstr "外部ストレージから別の外部ストレージに画像を移動します。"
+
+msgid "Source storage id"
+msgstr "元になるストレージID"
+
+msgid "Target storage id"
+msgstr "ターゲットのストレージID"
+
+msgid "Migrate"
+msgstr "移動"
+
+msgid "This only updates the database. You must transfer the actual files to target storage container on your own. URL rewriting is strongly recommended. Use zero (0) for local storage."
+msgstr "これはデータベースの更新のみす。ファイルは、ご自身でターゲット先に移動してください。URLの書換も推奨します。ローカルストレージを使用するには、ゼロ(0)を使用します。"
 
 msgid "social networks"
 msgstr "ソーシャル・ネットワーク"
@@ -4276,10 +4739,30 @@ msgstr "VKクライアントID"
 msgid "VK client secret"
 msgstr "VKクライアントシークレットキー"
 
+#, php-format
+msgid "%s spam protection"
+msgstr "%s スパム保護"
+
+msgid "user generated content"
+msgstr "ユーザー作成のコンテンツ"
+
+msgid "Enable this to use %l to block spam on %c."
+msgstr "%l を使用して %c のスパムをブロックを有効化"
+
+#, php-format
+msgid "%s API key"
+msgstr "%s API key"
+
+msgid "user signup"
+msgstr "ユーザーアカウント作成"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1968
 #, php-format
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr "画像認証を使用するためには、<a href=\"%s\" target=\"_blank\">reCAPTCHA キー</a>が必要です。"
+
+msgid "Please note that each reCAPTCHA version require its own set of keys. Don't forget to update the keys if you change versions."
+msgstr "reCAPTCHAのバージョンとキーはセットです。バージョンを上げる場合にはキーの更新も忘れないようにしてください。"
 
 #, php-format
 msgid "%s site key"
@@ -4296,6 +4779,14 @@ msgstr "閾値(失敗)"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1991
 msgid "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA."
 msgstr "何回の失敗でreCAPTCHAを有効にしますか？ゼロ(0)だと常にreCAPTCHAが表示されます。"
+
+#, php-format
+msgid "Force %s on contact page"
+msgstr "コンタクトページ上で %s を行わせる"
+
+#, php-format
+msgid "Enable this to always show %s on contact page."
+msgstr "コンタクトページに %s を常に表示する場合"
 
 msgid "Comments API"
 msgstr "コメントAPI"
@@ -4430,11 +4921,6 @@ msgstr "アップロードする画像をドラッグ＆ドロップすると、
 msgid "Start uploading"
 msgstr "アップロード開始"
 
-#: ../../../app/themes/Peafowl/views/index.php:63
-#, php-format
-msgid "Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings."
-msgstr "アカウント %s へ投稿するためには、このセクションに記入して下さい。<br>投稿先ユーザは、ダッシュボードで編集できます。"
-
 #: ../../../app/themes/Peafowl/views/index.php:79
 msgid "Sign up to unlock all the features"
 msgstr "すべての機能を利用するためにアカウントを作成しましょう。"
@@ -4443,15 +4929,34 @@ msgstr "すべての機能を利用するためにアカウントを作成しま
 msgid "Manage your content, create private albums, customize your profile and more."
 msgstr "あなたのコンテンツを管理したり、非公開アルバムを作成したり、プロフィールのカスタマイズなどが行えます。"
 
-#: ../../../app/themes/Peafowl/views/login.php:40
-#: ../../../app/themes/Peafowl/views/settings.php:323
-msgid "Enter your password"
-msgstr "パスワードを入力して下さい。"
+msgid "Sign in with your account"
+msgstr "アカウントへログイン"
+
+#: ../../../app/themes/Peafowl/header.php:301
+#, php-format
+msgid "Don't have an account? <a href='%s'>Sign up</a> now."
+msgstr "アカウントがありませんか？今すぐ<a href='%s'>アカウントを作成</a>しましょう。"
+
+#: ../../../app/routes/route.logout.php:29
+#: ../../../app/themes/Peafowl/views/logout.php:8
+msgid "Logged out"
+msgstr "ログアウトしました。"
 
 #: ../../../app/themes/Peafowl/views/logout.php:12
 #, php-format
 msgid "You have been logged off %s. Hope to see you soon."
 msgstr "あなたは%sからログアウトしました。またのご利用をお待ちしています。"
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/logout.php:13
+#: ../../../app/themes/Peafowl/views/request-denied.php:13
+msgid "Go to homepage"
+msgstr "ホームへ戻る"
 
 #: ../../../app/themes/Peafowl/views/maintenance.php:7
 msgid "Website under maintenance"
@@ -4555,10 +5060,6 @@ msgstr "登録日"
 msgid "Registration IP"
 msgstr "登録元IP"
 
-#: ../../../app/themes/Peafowl/views/settings.php:105
-msgid "Status"
-msgstr "ステータス"
-
 #: ../../../app/themes/Peafowl/views/settings.php:109
 msgid "Valid"
 msgstr "有効"
@@ -4642,6 +5143,16 @@ msgstr "ユーザ名、または、メールアドレスを使ってパスワー
 msgid "This user doesn't have a password. Add one using this form."
 msgstr "このユーザはパスワードを設定していません。このフォームから設定して下さい。"
 
+#: ../../../app/themes/Peafowl/views/login.php:40
+#: ../../../app/themes/Peafowl/views/settings.php:323
+msgid "Enter your password"
+msgstr "パスワードを入力して下さい。"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
+#: ../../../app/themes/Peafowl/views/settings.php:328
+msgid "Confirm password"
+msgstr "新しいパスワード（確認）"
+
 #: ../../../app/themes/Peafowl/views/settings.php:329
 msgid "Re-enter your password"
 msgstr "パスワードを再度入力して下さい。"
@@ -4654,9 +5165,6 @@ msgstr "新規画像のアップロード"
 #: ../../../app/themes/Peafowl/views/settings.php:354
 msgid "Delete existing image"
 msgstr "アップロード済みの画像を削除"
-
-msgid "Privacy"
-msgstr "非公開"
 
 msgid "Make my profile and identity totally private"
 msgstr "プロフィールなどを非公開にする"
@@ -4684,9 +5192,8 @@ msgstr "あなたについて少し教えてください。"
 msgid "User has no connections."
 msgstr "ユーザは何も接続していません。"
 
-#: ../../../app/themes/Peafowl/views/settings.php:391
-msgid "Link your account to external services to be able to login and share content."
-msgstr "あなたの外部サービスのアカウントでログインをしたり、コンテンツを共有するには、アカウントを関連づけてください。"
+msgid "Link your account to external services to be able to login here."
+msgstr "あなたのアカウントでの外部サービスへログイン、コンテンツの共有を行うリンク"
 
 #: ../../../app/themes/Peafowl/views/settings.php:398
 #, php-format
@@ -4722,18 +5229,51 @@ msgstr "接続を解除"
 msgid "Connect %s"
 msgstr "%sと接続"
 
+#: ../../../app/loader.php:279
+#: ../../../app/themes/Peafowl/views/settings.php:441
+msgid "Feel free to browse and discover all my shared images and albums."
+msgstr "お気軽に共有設定しているアルバムと画像をご覧下さい。"
+
 #: ../../../app/themes/Peafowl/views/settings.php:446
 msgid "Button"
 msgstr "ボタン"
+
+#: ../../../app/loader.php:282
+#: ../../../app/themes/Peafowl/views/settings.php:447
+msgid "View all my images"
+msgstr "全ての画像を見る"
+
+msgid "Login"
+msgstr "ログイン"
+
+#, php-format
+msgid "Already have an account? %s now."
+msgstr "既にアカウントをお持ちであれば %s へどうぞ。"
 
 #: ../../../app/themes/Peafowl/views/signup.php:45
 msgid "resend account activation"
 msgstr "アカウント有効の再通知"
 
-#: ../../../app/themes/Peafowl/views/signup.php:45
 #, php-format
-msgid "If you have already signed up maybe you need to request to %s"
-msgstr "既にアカウント登録されている場合、 %sへのリクエストが必要かもしれません。"
+msgid "If you have already signed up maybe you need to request to %s to activate your account."
+msgstr "アカウント申込みが完了している場合は、%s へ有効化を申請してください。 "
+
+#, php-format
+msgid "You can also %s."
+msgstr "%s も使用できます。"
+
+#, php-format
+msgid "I'm at least %s years old"
+msgstr "私は%s歳以上です。"
+
+msgid "terms"
+msgstr "利用規約"
+
+msgid "privacy policy"
+msgstr "プライバシーポリシー"
+
+msgid "I agree to the %terms_link and %privacy_link"
+msgstr "私は、%terms_link と %privacy_link に同意します"
 
 #: ../../../app/themes/Peafowl/views/user.php:15
 msgid "Upload profile background"
@@ -4764,6 +5304,17 @@ msgstr[0] "フォロワー"
 msgid "Follow"
 msgstr "フォロー"
 
+#: ../../../app/loader.php:180
+msgid "You have been forbidden to use this website."
+msgstr "あなたは、このウェブサイトを使うことができません。"
+
+msgid "Plugin"
+msgstr "プラグイン"
+
+#, php-format
+msgid "Page %s"
+msgstr "%sページ"
+
 #: ../../../app/routes/route.page.php:61
 #: ../../../content/pages/default/contact.php:7
 msgid "General questions/comments"
@@ -4784,11 +5335,6 @@ msgstr "有効なメッセージではありません。"
 msgid "Invalid subject"
 msgstr "有効な件名ではありません。"
 
-#: ../../../app/routes/route.page.php:85
-#: ../../../content/pages/default/contact.php:33
-msgid "Invalid reCAPTCHA"
-msgstr "入力された値は、画像にあるキーではありません。"
-
 #: ../../../app/routes/route.page.php:122
 #: ../../../content/pages/default/contact.php:69
 msgid "Mail error"
@@ -4796,9 +5342,6 @@ msgstr "メールでエラーが発生しました。"
 
 msgid "Message sent"
 msgstr "メッセージを送信しました。"
-
-msgid "Contact"
-msgstr "コンテンツ"
 
 #: ../../../app/routes/route.page.php:119
 msgid "Message sent. We will get in contact soon."
@@ -4812,248 +5355,6 @@ msgstr "氏名"
 
 msgid "Subject"
 msgstr "件名"
-
-#: ../../../app/install/update/template/update.js:19
-#, javascript-format
-msgid "Installed version is v%s"
-msgstr "インストールされているバージョンは v%s"
-
-#: ../../../app/install/update/template/update.js:26
-#: ../../../app/install/update/template/update.js:55
-#: ../../../app/install/update/template/update.js:78
-#, javascript-format
-msgid "Can't connect to %s"
-msgstr "%s に接続できません。"
-
-#: ../../../app/install/update/template/update.js:30
-#, javascript-format
-msgid "Last available release is v%s"
-msgstr "最新のリリース版は v%s"
-
-#: ../../../app/install/update/template/update.js:33
-msgid "Update needed, proceeding to download"
-msgstr "更新が必要です、ダウンロードをおこないます。"
-
-#: ../../../app/install/update/template/update.js:40
-msgid "No update needed"
-msgstr "更新の必要はありません。"
-
-#: ../../../app/install/update/template/update.js:41
-msgid "System files already up to date"
-msgstr "システムファイルは既に更新されています。"
-
-#: ../../../app/install/update/template/update.js:49
-#, javascript-format
-msgid "Starting v%s download"
-msgstr "v%sのダウンロードを開始しています。"
-
-#: ../../../app/install/update/template/update.js:60
-#, javascript-format
-msgid "Downloaded v%s, proceeding to extraction"
-msgstr "v%sのダウンロードが完了しました。抽出しています。"
-
-#: ../../../app/install/update/template/update.js:72
-#, javascript-format
-msgid "Attempting to extract v%s"
-msgstr "v%sの抽出を試みています。"
-
-#: ../../../app/install/update/template/update.js:82
-msgid "Extraction completed"
-msgstr "抽出が完了しました。"
-
-#: ../../../app/install/update/template/update.js:84
-msgid "Proceding to install the update"
-msgstr "更新のインストールが進行中"
-
-#: ../../../app/install/update/template/update.js:111
-msgid "Update failed"
-msgstr "更新に失敗しました。"
-
-#: ../../../app/lib/chevereto.js:592 ../../../app/lib/chevereto.min.js:36
-msgid "Please provide a valid email address"
-msgstr "有効なメールアドレスを入力してください。"
-
-msgid "Please provide a valid username"
-msgstr "有効なユーザー名を入力してください"
-
-#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
-#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
-#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
-#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
-#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
-#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
-msgid "You must enter the album name."
-msgstr "アルバム名を入力して下さい。"
-
-#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
-#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
-#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
-#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
-msgid "Confirm"
-msgstr "確認"
-
-#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
-msgid "Select existing album"
-msgstr "既に存在するアルバムを選択"
-
-#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
-#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
-msgid "Please select a valid image file type."
-msgstr "有効な画像ファイル形式を選択して下さい。"
-
-#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
-#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
-#, javascript-format
-msgid "Please select a picture of at most %s size."
-msgstr "%s以内の画像を選択して下さい。"
-
-#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
-msgid "Profile image updated."
-msgstr "プロフィール画像をアップロード"
-
-#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
-msgid "Profile background image updated."
-msgstr "プロフィールの背景画像をアップロード"
-
-#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
-msgid "Profile background image deleted."
-msgstr "プロフィールの背景画像が削除されました。"
-
-#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
-msgid "Error deleting profile background image."
-msgstr "プロフィールページの背景画像の削除でエラーが発生しました。"
-
-#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
-#, javascript-format
-msgid "Update available v%s"
-msgstr "v%sの更新が利用可能です。"
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#, javascript-format
-msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
-msgstr "このシステムで利用可能な更新が存在します。このアップデートを自動でダウンロードしてインストールするか、%sにアクセスしてダウンロードをすることができます。"
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "Update now"
-msgstr "今すぐ更新する"
-
-#, javascript-format
-msgid "This website is running latest %s version"
-msgstr "このサイトは、最新のバージョン %s で構成しています。"
-
-msgid "Toggle select"
-msgstr "選択をトグル"
-
-msgid "Toggle flag"
-msgstr "フラグをトグル"
-
-msgid "Previous"
-msgstr "前へ"
-
-msgid "Next"
-msgstr "次へ"
-
-#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
-msgid "Clipboard image"
-msgstr "クリップボードの画像"
-
-#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
-msgid "File too big."
-msgstr "ファイルが大きすぎます。"
-
-msgid "Invalid or unsupported file format."
-msgstr "無効か非対応のファイル形式です。"
-
-#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
-#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
-msgid "Some files couldn't be added"
-msgstr "いくつかのファイルが追加できませんでした。"
-
-#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
-msgid "Image edited successfully."
-msgstr "画像の編集が完了しました。"
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
-#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
-#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
-msgid "private"
-msgstr "非公開"
-
-#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
-msgid "Album edited successfully."
-msgstr "アルバムの編集が完了しました。"
-
-#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
-msgid "Invalid URL key."
-msgstr "無効なURLキーです。"
-
-#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
-msgid "Category URL key already being used."
-msgstr "このカテゴリURLキーは、既に使用されています。"
-
-#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
-msgid "Category successfully deleted."
-msgstr "カテゴリの削除が完了しました。"
-
-#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
-#, javascript-format
-msgid "Category %s added."
-msgstr "カテゴリ： %s を追加しました。"
-
-#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
-msgid "Invalid expiration date."
-msgstr "無効な期限です。"
-
-#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
-#, javascript-format
-msgid "IP %s already banned."
-msgstr "IPアドレス： %s はアクセス禁止となっています。"
-
-#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
-#, javascript-format
-msgid "IP %s banned."
-msgstr "IPアドレス： %s はアクセス禁止となっています。"
-
-#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
-msgid "IP ban successfully deleted."
-msgstr "このIPアドレスのアクセス禁止を解除しました。"
-
-#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
-#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
-#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
-msgid "Please fill all the required fields."
-msgstr "必須の項目全てに入力して下さい。"
-
-#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
-msgid "Invalid storage capacity value. Make sure to use a valid format."
-msgstr "ストレージ容量が不正です。有効なフォーマットかを確認して下さい。"
-
-#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
-msgid "Invalid URL."
-msgstr "無効なURLです。"
-
-#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
-msgid "Storage successfully edited."
-msgstr "ストレージの編集が完了しました。"
-
-#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
-msgid "User added successfully."
-msgstr "ユーザの追加が完了しました。"
-
-#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
-#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
-#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
-#: ../../../app/lib/chevereto.min.js:205
-msgid "The content has been moved."
-msgstr "コンテンツは移動しました。"
-
-#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
-msgid "Unselect"
-msgstr "選択を解除"
-
-#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
-msgid "The content has been edited."
-msgstr "コンテンツの編集が完了しました。"
 
 #: ../../../lib/Peafowl/peafowl.js:25 ../../../lib/Peafowl/peafowl.js:492
 #: ../../../lib/Peafowl/peafowl.min.js:1 ../../../lib/Peafowl/peafowl.min.js:31

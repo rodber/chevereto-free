@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2018-05-22 17:25+0000',
-  'PO-Revision-Date' => '2018-05-22 17:25+0000',
+  'POT-Creation-Date' => '2020-04-16 20:33+0000',
+  'PO-Revision-Date' => '2020-04-16 20:33+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'da',
@@ -52,6 +52,9 @@ $translation_table = [
 	"Personal" => [
 		0 => "Personlig",
 	],
+	"Can't connect to %s" => [
+		0 => "Kan ikke oprette forbindelse til %s",
+	],
 	"Update in progress" => [
 		0 => "Opdatering i gang",
 	],
@@ -78,6 +81,141 @@ $translation_table = [
 	],
 	"Can't update %s file - %e" => [
 		0 => "Kan ikke opdatere %s fil - %e",
+	],
+	"Check the errors in the form to continue." => [
+		0 => "Kontroller fejlene i formularen for at fortsætte.",
+	],
+	"You must enter the album name." => [
+		0 => "Indtast venligst albummets navn.",
+	],
+	"Confirm" => [
+		0 => "Bekræft",
+	],
+	"Select existing album" => [
+		0 => "Vælg eksisterende album",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "Der er sket en fejl. Venligt prøv igen senere.",
+	],
+	"Please select a valid image file type." => [
+		0 => "Venligst vælg en godkendt filtype.",
+	],
+	"Please select a picture of at most %s size." => [
+		0 => "Venligst vælg en fil der ikke er større end %s.",
+	],
+	"Profile image updated." => [
+		0 => "Profilbillede opdateret.",
+	],
+	"Profile background image updated." => [
+		0 => "Profil bagrundsbillede opdateret.",
+	],
+	"Profile background image deleted." => [
+		0 => "Profil bagrundsbillede slettet.",
+	],
+	"Error deleting profile background image." => [
+		0 => "Der er sket en fejl, og din profils bagrundsbillede er ikke blevet slettet.",
+	],
+	"Passwords don't match" => [
+		0 => "Adgangskoderne matcher ikke",
+	],
+	"The release notes for this update are:" => [
+		0 => "Udgivelsesnote til denne opdatering:",
+	],
+	"or" => [
+		0 => "eller",
+	],
+	"cancel" => [
+		0 => "annuller",
+	],
+	"loading" => [
+		0 => "Indlæser",
+	],
+	"Like" => [
+		0 => "Synes godt om",
+	],
+	"Edit" => [
+		0 => "Rediger",
+	],
+	"Album" => [
+		0 => "Album",
+		1 => "Albummer",
+	],
+	"Delete" => [
+		0 => "Slet",
+	],
+	"Close" => [
+		0 => "Luk",
+	],
+	"Previous" => [
+		0 => "Tidligere",
+	],
+	"Next" => [
+		0 => "Næste",
+	],
+	"Clipboard image" => [
+		0 => "Billede udklipsholder",
+	],
+	"File too big." => [
+		0 => "Filen er for stor.",
+	],
+	"Invalid or unsupported file format." => [
+		0 => "Ugyldigt eller ikke understøttet filformat.",
+	],
+	"Some files couldn't be added" => [
+		0 => "Nogle filer kunne ikke tilføjes.",
+	],
+	"image" => [
+		0 => "billede",
+		1 => "billeder",
+	],
+	"%s's Albums" => [
+		0 => "%s's Albummer",
+	],
+	"Image edited successfully." => [
+		0 => "Billede redigeret succesfuldt.",
+	],
+	"private" => [
+		0 => "Privat",
+	],
+	"Album edited successfully." => [
+		0 => "Album redigeret succesfuldt.",
+	],
+	"Invalid URL key." => [
+		0 => "Ugyldig URL nøgle.",
+	],
+	"Category URL key already being used." => [
+		0 => "Kategori URL nøgle bruges allerede.",
+	],
+	"Invalid expiration date." => [
+		0 => "Ugyldig udløbsdato.",
+	],
+	"IP %s banned." => [
+		0 => "IP %s er bannet.",
+	],
+	"Storage capacity can't be lower than its current usage (%s)." => [
+		0 => "Lagerkapacitet kan ikke være lavere end den aktuelle brug (%s).",
+	],
+	"Invalid URL." => [
+		0 => "Ugyldig URL.",
+	],
+	"The content has been deleted." => [
+		0 => "Indholdet er blevet slettet.",
+	],
+	"The content has been moved." => [
+		0 => "Indholdet er blevet flyttet.",
+	],
+	"Select" => [
+		0 => "Vælgt",
+	],
+	"Unselect" => [
+		0 => "Fravælg",
+	],
+	"The content has been edited." => [
+		0 => "Indholdet er blevet redigeret.",
+	],
+	"album" => [
+		0 => "album",
+		1 => "albums",
 	],
 	"Untitled" => [
 		0 => "Unavngivet",
@@ -153,10 +291,6 @@ $translation_table = [
 		0 => "synes godt om",
 		1 => "synes godt om",
 	],
-	"image" => [
-		0 => "billede",
-		1 => "billeder",
-	],
 	"Recent" => [
 		0 => "Nylig",
 	],
@@ -197,10 +331,6 @@ $translation_table = [
 		0 => "Billede",
 		1 => "Billeder",
 	],
-	"Album" => [
-		0 => "Album",
-		1 => "Albummer",
-	],
 	"User" => [
 		0 => "Bruger",
 		1 => "Brugere",
@@ -216,9 +346,6 @@ $translation_table = [
 	],
 	"Can't insert storage." => [
 		0 => "Kan ikke indsætte lager.",
-	],
-	"Storage capacity can't be lower than its current usage (%s)." => [
-		0 => "Lagerkapacitet kan ikke være lavere end den aktuelle brug (%s).",
 	],
 	"Can't update storage details." => [
 		0 => "Kan ikke opdatere lageroplysninger.",
@@ -266,9 +393,6 @@ $translation_table = [
 	"There is an update available for your Chevereto based website." => [
 		0 => "Der er en opdatering tilgængelig til din Chevereto baserede hjemmeside.",
 	],
-	"The release notes for this update are:" => [
-		0 => "Udgivelsesnote til denne opdatering:",
-	],
 	"admin dashboard" => [
 		0 => "admin startside",
 	],
@@ -278,20 +402,14 @@ $translation_table = [
 	"view on %s" => [
 		0 => "visning på %s",
 	],
-	"You have been forbidden to use this website." => [
-		0 => "Du er bannet at bruge denne hjemmeside.",
+	"cookie policy" => [
+		0 => "cookie politik",
 	],
-	"Feel free to browse and discover all my shared images and albums." => [
-		0 => "Du er velkommen til at gennemse og opdage alle mine delte billeder og albums.",
+	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link." => [
+		0 => "Vi bruger vores egne og tredjeparts cookies til at forbedre din browseroplevelse og vores tjenester. Hvis du fortsætter med at bruge vores hjemmeside, forstås det, at du accepterer %cookie_policy_link.",
 	],
-	"View all my images" => [
-		0 => "Vis alle mine billeder",
-	],
-	"Plugin" => [
-		0 => "Plugin",
-	],
-	"That page doesn't exist" => [
-		0 => "Denne side findes ikke",
+	"I understand" => [
+		0 => "Jeg forstår",
 	],
 	"Forgot password?" => [
 		0 => "Glemt adgangskode?",
@@ -307,9 +425,6 @@ $translation_table = [
 	],
 	"Email changed" => [
 		0 => "Email opdateret",
-	],
-	"The reCAPTCHA wasn't entered correctly" => [
-		0 => "reCAPTCHA blev ikke indtastet korrekt",
 	],
 	"Invalid Username/Email" => [
 		0 => "Ugyldig Brugernavn eller Email",
@@ -338,14 +453,8 @@ $translation_table = [
 	"Welcome to %s" => [
 		0 => "Velkommen til %s",
 	],
-	"Passwords don't match" => [
-		0 => "Adgangskoderne matcher ikke",
-	],
 	"Email already being used" => [
 		0 => "Denne email er allerede taget i brug",
-	],
-	"Check the errors in the form to continue." => [
-		0 => "Kontroller fejlene i formularen for at fortsætte.",
 	],
 	"Password required" => [
 		0 => "Adgangskode kræves",
@@ -441,14 +550,8 @@ $translation_table = [
 	"Changelog" => [
 		0 => "Seneste nyt",
 	],
-	"Request new features" => [
-		0 => "Anmod om nye funktioner",
-	],
 	"Bug tracking" => [
 		0 => "Fejlfinding",
-	],
-	"Blog" => [
-		0 => "Blog",
 	],
 	"Website" => [
 		0 => "Hjemmeside",
@@ -545,6 +648,9 @@ $translation_table = [
 	],
 	"Before main title (%s)" => [
 		0 => "Før hovedtitel (%s)",
+	],
+	"After call to action (%s)" => [
+		0 => "Efter opfordring til handling (%s)",
 	],
 	"After cover (%s)" => [
 		0 => "Efter cover (%s)",
@@ -738,9 +844,6 @@ $translation_table = [
 	"Sign in" => [
 		0 => "Log ind",
 	],
-	"Logged out" => [
-		0 => "Logget ud",
-	],
 	"Upload images" => [
 		0 => "Upload billeder",
 	],
@@ -810,9 +913,6 @@ $translation_table = [
 	"%s's Images" => [
 		0 => "%s's Billeder",
 	],
-	"%s's Albums" => [
-		0 => "%s's Albummer",
-	],
 	"Results for" => [
 		0 => "Resultater for",
 	],
@@ -834,9 +934,6 @@ $translation_table = [
 	"Discovery" => [
 		0 => "Opdagelse",
 	],
-	"Close" => [
-		0 => "Luk",
-	],
 	"Advanced search" => [
 		0 => "Avanceret søgning",
 	],
@@ -846,38 +943,8 @@ $translation_table = [
 	"Notices (%s)" => [
 		0 => "Meddelelser (%s)",
 	],
-	"Sign in with another account" => [
-		0 => "Log ind med en anden konto",
-	],
-	"or" => [
-		0 => "eller",
-	],
-	"Username or Email address" => [
-		0 => "Brugernavn eller Email",
-	],
-	"Keep me logged in" => [
-		0 => "Husk mig",
-	],
-	"Don't have an account? <a href='%s'>Sign up</a> now." => [
-		0 => "Har du ikke en konto? <a href='%s'>Opret</a> nu.",
-	],
-	"Sign up with another account" => [
-		0 => "Log ind med en anden konto",
-	],
-	"Email address" => [
-		0 => "Email addresse",
-	],
-	"Username" => [
-		0 => "Brugernavn",
-	],
-	"I'm at least %s years old" => [
-		0 => "Jeg er mindst %s år gammel",
-	],
 	"Notifications" => [
 		0 => "Notifikationer",
-	],
-	"loading" => [
-		0 => "Indlæser",
 	],
 	"You don't have notifications" => [
 		0 => "Du har ingen notifikationer :(",
@@ -1005,9 +1072,6 @@ $translation_table = [
 	"sign in" => [
 		0 => "log ind",
 	],
-	"You can %s or %l to save this content into your account." => [
-		0 => "Du kan %s eller %l for at gemme dette indhold i din konto.",
-	],
 	"No %s have been uploaded" => [
 		0 => "Ingen %s er blevet uploadet",
 	],
@@ -1028,9 +1092,6 @@ $translation_table = [
 	],
 	"Uploading" => [
 		0 => "Uploader",
-	],
-	"cancel" => [
-		0 => "annuller",
 	],
 	"cancel remaining" => [
 		0 => "Annullere resterende",
@@ -1058,9 +1119,6 @@ $translation_table = [
 	],
 	"insert" => [
 		0 => "indsæt",
-	],
-	"Edit" => [
-		0 => "Rediger",
 	],
 	"Remove" => [
 		0 => "Fjern",
@@ -1116,9 +1174,6 @@ $translation_table = [
 	"Create album" => [
 		0 => "Opret album",
 	],
-	"The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
-		0 => "Det uploadede indhold vil blive flyttet til dette nyoprettede album. Du kan også flytte indholdet til et <a class=\"modal-switch\" data-switch=\"move-existing-album\">eksisterende album</a>",
-	],
 	"Move to album" => [
 		0 => "Flyt til album",
 	],
@@ -1127,10 +1182,6 @@ $translation_table = [
 	],
 	"Error report" => [
 		0 => "Fejl rapport",
-	],
-	"album" => [
-		0 => "album",
-		1 => "albums",
 	],
 	"Viewer links" => [
 		0 => "Viewer links",
@@ -1171,6 +1222,15 @@ $translation_table = [
 	"Album name" => [
 		0 => "Album navn",
 	],
+	"Album description" => [
+		0 => "Albumbeskrivelse",
+	],
+	"Brief description of this album" => [
+		0 => "Kort beskrivelse af dette album",
+	],
+	"Album privacy" => [
+		0 => "Albums privatliv",
+	],
 	"Who can view this content" => [
 		0 => "Hvem kan se dette indhold",
 	],
@@ -1180,11 +1240,41 @@ $translation_table = [
 	"Private (anyone with the link)" => [
 		0 => "Privat (alle med linket)",
 	],
+	"Private (password protected)" => [
+		0 => "Privat (adgangskode beskyttet)",
+	],
+	"Album password" => [
+		0 => "Album adgangskode",
+	],
 	"Name" => [
 		0 => "Navn",
 	],
+	"Category name" => [
+		0 => "Kategori navn",
+	],
 	"URL key" => [
 		0 => "URL nøgle",
+	],
+	"Category URL key" => [
+		0 => "Kategori URL nøgle",
+	],
+	"Only letters, numbers, and hyphens" => [
+		0 => "Kun bogstaver, tal og bindestreger",
+	],
+	"Brief description of this category" => [
+		0 => "Kort beskrivelse af denne kategori",
+	],
+	"Untitled image" => [
+		0 => "Unavngivet billede",
+	],
+	"You can use wildcard * characters." => [
+		0 => "Du kan bruge wildcard * tegn.",
+	],
+	"Expiration date" => [
+		0 => "Udløbsdato",
+	],
+	"Example" => [
+		0 => "Eksempel",
 	],
 	"Message" => [
 		0 => "Besked",
@@ -1194,6 +1284,9 @@ $translation_table = [
 	],
 	"create new album" => [
 		0 => "opret nyt album",
+	],
+	"Username" => [
+		0 => "Brugernavn",
 	],
 	"view more" => [
 		0 => "Se mere",
@@ -1213,14 +1306,14 @@ $translation_table = [
 	"Flag as safe" => [
 		0 => "Marker som sikker",
 	],
-	"Delete" => [
-		0 => "Slet",
-	],
 	"Create new album" => [
 		0 => "Opret nyt album",
 	],
-	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
-		0 => "For at bruge alle funktionerne skal de logge ind. Hvis du ikke har en bruger kan du <a href=\"%s\">lave en</a> nu.",
+	"Sign in with another account" => [
+		0 => "Log ind med en anden konto",
+	],
+	"Home" => [
+		0 => "Hjem",
 	],
 	"There's nothing to show here." => [
 		0 => "Der er ikke noget at se her.",
@@ -1276,9 +1369,6 @@ $translation_table = [
 	"Keyboard shortcuts" => [
 		0 => "Tastaturgenveje",
 	],
-	"Like" => [
-		0 => "Synes godt om",
-	],
 	"Uploaded by guest" => [
 		0 => "Uploadet af gæst",
 	],
@@ -1291,11 +1381,11 @@ $translation_table = [
 	"by %u" => [
 		0 => "af %u",
 	],
-	"Select" => [
-		0 => "Vælgt",
-	],
 	"Toggle unsafe flag" => [
 		0 => "Skift usikre flag",
+	],
+	"That page doesn't exist" => [
+		0 => "Denne side findes ikke",
 	],
 	"The requested page was not found." => [
 		0 => "Den anmodet side er ikke blevet fundet",
@@ -1306,17 +1396,11 @@ $translation_table = [
 	"The user has been deleted" => [
 		0 => "Brugeren er blevet slettet",
 	],
-	"The content has been deleted." => [
-		0 => "Indholdet er blevet slettet.",
-	],
 	"Your account is almost ready" => [
 		0 => "Din bruger er næsten klar",
 	],
 	"An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "En email er blevet sendt til %s med instrukser til hvordan du skal aktivere din bruger. Aktivationslinket er kun gyldig de næste 48 timer. Hvis du ikke modtager nogle instrusker anbefaler vi at du prøver at checke din junk eller spam filtrer.",
-	],
-	"Go to homepage" => [
-		0 => "Gå til hjemmesiden",
 	],
 	"Resend activation" => [
 		0 => "Gensend aktivering",
@@ -1333,26 +1417,20 @@ $translation_table = [
 	"Your email address" => [
 		0 => "Din email addresse",
 	],
-	"Add email" => [
-		0 => "Tilføj email",
+	"Submit" => [
+		0 => "Indsend",
 	],
 	"An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "En email med instruktioner til hvordan du nulstiller deres kodeord er blevet sendt til det registreret email addresse. Hvis du ikke modtager instrukserne, skal du checke din junk og spam filtrer.",
 	],
-	"Resend instructions" => [
-		0 => "Gensend instrukser",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "Der er sket en fejl. Venligt prøv igen senere.",
-	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "En email er blevet sendt til %s med instrukser til hvordan du skal aktivere din konto.n\\Hvis du modtager instrukserne, check din junk og spam filtrer.",
 	],
-	"Enter your username or the email address that you used to create your account." => [
-		0 => "Indtast dit brugernavn eller email adressen som du brugte til at lave kontoen med.",
+	"Resend instructions" => [
+		0 => "Gensend instrukser",
 	],
-	"Submit" => [
-		0 => "Indsend",
+	"Username or Email address" => [
+		0 => "Brugernavn eller Email",
 	],
 	"Your password has been changed. You can now try logging in using your new password." => [
 		0 => "Dit kodeord er blevet ændret. Du kan logge ind med dit nye kodeord.",
@@ -1360,29 +1438,17 @@ $translation_table = [
 	"Login now" => [
 		0 => "Log ind nu",
 	],
-	"Enter the new password that you want to use." => [
-		0 => "Indtast den nye kodeord du vil bruge.",
-	],
-	"New Password" => [
-		0 => "Nyt Kodeord",
-	],
-	"%d characters min" => [
-		0 => "%d tegn min",
-	],
 	"Enter your new password" => [
 		0 => "Indtast dit nye kordord",
 	],
-	"Confirm password" => [
-		0 => "Bekræft kodeord",
+	"%d characters min" => [
+		0 => "%d tegn min",
 	],
 	"Re-enter your new password" => [
 		0 => "Genindtast dit nye kodeord.",
 	],
 	"An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "En email til %s er blevet sendt med instruktioner for at aktivere din konto. Hvis du ikke modtager vejledningen, skal du prøve at kontrollere dine junk eller spamfiltre.",
-	],
-	"Enter the username or email address that you used to create your account to continue." => [
-		0 => "Indtast brugernavnet eller e-mail adressen, som du brugte til at oprette din konto for at fortsætte.",
 	],
 	"This content is private" => [
 		0 => "Indholdet er privat",
@@ -1408,8 +1474,14 @@ $translation_table = [
 	"Disk used" => [
 		0 => "Plads brugt",
 	],
+	"Status" => [
+		0 => "Status",
+	],
 	"Role" => [
 		0 => "Rolle",
+	],
+	"Email address" => [
+		0 => "Email addresse",
 	],
 	"Add category" => [
 		0 => "Tilføj kategori",
@@ -1437,6 +1509,12 @@ $translation_table = [
 	],
 	"Private mode will make the website only available for registered users." => [
 		0 => "Privat tilstand vil gøre at hjemmesiden kun er tilgængelig for registrerede brugere.",
+	],
+	"Privacy" => [
+		0 => "Privatliv",
+	],
+	"Contact" => [
+		0 => "Kontakt",
 	],
 	"pages" => [
 		0 => "sider",
@@ -1663,6 +1741,9 @@ $translation_table = [
 	"Check the errors to proceed." => [
 		0 => "Se fejlene før de fortsætter.",
 	],
+	"Play GIF" => [
+		0 => "Afspil GIF",
+	],
 	"Load full resolution" => [
 		0 => "Indlæs billedet i fuld opløsning",
 	],
@@ -1706,13 +1787,22 @@ $translation_table = [
 		0 => "Tilmeld dig for at låse op for alle funktioner",
 	],
 	"Manage your content, create private albums, customize your profile and more." => [
-		0 => "Administrer dit indhold, opret privat album, tilpass din profil og meget mere.",
+		0 => "Administrer dit indhold, opret privat album, tilpas din profil og meget mere.",
 	],
-	"Enter your password" => [
-		0 => "Indtast dit kodeord",
+	"Sign in with your account" => [
+		0 => "Log ind med din konto",
+	],
+	"Don't have an account? <a href='%s'>Sign up</a> now." => [
+		0 => "Har du ikke en konto? <a href='%s'>Opret</a> nu.",
+	],
+	"Logged out" => [
+		0 => "Logget ud",
 	],
 	"You have been logged off %s. Hope to see you soon." => [
 		0 => "Du er blevet logget ud %s. Vi håber vi ser dig snart igen.",
+	],
+	"Go to homepage" => [
+		0 => "Gå til hjemmesiden",
 	],
 	"Website under maintenance" => [
 		0 => "Hjemmesiden er under vedligeholdelse",
@@ -1771,9 +1861,6 @@ $translation_table = [
 	"Registration IP" => [
 		0 => "Registrerings IP",
 	],
-	"Status" => [
-		0 => "Status",
-	],
 	"Valid" => [
 		0 => "Gyldig",
 	],
@@ -1831,6 +1918,12 @@ $translation_table = [
 	"This user doesn't have a password. Add one using this form." => [
 		0 => "Denne bruger har ikke et kodeord. Tilføj et med denne formel.",
 	],
+	"Enter your password" => [
+		0 => "Indtast dit kodeord",
+	],
+	"Confirm password" => [
+		0 => "Bekræft kodeord",
+	],
 	"Re-enter your password" => [
 		0 => "Genindtast dit kodeord",
 	],
@@ -1839,9 +1932,6 @@ $translation_table = [
 	],
 	"Delete existing image" => [
 		0 => "Slet eksisterende billede",
-	],
-	"Privacy" => [
-		0 => "Privatliv",
 	],
 	"Make my profile and identity totally private" => [
 		0 => "Gør min profil og identitet helt privat",
@@ -1864,9 +1954,6 @@ $translation_table = [
 	"User has no connections." => [
 		0 => "Brugeren har ikke nogen forbindelser",
 	],
-	"Link your account to external services to be able to login and share content." => [
-		0 => "Link konti til eksterne services for at login og dele indhold.",
-	],
 	"Do you really want to disconnect %s from this account?" => [
 		0 => "Vil du virkelig afbryde %s fra denne konto?",
 	],
@@ -1888,14 +1975,38 @@ $translation_table = [
 	"Connect %s" => [
 		0 => "Forbind %s",
 	],
+	"Feel free to browse and discover all my shared images and albums." => [
+		0 => "Du er velkommen til at gennemse og opdage alle mine delte billeder og albums.",
+	],
 	"Button" => [
 		0 => "Knap",
+	],
+	"View all my images" => [
+		0 => "Vis alle mine billeder",
+	],
+	"Login" => [
+		0 => "Log på",
+	],
+	"Already have an account? %s now." => [
+		0 => "Har du allerede en bruger? %s nu.",
 	],
 	"resend account activation" => [
 		0 => "gensend konto aktivering",
 	],
-	"If you have already signed up maybe you need to request to %s" => [
-		0 => "Hvis du allerede har tilmeldt dig, skal du anmode om at %s",
+	"If you have already signed up maybe you need to request to %s to activate your account." => [
+		0 => "Hvis du allerede har tilmeldt dig, skal du anmode om at %s for at aktiveret din konto.",
+	],
+	"I'm at least %s years old" => [
+		0 => "Jeg er mindst %s år gammel",
+	],
+	"terms" => [
+		0 => "betingelser",
+	],
+	"privacy policy" => [
+		0 => "Fortrolighedspolitik",
+	],
+	"I agree to the %terms_link and %privacy_link" => [
+		0 => "Jeg er enig i %terms_link and %privacy_link",
 	],
 	"Upload profile background" => [
 		0 => "Upload profil baggrundsbillede",
@@ -1919,6 +2030,12 @@ $translation_table = [
 	"Follow" => [
 		0 => "Følg",
 	],
+	"You have been forbidden to use this website." => [
+		0 => "Du er bannet at bruge denne hjemmeside.",
+	],
+	"Plugin" => [
+		0 => "Plugin",
+	],
 	"General questions/comments" => [
 		0 => "Generelt spørgsmål/kommentarer",
 	],
@@ -1931,17 +2048,11 @@ $translation_table = [
 	"Invalid subject" => [
 		0 => "Ugyldig emne",
 	],
-	"Invalid reCAPTCHA" => [
-		0 => "Ugyldig reCAPTCHA",
-	],
 	"Mail error" => [
 		0 => "Mail fejl",
 	],
 	"Message sent" => [
 		0 => "Besked sendt",
-	],
-	"Contact" => [
-		0 => "Kontakt",
 	],
 	"Message sent. We will get in contact soon." => [
 		0 => "Besked sendt. Vi kontakter dig hurtigst muligt.",
@@ -1954,90 +2065,6 @@ $translation_table = [
 	],
 	"Subject" => [
 		0 => "Emne",
-	],
-	"Can't connect to %s" => [
-		0 => "Kan ikke oprette forbindelse til %s",
-	],
-	"Please provide a valid email address" => [
-		0 => "Angiv en gyldig e-mail adresse",
-	],
-	"You must enter the album name." => [
-		0 => "Indtast venligst albummets navn.",
-	],
-	"Confirm" => [
-		0 => "Bekræft",
-	],
-	"Select existing album" => [
-		0 => "Vælg eksisterende album",
-	],
-	"Please select a valid image file type." => [
-		0 => "Venligst vælg en godkendt filtype.",
-	],
-	"Please select a picture of at most %s size." => [
-		0 => "Venligst vælg en fil der ikke er større end %s.",
-	],
-	"Profile image updated." => [
-		0 => "Profilbillede opdateret.",
-	],
-	"Profile background image updated." => [
-		0 => "Profil bagrundsbillede opdateret.",
-	],
-	"Profile background image deleted." => [
-		0 => "Profil bagrundsbillede slettet.",
-	],
-	"Error deleting profile background image." => [
-		0 => "Der er sket en fejl, og din profils bagrundsbillede er ikke blevet slettet.",
-	],
-	"Previous" => [
-		0 => "Tidligere",
-	],
-	"Next" => [
-		0 => "Næste",
-	],
-	"Clipboard image" => [
-		0 => "Billede udklipsholder",
-	],
-	"File too big." => [
-		0 => "Filen er for stor.",
-	],
-	"Invalid or unsupported file format." => [
-		0 => "Ugyldigt eller ikke understøttet filformat.",
-	],
-	"Some files couldn't be added" => [
-		0 => "Nogle filer kunne ikke tilføjes.",
-	],
-	"Image edited successfully." => [
-		0 => "Billede redigeret succesfuldt.",
-	],
-	"private" => [
-		0 => "Privat",
-	],
-	"Album edited successfully." => [
-		0 => "Album redigeret succesfuldt.",
-	],
-	"Invalid URL key." => [
-		0 => "Ugyldig URL nøgle.",
-	],
-	"Category URL key already being used." => [
-		0 => "Kategori URL nøgle bruges allerede.",
-	],
-	"Invalid expiration date." => [
-		0 => "Ugyldig udløbsdato.",
-	],
-	"IP %s banned." => [
-		0 => "IP %s er bannet.",
-	],
-	"Invalid URL." => [
-		0 => "Ugyldig URL.",
-	],
-	"The content has been moved." => [
-		0 => "Indholdet er blevet flyttet.",
-	],
-	"Unselect" => [
-		0 => "Fravælg",
-	],
-	"The content has been edited." => [
-		0 => "Indholdet er blevet redigeret.",
 	],
 	"All the changes that you have made will be lost if you continue." => [
 		0 => "Alle ændringerne du har lavet vil gå tabt",

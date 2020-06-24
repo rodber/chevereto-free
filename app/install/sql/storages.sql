@@ -10,8 +10,8 @@ CREATE TABLE `%table_prefix%storages` (
   `storage_server` varchar(255) DEFAULT NULL,
   `storage_account_id` varchar(255) DEFAULT NULL,
   `storage_account_name` varchar(255) DEFAULT NULL,
-  `storage_key` text,
-  `storage_secret` text,
+  `storage_key` mediumtext,
+  `storage_secret` mediumtext,
   `storage_is_https` tinyint(1) NOT NULL DEFAULT '0',
   `storage_is_active` tinyint(1) NOT NULL DEFAULT '0',
   `storage_capacity` bigint(32) DEFAULT NULL,
@@ -19,4 +19,4 @@ CREATE TABLE `%table_prefix%storages` (
   PRIMARY KEY (`storage_id`),
   KEY `storage_api_id` (`storage_api_id`),
   KEY `storage_is_active` (`storage_is_active`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

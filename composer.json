@@ -1,0 +1,34 @@
+{
+    "name": "chevereto/app",
+    "description": "Chevereto app",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Rodolfo Berrios",
+            "email": "inbox@rodolfoberrios.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "~6.0",
+        "facebook/graph-sdk": "~5.6",
+        "aws/aws-sdk-php": "~3.67",
+        "google/apiclient": "^2.2",
+        "jbroadway/urlify": "~1.1.2",
+        "phpseclib/phpseclib": "~2.0",
+        "rackspace/php-opencloud": "~1.16",
+        "mobiledetect/mobiledetectlib": "^2.8",
+        "abraham/twitteroauth": "~0.9",
+        "bocharsky-bw/vkontakte-php-sdk": "~2.0",
+        "microsoft/azure-storage-blob": "*",
+        "microsoft/azure-storage-table": "*",
+        "microsoft/azure-storage-queue": "*",
+        "microsoft/azure-storage-file": "*",
+        "aliyuncs/oss-sdk-php": "~2.0",
+        "esac/backblaze-b2": "~1.0",
+        "tijsverkoyen/akismet": "~1.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "vendor-dir": "app/vendor"
+    }
+}

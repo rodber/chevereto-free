@@ -5,7 +5,7 @@
   http://chevereto.com/
 
   @author	Rodolfo Berrios A. <http://rodolfoberrios.com/>
-			<inbox@rodolfoberrios.com>
+            <inbox@rodolfoberrios.com>
 
   Copyright (C) Rodolfo Berrios A. All rights reserved.
 
@@ -17,4 +17,6 @@
 define('access', 'index');
 
 /*** Load the G app ***/
-if(!include_once('app/loader.php')) die("Can't find app/loader.php");
+if (!include_once('app/loader.php')) {
+    die("Can't find app/loader.php");
+}

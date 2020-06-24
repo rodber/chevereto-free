@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2018-06-29 19:18+0000',
-  'PO-Revision-Date' => '2018-06-29 19:18+0000',
+  'POT-Creation-Date' => '2020-04-16 20:33+0000',
+  'PO-Revision-Date' => '2020-04-16 20:33+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ja',
@@ -16,18 +16,6 @@ $translation_plural = array (
   'function' => '($n != 1)',
 );
 $translation_table = [
-	"To use all the features of this site you must be logged in." => [
-		0 => "当サイトの全ての機能をご利用頂くにはログインが必要です。",
-	],
-	"If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
-		0 => "アカウントをお持ちでなければ、今すぐ<a href=\"%s\">アカウントを作成</a>いただくことができます。",
-	],
-	"Decode ID" => [
-		0 => "デコードID",
-	],
-	"Encode ID" => [
-		0 => "エンコードID",
-	],
 	"Invalid email" => [
 		0 => "有効なメールアドレスではありません。",
 	],
@@ -64,6 +52,42 @@ $translation_table = [
 	"Personal" => [
 		0 => "個人",
 	],
+	"Installed version is v%s" => [
+		0 => "インストールされているバージョンは v%s",
+	],
+	"Can't connect to %s" => [
+		0 => "%s に接続できません。",
+	],
+	"Last available release is v%s" => [
+		0 => "最新版は v%s です",
+	],
+	"Update needed, proceeding to download" => [
+		0 => "更新が必要です、ダウンロードをおこないます。",
+	],
+	"No update needed" => [
+		0 => "更新の必要はありません。",
+	],
+	"System files already up to date" => [
+		0 => "システムファイルは既に更新されています。",
+	],
+	"Starting v%s download" => [
+		0 => "v%sのダウンロードを開始しています。",
+	],
+	"Downloaded v%s, proceeding to extraction" => [
+		0 => "v%sのダウンロードが完了しました。抽出しています。",
+	],
+	"Attempting to extract v%s" => [
+		0 => "v%sの抽出を試みています。",
+	],
+	"Extraction completed" => [
+		0 => "抽出が完了しました。",
+	],
+	"Proceding to install the update" => [
+		0 => "更新のインストールが進行中",
+	],
+	"Update failed" => [
+		0 => "更新に失敗しました。",
+	],
 	"Update in progress" => [
 		0 => "進行中の更新",
 	],
@@ -90,6 +114,198 @@ $translation_table = [
 	],
 	"Can't update %s file - %e" => [
 		0 => "%sファイルを更新できません - %e",
+	],
+	"Check the errors in the form to continue." => [
+		0 => "先に進むためには、フォーム内のエラーを修正してください。",
+	],
+	"You must enter the album name." => [
+		0 => "アルバム名を入力して下さい。",
+	],
+	"Confirm" => [
+		0 => "確認",
+	],
+	"Select existing album" => [
+		0 => "既に存在するアルバムを選択",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "エラーが発生しました。後ほど、再度お試し下さい。",
+	],
+	"Please select a valid image file type." => [
+		0 => "有効な画像ファイル形式を選択して下さい。",
+	],
+	"Please select a picture of at most %s size." => [
+		0 => "%s以内の画像を選択して下さい。",
+	],
+	"Profile image updated." => [
+		0 => "プロフィール画像をアップロード",
+	],
+	"Profile background image updated." => [
+		0 => "プロフィールの背景画像をアップロード",
+	],
+	"Profile background image deleted." => [
+		0 => "プロフィールの背景画像が削除されました。",
+	],
+	"Error deleting profile background image." => [
+		0 => "プロフィールページの背景画像の削除でエラーが発生しました。",
+	],
+	"Passwords don't match" => [
+		0 => "パスワードが一致しません。",
+	],
+	"Update available v%s" => [
+		0 => "v%sの更新が利用可能です。",
+	],
+	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
+		0 => "このシステムで利用可能な更新が存在します。このアップデートを自動でダウンロードしてインストールするか、%sにアクセスしてダウンロードをすることができます。",
+	],
+	"The release notes for this update are:" => [
+		0 => "このアップデートのリリースノート：",
+	],
+	"Update now" => [
+		0 => "今すぐ更新する",
+	],
+	"or" => [
+		0 => "または",
+	],
+	"cancel" => [
+		0 => "キャンセル",
+	],
+	"This website is running latest %s version" => [
+		0 => "このサイトは、最新の %s 版で動作しています",
+	],
+	"loading" => [
+		0 => "読み込み中",
+	],
+	"Toggle select" => [
+		0 => "選択をトグル",
+	],
+	"Like" => [
+		0 => "いいね！",
+	],
+	"Toggle flag" => [
+		0 => "フラグをトグル",
+	],
+	"Edit" => [
+		0 => "編集",
+	],
+	"Album" => [
+		0 => "アルバム",
+	],
+	"Delete" => [
+		0 => "削除",
+	],
+	"Close" => [
+		0 => "閉じる",
+	],
+	"Previous" => [
+		0 => "前へ",
+	],
+	"Next" => [
+		0 => "次へ",
+	],
+	"Clipboard image" => [
+		0 => "クリップボードの画像",
+	],
+	"File too big." => [
+		0 => "ファイルが大きすぎます。",
+	],
+	"Invalid or unsupported file format." => [
+		0 => "無効か非対応のファイル形式です。",
+	],
+	"Some files couldn't be added" => [
+		0 => "いくつかのファイルが追加できませんでした。",
+	],
+	"image" => [
+		0 => "画像",
+	],
+	"%s's Albums" => [
+		0 => "%sさんのアルバム",
+	],
+	"Image edited successfully." => [
+		0 => "画像の編集が完了しました。",
+	],
+	"private" => [
+		0 => "非公開",
+	],
+	"Album edited successfully." => [
+		0 => "アルバムの編集が完了しました。",
+	],
+	"Invalid URL key." => [
+		0 => "無効なURLキーです。",
+	],
+	"Category URL key already being used." => [
+		0 => "このカテゴリURLキーは、既に使用されています。",
+	],
+	"Category successfully deleted." => [
+		0 => "カテゴリの削除が完了しました。",
+	],
+	"Category %s added." => [
+		0 => "カテゴリ： %s を追加しました。",
+	],
+	"Invalid expiration date." => [
+		0 => "無効な期限です。",
+	],
+	"IP %s already banned." => [
+		0 => "IPアドレス： %s はアクセス禁止となっています。",
+	],
+	"IP %s banned." => [
+		0 => "IPアドレス： %s はアクセス禁止となっています。",
+	],
+	"IP ban successfully deleted." => [
+		0 => "このIPアドレスのアクセス禁止を解除しました。",
+	],
+	"Please fill all the required fields." => [
+		0 => "必須の項目全てに入力して下さい。",
+	],
+	"Invalid storage capacity value. Make sure to use a valid format." => [
+		0 => "ストレージ容量が不正です。有効なフォーマットかを確認して下さい。",
+	],
+	"Storage capacity can't be lower than its current usage (%s)." => [
+		0 => "ストレージ容量は現在の使用量 (%s)より小さくできません。",
+	],
+	"Invalid URL." => [
+		0 => "無効なURLです。",
+	],
+	"Storage successfully edited." => [
+		0 => "ストレージの編集が完了しました。",
+	],
+	"User added successfully." => [
+		0 => "ユーザの追加が完了しました。",
+	],
+	"The content has been deleted." => [
+		0 => "コンテンツは削除されました。",
+	],
+	"The content has been moved." => [
+		0 => "コンテンツは移動しました。",
+	],
+	"Select" => [
+		0 => "選択",
+	],
+	"Unselect" => [
+		0 => "選択を解除",
+	],
+	"The content has been edited." => [
+		0 => "コンテンツの編集が完了しました。",
+	],
+	"Import job ID %s added successfully, you can process the import now" => [
+		0 => "インポートジョブID %s の追加に成功しました、インポートを行えます",
+	],
+	"Select number of threads" => [
+		0 => "スレッドの数を選択",
+	],
+	"Import job ID %s is being processed now" => [
+		0 => "インポートジョブID %s は、現在処理中です",
+	],
+	"Import ID %s removed" => [
+		0 => "インポートID %s は削除されました",
+	],
+	"Spam detected" => [
+		0 => "迷惑行為を検知しました",
+	],
+	"album" => [
+		0 => "アルバム",
+	],
+	"Flooding detected. You can only upload %limit% %content% per %time%" => [
+		0 => "不正な動作を検知しました。%time%回に%content%を%limit%までアップロードできます。",
 	],
 	"Untitled" => [
 		0 => "名称未設定",
@@ -157,9 +373,6 @@ $translation_table = [
 	"like" => [
 		0 => "いいね！",
 	],
-	"image" => [
-		0 => "画像",
-	],
 	"Recent" => [
 		0 => "最新",
 	],
@@ -170,7 +383,7 @@ $translation_table = [
 		0 => "トップユーザ",
 	],
 	"Most recent" => [
-		0 => "新しい順",
+		0 => "最も最新",
 	],
 	"Oldest" => [
 		0 => "古い順",
@@ -199,9 +412,6 @@ $translation_table = [
 	"Image" => [
 		0 => "画像",
 	],
-	"Album" => [
-		0 => "アルバム",
-	],
 	"User" => [
 		0 => "ユーザ",
 	],
@@ -216,9 +426,6 @@ $translation_table = [
 	],
 	"Can't insert storage." => [
 		0 => "ストレージを追加できません",
-	],
-	"Storage capacity can't be lower than its current usage (%s)." => [
-		0 => "ストレージ容量は現在の使用量 (%s)より小さくできません。",
 	],
 	"Can't update storage details." => [
 		0 => "ストレージの詳細を更新できません",
@@ -265,9 +472,6 @@ $translation_table = [
 	"There is an update available for your Chevereto based website." => [
 		0 => "あなたのCheveretoベースのサイトへ必要なアップデートがあります。",
 	],
-	"The release notes for this update are:" => [
-		0 => "このアップデートのリリースノート：",
-	],
 	"admin dashboard" => [
 		0 => "管理者用ダッシュボード",
 	],
@@ -286,21 +490,6 @@ $translation_table = [
 	"I understand" => [
 		0 => "私は次を理解しました：",
 	],
-	"You have been forbidden to use this website." => [
-		0 => "あなたは、このウェブサイトを使うことができません。",
-	],
-	"Feel free to browse and discover all my shared images and albums." => [
-		0 => "お気軽に共有設定しているアルバムと画像をご覧下さい。",
-	],
-	"View all my images" => [
-		0 => "全ての画像を見る",
-	],
-	"Plugin" => [
-		0 => "プラグイン",
-	],
-	"That page doesn't exist" => [
-		0 => "ページが存在しません。",
-	],
 	"Forgot password?" => [
 		0 => "パスワードを忘れてしまいましたか？",
 	],
@@ -316,8 +505,8 @@ $translation_table = [
 	"Email changed" => [
 		0 => "メールアドレスが変更されました。",
 	],
-	"The reCAPTCHA wasn't entered correctly" => [
-		0 => "画像認証が正しくありません。",
+	"%s says you are a robot" => [
+		0 => "%s は、あなたはボットだと言っています。",
 	],
 	"Invalid Username/Email" => [
 		0 => "ユーザ名/メールアドレスが有効ではありません。",
@@ -346,14 +535,8 @@ $translation_table = [
 	"Welcome to %s" => [
 		0 => "ようこそ、%sさん",
 	],
-	"Passwords don't match" => [
-		0 => "パスワードが一致しません。",
-	],
 	"Email already being used" => [
 		0 => "このメールアドレスは既に使用されています。",
-	],
-	"Check the errors in the form to continue." => [
-		0 => "先に進むためには、フォーム内のエラーを修正してください。",
 	],
 	"Password required" => [
 		0 => "パスワードが必要です。",
@@ -371,7 +554,7 @@ $translation_table = [
 		0 => "%a アルバムは %w　にてホストされます。",
 	],
 	"Stats" => [
-		0 => "最新状況",
+		0 => "統計",
 	],
 	"Images" => [
 		0 => "画像",
@@ -384,6 +567,9 @@ $translation_table = [
 	],
 	"Settings" => [
 		0 => "設定",
+	],
+	"Bulk importer" => [
+		0 => "一括インポート",
 	],
 	"Chevereto version" => [
 		0 => "Cheveretoのバージョン",
@@ -439,8 +625,20 @@ $translation_table = [
 	"Memory limit" => [
 		0 => "メモリ制限",
 	],
+	"Rebuild stats" => [
+		0 => "統計を再構築",
+	],
+	"Connecting IP" => [
+		0 => "接続中のIP",
+	],
+	"Not your IP?" => [
+		0 => "あなたのIPアドレスではありませんか？",
+	],
 	"Links" => [
 		0 => "リンク",
+	],
+	"Collaboration" => [
+		0 => "コラボレーション",
 	],
 	"Documentation" => [
 		0 => "ドキュメント",
@@ -448,14 +646,8 @@ $translation_table = [
 	"Changelog" => [
 		0 => "変更履歴",
 	],
-	"Request new features" => [
-		0 => "新機能のリクエスト",
-	],
 	"Bug tracking" => [
 		0 => "バグ修正過程",
-	],
-	"Blog" => [
-		0 => "ブログ",
 	],
 	"Website" => [
 		0 => "ウェブサイト",
@@ -730,6 +922,9 @@ $translation_table = [
 	"Invalid visibility" => [
 		0 => "可視性が不正です。",
 	],
+	"Invalid internal type" => [
+		0 => "不正なタイプです。",
+	],
 	"Invalid target attribute" => [
 		0 => "ターゲットの属性が不正です。",
 	],
@@ -784,6 +979,9 @@ $translation_table = [
 	"Invalid SMTP username" => [
 		0 => "有効なSMTPユーザ名ではありません。",
 	],
+	"Invalid key" => [
+		0 => "無効なキー",
+	],
 	"This URL key is already being used by another page (ID %s)" => [
 		0 => "このURLキーは、すでに他のページで使用されています (ID %s)。",
 	],
@@ -815,7 +1013,7 @@ $translation_table = [
 		0 => "アップロード日時",
 	],
 	"Image %i in %a album" => [
-		0 => "アルバム：%aに存在する画像：%i",
+		0 => "アルバム「%a」に存在する「%i」",
 	],
 	"Image %i in %c category" => [
 		0 => "カテゴリ：%cに存在する画像：%i",
@@ -913,9 +1111,6 @@ $translation_table = [
 	"Sign in" => [
 		0 => "サインイン",
 	],
-	"Logged out" => [
-		0 => "ログアウトしました。",
-	],
 	"Upload images" => [
 		0 => "画像をアップロード",
 	],
@@ -988,9 +1183,6 @@ $translation_table = [
 	"%s's Images" => [
 		0 => "%sさんの画像",
 	],
-	"%s's Albums" => [
-		0 => "%sさんのアルバム",
-	],
 	"Results for" => [
 		0 => "結果：",
 	],
@@ -1012,9 +1204,6 @@ $translation_table = [
 	"Discovery" => [
 		0 => "発見",
 	],
-	"Close" => [
-		0 => "閉じる",
-	],
 	"Advanced search" => [
 		0 => "高度な検索",
 	],
@@ -1024,47 +1213,11 @@ $translation_table = [
 	"Notices (%s)" => [
 		0 => "通知 (%s)",
 	],
-	"Sign in with another account" => [
-		0 => "別のアカウントでサインイン",
-	],
-	"or" => [
-		0 => "または",
-	],
-	"Username or Email address" => [
-		0 => "ユーザ名　又は　電子メールアドレス",
-	],
-	"Keep me logged in" => [
-		0 => "ログインしたままにする",
-	],
-	"Don't have an account? <a href='%s'>Sign up</a> now." => [
-		0 => "アカウントがありませんか？今すぐ<a href='%s'>アカウントを作成</a>しましょう。",
-	],
-	"Sign up with another account" => [
-		0 => "別なアカウントを作成",
-	],
-	"Email address" => [
-		0 => "メールアドレス",
-	],
-	"Username" => [
-		0 => "ユーザ名",
-	],
-	"I'm at least %s years old" => [
-		0 => "私は%s歳以上です。",
-	],
-	"terms" => [
-		0 => "利用規約",
-	],
-	"privacy policy" => [
-		0 => "プライバシーポリシー",
-	],
-	"I agree to the %terms_link and %privacy_link" => [
-		0 => "私は、%terms_link と %privacy_link に同意します",
+	"Lights" => [
+		0 => "明るい",
 	],
 	"Notifications" => [
 		0 => "通知",
-	],
-	"loading" => [
-		0 => "読み込み中",
 	],
 	"You don't have notifications" => [
 		0 => "まだ通知はありません。",
@@ -1186,14 +1339,14 @@ $translation_table = [
 	"move it to an existing album" => [
 		0 => "既に存在するアルバムに移動",
 	],
+	"You must %s or %l to save this content into your account." => [
+		0 => "このコンテンツをアカウントに保存するには、%s または %l である必要があります。",
+	],
 	"create an account" => [
 		0 => "アカウントを作成",
 	],
 	"sign in" => [
 		0 => "サインイン",
-	],
-	"You can %s or %l to save this content into your account." => [
-		0 => "このコンテンツをアカウントに保存するために、%sまたは%lが利用できます。",
 	],
 	"No %s have been uploaded" => [
 		0 => "アップロードされた%sはありません。",
@@ -1215,9 +1368,6 @@ $translation_table = [
 	],
 	"Uploading" => [
 		0 => "アップロード中",
-	],
-	"cancel" => [
-		0 => "キャンセル",
 	],
 	"cancel remaining" => [
 		0 => "残りも全てキャンセルする",
@@ -1245,9 +1395,6 @@ $translation_table = [
 	],
 	"insert" => [
 		0 => "挿入",
-	],
-	"Edit" => [
-		0 => "編集",
 	],
 	"Remove" => [
 		0 => "削除",
@@ -1303,8 +1450,17 @@ $translation_table = [
 	"Create album" => [
 		0 => "アルバムの作成",
 	],
-	"The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
-		0 => "アップロードされたものは、最新のアルバムに貼付けられます。 また、 <a class=\"modal-switch\" data-switch=\"move-existing-album\">お持ちのアルバム</a>へ貼付けることもできます。",
+	"The uploaded content will be moved to this newly created album." => [
+		0 => "アップロードされたコンテンツは最も新しいアルバムに移動されます。",
+	],
+	"existing album" => [
+		0 => "既に存在するアルバム",
+	],
+	"You can also move the content to an %a." => [
+		0 => "コンテンツを %a に移動することも可能です。",
+	],
+	"You must %s or %l if you want to edit this album later on." => [
+		0 => "このアルバムを後で編集するには、%s または %l である必要があります。",
 	],
 	"Move to album" => [
 		0 => "アルバムへ移動",
@@ -1314,9 +1470,6 @@ $translation_table = [
 	],
 	"Error report" => [
 		0 => "エラーレポート",
-	],
-	"album" => [
-		0 => "アルバム",
 	],
 	"Viewer links" => [
 		0 => "閲覧用リンク",
@@ -1438,6 +1591,33 @@ $translation_table = [
 	"Untitled image" => [
 		0 => "画像のタイトルを入力",
 	],
+	"Path" => [
+		0 => "パス",
+	],
+	"Local path (absolute)" => [
+		0 => "ローカルパス （絶対パス）",
+	],
+	"Directory structure" => [
+		0 => "ディレクトリ構造",
+	],
+	"Parse top level folders as users (username)" => [
+		0 => "トップレベルフォルダーをユーザー名にする",
+	],
+	"Parse top level folders as albums" => [
+		0 => "トップレベルフォルダーをアルバムにする",
+	],
+	"Don't parse folders" => [
+		0 => "フォルダーを構成しない",
+	],
+	"When parsing top level folders as users, second level folders will be parsed as user albums. Parsing top level folders as albums adds these as guest albums." => [
+		0 => "トップレベルフォルダーをユーザー名として構成すると、セカンドレベルフォルダーはユーザーのアルバムとして構成されます。トップレベルフォルダーをアルバムとして構成すると",
+	],
+	"Threads" => [
+		0 => "スレッド",
+	],
+	"This determines how intensive and fast will be the import process. Don't use more than %s threads on a shared server." => [
+		0 => "これは、インポート処理をどの程度集中的かつ高速に行われるかを設定できます。共有サーバーでは、%s スレッド以上利用しないでください。",
+	],
 	"You can use wildcard * characters." => [
 		0 => "ワイルドカード * 文字 をご利用いただけます。",
 	],
@@ -1474,6 +1654,9 @@ $translation_table = [
 	"Region" => [
 		0 => "リージョン",
 	],
+	"Storage region" => [
+		0 => "ストレージ地域",
+	],
 	"Storage bucket" => [
 		0 => "ストレージのバケット",
 	],
@@ -1489,20 +1672,14 @@ $translation_table = [
 	"Storage secret" => [
 		0 => "ストレージ秘密鍵",
 	],
-	"Client email" => [
-		0 => "クライアントE-Mail",
-	],
-	"Google Cloud client email" => [
-		0 => "グーグルクラウド用クライアントE-mail",
-	],
-	"You will need a <a %s>service account</a> for this." => [
-		0 => "<a %s>サービスアカウント</a>が必要です。",
-	],
 	"Private key" => [
 		0 => "プライベートキー",
 	],
 	"Google Cloud JSON key" => [
 		0 => "グーグルクラウド用JOSNキー",
+	],
+	"You will need a <a %s>service account</a> for this." => [
+		0 => "<a %s>サービスアカウント</a>が必要です。",
 	],
 	"Service name" => [
 		0 => "サービス名",
@@ -1516,8 +1693,8 @@ $translation_table = [
 	"API endpoint for OpenStack identity" => [
 		0 => "OpenStack用identityのAPIエンドポイント",
 	],
-	"Storage region" => [
-		0 => "ストレージ地域",
+	"Username" => [
+		0 => "ユーザ名",
 	],
 	"Container" => [
 		0 => "コンテナ",
@@ -1537,23 +1714,32 @@ $translation_table = [
 	"Tenant name (account name)" => [
 		0 => "テナント名(アカウント名)",
 	],
+	"Storage endpoint" => [
+		0 => "ストレージのエンドポイント",
+	],
+	"Server address" => [
+		0 => "サーバーのアドレス",
+	],
 	"Hostname or IP of the storage server" => [
 		0 => "外部ストレージサーバーのホスト名、または、IPアドレス",
-	],
-	"Path" => [
-		0 => "パス",
 	],
 	"Server path" => [
 		0 => "サーバーのパス",
 	],
-	"Server path where the files will be stored" => [
-		0 => "ファイルを保存するサーバーへのパス",
+	"Absolute path where the files will be stored in the context of the %p login. Use %s for root path." => [
+		0 => "絶対パスは、%p ログインで保管されます。ルートパスにする場合は、%s を利用してください。",
 	],
-	"Server username" => [
-		0 => "サーバーのユーザ名",
+	"Server login" => [
+		0 => "サーバーログイン",
 	],
 	"Server password" => [
 		0 => "サーバーのパスワード",
+	],
+	"Local path" => [
+		0 => "ローカルパス",
+	],
+	"Local path where the files will be stored" => [
+		0 => "ファイルを保管する場所となるローカルパスです",
 	],
 	"Storage capacity" => [
 		0 => "ストレージ容量",
@@ -1597,14 +1783,17 @@ $translation_table = [
 	"Flag as safe" => [
 		0 => "ファミリーセーフティを満たすとしてマーク",
 	],
-	"Delete" => [
-		0 => "削除",
-	],
 	"Create new album" => [
 		0 => "新規アルバムを作成",
 	],
-	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
-		0 => "このサイトの機能を全て利用するためには、ログインが必要です。 アカウントをお持ちでない場合は、<a href=\"%s\">こちら</a>でアカウントを作成することができます。",
+	"Sign in with another account" => [
+		0 => "別のアカウントでサインイン",
+	],
+	"Continue with %label%" => [
+		0 => "%label%で続ける",
+	],
+	"Home" => [
+		0 => "ホーム",
 	],
 	"There's nothing to show here." => [
 		0 => "表示するものはありません。",
@@ -1666,8 +1855,11 @@ $translation_table = [
 	"Keyboard shortcuts" => [
 		0 => "キーボードショートカット",
 	],
-	"Like" => [
-		0 => "いいね！",
+	"Private album" => [
+		0 => "個人用アルバム",
+	],
+	"Password protected" => [
+		0 => "パスワードで保護",
 	],
 	"Uploaded by guest" => [
 		0 => "ゲストからのアップロード",
@@ -1681,11 +1873,11 @@ $translation_table = [
 	"by %u" => [
 		0 => "%u　により",
 	],
-	"Select" => [
-		0 => "選択",
-	],
 	"Toggle unsafe flag" => [
 		0 => "ファミリーセーフ　ON/OFF",
+	],
+	"That page doesn't exist" => [
+		0 => "ページが存在しません。",
 	],
 	"The requested page was not found." => [
 		0 => "要求されたページは見つかりません。",
@@ -1696,17 +1888,11 @@ $translation_table = [
 	"The user has been deleted" => [
 		0 => "そのユーザは削除されています。",
 	],
-	"The content has been deleted." => [
-		0 => "コンテンツは削除されました。",
-	],
 	"Your account is almost ready" => [
 		0 => "アカウントの設定が完了するまで、あと少しです。",
 	],
 	"An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "%s宛にアカウント認証のためのメールを送信しました。 アカウント認証のためのリンクは48時間以内有効です。届いていない場合には迷惑メールフォルダをチェックして下さい。",
-	],
-	"Go to homepage" => [
-		0 => "ホームへ戻る",
 	],
 	"Resend activation" => [
 		0 => "認証メールを再送信",
@@ -1723,26 +1909,23 @@ $translation_table = [
 	"Your email address" => [
 		0 => "メールアドレス",
 	],
-	"Add email" => [
-		0 => "メールアドレスを追加",
+	"Submit" => [
+		0 => "送信",
 	],
 	"An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "パスワードのリセット方法を登録されているメールアドレス宛に送信しました。もし届いていない場合には、迷惑メールフォルダをチェックして下さい。",
 	],
-	"Resend instructions" => [
-		0 => "手順を再送信",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "エラーが発生しました。後ほど、再度お試し下さい。",
-	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "パスワードのリセットの手順をメールで送信しました。届いていない場合には、迷惑メールフォルダをチェックして下さい。",
 	],
-	"Enter your username or the email address that you used to create your account." => [
-		0 => "アカウント作成時のユーザ名、または、メールアドレスを入力して下さい。",
+	"Resend instructions" => [
+		0 => "手順を再送信",
 	],
-	"Submit" => [
-		0 => "送信",
+	"Enter your username or email address to continue. You may need to check your spam folder or whitelist %s" => [
+		0 => "続行するにはユーザー名またはパスワードを入力してください。迷惑メールフォルダーの確認と、%s をホワイトリストに追加するのも合わせてご確認ください。",
+	],
+	"Username or Email address" => [
+		0 => "ユーザ名　又は　電子メールアドレス",
 	],
 	"Your password has been changed. You can now try logging in using your new password." => [
 		0 => "パスワードの変更が完了しました。新しいパスワードでログインして下さい。",
@@ -1750,29 +1933,20 @@ $translation_table = [
 	"Login now" => [
 		0 => "今すぐログイン",
 	],
-	"Enter the new password that you want to use." => [
+	"Enter your new password" => [
 		0 => "新しいパスワードを入力して下さい。",
-	],
-	"New Password" => [
-		0 => "新しいパスワード",
 	],
 	"%d characters min" => [
 		0 => "最低%d文字",
 	],
-	"Enter your new password" => [
-		0 => "新しいパスワードを入力して下さい。",
-	],
-	"Confirm password" => [
-		0 => "新しいパスワード（確認）",
+	"Password strength" => [
+		0 => "パスワードの強さ",
 	],
 	"Re-enter your new password" => [
 		0 => "新しいパスワードを再度入力して下さい。",
 	],
 	"An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "有効なアカウント %s 　宛にE-mailを送信しました。届いていない場合には迷惑フォルダを確認してください。",
-	],
-	"Enter the username or email address that you used to create your account to continue." => [
-		0 => "アカウントを作成を続ける場合、ユーザ名、または、メールアドレスを入力してください。",
 	],
 	"This content is private" => [
 		0 => "このコンテンツは非公開です。",
@@ -1804,8 +1978,122 @@ $translation_table = [
 	"I Agree" => [
 		0 => "同意します",
 	],
+	"documentation" => [
+		0 => "ドキュメント",
+	],
+	"Learn more about %s at our %d." => [
+		0 => "%sについての詳細は、 %dから。",
+	],
+	"The connecting IP is determined using the server variable %var%. If the detected IP doesn't match yours, it means that your web server is under a proxy and you need to tweak your server to set the real connecting IP." => [
+		0 => "接続 IP は、サーバ変数 %var% を使用して決定されます。検出されたIPがあなたのものと一致しない場合、それはあなたのウェブサーバがプロキシの下にあることを意味し、実際の接続IPを設定するためにサーバを調整する必要があります。",
+	],
+	"For Nginx, you must use %nginx%. For Apache, %apache%." => [
+		0 => "Nginxでは %nginx% 、Apacheでは %apache%を使用します。",
+	],
+	"Make sure that you address this issue as the system relies on accurate IP detections to provide basic functionalities and to protect against spam, flooding, and brute force attacks." => [
+		0 => "システムは基本的な機能を提供し、スパム、フラッディング、ブルートフォース攻撃から保護するために、正確な IP 検出に依存しているため、この問題に対処することを確認してください。",
+	],
 	"Disk used" => [
 		0 => "ディスク使用量",
+	],
+	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure." => [
+		0 => "インポートしたいコンテンツをシステムパスを指し示すことで、Webサイトにコンテンツを大量に追加することができるツールです。フォルダベースの構造を利用したユーザー、アルバム、画像の追加に対応しています。",
+	],
+	"Automatic importing" => [
+		0 => "自動インポート",
+	],
+	"The system automatically parses any content by a continuous observation of the %path% path." => [
+		0 => "システムは、 パス %path% を継続的に観測することで自動的にコンテンツの解析を行います。",
+	],
+	"The system automatically parses any content by a continous observation of the %path% path." => [
+		0 => "システムは、継続的にパス %path% 内のコンテンツを自動的に解析します。",
+	],
+	"Completed jobs will be automatically re-started after %n %m." => [
+		0 => "完了したジョブは、%n %m 後に自動的に開始します。",
+	],
+	"Reset to clear stats and logs." => [
+		0 => "統計とログをクリアします",
+	],
+	"Queued" => [
+		0 => "キューに追加済み",
+	],
+	"Working" => [
+		0 => "お待ちください。",
+	],
+	"Paused" => [
+		0 => "一時停止中",
+	],
+	"Canceled" => [
+		0 => "キャンセルされました。",
+	],
+	"Completed" => [
+		0 => "完了しました。",
+	],
+	"Actions" => [
+		0 => "アクション",
+	],
+	"Reset" => [
+		0 => "リセット",
+	],
+	"Pause" => [
+		0 => "一時停止",
+	],
+	"Resume" => [
+		0 => "再開する",
+	],
+	"Process log" => [
+		0 => "プロセスログ",
+	],
+	"Errors" => [
+		0 => "エラー",
+	],
+	"Status" => [
+		0 => "ステータス",
+	],
+	"The system works with a scheduled command to continuously process the importing. It requires a crontab entry." => [
+		0 => "スケジュール化されたコマンドでインポート処理を継続的に行います。これにはcrontabのエントリが必要です。",
+	],
+	"You can run the command in parallel by changing the integer value of %s%." => [
+		0 => "%s% の値でコマンドを並列実行することができます。",
+	],
+	"All file-system permissions must be granted for the crontab user at %path%" => [
+		0 => "crontabユーザーへ %path% へのファイルシステムにアクセスする権利を付与してください。",
+	],
+	"Required crontab entry:" => [
+		0 => "crontabが必要です",
+	],
+	"Add import job" => [
+		0 => "インポートジョブに追加",
+	],
+	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d." => [
+		0 => "このツールは、インポートするコンテンツのパスが指定された場合、一括でサイトに追加をします。また、ユーザー、アルバム、画像をフォルダ形式として使用できます。メタデータやツール内で提供されるものについてのフォルダ形式は、%dに詳細があります。",
+	],
+	"Process import" => [
+		0 => "インポート処理",
+	],
+	"Top level folders as %s" => [
+		0 => "トップ階層 %s",
+	],
+	"Process" => [
+		0 => "処理",
+	],
+	"Cancel" => [
+		0 => "キャンセル",
+	],
+	"Do you really want to remove the import ID %s?" => [
+		0 => "インポートID: %s を削除してもよろしいですか？",
+	],
+	"Manual importing" => [
+		0 => "手動インポート",
+	],
+	"The system will parse the contents of any available filesystem path." => [
+		0 => "システムは、利用可能なファイルシステムのパスの内容を解析します。",
+	],
+	"These processes must be manually created and handled with the web browser tab open." => [
+		0 => "これらのプロセスは、手動で作成し、ウェブブラウザのタブを開いた状態で処理する必要があります。",
+	],
+	"Parser" => [
+		0 => "パーサー",
 	],
 	"Add user" => [
 		0 => "ユーザの追加",
@@ -1813,17 +2101,17 @@ $translation_table = [
 	"Role" => [
 		0 => "権限",
 	],
+	"Manager" => [
+		0 => "マネージャー",
+	],
 	"Administrator" => [
 		0 => "管理者",
 	],
+	"Email address" => [
+		0 => "メールアドレス",
+	],
 	"This setting is always diabled when using personal website mode." => [
 		0 => "この設定は個人Webサイトモードを利用している時は常に無効です。",
-	],
-	"documentation" => [
-		0 => "ドキュメント",
-	],
-	"Learn more about %s at our %d." => [
-		0 => "%sについての詳細は、 %dから。",
 	],
 	"Add category" => [
 		0 => "カテゴリの追加",
@@ -1845,6 +2133,24 @@ $translation_table = [
 	],
 	"Website description" => [
 		0 => "ウェブサイトの詳細",
+	],
+	"Powered by" => [
+		0 => "提供元",
+	],
+	"Enable this if you want to show a \"%s\" link at the footer." => [
+		0 => "コンテンツをSNSで共有するためにSNSボタンを表示するためにONにします。",
+	],
+	"Automatic" => [
+		0 => "自動的",
+	],
+	"Forced" => [
+		0 => "強制的",
+	],
+	"%a will use HTTPS detection on the server side (recommended). %f will use HTTPS regardless of your server setup. %d to don't use HTTPS at all." => [
+		0 => "%a は、サーバー側でHTTPSの検出をするために利用されます (推奨)。%f は、サーバーの設定がされていない場合に利用されます。 HTTPSを絶対に使用しない場合は、%d にしてください。",
+	],
+	"This only controls the protocol used in the URLs, it won't turn your website into a valid HTTPS website unless your server is configured to support and use HTTPS." => [
+		0 => "お使いのサーバーがHTTPSのサポート設定が完了するまで、有効なHTTPSにはならず、URLで指定されたプロトコルで通信します。",
 	],
 	"Default time zone" => [
 		0 => "既定のタイムゾーン",
@@ -1933,6 +2239,24 @@ $translation_table = [
 	"Type" => [
 		0 => "タイプ",
 	],
+	"Terms of service" => [
+		0 => "利用規約",
+	],
+	"Privacy" => [
+		0 => "非公開",
+	],
+	"Contact" => [
+		0 => "コンテンツ",
+	],
+	"Extra page" => [
+		0 => "追加ページ",
+	],
+	"Internal page type" => [
+		0 => "内部ページタイプ",
+	],
+	"You can have multiple extra pages, but only one of the other special internal types." => [
+		0 => "別なタイプとしてのみ複数の追加ページを作成できます。",
+	],
 	"Page visibility" => [
 		0 => "ページ可視性",
 	],
@@ -2008,6 +2332,9 @@ $translation_table = [
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "ページID %s を本当に削除しますか？削除すると元に戻せません。",
 	],
+	"Enabled image formats" => [
+		0 => "画像フォーマット可",
+	],
 	"Unchecked image formats won't be allowed to be uploaded." => [
 		0 => "未確認の画像フォーマットでは、アップロードが行えません。",
 	],
@@ -2022,6 +2349,15 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "未登録ユーザのアップロードを許可するときに有効にしてください。",
+	],
+	"Upload user interface" => [
+		0 => "アップロード用ユーザインターフェース",
+	],
+	"On-page container" => [
+		0 => "ページ上のコンテナー",
+	],
+	"route" => [
+		0 => "ルート",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "埋込みコード(アップロードしたユーザへのリンク)を有効にします。",
@@ -2557,6 +2893,12 @@ $translation_table = [
 	"Enable embed codes (content)" => [
 		0 => "埋込みコード(コンテンツへのリンク)を有効にする",
 	],
+	"Everybody" => [
+		0 => "すべての人",
+	],
+	"Users only" => [
+		0 => "ユーザーのみ",
+	],
 	"Enable this if you want to show embed codes for the content." => [
 		0 => "コンテンツへの埋込みコードを表示したい場合に有効にします。",
 	],
@@ -2577,6 +2919,9 @@ $translation_table = [
 	],
 	"Put your custom JS code here. It will be placed as <script> just before the closing </head> tag." => [
 		0 => "カスタムJSコードをここへ入力します。ヘッダタグの閉じられる寸前の</head>前に<script>タグとして挿入されます。",
+	],
+	"Do not use %s markup here. This is for plain JS code, not for HTML script tags. If you use script tags here you will break your website." => [
+		0 => "マークアップ %s は、ここでは使用できません。ここはjavascriptコードのためで、HTML用ではありません。HTMLタグを使用するとサイトに不具合が発生します。",
 	],
 	"Style" => [
 		0 => "スタイル",
@@ -2656,8 +3001,8 @@ $translation_table = [
 	"User IDs" => [
 		0 => "ユーザID",
 	],
-	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
-		0 => "ホームページに表示したい画像のユーザーIDをコンマで区切って入力してください。空白の情愛で全ての最近の画像を表示します。",
+	"Comma-separated list of target user IDs (integers) to show most recent images on homepage. Leave it empty to display trending images." => [
+		0 => "コンマ区切りの対象ユーザーIDにホームページの画像を表示します。空欄、またはゼロの場合は、最近の画像を表示します。",
 	],
 	"banners" => [
 		0 => "広告バナー",
@@ -2673,6 +3018,18 @@ $translation_table = [
 	],
 	"Enable this to show a notice on top warning you about new available system updates." => [
 		0 => "システムアップデートがリリースされた場合に歳重用通知として表示を有効化",
+	],
+	"Dump update query" => [
+		0 => "アップデートクエリーを削除",
+	],
+	"Enable this if you want to dump the update query to run it manually." => [
+		0 => "ユーザーごとに適切な言語を自動的に検出したい場合に有効にします。",
+	],
+	"SEO %s URLs" => [
+		0 => "%s のSEO対応URL",
+	],
+	"Enable this if you want to use SEO %s URLs." => [
+		0 => "%s URLsのSEOを有効化",
 	],
 	"Minify code" => [
 		0 => "コードを圧縮",
@@ -2727,6 +3084,30 @@ $translation_table = [
 	],
 	"Album routing" => [
 		0 => "アルバムへのルーティング",
+	],
+	"Hostname" => [
+		0 => "ホスト名",
+	],
+	"Hostname on which sub-domain wildcards will be added." => [
+		0 => "ホスト名のサブドメインをワイルドカードで追加します。",
+	],
+	"This setting may be overridden by %s." => [
+		0 => "この設定は、%s で上書されます。",
+	],
+	"Language subdomains" => [
+		0 => "サブドメインの言語",
+	],
+	"languages" => [
+		0 => "言語",
+	],
+	"Enable to use %s for %t." => [
+		0 => "%t 用に %s を使用",
+	],
+	"Username subdomains" => [
+		0 => "サブドメインのユーザ名",
+	],
+	"user profiles" => [
+		0 => "ユーザープロファイル",
 	],
 	"Custom language strings" => [
 		0 => "個別の言語文字列",
@@ -2812,11 +3193,14 @@ $translation_table = [
 	"Unsecured" => [
 		0 => "セキュリティで保護されていません",
 	],
+	"Decode ID" => [
+		0 => "デコードID",
+	],
+	"Encode ID" => [
+		0 => "エンコードID",
+	],
 	"Send test email" => [
 		0 => "テストメールを送信する",
-	],
-	"test@somedomain.com" => [
-		0 => "test@somedomain.com",
 	],
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "メールアドレスにどのように送信されるかをテストする場合にこちらを利用してください。%sを使用することをお勧めします。",
@@ -2829,6 +3213,33 @@ $translation_table = [
 	],
 	"This will allow you to download a user's standard personal information in JSON format." => [
 		0 => "JSONフォーマットで、ユーザーの標準的な個人情報をダウンロードすることができます。",
+	],
+	"Regenerate external storage stats" => [
+		0 => "外部ストレージの統計情報を再構築",
+	],
+	"Storage id" => [
+		0 => "ストレージID",
+	],
+	"Regenerate" => [
+		0 => "再構築",
+	],
+	"This will re-calculate the sum of all the image records associated to the target external storage." => [
+		0 => "指定された外部ストレージと再計算された保存画像の合計を紐付けます。",
+	],
+	"Migrate image records from one external storage to another" => [
+		0 => "外部ストレージから別の外部ストレージに画像を移動します。",
+	],
+	"Source storage id" => [
+		0 => "元になるストレージID",
+	],
+	"Target storage id" => [
+		0 => "ターゲットのストレージID",
+	],
+	"Migrate" => [
+		0 => "移動",
+	],
+	"This only updates the database. You must transfer the actual files to target storage container on your own. URL rewriting is strongly recommended. Use zero (0) for local storage." => [
+		0 => "これはデータベースの更新のみす。ファイルは、ご自身でターゲット先に移動してください。URLの書換も推奨します。ローカルストレージを使用するには、ゼロ(0)を使用します。",
 	],
 	"social networks" => [
 		0 => "ソーシャル・ネットワーク",
@@ -2872,8 +3283,26 @@ $translation_table = [
 	"VK client secret" => [
 		0 => "VKクライアントシークレットキー",
 	],
+	"%s spam protection" => [
+		0 => "%s スパム保護",
+	],
+	"user generated content" => [
+		0 => "ユーザー作成のコンテンツ",
+	],
+	"Enable this to use %l to block spam on %c." => [
+		0 => "%l を使用して %c のスパムをブロックを有効化",
+	],
+	"%s API key" => [
+		0 => "%s API key",
+	],
+	"user signup" => [
+		0 => "ユーザーアカウント作成",
+	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "画像認証を使用するためには、<a href=\"%s\" target=\"_blank\">reCAPTCHA キー</a>が必要です。",
+	],
+	"Please note that each reCAPTCHA version require its own set of keys. Don't forget to update the keys if you change versions." => [
+		0 => "reCAPTCHAのバージョンとキーはセットです。バージョンを上げる場合にはキーの更新も忘れないようにしてください。",
 	],
 	"%s site key" => [
 		0 => "%s サイトキー",
@@ -2886,6 +3315,12 @@ $translation_table = [
 	],
 	"How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA." => [
 		0 => "何回の失敗でreCAPTCHAを有効にしますか？ゼロ(0)だと常にreCAPTCHAが表示されます。",
+	],
+	"Force %s on contact page" => [
+		0 => "コンタクトページ上で %s を行わせる",
+	],
+	"Enable this to always show %s on contact page." => [
+		0 => "コンタクトページに %s を常に表示する場合",
 	],
 	"Comments API" => [
 		0 => "コメントAPI",
@@ -2983,20 +3418,26 @@ $translation_table = [
 	"Start uploading" => [
 		0 => "アップロード開始",
 	],
-	"Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings." => [
-		0 => "アカウント %s へ投稿するためには、このセクションに記入して下さい。<br>投稿先ユーザは、ダッシュボードで編集できます。",
-	],
 	"Sign up to unlock all the features" => [
 		0 => "すべての機能を利用するためにアカウントを作成しましょう。",
 	],
 	"Manage your content, create private albums, customize your profile and more." => [
 		0 => "あなたのコンテンツを管理したり、非公開アルバムを作成したり、プロフィールのカスタマイズなどが行えます。",
 	],
-	"Enter your password" => [
-		0 => "パスワードを入力して下さい。",
+	"Sign in with your account" => [
+		0 => "アカウントへログイン",
+	],
+	"Don't have an account? <a href='%s'>Sign up</a> now." => [
+		0 => "アカウントがありませんか？今すぐ<a href='%s'>アカウントを作成</a>しましょう。",
+	],
+	"Logged out" => [
+		0 => "ログアウトしました。",
 	],
 	"You have been logged off %s. Hope to see you soon." => [
 		0 => "あなたは%sからログアウトしました。またのご利用をお待ちしています。",
+	],
+	"Go to homepage" => [
+		0 => "ホームへ戻る",
 	],
 	"Website under maintenance" => [
 		0 => "現在、メンテナンス中です。",
@@ -3088,9 +3529,6 @@ $translation_table = [
 	"Registration IP" => [
 		0 => "登録元IP",
 	],
-	"Status" => [
-		0 => "ステータス",
-	],
 	"Valid" => [
 		0 => "有効",
 	],
@@ -3151,6 +3589,12 @@ $translation_table = [
 	"This user doesn't have a password. Add one using this form." => [
 		0 => "このユーザはパスワードを設定していません。このフォームから設定して下さい。",
 	],
+	"Enter your password" => [
+		0 => "パスワードを入力して下さい。",
+	],
+	"Confirm password" => [
+		0 => "新しいパスワード（確認）",
+	],
 	"Re-enter your password" => [
 		0 => "パスワードを再度入力して下さい。",
 	],
@@ -3159,9 +3603,6 @@ $translation_table = [
 	],
 	"Delete existing image" => [
 		0 => "アップロード済みの画像を削除",
-	],
-	"Privacy" => [
-		0 => "非公開",
 	],
 	"Make my profile and identity totally private" => [
 		0 => "プロフィールなどを非公開にする",
@@ -3184,8 +3625,8 @@ $translation_table = [
 	"User has no connections." => [
 		0 => "ユーザは何も接続していません。",
 	],
-	"Link your account to external services to be able to login and share content." => [
-		0 => "あなたの外部サービスのアカウントでログインをしたり、コンテンツを共有するには、アカウントを関連づけてください。",
+	"Link your account to external services to be able to login here." => [
+		0 => "あなたのアカウントでの外部サービスへログイン、コンテンツの共有を行うリンク",
 	],
 	"Do you really want to disconnect %s from this account?" => [
 		0 => "%sのアカウントとの接続を解除してもよろしいですか？",
@@ -3208,14 +3649,41 @@ $translation_table = [
 	"Connect %s" => [
 		0 => "%sと接続",
 	],
+	"Feel free to browse and discover all my shared images and albums." => [
+		0 => "お気軽に共有設定しているアルバムと画像をご覧下さい。",
+	],
 	"Button" => [
 		0 => "ボタン",
+	],
+	"View all my images" => [
+		0 => "全ての画像を見る",
+	],
+	"Login" => [
+		0 => "ログイン",
+	],
+	"Already have an account? %s now." => [
+		0 => "既にアカウントをお持ちであれば %s へどうぞ。",
 	],
 	"resend account activation" => [
 		0 => "アカウント有効の再通知",
 	],
-	"If you have already signed up maybe you need to request to %s" => [
-		0 => "既にアカウント登録されている場合、 %sへのリクエストが必要かもしれません。",
+	"If you have already signed up maybe you need to request to %s to activate your account." => [
+		0 => "アカウント申込みが完了している場合は、%s へ有効化を申請してください。 ",
+	],
+	"You can also %s." => [
+		0 => "%s も使用できます。",
+	],
+	"I'm at least %s years old" => [
+		0 => "私は%s歳以上です。",
+	],
+	"terms" => [
+		0 => "利用規約",
+	],
+	"privacy policy" => [
+		0 => "プライバシーポリシー",
+	],
+	"I agree to the %terms_link and %privacy_link" => [
+		0 => "私は、%terms_link と %privacy_link に同意します",
 	],
 	"Upload profile background" => [
 		0 => "プロフィールの背景をアップロード",
@@ -3238,6 +3706,15 @@ $translation_table = [
 	"Follow" => [
 		0 => "フォロー",
 	],
+	"You have been forbidden to use this website." => [
+		0 => "あなたは、このウェブサイトを使うことができません。",
+	],
+	"Plugin" => [
+		0 => "プラグイン",
+	],
+	"Page %s" => [
+		0 => "%sページ",
+	],
 	"General questions/comments" => [
 		0 => "一般的な質問/コメント",
 	],
@@ -3250,17 +3727,11 @@ $translation_table = [
 	"Invalid subject" => [
 		0 => "有効な件名ではありません。",
 	],
-	"Invalid reCAPTCHA" => [
-		0 => "入力された値は、画像にあるキーではありません。",
-	],
 	"Mail error" => [
 		0 => "メールでエラーが発生しました。",
 	],
 	"Message sent" => [
 		0 => "メッセージを送信しました。",
-	],
-	"Contact" => [
-		0 => "コンテンツ",
 	],
 	"Message sent. We will get in contact soon." => [
 		0 => "メッセージを送信しました。まもなく私どもから連絡を差し上げます。",
@@ -3273,168 +3744,6 @@ $translation_table = [
 	],
 	"Subject" => [
 		0 => "件名",
-	],
-	"Installed version is v%s" => [
-		0 => "インストールされているバージョンは v%s",
-	],
-	"Can't connect to %s" => [
-		0 => "%s に接続できません。",
-	],
-	"Last available release is v%s" => [
-		0 => "最新のリリース版は v%s",
-	],
-	"Update needed, proceeding to download" => [
-		0 => "更新が必要です、ダウンロードをおこないます。",
-	],
-	"No update needed" => [
-		0 => "更新の必要はありません。",
-	],
-	"System files already up to date" => [
-		0 => "システムファイルは既に更新されています。",
-	],
-	"Starting v%s download" => [
-		0 => "v%sのダウンロードを開始しています。",
-	],
-	"Downloaded v%s, proceeding to extraction" => [
-		0 => "v%sのダウンロードが完了しました。抽出しています。",
-	],
-	"Attempting to extract v%s" => [
-		0 => "v%sの抽出を試みています。",
-	],
-	"Extraction completed" => [
-		0 => "抽出が完了しました。",
-	],
-	"Proceding to install the update" => [
-		0 => "更新のインストールが進行中",
-	],
-	"Update failed" => [
-		0 => "更新に失敗しました。",
-	],
-	"Please provide a valid email address" => [
-		0 => "有効なメールアドレスを入力してください。",
-	],
-	"Please provide a valid username" => [
-		0 => "有効なユーザー名を入力してください",
-	],
-	"You must enter the album name." => [
-		0 => "アルバム名を入力して下さい。",
-	],
-	"Confirm" => [
-		0 => "確認",
-	],
-	"Select existing album" => [
-		0 => "既に存在するアルバムを選択",
-	],
-	"Please select a valid image file type." => [
-		0 => "有効な画像ファイル形式を選択して下さい。",
-	],
-	"Please select a picture of at most %s size." => [
-		0 => "%s以内の画像を選択して下さい。",
-	],
-	"Profile image updated." => [
-		0 => "プロフィール画像をアップロード",
-	],
-	"Profile background image updated." => [
-		0 => "プロフィールの背景画像をアップロード",
-	],
-	"Profile background image deleted." => [
-		0 => "プロフィールの背景画像が削除されました。",
-	],
-	"Error deleting profile background image." => [
-		0 => "プロフィールページの背景画像の削除でエラーが発生しました。",
-	],
-	"Update available v%s" => [
-		0 => "v%sの更新が利用可能です。",
-	],
-	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
-		0 => "このシステムで利用可能な更新が存在します。このアップデートを自動でダウンロードしてインストールするか、%sにアクセスしてダウンロードをすることができます。",
-	],
-	"Update now" => [
-		0 => "今すぐ更新する",
-	],
-	"This website is running latest %s version" => [
-		0 => "このサイトは、最新のバージョン %s で構成しています。",
-	],
-	"Toggle select" => [
-		0 => "選択をトグル",
-	],
-	"Toggle flag" => [
-		0 => "フラグをトグル",
-	],
-	"Previous" => [
-		0 => "前へ",
-	],
-	"Next" => [
-		0 => "次へ",
-	],
-	"Clipboard image" => [
-		0 => "クリップボードの画像",
-	],
-	"File too big." => [
-		0 => "ファイルが大きすぎます。",
-	],
-	"Invalid or unsupported file format." => [
-		0 => "無効か非対応のファイル形式です。",
-	],
-	"Some files couldn't be added" => [
-		0 => "いくつかのファイルが追加できませんでした。",
-	],
-	"Image edited successfully." => [
-		0 => "画像の編集が完了しました。",
-	],
-	"private" => [
-		0 => "非公開",
-	],
-	"Album edited successfully." => [
-		0 => "アルバムの編集が完了しました。",
-	],
-	"Invalid URL key." => [
-		0 => "無効なURLキーです。",
-	],
-	"Category URL key already being used." => [
-		0 => "このカテゴリURLキーは、既に使用されています。",
-	],
-	"Category successfully deleted." => [
-		0 => "カテゴリの削除が完了しました。",
-	],
-	"Category %s added." => [
-		0 => "カテゴリ： %s を追加しました。",
-	],
-	"Invalid expiration date." => [
-		0 => "無効な期限です。",
-	],
-	"IP %s already banned." => [
-		0 => "IPアドレス： %s はアクセス禁止となっています。",
-	],
-	"IP %s banned." => [
-		0 => "IPアドレス： %s はアクセス禁止となっています。",
-	],
-	"IP ban successfully deleted." => [
-		0 => "このIPアドレスのアクセス禁止を解除しました。",
-	],
-	"Please fill all the required fields." => [
-		0 => "必須の項目全てに入力して下さい。",
-	],
-	"Invalid storage capacity value. Make sure to use a valid format." => [
-		0 => "ストレージ容量が不正です。有効なフォーマットかを確認して下さい。",
-	],
-	"Invalid URL." => [
-		0 => "無効なURLです。",
-	],
-	"Storage successfully edited." => [
-		0 => "ストレージの編集が完了しました。",
-	],
-	"User added successfully." => [
-		0 => "ユーザの追加が完了しました。",
-	],
-	"The content has been moved." => [
-		0 => "コンテンツは移動しました。",
-	],
-	"Unselect" => [
-		0 => "選択を解除",
-	],
-	"The content has been edited." => [
-		0 => "コンテンツの編集が完了しました。",
 	],
 	"All the changes that you have made will be lost if you continue." => [
 		0 => "続行すると、行った全ての変更が破棄されます。",

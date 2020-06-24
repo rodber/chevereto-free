@@ -15,10 +15,10 @@
 
   --------------------------------------------------------------------- */
 
-$route = function($handler) {
+$route = function ($handler) {
 	try {
-		if(!$handler::getCond('upload_allowed')) {
-			if(CHV\Login::getUser()) {
+		if (!$handler::getCond('upload_allowed')) {
+			if (CHV\Login::getUser()) {
 				G\set_status_header(403);
 				$handler->template = 'request-denied';
 				return;
@@ -29,8 +29,18 @@ $route = function($handler) {
 		$logged_user = CHV\Login::getUser();
 		// User status override redirect
 		CHV\User::statusRedirect($logged_user['status']);
-		$handler::setVar('pre_doctitle', _s('Upload')); // Wow, such creativity. Very smart.
-	} catch(Exception $e) {
+		$album = null;
+		if ($_GET['toAlbum']) {
+			$toAlbumId = CHV\decodeID($_GET['toAlbum']);
+			$album = CHV\Album::getSingle($toAlbumId, false, true, $logged_user);
+			$is_owner = $album['user']['id'] && $album['user']['id'] == $logged_user['id'];
+			if (!$is_owner) {
+				$album = null;
+			}
+		}
+		$handler::setVar('album', $album);
+		$handler::setVar('pre_doctitle', _s('Upload'));
+	} catch (Exception $e) {
 		G\exception_to_error($e);
 	}
 };

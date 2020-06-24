@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2018-06-03 14:28+0000',
-  'PO-Revision-Date' => '2018-06-03 14:28+0000',
+  'POT-Creation-Date' => '2019-12-12 15:27+0000',
+  'PO-Revision-Date' => '2019-12-12 15:27+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ru',
@@ -16,12 +16,6 @@ $translation_plural = array (
   'function' => '($n != 1)',
 );
 $translation_table = [
-	"To use all the features of this site you must be logged in." => [
-		0 => "Вы должны войти, чтобы использовать все возможности этого сайта.",
-	],
-	"If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
-		0 => "Если у вас ещё нет аккаунта, вы можете <a href=\"%s\">зарегистрироваться</a> прямо сейчас.",
-	],
 	"Invalid email" => [
 		0 => "Неверный e-mail адрес",
 	],
@@ -58,6 +52,42 @@ $translation_table = [
 	"Personal" => [
 		0 => "Частный",
 	],
+	"Installed version is v%s" => [
+		0 => "У Вас установлена версия - v%s",
+	],
+	"Can't connect to %s" => [
+		0 => "Невозможно подкючиться к %s",
+	],
+	"Last available release is v%s" => [
+		0 => "Последняя доступная версия - v%s",
+	],
+	"Update needed, proceeding to download" => [
+		0 => "Доступно обновление, приступаю к загрузке",
+	],
+	"No update needed" => [
+		0 => "Обновления отсутствуют",
+	],
+	"System files already up to date" => [
+		0 => "Системные файлы уже находятся в актуальном состоянии",
+	],
+	"Starting v%s download" => [
+		0 => "Запускаю загрузку версии v%s",
+	],
+	"Downloaded v%s, proceeding to extraction" => [
+		0 => "Версия v%s загружена, приступаю к распаковке",
+	],
+	"Attempting to extract v%s" => [
+		0 => "Выполняю распаковку v%s",
+	],
+	"Extraction completed" => [
+		0 => "Распаковка выполнена",
+	],
+	"Proceding to install the update" => [
+		0 => "Приступаю к установке обновления",
+	],
+	"Update failed" => [
+		0 => "Ошибка обновления",
+	],
 	"Update in progress" => [
 		0 => "Выполняется обновление",
 	],
@@ -84,6 +114,184 @@ $translation_table = [
 	],
 	"Can't update %s file - %e" => [
 		0 => "Невозможно обновить %s файл - %e",
+	],
+	"Check the errors in the form to continue." => [
+		0 => "Перед тем как продолжить, проверьте правильность заполнения формы.",
+	],
+	"You must enter the album name." => [
+		0 => "Вы должны ввести название альбома.",
+	],
+	"Confirm" => [
+		0 => "Подтвердить",
+	],
+	"Select existing album" => [
+		0 => "Выберите существующий альбом",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "В процессе выполнения произошла ошибка. Пожалуйста попробуйте позже.",
+	],
+	"Please select a valid image file type." => [
+		0 => "Пожалуйста выберите правильный формат изображения.",
+	],
+	"Please select a picture of at most %s size." => [
+		0 => "Пожалуйста выберите изображение не более %s размером.",
+	],
+	"Profile image updated." => [
+		0 => "Изображение профиля обновлено.",
+	],
+	"Profile background image updated." => [
+		0 => "Фон профиля обновлен.",
+	],
+	"Profile background image deleted." => [
+		0 => "Фон профиля удален.",
+	],
+	"Error deleting profile background image." => [
+		0 => "При удалении фона профиля возникла ошибка.",
+	],
+	"Passwords don't match" => [
+		0 => "Пароли не совпадают",
+	],
+	"Update available v%s" => [
+		0 => "Доступное обновление до v%s",
+	],
+	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
+		0 => "Для Вашей системы доступно обновление. Вы можете автоматически загрузить и установить его, или перейти на %s для загрузки файла.",
+	],
+	"The release notes for this update are:" => [
+		0 => "Список изменений для данного обновления:",
+	],
+	"Update now" => [
+		0 => "Обновить",
+	],
+	"or" => [
+		0 => "или",
+	],
+	"cancel" => [
+		0 => "отменить",
+	],
+	"This website is running latest %s version" => [
+		0 => "Вы используете последнюю версию Chevereto - %s",
+	],
+	"loading" => [
+		0 => "загрузка",
+	],
+	"Toggle select" => [
+		0 => "выбранное",
+	],
+	"Like" => [
+		0 => "Нравится",
+	],
+	"Toggle flag" => [
+		0 => "Переключить",
+	],
+	"Edit" => [
+		0 => "Редактировать",
+	],
+	"Album" => [
+		0 => "Альбом",
+		1 => "Альбомы",
+		2 => "Альбомов",
+	],
+	"Delete" => [
+		0 => "Удалить",
+	],
+	"Close" => [
+		0 => "Закрыть",
+	],
+	"Previous" => [
+		0 => "Предыдущая",
+	],
+	"Next" => [
+		0 => "Следующая",
+	],
+	"Clipboard image" => [
+		0 => "Изображение из буфера обмена",
+	],
+	"File too big." => [
+		0 => "Файл слишком большой.",
+	],
+	"Invalid or unsupported file format." => [
+		0 => "Неверный или не поддерживаемый формат файла.",
+	],
+	"Some files couldn't be added" => [
+		0 => "Некоторые файлы не были добавлены.",
+	],
+	"image" => [
+		0 => "изображение",
+		1 => "изображения",
+		2 => "изображений",
+	],
+	"%s's Albums" => [
+		0 => "Альбомы %s",
+	],
+	"Image edited successfully." => [
+		0 => "Изображение успешно отредактировано.",
+	],
+	"private" => [
+		0 => "скрытое",
+	],
+	"Album edited successfully." => [
+		0 => "Альбом успешно отредактирован.",
+	],
+	"Invalid URL key." => [
+		0 => "Неверный URL ключ.",
+	],
+	"Category URL key already being used." => [
+		0 => "Такой URL-ключ уже используется.",
+	],
+	"Category successfully deleted." => [
+		0 => "Категория удалена.",
+	],
+	"Category %s added." => [
+		0 => "Категория %s добавлена.",
+	],
+	"Invalid expiration date." => [
+		0 => "Неверный срок действия.",
+	],
+	"IP %s already banned." => [
+		0 => "IP-адрес %s уже заблокирован",
+	],
+	"IP %s banned." => [
+		0 => "IP-адрес %s заблокирован",
+	],
+	"IP ban successfully deleted." => [
+		0 => "IP-адрес разблокирован.",
+	],
+	"Please fill all the required fields." => [
+		0 => "Пожалуйста заполните все необходимые поля.",
+	],
+	"Invalid storage capacity value. Make sure to use a valid format." => [
+		0 => "Неверное значение доступного дискового пространства. Убедитесь, что вы используете допустимый формат.",
+	],
+	"Storage capacity can't be lower than its current usage (%s)." => [
+		0 => "Доступное дисковое пространство не может быть меньше использованного в данный момент (%s).",
+	],
+	"Invalid URL." => [
+		0 => "Неверный адрес.",
+	],
+	"Storage successfully edited." => [
+		0 => "Хранилище изменено.",
+	],
+	"User added successfully." => [
+		0 => "Пользователь добавлен.",
+	],
+	"The content has been deleted." => [
+		0 => "Содержимое удалено.",
+	],
+	"The content has been moved." => [
+		0 => "Содержимое перемещено.",
+	],
+	"Select" => [
+		0 => "Выделить",
+	],
+	"Unselect" => [
+		0 => "Снять выделение",
+	],
+	"The content has been edited." => [
+		0 => "Содержимое отредактировано.",
+	],
+	"Spam detected" => [
+		0 => "Обнаружен спам",
 	],
 	"Untitled" => [
 		0 => "Безымянный",
@@ -167,11 +375,6 @@ $translation_table = [
 		1 => "понравилось",
 		2 => "понравилось",
 	],
-	"image" => [
-		0 => "изображение",
-		1 => "изображения",
-		2 => "изображений",
-	],
 	"Recent" => [
 		0 => "Новые",
 	],
@@ -213,14 +416,9 @@ $translation_table = [
 		1 => "Изображения",
 		2 => "Изображений",
 	],
-	"Album" => [
-		0 => "Альбом",
-		1 => "Альбома",
-		2 => "Альбомов",
-	],
 	"User" => [
 		0 => "Пользователь",
-		1 => "Пользователя",
+		1 => "Пользователи",
 		2 => "Пользователей",
 	],
 	"Can't create %s destination dir" => [
@@ -234,9 +432,6 @@ $translation_table = [
 	],
 	"Can't insert storage." => [
 		0 => "Невозможно добавить хранилище.",
-	],
-	"Storage capacity can't be lower than its current usage (%s)." => [
-		0 => "Доступное дисковое пространство не может быть меньше использованного в данный момент (%s).",
 	],
 	"Can't update storage details." => [
 		0 => "Невозможно получить подробную информацию о хранилище.",
@@ -285,9 +480,6 @@ $translation_table = [
 	"There is an update available for your Chevereto based website." => [
 		0 => "Для вашего Chevereto доступно обновление.",
 	],
-	"The release notes for this update are:" => [
-		0 => "Список изменений для данного обновления:",
-	],
 	"admin dashboard" => [
 		0 => "панель управления",
 	],
@@ -296,6 +488,15 @@ $translation_table = [
 	],
 	"view on %s" => [
 		0 => "посмотреть на %s",
+	],
+	"cookie policy" => [
+		0 => "политикой использования cookie",
+	],
+	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link." => [
+		0 => "Мы используем cookie-файлы, чтобы сделать наши ваше прибывание на сайте максимально комфортным. Работая с этим сайтом, вы даете свое согласие с нашей %cookie_policy_link.",
+	],
+	"I understand" => [
+		0 => "Хорошо",
 	],
 	"You have been forbidden to use this website." => [
 		0 => "Вам запрещено использовать этот сайт.",
@@ -309,8 +510,14 @@ $translation_table = [
 	"Plugin" => [
 		0 => "Плагин",
 	],
+	"Request denied" => [
+		0 => "В запросе отказано",
+	],
 	"That page doesn't exist" => [
 		0 => "Эта страница не существует",
+	],
+	"Page %s" => [
+		0 => "Страница %s",
 	],
 	"Forgot password?" => [
 		0 => "Забыли пароль?",
@@ -327,17 +534,14 @@ $translation_table = [
 	"Email changed" => [
 		0 => "Адрес электронной почты изменен",
 	],
-	"The reCAPTCHA wasn't entered correctly" => [
-		0 => "Вы неверно ввели капчу",
+	"%s says you are a robot" => [
+		0 => "%s сообщает, что Вы робот",
 	],
 	"Invalid Username/Email" => [
 		0 => "Неверное Имя пользователя/E-mail",
 	],
 	"User doesn't have an email." => [
 		0 => "Для этого пользователя не задан адрес электронной почты.",
-	],
-	"Request denied" => [
-		0 => "В запросе отказано",
 	],
 	"Account needs to be activated to use this feature" => [
 		0 => "Для использования этой функции, аккаунт должен быть активирован",
@@ -357,14 +561,8 @@ $translation_table = [
 	"Welcome to %s" => [
 		0 => "Добро пожаловать на %s",
 	],
-	"Passwords don't match" => [
-		0 => "Пароли не совпадают",
-	],
 	"Email already being used" => [
 		0 => "E-mail уже используется",
-	],
-	"Check the errors in the form to continue." => [
-		0 => "Перед тем как продолжить, проверьте правильность заполнения формы.",
 	],
 	"Password required" => [
 		0 => "Требуется указать пароль",
@@ -395,6 +593,9 @@ $translation_table = [
 	],
 	"Settings" => [
 		0 => "Настройки",
+	],
+	"Bulk importer" => [
+		0 => "Пакетный импорт",
 	],
 	"Chevereto version" => [
 		0 => "Версия Chevereto",
@@ -455,20 +656,17 @@ $translation_table = [
 	"Links" => [
 		0 => "Ссылки",
 	],
+	"Collaboration" => [
+		0 => "Команда",
+	],
 	"Documentation" => [
 		0 => "Документация",
 	],
 	"Changelog" => [
 		0 => "Список изменений",
 	],
-	"Request new features" => [
-		0 => "Предложить новый функционал",
-	],
 	"Bug tracking" => [
 		0 => "Баг трекер",
-	],
-	"Blog" => [
-		0 => "Блог",
 	],
 	"Website" => [
 		0 => "Сайт",
@@ -743,6 +941,9 @@ $translation_table = [
 	"Invalid visibility" => [
 		0 => "Неверная видимость",
 	],
+	"Invalid internal type" => [
+		0 => "Неверный тип",
+	],
 	"Invalid target attribute" => [
 		0 => "Неверный аттрибут target",
 	],
@@ -796,6 +997,9 @@ $translation_table = [
 	],
 	"Invalid SMTP username" => [
 		0 => "Неверное SMTP имя",
+	],
+	"Invalid key" => [
+		0 => "Неверный ключ",
 	],
 	"This URL key is already being used by another page (ID %s)" => [
 		0 => "Этот URL-ключ уже используется для другой страницы (ID %s)",
@@ -896,6 +1100,9 @@ $translation_table = [
 	"Test email sent to %s." => [
 		0 => "Тестовое сообщение отправлено на %s.",
 	],
+	"Downloading %s data" => [
+		0 => "Загружаю данные %s",
+	],
 	"User %s followed" => [
 		0 => "Вы подписались на загрузки пользователя %s",
 	],
@@ -922,9 +1129,6 @@ $translation_table = [
 	],
 	"Sign in" => [
 		0 => "Войти",
-	],
-	"Logged out" => [
-		0 => "Выход из системы",
 	],
 	"Upload images" => [
 		0 => "Загрузить изображения",
@@ -983,6 +1187,9 @@ $translation_table = [
 	"Settings for %s" => [
 		0 => "Настройки %s",
 	],
+	"You must agree to the terms and privacy policy" => [
+		0 => "Вы должны согласится с правилами и политикой конфиденциальности",
+	],
 	"You must be at least %s years old to use this website." => [
 		0 => "Для использования данного сайта вам должно быть как минимум %s лет.",
 	],
@@ -994,9 +1201,6 @@ $translation_table = [
 	],
 	"%s's Images" => [
 		0 => "Изображения %s",
-	],
-	"%s's Albums" => [
-		0 => "Альбомы %s",
 	],
 	"Results for" => [
 		0 => "Результаты для",
@@ -1019,9 +1223,6 @@ $translation_table = [
 	"Discovery" => [
 		0 => "Подборки",
 	],
-	"Close" => [
-		0 => "Закрыть",
-	],
 	"Advanced search" => [
 		0 => "Расширенный поиск",
 	],
@@ -1031,38 +1232,8 @@ $translation_table = [
 	"Notices (%s)" => [
 		0 => "Уведомления (%s)",
 	],
-	"Sign in with another account" => [
-		0 => "Войти через",
-	],
-	"or" => [
-		0 => "или",
-	],
-	"Username or Email address" => [
-		0 => "Имя пользователя или Email",
-	],
-	"Keep me logged in" => [
-		0 => "Запомнить меня",
-	],
-	"Don't have an account? <a href='%s'>Sign up</a> now." => [
-		0 => "У вас ещё нет аккаунта? <a href='%s'>Зарегистрируйтесь</a> сейчас!",
-	],
-	"Sign up with another account" => [
-		0 => "Зарегистрироваться через",
-	],
-	"Email address" => [
-		0 => "Адрес электронной почты",
-	],
-	"Username" => [
-		0 => "Имя пользователя",
-	],
-	"I'm at least %s years old" => [
-		0 => "Мне %s лет или больше.",
-	],
 	"Notifications" => [
 		0 => "Уведомления",
-	],
-	"loading" => [
-		0 => "загрузка",
 	],
 	"You don't have notifications" => [
 		0 => "У Вас нет новых уведомлений",
@@ -1170,7 +1341,7 @@ $translation_table = [
 		0 => "Загрузка завершена",
 	],
 	"Uploaded content added to %s." => [
-		0 => "Загруженное содержимое добавлено к %s.",
+		0 => "Загруженное содержимое добавлено к альбому %s.",
 	],
 	"You can %c with the content just uploaded or %m." => [
 		0 => "Вы можете %c с загруженным содержимым или %m.",
@@ -1184,14 +1355,14 @@ $translation_table = [
 	"move it to an existing album" => [
 		0 => "переместить его в существующий",
 	],
+	"You must %s or %l to save this content into your account." => [
+		0 => "Вы должны %s или %l, чтобы сохранить это содержимое в свой аккаунт.",
+	],
 	"create an account" => [
 		0 => "создать аккаунт",
 	],
 	"sign in" => [
 		0 => "войти",
-	],
-	"You can %s or %l to save this content into your account." => [
-		0 => "Вы можете %s и %l, чтобы сохранить содержимое в своем аккаунте.",
 	],
 	"No %s have been uploaded" => [
 		0 => "Не было загружено ни одного %s.",
@@ -1214,9 +1385,6 @@ $translation_table = [
 	"Uploading" => [
 		0 => "Загружается",
 	],
-	"cancel" => [
-		0 => "отменить",
-	],
 	"cancel remaining" => [
 		0 => "отменить оставшиеся",
 	],
@@ -1229,6 +1397,9 @@ $translation_table = [
 	"Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information." => [
 		0 => "Проверьте <a data-modal=\"simple\" data-target=\"failed-upload-result\">отчет об ошибках</a> для получения более подробной информации.",
 	],
+	"Register to get %s" => [
+		0 => "Зарегистрируйтесь, чтобы получить %s",
+	],
 	"reset" => [
 		0 => "сброс",
 	],
@@ -1240,9 +1411,6 @@ $translation_table = [
 	],
 	"insert" => [
 		0 => "вставить",
-	],
-	"Edit" => [
-		0 => "Редактировать",
 	],
 	"Remove" => [
 		0 => "Удалить",
@@ -1298,8 +1466,17 @@ $translation_table = [
 	"Create album" => [
 		0 => "Создать альбом",
 	],
-	"The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
-		0 => "Загруженное содержимое будет помещено в новый альбом. Вы также можете переместить содержимое в <a class=\"modal-switch\" data-switch=\"move-existing-album\">существующий альбом</a>.",
+	"The uploaded content will be moved to this newly created album." => [
+		0 => "Загруженный контент будет перемещен в новый альбом",
+	],
+	"existing album" => [
+		0 => "существующий альбом",
+	],
+	"You can also move the content to an %a." => [
+		0 => "Вы можете также переместить содержимое в виде %a.",
+	],
+	"You must %s or %l if you want to edit this album later on." => [
+		0 => "Вы должны %s или %l, если хотите отредактировать этот альбом позже.",
 	],
 	"Move to album" => [
 		0 => "Переместить в альбом",
@@ -1435,6 +1612,39 @@ $translation_table = [
 	"Untitled image" => [
 		0 => "Безымянное",
 	],
+	"Path" => [
+		0 => "Путь",
+	],
+	"Local path (absolute)" => [
+		0 => "Локальный путь (абсолютный)",
+	],
+	"Directory structure" => [
+		0 => "Структура папок",
+	],
+	"Parse top level folders as users (username)" => [
+		0 => "Обрабатывать имена папок как пользователей (логины)",
+	],
+	"Parse top level folders as albums" => [
+		0 => "Обрабатывать имена папок как альбомы",
+	],
+	"Don't parse folders" => [
+		0 => "Не обрабатывать имена папок",
+	],
+	"When parsing top level folders as users, second level folders will be parsed as user albums. Parsing top level folders as albums adds these as guest albums." => [
+		0 => "При обработке папок верхнего уровня, как имени пользователя, папки второго уровня будут обработаны, как альбомы. Обработка папок верхнего уровня как альбомы, включает в том числе и альбомы гостей.",
+	],
+	"Threads" => [
+		0 => "Потоки",
+	],
+	"Select number of threads" => [
+		0 => "Выберите количество потоков",
+	],
+	"This determines how intensive and fast will be the import process. Don't use more than %s threads on a shared server." => [
+		0 => "Определяет насколько быстрым и ресурсоемким будет процесс импорта. Не используйте больше %s потоков на совместном хостинге.",
+	],
+	"You can use wildcard * characters." => [
+		0 => "Вы можете использовать символы * для задания маски.",
+	],
 	"Expiration date" => [
 		0 => "Срок блокировки",
 	],
@@ -1468,6 +1678,9 @@ $translation_table = [
 	"Region" => [
 		0 => "Регион",
 	],
+	"Storage region" => [
+		0 => "Регион",
+	],
 	"Storage bucket" => [
 		0 => "Корзина хранилища",
 	],
@@ -1483,20 +1696,14 @@ $translation_table = [
 	"Storage secret" => [
 		0 => "Секретный ключ хранилища",
 	],
-	"Client email" => [
-		0 => "Email клиента",
-	],
-	"Google Cloud client email" => [
-		0 => "Email клиента Google Cloud",
-	],
-	"You will need a <a %s>service account</a> for this." => [
-		0 => "Для использования этой возможности, вам понадобится <a %s>аккаунт</a>.",
-	],
 	"Private key" => [
 		0 => "Закрытый ключ",
 	],
 	"Google Cloud JSON key" => [
 		0 => "JSON-ключ Google Cloud",
+	],
+	"You will need a <a %s>service account</a> for this." => [
+		0 => "Для использования этой возможности, вам понадобится <a %s>аккаунт</a>.",
 	],
 	"Service name" => [
 		0 => "Название службы",
@@ -1510,8 +1717,8 @@ $translation_table = [
 	"API endpoint for OpenStack identity" => [
 		0 => "Конечная точка API для пользователя OpenStack",
 	],
-	"Storage region" => [
-		0 => "Регион",
+	"Username" => [
+		0 => "Имя пользователя",
 	],
 	"Container" => [
 		0 => "Контейнер",
@@ -1531,23 +1738,32 @@ $translation_table = [
 	"Tenant name (account name)" => [
 		0 => "Имя клиента(аккаунта)",
 	],
+	"Storage endpoint" => [
+		0 => "Адрес хранилища",
+	],
+	"Server address" => [
+		0 => "Адрес сервера",
+	],
 	"Hostname or IP of the storage server" => [
 		0 => "Адрес или IP сервера",
-	],
-	"Path" => [
-		0 => "Путь",
 	],
 	"Server path" => [
 		0 => "Путь",
 	],
-	"Server path where the files will be stored" => [
-		0 => "Путь к месту хранения изображений на удаленном сервере",
+	"Absolute path where the files will be stored in the context of the %p login. Use %s for root path." => [
+		0 => "Абсолютный путь к хранилищу файлов для пользователя %p. Используйте %s для корневой директории.",
 	],
-	"Server username" => [
-		0 => "Имя пользователя",
+	"Server login" => [
+		0 => "Логин сервера",
 	],
 	"Server password" => [
 		0 => "Пароль",
+	],
+	"Local path" => [
+		0 => "Локальный путь",
+	],
+	"Local path where the files will be stored" => [
+		0 => "Локальный путь, где будут храниться файлы",
 	],
 	"Storage capacity" => [
 		0 => "Доступное пространство",
@@ -1591,14 +1807,14 @@ $translation_table = [
 	"Flag as safe" => [
 		0 => "Безопасное",
 	],
-	"Delete" => [
-		0 => "Удалить",
-	],
 	"Create new album" => [
 		0 => "Создать альбом",
 	],
-	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
-		0 => "Вы должны войти, чтобы использовать все возможности этого сайта. Если у вас ещё нет аккаунта, вы можете <a href=\"%s\">зарегистрироваться</a> прямо сейчас.",
+	"Sign in with another account" => [
+		0 => "Войти через",
+	],
+	"Home" => [
+		0 => "Главная",
 	],
 	"There's nothing to show here." => [
 		0 => "Нет элементов для отображения.",
@@ -1648,11 +1864,23 @@ $translation_table = [
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "Вы действительно хотите удалить выделенное содержимое? Это действие необратимо.",
 	],
+	"Fullscreen" => [
+		0 => "Полный экран",
+	],
+	"Exit fullscreen" => [
+		0 => "Выход из режима полного экрана",
+	],
 	"Guest" => [
 		0 => "Гость",
 	],
-	"Like" => [
-		0 => "Нравится",
+	"Keyboard shortcuts" => [
+		0 => "Горячие клавиши",
+	],
+	"Private album" => [
+		0 => "Скрытый альбом",
+	],
+	"Password protected" => [
+		0 => "Защищенный паролем",
 	],
 	"Uploaded by guest" => [
 		0 => "Загружено гостем",
@@ -1666,9 +1894,6 @@ $translation_table = [
 	"by %u" => [
 		0 => "от %u",
 	],
-	"Select" => [
-		0 => "Выделить",
-	],
 	"Toggle unsafe flag" => [
 		0 => "Включить отметку о небезопасном содержимом",
 	],
@@ -1681,17 +1906,11 @@ $translation_table = [
 	"The user has been deleted" => [
 		0 => "Пользователь удален",
 	],
-	"The content has been deleted." => [
-		0 => "Содержимое удалено.",
-	],
 	"Your account is almost ready" => [
 		0 => "Ваша учетная запись почти готова",
 	],
 	"An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "Инструкции по активации вашего аккаунта были отправлены на %s. Ссылка для активации действительна в течение 48 часов. Если вы не получили сообщение проверьте папку Спам.",
-	],
-	"Go to homepage" => [
-		0 => "На главную",
 	],
 	"Resend activation" => [
 		0 => "Выслать письмо с активацией аккаунта еще раз",
@@ -1708,26 +1927,23 @@ $translation_table = [
 	"Your email address" => [
 		0 => "Ваш адрес электронной почты",
 	],
-	"Add email" => [
-		0 => "Добавить адрес электронной почты",
+	"Submit" => [
+		0 => "Отправить",
 	],
 	"An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "Инструкции по сбросу пароля были оправлены на ваш адрес. Если вы их не получили, проверьте папку Спам.",
 	],
-	"Resend instructions" => [
-		0 => "Повторить отправку инструкций",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "В процессе выполнения произошла ошибка. Пожалуйста попробуйте позже.",
-	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "Вам уже было отправлено сообщение с инструкциями по сбросу пароля. Если вы не получили сообщения, проверьте папку Спам.",
 	],
-	"Enter your username or the email address that you used to create your account." => [
-		0 => "Введите имя пользователя и адрес электронной почты, использованные при регистрации.",
+	"Resend instructions" => [
+		0 => "Повторить отправку инструкций",
 	],
-	"Submit" => [
-		0 => "Отправить",
+	"Enter your username or email address to continue. You may need to check your spam folder or whitelist %s" => [
+		0 => "Чтобы продолжить, введите имя пользователя или e-mail. Не забудьте проверить папку со спамом %s",
+	],
+	"Username or Email address" => [
+		0 => "Имя пользователя или Email",
 	],
 	"Your password has been changed. You can now try logging in using your new password." => [
 		0 => "Пароль успешно изменен. Вы можете войти используя ваш новый пароль.",
@@ -1735,29 +1951,20 @@ $translation_table = [
 	"Login now" => [
 		0 => "Войти сейчас",
 	],
-	"Enter the new password that you want to use." => [
-		0 => "Введите новый пароль",
-	],
-	"New Password" => [
-		0 => "Новый пароль",
+	"Enter your new password" => [
+		0 => "Введите ваш новый пароль",
 	],
 	"%d characters min" => [
 		0 => "мин. %d символов",
 	],
-	"Enter your new password" => [
-		0 => "Введите ваш новый пароль",
-	],
-	"Confirm password" => [
-		0 => "Подтвердите пароль",
+	"Password strength" => [
+		0 => "Надежность пароля",
 	],
 	"Re-enter your new password" => [
 		0 => "Повторите новый пароль",
 	],
 	"An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "Инструкции по активации вашей учетной записи были отправлены на %s. Если вы не получили сообщение, проверьте папку Спам.",
-	],
-	"Enter the username or email address that you used to create your account to continue." => [
-		0 => "Чтобы продолжить, введите имя пользователя или email, указанный вами при регистрации.",
 	],
 	"This content is private" => [
 		0 => "Скрытое содержимое",
@@ -1789,8 +1996,68 @@ $translation_table = [
 	"I Agree" => [
 		0 => "Я согласен",
 	],
+	"documentation" => [
+		0 => "документации",
+	],
+	"Learn more about %s at our %d." => [
+		0 => "Узнайте больше о %s в %d.",
+	],
 	"Disk used" => [
 		0 => "Использовано места на диске",
+	],
+	"Add import job" => [
+		0 => "Добавить задачу импорта",
+	],
+	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d." => [
+		0 => "Эта утилита, позволит вам добавить контент на ваш сайт, посредством указания пути к нему. Поддерживается импорт пользователей, альбомов и изображений, через структуру папок. Вы можете узнать больше о структуре папок, добавлении меток и об этой утилите в нашей %d.",
+	],
+	"Process import" => [
+		0 => "Импорт",
+	],
+	"Top level folders as %s" => [
+		0 => "Папки верхнего уровня как %s",
+	],
+	"Actions" => [
+		0 => "Действия",
+	],
+	"Process" => [
+		0 => "Процесс",
+	],
+	"Pause" => [
+		0 => "Пауза",
+	],
+	"Cancel" => [
+		0 => "Отмена",
+	],
+	"Process log" => [
+		0 => "Журнал импорта",
+	],
+	"Errors" => [
+		0 => "Ошибки",
+	],
+	"Do you really want to remove the import ID %s?" => [
+		0 => "Вы действительно хотите удалить задачу с ID %s?",
+	],
+	"Queued" => [
+		0 => "В очереди",
+	],
+	"Working" => [
+		0 => "Обрабатывается",
+	],
+	"Paused" => [
+		0 => "Приостановлено",
+	],
+	"Canceled" => [
+		0 => "Отменено",
+	],
+	"Completed" => [
+		0 => "Завершено",
+	],
+	"Parser" => [
+		0 => "Парсер",
+	],
+	"Status" => [
+		0 => "Статус",
 	],
 	"Add user" => [
 		0 => "Добавить пользователя",
@@ -1798,17 +2065,17 @@ $translation_table = [
 	"Role" => [
 		0 => "Роль",
 	],
+	"Manager" => [
+		0 => "Менеджер",
+	],
 	"Administrator" => [
 		0 => "Администратор",
 	],
+	"Email address" => [
+		0 => "Адрес электронной почты",
+	],
 	"This setting is always diabled when using personal website mode." => [
 		0 => "Данная настройка всегда выключена, если вы используете персональный режим.",
-	],
-	"documentation" => [
-		0 => "документации",
-	],
-	"Learn more about %s at our %d." => [
-		0 => "Узнайте больше о %s в %d.",
 	],
 	"Add category" => [
 		0 => "Добавить категорию",
@@ -1831,6 +2098,24 @@ $translation_table = [
 	"Website description" => [
 		0 => "Описание сайта",
 	],
+	"Powered by" => [
+		0 => "Работает на",
+	],
+	"Enable this if you want to show a \"%s\" link at the footer." => [
+		0 => "Включите, чтобы показывать кнопки соцсетей.",
+	],
+	"Automatic" => [
+		0 => "Автоматически",
+	],
+	"Forced" => [
+		0 => "Принудительный",
+	],
+	"%a will use HTTPS detection on the server side (recommended). %f will use HTTPS regardless of your server setup. %d to don't use HTTPS at all." => [
+		0 => "%a будет использовать обнаружение HTTPS на стороне сервера (рекомендовано). %f будет использовать HTTPS независимо от настроек сервера. %d полностью отключает использование HTTPS.",
+	],
+	"This only controls the protocol used in the URLs, it won't turn your website into a valid HTTPS website unless your server is configured to support and use HTTPS." => [
+		0 => "Эта настройка влияет только на ссылки. Её включение не сделает ваш сайт доступным по HTTPS, без соответствующих настроек веб-сервера.",
+	],
 	"Default time zone" => [
 		0 => "Часовой пояс по-умолчанию",
 	],
@@ -1842,6 +2127,12 @@ $translation_table = [
 	],
 	"Enables to browse public uploaded images. It also enables categories." => [
 		0 => "Позволяет просмотр публичных изображений и категорий.",
+	],
+	"guests" => [
+		0 => "гости",
+	],
+	"Enables explore for guests." => [
+		0 => "Включает обозреватель для гостей.",
 	],
 	"Enables to browse images randomly." => [
 		0 => "Позволяет просмотр случайных изображений.",
@@ -1911,6 +2202,24 @@ $translation_table = [
 	],
 	"Type" => [
 		0 => "Тип",
+	],
+	"Terms of service" => [
+		0 => "Правила",
+	],
+	"Privacy" => [
+		0 => "Анонимность",
+	],
+	"Contact" => [
+		0 => "Обратная связь",
+	],
+	"Extra page" => [
+		0 => "Дополнительная страница",
+	],
+	"Internal page type" => [
+		0 => "Тип страницы",
+	],
+	"You can have multiple extra pages, but only one of the other special internal types." => [
+		0 => "Вы можете добавить не более одной страницы каждого типа.",
 	],
 	"Page visibility" => [
 		0 => "Видимость страницы",
@@ -1987,6 +2296,9 @@ $translation_table = [
 	"Do you really want to delete the page ID %s? This can't be undone." => [
 		0 => "Вы действительно хотите удалить страницу с ID %s? Это действие необратимо.",
 	],
+	"Enabled image formats" => [
+		0 => "Включенные форматы файлов",
+	],
 	"Unchecked image formats won't be allowed to be uploaded." => [
 		0 => "Только отмеченные форматы будут доступны для загрузки.",
 	],
@@ -2001,6 +2313,15 @@ $translation_table = [
 	],
 	"Enable this if you want to allow non registered users to upload." => [
 		0 => "Включите, если хотите позволить загружать изображения незарегистрированным пользователям.",
+	],
+	"Upload user interface" => [
+		0 => "Загрузить интерфейс пользователя",
+	],
+	"On-page container" => [
+		0 => "Контейнер страницы",
+	],
+	"route" => [
+		0 => "маршрут",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "Коды для встраивания (в загрузчике)",
@@ -2064,6 +2385,9 @@ $translation_table = [
 	],
 	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
 		0 => "Ограничение сервера - %s. Это ограничение обусловлено %u и %p (значения %f).",
+	],
+	"Same as \"%s\" but for guests." => [
+		0 => "То же, что и \"%s\" но для гостей.",
 	],
 	"Image path" => [
 		0 => "Путь к изображениям",
@@ -2254,6 +2578,12 @@ $translation_table = [
 	"Leave it empty to don't require a minimum age to use the website." => [
 		0 => "Оставьте поле пустым, если ваш сайт не предполагает возрастного ограничения.",
 	],
+	"Notify on user signup" => [
+		0 => "Уведомлять о новых пользователях",
+	],
+	"Enable this if you want to get an email notification for each new user signup." => [
+		0 => "Включите, чтобы получать email-уведомления о новых пользователях.",
+	],
 	"Username routing" => [
 		0 => "Адресация пользователей",
 	],
@@ -2356,6 +2686,12 @@ $translation_table = [
 	"What pagination method should be used." => [
 		0 => "Какой способ разбиения на станицы использовать.",
 	],
+	"Listing viewer" => [
+		0 => "Карусель",
+	],
+	"Enable this to use the listing viewer when clicking on an image." => [
+		0 => "Включите, чтобы использовать карусель для просмотра изображений.",
+	],
 	"Image listing size" => [
 		0 => "Размер миниатюр в списке",
 	],
@@ -2367,6 +2703,15 @@ $translation_table = [
 	],
 	"Both methods use a fixed width but fluid method uses automatic heights." => [
 		0 => "Оба метода используют фиксированную ширину, но в адаптивном методе, высота вычисляется с сохранением пропорций изображения.",
+	],
+	"Album listing images requirement" => [
+		0 => "Требования к альбомам для карусели",
+	],
+	"explore" => [
+		0 => "обзор",
+	],
+	"Sets the minimum image count needed to show albums in explore." => [
+		0 => "Устанавливает минимальное число изображений, необходимое для показа альбомов в обозревателе.",
 	],
 	"Listing columns number" => [
 		0 => "Количество столбцов в списках изображений",
@@ -2533,6 +2878,9 @@ $translation_table = [
 	"Put your custom JS code here. It will be placed as <script> just before the closing </head> tag." => [
 		0 => "Вставьте сюда ваш собственный JS код. Он будет вставлен с помощью тега <script> перед закрывающим тегом </head>.",
 	],
+	"Do not use %s markup here. This is for plain JS code, not for HTML script tags. If you use script tags here you will break your website." => [
+		0 => "Это поле предназначено для JS-кода. Не используйте в нем %s разметку. Использование разметки в этом поле, приведет к нарушению работы сайта.",
+	],
 	"Style" => [
 		0 => "Стиль",
 	],
@@ -2611,8 +2959,8 @@ $translation_table = [
 	"User IDs" => [
 		0 => "ID пользователей",
 	],
-	"Comma-separated list of target user IDs to show images on homepage. Leave it empty to display all recent images." => [
-		0 => "Список числовых идентификаторов пользователей (через запятую), изображения которых, будут показываться на главной странице. Оставьте поле пустым, чтобы показывать все новые изображения.",
+	"Comma-separated list of target user IDs (integers) to show most recent images on homepage. Leave it empty to display trending images." => [
+		0 => "Список числовых идентификаторов пользователей (через запятую), изображения которых, будут показываться на главной странице. Оставьте поле пустым или укажите ноль, чтобы показывать все новые изображения.",
 	],
 	"banners" => [
 		0 => "баннеры",
@@ -2628,6 +2976,18 @@ $translation_table = [
 	],
 	"Enable this to show a notice on top warning you about new available system updates." => [
 		0 => "Включите, чтобы показывать уведомления об обновлении в верхней части экрана.",
+	],
+	"Dump update query" => [
+		0 => "Просмотреть текст запроса",
+	],
+	"Enable this if you want to manually run the SQL update query." => [
+		0 => "Включите, чтобы автоматически определять и устанавливать язык пользователя.",
+	],
+	"SEO %s URLs" => [
+		0 => "SEO %s URLs",
+	],
+	"Enable this if you want to use SEO %s URLs." => [
+		0 => "Включите этот параметр, если вы хотите использовать SEO %s URL-адреса.",
 	],
 	"Minify code" => [
 		0 => "Сжимать код",
@@ -2682,6 +3042,30 @@ $translation_table = [
 	],
 	"Album routing" => [
 		0 => "Маршрутизация альбомов",
+	],
+	"Hostname" => [
+		0 => "Имя узла",
+	],
+	"Hostname on which sub-domain wildcards will be added." => [
+		0 => "Имя узла к которому будут добавлены субдомены.",
+	],
+	"This setting may be overridden by %s." => [
+		0 => "Эта настройка может быть переопределена %s.",
+	],
+	"Language subdomains" => [
+		0 => "Локальные поддомены",
+	],
+	"languages" => [
+		0 => "языки",
+	],
+	"Enable to use %s for %t." => [
+		0 => "Включите, чтобы использовать %s для %t.",
+	],
+	"Username subdomains" => [
+		0 => "Пользовательские поддомены",
+	],
+	"user profiles" => [
+		0 => "профили пользователя",
 	],
 	"Custom language strings" => [
 		0 => "Дополнительные строки перевода",
@@ -2767,14 +3151,53 @@ $translation_table = [
 	"Unsecured" => [
 		0 => "Небезопасный",
 	],
+	"Decode ID" => [
+		0 => "Декодировать ID",
+	],
+	"Encode ID" => [
+		0 => "Закодировать ID",
+	],
 	"Send test email" => [
 		0 => "Отправить тестовое сообщение",
 	],
-	"test@somedomain.com" => [
-		0 => "test@somedomain.ru",
-	],
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "Используйте эту форму для проверки доставки сообщений. Мы рекомендуем Вам использовать %s.",
+	],
+	"Export a user" => [
+		0 => "Экспортировать пользователя",
+	],
+	"Export user" => [
+		0 => "Экспортировать пользователя",
+	],
+	"This will allow you to download a user's standard personal information in JSON format." => [
+		0 => "Это позволит Вам скачать информацию о пользователе в формате JSON.",
+	],
+	"Regenerate external storage stats" => [
+		0 => "Регенерация статистики внешнего хранилища",
+	],
+	"Storage id" => [
+		0 => "ID хранилища",
+	],
+	"Regenerate" => [
+		0 => "Регенерировать",
+	],
+	"This will re-calculate the sum of all the image records associated to the target external storage." => [
+		0 => "При этом будет пересчитана сумма всех записей изображений, связанных с целевым внешним хранилищем.",
+	],
+	"Migrate image records from one external storage to another" => [
+		0 => "Перенос записей изображений из одного внешнего хранилища в другое",
+	],
+	"Source storage id" => [
+		0 => "Идентификатор хранилища источника",
+	],
+	"Target storage id" => [
+		0 => "Идентификатор целевого хранилища",
+	],
+	"Migrate" => [
+		0 => "Мигрировать",
+	],
+	"This only updates the database. You must transfer the actual files to target storage container on your own. URL rewriting is strongly recommended. Use zero (0) for local storage." => [
+		0 => "Обновляет только базу данных. Вы должны вручную переместить файлы в новое место. Используйте ноль(0) для указания локального хранилища.",
 	],
 	"social networks" => [
 		0 => "социальные сети",
@@ -2818,8 +3241,26 @@ $translation_table = [
 	"VK client secret" => [
 		0 => "Секретный ключ клиента ВКонтакте",
 	],
+	"%s spam protection" => [
+		0 => "защита от спама %s",
+	],
+	"user generated content" => [
+		0 => "загрузках пользователей",
+	],
+	"Enable this to use %l to block spam on %c." => [
+		0 => "Включите, чтобы использовать %i, для блокирования спама на %c.",
+	],
+	"%s API key" => [
+		0 => "Ключ API %s",
+	],
+	"user signup" => [
+		0 => "регистрация",
+	],
 	"You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this." => [
 		0 => "Для этого вам необходим <a href=\"%s\" target=\"_blank\">ключ reCAPTCHA</a>.",
+	],
+	"Please note that each reCAPTCHA version require its own set of keys. Don't forget to update the keys if you change versions." => [
+		0 => "Каждая версия reCAPTCHA требует отдельных ключей. Пожалуйста, не забудьте обновить ключи при смене версии.",
 	],
 	"%s site key" => [
 		0 => "%s ключ сайта",
@@ -2832,6 +3273,12 @@ $translation_table = [
 	],
 	"How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to always show reCAPTCHA." => [
 		0 => "Через сколько неудачных попыток показывать reCAPTCHA? Укажите ноль(0), чтобы всегда показывать reCAPTCHA.",
+	],
+	"Force %s on contact page" => [
+		0 => "Принудительная %s на странице обратной связи",
+	],
+	"Enable this to always show %s on contact page." => [
+		0 => "Включите, чтобы всегда показывать %s на странице обратной связи.",
 	],
 	"Comments API" => [
 		0 => "API системы комментариев",
@@ -2929,20 +3376,26 @@ $translation_table = [
 	"Start uploading" => [
 		0 => "Начать загрузку",
 	],
-	"Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings." => [
-		0 => "Заполните этот раздел, загружая изображения от имени %s.<br>Вы можете поменять этого пользователя в панели управления.",
-	],
 	"Sign up to unlock all the features" => [
 		0 => "Зарегистрируйтесь, чтобы получить больше возможностей.",
 	],
 	"Manage your content, create private albums, customize your profile and more." => [
 		0 => "Управляйте аккаунтом, создавайте альбомы, изменяйте свой профиль и многое другое.",
 	],
-	"Enter your password" => [
-		0 => "Введите ваш пароль",
+	"Sign in with your account" => [
+		0 => "Войдите в свою учетную запись",
+	],
+	"Don't have an account? <a href='%s'>Sign up</a> now." => [
+		0 => "У вас ещё нет аккаунта? <a href='%s'>Зарегистрируйтесь</a> сейчас!",
+	],
+	"Logged out" => [
+		0 => "Выход из системы",
 	],
 	"You have been logged off %s. Hope to see you soon." => [
 		0 => "Успешный выход из системы. До скорых встреч на %s.",
+	],
+	"Go to homepage" => [
+		0 => "На главную",
 	],
 	"Website under maintenance" => [
 		0 => "Сайт находится в режиме технического обслуживания.",
@@ -3034,9 +3487,6 @@ $translation_table = [
 	"Registration IP" => [
 		0 => "IP-адрес при регистрации",
 	],
-	"Status" => [
-		0 => "Статус",
-	],
 	"Valid" => [
 		0 => "Подтвержденный",
 	],
@@ -3097,6 +3547,12 @@ $translation_table = [
 	"This user doesn't have a password. Add one using this form." => [
 		0 => "У этого пользователя не установлен пароль. Добавьте его через эту форму.",
 	],
+	"Enter your password" => [
+		0 => "Введите ваш пароль",
+	],
+	"Confirm password" => [
+		0 => "Подтвердите пароль",
+	],
 	"Re-enter your password" => [
 		0 => "Повторите пароль",
 	],
@@ -3105,9 +3561,6 @@ $translation_table = [
 	],
 	"Delete existing image" => [
 		0 => "Удалить",
-	],
-	"Privacy" => [
-		0 => "Анонимность",
 	],
 	"Make my profile and identity totally private" => [
 		0 => "Сделать мой профиль полностью закрытым",
@@ -3157,11 +3610,32 @@ $translation_table = [
 	"Button" => [
 		0 => "Кнопка",
 	],
+	"Login" => [
+		0 => "Вход",
+	],
+	"Already have an account? %s now." => [
+		0 => "Уже есть аккаунт? %s  сейчас.",
+	],
 	"resend account activation" => [
 		0 => "Повторить отправку сообщения для активации аккаунта",
 	],
-	"If you have already signed up maybe you need to request to %s" => [
-		0 => "Если вы уже зарегистрированы, возможно вам необходимо сделать запрос к %s.",
+	"If you have already signed up maybe you need to request to %s to activate your account." => [
+		0 => "Если вы уже зарегистрировались, возможно Вам необходимо обратиться к %s , чтобы активировать аккаунт.",
+	],
+	"You can also %s." => [
+		0 => "Вы также можете %s.",
+	],
+	"I'm at least %s years old" => [
+		0 => "Мне %s лет или больше.",
+	],
+	"terms" => [
+		0 => "правила",
+	],
+	"privacy policy" => [
+		0 => "политики конфиденциальности",
+	],
+	"I agree to the %terms_link and %privacy_link" => [
+		0 => "Я согласен с %terms_link и %privacy_link",
 	],
 	"Upload profile background" => [
 		0 => "Загрузить фон профиля",
@@ -3198,17 +3672,11 @@ $translation_table = [
 	"Invalid subject" => [
 		0 => "Неверная тема",
 	],
-	"Invalid reCAPTCHA" => [
-		0 => "Неверная reCAPTCHA",
-	],
 	"Mail error" => [
 		0 => "Ошибка электронной почты",
 	],
 	"Message sent" => [
 		0 => "Сообщение отправлено",
-	],
-	"Contact" => [
-		0 => "Обратная связь",
 	],
 	"Message sent. We will get in contact soon." => [
 		0 => "Сообщение успешно отправлено. Мы ответим на него в кратчайшие сроки.",
@@ -3221,162 +3689,6 @@ $translation_table = [
 	],
 	"Subject" => [
 		0 => "Тема",
-	],
-	"Installed version is v%s" => [
-		0 => "У Вас установлена версия - v%s",
-	],
-	"Can't connect to %s" => [
-		0 => "Невозможно подкючиться к %s",
-	],
-	"Last available release is v%s" => [
-		0 => "Последняя доступная версия - v%s",
-	],
-	"Update needed, proceeding to download" => [
-		0 => "Доступно обновление, приступаю к загрузке",
-	],
-	"No update needed" => [
-		0 => "Обновления отсутствуют",
-	],
-	"System files already up to date" => [
-		0 => "Системные файлы уже находятся в актуальном состоянии",
-	],
-	"Starting v%s download" => [
-		0 => "Запускаю загрузку версии v%s",
-	],
-	"Downloaded v%s, proceeding to extraction" => [
-		0 => "Версия v%s загружена, приступаю к распаковке",
-	],
-	"Attempting to extract v%s" => [
-		0 => "Выполняю распаковку v%s",
-	],
-	"Extraction completed" => [
-		0 => "Распаковка выполнена",
-	],
-	"Proceding to install the update" => [
-		0 => "Приступаю к установке обновления",
-	],
-	"Update failed" => [
-		0 => "Ошибка обновления",
-	],
-	"Please provide a valid email address" => [
-		0 => "Пожалуйста укажите правильный email-адрес",
-	],
-	"You must enter the album name." => [
-		0 => "Вы должны ввести название альбома.",
-	],
-	"Confirm" => [
-		0 => "Подтвердить",
-	],
-	"Select existing album" => [
-		0 => "Выберите существующий альбом",
-	],
-	"Please select a valid image file type." => [
-		0 => "Пожалуйста выберите правильный формат изображения.",
-	],
-	"Please select a picture of at most %s size." => [
-		0 => "Пожалуйста выберите изображение не более %s размером.",
-	],
-	"Profile image updated." => [
-		0 => "Изображение профиля обновлено.",
-	],
-	"Profile background image updated." => [
-		0 => "Фон профиля обновлен.",
-	],
-	"Profile background image deleted." => [
-		0 => "Фон профиля удален.",
-	],
-	"Error deleting profile background image." => [
-		0 => "При удалении фона профиля возникла ошибка.",
-	],
-	"Update available v%s" => [
-		0 => "Доступное обновление до v%s",
-	],
-	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
-		0 => "Для Вашей системы доступно обновление. Вы можете автоматически загрузить и установить его, или перейти на %s для загрузки файла.",
-	],
-	"Update now" => [
-		0 => "Обновить",
-	],
-	"This website is running latest %s version" => [
-		0 => "Вы используете последнюю версию Chevereto - %s",
-	],
-	"Toggle select" => [
-		0 => "выбранное",
-	],
-	"Previous" => [
-		0 => "Предыдущая",
-	],
-	"Next" => [
-		0 => "Следующая",
-	],
-	"Clipboard image" => [
-		0 => "Изображение из буфера обмена",
-	],
-	"File too big." => [
-		0 => "Файл слишком большой.",
-	],
-	"Invalid or unsupported file format." => [
-		0 => "Неверный или не поддерживаемый формат файла.",
-	],
-	"Some files couldn't be added" => [
-		0 => "Некоторые файлы не были добавлены.",
-	],
-	"Image edited successfully." => [
-		0 => "Изображение успешно отредактировано.",
-	],
-	"private" => [
-		0 => "скрытое",
-	],
-	"Album edited successfully." => [
-		0 => "Альбом успешно отредактирован.",
-	],
-	"Invalid URL key." => [
-		0 => "Неверный URL ключ.",
-	],
-	"Category URL key already being used." => [
-		0 => "Такой URL-ключ уже используется.",
-	],
-	"Category successfully deleted." => [
-		0 => "Категория удалена.",
-	],
-	"Category %s added." => [
-		0 => "Категория %s добавлена.",
-	],
-	"Invalid expiration date." => [
-		0 => "Неверный срок действия.",
-	],
-	"IP %s already banned." => [
-		0 => "IP-адрес %s уже заблокирован",
-	],
-	"IP %s banned." => [
-		0 => "IP-адрес %s заблокирован",
-	],
-	"IP ban successfully deleted." => [
-		0 => "IP-адрес разблокирован.",
-	],
-	"Please fill all the required fields." => [
-		0 => "Пожалуйста заполните все необходимые поля.",
-	],
-	"Invalid storage capacity value. Make sure to use a valid format." => [
-		0 => "Неверное значение доступного дискового пространства. Убедитесь, что вы используете допустимый формат.",
-	],
-	"Invalid URL." => [
-		0 => "Неверный адрес.",
-	],
-	"Storage successfully edited." => [
-		0 => "Хранилище изменено.",
-	],
-	"User added successfully." => [
-		0 => "Пользователь добавлен.",
-	],
-	"The content has been moved." => [
-		0 => "Содержимое перемещено.",
-	],
-	"Unselect" => [
-		0 => "Снять выделение",
-	],
-	"The content has been edited." => [
-		0 => "Содержимое отредактировано.",
 	],
 	"All the changes that you have made will be lost if you continue." => [
 		0 => "Если вы продолжите, все сделаные вами изменения будут потеряны.",

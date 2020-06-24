@@ -1,112 +1,76 @@
-<?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
-<?php G\Render\include_theme_header(); ?>
-
-<div class="center-box c24">
-	<div class="content-width">
-
-		<div class="header default-margin-bottom">
-			<h1><?php _se('Create account'); ?></h1>
-		</div>
-
-		<div class="form-content overflow-auto">
-
-			<?php
-				if(CHV\getSetting('social_signin')) {
-			?>
-			<div class="phablet-show phone-show hidden">
-				<div class="signup-services-column c11 phablet-c1 phone-text-align-center phablet-text-align-center grid-columns">
-					<h2><?php _se('Sign in with another account'); ?></h2>
-					<ul class="sign-services"><?php G\Render\include_theme_file('snippets/sign_services_buttons'); ?></ul>
-				</div>
-				<div class="c4 phablet-c1 grid-columns">
-					<div class="or-separator c2 phablet-c1 margin-right-auto margin-left-auto margin-top-40"><span><?php _se('or'); ?></span></div>
-				</div>
-			</div>
-			<?php
-				}
-			?>
-
-			<form id="form-signup" class="c9 phablet-c1 grid-columns" method="post" autocomplete="off" data-action="validate">
-
-				<?php echo G\Render\get_input_auth_token(); ?>
-
-				<div class="input-label margin-top-0">
-					<label for="signup-email"><?php _se('Email address'); ?></label>
-					<input type="email" name="email" id="signup-email" class="text-input" autocomplete="off" value="<?php echo get_safe_post()['email']; ?>" placeholder="<?php _se('Email address'); ?>" required>
-					<span class="input-warning red-warning"><?php echo get_input_errors()["email"]; ?></span>
-				</div>
-				<div class="input-label">
-					<label for="signup-username"><?php _se('Username'); ?></label>
-					<input type="text" name="username" id="signup-username" class="text-input" autocomplete="off" value="<?php echo get_safe_post()["username"]; ?>" pattern="<?php echo CHV\getSetting('username_pattern'); ?>" rel="tooltip" title='<?php _se('%i to %f characters<br>Letters, numbers and "_"', ['%i' => CHV\getSetting('username_min_length'), '%f' => CHV\getSetting('username_max_length')]); ?>' data-tipTip="right" placeholder="<?php _se('Username'); ?>" required>
-					<span class="input-warning red-warning"><?php echo get_input_errors()["username"]; ?></span>
-				</div>
-
-				<?php if(is_show_resend_activation()) { ?>
-				<div class="font-size-small phone-text-align-center"><?php _se('If you have already signed up maybe you need to request to %s', '<a href="' . G\get_base_url('account/resend-activation') . '">' . _s('resend account activation') . '</a> to activate your account.'); ?></div>
-				<?php } ?>
-
-				<div class="input-label input-password">
-					<label for="signup-password"><?php _se('Password'); ?></label>
-					<input type="password" name="password" id="signup-password" class="text-input" pattern="<?php echo CHV\getSetting('user_password_pattern'); ?>" rel="tooltip" title="<?php _se('%d characters min', CHV\getSetting('user_password_min_length')); ?>" data-tipTip="right" placeholder="<?php _se('Password'); ?>" required>
-					<div class="input-password-strength"><span style="width: 0%" data-content="password-meter-bar"></span></div>
-					<span class="input-warning red-warning" data-text="password-meter-message"><?php echo get_input_errors()["password"]; ?></span>
-				</div>
-
-				<?php if(CHV\getSetting('user_minimum_age') > 0) { ?>
-				<div class="input">
-					<div class="checkbox-label"><label for="form-minimum-age-signup"><input type="checkbox" name="minimum-age-signup" id="form-minimum-age-signup" value="1" required><?php _se("I'm at least %s years old", CHV\getSetting('user_minimum_age')); ?></label></div>
-					<span class="red-warning"><?php echo get_input_errors()['minimum-age-signup']; ?></span>
-				</div>
-				<?php } ?>
-
-				<?php if(is_captcha_needed()) { ?>
-				<div class="input-label">
-					<label for="recaptcha_response_field">reCAPTCHA</label>
-					<?php echo get_recaptcha_html(); ?>
-				</div>
-				<?php } ?>
-
-				<div class="input-label">
-				  <div class="checkbox-label">
-				    <label for="signup-accept-terms-policies">
-				      <input type="checkbox" name="signup-accept-terms-policies" id="signup-accept-terms-policies" value="1" required><?php _se('I agree to the %terms_link and %privacy_link', ['%terms_link' => '<a ' . get_page_tos()['link_attr'] . '>'. _s('terms') .'</a>', '%privacy_link' => '<a ' . get_page_privacy()['link_attr'] . '>' . _s('privacy policy'). '</a>']); ?>
-				    </label>
-				  </div>
-					<span class="red-warning"><?php echo get_input_errors()['signup-accept-terms-policies']; ?></span>
-				</div>
-
-				<div class="btn-container">
-					<button class="btn btn-input default" type="submit"><?php _se('Create account'); ?></button>
-				</div>
-			</form>
-
-      <?php
-				if(CHV\getSetting('social_signin')) {
-			?>
-			<div class="phone-hide phablet-hide">
-				<div class="c4 phablet-c1 grid-columns">
-					<div class="or-separator c2 phablet-c1 margin-right-auto margin-left-auto margin-top-40"><span><?php _se('or'); ?></span></div>
-				</div>
-				<div class="signup-services-column c11 phablet-c1 phablet-text-align-center grid-columns">
-					<h2><?php _se('Sign in with another account'); ?></h2>
-					<ul class="sign-services"><?php G\Render\include_theme_file('snippets/sign_services_buttons'); ?></ul>
+<?php if (!defined('access') or !access) {
+    die('This file cannot be directly accessed.');
+} ?>
+<?php G\Render\include_theme_file('head'); ?>
+<body id="login" class="full--wh">
+	<?php G\Render\include_theme_file('custom_hooks/body_open'); ?>
+	<div class="display-flex height-min-full">
+		<?php G\Render\include_theme_file('snippets/quickty/background_cover'); ?>
+		<div class="flex-center">
+			<div class="content-box card-box col-8-max text-align-center">
+				<div class="fancy-box">
+					<h1 class="fancy-box-heading"><?php _se('Create account'); ?></h1>
+					<div class="content-section"><?php _se('Already have an account? %s now.', '<a href="'.G\get_base_url('login').'">'._s('Login').'</a>'); ?> <?php
+                        if (is_show_resend_activation()) {
+                            ?><?php _se('If you have already signed up maybe you need to request to %s to activate your account.', '<a href="'.G\get_base_url('account/resend-activation').'">'._s('resend account activation').'</a>'); ?><?php
+                        } else {
+                            ?><?php _se('You can also %s.', '<a href="'.G\get_base_url('account/resend-activation').'">'._s('resend account activation').'</a>'); ?></div>
+					<?php
+                        }
+                    ?>
+					<form class="content-section" method="post" autocomplete="off" data-action="validate">	
+						<fieldset class="fancy-fieldset">
+							<div class="position-relative">
+								<input name="email" tabindex="1" autocomplete="off" autocorrect="off" autocapitalize="off" type="email" placeholder="<?php _se('Email address'); ?>" class="input animate" required value="<?php echo get_safe_post()['email']; ?>">
+								<div class="text-align-left red-warning"><?php echo get_input_errors()['email']; ?></span>
+							</div>
+							<div class="position-relative">
+								<input name="username" tabindex="2" autocomplete="off" autocorrect="off" autocapitalize="off" type="text" class="input animate" value="<?php echo get_safe_post()['username']; ?>" pattern="<?php echo CHV\getSetting('username_pattern'); ?>" rel="tooltip" title='<?php _se('%i to %f characters<br>Letters, numbers and "_"', ['%i' => CHV\getSetting('username_min_length'), '%f' => CHV\getSetting('username_max_length')]); ?>' data-tipTip="right" placeholder="<?php _se('Username'); ?>" required>
+								<div class="text-align-left red-warning"><?php echo get_input_errors()['username']; ?></div>
+							</div>
+							<div class="input-password margin-bottom-10 position-relative">
+								<input name="password" tabindex="4" type="password" placeholder="<?php _se('Password'); ?>" class="input animate" pattern="<?php echo CHV\getSetting('user_password_pattern'); ?>" rel="tooltip" title="<?php _se('%d characters min', CHV\getSetting('user_password_min_length')); ?>" data-tipTip="right" required>
+								<div class="input-password-strength" rel="tooltip" title="<?php _se('Password strength'); ?>"><span style="width: 0%" data-content="password-meter-bar"></span></div>
+							</div>
+							<?php
+                                if (CHV\getSetting('user_minimum_age') > 0) {
+                                    ?>
+							<div class="input-label text-align-left">
+								<div class="checkbox-label"><label for="form-minimum-age-signup"><input type="checkbox" name="minimum-age-signup" id="form-minimum-age-signup" value="1" required><?php _se("I'm at least %s years old", CHV\getSetting('user_minimum_age')); ?></label></div>
+								<div class="text-align-left red-warning"><?php echo get_input_errors()['minimum-age-signup']; ?></div>
+							</div>
+							<?php
+                                } ?>
+							<div class="input-label text-align-left">
+								<div class="checkbox-label">
+									<label for="signup-accept-terms-policies">
+										<input type="checkbox" name="signup-accept-terms-policies" id="signup-accept-terms-policies" value="1" required>
+										<span><?php _se('I agree to the %terms_link and %privacy_link', ['%terms_link' => '<a '.get_page_tos()['link_attr'].'>'._s('terms').'</a>', '%privacy_link' => '<a '.get_page_privacy()['link_attr'].'>'._s('privacy policy').'</a>']); ?></span>
+									</label>
+								</div>
+								<div class="text-align-left red-warning"><?php echo get_input_errors()['signup-accept-terms-policies']; ?></div>
+							</div>
+						</fieldset>
+						<?php G\Render\include_theme_file('snippets/quickty/recaptcha_form'); ?>
+						<div class="btn-container">
+							<button class="btn btn-input default" type="submit"><?php _se('Create account'); ?></button>
+						</div>
+					</form>
+					<?php G\Render\include_theme_file('snippets/quickty/login_social'); ?>
 				</div>
 			</div>
-            <?php
-				}
-			?>
-
 		</div>
-
 	</div>
+	<?php G\Render\include_theme_file('snippets/quickty/top_left'); ?>
 </div>
 
-<?php if(get_post() and is_error()) { ?>
+<?php if (get_post() && is_error()) {
+                                    ?>
 <script>
-$(function() {
+$(document).ready(function() {
 	PF.fn.growl.expirable("<?php echo get_error(); ?>");
 });
 </script>
-<?php } ?>
-
-<?php G\Render\include_theme_footer(); ?>
+<?php
+                                }
+G\Render\include_theme_footer(); ?>

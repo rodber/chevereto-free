@@ -1,5 +1,8 @@
-<?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
+<?php if (!defined('access') or !access) {
+    die('This file cannot be directly accessed.');
+} ?>
 <?php G\Render\include_theme_header(); ?>
+
 <div class="content-width">
 
 	<div class="header header-tabs margin-bottom-10 follow-scroll">
@@ -8,15 +11,14 @@
         <?php G\Render\include_theme_file("snippets/tabs"); ?>
 
 		<?php
-			if(is_admin()) {
-				G\Render\include_theme_file("snippets/user_items_editor");
-		?>
+            if (is_content_manager()) {
+                G\Render\include_theme_file("snippets/user_items_editor"); ?>
         <div class="header-content-right phone-float-none">
 			<?php G\Render\include_theme_file("snippets/listing_tools_editor"); ?>
         </div>
 		<?php
-			}
-		?>
+            }
+        ?>
 
     </div>
 

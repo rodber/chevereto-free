@@ -1,9 +1,12 @@
 # Disable server signature
 ServerSignature Off
 
+# Enable CORS across all your subdomains (replace dev\.local with your domain\.com)
+# SetEnvIf Origin ^(https?://.+\.dev\.local(?::\d{1,5})?)$   CORS_ALLOW_ORIGIN=$1
+# Header append Access-Control-Allow-Origin  %{CORS_ALLOW_ORIGIN}e   env=CORS_ALLOW_ORIGIN
+# Header merge  Vary "Origin"
 
-
-# Disable directory listing (-indexes), Multiviews (-MultiViews) and enable Follow system links (+FollowSymLinks)
+# Disable directory listing (-indexes), Multiviews (-MultiViews)
 Options -Indexes
 Options -MultiViews
 
@@ -20,12 +23,12 @@ Options -MultiViews
 	# If you want to have your own fancy "image not found" image remove the "#" from RewriteCond and RewriteRule lines
 	# Make sure to apply the correct paths to reflect your current installation
 	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule images/.+\.(gif|jpe?g|png|bmp) - [NC,L,R=404]
-	#RewriteRule images/.+\.(gif|jpe?g|png|bmp) content/images/system/default/404.gif [NC,L]
+	RewriteRule images/.+\.(gif|jpe?g|png|bmp|webp) - [NC,L,R=404]
+	#RewriteRule images/.+\.(gif|jpe?g|a?png|bmp|webp) content/images/system/default/404.gif [NC,L]
 
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteCond %{REQUEST_URI} !\.(css|js|html|htm|rtf|rtx|svg|svgz|txt|xsd|xsl|xml|asf|asx|wax|wmv|wmx|avi|bmp|class|divx|doc|docx|exe|gif|gz|gzip|ico|jpe?g|jpe|mdb|mid|midi|mov|qt|mp3|m4a|mp4|m4v|mpeg|mpg|mpe|mpp|odb|odc|odf|odg|odp|ods|odt|ogg|pdf|png|pot|pps|ppt|pptx|ra|ram|swf|tar|tif|tiff|wav|wma|wri|xla|xls|xlsx|xlt|xlw|zip)$ [NC]
+	RewriteCond %{REQUEST_URI} !\.(css|js|html|htm|rtf|rtx|svg|svgz|txt|xsd|xsl|xml|asf|asx|wax|wmv|wmx|avi|bmp|class|divx|doc|docx|exe|gif|gz|gzip|ico|jpe?g|jpe|mdb|mid|midi|mov|qt|mp3|m4a|mp4|m4v|mpeg|mpg|mpe|mpp|odb|odc|odf|odg|odp|ods|odt|ogg|pdf|png|pot|pps|ppt|pptx|ra|ram|swf|tar|tif|tiff|wav|webp|wma|wri|xla|xls|xlsx|xlt|xlw|zip)$ [NC]
 	RewriteRule . index.php [L]
 
 </IfModule>

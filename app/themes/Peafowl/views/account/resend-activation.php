@@ -1,53 +1,52 @@
-<?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
-<?php G\Render\include_theme_header(); ?>
-
-<div class="center-box c24"> 
-	<div class="content-width">
-
-		<div class="header default-margin-bottom">
-			<h1><?php _se('Resend account activation'); ?></h1>
-		</div>
-		<?php if(is_process_done()) { ?>
-		<div>
-			<p><?php _se("An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters.", '<b>'.get_resend_activation_email().'</b>'); ?></p>
-			<div class="btn-container"><a href="<?php echo G\get_base_url(); ?>" class="btn btn-input default"><?php _se('Go to homepage'); ?></a> <span class="btn-alt"><?php _se('or'); ?> <a href="<?php echo G\get_base_url("account/resend-activation"); ?>"><?php _se('Resend activation'); ?></a></span></div>
-		</div>
-		<?php } else { ?>
-		
-		<form class="form-content" method="post" autocomplete="off" data-action="validate">
-			
-			<p><?php _se('Enter the username or email address that you used to create your account to continue.'); ?></p>
-			
-			<div class="c9">
-				<div class="input-label">
-					<label for="form-user-subject"><?php _se('Username or Email address'); ?></label>
-					<input type="text" name="user-subject" id="form-user-subject" class="text-input" autocomplete="off" value="<?php echo get_safe_post()["user-subject"]; ?>" required>
-					<span class="input-warning red-warning"><?php echo get_input_errors()["user-subject"]; ?></span>
-				</div>
-				
-				<?php if(is_captcha_needed()) { ?>
-				<div class="input-label">
-					<label for="recaptcha_response_field">reCAPTCHA</label>
-					<?php echo get_recaptcha_html(); ?>
-				</div>
-				<?php } ?>
+<?php if (!defined('access') or !access) {
+    die('This file cannot be directly accessed.');
+} ?>
+<?php G\Render\include_theme_file('head'); ?>
+<body id="login" class="full--wh">
+	<?php G\Render\include_theme_file('custom_hooks/body_open'); ?>
+	<div class="display-flex height-min-full">
+		<?php G\Render\include_theme_file('snippets/quickty/background_cover'); ?>
+		<div class="flex-center">
+			<div class="content-box card-box col-8-max text-align-center">
+			<div class="fancy-box">
+				<h1 class="fancy-box-heading"><?php _se('Resend account activation'); ?></h1>
+				<?php
+                    if (is_process_done()) {
+                        ?>
+				<div class="content-section"><?php _se("An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters.", '<b>'.get_resend_activation_email().'</b>'); ?></div>
+				<div class="content-section"><a href="<?php echo G\get_base_url('account/resend-activation'); ?>" class="btn btn-input default"><?php _se('Resend activation'); ?></a></div>
+				<?php
+                    } else {
+                        ?>
+				<div class="content-section"><?php _se('Enter your username or email address to continue. You may need to check your spam folder or whitelist %s', CHV\obfuscate(CHV\Settings::get('email_from_email'))); ?></div>
+				<form class="content-section" method="post" autocomplete="off" data-action="validate">	
+					<fieldset class="fancy-fieldset">
+						<div>
+							<input type="text" name="user-subject" id="form-user-subject" class="input animate" value="<?php echo get_safe_post()['user-subject']; ?>" placeholder="<?php _se('Username or Email address'); ?>" required>
+							<div class="text-align-left red-warning"><?php echo get_input_errors()['user-subject']; ?></div>
+						</div>
+					</fieldset>
+					<?php G\Render\include_theme_file('snippets/quickty/recaptcha_form'); ?>
+					<div class="content-section">
+						<button class="btn btn-input default" type="submit"><?php _se('Submit'); ?></button>
+					</div>
+				</form>
+				<?php
+                    }
+                ?>
 			</div>
-
-			<div class="btn-container">
-				<button class="btn btn-input default" type="submit"><?php _se('Submit'); ?></button>
-			</div>
-			
-		</form>
-		<?php } ?>
+		</div>
 	</div>
+	<?php G\Render\include_theme_file('snippets/quickty/top_left'); ?>
 </div>
 
-<?php if(is_error() and get_error()) { ?>
+<?php if (get_post() && is_error()) {
+                    ?>
 <script>
 $(document).ready(function() {
 	PF.fn.growl.expirable("<?php echo get_error(); ?>");
 });
 </script>
-<?php } ?>
-
-<?php G\Render\include_theme_footer(); ?>
+<?php
+                }
+G\Render\include_theme_footer(); ?>

@@ -1,29 +1,29 @@
-<?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
+<?php if (!defined('access') or !access) {
+    die('This file cannot be directly accessed.');
+} ?>
 <?php
 global $modal_dealing_with, $disable_album_toggle;
 $user_items_editor = function_exists('get_user_items_editor') ? get_user_items_editor() : G\get_global('user_items_editor');
 $modal_dealing_with = $user_items_editor["type"];
 
-if(!in_array($modal_dealing_with, array("images", "albums"))) {
-	$modal_dealing_with = "images";
+if (!in_array($modal_dealing_with, array("images", "albums"))) {
+    $modal_dealing_with = "images";
 }
-if($user_items_editor !== false) {
-?>
+if ($user_items_editor !== false) {
+    ?>
 <div data-modal="form-edit-single" class="hidden">
     <span class="modal-box-title">
 	<?php
-		if($modal_dealing_with == 'images') {
-	 		_se('Edit image details');
-		} else {
-	 		_se('Edit album details');
-			$disable_album_toggle = true;
-		}
-	?>
+        if ($modal_dealing_with == 'images') {
+            _se('Edit image details');
+        } else {
+            _se('Edit album details');
+            $disable_album_toggle = true;
+        } ?>
 	</span>
     <div class="modal-form">
 		<?php
-			G\Render\include_theme_file('snippets/form_' . ($modal_dealing_with == 'images' ? 'image' : 'album'));
-		?>
+            G\Render\include_theme_file('snippets/form_' . ($modal_dealing_with == 'images' ? 'image' : 'album')); ?>
     </div>
 </div>
 
@@ -36,8 +36,7 @@ if($user_items_editor !== false) {
 		</div>
 		<div id="move-new-album" data-content="form-new-album" data-view="switchable">
         	<?php
-				G\Render\include_theme_file("snippets/form_album");
-			?>
+                G\Render\include_theme_file("snippets/form_album"); ?>
 		</div>
 	</div>
 </div>
@@ -46,12 +45,11 @@ if($user_items_editor !== false) {
 	<span class="modal-box-title"><?php _se('Move to album'); ?></span>
     <p>
 	<?php
-		if($modal_dealing_with == "images") {
-	 		_se('Select an existing album to move the image. You can also <a class="modal-switch" data-switch="move-new-album">create a new album</a> and move the image there.');
-		} else {
-	 		_se('Select an existing album to move the album contents. You can also <a class="modal-switch" data-switch="move-new-album">create a new album</a> and move the album contents there.');
-		}
-	?>
+        if ($modal_dealing_with == "images") {
+            _se('Select an existing album to move the image. You can also <a class="modal-switch" data-switch="move-new-album">create a new album</a> and move the image there.');
+        } else {
+            _se('Select an existing album to move the album contents. You can also <a class="modal-switch" data-switch="move-new-album">create a new album</a> and move the album contents there.');
+        } ?>
 	</p>
 	<div class="modal-form">
 		<div id="move-existing-album" data-view="switchable" class="c7 input-label">
@@ -59,9 +57,8 @@ if($user_items_editor !== false) {
 		</div>
 		<div id="move-new-album" data-content="form-new-album" data-view="switchable" class="soft-hidden">
 			<?php
-				$disable_album_toggle = false;
-				G\Render\include_theme_file("snippets/form_album");
-			?>
+                $disable_album_toggle = false;
+    G\Render\include_theme_file("snippets/form_album"); ?>
 		</div>
 	</div>
 </div>
@@ -79,11 +76,12 @@ if($user_items_editor !== false) {
 	</div>
 </div>
 
-<?php } // full editor ?>
+<?php
+} // full editor?>
 
 <div data-modal="form-assign-category" class="hidden">
 	<span class="modal-box-title"><?php _se('Assign category'); ?></span>
-	<?php if(get_categories()) { ?>
+	<?php if (get_categories()) { ?>
 	<p><?php _se('All the selected images will be assigned to this category.'); ?></p>
 	<div class="input-label c7">
 		<?php G\Render\include_theme_file('snippets/form_category'); ?>
