@@ -118,7 +118,15 @@ function check_system_integrity() {
 			}
 		} else { // Can write?
 			if(!is_writable($v)) {
-				$install_errors[] = 'No write permission in <code>'.G\absolute_to_relative($v).'</code> directory. Chevereto needs to be able to write in this directory.';
+				//double check for NFS shares by writing a temp file 
+				$testFile = sprintf('%s/%s.tmp', $v, uniqid('data_dir_writability_test_'));
+				$handle = fopen($testFile, 'w');
+				if (!$handle || fwrite($handle, 'Test write operation') === FALSE) {
+					$install_errors[] = 'No write permission in <code>'.G\absolute_to_relative($v).'</code> directory. Chevereto needs to be able to write in this directory.';
+				} else {
+					fclose($handle);
+					unlink($testFile);
+				}
 			}
 		}
 	}
