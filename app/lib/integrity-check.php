@@ -123,6 +123,8 @@ function check_system_integrity() {
 				$handle = fopen($testFile, 'w');
 				if (!$handle || fwrite($handle, 'Test write operation') === FALSE) {
 					$install_errors[] = 'No write permission in <code>'.G\absolute_to_relative($v).'</code> directory. Chevereto needs to be able to write in this directory.';
+					error_log(fwrite($handle, 'Test write operation'));
+					error_log('No write permission');
 				} else {
 					fclose($handle);
 					unlink($testFile);
