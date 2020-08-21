@@ -478,7 +478,7 @@ try {
             $handler::setCond('forced_private_mode', (getSetting('website_privacy_mode') == 'private' and getSetting('website_content_privacy_mode') !== 'default'));
 
             // show explorer?
-            $handler::setCond('explore_enabled', Login::isAdmin() ?: getSetting('website_explore_page') ? (Login::getUser() ?: getSetting('website_explore_page_guest')) : false);
+            $handler::setCond('explore_enabled', Login::isAdmin() ?: (getSetting('website_explore_page') ? (Login::getUser() ?: getSetting('website_explore_page_guest')) : false));
 
             // Categories
             $categories = [];
