@@ -251,7 +251,7 @@ namespace G {
                 default: case $default_get:
                     $get = $default_get;
                     if (!array_key_exists($v, $array)) {
-                        continue;
+                        continue 2;
                     }
                     $return[$v] = $array[$v];
                 break;
