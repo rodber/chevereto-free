@@ -254,8 +254,9 @@
                             "BUTTON"
                             ? ' <button %x type="button" class="button button-icon-only" title="%text"><i class="icon fa-cloud-upload fa-fw" aria-hidden="true"></i></button> '
                             : ' <input %x type="button" class="button2" value="%text"> ',
-                    sibling: ".bbcode-img",
-                    siblingPos: "before"
+                    sibling: document.querySelector("#format-buttons *:first-child") && document.querySelector("#format-buttons *:first-child").tagName ==
+                    "BUTTON" ? ".bbcode-img" : "#message-box textarea.inputbox",
+                    siblingPos: "after"
                 },
                 check: "phpbb",
                 getEditor: function () {
