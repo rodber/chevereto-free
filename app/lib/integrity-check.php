@@ -120,16 +120,22 @@ function check_system_integrity()
 
     /*** Folders check ***/
 
-    // Check writtable folders
-    $writting_paths = [CHV_PATH_IMAGES, CHV_PATH_CONTENT, CHV_APP_PATH_CONTENT, CHV_APP_PATH_CONTENT_LOCKS];
-    foreach ($writting_paths as $v) {
+    $writing_paths = [CHV_PATH_IMAGES, CHV_PATH_CONTENT, CHV_APP_PATH_CONTENT, CHV_APP_PATH_CONTENT_LOCKS];
+    foreach ($writing_paths as $v) {
         if (!file_exists($v)) { // Exists?
             if (!@mkdir($v)) {
                 $install_errors[] = "<code>".G\absolute_to_relative($v)."</code> doesn't exists. Make sure to upload it.";
             }
         } else { // Can write?
             if (!is_writable($v)) {
-                $install_errors[] = 'No write permission for user '.get_current_user().' in <code>'.G\absolute_to_relative($v).'</code> directory. Chevereto needs to be able to write in this directory.';
+                $testFile = sprintf('%s/%s.tmp', $v, uniqid('data_write_test_'));
+                $handle = @fopen($testFile, 'w');
+                if (!$handle || fwrite($handle, 'Test write operation') === false) {
+                    $install_errors[] = 'No write permission for PHP user '.get_current_user().' in <code>'.G\absolute_to_relative($v).'</code> directory. Chevereto needs to be able to write in this directory.';
+                } else {
+                    fclose($handle);
+                    unlink($testFile);
+                }
             }
         }
     }
