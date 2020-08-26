@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname(dirname($vendorDir));
 
 return array(
+    'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Detection\\MobileDetect' => $vendorDir . '/mobiledetect/mobiledetectlib/namespaced/Detection/MobileDetect.php',
     'Mobile_Detect' => $vendorDir . '/mobiledetect/mobiledetectlib/Mobile_Detect.php',
     'PHPMailer\\PHPMailer\\Exception' => $vendorDir . '/phpmailer/phpmailer/src/Exception.php',
@@ -16,5 +17,4 @@ return array(
     'TijsVerkoyen\\Akismet\\Akismet' => $vendorDir . '/tijsverkoyen/akismet/Akismet.php',
     'TijsVerkoyen\\Akismet\\Exception' => $vendorDir . '/tijsverkoyen/akismet/Exception.php',
     'URLify' => $vendorDir . '/jbroadway/urlify/URLify.php',
-    'URLifyTest' => $vendorDir . '/jbroadway/urlify/tests/URLifyTest.php',
 );

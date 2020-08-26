@@ -23,8 +23,6 @@ namespace CHV;
 use G;
 use Exception;
 
-error_reporting(E_ALL);
-
 if (!defined('access') or !access) {
     die('This file cannot be directly accessed.');
 }

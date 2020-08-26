@@ -34,7 +34,7 @@ foreach ($tabs as $tab) {
                                 parse_str($QS, $current_page_qs);
                                 unset($current_page_qs['lang']); // Get rid of any ?lang=
                                 $current_url = $currentUrlPath . '?' . http_build_query($current_page_qs);
-                                $page = intval($_GET['page'] ? $_GET['page'] : $current_page_qs['page'] ?: 1);
+                                $page = intval(($_GET['page'] ? $_GET['page'] : $current_page_qs['page']) ?: 1);
                                 $pages = [];
                                 foreach (['prev', 'next'] as $v) {
                                     $params = $current_page_qs;

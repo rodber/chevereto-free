@@ -117,22 +117,17 @@ try {
             case 'extract':
                 $zip_file = $update_temp_dir . $_REQUEST['file'];
                 
-                if (false === preg_match('/^Chevereto-Chevereto-Free-([\d.]+)-\d+-g(.*)_.*$/i', $_REQUEST['file'], $matches)) {
+                if (false === preg_match('/^(chevereto-chevereto-free)-([\d.]+)-\d+-g(.*)_.*$/i', $_REQUEST['file'], $matches)) {
                     throw new Exception("Can't detect target zip file version");
                 }
                 
-                $version = $matches[1];
-                $etag_short = $matches[2];
-                
-                // Test .zip
+                $version = $matches[2];
+                $etag_short = $matches[3];
                 if (!is_readable($zip_file)) {
                     throw new Exception('Missing '.$zip_file.' file', 400);
                 }
-                // Unzip .zip
                 $zip = new \ZipArchive;
                 if ($zip->open($zip_file) === true) {
-
-                    // At this point we will enter the website in maintenance mode (if needed)
                     try {
                         $toggle_maintenance = !getSetting('maintenance');
                         if ($toggle_maintenance) {
@@ -147,14 +142,12 @@ try {
                 } else {
                     throw new Exception(_s("Can't extract %s", G\absolute_to_relative($zip_file)), 401);
                 }
-
                 // Recursive copy UPDATE -> CURRENT
-                $source = $update_temp_dir . G_APP_GITHUB_OWNER . '-' . G_APP_GITHUB_REPO . '-' . $etag_short . '/';
+                $source = $update_temp_dir . $matches[1] . '-' . $etag_short . '/';
                 $dest = G_ROOT_PATH;
                 foreach ($iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($source, \RecursiveDirectoryIterator::SKIP_DOTS), \RecursiveIteratorIterator::SELF_FIRST) as $item) {
                     $target = $dest . $iterator->getSubPathName();
                     $target_visible = G\absolute_to_relative($target);
-
                     if ($item->isDir()) {
                         if (!file_exists($target) and !@mkdir($target)) {
                             $error = error_get_last();
@@ -164,7 +157,6 @@ try {
                             ]), 402);
                         }
                     } else {
-                        // Touch anything but .htaccess files
                         if (!preg_match('/\.htaccess$/', $item)) {
                             if (!@copy($item, $target)) {
                                 $error = error_get_last();
@@ -174,7 +166,7 @@ try {
                                 ]), 403);
                             }
                         }
-                        unlink($item); // Save some valuable seconds...
+                        unlink($item);
                     }
                 }
 
@@ -184,8 +176,6 @@ try {
                     $todo = ($fileinfo->isDir() ? 'rmdir' : 'unlink');
                     $todo($fileinfo->getRealPath());
                 }
-
-                // Turn off maintenance mode (if needed)
                 try {
                     if ($toggle_maintenance) {
                         DB::update('settings', ['value' => 0], ['name' => 'maintenance']);
@@ -203,7 +193,7 @@ try {
         $json_array['request'] = $_REQUEST;
         G\Render\json_output($json_array);
     }
-    die(); // Terminate any remaining execution (if any)
+    die();
 } catch (Exception $e) {
     if (!isset($_REQUEST['action'])) {
         Render\chevereto_die($e->getMessage(), "This installation can't use the automatic update functionality because this server is missing some crucial elements to allow Chevereto to perform the automatic update:", "Can't perform automatic update");

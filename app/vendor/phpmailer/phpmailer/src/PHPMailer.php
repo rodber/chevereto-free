@@ -441,6 +441,8 @@ class PHPMailer
      * Only supported in `mail` and `sendmail` transports, not in SMTP.
      *
      * @var bool
+     *
+     * @deprecated 6.0.0 PHPMailer isn't a mailing list manager!
      */
     public $SingleTo = false;
 
@@ -745,7 +747,7 @@ class PHPMailer
      *
      * @var string
      */
-    const VERSION = '6.1.6';
+    const VERSION = '6.1.7';
 
     /**
      * Error severity: message only, continue processing.
@@ -1307,7 +1309,7 @@ class PHPMailer
             $patternselect = static::$validator;
         }
         if (is_callable($patternselect)) {
-            return $patternselect($address);
+            return call_user_func($patternselect, $address);
         }
         //Reject line breaks in addresses; it's valid RFC5322, but not RFC5321
         if (strpos($address, "\n") !== false || strpos($address, "\r") !== false) {
@@ -2975,7 +2977,6 @@ class PHPMailer
             if ('' === $name) {
                 $name = $filename;
             }
-
             if (!$this->validateEncoding($encoding)) {
                 throw new Exception($this->lang('encoding') . $encoding);
             }
@@ -3990,7 +3991,8 @@ class PHPMailer
      * @param string        $message  HTML message string
      * @param string        $basedir  Absolute path to a base directory to prepend to relative paths to images
      * @param bool|callable $advanced Whether to use the internal HTML to text converter
-     *                                or your own custom converter @return string $message The transformed message Body
+     *                                or your own custom converter
+     * @return string The transformed message body
      *
      * @throws Exception
      *
@@ -4114,7 +4116,7 @@ class PHPMailer
     public function html2text($html, $advanced = false)
     {
         if (is_callable($advanced)) {
-            return $advanced($html);
+            return call_user_func($advanced, $html);
         }
 
         return html_entity_decode(

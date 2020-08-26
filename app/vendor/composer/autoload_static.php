@@ -38,6 +38,7 @@ class ComposerStaticInit5ebab6dc32ca006b1a67a63e20c04846
     );
 
     public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Detection\\MobileDetect' => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/namespaced/Detection/MobileDetect.php',
         'Mobile_Detect' => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/Mobile_Detect.php',
         'PHPMailer\\PHPMailer\\Exception' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/Exception.php',
@@ -48,7 +49,6 @@ class ComposerStaticInit5ebab6dc32ca006b1a67a63e20c04846
         'TijsVerkoyen\\Akismet\\Akismet' => __DIR__ . '/..' . '/tijsverkoyen/akismet/Akismet.php',
         'TijsVerkoyen\\Akismet\\Exception' => __DIR__ . '/..' . '/tijsverkoyen/akismet/Exception.php',
         'URLify' => __DIR__ . '/..' . '/jbroadway/urlify/URLify.php',
-        'URLifyTest' => __DIR__ . '/..' . '/jbroadway/urlify/tests/URLifyTest.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

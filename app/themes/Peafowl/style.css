@@ -2331,6 +2331,7 @@ body.full--wh {
 
 [data-content="dashboard-imports"] [data-status="paused"] [data-action="pause"],
 [data-content="dashboard-imports"] [data-status="canceled"] [data-action="pause"],
+[data-content="dashboard-imports"] [data-status="completed"] [data-action="pause"],
 [data-content="dashboard-imports"] [data-status="queued"] [data-action="pause"],
 [data-content="dashboard-imports"] [data-status="canceled"] [data-action="cancel"],
 [data-content="dashboard-imports"] [data-status="canceled"] [data-target="modal-process-import"],

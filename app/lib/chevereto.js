@@ -2919,7 +2919,7 @@ CHV.fn.system = {
   checkUpdates: function (callback) {
     $.ajax({
       url: CHEVERETO.api.get.info + "/",
-      data: null,
+      data: { id: CHEVERETO.id },
       cache: false,
     }).always(function (data, status, XHR) {
       if (typeof callback == "function") {
@@ -5864,4 +5864,249 @@ CHV.fn.queuePixel = function () {
     PF.fn.generate_random_string(32) +
     '" width="1" height="1" alt="" style="display: none;">';
   $("body").append(img);
+};
+
+CHV.fn.import = {
+  errorHandler: function (response) {
+    PF.fn.growl.call(response.error.message);
+  },
+  reset: function (id) {
+    var id = parseInt(id);
+    CHV.obj.import.working[id].stats = $.ajax({
+      type: "POST",
+      data: {
+        action: "importReset",
+        id: id,
+      },
+    });
+    CHV.obj.import.working[id].stats.complete(function (XHR) {
+      var response = XHR.responseJSON;
+      if (response) {
+        var $html = CHV.fn.import.parseTemplate(response.import);
+        $(
+          "[data-id=" + response.import.id + "]",
+          CHV.obj.import.sel.root
+        ).replaceWith($html);
+        if (response.import.status != "working") {
+          clearInterval(CHV.obj.import.working[id].interval);
+        }
+      }
+    });
+  },
+  updateStats: function (id) {
+    var id = parseInt(id);
+    if (
+      "readyState" in CHV.obj.import.working[id].stats &&
+      CHV.obj.import.working[id].stats.readyState != 4
+    ) {
+      console.log(
+        "Aborting stats timeout call (previous call is still not ready)"
+      );
+      return;
+    }
+    CHV.obj.import.working[id].stats = $.ajax({
+      type: "POST",
+      data: {
+        action: "importStats",
+        id: id,
+      },
+    });
+    CHV.obj.import.working[id].stats.complete(function (XHR) {
+      var response = XHR.responseJSON;
+      if (response) {
+        var $html = CHV.fn.import.parseTemplate(response.import);
+        $(
+          "[data-id=" + response.import.id + "]",
+          CHV.obj.import.sel.root
+        ).replaceWith($html);
+        if (response.import.status != "working") {
+          clearInterval(CHV.obj.import.working[id].interval);
+        }
+      }
+    });
+  },
+  add: {
+    submit: function () {
+      var modal = PF.obj.modal.selectors.root;
+      PF.obj.modal.form_data = {
+        action: "importAdd",
+        path: $("[name=form-path]", modal).val(),
+        options: {
+          root: $("[name=form-structure]", PF.obj.modal.selectors.root).val(),
+        },
+      };
+      return true;
+    },
+    deferred: {
+      success: function (XHR) {
+        var response = XHR.responseJSON;
+        PF.fn.growl.expirable(
+          PF.fn._s(
+            "Import job ID %s added successfully, you can process the import now",
+            response.import.id
+          )
+        );
+        var $html = CHV.fn.import.parseTemplate(response.import);
+        $html.insertAfter(CHV.obj.import.sel.header, CHV.obj.import.sel.root);
+        $(CHV.obj.import.sel.root).removeClass("hidden");
+      },
+      error: function (XHR) {
+        CHV.fn.import.errorHandler(XHR.responseJSON);
+      },
+    },
+  },
+  process: {
+    abortAll: function (id) {
+      var id = parseInt(id);
+      if (id in CHV.obj.import.working) {
+        CHV.obj.import.aborted.push(id);
+        for (var key in CHV.obj.import.working[id].threads) {
+          CHV.obj.import.working[id].threads[key].abort();
+        }
+        PF.fn.growl.expirable(
+          "Aborted all threads for import job ID " +
+            id +
+            ", changing status now"
+        );
+        if ("interval" in CHV.obj.import.working[id]) {
+          clearInterval(CHV.obj.import.working[id].interval);
+          if ("abort" in CHV.obj.import.working[id].stats) {
+            CHV.obj.import.working[id].stats.abort();
+          }
+        }
+      }
+    },
+    xhr: function (id, thread) {
+      var id = parseInt(id);
+      console.log("New XHR for thread #" + thread + " for import job ID");
+      if (id in CHV.obj.import.working == false) {
+        CHV.obj.import.working[id] = {
+          threads: {},
+          interval: {},
+          stats: {},
+        };
+      }
+      CHV.obj.import.working[id].threads[thread] = $.ajax({
+        type: "POST",
+        data: {
+          action: "importProcess",
+          id: id,
+          thread: thread,
+        },
+      });
+      CHV.obj.import.working[id].threads[thread].complete(function (XHR) {
+        if (XHR.status == 400) {
+          CHV.fn.import.errorHandler(XHR.responseJSON);
+          return;
+        }
+        var status = $("[data-id=" + id + "]", CHV.obj.import.sel.root).data(
+          "status"
+        );
+        if ($.inArray(id, CHV.obj.import.aborted) == -1) {
+          CHV.fn.import.process.xhr(id, thread);
+        }
+      });
+    },
+    load: function () {
+      $("html").data("modal-form-values", "");
+      return true;
+    },
+    submit: function (id) {
+      var modal = PF.obj.modal.selectors.root;
+      var threads = $("[name=form-threads]", modal).val();
+      if (threads == 0) {
+        PF.fn.growl.expirable(PF.fn._s("Select number of threads"));
+        return false;
+      }
+      PF.obj.modal.form_data = {
+        action: "importEdit",
+        id: id,
+        threads: threads,
+        values: {
+          status: "working",
+        },
+      };
+      return true;
+    },
+    deferred: {
+      success: function (XHR) {
+        var response = XHR.responseJSON;
+        PF.fn.growl.expirable(
+          PF.fn._s(
+            "Import job ID %s is being processed now",
+            response.import.id
+          )
+        );
+        var $html = CHV.fn.import.parseTemplate(response.import);
+        $(
+          "[data-id=" + response.import.id + "]",
+          CHV.obj.import.sel.root
+        ).replaceWith($html);
+        // Once the row has been edited, start the actual jobs
+        var threads = parseInt(response.request.threads);
+        for (var i = 1; i <= threads; i++) {
+          CHV.fn.import.process.xhr(response.import.id, i);
+        }
+        CHV.obj.import.working[response.import.id].interval = setInterval(
+          function () {
+            CHV.fn.import.updateStats(response.import.id);
+          },
+          5000
+        );
+      },
+      error: function (XHR) {
+        var response = XHR.responseJSON;
+        if (response.error.code == 900) {
+          console.log("Aborting current working process (status changed)");
+          CHV.fn.import.process.abortAll(response.id);
+        } else {
+          CHV.fn.import.errorHandler();
+        }
+      },
+    },
+  },
+  delete: {
+    submit: function (id) {
+      PF.obj.modal.form_data = {
+        action: "importDelete",
+        id: id,
+      };
+      return true;
+    },
+    deferred: {
+      success: function (XHR) {
+        var response = XHR.responseJSON;
+        PF.fn.growl.call(PF.fn._s("Import ID %s removed", response.import.id));
+        $(
+          "[data-id=" + response.import.id + "]",
+          CHV.obj.import.sel.root
+        ).remove();
+        if ($("li", CHV.obj.import.sel.root).size() == 1) {
+          $(CHV.obj.import.sel.root).addClass("hidden");
+        }
+      },
+      error: function (XHR) {
+        CHV.fn.import.errorHandler(XHR.responseJSON);
+      },
+    },
+  },
+  parseTemplate: function (dataset, $el) {
+    var tpl = CHV.obj.import.rowTpl;
+    for (var key in CHV.obj.import.importTr) {
+      if (typeof dataset[key] != typeof undefined) {
+        tpl = tpl.replaceAll("%" + key + "%", dataset[key]);
+      }
+    }
+    tpl = tpl.replaceAll("%parse%", dataset.options.root);
+    tpl = tpl.replaceAll("%shortParse%", dataset.options.root.charAt(0));
+    tpl = tpl.replaceAll(
+      "%displayStatus%",
+      CHV.obj.import.statusesDisplay[dataset.status]
+    );
+    var $html = $($.parseHTML(tpl)).attr(
+      "data-object",
+      JSON.stringify(dataset)
+    );
+    return $html;
+  },
 };

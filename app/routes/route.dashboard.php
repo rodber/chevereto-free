@@ -44,11 +44,12 @@ $route = function ($handler) {
 
         $route_prefix = 'dashboard';
         $sub_routes = [
-            'stats'		=> _s('Stats'),
-            'images'	=> _s('Images'),
-            'albums'	=> _s('Albums'),
-            'users'		=> _s('Users'),
-            'settings'	=> _s('Settings')
+            'stats'        => _s('Stats'),
+            'images'    => _s('Images'),
+            'albums'    => _s('Albums'),
+            'users'        => _s('Users'),
+            'settings'    => _s('Settings'),
+            'bulk'    => _s('Bulk importer'),
         ];
 
         $default_route = 'stats';
@@ -75,7 +76,7 @@ $route = function ($handler) {
             );
         }
         $route_menu['upgrade'] = [
-            'label' => '💎 Upgrade to premium',
+            'label' => '⭐ Upgrade',
             'id' => 'upgrade'
         ];
 
@@ -188,6 +189,7 @@ $route = function ($handler) {
                 $chevereto_urls = [
                     'Chevereto'                => 'https://chevereto.com',
                     _s('Community')                => 'https://chevereto.com/community/',
+                    _s('Collaboration')            => 'https://chevereto.com/community/collaboration/',
                     _s('Support')                => 'https://chevereto.com/support',
                     _s('Documentation')            => 'https://v3-docs.chevereto.com/',
                     _s('Changelog')                => 'https://chevereto.com/changelog',

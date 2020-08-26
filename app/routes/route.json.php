@@ -34,6 +34,12 @@ $route = function ($handler) {
             $doing = 'deny';
         }
 
+        if (in_array($doing, ['importAdd', 'importStats', 'importProcess', 'importEdit', 'importDelete']) && $logged_user['is_admin'] == false) {
+            throw new Exception(_s('Request denied'), 400);
+        } else {
+            $import = new CHV\Import();
+        }
+
         switch ($doing) {
             case 'deny':
                 throw new Exception(_s('Request denied'), 403);
@@ -1314,11 +1320,91 @@ $route = function ($handler) {
                 } catch (Exception $e) {
                     throw new Exception('Error: ' . $e->getMessage());
                 }
-            break;
+                break;
 
+                // Adds the importer job (path+options)
+            case 'importAdd':
+                if ($_REQUEST['path'] == false) {
+                    throw new Exception('Missing path parameter', 100);
+                }
+                $import->path = $_REQUEST['path'];
+                if ($_REQUEST['options'] != false) {
+                    $import->options = $_REQUEST['options'];
+                }
+                $import->add();
+                $import->get();
+                $json_array['status_code'] = 200;
+                $json_array['import'] = $import->parsedImport;
+                break;
+                // Common operations
+            case 'importStats':
+            case 'importProcess':
+            case 'importEdit':
+            case 'importDelete':
+            case 'importReset':
+            case 'importResume':
+                if ($_REQUEST['id'] == false) {
+                    throw new Exception('Missing id parameter', 100);
+                }
+                $import->id = (int) $_REQUEST['id'];
+                $import->get();
+                break;
+            case 'toggleTone':
+                if (!$logged_user) {
+                    throw new Exception('Invalid request', 403);
+                }
+                CHV\User::update($logged_user['id'], ['is_dark_mode' => $logged_user['is_dark_mode'] ? 0 : 1]);
+                $json_array['status_code'] = 200;
+                $logged_user = CHV\User::getSingle($logged_user['id']);
+                $json_array['is_dark_mode'] = (bool) $logged_user['is_dark_mode'];
+                break;
             default: // EX X
-                throw new Exception(!G\check_value($_REQUEST['action']) ? 'empty action' : 'invalid action', !G\check_value($_REQUEST['action']) ? 0 : 1);
-            break;
+                throw new Exception(!G\check_value($doing) ? 'empty action' : 'invalid action', !G\check_value($doing) ? 0 : 1);
+                break;
+        }
+        if (isset($import->id)) {
+            switch ($doing) {
+                // Check the importer stats (id)
+                case 'importStats':
+                    $json_array['status_code'] = 200;
+                    $json_array['import'] = $import->parsedImport;
+                    break;
+                // Issue/Resume import operation (id+thread)
+                case 'importProcess':
+                    session_write_close();
+                    $import->thread = (int) $_REQUEST['thread'] ?: 1;
+                    $import->process();
+                    $json_array['status_code'] = 200;
+                    break;
+                    // Edit import job (id,values)
+                case 'importEdit':
+                    if ($_REQUEST['values'] == false) {
+                        throw new Exception('Missing values parameter', 101);
+                    }
+                    if (is_array($_REQUEST['values']) == false) {
+                        throw new Exception('Expecting array values', 102);
+                    }
+                    $import->edit($_REQUEST['values']);
+                    $import->get();
+                    $json_array['import'] = $import->parsedImport;
+                    $json_array['status_code'] = 200;
+                    break;
+                case 'importReset':
+                    $import->reset();
+                    $json_array['import'] = $import->parsedImport;
+                    $json_array['status_code'] = 200;
+                    break;
+                case 'importResume':
+                    $import->resume();
+                    $json_array['import'] = $import->parsedImport;
+                    $json_array['status_code'] = 200;
+                    break;
+                case 'importDelete':
+                    $import->delete();
+                    $json_array['status_code'] = 200;
+                    $json_array['import'] = $import->parsedImport;
+                    break;
+            }
         }
         // Inject any missing status_code
         if (isset($json_array['success']) and !isset($json_array['status_code'])) {

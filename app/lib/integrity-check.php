@@ -129,7 +129,7 @@ function check_system_integrity()
             }
         } else { // Can write?
             if (!is_writable($v)) {
-                $install_errors[] = 'No write permission in <code>'.G\absolute_to_relative($v).'</code> directory. Chevereto needs to be able to write in this directory.';
+                $install_errors[] = 'No write permission for user '.get_current_user().' in <code>'.G\absolute_to_relative($v).'</code> directory. Chevereto needs to be able to write in this directory.';
             }
         }
     }
@@ -178,6 +178,10 @@ function check_system_integrity()
     }
 
     if (is_array($install_errors) && count($install_errors) > 0) {
+        if (access === 'cli') {
+            G\debug($install_errors);
+            die(255);
+        }
         Render\chevereto_die($install_errors);
     }
 }
