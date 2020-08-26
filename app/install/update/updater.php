@@ -116,11 +116,9 @@ try {
             break;
             case 'extract':
                 $zip_file = $update_temp_dir . $_REQUEST['file'];
-                
                 if (false === preg_match('/^(chevereto-chevereto-free)-([\d.]+)-\d+-g(.*)_.*$/i', $_REQUEST['file'], $matches)) {
                     throw new Exception("Can't detect target zip file version");
                 }
-                
                 $version = $matches[2];
                 $etag_short = $matches[3];
                 if (!is_readable($zip_file)) {

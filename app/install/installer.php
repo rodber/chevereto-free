@@ -511,7 +511,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
                     ]
                 ],
                 '1.2.0' => [
-                    // 'imports' => [], // ADD TABLE
+                    'imports' => [], // ADD TABLE
                     'importing' => [], // ADD TABLE
                     'redirects' => [], // ADD TABLE
                     'images' => [
@@ -567,7 +567,7 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
                     ],
                     'pages' => [
                         'page_internal' => [
-                            'op' => 'MODIFY',
+                            'op' => 'ADD',
                             'type' => 'varchar(191)',
                             'prop' => 'DEFAULT NULL',
                         ],
