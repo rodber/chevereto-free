@@ -674,7 +674,7 @@ function chevereto_die($error_msg, $paragraph = null, $title = null)
     $template = CHV_APP_PATH_CONTENT_SYSTEM . 'template.php';
 
     if (!require_once($template)) {
-        die("Can't find " . G\absolute_to_relative($system_template));
+        die("Can't find " . G\absolute_to_relative($template));
     }
 
     die();
