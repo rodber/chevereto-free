@@ -28,6 +28,7 @@ if (!$threadID) {
 if (!include_once('app/loader.php')) {
     die("Can't find app/loader.php\n");
 }
+$loop = 1;
 do {
     try {
         CHV\Import::refresh();
