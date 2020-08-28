@@ -120,7 +120,7 @@ function check_system_integrity()
 
     /*** Folders check ***/
 
-    $writing_paths = [CHV_PATH_IMAGES, CHV_PATH_CONTENT, CHV_APP_PATH_CONTENT, CHV_APP_PATH_CONTENT_LOCKS];
+    $writing_paths = [CHV_PATH_IMAGES, CHV_PATH_CONTENT, CHV_APP_PATH_CONTENT, CHV_APP_PATH_CONTENT_LOCKS, CHV_APP_PATH_INSTALL . 'update/temp/'];
     foreach ($writing_paths as $v) {
         if (!file_exists($v)) { // Exists?
             if (!@mkdir($v)) {

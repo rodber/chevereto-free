@@ -35,9 +35,6 @@ try {
         throw new Exception(sprintf("Can't write into root %s path", G\absolute_to_relative(G_ROOT_PATH)));
     }
     $update_temp_dir = CHV_APP_PATH_INSTALL . 'update/temp/';
-    if (!is_writable($update_temp_dir)) {
-        throw new Exception(sprintf("Can't write into %s path", G\absolute_to_relative($update_temp_dir)));
-    }
     if (!isset($_REQUEST['action'])) {
         $doctitle = _s('Update in progress');
         $system_template = CHV_APP_PATH_CONTENT_SYSTEM . 'template.php';

@@ -15,6 +15,16 @@ The support response time is currently about ~1-2 weeks. Users helping each othe
 
 > 👍🏾 Consider [purchasing](https://chevereto.com/pricing) a license to get the entire pack of features, an extra layer of support, and to sustain the development of this software.
 
+## Known issues
+
+### Can't write into `/app/install/update/temp/` path
+
+Older releases (`1.2.0` and below) are missing the temp folder required for the one-click update process. Simply create the folder for the `www-data` user:
+
+```sh
+sudo -u www-data mkdir /var/www/html/app/install/update/temp/
+```
+
 ## 🤯 Next-gen in the works
 
 Chevereto is being modernized by updating its stack and turning towards Open Source. [Read all updates](https://chevereto.com/community/threads/building-the-next-gen-chevereto.11140/) and check the [Chevere Framework](https://chevere.org/).
