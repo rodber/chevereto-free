@@ -276,6 +276,7 @@ try {
             'hostname' => null,
             'theme_show_embed_content_for' => 'all', // none,users,all
         ],
+        '1.2.1' => null,
     ];
     // Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
     $settings_rename = [];
