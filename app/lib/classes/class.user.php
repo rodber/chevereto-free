@@ -391,13 +391,6 @@ class User
                 Image::delete($user_image['image_id']);
             }
 
-            // Remove related notifications tied to this user (follows)
-            Notification::delete([
-                'table'        => 'users',
-                'user_id'    => $user['id'],
-            ]);
-
-            // Track stats
             Stat::track([
                 'action'    => 'delete',
                 'table'        => 'users',
