@@ -461,8 +461,15 @@ try {
             }
             unset($v);
             $handler::setVar('explore_semantics', $explore_semantics);
+
             // Get active AND visible pages
-            $pages_visible_db = Page::getAll(['is_active' => 1, 'is_link_visible' => 1], ['field' => 'sort_display', 'order' => 'ASC']);
+            $versionCompare = '3.6.7';
+            if (defined('G_APP_GITHUB_REPO')) {
+                $versionCompare = '1.0.0';
+            }
+            if (version_compare(Settings::get('chevereto_version_installed'), $versionCompare, '>=')) {
+                $pages_visible_db = Page::getAll(['is_active' => 1, 'is_link_visible' => 1], ['field' => 'sort_display', 'order' => 'ASC']);
+            }
             $versionCompare = '3.12.4';
             if (defined('G_APP_GITHUB_REPO')) {
                 $versionCompare = '1.2.0';
