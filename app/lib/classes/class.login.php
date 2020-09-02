@@ -57,8 +57,12 @@ class Login
 
     public static function isPi()
     {
+        $versionCompare = '3.14.0.beta.1';
+        if (defined('G_APP_GITHUB_REPO')) {
+            $versionCompare = '1.2.0';
+        }
         if (!isset(self::$isPi)) {
-            self::$isPi = version_compare(Settings::get('chevereto_version_installed'), '3.14.0.beta.1', '>=');
+            self::$isPi = version_compare(Settings::get('chevereto_version_installed'), $versionCompare, '>=');
         }
 
         return self::$isPi;

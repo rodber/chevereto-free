@@ -1007,9 +1007,16 @@ function getPixel($type)
 
 function showQueuePixel()
 {
-    if (version_compare(CHV\getSetting('chevereto_version_installed'), '3.5.5', '<') || CHV\DB::queryFetchSingle('SELECT EXISTS(SELECT 1 FROM ' . CHV\DB::getTable('queues') . ' WHERE queue_status = "pending") as has')['has'] == 0) {
+    if (!defined('G_APP_GITHUB_REPO')) {
         return;
     }
+    if (version_compare(CHV\getSetting('chevereto_version_installed'), '3.5.5', '<')) {
+        return;
+    }
+    if (CHV\DB::queryFetchSingle('SELECT EXISTS(SELECT 1 FROM ' . CHV\DB::getTable('queues') . ' WHERE queue_status = "pending") as has')['has'] == 0) {
+        return;
+    }
+
     echo getPixel('queue');
 }
 

@@ -58,7 +58,11 @@ if (class_exists('CHV\Lock') && Settings::get('enable_automatic_updates_check') 
 }
 
 // Handle banned IP address
-if (version_compare(Settings::get('chevereto_version_installed'), '3.5.14', '>=') && method_exists('CHV\Ip_ban', 'getSingle')) {
+$versionCompare = '3.5.14';
+if (defined('G_APP_GITHUB_REPO')) {
+    $versionCompare = '1.0.0';
+}
+if (version_compare(Settings::get('chevereto_version_installed'), $versionCompare, '>=')) {
     $banned_ip = Ip_ban::getSingle();
     if ($banned_ip) {
         if (G\is_url($banned_ip['message'])) {
@@ -129,7 +133,11 @@ foreach ([
 
 // Let's try this one out... Why not?
 register_shutdown_function(function () {
-    if (version_compare(Settings::get('chevereto_version_installed'), '3.9.0', '>=') && class_exists('CHV\Lock')) {
+    $versionCompare = '3.9.0';
+    if (defined('G_APP_GITHUB_REPO')) {
+        $versionCompare = '1.0.9';
+    }
+    if (version_compare(Settings::get('chevereto_version_installed'), $versionCompare, '>=')) {
         // Delete expired images
         if (method_exists('CHV\Image', 'deleteExpired')) {
             try {

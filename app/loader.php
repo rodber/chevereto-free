@@ -101,7 +101,6 @@ define('CHV_APP_PATH_INSTALL', G_APP_PATH . 'install/');
 define('CHV_APP_PATH_CONTENT', G_APP_PATH . 'content/');
 define('CHV_APP_PATH_LIB_VENDOR', G_APP_PATH . 'vendor/');
 
-// Composer autoloader
 require_once CHV_APP_PATH_LIB_VENDOR . 'autoload.php';
 
 define('CHV_APP_PATH_CONTENT_SYSTEM', CHV_APP_PATH_CONTENT . 'system/');

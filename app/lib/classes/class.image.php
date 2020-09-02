@@ -70,7 +70,7 @@ class Image
             if (!is_array($requester)) {
                 $requester = User::getSingle($requester, 'id');
             }
-            if (version_compare(Settings::get('chevereto_version_installed'), '3.7.0', '>=')) {
+            if (!defined('G_APP_GITHUB_REPO') && version_compare(Settings::get('chevereto_version_installed'), '3.7.0', '>=')) {
                 $joins[] = 'LEFT JOIN ' . $tables['likes'] . ' ON ' . $tables['likes'] . '.like_content_type = "image" AND ' . $tables['images'] . '.image_id = ' . $tables['likes'] . '.like_content_id AND ' . $tables['likes'] . '.like_user_id = ' . $requester['id'];
             }
         }

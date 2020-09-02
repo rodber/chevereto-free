@@ -457,7 +457,11 @@ UPDATE `%table_prefix%users` SET user_content_views = COALESCE((SELECT SUM(image
                 $engines[$TABLE] = $v['ENGINE'];
             }
 
-            $isUtf8mb4 = version_compare($installed_version, '3.12.10', '>');
+            $versionCompare = '3.12.10';
+            if (defined('G_APP_GITHUB_REPO')) {
+                $versionCompare = '1.2.0';
+            }
+            $isUtf8mb4 = version_compare($installed_version, $versionCompare, '>');
 
             // Set the right table schema changes per release
             $update_table = [
