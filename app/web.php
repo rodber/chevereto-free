@@ -452,16 +452,16 @@ try {
                 $v['url'] = G\get_base_url('explore/' . $k);
             }
             unset($v);
-
             $handler::setVar('explore_semantics', $explore_semantics);
-
             // Get active AND visible pages
-            if (version_compare(Settings::get('chevereto_version_installed'), '3.6.7', '>=')) {
-                $pages_visible_db = Page::getAll(['is_active' => 1, 'is_link_visible' => 1], ['field' => 'sort_display', 'order' => 'ASC']);
-                $pageHandle = version_compare(Settings::get('chevereto_version_installed'), '3.12.4', '>=') ? 'internal' : 'url_key';
-                $handler::setVar('page_tos', Page::getSingle('tos', $pageHandle));
-                $handler::setVar('page_privacy', Page::getSingle('privacy', $pageHandle));
+            $pages_visible_db = Page::getAll(['is_active' => 1, 'is_link_visible' => 1], ['field' => 'sort_display', 'order' => 'ASC']);
+            $versionCompare = '3.12.4';
+            if (defined('G_APP_GITHUB_REPO')) {
+                $versionCompare = '1.2.0';
             }
+            $pageHandle = version_compare(Settings::get('chevereto_version_installed'), $versionCompare, '>=') ? 'internal' : 'url_key';
+            $handler::setVar('page_tos', Page::getSingle('tos', $pageHandle));
+            $handler::setVar('page_privacy', Page::getSingle('privacy', $pageHandle));
             $pages_visible = [];
             if ($pages_visible_db) {
                 foreach ($pages_visible_db as $k => $v) {
