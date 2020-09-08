@@ -532,6 +532,22 @@ class Listing
                 'content'    => 'all',
             ],
         ];
+        $criterias['album-az-asc'] = [
+            'label'        => 'AZ',
+            'sort'        => 'name_asc',
+            'content'    => 'albums',
+        ];
+        $criterias['image-az-asc'] = [
+            'label'        => 'AZ',
+            'sort'        => 'title_asc',
+            'content'    => 'images',
+        ];
+        $criterias['user-az-asc'] = [
+            'label'        => 'AZ',
+            'sort'        => 'username_asc',
+            'content'    => 'users',
+        ];
+
         $listings = [
             'explore'    => [
                 'label'        => _s('Explore'),
