@@ -15,6 +15,16 @@ The support response time is currently about ~1-2 weeks. Users helping each othe
 
 > 👍🏾 Consider [purchasing](https://chevereto.com/pricing) a license to get the entire pack of features, an extra layer of support, and to sustain the development of this software.
 
+## Community
+
+Join thousands of other Chevereto users in our [community](https://chevereto.com/community/) for sharing, supporting and contributing to Chevereto development.
+
+## Documentation
+
+Chevereto documentation can be found at [v3-docs.chevereto.com](https://v3-docs.chevereto.com/)
+
+> 📝 Contributing for a better documentation is highly appreciated
+
 ## Known issues
 
 ### Can't write into `/app/install/update/temp/` path
@@ -29,11 +39,7 @@ sudo -u www-data mkdir /var/www/html/app/install/update/temp/
 
 Chevereto is being modernized by updating its stack and turning towards Open Source. [Read all updates](https://chevereto.com/community/threads/building-the-next-gen-chevereto.11140/) and check the [Chevere Framework](https://chevere.org/).
 
-## Documentation
-
-Documentation can be found at [v3-docs.chevereto.com](https://v3-docs.chevereto.com/)
-
-> 📝 Contributing for a better documentation is highly appreciated
+While is being modernized, V3 (commercial) still gets regular updates so if you want the full package (and to support my development which is highly appreciated) consider to [purchase a license](https://v3-docs.chevereto.com/licenses.html).
 
 ## Support
 
@@ -43,7 +49,11 @@ Please **don't** open issues here unless is code related.
 
 ## License
 
-Copyright [Rodolfo Berríos](http://rodolfoberrios.com) - Released under the AGPLv3 license.
+Copyright [Rodolfo Berríos Arce](http://rodolfoberrios.com) - Released under the [MIT License](LICENSE).
+
+## Author
+
+Chevereto is made by the guy at the license.
 
 ## Warranty
 
