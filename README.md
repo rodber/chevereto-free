@@ -58,4 +58,4 @@ Chevereto is made by the guy at the license.
 
 ## Warranty
 
-This software doesn't include support. It may contain bugs. Use it at your own risk. This software is offered on an “as-is” basis. No warranty, either expressed or implied, is given.
+This software doesn't include support. It may contain bugs. Use it at your own risk. This software is offered on an “as-is” basis. No warranty, either expressed or implied, is given. All the best.
