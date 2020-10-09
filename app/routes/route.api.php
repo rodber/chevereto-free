@@ -105,7 +105,11 @@ $route = function ($handler) {
         $uploaded_id = CHV\Image::uploadToWebsite($source);
         $json_array['status_code'] = 200;
         $json_array['success'] = array('message' => 'image uploaded', 'code' => 200);
-        $json_array['image'] = CHV\Image::formatArray(CHV\Image::getSingle($uploaded_id, false, false), true);
+        $image = CHV\Image::formatArray(CHV\Image::getSingle($uploaded_id, false, false), true);
+        if (!$image['is_approved']) {
+            unset($image['image']['url'], $image['thumb']['url'], $image['medium']['url'], $image['url'], $image['display_url']);
+        }
+        $json_array['image'] = $image;
 
         if ($version == 1) {
             switch ($_REQUEST['format']) {

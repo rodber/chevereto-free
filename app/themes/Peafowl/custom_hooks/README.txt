@@ -1,1 +1,1 @@
-Check the custom hooks documentation here: https://chevereto.com/docs/theme
+Check the custom hooks documentation here: https://v3-docs.chevereto.com/customization/theme.html#custom-hooks

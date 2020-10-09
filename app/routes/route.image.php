@@ -26,7 +26,7 @@ $route = function ($handler) {
 
         // User status override redirect
         CHV\User::statusRedirect($logged_user['status']);
-        $id = CHV\getIdFromURL($handler->request[0]);
+        $id = CHV\getIdFromURLComponent($handler->request[0]);
 
         if ($id == false) {
             return $handler->issue404();
@@ -41,6 +41,12 @@ $route = function ($handler) {
 
         // Get image DB
         $image = CHV\Image::getSingle($id, !in_array($id, $_SESSION['image_view_stock']), true, $logged_user);
+
+        if (!$image['is_approved'] && !($logged_user['is_manager'] || $logged_user['is_admin'])) {
+            G\set_status_header(403);
+            $handler->template = 'request-denied';
+            return;
+        }
 
         if ($image && $image['url_viewer'] != G\get_current_url()) {
             G\redirect($image['url_viewer']);
@@ -127,10 +133,8 @@ $route = function ($handler) {
         }
 
         $image_safe_html = G\safe_html($image);
-
         $image['alt'] = $image_safe_html['description'] ?: ($image_safe_html['title'] ?: $image_safe_html['name']);
-
-        $pre_doctitle = G\safe_html($image['title'], ENT_NOQUOTES) ?: ($image_safe_html['name'] . '.' . $image['extension']) . ' hosted at ' . CHV\getSetting('website_name');
+        $pre_doctitle = strip_tags($image['title']) ?: ($image_safe_html['name'] . '.' . $image['extension']) . ' hosted at ' . CHV\getSetting('website_name');
 
         $tabs = [
             [

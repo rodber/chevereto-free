@@ -91,7 +91,13 @@ $route = function ($handler) {
                 $uploaded_id = CHV\Image::uploadToWebsite($source, $logged_user, $_REQUEST);
                 $json_array['status_code'] = 200;
                 $json_array['success'] = array('message' => 'image uploaded', 'code' => 200);
-                $json_array['image'] = CHV\Image::formatArray(CHV\Image::getSingle($uploaded_id, 0, 0), 1);
+                $image = CHV\Image::getSingle($uploaded_id, 0, 0);
+                $image = CHV\Image::formatArray($image, true);
+                if (!$image['is_approved']) {
+                    unset($image['image']['url'], $image['thumb']['url'], $image['medium']['url'], $image['url'], $image['display_url']);
+                }
+                $json_array['image'] = $image;
+                
                 break;
 
             case 'get-album-contents':
@@ -253,6 +259,13 @@ $route = function ($handler) {
                 }
 
                 $list = new CHV\Listing();
+                if (array_key_exists('approved', $_REQUEST)) {
+                    if ($logged_user['is_admin'] || $logged_user['is_manager']) {
+                        $list->setApproved((int) $_REQUEST['approved']);
+                    } else {
+                        throw new Exception(_s('Request denied'), 403);
+                    }
+                }
                 $list->setType($list_request); // images | users | albums
                 $list->setReverse($list_params['reverse']);
                 $list->setSeek($list_params['seek']);
@@ -390,9 +403,15 @@ $route = function ($handler) {
                     case 'image':
 
                         $source_image_db = CHV\Image::getSingle($id, false, false);
-
                         if (!$source_image_db) {
                             throw new Exception("Image doesn't exists", 100);
+                        }
+                        if (
+                            $editing['nsfw'] != $source_image_db['image_nsfw']
+                            && CHV\getSetting('image_lock_nsfw_editing')
+                            && !($logged_user['is_admin'] || $logged_user['is_manager'])
+                        ) {
+                            throw new Exception('Invalid request', 403);
                         }
 
                         if (!$handler::getCond('content_manager') && $source_image_db['image_user_id'] !== $logged_user['id']) {
@@ -448,7 +467,6 @@ $route = function ($handler) {
 
                         // Append the HTML slice
                         if ($image_album_slice) {
-
                             // Add the album URL to the slice
                             $image_album_slice['url'] = CHV\Album::getUrl(CHV\encodeID($album_id));
 
@@ -836,6 +854,11 @@ $route = function ($handler) {
                 switch ($doing) {
                     case 'flag-safe':
                     case 'flag-unsafe':
+                        if (CHV\getSetting('image_lock_nsfw_editing')
+                            && !($logged_user['is_admin'] || $logged_user['is_manager'])
+                        ) {
+                            throw new Exception('Invalid request', 403);
+                        }
                         $query_field = 'nsfw';
                         $prop = $editing['nsfw'] == 1 ? 1 : 0;
                         $msg = 'Content flag changed';
@@ -1355,6 +1378,28 @@ $route = function ($handler) {
                 $logged_user = CHV\User::getSingle($logged_user['id']);
                 $json_array['is_dark_mode'] = (bool) $logged_user['is_dark_mode'];
                 break;
+            case 'approve':
+                if (!($logged_user['is_admin'] || $logged_user['is_manager'])) {
+                    throw new Exception('Invalid request', 403);
+                }
+                $approve_ids = [];
+                $approving = $_REQUEST['approving'];
+                if ($_REQUEST['multiple'] == 'true') {
+                    $approve_ids = $approving['ids'];
+                } else {
+                    $approve_ids = [$approving['id']];
+                }
+                if ($approve_ids == []) {
+                    throw new Exception('Missing approve target ids', 100);
+                }
+                $ids = [];
+                foreach ($approve_ids as $value) {
+                    $ids[] = CHV\decodeID($value);
+                }
+                $affected = CHV\DB::queryExec(sprintf('UPDATE '.CHV\DB::getTable('images').' SET image_is_approved = 1 WHERE image_id IN (%s)', implode(',', $ids)));
+                $json_array['status_code'] = 200;
+                $json_array['affected'] = $affected;
+            break;
             default: // EX X
                 throw new Exception(!G\check_value($doing) ? 'empty action' : 'invalid action', !G\check_value($doing) ? 0 : 1);
                 break;
@@ -1410,7 +1455,6 @@ $route = function ($handler) {
         $json_array['request'] = $_REQUEST;
         G\Render\json_output($json_array);
     } catch (Exception $e) {
-        // G\debug($e);
         $json_array = G\json_error($e);
         $json_array['request'] = $_REQUEST;
         G\Render\json_output($json_array);

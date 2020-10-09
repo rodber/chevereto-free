@@ -175,11 +175,9 @@ $route = function ($handler) {
             case 'liked':
                 $type = "images";
                 $tools = $is_owner || $handler::getCond('content_manager');
-                $current = false;
                 if ($current_view == 'liked') {
                     $tools_available = $handler::getCond('content_manager') ? ['delete', 'category', 'flag'] : ['embed'];
                 }
-
             break;
 
             case 'following':
@@ -286,7 +284,6 @@ $route = function ($handler) {
             if ($type == 'albums') {
                 $show_user_items_editor = false;
             }
-
             try {
                 $list = new CHV\Listing;
                 $list->setType($type); // images | users | albums

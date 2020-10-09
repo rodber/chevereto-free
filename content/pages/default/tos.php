@@ -10,7 +10,7 @@
 		</div>
 		<div class="text-content">
 			
-			<p>This is an example page for your Chevereto site. You can edit and learn from this file located in <span class="highlight"><?php echo G\absolute_to_relative(__FILE__); ?></span>. If you want a real world example you should check the <a href="<?php echo G\get_base_url('page/contact'); ?>">contact page</a> which is <code>contact.php</code> in the same folder.</p>
+            <p>This is an example page for your Chevereto site. You can edit this file located at <span class="highlight"><?php echo G\absolute_to_relative(__FILE__); ?></span>. If you want a real world example you should check the <a href="<?php echo G\get_base_url('page/contact'); ?>">contact page</a> which is <code>contact.php</code> in the same folder.</p>
 			
 			<h2>Creating and editing pages</h2>
 			
@@ -18,11 +18,11 @@
 			
 			<h2>Custom styles and coding</h2>
 			
-			<p>Chevereto pages uses full PHP code which gives you the power to highly customize how a page should look and operate. You can use your own header, footer, style sheets, etc. You can even create pages that look completely different from the main site look and and use all the system classes and functions (Both G\ and Chevereto) to make it easier and yet more powerful.</p>
+			<p>Chevereto pages uses PHP code which gives you the power to highly customize how a page should look and operate. You can use your own header, footer, style sheets, etc. You can even create pages that look completely different from the main site look and and use all the system classes and functions (Both G\ and Chevereto) to make it easier and yet more powerful.</p>
 			
 			<h2>More help</h2>
 			
-			<p>If you need more help we suggest you to go to <a href="https://chevereto.com/support">Chevereto support</a> and read the <a href="https://g.chevereto.com/docs">G\ Library documentation</a>. View the code of this file will also help you to understand the magic behind this system.</p>
+			<p>If you need more help we suggest you to read the <a href="https://v3-docs.chevereto.com/">Chevereto documentation</a>. View the code of this file will also help you to understand the magic behind this system. Go to <a href="https://chevereto.com/support">Chevereto support</a> if needed.</p>
 			
 		</div>
 	</div>

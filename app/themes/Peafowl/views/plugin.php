@@ -1,4 +1,6 @@
-<?php if(!defined('access') or !access) die('This file cannot be directly accessed.'); ?>
+<?php if (!defined('access') or !access) {
+    die('This file cannot be directly accessed.');
+} ?>
 <?php G\Render\include_theme_header(); ?>
 
 <div class="center-box c24">
@@ -12,10 +14,10 @@
 			<p><?php _se('The plugin works in any website with user-editable content and for %sv, it will place an upload button that will match the target editor toolbar so no extra customization is needed.', ['%sv' => '<a data-toggle="pup-vendors">' . _s('supported software') . '</a>']); ?></p>
 			<ul data-content="pup-vendors" class="soft-hidden">
 				<?php
-					foreach (get_plugin()['vendors'] as $k => $v) {
-						echo '<li>' . $v . '</li>' . "\n";
-					}
-				?>
+                    foreach (get_plugin()['vendors'] as $k => $v) {
+                        echo '<li>' . $v . '</li>' . "\n";
+                    }
+                ?>
 			</ul>
 			<h2><?php _se('Add it to your website'); ?></h2>
 			<p><?php _se('Copy and paste the plugin code into your website HTML code (preferably inside the head section). There are plenty %o to make it fit better to your needs.', ['%o' => '<a data-toggle="pup-options">' . _s('options') . '</a>']); ?></p>
@@ -31,14 +33,14 @@
 					<div class="c9 phablet-c1">
 						<select type="text" name="palette" id="palette" class="text-input">
 							<?php
-								foreach (get_plugin()['palettes'] as $k => $v) {
-									$attr = 'value="' . ($k == 'default' ? '' : $k) . '"';
-									if($k == 'default') {
-										$attr .= ' selected="selected"';
-									}
-									echo '<option ' . $attr . '>' . ucfirst($k) . '</option>' . "\n";
-								}
-							?>
+                                foreach (get_plugin()['palettes'] as $k => $v) {
+                                    $attr = 'value="' . ($k == 'default' ? '' : $k) . '"';
+                                    if ($k == 'default') {
+                                        $attr .= ' selected="selected"';
+                                    }
+                                    echo '<option ' . $attr . '>' . ucfirst($k) . '</option>' . "\n";
+                                }
+                            ?>
 						</select>
 					</div>
 					<div class="input-below"><?php _se('Button color scheme'); ?></div>
@@ -48,14 +50,14 @@
 						<div class="c9 phablet-c1">
 						<select type="text" name="auto-insert" id="auto-insert" class="text-input">
 							<?php
-								foreach (get_plugin()['embed'] as $k => $v) {
-									$attr = 'value="' . $k . '"';
-									if(!$k) {
-										$attr .= ' selected="selected"';
-									}
-									echo '<option ' . $attr . '>' . $v . '</option>' . "\n";
-								}
-							?>
+                                foreach (get_plugin()['embed'] as $k => $v) {
+                                    $attr = 'value="' . $k . '"';
+                                    if (!$k) {
+                                        $attr .= ' selected="selected"';
+                                    }
+                                    echo '<option ' . $attr . '>' . $v . '</option>' . "\n";
+                                }
+                            ?>
 						</select>
 					</div>
 					<div class="input-below"><?php _se('Embed codes that will be auto-inserted in editor box'); ?></div>
@@ -79,7 +81,7 @@
 				</div>
 				<div class="clear-both">
 					<h3><?php _se('Advanced options'); ?></h3>
-					<p><?php _se('The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options.', ['%d' => '<a href="https://chevereto.com/docs/pup" target="_blank">' . _s('documentation') . '</a>']); ?></p>
+					<p><?php _se('The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options.', ['%d' => '<a href="https://v3-docs.chevereto.com/features/PUP.html" target="_blank">' . _s('documentation') . '</a>']); ?></p>
 				</div>
 			</div>
 		</div>

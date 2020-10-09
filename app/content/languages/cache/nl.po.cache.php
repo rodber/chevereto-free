@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2020-05-16 19:37+0000',
-  'PO-Revision-Date' => '2020-05-16 19:37+0000',
+  'POT-Creation-Date' => '2020-09-02 17:14+0000',
+  'PO-Revision-Date' => '2020-09-02 17:14+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'nl',
@@ -124,6 +124,9 @@ $translation_table = [
 	"Confirm" => [
 		0 => "Bevestigen",
 	],
+	"The content has been approved." => [
+		0 => "De inhoud is goedgekeurd.",
+	],
 	"Select existing album" => [
 		0 => "Selecteer bestaand album",
 	],
@@ -190,6 +193,9 @@ $translation_table = [
 	"Album" => [
 		0 => "Album",
 		1 => "Albums",
+	],
+	"Approve" => [
+		0 => "Goedkeuren",
 	],
 	"Delete" => [
 		0 => "Verwijder",
@@ -427,6 +433,15 @@ $translation_table = [
 	"User" => [
 		0 => "Gebruiker",
 		1 => "Gebruikers",
+	],
+	"adult" => [
+		0 => "Volwassene",
+	],
+	"teen" => [
+		0 => "Tienier",
+	],
+	"Content of type %s is forbidden" => [
+		0 => "%s inhoud is niet toegestaan.",
 	],
 	"Can't create %s destination dir" => [
 		0 => "Kan doelmap %s niet maken",
@@ -793,9 +808,6 @@ $translation_table = [
 	"Inside viewer top (image page)" => [
 		0 => "Vanboven in de afbeelding viewer (weergavepagina afbeelding)",
 	],
-	"Expected banner size 728x90" => [
-		0 => "Verwachte afmetingen banner: 728x90",
-	],
 	"Inside viewer foot (image page)" => [
 		0 => "Vanonder in de afbeelding viewer (weergavepagina afbeelding)",
 	],
@@ -882,9 +894,6 @@ $translation_table = [
 	],
 	"Invalid theme main color" => [
 		0 => "Ongeldige hoofdkleur thema",
-	],
-	"Invalid theme top bar color" => [
-		0 => "Ongeldige topbalk thema kleur",
 	],
 	"Invalid theme top bar button color" => [
 		0 => "Ongeldige topbalk knop kleur",
@@ -1125,6 +1134,9 @@ $translation_table = [
 	],
 	"Sign in" => [
 		0 => "Inloggen",
+	],
+	"Moderate" => [
+		0 => "Modereren",
 	],
 	"Upload images" => [
 		0 => "Upload afbeeldingen",
@@ -1405,6 +1417,12 @@ $translation_table = [
 	"close" => [
 		0 => "sluiten",
 	],
+	"Note" => [
+		0 => "Opmerking",
+	],
+	"We must approve the uploaded content before being able to share." => [
+		0 => "We moeten de geüploade inhoud goedkeuren voordat deze gedeeld kan worden.",
+	],
 	"copy" => [
 		0 => "Kopieër",
 	],
@@ -1413,9 +1431,6 @@ $translation_table = [
 	],
 	"Remove" => [
 		0 => "Verwijder",
-	],
-	"Edit image" => [
-		0 => "Wijzig foto",
 	],
 	"Title" => [
 		0 => "Titel",
@@ -1605,6 +1620,12 @@ $translation_table = [
 	],
 	"Untitled image" => [
 		0 => "Naamloze afbeelding",
+	],
+	"Mark this if the image is not safe for work" => [
+		0 => "Markeer dit als het beeld niet veilig is voor het werk",
+	],
+	"Flag not safe" => [
+		0 => "Vlag niet veilig",
 	],
 	"Path" => [
 		0 => "Pad",
@@ -1813,12 +1834,6 @@ $translation_table = [
 	"There's nothing to show here." => [
 		0 => "Er is hier niets te zien",
 	],
-	"Edit image details" => [
-		0 => "Afbeelding bewerken",
-	],
-	"Edit album details" => [
-		0 => "Album bewerken",
-	],
 	"All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
 		0 => "Alle afbeeldingen zullen worden verplaatst naar dit nieuwe album. U kunt de afbeeldingen ook verplaatsen naar een <a class=\"modal-switch\" data-switch=\"move-existing-album\">bestaand album</a>.",
 	],
@@ -1849,11 +1864,20 @@ $translation_table = [
 	"Do you really want to flag this content as unsafe?" => [
 		0 => "Weet u zeker dat u deze inhoud als onveilig wilt markeren?",
 	],
+	"Confirm approval" => [
+		0 => "Bevestig goedkeuring",
+	],
+	"Do you really want to approve this content? This can't be undone." => [
+		0 => "Wilt u echt alle geselecteerde inhoud verwijderen? Dit kan niet ongedaan worden gemaakt.",
+	],
 	"Confirm deletion" => [
 		0 => "Bevestig verwijderen",
 	],
 	"Do you really want to remove this content? This can't be undone." => [
 		0 => "Wilt u deze inhoud echt verwijderen? Dit kan niet ongedaan gemaakt worden.",
+	],
+	"Do you really want to approve all the selected content? This can't be undone." => [
+		0 => "Wilt u echt alle geselecteerde inhoud verwijderen? Dit kan niet ongedaan worden gemaakt.",
 	],
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "Wilt u deze selectie echt verwijderen? Dit kan niet ongedaan gemaakt worden.",
@@ -1969,9 +1993,6 @@ $translation_table = [
 	"Do you really want to delete this album and all of its images? This can't be undone." => [
 		0 => "Weet u zeker dat u dit album inclusief afbeeldingen wil verwijderen? Dit kan niet ongedaan gemaakt worden.",
 	],
-	"Delete album" => [
-		0 => "Verwijder album",
-	],
 	"You like this" => [
 		0 => "U waardeert dit",
 	],
@@ -2019,9 +2040,6 @@ $translation_table = [
 	],
 	"The system automatically parses any content by a continuous observation of the %path% path." => [
 		0 => "Het systeem verwerkt automatisch iedere inhoud door een continue monitoring van het %path% pad.",
-	],
-	"The system automatically parses any content by a continous observation of the %path% path." => [
-		0 => "Het systeem ontleedt automatisch elke inhoud door een continue observatie van het %path% pad.",
 	],
 	"Completed jobs will be automatically re-started after %n %m." => [
 		0 => "Voltooide jobs worden automatisch opnieuw opgestart na %n %m.",
@@ -2074,14 +2092,8 @@ $translation_table = [
 	"All file-system permissions must be granted for the crontab user at %path%" => [
 		0 => "Alle permissies voor het bestandssysteem moeten voor de crontab-gebruiker worden verleend op %path%.",
 	],
-	"Required crontab entry:" => [
-		0 => "Vereiste crontab voorwaarde:",
-	],
 	"Add import job" => [
 		0 => "Voeg importeeropdracht toe",
-	],
-	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d." => [
-		0 => "Deze tool maakt het mogelijk om massaal inhoud aan uw website toe te voegen door een systeempad aan te wijzen met de inhoud die u wilt importeren. Het ondersteunt het toevoegen van gebruikers, albums en afbeeldingen met behulp van een mapstructuur. U kunt meer te weten komen over de mappenstructuur, het toevoegen van metadata, en alles over deze tool in onze %d.",
 	],
 	"Process import" => [
 		0 => "Procesimport",
@@ -2359,12 +2371,6 @@ $translation_table = [
 	"Enable this if you want to allow image uploads. This setting doesn't affect administrators." => [
 		0 => "Schakel dit in indien u het uploaden van afbeeldingen wilt toestaan​​. Deze instelling heeft geen invloed op beheerders.",
 	],
-	"Guest uploads" => [
-		0 => "Bezoeker uploads",
-	],
-	"Enable this if you want to allow non registered users to upload." => [
-		0 => "Schakel dit in om bezoeker uploads toe te staan",
-	],
 	"Upload user interface" => [
 		0 => "Gebruikersinterface uploaden",
 	],
@@ -2373,6 +2379,21 @@ $translation_table = [
 	],
 	"route" => [
 		0 => "route",
+	],
+	"Guest uploads" => [
+		0 => "Bezoeker uploads",
+	],
+	"Enable this if you want to allow non registered users to upload." => [
+		0 => "Schakel dit in om bezoeker uploads toe te staan",
+	],
+	"Moderate uploads" => [
+		0 => "Modereer uploads",
+	],
+	"Guests" => [
+		0 => "Gasten",
+	],
+	"Enable this to moderate incoming uploads. Target content will require moderation for approval." => [
+		0 => "Schakel dit in om inkomende uploads te modereren. De inhoud zal moderatie vereisen voor goedkeuring.",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "Insluitcodes inschakelen (uploader)",
@@ -2698,6 +2719,12 @@ $translation_table = [
 	"Monthly limit" => [
 		0 => "Maandlimiet",
 	],
+	"Lock %s editing" => [
+		0 => "Blokkeer %s wijzigen",
+	],
+	"Enable this to prevent users from changing the NSFW flag. When enabled, only admin and managers will have this permission." => [
+		0 => "Schakel dit in om te voorkomen dat gebruikers de NSFW-vlag wijzigen. Indien ingeschakeld, zullen alleen admin en managers deze toestemming hebben.",
+	],
 	"Show not safe content in listings" => [
 		0 => "Geef onveilige (NFSW) inhoud weer",
 	],
@@ -2809,18 +2836,6 @@ $translation_table = [
 	"Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>." => [
 		0 => "Gebruik dit om de hoofdkleur van het thema te kiezen. Waarde moet in <a href=\"%s\" target=\"_blank\">hex formaat</a> zijn.",
 	],
-	"Top bar color" => [
-		0 => "Topbalk kleur",
-	],
-	"Black" => [
-		0 => "Zwart",
-	],
-	"White" => [
-		0 => "Wit",
-	],
-	"If you set this to \"white\" the top bar and all the black tones will be changed to white tones." => [
-		0 => "Als dit naar 'wit' gewijzigd wordt veranderd de kleur van de bovenbalk en alle zwarte kleurtonen naar witte tonen.",
-	],
 	"Top bar button color" => [
 		0 => "Topbalk knop kleur",
 	],
@@ -2838,6 +2853,12 @@ $translation_table = [
 	],
 	"Grey" => [
 		0 => "Grijs",
+	],
+	"Black" => [
+		0 => "Zwart",
+	],
+	"White" => [
+		0 => "Wit",
 	],
 	"Color for the top bar buttons like the \"Create account\" button." => [
 		0 => "Kleur voor de knoppen in de bovenste balk, bijvoorbeeld voor 'Nieuw account'",
@@ -2947,8 +2968,11 @@ $translation_table = [
 	"Split landing + images" => [
 		0 => "Opdelen beginpagina en afbeeldingen",
 	],
-	"Route explore" => [
-		0 => "Route verkennen",
+	"Route %s" => [
+		0 => "Route %s",
+	],
+	"upload" => [
+		0 => "upload",
 	],
 	"Select the homepage style. To customize it further edit app/themes/%s/views/index.php" => [
 		0 => "Selecteer de homepage stijl. Om het verder aan te passen, wijzig app/themes/%s/views/index.php",
@@ -3355,6 +3379,27 @@ $translation_table = [
 	"Disqus, Facebook or anything you want. It will be used in image view." => [
 		0 => "Disqus, Facebook of wat u maar wilt. Het zal worden gebruikt in de afbeelding viewer.",
 	],
+	"Automatically moderate the content using the %s service." => [
+		0 => "Automatisch modereren van de inhoud met behulp van de %s service.",
+	],
+	"Automatic approve" => [
+		0 => "Automatisch goedkeuren",
+	],
+	"Enable this to automatically approve content moderated by this service." => [
+		0 => "Schakel dit in om de inhoud die door deze dienst gemodereerd wordt automatisch goed te keuren.",
+	],
+	"Block content" => [
+		0 => "Blokkeer inhoud",
+	],
+	"Adult" => [
+		0 => "Volwassene",
+	],
+	"Teen and adult" => [
+		0 => "Tiener en volwassene",
+	],
+	"Flag NSFW" => [
+		0 => "Vlag NSFW",
+	],
 	"Analytics code" => [
 		0 => "Google Analytics-code",
 	],
@@ -3396,6 +3441,9 @@ $translation_table = [
 	],
 	"Load full resolution" => [
 		0 => "Laadt de volledige resolutie",
+	],
+	"Do you really want to approve this image? The image will go public if you approve it." => [
+		0 => "Wilt u echt alle geselecteerde inhoud verwijderen? Dit kan niet ongedaan worden gemaakt.",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "Toegevoegd aan %a en gecategoriseerd in %c",
@@ -3711,9 +3759,6 @@ $translation_table = [
 	],
 	"Delete background" => [
 		0 => "Verwijder achtergrond",
-	],
-	"Edit profile" => [
-		0 => "Profiel bewerken",
 	],
 	"Follower" => [
 		0 => "Volger",

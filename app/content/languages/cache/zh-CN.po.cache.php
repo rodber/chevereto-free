@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2020-04-16 12:57+0000',
-  'PO-Revision-Date' => '2020-04-16 12:57+0000',
+  'POT-Creation-Date' => '2020-09-25 18:53+0000',
+  'PO-Revision-Date' => '2020-09-25 18:53+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'zh_CN',
@@ -124,6 +124,9 @@ $translation_table = [
 	"Confirm" => [
 		0 => "确认",
 	],
+	"The content has been approved." => [
+		0 => "内容已获批准。",
+	],
 	"Select existing album" => [
 		0 => "选择现有的相册",
 	],
@@ -189,6 +192,9 @@ $translation_table = [
 	],
 	"Album" => [
 		0 => "相册",
+	],
+	"Approve" => [
+		0 => "批准",
 	],
 	"Delete" => [
 		0 => "删除",
@@ -414,6 +420,15 @@ $translation_table = [
 	],
 	"User" => [
 		0 => "用户",
+	],
+	"adult" => [
+		0 => "成人",
+	],
+	"teen" => [
+		0 => "青少年",
+	],
+	"Content of type %s is forbidden" => [
+		0 => "类型为 %s 的内容被禁止",
 	],
 	"Can't create %s destination dir" => [
 		0 => "无法创建 %s 目标目录",
@@ -778,9 +793,6 @@ $translation_table = [
 	"Inside viewer top (image page)" => [
 		0 => "内部图像浏览器顶部（图像页）",
 	],
-	"Expected banner size 728x90" => [
-		0 => "默认的横幅大小为728x90",
-	],
 	"Inside viewer foot (image page)" => [
 		0 => "内部图像浏览器底部（图像页）",
 	],
@@ -867,9 +879,6 @@ $translation_table = [
 	],
 	"Invalid theme main color" => [
 		0 => "无效的主题主要颜色",
-	],
-	"Invalid theme top bar color" => [
-		0 => "无效的主题顶部菜单栏颜色",
 	],
 	"Invalid theme top bar button color" => [
 		0 => "无效的主题顶部菜单栏按钮颜色",
@@ -1110,6 +1119,9 @@ $translation_table = [
 	],
 	"Sign in" => [
 		0 => "登录",
+	],
+	"Moderate" => [
+		0 => "Moderate",
 	],
 	"Upload images" => [
 		0 => "上传图片",
@@ -1390,6 +1402,12 @@ $translation_table = [
 	"close" => [
 		0 => "关闭",
 	],
+	"Note" => [
+		0 => "通知",
+	],
+	"We must approve the uploaded content before being able to share." => [
+		0 => "我们必须对上传的内容进行审核，才能进行分享。",
+	],
 	"copy" => [
 		0 => "复制",
 	],
@@ -1398,9 +1416,6 @@ $translation_table = [
 	],
 	"Remove" => [
 		0 => "删除",
-	],
-	"Edit image" => [
-		0 => "编辑图片",
 	],
 	"Title" => [
 		0 => "标题",
@@ -1571,7 +1586,7 @@ $translation_table = [
 		0 => "相册密码",
 	],
 	"Name" => [
-		0 => "昵称",
+		0 => "名称",
 	],
 	"Category name" => [
 		0 => "类别名称",
@@ -1590,6 +1605,12 @@ $translation_table = [
 	],
 	"Untitled image" => [
 		0 => "无标题图像",
+	],
+	"Mark this if the image is not safe for work" => [
+		0 => "如果图像不安全(NSFW)，请在此标记。",
+	],
+	"Flag not safe" => [
+		0 => "标记不安全",
 	],
 	"Path" => [
 		0 => "路径",
@@ -1798,12 +1819,6 @@ $translation_table = [
 	"There's nothing to show here." => [
 		0 => "没有要显示的内容",
 	],
-	"Edit image details" => [
-		0 => "编辑图片",
-	],
-	"Edit album details" => [
-		0 => "编辑相册",
-	],
 	"All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
 		0 => "所有的图片将被移动到这个新创建的相册. 你也可以移动图片到 <a class=\"modal-switch\" data-switch=\"move-existing-album\">现有相册</a>.",
 	],
@@ -1834,11 +1849,20 @@ $translation_table = [
 	"Do you really want to flag this content as unsafe?" => [
 		0 => "你真的要标记这个内容为不安全?",
 	],
+	"Confirm approval" => [
+		0 => "确认批准",
+	],
+	"Do you really want to approve this content? This can't be undone." => [
+		0 => "你真的想删除所有选中的内容吗？这是无法挽回的。",
+	],
 	"Confirm deletion" => [
 		0 => "确认删除",
 	],
 	"Do you really want to remove this content? This can't be undone." => [
 		0 => "你真的想删除此内容? 一旦删除将无法恢复.",
+	],
+	"Do you really want to approve all the selected content? This can't be undone." => [
+		0 => "你真的想删除所有选中的内容吗？这是无法挽回的。",
 	],
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "你真的想删除所选内容? 一旦删除将无法恢复.",
@@ -1954,9 +1978,6 @@ $translation_table = [
 	"Do you really want to delete this album and all of its images? This can't be undone." => [
 		0 => "你真的要删除这个相册和它的所有图像? 这将不能恢复.",
 	],
-	"Delete album" => [
-		0 => "删除相册",
-	],
 	"You like this" => [
 		0 => "你喜欢它",
 	],
@@ -1985,13 +2006,13 @@ $translation_table = [
 		0 => "在 %d 处了解 %s 的详情.",
 	],
 	"The connecting IP is determined using the server variable %var%. If the detected IP doesn't match yours, it means that your web server is under a proxy and you need to tweak your server to set the real connecting IP." => [
-		0 => "使用服务器变量 %var% 获取真实IP。如果检测到的IP与您的不匹配，这意味着您的Web服务器在代理下，您需要调整您的服务器设置，以便获取真实IP。",
+		0 => "连接IP是通过服务器变量 %var% 来确定的。如果检测到的IP与你的不一致，说明你的Web服务器是在代理服务器下，你需要调整你的服务器来设置真正的连接IP。",
 	],
 	"For Nginx, you must use %nginx%. For Apache, %apache%." => [
-		0 => "对于nginx，您必须使用 %nginx% ；对于Apache，%apache% 。",
+		0 => "对于Nginx，你必须使用 %nginx% ；对于Apache，使用 %apache% 。",
 	],
 	"Make sure that you address this issue as the system relies on accurate IP detections to provide basic functionalities and to protect against spam, flooding, and brute force attacks." => [
-		0 => "请确保解决此问题，因为系统依赖准确的IP检测来提供基本功能，并能防止垃圾邮件、洪水和暴力攻击。",
+		0 => "请确保解决此问题，因为系统依靠准确的IP检测来提供基本功能，并能防止垃圾邮件、洪水攻击和暴力破解攻击。",
 	],
 	"Disk used" => [
 		0 => "已用大小",
@@ -2003,9 +2024,6 @@ $translation_table = [
 		0 => "自动导入",
 	],
 	"The system automatically parses any content by a continuous observation of the %path% path." => [
-		0 => "系统将自动检测 %path% 路径，自动解析并导入内容。",
-	],
-	"The system automatically parses any content by a continous observation of the %path% path." => [
 		0 => "系统将自动检测 %path% 路径，自动解析并导入内容。",
 	],
 	"Completed jobs will be automatically re-started after %n %m." => [
@@ -2059,14 +2077,8 @@ $translation_table = [
 	"All file-system permissions must be granted for the crontab user at %path%" => [
 		0 => "必须给crontab用户授予 %path% 下所有文件的可读写权限",
 	],
-	"Required crontab entry:" => [
-		0 => "必需的crontab指令：",
-	],
 	"Add import job" => [
 		0 => "添加导入作业",
-	],
-	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d." => [
-		0 => "此工具允许通过将要导入的内容指向系统路径，向网站批量添加内容。它支持使用基于文件夹的结构添加用户、相册和图像。您可以在我们的 %d 中了解更多关于文件夹结构、添加元数据，以及有关此工具的所有信息。",
 	],
 	"Process import" => [
 		0 => "进程导入",
@@ -2344,12 +2356,6 @@ $translation_table = [
 	"Enable this if you want to allow image uploads. This setting doesn't affect administrators." => [
 		0 => "启用图片上传（如果你想允许图片上传请启用）. 此设置不会影响管理员.",
 	],
-	"Guest uploads" => [
-		0 => "访客（不需注册）上传",
-	],
-	"Enable this if you want to allow non registered users to upload." => [
-		0 => "启用它则允许未注册的用户上传图片",
-	],
 	"Upload user interface" => [
 		0 => "上传用户界面",
 	],
@@ -2358,6 +2364,21 @@ $translation_table = [
 	],
 	"route" => [
 		0 => "路由",
+	],
+	"Guest uploads" => [
+		0 => "访客（不需注册）上传",
+	],
+	"Enable this if you want to allow non registered users to upload." => [
+		0 => "启用它则允许未注册的用户上传图片",
+	],
+	"Moderate uploads" => [
+		0 => "Moderate 上传",
+	],
+	"Guests" => [
+		0 => "访客",
+	],
+	"Enable this to moderate incoming uploads. Target content will require moderation for approval." => [
+		0 => "启用此功能可对传入的上传内容进行审核。目标内容将需要审核才能获得批准。",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "启用嵌入代码（上传者）",
@@ -2417,7 +2438,7 @@ $translation_table = [
 		0 => "启用它, 如果你允许每个用户设置是否删除图像的Exif数据.",
 	],
 	"Maximum upload file size" => [
-		0 => "最大文件大小 (MB)",
+		0 => "最大上传文件大小 (MB)",
 	],
 	"Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)." => [
 		0 => "服务器最大允许上传%s.因为参数%u和%p(文件:%f)",
@@ -2683,23 +2704,29 @@ $translation_table = [
 	"Monthly limit" => [
 		0 => "每月的限额",
 	],
+	"Lock %s editing" => [
+		0 => "锁定 %s 编辑",
+	],
+	"Enable this to prevent users from changing the NSFW flag. When enabled, only admin and managers will have this permission." => [
+		0 => "启用此功能可防止用户更改NSFW标志。启用后，只有管理员和管理有此权限。",
+	],
 	"Show not safe content in listings" => [
-		0 => "显示在列表中没有安全内容",
+		0 => "在列表中显示不安全内容(NSFW)",
 	],
 	"Enable this if you want to show not safe content in listings. This setting doesn't affect administrators and can be overridden by user own settings." => [
-		0 => "如果要在列表中显示不安全内容请启用此功能. 此设置不会影响管理员, 并且可以由用户自己的设置重写.",
+		0 => "如果您想在列表中显示不安全的内容(NSFW)，请启用此功能。此设置不影响管理员，可由用户自己的设置覆盖。",
 	],
 	"Blur NSFW content in listings" => [
-		0 => "模糊NSFW（标记为不安全）的内容显示在列表",
+		0 => "在列表中模糊显示NSFW内容",
 	],
 	"Enable this if you want to apply a blur effect on the NSFW images in listings." => [
-		0 => "如果你想申请一个模糊效果的NSFW图像列表启用它.",
+		0 => "如果您想对列表中的NSFW图片应用高斯模糊效果，请启用此功能。",
 	],
 	"Show banners in not safe content" => [
-		0 => "显示横幅在不安全的内容",
+		0 => "在不安全的内容中显示横幅广告",
 	],
 	"Enable this if you want to show banners in not safe content pages." => [
-		0 => "如果你想显示在不安全的内容页面的横幅请启用这个功能.",
+		0 => "如果您想在不安全的内容页面中显示横幅广告，请启用此功能。",
 	],
 	"Show not safe content in random mode" => [
 		0 => "在随机模式显示标记为不安全内容",
@@ -2794,18 +2821,6 @@ $translation_table = [
 	"Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>." => [
 		0 => "使用此设置的主要主题颜色. 值必须是 <a href=\"%s\" target=\"_blank\">十六进制</a> 格式.",
 	],
-	"Top bar color" => [
-		0 => "顶部菜单栏颜色",
-	],
-	"Black" => [
-		0 => "黑",
-	],
-	"White" => [
-		0 => "白",
-	],
-	"If you set this to \"white\" the top bar and all the black tones will be changed to white tones." => [
-		0 => "如果您将此设置为\"白\"的顶部栏和所有黑色的色调将更改为白色的色调.",
-	],
 	"Top bar button color" => [
 		0 => "顶部菜单栏按钮颜色",
 	],
@@ -2823,6 +2838,12 @@ $translation_table = [
 	],
 	"Grey" => [
 		0 => "灰",
+	],
+	"Black" => [
+		0 => "黑",
+	],
+	"White" => [
+		0 => "白",
 	],
 	"Color for the top bar buttons like the \"Create account\" button." => [
 		0 => "顶栏的颜色按钮为\"创建帐户\"按钮.",
@@ -2903,10 +2924,10 @@ $translation_table = [
 		0 => "启用此选项, 以内容嵌入代码 .",
 	],
 	"Not safe content checkbox in uploader" => [
-		0 => "在查看上载不安全内容复选框",
+		0 => "在上传时显示\"标记不安全内容\"复选框",
 	],
 	"Enable this if you want to show a checkbox to indicate not safe content upload." => [
-		0 => "如果你想显示一个复选框, 表示没有安全内容上传请启用这个功能.",
+		0 => "如果您想在上传页面显示一个复选框来标记\"不安全的内容(NSFW)\"，请启用此功能。",
 	],
 	"Custom CSS code" => [
 		0 => "自定义CSS代码",
@@ -2932,8 +2953,11 @@ $translation_table = [
 	"Split landing + images" => [
 		0 => "上传按钮 + 最新图片",
 	],
-	"Route explore" => [
-		0 => "直接显示探索图库",
+	"Route %s" => [
+		0 => "路径 %s",
+	],
+	"upload" => [
+		0 => "上传",
 	],
 	"Select the homepage style. To customize it further edit app/themes/%s/views/index.php" => [
 		0 => "选择主页风格. 详细定制主页编辑此 app/themes/%s/views/index.php",
@@ -3340,6 +3364,27 @@ $translation_table = [
 	"Disqus, Facebook or anything you want. It will be used in image view." => [
 		0 => "DISQUS, Facebook或其他. 它将在图像视图中使用.",
 	],
+	"Automatically moderate the content using the %s service." => [
+		0 => "使用 %s 服务将会自动审核内容。",
+	],
+	"Automatic approve" => [
+		0 => "自动审核",
+	],
+	"Enable this to automatically approve content moderated by this service." => [
+		0 => "启用此功能可自动审核本服务所管理的内容。",
+	],
+	"Block content" => [
+		0 => "屏蔽内容",
+	],
+	"Adult" => [
+		0 => "成人",
+	],
+	"Teen and adult" => [
+		0 => "青少年和成人",
+	],
+	"Flag NSFW" => [
+		0 => "标记 NSFW",
+	],
 	"Analytics code" => [
 		0 => "Analytics（分析）代码",
 	],
@@ -3350,7 +3395,7 @@ $translation_table = [
 		0 => "有关API的文档查看 <a %s>API文档</a>",
 	],
 	"API v1 key" => [
-		0 => "API v1 key",
+		0 => "API v1 密钥",
 	],
 	"Use this key when using the <a %s>API v1</a>." => [
 		0 => "使用<a %s>API V1</a>时使用此值.",
@@ -3381,6 +3426,9 @@ $translation_table = [
 	],
 	"Load full resolution" => [
 		0 => "加载原图",
+	],
+	"Do you really want to approve this image? The image will go public if you approve it." => [
+		0 => "你真的想删除所有选中的内容吗？这是无法挽回的。",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "加入 %a 和标记上 %c",
@@ -3696,9 +3744,6 @@ $translation_table = [
 	],
 	"Delete background" => [
 		0 => "删除背景图片",
-	],
-	"Edit profile" => [
-		0 => "编辑网站配置",
 	],
 	"Follower" => [
 		0 => "粉丝",

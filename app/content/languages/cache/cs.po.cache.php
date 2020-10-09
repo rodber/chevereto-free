@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2020-04-16 20:33+0000',
-  'PO-Revision-Date' => '2020-04-16 20:33+0000',
+  'POT-Creation-Date' => '2020-09-02 17:14+0000',
+  'PO-Revision-Date' => '2020-09-02 17:14+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'cs',
@@ -124,6 +124,9 @@ $translation_table = [
 	"Confirm" => [
 		0 => "Potvrdit",
 	],
+	"The content has been approved." => [
+		0 => "Obsah byl schválen.",
+	],
 	"Select existing album" => [
 		0 => "Vyberte stávající album",
 	],
@@ -192,6 +195,9 @@ $translation_table = [
 		1 => "Alb",
 		2 => "Alb",
 		3 => "Alba",
+	],
+	"Approve" => [
+		0 => "Schválit",
 	],
 	"Delete" => [
 		0 => "Smazat",
@@ -453,6 +459,15 @@ $translation_table = [
 		1 => "Uživatelů",
 		2 => "Uživatelů",
 		3 => "Uživatelé",
+	],
+	"adult" => [
+		0 => "dospělý",
+	],
+	"teen" => [
+		0 => "dospívající",
+	],
+	"Content of type %s is forbidden" => [
+		0 => "Obsah typu %s je zakázán",
 	],
 	"Can't create %s destination dir" => [
 		0 => "Nelze vytvořit %s cílový adresář",
@@ -823,9 +838,6 @@ $translation_table = [
 	"Inside viewer top (image page)" => [
 		0 => "Uvnitř prohlížeče nahoře (stránka s obrázkem)",
 	],
-	"Expected banner size 728x90" => [
-		0 => "Očekávaná velikost banneru je 728×90px",
-	],
 	"Inside viewer foot (image page)" => [
 		0 => "Uvnitř prohlížeče dole (stránka s obrázkem)",
 	],
@@ -912,9 +924,6 @@ $translation_table = [
 	],
 	"Invalid theme main color" => [
 		0 => "Chybná barva hlavní šablony",
-	],
-	"Invalid theme top bar color" => [
-		0 => "Neplatná barva vrchního rámečku tématu",
 	],
 	"Invalid theme top bar button color" => [
 		0 => "Neplatná barva vrchního baru tématu.",
@@ -1155,6 +1164,9 @@ $translation_table = [
 	],
 	"Sign in" => [
 		0 => "Přihlásit se",
+	],
+	"Moderate" => [
+		0 => "Moderovat",
 	],
 	"Upload images" => [
 		0 => "Nahrát obrázky",
@@ -1435,6 +1447,12 @@ $translation_table = [
 	"close" => [
 		0 => "zavřít",
 	],
+	"Note" => [
+		0 => "Poznámka",
+	],
+	"We must approve the uploaded content before being able to share." => [
+		0 => "Než budeme moci sdílet, musíme schválit nahraný obsah.",
+	],
 	"copy" => [
 		0 => "kopírovat",
 	],
@@ -1443,9 +1461,6 @@ $translation_table = [
 	],
 	"Remove" => [
 		0 => "Odstranit",
-	],
-	"Edit image" => [
-		0 => "Upravit obrázek",
 	],
 	"Title" => [
 		0 => "Název",
@@ -1635,6 +1650,9 @@ $translation_table = [
 	],
 	"Untitled image" => [
 		0 => "Obrázek bez názvu",
+	],
+	"Mark this if the image is not safe for work" => [
+		0 => "Označit tento obrázek, pokud není vhodný a bezpečný",
 	],
 	"Path" => [
 		0 => "Cesta",
@@ -1843,12 +1861,6 @@ $translation_table = [
 	"There's nothing to show here." => [
 		0 => "Zde se nenachází nic k zobrazení.",
 	],
-	"Edit image details" => [
-		0 => "Upravit detaily obrázku",
-	],
-	"Edit album details" => [
-		0 => "Uprav informace o albu",
-	],
 	"All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
 		0 => "Všechny obrázky budou přesunuty do nově vytvořeného alba. Samozřejmé můžete také obrázky přesunou do již <a class=\"modal-switch\" data-switch=\"move-existing-album\">existujícího alba</a>.",
 	],
@@ -1879,11 +1891,20 @@ $translation_table = [
 	"Do you really want to flag this content as unsafe?" => [
 		0 => "Opravdu si přejete tento obsah označit jako nebezpečný?",
 	],
+	"Confirm approval" => [
+		0 => "Potvrďte souhlas",
+	],
+	"Do you really want to approve this content? This can't be undone." => [
+		0 => "Opravdu chcete odstranit veškerý vybraný obsah? Toto nelze vrátit zpět.",
+	],
 	"Confirm deletion" => [
 		0 => "Potvrďte odstranění",
 	],
 	"Do you really want to remove this content? This can't be undone." => [
 		0 => "Opravdu chcete odstranit tento obsah? (Nelze vrátit zpět)",
+	],
+	"Do you really want to approve all the selected content? This can't be undone." => [
+		0 => "Opravdu chcete odstranit veškerý vybraný obsah? Toto nelze vrátit zpět.",
 	],
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "Opravdu si přejete odstranit vybraný obsah?  (Nelze vrátit zpět)",
@@ -1999,9 +2020,6 @@ $translation_table = [
 	"Do you really want to delete this album and all of its images? This can't be undone." => [
 		0 => "Opravdu si přejete odstranit toto album a všechny obrázky do něj zařazené? (Tuto akci nelze vrátit)",
 	],
-	"Delete album" => [
-		0 => "Smazat album",
-	],
 	"You like this" => [
 		0 => "Toto se vám líbí",
 	],
@@ -2049,9 +2067,6 @@ $translation_table = [
 	],
 	"The system automatically parses any content by a continuous observation of the %path% path." => [
 		0 => "Systém automaticky analyzuje veškerý obsah kontinuálním sledováním cesty %path%.",
-	],
-	"The system automatically parses any content by a continous observation of the %path% path." => [
-		0 => "Systém automaticky analyzuje veškerý obsah nepřetržitým sledováním cesty %path%.",
 	],
 	"Completed jobs will be automatically re-started after %n %m." => [
 		0 => "Dokončené úlohy budou automaticky znovu spuštěny po %n %m.",
@@ -2104,14 +2119,8 @@ $translation_table = [
 	"All file-system permissions must be granted for the crontab user at %path%" => [
 		0 => "Všechna oprávnění systému souborů musí být udělena uživateli crontab v %path%",
 	],
-	"Required crontab entry:" => [
-		0 => "Požadovaný záznam cronu:",
-	],
 	"Add import job" => [
 		0 => "Přidat úlohu importu",
-	],
-	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d." => [
-		0 => "Tento nástroj umožňuje hromadně přidávat obsah na vaše webové stránky tím, že zadává systémovou cestu s obsahem, který chcete importovat. Podporuje přidávání uživatelů, alb a obrázků pomocí struktury založené na složkách. Další informace o struktuře složek, přidání metadat a vše o tomto nástroji naleznete v naší %d.",
 	],
 	"Process import" => [
 		0 => "Proces importu",
@@ -2389,12 +2398,6 @@ $translation_table = [
 	"Enable this if you want to allow image uploads. This setting doesn't affect administrators." => [
 		0 => "Povolte pokud chcete umožnit nahrávání. Toto nastavení nemá vliv na administrátory",
 	],
-	"Guest uploads" => [
-		0 => "Nahráno hostem",
-	],
-	"Enable this if you want to allow non registered users to upload." => [
-		0 => "Povol pokud chceš umožnit neregistrovaným uživatelům nahrávání.",
-	],
 	"Upload user interface" => [
 		0 => "Rozhraní uživatelského nahrávání",
 	],
@@ -2403,6 +2406,21 @@ $translation_table = [
 	],
 	"route" => [
 		0 => "trasa",
+	],
+	"Guest uploads" => [
+		0 => "Nahráno hostem",
+	],
+	"Enable this if you want to allow non registered users to upload." => [
+		0 => "Povol pokud chceš umožnit neregistrovaným uživatelům nahrávání.",
+	],
+	"Moderate uploads" => [
+		0 => "Moderovat nahrávání",
+	],
+	"Guests" => [
+		0 => "Hosté",
+	],
+	"Enable this to moderate incoming uploads. Target content will require moderation for approval." => [
+		0 => "Povolte tuto funkci pro moderování příchozích nahrávek. Cílový obsah bude ke schválení vyžadovat moderování.",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "Povolit vkládací odkazy (v nahrávacím nástroji)",
@@ -2728,6 +2746,12 @@ $translation_table = [
 	"Monthly limit" => [
 		0 => "Měsíční limit",
 	],
+	"Lock %s editing" => [
+		0 => "Zamknout úpravy %s",
+	],
+	"Enable this to prevent users from changing the NSFW flag. When enabled, only admin and managers will have this permission." => [
+		0 => "Povolte tuto funkci, aby uživatelé nemohli změnit příznak NSFW. Pokud je funkce povolena, toto oprávnění budou mít pouze administrátoři a správci.",
+	],
 	"Show not safe content in listings" => [
 		0 => "V galerii vypisovat i nevhodný obsah",
 	],
@@ -2839,18 +2863,6 @@ $translation_table = [
 	"Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>." => [
 		0 => "Použijte pro nastavení barvy hlavní šablony. Hodnota musí být v <a href=\"%s\" target=\"_blank\">hex formátu</a>.",
 	],
-	"Top bar color" => [
-		0 => "Barva horního baru",
-	],
-	"Black" => [
-		0 => "Černá",
-	],
-	"White" => [
-		0 => "Bílá",
-	],
-	"If you set this to \"white\" the top bar and all the black tones will be changed to white tones." => [
-		0 => "Pokud se toto nastaví na \"Bílá\", horní bar a všechny černé tóny se změní na bílé tóny.",
-	],
 	"Top bar button color" => [
 		0 => "Barva tlačítka horního baru",
 	],
@@ -2868,6 +2880,12 @@ $translation_table = [
 	],
 	"Grey" => [
 		0 => "Šedá",
+	],
+	"Black" => [
+		0 => "Černá",
+	],
+	"White" => [
+		0 => "Bílá",
 	],
 	"Color for the top bar buttons like the \"Create account\" button." => [
 		0 => "Barva tlačítek na horní liště, např. jako je tlačítko \"Vytvořit účet\".",
@@ -2977,8 +2995,11 @@ $translation_table = [
 	"Split landing + images" => [
 		0 => "Split landing + obrázky",
 	],
-	"Route explore" => [
-		0 => "Prozkoumejte trasu",
+	"Route %s" => [
+		0 => "Trasa %s",
+	],
+	"upload" => [
+		0 => "nahrát",
 	],
 	"Select the homepage style. To customize it further edit app/themes/%s/views/index.php" => [
 		0 => "Vyberte styl domovské obrazovky. Pro přispůsobení stylu jej upravte v app/themes/%s/views/index.php",
@@ -3385,6 +3406,27 @@ $translation_table = [
 	"Disqus, Facebook or anything you want. It will be used in image view." => [
 		0 => "Disqus, Facebook nebo cokoliv jiného. Bude použito v zobrazení obrázku.",
 	],
+	"Automatically moderate the content using the %s service." => [
+		0 => "Automaticky moderujte obsah pomocí služby %s.",
+	],
+	"Automatic approve" => [
+		0 => "Automatické schválení",
+	],
+	"Enable this to automatically approve content moderated by this service." => [
+		0 => "Povolte tuto funkci pro automatické schválení obsahu moderovaného touto službou.",
+	],
+	"Block content" => [
+		0 => "Blokovat obsah",
+	],
+	"Adult" => [
+		0 => "Dospělí",
+	],
+	"Teen and adult" => [
+		0 => "Dospívající i dospělí",
+	],
+	"Flag NSFW" => [
+		0 => "Příznak NSFW",
+	],
 	"Analytics code" => [
 		0 => "Kód analytics.",
 	],
@@ -3426,6 +3468,9 @@ $translation_table = [
 	],
 	"Load full resolution" => [
 		0 => "Načíst v plném rozlišení",
+	],
+	"Do you really want to approve this image? The image will go public if you approve it." => [
+		0 => "Opravdu chcete odstranit veškerý vybraný obsah? Toto nelze vrátit zpět.",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "Přidáno do alba %a a zařazeno do kategorie %c",
@@ -3741,9 +3786,6 @@ $translation_table = [
 	],
 	"Delete background" => [
 		0 => "Odstranit pozadí",
-	],
-	"Edit profile" => [
-		0 => "Upravit profil",
 	],
 	"Follower" => [
 		0 => "Sledující",

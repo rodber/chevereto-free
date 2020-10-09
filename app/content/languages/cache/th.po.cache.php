@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2019-12-12 15:27+0000',
-  'PO-Revision-Date' => '2019-12-12 15:27+0000',
+  'POT-Creation-Date' => '2020-09-02 17:16+0000',
+  'PO-Revision-Date' => '2020-09-02 17:16+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'th',
@@ -286,6 +286,9 @@ $translation_table = [
 	"The content has been edited." => [
 		0 => "เนื้อหาที่ได้รับการแก้ไข",
 	],
+	"album" => [
+		0 => "อัลบั้ม",
+	],
 	"Untitled" => [
 		0 => "ไม่มีชื่อ",
 	],
@@ -469,24 +472,6 @@ $translation_table = [
 	"I understand" => [
 		0 => "ฉันเข้าใจ",
 	],
-	"You have been forbidden to use this website." => [
-		0 => "คุณถูกห้ามการใช้งานเว็บไซต์นี้",
-	],
-	"Feel free to browse and discover all my shared images and albums." => [
-		0 => "อย่าลังเลที่จะเรียกดูและค้นพบภาพร่วมกันทั้งหมดของภาพและอัลบั้มฉัน",
-	],
-	"View all my images" => [
-		0 => "ดูภาพทั้งหมดของฉัน",
-	],
-	"Plugin" => [
-		0 => "ปลั๊กอิน",
-	],
-	"Request denied" => [
-		0 => "คำขอไม่สามารถเข้าถึงได้",
-	],
-	"That page doesn't exist" => [
-		0 => "ไม่สามารถใช้งานหน้าเว็บไซต์นี้ได้",
-	],
 	"Forgot password?" => [
 		0 => "ลืมรหัสผ่าน?",
 	],
@@ -510,6 +495,9 @@ $translation_table = [
 	],
 	"User doesn't have an email." => [
 		0 => "ผู้ใช้ไม่ได้อีเมล",
+	],
+	"Request denied" => [
+		0 => "คำขอไม่สามารถเข้าถึงได้",
 	],
 	"Account needs to be activated to use this feature" => [
 		0 => "บัญชีผู้ใช้ต้องทำการปลดล็อคเพื่อใช้งานส่วนนี้",
@@ -760,9 +748,6 @@ $translation_table = [
 	"Inside viewer top (image page)" => [
 		0 => "ด้านบนภายใน (หน้าภาพ)",
 	],
-	"Expected banner size 728x90" => [
-		0 => "ขนาดแบนเนอร์ควรจะ  728x90",
-	],
 	"Inside viewer foot (image page)" => [
 		0 => "ด้านท้ายของผู้ชมภายใน (หน้าภาพ)",
 	],
@@ -849,9 +834,6 @@ $translation_table = [
 	],
 	"Invalid theme main color" => [
 		0 => "ธีมสีหลักไม่ถูกต้อง",
-	],
-	"Invalid theme top bar color" => [
-		0 => "รูปแบบสีแถบด้านบนไม่ถูกต้อง",
 	],
 	"Invalid theme top bar button color" => [
 		0 => "รูปแบบแถบด้านบนปุ่มสีไม่ถูกต้อง",
@@ -1375,9 +1357,6 @@ $translation_table = [
 	"Remove" => [
 		0 => "ลบ",
 	],
-	"Edit image" => [
-		0 => "แก้ไขรูปภาพ",
-	],
 	"Title" => [
 		0 => "หัวข้อ",
 	],
@@ -1446,9 +1425,6 @@ $translation_table = [
 	],
 	"Error report" => [
 		0 => "รายงานข้อผิดพลาด",
-	],
-	"album" => [
-		0 => "อัลบั้ม",
 	],
 	"Viewer links" => [
 		0 => "ผู้ชมลิ้งค์",
@@ -1747,12 +1723,6 @@ $translation_table = [
 	"There's nothing to show here." => [
 		0 => "ไม่มีอะไรที่จะแสดงที่นี่",
 	],
-	"Edit image details" => [
-		0 => "แก้ไขรายละเอียดของภาพ",
-	],
-	"Edit album details" => [
-		0 => "แก้ไขรายละเอียดอัลบั้ม",
-	],
 	"All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
 		0 => "ภาพทั้งหมดจะถูกย้ายไปที่อัลบั้มที่สร้างขึ้นใหม่นี้ นอกจากนี้คุณยังสามารถย้ายภาพไปที่ <a class=\"modal-switch\" data-switch=\"move-existing-album\">อัลบั้มที่มีอยู่</a>",
 	],
@@ -1818,6 +1788,9 @@ $translation_table = [
 	],
 	"Toggle unsafe flag" => [
 		0 => "สลับสถานะที่ไม่ปลอดภัย",
+	],
+	"That page doesn't exist" => [
+		0 => "ไม่สามารถใช้งานหน้าเว็บไซต์นี้ได้",
 	],
 	"The requested page was not found." => [
 		0 => "ไม่พบหน้าที่คุณค้นหา",
@@ -1893,9 +1866,6 @@ $translation_table = [
 	],
 	"Do you really want to delete this album and all of its images? This can't be undone." => [
 		0 => "คุณต้องการที่จะลบอัลบั้มนี้และทุกภาพของตนหรือไม่?",
-	],
-	"Delete album" => [
-		0 => "ลบอัลบั้ม",
 	],
 	"You like this" => [
 		0 => "คุณถูกใจสิ่งนี้",
@@ -2584,18 +2554,6 @@ $translation_table = [
 	"Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>." => [
 		0 => "ใช้ปุ่มนี้เพื่อกำหนดสีของธีมหลัก ค่าต้องอยู่ใน <a href=\"%s\" target=\"_blank\">รูปแบบ hex</a>",
 	],
-	"Top bar color" => [
-		0 => "สีของ Top bar",
-	],
-	"Black" => [
-		0 => "ดำ",
-	],
-	"White" => [
-		0 => "สีขาว",
-	],
-	"If you set this to \"white\" the top bar and all the black tones will be changed to white tones." => [
-		0 => "หากคุณตั้งค่านี้เป็น \"สีขาว\" แถบด้านบนและทุกโทนสีดำจะเปลี่ยนเป็นโทนสีขาว",
-	],
 	"Top bar button color" => [
 		0 => "สีปุ่มแถบด้านบน",
 	],
@@ -2613,6 +2571,12 @@ $translation_table = [
 	],
 	"Grey" => [
 		0 => "สีเทา",
+	],
+	"Black" => [
+		0 => "ดำ",
+	],
+	"White" => [
+		0 => "สีขาว",
 	],
 	"Color for the top bar buttons like the \"Create account\" button." => [
 		0 => "สีสำหรับปุ่มแถบด้านบนเช่นปุ่ม \"สมัครสมาชิก\"",
@@ -2712,9 +2676,6 @@ $translation_table = [
 	],
 	"Split landing + images" => [
 		0 => "แบ่งภาพ + ภาพ",
-	],
-	"Route explore" => [
-		0 => "เส้นทางรวมภาพ",
 	],
 	"Select the homepage style. To customize it further edit app/themes/%s/views/index.php" => [
 		0 => "เลือกรูปแบบหน้าแรก หากต้องการปรับแต่งเพิ่มเติมให้แก้ไข app/themes/%s/views/index.php",
@@ -3325,9 +3286,6 @@ $translation_table = [
 	"User has no connections." => [
 		0 => "ผู้ใช้ไม่มีการเชื่อมต่อ",
 	],
-	"Link your account to external services to be able to login and share content." => [
-		0 => "เชื่อมโยงบัญชีของคุณกับบริการภายนอกเพื่อเข้าสู่ระบบและแบ่งปันเนื้อหา",
-	],
 	"Do you really want to disconnect %s from this account?" => [
 		0 => "คุณต้องการตัดการเชื่อมต่อ %s จากบัญชีนี้หรือไม่?",
 	],
@@ -3349,8 +3307,14 @@ $translation_table = [
 	"Connect %s" => [
 		0 => "เชื่อมต่อ %s",
 	],
+	"Feel free to browse and discover all my shared images and albums." => [
+		0 => "อย่าลังเลที่จะเรียกดูและค้นพบภาพร่วมกันทั้งหมดของภาพและอัลบั้มฉัน",
+	],
 	"Button" => [
 		0 => "ปุ่ม",
+	],
+	"View all my images" => [
+		0 => "ดูภาพทั้งหมดของฉัน",
 	],
 	"Login" => [
 		0 => "เข้าสู่ระบบ",
@@ -3382,14 +3346,17 @@ $translation_table = [
 	"Delete background" => [
 		0 => "ลบพื้นหลัง",
 	],
-	"Edit profile" => [
-		0 => "แก้ไขโปรไฟล์",
-	],
 	"Follower" => [
 		0 => "ผู้ติดตาม",
 	],
 	"Follow" => [
 		0 => "ติดตาม",
+	],
+	"You have been forbidden to use this website." => [
+		0 => "คุณถูกห้ามการใช้งานเว็บไซต์นี้",
+	],
+	"Plugin" => [
+		0 => "ปลั๊กอิน",
 	],
 	"General questions/comments" => [
 		0 => "คำถามทั่วไป/แสดงความคิดเห็น",

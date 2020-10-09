@@ -73,10 +73,10 @@ $route = function ($handler) {
             );
         }
         $route_menu['upgrade'] = [
-            'label' => '⭐ Upgrade',
+            'label' => '🚀 Upgrade',
             'id' => 'upgrade'
         ];
-
+        $handler::setVar('documentationBaseUrl', 'https://v3-docs.chevereto.com/');
         $handler::setVar($route_prefix . '_menu', $route_menu);
         $handler::setVar('tabs', $route_menu);
 
@@ -132,7 +132,7 @@ $route = function ($handler) {
                     ],
                     'php_version' => [
                         'label'        => _s('PHP version'),
-                        'content'    => PHP_VERSION . ' 🐘 '. php_ini_loaded_file()
+                        'content'    => PHP_VERSION . ' 🐘 ' . php_ini_loaded_file()
                     ],
                     'server' => [
                         'label'        => _s('Server'),
@@ -186,12 +186,11 @@ $route = function ($handler) {
                 $chevereto_urls = [
                     'Chevereto'                => 'https://chevereto.com',
                     _s('Community')                => 'https://chevereto.com/community/',
-                    _s('Collaboration')            => 'https://chevereto.com/community/collaboration/',
                     _s('Support')                => 'https://chevereto.com/support',
-                    _s('Documentation')            => 'https://v3-docs.chevereto.com/',
-                    _s('Changelog')                => 'https://chevereto.com/changelog',
+                    _s('Documentation')            => 'https://v3-docs.chevereto.com',
+                    _s('Changelog')                => 'https://chevereto.com/releases',
                     _s('Bug tracking')            => 'https://chevereto.com/bug-tracking',
-                    'GitHub'                     => 'https://github.com/chevereto',
+                    'GitHub'                     => 'https://github.com/Chevereto',
                 ];
                 $chevereto_links = [];
                 foreach ($chevereto_urls as $k => $v) {
@@ -241,6 +240,8 @@ $route = function ($handler) {
                     'additional-settings'    => _s('Additional settings'),
                     'tools'                    => _s('Tools'),
                 ];
+
+                
 
                 foreach ($settings_sections as $k => $v) {
                     $current = $handler->request[1] ? ($handler->request[1] == $k) : ($k == 'website');
@@ -582,7 +583,7 @@ $route = function ($handler) {
                         ],
                         'homepage_style' =>
                         [
-                            'validate'    => in_array($_POST['homepage_style'], ['landing', 'split', 'route_explore']),
+                            'validate'    => in_array($_POST['homepage_style'], ['landing', 'split', 'route_explore', 'route_upload']),
                             'error_msg'    => _s('Invalid homepage style')
                         ],
                         'homepage_cta_color' =>
@@ -845,6 +846,22 @@ $route = function ($handler) {
                                     'error_msg' => $e->getMessage()
                                 ];
                             }
+                        }
+                    }
+
+                    if ($_POST['moderatecontent'] == 1) {
+                        $moderateContentKey = CHV\getSetting('moderatecontent_key');
+                        if ($_POST['moderatecontent_key']) {
+                            $moderateContentKey = $_POST['moderatecontent_key'];
+                        }
+                        $sample = 'http://www.moderatecontent.com/img/sample_face_2.jpg';
+                        $json = G\fetch_url('https://api.moderatecontent.com/moderate/?key='.$moderateContentKey.'&url=' . $sample);
+                        $data = json_decode($json);
+                        if (isset($data->error)) {
+                            $validations['moderatecontent_key'] = [
+                                'validate'    => false,
+                                'error_msg' => $data->error
+                            ];
                         }
                     }
 

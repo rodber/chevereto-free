@@ -72,7 +72,8 @@ if (is_captcha_show() && CHV\getSetting('recaptcha_version') == 3) {
 			upload: {
 				redirect_single_upload: <?php echo json_encode(CHV\getSetting('enable_redirect_single_upload')); ?>,
 				threads: <?php echo json_encode(CHV\getSetting('upload_threads')); ?>,
-				image_types: <?php echo json_encode(CHV\Image::getEnabledImageFormats()); ?>,
+                image_types: <?php echo json_encode(CHV\Image::getEnabledImageFormats()); ?>,
+                moderation: <?php echo json_encode(is_moderate_uploads()); ?>,  
 			},
 			user: {
 				avatar_max_filesize: "<?php echo CHV\getSetting('user_image_avatar_max_filesize_mb') . ' MB'; ?>",
@@ -131,7 +132,7 @@ if (is_captcha_show() && CHV\getSetting('recaptcha_version') == 3) {
 				id: "<?php echo $route["id_encoded"]; ?>",
 				type: "<?php echo G\get_route_name(); ?>",
 				url: "<?php echo(G\get_route_name() == "image" ?  $route["url_viewer"] : $route["url"]); ?>",
-				parent_url: "<?php echo G\get_route_name() == "image" ? (get_image()['user']['is_private'] ? G\get_base_url() : get_image()['album']['url']) : (G\get_route_name() == 'dashboard' ? null : $route_user['url']) ?>"
+				parent_url: "<?php echo function_exists('get_image') ? (get_image()['user']['is_private'] ? G\get_base_url() : get_image()['album']['url']) : (G\get_route_name() == 'dashboard' ? null : $route_user['url']) ?>"
 			};
 
 			<?php

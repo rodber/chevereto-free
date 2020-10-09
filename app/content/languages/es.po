@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2020-04-16 20:33+0000\n"
-"PO-Revision-Date: 2020-04-16 20:33+0000\n"
+"POT-Creation-Date: 2020-09-25 18:53+0000\n"
+"PO-Revision-Date: 2020-09-25 18:53+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -203,6 +203,9 @@ msgstr "Debes ingresar el nombre del álbum."
 msgid "Confirm"
 msgstr "Confirmar"
 
+msgid "The content has been approved."
+msgstr "El contenido ha sido aprobado."
+
 #: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
 msgid "Select existing album"
 msgstr "Seleccionar álbum existente"
@@ -353,6 +356,9 @@ msgid "Album"
 msgid_plural "Albums"
 msgstr[0] "Álbum"
 msgstr[1] "Álbumes"
+
+msgid "Approve"
+msgstr "Aprobar"
 
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
 #: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
@@ -762,6 +768,16 @@ msgid "User"
 msgid_plural "Users"
 msgstr[0] "Usuario"
 msgstr[1] "Usuarios"
+
+msgid "adult"
+msgstr "adulto"
+
+msgid "teen"
+msgstr "adolescente"
+
+#, php-format
+msgid "Content of type %s is forbidden"
+msgstr "El contenido de tipo %s está prohibido"
 
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
@@ -1382,11 +1398,6 @@ msgstr "Página de imagen"
 msgid "Inside viewer top (image page)"
 msgstr "En el interior superior del visualizador (página de imagen)"
 
-#: ../../../app/routes/route.dashboard.php:413
-#: ../../../app/routes/route.dashboard.php:417
-msgid "Expected banner size 728x90"
-msgstr "Tamaño esperado del aviso es 728x90"
-
 #: ../../../app/routes/route.dashboard.php:416
 msgid "Inside viewer foot (image page)"
 msgstr "En el interior inferior del visualizador (página de imagen)"
@@ -1504,10 +1515,6 @@ msgstr "Tono de tema inválido"
 #: ../../../app/routes/route.dashboard.php:627
 msgid "Invalid theme main color"
 msgstr "Color principal de tema inválido"
-
-#: ../../../app/routes/route.dashboard.php:632
-msgid "Invalid theme top bar color"
-msgstr "Color de barra superior de tema inválido"
 
 #: ../../../app/routes/route.dashboard.php:637
 msgid "Invalid theme top bar button color"
@@ -1842,6 +1849,9 @@ msgstr "Combinación Nombre de usuario / Email incorrecta"
 #: ../../../app/themes/Peafowl/views/login.php:52
 msgid "Sign in"
 msgstr "Entrar"
+
+msgid "Moderate"
+msgstr "Moderar"
 
 msgid "Upload images"
 msgstr "Subir imágenes"
@@ -2227,6 +2237,12 @@ msgstr "restablecer"
 msgid "close"
 msgstr "cerrar"
 
+msgid "Note"
+msgstr "Nota"
+
+msgid "We must approve the uploaded content before being able to share."
+msgstr "Debemos aprobar el contenido subido antes de poder compartir."
+
 msgid "copy"
 msgstr "copiar"
 
@@ -2237,10 +2253,6 @@ msgstr "insertar"
 #: ../../../app/themes/Peafowl/views/dashboard.php:666
 msgid "Remove"
 msgstr "Eliminar"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:154
-msgid "Edit image"
-msgstr "Editar imagen"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
 #: ../../../app/themes/Peafowl/snippets/form_image.php:4
@@ -2535,6 +2547,12 @@ msgstr "Breve descripción de esta categoría"
 msgid "Untitled image"
 msgstr "Imagen sin título"
 
+msgid "Mark this if the image is not safe for work"
+msgstr "Marca esto si la imagen no es segura para trabajo"
+
+msgid "Flag not safe"
+msgstr "Marcar no segura"
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
 msgid "Path"
 msgstr "Ruta"
@@ -2820,18 +2838,6 @@ msgstr "Principal"
 msgid "There's nothing to show here."
 msgstr "No hay nada que mostrar aquí."
 
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
-#: ../../../app/themes/Peafowl/views/image.php:69
-#: ../../../app/themes/Peafowl/views/image.php:457
-msgid "Edit image details"
-msgstr "Editar detalles de la imagen"
-
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
-#: ../../../app/themes/Peafowl/views/album.php:22
-#: ../../../app/themes/Peafowl/views/album.php:118
-msgid "Edit album details"
-msgstr "Editar detalles del álbum"
-
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
 msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
 msgstr "Todas las imágenes serán trasladadas a este nuevo álbum. También puedes trasladar las imágenes a un  <a class=\"modal-switch\" data-switch=\"move-existing-album\">álbum existente</a>."
@@ -2872,6 +2878,12 @@ msgstr "Confirmar marcar contenido como no seguro"
 msgid "Do you really want to flag this content as unsafe?"
 msgstr "¿Realmente quieres marcar este contenido como no seguro?"
 
+msgid "Confirm approval"
+msgstr "Confirmar aprobación"
+
+msgid "Do you really want to approve this content? This can't be undone."
+msgstr "¿Realmente quieres eliminar todo el contenido seleccionado? Esto no se podrá deshacer."
+
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:106
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:110
 msgid "Confirm deletion"
@@ -2880,6 +2892,9 @@ msgstr "Confirmar eliminación"
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:107
 msgid "Do you really want to remove this content? This can't be undone."
 msgstr "¿Realmente quieres eliminar este contenido? Esto no se podrá deshacer."
+
+msgid "Do you really want to approve all the selected content? This can't be undone."
+msgstr "Do you really want to approve all the selected content? This can't be undone."
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:111
 msgid "Do you really want to remove all the selected content? This can't be undone."
@@ -3054,10 +3069,6 @@ msgstr "Este contenido es privado"
 msgid "Do you really want to delete this album and all of its images? This can't be undone."
 msgstr "¿Realmente quieres eliminar este álbum y todas sus imágenes? Esto no se podrá deshacer."
 
-#: ../../../app/themes/Peafowl/views/album.php:25
-msgid "Delete album"
-msgstr "Eliminar álbum"
-
 #: ../../../app/themes/Peafowl/views/image.php:85
 msgid "You like this"
 msgstr "Te gusta esto"
@@ -3112,9 +3123,6 @@ msgstr "Importación automática"
 msgid "The system automatically parses any content by a continuous observation of the %path% path."
 msgstr "El sistema analiza automáticamente cualquier contenido mediante una observación continua de la ruta %path%"
 
-msgid "The system automatically parses any content by a continous observation of the %path% path."
-msgstr "El sistema analiza automáticamente cualquier contenido mediante una observación continua de la ruta %path%"
-
 msgid "Completed jobs will be automatically re-started after %n %m."
 msgstr "Los trabajos completados serán automáticamente reiniciados luego de %n %m."
 
@@ -3167,15 +3175,8 @@ msgstr "Puedes correr el comando en paralelo cambiando el valor entero de %s%."
 msgid "All file-system permissions must be granted for the crontab user at %path%"
 msgstr "Todos los permisos del sistema de archivos deben estar concedidos para el usuario crontab en %path%"
 
-msgid "Required crontab entry:"
-msgstr "Entrada obligatoria de crontab:"
-
 msgid "Add import job"
 msgstr "Añadir trabajo de importación"
-
-#, php-format
-msgid "This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d."
-msgstr "Esta herramienta permite agregar contenido de manera masiva a tu sitio web al indicar una ruta de sistema con el contenido que quieres importar. Soporta la adición de usuarios, álbumes e imágenes usando una estructura de carpetas. Puedes aprender más sobre la estructura de carpetas, adición de metadata y todo lo relacionado a esta herramienta en nuestra %d."
 
 msgid "Process import"
 msgstr "Procesar importación"
@@ -3544,14 +3545,6 @@ msgstr "Habilitar subidas"
 msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
 msgstr "Habilita esto si quieres permitir subidas de imágenes. Esta configuración no afecta a los administradores."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:639
-msgid "Guest uploads"
-msgstr "Subidas de invitados"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:645
-msgid "Enable this if you want to allow non registered users to upload."
-msgstr "Habilita esto si quieres permitir permitir que usuarios no registrados suban imágenes"
-
 msgid "Upload user interface"
 msgstr "Interfaz de subida"
 
@@ -3560,6 +3553,23 @@ msgstr "Contenedor en página"
 
 msgid "route"
 msgstr "ruta"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:639
+msgid "Guest uploads"
+msgstr "Subidas de invitados"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+msgid "Enable this if you want to allow non registered users to upload."
+msgstr "Habilita esto si quieres permitir permitir que usuarios no registrados suban imágenes"
+
+msgid "Moderate uploads"
+msgstr "Moderar subidas"
+
+msgid "Guests"
+msgstr "Invitados"
+
+msgid "Enable this to moderate incoming uploads. Target content will require moderation for approval."
+msgstr "Habilita esto para moderar las subidas entrantes. El contenido objetivo requerirá moderación para ser aprobado."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1353
 msgid "Enable embed codes (uploader)"
@@ -3976,6 +3986,13 @@ msgstr "Límite semanal"
 msgid "Monthly limit"
 msgstr "Límite mensual"
 
+#, php-format
+msgid "Lock %s editing"
+msgstr "Bloquear edición de %s"
+
+msgid "Enable this to prevent users from changing the NSFW flag. When enabled, only admin and managers will have this permission."
+msgstr "Habilita esto para prevenir que los usuarios cambien la marca no segura para trabajo (NSFW). Cuando está habilitado, solo administrador y gerentes tendrán este permiso."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1070
 msgid "Show not safe content in listings"
 msgstr "Mostrar contenido no seguro en los listados"
@@ -4120,26 +4137,6 @@ msgstr "Color en valor hexadecimal"
 msgid "Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>."
 msgstr "Usa esto para establecer el color principal del tema. El valor debe estar en <a href=\"%s\" target=\"_blank\">formato hex</a>."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1203
-msgid "Top bar color"
-msgstr "Color de barra superior"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1223
-#: ../../../app/themes/Peafowl/views/dashboard.php:1461
-msgid "Black"
-msgstr "Negro"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1224
-#: ../../../app/themes/Peafowl/views/dashboard.php:1462
-msgid "White"
-msgstr "Blanco"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1210
-msgid "If you set this to \"white\" the top bar and all the black tones will be changed to white tones."
-msgstr "Si estableces esto en \"blanco\" la barra superior y todos los tonos negros se cambiaran a tonos blancos."
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1214
 msgid "Top bar button color"
 msgstr "Color de botón de barra superior"
@@ -4168,6 +4165,18 @@ msgstr "Rojo"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1460
 msgid "Grey"
 msgstr "Gris"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1223
+#: ../../../app/themes/Peafowl/views/dashboard.php:1461
+msgid "Black"
+msgstr "Negro"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1224
+#: ../../../app/themes/Peafowl/views/dashboard.php:1462
+msgid "White"
+msgstr "Blanco"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1230
 msgid "Color for the top bar buttons like the \"Create account\" button."
@@ -4312,9 +4321,12 @@ msgstr "Página de caída"
 msgid "Split landing + images"
 msgstr "Pág. caída + imágenes"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1396
-msgid "Route explore"
-msgstr "Enrutar explorar"
+#, php-format
+msgid "Route %s"
+msgstr "Ruta %s"
+
+msgid "upload"
+msgstr "subir"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1401
 #, php-format
@@ -4825,6 +4837,28 @@ msgstr "Código de comentarios"
 msgid "Disqus, Facebook or anything you want. It will be used in image view."
 msgstr "Disqus, Facebook o lo que quieras. Será usado en la vista de imagen."
 
+#, php-format
+msgid "Automatically moderate the content using the %s service."
+msgstr "Moderar automáticamente el contenido usando el servicio de %s."
+
+msgid "Automatic approve"
+msgstr "Aprobación automática"
+
+msgid "Enable this to automatically approve content moderated by this service."
+msgstr "Habilita esto para aprobar automáticamente el contenido moderado por este servicio."
+
+msgid "Block content"
+msgstr "Bloquear contenido"
+
+msgid "Adult"
+msgstr "Adulto"
+
+msgid "Teen and adult"
+msgstr "Adolescente y adulto"
+
+msgid "Flag NSFW"
+msgstr "Marcar NSFW"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:2002
 msgid "Analytics code"
 msgstr "Código de analíticas"
@@ -4881,6 +4915,9 @@ msgstr "Reproducir GIF"
 
 msgid "Load full resolution"
 msgstr "Cargar tamaño completo"
+
+msgid "Do you really want to approve this image? The image will go public if you approve it."
+msgstr "¿Realmente quieres aprobar todo el contenido seleccionado? Esto no se podrá deshacer."
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -5305,10 +5342,6 @@ msgstr "La imagen de fondo de perfil se eliminada. Esto no se podrá deshacer. �
 #: ../../../app/themes/Peafowl/views/user.php:22
 msgid "Delete background"
 msgstr "Eliminar fondo"
-
-#: ../../../app/themes/Peafowl/views/user.php:61
-msgid "Edit profile"
-msgstr "Editar perfil"
 
 #: ../../../app/themes/Peafowl/views/user.php:75
 msgid "Follower"

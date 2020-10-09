@@ -1,6 +1,7 @@
 <?php
 
 /* --------------------------------------------------------------------
+
   This file is part of Chevereto Free.
   https://chevereto.com/free
 

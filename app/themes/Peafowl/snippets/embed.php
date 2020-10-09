@@ -1,9 +1,8 @@
 <?php
-
 if (!defined('access') or !access) {
     die('This file cannot be directly accessed.');
 }
-global $embed_tpl;
+global $embed_tpl, $embed_unapproved_tpl;
 $embed_tpl = [
     'links' => [
         'label' => _s('Links'),
@@ -92,6 +91,18 @@ $embed_tpl = [
                 'label' => _s('Markdown thumbnail linked'),
                 'template' => '[![%THUMB_FILENAME%](%THUMB_URL%)](%URL_SHORT%)',
                 'size' => 'thumb',
+            ],
+        ],
+    ],
+];
+$embed_unapproved_tpl = [
+    'links' => [
+        'label' => _s('Links'),
+        'options' => [
+            'viewer-links' => [
+                'label' => _s('Viewer links'),
+                'template' => '%URL_SHORT%',
+                'size' => 'viewer',
             ],
         ],
     ],

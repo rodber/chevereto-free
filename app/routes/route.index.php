@@ -12,14 +12,17 @@
 
   --------------------------------------------------------------------- */
 
+use function G\str_replace_first;
+
 $route = function ($handler) {
     try {
         // Parse the current query string
         parse_str($_SERVER['QUERY_STRING'], $querystr);
 
-        if (!in_array(key($querystr), ['random']) and CHV\Settings::get('homepage_style') == 'route_explore') {
-            $handler->mapRoute('explore');
-            include G_APP_PATH_ROUTES . 'route.explore.php';
+        if (!in_array(key($querystr), ['random']) and G\starts_with('route_', CHV\Settings::get('homepage_style'))) {
+            $route = str_replace_first('route_', '', CHV\Settings::get('homepage_style'));
+            $handler->mapRoute($route);
+            include G_APP_PATH_ROUTES . 'route.'.$route.'.php';
 
             return $route($handler);
         }

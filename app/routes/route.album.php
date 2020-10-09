@@ -27,7 +27,7 @@ $route = function ($handler) {
         // User status override redirect
         CHV\User::statusRedirect($logged_user['status']);
 
-        $id = CHV\getIdFromURL($handler->request[0]);
+        $id = CHV\getIdFromURLComponent($handler->request[0]);
 
         // Session stock viewed albums
         if (!$_SESSION['album_view_stock']) {
@@ -203,7 +203,7 @@ $route = function ($handler) {
 
         $handler::setCond('owner', $is_owner);
         $handler::setVars([
-            'pre_doctitle'        => G\safe_html($album['name'], ENT_NOQUOTES),
+            'pre_doctitle'        => strip_tags($album['name']),
             'album'                => $album,
             'album_safe_html'    => $safe_html_album,
             'tabs'                => $tabs,

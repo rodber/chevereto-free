@@ -16,14 +16,6 @@
 				<span class="btn-icon icon-cross4"></span>
 				<span class="label"><?php _se('Close'); ?></span>
 			</li>
-			<li class="fullscreen-hide" data-action="viewer-fullscreen">
-				<span class="btn-icon icon-expand2"></span>
-				<span class="label"><?php _se('Fullscreen'); ?></span>
-			</li>
-			<li class="fullscreen-show" data-action="viewer-normalscreen">
-				<span class="btn-icon icon-contract2"></span>
-				<span class="label"><?php _se('Exit fullscreen'); ?></span>
-			</li>
 		</ul>
 		<div class="viewer-foot hover-display hover-display--flex">
 			<div class="viewer-owner viewer-owner--user">
@@ -42,11 +34,11 @@
 					<?php
                         if (CHV\getSetting('enable_likes')) {
                             ?>
-					<div class="viewer-kb-key"><kbd>L</kbd><span><?php _se('Like'); ?></span></div>
+					<div class="viewer-kb-key" data-key="L"><kbd>L</kbd><span><?php _se('Like'); ?></span></div>
 					<?php
                         }
                     ?>
-					<div class="viewer-kb-key"><kbd>X</kbd><span><?php _se('Close'); ?></span></div>
+					<div class="viewer-kb-key" data-key="X"><kbd>X</kbd><span><?php _se('Close'); ?></span></div>
 				</div>
 			</div>
 		</div>

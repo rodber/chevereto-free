@@ -76,11 +76,11 @@
                 } ?></span><?php
                 if (is_owner() or is_admin() or (is_content_manager() && get_user()['is_content_manager'] == false)) {
                     ?>
-				<a class="edit-link" href="<?php echo G\get_base_url(is_owner() ? 'settings/profile' : 'dashboard/user/' . get_user()['id']); ?>"><span class="icon-edit"></span><span><?php _se('Edit profile'); ?></span></a>
+				<a class="link link--edit" href="<?php echo G\get_base_url(is_owner() ? 'settings/profile' : 'dashboard/user/' . get_user()['id']); ?>"><span class="icon icon-edit"></span><span><?php _se('Edit'); ?></span></a>
 			<?php
                     if (!is_owner() and is_content_manager()) {
                         ?>
-				<a class="delete-link margin-left-5" data-confirm="<?php _se("Do you really want to delete this user? This can't be undone."); ?>" data-submit-fn="CHV.fn.submit_resource_delete" data-ajax-deferred="CHV.fn.complete_resource_delete" data-ajax-url="<?php echo G\get_base_url("json"); ?>"><?php _se('Delete user'); ?></a>
+				<a class="link link--delete margin-left-5" data-confirm="<?php _se("Do you really want to delete this user? This can't be undone."); ?>" data-submit-fn="CHV.fn.submit_resource_delete" data-ajax-deferred="CHV.fn.complete_resource_delete" data-ajax-url="<?php echo G\get_base_url("json"); ?>"><span class="icon icon-remove"></span><span><?php _se('Delete'); ?></span></a>
 			<?php
                     } ?>
 			<?php

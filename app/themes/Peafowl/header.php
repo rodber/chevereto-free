@@ -120,6 +120,13 @@ if (is_maintenance() || is_show_consent_screen() || in_array($templateUsed, ['re
                             </li>
                         <?php
                                 } ?>
+                        <?php if (is_content_manager()) { ?>
+                        <li id="top-bar-moderate" data-nav="moderate" class="top-btn-el<?php if (in_array(G\get_route_name(), ['moderate'])) {
+                                    ?> current<?php
+                                } ?>"">
+                            <a href="<?php echo G\get_base_url('moderate'); ?>"><span class="top-btn-text"><span class="icon icon-download2"></span><span class="btn-text phone-hide phablet-hide"><?php _se('Moderate'); ?></span></span></a>
+                        </li>
+                        <?php } ?>
 
                         <?php if (is_search_enabled()) {
                                     ?>
@@ -280,7 +287,7 @@ if (is_maintenance() || is_show_consent_screen() || in_array($templateUsed, ['re
                                         <li><a href="<?php echo G\get_base_url(sprintf('logout/?auth_token=%s', get_auth_token())); ?>"><?php _se('Sign out'); ?></a></li>
                                         <?php if (is_admin()) { ?>
                                         <div class="or-separator margin-0" style="height: 1px;"></div>
-                                        <li><a data-action="upgrade">⭐ Upgrade</a></li>
+                                        <li><a data-action="upgrade">🚀 Upgrade</a></li>
                                         <?php } ?>
                                     </ul>
                                 </div>

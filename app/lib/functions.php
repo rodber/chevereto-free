@@ -22,9 +22,9 @@ if (!defined('access') or !access) {
     die('This file cannot be directly accessed.');
 }
 
-function getIdFromURL($url)
+function getIdFromURLComponent($component)
 {
-    $explode = explode('.', $url);
+    $explode = explode('.', $component);
     $encodedId = $explode[1] ?: $explode[0];
 
     return decodeID($encodedId);

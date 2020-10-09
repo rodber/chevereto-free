@@ -47,14 +47,17 @@ foreach ($tabs as $tab) {
 					<?php
                         } ?>
 					<?php
-                        if ((array_key_exists('tools_available', $tab) ? in_array('flag', $tab['tools_available']) : true)) {
+                        if (is_allowed_nsfw_flagging() && (array_key_exists('tools_available', $tab) ? (in_array('flag', $tab['tools_available'])) : true)) {
                             ?>
 					<li><a data-action="flag-safe" class="hidden"><?php _se('Flag as safe'); ?></a></li>
 					<li><a data-action="flag-unsafe" class="hidden"><?php _se('Flag as unsafe'); ?></a></li>
 					<?php
-                        } ?>
+                        }
+                            if (G\Handler::getRouteName() == 'moderate') { ?>
+                    <li><a data-action="approve"><?php _se('Approve'); ?></a></li>
                     <?php
-                        } ?>
+                            }
+                        } // images?>
 					<?php
                         if (is_allowed_to_delete_content() && (array_key_exists('tools_available', $tab) ? in_array('delete', $tab['tools_available']) : true)) {
                             ?>

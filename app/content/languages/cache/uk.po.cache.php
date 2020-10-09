@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2018-06-01 21:51+0000',
-  'PO-Revision-Date' => '2018-06-01 21:51+0000',
+  'POT-Creation-Date' => '2020-09-02 17:16+0000',
+  'PO-Revision-Date' => '2020-09-02 17:16+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'uk',
@@ -52,6 +52,42 @@ $translation_table = [
 	"Personal" => [
 		0 => "Особистий",
 	],
+	"Installed version is v%s" => [
+		0 => "Встановлена версія v%s",
+	],
+	"Can't connect to %s" => [
+		0 => "Неможливо приєднатись до %s",
+	],
+	"Last available release is v%s" => [
+		0 => "Останній доступний реліз v%s",
+	],
+	"Update needed, proceeding to download" => [
+		0 => "Потрібне оновлення, почати завантаження",
+	],
+	"No update needed" => [
+		0 => "Оновлення не потрібне",
+	],
+	"System files already up to date" => [
+		0 => "Системні файли вже оновлені",
+	],
+	"Starting v%s download" => [
+		0 => "Почати завантаження v%s",
+	],
+	"Downloaded v%s, proceeding to extraction" => [
+		0 => "Завантажено v%s, почати роспакування",
+	],
+	"Attempting to extract v%s" => [
+		0 => "Спроба розпакувати v%s",
+	],
+	"Extraction completed" => [
+		0 => "Розпакування завершено",
+	],
+	"Proceding to install the update" => [
+		0 => "Почати інсталяцію оновлення",
+	],
+	"Update failed" => [
+		0 => "Оновлення зірвано",
+	],
 	"Update in progress" => [
 		0 => "Оновлення в процесі",
 	],
@@ -78,6 +114,180 @@ $translation_table = [
 	],
 	"Can't update %s file - %e" => [
 		0 => "Неможливо оновити %s файл - %e",
+	],
+	"Check the errors in the form to continue." => [
+		0 => "Перед продовженням перевірте форму на наявність помилок",
+	],
+	"You must enter the album name." => [
+		0 => "Ви повинні ввести назву альбому.",
+	],
+	"Confirm" => [
+		0 => "Підтвердити",
+	],
+	"Select existing album" => [
+		0 => "Виберіть існуючий альбом",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "У процесі виконання сталася помилка. Будь ласка спробуйте пізніше.",
+	],
+	"Please select a valid image file type." => [
+		0 => "Будь ласка виберіть правильний формат зображення.",
+	],
+	"Please select a picture of at most %s size." => [
+		0 => "Будь ласка, виберіть зображення не більше %s розміром.",
+	],
+	"Profile image updated." => [
+		0 => "Зображення профілю оновлено.",
+	],
+	"Profile background image updated." => [
+		0 => "Фон профілю оновлений.",
+	],
+	"Profile background image deleted." => [
+		0 => "Фон профілю видалений.",
+	],
+	"Error deleting profile background image." => [
+		0 => "При видаленні фону профілю виникла помилка.",
+	],
+	"Passwords don't match" => [
+		0 => "Паролі не збігаються",
+	],
+	"Update available v%s" => [
+		0 => "Поновлення доступне v%s",
+	],
+	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
+		0 => "Є поновлення для вашої системи. Ви можете автоматично скачати і встановити його або піти до %s для того щоб скачати його вручну.",
+	],
+	"The release notes for this update are:" => [
+		0 => "Нотатки про випуск для цього оновлення:",
+	],
+	"Update now" => [
+		0 => "Оновити зараз",
+	],
+	"or" => [
+		0 => "або",
+	],
+	"cancel" => [
+		0 => "скасувати",
+	],
+	"loading" => [
+		0 => "Завантаження",
+	],
+	"Like" => [
+		0 => "Сподобалось",
+	],
+	"Edit" => [
+		0 => "Редагувати",
+	],
+	"Album" => [
+		0 => "Альбом",
+		1 => "Альбоми",
+		2 => "Альбомів",
+	],
+	"Delete" => [
+		0 => "Видалити",
+	],
+	"Close" => [
+		0 => "Закрити",
+	],
+	"Previous" => [
+		0 => "Попередня",
+	],
+	"Next" => [
+		0 => "Наступна",
+	],
+	"Clipboard image" => [
+		0 => "Зображення у буфері обміну",
+	],
+	"File too big." => [
+		0 => "Файл занадто великий.",
+	],
+	"Invalid or unsupported file format." => [
+		0 => "Невірний або підтримуваний формат файлу.",
+	],
+	"Some files couldn't be added" => [
+		0 => "Деякі файли не були додані.",
+	],
+	"image" => [
+		0 => "зображення",
+		1 => "зображень",
+		2 => "зображень",
+	],
+	"%s's Albums" => [
+		0 => "%s Альбомів",
+	],
+	"Image edited successfully." => [
+		0 => "Зображення успішно змінене.",
+	],
+	"private" => [
+		0 => "приховане",
+	],
+	"Album edited successfully." => [
+		0 => "Альбом успішно відредагований.",
+	],
+	"Invalid URL key." => [
+		0 => "Невірний URL ключ.",
+	],
+	"Category URL key already being used." => [
+		0 => "Такий URL ключ вже використовується.",
+	],
+	"Category successfully deleted." => [
+		0 => "Категорія вилучена.",
+	],
+	"Category %s added." => [
+		0 => "Категорія %s додана.",
+	],
+	"Invalid expiration date." => [
+		0 => "Неправильна дата закінчення терміну дії.",
+	],
+	"IP %s already banned." => [
+		0 => "IP адреса %s вже заблокована",
+	],
+	"IP %s banned." => [
+		0 => "IP %s вже заблокована.",
+	],
+	"IP ban successfully deleted." => [
+		0 => "Блокування IP адреси успішно видалено.",
+	],
+	"Please fill all the required fields." => [
+		0 => "Будь ласка заповніть всі необхідні поля.",
+	],
+	"Invalid storage capacity value. Make sure to use a valid format." => [
+		0 => "Невірне значення доступного дискового простору. Переконайтеся, що ви використовуєте допустимий формат.",
+	],
+	"Storage capacity can't be lower than its current usage (%s)." => [
+		0 => "Ємність не може бути нижчою, ніж його поточне використання (%s).",
+	],
+	"Invalid URL." => [
+		0 => "Неправильна адреса.",
+	],
+	"Storage successfully edited." => [
+		0 => "Сховище змінено.",
+	],
+	"User added successfully." => [
+		0 => "Користувач доданий.",
+	],
+	"The content has been deleted." => [
+		0 => "Вміст видалено.",
+	],
+	"The content has been moved." => [
+		0 => "Вміст переміщено.",
+	],
+	"Select" => [
+		0 => "Виділити",
+	],
+	"Unselect" => [
+		0 => "Зняти виділення",
+	],
+	"The content has been edited." => [
+		0 => "Вміст змінено.",
+	],
+	"Spam detected" => [
+		0 => "Виявлено спам",
+	],
+	"album" => [
+		0 => "альбом",
+		1 => "альбомів",
+		2 => "альбомів",
 	],
 	"Untitled" => [
 		0 => "Безіменний",
@@ -159,11 +369,6 @@ $translation_table = [
 	"like" => [
 		0 => "Подобається",
 	],
-	"image" => [
-		0 => "зображення",
-		1 => "зображень",
-		2 => "зображень",
-	],
 	"Recent" => [
 		0 => "Недавні",
 	],
@@ -202,11 +407,6 @@ $translation_table = [
 		1 => "Зображень",
 		2 => "Зображень",
 	],
-	"Album" => [
-		0 => "Альбом",
-		1 => "Альбоми",
-		2 => "Альбомів",
-	],
 	"User" => [
 		0 => "Користувача",
 		1 => "Користувачів",
@@ -223,9 +423,6 @@ $translation_table = [
 	],
 	"Can't insert storage." => [
 		0 => "Неможливо додати сховище",
-	],
-	"Storage capacity can't be lower than its current usage (%s)." => [
-		0 => "Ємність не може бути нижчою, ніж його поточне використання (%s).",
 	],
 	"Can't update storage details." => [
 		0 => "Неможливо оновити дані сховища",
@@ -274,9 +471,6 @@ $translation_table = [
 	"There is an update available for your Chevereto based website." => [
 		0 => "Існує оновлення для вашого веб-сайту на основі Chevereto.",
 	],
-	"The release notes for this update are:" => [
-		0 => "Нотатки про випуск для цього оновлення:",
-	],
 	"admin dashboard" => [
 		0 => "панель адміністратора",
 	],
@@ -286,20 +480,8 @@ $translation_table = [
 	"view on %s" => [
 		0 => "перегляд на %s",
 	],
-	"You have been forbidden to use this website." => [
-		0 => "Вам заборонено користуватися цим сайтом.",
-	],
-	"Feel free to browse and discover all my shared images and albums." => [
-		0 => "Не соромтеся, щоб переглянути всі мої завантажені зображення та альбоми.",
-	],
-	"View all my images" => [
-		0 => "Переглянути всі мої зображення",
-	],
-	"Plugin" => [
-		0 => "Плаґін",
-	],
-	"That page doesn't exist" => [
-		0 => "Такої сторінки не існує",
+	"I understand" => [
+		0 => "Я розумію",
 	],
 	"Forgot password?" => [
 		0 => "Забули пароль?",
@@ -315,9 +497,6 @@ $translation_table = [
 	],
 	"Email changed" => [
 		0 => "Адреса електронної пошти змінена",
-	],
-	"The reCAPTCHA wasn't entered correctly" => [
-		0 => "Ви ввели неправильну капчу",
 	],
 	"Invalid Username/Email" => [
 		0 => "Неправильне ім'я користувача або email",
@@ -346,14 +525,8 @@ $translation_table = [
 	"Welcome to %s" => [
 		0 => "Ласкаво просимо на %s",
 	],
-	"Passwords don't match" => [
-		0 => "Паролі не збігаються",
-	],
 	"Email already being used" => [
 		0 => "Адреса вже використовується",
-	],
-	"Check the errors in the form to continue." => [
-		0 => "Перед продовженням перевірте форму на наявність помилок",
 	],
 	"Password required" => [
 		0 => "Пароль обов'язковий",
@@ -441,6 +614,9 @@ $translation_table = [
 	"Memory limit" => [
 		0 => "Обмеження пам'яті",
 	],
+	"Not your IP?" => [
+		0 => "Не ваш IP?",
+	],
 	"Links" => [
 		0 => "Посилання",
 	],
@@ -450,14 +626,8 @@ $translation_table = [
 	"Changelog" => [
 		0 => "Список змін",
 	],
-	"Request new features" => [
-		0 => "Запит нових функцій",
-	],
 	"Bug tracking" => [
 		0 => "Простежування помилок",
-	],
-	"Blog" => [
-		0 => "Блоґ",
 	],
 	"Website" => [
 		0 => "Сайт",
@@ -582,9 +752,6 @@ $translation_table = [
 	"Inside viewer top (image page)" => [
 		0 => "У заголовку переглядача (сторінка зображення)",
 	],
-	"Expected banner size 728x90" => [
-		0 => "Рекомендований розмір банера 728x90",
-	],
 	"Inside viewer foot (image page)" => [
 		0 => "Внизу переглядача (сторінка зображення)",
 	],
@@ -636,6 +803,9 @@ $translation_table = [
 	"Invalid timezone" => [
 		0 => "Неправильний часовий пояс",
 	],
+	"Invalid value: %s" => [
+		0 => "Некоректне значення: %s",
+	],
 	"Invalid upload storage mode" => [
 		0 => "Неправильний спосіб зберігання файлів.",
 	],
@@ -668,9 +838,6 @@ $translation_table = [
 	],
 	"Invalid theme main color" => [
 		0 => "Неправильний основний колір теми",
-	],
-	"Invalid theme top bar color" => [
-		0 => "Неправильний колір верхньої панелі теми",
 	],
 	"Invalid theme top bar button color" => [
 		0 => "Неправильний колір кнопки верхньої панелі теми",
@@ -761,6 +928,9 @@ $translation_table = [
 	],
 	"Invalid SMTP username" => [
 		0 => "Неправильне SMTP ім'я",
+	],
+	"Invalid key" => [
+		0 => "Неправильний ключ",
 	],
 	"This URL key is already being used by another page (ID %s)" => [
 		0 => "Це посилання вже використовується іншою сторінкою (ID %s)",
@@ -885,9 +1055,6 @@ $translation_table = [
 	"Sign in" => [
 		0 => "Вхід",
 	],
-	"Logged out" => [
-		0 => "Вийти",
-	],
 	"Upload images" => [
 		0 => "Завантажити зображення",
 	],
@@ -951,9 +1118,6 @@ $translation_table = [
 	"%s's Images" => [
 		0 => "%s Зображень",
 	],
-	"%s's Albums" => [
-		0 => "%s Альбомів",
-	],
 	"Results for" => [
 		0 => "Результати для",
 	],
@@ -972,9 +1136,6 @@ $translation_table = [
 	"%n (%u) on %w" => [
 		0 => "%n (%u) в %w",
 	],
-	"Close" => [
-		0 => "Закрити",
-	],
 	"Advanced search" => [
 		0 => "Розширений пошук",
 	],
@@ -984,35 +1145,8 @@ $translation_table = [
 	"Notices (%s)" => [
 		0 => "Повідомлення (%s)",
 	],
-	"Sign in with another account" => [
-		0 => "Увійти через",
-	],
-	"or" => [
-		0 => "або",
-	],
-	"Username or Email address" => [
-		0 => "Ім'я користувача або Email",
-	],
-	"Keep me logged in" => [
-		0 => "Запам'ятати мене",
-	],
-	"Don't have an account? <a href='%s'>Sign up</a> now." => [
-		0 => "У вас ще немає акаунта? <a href='%s'>Зареєструйтесь</a> зараз.",
-	],
-	"Sign up with another account" => [
-		0 => "Зареєструватися через",
-	],
-	"Email address" => [
-		0 => "Адреса електронної пошти",
-	],
-	"Username" => [
-		0 => "Ім'я користувача",
-	],
 	"Notifications" => [
 		0 => "Повідомлення",
-	],
-	"loading" => [
-		0 => "Завантаження",
 	],
 	"You don't have notifications" => [
 		0 => "У Вас немає повідомлень",
@@ -1104,9 +1238,6 @@ $translation_table = [
 	"Uploading" => [
 		0 => "Завантажується",
 	],
-	"cancel" => [
-		0 => "скасувати",
-	],
 	"cancel remaining" => [
 		0 => "скасувати решту",
 	],
@@ -1119,17 +1250,20 @@ $translation_table = [
 	"Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information." => [
 		0 => "Перевірте <a data-modal=\"simple\" data-target=\"failed-upload-result\">звіт про помилки</a> для отримання більш докладної інформації.",
 	],
+	"reset" => [
+		0 => "скинути",
+	],
 	"close" => [
 		0 => "закрити",
 	],
-	"Edit" => [
-		0 => "Редагувати",
+	"copy" => [
+		0 => "копіювати",
+	],
+	"insert" => [
+		0 => "вставити",
 	],
 	"Remove" => [
 		0 => "Видалити",
-	],
-	"Edit image" => [
-		0 => "Редагувати зображення",
 	],
 	"Title" => [
 		0 => "Заголовок",
@@ -1173,8 +1307,8 @@ $translation_table = [
 	"Create album" => [
 		0 => "створити альбом",
 	],
-	"The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
-		0 => "Завантажений вміст буде поміщено в новий альбом. Ви також можете перемістити вміст в <a class=\"modal-switch\" data-switch=\"move-existing-album\">існуючий альбом</a>.",
+	"existing album" => [
+		0 => "існуючий альбом",
 	],
 	"Move to album" => [
 		0 => "Перемістити до альбому",
@@ -1184,11 +1318,6 @@ $translation_table = [
 	],
 	"Error report" => [
 		0 => "Звіт про помилки",
-	],
-	"album" => [
-		0 => "альбом",
-		1 => "альбомів",
-		2 => "альбомів",
 	],
 	"Viewer links" => [
 		0 => "Посилання на перегляд",
@@ -1271,6 +1400,9 @@ $translation_table = [
 	"Brief description of this album" => [
 		0 => "Короткий опис цього альбому",
 	],
+	"Album privacy" => [
+		0 => "Видимість альбому",
+	],
 	"Who can view this content" => [
 		0 => "Хто може переглядати цей контент",
 	],
@@ -1279,6 +1411,9 @@ $translation_table = [
 	],
 	"Private (anyone with the link)" => [
 		0 => "Приховане (тільки за посиланням)",
+	],
+	"Private (password protected)" => [
+		0 => "Приватний (виявлено пароль)",
 	],
 	"Name" => [
 		0 => "Ім'я",
@@ -1300,6 +1435,9 @@ $translation_table = [
 	],
 	"Untitled image" => [
 		0 => "Безіменне",
+	],
+	"Path" => [
+		0 => "Шлях",
 	],
 	"Expiration date" => [
 		0 => "Дата закінчення",
@@ -1334,6 +1472,9 @@ $translation_table = [
 	"Region" => [
 		0 => "Регіон",
 	],
+	"Storage region" => [
+		0 => "Регіон сховища",
+	],
 	"Storage bucket" => [
 		0 => "Корзина сховища",
 	],
@@ -1349,20 +1490,14 @@ $translation_table = [
 	"Storage secret" => [
 		0 => "Секретний ключ сховища",
 	],
-	"Client email" => [
-		0 => "Клієнт електронної пошти",
-	],
-	"Google Cloud client email" => [
-		0 => "Google Cloud клієнт електронної пошти",
-	],
-	"You will need a <a %s>service account</a> for this." => [
-		0 => "Вам потрібно <a %s>обліковий запис служби</a> для цього",
-	],
 	"Private key" => [
 		0 => "Приватний ключ",
 	],
 	"Google Cloud JSON key" => [
 		0 => "Google Cloud JSON ключ",
+	],
+	"You will need a <a %s>service account</a> for this." => [
+		0 => "Вам потрібно <a %s>обліковий запис служби</a> для цього",
 	],
 	"Identity URL" => [
 		0 => "Ідентичне посилання",
@@ -1373,8 +1508,8 @@ $translation_table = [
 	"API endpoint for OpenStack identity" => [
 		0 => "Кінцева точка API для ідентифікації в OpenStack",
 	],
-	"Storage region" => [
-		0 => "Регіон сховища",
+	"Username" => [
+		0 => "Ім'я користувача",
 	],
 	"Container" => [
 		0 => "Контейнер",
@@ -1397,17 +1532,8 @@ $translation_table = [
 	"Hostname or IP of the storage server" => [
 		0 => "Адреса або IP сервера",
 	],
-	"Path" => [
-		0 => "Шлях",
-	],
 	"Server path" => [
 		0 => "Шлях",
-	],
-	"Server path where the files will be stored" => [
-		0 => "Шлях до місця зберігання зображень на віддаленому сервері",
-	],
-	"Server username" => [
-		0 => "Ім'я користувача",
 	],
 	"Server password" => [
 		0 => "Пароль",
@@ -1454,20 +1580,11 @@ $translation_table = [
 	"Flag as safe" => [
 		0 => "Помітити як безпечне",
 	],
-	"Delete" => [
-		0 => "Видалити",
-	],
-	"To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now." => [
-		0 => "Ви повинні увійти, щоб використовувати всі можливості цього сайту. Якщо у вас ще немає облікового запису, ви можете <a href=\"%s\">зареєструватися</a> просто зараз.",
+	"Sign in with another account" => [
+		0 => "Увійти через",
 	],
 	"There's nothing to show here." => [
 		0 => "Немає елементів для відображення.",
-	],
-	"Edit image details" => [
-		0 => "Редагувати зображення",
-	],
-	"Edit album details" => [
-		0 => "Редагувати альбом",
 	],
 	"All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
 		0 => "Всі зображення будуть поміщені в цей новий альбом. Ви також можете перемістити зображення в <a class=\"modal-switch\" data-switch=\"move-existing-album\">існуючий альбом</a>.",
@@ -1511,8 +1628,8 @@ $translation_table = [
 	"Guest" => [
 		0 => "Гість",
 	],
-	"Like" => [
-		0 => "Сподобалось",
+	"Private album" => [
+		0 => "Приватний альбом",
 	],
 	"From %s" => [
 		0 => "З альбому %s",
@@ -1520,11 +1637,11 @@ $translation_table = [
 	"by %u" => [
 		0 => "by %u",
 	],
-	"Select" => [
-		0 => "Виділити",
-	],
 	"Toggle unsafe flag" => [
 		0 => "Переключити в небезпечне",
+	],
+	"That page doesn't exist" => [
+		0 => "Такої сторінки не існує",
 	],
 	"The requested page was not found." => [
 		0 => "Сторінку не знайдено",
@@ -1535,17 +1652,11 @@ $translation_table = [
 	"The user has been deleted" => [
 		0 => "Користувач видалений",
 	],
-	"The content has been deleted." => [
-		0 => "Вміст видалено.",
-	],
 	"Your account is almost ready" => [
 		0 => "Ваш обліковий запис майже готовий",
 	],
 	"An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "Інструкції з активації вашого аккаунта були відправлені на %s. Посилання для активації дійсне протягом 48 годин. Якщо ви не отримали повідомлення перевірте папку Спам.",
-	],
-	"Go to homepage" => [
-		0 => "Головна",
 	],
 	"Resend activation" => [
 		0 => "Повторити відправку посилання для активації",
@@ -1562,26 +1673,20 @@ $translation_table = [
 	"Your email address" => [
 		0 => "Ваша адреса електронної пошти",
 	],
-	"Add email" => [
-		0 => "Додати адресу електронної пошти",
+	"Submit" => [
+		0 => "Надіслати",
 	],
 	"An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "Інструкції по скиданню паролю були надіслані на вашу адресу. Якщо ви їх не отримали, перевірте папку Спам.",
 	],
-	"Resend instructions" => [
-		0 => "Повторити відправку інструкцій",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "У процесі виконання сталася помилка. Будь ласка спробуйте пізніше.",
-	],
 	"A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters." => [
 		0 => "Вам вже було надіслано повідомлення з інструкціями щодо скидання пароля. Якщо ви не отримали повідомлення, перевірте папку Спам.",
 	],
-	"Enter your username or the email address that you used to create your account." => [
-		0 => "Введіть ім'я користувача та адресу електронної пошти, використані при реєстрації.",
+	"Resend instructions" => [
+		0 => "Повторити відправку інструкцій",
 	],
-	"Submit" => [
-		0 => "Надіслати",
+	"Username or Email address" => [
+		0 => "Ім'я користувача або Email",
 	],
 	"Your password has been changed. You can now try logging in using your new password." => [
 		0 => "Пароль успішно змінений. Ви можете увійти використовуючи ваш новий пароль.",
@@ -1589,20 +1694,11 @@ $translation_table = [
 	"Login now" => [
 		0 => "Увійти зараз",
 	],
-	"Enter the new password that you want to use." => [
-		0 => "Введіть новий пароль",
-	],
-	"New Password" => [
-		0 => "Новий пароль",
-	],
-	"%d characters min" => [
-		0 => "мін. %d символів",
-	],
 	"Enter your new password" => [
 		0 => "Введіть ваш новий пароль",
 	],
-	"Confirm password" => [
-		0 => "Підтвердіть пароль",
+	"%d characters min" => [
+		0 => "мін. %d символів",
 	],
 	"Re-enter your new password" => [
 		0 => "Підтвердіть новий пароль",
@@ -1610,17 +1706,11 @@ $translation_table = [
 	"An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters." => [
 		0 => "Інструкції по активації облікового запису були відправлені на %s . Якщо ви не отримали повідомлення, перевірте папку Спам.",
 	],
-	"Enter the username or email address that you used to create your account to continue." => [
-		0 => "Для продовження введіть ім'я користувача або електронну адресу пошти яку ви використовували для створення вашого аккаунту.",
-	],
 	"This content is private" => [
 		0 => "Цей контент приватний",
 	],
 	"Do you really want to delete this album and all of its images? This can't be undone." => [
 		0 => "Ви дійсно хочете видалити цей альбом з усіма зображеннями? Ця дія є незворотньою.",
-	],
-	"Delete album" => [
-		0 => "Видалити альбом",
 	],
 	"You like this" => [
 		0 => "Вам подобається це",
@@ -1628,8 +1718,41 @@ $translation_table = [
 	"Album link" => [
 		0 => "Посилання на альбом",
 	],
+	"I Agree" => [
+		0 => "Я погоджуюся",
+	],
 	"Disk used" => [
 		0 => "Використано місця на диску",
+	],
+	"Working" => [
+		0 => "Працює",
+	],
+	"Paused" => [
+		0 => "Призупинено",
+	],
+	"Canceled" => [
+		0 => "Скасовано",
+	],
+	"Completed" => [
+		0 => "Завершено",
+	],
+	"Actions" => [
+		0 => "Дії",
+	],
+	"Reset" => [
+		0 => "Скинути",
+	],
+	"Resume" => [
+		0 => "Відновити",
+	],
+	"Errors" => [
+		0 => "Помилки",
+	],
+	"Status" => [
+		0 => "Статус",
+	],
+	"Cancel" => [
+		0 => "Скасувати",
 	],
 	"Add user" => [
 		0 => "Додати користувача",
@@ -1639,6 +1762,9 @@ $translation_table = [
 	],
 	"Administrator" => [
 		0 => "Адміністратор",
+	],
+	"Email address" => [
+		0 => "Адреса електронної пошти",
 	],
 	"Add category" => [
 		0 => "Додати категорію",
@@ -1666,6 +1792,12 @@ $translation_table = [
 	],
 	"Select region" => [
 		0 => "Оберіть регіон",
+	],
+	"guests" => [
+		0 => "гості",
+	],
+	"Likes" => [
+		0 => "Вподобання",
 	],
 	"Personal mode target user" => [
 		0 => "Особистий режим цільового користувача",
@@ -2150,18 +2282,6 @@ $translation_table = [
 	"Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>." => [
 		0 => "Використовуйте це, щоб встановити основну колірну тему. Значення має бути в <a href=\"%s\" target=\"_blank\">Hex форматі</a>.",
 	],
-	"Top bar color" => [
-		0 => "Колір верхньої панелі",
-	],
-	"Black" => [
-		0 => "Чорний",
-	],
-	"White" => [
-		0 => "Білий",
-	],
-	"If you set this to \"white\" the top bar and all the black tones will be changed to white tones." => [
-		0 => "Якщо ви встановите колір верхньої панелі на \"білий\" тоді всі темні тони будуть замінені на білі тони.",
-	],
 	"Top bar button color" => [
 		0 => "Колір кнопки верхньої панелі",
 	],
@@ -2179,6 +2299,12 @@ $translation_table = [
 	],
 	"Grey" => [
 		0 => "Сірий",
+	],
+	"Black" => [
+		0 => "Чорний",
+	],
+	"White" => [
+		0 => "Білий",
 	],
 	"Color for the top bar buttons like the \"Create account\" button." => [
 		0 => "Колір кнопки \"Створити обліковий запис\" у верхній панелі кнопок .",
@@ -2272,9 +2398,6 @@ $translation_table = [
 	],
 	"Split landing + images" => [
 		0 => "Стартова сторінка + зображення",
-	],
-	"Route explore" => [
-		0 => "Переадресація в Огляд",
 	],
 	"Select the homepage style. To customize it further edit app/themes/%s/views/index.php" => [
 		0 => "Виберіть стиль головної сторінки. Щоб налаштувати його відредагуйте app/themes/%s/views/index.php",
@@ -2462,9 +2585,6 @@ $translation_table = [
 	"Send test email" => [
 		0 => "Надіслати тестове повідомлення",
 	],
-	"test@somedomain.com" => [
-		0 => "test@somedomain.com",
-	],
 	"Use this to test how your emails are being delivered. We recommend you to use %s." => [
 		0 => "Використовуйте це тестове повідомлення для перевірки доставки пошти, Ми рекомендуємо використовувати %s.",
 	],
@@ -2585,20 +2705,23 @@ $translation_table = [
 	"Start uploading" => [
 		0 => "Почати завантаження",
 	],
-	"Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings." => [
-		0 => "Заповніть цей розділ, завантажуючи зображення від імені %s.<br>Ви можете поміняти цього користувача в панелі управління.",
-	],
 	"Sign up to unlock all the features" => [
 		0 => "Зареєструватися, щоб отримати більше можливостей.",
 	],
 	"Manage your content, create private albums, customize your profile and more." => [
 		0 => "Керуйте аккаунтом, створюйте альбоми, змінюйте свій профіль і багато іншого.",
 	],
-	"Enter your password" => [
-		0 => "Введите ваш пароль",
+	"Don't have an account? <a href='%s'>Sign up</a> now." => [
+		0 => "У вас ще немає акаунта? <a href='%s'>Зареєструйтесь</a> зараз.",
+	],
+	"Logged out" => [
+		0 => "Вийти",
 	],
 	"You have been logged off %s. Hope to see you soon." => [
 		0 => "Успішний вихід з системи. До нових зустрічей на %s.",
+	],
+	"Go to homepage" => [
+		0 => "Головна",
 	],
 	"Website under maintenance" => [
 		0 => "Сайт на обслуговуванні",
@@ -2623,9 +2746,6 @@ $translation_table = [
 	],
 	"Registration IP" => [
 		0 => "IP при реєстрації",
-	],
-	"Status" => [
-		0 => "Статус",
 	],
 	"Valid" => [
 		0 => "Підтверджений",
@@ -2687,6 +2807,12 @@ $translation_table = [
 	"This user doesn't have a password. Add one using this form." => [
 		0 => "У цього користувача не встановлений пароль. Додайте його через дану форму.",
 	],
+	"Enter your password" => [
+		0 => "Введите ваш пароль",
+	],
+	"Confirm password" => [
+		0 => "Підтвердіть пароль",
+	],
 	"Re-enter your password" => [
 		0 => "Повторіть пароль",
 	],
@@ -2711,9 +2837,6 @@ $translation_table = [
 	"User has no connections." => [
 		0 => "У користувача немає зв'язків з іншими акаунтами.",
 	],
-	"Link your account to external services to be able to login and share content." => [
-		0 => "Зв'яжіть ваш аккаунт з соціальними мережами і сторонніми сервісами, щоб мати можливість входити через них і ділиться зображеннями.",
-	],
 	"Do you really want to disconnect %s from this account?" => [
 		0 => "Ви дійсно хочете відв'язати %s від цього аккаунта?",
 	],
@@ -2735,14 +2858,17 @@ $translation_table = [
 	"Connect %s" => [
 		0 => "Пов'язати %s",
 	],
+	"Feel free to browse and discover all my shared images and albums." => [
+		0 => "Не соромтеся, щоб переглянути всі мої завантажені зображення та альбоми.",
+	],
 	"Button" => [
 		0 => "Кнопка",
 	],
+	"View all my images" => [
+		0 => "Переглянути всі мої зображення",
+	],
 	"resend account activation" => [
 		0 => "Повторити відправку посилання для активації",
-	],
-	"If you have already signed up maybe you need to request to %s" => [
-		0 => "Якщо ви вже зареєструвалися, можливо, вам потрібно запросити %s",
 	],
 	"Upload profile background" => [
 		0 => "Завантажити фон профілю",
@@ -2756,14 +2882,17 @@ $translation_table = [
 	"Delete background" => [
 		0 => "Видалити фон",
 	],
-	"Edit profile" => [
-		0 => "Редагувати профіль",
-	],
 	"Follower" => [
 		0 => "Послідовник",
 	],
 	"Follow" => [
 		0 => "Слідкувати",
+	],
+	"You have been forbidden to use this website." => [
+		0 => "Вам заборонено користуватися цим сайтом.",
+	],
+	"Plugin" => [
+		0 => "Плаґін",
 	],
 	"General questions/comments" => [
 		0 => "Загальні питання / коментарі",
@@ -2777,158 +2906,11 @@ $translation_table = [
 	"Invalid subject" => [
 		0 => "Неправильна тема",
 	],
-	"Invalid reCAPTCHA" => [
-		0 => "Неправильна reCAPTCHA",
-	],
 	"Mail error" => [
 		0 => "Помилка електронної пошти",
 	],
 	"Message sent. We will get in contact soon." => [
 		0 => "Повідомлення надіслано. Ми зв'яжемося найближчим часом.",
-	],
-	"Installed version is v%s" => [
-		0 => "Встановлена версія v%s",
-	],
-	"Can't connect to %s" => [
-		0 => "Неможливо приєднатись до %s",
-	],
-	"Last available release is v%s" => [
-		0 => "Останній доступний реліз v%s",
-	],
-	"Update needed, proceeding to download" => [
-		0 => "Потрібне оновлення, почати завантаження",
-	],
-	"No update needed" => [
-		0 => "Оновлення не потрібне",
-	],
-	"System files already up to date" => [
-		0 => "Системні файли вже оновлені",
-	],
-	"Starting v%s download" => [
-		0 => "Почати завантаження v%s",
-	],
-	"Downloaded v%s, proceeding to extraction" => [
-		0 => "Завантажено v%s, почати роспакування",
-	],
-	"Attempting to extract v%s" => [
-		0 => "Спроба розпакувати v%s",
-	],
-	"Extraction completed" => [
-		0 => "Розпакування завершено",
-	],
-	"Proceding to install the update" => [
-		0 => "Почати інсталяцію оновлення",
-	],
-	"Update failed" => [
-		0 => "Оновлення зірвано",
-	],
-	"Please provide a valid email address" => [
-		0 => "Будь ласка надайте правильну електронну адресу",
-	],
-	"You must enter the album name." => [
-		0 => "Ви повинні ввести назву альбому.",
-	],
-	"Confirm" => [
-		0 => "Підтвердити",
-	],
-	"Select existing album" => [
-		0 => "Виберіть існуючий альбом",
-	],
-	"Please select a valid image file type." => [
-		0 => "Будь ласка виберіть правильний формат зображення.",
-	],
-	"Please select a picture of at most %s size." => [
-		0 => "Будь ласка, виберіть зображення не більше %s розміром.",
-	],
-	"Profile image updated." => [
-		0 => "Зображення профілю оновлено.",
-	],
-	"Profile background image updated." => [
-		0 => "Фон профілю оновлений.",
-	],
-	"Profile background image deleted." => [
-		0 => "Фон профілю видалений.",
-	],
-	"Error deleting profile background image." => [
-		0 => "При видаленні фону профілю виникла помилка.",
-	],
-	"Update available v%s" => [
-		0 => "Поновлення доступне v%s",
-	],
-	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
-		0 => "Є поновлення для вашої системи. Ви можете автоматично скачати і встановити його або піти до %s для того щоб скачати його вручну.",
-	],
-	"Update now" => [
-		0 => "Оновити зараз",
-	],
-	"Clipboard image" => [
-		0 => "Зображення у буфері обміну",
-	],
-	"File too big." => [
-		0 => "Файл занадто великий.",
-	],
-	"Invalid or unsupported file format." => [
-		0 => "Невірний або підтримуваний формат файлу.",
-	],
-	"Some files couldn't be added" => [
-		0 => "Деякі файли не були додані.",
-	],
-	"Image edited successfully." => [
-		0 => "Зображення успішно змінене.",
-	],
-	"private" => [
-		0 => "приховане",
-	],
-	"Album edited successfully." => [
-		0 => "Альбом успішно відредагований.",
-	],
-	"Invalid URL key." => [
-		0 => "Невірний URL ключ.",
-	],
-	"Category URL key already being used." => [
-		0 => "Такий URL ключ вже використовується.",
-	],
-	"Category successfully deleted." => [
-		0 => "Категорія вилучена.",
-	],
-	"Category %s added." => [
-		0 => "Категорія %s додана.",
-	],
-	"Invalid expiration date." => [
-		0 => "Неправильна дата закінчення терміну дії.",
-	],
-	"IP %s already banned." => [
-		0 => "IP адреса %s вже заблокована",
-	],
-	"IP %s banned." => [
-		0 => "IP %s вже заблокована.",
-	],
-	"IP ban successfully deleted." => [
-		0 => "Блокування IP адреси успішно видалено.",
-	],
-	"Please fill all the required fields." => [
-		0 => "Будь ласка заповніть всі необхідні поля.",
-	],
-	"Invalid storage capacity value. Make sure to use a valid format." => [
-		0 => "Невірне значення доступного дискового простору. Переконайтеся, що ви використовуєте допустимий формат.",
-	],
-	"Invalid URL." => [
-		0 => "Неправильна адреса.",
-	],
-	"Storage successfully edited." => [
-		0 => "Сховище змінено.",
-	],
-	"User added successfully." => [
-		0 => "Користувач доданий.",
-	],
-	"The content has been moved." => [
-		0 => "Вміст переміщено.",
-	],
-	"Unselect" => [
-		0 => "Зняти виділення",
-	],
-	"The content has been edited." => [
-		0 => "Вміст змінено.",
 	],
 	"All the changes that you have made will be lost if you continue." => [
 		0 => "Якщо ви продовжите, всі зроблені вами зміни будуть втрачені.",

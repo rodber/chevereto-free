@@ -1,1 +1,1 @@
-Check the theme overrides documentation here: https://chevereto.com/docs/theme
+Check the theme overrides documentation here: https://v3-docs.chevereto.com/customization/theme.html#theme-overrides

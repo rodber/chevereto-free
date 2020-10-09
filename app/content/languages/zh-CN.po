@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2020-04-16 12:57+0000\n"
-"PO-Revision-Date: 2020-04-16 12:57+0000\n"
+"POT-Creation-Date: 2020-09-25 18:53+0000\n"
+"PO-Revision-Date: 2020-09-25 18:53+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -203,6 +203,9 @@ msgstr "您必须输入相册名称."
 msgid "Confirm"
 msgstr "确认"
 
+msgid "The content has been approved."
+msgstr "内容已获批准。"
+
 #: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
 msgid "Select existing album"
 msgstr "选择现有的相册"
@@ -352,6 +355,9 @@ msgstr "编辑"
 msgid "Album"
 msgid_plural "Albums"
 msgstr[0] "相册"
+
+msgid "Approve"
+msgstr "批准"
 
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
 #: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
@@ -749,6 +755,16 @@ msgstr[0] "图片"
 msgid "User"
 msgid_plural "Users"
 msgstr[0] "用户"
+
+msgid "adult"
+msgstr "成人"
+
+msgid "teen"
+msgstr "青少年"
+
+#, php-format
+msgid "Content of type %s is forbidden"
+msgstr "类型为 %s 的内容被禁止"
 
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
@@ -1367,11 +1383,6 @@ msgstr "图像页面"
 msgid "Inside viewer top (image page)"
 msgstr "内部图像浏览器顶部（图像页）"
 
-#: ../../../app/routes/route.dashboard.php:413
-#: ../../../app/routes/route.dashboard.php:417
-msgid "Expected banner size 728x90"
-msgstr "默认的横幅大小为728x90"
-
 #: ../../../app/routes/route.dashboard.php:416
 msgid "Inside viewer foot (image page)"
 msgstr "内部图像浏览器底部（图像页）"
@@ -1489,10 +1500,6 @@ msgstr "无效的主题色调"
 #: ../../../app/routes/route.dashboard.php:627
 msgid "Invalid theme main color"
 msgstr "无效的主题主要颜色"
-
-#: ../../../app/routes/route.dashboard.php:632
-msgid "Invalid theme top bar color"
-msgstr "无效的主题顶部菜单栏颜色"
 
 #: ../../../app/routes/route.dashboard.php:637
 msgid "Invalid theme top bar button color"
@@ -1827,6 +1834,9 @@ msgstr "错误的用户名或密码"
 #: ../../../app/themes/Peafowl/views/login.php:52
 msgid "Sign in"
 msgstr "登录"
+
+msgid "Moderate"
+msgstr "Moderate"
 
 msgid "Upload images"
 msgstr "上传图片"
@@ -2212,6 +2222,12 @@ msgstr "重置"
 msgid "close"
 msgstr "关闭"
 
+msgid "Note"
+msgstr "通知"
+
+msgid "We must approve the uploaded content before being able to share."
+msgstr "我们必须对上传的内容进行审核，才能进行分享。"
+
 msgid "copy"
 msgstr "复制"
 
@@ -2222,10 +2238,6 @@ msgstr "插入"
 #: ../../../app/themes/Peafowl/views/dashboard.php:666
 msgid "Remove"
 msgstr "删除"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:154
-msgid "Edit image"
-msgstr "编辑图片"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
 #: ../../../app/themes/Peafowl/snippets/form_image.php:4
@@ -2491,7 +2503,7 @@ msgstr "相册密码"
 #: ../../../app/themes/Peafowl/views/settings.php:364
 #: ../../../content/pages/default/contact.php:87
 msgid "Name"
-msgstr "昵称"
+msgstr "名称"
 
 #: ../../../app/themes/Peafowl/snippets/form_category_edit.php:5
 msgid "Category name"
@@ -2519,6 +2531,12 @@ msgstr "简要描述这一类别"
 #: ../../../app/themes/Peafowl/snippets/form_image.php:5
 msgid "Untitled image"
 msgstr "无标题图像"
+
+msgid "Mark this if the image is not safe for work"
+msgstr "如果图像不安全(NSFW)，请在此标记。"
+
+msgid "Flag not safe"
+msgstr "标记不安全"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
 msgid "Path"
@@ -2805,18 +2823,6 @@ msgstr "首页"
 msgid "There's nothing to show here."
 msgstr "没有要显示的内容"
 
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
-#: ../../../app/themes/Peafowl/views/image.php:69
-#: ../../../app/themes/Peafowl/views/image.php:457
-msgid "Edit image details"
-msgstr "编辑图片"
-
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
-#: ../../../app/themes/Peafowl/views/album.php:22
-#: ../../../app/themes/Peafowl/views/album.php:118
-msgid "Edit album details"
-msgstr "编辑相册"
-
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
 msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
 msgstr "所有的图片将被移动到这个新创建的相册. 你也可以移动图片到 <a class=\"modal-switch\" data-switch=\"move-existing-album\">现有相册</a>."
@@ -2857,6 +2863,12 @@ msgstr "确认标记内容为不安全"
 msgid "Do you really want to flag this content as unsafe?"
 msgstr "你真的要标记这个内容为不安全?"
 
+msgid "Confirm approval"
+msgstr "确认批准"
+
+msgid "Do you really want to approve this content? This can't be undone."
+msgstr "你真的想删除所有选中的内容吗？这是无法挽回的。"
+
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:106
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:110
 msgid "Confirm deletion"
@@ -2865,6 +2877,9 @@ msgstr "确认删除"
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:107
 msgid "Do you really want to remove this content? This can't be undone."
 msgstr "你真的想删除此内容? 一旦删除将无法恢复."
+
+msgid "Do you really want to approve all the selected content? This can't be undone."
+msgstr "你真的想删除所有选中的内容吗？这是无法挽回的。"
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:111
 msgid "Do you really want to remove all the selected content? This can't be undone."
@@ -3039,10 +3054,6 @@ msgstr "此内容是私有的"
 msgid "Do you really want to delete this album and all of its images? This can't be undone."
 msgstr "你真的要删除这个相册和它的所有图像? 这将不能恢复."
 
-#: ../../../app/themes/Peafowl/views/album.php:25
-msgid "Delete album"
-msgstr "删除相册"
-
 #: ../../../app/themes/Peafowl/views/image.php:85
 msgid "You like this"
 msgstr "你喜欢它"
@@ -3075,13 +3086,13 @@ msgid "Learn more about %s at our %d."
 msgstr "在 %d 处了解 %s 的详情."
 
 msgid "The connecting IP is determined using the server variable %var%. If the detected IP doesn't match yours, it means that your web server is under a proxy and you need to tweak your server to set the real connecting IP."
-msgstr "使用服务器变量 %var% 获取真实IP。如果检测到的IP与您的不匹配，这意味着您的Web服务器在代理下，您需要调整您的服务器设置，以便获取真实IP。"
+msgstr "连接IP是通过服务器变量 %var% 来确定的。如果检测到的IP与你的不一致，说明你的Web服务器是在代理服务器下，你需要调整你的服务器来设置真正的连接IP。"
 
 msgid "For Nginx, you must use %nginx%. For Apache, %apache%."
-msgstr "对于nginx，您必须使用 %nginx% ；对于Apache，%apache% 。"
+msgstr "对于Nginx，你必须使用 %nginx% ；对于Apache，使用 %apache% 。"
 
 msgid "Make sure that you address this issue as the system relies on accurate IP detections to provide basic functionalities and to protect against spam, flooding, and brute force attacks."
-msgstr "请确保解决此问题，因为系统依赖准确的IP检测来提供基本功能，并能防止垃圾邮件、洪水和暴力攻击。"
+msgstr "请确保解决此问题，因为系统依靠准确的IP检测来提供基本功能，并能防止垃圾邮件、洪水攻击和暴力破解攻击。"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:40
 #: ../../../app/themes/Peafowl/views/dashboard.php:1732
@@ -3095,9 +3106,6 @@ msgid "Automatic importing"
 msgstr "自动导入"
 
 msgid "The system automatically parses any content by a continuous observation of the %path% path."
-msgstr "系统将自动检测 %path% 路径，自动解析并导入内容。"
-
-msgid "The system automatically parses any content by a continous observation of the %path% path."
 msgstr "系统将自动检测 %path% 路径，自动解析并导入内容。"
 
 msgid "Completed jobs will be automatically re-started after %n %m."
@@ -3152,15 +3160,8 @@ msgstr "您可以通过更改 %s% 的整数值来实现并行运行该命令。"
 msgid "All file-system permissions must be granted for the crontab user at %path%"
 msgstr "必须给crontab用户授予 %path% 下所有文件的可读写权限"
 
-msgid "Required crontab entry:"
-msgstr "必需的crontab指令："
-
 msgid "Add import job"
 msgstr "添加导入作业"
-
-#, php-format
-msgid "This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d."
-msgstr "此工具允许通过将要导入的内容指向系统路径，向网站批量添加内容。它支持使用基于文件夹的结构添加用户、相册和图像。您可以在我们的 %d 中了解更多关于文件夹结构、添加元数据，以及有关此工具的所有信息。"
 
 msgid "Process import"
 msgstr "进程导入"
@@ -3529,14 +3530,6 @@ msgstr "启用上传"
 msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
 msgstr "启用图片上传（如果你想允许图片上传请启用）. 此设置不会影响管理员."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:639
-msgid "Guest uploads"
-msgstr "访客（不需注册）上传"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:645
-msgid "Enable this if you want to allow non registered users to upload."
-msgstr "启用它则允许未注册的用户上传图片"
-
 msgid "Upload user interface"
 msgstr "上传用户界面"
 
@@ -3545,6 +3538,23 @@ msgstr "页面容器"
 
 msgid "route"
 msgstr "路由"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:639
+msgid "Guest uploads"
+msgstr "访客（不需注册）上传"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+msgid "Enable this if you want to allow non registered users to upload."
+msgstr "启用它则允许未注册的用户上传图片"
+
+msgid "Moderate uploads"
+msgstr "Moderate 上传"
+
+msgid "Guests"
+msgstr "访客"
+
+msgid "Enable this to moderate incoming uploads. Target content will require moderation for approval."
+msgstr "启用此功能可对传入的上传内容进行审核。目标内容将需要审核才能获得批准。"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1353
 msgid "Enable embed codes (uploader)"
@@ -3615,7 +3625,7 @@ msgid "Enable this if you want to allow each user to configure how image Exif da
 msgstr "启用它, 如果你允许每个用户设置是否删除图像的Exif数据."
 
 msgid "Maximum upload file size"
-msgstr "最大文件大小 (MB)"
+msgstr "最大上传文件大小 (MB)"
 
 msgid "Maximum size allowed by server is %s. This limit is capped by %u and %p (%f values)."
 msgstr "服务器最大允许上传%s.因为参数%u和%p(文件:%f)"
@@ -3961,29 +3971,36 @@ msgstr "每周的限额"
 msgid "Monthly limit"
 msgstr "每月的限额"
 
+#, php-format
+msgid "Lock %s editing"
+msgstr "锁定 %s 编辑"
+
+msgid "Enable this to prevent users from changing the NSFW flag. When enabled, only admin and managers will have this permission."
+msgstr "启用此功能可防止用户更改NSFW标志。启用后，只有管理员和管理有此权限。"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1070
 msgid "Show not safe content in listings"
-msgstr "显示在列表中没有安全内容"
+msgstr "在列表中显示不安全内容(NSFW)"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1076
 msgid "Enable this if you want to show not safe content in listings. This setting doesn't affect administrators and can be overridden by user own settings."
-msgstr "如果要在列表中显示不安全内容请启用此功能. 此设置不会影响管理员, 并且可以由用户自己的设置重写."
+msgstr "如果您想在列表中显示不安全的内容(NSFW)，请启用此功能。此设置不影响管理员，可由用户自己的设置覆盖。"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1079
 msgid "Blur NSFW content in listings"
-msgstr "模糊NSFW（标记为不安全）的内容显示在列表"
+msgstr "在列表中模糊显示NSFW内容"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1085
 msgid "Enable this if you want to apply a blur effect on the NSFW images in listings."
-msgstr "如果你想申请一个模糊效果的NSFW图像列表启用它."
+msgstr "如果您想对列表中的NSFW图片应用高斯模糊效果，请启用此功能。"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1088
 msgid "Show banners in not safe content"
-msgstr "显示横幅在不安全的内容"
+msgstr "在不安全的内容中显示横幅广告"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1094
 msgid "Enable this if you want to show banners in not safe content pages."
-msgstr "如果你想显示在不安全的内容页面的横幅请启用这个功能."
+msgstr "如果您想在不安全的内容页面中显示横幅广告，请启用此功能。"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1098
 msgid "Show not safe content in random mode"
@@ -4105,26 +4122,6 @@ msgstr "十六进制颜色值"
 msgid "Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>."
 msgstr "使用此设置的主要主题颜色. 值必须是 <a href=\"%s\" target=\"_blank\">十六进制</a> 格式."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1203
-msgid "Top bar color"
-msgstr "顶部菜单栏颜色"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1223
-#: ../../../app/themes/Peafowl/views/dashboard.php:1461
-msgid "Black"
-msgstr "黑"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1224
-#: ../../../app/themes/Peafowl/views/dashboard.php:1462
-msgid "White"
-msgstr "白"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1210
-msgid "If you set this to \"white\" the top bar and all the black tones will be changed to white tones."
-msgstr "如果您将此设置为\"白\"的顶部栏和所有黑色的色调将更改为白色的色调."
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1214
 msgid "Top bar button color"
 msgstr "顶部菜单栏按钮颜色"
@@ -4153,6 +4150,18 @@ msgstr "红"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1460
 msgid "Grey"
 msgstr "灰"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1223
+#: ../../../app/themes/Peafowl/views/dashboard.php:1461
+msgid "Black"
+msgstr "黑"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1224
+#: ../../../app/themes/Peafowl/views/dashboard.php:1462
+msgid "White"
+msgstr "白"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1230
 msgid "Color for the top bar buttons like the \"Create account\" button."
@@ -4259,11 +4268,11 @@ msgstr "启用此选项, 以内容嵌入代码 ."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1365
 msgid "Not safe content checkbox in uploader"
-msgstr "在查看上载不安全内容复选框"
+msgstr "在上传时显示\"标记不安全内容\"复选框"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1371
 msgid "Enable this if you want to show a checkbox to indicate not safe content upload."
-msgstr "如果你想显示一个复选框, 表示没有安全内容上传请启用这个功能."
+msgstr "如果您想在上传页面显示一个复选框来标记\"不安全的内容(NSFW)\"，请启用此功能。"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1377
 msgid "Custom CSS code"
@@ -4297,9 +4306,12 @@ msgstr "仅显示上传按钮"
 msgid "Split landing + images"
 msgstr "上传按钮 + 最新图片"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1396
-msgid "Route explore"
-msgstr "直接显示探索图库"
+#, php-format
+msgid "Route %s"
+msgstr "路径 %s"
+
+msgid "upload"
+msgstr "上传"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1401
 #, php-format
@@ -4810,6 +4822,28 @@ msgstr "评论社会化代码"
 msgid "Disqus, Facebook or anything you want. It will be used in image view."
 msgstr "DISQUS, Facebook或其他. 它将在图像视图中使用."
 
+#, php-format
+msgid "Automatically moderate the content using the %s service."
+msgstr "使用 %s 服务将会自动审核内容。"
+
+msgid "Automatic approve"
+msgstr "自动审核"
+
+msgid "Enable this to automatically approve content moderated by this service."
+msgstr "启用此功能可自动审核本服务所管理的内容。"
+
+msgid "Block content"
+msgstr "屏蔽内容"
+
+msgid "Adult"
+msgstr "成人"
+
+msgid "Teen and adult"
+msgstr "青少年和成人"
+
+msgid "Flag NSFW"
+msgstr "标记 NSFW"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:2002
 msgid "Analytics code"
 msgstr "Analytics（分析）代码"
@@ -4825,7 +4859,7 @@ msgstr "有关API的文档查看 <a %s>API文档</a>"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:2019
 msgid "API v1 key"
-msgstr "API v1 key"
+msgstr "API v1 密钥"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:2022
 #, php-format
@@ -4866,6 +4900,9 @@ msgstr "播放 GIF"
 
 msgid "Load full resolution"
 msgstr "加载原图"
+
+msgid "Do you really want to approve this image? The image will go public if you approve it."
+msgstr "你真的想删除所有选中的内容吗？这是无法挽回的。"
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -5290,10 +5327,6 @@ msgstr "该个人信息的背景图像将被删除. 这将不能恢复. 您确�
 #: ../../../app/themes/Peafowl/views/user.php:22
 msgid "Delete background"
 msgstr "删除背景图片"
-
-#: ../../../app/themes/Peafowl/views/user.php:61
-msgid "Edit profile"
-msgstr "编辑网站配置"
 
 #: ../../../app/themes/Peafowl/views/user.php:75
 msgid "Follower"

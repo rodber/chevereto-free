@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2020-04-16 20:33+0000',
-  'PO-Revision-Date' => '2020-04-16 20:33+0000',
+  'POT-Creation-Date' => '2020-09-25 18:53+0000',
+  'PO-Revision-Date' => '2020-09-25 18:53+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'es',
@@ -124,6 +124,9 @@ $translation_table = [
 	"Confirm" => [
 		0 => "Confirmar",
 	],
+	"The content has been approved." => [
+		0 => "El contenido ha sido aprobado.",
+	],
 	"Select existing album" => [
 		0 => "Seleccionar álbum existente",
 	],
@@ -190,6 +193,9 @@ $translation_table = [
 	"Album" => [
 		0 => "Álbum",
 		1 => "Álbumes",
+	],
+	"Approve" => [
+		0 => "Aprobar",
 	],
 	"Delete" => [
 		0 => "Eliminar",
@@ -427,6 +433,15 @@ $translation_table = [
 	"User" => [
 		0 => "Usuario",
 		1 => "Usuarios",
+	],
+	"adult" => [
+		0 => "adulto",
+	],
+	"teen" => [
+		0 => "adolescente",
+	],
+	"Content of type %s is forbidden" => [
+		0 => "El contenido de tipo %s está prohibido",
 	],
 	"Can't create %s destination dir" => [
 		0 => "No se puede crear el directorio %s de destino",
@@ -793,9 +808,6 @@ $translation_table = [
 	"Inside viewer top (image page)" => [
 		0 => "En el interior superior del visualizador (página de imagen)",
 	],
-	"Expected banner size 728x90" => [
-		0 => "Tamaño esperado del aviso es 728x90",
-	],
 	"Inside viewer foot (image page)" => [
 		0 => "En el interior inferior del visualizador (página de imagen)",
 	],
@@ -882,9 +894,6 @@ $translation_table = [
 	],
 	"Invalid theme main color" => [
 		0 => "Color principal de tema inválido",
-	],
-	"Invalid theme top bar color" => [
-		0 => "Color de barra superior de tema inválido",
 	],
 	"Invalid theme top bar button color" => [
 		0 => "Color de botón de barra superior de tema inválido",
@@ -1125,6 +1134,9 @@ $translation_table = [
 	],
 	"Sign in" => [
 		0 => "Entrar",
+	],
+	"Moderate" => [
+		0 => "Moderar",
 	],
 	"Upload images" => [
 		0 => "Subir imágenes",
@@ -1405,6 +1417,12 @@ $translation_table = [
 	"close" => [
 		0 => "cerrar",
 	],
+	"Note" => [
+		0 => "Nota",
+	],
+	"We must approve the uploaded content before being able to share." => [
+		0 => "Debemos aprobar el contenido subido antes de poder compartir.",
+	],
 	"copy" => [
 		0 => "copiar",
 	],
@@ -1413,9 +1431,6 @@ $translation_table = [
 	],
 	"Remove" => [
 		0 => "Eliminar",
-	],
-	"Edit image" => [
-		0 => "Editar imagen",
 	],
 	"Title" => [
 		0 => "Título",
@@ -1605,6 +1620,12 @@ $translation_table = [
 	],
 	"Untitled image" => [
 		0 => "Imagen sin título",
+	],
+	"Mark this if the image is not safe for work" => [
+		0 => "Marca esto si la imagen no es segura para trabajo",
+	],
+	"Flag not safe" => [
+		0 => "Marcar no segura",
 	],
 	"Path" => [
 		0 => "Ruta",
@@ -1813,12 +1834,6 @@ $translation_table = [
 	"There's nothing to show here." => [
 		0 => "No hay nada que mostrar aquí.",
 	],
-	"Edit image details" => [
-		0 => "Editar detalles de la imagen",
-	],
-	"Edit album details" => [
-		0 => "Editar detalles del álbum",
-	],
 	"All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
 		0 => "Todas las imágenes serán trasladadas a este nuevo álbum. También puedes trasladar las imágenes a un  <a class=\"modal-switch\" data-switch=\"move-existing-album\">álbum existente</a>.",
 	],
@@ -1849,11 +1864,20 @@ $translation_table = [
 	"Do you really want to flag this content as unsafe?" => [
 		0 => "¿Realmente quieres marcar este contenido como no seguro?",
 	],
+	"Confirm approval" => [
+		0 => "Confirmar aprobación",
+	],
+	"Do you really want to approve this content? This can't be undone." => [
+		0 => "¿Realmente quieres eliminar todo el contenido seleccionado? Esto no se podrá deshacer.",
+	],
 	"Confirm deletion" => [
 		0 => "Confirmar eliminación",
 	],
 	"Do you really want to remove this content? This can't be undone." => [
 		0 => "¿Realmente quieres eliminar este contenido? Esto no se podrá deshacer.",
+	],
+	"Do you really want to approve all the selected content? This can't be undone." => [
+		0 => "Do you really want to approve all the selected content? This can't be undone.",
 	],
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "¿Realmente quieres eliminar todo el contenido seleccionado? Esto no se podrá deshacer.",
@@ -1969,9 +1993,6 @@ $translation_table = [
 	"Do you really want to delete this album and all of its images? This can't be undone." => [
 		0 => "¿Realmente quieres eliminar este álbum y todas sus imágenes? Esto no se podrá deshacer.",
 	],
-	"Delete album" => [
-		0 => "Eliminar álbum",
-	],
 	"You like this" => [
 		0 => "Te gusta esto",
 	],
@@ -2018,9 +2039,6 @@ $translation_table = [
 		0 => "Importación automática",
 	],
 	"The system automatically parses any content by a continuous observation of the %path% path." => [
-		0 => "El sistema analiza automáticamente cualquier contenido mediante una observación continua de la ruta %path%",
-	],
-	"The system automatically parses any content by a continous observation of the %path% path." => [
 		0 => "El sistema analiza automáticamente cualquier contenido mediante una observación continua de la ruta %path%",
 	],
 	"Completed jobs will be automatically re-started after %n %m." => [
@@ -2074,14 +2092,8 @@ $translation_table = [
 	"All file-system permissions must be granted for the crontab user at %path%" => [
 		0 => "Todos los permisos del sistema de archivos deben estar concedidos para el usuario crontab en %path%",
 	],
-	"Required crontab entry:" => [
-		0 => "Entrada obligatoria de crontab:",
-	],
 	"Add import job" => [
 		0 => "Añadir trabajo de importación",
-	],
-	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d." => [
-		0 => "Esta herramienta permite agregar contenido de manera masiva a tu sitio web al indicar una ruta de sistema con el contenido que quieres importar. Soporta la adición de usuarios, álbumes e imágenes usando una estructura de carpetas. Puedes aprender más sobre la estructura de carpetas, adición de metadata y todo lo relacionado a esta herramienta en nuestra %d.",
 	],
 	"Process import" => [
 		0 => "Procesar importación",
@@ -2359,12 +2371,6 @@ $translation_table = [
 	"Enable this if you want to allow image uploads. This setting doesn't affect administrators." => [
 		0 => "Habilita esto si quieres permitir subidas de imágenes. Esta configuración no afecta a los administradores.",
 	],
-	"Guest uploads" => [
-		0 => "Subidas de invitados",
-	],
-	"Enable this if you want to allow non registered users to upload." => [
-		0 => "Habilita esto si quieres permitir permitir que usuarios no registrados suban imágenes",
-	],
 	"Upload user interface" => [
 		0 => "Interfaz de subida",
 	],
@@ -2373,6 +2379,21 @@ $translation_table = [
 	],
 	"route" => [
 		0 => "ruta",
+	],
+	"Guest uploads" => [
+		0 => "Subidas de invitados",
+	],
+	"Enable this if you want to allow non registered users to upload." => [
+		0 => "Habilita esto si quieres permitir permitir que usuarios no registrados suban imágenes",
+	],
+	"Moderate uploads" => [
+		0 => "Moderar subidas",
+	],
+	"Guests" => [
+		0 => "Invitados",
+	],
+	"Enable this to moderate incoming uploads. Target content will require moderation for approval." => [
+		0 => "Habilita esto para moderar las subidas entrantes. El contenido objetivo requerirá moderación para ser aprobado.",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "Habilitar códigos de inserción (subidas)",
@@ -2698,6 +2719,12 @@ $translation_table = [
 	"Monthly limit" => [
 		0 => "Límite mensual",
 	],
+	"Lock %s editing" => [
+		0 => "Bloquear edición de %s",
+	],
+	"Enable this to prevent users from changing the NSFW flag. When enabled, only admin and managers will have this permission." => [
+		0 => "Habilita esto para prevenir que los usuarios cambien la marca no segura para trabajo (NSFW). Cuando está habilitado, solo administrador y gerentes tendrán este permiso.",
+	],
 	"Show not safe content in listings" => [
 		0 => "Mostrar contenido no seguro en los listados",
 	],
@@ -2809,18 +2836,6 @@ $translation_table = [
 	"Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>." => [
 		0 => "Usa esto para establecer el color principal del tema. El valor debe estar en <a href=\"%s\" target=\"_blank\">formato hex</a>.",
 	],
-	"Top bar color" => [
-		0 => "Color de barra superior",
-	],
-	"Black" => [
-		0 => "Negro",
-	],
-	"White" => [
-		0 => "Blanco",
-	],
-	"If you set this to \"white\" the top bar and all the black tones will be changed to white tones." => [
-		0 => "Si estableces esto en \"blanco\" la barra superior y todos los tonos negros se cambiaran a tonos blancos.",
-	],
 	"Top bar button color" => [
 		0 => "Color de botón de barra superior",
 	],
@@ -2838,6 +2853,12 @@ $translation_table = [
 	],
 	"Grey" => [
 		0 => "Gris",
+	],
+	"Black" => [
+		0 => "Negro",
+	],
+	"White" => [
+		0 => "Blanco",
 	],
 	"Color for the top bar buttons like the \"Create account\" button." => [
 		0 => "Color de los botones de la barra superior como el botón \"Crear cuenta\".",
@@ -2947,8 +2968,11 @@ $translation_table = [
 	"Split landing + images" => [
 		0 => "Pág. caída + imágenes",
 	],
-	"Route explore" => [
-		0 => "Enrutar explorar",
+	"Route %s" => [
+		0 => "Ruta %s",
+	],
+	"upload" => [
+		0 => "subir",
 	],
 	"Select the homepage style. To customize it further edit app/themes/%s/views/index.php" => [
 		0 => "Selecciona el estilo de la página principal. Para personalizar más edita app/themes/%s/views/index.php",
@@ -3355,6 +3379,27 @@ $translation_table = [
 	"Disqus, Facebook or anything you want. It will be used in image view." => [
 		0 => "Disqus, Facebook o lo que quieras. Será usado en la vista de imagen.",
 	],
+	"Automatically moderate the content using the %s service." => [
+		0 => "Moderar automáticamente el contenido usando el servicio de %s.",
+	],
+	"Automatic approve" => [
+		0 => "Aprobación automática",
+	],
+	"Enable this to automatically approve content moderated by this service." => [
+		0 => "Habilita esto para aprobar automáticamente el contenido moderado por este servicio.",
+	],
+	"Block content" => [
+		0 => "Bloquear contenido",
+	],
+	"Adult" => [
+		0 => "Adulto",
+	],
+	"Teen and adult" => [
+		0 => "Adolescente y adulto",
+	],
+	"Flag NSFW" => [
+		0 => "Marcar NSFW",
+	],
 	"Analytics code" => [
 		0 => "Código de analíticas",
 	],
@@ -3396,6 +3441,9 @@ $translation_table = [
 	],
 	"Load full resolution" => [
 		0 => "Cargar tamaño completo",
+	],
+	"Do you really want to approve this image? The image will go public if you approve it." => [
+		0 => "¿Realmente quieres aprobar todo el contenido seleccionado? Esto no se podrá deshacer.",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "Agregada a %a y categorizada en %c",
@@ -3711,9 +3759,6 @@ $translation_table = [
 	],
 	"Delete background" => [
 		0 => "Eliminar fondo",
-	],
-	"Edit profile" => [
-		0 => "Editar perfil",
 	],
 	"Follower" => [
 		0 => "Seguidor",

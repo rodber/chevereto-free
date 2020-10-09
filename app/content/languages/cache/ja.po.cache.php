@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2020-04-16 20:33+0000',
-  'PO-Revision-Date' => '2020-04-16 20:33+0000',
+  'POT-Creation-Date' => '2020-09-02 17:14+0000',
+  'PO-Revision-Date' => '2020-09-02 17:14+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ja',
@@ -124,6 +124,9 @@ $translation_table = [
 	"Confirm" => [
 		0 => "確認",
 	],
+	"The content has been approved." => [
+		0 => "コンテンツは承認されました。",
+	],
 	"Select existing album" => [
 		0 => "既に存在するアルバムを選択",
 	],
@@ -189,6 +192,9 @@ $translation_table = [
 	],
 	"Album" => [
 		0 => "アルバム",
+	],
+	"Approve" => [
+		0 => "承認",
 	],
 	"Delete" => [
 		0 => "削除",
@@ -414,6 +420,15 @@ $translation_table = [
 	],
 	"User" => [
 		0 => "ユーザ",
+	],
+	"adult" => [
+		0 => "アダルト",
+	],
+	"teen" => [
+		0 => "未成年",
+	],
+	"Content of type %s is forbidden" => [
+		0 => "コンテンツタイプ %s は許可されていません。",
 	],
 	"Can't create %s destination dir" => [
 		0 => "転送先ディレクトリ %s が作成できません。",
@@ -778,9 +793,6 @@ $translation_table = [
 	"Inside viewer top (image page)" => [
 		0 => "画像ビューア内上部 (画像ページ)",
 	],
-	"Expected banner size 728x90" => [
-		0 => "バナーサイズは 728x90を想定",
-	],
 	"Inside viewer foot (image page)" => [
 		0 => "画像ビューア内下部(画像ページ)",
 	],
@@ -867,9 +879,6 @@ $translation_table = [
 	],
 	"Invalid theme main color" => [
 		0 => "無効なメインカラーです。",
-	],
-	"Invalid theme top bar color" => [
-		0 => "無効なトップバーの色です。",
 	],
 	"Invalid theme top bar button color" => [
 		0 => "無効なトップバーのボタンの色です。",
@@ -1110,6 +1119,9 @@ $translation_table = [
 	],
 	"Sign in" => [
 		0 => "サインイン",
+	],
+	"Moderate" => [
+		0 => "判定",
 	],
 	"Upload images" => [
 		0 => "画像をアップロード",
@@ -1390,6 +1402,12 @@ $translation_table = [
 	"close" => [
 		0 => "閉じる",
 	],
+	"Note" => [
+		0 => "ノート",
+	],
+	"We must approve the uploaded content before being able to share." => [
+		0 => "アップロードされた内容が承認されてから、共有できるようにしなければなりません。",
+	],
 	"copy" => [
 		0 => "コピー",
 	],
@@ -1398,9 +1416,6 @@ $translation_table = [
 	],
 	"Remove" => [
 		0 => "削除",
-	],
-	"Edit image" => [
-		0 => "画像の編集",
 	],
 	"Title" => [
 		0 => "タイトル",
@@ -1590,6 +1605,12 @@ $translation_table = [
 	],
 	"Untitled image" => [
 		0 => "画像のタイトルを入力",
+	],
+	"Mark this if the image is not safe for work" => [
+		0 => "画像が安全に作業できない場合には、マークを付けてください。",
+	],
+	"Flag not safe" => [
+		0 => "安全ではない印",
 	],
 	"Path" => [
 		0 => "パス",
@@ -1798,12 +1819,6 @@ $translation_table = [
 	"There's nothing to show here." => [
 		0 => "表示するものはありません。",
 	],
-	"Edit image details" => [
-		0 => "画像の詳細の編集",
-	],
-	"Edit album details" => [
-		0 => "アルバムの詳細の編集",
-	],
 	"All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
 		0 => "すべての画像は最新のアルバムへ移動されます。 <a class=\"modal-switch\" data-switch=\"move-existing-album\">既に存在する他のアルバム</a>へ移動することもできます。",
 	],
@@ -1834,11 +1849,20 @@ $translation_table = [
 	"Do you really want to flag this content as unsafe?" => [
 		0 => "このコンテンツが本当にファミリーセーフティに接触するとマークしますか？",
 	],
+	"Confirm approval" => [
+		0 => "承認を確認",
+	],
+	"Do you really want to approve this content? This can't be undone." => [
+		0 => "選択されたコンテンツを本当に削除しますか？一度削除すると元には戻せません。",
+	],
 	"Confirm deletion" => [
 		0 => "削除の確認",
 	],
 	"Do you really want to remove this content? This can't be undone." => [
 		0 => "このコンテンツを本当に削除しますか？一度削除すると元には戻せません。",
+	],
+	"Do you really want to approve all the selected content? This can't be undone." => [
+		0 => "選択されたコンテンツを本当に削除しますか？一度削除すると元には戻せません。",
 	],
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "選択されたコンテンツを本当に削除しますか？一度削除すると元には戻せません。",
@@ -1954,9 +1978,6 @@ $translation_table = [
 	"Do you really want to delete this album and all of its images? This can't be undone." => [
 		0 => "本当にこのアルバムとアルバムにある全ての画像を削除しますか？削除すると元には戻せません。",
 	],
-	"Delete album" => [
-		0 => "アルバムを削除する",
-	],
 	"You like this" => [
 		0 => "いいね！しました",
 	],
@@ -2004,9 +2025,6 @@ $translation_table = [
 	],
 	"The system automatically parses any content by a continuous observation of the %path% path." => [
 		0 => "システムは、 パス %path% を継続的に観測することで自動的にコンテンツの解析を行います。",
-	],
-	"The system automatically parses any content by a continous observation of the %path% path." => [
-		0 => "システムは、継続的にパス %path% 内のコンテンツを自動的に解析します。",
 	],
 	"Completed jobs will be automatically re-started after %n %m." => [
 		0 => "完了したジョブは、%n %m 後に自動的に開始します。",
@@ -2059,14 +2077,8 @@ $translation_table = [
 	"All file-system permissions must be granted for the crontab user at %path%" => [
 		0 => "crontabユーザーへ %path% へのファイルシステムにアクセスする権利を付与してください。",
 	],
-	"Required crontab entry:" => [
-		0 => "crontabが必要です",
-	],
 	"Add import job" => [
 		0 => "インポートジョブに追加",
-	],
-	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d." => [
-		0 => "このツールは、インポートするコンテンツのパスが指定された場合、一括でサイトに追加をします。また、ユーザー、アルバム、画像をフォルダ形式として使用できます。メタデータやツール内で提供されるものについてのフォルダ形式は、%dに詳細があります。",
 	],
 	"Process import" => [
 		0 => "インポート処理",
@@ -2344,12 +2356,6 @@ $translation_table = [
 	"Enable this if you want to allow image uploads. This setting doesn't affect administrators." => [
 		0 => "画像のアップロードを許可する場合には有効にしてください。この設定は管理者へ影響しません。",
 	],
-	"Guest uploads" => [
-		0 => "ゲストとしてアップロード",
-	],
-	"Enable this if you want to allow non registered users to upload." => [
-		0 => "未登録ユーザのアップロードを許可するときに有効にしてください。",
-	],
 	"Upload user interface" => [
 		0 => "アップロード用ユーザインターフェース",
 	],
@@ -2358,6 +2364,21 @@ $translation_table = [
 	],
 	"route" => [
 		0 => "ルート",
+	],
+	"Guest uploads" => [
+		0 => "ゲストとしてアップロード",
+	],
+	"Enable this if you want to allow non registered users to upload." => [
+		0 => "未登録ユーザのアップロードを許可するときに有効にしてください。",
+	],
+	"Moderate uploads" => [
+		0 => "アップロードを判定",
+	],
+	"Guests" => [
+		0 => "ゲスト",
+	],
+	"Enable this to moderate incoming uploads. Target content will require moderation for approval." => [
+		0 => "これを有効にすると、アップロードを判定することができます。対象となるコンテンツは、承認のための判定が必要になります。",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "埋込みコード(アップロードしたユーザへのリンク)を有効にします。",
@@ -2683,6 +2704,12 @@ $translation_table = [
 	"Monthly limit" => [
 		0 => "1ヶ月の許容量",
 	],
+	"Lock %s editing" => [
+		0 => "%s の編集をロック ",
+	],
+	"Enable this to prevent users from changing the NSFW flag. When enabled, only admin and managers will have this permission." => [
+		0 => "これを有効にすると、ユーザーがNSFWフラグを変更できなくなります。有効にすると、管理者と管理者のみがこの権限を持つことになります。",
+	],
 	"Show not safe content in listings" => [
 		0 => "リスト中にファミリーセーフティに接触するコンテンツが含まれている場合でも表示する",
 	],
@@ -2794,18 +2821,6 @@ $translation_table = [
 	"Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>." => [
 		0 => "メインのテーマ色を設定するにはこちらをご利用ください。値は、<a href=\"%s\" target=\"_blank\">16進数</a>で入力する必要があります。",
 	],
-	"Top bar color" => [
-		0 => "トップバーの色",
-	],
-	"Black" => [
-		0 => "黒",
-	],
-	"White" => [
-		0 => "白",
-	],
-	"If you set this to \"white\" the top bar and all the black tones will be changed to white tones." => [
-		0 => "カラーを白にセットすると、トップバーなど全ての黒系は、全て白系に変わります。",
-	],
 	"Top bar button color" => [
 		0 => "トップバーのボタンの色",
 	],
@@ -2823,6 +2838,12 @@ $translation_table = [
 	],
 	"Grey" => [
 		0 => "灰色",
+	],
+	"Black" => [
+		0 => "黒",
+	],
+	"White" => [
+		0 => "白",
 	],
 	"Color for the top bar buttons like the \"Create account\" button." => [
 		0 => "トップの”アカウントを作成”ボタンなどの色を設定します。",
@@ -2932,8 +2953,11 @@ $translation_table = [
 	"Split landing + images" => [
 		0 => "ランディング + 画像 を分割",
 	],
-	"Route explore" => [
-		0 => "「もっと見る」の最初のページ",
+	"Route %s" => [
+		0 => "ルート%s",
+	],
+	"upload" => [
+		0 => "アップロード",
 	],
 	"Select the homepage style. To customize it further edit app/themes/%s/views/index.php" => [
 		0 => "ホームページのスタイルを選択。 カスタマイズを行う場合は app/themes/%s/views/index.php を編集します。",
@@ -3340,6 +3364,27 @@ $translation_table = [
 	"Disqus, Facebook or anything you want. It will be used in image view." => [
 		0 => "Disqus,Facebookなどが必要な場合には、イメージ表示を使って下さい。",
 	],
+	"Automatically moderate the content using the %s service." => [
+		0 => "%s を使用してコンテンツを自動で判定する。",
+	],
+	"Automatic approve" => [
+		0 => "自動承認",
+	],
+	"Enable this to automatically approve content moderated by this service." => [
+		0 => "このサービスによってモデレートされたコンテンツを自動的に承認するには、これを有効にします。",
+	],
+	"Block content" => [
+		0 => "コンテンツをブロック",
+	],
+	"Adult" => [
+		0 => "アダルト",
+	],
+	"Teen and adult" => [
+		0 => "未成年とアダルト",
+	],
+	"Flag NSFW" => [
+		0 => "NSFW印",
+	],
 	"Analytics code" => [
 		0 => "アクセス解析用コード",
 	],
@@ -3381,6 +3426,9 @@ $translation_table = [
 	],
 	"Load full resolution" => [
 		0 => "最大解像度で表示",
+	],
+	"Do you really want to approve this image? The image will go public if you approve it." => [
+		0 => "選択されたコンテンツを本当に削除しますか？一度削除すると元には戻せません。",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "%a へ追加してカテゴリ名: %c に分類",
@@ -3696,9 +3744,6 @@ $translation_table = [
 	],
 	"Delete background" => [
 		0 => "背景の削除",
-	],
-	"Edit profile" => [
-		0 => "プロフィールの編集",
 	],
 	"Follower" => [
 		0 => "フォロワー",

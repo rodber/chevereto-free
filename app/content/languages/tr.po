@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2020-04-18 16:12+0000\n"
-"PO-Revision-Date: 2020-04-18 16:12+0000\n"
+"POT-Creation-Date: 2020-09-02 17:14+0000\n"
+"PO-Revision-Date: 2020-09-02 17:14+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: tr\n"
@@ -203,6 +203,9 @@ msgstr "Albüm ismi girmelisiniz."
 msgid "Confirm"
 msgstr "Onayla"
 
+msgid "The content has been approved."
+msgstr "İçerik onaylandı."
+
 #: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
 msgid "Select existing album"
 msgstr "Mevcut olan albümü seçin"
@@ -353,6 +356,9 @@ msgid "Album"
 msgid_plural "Albums"
 msgstr[0] "Albüm"
 msgstr[1] "Albümler"
+
+msgid "Approve"
+msgstr "Onayla"
 
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
 #: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
@@ -762,6 +768,16 @@ msgid "User"
 msgid_plural "Users"
 msgstr[0] "Üye"
 msgstr[1] "Üyeler"
+
+msgid "adult"
+msgstr "yetişkin"
+
+msgid "teen"
+msgstr "genç"
+
+#, php-format
+msgid "Content of type %s is forbidden"
+msgstr "%s türü içerikler yasaktır."
 
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
@@ -1382,11 +1398,6 @@ msgstr "Resim sayfası"
 msgid "Inside viewer top (image page)"
 msgstr "İç izleyici üst (resim sayfası)"
 
-#: ../../../app/routes/route.dashboard.php:413
-#: ../../../app/routes/route.dashboard.php:417
-msgid "Expected banner size 728x90"
-msgstr "Önerilen afiş boyutu 728x90"
-
 #: ../../../app/routes/route.dashboard.php:416
 msgid "Inside viewer foot (image page)"
 msgstr "İç izleyici ayak (resim sayfası)"
@@ -1504,10 +1515,6 @@ msgstr "Geçersiz tema tonu."
 #: ../../../app/routes/route.dashboard.php:627
 msgid "Invalid theme main color"
 msgstr "Temanın geçersiz ana rengi"
-
-#: ../../../app/routes/route.dashboard.php:632
-msgid "Invalid theme top bar color"
-msgstr "Tema ana çubuğunun geçersiz rengi"
 
 #: ../../../app/routes/route.dashboard.php:637
 msgid "Invalid theme top bar button color"
@@ -1842,6 +1849,9 @@ msgstr "Geçersiz kullanıcı adı ve şifre ! lütfen kullanıcı adı ve şifr
 #: ../../../app/themes/Peafowl/views/login.php:52
 msgid "Sign in"
 msgstr "Giriş Yap"
+
+msgid "Moderate"
+msgstr "Denetlemek"
 
 msgid "Upload images"
 msgstr "Resim yükle"
@@ -2227,6 +2237,12 @@ msgstr "Dönüştür"
 msgid "close"
 msgstr "kapat"
 
+msgid "Note"
+msgstr "Not"
+
+msgid "We must approve the uploaded content before being able to share."
+msgstr "Paylaşmadan önce yüklenen içeriği onaylamamız gerekir."
+
 msgid "copy"
 msgstr "Kopyala"
 
@@ -2237,10 +2253,6 @@ msgstr "Ekle"
 #: ../../../app/themes/Peafowl/views/dashboard.php:666
 msgid "Remove"
 msgstr "Kaldır"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:154
-msgid "Edit image"
-msgstr "Resmi düzenle"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
 #: ../../../app/themes/Peafowl/snippets/form_image.php:4
@@ -2535,6 +2547,12 @@ msgstr "Kategori hakkında kısa tanım"
 msgid "Untitled image"
 msgstr "İsimsiz resim"
 
+msgid "Mark this if the image is not safe for work"
+msgstr "Görüntü aile için güvenli değilse işaretleyin."
+
+msgid "Flag not safe"
+msgstr "Güvenli değil olarak işaretle."
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
 msgid "Path"
 msgstr "Yol"
@@ -2820,18 +2838,6 @@ msgstr "Anasayfa"
 msgid "There's nothing to show here."
 msgstr "Burada gösterilecek birşey yok."
 
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
-#: ../../../app/themes/Peafowl/views/image.php:69
-#: ../../../app/themes/Peafowl/views/image.php:457
-msgid "Edit image details"
-msgstr "Resim düzenleme ayrıntıları"
-
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
-#: ../../../app/themes/Peafowl/views/album.php:22
-#: ../../../app/themes/Peafowl/views/album.php:118
-msgid "Edit album details"
-msgstr "Albüm ayarlarını Düzenle"
-
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
 msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
 msgstr "Resimleriniz yeni oluşturulacak bir albüme taşınacaktır. İsterseniz resimlerinizi <a class=\"modal-switch\" data-switch=\"move-existing-album\">mevcut albümlerden</a>.birisine taşıyabilirsiniz."
@@ -2872,6 +2878,12 @@ msgstr "İşaretli içeriği rahatsız edici olarak onaylayın"
 msgid "Do you really want to flag this content as unsafe?"
 msgstr "Bu içeriği gerçekten rahatsız edici olarak işaretlemek istiyor musunuz?"
 
+msgid "Confirm approval"
+msgstr "Onayı onayla"
+
+msgid "Do you really want to approve this content? This can't be undone."
+msgstr "Seçilen tüm içeriği gerçekten kaldırmak istiyor musunuz? Bu geri alınamaz."
+
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:106
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:110
 msgid "Confirm deletion"
@@ -2880,6 +2892,9 @@ msgstr "Silmek istediğinizden emin misiniz."
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:107
 msgid "Do you really want to remove this content? This can't be undone."
 msgstr "Resim veya resimleri silmek istediğinizden eminmisiniz. Resimler geri dönüşümü olmaksızın silinecektir."
+
+msgid "Do you really want to approve all the selected content? This can't be undone."
+msgstr "Seçilen tüm içeriği gerçekten kaldırmak istiyor musunuz? Bu geri alınamaz."
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:111
 msgid "Do you really want to remove all the selected content? This can't be undone."
@@ -3054,10 +3069,6 @@ msgstr "Özel içerik !"
 msgid "Do you really want to delete this album and all of its images? This can't be undone."
 msgstr "Gerçekten bu albümü ve içindekileri silmek istiyormusun? Bu işlemin geri dönüşü yok."
 
-#: ../../../app/themes/Peafowl/views/album.php:25
-msgid "Delete album"
-msgstr "Albümü Sil"
-
 #: ../../../app/themes/Peafowl/views/image.php:85
 msgid "You like this"
 msgstr "Bunu beğendiniz"
@@ -3106,10 +3117,10 @@ msgstr "Kullanılan disk alanı"
 msgid "This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure."
 msgstr "Bu araç, içe aktarmak istediğiniz içeriğin bulunduğu bir sistem yolunu işaretleyerek web sitenize toplu içerik eklemenize olanak tanır. Klasör tabanlı bir yapı kullanarak kullanıcıların, albümlerin ve görüntülerin eklenmesini destekler."
 
-msgid "The system automatically parses any content by a continuous observation of the %path% path."
-msgstr "Sistem, %path% yolunu sürekli gözlemleyerek herhangi bir içeriği otomatik olarak ayrıştırır."
+msgid "Automatic importing"
+msgstr "Otomatik içe aktarma"
 
-msgid "The system automatically parses any content by a continous observation of the %path% path."
+msgid "The system automatically parses any content by a continuous observation of the %path% path."
 msgstr "Sistem, %path% yolunu sürekli gözlemleyerek herhangi bir içeriği otomatik olarak ayrıştırır."
 
 msgid "Completed jobs will be automatically re-started after %n %m."
@@ -3164,15 +3175,8 @@ msgstr "%s% tam sayı değerini değiştirerek komutu paralel olarak çalıştı
 msgid "All file-system permissions must be granted for the crontab user at %path%"
 msgstr "%path% yolundaki crontab kullanıcısı için tüm dosya sistemi izinleri verilmelidir"
 
-msgid "Required crontab entry:"
-msgstr "Gerekli crontab girişi:"
-
 msgid "Add import job"
 msgstr "İçe aktarma işi ekle"
-
-#, php-format
-msgid "This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d."
-msgstr "Bu araç, içe aktarmak istediğiniz içeriğe sahip bir sistem yolunu işaretleyerek web sitenize toplu içerik eklemenizi sağlar. Klasör tabanlı bir yapı kullanarak kullanıcıların, albümlerin ve görüntülerin eklenmesini destekler. Klasör yapısı, meta veri ekleme ve bu araçla ilgili daha fazla bilgiyi %d içinde bulabilirsiniz."
 
 msgid "Process import"
 msgstr "İşlem içe aktarma"
@@ -3541,14 +3545,6 @@ msgstr "Desteklenen Formatlar"
 msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
 msgstr "Resim yükleme izin vermek için bunu etkinleştirin. Bu ayar, yöneticilerin etkilemez."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:639
-msgid "Guest uploads"
-msgstr "Misafirlerin Yüklediği Resimler"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:645
-msgid "Enable this if you want to allow non registered users to upload."
-msgstr "Misafir Kullanıcıların Resim Yüklemesini İstiyorsanız Bunu Etkinleştirmeniz Gerekmektedir. "
-
 msgid "Upload user interface"
 msgstr "Kullanıcı arayüzünü yükle"
 
@@ -3557,6 +3553,23 @@ msgstr "Sayfa içi konteyner"
 
 msgid "route"
 msgstr "rota"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:639
+msgid "Guest uploads"
+msgstr "Misafirlerin Yüklediği Resimler"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+msgid "Enable this if you want to allow non registered users to upload."
+msgstr "Misafir Kullanıcıların Resim Yüklemesini İstiyorsanız Bunu Etkinleştirmeniz Gerekmektedir. "
+
+msgid "Moderate uploads"
+msgstr "Yüklemeleri denetle"
+
+msgid "Guests"
+msgstr "Ziyaretçiler"
+
+msgid "Enable this to moderate incoming uploads. Target content will require moderation for approval."
+msgstr "Gelen yüklemeleri denetlemek için bunu etkinleştirin. Hedef içerik, onay için denetim gerektirecektir."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1353
 msgid "Enable embed codes (uploader)"
@@ -3973,6 +3986,13 @@ msgstr "Haftalık Resim Yükleme Sınırı"
 msgid "Monthly limit"
 msgstr "Aylık Resim Yükleme Sınırı"
 
+#, php-format
+msgid "Lock %s editing"
+msgstr "%s düzenlemesini kilitle"
+
+msgid "Enable this to prevent users from changing the NSFW flag. When enabled, only admin and managers will have this permission."
+msgstr "Gelen yüklemeleri denetlemek için bunu etkinleştirin. Hedef içerik, onay için denetim gerektirecektir."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1070
 msgid "Show not safe content in listings"
 msgstr "Listelerde güvenli olmayan içeriği göster"
@@ -4117,26 +4137,6 @@ msgstr "Heksadesimal renk değeri"
 msgid "Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>."
 msgstr "Ana tema rengi olarak bunu kullan. Değer<a href=\"%s\" target=\"_blank\">heksadesimal formatta</a> olmalı."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1203
-msgid "Top bar color"
-msgstr "Üst çubuk rengi"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1223
-#: ../../../app/themes/Peafowl/views/dashboard.php:1461
-msgid "Black"
-msgstr "Geri"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1224
-#: ../../../app/themes/Peafowl/views/dashboard.php:1462
-msgid "White"
-msgstr "Beyaz"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1210
-msgid "If you set this to \"white\" the top bar and all the black tones will be changed to white tones."
-msgstr "Bunu \"beyaz\" olarak ayarlarsanız, üstteki çubuk ve tüm siyah tonları beyaz tonlarına dönüştürülür."
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1214
 msgid "Top bar button color"
 msgstr "Üst çubuk düğme (button) rengi"
@@ -4165,6 +4165,18 @@ msgstr "Kırmızı"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1460
 msgid "Grey"
 msgstr "Gri"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1223
+#: ../../../app/themes/Peafowl/views/dashboard.php:1461
+msgid "Black"
+msgstr "Geri"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1224
+#: ../../../app/themes/Peafowl/views/dashboard.php:1462
+msgid "White"
+msgstr "Beyaz"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1230
 msgid "Color for the top bar buttons like the \"Create account\" button."
@@ -4309,9 +4321,12 @@ msgstr "Açılış sayfası"
 msgid "Split landing + images"
 msgstr "Bölünmüş iniş + görüntüleri"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1396
-msgid "Route explore"
-msgstr "Rota keşfet"
+#, php-format
+msgid "Route %s"
+msgstr "%s yolu"
+
+msgid "upload"
+msgstr "yükle"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1401
 #, php-format
@@ -4822,6 +4837,28 @@ msgstr "Kodun İçeriği"
 msgid "Disqus, Facebook or anything you want. It will be used in image view."
 msgstr "Disqus, Facebook veya başka bir yerden görüntü almak istiyorum. Alınacak görüntü profilde gösterilecektir."
 
+#, php-format
+msgid "Automatically moderate the content using the %s service."
+msgstr "%s hizmetini kullanarak içeriği otomatik olarak denetleyin."
+
+msgid "Automatic approve"
+msgstr "Otomatik onay"
+
+msgid "Enable this to automatically approve content moderated by this service."
+msgstr "Bu hizmet tarafından denetlenen içeriği otomatik olarak onaylamak için bunu etkinleştirin."
+
+msgid "Block content"
+msgstr "İçeriği engelle"
+
+msgid "Adult"
+msgstr "Yetişkin"
+
+msgid "Teen and adult"
+msgstr "Genç ve yetişkin"
+
+msgid "Flag NSFW"
+msgstr "NSFW olarak işaretle."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:2002
 msgid "Analytics code"
 msgstr "Google Analytics kodunuzu giriniz."
@@ -4878,6 +4915,9 @@ msgstr "GIF Oynat"
 
 msgid "Load full resolution"
 msgstr "Tam çözünürlük yükle"
+
+msgid "Do you really want to approve this image? The image will go public if you approve it."
+msgstr "Seçilen tüm içeriği gerçekten kaldırmak istiyor musunuz? Bu geri alınamaz."
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -5302,10 +5342,6 @@ msgstr "Profilinizin arkaplan resmi silinecektir. Bu işlem geri alınamaz. Silm
 #: ../../../app/themes/Peafowl/views/user.php:22
 msgid "Delete background"
 msgstr "Arka Planı Sil"
-
-#: ../../../app/themes/Peafowl/views/user.php:61
-msgid "Edit profile"
-msgstr "Profili Düzenle"
 
 #: ../../../app/themes/Peafowl/views/user.php:75
 msgid "Follower"

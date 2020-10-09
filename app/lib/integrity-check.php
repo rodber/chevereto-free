@@ -5,8 +5,7 @@
   This file is part of Chevereto Free.
   https://chevereto.com/free
 
-
-  Copyright (C) 2013 Rodolfo Berrios A. All rights reserved.
+  (c) Rodolfo Berrios <rodolfo@chevereto.com>
 
   For the full copyright and license information, please view the LICENSE
   file that was distributed with this source code.
@@ -118,7 +117,7 @@ function check_system_integrity()
 
     /*** Folders check ***/
 
-    $writing_paths = [CHV_PATH_IMAGES, CHV_PATH_CONTENT, CHV_APP_PATH_CONTENT, CHV_APP_PATH_CONTENT_LOCKS, CHV_APP_PATH_INSTALL . 'update/temp/'];
+    $writing_paths = [CHV_PATH_IMAGES, CHV_PATH_CONTENT, CHV_APP_PATH_CONTENT, CHV_APP_PATH_INSTALL . 'update/temp/'];
     foreach ($writing_paths as $v) {
         if (!file_exists($v)) { // Exists?
             if (!@mkdir($v)) {

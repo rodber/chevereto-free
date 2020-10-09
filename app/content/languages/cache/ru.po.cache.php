@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2019-12-12 15:27+0000',
-  'PO-Revision-Date' => '2019-12-12 15:27+0000',
+  'POT-Creation-Date' => '2020-09-02 17:16+0000',
+  'PO-Revision-Date' => '2020-09-02 17:16+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ru',
@@ -290,8 +290,16 @@ $translation_table = [
 	"The content has been edited." => [
 		0 => "Содержимое отредактировано.",
 	],
+	"Select number of threads" => [
+		0 => "Выберите количество потоков",
+	],
 	"Spam detected" => [
 		0 => "Обнаружен спам",
+	],
+	"album" => [
+		0 => "альбом",
+		1 => "альбома",
+		2 => "альбомов",
 	],
 	"Untitled" => [
 		0 => "Безымянный",
@@ -498,27 +506,6 @@ $translation_table = [
 	"I understand" => [
 		0 => "Хорошо",
 	],
-	"You have been forbidden to use this website." => [
-		0 => "Вам запрещено использовать этот сайт.",
-	],
-	"Feel free to browse and discover all my shared images and albums." => [
-		0 => "Чувствуйте себя как дома и наслаждайтесь моими изображениями и альбомами.",
-	],
-	"View all my images" => [
-		0 => "Показать мои изображения",
-	],
-	"Plugin" => [
-		0 => "Плагин",
-	],
-	"Request denied" => [
-		0 => "В запросе отказано",
-	],
-	"That page doesn't exist" => [
-		0 => "Эта страница не существует",
-	],
-	"Page %s" => [
-		0 => "Страница %s",
-	],
 	"Forgot password?" => [
 		0 => "Забыли пароль?",
 	],
@@ -542,6 +529,9 @@ $translation_table = [
 	],
 	"User doesn't have an email." => [
 		0 => "Для этого пользователя не задан адрес электронной почты.",
+	],
+	"Request denied" => [
+		0 => "В запросе отказано",
 	],
 	"Account needs to be activated to use this feature" => [
 		0 => "Для использования этой функции, аккаунт должен быть активирован",
@@ -797,9 +787,6 @@ $translation_table = [
 	"Inside viewer top (image page)" => [
 		0 => "В заголовке просмотрщика (страница изображения)",
 	],
-	"Expected banner size 728x90" => [
-		0 => "Рекомендуемый размер баннера 728x90",
-	],
 	"Inside viewer foot (image page)" => [
 		0 => "Внизу просмотрщика (страница изображения)",
 	],
@@ -886,9 +873,6 @@ $translation_table = [
 	],
 	"Invalid theme main color" => [
 		0 => "Неверный цвет темы",
-	],
-	"Invalid theme top bar color" => [
-		0 => "Неверный цвет панели",
 	],
 	"Invalid theme top bar button color" => [
 		0 => "Неверный цвет кнопок панели",
@@ -1415,9 +1399,6 @@ $translation_table = [
 	"Remove" => [
 		0 => "Удалить",
 	],
-	"Edit image" => [
-		0 => "Редактировать изображение",
-	],
 	"Title" => [
 		0 => "Заголовок",
 	],
@@ -1486,11 +1467,6 @@ $translation_table = [
 	],
 	"Error report" => [
 		0 => "Отчет об ошибках",
-	],
-	"album" => [
-		0 => "альбом",
-		1 => "альбома",
-		2 => "альбомов",
 	],
 	"Viewer links" => [
 		0 => "Ссылки на просмотр",
@@ -1635,9 +1611,6 @@ $translation_table = [
 	],
 	"Threads" => [
 		0 => "Потоки",
-	],
-	"Select number of threads" => [
-		0 => "Выберите количество потоков",
 	],
 	"This determines how intensive and fast will be the import process. Don't use more than %s threads on a shared server." => [
 		0 => "Определяет насколько быстрым и ресурсоемким будет процесс импорта. Не используйте больше %s потоков на совместном хостинге.",
@@ -1813,17 +1786,14 @@ $translation_table = [
 	"Sign in with another account" => [
 		0 => "Войти через",
 	],
+	"Continue with %label%" => [
+		0 => "Продолжить с %label%",
+	],
 	"Home" => [
 		0 => "Главная",
 	],
 	"There's nothing to show here." => [
 		0 => "Нет элементов для отображения.",
-	],
-	"Edit image details" => [
-		0 => "Редактировать изображение",
-	],
-	"Edit album details" => [
-		0 => "Редактировать альбом",
 	],
 	"All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
 		0 => "Все изображения будут помещены в этот новый альбом. Вы также можете переместить изображения в <a class=\"modal-switch\" data-switch=\"move-existing-album\">существующий альбом</a>.",
@@ -1896,6 +1866,9 @@ $translation_table = [
 	],
 	"Toggle unsafe flag" => [
 		0 => "Включить отметку о небезопасном содержимом",
+	],
+	"That page doesn't exist" => [
+		0 => "Эта страница не существует",
 	],
 	"The requested page was not found." => [
 		0 => "Запрошеная страница не найдена",
@@ -1972,9 +1945,6 @@ $translation_table = [
 	"Do you really want to delete this album and all of its images? This can't be undone." => [
 		0 => "Вы действительно хотите удалить этот альбом со всеми изображениями? Это действие необратимо.",
 	],
-	"Delete album" => [
-		0 => "Удалить",
-	],
 	"You like this" => [
 		0 => "Вам это нравится",
 	],
@@ -2002,41 +1972,17 @@ $translation_table = [
 	"Learn more about %s at our %d." => [
 		0 => "Узнайте больше о %s в %d.",
 	],
+	"For Nginx, you must use %nginx%. For Apache, %apache%." => [
+		0 => "Для Nginx необходимо использовать %nginx%. Для Apache, %apache%.",
+	],
 	"Disk used" => [
 		0 => "Использовано места на диске",
 	],
-	"Add import job" => [
-		0 => "Добавить задачу импорта",
+	"Automatic importing" => [
+		0 => "Автоматический импорт",
 	],
-	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d." => [
-		0 => "Эта утилита, позволит вам добавить контент на ваш сайт, посредством указания пути к нему. Поддерживается импорт пользователей, альбомов и изображений, через структуру папок. Вы можете узнать больше о структуре папок, добавлении меток и об этой утилите в нашей %d.",
-	],
-	"Process import" => [
-		0 => "Импорт",
-	],
-	"Top level folders as %s" => [
-		0 => "Папки верхнего уровня как %s",
-	],
-	"Actions" => [
-		0 => "Действия",
-	],
-	"Process" => [
-		0 => "Процесс",
-	],
-	"Pause" => [
-		0 => "Пауза",
-	],
-	"Cancel" => [
-		0 => "Отмена",
-	],
-	"Process log" => [
-		0 => "Журнал импорта",
-	],
-	"Errors" => [
-		0 => "Ошибки",
-	],
-	"Do you really want to remove the import ID %s?" => [
-		0 => "Вы действительно хотите удалить задачу с ID %s?",
+	"Reset to clear stats and logs." => [
+		0 => "Сброс, для очистки статистики и журналов.",
 	],
 	"Queued" => [
 		0 => "В очереди",
@@ -2053,11 +1999,47 @@ $translation_table = [
 	"Completed" => [
 		0 => "Завершено",
 	],
-	"Parser" => [
-		0 => "Парсер",
+	"Actions" => [
+		0 => "Действия",
+	],
+	"Reset" => [
+		0 => "Сброс",
+	],
+	"Pause" => [
+		0 => "Пауза",
+	],
+	"Process log" => [
+		0 => "Журнал импорта",
+	],
+	"Errors" => [
+		0 => "Ошибки",
 	],
 	"Status" => [
 		0 => "Статус",
+	],
+	"Add import job" => [
+		0 => "Добавить задачу импорта",
+	],
+	"Process import" => [
+		0 => "Импорт",
+	],
+	"Top level folders as %s" => [
+		0 => "Папки верхнего уровня как %s",
+	],
+	"Process" => [
+		0 => "Процесс",
+	],
+	"Cancel" => [
+		0 => "Отмена",
+	],
+	"Do you really want to remove the import ID %s?" => [
+		0 => "Вы действительно хотите удалить задачу с ID %s?",
+	],
+	"Manual importing" => [
+		0 => "Ручной импорт",
+	],
+	"Parser" => [
+		0 => "Парсер",
 	],
 	"Add user" => [
 		0 => "Добавить пользователя",
@@ -2308,12 +2290,6 @@ $translation_table = [
 	"Enable this if you want to allow image uploads. This setting doesn't affect administrators." => [
 		0 => "Включите, если вы хотите разрешить загрузку изображений. Эта настройка не влияет на администраторов.",
 	],
-	"Guest uploads" => [
-		0 => "Гостевые загрузки",
-	],
-	"Enable this if you want to allow non registered users to upload." => [
-		0 => "Включите, если хотите позволить загружать изображения незарегистрированным пользователям.",
-	],
 	"Upload user interface" => [
 		0 => "Загрузить интерфейс пользователя",
 	],
@@ -2322,6 +2298,12 @@ $translation_table = [
 	],
 	"route" => [
 		0 => "маршрут",
+	],
+	"Guest uploads" => [
+		0 => "Гостевые загрузки",
+	],
+	"Enable this if you want to allow non registered users to upload." => [
+		0 => "Включите, если хотите позволить загружать изображения незарегистрированным пользователям.",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "Коды для встраивания (в загрузчике)",
@@ -2758,18 +2740,6 @@ $translation_table = [
 	"Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>." => [
 		0 => "Используйте это поле, чтобы указать основной цвет темы. Значение должно быть указано в <a href=\"%s\" target=\"_blank\">шестнадцатеричном формате</a>.",
 	],
-	"Top bar color" => [
-		0 => "Цвет верхней панели",
-	],
-	"Black" => [
-		0 => "Черный",
-	],
-	"White" => [
-		0 => "Белый",
-	],
-	"If you set this to \"white\" the top bar and all the black tones will be changed to white tones." => [
-		0 => "Если вы выберете \"Белый\", цвет верхней панели и некоторых других элементов будет заменен на светлый.",
-	],
 	"Top bar button color" => [
 		0 => "Цвет кнопок верхней панели",
 	],
@@ -2787,6 +2757,12 @@ $translation_table = [
 	],
 	"Grey" => [
 		0 => "Серый",
+	],
+	"Black" => [
+		0 => "Черный",
+	],
+	"White" => [
+		0 => "Белый",
 	],
 	"Color for the top bar buttons like the \"Create account\" button." => [
 		0 => "Цвет кнопок на верхней панели, таких как \"Зарегистрироваться\".",
@@ -2857,6 +2833,12 @@ $translation_table = [
 	"Enable embed codes (content)" => [
 		0 => "Коды для встраивания (в просмотре)",
 	],
+	"Everybody" => [
+		0 => "Все пользователи",
+	],
+	"Users only" => [
+		0 => "Только зарегистрированные",
+	],
 	"Enable this if you want to show embed codes for the content." => [
 		0 => "Включите эту настройку, если вы хотите показывать коды для встраивания в просмотре изображений.",
 	],
@@ -2889,9 +2871,6 @@ $translation_table = [
 	],
 	"Split landing + images" => [
 		0 => "Целевая страница + изображения",
-	],
-	"Route explore" => [
-		0 => "Переадресовывать на Обзор",
 	],
 	"Select the homepage style. To customize it further edit app/themes/%s/views/index.php" => [
 		0 => "Выберите стиль отображения главной страницы. Для получения больших возможностей, Вы можете отредактировать файл app/themes/%s/views/index.php.",
@@ -2979,9 +2958,6 @@ $translation_table = [
 	],
 	"Dump update query" => [
 		0 => "Просмотреть текст запроса",
-	],
-	"Enable this if you want to manually run the SQL update query." => [
-		0 => "Включите, чтобы автоматически определять и устанавливать язык пользователя.",
 	],
 	"SEO %s URLs" => [
 		0 => "SEO %s URLs",
@@ -3583,9 +3559,6 @@ $translation_table = [
 	"User has no connections." => [
 		0 => "У пользователя нет связей с другими аккаунтами.",
 	],
-	"Link your account to external services to be able to login and share content." => [
-		0 => "Свяжите ваш аккаунт со сторонними сервисами, чтобы иметь возможность входить через них и делиться содержимым.",
-	],
 	"Do you really want to disconnect %s from this account?" => [
 		0 => "Вы действительно хотите отвязать %s от этого аккаунта?",
 	],
@@ -3607,8 +3580,14 @@ $translation_table = [
 	"Connect %s" => [
 		0 => "Связать с %s",
 	],
+	"Feel free to browse and discover all my shared images and albums." => [
+		0 => "Чувствуйте себя как дома и наслаждайтесь моими изображениями и альбомами.",
+	],
 	"Button" => [
 		0 => "Кнопка",
+	],
+	"View all my images" => [
+		0 => "Показать мои изображения",
 	],
 	"Login" => [
 		0 => "Вход",
@@ -3649,9 +3628,6 @@ $translation_table = [
 	"Delete background" => [
 		0 => "Удалить фон",
 	],
-	"Edit profile" => [
-		0 => "Редактировать профиль",
-	],
 	"Follower" => [
 		0 => "Подписчик",
 		1 => "Подписчика",
@@ -3659,6 +3635,15 @@ $translation_table = [
 	],
 	"Follow" => [
 		0 => "Подписаться",
+	],
+	"You have been forbidden to use this website." => [
+		0 => "Вам запрещено использовать этот сайт.",
+	],
+	"Plugin" => [
+		0 => "Плагин",
+	],
+	"Page %s" => [
+		0 => "Страница %s",
 	],
 	"General questions/comments" => [
 		0 => "Общие вопросы/комментарии",

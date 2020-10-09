@@ -29,6 +29,7 @@ CREATE TABLE `%table_prefix%images` (
   `image_expiration_date_gmt` datetime DEFAULT NULL,
   `image_likes` bigint(32) NOT NULL DEFAULT '0',
   `image_is_animated` tinyint(1) NOT NULL DEFAULT '0',
+  `image_is_approved` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`image_id`),
   KEY `image_name` (`image_name`(191)),
   KEY `image_extension` (`image_extension`(191)),
@@ -51,6 +52,7 @@ CREATE TABLE `%table_prefix%images` (
   KEY `image_expiration_date_gmt` (`image_expiration_date_gmt`),
   KEY `image_likes` (`image_likes`),
   KEY `image_is_animated` (`image_is_animated`),
+  KEY `image_is_approved` (`image_is_approved`),
   KEY `image_album_id_image_id` (`image_album_id`, `image_id`),
   FULLTEXT KEY `searchindex` (`image_name`,`image_title`,`image_description`,`image_original_filename`)
 ) ENGINE=%table_engine% DEFAULT CHARSET=utf8mb4;

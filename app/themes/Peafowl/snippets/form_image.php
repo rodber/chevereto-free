@@ -1,4 +1,6 @@
-<?php if (!defined('access') or !access) {
+<?php
+
+if (!defined('access') or !access) {
     die('This file cannot be directly accessed.');
 } ?>
 
@@ -27,10 +29,13 @@
 <?php
     }
 ?>
-<div class="checkbox-label"><span rel="template-tooltip" data-tiptip="right" data-title="<?php _se('Mark this if the image is not family safe'); ?>"><label for="form-nsfw"><input class="float-left" type="checkbox" name="form-nsfw" id="form-nsfw"<?php if (function_exists('get_image') and get_image()['nsfw']) {
+<div class="checkbox-label"><span rel="template-tooltip" data-tiptip="right" data-title="<?php _se('Mark this if the image is not safe for work'); ?>"><label for="form-nsfw"><input class="float-left" type="checkbox" name="form-nsfw" id="form-nsfw"<?php if (function_exists('get_image') and get_image()['nsfw']) {
     echo ' checked';
-} ?>><?php _se('Flag as unsafe'); ?></label></span></div>
-
+}
+if (!is_allowed_nsfw_flagging()) {
+    echo ' disabled';
+}
+?>><span class="no-select"><?php _se('Flag not safe'); ?></span></label></span></div>
 <div class="input-label">
     <label for="form-image-description"><?php _se('Description'); ?> <span class="optional"><?php _se('optional'); ?></span></label>
     <textarea id="form-image-description" name="form-image-description" class="text-input no-resize" placeholder="<?php _se('Brief description of this image'); ?>"><?php echo function_exists('get_image_safe_html') ? get_image_safe_html()["description"] : null; ?></textarea>

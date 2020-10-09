@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2018-12-25 14:55+0000\n"
-"PO-Revision-Date: 2018-12-25 14:55+0000\n"
+"POT-Creation-Date: 2020-09-02 17:16+0000\n"
+"PO-Revision-Date: 2020-09-02 17:16+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: he\n"
@@ -29,7 +29,7 @@ msgstr "דוא\"ל שגוי"
 #: ../../../app/routes/route.settings.php:181
 #: ../../../app/routes/route.signup.php:100
 msgid "Invalid username"
-msgstr "שם משתמש שגוי"
+msgstr "שגיאה בבחירת מצב אתר"
 
 #: ../../../app/install/installer.php:1174
 #: ../../../app/routes/route.account.php:357
@@ -42,7 +42,7 @@ msgstr "סיסמא שגוייה"
 #: ../../../app/install/installer.php:1183
 #: ../../../app/routes/route.dashboard.php:667
 msgid "Invalid website mode"
-msgstr "מצב אתר שגוי"
+msgstr "שגיאה בבחירת מצב אתר"
 
 #: ../../../app/install/template/ready.php:31
 #: ../../../app/themes/Peafowl/views/dashboard.php:1760
@@ -84,6 +84,50 @@ msgstr "קהילה"
 msgid "Personal"
 msgstr "אישי"
 
+#: ../../../app/install/update/template/update.js:19
+#, javascript-format
+msgid "Installed version is v%s"
+msgstr "הגירסה הנוכחית היא %s"
+
+#: ../../../app/install/update/template/update.js:26
+#: ../../../app/install/update/template/update.js:55
+#: ../../../app/install/update/template/update.js:78
+#, javascript-format
+msgid "Can't connect to %s"
+msgstr "לא ניתן להתחבר ל- %s"
+
+#: ../../../app/install/update/template/update.js:30
+#, javascript-format
+msgid "Last available release is v%s"
+msgstr "יש עדכון זמין לגירסה %s"
+
+#: ../../../app/install/update/template/update.js:33
+msgid "Update needed, proceeding to download"
+msgstr "מוריד עדכון חדש, אנא המתן"
+
+#: ../../../app/install/update/template/update.js:40
+msgid "No update needed"
+msgstr "עדכון לא נדרש"
+
+#: ../../../app/install/update/template/update.js:41
+msgid "System files already up to date"
+msgstr "קבצי מערכת נמצאו מעודכנים"
+
+#: ../../../app/install/update/template/update.js:49
+#, javascript-format
+msgid "Starting v%s download"
+msgstr "מתחיל בהורדת עדכון %s"
+
+#: ../../../app/install/update/template/update.js:60
+#, javascript-format
+msgid "Downloaded v%s, proceeding to extraction"
+msgstr "עדכון %s הורד בהצלחה, ממתין לאימות נתונים"
+
+#: ../../../app/install/update/template/update.js:72
+#, javascript-format
+msgid "Attempting to extract v%s"
+msgstr "עדכון %s עבר אימות בהצלחה, וכעת מתקין קבצים"
+
 #: ../../../app/install/update/template/update.php:2
 msgid "Update in progress"
 msgstr "מעדכן נתונים"
@@ -97,6 +141,313 @@ msgstr "שגיאה בהורדה %s"
 #, php-format
 msgid "Can't extract %s"
 msgstr "לא יכול לחלץ %s"
+
+#: ../../../app/routes/route.account.php:508
+#: ../../../app/routes/route.signup.php:236
+#: ../../../content/pages/default/contact.php:132
+#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
+#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
+msgid "Check the errors in the form to continue."
+msgstr "בדקו שגיאות בטופס כדי להמשיך."
+
+#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
+#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
+#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
+#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
+#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
+#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
+msgid "You must enter the album name."
+msgstr "לא הוזן שם אלבום"
+
+#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
+#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
+#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
+#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
+msgid "Confirm"
+msgstr "אישור פעולה"
+
+#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
+msgid "Select existing album"
+msgstr "בחר לאלבום קיים"
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "התרחשה שגיאה. אנא נסו שוב מאוחר יותר."
+
+#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
+#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
+msgid "Please select a valid image file type."
+msgstr "בחר סוג קובץ תמונה תקין."
+
+#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
+#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
+#, javascript-format
+msgid "Please select a picture of at most %s size."
+msgstr "ניתן לבחור תמונה עד גודל %s."
+
+#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
+msgid "Profile image updated."
+msgstr "תמונת פרופיל עודכנה בהצלחה."
+
+#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
+msgid "Profile background image updated."
+msgstr "תמונת רקע פרופיל עודכנה בהצלחה."
+
+#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
+msgid "Profile background image deleted."
+msgstr "תמונת רקע פרופיל נמחקה בהצלחה."
+
+#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
+msgid "Error deleting profile background image."
+msgstr "שגיאה בעת מחיקת תמונת רקע פרופיל, נסה שוב."
+
+#: ../../../app/routes/route.account.php:360
+#: ../../../app/routes/route.settings.php:327
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
+#: ../../../app/themes/Peafowl/views/settings.php:313
+#: ../../../app/themes/Peafowl/views/settings.php:330
+#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
+msgid "Passwords don't match"
+msgstr "הסיסמאות אינן תואמות"
+
+#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "Update available v%s"
+msgstr "עדכון זמין (גירסה %s)"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
+msgstr "קיים עדכון זמין עבור המערכת. באפשרותך להוריד ולהתקין את העדכון באופן אוטומטי, או להיכנס לכתובת %s כדי להמשיך ולהוריד את הקובץ."
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "The release notes for this update are:"
+msgstr "הערות שחרור עבור עדכון זה:"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "Update now"
+msgstr "עדכן כעת"
+
+#: ../../../app/themes/Peafowl/header.php:285
+#: ../../../app/themes/Peafowl/header.php:332
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/form_album.php:9
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/login.php:22
+#: ../../../app/themes/Peafowl/views/login.php:62
+#: ../../../app/themes/Peafowl/views/settings.php:354
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../app/themes/Peafowl/views/signup.php:22
+#: ../../../app/themes/Peafowl/views/signup.php:73
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
+#: ../../../lib/Peafowl/peafowl.min.js:31
+#: ../../../lib/Peafowl/peafowl.min.js:140
+msgid "or"
+msgstr "או"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "ביטול"
+
+#, javascript-format
+msgid "This website is running latest %s version"
+msgstr "הינך נמצא בגירסה המעודכנת של מערכת %s"
+
+#: ../../../app/themes/Peafowl/header.php:381
+#: ../../../app/themes/Peafowl/views/settings.php:348
+#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
+msgid "loading"
+msgstr "טוען נתונים"
+
+msgid "Toggle select"
+msgstr "סמן בחירה"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "לייק"
+
+msgid "Toggle flag"
+msgstr "סמן כתוכן פוגעני"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
+msgid "Edit"
+msgstr "עריכה"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "אלבום"
+msgstr[1] "אלבומים"
+msgstr[2] "אלבומים"
+msgstr[3] "אלבומים"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:607
+#: ../../../app/themes/Peafowl/views/dashboard.php:884
+#: ../../../app/themes/Peafowl/views/dashboard.php:933
+msgid "Delete"
+msgstr "מחק"
+
+#: ../../../app/themes/Peafowl/header.php:222
+msgid "Close"
+msgstr "סגור"
+
+#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
+msgid "File too big."
+msgstr "הקובץ בנפח גדול"
+
+#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
+#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
+msgid "Some files couldn't be added"
+msgstr "לא ניתן להעלות קבצים מסויימים"
+
+#: ../../../app/lib/classes/class.listing.php:296
+#: ../../../app/routes/route.album.php:177
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
+#: ../../../app/themes/Peafowl/views/album.php:34
+#: ../../../app/themes/Peafowl/views/user.php:98
+#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
+msgid "image"
+msgid_plural "images"
+msgstr[0] "תמונה"
+msgstr[1] "תמונות"
+msgstr[2] "תמונות"
+msgstr[3] "תמונות"
+
+#: ../../../app/routes/route.user.php:89
+#: ../../../app/themes/Peafowl/header.php:56
+#, php-format, javascript-format
+msgid "%s's Albums"
+msgstr "האלבומים של %s"
+
+#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
+msgid "Image edited successfully."
+msgstr "שינוי פרטי התמונה עודכן בהצלחה"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "פרטי"
+
+#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
+msgid "Album edited successfully."
+msgstr "שינוי פרטי האלבום עודכן בהצלחה"
+
+#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
+msgid "Invalid URL key."
+msgstr "מפתח קישור לא חוקי"
+
+#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
+msgid "Category URL key already being used."
+msgstr "מפתח קישור של קטגוריה כבר נמצא בשימוש"
+
+#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
+#, javascript-format
+msgid "Category %s added."
+msgstr "קטגוריית %s נוספה בהצלחה."
+
+#: ../../../app/lib/classes/class.storage.php:450
+#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
+#, php-format, javascript-format
+msgid "Storage capacity can't be lower than its current usage (%s)."
+msgstr "קיבולת האיחסון לא יכולה להיות נמוכה מהנוכחית %s"
+
+#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
+msgid "User added successfully."
+msgstr "משתמש התווסף בהצלחה"
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+#: ../../../app/themes/Peafowl/views/album.php:134
+#: ../../../app/themes/Peafowl/views/user.php:171
+#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
+msgid "The content has been deleted."
+msgstr "התוכן נמחק בהצלחה."
+
+#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
+#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
+#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
+#: ../../../app/lib/chevereto.min.js:205
+msgid "The content has been moved."
+msgstr "התמונות הועברו לאלבום בהצלחה."
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
+#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
+#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
+msgid "Select"
+msgstr "בחירה"
+
+#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
+msgid "Unselect"
+msgstr "בטל בחירה"
+
+#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
+msgid "The content has been edited."
+msgstr "הפרטים נערכו בהצלחה."
+
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
+#: ../../../app/themes/Peafowl/views/user.php:99
+msgid "album"
+msgid_plural "albums"
+msgstr[0] "אלבום"
+msgstr[1] "אלבומים"
+msgstr[2] "אלבומים"
+msgstr[3] "אלבומים"
 
 #: ../../../app/lib/classes/class.album.php:100
 msgid "Untitled"
@@ -235,19 +586,6 @@ msgstr[1] "לייקים"
 msgstr[2] "לייקים"
 msgstr[3] "לייקים"
 
-#: ../../../app/lib/classes/class.listing.php:296
-#: ../../../app/routes/route.album.php:177
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
-#: ../../../app/themes/Peafowl/views/album.php:34
-#: ../../../app/themes/Peafowl/views/user.php:98
-#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
-msgid "image"
-msgid_plural "images"
-msgstr[0] "תמונה"
-msgstr[1] "תמונות"
-msgstr[2] "תמונות"
-msgstr[3] "תמונות"
-
 msgid "Recent"
 msgstr "אחרונים"
 
@@ -327,19 +665,6 @@ msgstr[1] "תמונות"
 msgstr[2] "תמונות"
 msgstr[3] "תמונות"
 
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
-#: ../../../app/themes/Peafowl/views/dashboard.php:28
-msgid "Album"
-msgid_plural "Albums"
-msgstr[0] "אלבום"
-msgstr[1] "אלבומים"
-msgstr[2] "אלבומים"
-msgstr[3] "אלבומים"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:34
 #: ../../../app/themes/Peafowl/views/dashboard.php:90
 #: ../../../app/themes/Peafowl/views/settings.php:126
@@ -364,12 +689,6 @@ msgstr "לא ניתן לפתוח את  %s לכתיבה"
 #: ../../../app/themes/Peafowl/views/dashboard.php:461
 msgid "Internal"
 msgstr "חיצוני"
-
-#: ../../../app/lib/classes/class.storage.php:450
-#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
-#, php-format, javascript-format
-msgid "Storage capacity can't be lower than its current usage (%s)."
-msgstr "קיבולת האיחסון לא יכולה להיות נמוכה מהנוכחית %s"
 
 #: ../../../app/lib/classes/class.storage.php:720
 msgid "Unlimited"
@@ -422,10 +741,6 @@ msgstr "האתר במצב תחזוקה. כדי לשנות הגדרות כנסו 
 msgid "There is an update available for your Chevereto based website."
 msgstr "קיים עדכון זמין עבור אתר האינטרנט שלך מבוסס Chevereto."
 
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "The release notes for this update are:"
-msgstr "הערות שחרור עבור עדכון זה:"
-
 msgid "admin dashboard"
 msgstr "פאנל ניהול"
 
@@ -435,27 +750,6 @@ msgstr "מדיניות פרטיות"
 #, php-format
 msgid "We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link."
 msgstr "<b>באתר זה נעשה שימוש בקבצי cookie כדי לשפר את חווית הגלישה שלכם.</b>\nלמידע נוסף על האופן שבו אנו משתמשים בקבצי cookies, עיינו במדיניות הפרטיות שלנו. במידה ותמשיכו להשתמש באתר שלנו, אתם מסכימים לשימוש כזה בקבצי %cookie_policy_link"
-
-#: ../../../app/loader.php:180
-msgid "You have been forbidden to use this website."
-msgstr "נחסמת זמנית לכניסה למערכת."
-
-#: ../../../app/loader.php:279
-#: ../../../app/themes/Peafowl/views/settings.php:441
-msgid "Feel free to browse and discover all my shared images and albums."
-msgstr "הרגישו חופשיים לעיין ולראות את כל האלבומים והתמונות המשותפים שלי."
-
-#: ../../../app/loader.php:282
-#: ../../../app/themes/Peafowl/views/settings.php:447
-msgid "View all my images"
-msgstr "צפייה בכל התמונות שלי"
-
-msgid "Plugin"
-msgstr "תוספים"
-
-#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
-msgid "That page doesn't exist"
-msgstr "הדף אינו קיים."
 
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
@@ -545,29 +839,12 @@ msgstr "נדרש אישור ב- %s"
 msgid "Welcome to %s"
 msgstr "ברוכים הבאים ל%s"
 
-#: ../../../app/routes/route.account.php:360
-#: ../../../app/routes/route.settings.php:327
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
-#: ../../../app/themes/Peafowl/views/settings.php:313
-#: ../../../app/themes/Peafowl/views/settings.php:330
-#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
-msgid "Passwords don't match"
-msgstr "הסיסמאות אינן תואמות"
-
 #: ../../../app/routes/route.account.php:422
 #: ../../../app/routes/route.json.php:599
 #: ../../../app/routes/route.settings.php:243
 #: ../../../app/routes/route.signup.php:141
 msgid "Email already being used"
 msgstr "דוא\"ל כבר בשימוש"
-
-#: ../../../app/routes/route.account.php:508
-#: ../../../app/routes/route.signup.php:236
-#: ../../../content/pages/default/contact.php:132
-#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
-#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
-msgid "Check the errors in the form to continue."
-msgstr "בדקו שגיאות בטופס כדי להמשיך."
 
 msgid "Password required"
 msgstr "נדרשת סיסמא"
@@ -967,10 +1244,6 @@ msgstr "גוון ערכת נושא לא חוקי"
 msgid "Invalid theme main color"
 msgstr "צבע עיקרי של ערכת הנושא לא חוקי"
 
-#: ../../../app/routes/route.dashboard.php:632
-msgid "Invalid theme top bar color"
-msgstr "צבע באר עליון של ערכת הנושא לא חוקי"
-
 #: ../../../app/routes/route.dashboard.php:637
 msgid "Invalid theme top bar button color"
 msgstr "צבע כפתור הבאר העליון של ערכת הנושא לא חוקי"
@@ -1187,11 +1460,6 @@ msgstr "שם המשתמש או הדוא\"ל שגויים"
 msgid "Sign in"
 msgstr "היכנס"
 
-#: ../../../app/routes/route.logout.php:29
-#: ../../../app/themes/Peafowl/views/logout.php:8
-msgid "Logged out"
-msgstr "התנתק"
-
 msgid "Upload images"
 msgstr "העלה תמונות"
 
@@ -1295,12 +1563,6 @@ msgstr "העלאה"
 msgid "%s's Images"
 msgstr "התמונות של %s"
 
-#: ../../../app/routes/route.user.php:89
-#: ../../../app/themes/Peafowl/header.php:56
-#, php-format, javascript-format
-msgid "%s's Albums"
-msgstr "האלבומים של %s"
-
 #: ../../../app/routes/route.user.php:99
 #: ../../../app/themes/Peafowl/views/search.php:8
 msgid "Results for"
@@ -1332,10 +1594,6 @@ msgid "Discovery"
 msgstr "גלה עוד"
 
 #: ../../../app/themes/Peafowl/header.php:222
-msgid "Close"
-msgstr "סגור"
-
-#: ../../../app/themes/Peafowl/header.php:222
 #: ../../../app/themes/Peafowl/header.php:226
 msgid "Advanced search"
 msgstr "חיפוש מתקדם"
@@ -1354,12 +1612,6 @@ msgstr "הודעות (%s)"
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
 msgstr "התראות"
-
-#: ../../../app/themes/Peafowl/header.php:381
-#: ../../../app/themes/Peafowl/views/settings.php:348
-#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
-msgid "loading"
-msgstr "טוען נתונים"
 
 #: ../../../app/themes/Peafowl/header.php:384
 msgid "You don't have notifications"
@@ -1547,46 +1799,6 @@ msgstr "סמן כתוכן פוגעני"
 msgid "Uploading"
 msgstr "בהעלאה.."
 
-#: ../../../app/themes/Peafowl/header.php:285
-#: ../../../app/themes/Peafowl/header.php:332
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/form_album.php:9
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
-#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
-#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/login.php:22
-#: ../../../app/themes/Peafowl/views/login.php:62
-#: ../../../app/themes/Peafowl/views/settings.php:354
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../app/themes/Peafowl/views/signup.php:22
-#: ../../../app/themes/Peafowl/views/signup.php:73
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
-#: ../../../lib/Peafowl/peafowl.min.js:31
-#: ../../../lib/Peafowl/peafowl.min.js:140
-msgid "or"
-msgstr "או"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
-msgid "cancel"
-msgstr "ביטול"
-
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
 msgid "cancel remaining"
@@ -1611,21 +1823,10 @@ msgstr "סגור"
 msgid "copy"
 msgstr "העתק"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
-msgid "Edit"
-msgstr "עריכה"
-
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:148
 #: ../../../app/themes/Peafowl/views/dashboard.php:666
 msgid "Remove"
 msgstr "הסרה"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:154
-msgid "Edit image"
-msgstr "עריכת תמונה"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
 #: ../../../app/themes/Peafowl/snippets/form_image.php:4
@@ -1740,15 +1941,6 @@ msgstr "בחרו אלבום קיים על מנת להעביר את התמונו�
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:252
 msgid "Error report"
 msgstr "דוח שגיאות"
-
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
-#: ../../../app/themes/Peafowl/views/user.php:99
-msgid "album"
-msgid_plural "albums"
-msgstr[0] "אלבום"
-msgstr[1] "אלבומים"
-msgstr[2] "אלבומים"
-msgstr[3] "אלבומים"
 
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
@@ -2114,21 +2306,6 @@ msgstr "העבר לקטגוריה"
 msgid "Flag as safe"
 msgstr "סמן כתוכן מאושר"
 
-#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
-#: ../../../app/themes/Peafowl/views/dashboard.php:607
-#: ../../../app/themes/Peafowl/views/dashboard.php:884
-#: ../../../app/themes/Peafowl/views/dashboard.php:933
-msgid "Delete"
-msgstr "מחק"
-
 msgid "Create new album"
 msgstr "צור אלבום חדש"
 
@@ -2147,18 +2324,6 @@ msgstr "היכנס עם חשבון אחר"
 #: ../../../app/themes/Peafowl/views/index.php:63
 msgid "There's nothing to show here."
 msgstr "לא נמצאו נתונים."
-
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
-#: ../../../app/themes/Peafowl/views/image.php:69
-#: ../../../app/themes/Peafowl/views/image.php:457
-msgid "Edit image details"
-msgstr "עריכת פרטי תמונה"
-
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
-#: ../../../app/themes/Peafowl/views/album.php:22
-#: ../../../app/themes/Peafowl/views/album.php:118
-msgid "Edit album details"
-msgstr "עריכת פרטי האלבום"
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
 msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
@@ -2226,11 +2391,6 @@ msgstr "אורח"
 msgid "Keyboard shortcuts"
 msgstr "קיצורי דרך במקלדת"
 
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "לייק"
-
 msgid "Uploaded by guest"
 msgstr "הועלה על ידי אורח"
 
@@ -2247,25 +2407,14 @@ msgstr "הועלה לתוכן פרטי"
 msgid "by %u"
 msgstr "מאת %u"
 
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
-#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
-#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
-msgid "Select"
-msgstr "בחירה"
-
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:7
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:7
 msgid "Toggle unsafe flag"
 msgstr "אפשרות דגל לא בטוח"
+
+#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
+msgid "That page doesn't exist"
+msgstr "הדף אינו קיים."
 
 #: ../../../app/themes/Peafowl/views/404.php:7
 msgid "The requested page was not found."
@@ -2278,13 +2427,6 @@ msgstr "חפשו משהו אחר"
 #: ../../../app/themes/Peafowl/views/404.php:22
 msgid "The user has been deleted"
 msgstr "המשתמש נמחק"
-
-#: ../../../app/themes/Peafowl/views/404.php:22
-#: ../../../app/themes/Peafowl/views/album.php:134
-#: ../../../app/themes/Peafowl/views/user.php:171
-#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
-msgid "The content has been deleted."
-msgstr "התוכן נמחק בהצלחה."
 
 #: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:7
 msgid "Your account is almost ready"
@@ -2399,10 +2541,6 @@ msgstr "האלבום מוגדר פרטי"
 msgid "Do you really want to delete this album and all of its images? This can't be undone."
 msgstr "האם הינך בטוח במחיקת האלבום כולל התמונות? לא ניתן לבטל פעולה זו."
 
-#: ../../../app/themes/Peafowl/views/album.php:25
-msgid "Delete album"
-msgstr "מחיקת אלבום"
-
 #: ../../../app/themes/Peafowl/views/image.php:85
 msgid "You like this"
 msgstr "אהבת את זה"
@@ -2432,15 +2570,15 @@ msgstr "אני מאשר"
 msgid "Disk used"
 msgstr "שימוש דיסק"
 
-msgid "Cancel"
-msgstr "ביטול"
-
 msgid "Errors"
 msgstr "שגיאות"
 
 #: ../../../app/themes/Peafowl/views/settings.php:105
 msgid "Status"
 msgstr "סטטוס"
+
+msgid "Cancel"
+msgstr "ביטול"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:80
 #: ../../../app/themes/Peafowl/views/dashboard.php:84
@@ -2946,10 +3084,6 @@ msgstr "דף נחיתה"
 msgid "Split landing + images"
 msgstr "דף נחיתה + תמונות אחרונות"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1396
-msgid "Route explore"
-msgstr "דף סיור"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1401
 #, php-format
 msgid "Select the homepage style. To customize it further edit app/themes/%s/views/index.php"
@@ -3129,6 +3263,11 @@ msgstr "כניסת משתמש"
 msgid "Don't have an account? <a href='%s'>Sign up</a> now."
 msgstr "אין לך משתמש? <a href='%s'>הירשם עכשיו</a>."
 
+#: ../../../app/routes/route.logout.php:29
+#: ../../../app/themes/Peafowl/views/logout.php:8
+msgid "Logged out"
+msgstr "התנתק"
+
 #: ../../../app/themes/Peafowl/views/logout.php:12
 #, php-format
 msgid "You have been logged off %s. Hope to see you soon."
@@ -3278,6 +3417,16 @@ msgstr "ביוגרפיה"
 msgid "Tell us a little bit about you"
 msgstr "ספר בקצרה מי אתה !!"
 
+#: ../../../app/loader.php:279
+#: ../../../app/themes/Peafowl/views/settings.php:441
+msgid "Feel free to browse and discover all my shared images and albums."
+msgstr "הרגישו חופשיים לעיין ולראות את כל האלבומים והתמונות המשותפים שלי."
+
+#: ../../../app/loader.php:282
+#: ../../../app/themes/Peafowl/views/settings.php:447
+msgid "View all my images"
+msgstr "צפייה בכל התמונות שלי"
+
 msgid "Login"
 msgstr "התחבר"
 
@@ -3322,10 +3471,6 @@ msgstr "לא ניתן לבטל פעולה זו לאחר מחיקת תמונת ר
 msgid "Delete background"
 msgstr "מחק רקע"
 
-#: ../../../app/themes/Peafowl/views/user.php:61
-msgid "Edit profile"
-msgstr "ערוך פרופיל"
-
 #: ../../../app/themes/Peafowl/views/user.php:75
 msgid "Follower"
 msgid_plural "Followers"
@@ -3337,6 +3482,13 @@ msgstr[3] "עוקבים"
 #: ../../../app/themes/Peafowl/views/user.php:81
 msgid "Follow"
 msgstr "לעקוב"
+
+#: ../../../app/loader.php:180
+msgid "You have been forbidden to use this website."
+msgstr "נחסמת זמנית לכניסה למערכת."
+
+msgid "Plugin"
+msgstr "תוספים"
 
 #: ../../../app/routes/route.page.php:61
 #: ../../../content/pages/default/contact.php:7
@@ -3378,179 +3530,6 @@ msgstr "שם מלא"
 
 msgid "Subject"
 msgstr "נושא"
-
-#: ../../../app/install/update/template/update.js:19
-#, javascript-format
-msgid "Installed version is v%s"
-msgstr "הגירסה הנוכחית היא %s"
-
-#: ../../../app/install/update/template/update.js:30
-#, javascript-format
-msgid "Last available release is v%s"
-msgstr "יש עדכון זמין לגירסה %s"
-
-#: ../../../app/install/update/template/update.js:33
-msgid "Update needed, proceeding to download"
-msgstr "מוריד עדכון חדש, אנא המתן"
-
-#: ../../../app/install/update/template/update.js:40
-msgid "No update needed"
-msgstr "עדכון לא נדרש"
-
-#: ../../../app/install/update/template/update.js:49
-#, javascript-format
-msgid "Starting v%s download"
-msgstr "התחיל בהורדת עדכון %s"
-
-#: ../../../app/install/update/template/update.js:60
-#, javascript-format
-msgid "Downloaded v%s, proceeding to extraction"
-msgstr "עדכון %s הורד בהצלחה, ממתין לאימות נתונים"
-
-#: ../../../app/install/update/template/update.js:72
-#, javascript-format
-msgid "Attempting to extract v%s"
-msgstr "עדכון %s עבר אימות בהצלחה, וכעת מתקין קבצים"
-
-#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
-#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
-#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
-#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
-#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
-#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
-msgid "You must enter the album name."
-msgstr "לא הוזן שם אלבום"
-
-#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
-#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
-#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
-#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
-msgid "Confirm"
-msgstr "אישור פעולה"
-
-#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
-msgid "Select existing album"
-msgstr "בחר לאלבום קיים"
-
-#: ../../../app/install/update/updater.php:62
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
-#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
-#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
-#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
-#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
-#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
-#: ../../../lib/Peafowl/peafowl.min.js:158
-#: ../../../lib/Peafowl/peafowl.min.js:195
-msgid "An error occurred. Please try again later."
-msgstr "התרחשה שגיאה. אנא נסו שוב מאוחר יותר."
-
-#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
-#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
-msgid "Please select a valid image file type."
-msgstr "בחר סוג קובץ תמונה תקין."
-
-#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
-#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
-#, javascript-format
-msgid "Please select a picture of at most %s size."
-msgstr "ניתן לבחור תמונה עד גודל %s."
-
-#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
-msgid "Profile image updated."
-msgstr "תמונת פרופיל עודכנה בהצלחה."
-
-#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
-msgid "Profile background image updated."
-msgstr "תמונת רקע פרופיל עודכנה בהצלחה."
-
-#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
-msgid "Profile background image deleted."
-msgstr "תמונת רקע פרופיל נמחקה בהצלחה."
-
-#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
-msgid "Error deleting profile background image."
-msgstr "שגיאה בעת מחיקת תמונת רקע פרופיל, נסה שוב."
-
-#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
-#, javascript-format
-msgid "Update available v%s"
-msgstr "עדכון זמין (גירסה %s)"
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#, javascript-format
-msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
-msgstr "קיים עדכון זמין עבור המערכת. באפשרותך להוריד ולהתקין את העדכון באופן אוטומטי, או להיכנס לכתובת %s כדי להמשיך ולהוריד את הקובץ."
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "Update now"
-msgstr "עדכן כעת"
-
-#, javascript-format
-msgid "This website is running latest %s version"
-msgstr "הינך נמצא בגירסה המעודכנת של מערכת %s"
-
-msgid "Toggle select"
-msgstr "סמן בחירה"
-
-msgid "Toggle flag"
-msgstr "סמן כתוכן פוגעני"
-
-#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
-msgid "File too big."
-msgstr "הקובץ בנפח גדול"
-
-#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
-#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
-msgid "Some files couldn't be added"
-msgstr "לא ניתן להעלות קבצים מסויימים"
-
-#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
-msgid "Image edited successfully."
-msgstr "שינוי פרטי התמונה עודכן בהצלחה"
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
-#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
-#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
-msgid "private"
-msgstr "פרטי"
-
-#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
-msgid "Album edited successfully."
-msgstr "שינוי פרטי האלבום עודכן בהצלחה"
-
-#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
-msgid "Invalid URL key."
-msgstr "מפתח קישור לא חוקי"
-
-#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
-msgid "Category URL key already being used."
-msgstr "מפתח קישור של קטגוריה כבר נמצא בשימוש"
-
-#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
-#, javascript-format
-msgid "Category %s added."
-msgstr "קטגוריית %s נוספה בהצלחה."
-
-#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
-msgid "User added successfully."
-msgstr "משתמש התווסף בהצלחה"
-
-#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
-#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
-#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
-#: ../../../app/lib/chevereto.min.js:205
-msgid "The content has been moved."
-msgstr "התמונות הועברו לאלבום בהצלחה."
-
-#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
-msgid "Unselect"
-msgstr "בטל בחירה"
-
-#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
-msgid "The content has been edited."
-msgstr "הפרטים נערכו בהצלחה."
 
 #: ../../../lib/Peafowl/peafowl.js:25 ../../../lib/Peafowl/peafowl.js:492
 #: ../../../lib/Peafowl/peafowl.min.js:1 ../../../lib/Peafowl/peafowl.min.js:31

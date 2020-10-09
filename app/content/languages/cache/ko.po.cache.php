@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2020-05-16 19:37+0000',
-  'PO-Revision-Date' => '2020-05-16 19:37+0000',
+  'POT-Creation-Date' => '2020-09-25 18:53+0000',
+  'PO-Revision-Date' => '2020-09-25 18:53+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'ko',
@@ -20,13 +20,13 @@ $translation_table = [
 		0 => "이메일 주소가 잘못되었습니다",
 	],
 	"Invalid username" => [
-		0 => "사용자 이름이 잘못되었습니다",
+		0 => "잘못된 사용자명",
 	],
 	"Invalid password" => [
-		0 => "비밀번호가 잘못되었습니다",
+		0 => "잘못된 암호",
 	],
 	"Invalid website mode" => [
-		0 => "웹사이트 모드가 잘못되었습니다",
+		0 => "잘못된 웹사이트 모드",
 	],
 	"From email address" => [
 		0 => "보내는 이메일 주소",
@@ -47,10 +47,10 @@ $translation_table = [
 		0 => "웹사이트 모드는 언제든지 바꿀 수 있습니다.",
 	],
 	"Community" => [
-		0 => "커뮤니티",
+		0 => "모임",
 	],
 	"Personal" => [
-		0 => "개인",
+		0 => "개인용",
 	],
 	"Installed version is v%s" => [
 		0 => "설치된 버전은 v%s 입니다",
@@ -71,7 +71,7 @@ $translation_table = [
 		0 => "시스템 파일이 이미 최신 상태입니다",
 	],
 	"Starting v%s download" => [
-		0 => "v%s 다운로드를 시작하는 중입니다",
+		0 => "v%s 버전 다운로드를 시작 중",
 	],
 	"Downloaded v%s, proceeding to extraction" => [
 		0 => "v%s 을(를) 다운로드했습니다. 압축을 해제하는 중입니다",
@@ -124,6 +124,9 @@ $translation_table = [
 	"Confirm" => [
 		0 => "확인",
 	],
+	"The content has been approved." => [
+		0 => "게시물을 승인하였습니다.",
+	],
 	"Select existing album" => [
 		0 => "기존 앨범 선택하기",
 	],
@@ -131,7 +134,7 @@ $translation_table = [
 		0 => "오류가 발생했습니다. 잠시 후에 다시 시도해주세요.",
 	],
 	"Please select a valid image file type." => [
-		0 => "올바른 이미지 파일 유형을 선택해주세요.",
+		0 => "올바른 이미지 파일 유형을 선택하십시오.",
 	],
 	"Please select a picture of at most %s size." => [
 		0 => "최대 %s 크기의 이미지를 선택해주세요.",
@@ -152,16 +155,16 @@ $translation_table = [
 		0 => "비밀번호가 일치하지 않습니다",
 	],
 	"Update available v%s" => [
-		0 => "v%s 업데이트가 가능합니다",
+		0 => "v%s 버전 업데이트가 가능합니다",
 	],
 	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
-		0 => "시스템에 적용할 수 있는 업데이트가 발견되었습니다. 이 업데이트를 자동으로 다운로드하여 설치하거나 %s로(으로) 이동하여 파일을 다운로드할 수 있습니다.",
+		0 => "시스템에 적용할 수 있는 업데이트가 발견되었습니다. 이 업데이트를 자동으로 다운로드하여 설치하거나 %s 로(으로) 이동하여 파일 다운로드를 진행할 수 있습니다.",
 	],
 	"The release notes for this update are:" => [
 		0 => "이 업데이트의 릴리즈 노트는 다음과 같습니다:",
 	],
 	"Update now" => [
-		0 => "지금 업데이트 하기",
+		0 => "업데이트 하기",
 	],
 	"or" => [
 		0 => "또는",
@@ -173,7 +176,7 @@ $translation_table = [
 		0 => "이 웹사이트는 최신 %s 버전을 사용 중입니다",
 	],
 	"loading" => [
-		0 => "로딩 중",
+		0 => "불러오는 중",
 	],
 	"Toggle select" => [
 		0 => "선택 토글",
@@ -189,6 +192,9 @@ $translation_table = [
 	],
 	"Album" => [
 		0 => "앨범",
+	],
+	"Approve" => [
+		0 => "승인",
 	],
 	"Delete" => [
 		0 => "삭제",
@@ -218,7 +224,7 @@ $translation_table = [
 		0 => "이미지",
 	],
 	"%s's Albums" => [
-		0 => "%s님의 앨범",
+		0 => "%s의 앨범",
 	],
 	"Image edited successfully." => [
 		0 => "이미지 편집이 완료되었습니다.",
@@ -335,7 +341,7 @@ $translation_table = [
 		0 => "링크",
 	],
 	"Password" => [
-		0 => "비밀번호",
+		0 => "암호",
 	],
 	"view" => [
 		0 => "조회",
@@ -374,10 +380,10 @@ $translation_table = [
 		0 => "좋아요",
 	],
 	"Recent" => [
-		0 => "최신",
+		0 => "최신 게시물",
 	],
 	"Trending" => [
-		0 => "트랜드",
+		0 => "트렌드",
 	],
 	"Top users" => [
 		0 => "최고 사용자",
@@ -398,7 +404,7 @@ $translation_table = [
 		0 => "인기순",
 	],
 	"Explore" => [
-		0 => "둘러보기",
+		0 => "탐색",
 	],
 	"Animated" => [
 		0 => "움짤",
@@ -414,6 +420,12 @@ $translation_table = [
 	],
 	"User" => [
 		0 => "사용자",
+	],
+	"adult" => [
+		0 => "성인",
+	],
+	"teen" => [
+		0 => "미성년자",
 	],
 	"Can't create %s destination dir" => [
 		0 => "%s 목적지 디렉터리를 찾을 수 없습니다",
@@ -488,13 +500,13 @@ $translation_table = [
 		0 => "이 웹사이트는 개인화되고 맞춤화된 서비스를 제공하기 위해서, 사용자의 정보를 저장하고 수시로 불러오는 쿠키(cookie)를 사용합니다. 웹사이트 이용을 계속하는 것은 %cookie_policy_link에 동의하는 것으로 간주합니다.",
 	],
 	"I understand" => [
-		0 => "동의합니다",
+		0 => "동의합니다.",
 	],
 	"Forgot password?" => [
-		0 => "비밀번호를 잊으셨나요?",
+		0 => "암호를 잊으셨나요?",
 	],
 	"Reset password" => [
-		0 => "비밀번호 재설정하기",
+		0 => "암호 재설정",
 	],
 	"Resend account activation" => [
 		0 => "계정 활성화 메일 다시보내기",
@@ -515,19 +527,19 @@ $translation_table = [
 		0 => "이메일 주소가 없는 사용자입니다.",
 	],
 	"Request denied" => [
-		0 => "요청이 거부되었습니다",
+		0 => "요청이 거부됨",
 	],
 	"Account needs to be activated to use this feature" => [
 		0 => "이 기능을 사용하려면 계정이 활성화되어야 합니다",
 	],
 	"Account already activated" => [
-		0 => "계정이 이미 활성화되었습니다",
+		0 => "계정이 이미 활성화됨",
 	],
 	"Allow up to 15 minutes for the email. You can try again later." => [
 		0 => "이메일을 다시 보내기 위해서는 최대 15분이 필요합니다. 잠시 후에 다시 시도해주세요.",
 	],
 	"Reset your password at %s" => [
-		0 => "%s의 비밀번호 재설정 하기",
+		0 => "귀하의 암호 재설정하기 - %s",
 	],
 	"Confirmation required at %s" => [
 		0 => "%s에서 확인해주셔야 할 내용이 있습니다.",
@@ -539,7 +551,7 @@ $translation_table = [
 		0 => "이메일 주소가 이미 사용 중입니다",
 	],
 	"Password required" => [
-		0 => "비밀번호가 필요합니다",
+		0 => "암호 필요",
 	],
 	"Share" => [
 		0 => "공유하기",
@@ -578,10 +590,10 @@ $translation_table = [
 		0 => "업데이트 설치하기",
 	],
 	"check for updates" => [
-		0 => "업데이트 검사하기",
+		0 => "업데이트 확인하기",
 	],
 	"Support" => [
-		0 => "고객지원",
+		0 => "지원",
 	],
 	"Need help? Go to %s and you will get help quickly." => [
 		0 => "도움이 필요하세요? %s을 방문하시면 빠르게 도움을 받을 수 있습니다.",
@@ -665,7 +677,7 @@ $translation_table = [
 		0 => "이미지 업로드",
 	],
 	"Categories" => [
-		0 => "카테고리",
+		0 => "범주",
 	],
 	"Consent screen" => [
 		0 => "동의 화면",
@@ -695,7 +707,7 @@ $translation_table = [
 		0 => "외부 저장소",
 	],
 	"Email" => [
-		0 => "이메일",
+		0 => "전자우편",
 	],
 	"Social networks" => [
 		0 => "소셜 네트워크",
@@ -777,9 +789,6 @@ $translation_table = [
 	],
 	"Inside viewer top (image page)" => [
 		0 => "뷰어의 상단 (이미지 페이지)",
-	],
-	"Expected banner size 728x90" => [
-		0 => "배너 크기 공간 728x90",
 	],
 	"Inside viewer foot (image page)" => [
 		0 => "뷰어의 하단 (이미지 페이지)",
@@ -863,13 +872,10 @@ $translation_table = [
 		0 => "값이 잘못되었습니다",
 	],
 	"Invalid theme tone" => [
-		0 => "테마 톤이 잘못되었습니다",
+		0 => "잘못된 테마 톤",
 	],
 	"Invalid theme main color" => [
 		0 => "테마 주 색상이 잘못되었습니다",
-	],
-	"Invalid theme top bar color" => [
-		0 => "테마 상단 바 색상이 잘못되었습니다",
 	],
 	"Invalid theme top bar button color" => [
 		0 => "테마 상단 바 버튼 색상이 잘못되었습니다",
@@ -1111,6 +1117,9 @@ $translation_table = [
 	"Sign in" => [
 		0 => "로그인",
 	],
+	"Moderate" => [
+		0 => "중재하기",
+	],
 	"Upload images" => [
 		0 => "이미지 업로드",
 	],
@@ -1148,19 +1157,19 @@ $translation_table = [
 		0 => "웹사이트가 잘못되었습니다",
 	],
 	"Wrong password" => [
-		0 => "비밀번호가 일치하지 않습니다",
+		0 => "틀린 암호",
 	],
 	"Use a new password" => [
-		0 => "새로운 비밀번호 사용하기",
+		0 => "새로운 암호 사용하기",
 	],
 	"Changes have been saved." => [
 		0 => "변경 사항이 저장되었습니다.",
 	],
 	"Password has been changed" => [
-		0 => "비밀번호가 변경되었습니다",
+		0 => "암호가 변경되었습니다.",
 	],
 	"Password has been created." => [
-		0 => "비밀번호가 생성되었습니다",
+		0 => "암호가 생성되었습니다.",
 	],
 	"Wrong Username/Email values" => [
 		0 => "사용자 이름 또는 이메일 주소가 잘못되었습니다",
@@ -1390,6 +1399,9 @@ $translation_table = [
 	"close" => [
 		0 => "닫기",
 	],
+	"Note" => [
+		0 => "비고",
+	],
 	"copy" => [
 		0 => "복사",
 	],
@@ -1398,9 +1410,6 @@ $translation_table = [
 	],
 	"Remove" => [
 		0 => "제거",
-	],
-	"Edit image" => [
-		0 => "이미지 편집",
 	],
 	"Title" => [
 		0 => "제목",
@@ -1565,10 +1574,10 @@ $translation_table = [
 		0 => "비공개(링크)",
 	],
 	"Private (password protected)" => [
-		0 => "비공개(비밀번호)",
+		0 => "비공개 (암호로 보호 됨)",
 	],
 	"Album password" => [
-		0 => "앨범 비밀번호",
+		0 => "앨범 암호",
 	],
 	"Name" => [
 		0 => "이름",
@@ -1590,6 +1599,9 @@ $translation_table = [
 	],
 	"Untitled image" => [
 		0 => "제목 없는 이미지",
+	],
+	"Flag not safe" => [
+		0 => "미안전 표기",
 	],
 	"Path" => [
 		0 => "경로",
@@ -1733,7 +1745,7 @@ $translation_table = [
 		0 => "서버 사용자 이름",
 	],
 	"Server password" => [
-		0 => "서버 비밀번호",
+		0 => "서버 암호",
 	],
 	"Local path" => [
 		0 => "내부 경로",
@@ -1798,12 +1810,6 @@ $translation_table = [
 	"There's nothing to show here." => [
 		0 => "볼 수 있는 게시물이 없습니다.",
 	],
-	"Edit image details" => [
-		0 => "이미지 속성 편집하기",
-	],
-	"Edit album details" => [
-		0 => "앨범 속성 편집하기",
-	],
 	"All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
 		0 => "모든 이미지는 새로 만든 앨범으로 이동됩니다. 또는 <a class=\"modal-switch\" data-switch=\"move-existing-album\">기존 앨범</a>으로 이동시킬 수 있습니다.",
 	],
@@ -1834,6 +1840,9 @@ $translation_table = [
 	"Do you really want to flag this content as unsafe?" => [
 		0 => "선택한 게시물에 후방주의 플래그를 설정하시겠습니까?",
 	],
+	"Confirm approval" => [
+		0 => "승인 확인",
+	],
 	"Confirm deletion" => [
 		0 => "삭제 확인",
 	],
@@ -1844,10 +1853,10 @@ $translation_table = [
 		0 => "선택한 게시물을 삭제하시겠습니까? 이 작업은 원래대로 되돌릴 수 없습니다.",
 	],
 	"Fullscreen" => [
-		0 => "전체 화면",
+		0 => "전체화면",
 	],
 	"Exit fullscreen" => [
-		0 => "전체 화면 나가기",
+		0 => "전체화면 나가기",
 	],
 	"Guest" => [
 		0 => "손님",
@@ -1859,7 +1868,7 @@ $translation_table = [
 		0 => "비공개 앨범",
 	],
 	"Password protected" => [
-		0 => "비밀번호 보호",
+		0 => "암호로 보호 됨",
 	],
 	"Uploaded by guest" => [
 		0 => "손님의 업로드",
@@ -1940,7 +1949,7 @@ $translation_table = [
 		0 => "최소 %d개의 문자를 입력해주세요",
 	],
 	"Password strength" => [
-		0 => "비밀번호 강도",
+		0 => "암호 강도",
 	],
 	"Re-enter your new password" => [
 		0 => "새로운 비밀번호를 다시 입력해주세요",
@@ -1953,9 +1962,6 @@ $translation_table = [
 	],
 	"Do you really want to delete this album and all of its images? This can't be undone." => [
 		0 => "이 앨범과 앨범의 모든 이미지를 삭제하시겠습니까? 이 작업은 원래대로 되돌릴 수 없습니다.",
-	],
-	"Delete album" => [
-		0 => "앨범 삭제하기",
 	],
 	"You like this" => [
 		0 => "좋아하는 게시물입니다",
@@ -2005,9 +2011,6 @@ $translation_table = [
 	"The system automatically parses any content by a continuous observation of the %path% path." => [
 		0 => "시스템은 %path% 경로를 지속적으로 감시하여 자동으로 내용물을 구문 분석합니다.",
 	],
-	"The system automatically parses any content by a continous observation of the %path% path." => [
-		0 => "시스템은 %path% 경로를 지속적으로 감시하여 자동으로 내용물을 구문분석(파싱)합니다.",
-	],
 	"Completed jobs will be automatically re-started after %n %m." => [
 		0 => "완료된 작업은 %n %m 후에 자동으로 재시작됩니다.",
 	],
@@ -2021,13 +2024,13 @@ $translation_table = [
 		0 => "작업 중",
 	],
 	"Paused" => [
-		0 => "일시중지",
+		0 => "멈춤",
 	],
 	"Canceled" => [
-		0 => "취소됨",
+		0 => "취소",
 	],
 	"Completed" => [
-		0 => "완료됨",
+		0 => "완료",
 	],
 	"Actions" => [
 		0 => "액션",
@@ -2036,7 +2039,7 @@ $translation_table = [
 		0 => "재설정",
 	],
 	"Pause" => [
-		0 => "일시중지",
+		0 => "멈춤",
 	],
 	"Resume" => [
 		0 => "재시작",
@@ -2059,14 +2062,8 @@ $translation_table = [
 	"All file-system permissions must be granted for the crontab user at %path%" => [
 		0 => "crontab 사용자에게 %path% 경로의 모든 파일 시스템 권한을 부여해야 합니다.",
 	],
-	"Required crontab entry:" => [
-		0 => "필수 crontab 항목:",
-	],
 	"Add import job" => [
 		0 => "가져오기 작업 추가하기",
-	],
-	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d." => [
-		0 => "이 도구를 사용하면 가져올 내용물의 시스템 경로를 지정하여 웹사이트에 내용물을 대량으로 추가할 수 있습니다. 폴더 기반 구조를 사용하여 사용자, 앨범 및 이미지의 추가를 지원합니다. 폴더 구조, 메타데이터 추가 및 이 도구에 대한 모든 정보에 대해 더 알아보려면 %d를 참조해주세요.",
 	],
 	"Process import" => [
 		0 => "가져오기 실행하기",
@@ -2099,13 +2096,13 @@ $translation_table = [
 		0 => "사용자 추가",
 	],
 	"Role" => [
-		0 => "권한",
+		0 => "역할",
 	],
 	"Manager" => [
-		0 => "운영자",
+		0 => "관리자",
 	],
 	"Administrator" => [
-		0 => "관리자",
+		0 => "최고관리자",
 	],
 	"Email address" => [
 		0 => "이메일 주소",
@@ -2237,16 +2234,16 @@ $translation_table = [
 		0 => "활성 페이지에만 액세스할 수 있습니다.",
 	],
 	"Type" => [
-		0 => "종류",
+		0 => "유형",
 	],
 	"Terms of service" => [
-		0 => "이용 약관",
+		0 => "이용약관",
 	],
 	"Privacy" => [
 		0 => "개인 정보 보호 정책",
 	],
 	"Contact" => [
-		0 => "문의하기",
+		0 => "문의",
 	],
 	"Extra page" => [
 		0 => "추가 페이지",
@@ -2344,12 +2341,6 @@ $translation_table = [
 	"Enable this if you want to allow image uploads. This setting doesn't affect administrators." => [
 		0 => "이미지 업로드를 허용하려면 이 옵션을 활성화로 설정해주세요. 이 설정은 관리자에게 영향을 주지 않습니다.",
 	],
-	"Guest uploads" => [
-		0 => "손님 업로드",
-	],
-	"Enable this if you want to allow non registered users to upload." => [
-		0 => "미등록 사용자의 업로드를 허용하려면 이 옵션을 활성화로 설정해주세요.",
-	],
 	"Upload user interface" => [
 		0 => "업로드 사용자 인터페이스",
 	],
@@ -2358,6 +2349,21 @@ $translation_table = [
 	],
 	"route" => [
 		0 => "라우팅",
+	],
+	"Guest uploads" => [
+		0 => "손님 업로드",
+	],
+	"Enable this if you want to allow non registered users to upload." => [
+		0 => "미등록 사용자의 업로드를 허용하려면 이 옵션을 활성화로 설정해주세요.",
+	],
+	"Moderate uploads" => [
+		0 => "올려놓기 중재",
+	],
+	"Guests" => [
+		0 => "손님",
+	],
+	"Enable this to moderate incoming uploads. Target content will require moderation for approval." => [
+		0 => "활성화하면 올려놓기 요청을 중재합니다. 대상 게시물은 중재를 통한 승인이 요구됩니다.",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "퍼가기 코드 활성화 (업로드 창)",
@@ -2627,7 +2633,7 @@ $translation_table = [
 		0 => "사용자의 URL을 %s/user/username 대신 %s/username을 사용하려면 이 옵션을 활성화로 설정해주세요.",
 	],
 	"Require email confirmation" => [
-		0 => "이메일 인증 요청",
+		0 => "전자우편 확인 요구",
 	],
 	"Enable this if users must validate their email address on sign up." => [
 		0 => "가입시 사용자의 이메일 주소 정상 여부를 확인하려면 이 옵션을 활성화로 설정해주세요.",
@@ -2682,6 +2688,9 @@ $translation_table = [
 	],
 	"Monthly limit" => [
 		0 => "월간 업로드 제한",
+	],
+	"Lock %s editing" => [
+		0 => "%s의 편집 잠금",
 	],
 	"Show not safe content in listings" => [
 		0 => "목록에 후방주의 게시물 노출",
@@ -2756,7 +2765,7 @@ $translation_table = [
 		0 => "각 대상 기기에 따라 사용되는 목록의 칼럼 개수를 설정할 수 있습니다.",
 	],
 	"Phone" => [
-		0 => "스마트폰",
+		0 => "전화",
 	],
 	"Phablet" => [
 		0 => "패블릿",
@@ -2794,18 +2803,6 @@ $translation_table = [
 	"Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>." => [
 		0 => "주 테마 색상을 설정하려면 이 옵션을 설정해주세요. 설정 값은 <a href=\"%s\" target=\"_blank\">헥스 코드</a>이어야 합니다.",
 	],
-	"Top bar color" => [
-		0 => "상단 바 색상",
-	],
-	"Black" => [
-		0 => "검정",
-	],
-	"White" => [
-		0 => "하양",
-	],
-	"If you set this to \"white\" the top bar and all the black tones will be changed to white tones." => [
-		0 => "상단 바의 색상을 \"하양\"으로 설정하면 모든 검정색의 요소가 하얀색으로 바뀝니다.",
-	],
 	"Top bar button color" => [
 		0 => "상단 바 버튼 색상",
 	],
@@ -2823,6 +2820,12 @@ $translation_table = [
 	],
 	"Grey" => [
 		0 => "회색",
+	],
+	"Black" => [
+		0 => "검정",
+	],
+	"White" => [
+		0 => "하양",
 	],
 	"Color for the top bar buttons like the \"Create account\" button." => [
 		0 => "상단 바 버튼의 색상은 \"계정 만들기\" 버튼의 색상과 같이 사용됩니다.",
@@ -2894,7 +2897,7 @@ $translation_table = [
 		0 => "퍼가기 코드 활성화 (게시물)",
 	],
 	"Everybody" => [
-		0 => "아무나",
+		0 => "누구나",
 	],
 	"Users only" => [
 		0 => "사용자만",
@@ -2931,9 +2934,6 @@ $translation_table = [
 	],
 	"Split landing + images" => [
 		0 => "잘라낸 방문 페이지 + 이미지",
-	],
-	"Route explore" => [
-		0 => "둘러보기 라우팅",
 	],
 	"Select the homepage style. To customize it further edit app/themes/%s/views/index.php" => [
 		0 => "홈페이지 스타일을 선택해주세요. 추가 편집은 app/themes/%s/views/index.php에서 할 수 있습니다.",
@@ -3008,7 +3008,7 @@ $translation_table = [
 		0 => "배너",
 	],
 	"Automatic updates check" => [
-		0 => "자동 업데이트 체크",
+		0 => "자동 업데이트 확인하기",
 	],
 	"When enabled the system will automatically check for new updates." => [
 		0 => "활성화하면 시스템은 자동으로 새로운 업데이트를 체크합니다.",
@@ -3020,10 +3020,10 @@ $translation_table = [
 		0 => "사용 가능한 새로운 시스템 업데이트에 대한 알림을 상단 알림에 표시하려면 이 옵션을 활성화로 설정해주세요.",
 	],
 	"Dump update query" => [
-		0 => "업데이트 쿼리 덤프",
+		0 => "업데이트 쿼리 덤프 뜨기",
 	],
 	"Enable this if you want to dump the update query to run it manually." => [
-		0 => "업데이트 쿼리를 덤프해서 수동으로 실행하려면 이 옵션을 활성화로 설정해주세요",
+		0 => "활성화하면 자동으로 언어를 감자하여 각 사용자에게 맞는 언어로 설정합니다.",
 	],
 	"SEO %s URLs" => [
 		0 => "검색엔진 최적화 %s URL",
@@ -3086,7 +3086,7 @@ $translation_table = [
 		0 => "앨범 라우팅",
 	],
 	"Hostname" => [
-		0 => "호스트 이름",
+		0 => "호스트네임",
 	],
 	"Hostname on which sub-domain wildcards will be added." => [
 		0 => "서브도메인 와일드카드가 추가될 호스트 이름입니다.",
@@ -3185,7 +3185,7 @@ $translation_table = [
 		0 => "SMTP 사용자 이름",
 	],
 	"SMTP password" => [
-		0 => "SMTP 사용자 비밀번호",
+		0 => "SMTP 사용자 암호",
 	],
 	"SMTP security" => [
 		0 => "SMTP 보안 연결 방법",
@@ -3339,6 +3339,21 @@ $translation_table = [
 	],
 	"Disqus, Facebook or anything you want. It will be used in image view." => [
 		0 => "Disqus, Facebook 또는 다른 원하는 서비스의 코드를 넣어주세요. 댓글은 이미지 뷰어에 사용됩니다.",
+	],
+	"Automatic approve" => [
+		0 => "자동 승인",
+	],
+	"Block content" => [
+		0 => "블럭한 게시물",
+	],
+	"Adult" => [
+		0 => "성인",
+	],
+	"Teen and adult" => [
+		0 => "미성년자와 성인",
+	],
+	"Flag NSFW" => [
+		0 => "후방주의 표기",
 	],
 	"Analytics code" => [
 		0 => "접속 통계 코드",
@@ -3572,16 +3587,16 @@ $translation_table = [
 		0 => "시간대",
 	],
 	"Current password" => [
-		0 => "현재 비밀번호",
+		0 => "현재 암호",
 	],
 	"Enter your current password" => [
-		0 => "현재 비밀번호를 입력해주세요",
+		0 => "귀하의 현재 암호를 입력해주세요.",
 	],
 	"New password" => [
-		0 => "새 비밀번호",
+		0 => "새 암호",
 	],
 	"Confirm new password" => [
-		0 => "새 비밀번호 확인",
+		0 => "새 암호 확인",
 	],
 	"Add a password to be able to login using your username or email." => [
 		0 => "사용자 이름 또는 이메일 주소로 로그인 하려면 비밀번호를 넣어주세요.",
@@ -3590,13 +3605,13 @@ $translation_table = [
 		0 => "이 사용자는 비밀번호를 설정하지 않았습니다. 여기서 비밀번호를 설정해주세요.",
 	],
 	"Enter your password" => [
-		0 => "비밀번호를 입력해주세요",
+		0 => "암호를 입력해주세요.",
 	],
 	"Confirm password" => [
-		0 => "비밀번호 확인",
+		0 => "암호 확인",
 	],
 	"Re-enter your password" => [
-		0 => "비밀번호를 다시 입력해주세요",
+		0 => "암호를 다시 입력해주세요.",
 	],
 	"Upload new image" => [
 		0 => "새 이미지 업로드하기",
@@ -3696,9 +3711,6 @@ $translation_table = [
 	],
 	"Delete background" => [
 		0 => "배경 지우기",
-	],
-	"Edit profile" => [
-		0 => "프로필 편집하기",
 	],
 	"Follower" => [
 		0 => "팔로워",

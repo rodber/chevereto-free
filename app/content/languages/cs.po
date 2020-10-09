@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2020-04-16 20:33+0000\n"
-"PO-Revision-Date: 2020-04-16 20:33+0000\n"
+"POT-Creation-Date: 2020-09-02 17:14+0000\n"
+"PO-Revision-Date: 2020-09-02 17:14+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: cs\n"
@@ -203,6 +203,9 @@ msgstr "Musíte zadat název alba."
 msgid "Confirm"
 msgstr "Potvrdit"
 
+msgid "The content has been approved."
+msgstr "Obsah byl schválen."
+
 #: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
 msgid "Select existing album"
 msgstr "Vyberte stávající album"
@@ -355,6 +358,9 @@ msgstr[0] "Album"
 msgstr[1] "Alb"
 msgstr[2] "Alb"
 msgstr[3] "Alba"
+
+msgid "Approve"
+msgstr "Schválit"
 
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
 #: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
@@ -788,6 +794,16 @@ msgstr[0] "Uřivatel"
 msgstr[1] "Uživatelů"
 msgstr[2] "Uživatelů"
 msgstr[3] "Uživatelé"
+
+msgid "adult"
+msgstr "dospělý"
+
+msgid "teen"
+msgstr "dospívající"
+
+#, php-format
+msgid "Content of type %s is forbidden"
+msgstr "Obsah typu %s je zakázán"
 
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
@@ -1412,11 +1428,6 @@ msgstr "Stránka s obrázkem"
 msgid "Inside viewer top (image page)"
 msgstr "Uvnitř prohlížeče nahoře (stránka s obrázkem)"
 
-#: ../../../app/routes/route.dashboard.php:413
-#: ../../../app/routes/route.dashboard.php:417
-msgid "Expected banner size 728x90"
-msgstr "Očekávaná velikost banneru je 728×90px"
-
 #: ../../../app/routes/route.dashboard.php:416
 msgid "Inside viewer foot (image page)"
 msgstr "Uvnitř prohlížeče dole (stránka s obrázkem)"
@@ -1534,10 +1545,6 @@ msgstr "Neplatný tón šablony."
 #: ../../../app/routes/route.dashboard.php:627
 msgid "Invalid theme main color"
 msgstr "Chybná barva hlavní šablony"
-
-#: ../../../app/routes/route.dashboard.php:632
-msgid "Invalid theme top bar color"
-msgstr "Neplatná barva vrchního rámečku tématu"
 
 #: ../../../app/routes/route.dashboard.php:637
 msgid "Invalid theme top bar button color"
@@ -1872,6 +1879,9 @@ msgstr "Špatná kombinace přihlašovacího jména nebo e-mailu a hesla"
 #: ../../../app/themes/Peafowl/views/login.php:52
 msgid "Sign in"
 msgstr "Přihlásit se"
+
+msgid "Moderate"
+msgstr "Moderovat"
 
 msgid "Upload images"
 msgstr "Nahrát obrázky"
@@ -2257,6 +2267,12 @@ msgstr "resetovat"
 msgid "close"
 msgstr "zavřít"
 
+msgid "Note"
+msgstr "Poznámka"
+
+msgid "We must approve the uploaded content before being able to share."
+msgstr "Než budeme moci sdílet, musíme schválit nahraný obsah."
+
 msgid "copy"
 msgstr "kopírovat"
 
@@ -2267,10 +2283,6 @@ msgstr "vložit"
 #: ../../../app/themes/Peafowl/views/dashboard.php:666
 msgid "Remove"
 msgstr "Odstranit"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:154
-msgid "Edit image"
-msgstr "Upravit obrázek"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
 #: ../../../app/themes/Peafowl/snippets/form_image.php:4
@@ -2565,6 +2577,9 @@ msgstr "Stručný popis této kategorie"
 msgid "Untitled image"
 msgstr "Obrázek bez názvu"
 
+msgid "Mark this if the image is not safe for work"
+msgstr "Označit tento obrázek, pokud není vhodný a bezpečný"
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
 msgid "Path"
 msgstr "Cesta"
@@ -2850,18 +2865,6 @@ msgstr "Domů"
 msgid "There's nothing to show here."
 msgstr "Zde se nenachází nic k zobrazení."
 
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
-#: ../../../app/themes/Peafowl/views/image.php:69
-#: ../../../app/themes/Peafowl/views/image.php:457
-msgid "Edit image details"
-msgstr "Upravit detaily obrázku"
-
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
-#: ../../../app/themes/Peafowl/views/album.php:22
-#: ../../../app/themes/Peafowl/views/album.php:118
-msgid "Edit album details"
-msgstr "Uprav informace o albu"
-
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
 msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
 msgstr "Všechny obrázky budou přesunuty do nově vytvořeného alba. Samozřejmé můžete také obrázky přesunou do již <a class=\"modal-switch\" data-switch=\"move-existing-album\">existujícího alba</a>."
@@ -2902,6 +2905,12 @@ msgstr "Potvrďte, že obrázek není bezpečný"
 msgid "Do you really want to flag this content as unsafe?"
 msgstr "Opravdu si přejete tento obsah označit jako nebezpečný?"
 
+msgid "Confirm approval"
+msgstr "Potvrďte souhlas"
+
+msgid "Do you really want to approve this content? This can't be undone."
+msgstr "Opravdu chcete odstranit veškerý vybraný obsah? Toto nelze vrátit zpět."
+
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:106
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:110
 msgid "Confirm deletion"
@@ -2910,6 +2919,9 @@ msgstr "Potvrďte odstranění"
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:107
 msgid "Do you really want to remove this content? This can't be undone."
 msgstr "Opravdu chcete odstranit tento obsah? (Nelze vrátit zpět)"
+
+msgid "Do you really want to approve all the selected content? This can't be undone."
+msgstr "Opravdu chcete odstranit veškerý vybraný obsah? Toto nelze vrátit zpět."
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:111
 msgid "Do you really want to remove all the selected content? This can't be undone."
@@ -3084,10 +3096,6 @@ msgstr "Tento obsah je soukromý"
 msgid "Do you really want to delete this album and all of its images? This can't be undone."
 msgstr "Opravdu si přejete odstranit toto album a všechny obrázky do něj zařazené? (Tuto akci nelze vrátit)"
 
-#: ../../../app/themes/Peafowl/views/album.php:25
-msgid "Delete album"
-msgstr "Smazat album"
-
 #: ../../../app/themes/Peafowl/views/image.php:85
 msgid "You like this"
 msgstr "Toto se vám líbí"
@@ -3142,9 +3150,6 @@ msgstr "Automatický import"
 msgid "The system automatically parses any content by a continuous observation of the %path% path."
 msgstr "Systém automaticky analyzuje veškerý obsah kontinuálním sledováním cesty %path%."
 
-msgid "The system automatically parses any content by a continous observation of the %path% path."
-msgstr "Systém automaticky analyzuje veškerý obsah nepřetržitým sledováním cesty %path%."
-
 msgid "Completed jobs will be automatically re-started after %n %m."
 msgstr "Dokončené úlohy budou automaticky znovu spuštěny po %n %m."
 
@@ -3197,15 +3202,8 @@ msgstr "Příkaz můžete spustit paralelně změnou celočíselné hodnoty %s%.
 msgid "All file-system permissions must be granted for the crontab user at %path%"
 msgstr "Všechna oprávnění systému souborů musí být udělena uživateli crontab v %path%"
 
-msgid "Required crontab entry:"
-msgstr "Požadovaný záznam cronu:"
-
 msgid "Add import job"
 msgstr "Přidat úlohu importu"
-
-#, php-format
-msgid "This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d."
-msgstr "Tento nástroj umožňuje hromadně přidávat obsah na vaše webové stránky tím, že zadává systémovou cestu s obsahem, který chcete importovat. Podporuje přidávání uživatelů, alb a obrázků pomocí struktury založené na složkách. Další informace o struktuře složek, přidání metadat a vše o tomto nástroji naleznete v naší %d."
 
 msgid "Process import"
 msgstr "Proces importu"
@@ -3574,14 +3572,6 @@ msgstr "Povolit nahrávání"
 msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
 msgstr "Povolte pokud chcete umožnit nahrávání. Toto nastavení nemá vliv na administrátory"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:639
-msgid "Guest uploads"
-msgstr "Nahráno hostem"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:645
-msgid "Enable this if you want to allow non registered users to upload."
-msgstr "Povol pokud chceš umožnit neregistrovaným uživatelům nahrávání."
-
 msgid "Upload user interface"
 msgstr "Rozhraní uživatelského nahrávání"
 
@@ -3590,6 +3580,23 @@ msgstr "On-page kontejner"
 
 msgid "route"
 msgstr "trasa"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:639
+msgid "Guest uploads"
+msgstr "Nahráno hostem"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+msgid "Enable this if you want to allow non registered users to upload."
+msgstr "Povol pokud chceš umožnit neregistrovaným uživatelům nahrávání."
+
+msgid "Moderate uploads"
+msgstr "Moderovat nahrávání"
+
+msgid "Guests"
+msgstr "Hosté"
+
+msgid "Enable this to moderate incoming uploads. Target content will require moderation for approval."
+msgstr "Povolte tuto funkci pro moderování příchozích nahrávek. Cílový obsah bude ke schválení vyžadovat moderování."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1353
 msgid "Enable embed codes (uploader)"
@@ -4006,6 +4013,13 @@ msgstr "Týdenní limit"
 msgid "Monthly limit"
 msgstr "Měsíční limit"
 
+#, php-format
+msgid "Lock %s editing"
+msgstr "Zamknout úpravy %s"
+
+msgid "Enable this to prevent users from changing the NSFW flag. When enabled, only admin and managers will have this permission."
+msgstr "Povolte tuto funkci, aby uživatelé nemohli změnit příznak NSFW. Pokud je funkce povolena, toto oprávnění budou mít pouze administrátoři a správci."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1070
 msgid "Show not safe content in listings"
 msgstr "V galerii vypisovat i nevhodný obsah"
@@ -4150,26 +4164,6 @@ msgstr "Hexadecimální hodnota barvy"
 msgid "Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>."
 msgstr "Použijte pro nastavení barvy hlavní šablony. Hodnota musí být v <a href=\"%s\" target=\"_blank\">hex formátu</a>."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1203
-msgid "Top bar color"
-msgstr "Barva horního baru"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1223
-#: ../../../app/themes/Peafowl/views/dashboard.php:1461
-msgid "Black"
-msgstr "Černá"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1224
-#: ../../../app/themes/Peafowl/views/dashboard.php:1462
-msgid "White"
-msgstr "Bílá"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1210
-msgid "If you set this to \"white\" the top bar and all the black tones will be changed to white tones."
-msgstr "Pokud se toto nastaví na \"Bílá\", horní bar a všechny černé tóny se změní na bílé tóny."
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1214
 msgid "Top bar button color"
 msgstr "Barva tlačítka horního baru"
@@ -4198,6 +4192,18 @@ msgstr "Červená"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1460
 msgid "Grey"
 msgstr "Šedá"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1223
+#: ../../../app/themes/Peafowl/views/dashboard.php:1461
+msgid "Black"
+msgstr "Černá"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1224
+#: ../../../app/themes/Peafowl/views/dashboard.php:1462
+msgid "White"
+msgstr "Bílá"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1230
 msgid "Color for the top bar buttons like the \"Create account\" button."
@@ -4342,9 +4348,12 @@ msgstr "Vstupní stránka"
 msgid "Split landing + images"
 msgstr "Split landing + obrázky"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1396
-msgid "Route explore"
-msgstr "Prozkoumejte trasu"
+#, php-format
+msgid "Route %s"
+msgstr "Trasa %s"
+
+msgid "upload"
+msgstr "nahrát"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1401
 #, php-format
@@ -4855,6 +4864,28 @@ msgstr "Kód komentáře"
 msgid "Disqus, Facebook or anything you want. It will be used in image view."
 msgstr "Disqus, Facebook nebo cokoliv jiného. Bude použito v zobrazení obrázku."
 
+#, php-format
+msgid "Automatically moderate the content using the %s service."
+msgstr "Automaticky moderujte obsah pomocí služby %s."
+
+msgid "Automatic approve"
+msgstr "Automatické schválení"
+
+msgid "Enable this to automatically approve content moderated by this service."
+msgstr "Povolte tuto funkci pro automatické schválení obsahu moderovaného touto službou."
+
+msgid "Block content"
+msgstr "Blokovat obsah"
+
+msgid "Adult"
+msgstr "Dospělí"
+
+msgid "Teen and adult"
+msgstr "Dospívající i dospělí"
+
+msgid "Flag NSFW"
+msgstr "Příznak NSFW"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:2002
 msgid "Analytics code"
 msgstr "Kód analytics."
@@ -4911,6 +4942,9 @@ msgstr "Přehrát GIF"
 
 msgid "Load full resolution"
 msgstr "Načíst v plném rozlišení"
+
+msgid "Do you really want to approve this image? The image will go public if you approve it."
+msgstr "Opravdu chcete odstranit veškerý vybraný obsah? Toto nelze vrátit zpět."
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -5335,10 +5369,6 @@ msgstr "Profilový obrázek pozadí bude odstraněn. Tuto akci nelze vrátit. Op
 #: ../../../app/themes/Peafowl/views/user.php:22
 msgid "Delete background"
 msgstr "Odstranit pozadí"
-
-#: ../../../app/themes/Peafowl/views/user.php:61
-msgid "Edit profile"
-msgstr "Upravit profil"
 
 #: ../../../app/themes/Peafowl/views/user.php:75
 msgid "Follower"

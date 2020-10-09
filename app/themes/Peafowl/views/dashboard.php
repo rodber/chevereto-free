@@ -2,15 +2,19 @@
     die('This file cannot be directly accessed.');
 } ?>
 <?php G\Render\include_theme_header();
-function read_the_docs($args = [])
+function read_the_docs_settings($key, $subject)
 {
-    return _s('Learn more about %s at our %d.', [
-        '%s' => $args['%s'],
-        '%d' => '<a href="https://v3-docs.chevereto.com/' . $args['%k'] . '" target="_blank">' . _s('documentation') . '</a>',
+    return _s('Learn about %s settings at our %d.', [
+        '%s' => $subject,
+        '%d' => get_docs_link('settings/' . $key . '.html', _s('documentation')),
     ]);
 }
 
-function free_version_waring($wrap=true)
+function get_docs_link($key, $subject)
+{
+    return '<a href="' . get_documentationBaseUrl() . $key . '" target="_blank">' . $subject . '</a>';
+}
+function free_version_warning($wrap=true)
 {
     $message = _s("This functionality is not part of Chevereto Free. %s to obtain this feature.", ['%s' => '<a href="https://chevereto.com/pricing" target="_blank">' . _s('Upgrade to paid version') . '</a>']);
     echo($wrap ? ('<div class="input-below">' . $message . '</div>') : $message);
@@ -116,14 +120,9 @@ function free_version_waring($wrap=true)
             ?>
 				<div class="header header--centering default-margin-bottom">
 					<h1><?php _se('Bulk importer'); ?></h1>
-					<div class="header-content-right phone-float-none">
-						<div class="list-selection header--centering">
-							<a class="header-link" href="https://goo.gl/q5poeY" target="_blank"><?php _se('documentation'); ?></a>
-						</div>
-					</div>
                 </div>
                 <div class="text-content">
-                    <p><?php _se('This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure.'); ?></p>
+                    <p><?php _se('This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure.'); ?> <?php _se('Check the %s for more information about this feature.', get_docs_link('features/bulk-content-importer.html', _s('documentation'))); ?></p>
                 </div>
                 <div class ="text-content margin-bottom-20">
                 <h3>🤖 <?php _se('Automatic importing'); ?></h3>
@@ -461,8 +460,7 @@ function free_version_waring($wrap=true)
                     });
                     
 				</script>
-
-		<?php
+			<?php
                 break;
 
             case 'images':
@@ -542,7 +540,7 @@ function free_version_waring($wrap=true)
 
 					<?php echo G\Render\get_input_auth_token(); ?>
 
-					<div class="header header--centering default-margin-bottom">
+					<div class="header header--centering default-margin-bottom follow-scroll">
 						<h1>
 							<span class="icon icon-cog phablet-hide tablet-hide laptop-hide desktop-hide"></span>
 							<span class="phone-hide"><?php echo get_dashboard_menu()[get_dashboard()]['label']; ?></span>
@@ -565,8 +563,7 @@ function free_version_waring($wrap=true)
 								</div>
 							</div>
 						</div>
-						<?php if (get_settings()['key'] == 'categories') {
-                                                ?>
+						<?php if (get_settings()['key'] == 'categories') { ?>
 							<div class="header-content-right phone-float-none">
 								<div class="list-selection header--centering">
 									<a class="header-link" data-modal="form" data-target="modal-add-category"><?php _se('Add category'); ?></a>
@@ -580,8 +577,7 @@ function free_version_waring($wrap=true)
 							</div>
 						<?php
                                             } ?>
-						<?php if (get_settings()['key'] == 'ip-bans') {
-                                                ?>
+						<?php if (get_settings()['key'] == 'ip-bans') { ?>
 							<div class="header-content-right phone-float-none">
 								<div class="list-selection header--centering">
 									<a class="header-link" data-modal="form" data-target="modal-add-ip_ban"><?php _se('Add IP ban'); ?></a>
@@ -625,9 +621,8 @@ function free_version_waring($wrap=true)
                     if (get_dashboard() == 'settings') {
                         ?>
 
-						<?php if (get_settings()['key'] == 'website') {
-                            ?>
-
+						<?php if (get_settings()['key'] == 'website') { ?>
+                            <p><?php echo read_the_docs_settings('website', _s('website')); ?></p>
 							<div class="phablet-c1">
 								<div class="input-label">
 									<label for="website_name"><?php _se('Website name'); ?></label>
@@ -768,7 +763,7 @@ function free_version_waring($wrap=true)
 					<?php
                         echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('enable_likes')); ?>
 				</select></div>
-				<?php free_version_waring(); ?>
+				<?php free_version_warning(); ?>
 				<?php personal_mode_warning(); ?>
 			</div>
 
@@ -778,7 +773,7 @@ function free_version_waring($wrap=true)
 					<?php
                         echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('enable_followers')); ?>
 				</select></div>
-				<?php free_version_waring(); ?>
+				<?php free_version_warning(); ?>
 				<?php personal_mode_warning(); ?>
 			</div>
 
@@ -1093,7 +1088,7 @@ function free_version_waring($wrap=true)
                             } else { // display
                                 if (get_pages() and count(get_pages()) > 0) {
                                     $auth_token = G\Handler::getAuthToken(); ?>
-									<p><?php echo read_the_docs(['%s' => _s('pages'), '%k' => 'pages']); ?></p>
+									<p><?php echo read_the_docs_settings('pages', _s('pages')); ?></p>
 									<ul data-content="dashboard-categories-list" class="tabbed-content-list table-li-hover table-li margin-top-20 margin-bottom-20">
 										<li class="table-li-header phone-hide">
 											<span class="c2 display-table-cell padding-right-10"><?php echo 'ID'; ?></span>
@@ -1133,9 +1128,9 @@ function free_version_waring($wrap=true)
                         } // pages
                         ?>
 
-						<?php if (get_settings()['key'] == 'image-upload') {
-                            ?>
-							<div class="input-label">
+						<?php if (get_settings()['key'] == 'image-upload') { ?>
+                            <p><?php echo read_the_docs_settings('image-upload', _s('image upload')); ?></p>
+                            <div class="input-label">
 								<label><?php _se('Enabled image formats'); ?></label>
 								<div class="checkbox-label">
 									<ul class="c20 phablet-c1">
@@ -1159,6 +1154,13 @@ function free_version_waring($wrap=true)
 									</select></div>
 								<div class="input-below"><?php _se("Enable this if you want to allow image uploads. This setting doesn't affect administrators."); ?></div>
 							</div>
+                            <div class="input-label">
+								<label for="upload_gui"><?php _se('Upload user interface'); ?></label>
+								<div class="c5 phablet-c1"><select type="text" name="upload_gui" id="upload_gui" class="text-input">
+										<?php
+                                        echo CHV\Render\get_select_options_html(['js' => _s('On-page container'), 'page' => '/upload ' . _s('route')], CHV\Settings::get('upload_gui')); ?>
+									</select></div>
+							</div>
 							<div class="input-label">
 								<label for="guest_uploads"><?php _se('Guest uploads'); ?></label>
 								<div class="c5 phablet-c1"><select type="text" name="guest_uploads" id="guest_uploads" class="text-input" <?php if (CHV\getSetting('website_mode') == 'personal') {
@@ -1170,16 +1172,23 @@ function free_version_waring($wrap=true)
 								<div class="input-below"><?php _se('Enable this if you want to allow non registered users to upload.'); ?></div>
 								<?php personal_mode_warning(); ?>
 							</div>
-
-							<div class="input-label">
-								<label for="upload_gui"><?php _se('Upload user interface'); ?></label>
-								<div class="c5 phablet-c1"><select type="text" name="upload_gui" id="upload_gui" class="text-input">
+                            <div class="input-label">
+								<label for="moderate_uploads"><?php _se('Moderate uploads'); ?></label>
+								<div class="c5 phablet-c1"><select type="text" name="moderate_uploads" id="moderate_uploads" class="text-input" <?php if (CHV\getSetting('website_mode') == 'personal') {
+                                            echo ' disabled';
+                                        } ?>>
 										<?php
-                                        echo CHV\Render\get_select_options_html(['js' => _s('On-page container'), 'page' => '/upload ' . _s('route')], CHV\Settings::get('upload_gui')); ?>
+                                        echo CHV\Render\get_select_options_html([
+                                                '' => _s('Disabled'),
+                                                'guest' => _s('Guest'),
+                                                'all' => _s('All')
+                                            ], CHV\Settings::get('moderate_uploads')); ?>
 									</select></div>
+                                <div class="input-below"><?php _se('Enable this to moderate incoming uploads. Target content will require moderation for approval.'); ?></div>
+								<?php personal_mode_warning(); ?>
 							</div>
 
-							<hr class="line-separator">
+                            <hr class="line-separator">
 
 							<div class="input-label">
 								<label for="theme_show_embed_uploader"><?php _se('Enable embed codes (uploader)'); ?></label>
@@ -1478,13 +1487,13 @@ function free_version_waring($wrap=true)
 						<?php
                         } ?>
 
-						<?php if (get_settings()['key'] == 'categories') {
-                            ?>
+                        <?php if (get_settings()['key'] == 'categories') { ?>
+                            <p><?php echo read_the_docs_settings('categories', _s('categories')); ?></p>
 							<?php if (!CHV\getSetting('website_explore_page')) {
-                                ?>
+                            ?>
 								<div class="growl static"><?php _se("Categories won't work when the explorer feature is turned off. To revert this setting go to %s.", ['%s' => '<a href="' . G\get_base_url('dashboard/settings/website') . '">' . _s('Dashboard > Settings > Website') . '</a>']); ?></div>
 							<?php
-                            } ?>
+                        } ?>
 							<script>
 								$(document).ready(function() {
 									CHV.obj.categories = <?php echo json_encode(get_categories()); ?>;
@@ -1537,7 +1546,8 @@ function free_version_waring($wrap=true)
 								$(document).ready(function() {
 									CHV.obj.ip_bans = <?php echo json_encode($ip_bans); ?>;
 								});
-							</script>
+                            </script>
+                            <p><?php echo read_the_docs_settings('ip-bans', _s('ip bans')); ?></p>
 							<ul data-content="dashboard-ip_bans-list" class="tabbed-content-list table-li table-li-hover margin-top-20 margin-bottom-20">
 								<li class="table-li-header phone-hide">
 									<span class="c6 display-table-cell padding-right-10">IP</span>
@@ -1573,13 +1583,13 @@ function free_version_waring($wrap=true)
 						<?php
                         } ?>
 
-						<?php if (get_settings()['key'] == 'users') {
-                            ?>
-							<div class="input-label">
+						<?php if (get_settings()['key'] == 'users') { ?>
+                            <p><?php echo read_the_docs_settings('users', _s('users')); ?></p>
+                            <div class="input-label">
 								<label for="enable_signups"><?php _se('Enable signups'); ?></label>
 								<div class="c5 phablet-c1"><select type="text" name="enable_signups" id="enable_signups" class="text-input" <?php if (CHV\getSetting('website_mode') == 'personal') {
-                                echo ' disabled';
-                            } ?>>
+                            echo ' disabled';
+                        } ?>>
 										<?php
                                         echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('enable_signups')); ?>
 									</select></div>
@@ -1676,7 +1686,7 @@ function free_version_waring($wrap=true)
 
 						<?php if (get_settings()['key'] == 'consent-screen') {
                             ?>
-							<p><?php _se("Shows a consent screen before accessing the website. Useful for adult content websites where minors shouldn't be allowed."); ?></p>
+							<p><?php _se("Shows a consent screen before accessing the website. Useful for adult content websites where minors shouldn't be allowed."); ?> <?php echo read_the_docs_settings('consent-screen', _s('consent screen')); ?></p>
 							<div class="input-label">
 								<label for="enable_consent_screen"><?php _se('Enable consent screen'); ?></label>
 								<div class="c5 phablet-c1"><select type="text" name="enable_consent_screen" id="enable_consent_screen" class="text-input" data-combo="consent-screen-combo">
@@ -1703,7 +1713,7 @@ function free_version_waring($wrap=true)
 
 						<?php if (get_settings()['key'] == 'flood-protection') {
                             ?>
-							<p><?php _se("Block image uploads by IP if the system notice a flood  behavior based on the number of uploads per time period. This setting doesn't affect administrators."); ?></p>
+							<p><?php _se("Block image uploads by IP if the system notice a flood  behavior based on the number of uploads per time period. This setting doesn't affect administrators."); ?> <?php echo read_the_docs_settings('flood-protection', _s('flood protection')); ?></p>
 							<div class="input-label">
 								<label for="flood_uploads_protection"><?php _se('Flood protection'); ?></label>
 								<div class="c5 phablet-c1"><select type="text" name="flood_uploads_protection" id="flood_uploads_protection" class="text-input" data-combo="flood-protection-combo">
@@ -1753,8 +1763,22 @@ function free_version_waring($wrap=true)
 						<?php
                         } ?>
 
-						<?php if (get_settings()['key'] == 'content') {
-                            ?>
+						<?php if (get_settings()['key'] == 'content') { ?>
+                            <p><?php echo read_the_docs_settings('content', _s('content')); ?></p>
+                            <div class="input-label">
+								<label for="image_lock_nsfw_editing"><?php _se('Lock %s editing', _s('NSFW')); ?></label>
+								<div class="c5 phablet-c1"><select type="text" name="image_lock_nsfw_editing" id="image_lock_nsfw_editing" class="text-input" <?php if (CHV\getSetting('website_mode') == 'personal') {
+                            echo ' disabled';
+                        } ?>>
+										<?php
+                                        echo CHV\Render\get_select_options_html([
+                                                0 => _s('Disabled'),
+                                                1 => _s('Enabled'),
+                                            ], CHV\Settings::get('image_lock_nsfw_editing')); ?>
+									</select></div>
+                                <div class="input-below"><?php _se('Enable this to prevent users from changing the NSFW flag. When enabled, only admin and managers will have this permission.'); ?></div>
+								<?php personal_mode_warning(); ?>
+							</div>
 							<div class="input-label">
 								<label for="show_nsfw_in_listings"><?php _se('Show not safe content in listings'); ?></label>
 								<div class="c5 phablet-c1"><select type="text" name="show_nsfw_in_listings" id="show_nsfw_in_listings" class="text-input">
@@ -1777,7 +1801,7 @@ function free_version_waring($wrap=true)
 					<?php
                         echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('show_banners_in_nsfw')); ?>
 				</select></div>
-				<?php free_version_waring(); ?>
+				<?php free_version_warning(); ?>
 			</div>
 
 							<div class="input-label">
@@ -1790,8 +1814,8 @@ function free_version_waring($wrap=true)
 						<?php
                         } ?>
 
-						<?php if (get_settings()['key'] == 'listings') {
-                            ?>
+                        <?php if (get_settings()['key'] == 'listings') { ?>
+                            <p><?php echo read_the_docs_settings('listings', _s('listings')); ?></p>
 							<div class="input-label">
 								<label for="listing_items_per_page"><?php _se('List items per page'); ?></label>
 								<div class="c2"><input type="number" min="1" name="listing_items_per_page" id="listing_items_per_page" class="text-input" value="<?php echo CHV\Settings::get('listing_items_per_page', true); ?>" placeholder="<?php echo CHV\Settings::getDefault('listing_items_per_page', true); ?>" required></div>
@@ -1868,9 +1892,8 @@ function free_version_waring($wrap=true)
 						<?php
                         } ?>
 
-						<?php if (get_settings()['key'] == 'theme') {
-                            ?>
-							<p><?php echo read_the_docs(['%s' => _s('theme editing'), '%k' => 'theme']); ?></p>
+						<?php if (get_settings()['key'] == 'theme') { ?>
+							<p><?php echo read_the_docs_settings('theme', _s('theme')); ?></p>
 							<hr class="line-separator">
 							<div class="input-label">
 								<label for="theme"><?php _se('Theme'); ?></label>
@@ -2079,6 +2102,7 @@ function free_version_waring($wrap=true)
 
 						<?php if (get_settings()['key'] == 'homepage') {
                             ?>
+                            <p><?php echo read_the_docs_settings('homepage', _s('homepage')); ?></p>
 							<div class="input-label">
 								<label for="homepage_style"><?php _se('Style'); ?></label>
 								<div class="c5 phablet-c1"><select type="text" name="homepage_style" id="homepage_style" class="text-input" data-combo="home-style-combo">
@@ -2086,7 +2110,8 @@ function free_version_waring($wrap=true)
                                         echo CHV\Render\get_select_options_html([
                                             'landing' => _s('Landing page'),
                                             'split' => _s('Split landing + images'),
-                                            'route_explore' => _s('Route explore'),
+                                            'route_explore' => _s('Route %s', _s('explore')),
+                                            'route_upload' => _s('Route %s', _s('upload')),
                                         ], CHV\Settings::get('homepage_style')); ?>
 									</select></div>
 								<div class="input-below input-warning red-warning"><?php echo get_input_errors()['homepage_style']; ?></div>
@@ -2235,17 +2260,18 @@ function free_version_waring($wrap=true)
 										<div class="input-below"><?php _se('Comma-separated list of target user IDs (integers) to show most recent images on homepage. Leave it empty to display trending images.'); ?></div>
 									</div>
 								</div>
-			</div>
+							</div>
 
-			<?php
+						<?php
                         } ?>
 
             <?php if (get_settings()['key'] == 'banners') {
-                            free_version_waring();
+                            free_version_warning();
                         } ?>
 			<?php if (get_settings()['key'] == 'system') {
                             ?>
-			<div class="input-label">
+            <p><?php echo read_the_docs_settings('system', _s('system')); ?></p>
+            <div class="input-label">
 				<label for="enable_automatic_updates_check"><?php _se('Automatic updates check'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="enable_automatic_updates_check" id="enable_automatic_updates_check" class="text-input">
 					<?php
@@ -2333,7 +2359,7 @@ function free_version_waring($wrap=true)
 
 			<?php if (get_settings()['key'] == 'routing') {
                             ?>
-			<p><?php _se('Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed. Check out our %s if you want to override or add new routes.', '<a href="https://chevereto.com/docs/routes">' . _s('documentation') . '</a>'); ?></p>
+			<p><?php _se('Routing allows you to customize default route binds on the fly. Only alphanumeric, hyphen and underscore characters are allowed.'); ?> <?php echo read_the_docs_settings('routing', _s('routing')); ?></p>
 			<div class="input-label">
 				<label for="route_image"><?php _se('Image routing'); ?></label>
 				<div class="c9 phablet-c1">
@@ -2385,9 +2411,9 @@ function free_version_waring($wrap=true)
 
 			<?php if (get_settings()['key'] == 'languages') {
                             ?>
-			<div class="input-label">
+            <p><?php echo read_the_docs_settings('languages', _s('languages')); ?></p>
+            <div class="input-label">
 				<label><?php _se('Custom language strings'); ?></label>
-				<p><?php echo read_the_docs(['%s' => _s('language strings'), '%k' => 'language-strings']); ?></p>
 			</div>
 			<div class="input-label">
 				<label for="default_language"><?php _se('Default language'); ?></label>
@@ -2445,11 +2471,12 @@ function free_version_waring($wrap=true)
                         } ?>
 
             <?php if (get_settings()['key'] == 'external-storage') {
-                            free_version_waring();
+                            free_version_warning();
                         } ?>
 			<?php if (get_settings()['key'] == 'email') {
                             ?>
-			<div class="input-label">
+            <p><?php echo read_the_docs_settings('email', _s('email')); ?></p>
+            <div class="input-label">
 				<label for="email_from_name"><?php _se('From name'); ?></label>
 				<div class="c9 phablet-c1"><input type="text" name="email_from_name" id="email_from_name" class="text-input" value="<?php echo CHV\Settings::get('email_from_name', true); ?>" required></div>
 				<div class="input-warning red-warning"><?php echo get_input_errors()['email_from_name']; ?></div>
@@ -2524,7 +2551,8 @@ function free_version_waring($wrap=true)
 
       <?php if (get_settings()['key'] == 'tools') {
                             ?>
-		<div class="input-label">
+        <p><?php echo read_the_docs_settings('tools', _s('tools')); ?></p>
+        <div class="input-label">
 			<label for="decode-id"><?php _se('Decode ID'); ?></label>
 			<div class="phablet-c1">
 				<input type="text" data-dashboard-tool="decodeId" name="decode-id" id="decode-id" class="c4 text-input" placeholder="<?php echo CHV\encodeID(1337); ?>"> <a class="btn btn-input default" data-action="dashboardTool" data-tool="decodeId" data-data='{"id":"#decode-id"}'><span class="loading display-inline-block"></span><span class="text"><?php _se('Decode ID'); ?></span></a>
@@ -2578,18 +2606,54 @@ function free_version_waring($wrap=true)
                         } ?>
 
 			<?php if (get_settings()['key'] == 'social-networks') {
-                            free_version_waring();
+                            free_version_warning();
                         } ?>
+
 			<?php if (get_settings()['key'] == 'external-services') {
                             ?>
-			
+			<p><?php echo read_the_docs_settings('external-services', _s('external services')); ?></p>
+			<div class="input-label">
+				<label for="akismet"><?php _se('%s spam protection', 'Akismet'); ?></label>
+				<div class="c5 phablet-c1"><select type="text" name="akismet" id="akismet" class="text-input" data-combo="akismet-combo">
+					<?php
+                            echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], get_safe_post() ? get_safe_post()['akismet'] : CHV\Settings::get('akismet')); ?>
+				</select></div>
+				<div class="input-below"><?php _se('Enable this to use %l to block spam on %c.', [
+                                                                        '%l' => '<a href="https://akismet.com/" target="_blank">Akismet</a>',
+                                                                        '%c' => _s('user generated content')
+                                                                    ]); ?></div>
+			</div>
+			<div id="akismet-combo" class="c9 phablet-c1">
+				<div data-combo-value="1" class="switch-combo<?php if (!(get_safe_post() ? get_safe_post()['akismet'] : CHV\Settings::get('akismet'))) {
+                                                                        echo ' soft-hidden';
+                                                                    } ?>">
+					<div class="input-label">
+						<label for="akismet_api_key"><?php _se('%s API key', 'Akismet'); ?></label>
+						<input type="text" name="akismet_api_key" id="akismet_api_key" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['akismet_api_key'] : CHV\Settings::get('akismet_api_key', true); ?>" >
+						<div class="input-warning red-warning"><?php echo get_input_errors()['akismet_api_key']; ?></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="input-label">
+				<label for="stopforumspam"><?php _se('%s spam protection', 'StopForumSpam'); ?></label>
+				<div class="c5 phablet-c1"><select type="text" name="stopforumspam" id="stopforumspam" class="text-input">
+					<?php
+                            echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], get_safe_post() ? get_safe_post()['stopforumspam'] : CHV\Settings::get('stopforumspam')); ?>
+				</select></div>
+				<div class="input-below"><?php _se('Enable this to use %l to block spam on %c.', [
+                                                                        '%l' => '<a href="https://stopforumspam.com/" target="_blank">StopForumSpam</a>',
+                                                                        '%c' => _s('user signup')
+                                                                    ]); ?></div>
+			</div>
+
+			<hr class="line-separator">
 			<div class="input-label">
 				<label for="cdn">CDN</label>
 				<div class="c5 phablet-c1"><select type="text" name="cdn" id="cdn" class="text-input" data-combo="cdn-combo">
 					<?php
                             echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], get_safe_post() ? get_safe_post()['cdn'] : CHV\Settings::get('cdn')); ?>
-				</select></div>
-				<div class="input-below"><?php echo read_the_docs(['%s' => 'CDN', '%k' => 'cdn']); ?></div>
+                </select></div>
 			</div>
 			<div id="cdn-combo" class="c9 phablet-c1">
 				<div data-combo-value="1" class="switch-combo<?php if (!(get_safe_post() ? get_safe_post()['cdn'] : CHV\Settings::get('cdn'))) {
@@ -2694,20 +2758,59 @@ function free_version_waring($wrap=true)
 					<div class="input-label">
 						<label for="comment_code"><?php _se('Comment code'); ?></label>
 						<div class="c12 phablet-c1"><textarea type="text" name="comment_code" id="comment_code" class="text-input r4" value="" placeholder="<?php _se('Disqus, Facebook or anything you want. It will be used in image view.'); ?>"><?php echo CHV\Settings::get('comment_code', true); ?></textarea></div>
-									</div>
-	</div>
-</div>
-<hr class="line-separator">
-<div class="input-label">
-	<label for="analytics_code"><?php _se('Analytics code'); ?></label>
-	<div class="c12 phablet-c1"><textarea type="text" name="analytics_code" id="analytics_code" class="text-input r4" value="" placeholder="<?php _se('Google Analytics or anything you want. It will be added to the theme footer.'); ?>"><?php echo CHV\Settings::get('analytics_code', true); ?></textarea></div>
-</div>
+					</div>
+                </div>
+            </div>
+            <hr class="line-separator"></hr>
+            <div class="input-label">
+                <label for="moderatecontent">ModerateContent</label>
+                <div class="c5 phablet-c1"><select type="text" name="moderatecontent" id="moderatecontent" class="text-input" data-combo="moderatecontent-combo">
+                    <?php
+                        echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], get_safe_post() ? get_safe_post()['moderatecontent'] : CHV\Settings::get('moderatecontent')); ?>
+                </select></div>
+                <div class="input-below"><?php _se('Automatically moderate the content using the %s service.', '<a href="https://www.moderatecontent.com/" target="_blank">ModerateContent</a>'); ?></div>
+            </div>
+            <div id="moderatecontent-combo" class="c12 phablet-c1">
+                <div data-combo-value="1" class="switch-combo<?php if ((get_safe_post() ? get_safe_post()['moderatecontent'] : CHV\Settings::get('moderatecontent')) == 0) {
+                            echo ' soft-hidden';
+                        } ?>">
+                    <div class="input-label">
+                        <label for="moderatecontent_key">ModerateContent API Key</label>
+                        <input type="text" name="moderatecontent_key" id="moderatecontent_key" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['moderatecontent_key'] : CHV\Settings::get('moderatecontent_key'); ?>" placeholder="">
+                        <div class="input-below input-warning red-warning"><?php echo get_input_errors()['moderatecontent_key']; ?></div>
+                    </div>
+                    <div class="input-label">
+                        <label for="moderatecontent_auto_approve"><?php _se('Automatic approve'); ?></label>
+                        <div class="c5 phablet-c1"><select type="text" name="moderatecontent_auto_approve" id="moderatecontent_auto_approve" class="text-input">
+                        <?php echo CHV\Render\get_select_options_html([0 => _s('Disabled'), 1 => _s('Enabled')], get_safe_post() ? get_safe_post()['moderatecontent_auto_approve'] : CHV\Settings::get('moderatecontent_auto_approve')); ?>
+                        </select></div>
+                        <div class="input-below"><?php _se('Enable this to automatically approve content moderated by this service.'); ?></div>
+                    </div>
+                    <div class="input-label">
+                        <label for="moderatecontent_block_rating"><?php _se('Block content'); ?></label>
+                        <div class="c5 phablet-c1"><select type="text" name="moderatecontent_block_rating" id="moderatecontent_block_rating" class="text-input">
+                        <?php echo CHV\Render\get_select_options_html(['' => _s('Disabled'), 'a' => _s('Adult'), 't' => _s('Teen and adult')], get_safe_post() ? get_safe_post()['moderatecontent_block_rating'] : CHV\Settings::get('moderatecontent_block_rating')); ?>
+                        </select></div>
+                    </div>
+                    <div class="input-label">
+                        <label for="moderatecontent_flag_nsfw"><?php _se('Flag NSFW'); ?></label>
+                        <div class="c5 phablet-c1"><select type="text" name="moderatecontent_flag_nsfw" id="moderatecontent_flag_nsfw" class="text-input">
+                        <?php echo CHV\Render\get_select_options_html([0 => _s('Disabled'), 'a' => _s('Adult'), 't' => _s('Teen and adult')], get_safe_post() ? get_safe_post()['moderatecontent_flag_nsfw'] : CHV\Settings::get('moderatecontent_flag_nsfw')); ?>
+                        </select></div>
+                    </div>                    
+                </div>
+            </div>
+            <hr class="line-separator">
+            <div class="input-label">
+                <label for="analytics_code"><?php _se('Analytics code'); ?></label>
+                <div class="c12 phablet-c1"><textarea type="text" name="analytics_code" id="analytics_code" class="text-input r4" value="" placeholder="<?php _se('Google Analytics or anything you want. It will be added to the theme footer.'); ?>"><?php echo CHV\Settings::get('analytics_code', true); ?></textarea></div>
+            </div>
 <?php
                         } ?>
 
 <?php if (get_settings()['key'] == 'api') {
                             ?>
-	<p><?php _se('For documentation about the API check the <a %s>API documentation</a>', 'href="http://bit.ly/1EFSP0H" target="_blank"'); ?></p>
+	<p><?php echo read_the_docs_settings('api', _s('api')); ?></p>
 	<div class="input-label">
 		<label for="api_v1_key"><?php _se('API v1 key'); ?></label>
 		<div class="c9 phablet-c1"><input type="text" name="api_v1_key" id="api_v1_key" class="text-input" value="<?php echo CHV\Settings::get('api_v1_key', true); ?>"></div>
@@ -2719,6 +2822,7 @@ function free_version_waring($wrap=true)
 
 <?php if (get_settings()['key'] == 'additional-settings') {
                             ?>
+    <p><?php echo read_the_docs_settings('additional-settings', _s('additional settings')); ?></p>
 	<div class="input-label">
 		<label for="enable_plugin_route"><?php _se('Plugin route'); ?></label>
 		<div class="c5 phablet-c1"><select type="text" name="enable_plugin_route" id="enable_plugin_route" class="text-input">

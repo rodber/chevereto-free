@@ -1,6 +1,7 @@
 <?php
 
 /* --------------------------------------------------------------------
+
   This file is part of Chevereto Free.
   https://chevereto.com/free
 
@@ -261,7 +262,7 @@ try {
             'lang_subdomain_wildcard' => 0,
             'user_subdomain_wildcard' => 0,
             'website_https' => 'auto',
-            'upload_gui' => 'js',
+            'upload_gui' => 'page',
             'recaptcha_version' => '2',
             'force_recaptcha_contact_page' => 1,
             'dump_update_query' => 0,
@@ -276,6 +277,15 @@ try {
         '1.2.1' => null,
         '1.2.2' => null,
         '1.2.3' => null,
+        '1.3.0' => [
+            'moderatecontent' => 0,
+            'moderatecontent_key' => '',
+            'moderatecontent_block_rating' => 'a', // ,a,t
+            'moderatecontent_flag_nsfw' => 'a', // ,a,t
+            'moderatecontent_auto_approve' => 0,
+            'moderate_uploads' => '', // ,all,guest,
+            'image_lock_nsfw_editing' => 0,
+        ],
     ];
     // Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
     $settings_rename = [];
@@ -665,6 +675,16 @@ INSERT INTO `%table_prefix%imports` (`import_path`, `import_options`, `import_st
 SELECT '%rootPath%importing/parse-albums', 'a:1:{s:4:\"root\";s:6:\"albums\";}', 'working', '0', '0', '0', NOW(), NOW(), '0', '0', '1' FROM DUAL
 WHERE NOT EXISTS (SELECT * FROM `%table_prefix%imports` WHERE `import_path`='%rootPath%importing/parse-albums' AND `import_continuous`=1 LIMIT 1);",
                 ],
+                '1.3.0' => [
+                    'locks' => [], // ADD TABLE
+                    'images' => [
+                        'image_is_approved' => [
+                            'op' => 'ADD',
+                            'type' => 'tinyint(1)',
+                            'prop' => "NOT NULL DEFAULT '1'",
+                        ],
+                    ],
+                ]
             ];
 
             $sql_update = [];
@@ -875,7 +895,7 @@ WHERE NOT EXISTS (SELECT * FROM `%table_prefix%imports` WHERE `import_path`='%ro
             }
 
             if ($isDumpUpdate) {
-                G\debug('# Dumped update query. https://chevereto.com/docs/update-guide#manual-db');
+                G\debug('# Dumped update query. https://v3-docs.chevereto.com/setup/update-guide.html#manual-procedure');
                 G\debug($sql_update);
                 die();
             }

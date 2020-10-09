@@ -47,6 +47,7 @@ class Image
         'expiration_date_gmt',
         'likes',
         'is_animated',
+        'is_approved'
     ];
 
     public static $chain_sizes = ['original', 'image', 'medium', 'thumb'];
@@ -67,9 +68,7 @@ class Image
             if (!is_array($requester)) {
                 $requester = User::getSingle($requester, 'id');
             }
-            if (!defined('G_APP_GITHUB_REPO') && version_compare(Settings::get('chevereto_version_installed'), '3.7.0', '>=')) {
-                $joins[] = 'LEFT JOIN ' . $tables['likes'] . ' ON ' . $tables['likes'] . '.like_content_type = "image" AND ' . $tables['images'] . '.image_id = ' . $tables['likes'] . '.like_content_id AND ' . $tables['likes'] . '.like_user_id = ' . $requester['id'];
-            }
+
         }
 
         $query .=  implode("\n", $joins) . "\n";
@@ -182,8 +181,6 @@ class Image
         if (!is_numeric($padding)) {
             $padding = 2;
         }
-
-        //$where_album = $album_id !== NULL ? "image_album_id=:image_album_id" : "image_album_id IS NULL";
 
         try {
             $prevs = new Listing;
@@ -541,13 +538,10 @@ class Image
     public static function upload($source, $destination, $filename = null, $options = [], $storage_id = null, $guestSessionHandle = true)
     {
         $default_options = Upload::getDefaultOptions();
-
         $options = array_merge($default_options, $options);
-
         if (!is_null($filename) && !$options['filenaming']) {
             $options['filenaming'] = 'original';
         }
-
         try {
             $upload = new Upload;
             $upload->setSource($source);
@@ -560,25 +554,16 @@ class Image
                 $upload->setFilename($filename);
             }
             if ($guestSessionHandle == false) {
-                // G\debug('Dont detect flood');
                 $upload->detectFlood = false;
-            } else {
-                // G\debug('Detect flood');
             }
             $upload->exec();
-
             $original_md5 = $upload->uploaded['fileinfo']['md5'];
-
             $is_animated_image = G\is_animated_image($upload->uploaded['file']);
             $apply_watermark = ($options['watermark'] and !$is_animated_image);
-
-            // Disable animated image watermark
             if ($is_animated_image) {
                 $apply_watermark = false;
             }
-
             if ($apply_watermark) {
-                // Detect watermark min image requirement
                 foreach (['width', 'height'] as $k) {
                     $min_value = getSetting('watermark_target_min_' . $k);
                     if ($min_value == 0) { // Skip on zero
@@ -586,7 +571,6 @@ class Image
                     }
                     $apply_watermark = $upload->uploaded['fileinfo'][$k] >= $min_value;
                 }
-                // Disable on GIF image?
                 if ($apply_watermark and $upload->uploaded['fileinfo']['extension'] == 'gif' and !$options['watermark_gif']) {
                     $apply_watermark = false;
                 }
@@ -597,10 +581,15 @@ class Image
                 $upload->uploaded['fileinfo']['md5'] = $original_md5; // Preserve original MD5 for watermarked images
             }
 
-            return [
-                'uploaded'    => $upload->uploaded,
-                'source'    => $upload->source
+            $return = [
+                'uploaded' => $upload->uploaded,
+                'source' => $upload->source,
             ];
+            if (isset($upload->moderation)) {
+                $return['moderation'] = $upload->moderation;
+            }
+
+            return $return;
         } catch (Exception $e) {
             throw new UploadException($e->getMessage(), $e->getCode());
         }
@@ -732,12 +721,8 @@ class Image
 
             // Allowed extensions
             $upload_options['allowed_formats'] = self::getEnabledImageFormats();
-
             $image_upload = self::upload($source, $upload_path, $filenaming == 'id' ? encodeID($target_id) : null, $upload_options, $storage_id, $guestSessionHandle);
-
             $chain_mask = [0, 1, 0, 1]; // original image medium thumb
-            $chain_array = [];
-
             // Detect duplicated uploads (all) by IP + MD5 (second layer)
             if ($do_dupe_check && self::isDuplicatedUpload($image_upload['uploaded']['fileinfo']['md5'])) {
                 throw new Exception(_s('Duplicated upload'), 102);
@@ -1040,9 +1025,20 @@ class Image
             }
 
             $original_exifdata = $image_upload['source']['image_exif'] ? json_encode(G\array_utf8encode($image_upload['source']['image_exif'])) : null;
-
-            // Fix some values
+            
             $values['nsfw'] = in_array(strval($values['nsfw']), ['0', '1']) ? $values['nsfw'] : 0;
+            if (Settings::get('moderatecontent') && $values['nsfw'] == 0 && Settings::get('moderatecontent_flag_nsfw')) {
+                switch ($image_upload['moderation']->rating_letter) {
+                    case 'a':
+                        $values['nsfw'] = '1';
+                    break;
+                    case 't':
+                        if (Settings::get('moderatecontent_flag_nsfw') == 't') {
+                            $values['nsfw'] = 1;
+                        }
+                    break;
+                }
+            }
 
             $populate_values = [
                 'uploader_ip' => $values['uploader_ip'],
@@ -1073,7 +1069,20 @@ class Image
                 }
             }
 
-            // Insert image
+            $values['is_approved'] = 1;
+            switch (Settings::get('moderate_uploads')) {
+                case 'all':
+                    $values['is_approved'] = 0;
+                break;
+                case 'guest':
+                    $values['is_approved'] = (int) isset($values['user_id']);
+                break;
+            }
+
+            if (Settings::get('moderatecontent_auto_approve') && isset($image_upload['moderation'])) {
+                $values['is_approved'] = 1;
+            }
+
             $insert = DB::insert('images', $values);
 
             $disk_space_used = $values['size'] + $values['thumb_size'] + $values['medium_size'];
@@ -1165,9 +1174,7 @@ class Image
                 'likes'        => $image['likes'],
             ]);
 
-            // Remove "liked" counter for each user who liked this image
-            DB::queryExec('UPDATE '.DB::getTable('users').' INNER JOIN '.DB::getTable('likes').' ON user_id = like_user_id AND like_content_type = "image" AND like_content_id = '.$image['id'].' SET user_liked = GREATEST(cast(user_liked AS SIGNED) - 1, 0);');
-            
+
 
             // Log image deletion
             DB::insert('deletions', [
@@ -1234,12 +1241,10 @@ class Image
     public static function fill(&$image)
     {
         $image['id_encoded'] = encodeID($image['id']);
-
         $targets = self::getSrcTargetSingle($image, false);
-
+        $medium_size = getSetting('upload_medium_size');
+        $medium_fixed_dimension = getSetting('upload_medium_fixed_dimension');
         if ($targets['type'] == 'path') {
-
-            // Re-create missing stuff
             if ($image['size'] == 0) {
                 $get_image_fileinfo = G\get_image_fileinfo($targets['chain']['image']);
                 $update_missing_values = [
@@ -1258,10 +1263,7 @@ class Image
                 self::update($image['id'], $update_missing_values);
                 $image = array_merge($image, $update_missing_values);
             }
-
             $is_animated = G\is_animated_image($targets['chain']['image']);
-
-            // Recreate thumb
             if (count($targets['chain']) > 0 && !$targets['chain']['thumb']) {
                 try {
                     $thumb_options = [
@@ -1273,11 +1275,6 @@ class Image
                 } catch (Exception $e) {
                 }
             }
-
-            // Recreate medium
-            $medium_size = getSetting('upload_medium_size');
-            $medium_fixed_dimension = getSetting('upload_medium_fixed_dimension');
-
             if ($image[$medium_fixed_dimension] > $medium_size && count($targets['chain']) > 0 && !$targets['chain']['medium']) {
                 try {
                     $medium_options = [
@@ -1288,14 +1285,11 @@ class Image
                 } catch (Exception $e) {
                 }
             }
-
             if (count($targets['chain']) > 0) {
                 $original_md5 = $image['md5'];
                 $image = array_merge($image, (array) @get_image_fileinfo($targets['chain']['image'])); // Never do an array merge over an empty thing!
                 $image['md5'] = $original_md5;
             }
-
-            // Update is_animated flag
             if ($is_animated && !$image['is_animated']) {
                 self::update($image['id'], ['is_animated' => 1]);
                 $image['is_animated'] = 1;
@@ -1320,25 +1314,37 @@ class Image
             }
             $image[$k]['size'] = $image[($k == 'image' ? '' : $k . '_') . 'size'];
         }
-
-        $display = $image['medium'] !== null ? $image['medium'] : ($image['size'] < G\get_bytes('200 KB') ? $image : $image['thumb']);
-        $display_thumb = $display == $image['thumb'];
-
         $image['size_formatted'] = G\format_bytes($image['size']);
-
-        $image['display_url'] = $display['url'];
-        $image['display_width'] = $display_thumb ? getSetting('upload_thumb_width') : $image['width'];
-        $image['display_height'] = $display_thumb ? getSetting('upload_thumb_height') : $image['height'];
-
+        $display_url = $image['url'];
+        $display_width = $image['width'];
+        $display_height = $image['height'];
+        if ($image['medium'] !== null) {
+            $display_url = $image['medium']['url'];
+            $image_ratio = $image['width']/$image['height'];
+            switch ($medium_fixed_dimension) {
+                case 'width':
+                    $display_width = $medium_size;
+                    $display_height = intval(round($medium_size/$image_ratio));
+                break;
+                case 'height':
+                    $display_height = $medium_size;
+                    $display_width = intval(round($medium_size*$image_ratio));
+                break;
+            }
+        } elseif ($image['size'] > G\get_bytes('200 KB')) {
+            $display_url = $image['thumb']['url'];
+            $display_width = getSetting('upload_thumb_width');
+            $display_height = getSetting('upload_thumb_height');
+        }
+        $image['display_url'] = $display_url;
+        $image['display_width'] = $display_width;
+        $image['display_height'] = $display_height;
         $image['views_label'] = _n('view', 'views', $image['views']);
         $image['likes_label'] = _n('like', 'likes', $image['likes']);
         $image['how_long_ago'] = time_elapsed_string($image['date_gmt']);
-
         $image['date_fixed_peer'] = Login::getUser() ? G\datetimegmt_convert_tz($image['date_gmt'], Login::getUser()['timezone']) : $image['date_gmt'];
-
         $image['title_truncated'] = G\truncate($image['title'], 28);
         $image['title_truncated_html'] = G\safe_html($image['title_truncated']);
-
         $image['is_use_loader'] = getSetting('image_load_max_filesize_mb') !== '' ? ($image['size'] > G\get_bytes(getSetting('image_load_max_filesize_mb') . 'MB')) : false;
     }
 
@@ -1367,6 +1373,7 @@ class Image
                 unset($output['album']['id'], $output['album']['privacy_extra'], $output['album']['user_id']);
                 unset($output['user']['id']);
                 unset($output['file_resource']);
+                unset($output['file']['resource']['chain']);
             }
 
             return $output;

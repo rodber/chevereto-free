@@ -548,8 +548,6 @@ function get_peafowl_item_list($tpl = 'image', $item, $template, $requester = nu
     // Now stock the item values
     $replacements = array_change_key_case(flatten_array($item, $stock_tpl . '_'), CASE_UPPER);
 
-    // G\debug($replacements);
-
     unset($replacements['IMAGE_ORIGINAL_EXIFDATA']);
 
     if ($stock_tpl == 'IMAGE' or $stock_tpl == 'ALBUM') {
@@ -1004,17 +1002,7 @@ function getPixel($type)
 
 function showQueuePixel()
 {
-    if (!defined('G_APP_GITHUB_REPO')) {
-        return;
-    }
-    if (version_compare(CHV\getSetting('chevereto_version_installed'), '3.5.5', '<')) {
-        return;
-    }
-    if (CHV\DB::queryFetchSingle('SELECT EXISTS(SELECT 1 FROM ' . CHV\DB::getTable('queues') . ' WHERE queue_status = "pending") as has')['has'] == 0) {
-        return;
-    }
-
-    echo getPixel('queue');
+    return;
 }
 
 function show_queue_img()

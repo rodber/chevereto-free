@@ -91,7 +91,7 @@ function get_input_auth_token($name='auth_token')
  */
 
 // Outputs the REST_API array to xml
-function xml_output($array=array())
+function xml_output($data=[])
 {
     error_reporting(0);
     //@ini_set('display_errors', false);
@@ -103,18 +103,25 @@ function xml_output($array=array())
     header("Pragma: no-cache");
     header("Content-Type:text/xml; charset=UTF-8");
     $out = '<?xml version="1.0" encoding="UTF-8"?>'."\n";
-    $out .= "<response>\n";
-    $out .= "	<status_code>$array[status_code]</status_code>\n";
-    $out .= "	<status_txt>$array[status_txt]</status_txt>\n";
-    if (count($array["data"])>0) {
-        $out .= "	<data>\n";
-        foreach ($array["data"] as $key => $value) {
-            $out .= "		<$key>$value</$key>\n";
+    if ($data['status_code']) {
+        $out .= "<status_code>$data[status_code]</status_code>\n";
+        if (!$data['status_txt']) {
+            $data['status_txt'] = G\get_set_status_header_desc($data['status_code']);
         }
-        $out .= "	</data>\n";
+        $out .= "<status_txt>$data[status_txt]</status_txt>\n";
     }
-    $out .= "</response>";
+    unset($data['status_code'], $data['status_txt']);
+    if ($data !== []) {
+        foreach ($data as $key => $array) {
+            $out .= "<$key>\n";
+            foreach ($array as $prop => $value) {
+                $out .= "	<$prop>$value</$prop>\n";
+            }
+            $out .= "</$key>\n";
+        }
+    }
     echo $out;
+    die();
 }
 
 // Procedural function to output an array to json
@@ -144,7 +151,6 @@ function json_output($data=[], $callback=null)
         die(json_encode($json_fail));
     }
     
-    // Populate missing values
     if ($data['status_code'] && !$data['status_txt']) {
         $data['status_txt'] = G\get_set_status_header_desc($data['status_code']);
     }

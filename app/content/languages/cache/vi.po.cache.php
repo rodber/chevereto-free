@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2018-12-19 20:57+0000',
-  'PO-Revision-Date' => '2018-12-19 20:57+0000',
+  'POT-Creation-Date' => '2020-09-02 17:16+0000',
+  'PO-Revision-Date' => '2020-09-02 17:16+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'vi',
@@ -52,6 +52,42 @@ $translation_table = [
 	"Personal" => [
 		0 => "Cá nhân",
 	],
+	"Installed version is v%s" => [
+		0 => "Phiên bản đã cài là v%s",
+	],
+	"Can't connect to %s" => [
+		0 => "Không thể kết nối tới %s\n",
+	],
+	"Last available release is v%s" => [
+		0 => "Phiên bản hiện tại v%s",
+	],
+	"Update needed, proceeding to download" => [
+		0 => "Cập nhật cần thiết, tiến hành tải xuống\n",
+	],
+	"No update needed" => [
+		0 => "Không có cập nhật\n",
+	],
+	"System files already up to date" => [
+		0 => "Các file hệ thống đã cập nhật",
+	],
+	"Starting v%s download" => [
+		0 => "Bắt đầu tải xuống v%s ",
+	],
+	"Downloaded v%s, proceeding to extraction" => [
+		0 => "Đã tải xuống v%s, đang tiến hành giải nén",
+	],
+	"Attempting to extract v%s" => [
+		0 => "Đang giải nén v%s\n",
+	],
+	"Extraction completed" => [
+		0 => "Giải nén thành công",
+	],
+	"Proceding to install the update" => [
+		0 => "Tiến hành cài đặt bản cập nhật",
+	],
+	"Update failed" => [
+		0 => "Cập nhật thất bại",
+	],
 	"Update in progress" => [
 		0 => "Đang tiến hành cập nhật",
 	],
@@ -65,7 +101,7 @@ $translation_table = [
 		0 => "Mã key bản quyền không hợp lệ",
 	],
 	"Can't save file" => [
-		0 => "Không thể lưu file",
+		0 => "Không thể lưu tệp",
 	],
 	"Can't download %s" => [
 		0 => "Không thể tải xuống %s",
@@ -78,6 +114,183 @@ $translation_table = [
 	],
 	"Can't update %s file - %e" => [
 		0 => "Không thể cập nhật file %s - %e",
+	],
+	"Check the errors in the form to continue." => [
+		0 => "Kiểm tra lỗi trong biểu mẫu để tiếp tục.",
+	],
+	"You must enter the album name." => [
+		0 => "Bạn phải đặt tên album.",
+	],
+	"Confirm" => [
+		0 => "Xác nhận",
+	],
+	"Select existing album" => [
+		0 => "Chọn album sẵn có",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "Có lỗi xảy ra, hãy quay lại sau.",
+	],
+	"Please select a valid image file type." => [
+		0 => "Hãy chọn loại ảnh phù hợp",
+	],
+	"Please select a picture of at most %s size." => [
+		0 => "Hãy chọn dung lượng ảnh tối đa %s",
+	],
+	"Profile image updated." => [
+		0 => "Hình đại diện đã cập nhật",
+	],
+	"Profile background image updated." => [
+		0 => "Hình nền cá nhân đã cập nhật.",
+	],
+	"Profile background image deleted." => [
+		0 => "Hình nền cá nhân đã xóa.",
+	],
+	"Error deleting profile background image." => [
+		0 => "Xóa hình nền bị lỗi.",
+	],
+	"Passwords don't match" => [
+		0 => "Mật khẩu không khớp",
+	],
+	"Update available v%s" => [
+		0 => "Cập nhật có sẵn v%s",
+	],
+	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
+		0 => "Có bản cập nhật mới cho hệ thống của bạn. Bạn có thể tự động tải xuống và cài đặt bản cập nhật này hoặc truy cập %s để tải file xuống",
+	],
+	"The release notes for this update are:" => [
+		0 => "Chú ý cho bản cập nhật này là:",
+	],
+	"Update now" => [
+		0 => "Cập nhật ngay",
+	],
+	"or" => [
+		0 => "hoặc",
+	],
+	"cancel" => [
+		0 => "hủy",
+	],
+	"This website is running latest %s version" => [
+		0 => "Website này đang chạy phiên bản %s mới nhất",
+	],
+	"loading" => [
+		0 => "đang tải",
+	],
+	"Toggle select" => [
+		0 => "Chọn chuyển đổi",
+	],
+	"Like" => [
+		0 => "Thích",
+	],
+	"Edit" => [
+		0 => "Sửa",
+	],
+	"Album" => [
+		0 => "Albums",
+	],
+	"Delete" => [
+		0 => "Xóa",
+	],
+	"Close" => [
+		0 => "Đóng",
+	],
+	"Previous" => [
+		0 => "Trước",
+	],
+	"Next" => [
+		0 => "Tiếp",
+	],
+	"Clipboard image" => [
+		0 => "Lưu tạm ảnh",
+	],
+	"File too big." => [
+		0 => "Hình quá lớn",
+	],
+	"Invalid or unsupported file format." => [
+		0 => "Định dạng tệp không hợp lệ hoặc không được hỗ trợ.",
+	],
+	"Some files couldn't be added" => [
+		0 => "Một số tệp không thêm được.",
+	],
+	"image" => [
+		0 => "ảnh",
+	],
+	"%s's Albums" => [
+		0 => "Album của %s",
+	],
+	"Image edited successfully." => [
+		0 => "Sửa ảnh thành công.",
+	],
+	"private" => [
+		0 => "riêng tư",
+	],
+	"Album edited successfully." => [
+		0 => "Sửa album thành công.",
+	],
+	"Invalid URL key." => [
+		0 => "Khóa URL không hợp lệ.",
+	],
+	"Category URL key already being used." => [
+		0 => "Khóa URL của danh mục đã được sử dụng.",
+	],
+	"Category successfully deleted." => [
+		0 => "Danh mục đã xóa thành công ",
+	],
+	"Category %s added." => [
+		0 => "Danh mục %s đã thêm.",
+	],
+	"Invalid expiration date." => [
+		0 => "Ngày hết hạn không hợp lệ.\n",
+	],
+	"IP %s already banned." => [
+		0 => "IP %s đã bị cấm.",
+	],
+	"IP %s banned." => [
+		0 => "IP %s bị cấm.",
+	],
+	"IP ban successfully deleted." => [
+		0 => "Bỏ cấm IP thành công.",
+	],
+	"Please fill all the required fields." => [
+		0 => "Vui lòng điền vào tất cả các vùng bắt buộc.",
+	],
+	"Invalid storage capacity value. Make sure to use a valid format." => [
+		0 => "Sức chứa dung lượng lưu trữ không hợp lệ. Hãy đảm bảo sử dụng định dạng hợp lệ.\n",
+	],
+	"Storage capacity can't be lower than its current usage (%s)." => [
+		0 => "Dung lượng lưu trữ không thể thấp hơn hiện tại đang sử dụng (%s)",
+	],
+	"Invalid URL." => [
+		0 => "URL không hợp lệ.",
+	],
+	"Storage successfully edited." => [
+		0 => "Đã chỉnh sửa kho lưu trữ thành công.",
+	],
+	"User added successfully." => [
+		0 => "Thêm người dùng thành công.",
+	],
+	"The content has been deleted." => [
+		0 => "Nội dung đã bị xóa",
+	],
+	"The content has been moved." => [
+		0 => "Nội dung đã được di chuyển.",
+	],
+	"Select" => [
+		0 => "Chọn",
+	],
+	"Unselect" => [
+		0 => "Bỏ chọn",
+	],
+	"The content has been edited." => [
+		0 => "Nội dung đã được chỉnh sửa.",
+	],
+	"Spam detected" => [
+		0 => "Phát hiện Spam",
+	],
+	"album" => [
+		0 => "album",
+	],
+	"Flooding detected. You can only upload %limit% %content% per %time%" => [
+		0 => "Phát hiện spam. Bạn chỉ có thể tải lên %limit% %content% trong %time%",
 	],
 	"Untitled" => [
 		0 => "Chưa đặt tên",
@@ -92,7 +305,7 @@ $translation_table = [
 		0 => "Lưu ý: Nội dung này được bảo vệ bằng mật khẩu. Hãy nhớ cho mật khẩu của nội dung khi chia sẻ.",
 	],
 	"Note: This content is private. Change privacy to \"public\" to share." => [
-		0 => "Nội dung này ở chế độ riêng tư. Đổi sang chế độ \"public\" để chia sẻ.",
+		0 => "Nội dung này ở chế độ riêng tư. Đổi sang chế độ \"công khai\" để chia sẻ.",
 	],
 	"Private" => [
 		0 => "Riêng tư",
@@ -145,9 +358,6 @@ $translation_table = [
 	"like" => [
 		0 => "thích",
 	],
-	"image" => [
-		0 => "ảnh",
-	],
 	"Recent" => [
 		0 => "Gần đây",
 	],
@@ -187,9 +397,6 @@ $translation_table = [
 	"Image" => [
 		0 => "Ảnh",
 	],
-	"Album" => [
-		0 => "Albums",
-	],
 	"User" => [
 		0 => "Người dùng",
 	],
@@ -204,9 +411,6 @@ $translation_table = [
 	],
 	"Can't insert storage." => [
 		0 => "Không thể chèn vào kho lưu trữ.",
-	],
-	"Storage capacity can't be lower than its current usage (%s)." => [
-		0 => "Dung lượng lưu trữ không thể thấp hơn hiện tại đang sử dụng (%s)",
 	],
 	"Can't update storage details." => [
 		0 => "Không thể cập nhật chi tiết kho lưu trữ.",
@@ -253,9 +457,6 @@ $translation_table = [
 	"There is an update available for your Chevereto based website." => [
 		0 => "Đã có sẵn bản cập nhật cho trang Chevereto của bạn.",
 	],
-	"The release notes for this update are:" => [
-		0 => "Chú ý cho bản cập nhật này là:",
-	],
 	"admin dashboard" => [
 		0 => "bảng điều khiển ",
 	],
@@ -273,21 +474,6 @@ $translation_table = [
 	],
 	"I understand" => [
 		0 => "Tôi hiểu",
-	],
-	"You have been forbidden to use this website." => [
-		0 => "Bạn bị bắt buộc dùng website này",
-	],
-	"Feel free to browse and discover all my shared images and albums." => [
-		0 => "Cứ thoải mái khám phá tất cả ảnh và album tôi đã chia sẻ công khai.",
-	],
-	"View all my images" => [
-		0 => "Xem tất cả ảnh của tôi",
-	],
-	"Plugin" => [
-		0 => "Plugin\n",
-	],
-	"That page doesn't exist" => [
-		0 => "404: Trng này không tồn tại",
 	],
 	"Forgot password?" => [
 		0 => "Quên mật khẩu?",
@@ -334,14 +520,8 @@ $translation_table = [
 	"Welcome to %s" => [
 		0 => "Chào mừng %s",
 	],
-	"Passwords don't match" => [
-		0 => "Mật khẩu không khớp",
-	],
 	"Email already being used" => [
 		0 => "Email đã sử dụng",
-	],
-	"Check the errors in the form to continue." => [
-		0 => "Kiểm tra lỗi trong biểu mẫu để tiếp tục.",
 	],
 	"Password required" => [
 		0 => "Yêu cầu mật khẩu",
@@ -438,9 +618,6 @@ $translation_table = [
 	],
 	"Changelog" => [
 		0 => "Nhật ký thay đổi",
-	],
-	"Request new features" => [
-		0 => "Yêu cầu thêm tính năng mới",
 	],
 	"Bug tracking" => [
 		0 => "Theo dõi lỗi",
@@ -574,9 +751,6 @@ $translation_table = [
 	"Inside viewer top (image page)" => [
 		0 => "Trong phần trên của trình duyệt ảnh (trang xem ảnh)",
 	],
-	"Expected banner size 728x90" => [
-		0 => "Size tốt nhất 728x90",
-	],
 	"Inside viewer foot (image page)" => [
 		0 => "Trong phần chân của trình duyệt ảnh (trang xem ảnh)",
 	],
@@ -639,9 +813,6 @@ $translation_table = [
 	],
 	"Invalid theme main color" => [
 		0 => "sai màu chính",
-	],
-	"Invalid theme top bar color" => [
-		0 => "sai màu của top bar",
 	],
 	"Invalid theme top bar button color" => [
 		0 => "Sai màu nút trên topbar",
@@ -847,9 +1018,6 @@ $translation_table = [
 	"Sign in" => [
 		0 => "Đăng nhập",
 	],
-	"Logged out" => [
-		0 => "Đã đăng xuất",
-	],
 	"Upload images" => [
 		0 => "Upload ảnh",
 	],
@@ -919,9 +1087,6 @@ $translation_table = [
 	"%s's Images" => [
 		0 => "Ảnh của %s",
 	],
-	"%s's Albums" => [
-		0 => "Album của %s",
-	],
 	"Results for" => [
 		0 => "Kết quả cho",
 	],
@@ -943,9 +1108,6 @@ $translation_table = [
 	"Discovery" => [
 		0 => "Khám phá",
 	],
-	"Close" => [
-		0 => "Đóng",
-	],
 	"Advanced search" => [
 		0 => "Tìm kiếm nâng cao",
 	],
@@ -957,9 +1119,6 @@ $translation_table = [
 	],
 	"Notifications" => [
 		0 => "Thông báo",
-	],
-	"loading" => [
-		0 => "đang tải",
 	],
 	"You don't have notifications" => [
 		0 => "Bạn chưa có thông báo nào",
@@ -980,13 +1139,13 @@ $translation_table = [
 		0 => "Hoặc bạn có thê copy đoạn URL sau và dán vào thanh địa chỉ của trình duyệt để kích hoạt: <a href=\"%s\">%s</a>",
 	],
 	"If you didn't intend this just ignore this message." => [
-		0 => "Nếu bạn không đăng ký hoặc bạn không hiểu nội dung email này nói về gì, hãy bỏ qua và xem như chưa biết gì hết Up Siêu Tốc ^^",
+		0 => "Nếu bạn không có ý định này, chỉ cần bỏ qua thông báo này.",
 	],
 	"This request was made from IP: %s" => [
 		0 => "Yêu cầu này xuất phát từ IP: %s",
 	],
 	"We received a request to register the %n account at %w." => [
-		0 => "Chúng tôi nhận được yêu cầu tạo tài khoản %n tại Up Siêu Tốc %w.",
+		0 => "Chúng tôi nhận được yêu cầu tạo tài khoản %n tại %w.",
 	],
 	"To complete the process you must <a href=\"%s\">activate your account</a>." => [
 		0 => "Để hoàn tất vui lòng <a href=\"%s\">kích hoạt tài khoản</a>.",
@@ -998,13 +1157,13 @@ $translation_table = [
 		0 => "Để reset lại mật khẩu xin vui lòng <a href=\"%s\">click vào link này</a>.",
 	],
 	"Hi %n, welcome to %w" => [
-		0 => "Xin chào %n, rất vui khi bạn đến với Up siêu tốc %w",
+		0 => "Xin chào %n, rất vui khi bạn đến với %w",
 	],
 	"Now that your account is ready you can enjoy uploading your images, creating albums and setting the privacy of your content as well as many more cool things that you will discover." => [
 		0 => "Tài khoản của bạn đã được kích hoạt thành công. Hãy bắt đầu upload ảnh của bạn, tạo album, set chế độ riêng tư hoặc công cộng cho hình ảnh của bạn và hàng đống chức năng khác đang chờ bạn khám phá.",
 	],
 	"By the way, here is you very own awesome profile page: <a href=\"%u\">%n</a>. Go ahead and customize it, its yours!." => [
-		0 => "Ngoài ra thì Up siêu tốc cũng tạo cho bạn 1 trang cá nhân rất ngầu tại địa chỉ <a href=\"%u\">%n</a>. Còn chờ gì nữa mà không truy cập thử và đổi ảnh đại diện, avatar... đi :D",
+		0 => "Nhân tiện, đây là trang cá nhân tuyệt vời của bạn: <a href=\"%u\">%n</a>. Hãy tiếp tục tùy chỉnh, nó là của bạn !.",
 	],
 	"Thank you for joining" => [
 		0 => "Cảm ơn bạn đã tham gia với chúng tôi.",
@@ -1096,12 +1255,6 @@ $translation_table = [
 	"Uploading" => [
 		0 => "Đang đăng",
 	],
-	"or" => [
-		0 => "hoặc",
-	],
-	"cancel" => [
-		0 => "hủy",
-	],
 	"cancel remaining" => [
 		0 => "Ngưng upload những ảnh còn lại",
 	],
@@ -1125,12 +1278,6 @@ $translation_table = [
 	],
 	"insert" => [
 		0 => "chèn",
-	],
-	"Edit" => [
-		0 => "Sửa",
-	],
-	"Edit image" => [
-		0 => "Sửa ảnh",
 	],
 	"Title" => [
 		0 => "Tiêu đề",
@@ -1185,9 +1332,6 @@ $translation_table = [
 	],
 	"Error report" => [
 		0 => "Thông báo lỗi",
-	],
-	"album" => [
-		0 => "album",
 	],
 	"Viewer links" => [
 		0 => "Link người xem",
@@ -1283,7 +1427,7 @@ $translation_table = [
 		0 => "API",
 	],
 	"Region" => [
-		0 => "Region",
+		0 => "Khu vực",
 	],
 	"Storage region" => [
 		0 => "Storage region",
@@ -1393,9 +1537,6 @@ $translation_table = [
 	"Flag as safe" => [
 		0 => "Ảnh an toàn",
 	],
-	"Delete" => [
-		0 => "Xóa",
-	],
 	"Create new album" => [
 		0 => "Tạo album mới",
 	],
@@ -1404,12 +1545,6 @@ $translation_table = [
 	],
 	"There's nothing to show here." => [
 		0 => "Không có gì để hiện.",
-	],
-	"Edit image details" => [
-		0 => "Chỉnh thửa thông tin ảnh",
-	],
-	"Edit album details" => [
-		0 => "Sửa thông tin album",
 	],
 	"All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
 		0 => "Hình đã chuyển đến  album mới tạo. Bạn cố thể chuyển hình đến <a class=\"modal-switch\" data-switch=\"move-existing-album\">album hiện có</a>.",
@@ -1462,9 +1597,6 @@ $translation_table = [
 	"Keyboard shortcuts" => [
 		0 => "Phím tắt",
 	],
-	"Like" => [
-		0 => "Thích",
-	],
 	"Uploaded by guest" => [
 		0 => "Upload by khách",
 	],
@@ -1477,11 +1609,11 @@ $translation_table = [
 	"by %u" => [
 		0 => "bởi %u",
 	],
-	"Select" => [
-		0 => "Chọn",
-	],
 	"Toggle unsafe flag" => [
 		0 => "Bật kiểm tra nội dung không an toàn",
+	],
+	"That page doesn't exist" => [
+		0 => "404: Trng này không tồn tại",
 	],
 	"The requested page was not found." => [
 		0 => "Không tìm thấy trang yêu cầu",
@@ -1491,9 +1623,6 @@ $translation_table = [
 	],
 	"The user has been deleted" => [
 		0 => "Người dùng đã bị xóa",
-	],
-	"The content has been deleted." => [
-		0 => "Nội dung đã bị xóa",
 	],
 	"Your account is almost ready" => [
 		0 => "Tài khoản bạn đã sẵn sàng",
@@ -1554,9 +1683,6 @@ $translation_table = [
 	],
 	"Do you really want to delete this album and all of its images? This can't be undone." => [
 		0 => "Bạn có muốn xoá tất cả hình ảnh album? Không phục hồi được nhé.",
-	],
-	"Delete album" => [
-		0 => "Xóa album",
 	],
 	"You like this" => [
 		0 => "Bạn đã like",
@@ -2014,6 +2140,9 @@ $translation_table = [
 	"Don't have an account? <a href='%s'>Sign up</a> now." => [
 		0 => "Chưa có tài khoản? <a href='%s'>Đăng ký </a> ngay!",
 	],
+	"Logged out" => [
+		0 => "Đã đăng xuất",
+	],
 	"You have been logged off %s. Hope to see you soon." => [
 		0 => "Bạn đã thoát khỏi tài khoản %s. Hẹn gặp lại sau!",
 	],
@@ -2104,9 +2233,6 @@ $translation_table = [
 	"User has no connections." => [
 		0 => "Người dùng chưa có kết nối đến mạng xã hội",
 	],
-	"Link your account to external services to be able to login and share content." => [
-		0 => "Kết nối đến tài khoản xã hội để có thể đăng nhập và chia sẻ nhanh.",
-	],
 	"Do you really want to disconnect %s from this account?" => [
 		0 => "Bạn có chắc là muốn xóa liên kết đến %s của tài khoản",
 	],
@@ -2128,8 +2254,14 @@ $translation_table = [
 	"Connect %s" => [
 		0 => "Kết nối %s",
 	],
+	"Feel free to browse and discover all my shared images and albums." => [
+		0 => "Cứ thoải mái khám phá tất cả ảnh và album tôi đã chia sẻ công khai.",
+	],
 	"Button" => [
 		0 => "Nút",
+	],
+	"View all my images" => [
+		0 => "Xem tất cả ảnh của tôi",
 	],
 	"resend account activation" => [
 		0 => "gửi lại email kích hoạt tài khoản",
@@ -2158,14 +2290,17 @@ $translation_table = [
 	"Delete background" => [
 		0 => "Xóa hình nền",
 	],
-	"Edit profile" => [
-		0 => "Sửa hồ sơ cá nhân",
-	],
 	"Follower" => [
 		0 => "Người theo dõi",
 	],
 	"Follow" => [
 		0 => "Theo dõi",
+	],
+	"You have been forbidden to use this website." => [
+		0 => "Bạn bị bắt buộc dùng website này",
+	],
+	"Plugin" => [
+		0 => "Plugin\n",
 	],
 	"General questions/comments" => [
 		0 => "Hỏi đáp, thắc mắc, kiến nghị",
@@ -2196,162 +2331,6 @@ $translation_table = [
 	],
 	"Subject" => [
 		0 => "Chủ đề",
-	],
-	"Installed version is v%s" => [
-		0 => "Phiên bản đã cài là v%s",
-	],
-	"Can't connect to %s" => [
-		0 => "Không thể kết nối tới %s\n",
-	],
-	"Last available release is v%s" => [
-		0 => "Phiên bản hiện tại v%s",
-	],
-	"Update needed, proceeding to download" => [
-		0 => "Cập nhật cần thiết, tiến hành tải xuống\n",
-	],
-	"No update needed" => [
-		0 => "Không có cập nhật\n",
-	],
-	"System files already up to date" => [
-		0 => "Các file hệ thống đã cập nhật",
-	],
-	"Starting v%s download" => [
-		0 => "Bắt đầu tải xuống v%s ",
-	],
-	"Downloaded v%s, proceeding to extraction" => [
-		0 => "Đã tải xuống v%s, đang tiến hành giải nén",
-	],
-	"Attempting to extract v%s" => [
-		0 => "Đang giải nén v%s\n",
-	],
-	"Extraction completed" => [
-		0 => "Giải nén thành công",
-	],
-	"Proceding to install the update" => [
-		0 => "Tiến hành cài đặt bản cập nhật",
-	],
-	"Update failed" => [
-		0 => "Cập nhật thất bại",
-	],
-	"You must enter the album name." => [
-		0 => "Bạn phải đặt tên album.",
-	],
-	"Confirm" => [
-		0 => "Xác nhận",
-	],
-	"Select existing album" => [
-		0 => "Chọn album sẵn có",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "Có lỗi xảy ra, hãy quay lại sau.",
-	],
-	"Please select a valid image file type." => [
-		0 => "Hãy chọn loại ảnh phù hợp",
-	],
-	"Please select a picture of at most %s size." => [
-		0 => "Hãy chọn dung lượng ảnh tối đa %s",
-	],
-	"Profile image updated." => [
-		0 => "Hình đại diện đã cập nhật",
-	],
-	"Profile background image updated." => [
-		0 => "Hình nền cá nhân đã cập nhật.",
-	],
-	"Profile background image deleted." => [
-		0 => "Hình nền cá nhân đã xóa.",
-	],
-	"Error deleting profile background image." => [
-		0 => "Xóa hình nền bị lỗi.",
-	],
-	"Update available v%s" => [
-		0 => "Cập nhật có sẵn v%s",
-	],
-	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
-		0 => "Có bản update mới cho hệ thống của bạn. Bạn có thể tự động tải xuống và cài đặt bản update này hoặc truy cập %s để tải file xuống",
-	],
-	"Update now" => [
-		0 => "Cập nhật ngay",
-	],
-	"This website is running latest %s version" => [
-		0 => "Trang web này đang chạy phiên bản %s mới nhất",
-	],
-	"Toggle select" => [
-		0 => "Chọn chuyển đổi",
-	],
-	"Previous" => [
-		0 => "Trước",
-	],
-	"Next" => [
-		0 => "Tiếp",
-	],
-	"Clipboard image" => [
-		0 => "Lưu tạm ảnh",
-	],
-	"File too big." => [
-		0 => "Hình quá lớn",
-	],
-	"Invalid or unsupported file format." => [
-		0 => "Định dạng tệp không hợp lệ hoặc không được hỗ trợ.",
-	],
-	"Some files couldn't be added" => [
-		0 => "Một số hình không thêm được.",
-	],
-	"Image edited successfully." => [
-		0 => "Sửa ảnh thành công.",
-	],
-	"private" => [
-		0 => "riêng tư",
-	],
-	"Album edited successfully." => [
-		0 => "Sửa album thành công.",
-	],
-	"Invalid URL key." => [
-		0 => "Khóa URL không hợp lệ.",
-	],
-	"Category URL key already being used." => [
-		0 => "Khóa URL của danh mục đã được sử dụng.",
-	],
-	"Category successfully deleted." => [
-		0 => "Danh mục đã xóa thành công ",
-	],
-	"Category %s added." => [
-		0 => "Danh mục %s đã thêm.",
-	],
-	"Invalid expiration date." => [
-		0 => "Ngày hết hạn không hợp lệ.\n",
-	],
-	"IP %s already banned." => [
-		0 => "IP %s đã bị cấm.",
-	],
-	"IP %s banned." => [
-		0 => "IP %s bị cấm.",
-	],
-	"IP ban successfully deleted." => [
-		0 => "Bỏ cấm IP thành công.",
-	],
-	"Please fill all the required fields." => [
-		0 => "Vui lòng điền vào tất cả các vùng bắt buộc.",
-	],
-	"Invalid storage capacity value. Make sure to use a valid format." => [
-		0 => "Sức chứa dung lượng lưu trữ không hợp lệ. Hãy đảm bảo sử dụng định dạng hợp lệ.\n",
-	],
-	"Invalid URL." => [
-		0 => "URL không hợp lệ.",
-	],
-	"Storage successfully edited." => [
-		0 => "Đã chỉnh sửa kho lưu trữ thành công.",
-	],
-	"User added successfully." => [
-		0 => "Thêm người dùng thành công.",
-	],
-	"The content has been moved." => [
-		0 => "Nội dung đã được di chuyển.",
-	],
-	"Unselect" => [
-		0 => "Bỏ chọn",
-	],
-	"The content has been edited." => [
-		0 => "Nội dung đã được chỉnh sửa.",
 	],
 	"All the changes that you have made will be lost if you continue." => [
 		0 => "Nếu tiếp tục các thay đổi sẽ mất",

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2020-05-16 19:37+0000\n"
-"PO-Revision-Date: 2020-05-16 19:37+0000\n"
+"POT-Creation-Date: 2020-09-02 17:14+0000\n"
+"PO-Revision-Date: 2020-09-02 17:14+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: nl\n"
@@ -203,6 +203,9 @@ msgstr "U moet nog een albumnaam invoeren."
 msgid "Confirm"
 msgstr "Bevestigen"
 
+msgid "The content has been approved."
+msgstr "De inhoud is goedgekeurd."
+
 #: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
 msgid "Select existing album"
 msgstr "Selecteer bestaand album"
@@ -353,6 +356,9 @@ msgid "Album"
 msgid_plural "Albums"
 msgstr[0] "Album"
 msgstr[1] "Albums"
+
+msgid "Approve"
+msgstr "Goedkeuren"
 
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
 #: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
@@ -762,6 +768,16 @@ msgid "User"
 msgid_plural "Users"
 msgstr[0] "Gebruiker"
 msgstr[1] "Gebruikers"
+
+msgid "adult"
+msgstr "Volwassene"
+
+msgid "teen"
+msgstr "Tienier"
+
+#, php-format
+msgid "Content of type %s is forbidden"
+msgstr "%s inhoud is niet toegestaan."
 
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
@@ -1382,11 +1398,6 @@ msgstr "Weergavepagina afbeelding"
 msgid "Inside viewer top (image page)"
 msgstr "Vanboven in de afbeelding viewer (weergavepagina afbeelding)"
 
-#: ../../../app/routes/route.dashboard.php:413
-#: ../../../app/routes/route.dashboard.php:417
-msgid "Expected banner size 728x90"
-msgstr "Verwachte afmetingen banner: 728x90"
-
 #: ../../../app/routes/route.dashboard.php:416
 msgid "Inside viewer foot (image page)"
 msgstr "Vanonder in de afbeelding viewer (weergavepagina afbeelding)"
@@ -1504,10 +1515,6 @@ msgstr "Ongeldige thema toonzetting"
 #: ../../../app/routes/route.dashboard.php:627
 msgid "Invalid theme main color"
 msgstr "Ongeldige hoofdkleur thema"
-
-#: ../../../app/routes/route.dashboard.php:632
-msgid "Invalid theme top bar color"
-msgstr "Ongeldige topbalk thema kleur"
 
 #: ../../../app/routes/route.dashboard.php:637
 msgid "Invalid theme top bar button color"
@@ -1842,6 +1849,9 @@ msgstr "Verkeerde inloggegevens"
 #: ../../../app/themes/Peafowl/views/login.php:52
 msgid "Sign in"
 msgstr "Inloggen"
+
+msgid "Moderate"
+msgstr "Modereren"
 
 msgid "Upload images"
 msgstr "Upload afbeeldingen"
@@ -2227,6 +2237,12 @@ msgstr "reset"
 msgid "close"
 msgstr "sluiten"
 
+msgid "Note"
+msgstr "Opmerking"
+
+msgid "We must approve the uploaded content before being able to share."
+msgstr "We moeten de geüploade inhoud goedkeuren voordat deze gedeeld kan worden."
+
 msgid "copy"
 msgstr "Kopieër"
 
@@ -2237,10 +2253,6 @@ msgstr "invoegen"
 #: ../../../app/themes/Peafowl/views/dashboard.php:666
 msgid "Remove"
 msgstr "Verwijder"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:154
-msgid "Edit image"
-msgstr "Wijzig foto"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
 #: ../../../app/themes/Peafowl/snippets/form_image.php:4
@@ -2535,6 +2547,12 @@ msgstr "Korte omschrijving van deze categorie"
 msgid "Untitled image"
 msgstr "Naamloze afbeelding"
 
+msgid "Mark this if the image is not safe for work"
+msgstr "Markeer dit als het beeld niet veilig is voor het werk"
+
+msgid "Flag not safe"
+msgstr "Vlag niet veilig"
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
 msgid "Path"
 msgstr "Pad"
@@ -2820,18 +2838,6 @@ msgstr "Home"
 msgid "There's nothing to show here."
 msgstr "Er is hier niets te zien"
 
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
-#: ../../../app/themes/Peafowl/views/image.php:69
-#: ../../../app/themes/Peafowl/views/image.php:457
-msgid "Edit image details"
-msgstr "Afbeelding bewerken"
-
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
-#: ../../../app/themes/Peafowl/views/album.php:22
-#: ../../../app/themes/Peafowl/views/album.php:118
-msgid "Edit album details"
-msgstr "Album bewerken"
-
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
 msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
 msgstr "Alle afbeeldingen zullen worden verplaatst naar dit nieuwe album. U kunt de afbeeldingen ook verplaatsen naar een <a class=\"modal-switch\" data-switch=\"move-existing-album\">bestaand album</a>."
@@ -2872,6 +2878,12 @@ msgstr "Bevestig dat deze content onveilig is"
 msgid "Do you really want to flag this content as unsafe?"
 msgstr "Weet u zeker dat u deze inhoud als onveilig wilt markeren?"
 
+msgid "Confirm approval"
+msgstr "Bevestig goedkeuring"
+
+msgid "Do you really want to approve this content? This can't be undone."
+msgstr "Wilt u echt alle geselecteerde inhoud verwijderen? Dit kan niet ongedaan worden gemaakt."
+
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:106
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:110
 msgid "Confirm deletion"
@@ -2880,6 +2892,9 @@ msgstr "Bevestig verwijderen"
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:107
 msgid "Do you really want to remove this content? This can't be undone."
 msgstr "Wilt u deze inhoud echt verwijderen? Dit kan niet ongedaan gemaakt worden."
+
+msgid "Do you really want to approve all the selected content? This can't be undone."
+msgstr "Wilt u echt alle geselecteerde inhoud verwijderen? Dit kan niet ongedaan worden gemaakt."
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:111
 msgid "Do you really want to remove all the selected content? This can't be undone."
@@ -3054,10 +3069,6 @@ msgstr "Deze inhoud is privé"
 msgid "Do you really want to delete this album and all of its images? This can't be undone."
 msgstr "Weet u zeker dat u dit album inclusief afbeeldingen wil verwijderen? Dit kan niet ongedaan gemaakt worden."
 
-#: ../../../app/themes/Peafowl/views/album.php:25
-msgid "Delete album"
-msgstr "Verwijder album"
-
 #: ../../../app/themes/Peafowl/views/image.php:85
 msgid "You like this"
 msgstr "U waardeert dit"
@@ -3112,9 +3123,6 @@ msgstr "Automatisch importeren"
 msgid "The system automatically parses any content by a continuous observation of the %path% path."
 msgstr "Het systeem verwerkt automatisch iedere inhoud door een continue monitoring van het %path% pad."
 
-msgid "The system automatically parses any content by a continous observation of the %path% path."
-msgstr "Het systeem ontleedt automatisch elke inhoud door een continue observatie van het %path% pad."
-
 msgid "Completed jobs will be automatically re-started after %n %m."
 msgstr "Voltooide jobs worden automatisch opnieuw opgestart na %n %m."
 
@@ -3167,15 +3175,8 @@ msgstr "U kunt het commando parallel uitvoeren door de cijferwaarde van %s% te w
 msgid "All file-system permissions must be granted for the crontab user at %path%"
 msgstr "Alle permissies voor het bestandssysteem moeten voor de crontab-gebruiker worden verleend op %path%."
 
-msgid "Required crontab entry:"
-msgstr "Vereiste crontab voorwaarde:"
-
 msgid "Add import job"
 msgstr "Voeg importeeropdracht toe"
-
-#, php-format
-msgid "This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d."
-msgstr "Deze tool maakt het mogelijk om massaal inhoud aan uw website toe te voegen door een systeempad aan te wijzen met de inhoud die u wilt importeren. Het ondersteunt het toevoegen van gebruikers, albums en afbeeldingen met behulp van een mapstructuur. U kunt meer te weten komen over de mappenstructuur, het toevoegen van metadata, en alles over deze tool in onze %d."
 
 msgid "Process import"
 msgstr "Procesimport"
@@ -3544,14 +3545,6 @@ msgstr "Schakel uploads in"
 msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
 msgstr "Schakel dit in indien u het uploaden van afbeeldingen wilt toestaan​​. Deze instelling heeft geen invloed op beheerders."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:639
-msgid "Guest uploads"
-msgstr "Bezoeker uploads"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:645
-msgid "Enable this if you want to allow non registered users to upload."
-msgstr "Schakel dit in om bezoeker uploads toe te staan"
-
 msgid "Upload user interface"
 msgstr "Gebruikersinterface uploaden"
 
@@ -3560,6 +3553,23 @@ msgstr "Container op pagina"
 
 msgid "route"
 msgstr "route"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:639
+msgid "Guest uploads"
+msgstr "Bezoeker uploads"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+msgid "Enable this if you want to allow non registered users to upload."
+msgstr "Schakel dit in om bezoeker uploads toe te staan"
+
+msgid "Moderate uploads"
+msgstr "Modereer uploads"
+
+msgid "Guests"
+msgstr "Gasten"
+
+msgid "Enable this to moderate incoming uploads. Target content will require moderation for approval."
+msgstr "Schakel dit in om inkomende uploads te modereren. De inhoud zal moderatie vereisen voor goedkeuring."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1353
 msgid "Enable embed codes (uploader)"
@@ -3976,6 +3986,13 @@ msgstr "Weeklimiet"
 msgid "Monthly limit"
 msgstr "Maandlimiet"
 
+#, php-format
+msgid "Lock %s editing"
+msgstr "Blokkeer %s wijzigen"
+
+msgid "Enable this to prevent users from changing the NSFW flag. When enabled, only admin and managers will have this permission."
+msgstr "Schakel dit in om te voorkomen dat gebruikers de NSFW-vlag wijzigen. Indien ingeschakeld, zullen alleen admin en managers deze toestemming hebben."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1070
 msgid "Show not safe content in listings"
 msgstr "Geef onveilige (NFSW) inhoud weer"
@@ -4120,26 +4137,6 @@ msgstr "Hexadecimale kleurwaarde"
 msgid "Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>."
 msgstr "Gebruik dit om de hoofdkleur van het thema te kiezen. Waarde moet in <a href=\"%s\" target=\"_blank\">hex formaat</a> zijn."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1203
-msgid "Top bar color"
-msgstr "Topbalk kleur"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1223
-#: ../../../app/themes/Peafowl/views/dashboard.php:1461
-msgid "Black"
-msgstr "Zwart"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1224
-#: ../../../app/themes/Peafowl/views/dashboard.php:1462
-msgid "White"
-msgstr "Wit"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1210
-msgid "If you set this to \"white\" the top bar and all the black tones will be changed to white tones."
-msgstr "Als dit naar 'wit' gewijzigd wordt veranderd de kleur van de bovenbalk en alle zwarte kleurtonen naar witte tonen."
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1214
 msgid "Top bar button color"
 msgstr "Topbalk knop kleur"
@@ -4168,6 +4165,18 @@ msgstr "Rood"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1460
 msgid "Grey"
 msgstr "Grijs"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1223
+#: ../../../app/themes/Peafowl/views/dashboard.php:1461
+msgid "Black"
+msgstr "Zwart"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1224
+#: ../../../app/themes/Peafowl/views/dashboard.php:1462
+msgid "White"
+msgstr "Wit"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1230
 msgid "Color for the top bar buttons like the \"Create account\" button."
@@ -4312,9 +4321,12 @@ msgstr "Beginpagina"
 msgid "Split landing + images"
 msgstr "Opdelen beginpagina en afbeeldingen"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1396
-msgid "Route explore"
-msgstr "Route verkennen"
+#, php-format
+msgid "Route %s"
+msgstr "Route %s"
+
+msgid "upload"
+msgstr "upload"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1401
 #, php-format
@@ -4825,6 +4837,28 @@ msgstr "Opmerking code"
 msgid "Disqus, Facebook or anything you want. It will be used in image view."
 msgstr "Disqus, Facebook of wat u maar wilt. Het zal worden gebruikt in de afbeelding viewer."
 
+#, php-format
+msgid "Automatically moderate the content using the %s service."
+msgstr "Automatisch modereren van de inhoud met behulp van de %s service."
+
+msgid "Automatic approve"
+msgstr "Automatisch goedkeuren"
+
+msgid "Enable this to automatically approve content moderated by this service."
+msgstr "Schakel dit in om de inhoud die door deze dienst gemodereerd wordt automatisch goed te keuren."
+
+msgid "Block content"
+msgstr "Blokkeer inhoud"
+
+msgid "Adult"
+msgstr "Volwassene"
+
+msgid "Teen and adult"
+msgstr "Tiener en volwassene"
+
+msgid "Flag NSFW"
+msgstr "Vlag NSFW"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:2002
 msgid "Analytics code"
 msgstr "Google Analytics-code"
@@ -4881,6 +4915,9 @@ msgstr "Speel GIF af"
 
 msgid "Load full resolution"
 msgstr "Laadt de volledige resolutie"
+
+msgid "Do you really want to approve this image? The image will go public if you approve it."
+msgstr "Wilt u echt alle geselecteerde inhoud verwijderen? Dit kan niet ongedaan worden gemaakt."
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -5305,10 +5342,6 @@ msgstr "Uw achtergrondafbeelding zal worden verwijderd. Dit kan niet ongedaan ge
 #: ../../../app/themes/Peafowl/views/user.php:22
 msgid "Delete background"
 msgstr "Verwijder achtergrond"
-
-#: ../../../app/themes/Peafowl/views/user.php:61
-msgid "Edit profile"
-msgstr "Profiel bewerken"
 
 #: ../../../app/themes/Peafowl/views/user.php:75
 msgid "Follower"

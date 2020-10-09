@@ -502,16 +502,13 @@
             },
             // Froala
             XF2: {
-                // I left commented the stuff needed for making this work inside froala toolbar, but on window resize it will revert your sibling element pos. Is just a limitation of this kind of implementation
                 settings: {
                     autoInsert: "html-embed-medium",
                     containerClass: 1,
-                    buttonClass: 1,
-                    html: '<div class="%cClass"><button type="button" tabindex="-1" role="button" title="%text" class="%bClass fr-command fr-btn fr-btn-font_awesome" data-cmd="PUP" %x><i class="fa fa-cloud-upload" aria-hidden="true"></i><span class="fr-sr-only">%text</span></button></div>',
-//                     html: ' <a %x class="%bClass button button--link button button--icon button--icon--upload"><span class="button-text">%text</span></a> ',
-                    // sibling: '[data-cmd="clearFormatting"]',
-                    sibling: "[data-cmd=insertImage]",
-                    siblingPos: "before",
+                    buttonClass: "button--link js-attachmentUpload button button--icon button--icon--upload fa--xf",
+                    html: '<div class="formButtonGroup"><div class="formButtonGroup-extra"><button type="button" tabindex="-1" role="button" title="%text" class="%bClass" %x><span class="button-text">%text</span></button></div></div>',
+                    sibling: '',
+                    siblingPos: "after",
                     observe: '[data-xf-click="quick-edit"]',
                     observeCache: 1
                 },
@@ -519,28 +516,6 @@
                     default: ["transparent", "#505050", "rgba(20,20,20,0.06)", "#141414"]
                 },
                 check: "XF",
-                // callback: function() {
-                // 	$.FroalaEditor.RegisterCommand('PUP', {
-                // 	  title: 'PUP',
-                // 		type: 'popup',
-                // 	  focus: false,
-                // 	  undo: false,
-                // 	  refreshAfterCallback: true,
-                // 	  callback: function (cmd) {
-                // 			let el = this.$box[0].querySelector('[data-cmd="' + cmd + '"]');
-                // 			el.classList.remove('fr-selected');
-                // 			let id = el.getAttribute(PUP.ns.dataPluginId);
-                // 			PUP.openPopup(id);
-                // 	  }
-                // 	});
-                // 	$(function() {
-                // 		$('.js-editor')
-                // 			.froalaEditor({
-                // 				tooltips: true,
-                // 			  toolbarButtons: ['PUP'],
-                // 			})
-                //   });
-                // },
                 // Use id to pass the target editor, if not... XF editor will always return the first editor (DOM) for .js-editor selector
                 getEditorFn: function (id) {
                     var sel = ".js-editor";

@@ -3,11 +3,17 @@
 		<span data-icon-selected="icon-ok" data-icon-unselected="icon-checkbox-unchecked" class="btn-icon icon-checkbox-unchecked" title="<?php _se('Select'); ?>"></span>
 		<span class="label label-select"><?php _se('Select'); ?></span>
 	</li>
+    <?php
+    if (G\Handler::getCond('allowed_nsfw_flagging')) {
+        ?>
 	<li class="tool-flag" data-action="flag">
 		<span class="btn-icon icon-flag" title="<?php _se('Toggle unsafe flag'); ?>"></span>
 		<span class="label label-flag label-flag-unsafe"><?php _se('Flag as unsafe'); ?></span>
 		<span class="label label-flag label-flag-safe"><?php _se('Flag as safe'); ?></span>
 	</li>
+    <?php
+    }
+    ?>
 	<li class="tool-edit" data-action="edit">
 		<span class="btn-icon icon-edit" title="<?php _se('Edit'); ?>"></span>
 		<span class="label label-edit"><?php _se('Edit'); ?></span>
@@ -17,13 +23,13 @@
 		<span class="label label-move"><?php _ne('Album', 'Albums', 1); ?></span>
 	</li>
 	<?php
-		if(G\Handler::getCond('allowed_to_delete_content')) {
-	?>
+        if (G\Handler::getCond('allowed_to_delete_content')) {
+            ?>
 	<li class="tool-delete" data-action="delete">
 		<span class="btn-icon icon-remove" title="<?php _se('Delete'); ?>"></span>
 		<span class="label label-delete"><?php _se('Delete'); ?></span>
 	</li>
 	<?php
-		}
-	?>
+        }
+    ?>
 </ul>

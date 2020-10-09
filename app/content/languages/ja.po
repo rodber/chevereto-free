@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2020-04-16 20:33+0000\n"
-"PO-Revision-Date: 2020-04-16 20:33+0000\n"
+"POT-Creation-Date: 2020-09-02 17:14+0000\n"
+"PO-Revision-Date: 2020-09-02 17:14+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -203,6 +203,9 @@ msgstr "アルバム名を入力して下さい。"
 msgid "Confirm"
 msgstr "確認"
 
+msgid "The content has been approved."
+msgstr "コンテンツは承認されました。"
+
 #: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
 msgid "Select existing album"
 msgstr "既に存在するアルバムを選択"
@@ -352,6 +355,9 @@ msgstr "編集"
 msgid "Album"
 msgid_plural "Albums"
 msgstr[0] "アルバム"
+
+msgid "Approve"
+msgstr "承認"
 
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
 #: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
@@ -749,6 +755,16 @@ msgstr[0] "画像"
 msgid "User"
 msgid_plural "Users"
 msgstr[0] "ユーザ"
+
+msgid "adult"
+msgstr "アダルト"
+
+msgid "teen"
+msgstr "未成年"
+
+#, php-format
+msgid "Content of type %s is forbidden"
+msgstr "コンテンツタイプ %s は許可されていません。"
 
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
@@ -1367,11 +1383,6 @@ msgstr "画像ページ"
 msgid "Inside viewer top (image page)"
 msgstr "画像ビューア内上部 (画像ページ)"
 
-#: ../../../app/routes/route.dashboard.php:413
-#: ../../../app/routes/route.dashboard.php:417
-msgid "Expected banner size 728x90"
-msgstr "バナーサイズは 728x90を想定"
-
 #: ../../../app/routes/route.dashboard.php:416
 msgid "Inside viewer foot (image page)"
 msgstr "画像ビューア内下部(画像ページ)"
@@ -1489,10 +1500,6 @@ msgstr "テーマのトーン(色調)が有効ではありません。"
 #: ../../../app/routes/route.dashboard.php:627
 msgid "Invalid theme main color"
 msgstr "無効なメインカラーです。"
-
-#: ../../../app/routes/route.dashboard.php:632
-msgid "Invalid theme top bar color"
-msgstr "無効なトップバーの色です。"
 
 #: ../../../app/routes/route.dashboard.php:637
 msgid "Invalid theme top bar button color"
@@ -1827,6 +1834,9 @@ msgstr "ユーザ名/電子メールアドレスとパスワードの組合せ�
 #: ../../../app/themes/Peafowl/views/login.php:52
 msgid "Sign in"
 msgstr "サインイン"
+
+msgid "Moderate"
+msgstr "判定"
 
 msgid "Upload images"
 msgstr "画像をアップロード"
@@ -2212,6 +2222,12 @@ msgstr "リセット"
 msgid "close"
 msgstr "閉じる"
 
+msgid "Note"
+msgstr "ノート"
+
+msgid "We must approve the uploaded content before being able to share."
+msgstr "アップロードされた内容が承認されてから、共有できるようにしなければなりません。"
+
 msgid "copy"
 msgstr "コピー"
 
@@ -2222,10 +2238,6 @@ msgstr "挿入"
 #: ../../../app/themes/Peafowl/views/dashboard.php:666
 msgid "Remove"
 msgstr "削除"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:154
-msgid "Edit image"
-msgstr "画像の編集"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
 #: ../../../app/themes/Peafowl/snippets/form_image.php:4
@@ -2520,6 +2532,12 @@ msgstr "このカテゴリの簡単な説明"
 msgid "Untitled image"
 msgstr "画像のタイトルを入力"
 
+msgid "Mark this if the image is not safe for work"
+msgstr "画像が安全に作業できない場合には、マークを付けてください。"
+
+msgid "Flag not safe"
+msgstr "安全ではない印"
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
 msgid "Path"
 msgstr "パス"
@@ -2805,18 +2823,6 @@ msgstr "ホーム"
 msgid "There's nothing to show here."
 msgstr "表示するものはありません。"
 
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
-#: ../../../app/themes/Peafowl/views/image.php:69
-#: ../../../app/themes/Peafowl/views/image.php:457
-msgid "Edit image details"
-msgstr "画像の詳細の編集"
-
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
-#: ../../../app/themes/Peafowl/views/album.php:22
-#: ../../../app/themes/Peafowl/views/album.php:118
-msgid "Edit album details"
-msgstr "アルバムの詳細の編集"
-
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
 msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
 msgstr "すべての画像は最新のアルバムへ移動されます。 <a class=\"modal-switch\" data-switch=\"move-existing-album\">既に存在する他のアルバム</a>へ移動することもできます。"
@@ -2857,6 +2863,12 @@ msgstr "コンテンツがファミリーセーフティに接触すると確認
 msgid "Do you really want to flag this content as unsafe?"
 msgstr "このコンテンツが本当にファミリーセーフティに接触するとマークしますか？"
 
+msgid "Confirm approval"
+msgstr "承認を確認"
+
+msgid "Do you really want to approve this content? This can't be undone."
+msgstr "選択されたコンテンツを本当に削除しますか？一度削除すると元には戻せません。"
+
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:106
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:110
 msgid "Confirm deletion"
@@ -2865,6 +2877,9 @@ msgstr "削除の確認"
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:107
 msgid "Do you really want to remove this content? This can't be undone."
 msgstr "このコンテンツを本当に削除しますか？一度削除すると元には戻せません。"
+
+msgid "Do you really want to approve all the selected content? This can't be undone."
+msgstr "選択されたコンテンツを本当に削除しますか？一度削除すると元には戻せません。"
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:111
 msgid "Do you really want to remove all the selected content? This can't be undone."
@@ -3039,10 +3054,6 @@ msgstr "このコンテンツは非公開です。"
 msgid "Do you really want to delete this album and all of its images? This can't be undone."
 msgstr "本当にこのアルバムとアルバムにある全ての画像を削除しますか？削除すると元には戻せません。"
 
-#: ../../../app/themes/Peafowl/views/album.php:25
-msgid "Delete album"
-msgstr "アルバムを削除する"
-
 #: ../../../app/themes/Peafowl/views/image.php:85
 msgid "You like this"
 msgstr "いいね！しました"
@@ -3097,9 +3108,6 @@ msgstr "自動インポート"
 msgid "The system automatically parses any content by a continuous observation of the %path% path."
 msgstr "システムは、 パス %path% を継続的に観測することで自動的にコンテンツの解析を行います。"
 
-msgid "The system automatically parses any content by a continous observation of the %path% path."
-msgstr "システムは、継続的にパス %path% 内のコンテンツを自動的に解析します。"
-
 msgid "Completed jobs will be automatically re-started after %n %m."
 msgstr "完了したジョブは、%n %m 後に自動的に開始します。"
 
@@ -3152,15 +3160,8 @@ msgstr "%s% の値でコマンドを並列実行することができます。"
 msgid "All file-system permissions must be granted for the crontab user at %path%"
 msgstr "crontabユーザーへ %path% へのファイルシステムにアクセスする権利を付与してください。"
 
-msgid "Required crontab entry:"
-msgstr "crontabが必要です"
-
 msgid "Add import job"
 msgstr "インポートジョブに追加"
-
-#, php-format
-msgid "This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d."
-msgstr "このツールは、インポートするコンテンツのパスが指定された場合、一括でサイトに追加をします。また、ユーザー、アルバム、画像をフォルダ形式として使用できます。メタデータやツール内で提供されるものについてのフォルダ形式は、%dに詳細があります。"
 
 msgid "Process import"
 msgstr "インポート処理"
@@ -3529,14 +3530,6 @@ msgstr "アップロード"
 msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
 msgstr "画像のアップロードを許可する場合には有効にしてください。この設定は管理者へ影響しません。"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:639
-msgid "Guest uploads"
-msgstr "ゲストとしてアップロード"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:645
-msgid "Enable this if you want to allow non registered users to upload."
-msgstr "未登録ユーザのアップロードを許可するときに有効にしてください。"
-
 msgid "Upload user interface"
 msgstr "アップロード用ユーザインターフェース"
 
@@ -3545,6 +3538,23 @@ msgstr "ページ上のコンテナー"
 
 msgid "route"
 msgstr "ルート"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:639
+msgid "Guest uploads"
+msgstr "ゲストとしてアップロード"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+msgid "Enable this if you want to allow non registered users to upload."
+msgstr "未登録ユーザのアップロードを許可するときに有効にしてください。"
+
+msgid "Moderate uploads"
+msgstr "アップロードを判定"
+
+msgid "Guests"
+msgstr "ゲスト"
+
+msgid "Enable this to moderate incoming uploads. Target content will require moderation for approval."
+msgstr "これを有効にすると、アップロードを判定することができます。対象となるコンテンツは、承認のための判定が必要になります。"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1353
 msgid "Enable embed codes (uploader)"
@@ -3961,6 +3971,13 @@ msgstr "1週間の許容量"
 msgid "Monthly limit"
 msgstr "1ヶ月の許容量"
 
+#, php-format
+msgid "Lock %s editing"
+msgstr "%s の編集をロック "
+
+msgid "Enable this to prevent users from changing the NSFW flag. When enabled, only admin and managers will have this permission."
+msgstr "これを有効にすると、ユーザーがNSFWフラグを変更できなくなります。有効にすると、管理者と管理者のみがこの権限を持つことになります。"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1070
 msgid "Show not safe content in listings"
 msgstr "リスト中にファミリーセーフティに接触するコンテンツが含まれている場合でも表示する"
@@ -4105,26 +4122,6 @@ msgstr "16進数の色の値"
 msgid "Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>."
 msgstr "メインのテーマ色を設定するにはこちらをご利用ください。値は、<a href=\"%s\" target=\"_blank\">16進数</a>で入力する必要があります。"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1203
-msgid "Top bar color"
-msgstr "トップバーの色"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1223
-#: ../../../app/themes/Peafowl/views/dashboard.php:1461
-msgid "Black"
-msgstr "黒"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1224
-#: ../../../app/themes/Peafowl/views/dashboard.php:1462
-msgid "White"
-msgstr "白"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1210
-msgid "If you set this to \"white\" the top bar and all the black tones will be changed to white tones."
-msgstr "カラーを白にセットすると、トップバーなど全ての黒系は、全て白系に変わります。"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1214
 msgid "Top bar button color"
 msgstr "トップバーのボタンの色"
@@ -4153,6 +4150,18 @@ msgstr "赤"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1460
 msgid "Grey"
 msgstr "灰色"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1223
+#: ../../../app/themes/Peafowl/views/dashboard.php:1461
+msgid "Black"
+msgstr "黒"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1224
+#: ../../../app/themes/Peafowl/views/dashboard.php:1462
+msgid "White"
+msgstr "白"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1230
 msgid "Color for the top bar buttons like the \"Create account\" button."
@@ -4297,9 +4306,12 @@ msgstr "ランディングページ"
 msgid "Split landing + images"
 msgstr "ランディング + 画像 を分割"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1396
-msgid "Route explore"
-msgstr "「もっと見る」の最初のページ"
+#, php-format
+msgid "Route %s"
+msgstr "ルート%s"
+
+msgid "upload"
+msgstr "アップロード"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1401
 #, php-format
@@ -4810,6 +4822,28 @@ msgstr "コメントコード"
 msgid "Disqus, Facebook or anything you want. It will be used in image view."
 msgstr "Disqus,Facebookなどが必要な場合には、イメージ表示を使って下さい。"
 
+#, php-format
+msgid "Automatically moderate the content using the %s service."
+msgstr "%s を使用してコンテンツを自動で判定する。"
+
+msgid "Automatic approve"
+msgstr "自動承認"
+
+msgid "Enable this to automatically approve content moderated by this service."
+msgstr "このサービスによってモデレートされたコンテンツを自動的に承認するには、これを有効にします。"
+
+msgid "Block content"
+msgstr "コンテンツをブロック"
+
+msgid "Adult"
+msgstr "アダルト"
+
+msgid "Teen and adult"
+msgstr "未成年とアダルト"
+
+msgid "Flag NSFW"
+msgstr "NSFW印"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:2002
 msgid "Analytics code"
 msgstr "アクセス解析用コード"
@@ -4866,6 +4900,9 @@ msgstr "GIF再生"
 
 msgid "Load full resolution"
 msgstr "最大解像度で表示"
+
+msgid "Do you really want to approve this image? The image will go public if you approve it."
+msgstr "選択されたコンテンツを本当に削除しますか？一度削除すると元には戻せません。"
 
 #: ../../../app/themes/Peafowl/views/image.php:136
 msgid "Added to %a and categorized in %c"
@@ -5290,10 +5327,6 @@ msgstr "このプロフィールの背景画像は削除されます。削除す
 #: ../../../app/themes/Peafowl/views/user.php:22
 msgid "Delete background"
 msgstr "背景の削除"
-
-#: ../../../app/themes/Peafowl/views/user.php:61
-msgid "Edit profile"
-msgstr "プロフィールの編集"
 
 #: ../../../app/themes/Peafowl/views/user.php:75
 msgid "Follower"

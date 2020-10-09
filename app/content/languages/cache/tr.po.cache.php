@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2020-04-18 16:12+0000',
-  'PO-Revision-Date' => '2020-04-18 16:12+0000',
+  'POT-Creation-Date' => '2020-09-02 17:14+0000',
+  'PO-Revision-Date' => '2020-09-02 17:14+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'tr',
@@ -124,6 +124,9 @@ $translation_table = [
 	"Confirm" => [
 		0 => "Onayla",
 	],
+	"The content has been approved." => [
+		0 => "İçerik onaylandı.",
+	],
 	"Select existing album" => [
 		0 => "Mevcut olan albümü seçin",
 	],
@@ -190,6 +193,9 @@ $translation_table = [
 	"Album" => [
 		0 => "Albüm",
 		1 => "Albümler",
+	],
+	"Approve" => [
+		0 => "Onayla",
 	],
 	"Delete" => [
 		0 => "Sil",
@@ -427,6 +433,15 @@ $translation_table = [
 	"User" => [
 		0 => "Üye",
 		1 => "Üyeler",
+	],
+	"adult" => [
+		0 => "yetişkin",
+	],
+	"teen" => [
+		0 => "genç",
+	],
+	"Content of type %s is forbidden" => [
+		0 => "%s türü içerikler yasaktır.",
 	],
 	"Can't create %s destination dir" => [
 		0 => "%s Hedef dizin oluşturulamıyor",
@@ -793,9 +808,6 @@ $translation_table = [
 	"Inside viewer top (image page)" => [
 		0 => "İç izleyici üst (resim sayfası)",
 	],
-	"Expected banner size 728x90" => [
-		0 => "Önerilen afiş boyutu 728x90",
-	],
 	"Inside viewer foot (image page)" => [
 		0 => "İç izleyici ayak (resim sayfası)",
 	],
@@ -882,9 +894,6 @@ $translation_table = [
 	],
 	"Invalid theme main color" => [
 		0 => "Temanın geçersiz ana rengi",
-	],
-	"Invalid theme top bar color" => [
-		0 => "Tema ana çubuğunun geçersiz rengi",
 	],
 	"Invalid theme top bar button color" => [
 		0 => "Tema ana çubuğu düğmelerinin geçersiz rengi",
@@ -1125,6 +1134,9 @@ $translation_table = [
 	],
 	"Sign in" => [
 		0 => "Giriş Yap",
+	],
+	"Moderate" => [
+		0 => "Denetlemek",
 	],
 	"Upload images" => [
 		0 => "Resim yükle",
@@ -1405,6 +1417,12 @@ $translation_table = [
 	"close" => [
 		0 => "kapat",
 	],
+	"Note" => [
+		0 => "Not",
+	],
+	"We must approve the uploaded content before being able to share." => [
+		0 => "Paylaşmadan önce yüklenen içeriği onaylamamız gerekir.",
+	],
 	"copy" => [
 		0 => "Kopyala",
 	],
@@ -1413,9 +1431,6 @@ $translation_table = [
 	],
 	"Remove" => [
 		0 => "Kaldır",
-	],
-	"Edit image" => [
-		0 => "Resmi düzenle",
 	],
 	"Title" => [
 		0 => "Başlık",
@@ -1605,6 +1620,12 @@ $translation_table = [
 	],
 	"Untitled image" => [
 		0 => "İsimsiz resim",
+	],
+	"Mark this if the image is not safe for work" => [
+		0 => "Görüntü aile için güvenli değilse işaretleyin.",
+	],
+	"Flag not safe" => [
+		0 => "Güvenli değil olarak işaretle.",
 	],
 	"Path" => [
 		0 => "Yol",
@@ -1813,12 +1834,6 @@ $translation_table = [
 	"There's nothing to show here." => [
 		0 => "Burada gösterilecek birşey yok.",
 	],
-	"Edit image details" => [
-		0 => "Resim düzenleme ayrıntıları",
-	],
-	"Edit album details" => [
-		0 => "Albüm ayarlarını Düzenle",
-	],
 	"All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
 		0 => "Resimleriniz yeni oluşturulacak bir albüme taşınacaktır. İsterseniz resimlerinizi <a class=\"modal-switch\" data-switch=\"move-existing-album\">mevcut albümlerden</a>.birisine taşıyabilirsiniz.",
 	],
@@ -1849,11 +1864,20 @@ $translation_table = [
 	"Do you really want to flag this content as unsafe?" => [
 		0 => "Bu içeriği gerçekten rahatsız edici olarak işaretlemek istiyor musunuz?",
 	],
+	"Confirm approval" => [
+		0 => "Onayı onayla",
+	],
+	"Do you really want to approve this content? This can't be undone." => [
+		0 => "Seçilen tüm içeriği gerçekten kaldırmak istiyor musunuz? Bu geri alınamaz.",
+	],
 	"Confirm deletion" => [
 		0 => "Silmek istediğinizden emin misiniz.",
 	],
 	"Do you really want to remove this content? This can't be undone." => [
 		0 => "Resim veya resimleri silmek istediğinizden eminmisiniz. Resimler geri dönüşümü olmaksızın silinecektir.",
+	],
+	"Do you really want to approve all the selected content? This can't be undone." => [
+		0 => "Seçilen tüm içeriği gerçekten kaldırmak istiyor musunuz? Bu geri alınamaz.",
 	],
 	"Do you really want to remove all the selected content? This can't be undone." => [
 		0 => "Seçili resimleri silmek istediğinizden eminmisiniz ?. Resimler geri dönüşümü olmaksızın silinecektir.",
@@ -1969,9 +1993,6 @@ $translation_table = [
 	"Do you really want to delete this album and all of its images? This can't be undone." => [
 		0 => "Gerçekten bu albümü ve içindekileri silmek istiyormusun? Bu işlemin geri dönüşü yok.",
 	],
-	"Delete album" => [
-		0 => "Albümü Sil",
-	],
 	"You like this" => [
 		0 => "Bunu beğendiniz",
 	],
@@ -2014,10 +2035,10 @@ $translation_table = [
 	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure." => [
 		0 => "Bu araç, içe aktarmak istediğiniz içeriğin bulunduğu bir sistem yolunu işaretleyerek web sitenize toplu içerik eklemenize olanak tanır. Klasör tabanlı bir yapı kullanarak kullanıcıların, albümlerin ve görüntülerin eklenmesini destekler.",
 	],
-	"The system automatically parses any content by a continuous observation of the %path% path." => [
-		0 => "Sistem, %path% yolunu sürekli gözlemleyerek herhangi bir içeriği otomatik olarak ayrıştırır.",
+	"Automatic importing" => [
+		0 => "Otomatik içe aktarma",
 	],
-	"The system automatically parses any content by a continous observation of the %path% path." => [
+	"The system automatically parses any content by a continuous observation of the %path% path." => [
 		0 => "Sistem, %path% yolunu sürekli gözlemleyerek herhangi bir içeriği otomatik olarak ayrıştırır.",
 	],
 	"Completed jobs will be automatically re-started after %n %m." => [
@@ -2071,14 +2092,8 @@ $translation_table = [
 	"All file-system permissions must be granted for the crontab user at %path%" => [
 		0 => "%path% yolundaki crontab kullanıcısı için tüm dosya sistemi izinleri verilmelidir",
 	],
-	"Required crontab entry:" => [
-		0 => "Gerekli crontab girişi:",
-	],
 	"Add import job" => [
 		0 => "İçe aktarma işi ekle",
-	],
-	"This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d." => [
-		0 => "Bu araç, içe aktarmak istediğiniz içeriğe sahip bir sistem yolunu işaretleyerek web sitenize toplu içerik eklemenizi sağlar. Klasör tabanlı bir yapı kullanarak kullanıcıların, albümlerin ve görüntülerin eklenmesini destekler. Klasör yapısı, meta veri ekleme ve bu araçla ilgili daha fazla bilgiyi %d içinde bulabilirsiniz.",
 	],
 	"Process import" => [
 		0 => "İşlem içe aktarma",
@@ -2356,12 +2371,6 @@ $translation_table = [
 	"Enable this if you want to allow image uploads. This setting doesn't affect administrators." => [
 		0 => "Resim yükleme izin vermek için bunu etkinleştirin. Bu ayar, yöneticilerin etkilemez.",
 	],
-	"Guest uploads" => [
-		0 => "Misafirlerin Yüklediği Resimler",
-	],
-	"Enable this if you want to allow non registered users to upload." => [
-		0 => "Misafir Kullanıcıların Resim Yüklemesini İstiyorsanız Bunu Etkinleştirmeniz Gerekmektedir. ",
-	],
 	"Upload user interface" => [
 		0 => "Kullanıcı arayüzünü yükle",
 	],
@@ -2370,6 +2379,21 @@ $translation_table = [
 	],
 	"route" => [
 		0 => "rota",
+	],
+	"Guest uploads" => [
+		0 => "Misafirlerin Yüklediği Resimler",
+	],
+	"Enable this if you want to allow non registered users to upload." => [
+		0 => "Misafir Kullanıcıların Resim Yüklemesini İstiyorsanız Bunu Etkinleştirmeniz Gerekmektedir. ",
+	],
+	"Moderate uploads" => [
+		0 => "Yüklemeleri denetle",
+	],
+	"Guests" => [
+		0 => "Ziyaretçiler",
+	],
+	"Enable this to moderate incoming uploads. Target content will require moderation for approval." => [
+		0 => "Gelen yüklemeleri denetlemek için bunu etkinleştirin. Hedef içerik, onay için denetim gerektirecektir.",
 	],
 	"Enable embed codes (uploader)" => [
 		0 => "Katıştırma kodlarını etkinleştir (yükleyici)",
@@ -2695,6 +2719,12 @@ $translation_table = [
 	"Monthly limit" => [
 		0 => "Aylık Resim Yükleme Sınırı",
 	],
+	"Lock %s editing" => [
+		0 => "%s düzenlemesini kilitle",
+	],
+	"Enable this to prevent users from changing the NSFW flag. When enabled, only admin and managers will have this permission." => [
+		0 => "Gelen yüklemeleri denetlemek için bunu etkinleştirin. Hedef içerik, onay için denetim gerektirecektir.",
+	],
 	"Show not safe content in listings" => [
 		0 => "Listelerde güvenli olmayan içeriği göster",
 	],
@@ -2806,18 +2836,6 @@ $translation_table = [
 	"Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>." => [
 		0 => "Ana tema rengi olarak bunu kullan. Değer<a href=\"%s\" target=\"_blank\">heksadesimal formatta</a> olmalı.",
 	],
-	"Top bar color" => [
-		0 => "Üst çubuk rengi",
-	],
-	"Black" => [
-		0 => "Geri",
-	],
-	"White" => [
-		0 => "Beyaz",
-	],
-	"If you set this to \"white\" the top bar and all the black tones will be changed to white tones." => [
-		0 => "Bunu \"beyaz\" olarak ayarlarsanız, üstteki çubuk ve tüm siyah tonları beyaz tonlarına dönüştürülür.",
-	],
 	"Top bar button color" => [
 		0 => "Üst çubuk düğme (button) rengi",
 	],
@@ -2835,6 +2853,12 @@ $translation_table = [
 	],
 	"Grey" => [
 		0 => "Gri",
+	],
+	"Black" => [
+		0 => "Geri",
+	],
+	"White" => [
+		0 => "Beyaz",
 	],
 	"Color for the top bar buttons like the \"Create account\" button." => [
 		0 => "\"Hesap oluştur\" düğmesi gibi en üstteki çubuk düğmeleri için renk.",
@@ -2944,8 +2968,11 @@ $translation_table = [
 	"Split landing + images" => [
 		0 => "Bölünmüş iniş + görüntüleri",
 	],
-	"Route explore" => [
-		0 => "Rota keşfet",
+	"Route %s" => [
+		0 => "%s yolu",
+	],
+	"upload" => [
+		0 => "yükle",
 	],
 	"Select the homepage style. To customize it further edit app/themes/%s/views/index.php" => [
 		0 => "Ana sayfa stilini seçin. Daha fazla düzenlemek için app/themes/%s/views/index.php",
@@ -3352,6 +3379,27 @@ $translation_table = [
 	"Disqus, Facebook or anything you want. It will be used in image view." => [
 		0 => "Disqus, Facebook veya başka bir yerden görüntü almak istiyorum. Alınacak görüntü profilde gösterilecektir.",
 	],
+	"Automatically moderate the content using the %s service." => [
+		0 => "%s hizmetini kullanarak içeriği otomatik olarak denetleyin.",
+	],
+	"Automatic approve" => [
+		0 => "Otomatik onay",
+	],
+	"Enable this to automatically approve content moderated by this service." => [
+		0 => "Bu hizmet tarafından denetlenen içeriği otomatik olarak onaylamak için bunu etkinleştirin.",
+	],
+	"Block content" => [
+		0 => "İçeriği engelle",
+	],
+	"Adult" => [
+		0 => "Yetişkin",
+	],
+	"Teen and adult" => [
+		0 => "Genç ve yetişkin",
+	],
+	"Flag NSFW" => [
+		0 => "NSFW olarak işaretle.",
+	],
 	"Analytics code" => [
 		0 => "Google Analytics kodunuzu giriniz.",
 	],
@@ -3393,6 +3441,9 @@ $translation_table = [
 	],
 	"Load full resolution" => [
 		0 => "Tam çözünürlük yükle",
+	],
+	"Do you really want to approve this image? The image will go public if you approve it." => [
+		0 => "Seçilen tüm içeriği gerçekten kaldırmak istiyor musunuz? Bu geri alınamaz.",
 	],
 	"Added to %a and categorized in %c" => [
 		0 => "%a ya eklendi ve %c olarak kategorize edildi",
@@ -3708,9 +3759,6 @@ $translation_table = [
 	],
 	"Delete background" => [
 		0 => "Arka Planı Sil",
-	],
-	"Edit profile" => [
-		0 => "Profili Düzenle",
 	],
 	"Follower" => [
 		0 => "takipçi",

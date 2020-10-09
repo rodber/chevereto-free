@@ -587,33 +587,33 @@ namespace G {
     // Converts an Exception to a formatted PHP like error
     function exception_to_error($e, $die = true)
     {
-        $internal_code = 500;
-        $internal_error = '<b>Aw, snap!</b> ' . get_set_status_header_desc($internal_code) . ' - Check your error_log or enable debug_mode = 3 (chevereto.com/docs/debug).';
-
-        set_status_header($internal_code);
-
         // Debug levels
         // 0:NONE 1:ERROR_LOG 2:PRINT(NO ERROR_LOG) 3:PRINT+ERROR_LOG
-
         $debug_level = get_app_setting('debug_level');
-
+        $internal_code = 500;
+        $internal_error = '<b>Aw, snap!</b> ' . get_set_status_header_desc($internal_code);
+        $table = [
+            0 => 'debug is disabled',
+            1 => 'debug @ `error_log`',
+            2 => 'debug @ print',
+            3 => 'debug @ print,`error_log`',
+        ];
+        $internal_error .= ' [' . $table[$debug_level] . '] - https://v3-docs.chevereto.com/setup/debug.html';
+        set_status_header($internal_code);
         if (!in_array($debug_level, [0, 1, 2, 3])) {
             $debug_level = 1;
         }
-
         if (in_array($debug_level, [1, 3])) {
             error_log($e);
         }
-
         if (!in_array($debug_level, [2, 3])) { // No print here
             die($internal_error);
         }
-
-        $message = [];
+        $message = [$internal_error];
+        $message[] = '';
         $message[] = '<b>Fatal error [' . $e->getCode() . ']:</b> ' . safe_html($e->getMessage());
         $message[] = 'Triggered in ' . absolute_to_relative($e->getFile()) . ' at line ' . $e->getLine() . "\n";
         $message[] = '<b>Stack trace:</b>';
-
         $rtn = '';
         $count = 0;
         foreach ($e->getTrace() as $frame) {
@@ -769,21 +769,22 @@ namespace G {
         return $date->format('Y-m-d H:i:s');
     }
 
-    // Returns the difference between two dates in the given format (default seconds)
+    /**
+     * Returns the difference between two UTC dates in the given format (default seconds)
+     * @return integer `$newer - $older`
+     */
     function datetime_diff($older, $newer = null, $format = 's')
     {
         if (!in_array($format, ['s', 'm', 'h', 'd'])) {
             $format = 's';
         }
-
         if (!$newer or $newer == null) {
             $newer = datetimegmt();
         }
-
-        $datetime1 = new \DateTime($older);
-        $datetime2 = new \DateTime($newer);
+        $tz = new \DateTimeZone('UTC');
+        $datetime1 = new \DateTime($older, $tz);
+        $datetime2 = new \DateTime($newer, $tz);
         $diff = $datetime2->getTimestamp() - $datetime1->getTimestamp(); // In seconds
-
         $timeconstant = [
             's' => 1,
             'm' => 60,
@@ -791,7 +792,7 @@ namespace G {
             'd' => 86400,
         ];
 
-        return $diff / $timeconstant[$format];
+        return intval($diff / $timeconstant[$format]);
     }
 
     function datetime_add($datetime, $add)

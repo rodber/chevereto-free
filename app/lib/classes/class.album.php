@@ -32,9 +32,7 @@ class Album
             if (!is_array($requester)) {
                 $requester = User::getSingle($requester, 'id');
             }
-            if (!defined('G_APP_GITHUB_REPO') && version_compare(Settings::get('chevereto_version_installed'), '3.9.0', '>=')) {
-                $joins[] = 'LEFT JOIN ' . $tables['likes'] . ' ON ' . $tables['likes'] . '.like_content_type = "album" AND ' . $tables['albums'] . '.album_id = ' . $tables['likes'] . '.like_content_id AND ' . $tables['likes'] . '.like_user_id = ' . $requester['id'];
-            }
+
         }
 
         $query .=  implode("\n", $joins) . "\n";

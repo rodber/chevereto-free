@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2019-12-12 15:27+0000\n"
-"PO-Revision-Date: 2019-12-12 15:27+0000\n"
+"POT-Creation-Date: 2020-09-02 17:16+0000\n"
+"PO-Revision-Date: 2020-09-02 17:16+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: th\n"
@@ -524,6 +524,12 @@ msgstr "ยกเลิกการเลือก"
 msgid "The content has been edited."
 msgstr "เนื้อหาที่ได้รับการแก้ไข"
 
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
+#: ../../../app/themes/Peafowl/views/user.php:99
+msgid "album"
+msgid_plural "albums"
+msgstr[0] "อัลบั้ม"
+
 #: ../../../app/lib/classes/class.album.php:100
 msgid "Untitled"
 msgstr "ไม่มีชื่อ"
@@ -824,41 +830,6 @@ msgstr "เราใช้คุกกี้ของเราเองและ
 msgid "I understand"
 msgstr "ฉันเข้าใจ"
 
-#: ../../../app/loader.php:180
-msgid "You have been forbidden to use this website."
-msgstr "คุณถูกห้ามการใช้งานเว็บไซต์นี้"
-
-#: ../../../app/loader.php:279
-#: ../../../app/themes/Peafowl/views/settings.php:441
-msgid "Feel free to browse and discover all my shared images and albums."
-msgstr "อย่าลังเลที่จะเรียกดูและค้นพบภาพร่วมกันทั้งหมดของภาพและอัลบั้มฉัน"
-
-#: ../../../app/loader.php:282
-#: ../../../app/themes/Peafowl/views/settings.php:447
-msgid "View all my images"
-msgstr "ดูภาพทั้งหมดของฉัน"
-
-msgid "Plugin"
-msgstr "ปลั๊กอิน"
-
-#: ../../../app/routes/route.account.php:140
-#: ../../../app/routes/route.account.php:299
-#: ../../../app/routes/route.account.php:321
-#: ../../../app/routes/route.account.php:388
-#: ../../../app/routes/route.json.php:24 ../../../app/routes/route.json.php:37
-#: ../../../app/routes/route.json.php:49 ../../../app/routes/route.json.php:561
-#: ../../../app/routes/route.json.php:623
-#: ../../../app/routes/route.json.php:672
-#: ../../../app/routes/route.json.php:719 ../../../app/routes/route.page.php:66
-#: ../../../app/themes/Peafowl/views/request-denied.php:8
-#: ../../../content/pages/default/contact.php:14
-msgid "Request denied"
-msgstr "คำขอไม่สามารถเข้าถึงได้"
-
-#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
-msgid "That page doesn't exist"
-msgstr "ไม่สามารถใช้งานหน้าเว็บไซต์นี้ได้"
-
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:24
@@ -901,6 +872,20 @@ msgstr "ยูสเซอร์หรือพาสเวิร์ดผิด
 #: ../../../app/routes/route.account.php:129
 msgid "User doesn't have an email."
 msgstr "ผู้ใช้ไม่ได้อีเมล"
+
+#: ../../../app/routes/route.account.php:140
+#: ../../../app/routes/route.account.php:299
+#: ../../../app/routes/route.account.php:321
+#: ../../../app/routes/route.account.php:388
+#: ../../../app/routes/route.json.php:24 ../../../app/routes/route.json.php:37
+#: ../../../app/routes/route.json.php:49 ../../../app/routes/route.json.php:561
+#: ../../../app/routes/route.json.php:623
+#: ../../../app/routes/route.json.php:672
+#: ../../../app/routes/route.json.php:719 ../../../app/routes/route.page.php:66
+#: ../../../app/themes/Peafowl/views/request-denied.php:8
+#: ../../../content/pages/default/contact.php:14
+msgid "Request denied"
+msgstr "คำขอไม่สามารถเข้าถึงได้"
 
 #: ../../../app/routes/route.account.php:145
 msgid "Account needs to be activated to use this feature"
@@ -1349,11 +1334,6 @@ msgstr "หน้าภาพ"
 msgid "Inside viewer top (image page)"
 msgstr "ด้านบนภายใน (หน้าภาพ)"
 
-#: ../../../app/routes/route.dashboard.php:413
-#: ../../../app/routes/route.dashboard.php:417
-msgid "Expected banner size 728x90"
-msgstr "ขนาดแบนเนอร์ควรจะ  728x90"
-
 #: ../../../app/routes/route.dashboard.php:416
 msgid "Inside viewer foot (image page)"
 msgstr "ด้านท้ายของผู้ชมภายใน (หน้าภาพ)"
@@ -1471,10 +1451,6 @@ msgstr "เสียงรูปแบบไม่ถูกต้อง"
 #: ../../../app/routes/route.dashboard.php:627
 msgid "Invalid theme main color"
 msgstr "ธีมสีหลักไม่ถูกต้อง"
-
-#: ../../../app/routes/route.dashboard.php:632
-msgid "Invalid theme top bar color"
-msgstr "รูปแบบสีแถบด้านบนไม่ถูกต้อง"
 
 #: ../../../app/routes/route.dashboard.php:637
 msgid "Invalid theme top bar button color"
@@ -2199,10 +2175,6 @@ msgstr "แทรก"
 msgid "Remove"
 msgstr "ลบ"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:154
-msgid "Edit image"
-msgstr "แก้ไขรูปภาพ"
-
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
 #: ../../../app/themes/Peafowl/snippets/form_image.php:4
 #: ../../../app/themes/Peafowl/views/dashboard.php:441
@@ -2329,12 +2301,6 @@ msgstr "เลือกอัลบั้มที่มีอยู่เพื
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:252
 msgid "Error report"
 msgstr "รายงานข้อผิดพลาด"
-
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
-#: ../../../app/themes/Peafowl/views/user.php:99
-msgid "album"
-msgid_plural "albums"
-msgstr[0] "อัลบั้ม"
 
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
@@ -2756,18 +2722,6 @@ msgstr "หน้าแรก"
 msgid "There's nothing to show here."
 msgstr "ไม่มีอะไรที่จะแสดงที่นี่"
 
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
-#: ../../../app/themes/Peafowl/views/image.php:69
-#: ../../../app/themes/Peafowl/views/image.php:457
-msgid "Edit image details"
-msgstr "แก้ไขรายละเอียดของภาพ"
-
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
-#: ../../../app/themes/Peafowl/views/album.php:22
-#: ../../../app/themes/Peafowl/views/album.php:118
-msgid "Edit album details"
-msgstr "แก้ไขรายละเอียดอัลบั้ม"
-
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
 msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
 msgstr "ภาพทั้งหมดจะถูกย้ายไปที่อัลบั้มที่สร้างขึ้นใหม่นี้ นอกจากนี้คุณยังสามารถย้ายภาพไปที่ <a class=\"modal-switch\" data-switch=\"move-existing-album\">อัลบั้มที่มีอยู่</a>"
@@ -2854,6 +2808,10 @@ msgstr "โดย %u"
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:7
 msgid "Toggle unsafe flag"
 msgstr "สลับสถานะที่ไม่ปลอดภัย"
+
+#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
+msgid "That page doesn't exist"
+msgstr "ไม่สามารถใช้งานหน้าเว็บไซต์นี้ได้"
 
 #: ../../../app/themes/Peafowl/views/404.php:7
 msgid "The requested page was not found."
@@ -2979,10 +2937,6 @@ msgstr "นี่เป็นเนื้อหาส่วนตัว"
 #: ../../../app/themes/Peafowl/views/album.php:25
 msgid "Do you really want to delete this album and all of its images? This can't be undone."
 msgstr "คุณต้องการที่จะลบอัลบั้มนี้และทุกภาพของตนหรือไม่?"
-
-#: ../../../app/themes/Peafowl/views/album.php:25
-msgid "Delete album"
-msgstr "ลบอัลบั้ม"
 
 #: ../../../app/themes/Peafowl/views/image.php:85
 msgid "You like this"
@@ -3892,26 +3846,6 @@ msgstr "ค่าสีฐานสิบหก"
 msgid "Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>."
 msgstr "ใช้ปุ่มนี้เพื่อกำหนดสีของธีมหลัก ค่าต้องอยู่ใน <a href=\"%s\" target=\"_blank\">รูปแบบ hex</a>"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1203
-msgid "Top bar color"
-msgstr "สีของ Top bar"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1223
-#: ../../../app/themes/Peafowl/views/dashboard.php:1461
-msgid "Black"
-msgstr "ดำ"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1224
-#: ../../../app/themes/Peafowl/views/dashboard.php:1462
-msgid "White"
-msgstr "สีขาว"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1210
-msgid "If you set this to \"white\" the top bar and all the black tones will be changed to white tones."
-msgstr "หากคุณตั้งค่านี้เป็น \"สีขาว\" แถบด้านบนและทุกโทนสีดำจะเปลี่ยนเป็นโทนสีขาว"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1214
 msgid "Top bar button color"
 msgstr "สีปุ่มแถบด้านบน"
@@ -3940,6 +3874,18 @@ msgstr "สีแดง"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1460
 msgid "Grey"
 msgstr "สีเทา"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1223
+#: ../../../app/themes/Peafowl/views/dashboard.php:1461
+msgid "Black"
+msgstr "ดำ"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1224
+#: ../../../app/themes/Peafowl/views/dashboard.php:1462
+msgid "White"
+msgstr "สีขาว"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1230
 msgid "Color for the top bar buttons like the \"Create account\" button."
@@ -4073,10 +4019,6 @@ msgstr "หน้า Landing Page"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1395
 msgid "Split landing + images"
 msgstr "แบ่งภาพ + ภาพ"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1396
-msgid "Route explore"
-msgstr "เส้นทางรวมภาพ"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1401
 #, php-format
@@ -4879,10 +4821,6 @@ msgstr "บอกเรานิด ๆ หน่อย ๆ เกี่ยว�
 msgid "User has no connections."
 msgstr "ผู้ใช้ไม่มีการเชื่อมต่อ"
 
-#: ../../../app/themes/Peafowl/views/settings.php:391
-msgid "Link your account to external services to be able to login and share content."
-msgstr "เชื่อมโยงบัญชีของคุณกับบริการภายนอกเพื่อเข้าสู่ระบบและแบ่งปันเนื้อหา"
-
 #: ../../../app/themes/Peafowl/views/settings.php:398
 #, php-format
 msgid "Do you really want to disconnect %s from this account?"
@@ -4917,9 +4855,19 @@ msgstr "ตัตเชื่อมต่อ"
 msgid "Connect %s"
 msgstr "เชื่อมต่อ %s"
 
+#: ../../../app/loader.php:279
+#: ../../../app/themes/Peafowl/views/settings.php:441
+msgid "Feel free to browse and discover all my shared images and albums."
+msgstr "อย่าลังเลที่จะเรียกดูและค้นพบภาพร่วมกันทั้งหมดของภาพและอัลบั้มฉัน"
+
 #: ../../../app/themes/Peafowl/views/settings.php:446
 msgid "Button"
 msgstr "ปุ่ม"
+
+#: ../../../app/loader.php:282
+#: ../../../app/themes/Peafowl/views/settings.php:447
+msgid "View all my images"
+msgstr "ดูภาพทั้งหมดของฉัน"
 
 msgid "Login"
 msgstr "เข้าสู่ระบบ"
@@ -4957,10 +4905,6 @@ msgstr "ภาพพื้นหลังโปรไฟล์จะถูกล
 msgid "Delete background"
 msgstr "ลบพื้นหลัง"
 
-#: ../../../app/themes/Peafowl/views/user.php:61
-msgid "Edit profile"
-msgstr "แก้ไขโปรไฟล์"
-
 #: ../../../app/themes/Peafowl/views/user.php:75
 msgid "Follower"
 msgid_plural "Followers"
@@ -4969,6 +4913,13 @@ msgstr[0] "ผู้ติดตาม"
 #: ../../../app/themes/Peafowl/views/user.php:81
 msgid "Follow"
 msgstr "ติดตาม"
+
+#: ../../../app/loader.php:180
+msgid "You have been forbidden to use this website."
+msgstr "คุณถูกห้ามการใช้งานเว็บไซต์นี้"
+
+msgid "Plugin"
+msgstr "ปลั๊กอิน"
 
 #: ../../../app/routes/route.page.php:61
 #: ../../../content/pages/default/contact.php:7

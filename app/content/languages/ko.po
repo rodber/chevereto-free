@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2020-05-16 19:37+0000\n"
-"PO-Revision-Date: 2020-05-16 19:37+0000\n"
+"POT-Creation-Date: 2020-09-25 18:53+0000\n"
+"PO-Revision-Date: 2020-09-25 18:53+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: ko\n"
@@ -29,7 +29,7 @@ msgstr "이메일 주소가 잘못되었습니다"
 #: ../../../app/routes/route.settings.php:181
 #: ../../../app/routes/route.signup.php:100
 msgid "Invalid username"
-msgstr "사용자 이름이 잘못되었습니다"
+msgstr "잘못된 사용자명"
 
 #: ../../../app/install/installer.php:1174
 #: ../../../app/routes/route.account.php:357
@@ -37,12 +37,12 @@ msgstr "사용자 이름이 잘못되었습니다"
 #: ../../../app/routes/route.settings.php:323
 #: ../../../app/routes/route.signup.php:103
 msgid "Invalid password"
-msgstr "비밀번호가 잘못되었습니다"
+msgstr "잘못된 암호"
 
 #: ../../../app/install/installer.php:1183
 #: ../../../app/routes/route.dashboard.php:667
 msgid "Invalid website mode"
-msgstr "웹사이트 모드가 잘못되었습니다"
+msgstr "잘못된 웹사이트 모드"
 
 #: ../../../app/install/template/ready.php:31
 #: ../../../app/themes/Peafowl/views/dashboard.php:1760
@@ -77,12 +77,12 @@ msgstr "웹사이트 모드는 언제든지 바꿀 수 있습니다."
 #: ../../../app/install/template/ready.php:47
 #: ../../../app/themes/Peafowl/views/dashboard.php:330
 msgid "Community"
-msgstr "커뮤니티"
+msgstr "모임"
 
 #: ../../../app/install/template/ready.php:47
 #: ../../../app/themes/Peafowl/views/dashboard.php:330
 msgid "Personal"
-msgstr "개인"
+msgstr "개인용"
 
 #: ../../../app/install/update/template/update.js:19
 #, javascript-format
@@ -116,7 +116,7 @@ msgstr "시스템 파일이 이미 최신 상태입니다"
 #: ../../../app/install/update/template/update.js:49
 #, javascript-format
 msgid "Starting v%s download"
-msgstr "v%s 다운로드를 시작하는 중입니다"
+msgstr "v%s 버전 다운로드를 시작 중"
 
 #: ../../../app/install/update/template/update.js:60
 #, javascript-format
@@ -203,6 +203,9 @@ msgstr "앨범 이름은 필수 요소입니다."
 msgid "Confirm"
 msgstr "확인"
 
+msgid "The content has been approved."
+msgstr "게시물을 승인하였습니다."
+
 #: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
 msgid "Select existing album"
 msgstr "기존 앨범 선택하기"
@@ -224,7 +227,7 @@ msgstr "오류가 발생했습니다. 잠시 후에 다시 시도해주세요."
 #: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
 #: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
 msgid "Please select a valid image file type."
-msgstr "올바른 이미지 파일 유형을 선택해주세요."
+msgstr "올바른 이미지 파일 유형을 선택하십시오."
 
 #: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
 #: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
@@ -260,12 +263,12 @@ msgstr "비밀번호가 일치하지 않습니다"
 #: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
 #, javascript-format
 msgid "Update available v%s"
-msgstr "v%s 업데이트가 가능합니다"
+msgstr "v%s 버전 업데이트가 가능합니다"
 
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 #, javascript-format
 msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
-msgstr "시스템에 적용할 수 있는 업데이트가 발견되었습니다. 이 업데이트를 자동으로 다운로드하여 설치하거나 %s로(으로) 이동하여 파일을 다운로드할 수 있습니다."
+msgstr "시스템에 적용할 수 있는 업데이트가 발견되었습니다. 이 업데이트를 자동으로 다운로드하여 설치하거나 %s 로(으로) 이동하여 파일 다운로드를 진행할 수 있습니다."
 
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 msgid "The release notes for this update are:"
@@ -273,7 +276,7 @@ msgstr "이 업데이트의 릴리즈 노트는 다음과 같습니다:"
 
 #: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
 msgid "Update now"
-msgstr "지금 업데이트 하기"
+msgstr "업데이트 하기"
 
 #: ../../../app/themes/Peafowl/header.php:285
 #: ../../../app/themes/Peafowl/header.php:332
@@ -323,7 +326,7 @@ msgstr "이 웹사이트는 최신 %s 버전을 사용 중입니다"
 #: ../../../app/themes/Peafowl/views/settings.php:348
 #: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
 msgid "loading"
-msgstr "로딩 중"
+msgstr "불러오는 중"
 
 msgid "Toggle select"
 msgstr "선택 토글"
@@ -352,6 +355,9 @@ msgstr "편집"
 msgid "Album"
 msgid_plural "Albums"
 msgstr[0] "앨범"
+
+msgid "Approve"
+msgstr "승인"
 
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
 #: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
@@ -408,7 +414,7 @@ msgstr[0] "이미지"
 #: ../../../app/themes/Peafowl/header.php:56
 #, php-format, javascript-format
 msgid "%s's Albums"
-msgstr "%s님의 앨범"
+msgstr "%s의 앨범"
 
 #: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
 msgid "Image edited successfully."
@@ -605,7 +611,7 @@ msgstr "링크"
 #: ../../../app/themes/Peafowl/views/signup.php:49
 #: ../../../app/themes/Peafowl/views/signup.php:50
 msgid "Password"
-msgstr "비밀번호"
+msgstr "암호"
 
 #: ../../../app/lib/classes/class.image.php:1230
 msgid "view"
@@ -665,10 +671,10 @@ msgid_plural "likes"
 msgstr[0] "좋아요"
 
 msgid "Recent"
-msgstr "최신"
+msgstr "최신 게시물"
 
 msgid "Trending"
-msgstr "트랜드"
+msgstr "트렌드"
 
 #: ../../../app/routes/route.dashboard.php:1163
 msgid "Top users"
@@ -723,7 +729,7 @@ msgstr "인기순"
 #: ../../../app/themes/Peafowl/views/dashboard.php:305
 #: ../../../app/themes/Peafowl/views/explore.php:9
 msgid "Explore"
-msgstr "둘러보기"
+msgstr "탐색"
 
 msgid "Animated"
 msgstr "움짤"
@@ -749,6 +755,12 @@ msgstr[0] "이미지"
 msgid "User"
 msgid_plural "Users"
 msgstr[0] "사용자"
+
+msgid "adult"
+msgstr "성인"
+
+msgid "teen"
+msgstr "미성년자"
 
 #: ../../../app/lib/classes/class.page.php:108
 #, php-format
@@ -849,7 +861,7 @@ msgid "We use our own and third party cookies to improve your browsing experienc
 msgstr "이 웹사이트는 개인화되고 맞춤화된 서비스를 제공하기 위해서, 사용자의 정보를 저장하고 수시로 불러오는 쿠키(cookie)를 사용합니다. 웹사이트 이용을 계속하는 것은 %cookie_policy_link에 동의하는 것으로 간주합니다."
 
 msgid "I understand"
-msgstr "동의합니다"
+msgstr "동의합니다."
 
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
@@ -858,12 +870,12 @@ msgstr "동의합니다"
 #: ../../../app/themes/Peafowl/views/login.php:41
 #: ../../../app/themes/Peafowl/views/settings.php:299
 msgid "Forgot password?"
-msgstr "비밀번호를 잊으셨나요?"
+msgstr "암호를 잊으셨나요?"
 
 #: ../../../app/routes/route.account.php:73
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:8
 msgid "Reset password"
-msgstr "비밀번호 재설정하기"
+msgstr "암호 재설정"
 
 #: ../../../app/routes/route.account.php:74
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:8
@@ -906,7 +918,7 @@ msgstr "이메일 주소가 없는 사용자입니다."
 #: ../../../app/themes/Peafowl/views/request-denied.php:8
 #: ../../../content/pages/default/contact.php:14
 msgid "Request denied"
-msgstr "요청이 거부되었습니다"
+msgstr "요청이 거부됨"
 
 #: ../../../app/routes/route.account.php:145
 msgid "Account needs to be activated to use this feature"
@@ -914,7 +926,7 @@ msgstr "이 기능을 사용하려면 계정이 활성화되어야 합니다"
 
 #: ../../../app/routes/route.account.php:151
 msgid "Account already activated"
-msgstr "계정이 이미 활성화되었습니다"
+msgstr "계정이 이미 활성화됨"
 
 #: ../../../app/routes/route.account.php:192
 msgid "Allow up to 15 minutes for the email. You can try again later."
@@ -923,7 +935,7 @@ msgstr "이메일을 다시 보내기 위해서는 최대 15분이 필요합니�
 #: ../../../app/routes/route.account.php:231
 #, php-format
 msgid "Reset your password at %s"
-msgstr "%s의 비밀번호 재설정 하기"
+msgstr "귀하의 암호 재설정하기 - %s"
 
 #: ../../../app/routes/route.account.php:233
 #: ../../../app/routes/route.account.php:454
@@ -947,7 +959,7 @@ msgid "Email already being used"
 msgstr "이메일 주소가 이미 사용 중입니다"
 
 msgid "Password required"
-msgstr "비밀번호가 필요합니다"
+msgstr "암호 필요"
 
 #: ../../../app/routes/route.album.php:115
 #: ../../../app/themes/Peafowl/snippets/modal_share.php:4
@@ -1016,10 +1028,10 @@ msgstr "업데이트 설치하기"
 
 #: ../../../app/routes/route.dashboard.php:162
 msgid "check for updates"
-msgstr "업데이트 검사하기"
+msgstr "업데이트 확인하기"
 
 msgid "Support"
-msgstr "고객지원"
+msgstr "지원"
 
 #, php-format
 msgid "Need help? Go to %s and you will get help quickly."
@@ -1209,7 +1221,7 @@ msgstr "이미지 업로드"
 
 #: ../../../app/routes/route.dashboard.php:232
 msgid "Categories"
-msgstr "카테고리"
+msgstr "범주"
 
 msgid "Consent screen"
 msgstr "동의 화면"
@@ -1252,7 +1264,7 @@ msgstr "외부 저장소"
 #: ../../../app/routes/route.dashboard.php:241
 #: ../../../app/themes/Peafowl/views/dashboard.php:99
 msgid "Email"
-msgstr "이메일"
+msgstr "전자우편"
 
 #: ../../../app/routes/route.dashboard.php:242
 #: ../../../app/themes/Peafowl/views/album.php:79
@@ -1367,11 +1379,6 @@ msgstr "이미지 페이지"
 msgid "Inside viewer top (image page)"
 msgstr "뷰어의 상단 (이미지 페이지)"
 
-#: ../../../app/routes/route.dashboard.php:413
-#: ../../../app/routes/route.dashboard.php:417
-msgid "Expected banner size 728x90"
-msgstr "배너 크기 공간 728x90"
-
 #: ../../../app/routes/route.dashboard.php:416
 msgid "Inside viewer foot (image page)"
 msgstr "뷰어의 하단 (이미지 페이지)"
@@ -1484,15 +1491,11 @@ msgstr "값이 잘못되었습니다"
 
 #: ../../../app/routes/route.dashboard.php:622
 msgid "Invalid theme tone"
-msgstr "테마 톤이 잘못되었습니다"
+msgstr "잘못된 테마 톤"
 
 #: ../../../app/routes/route.dashboard.php:627
 msgid "Invalid theme main color"
 msgstr "테마 주 색상이 잘못되었습니다"
-
-#: ../../../app/routes/route.dashboard.php:632
-msgid "Invalid theme top bar color"
-msgstr "테마 상단 바 색상이 잘못되었습니다"
 
 #: ../../../app/routes/route.dashboard.php:637
 msgid "Invalid theme top bar button color"
@@ -1828,6 +1831,9 @@ msgstr "사용자 이름 또는 이메일 주소의 비밀번호가 잘못되었
 msgid "Sign in"
 msgstr "로그인"
 
+msgid "Moderate"
+msgstr "중재하기"
+
 msgid "Upload images"
 msgstr "이미지 업로드"
 
@@ -1882,11 +1888,11 @@ msgstr "웹사이트가 잘못되었습니다"
 
 #: ../../../app/routes/route.settings.php:313
 msgid "Wrong password"
-msgstr "비밀번호가 일치하지 않습니다"
+msgstr "틀린 암호"
 
 #: ../../../app/routes/route.settings.php:316
 msgid "Use a new password"
-msgstr "새로운 비밀번호 사용하기"
+msgstr "새로운 암호 사용하기"
 
 #: ../../../app/routes/route.settings.php:416
 #: ../../../app/themes/Peafowl/views/dashboard.php:2067
@@ -1896,11 +1902,11 @@ msgstr "변경 사항이 저장되었습니다."
 
 #: ../../../app/routes/route.settings.php:435
 msgid "Password has been changed"
-msgstr "비밀번호가 변경되었습니다"
+msgstr "암호가 변경되었습니다."
 
 #: ../../../app/routes/route.settings.php:440
 msgid "Password has been created."
-msgstr "비밀번호가 생성되었습니다"
+msgstr "암호가 생성되었습니다."
 
 #: ../../../app/routes/route.settings.php:455
 msgid "Wrong Username/Email values"
@@ -2212,6 +2218,9 @@ msgstr "초기화"
 msgid "close"
 msgstr "닫기"
 
+msgid "Note"
+msgstr "비고"
+
 msgid "copy"
 msgstr "복사"
 
@@ -2222,10 +2231,6 @@ msgstr "삽입"
 #: ../../../app/themes/Peafowl/views/dashboard.php:666
 msgid "Remove"
 msgstr "제거"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:154
-msgid "Edit image"
-msgstr "이미지 편집"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
 #: ../../../app/themes/Peafowl/snippets/form_image.php:4
@@ -2479,10 +2484,10 @@ msgid "Private (anyone with the link)"
 msgstr "비공개(링크)"
 
 msgid "Private (password protected)"
-msgstr "비공개(비밀번호)"
+msgstr "비공개 (암호로 보호 됨)"
 
 msgid "Album password"
-msgstr "앨범 비밀번호"
+msgstr "앨범 암호"
 
 #: ../../../app/themes/Peafowl/snippets/form_category_edit.php:4
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:3
@@ -2519,6 +2524,9 @@ msgstr "이 카테고리에 대해 알려주세요"
 #: ../../../app/themes/Peafowl/snippets/form_image.php:5
 msgid "Untitled image"
 msgstr "제목 없는 이미지"
+
+msgid "Flag not safe"
+msgstr "미안전 표기"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
 msgid "Path"
@@ -2710,7 +2718,7 @@ msgstr "서버 사용자 이름"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:127
 msgid "Server password"
-msgstr "서버 비밀번호"
+msgstr "서버 암호"
 
 msgid "Local path"
 msgstr "내부 경로"
@@ -2805,18 +2813,6 @@ msgstr "홈"
 msgid "There's nothing to show here."
 msgstr "볼 수 있는 게시물이 없습니다."
 
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
-#: ../../../app/themes/Peafowl/views/image.php:69
-#: ../../../app/themes/Peafowl/views/image.php:457
-msgid "Edit image details"
-msgstr "이미지 속성 편집하기"
-
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
-#: ../../../app/themes/Peafowl/views/album.php:22
-#: ../../../app/themes/Peafowl/views/album.php:118
-msgid "Edit album details"
-msgstr "앨범 속성 편집하기"
-
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
 msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
 msgstr "모든 이미지는 새로 만든 앨범으로 이동됩니다. 또는 <a class=\"modal-switch\" data-switch=\"move-existing-album\">기존 앨범</a>으로 이동시킬 수 있습니다."
@@ -2857,6 +2853,9 @@ msgstr "후방주의 플래그 설정 확인"
 msgid "Do you really want to flag this content as unsafe?"
 msgstr "선택한 게시물에 후방주의 플래그를 설정하시겠습니까?"
 
+msgid "Confirm approval"
+msgstr "승인 확인"
+
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:106
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:110
 msgid "Confirm deletion"
@@ -2871,10 +2870,10 @@ msgid "Do you really want to remove all the selected content? This can't be undo
 msgstr "선택한 게시물을 삭제하시겠습니까? 이 작업은 원래대로 되돌릴 수 없습니다."
 
 msgid "Fullscreen"
-msgstr "전체 화면"
+msgstr "전체화면"
 
 msgid "Exit fullscreen"
-msgstr "전체 화면 나가기"
+msgstr "전체화면 나가기"
 
 #: ../../../app/themes/Peafowl/views/image.php:57
 msgid "Guest"
@@ -2887,7 +2886,7 @@ msgid "Private album"
 msgstr "비공개 앨범"
 
 msgid "Password protected"
-msgstr "비밀번호 보호"
+msgstr "암호로 보호 됨"
 
 msgid "Uploaded by guest"
 msgstr "손님의 업로드"
@@ -3018,7 +3017,7 @@ msgid "%d characters min"
 msgstr "최소 %d개의 문자를 입력해주세요"
 
 msgid "Password strength"
-msgstr "비밀번호 강도"
+msgstr "암호 강도"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:35
 #: ../../../app/themes/Peafowl/views/settings.php:312
@@ -3038,10 +3037,6 @@ msgstr "이 게시물은 비공개 게시물입니다"
 #: ../../../app/themes/Peafowl/views/album.php:25
 msgid "Do you really want to delete this album and all of its images? This can't be undone."
 msgstr "이 앨범과 앨범의 모든 이미지를 삭제하시겠습니까? 이 작업은 원래대로 되돌릴 수 없습니다."
-
-#: ../../../app/themes/Peafowl/views/album.php:25
-msgid "Delete album"
-msgstr "앨범 삭제하기"
 
 #: ../../../app/themes/Peafowl/views/image.php:85
 msgid "You like this"
@@ -3097,9 +3092,6 @@ msgstr "자동으로 가져오기"
 msgid "The system automatically parses any content by a continuous observation of the %path% path."
 msgstr "시스템은 %path% 경로를 지속적으로 감시하여 자동으로 내용물을 구문 분석합니다."
 
-msgid "The system automatically parses any content by a continous observation of the %path% path."
-msgstr "시스템은 %path% 경로를 지속적으로 감시하여 자동으로 내용물을 구문분석(파싱)합니다."
-
 msgid "Completed jobs will be automatically re-started after %n %m."
 msgstr "완료된 작업은 %n %m 후에 자동으로 재시작됩니다."
 
@@ -3113,13 +3105,13 @@ msgid "Working"
 msgstr "작업 중"
 
 msgid "Paused"
-msgstr "일시중지"
+msgstr "멈춤"
 
 msgid "Canceled"
-msgstr "취소됨"
+msgstr "취소"
 
 msgid "Completed"
-msgstr "완료됨"
+msgstr "완료"
 
 msgid "Actions"
 msgstr "액션"
@@ -3128,7 +3120,7 @@ msgid "Reset"
 msgstr "재설정"
 
 msgid "Pause"
-msgstr "일시중지"
+msgstr "멈춤"
 
 msgid "Resume"
 msgstr "재시작"
@@ -3152,15 +3144,8 @@ msgstr "%s% 의 정수 값을 변경하여 명령을 병렬로 다중 실행할 
 msgid "All file-system permissions must be granted for the crontab user at %path%"
 msgstr "crontab 사용자에게 %path% 경로의 모든 파일 시스템 권한을 부여해야 합니다."
 
-msgid "Required crontab entry:"
-msgstr "필수 crontab 항목:"
-
 msgid "Add import job"
 msgstr "가져오기 작업 추가하기"
-
-#, php-format
-msgid "This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d."
-msgstr "이 도구를 사용하면 가져올 내용물의 시스템 경로를 지정하여 웹사이트에 내용물을 대량으로 추가할 수 있습니다. 폴더 기반 구조를 사용하여 사용자, 앨범 및 이미지의 추가를 지원합니다. 폴더 구조, 메타데이터 추가 및 이 도구에 대한 모든 정보에 대해 더 알아보려면 %d를 참조해주세요."
 
 msgid "Process import"
 msgstr "가져오기 실행하기"
@@ -3199,15 +3184,15 @@ msgstr "사용자 추가"
 #: ../../../app/themes/Peafowl/views/dashboard.php:87
 #: ../../../app/themes/Peafowl/views/settings.php:121
 msgid "Role"
-msgstr "권한"
+msgstr "역할"
 
 msgid "Manager"
-msgstr "운영자"
+msgstr "관리자"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:89
 #: ../../../app/themes/Peafowl/views/settings.php:125
 msgid "Administrator"
-msgstr "관리자"
+msgstr "최고관리자"
 
 #: ../../../app/themes/Peafowl/header.php:338
 #: ../../../app/themes/Peafowl/views/account/email-needed.php:15
@@ -3387,16 +3372,16 @@ msgstr "활성 페이지에만 액세스할 수 있습니다."
 #: ../../../app/themes/Peafowl/views/dashboard.php:458
 #: ../../../app/themes/Peafowl/views/dashboard.php:595
 msgid "Type"
-msgstr "종류"
+msgstr "유형"
 
 msgid "Terms of service"
-msgstr "이용 약관"
+msgstr "이용약관"
 
 msgid "Privacy"
 msgstr "개인 정보 보호 정책"
 
 msgid "Contact"
-msgstr "문의하기"
+msgstr "문의"
 
 msgid "Extra page"
 msgstr "추가 페이지"
@@ -3529,14 +3514,6 @@ msgstr "업로드 활성화"
 msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
 msgstr "이미지 업로드를 허용하려면 이 옵션을 활성화로 설정해주세요. 이 설정은 관리자에게 영향을 주지 않습니다."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:639
-msgid "Guest uploads"
-msgstr "손님 업로드"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:645
-msgid "Enable this if you want to allow non registered users to upload."
-msgstr "미등록 사용자의 업로드를 허용하려면 이 옵션을 활성화로 설정해주세요."
-
 msgid "Upload user interface"
 msgstr "업로드 사용자 인터페이스"
 
@@ -3545,6 +3522,23 @@ msgstr "온페이지 컨테이너"
 
 msgid "route"
 msgstr "라우팅"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:639
+msgid "Guest uploads"
+msgstr "손님 업로드"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+msgid "Enable this if you want to allow non registered users to upload."
+msgstr "미등록 사용자의 업로드를 허용하려면 이 옵션을 활성화로 설정해주세요."
+
+msgid "Moderate uploads"
+msgstr "올려놓기 중재"
+
+msgid "Guests"
+msgstr "손님"
+
+msgid "Enable this to moderate incoming uploads. Target content will require moderation for approval."
+msgstr "활성화하면 올려놓기 요청을 중재합니다. 대상 게시물은 중재를 통한 승인이 요구됩니다."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1353
 msgid "Enable embed codes (uploader)"
@@ -3888,7 +3882,7 @@ msgstr "사용자의 URL을 %s/user/username 대신 %s/username을 사용하려�
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:983
 msgid "Require email confirmation"
-msgstr "이메일 인증 요청"
+msgstr "전자우편 확인 요구"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:989
 msgid "Enable this if users must validate their email address on sign up."
@@ -3960,6 +3954,10 @@ msgstr "주간 업로드 제한"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1060
 msgid "Monthly limit"
 msgstr "월간 업로드 제한"
+
+#, php-format
+msgid "Lock %s editing"
+msgstr "%s의 편집 잠금"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1070
 msgid "Show not safe content in listings"
@@ -4054,7 +4052,7 @@ msgstr "각 대상 기기에 따라 사용되는 목록의 칼럼 개수를 설�
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1143
 msgid "Phone"
-msgstr "스마트폰"
+msgstr "전화"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1147
 msgid "Phablet"
@@ -4105,26 +4103,6 @@ msgstr "16진수 색상 코드(헥스 코드)"
 msgid "Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>."
 msgstr "주 테마 색상을 설정하려면 이 옵션을 설정해주세요. 설정 값은 <a href=\"%s\" target=\"_blank\">헥스 코드</a>이어야 합니다."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1203
-msgid "Top bar color"
-msgstr "상단 바 색상"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1223
-#: ../../../app/themes/Peafowl/views/dashboard.php:1461
-msgid "Black"
-msgstr "검정"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1224
-#: ../../../app/themes/Peafowl/views/dashboard.php:1462
-msgid "White"
-msgstr "하양"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1210
-msgid "If you set this to \"white\" the top bar and all the black tones will be changed to white tones."
-msgstr "상단 바의 색상을 \"하양\"으로 설정하면 모든 검정색의 요소가 하얀색으로 바뀝니다."
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1214
 msgid "Top bar button color"
 msgstr "상단 바 버튼 색상"
@@ -4153,6 +4131,18 @@ msgstr "빨강"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1460
 msgid "Grey"
 msgstr "회색"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1223
+#: ../../../app/themes/Peafowl/views/dashboard.php:1461
+msgid "Black"
+msgstr "검정"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1224
+#: ../../../app/themes/Peafowl/views/dashboard.php:1462
+msgid "White"
+msgstr "하양"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1230
 msgid "Color for the top bar buttons like the \"Create account\" button."
@@ -4248,7 +4238,7 @@ msgid "Enable embed codes (content)"
 msgstr "퍼가기 코드 활성화 (게시물)"
 
 msgid "Everybody"
-msgstr "아무나"
+msgstr "누구나"
 
 msgid "Users only"
 msgstr "사용자만"
@@ -4296,10 +4286,6 @@ msgstr "방문 페이지"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1395
 msgid "Split landing + images"
 msgstr "잘라낸 방문 페이지 + 이미지"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1396
-msgid "Route explore"
-msgstr "둘러보기 라우팅"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1401
 #, php-format
@@ -4399,7 +4385,7 @@ msgid "banners"
 msgstr "배너"
 
 msgid "Automatic updates check"
-msgstr "자동 업데이트 체크"
+msgstr "자동 업데이트 확인하기"
 
 msgid "When enabled the system will automatically check for new updates."
 msgstr "활성화하면 시스템은 자동으로 새로운 업데이트를 체크합니다."
@@ -4411,10 +4397,10 @@ msgid "Enable this to show a notice on top warning you about new available syste
 msgstr "사용 가능한 새로운 시스템 업데이트에 대한 알림을 상단 알림에 표시하려면 이 옵션을 활성화로 설정해주세요."
 
 msgid "Dump update query"
-msgstr "업데이트 쿼리 덤프"
+msgstr "업데이트 쿼리 덤프 뜨기"
 
 msgid "Enable this if you want to dump the update query to run it manually."
-msgstr "업데이트 쿼리를 덤프해서 수동으로 실행하려면 이 옵션을 활성화로 설정해주세요"
+msgstr "활성화하면 자동으로 언어를 감자하여 각 사용자에게 맞는 언어로 설정합니다."
 
 #, php-format
 msgid "SEO %s URLs"
@@ -4497,7 +4483,7 @@ msgid "Album routing"
 msgstr "앨범 라우팅"
 
 msgid "Hostname"
-msgstr "호스트 이름"
+msgstr "호스트네임"
 
 msgid "Hostname on which sub-domain wildcards will be added."
 msgstr "서브도메인 와일드카드가 추가될 호스트 이름입니다."
@@ -4622,7 +4608,7 @@ msgstr "SMTP 사용자 이름"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1805
 msgid "SMTP password"
-msgstr "SMTP 사용자 비밀번호"
+msgstr "SMTP 사용자 암호"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1810
 msgid "SMTP security"
@@ -4809,6 +4795,21 @@ msgstr "댓글 코드"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1998
 msgid "Disqus, Facebook or anything you want. It will be used in image view."
 msgstr "Disqus, Facebook 또는 다른 원하는 서비스의 코드를 넣어주세요. 댓글은 이미지 뷰어에 사용됩니다."
+
+msgid "Automatic approve"
+msgstr "자동 승인"
+
+msgid "Block content"
+msgstr "블럭한 게시물"
+
+msgid "Adult"
+msgstr "성인"
+
+msgid "Teen and adult"
+msgstr "미성년자와 성인"
+
+msgid "Flag NSFW"
+msgstr "후방주의 표기"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:2002
 msgid "Analytics code"
@@ -5121,19 +5122,19 @@ msgstr "시간대"
 
 #: ../../../app/themes/Peafowl/views/settings.php:296
 msgid "Current password"
-msgstr "현재 비밀번호"
+msgstr "현재 암호"
 
 #: ../../../app/themes/Peafowl/views/settings.php:297
 msgid "Enter your current password"
-msgstr "현재 비밀번호를 입력해주세요"
+msgstr "귀하의 현재 암호를 입력해주세요."
 
 #: ../../../app/themes/Peafowl/views/settings.php:305
 msgid "New password"
-msgstr "새 비밀번호"
+msgstr "새 암호"
 
 #: ../../../app/themes/Peafowl/views/settings.php:311
 msgid "Confirm new password"
-msgstr "새 비밀번호 확인"
+msgstr "새 암호 확인"
 
 #: ../../../app/themes/Peafowl/views/settings.php:319
 msgid "Add a password to be able to login using your username or email."
@@ -5146,16 +5147,16 @@ msgstr "이 사용자는 비밀번호를 설정하지 않았습니다. 여기서
 #: ../../../app/themes/Peafowl/views/login.php:40
 #: ../../../app/themes/Peafowl/views/settings.php:323
 msgid "Enter your password"
-msgstr "비밀번호를 입력해주세요"
+msgstr "암호를 입력해주세요."
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:34
 #: ../../../app/themes/Peafowl/views/settings.php:328
 msgid "Confirm password"
-msgstr "비밀번호 확인"
+msgstr "암호 확인"
 
 #: ../../../app/themes/Peafowl/views/settings.php:329
 msgid "Re-enter your password"
-msgstr "비밀번호를 다시 입력해주세요"
+msgstr "암호를 다시 입력해주세요."
 
 #: ../../../app/themes/Peafowl/views/settings.php:352
 #: ../../../app/themes/Peafowl/views/user.php:21
@@ -5290,10 +5291,6 @@ msgstr "배경 지우기는 프로필 배경 이미지를 삭제합니다. 프�
 #: ../../../app/themes/Peafowl/views/user.php:22
 msgid "Delete background"
 msgstr "배경 지우기"
-
-#: ../../../app/themes/Peafowl/views/user.php:61
-msgid "Edit profile"
-msgstr "프로필 편집하기"
 
 #: ../../../app/themes/Peafowl/views/user.php:75
 msgid "Follower"

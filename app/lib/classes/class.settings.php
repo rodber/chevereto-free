@@ -162,9 +162,17 @@ class Settings
                 'stopforumspam' => false,
                 // 3.14.0
                 'upload_enabled_image_formats' => 'jpg,png,bmp,gif,webp',
+                // 3.15.0
+                'hostname' => null,
+                'theme_show_embed_content_for' => 'all', // none,users,all
+                // 3.16.0
+                'moderatecontent' => 0,
+                'moderatecontent_key' => '',
+                'moderatecontent_block_rating' => 'a',
+                'moderatecontent_flag_nsfw' => 'a',
+                'moderate_uploads' => '', // ,
             ];
 
-            // Default listing thing
             $device_to_columns = [
                 'phone' => 1,
                 'phablet' => 3,

@@ -25,7 +25,7 @@ if (G\ends_with('/lib/Peafowl/js/hammer.min.js.map', $_SERVER['REQUEST_URI'])) {
     G\Handler::issue404();
     die();
 }
-
+$isGt3160 = version_compare(Settings::get('chevereto_version_installed'), '1.2.0', '>=');
 // Not installed
 if (!Settings::get('chevereto_version_installed')) {
     new G\Handler([
@@ -38,12 +38,20 @@ if (!Settings::get('chevereto_version_installed')) {
 }
 
 // Process showPingPixel (automatic updates check)
-if (class_exists('CHV\Lock') && Settings::get('enable_automatic_updates_check') && array_key_exists('ping', $_REQUEST) && $_REQUEST['r']) {
-    if (is_null(Settings::get('update_check_datetimegmt')) || G\datetime_add(Settings::get('update_check_datetimegmt'), 'P1D') < G\datetimegmt()) {
+if (
+    $isGt3160
+    && Settings::get('enable_automatic_updates_check')
+    && array_key_exists('ping', $_REQUEST)
+    && $_REQUEST['r']
+) {
+    if (
+        is_null(Settings::get('update_check_datetimegmt'))
+        || G\datetime_add(Settings::get('update_check_datetimegmt'), 'P1D') < G\datetimegmt()
+) {
         try {
-            L10n::setLocale(Settings::get('default_language')); // Force system language
+            L10n::setLocale(Settings::get('default_language'));
             $lock = new Lock('check-updates');
-            if (!$lock->check() && $lock->create()) {
+            if ($lock->create()) {
                 checkUpdates();
                 $lock->destroy();
             }
@@ -55,18 +63,12 @@ if (class_exists('CHV\Lock') && Settings::get('enable_automatic_updates_check') 
 }
 
 // Handle banned IP address
-$versionCompare = '3.5.14';
-if (defined('G_APP_GITHUB_REPO')) {
-    $versionCompare = '1.0.0';
-}
-if (version_compare(Settings::get('chevereto_version_installed'), $versionCompare, '>=')) {
-    $banned_ip = Ip_ban::getSingle();
-    if ($banned_ip) {
-        if (G\is_url($banned_ip['message'])) {
-            G\redirect($banned_ip['message']);
-        } else {
-            die(empty($banned_ip['message']) ? _s('You have been forbidden to use this website.') : $banned_ip['message']);
-        }
+$banned_ip = Ip_ban::getSingle();
+if ($banned_ip) {
+    if (G\is_url($banned_ip['message'])) {
+        G\redirect($banned_ip['message']);
+    } else {
+        die(empty($banned_ip['message']) ? _s('You have been forbidden to use this website.') : $banned_ip['message']);
     }
 }
 
@@ -128,55 +130,19 @@ foreach ([
     }
 }
 
-// Let's try this one out... Why not?
-register_shutdown_function(function () {
-    $versionCompare = '3.9.0';
-    if (defined('G_APP_GITHUB_REPO')) {
-        $versionCompare = '1.0.9';
-    }
-    if (version_compare(Settings::get('chevereto_version_installed'), $versionCompare, '>=')) {
-        // Delete expired images
-        if (method_exists('CHV\Image', 'deleteExpired')) {
-            try {
-                $lock = new Lock('delete-expired-images');
-                if (!$lock->check() && $lock->create()) {
-                    Image::deleteExpired(50);
-                    $lock->destroy();
-                }
-            } catch (Exception $e) {
-                error_log($e);
+if ($isGt3160) {
+    register_shutdown_function(function () {
+        try {
+            $lock = new Lock('delete-expired-images');
+            if ($lock->create()) {
+                Image::deleteExpired(50);
+                $lock->destroy();
             }
+        } catch (Exception $e) {
+            error_log($e);
         }
-
-        // Handle invalid user accounts
-        if (method_exists('CHV\User', 'cleanUnconfirmed')) {
-            try {
-                $lock = new Lock('clean-unconfirmed-users');
-                if (!$lock->check() && $lock->create()) {
-                    User::cleanUnconfirmed(5);
-                    $lock->destroy();
-                }
-            } catch (Exception $e) {
-                error_log($e);
-            }
-        }
-
-        if (array_key_exists('deletions', DB::getTables())) {
-            try {
-                $lock = new Lock('remove-delete-log');
-                if (!$lock->check() && $lock->create()) {
-                    $db = DB::getInstance();
-                    $db->query('DELETE FROM ' . DB::getTable('deletions') . ' WHERE deleted_date_gmt <= :time;');
-                    $db->bind(':time', G\datetime_sub(G\datetimegmt(), 'P3M'));
-                    $db->exec();
-                    $lock->destroy();
-                }
-            } catch (Exception $e) {
-                error_log($e);
-            }
-        }
-    }
-});
+    });
+}
 
 // We're getting fancy
 try {
@@ -237,7 +203,6 @@ try {
 
             parse_str($_SERVER['QUERY_STRING'], $querystr);
 
-            // Inject some global stuff
             $handler::setVar('auth_token', $handler::getAuthToken());
             $handler::setVar('doctitle', getSetting('website_name'));
             $handler::setVar('meta_description', getSetting('website_description'));
@@ -247,6 +212,11 @@ try {
             $handler::setCond('admin', Login::isAdmin());
             $handler::setCond('manager', Login::isManager());
             $handler::setCond('content_manager', Login::isAdmin() || Login::isManager());
+            $allowed_nsfw_flagging = !getSetting('image_lock_nsfw_editing');
+            if ($handler::getCond('content_manager')) {
+                $allowed_nsfw_flagging = true;
+            }
+            $handler::setCond('allowed_nsfw_flagging', $allowed_nsfw_flagging);
             $handler::setCond('maintenance', getSetting('maintenance') and !Login::isAdmin());
             $handler::setCond('show_consent_screen', $base !== 'api' && (getSetting('enable_consent_screen') ? !(Login::getUser() or isset($_SESSION['agree-consent']) or isset($_COOKIE['AGREE_CONSENT'])) : false));
             $handler::setCond('captcha_needed', getSetting('recaptcha') and getSetting('recaptcha_threshold') == 0);
@@ -264,7 +234,6 @@ try {
             $is_dark_mode = $theme_tone == 'dark';
             $handler::setCond('dark_mode', $is_dark_mode);
             $handler::setVar('theme_top_bar_color', $is_dark_mode ? 'black' : 'white');
-
             // Login if maintenance /dashboard
             if ($handler::getCond('maintenance') && $handler->request_array[0] == 'dashboard') {
                 G\redirect('login');
@@ -405,13 +374,21 @@ try {
             // Forced privacy
             $handler::setCond('forced_private_mode', (getSetting('website_privacy_mode') == 'private' and getSetting('website_content_privacy_mode') !== 'default'));
 
-            // show explorer?
             $handler::setCond('explore_enabled', $handler::getCond('content_manager') ?: (getSetting('website_explore_page') ? (Login::getUser() ?: getSetting('website_explore_page_guest')) : false));
 
-            // Show search?
             $handler::setCond('search_enabled', $handler::getCond('content_manager') ?: getSetting('website_search'));
 
-            // Categories
+            $moderate_uploads = false;
+            switch (getSetting('moderate_uploads')) {
+                case 'all':
+                    $moderate_uploads = true;
+                break;
+                case 'guest':
+                    $moderate_uploads = !Login::isLoggedUser();
+                break;
+            }
+            $handler::setCond('moderate_uploads', $moderate_uploads);
+
             $categories = [];
             if ($handler::getCond('explore_enabled') || $base == 'dashboard') {
                 try {
@@ -457,21 +434,12 @@ try {
                 $v['url'] = G\get_base_url('explore/' . $k);
             }
             unset($v);
+
             $handler::setVar('explore_semantics', $explore_semantics);
 
             // Get active AND visible pages
-            $versionCompare = '3.6.7';
-            if (defined('G_APP_GITHUB_REPO')) {
-                $versionCompare = '1.0.0';
-            }
-            if (version_compare(Settings::get('chevereto_version_installed'), $versionCompare, '>=')) {
-                $pages_visible_db = Page::getAll(['is_active' => 1, 'is_link_visible' => 1], ['field' => 'sort_display', 'order' => 'ASC']);
-            }
-            $versionCompare = '3.12.4';
-            if (defined('G_APP_GITHUB_REPO')) {
-                $versionCompare = '1.2.0';
-            }
-            $pageHandle = version_compare(Settings::get('chevereto_version_installed'), $versionCompare, '>=') ? 'internal' : 'url_key';
+            $pages_visible_db = Page::getAll(['is_active' => 1, 'is_link_visible' => 1], ['field' => 'sort_display', 'order' => 'ASC']);
+            $pageHandle = version_compare(Settings::get('chevereto_version_installed'), '1.2.0', '>=') ? 'internal' : 'url_key';
             $handler::setVar('page_tos', Page::getSingle('tos', $pageHandle));
             $handler::setVar('page_privacy', Page::getSingle('privacy', $pageHandle));
             $pages_visible = [];

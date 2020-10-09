@@ -14,12 +14,10 @@ if ($user_items_editor !== false) {
 <div data-modal="form-edit-single" class="hidden">
     <span class="modal-box-title">
 	<?php
-        if ($modal_dealing_with == 'images') {
-            _se('Edit image details');
-        } else {
-            _se('Edit album details');
-            $disable_album_toggle = true;
-        } ?>
+        _se('Edit');
+    if ($modal_dealing_with != 'images') {
+        $disable_album_toggle = true;
+    } ?>
 	</span>
     <div class="modal-form">
 		<?php
@@ -100,9 +98,17 @@ if ($user_items_editor !== false) {
 	<p><?php _se("Do you really want to flag this content as unsafe?"); ?></p>
 </div>
 
+<div data-modal="form-approve-single" class="hidden">
+	<span class="modal-box-title"><?php _se('Confirm approval'); ?></span>
+	<p><?php _se("Do you really want to approve this content? This can't be undone."); ?></p>
+</div>
 <div data-modal="form-delete-single" class="hidden">
 	<span class="modal-box-title"><?php _se('Confirm deletion'); ?></span>
 	<p><?php _se("Do you really want to remove this content? This can't be undone."); ?></p>
+</div>
+<div data-modal="form-approve-multiple" class="hidden">
+	<span class="modal-box-title"><?php _se('Confirm approval'); ?></span>
+	<p><?php _se("Do you really want to approve all the selected content? This can't be undone."); ?></p>
 </div>
 <div data-modal="form-delete-multiple" class="hidden">
 	<span class="modal-box-title"><?php _se('Confirm deletion'); ?></span>

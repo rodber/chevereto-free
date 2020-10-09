@@ -1,8 +1,8 @@
 <?php
 $translation_header = array (
   'Project-Id-Version' => 'VERSION',
-  'POT-Creation-Date' => '2018-12-25 14:55+0000',
-  'PO-Revision-Date' => '2018-12-25 14:55+0000',
+  'POT-Creation-Date' => '2020-09-02 17:16+0000',
+  'PO-Revision-Date' => '2020-09-02 17:16+0000',
   'Last-Translator' => 'FULL NAME <EMAIL@ADDRESS>',
   'Language-Team' => 'LANGUAGE TEAM <EMAIL@ADDRESS>',
   'Language' => 'he',
@@ -20,13 +20,13 @@ $translation_table = [
 		0 => "דוא\"ל שגוי",
 	],
 	"Invalid username" => [
-		0 => "שם משתמש שגוי",
+		0 => "שגיאה בבחירת מצב אתר",
 	],
 	"Invalid password" => [
 		0 => "סיסמא שגוייה",
 	],
 	"Invalid website mode" => [
-		0 => "מצב אתר שגוי",
+		0 => "שגיאה בבחירת מצב אתר",
 	],
 	"From email address" => [
 		0 => "מכתובת דואר אלקטרוני",
@@ -52,6 +52,33 @@ $translation_table = [
 	"Personal" => [
 		0 => "אישי",
 	],
+	"Installed version is v%s" => [
+		0 => "הגירסה הנוכחית היא %s",
+	],
+	"Can't connect to %s" => [
+		0 => "לא ניתן להתחבר ל- %s",
+	],
+	"Last available release is v%s" => [
+		0 => "יש עדכון זמין לגירסה %s",
+	],
+	"Update needed, proceeding to download" => [
+		0 => "מוריד עדכון חדש, אנא המתן",
+	],
+	"No update needed" => [
+		0 => "עדכון לא נדרש",
+	],
+	"System files already up to date" => [
+		0 => "קבצי מערכת נמצאו מעודכנים",
+	],
+	"Starting v%s download" => [
+		0 => "מתחיל בהורדת עדכון %s",
+	],
+	"Downloaded v%s, proceeding to extraction" => [
+		0 => "עדכון %s הורד בהצלחה, ממתין לאימות נתונים",
+	],
+	"Attempting to extract v%s" => [
+		0 => "עדכון %s עבר אימות בהצלחה, וכעת מתקין קבצים",
+	],
 	"Update in progress" => [
 		0 => "מעדכן נתונים",
 	],
@@ -60,6 +87,150 @@ $translation_table = [
 	],
 	"Can't extract %s" => [
 		0 => "לא יכול לחלץ %s",
+	],
+	"Check the errors in the form to continue." => [
+		0 => "בדקו שגיאות בטופס כדי להמשיך.",
+	],
+	"You must enter the album name." => [
+		0 => "לא הוזן שם אלבום",
+	],
+	"Confirm" => [
+		0 => "אישור פעולה",
+	],
+	"Select existing album" => [
+		0 => "בחר לאלבום קיים",
+	],
+	"An error occurred. Please try again later." => [
+		0 => "התרחשה שגיאה. אנא נסו שוב מאוחר יותר.",
+	],
+	"Please select a valid image file type." => [
+		0 => "בחר סוג קובץ תמונה תקין.",
+	],
+	"Please select a picture of at most %s size." => [
+		0 => "ניתן לבחור תמונה עד גודל %s.",
+	],
+	"Profile image updated." => [
+		0 => "תמונת פרופיל עודכנה בהצלחה.",
+	],
+	"Profile background image updated." => [
+		0 => "תמונת רקע פרופיל עודכנה בהצלחה.",
+	],
+	"Profile background image deleted." => [
+		0 => "תמונת רקע פרופיל נמחקה בהצלחה.",
+	],
+	"Error deleting profile background image." => [
+		0 => "שגיאה בעת מחיקת תמונת רקע פרופיל, נסה שוב.",
+	],
+	"Passwords don't match" => [
+		0 => "הסיסמאות אינן תואמות",
+	],
+	"Update available v%s" => [
+		0 => "עדכון זמין (גירסה %s)",
+	],
+	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
+		0 => "קיים עדכון זמין עבור המערכת. באפשרותך להוריד ולהתקין את העדכון באופן אוטומטי, או להיכנס לכתובת %s כדי להמשיך ולהוריד את הקובץ.",
+	],
+	"The release notes for this update are:" => [
+		0 => "הערות שחרור עבור עדכון זה:",
+	],
+	"Update now" => [
+		0 => "עדכן כעת",
+	],
+	"or" => [
+		0 => "או",
+	],
+	"cancel" => [
+		0 => "ביטול",
+	],
+	"This website is running latest %s version" => [
+		0 => "הינך נמצא בגירסה המעודכנת של מערכת %s",
+	],
+	"loading" => [
+		0 => "טוען נתונים",
+	],
+	"Toggle select" => [
+		0 => "סמן בחירה",
+	],
+	"Like" => [
+		0 => "לייק",
+	],
+	"Toggle flag" => [
+		0 => "סמן כתוכן פוגעני",
+	],
+	"Edit" => [
+		0 => "עריכה",
+	],
+	"Album" => [
+		0 => "אלבום",
+		1 => "אלבומים",
+		2 => "אלבומים",
+		3 => "אלבומים",
+	],
+	"Delete" => [
+		0 => "מחק",
+	],
+	"Close" => [
+		0 => "סגור",
+	],
+	"File too big." => [
+		0 => "הקובץ בנפח גדול",
+	],
+	"Some files couldn't be added" => [
+		0 => "לא ניתן להעלות קבצים מסויימים",
+	],
+	"image" => [
+		0 => "תמונה",
+		1 => "תמונות",
+		2 => "תמונות",
+		3 => "תמונות",
+	],
+	"%s's Albums" => [
+		0 => "האלבומים של %s",
+	],
+	"Image edited successfully." => [
+		0 => "שינוי פרטי התמונה עודכן בהצלחה",
+	],
+	"private" => [
+		0 => "פרטי",
+	],
+	"Album edited successfully." => [
+		0 => "שינוי פרטי האלבום עודכן בהצלחה",
+	],
+	"Invalid URL key." => [
+		0 => "מפתח קישור לא חוקי",
+	],
+	"Category URL key already being used." => [
+		0 => "מפתח קישור של קטגוריה כבר נמצא בשימוש",
+	],
+	"Category %s added." => [
+		0 => "קטגוריית %s נוספה בהצלחה.",
+	],
+	"Storage capacity can't be lower than its current usage (%s)." => [
+		0 => "קיבולת האיחסון לא יכולה להיות נמוכה מהנוכחית %s",
+	],
+	"User added successfully." => [
+		0 => "משתמש התווסף בהצלחה",
+	],
+	"The content has been deleted." => [
+		0 => "התוכן נמחק בהצלחה.",
+	],
+	"The content has been moved." => [
+		0 => "התמונות הועברו לאלבום בהצלחה.",
+	],
+	"Select" => [
+		0 => "בחירה",
+	],
+	"Unselect" => [
+		0 => "בטל בחירה",
+	],
+	"The content has been edited." => [
+		0 => "הפרטים נערכו בהצלחה.",
+	],
+	"album" => [
+		0 => "אלבום",
+		1 => "אלבומים",
+		2 => "אלבומים",
+		3 => "אלבומים",
 	],
 	"Untitled" => [
 		0 => "ללא כותרת",
@@ -151,12 +322,6 @@ $translation_table = [
 		2 => "לייקים",
 		3 => "לייקים",
 	],
-	"image" => [
-		0 => "תמונה",
-		1 => "תמונות",
-		2 => "תמונות",
-		3 => "תמונות",
-	],
 	"Recent" => [
 		0 => "אחרונים",
 	],
@@ -196,12 +361,6 @@ $translation_table = [
 		2 => "תמונות",
 		3 => "תמונות",
 	],
-	"Album" => [
-		0 => "אלבום",
-		1 => "אלבומים",
-		2 => "אלבומים",
-		3 => "אלבומים",
-	],
 	"User" => [
 		0 => "משתמש",
 		1 => "משתמשים",
@@ -216,9 +375,6 @@ $translation_table = [
 	],
 	"Internal" => [
 		0 => "חיצוני",
-	],
-	"Storage capacity can't be lower than its current usage (%s)." => [
-		0 => "קיבולת האיחסון לא יכולה להיות נמוכה מהנוכחית %s",
 	],
 	"Unlimited" => [
 		0 => "בלתי מוגבל",
@@ -256,9 +412,6 @@ $translation_table = [
 	"There is an update available for your Chevereto based website." => [
 		0 => "קיים עדכון זמין עבור אתר האינטרנט שלך מבוסס Chevereto.",
 	],
-	"The release notes for this update are:" => [
-		0 => "הערות שחרור עבור עדכון זה:",
-	],
 	"admin dashboard" => [
 		0 => "פאנל ניהול",
 	],
@@ -267,21 +420,6 @@ $translation_table = [
 	],
 	"We use our own and third party cookies to improve your browsing experience and our services. If you continue using our website is understood that you accept this %cookie_policy_link." => [
 		0 => "<b>באתר זה נעשה שימוש בקבצי cookie כדי לשפר את חווית הגלישה שלכם.</b>\nלמידע נוסף על האופן שבו אנו משתמשים בקבצי cookies, עיינו במדיניות הפרטיות שלנו. במידה ותמשיכו להשתמש באתר שלנו, אתם מסכימים לשימוש כזה בקבצי %cookie_policy_link",
-	],
-	"You have been forbidden to use this website." => [
-		0 => "נחסמת זמנית לכניסה למערכת.",
-	],
-	"Feel free to browse and discover all my shared images and albums." => [
-		0 => "הרגישו חופשיים לעיין ולראות את כל האלבומים והתמונות המשותפים שלי.",
-	],
-	"View all my images" => [
-		0 => "צפייה בכל התמונות שלי",
-	],
-	"Plugin" => [
-		0 => "תוספים",
-	],
-	"That page doesn't exist" => [
-		0 => "הדף אינו קיים.",
 	],
 	"Forgot password?" => [
 		0 => "שכחתי סיסמא?",
@@ -328,14 +466,8 @@ $translation_table = [
 	"Welcome to %s" => [
 		0 => "ברוכים הבאים ל%s",
 	],
-	"Passwords don't match" => [
-		0 => "הסיסמאות אינן תואמות",
-	],
 	"Email already being used" => [
 		0 => "דוא\"ל כבר בשימוש",
-	],
-	"Check the errors in the form to continue." => [
-		0 => "בדקו שגיאות בטופס כדי להמשיך.",
 	],
 	"Password required" => [
 		0 => "נדרשת סיסמא",
@@ -550,9 +682,6 @@ $translation_table = [
 	"Invalid theme main color" => [
 		0 => "צבע עיקרי של ערכת הנושא לא חוקי",
 	],
-	"Invalid theme top bar color" => [
-		0 => "צבע באר עליון של ערכת הנושא לא חוקי",
-	],
 	"Invalid theme top bar button color" => [
 		0 => "צבע כפתור הבאר העליון של ערכת הנושא לא חוקי",
 	],
@@ -703,9 +832,6 @@ $translation_table = [
 	"Sign in" => [
 		0 => "היכנס",
 	],
-	"Logged out" => [
-		0 => "התנתק",
-	],
 	"Upload images" => [
 		0 => "העלה תמונות",
 	],
@@ -772,9 +898,6 @@ $translation_table = [
 	"%s's Images" => [
 		0 => "התמונות של %s",
 	],
-	"%s's Albums" => [
-		0 => "האלבומים של %s",
-	],
 	"Results for" => [
 		0 => "תוצאות עבור",
 	],
@@ -796,9 +919,6 @@ $translation_table = [
 	"Discovery" => [
 		0 => "גלה עוד",
 	],
-	"Close" => [
-		0 => "סגור",
-	],
 	"Advanced search" => [
 		0 => "חיפוש מתקדם",
 	],
@@ -810,9 +930,6 @@ $translation_table = [
 	],
 	"Notifications" => [
 		0 => "התראות",
-	],
-	"loading" => [
-		0 => "טוען נתונים",
 	],
 	"You don't have notifications" => [
 		0 => "אין התראות חדשות",
@@ -958,12 +1075,6 @@ $translation_table = [
 	"Uploading" => [
 		0 => "בהעלאה..",
 	],
-	"or" => [
-		0 => "או",
-	],
-	"cancel" => [
-		0 => "ביטול",
-	],
 	"cancel remaining" => [
 		0 => "בטל את העלאה",
 	],
@@ -982,14 +1093,8 @@ $translation_table = [
 	"copy" => [
 		0 => "העתק",
 	],
-	"Edit" => [
-		0 => "עריכה",
-	],
 	"Remove" => [
 		0 => "הסרה",
-	],
-	"Edit image" => [
-		0 => "עריכת תמונה",
 	],
 	"Title" => [
 		0 => "כותרת",
@@ -1047,12 +1152,6 @@ $translation_table = [
 	],
 	"Error report" => [
 		0 => "דוח שגיאות",
-	],
-	"album" => [
-		0 => "אלבום",
-		1 => "אלבומים",
-		2 => "אלבומים",
-		3 => "אלבומים",
 	],
 	"Viewer links" => [
 		0 => "קישורים ישירים (מקוצר)",
@@ -1309,9 +1408,6 @@ $translation_table = [
 	"Flag as safe" => [
 		0 => "סמן כתוכן מאושר",
 	],
-	"Delete" => [
-		0 => "מחק",
-	],
 	"Create new album" => [
 		0 => "צור אלבום חדש",
 	],
@@ -1320,12 +1416,6 @@ $translation_table = [
 	],
 	"There's nothing to show here." => [
 		0 => "לא נמצאו נתונים.",
-	],
-	"Edit image details" => [
-		0 => "עריכת פרטי תמונה",
-	],
-	"Edit album details" => [
-		0 => "עריכת פרטי האלבום",
 	],
 	"All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>." => [
 		0 => "כל התמונות יועברו לאלבום החדש. ניתן גם להעביר תמונות <a class=\"modal-switch\" data-switch=\"move-existing-album\">מאלבום קיים</a>",
@@ -1378,9 +1468,6 @@ $translation_table = [
 	"Keyboard shortcuts" => [
 		0 => "קיצורי דרך במקלדת",
 	],
-	"Like" => [
-		0 => "לייק",
-	],
 	"Uploaded by guest" => [
 		0 => "הועלה על ידי אורח",
 	],
@@ -1393,11 +1480,11 @@ $translation_table = [
 	"by %u" => [
 		0 => "מאת %u",
 	],
-	"Select" => [
-		0 => "בחירה",
-	],
 	"Toggle unsafe flag" => [
 		0 => "אפשרות דגל לא בטוח",
+	],
+	"That page doesn't exist" => [
+		0 => "הדף אינו קיים.",
 	],
 	"The requested page was not found." => [
 		0 => "הדף המבוקש אינו נמצא",
@@ -1407,9 +1494,6 @@ $translation_table = [
 	],
 	"The user has been deleted" => [
 		0 => "המשתמש נמחק",
-	],
-	"The content has been deleted." => [
-		0 => "התוכן נמחק בהצלחה.",
 	],
 	"Your account is almost ready" => [
 		0 => "החשבון שלך כמעט מוכן",
@@ -1477,9 +1561,6 @@ $translation_table = [
 	"Do you really want to delete this album and all of its images? This can't be undone." => [
 		0 => "האם הינך בטוח במחיקת האלבום כולל התמונות? לא ניתן לבטל פעולה זו.",
 	],
-	"Delete album" => [
-		0 => "מחיקת אלבום",
-	],
 	"You like this" => [
 		0 => "אהבת את זה",
 	],
@@ -1504,14 +1585,14 @@ $translation_table = [
 	"Disk used" => [
 		0 => "שימוש דיסק",
 	],
-	"Cancel" => [
-		0 => "ביטול",
-	],
 	"Errors" => [
 		0 => "שגיאות",
 	],
 	"Status" => [
 		0 => "סטטוס",
+	],
+	"Cancel" => [
+		0 => "ביטול",
 	],
 	"Add user" => [
 		0 => "הוספת משתמש",
@@ -1882,9 +1963,6 @@ $translation_table = [
 	"Split landing + images" => [
 		0 => "דף נחיתה + תמונות אחרונות",
 	],
-	"Route explore" => [
-		0 => "דף סיור",
-	],
 	"Select the homepage style. To customize it further edit app/themes/%s/views/index.php" => [
 		0 => "בחר את סגנון דף הבית. כדי להתאימו אישית יש לערוך את הקובץ app/themes/%s/views/index.php",
 	],
@@ -2011,6 +2089,9 @@ $translation_table = [
 	"Don't have an account? <a href='%s'>Sign up</a> now." => [
 		0 => "אין לך משתמש? <a href='%s'>הירשם עכשיו</a>.",
 	],
+	"Logged out" => [
+		0 => "התנתק",
+	],
 	"You have been logged off %s. Hope to see you soon." => [
 		0 => "התנתקת בהצלחה ממערכת %s, מקווים לראותך בקרוב",
 	],
@@ -2116,6 +2197,12 @@ $translation_table = [
 	"Tell us a little bit about you" => [
 		0 => "ספר בקצרה מי אתה !!",
 	],
+	"Feel free to browse and discover all my shared images and albums." => [
+		0 => "הרגישו חופשיים לעיין ולראות את כל האלבומים והתמונות המשותפים שלי.",
+	],
+	"View all my images" => [
+		0 => "צפייה בכל התמונות שלי",
+	],
 	"Login" => [
 		0 => "התחבר",
 	],
@@ -2152,9 +2239,6 @@ $translation_table = [
 	"Delete background" => [
 		0 => "מחק רקע",
 	],
-	"Edit profile" => [
-		0 => "ערוך פרופיל",
-	],
 	"Follower" => [
 		0 => "עוקבים",
 		1 => "עוקבים",
@@ -2163,6 +2247,12 @@ $translation_table = [
 	],
 	"Follow" => [
 		0 => "לעקוב",
+	],
+	"You have been forbidden to use this website." => [
+		0 => "נחסמת זמנית לכניסה למערכת.",
+	],
+	"Plugin" => [
+		0 => "תוספים",
 	],
 	"General questions/comments" => [
 		0 => "שאלות כלליות\\הערות",
@@ -2193,111 +2283,6 @@ $translation_table = [
 	],
 	"Subject" => [
 		0 => "נושא",
-	],
-	"Installed version is v%s" => [
-		0 => "הגירסה הנוכחית היא %s",
-	],
-	"Last available release is v%s" => [
-		0 => "יש עדכון זמין לגירסה %s",
-	],
-	"Update needed, proceeding to download" => [
-		0 => "מוריד עדכון חדש, אנא המתן",
-	],
-	"No update needed" => [
-		0 => "עדכון לא נדרש",
-	],
-	"Starting v%s download" => [
-		0 => "התחיל בהורדת עדכון %s",
-	],
-	"Downloaded v%s, proceeding to extraction" => [
-		0 => "עדכון %s הורד בהצלחה, ממתין לאימות נתונים",
-	],
-	"Attempting to extract v%s" => [
-		0 => "עדכון %s עבר אימות בהצלחה, וכעת מתקין קבצים",
-	],
-	"You must enter the album name." => [
-		0 => "לא הוזן שם אלבום",
-	],
-	"Confirm" => [
-		0 => "אישור פעולה",
-	],
-	"Select existing album" => [
-		0 => "בחר לאלבום קיים",
-	],
-	"An error occurred. Please try again later." => [
-		0 => "התרחשה שגיאה. אנא נסו שוב מאוחר יותר.",
-	],
-	"Please select a valid image file type." => [
-		0 => "בחר סוג קובץ תמונה תקין.",
-	],
-	"Please select a picture of at most %s size." => [
-		0 => "ניתן לבחור תמונה עד גודל %s.",
-	],
-	"Profile image updated." => [
-		0 => "תמונת פרופיל עודכנה בהצלחה.",
-	],
-	"Profile background image updated." => [
-		0 => "תמונת רקע פרופיל עודכנה בהצלחה.",
-	],
-	"Profile background image deleted." => [
-		0 => "תמונת רקע פרופיל נמחקה בהצלחה.",
-	],
-	"Error deleting profile background image." => [
-		0 => "שגיאה בעת מחיקת תמונת רקע פרופיל, נסה שוב.",
-	],
-	"Update available v%s" => [
-		0 => "עדכון זמין (גירסה %s)",
-	],
-	"There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file." => [
-		0 => "קיים עדכון זמין עבור המערכת. באפשרותך להוריד ולהתקין את העדכון באופן אוטומטי, או להיכנס לכתובת %s כדי להמשיך ולהוריד את הקובץ.",
-	],
-	"Update now" => [
-		0 => "עדכן כעת",
-	],
-	"This website is running latest %s version" => [
-		0 => "הינך נמצא בגירסה המעודכנת של מערכת %s",
-	],
-	"Toggle select" => [
-		0 => "סמן בחירה",
-	],
-	"Toggle flag" => [
-		0 => "סמן כתוכן פוגעני",
-	],
-	"File too big." => [
-		0 => "הקובץ בנפח גדול",
-	],
-	"Some files couldn't be added" => [
-		0 => "לא ניתן להעלות קבצים מסויימים",
-	],
-	"Image edited successfully." => [
-		0 => "שינוי פרטי התמונה עודכן בהצלחה",
-	],
-	"private" => [
-		0 => "פרטי",
-	],
-	"Album edited successfully." => [
-		0 => "שינוי פרטי האלבום עודכן בהצלחה",
-	],
-	"Invalid URL key." => [
-		0 => "מפתח קישור לא חוקי",
-	],
-	"Category URL key already being used." => [
-		0 => "מפתח קישור של קטגוריה כבר נמצא בשימוש",
-	],
-	"Category %s added." => [
-		0 => "קטגוריית %s נוספה בהצלחה.",
-	],
-	"User added successfully." => [
-		0 => "משתמש התווסף בהצלחה",
-	],
-	"The content has been moved." => [
-		0 => "התמונות הועברו לאלבום בהצלחה.",
-	],
-	"Unselect" => [
-		0 => "בטל בחירה",
-	],
-	"The content has been edited." => [
-		0 => "הפרטים נערכו בהצלחה.",
 	],
 	"All the changes that you have made will be lost if you continue." => [
 		0 => "השינויים שביצעת לא נשמרו. האם להמשיך?",

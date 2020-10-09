@@ -72,14 +72,20 @@
                 if (is_owner() or is_content_manager()) {
                     ?>
                     <div class="breadcrum-item">
-                        <a class="edit-link" data-modal="edit"><span class="icon-edit"></span><span><?php _se('Edit image details'); ?></span></a>
+                        <a class="link link--edit" data-modal="edit"><span class="icon icon-edit"></span><span><?php _se('Edit'); ?></span></a>
                     </div>
                     <?php
+                    if (!get_image()['is_approved'] && is_content_manager()) { ?>
+                    <div class="breadcrum-item">
+                        <a class="link link--approve" data-confirm="<?php _se("Do you really want to approve this image? The image will go public if you approve it."); ?>" data-submit-fn="CHV.fn.submit_resource_approve" data-ajax-deferred="CHV.fn.complete_resource_approve" data-ajax-url="<?php echo G\get_base_url('json'); ?>"><span class="icon icon-checkmark"></span><span><?php _se('Approve'); ?></span></a>
+                    </div>
+                    <?php
+                    }
                     if (is_allowed_to_delete_content()) {
                         ?>
-                        <div class="breadcrum-item">
-                            <a class="delete-link" data-confirm="<?php _se("Do you really want to delete this image? This can't be undone."); ?>" data-submit-fn="CHV.fn.submit_resource_delete" data-ajax-deferred="CHV.fn.complete_resource_delete" data-ajax-url="<?php echo G\get_base_url('json'); ?>"><?php _se('Delete image'); ?></a>
-                        </div>
+                    <div class="breadcrum-item">
+                        <a class="link link--delete" data-confirm="<?php _se("Do you really want to delete this image? This can't be undone."); ?>" data-submit-fn="CHV.fn.submit_resource_delete" data-ajax-deferred="CHV.fn.complete_resource_delete" data-ajax-url="<?php echo G\get_base_url('json'); ?>"><span class="icon icon-remove"></span><span><?php _se('Delete'); ?></span></a>
+                    </div>
                 <?php
                     }
                 }
@@ -109,7 +115,6 @@
             <?php
             } ?>
         </div>
-
     </div>
 
     <?php
@@ -274,12 +279,12 @@
         </div>
 
         <?php if (CHV\isShowEmbedContent()) {
-                ?>
+                    ?>
             <div id="tab-codes" class="tabbed-content<?php echo get_current_tab() == 'codes' ? ' visible' : null; ?>">
 
                 <div class="growl static text-align-center margin-bottom-30 clear-both<?php if (get_image()['album']['privacy'] == 'public' || get_image()['album']['privacy'] == null) {
-                    echo ' soft-hidden';
-                } ?>" data-content="privacy-private"><?php echo get_image()['album']['privacy_notes']; ?></div>
+                        echo ' soft-hidden';
+                    } ?>" data-content="privacy-private"><?php echo get_image()['album']['privacy_notes']; ?></div>
 
                 <div class="panel-share c16 phablet-c1 grid-columns margin-right-10">
                     <?php
@@ -305,7 +310,7 @@
 
             </div>
         <?php
-            } ?>
+                } ?>
 
         <?php
         if (is_admin()) {
@@ -324,16 +329,16 @@
 
 <?php
 if (is_owner() or is_content_manager()) {
-            ?>
+        ?>
     <div data-modal="form-modal" class="hidden" data-submit-fn="CHV.fn.submit_image_edit" data-before-fn="CHV.fn.before_image_edit" data-ajax-deferred="CHV.fn.complete_image_edit" data-ajax-url="<?php echo G\get_base_url('json'); ?>">
-        <span class="modal-box-title"><?php _se('Edit image details'); ?></span>
+        <span class="modal-box-title"><?php _se('Edit'); ?></span>
         <div class="modal-form">
             <?php
             G\Render\include_theme_file('snippets/form_image'); ?>
         </div>
     </div>
 <?php
-        }
+    }
 
 if (CHV\getSetting('theme_show_social_share')) {
     G\Render\include_theme_file('snippets/modal_share');

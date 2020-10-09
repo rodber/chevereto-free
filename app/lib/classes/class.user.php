@@ -184,7 +184,9 @@ class User
             if (empty($values['registration_ip'])) {
                 $values['registration_ip'] = G\get_client_ip();
             }
-
+            if (!array_key_exists('is_dark_mode', $values)) {
+                $values['is_dark_mode'] = Settings::get('theme_tone') == 'dark';
+            }
             // Detect flood (son 48 horas que hay que aprovechar)
             if (!Login::getUser()['is_admin']) {
                 $db = DB::getInstance();

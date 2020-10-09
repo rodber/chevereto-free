@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2019-12-12 15:27+0000\n"
-"PO-Revision-Date: 2019-12-12 15:27+0000\n"
+"POT-Creation-Date: 2020-09-02 17:16+0000\n"
+"PO-Revision-Date: 2020-09-02 17:16+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -528,8 +528,19 @@ msgstr "Снять выделение"
 msgid "The content has been edited."
 msgstr "Содержимое отредактировано."
 
+msgid "Select number of threads"
+msgstr "Выберите количество потоков"
+
 msgid "Spam detected"
 msgstr "Обнаружен спам"
+
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
+#: ../../../app/themes/Peafowl/views/user.php:99
+msgid "album"
+msgid_plural "albums"
+msgstr[0] "альбом"
+msgstr[1] "альбома"
+msgstr[2] "альбомов"
 
 #: ../../../app/lib/classes/class.album.php:100
 msgid "Untitled"
@@ -853,45 +864,6 @@ msgstr "Мы используем cookie-файлы, чтобы сделать �
 msgid "I understand"
 msgstr "Хорошо"
 
-#: ../../../app/loader.php:180
-msgid "You have been forbidden to use this website."
-msgstr "Вам запрещено использовать этот сайт."
-
-#: ../../../app/loader.php:279
-#: ../../../app/themes/Peafowl/views/settings.php:441
-msgid "Feel free to browse and discover all my shared images and albums."
-msgstr "Чувствуйте себя как дома и наслаждайтесь моими изображениями и альбомами."
-
-#: ../../../app/loader.php:282
-#: ../../../app/themes/Peafowl/views/settings.php:447
-msgid "View all my images"
-msgstr "Показать мои изображения"
-
-msgid "Plugin"
-msgstr "Плагин"
-
-#: ../../../app/routes/route.account.php:140
-#: ../../../app/routes/route.account.php:299
-#: ../../../app/routes/route.account.php:321
-#: ../../../app/routes/route.account.php:388
-#: ../../../app/routes/route.json.php:24 ../../../app/routes/route.json.php:37
-#: ../../../app/routes/route.json.php:49 ../../../app/routes/route.json.php:561
-#: ../../../app/routes/route.json.php:623
-#: ../../../app/routes/route.json.php:672
-#: ../../../app/routes/route.json.php:719 ../../../app/routes/route.page.php:66
-#: ../../../app/themes/Peafowl/views/request-denied.php:8
-#: ../../../content/pages/default/contact.php:14
-msgid "Request denied"
-msgstr "В запросе отказано"
-
-#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
-msgid "That page doesn't exist"
-msgstr "Эта страница не существует"
-
-#, php-format
-msgid "Page %s"
-msgstr "Страница %s"
-
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
 #: ../../../app/themes/Peafowl/snippets/modal_login.php:24
@@ -934,6 +906,20 @@ msgstr "Неверное Имя пользователя/E-mail"
 #: ../../../app/routes/route.account.php:129
 msgid "User doesn't have an email."
 msgstr "Для этого пользователя не задан адрес электронной почты."
+
+#: ../../../app/routes/route.account.php:140
+#: ../../../app/routes/route.account.php:299
+#: ../../../app/routes/route.account.php:321
+#: ../../../app/routes/route.account.php:388
+#: ../../../app/routes/route.json.php:24 ../../../app/routes/route.json.php:37
+#: ../../../app/routes/route.json.php:49 ../../../app/routes/route.json.php:561
+#: ../../../app/routes/route.json.php:623
+#: ../../../app/routes/route.json.php:672
+#: ../../../app/routes/route.json.php:719 ../../../app/routes/route.page.php:66
+#: ../../../app/themes/Peafowl/views/request-denied.php:8
+#: ../../../content/pages/default/contact.php:14
+msgid "Request denied"
+msgstr "В запросе отказано"
 
 #: ../../../app/routes/route.account.php:145
 msgid "Account needs to be activated to use this feature"
@@ -1387,11 +1373,6 @@ msgstr "Страница изображения"
 msgid "Inside viewer top (image page)"
 msgstr "В заголовке просмотрщика (страница изображения)"
 
-#: ../../../app/routes/route.dashboard.php:413
-#: ../../../app/routes/route.dashboard.php:417
-msgid "Expected banner size 728x90"
-msgstr "Рекомендуемый размер баннера 728x90"
-
 #: ../../../app/routes/route.dashboard.php:416
 msgid "Inside viewer foot (image page)"
 msgstr "Внизу просмотрщика (страница изображения)"
@@ -1509,10 +1490,6 @@ msgstr "Неверный стиль темы"
 #: ../../../app/routes/route.dashboard.php:627
 msgid "Invalid theme main color"
 msgstr "Неверный цвет темы"
-
-#: ../../../app/routes/route.dashboard.php:632
-msgid "Invalid theme top bar color"
-msgstr "Неверный цвет панели"
 
 #: ../../../app/routes/route.dashboard.php:637
 msgid "Invalid theme top bar button color"
@@ -2240,10 +2217,6 @@ msgstr "вставить"
 msgid "Remove"
 msgstr "Удалить"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:154
-msgid "Edit image"
-msgstr "Редактировать изображение"
-
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
 #: ../../../app/themes/Peafowl/snippets/form_image.php:4
 #: ../../../app/themes/Peafowl/views/dashboard.php:441
@@ -2370,14 +2343,6 @@ msgstr "Выберите существующий альбом для перем
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:252
 msgid "Error report"
 msgstr "Отчет об ошибках"
-
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
-#: ../../../app/themes/Peafowl/views/user.php:99
-msgid "album"
-msgid_plural "albums"
-msgstr[0] "альбом"
-msgstr[1] "альбома"
-msgstr[2] "альбомов"
 
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
@@ -2569,9 +2534,6 @@ msgstr "При обработке папок верхнего уровня, ка
 
 msgid "Threads"
 msgstr "Потоки"
-
-msgid "Select number of threads"
-msgstr "Выберите количество потоков"
 
 #, php-format
 msgid "This determines how intensive and fast will be the import process. Don't use more than %s threads on a shared server."
@@ -2821,6 +2783,9 @@ msgstr "Создать альбом"
 msgid "Sign in with another account"
 msgstr "Войти через"
 
+msgid "Continue with %label%"
+msgstr "Продолжить с %label%"
+
 msgid "Home"
 msgstr "Главная"
 
@@ -2829,18 +2794,6 @@ msgstr "Главная"
 #: ../../../app/themes/Peafowl/views/index.php:63
 msgid "There's nothing to show here."
 msgstr "Нет элементов для отображения."
-
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
-#: ../../../app/themes/Peafowl/views/image.php:69
-#: ../../../app/themes/Peafowl/views/image.php:457
-msgid "Edit image details"
-msgstr "Редактировать изображение"
-
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
-#: ../../../app/themes/Peafowl/views/album.php:22
-#: ../../../app/themes/Peafowl/views/album.php:118
-msgid "Edit album details"
-msgstr "Редактировать альбом"
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
 msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
@@ -2934,6 +2887,10 @@ msgstr "от %u"
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:7
 msgid "Toggle unsafe flag"
 msgstr "Включить отметку о небезопасном содержимом"
+
+#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
+msgid "That page doesn't exist"
+msgstr "Эта страница не существует"
 
 #: ../../../app/themes/Peafowl/views/404.php:7
 msgid "The requested page was not found."
@@ -3060,10 +3017,6 @@ msgstr "Скрытое содержимое"
 msgid "Do you really want to delete this album and all of its images? This can't be undone."
 msgstr "Вы действительно хотите удалить этот альбом со всеми изображениями? Это действие необратимо."
 
-#: ../../../app/themes/Peafowl/views/album.php:25
-msgid "Delete album"
-msgstr "Удалить"
-
 #: ../../../app/themes/Peafowl/views/image.php:85
 msgid "You like this"
 msgstr "Вам это нравится"
@@ -3095,46 +3048,19 @@ msgstr "документации"
 msgid "Learn more about %s at our %d."
 msgstr "Узнайте больше о %s в %d."
 
+msgid "For Nginx, you must use %nginx%. For Apache, %apache%."
+msgstr "Для Nginx необходимо использовать %nginx%. Для Apache, %apache%."
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:40
 #: ../../../app/themes/Peafowl/views/dashboard.php:1732
 msgid "Disk used"
 msgstr "Использовано места на диске"
 
-msgid "Add import job"
-msgstr "Добавить задачу импорта"
+msgid "Automatic importing"
+msgstr "Автоматический импорт"
 
-#, php-format
-msgid "This tool allows to mass add content to your website by pointing a system path with the content you want to import. It supports the addition of users, albums, and images using a folder based structure. You can learn more about the folder structure, adding metadata, and all about this tool in our %d."
-msgstr "Эта утилита, позволит вам добавить контент на ваш сайт, посредством указания пути к нему. Поддерживается импорт пользователей, альбомов и изображений, через структуру папок. Вы можете узнать больше о структуре папок, добавлении меток и об этой утилите в нашей %d."
-
-msgid "Process import"
-msgstr "Импорт"
-
-#, php-format
-msgid "Top level folders as %s"
-msgstr "Папки верхнего уровня как %s"
-
-msgid "Actions"
-msgstr "Действия"
-
-msgid "Process"
-msgstr "Процесс"
-
-msgid "Pause"
-msgstr "Пауза"
-
-msgid "Cancel"
-msgstr "Отмена"
-
-msgid "Process log"
-msgstr "Журнал импорта"
-
-msgid "Errors"
-msgstr "Ошибки"
-
-#, php-format
-msgid "Do you really want to remove the import ID %s?"
-msgstr "Вы действительно хотите удалить задачу с ID %s?"
+msgid "Reset to clear stats and logs."
+msgstr "Сброс, для очистки статистики и журналов."
 
 msgid "Queued"
 msgstr "В очереди"
@@ -3151,12 +3077,50 @@ msgstr "Отменено"
 msgid "Completed"
 msgstr "Завершено"
 
-msgid "Parser"
-msgstr "Парсер"
+msgid "Actions"
+msgstr "Действия"
+
+msgid "Reset"
+msgstr "Сброс"
+
+msgid "Pause"
+msgstr "Пауза"
+
+msgid "Process log"
+msgstr "Журнал импорта"
+
+msgid "Errors"
+msgstr "Ошибки"
 
 #: ../../../app/themes/Peafowl/views/settings.php:105
 msgid "Status"
 msgstr "Статус"
+
+msgid "Add import job"
+msgstr "Добавить задачу импорта"
+
+msgid "Process import"
+msgstr "Импорт"
+
+#, php-format
+msgid "Top level folders as %s"
+msgstr "Папки верхнего уровня как %s"
+
+msgid "Process"
+msgstr "Процесс"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+#, php-format
+msgid "Do you really want to remove the import ID %s?"
+msgstr "Вы действительно хотите удалить задачу с ID %s?"
+
+msgid "Manual importing"
+msgstr "Ручной импорт"
+
+msgid "Parser"
+msgstr "Парсер"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:80
 #: ../../../app/themes/Peafowl/views/dashboard.php:84
@@ -3496,14 +3460,6 @@ msgstr "Включить загрузку"
 msgid "Enable this if you want to allow image uploads. This setting doesn't affect administrators."
 msgstr "Включите, если вы хотите разрешить загрузку изображений. Эта настройка не влияет на администраторов."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:639
-msgid "Guest uploads"
-msgstr "Гостевые загрузки"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:645
-msgid "Enable this if you want to allow non registered users to upload."
-msgstr "Включите, если хотите позволить загружать изображения незарегистрированным пользователям."
-
 msgid "Upload user interface"
 msgstr "Загрузить интерфейс пользователя"
 
@@ -3512,6 +3468,14 @@ msgstr "Контейнер страницы"
 
 msgid "route"
 msgstr "маршрут"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:639
+msgid "Guest uploads"
+msgstr "Гостевые загрузки"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:645
+msgid "Enable this if you want to allow non registered users to upload."
+msgstr "Включите, если хотите позволить загружать изображения незарегистрированным пользователям."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1353
 msgid "Enable embed codes (uploader)"
@@ -4072,26 +4036,6 @@ msgstr "Шестнадцатеричный код цвета"
 msgid "Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>."
 msgstr "Используйте это поле, чтобы указать основной цвет темы. Значение должно быть указано в <a href=\"%s\" target=\"_blank\">шестнадцатеричном формате</a>."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1203
-msgid "Top bar color"
-msgstr "Цвет верхней панели"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1223
-#: ../../../app/themes/Peafowl/views/dashboard.php:1461
-msgid "Black"
-msgstr "Черный"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1224
-#: ../../../app/themes/Peafowl/views/dashboard.php:1462
-msgid "White"
-msgstr "Белый"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1210
-msgid "If you set this to \"white\" the top bar and all the black tones will be changed to white tones."
-msgstr "Если вы выберете \"Белый\", цвет верхней панели и некоторых других элементов будет заменен на светлый."
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1214
 msgid "Top bar button color"
 msgstr "Цвет кнопок верхней панели"
@@ -4120,6 +4064,18 @@ msgstr "Красный"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1460
 msgid "Grey"
 msgstr "Серый"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1223
+#: ../../../app/themes/Peafowl/views/dashboard.php:1461
+msgid "Black"
+msgstr "Черный"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1224
+#: ../../../app/themes/Peafowl/views/dashboard.php:1462
+msgid "White"
+msgstr "Белый"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1230
 msgid "Color for the top bar buttons like the \"Create account\" button."
@@ -4214,6 +4170,12 @@ msgstr "Включите эту настройку, чтобы показыва�
 msgid "Enable embed codes (content)"
 msgstr "Коды для встраивания (в просмотре)"
 
+msgid "Everybody"
+msgstr "Все пользователи"
+
+msgid "Users only"
+msgstr "Только зарегистрированные"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:1349
 msgid "Enable this if you want to show embed codes for the content."
 msgstr "Включите эту настройку, если вы хотите показывать коды для встраивания в просмотре изображений."
@@ -4257,10 +4219,6 @@ msgstr "Целевая страница"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1395
 msgid "Split landing + images"
 msgstr "Целевая страница + изображения"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1396
-msgid "Route explore"
-msgstr "Переадресовывать на Обзор"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1401
 #, php-format
@@ -4373,9 +4331,6 @@ msgstr "Включите, чтобы показывать уведомления
 
 msgid "Dump update query"
 msgstr "Просмотреть текст запроса"
-
-msgid "Enable this if you want to manually run the SQL update query."
-msgstr "Включите, чтобы автоматически определять и устанавливать язык пользователя."
 
 #, php-format
 msgid "SEO %s URLs"
@@ -5153,10 +5108,6 @@ msgstr "Расскажите нам немного о себе"
 msgid "User has no connections."
 msgstr "У пользователя нет связей с другими аккаунтами."
 
-#: ../../../app/themes/Peafowl/views/settings.php:391
-msgid "Link your account to external services to be able to login and share content."
-msgstr "Свяжите ваш аккаунт со сторонними сервисами, чтобы иметь возможность входить через них и делиться содержимым."
-
 #: ../../../app/themes/Peafowl/views/settings.php:398
 #, php-format
 msgid "Do you really want to disconnect %s from this account?"
@@ -5191,9 +5142,19 @@ msgstr "отвязать"
 msgid "Connect %s"
 msgstr "Связать с %s"
 
+#: ../../../app/loader.php:279
+#: ../../../app/themes/Peafowl/views/settings.php:441
+msgid "Feel free to browse and discover all my shared images and albums."
+msgstr "Чувствуйте себя как дома и наслаждайтесь моими изображениями и альбомами."
+
 #: ../../../app/themes/Peafowl/views/settings.php:446
 msgid "Button"
 msgstr "Кнопка"
+
+#: ../../../app/loader.php:282
+#: ../../../app/themes/Peafowl/views/settings.php:447
+msgid "View all my images"
+msgstr "Показать мои изображения"
 
 msgid "Login"
 msgstr "Вход"
@@ -5243,10 +5204,6 @@ msgstr "Фон профиля будет удален. Это действие �
 msgid "Delete background"
 msgstr "Удалить фон"
 
-#: ../../../app/themes/Peafowl/views/user.php:61
-msgid "Edit profile"
-msgstr "Редактировать профиль"
-
 #: ../../../app/themes/Peafowl/views/user.php:75
 msgid "Follower"
 msgid_plural "Followers"
@@ -5257,6 +5214,17 @@ msgstr[2] "Подписчиков"
 #: ../../../app/themes/Peafowl/views/user.php:81
 msgid "Follow"
 msgstr "Подписаться"
+
+#: ../../../app/loader.php:180
+msgid "You have been forbidden to use this website."
+msgstr "Вам запрещено использовать этот сайт."
+
+msgid "Plugin"
+msgstr "Плагин"
+
+#, php-format
+msgid "Page %s"
+msgstr "Страница %s"
 
 #: ../../../app/routes/route.page.php:61
 #: ../../../content/pages/default/contact.php:7

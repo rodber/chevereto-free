@@ -25,7 +25,7 @@
 .btn,
 .top-btn-text,
 .pop-btn-text,
-.edit-link,
+.link,
 .btn-container,
 .input-search {
 	-webkit-touch-callout: none;
@@ -382,29 +382,26 @@ a.number-figures:hover * {
 	cursor: pointer;
 }
 
-a.edit-link,
-a.delete-link {
+a.link {
 	font-size: 13px;
 	font-size: 0.93rem;
 	text-decoration: none;
 	font-weight: normal;
 }
-
-a.delete-link {
-	color: #D90000;
+a.link--delete {
+	color: #e74c3c;
 }
-
-a.edit-link:hover span,
-a.delete-link:hover {
+a.link--approve {
+	color: #2ecc71;
+}
+a.link span.icon,
+a.link:hover span.icon {
+    margin-right: 5px;
+    font-size: 80%;
+    text-decoration: none;
+}
+a.link:hover span {
 	text-decoration: underline;
-}
-
-a.edit-link span.icon-edit {
-	font-size: 9px;
-	width: 9px;
-	display: inline-block;
-	margin-right: 3px;
-	text-decoration: none;
 }
 
 .disabled,
@@ -839,8 +836,8 @@ input.search:focus,
 
 .checkbox-label input {
 	position: absolute;
-	padding: 0;
-	margin: 2px 0 0;
+    padding: 0;
+    margin: 0;
 	margin-left: -20px;
 }
 

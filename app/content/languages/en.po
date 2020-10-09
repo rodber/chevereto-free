@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Chevereto V3\n"
-"POT-Creation-Date: 2020-04-15 13:52-0400\n"
-"PO-Revision-Date: 2020-04-15 13:52-0400\n"
+"POT-Creation-Date: 2020-09-01 09:57-0400\n"
+"PO-Revision-Date: 2020-09-01 09:57-0400\n"
 "Last-Translator: Rodolfo Berríos <inbox@rodolfoberrios.com>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -18,47 +18,47 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: app/vendor\n"
 "X-Poedit-SearchPathExcluded-1: app/content/languages/cache\n"
 
-#: app/install/installer.php:1672 app/install/installer.php:1681
-#: app/install/installer.php:1684 app/routes/route.account.php:410
-#: app/routes/route.json.php:690 app/routes/route.json.php:1279
+#: app/install/installer.php:1691 app/install/installer.php:1700
+#: app/install/installer.php:1703 app/routes/route.account.php:410
+#: app/routes/route.json.php:709 app/routes/route.json.php:1303
 #: app/routes/route.settings.php:189 app/routes/route.signup.php:92
 #: app/routes/route.signup.php:102 content/pages/default/contact.php:34
 msgid "Invalid email"
 msgstr ""
 
-#: app/install/installer.php:1675 app/routes/route.json.php:685
-#: app/routes/route.json.php:1313 app/routes/route.json.php:1317
+#: app/install/installer.php:1694 app/routes/route.json.php:704
+#: app/routes/route.json.php:1337 app/routes/route.json.php:1341
 #: app/routes/route.settings.php:185 app/routes/route.signup.php:95
 msgid "Invalid username"
 msgstr ""
 
-#: app/install/installer.php:1678 app/routes/route.account.php:350
-#: app/routes/route.album.php:101 app/routes/route.json.php:695
+#: app/install/installer.php:1697 app/routes/route.account.php:350
+#: app/routes/route.album.php:101 app/routes/route.json.php:714
 #: app/routes/route.settings.php:335 app/routes/route.signup.php:98
 msgid "Invalid password"
 msgstr ""
 
-#: app/install/installer.php:1687 app/routes/route.dashboard.php:707
+#: app/install/installer.php:1706 app/routes/route.dashboard.php:705
 msgid "Invalid website mode"
 msgstr ""
 
 #: app/install/template/ready.php:34
-#: app/themes/Peafowl/views/dashboard.php:2578
+#: app/themes/Peafowl/views/dashboard.php:2598
 msgid "From email address"
 msgstr ""
 
 #: app/install/template/ready.php:35
-#: app/themes/Peafowl/views/dashboard.php:2581
+#: app/themes/Peafowl/views/dashboard.php:2601
 msgid "Sender email for emails sent to users."
 msgstr ""
 
 #: app/install/template/ready.php:39
-#: app/themes/Peafowl/views/dashboard.php:2584
+#: app/themes/Peafowl/views/dashboard.php:2604
 msgid "Incoming email address"
 msgstr ""
 
 #: app/install/template/ready.php:40
-#: app/themes/Peafowl/views/dashboard.php:2587
+#: app/themes/Peafowl/views/dashboard.php:2607
 msgid "Recipient for contact form and system alerts."
 msgstr ""
 
@@ -135,109 +135,114 @@ msgstr ""
 msgid "Update failed"
 msgstr ""
 
-#: app/install/update/template/update.php:2 app/install/update/updater.php:42
+#: app/install/update/template/update.php:4 app/install/update/updater.php:39
 msgid "Update in progress"
 msgstr ""
 
-#: app/install/update/updater.php:78
+#: app/install/update/updater.php:75
 #, php-format
 msgid "Missing %s file"
 msgstr ""
 
-#: app/install/update/updater.php:84
+#: app/install/update/updater.php:81
 msgid "Invalid license info"
 msgstr ""
 
-#: app/install/update/updater.php:93
+#: app/install/update/updater.php:90
 msgid "Invalid license key"
 msgstr ""
 
-#: app/install/update/updater.php:96
+#: app/install/update/updater.php:93
 msgid "Can't save file"
 msgstr ""
 
-#: app/install/update/updater.php:109
+#: app/install/update/updater.php:106
 #, php-format
 msgid "Can't download %s"
 msgstr ""
 
-#: app/install/update/updater.php:135
+#: app/install/update/updater.php:130
 #, php-format
 msgid "Can't extract %s"
 msgstr ""
 
-#: app/install/update/updater.php:148
+#: app/install/update/updater.php:141
 #, php-format
 msgid "Can't create %s directory - %e"
 msgstr ""
 
-#: app/install/update/updater.php:158
+#: app/install/update/updater.php:150
 #, php-format
 msgid "Can't update %s file - %e"
 msgstr ""
 
-#: app/lib/chevereto.js:513 app/lib/chevereto.min.js:1
+#: app/lib/chevereto.js:516 app/lib/chevereto.min.js:1
 #: app/routes/route.account.php:502 app/routes/route.signup.php:254
 #: content/pages/default/contact.php:152 lib/Peafowl/peafowl.js:257
 #: lib/Peafowl/peafowl.min.js:1
 msgid "Check the errors in the form to continue."
 msgstr ""
 
-#: app/lib/chevereto.js:1130 app/lib/chevereto.js:1270
-#: app/lib/chevereto.js:1526 app/lib/chevereto.js:4354
-#: app/lib/chevereto.js:4394 app/lib/chevereto.js:4464
-#: app/lib/chevereto.js:4606 app/lib/chevereto.min.js:1
-#: app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:1131 app/lib/chevereto.js:1271
+#: app/lib/chevereto.js:1555 app/lib/chevereto.js:4357
+#: app/lib/chevereto.js:4397 app/lib/chevereto.js:4467
+#: app/lib/chevereto.js:4607 app/lib/chevereto.min.js:1
 msgid "You must enter the album name."
 msgstr ""
 
-#: app/lib/chevereto.js:1331 app/lib/chevereto.js:1588
-#: app/lib/chevereto.js:1688 app/lib/chevereto.min.js:1
+#: app/lib/chevereto.js:1332 app/lib/chevereto.js:1361
+#: app/lib/chevereto.js:1617 app/lib/chevereto.js:1649
+#: app/lib/chevereto.js:1749 app/lib/chevereto.min.js:1
 #: lib/Peafowl/peafowl.js:2980 lib/Peafowl/peafowl.min.js:2
 msgid "Confirm"
 msgstr ""
 
-#: app/lib/chevereto.js:1485 app/lib/chevereto.min.js:1
+#: app/lib/chevereto.js:1339 app/lib/chevereto.js:1624
+#: app/lib/chevereto.min.js:1
+msgid "The content has been approved."
+msgstr ""
+
+#: app/lib/chevereto.js:1514 app/lib/chevereto.min.js:1
 msgid "Select existing album"
 msgstr ""
 
-#: app/lib/chevereto.js:1808 app/lib/chevereto.js:1903
-#: app/lib/chevereto.js:2004 app/lib/chevereto.js:2149
-#: app/lib/chevereto.js:2302 app/lib/chevereto.js:2361
-#: app/lib/chevereto.js:2434 app/lib/chevereto.min.js:1
-#: app/lib/chevereto.min.js:2 lib/Peafowl/peafowl.js:3265
-#: lib/Peafowl/peafowl.js:3940 lib/Peafowl/peafowl.min.js:2
+#: app/lib/chevereto.js:1865 app/lib/chevereto.js:1958
+#: app/lib/chevereto.js:2059 app/lib/chevereto.js:2186
+#: app/lib/chevereto.js:2331 app/lib/chevereto.js:2386
+#: app/lib/chevereto.js:2459 app/lib/chevereto.min.js:1
+#: lib/Peafowl/peafowl.js:3265 lib/Peafowl/peafowl.js:3940
+#: lib/Peafowl/peafowl.min.js:2
 msgid "An error occurred. Please try again later."
 msgstr ""
 
-#: app/lib/chevereto.js:1831 app/lib/chevereto.js:1931
+#: app/lib/chevereto.js:1888 app/lib/chevereto.js:1986
 #: app/lib/chevereto.min.js:1
 msgid "Please select a valid image file type."
 msgstr ""
 
-#: app/lib/chevereto.js:1840 app/lib/chevereto.js:1940
+#: app/lib/chevereto.js:1897 app/lib/chevereto.js:1995
 #: app/lib/chevereto.min.js:1
 #, javascript-format
 msgid "Please select a picture of at most %s size."
 msgstr ""
 
-#: app/lib/chevereto.js:1900 app/lib/chevereto.min.js:1
+#: app/lib/chevereto.js:1955 app/lib/chevereto.min.js:1
 msgid "Profile image updated."
 msgstr ""
 
-#: app/lib/chevereto.js:1993 app/lib/chevereto.min.js:1
+#: app/lib/chevereto.js:2048 app/lib/chevereto.min.js:1
 msgid "Profile background image updated."
 msgstr ""
 
-#: app/lib/chevereto.js:2043 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:2098 app/lib/chevereto.min.js:1
 msgid "Profile background image deleted."
 msgstr ""
 
-#: app/lib/chevereto.js:2050 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:2105 app/lib/chevereto.min.js:1
 msgid "Error deleting profile background image."
 msgstr ""
 
-#: app/lib/chevereto.js:2120 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:2171 app/lib/chevereto.min.js:1
 #: app/routes/route.account.php:353 app/routes/route.settings.php:339
 #: app/themes/Peafowl/views/account/password-reset.php:21
 #: app/themes/Peafowl/views/settings.php:341
@@ -246,12 +251,12 @@ msgstr ""
 msgid "Passwords don't match"
 msgstr ""
 
-#: app/lib/chevereto.js:2163 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:2200 app/lib/chevereto.min.js:1
 #, javascript-format
 msgid "Update available v%s"
 msgstr ""
 
-#: app/lib/chevereto.js:2167 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:2204 app/lib/chevereto.min.js:1
 #, javascript-format
 msgid ""
 "There is an update available for your system. You can automatic download and "
@@ -260,16 +265,16 @@ msgstr ""
 "There is an update available for your system. You can automatic download and "
 "install this update or go to %s to proceed to download the file."
 
-#: app/lib/chevereto.js:2175 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:2212 app/lib/chevereto.min.js:1
 #: app/lib/functions.php:795
 msgid "The release notes for this update are:"
 msgstr ""
 
-#: app/lib/chevereto.js:2186 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:2223 app/lib/chevereto.min.js:1
 msgid "Update now"
 msgstr ""
 
-#: app/lib/chevereto.js:2188 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:2225 app/lib/chevereto.min.js:1
 #: app/themes/Peafowl/snippets/anywhere_upload.php:160
 #: app/themes/Peafowl/snippets/form_album.php:13
 #: app/themes/Peafowl/snippets/form_move_existing_album.php:19
@@ -284,7 +289,7 @@ msgstr ""
 msgid "or"
 msgstr ""
 
-#: app/lib/chevereto.js:2190 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:2227 app/lib/chevereto.min.js:1
 #: app/themes/Peafowl/snippets/anywhere_upload.php:160
 #: app/themes/Peafowl/snippets/anywhere_upload.php:185
 #: app/themes/Peafowl/views/consent-screen.php:13
@@ -295,107 +300,122 @@ msgstr ""
 msgid "cancel"
 msgstr ""
 
-#: app/lib/chevereto.js:2197 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:2234 app/lib/chevereto.min.js:1
 #, javascript-format
 msgid "This website is running latest %s version"
 msgstr ""
 
-#: app/lib/chevereto.js:2420 app/lib/chevereto.min.js:2
-#: app/themes/Peafowl/header.php:233 app/themes/Peafowl/views/settings.php:387
+#: app/lib/chevereto.js:2445 app/lib/chevereto.min.js:1
+#: app/themes/Peafowl/header.php:240 app/themes/Peafowl/views/settings.php:387
 #: lib/Peafowl/peafowl.js:4523 lib/Peafowl/peafowl.min.js:3
 msgid "loading"
 msgstr ""
 
-#: app/lib/chevereto.js:2682 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:2706 app/lib/chevereto.min.js:1
 msgid "Toggle select"
 msgstr ""
 
-#: app/lib/chevereto.js:2683 app/lib/chevereto.min.js:2
-#: app/themes/Peafowl/snippets/viewer_template.php:43
-#: app/themes/Peafowl/views/album.php:63 app/themes/Peafowl/views/image.php:109
+#: app/lib/chevereto.js:2707 app/lib/chevereto.min.js:1
+#: app/themes/Peafowl/snippets/viewer_template.php:45
+#: app/themes/Peafowl/views/album.php:63 app/themes/Peafowl/views/image.php:121
 msgid "Like"
 msgstr ""
 
-#: app/lib/chevereto.js:2684 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:2708 app/lib/chevereto.min.js:1
 msgid "Toggle flag"
 msgstr ""
 
-#: app/lib/chevereto.js:2685 app/lib/chevereto.min.js:2
-#: app/themes/Peafowl/snippets/anywhere_upload.php:241
-#: app/themes/Peafowl/snippets/anywhere_upload.php:243
+#: app/lib/chevereto.js:2709 app/lib/chevereto.min.js:1
+#: app/themes/Peafowl/snippets/anywhere_upload.php:248
+#: app/themes/Peafowl/snippets/anywhere_upload.php:250
+#: app/themes/Peafowl/snippets/anywhere_upload.php:259
+#: app/themes/Peafowl/snippets/user_items_editor.php:17
 #: app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
-#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
-#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
+#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:18
+#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:19
+#: app/themes/Peafowl/views/album.php:39 app/themes/Peafowl/views/album.php:203
+#: app/themes/Peafowl/views/image.php:89 app/themes/Peafowl/views/image.php:378
+#: app/themes/Peafowl/views/user.php:81
 msgid "Edit"
 msgstr ""
 
-#: app/lib/chevereto.js:2686 app/lib/chevereto.min.js:2
-#: app/lib/classes/class.listing.php:615 app/lib/classes/class.listing.php:638
-#: app/routes/route.user.php:235
+#: app/lib/chevereto.js:2710 app/lib/chevereto.min.js:1
+#: app/lib/classes/class.listing.php:614 app/lib/classes/class.listing.php:637
+#: app/routes/route.user.php:233
 #: app/themes/Peafowl/snippets/anywhere_upload.php:113
-#: app/themes/Peafowl/snippets/anywhere_upload.php:263
+#: app/themes/Peafowl/snippets/anywhere_upload.php:270
 #: app/themes/Peafowl/snippets/form_move_existing_album.php:5
 #: app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
 #: app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
-#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
-#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:22
+#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:23
 #: app/themes/Peafowl/views/dashboard.php:52
 msgid "Album"
 msgid_plural "Albums"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/lib/chevereto.js:2687 app/lib/chevereto.min.js:2
-#: app/themes/Peafowl/snippets/listing_tools_editor.php:61
+#: app/lib/chevereto.js:2711
+#: app/themes/Peafowl/snippets/listing_tools_editor.php:57
+#: app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:19
+#: app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:20
+#: app/themes/Peafowl/views/image.php:94
+msgid "Approve"
+msgstr ""
+
+#: app/lib/chevereto.js:2712 app/lib/chevereto.min.js:1
+#: app/themes/Peafowl/snippets/listing_tools_editor.php:64
 #: app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
 #: app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
 #: app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:15
 #: app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:16
-#: app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
-#: app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
-#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:23
-#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:24
+#: app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:26
+#: app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:27
+#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:29
+#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:30
+#: app/themes/Peafowl/views/album.php:45
 #: app/themes/Peafowl/views/dashboard.php:224
 #: app/themes/Peafowl/views/dashboard.php:1100
-#: app/themes/Peafowl/views/dashboard.php:1492
-#: app/themes/Peafowl/views/dashboard.php:1540
+#: app/themes/Peafowl/views/dashboard.php:1507
+#: app/themes/Peafowl/views/dashboard.php:1555
+#: app/themes/Peafowl/views/image.php:101 app/themes/Peafowl/views/user.php:85
 msgid "Delete"
 msgstr ""
 
-#: app/lib/chevereto.js:2688 app/lib/chevereto.min.js:2
-#: app/themes/Peafowl/header.php:134
-#: app/themes/Peafowl/snippets/viewer_template.php:15
-#: app/themes/Peafowl/snippets/viewer_template.php:47
+#: app/lib/chevereto.js:2713 app/lib/chevereto.min.js:1
+#: app/themes/Peafowl/header.php:141
+#: app/themes/Peafowl/snippets/viewer_template.php:17
+#: app/themes/Peafowl/snippets/viewer_template.php:49
 msgid "Close"
 msgstr ""
 
-#: app/lib/chevereto.js:2689 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:2714 app/lib/chevereto.min.js:1
 msgid "Previous"
 msgstr ""
 
-#: app/lib/chevereto.js:2690 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:2715 app/lib/chevereto.min.js:1
 msgid "Next"
 msgstr ""
 
-#: app/lib/chevereto.js:3429 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:3432 app/lib/chevereto.min.js:1
 msgid "Clipboard image"
 msgstr ""
 
-#: app/lib/chevereto.js:3511 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:3514 app/lib/chevereto.min.js:1
 msgid "File too big."
 msgstr ""
 
-#: app/lib/chevereto.js:3525 app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:3528 app/lib/chevereto.min.js:1
 msgid "Invalid or unsupported file format."
 msgstr ""
 
-#: app/lib/chevereto.js:3547 app/lib/chevereto.js:3810
-#: app/lib/chevereto.min.js:2
+#: app/lib/chevereto.js:3551 app/lib/chevereto.js:3815
+#: app/lib/chevereto.min.js:1
 msgid "Some files couldn't be added"
 msgstr ""
 
-#: app/lib/chevereto.js:3843 app/lib/chevereto.min.js:2
-#: app/lib/classes/class.listing.php:482 app/lib/classes/class.upload.php:243
+#: app/lib/chevereto.js:3848 app/lib/chevereto.min.js:1
+#: app/lib/classes/class.listing.php:481 app/lib/classes/class.upload.php:243
 #: app/lib/classes/class.user.php:74 app/routes/route.album.php:239
 #: app/themes/Peafowl/snippets/anywhere_upload.php:52
 #: app/themes/Peafowl/snippets/anywhere_upload.php:92
@@ -406,99 +426,99 @@ msgid_plural "images"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/lib/chevereto.js:4214 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:4217 app/lib/chevereto.min.js:1
 #: app/routes/route.user.php:89
 #, php-format, javascript-format
 msgid "%s's Albums"
 msgstr ""
 
-#: app/lib/chevereto.js:4566 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:4569 app/lib/chevereto.min.js:1
 msgid "Image edited successfully."
 msgstr ""
 
-#: app/lib/chevereto.js:4648 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:4649 app/lib/chevereto.min.js:1
 msgid "private"
 msgstr ""
 
-#: app/lib/chevereto.js:4654 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:4655 app/lib/chevereto.min.js:1
 msgid "Album edited successfully."
 msgstr ""
 
-#: app/lib/chevereto.js:4673 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:4674 app/lib/chevereto.min.js:1
 msgid "Invalid URL key."
 msgstr ""
 
-#: app/lib/chevereto.js:4688 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:4689 app/lib/chevereto.min.js:1
 msgid "Category URL key already being used."
 msgstr ""
 
-#: app/lib/chevereto.js:4774 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:4775 app/lib/chevereto.min.js:1
 msgid "Category successfully deleted."
 msgstr ""
 
-#: app/lib/chevereto.js:4825 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:4826 app/lib/chevereto.min.js:1
 #, javascript-format
 msgid "Category %s added."
 msgstr ""
 
-#: app/lib/chevereto.js:4851 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:4852 app/lib/chevereto.min.js:1
 msgid "Invalid expiration date."
 msgstr ""
 
-#: app/lib/chevereto.js:4866 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:4867 app/lib/chevereto.min.js:1
 #, javascript-format
 msgid "IP %s already banned."
 msgstr ""
 
-#: app/lib/chevereto.js:4921 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:4922 app/lib/chevereto.min.js:1
 #, javascript-format
 msgid "IP %s banned."
 msgstr ""
 
-#: app/lib/chevereto.js:5011 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:5012 app/lib/chevereto.min.js:1
 msgid "IP ban successfully deleted."
 msgstr ""
 
-#: app/lib/chevereto.js:5066 app/lib/chevereto.js:5335
-#: app/lib/chevereto.js:5365 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:5065 app/lib/chevereto.js:5334
+#: app/lib/chevereto.js:5364 app/lib/chevereto.min.js:1
 msgid "Please fill all the required fields."
 msgstr ""
 
-#: app/lib/chevereto.js:5081 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:5080 app/lib/chevereto.min.js:1
 msgid "Invalid storage capacity value. Make sure to use a valid format."
 msgstr ""
 
-#: app/lib/chevereto.js:5088 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:5087 app/lib/chevereto.min.js:1
 #: app/lib/classes/class.storage.php:538
 #, php-format, javascript-format
 msgid "Storage capacity can't be lower than its current usage (%s)."
 msgstr ""
 
-#: app/lib/chevereto.js:5102 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:5101 app/lib/chevereto.min.js:1
 msgid "Invalid URL."
 msgstr ""
 
-#: app/lib/chevereto.js:5153 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:5152 app/lib/chevereto.min.js:1
 msgid "Storage successfully edited."
 msgstr ""
 
-#: app/lib/chevereto.js:5384 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:5383 app/lib/chevereto.min.js:1
 msgid "User added successfully."
 msgstr ""
 
-#: app/lib/chevereto.js:5633 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:5654 app/lib/chevereto.min.js:1
 #: app/themes/Peafowl/views/404.php:27 app/themes/Peafowl/views/album.php:218
 #: app/themes/Peafowl/views/user.php:213
 msgid "The content has been deleted."
 msgstr ""
 
-#: app/lib/chevereto.js:5644 app/lib/chevereto.js:5763
-#: app/lib/chevereto.js:5866 app/lib/chevereto.js:5873
-#: app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:5665 app/lib/chevereto.js:5784
+#: app/lib/chevereto.js:5885 app/lib/chevereto.js:5892
+#: app/lib/chevereto.min.js:1
 msgid "The content has been moved."
 msgstr ""
 
-#: app/lib/chevereto.js:5663 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:5684 app/lib/chevereto.min.js:1
 #: app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
 #: app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
 #: app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
@@ -513,30 +533,30 @@ msgstr ""
 msgid "Select"
 msgstr ""
 
-#: app/lib/chevereto.js:5668 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:5689 app/lib/chevereto.min.js:1
 msgid "Unselect"
 msgstr ""
 
-#: app/lib/chevereto.js:5762 app/lib/chevereto.min.js:3
+#: app/lib/chevereto.js:5783 app/lib/chevereto.min.js:1
 msgid "The content has been edited."
 msgstr ""
 
-#: app/lib/chevereto.js:6001 app/lib/chevereto.min.js:4
+#: app/lib/chevereto.js:6033 app/lib/chevereto.min.js:1
 #, javascript-format
 msgid "Import job ID %s added successfully, you can process the import now"
 msgstr ""
 
-#: app/lib/chevereto.js:6065 app/lib/chevereto.min.js:4
+#: app/lib/chevereto.js:6106 app/lib/chevereto.min.js:1
 #: app/themes/Peafowl/snippets/form_import_process.php:9
 msgid "Select number of threads"
 msgstr ""
 
-#: app/lib/chevereto.js:6081 app/lib/chevereto.min.js:4
+#: app/lib/chevereto.js:6124 app/lib/chevereto.min.js:1
 #, javascript-format
 msgid "Import job ID %s is being processed now"
 msgstr ""
 
-#: app/lib/chevereto.js:6115 app/lib/chevereto.min.js:4
+#: app/lib/chevereto.js:6167 app/lib/chevereto.min.js:1
 #, javascript-format
 msgid "Import ID %s removed"
 msgstr ""
@@ -587,7 +607,7 @@ msgstr ""
 #: app/lib/classes/class.album.php:453 app/lib/classes/class.user.php:70
 #: app/themes/Peafowl/views/album.php:22
 #: app/themes/Peafowl/views/dashboard.php:816
-#: app/themes/Peafowl/views/image.php:69
+#: app/themes/Peafowl/views/image.php:75
 msgid "Private"
 msgstr ""
 
@@ -601,8 +621,8 @@ msgstr ""
 msgid "Me"
 msgstr ""
 
-#: app/lib/classes/class.album.php:457 app/lib/classes/class.page.php:138
-#: app/themes/Peafowl/snippets/modal_share.php:11
+#: app/lib/classes/class.album.php:457 app/lib/classes/class.page.php:146
+#: app/themes/Peafowl/snippets/modal_share.php:15
 #: app/themes/Peafowl/views/dashboard.php:915
 msgid "Link"
 msgstr ""
@@ -620,139 +640,139 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: app/lib/classes/class.album.php:477 app/lib/classes/class.image.php:1503
+#: app/lib/classes/class.album.php:477 app/lib/classes/class.image.php:1516
 msgid "view"
 msgid_plural "views"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/lib/classes/class.image.php:359
+#: app/lib/classes/class.image.php:358
 msgid "After %n %t"
 msgstr ""
 
-#: app/lib/classes/class.image.php:361 app/lib/functions.php:53
+#: app/lib/classes/class.image.php:360 app/lib/functions.php:53
 #: app/lib/functions.php:64 app/themes/Peafowl/views/dashboard.php:102
 msgid "minute"
 msgid_plural "minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/lib/classes/class.image.php:362 app/lib/functions.php:52
+#: app/lib/classes/class.image.php:361 app/lib/functions.php:52
 #: app/lib/functions.php:63
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/lib/classes/class.image.php:363 app/lib/functions.php:51
+#: app/lib/classes/class.image.php:362 app/lib/functions.php:51
 #: app/lib/functions.php:62
 msgid "day"
 msgid_plural "days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/lib/classes/class.image.php:364 app/lib/functions.php:50
+#: app/lib/classes/class.image.php:363 app/lib/functions.php:50
 #: app/lib/functions.php:61
 msgid "week"
 msgid_plural "weeks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/lib/classes/class.image.php:365 app/lib/functions.php:49
+#: app/lib/classes/class.image.php:364 app/lib/functions.php:49
 #: app/lib/functions.php:60
 msgid "month"
 msgid_plural "months"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/lib/classes/class.image.php:366 app/lib/functions.php:48
+#: app/lib/classes/class.image.php:365 app/lib/functions.php:48
 #: app/lib/functions.php:59
 msgid "year"
 msgid_plural "years"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/lib/classes/class.image.php:369
+#: app/lib/classes/class.image.php:368
 msgid "Don't autodelete"
 msgstr ""
 
-#: app/lib/classes/class.image.php:664 app/lib/classes/class.image.php:772
-#: app/lib/classes/class.image.php:831
+#: app/lib/classes/class.image.php:655 app/lib/classes/class.image.php:759
+#: app/lib/classes/class.image.php:818
 msgid "Duplicated upload"
 msgstr ""
 
-#: app/lib/classes/class.image.php:1076
+#: app/lib/classes/class.image.php:1063
 #: app/themes/Peafowl/snippets/anywhere_upload.php:157
 msgid "Private upload"
 msgstr ""
 
-#: app/lib/classes/class.image.php:1504
+#: app/lib/classes/class.image.php:1517
 msgid "like"
 msgid_plural "likes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/lib/classes/class.listing.php:527 app/web.php:437
+#: app/lib/classes/class.listing.php:526 app/web.php:456
 msgid "Recent"
 msgstr ""
 
-#: app/lib/classes/class.listing.php:532 app/web.php:441
+#: app/lib/classes/class.listing.php:531 app/web.php:460
 msgid "Trending"
 msgstr ""
 
-#: app/lib/classes/class.listing.php:542
+#: app/lib/classes/class.listing.php:541
 msgid "Top users"
 msgstr ""
 
-#: app/lib/classes/class.listing.php:547
+#: app/lib/classes/class.listing.php:546
 msgid "Most recent"
 msgstr ""
 
-#: app/lib/classes/class.listing.php:552
+#: app/lib/classes/class.listing.php:551
 msgid "Oldest"
 msgstr ""
 
-#: app/lib/classes/class.listing.php:557
+#: app/lib/classes/class.listing.php:556
 msgid "Most viewed"
 msgstr ""
 
-#: app/lib/classes/class.listing.php:564 app/web.php:445
+#: app/lib/classes/class.listing.php:563 app/web.php:464
 msgid "Popular"
 msgstr ""
 
-#: app/lib/classes/class.listing.php:569
+#: app/lib/classes/class.listing.php:568
 msgid "Most liked"
 msgstr ""
 
-#: app/lib/classes/class.listing.php:593 app/routes/route.explore.php:48
+#: app/lib/classes/class.listing.php:592 app/routes/route.explore.php:48
 #: app/routes/route.explore.php:96 app/themes/Peafowl/header.php:78
 #: app/themes/Peafowl/views/dashboard.php:717
 #: app/themes/Peafowl/views/dashboard.php:730
 msgid "Explore"
 msgstr ""
 
-#: app/lib/classes/class.listing.php:597 app/web.php:449
+#: app/lib/classes/class.listing.php:596 app/web.php:468
 msgid "Animated"
 msgstr ""
 
-#: app/lib/classes/class.listing.php:603 app/routes/route.search.php:107
-#: app/themes/Peafowl/header.php:127 app/themes/Peafowl/header.php:132
+#: app/lib/classes/class.listing.php:602 app/routes/route.search.php:107
+#: app/themes/Peafowl/header.php:134 app/themes/Peafowl/header.php:139
 #: app/themes/Peafowl/views/dashboard.php:708
 msgid "Search"
 msgstr ""
 
-#: app/lib/classes/class.listing.php:607
+#: app/lib/classes/class.listing.php:606
 msgid "People"
 msgstr ""
 
-#: app/lib/classes/class.listing.php:611 app/lib/classes/class.listing.php:635
-#: app/routes/route.user.php:229 app/themes/Peafowl/views/dashboard.php:44
+#: app/lib/classes/class.listing.php:610 app/lib/classes/class.listing.php:634
+#: app/routes/route.user.php:227 app/themes/Peafowl/views/dashboard.php:44
 msgid "Image"
 msgid_plural "Images"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/lib/classes/class.listing.php:641
+#: app/lib/classes/class.listing.php:640
 #: app/themes/Peafowl/snippets/form_storage_edit.php:176
 #: app/themes/Peafowl/views/dashboard.php:60
 #: app/themes/Peafowl/views/dashboard.php:467
@@ -762,17 +782,30 @@ msgid_plural "Users"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/lib/classes/class.page.php:109
+#: app/lib/classes/class.moderatecontent.php:114
+msgid "adult"
+msgstr ""
+
+#: app/lib/classes/class.moderatecontent.php:115
+msgid "teen"
+msgstr ""
+
+#: app/lib/classes/class.moderatecontent.php:119
+#, php-format
+msgid "Content of type %s is forbidden"
+msgstr ""
+
+#: app/lib/classes/class.page.php:117
 #, php-format
 msgid "Can't create %s destination dir"
 msgstr ""
 
-#: app/lib/classes/class.page.php:127
+#: app/lib/classes/class.page.php:135
 #, php-format
 msgid "Can't open %s for writing"
 msgstr ""
 
-#: app/lib/classes/class.page.php:137
+#: app/lib/classes/class.page.php:145
 #: app/themes/Peafowl/views/dashboard.php:915
 msgid "Internal"
 msgstr ""
@@ -819,8 +852,8 @@ msgstr ""
 msgid "moments ago"
 msgstr ""
 
-#: app/lib/functions.php:249 app/routes/route.dashboard.php:1299
-#: app/themes/Peafowl/header.php:277 app/themes/Peafowl/views/dashboard.php:19
+#: app/lib/functions.php:249 app/routes/route.dashboard.php:1313
+#: app/themes/Peafowl/header.php:284 app/themes/Peafowl/views/dashboard.php:19
 msgid "Dashboard"
 msgstr ""
 
@@ -946,11 +979,12 @@ msgstr ""
 #: app/routes/route.account.php:383 app/routes/route.dashboard.php:284
 #: app/routes/route.json.php:22 app/routes/route.json.php:38
 #: app/routes/route.json.php:45 app/routes/route.json.php:51
-#: app/routes/route.json.php:105 app/routes/route.json.php:174
-#: app/routes/route.json.php:252 app/routes/route.json.php:672
-#: app/routes/route.json.php:745 app/routes/route.json.php:793
-#: app/routes/route.json.php:837 app/themes/Peafowl/views/request-denied.php:8
-#: app/web.php:542 content/pages/default/contact.php:20
+#: app/routes/route.json.php:111 app/routes/route.json.php:180
+#: app/routes/route.json.php:258 app/routes/route.json.php:277
+#: app/routes/route.json.php:691 app/routes/route.json.php:764
+#: app/routes/route.json.php:812 app/routes/route.json.php:856
+#: app/themes/Peafowl/views/request-denied.php:8 app/web.php:561
+#: content/pages/default/contact.php:20
 msgid "Request denied"
 msgstr ""
 
@@ -982,7 +1016,7 @@ msgstr ""
 msgid "Welcome to %s"
 msgstr ""
 
-#: app/routes/route.account.php:418 app/routes/route.json.php:710
+#: app/routes/route.account.php:418 app/routes/route.json.php:729
 #: app/routes/route.settings.php:248 app/routes/route.signup.php:153
 msgid "Email already being used"
 msgstr ""
@@ -991,20 +1025,20 @@ msgstr ""
 msgid "Password required"
 msgstr ""
 
-#: app/routes/route.album.php:177 app/themes/Peafowl/snippets/modal_share.php:4
-#: app/themes/Peafowl/views/album.php:71 app/themes/Peafowl/views/image.php:116
+#: app/routes/route.album.php:177 app/themes/Peafowl/snippets/modal_share.php:6
+#: app/themes/Peafowl/views/album.php:71 app/themes/Peafowl/views/image.php:128
 msgid "Share"
 msgstr ""
 
-#: app/routes/route.album.php:186 app/routes/route.image.php:147
-#: app/themes/Peafowl/snippets/anywhere_upload.php:193
-#: app/themes/Peafowl/snippets/embed_tpl.php:15
+#: app/routes/route.album.php:186 app/routes/route.image.php:151
+#: app/themes/Peafowl/snippets/anywhere_upload.php:199
+#: app/themes/Peafowl/snippets/embed_tpl.php:17
 #: app/themes/Peafowl/views/album.php:151
 #: app/themes/Peafowl/views/plugin.php:47
 msgid "Embed codes"
 msgstr ""
 
-#: app/routes/route.album.php:195 app/routes/route.image.php:155
+#: app/routes/route.album.php:195 app/routes/route.image.php:159
 msgid "Full info"
 msgstr ""
 
@@ -1024,7 +1058,7 @@ msgid "Images"
 msgstr ""
 
 #: app/routes/route.dashboard.php:49 app/routes/route.user.php:90
-#: app/themes/Peafowl/header.php:261 app/themes/Peafowl/views/dashboard.php:210
+#: app/themes/Peafowl/header.php:268 app/themes/Peafowl/views/dashboard.php:210
 #: app/themes/Peafowl/views/dashboard.php:245
 #: app/themes/Peafowl/views/settings.php:91
 msgid "Albums"
@@ -1037,7 +1071,7 @@ msgid "Users"
 msgstr ""
 
 #: app/routes/route.dashboard.php:51 app/routes/route.settings.php:534
-#: app/themes/Peafowl/header.php:226 app/themes/Peafowl/header.php:274
+#: app/themes/Peafowl/header.php:233 app/themes/Peafowl/header.php:281
 msgid "Settings"
 msgstr ""
 
@@ -1100,56 +1134,59 @@ msgstr ""
 #: app/themes/Peafowl/views/dashboard.php:755
 #: app/themes/Peafowl/views/dashboard.php:767
 #: app/themes/Peafowl/views/dashboard.php:1146
-#: app/themes/Peafowl/views/dashboard.php:1156
-#: app/themes/Peafowl/views/dashboard.php:1176
-#: app/themes/Peafowl/views/dashboard.php:1194
-#: app/themes/Peafowl/views/dashboard.php:1203
-#: app/themes/Peafowl/views/dashboard.php:1214
-#: app/themes/Peafowl/views/dashboard.php:1265
-#: app/themes/Peafowl/views/dashboard.php:1352
-#: app/themes/Peafowl/views/dashboard.php:1572
-#: app/themes/Peafowl/views/dashboard.php:1582
-#: app/themes/Peafowl/views/dashboard.php:1604
-#: app/themes/Peafowl/views/dashboard.php:1616
-#: app/themes/Peafowl/views/dashboard.php:1630
-#: app/themes/Peafowl/views/dashboard.php:1641
-#: app/themes/Peafowl/views/dashboard.php:1672
-#: app/themes/Peafowl/views/dashboard.php:1699
-#: app/themes/Peafowl/views/dashboard.php:1710
-#: app/themes/Peafowl/views/dashboard.php:1750
-#: app/themes/Peafowl/views/dashboard.php:1758
-#: app/themes/Peafowl/views/dashboard.php:1766
-#: app/themes/Peafowl/views/dashboard.php:1775
+#: app/themes/Peafowl/views/dashboard.php:1163
+#: app/themes/Peafowl/views/dashboard.php:1191
+#: app/themes/Peafowl/views/dashboard.php:1209
+#: app/themes/Peafowl/views/dashboard.php:1218
+#: app/themes/Peafowl/views/dashboard.php:1229
+#: app/themes/Peafowl/views/dashboard.php:1280
+#: app/themes/Peafowl/views/dashboard.php:1367
+#: app/themes/Peafowl/views/dashboard.php:1587
+#: app/themes/Peafowl/views/dashboard.php:1597
+#: app/themes/Peafowl/views/dashboard.php:1619
+#: app/themes/Peafowl/views/dashboard.php:1631
+#: app/themes/Peafowl/views/dashboard.php:1645
+#: app/themes/Peafowl/views/dashboard.php:1656
+#: app/themes/Peafowl/views/dashboard.php:1687
+#: app/themes/Peafowl/views/dashboard.php:1714
+#: app/themes/Peafowl/views/dashboard.php:1725
+#: app/themes/Peafowl/views/dashboard.php:1769
+#: app/themes/Peafowl/views/dashboard.php:1779
+#: app/themes/Peafowl/views/dashboard.php:1787
+#: app/themes/Peafowl/views/dashboard.php:1795
 #: app/themes/Peafowl/views/dashboard.php:1804
-#: app/themes/Peafowl/views/dashboard.php:1939
-#: app/themes/Peafowl/views/dashboard.php:2002
-#: app/themes/Peafowl/views/dashboard.php:2011
-#: app/themes/Peafowl/views/dashboard.php:2022
-#: app/themes/Peafowl/views/dashboard.php:2033
-#: app/themes/Peafowl/views/dashboard.php:2057
-#: app/themes/Peafowl/views/dashboard.php:2190
-#: app/themes/Peafowl/views/dashboard.php:2282
-#: app/themes/Peafowl/views/dashboard.php:2291
-#: app/themes/Peafowl/views/dashboard.php:2301
-#: app/themes/Peafowl/views/dashboard.php:2314
-#: app/themes/Peafowl/views/dashboard.php:2325
-#: app/themes/Peafowl/views/dashboard.php:2333
-#: app/themes/Peafowl/views/dashboard.php:2348
-#: app/themes/Peafowl/views/dashboard.php:2401
-#: app/themes/Peafowl/views/dashboard.php:2409
-#: app/themes/Peafowl/views/dashboard.php:2438
-#: app/themes/Peafowl/views/dashboard.php:2447
-#: app/themes/Peafowl/views/dashboard.php:2706
-#: app/themes/Peafowl/views/dashboard.php:2731
-#: app/themes/Peafowl/views/dashboard.php:2763
-#: app/themes/Peafowl/views/dashboard.php:2788
-#: app/themes/Peafowl/views/dashboard.php:2818
-#: app/themes/Peafowl/views/dashboard.php:2841
-#: app/themes/Peafowl/views/dashboard.php:2854
+#: app/themes/Peafowl/views/dashboard.php:1833
+#: app/themes/Peafowl/views/dashboard.php:1958
+#: app/themes/Peafowl/views/dashboard.php:2021
+#: app/themes/Peafowl/views/dashboard.php:2030
+#: app/themes/Peafowl/views/dashboard.php:2041
+#: app/themes/Peafowl/views/dashboard.php:2052
+#: app/themes/Peafowl/views/dashboard.php:2076
+#: app/themes/Peafowl/views/dashboard.php:2210
+#: app/themes/Peafowl/views/dashboard.php:2302
+#: app/themes/Peafowl/views/dashboard.php:2311
+#: app/themes/Peafowl/views/dashboard.php:2321
+#: app/themes/Peafowl/views/dashboard.php:2334
+#: app/themes/Peafowl/views/dashboard.php:2345
+#: app/themes/Peafowl/views/dashboard.php:2353
+#: app/themes/Peafowl/views/dashboard.php:2368
+#: app/themes/Peafowl/views/dashboard.php:2421
+#: app/themes/Peafowl/views/dashboard.php:2429
+#: app/themes/Peafowl/views/dashboard.php:2458
+#: app/themes/Peafowl/views/dashboard.php:2467
+#: app/themes/Peafowl/views/dashboard.php:2726
+#: app/themes/Peafowl/views/dashboard.php:2751
+#: app/themes/Peafowl/views/dashboard.php:2783
+#: app/themes/Peafowl/views/dashboard.php:2808
+#: app/themes/Peafowl/views/dashboard.php:2838
+#: app/themes/Peafowl/views/dashboard.php:2861
 #: app/themes/Peafowl/views/dashboard.php:2874
-#: app/themes/Peafowl/views/dashboard.php:2915
-#: app/themes/Peafowl/views/dashboard.php:2990
-#: app/themes/Peafowl/views/dashboard.php:3010
+#: app/themes/Peafowl/views/dashboard.php:2894
+#: app/themes/Peafowl/views/dashboard.php:2935
+#: app/themes/Peafowl/views/dashboard.php:2989
+#: app/themes/Peafowl/views/dashboard.php:3005
+#: app/themes/Peafowl/views/dashboard.php:3049
+#: app/themes/Peafowl/views/dashboard.php:3069
 msgid "Enabled"
 msgstr ""
 
@@ -1164,57 +1201,63 @@ msgstr ""
 #: app/themes/Peafowl/views/dashboard.php:755
 #: app/themes/Peafowl/views/dashboard.php:767
 #: app/themes/Peafowl/views/dashboard.php:1146
-#: app/themes/Peafowl/views/dashboard.php:1156
-#: app/themes/Peafowl/views/dashboard.php:1176
-#: app/themes/Peafowl/views/dashboard.php:1194
-#: app/themes/Peafowl/views/dashboard.php:1203
-#: app/themes/Peafowl/views/dashboard.php:1214
-#: app/themes/Peafowl/views/dashboard.php:1266
-#: app/themes/Peafowl/views/dashboard.php:1352
-#: app/themes/Peafowl/views/dashboard.php:1572
-#: app/themes/Peafowl/views/dashboard.php:1582
-#: app/themes/Peafowl/views/dashboard.php:1604
-#: app/themes/Peafowl/views/dashboard.php:1616
-#: app/themes/Peafowl/views/dashboard.php:1630
-#: app/themes/Peafowl/views/dashboard.php:1641
-#: app/themes/Peafowl/views/dashboard.php:1672
-#: app/themes/Peafowl/views/dashboard.php:1699
-#: app/themes/Peafowl/views/dashboard.php:1710
-#: app/themes/Peafowl/views/dashboard.php:1750
-#: app/themes/Peafowl/views/dashboard.php:1758
-#: app/themes/Peafowl/views/dashboard.php:1766
-#: app/themes/Peafowl/views/dashboard.php:1775
+#: app/themes/Peafowl/views/dashboard.php:1163
+#: app/themes/Peafowl/views/dashboard.php:1178
+#: app/themes/Peafowl/views/dashboard.php:1191
+#: app/themes/Peafowl/views/dashboard.php:1209
+#: app/themes/Peafowl/views/dashboard.php:1218
+#: app/themes/Peafowl/views/dashboard.php:1229
+#: app/themes/Peafowl/views/dashboard.php:1281
+#: app/themes/Peafowl/views/dashboard.php:1367
+#: app/themes/Peafowl/views/dashboard.php:1587
+#: app/themes/Peafowl/views/dashboard.php:1597
+#: app/themes/Peafowl/views/dashboard.php:1619
+#: app/themes/Peafowl/views/dashboard.php:1631
+#: app/themes/Peafowl/views/dashboard.php:1645
+#: app/themes/Peafowl/views/dashboard.php:1656
+#: app/themes/Peafowl/views/dashboard.php:1687
+#: app/themes/Peafowl/views/dashboard.php:1714
+#: app/themes/Peafowl/views/dashboard.php:1725
+#: app/themes/Peafowl/views/dashboard.php:1768
+#: app/themes/Peafowl/views/dashboard.php:1779
+#: app/themes/Peafowl/views/dashboard.php:1787
+#: app/themes/Peafowl/views/dashboard.php:1795
 #: app/themes/Peafowl/views/dashboard.php:1804
-#: app/themes/Peafowl/views/dashboard.php:1939
-#: app/themes/Peafowl/views/dashboard.php:2002
-#: app/themes/Peafowl/views/dashboard.php:2011
-#: app/themes/Peafowl/views/dashboard.php:2022
-#: app/themes/Peafowl/views/dashboard.php:2033
-#: app/themes/Peafowl/views/dashboard.php:2045
-#: app/themes/Peafowl/views/dashboard.php:2057
-#: app/themes/Peafowl/views/dashboard.php:2190
-#: app/themes/Peafowl/views/dashboard.php:2282
-#: app/themes/Peafowl/views/dashboard.php:2291
-#: app/themes/Peafowl/views/dashboard.php:2301
-#: app/themes/Peafowl/views/dashboard.php:2314
-#: app/themes/Peafowl/views/dashboard.php:2325
-#: app/themes/Peafowl/views/dashboard.php:2333
-#: app/themes/Peafowl/views/dashboard.php:2348
-#: app/themes/Peafowl/views/dashboard.php:2401
-#: app/themes/Peafowl/views/dashboard.php:2409
-#: app/themes/Peafowl/views/dashboard.php:2438
-#: app/themes/Peafowl/views/dashboard.php:2447
-#: app/themes/Peafowl/views/dashboard.php:2706
-#: app/themes/Peafowl/views/dashboard.php:2731
-#: app/themes/Peafowl/views/dashboard.php:2763
-#: app/themes/Peafowl/views/dashboard.php:2788
-#: app/themes/Peafowl/views/dashboard.php:2818
-#: app/themes/Peafowl/views/dashboard.php:2841
-#: app/themes/Peafowl/views/dashboard.php:2854
+#: app/themes/Peafowl/views/dashboard.php:1833
+#: app/themes/Peafowl/views/dashboard.php:1958
+#: app/themes/Peafowl/views/dashboard.php:2021
+#: app/themes/Peafowl/views/dashboard.php:2030
+#: app/themes/Peafowl/views/dashboard.php:2041
+#: app/themes/Peafowl/views/dashboard.php:2052
+#: app/themes/Peafowl/views/dashboard.php:2064
+#: app/themes/Peafowl/views/dashboard.php:2076
+#: app/themes/Peafowl/views/dashboard.php:2210
+#: app/themes/Peafowl/views/dashboard.php:2302
+#: app/themes/Peafowl/views/dashboard.php:2311
+#: app/themes/Peafowl/views/dashboard.php:2321
+#: app/themes/Peafowl/views/dashboard.php:2334
+#: app/themes/Peafowl/views/dashboard.php:2345
+#: app/themes/Peafowl/views/dashboard.php:2353
+#: app/themes/Peafowl/views/dashboard.php:2368
+#: app/themes/Peafowl/views/dashboard.php:2421
+#: app/themes/Peafowl/views/dashboard.php:2429
+#: app/themes/Peafowl/views/dashboard.php:2458
+#: app/themes/Peafowl/views/dashboard.php:2467
+#: app/themes/Peafowl/views/dashboard.php:2726
+#: app/themes/Peafowl/views/dashboard.php:2751
+#: app/themes/Peafowl/views/dashboard.php:2783
+#: app/themes/Peafowl/views/dashboard.php:2808
+#: app/themes/Peafowl/views/dashboard.php:2838
+#: app/themes/Peafowl/views/dashboard.php:2861
 #: app/themes/Peafowl/views/dashboard.php:2874
-#: app/themes/Peafowl/views/dashboard.php:2915
-#: app/themes/Peafowl/views/dashboard.php:2990
-#: app/themes/Peafowl/views/dashboard.php:3010
+#: app/themes/Peafowl/views/dashboard.php:2894
+#: app/themes/Peafowl/views/dashboard.php:2935
+#: app/themes/Peafowl/views/dashboard.php:2989
+#: app/themes/Peafowl/views/dashboard.php:3005
+#: app/themes/Peafowl/views/dashboard.php:3012
+#: app/themes/Peafowl/views/dashboard.php:3018
+#: app/themes/Peafowl/views/dashboard.php:3049
+#: app/themes/Peafowl/views/dashboard.php:3069
 msgid "Disabled"
 msgstr ""
 
@@ -1253,7 +1296,8 @@ msgstr ""
 msgid "Not your IP?"
 msgstr ""
 
-#: app/routes/route.dashboard.php:186 app/themes/Peafowl/snippets/embed.php:9
+#: app/routes/route.dashboard.php:186 app/themes/Peafowl/snippets/embed.php:8
+#: app/themes/Peafowl/snippets/embed.php:100
 msgid "Links"
 msgstr ""
 
@@ -1302,12 +1346,12 @@ msgid "Consent screen"
 msgstr ""
 
 #: app/routes/route.dashboard.php:234
-#: app/themes/Peafowl/views/dashboard.php:1696
+#: app/themes/Peafowl/views/dashboard.php:1711
 msgid "Flood protection"
 msgstr ""
 
 #: app/routes/route.dashboard.php:235
-#: app/themes/Peafowl/views/dashboard.php:1864
+#: app/themes/Peafowl/views/dashboard.php:1893
 msgid "Theme"
 msgstr ""
 
@@ -1380,11 +1424,12 @@ msgstr ""
 #: app/routes/route.dashboard.php:332 app/themes/Peafowl/header.php:72
 #: app/themes/Peafowl/snippets/form_advanced_search.php:40
 #: app/themes/Peafowl/snippets/form_advanced_search.php:63
+#: app/themes/Peafowl/views/dashboard.php:1180
 msgid "All"
 msgstr ""
 
-#: app/routes/route.dashboard.php:339 app/routes/route.image.php:170
-#: app/themes/Peafowl/views/dashboard.php:2521
+#: app/routes/route.dashboard.php:339 app/routes/route.image.php:174
+#: app/themes/Peafowl/views/dashboard.php:2541
 #: app/themes/Peafowl/views/settings.php:106
 msgid "search content"
 msgstr ""
@@ -1460,457 +1505,454 @@ msgstr ""
 msgid "Inside viewer top (image page)"
 msgstr ""
 
-#: app/routes/route.dashboard.php:459 app/routes/route.dashboard.php:463
-msgid "Expected banner size 728x90"
-msgstr ""
-
-#: app/routes/route.dashboard.php:462
+#: app/routes/route.dashboard.php:461
 msgid "Inside viewer foot (image page)"
 msgstr ""
 
-#: app/routes/route.dashboard.php:466
+#: app/routes/route.dashboard.php:464
 msgid "After image viewer (image page)"
 msgstr ""
 
-#: app/routes/route.dashboard.php:469
+#: app/routes/route.dashboard.php:467
 msgid "Before header (image page)"
 msgstr ""
 
-#: app/routes/route.dashboard.php:472
+#: app/routes/route.dashboard.php:470
 msgid "After header (image page)"
 msgstr ""
 
-#: app/routes/route.dashboard.php:475
+#: app/routes/route.dashboard.php:473
 msgid "Footer (image page)"
 msgstr ""
 
-#: app/routes/route.dashboard.php:480
+#: app/routes/route.dashboard.php:478
 msgid "Album page"
 msgstr ""
 
-#: app/routes/route.dashboard.php:483
+#: app/routes/route.dashboard.php:481
 msgid "Before header (album page)"
 msgstr ""
 
-#: app/routes/route.dashboard.php:486
+#: app/routes/route.dashboard.php:484
 msgid "After header (album page)"
 msgstr ""
 
-#: app/routes/route.dashboard.php:491
+#: app/routes/route.dashboard.php:489
 msgid "User profile page"
 msgstr ""
 
-#: app/routes/route.dashboard.php:494
+#: app/routes/route.dashboard.php:492
 msgid "After top (user profile)"
 msgstr ""
 
-#: app/routes/route.dashboard.php:497
+#: app/routes/route.dashboard.php:495
 msgid "Before listing (user profile)"
 msgstr ""
 
-#: app/routes/route.dashboard.php:502
+#: app/routes/route.dashboard.php:500
 msgid "Explore page"
 msgstr ""
 
-#: app/routes/route.dashboard.php:505
+#: app/routes/route.dashboard.php:503
 msgid "After top (explore page)"
 msgstr ""
 
-#: app/routes/route.dashboard.php:514
+#: app/routes/route.dashboard.php:512
+#: app/themes/Peafowl/views/dashboard.php:1762
 msgid "NSFW"
 msgstr ""
 
-#: app/routes/route.dashboard.php:597
+#: app/routes/route.dashboard.php:595
 msgid "Invalid website name"
 msgstr ""
 
-#: app/routes/route.dashboard.php:602
+#: app/routes/route.dashboard.php:600
 msgid "Invalid language"
 msgstr ""
 
-#: app/routes/route.dashboard.php:607
+#: app/routes/route.dashboard.php:605
 msgid "Invalid timezone"
 msgstr ""
 
-#: app/routes/route.dashboard.php:612 app/routes/route.dashboard.php:617
-#: app/routes/route.dashboard.php:818 app/routes/route.dashboard.php:823
-#: app/routes/route.dashboard.php:828 app/routes/route.dashboard.php:833
+#: app/routes/route.dashboard.php:610 app/routes/route.dashboard.php:615
+#: app/routes/route.dashboard.php:816 app/routes/route.dashboard.php:821
+#: app/routes/route.dashboard.php:826 app/routes/route.dashboard.php:831
 #, php-format
 msgid "Invalid value: %s"
 msgstr ""
 
-#: app/routes/route.dashboard.php:622
+#: app/routes/route.dashboard.php:620
 msgid "Invalid upload storage mode"
 msgstr ""
 
-#: app/routes/route.dashboard.php:627
+#: app/routes/route.dashboard.php:625
 msgid "Invalid upload filenaming"
 msgstr ""
 
-#: app/routes/route.dashboard.php:632
+#: app/routes/route.dashboard.php:630
 msgid "Invalid thumb width"
 msgstr ""
 
-#: app/routes/route.dashboard.php:637
+#: app/routes/route.dashboard.php:635
 msgid "Invalid thumb height"
 msgstr ""
 
-#: app/routes/route.dashboard.php:642
+#: app/routes/route.dashboard.php:640
 msgid "Invalid medium size"
 msgstr ""
 
-#: app/routes/route.dashboard.php:647
+#: app/routes/route.dashboard.php:645
 msgid "Invalid watermark percentage"
 msgstr ""
 
-#: app/routes/route.dashboard.php:652
+#: app/routes/route.dashboard.php:650
 msgid "Invalid watermark opacity"
 msgstr ""
 
-#: app/routes/route.dashboard.php:657
+#: app/routes/route.dashboard.php:655
 msgid "Invalid theme"
 msgstr ""
 
-#: app/routes/route.dashboard.php:662 app/routes/route.dashboard.php:886
-#: app/routes/route.dashboard.php:1102
+#: app/routes/route.dashboard.php:660 app/routes/route.dashboard.php:884
+#: app/routes/route.dashboard.php:1116
 msgid "Invalid value"
 msgstr ""
 
-#: app/routes/route.dashboard.php:667
+#: app/routes/route.dashboard.php:665
 msgid "Invalid theme tone"
 msgstr ""
 
-#: app/routes/route.dashboard.php:672
+#: app/routes/route.dashboard.php:670
 msgid "Invalid theme main color"
 msgstr ""
 
-#: app/routes/route.dashboard.php:677
+#: app/routes/route.dashboard.php:675
 msgid "Invalid theme top bar button color"
 msgstr ""
 
-#: app/routes/route.dashboard.php:682
+#: app/routes/route.dashboard.php:680
 msgid "Invalid theme image listing size"
 msgstr ""
 
-#: app/routes/route.dashboard.php:687
+#: app/routes/route.dashboard.php:685
 msgid "Invalid user id"
 msgstr ""
 
-#: app/routes/route.dashboard.php:692
+#: app/routes/route.dashboard.php:690
 msgid "Invalid email mode"
 msgstr ""
 
-#: app/routes/route.dashboard.php:697
+#: app/routes/route.dashboard.php:695
 msgid "Invalid SMTP port"
 msgstr ""
 
-#: app/routes/route.dashboard.php:702
+#: app/routes/route.dashboard.php:700
 msgid "Invalid SMTP security"
 msgstr ""
 
-#: app/routes/route.dashboard.php:712 app/routes/route.dashboard.php:977
+#: app/routes/route.dashboard.php:710 app/routes/route.dashboard.php:975
 msgid "Invalid personal mode user ID"
 msgstr ""
 
-#: app/routes/route.dashboard.php:717
+#: app/routes/route.dashboard.php:715
 msgid "Invalid or reserved route"
 msgstr ""
 
-#: app/routes/route.dashboard.php:722
+#: app/routes/route.dashboard.php:720
 msgid "Invalid website privacy mode"
 msgstr ""
 
-#: app/routes/route.dashboard.php:727
+#: app/routes/route.dashboard.php:725
 msgid "Invalid website content privacy mode"
 msgstr ""
 
-#: app/routes/route.dashboard.php:732
+#: app/routes/route.dashboard.php:730
 msgid "Invalid homepage style"
 msgstr ""
 
-#: app/routes/route.dashboard.php:737
+#: app/routes/route.dashboard.php:735
 msgid "Invalid homepage call to action button color"
 msgstr ""
 
-#: app/routes/route.dashboard.php:742
+#: app/routes/route.dashboard.php:740
 msgid "Invalid homepage call to action functionality"
 msgstr ""
 
-#: app/routes/route.dashboard.php:748
+#: app/routes/route.dashboard.php:746
 msgid "Invalid title"
 msgstr ""
 
-#: app/routes/route.dashboard.php:753
+#: app/routes/route.dashboard.php:751
 msgid "Invalid status"
 msgstr ""
 
-#: app/routes/route.dashboard.php:758
+#: app/routes/route.dashboard.php:756
 msgid "Invalid type"
 msgstr ""
 
-#: app/routes/route.dashboard.php:763
+#: app/routes/route.dashboard.php:761
 msgid "Invalid visibility"
 msgstr ""
 
-#: app/routes/route.dashboard.php:768
+#: app/routes/route.dashboard.php:766
 msgid "Invalid internal type"
 msgstr ""
 
-#: app/routes/route.dashboard.php:773
+#: app/routes/route.dashboard.php:771
 msgid "Invalid target attribute"
 msgstr ""
 
-#: app/routes/route.dashboard.php:778
+#: app/routes/route.dashboard.php:776
 msgid "Invalid rel attribute"
 msgstr ""
 
-#: app/routes/route.dashboard.php:783
+#: app/routes/route.dashboard.php:781
 msgid "Invalid icon"
 msgstr ""
 
-#: app/routes/route.dashboard.php:788
+#: app/routes/route.dashboard.php:786
 msgid "Invalid URL key"
 msgstr ""
 
-#: app/routes/route.dashboard.php:793
+#: app/routes/route.dashboard.php:791
 msgid "Invalid file path"
 msgstr ""
 
-#: app/routes/route.dashboard.php:798
+#: app/routes/route.dashboard.php:796
 msgid "Invalid link URL"
 msgstr ""
 
-#: app/routes/route.dashboard.php:803
+#: app/routes/route.dashboard.php:801
 msgid "Invalid user minimum age"
 msgstr ""
 
-#: app/routes/route.dashboard.php:808 app/routes/route.dashboard.php:813
+#: app/routes/route.dashboard.php:806 app/routes/route.dashboard.php:811
 msgid "Only alphanumeric, hyphen and underscore characters are allowed"
 msgstr ""
 
-#: app/routes/route.dashboard.php:838 app/routes/route.dashboard.php:1084
+#: app/routes/route.dashboard.php:836 app/routes/route.dashboard.php:1098
 msgid "Invalid URL"
 msgstr ""
 
-#: app/routes/route.dashboard.php:846
+#: app/routes/route.dashboard.php:844
 msgid "Routes can't be the same"
 msgstr ""
 
-#: app/routes/route.dashboard.php:862
+#: app/routes/route.dashboard.php:860
 msgid "Invalid upload image path"
 msgstr ""
 
-#: app/routes/route.dashboard.php:876
+#: app/routes/route.dashboard.php:874
 msgid "Invalid call to action URL"
 msgstr ""
 
-#: app/routes/route.dashboard.php:889
+#: app/routes/route.dashboard.php:887
 #, php-format
 msgid "Max. allowed %s"
 msgstr ""
 
-#: app/routes/route.dashboard.php:903
+#: app/routes/route.dashboard.php:901
 msgid "Can't map %m to an existing folder (%f)"
 msgstr ""
 
-#: app/routes/route.dashboard.php:911
+#: app/routes/route.dashboard.php:909
 msgid "Can't map %m to an existing route (%r)"
 msgstr ""
 
-#: app/routes/route.dashboard.php:919
+#: app/routes/route.dashboard.php:917
 msgid "Can't map %m to %r (username collision)"
 msgstr ""
 
-#: app/routes/route.dashboard.php:1004
+#: app/routes/route.dashboard.php:1018
 msgid "Invalid SMTP server"
 msgstr ""
 
-#: app/routes/route.dashboard.php:1005
+#: app/routes/route.dashboard.php:1019
 msgid "Invalid SMTP username"
 msgstr ""
 
-#: app/routes/route.dashboard.php:1071
+#: app/routes/route.dashboard.php:1085
 msgid "Invalid key"
 msgstr ""
 
-#: app/routes/route.dashboard.php:1122
+#: app/routes/route.dashboard.php:1136
 #, php-format
 msgid "This URL key is already being used by another page (ID %s)"
 msgstr ""
 
-#: app/routes/route.dashboard.php:1123
+#: app/routes/route.dashboard.php:1137
 #, php-format
 msgid "This file path is already being used by another page (ID %s)"
 msgstr ""
 
-#: app/routes/route.dashboard.php:1153
+#: app/routes/route.dashboard.php:1167
 #, php-format
 msgid "Can't save page contents: %s."
 msgstr ""
 
 #: app/routes/route.following.php:43 app/routes/route.user.php:115
-#: app/themes/Peafowl/header.php:91 app/themes/Peafowl/header.php:270
+#: app/themes/Peafowl/header.php:91 app/themes/Peafowl/header.php:277
 #: app/themes/Peafowl/views/following.php:9
 #: app/themes/Peafowl/views/user.php:95 app/themes/Peafowl/views/user.php:101
 msgid "Following"
 msgstr ""
 
-#: app/routes/route.image.php:140 app/themes/Peafowl/header.php:294
-#: app/themes/Peafowl/views/dashboard.php:2994
+#: app/routes/route.image.php:144 app/themes/Peafowl/header.php:301
+#: app/themes/Peafowl/views/dashboard.php:3053
 msgid "About"
 msgstr ""
 
-#: app/routes/route.image.php:165
+#: app/routes/route.image.php:169
 msgid "Image ID"
 msgstr ""
 
-#: app/routes/route.image.php:169
+#: app/routes/route.image.php:173
 msgid "Uploader IP"
 msgstr ""
 
-#: app/routes/route.image.php:170 app/themes/Peafowl/views/settings.php:106
+#: app/routes/route.image.php:174 app/themes/Peafowl/views/settings.php:106
 msgid "Ban IP"
 msgstr ""
 
-#: app/routes/route.image.php:170 app/themes/Peafowl/views/settings.php:106
+#: app/routes/route.image.php:174 app/themes/Peafowl/views/settings.php:106
 msgid "IP already banned"
 msgstr ""
 
-#: app/routes/route.image.php:173
+#: app/routes/route.image.php:177
 msgid "Upload date"
 msgstr ""
 
-#: app/routes/route.image.php:213
+#: app/routes/route.image.php:217
 msgid "Image %i in %a album"
 msgstr ""
 
-#: app/routes/route.image.php:215
+#: app/routes/route.image.php:219
 msgid "Image %i in %c category"
 msgstr ""
 
-#: app/routes/route.image.php:217
+#: app/routes/route.image.php:221
 msgid "Image %i hosted in %w"
 msgstr ""
 
-#: app/routes/route.image.php:254 app/themes/Peafowl/snippets/embed.php:17
+#: app/routes/route.image.php:258 app/themes/Peafowl/snippets/embed.php:16
 msgid "Direct links"
 msgstr ""
 
-#: app/routes/route.image.php:257
+#: app/routes/route.image.php:261
 msgid "Image link"
 msgstr ""
 
-#: app/routes/route.image.php:261
+#: app/routes/route.image.php:265
 msgid "Image URL"
 msgstr ""
 
-#: app/routes/route.image.php:265
+#: app/routes/route.image.php:269
 msgid "Thumbnail URL"
 msgstr ""
 
-#: app/routes/route.image.php:272
+#: app/routes/route.image.php:276
 msgid "Medium URL"
 msgstr ""
 
-#: app/routes/route.image.php:284
+#: app/routes/route.image.php:288
 msgid "Full image"
 msgstr ""
 
-#: app/routes/route.image.php:306
+#: app/routes/route.image.php:310
 msgid "Full image (linked)"
 msgstr ""
 
-#: app/routes/route.image.php:330
+#: app/routes/route.image.php:334
 msgid "Medium image (linked)"
 msgstr ""
 
-#: app/routes/route.image.php:355
+#: app/routes/route.image.php:359
 msgid "Thumbnail image (linked)"
 msgstr ""
 
-#: app/routes/route.json.php:62 app/routes/route.json.php:349
-#: app/routes/route.json.php:864 app/routes/route.json.php:1047
-#: app/routes/route.json.php:1201
+#: app/routes/route.json.php:62 app/routes/route.json.php:362
+#: app/routes/route.json.php:883 app/routes/route.json.php:1071
+#: app/routes/route.json.php:1225
 msgid "Login needed"
 msgstr ""
 
-#: app/routes/route.json.php:612 app/routes/route.json.php:809
+#: app/routes/route.json.php:631 app/routes/route.json.php:828
 msgid "IP address already banned"
 msgstr ""
 
-#: app/routes/route.json.php:679 app/routes/route.json.php:752
+#: app/routes/route.json.php:698 app/routes/route.json.php:771
 msgid "Missing values"
 msgstr ""
 
-#: app/routes/route.json.php:700
+#: app/routes/route.json.php:719
 msgid "Invalid role"
 msgstr ""
 
-#: app/routes/route.json.php:705
+#: app/routes/route.json.php:724
 msgid "Username already being used"
 msgstr ""
 
-#: app/routes/route.json.php:1228
+#: app/routes/route.json.php:1252
 #, php-format
 msgid "Add a password or another social connection before deleting %s"
 msgstr ""
 
-#: app/routes/route.json.php:1242
+#: app/routes/route.json.php:1266
 #, php-format
 msgid "Add an email or another social connection before deleting %s"
 msgstr ""
 
-#: app/routes/route.json.php:1254
+#: app/routes/route.json.php:1278
 #, php-format
 msgid "%s has been disconnected."
 msgstr ""
 
-#: app/routes/route.json.php:1281
+#: app/routes/route.json.php:1305
 msgid "Test email from %s @ %t"
 msgstr ""
 
-#: app/routes/route.json.php:1281
+#: app/routes/route.json.php:1305
 msgid "This is just a test"
 msgstr ""
 
-#: app/routes/route.json.php:1283
+#: app/routes/route.json.php:1307
 #, php-format
 msgid "Test email sent to %s."
 msgstr ""
 
-#: app/routes/route.json.php:1322
+#: app/routes/route.json.php:1346
 #, php-format
 msgid "Downloading %s data"
 msgstr ""
 
-#: app/routes/route.json.php:1355
+#: app/routes/route.json.php:1379
 #, php-format
 msgid "User %s followed"
 msgstr ""
 
-#: app/routes/route.json.php:1355
+#: app/routes/route.json.php:1379
 #, php-format
 msgid "User %s unfollowed"
 msgstr ""
 
-#: app/routes/route.json.php:1377
+#: app/routes/route.json.php:1401
 msgid "Content liked"
 msgstr ""
 
-#: app/routes/route.json.php:1377
+#: app/routes/route.json.php:1401
 msgid "Content disliked"
 msgstr ""
 
-#: app/routes/route.json.php:1431
+#: app/routes/route.json.php:1455
 msgid "%u liked your %t %c"
 msgstr ""
 
-#: app/routes/route.json.php:1437
+#: app/routes/route.json.php:1461
 #, php-format
 msgid "%u is now following you"
 msgstr ""
 
-#: app/routes/route.json.php:1441
+#: app/routes/route.json.php:1465
 msgid "A private user"
 msgstr ""
 
@@ -1918,9 +1960,14 @@ msgstr ""
 msgid "Wrong Username/Email password combination"
 msgstr ""
 
-#: app/routes/route.login.php:129 app/themes/Peafowl/header.php:198
+#: app/routes/route.login.php:129 app/themes/Peafowl/header.php:205
 #: app/themes/Peafowl/snippets/quickty/top_left.php:18
 msgid "Sign in"
+msgstr ""
+
+#: app/routes/route.moderate.php:25 app/routes/route.moderate.php:61
+#: app/themes/Peafowl/header.php:127
+msgid "Moderate"
 msgstr ""
 
 #: app/routes/route.plugin.php:87
@@ -1986,7 +2033,7 @@ msgid "Use a new password"
 msgstr ""
 
 #: app/routes/route.settings.php:458
-#: app/themes/Peafowl/views/dashboard.php:3047
+#: app/themes/Peafowl/views/dashboard.php:3106
 #: app/themes/Peafowl/views/settings.php:537
 msgid "Changes have been saved."
 msgstr ""
@@ -2017,13 +2064,13 @@ msgstr ""
 msgid "You must be at least %s years old to use this website."
 msgstr ""
 
-#: app/routes/route.signup.php:269 app/themes/Peafowl/header.php:206
+#: app/routes/route.signup.php:269 app/themes/Peafowl/header.php:213
 #: app/themes/Peafowl/views/index.php:77 app/themes/Peafowl/views/signup.php:12
 #: app/themes/Peafowl/views/signup.php:56
 msgid "Create account"
 msgstr ""
 
-#: app/routes/route.upload.php:42 app/themes/Peafowl/header.php:187
+#: app/routes/route.upload.php:46 app/themes/Peafowl/header.php:194
 #: app/themes/Peafowl/snippets/anywhere_upload.php:157
 msgid "Upload"
 msgstr ""
@@ -2042,21 +2089,21 @@ msgstr ""
 msgid "Liked by %s"
 msgstr ""
 
-#: app/routes/route.user.php:107 app/themes/Peafowl/header.php:264
-#: app/themes/Peafowl/views/album.php:62 app/themes/Peafowl/views/image.php:108
+#: app/routes/route.user.php:107 app/themes/Peafowl/header.php:271
+#: app/themes/Peafowl/views/album.php:62 app/themes/Peafowl/views/image.php:120
 msgid "Liked"
 msgstr ""
 
-#: app/routes/route.user.php:120 app/themes/Peafowl/header.php:271
+#: app/routes/route.user.php:120 app/themes/Peafowl/header.php:278
 #: app/themes/Peafowl/views/dashboard.php:762
 msgid "Followers"
 msgstr ""
 
-#: app/routes/route.user.php:365
+#: app/routes/route.user.php:363
 msgid "%n (%u) albums on %w"
 msgstr ""
 
-#: app/routes/route.user.php:370
+#: app/routes/route.user.php:368
 msgid "%n (%u) on %w"
 msgstr ""
 
@@ -2064,37 +2111,37 @@ msgstr ""
 msgid "Discovery"
 msgstr ""
 
-#: app/themes/Peafowl/header.php:134 app/themes/Peafowl/header.php:138
+#: app/themes/Peafowl/header.php:141 app/themes/Peafowl/header.php:145
 msgid "Advanced search"
 msgstr ""
 
-#: app/themes/Peafowl/header.php:147 app/themes/Peafowl/views/dashboard.php:741
-#: app/themes/Peafowl/views/dashboard.php:1308
+#: app/themes/Peafowl/header.php:154 app/themes/Peafowl/views/dashboard.php:741
+#: app/themes/Peafowl/views/dashboard.php:1323
 msgid "Random"
 msgstr ""
 
-#: app/themes/Peafowl/header.php:160
+#: app/themes/Peafowl/header.php:167
 #, php-format
 msgid "Notices (%s)"
 msgstr ""
 
-#: app/themes/Peafowl/header.php:177
+#: app/themes/Peafowl/header.php:184
 msgid "Lights"
 msgstr ""
 
-#: app/themes/Peafowl/header.php:219 app/themes/Peafowl/header.php:225
+#: app/themes/Peafowl/header.php:226 app/themes/Peafowl/header.php:232
 msgid "Notifications"
 msgstr ""
 
-#: app/themes/Peafowl/header.php:236
+#: app/themes/Peafowl/header.php:243
 msgid "You don't have notifications"
 msgstr ""
 
-#: app/themes/Peafowl/header.php:260
+#: app/themes/Peafowl/header.php:267
 msgid "My Profile"
 msgstr ""
 
-#: app/themes/Peafowl/header.php:280
+#: app/themes/Peafowl/header.php:287
 msgid "Sign out"
 msgstr ""
 
@@ -2298,12 +2345,12 @@ msgid "You must %s or %l to save this content into your account."
 msgstr ""
 
 #: app/themes/Peafowl/snippets/anywhere_upload.php:83
-#: app/themes/Peafowl/snippets/anywhere_upload.php:358
+#: app/themes/Peafowl/snippets/anywhere_upload.php:365
 msgid "create an account"
 msgstr ""
 
 #: app/themes/Peafowl/snippets/anywhere_upload.php:84
-#: app/themes/Peafowl/snippets/anywhere_upload.php:359
+#: app/themes/Peafowl/snippets/anywhere_upload.php:366
 msgid "sign in"
 msgstr ""
 
@@ -2318,12 +2365,12 @@ msgstr ""
 
 #: app/themes/Peafowl/snippets/anywhere_upload.php:135
 #: app/themes/Peafowl/snippets/form_advanced_search.php:43
-#: app/themes/Peafowl/snippets/form_category.php:3
+#: app/themes/Peafowl/snippets/form_category.php:5
 msgid "Category"
 msgstr ""
 
 #: app/themes/Peafowl/snippets/anywhere_upload.php:137
-#: app/themes/Peafowl/snippets/form_category.php:9
+#: app/themes/Peafowl/snippets/form_category.php:11
 msgid "Select category"
 msgstr ""
 
@@ -2373,41 +2420,45 @@ msgstr ""
 msgid "close"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:213
-#: app/themes/Peafowl/snippets/embed_tpl.php:37
+#: app/themes/Peafowl/snippets/anywhere_upload.php:196
+msgid "Note"
+msgstr ""
+
+#: app/themes/Peafowl/snippets/anywhere_upload.php:196
+msgid "We must approve the uploaded content before being able to share."
+msgstr ""
+
+#: app/themes/Peafowl/snippets/anywhere_upload.php:220
+#: app/themes/Peafowl/snippets/embed_tpl.php:39
 #: app/themes/Peafowl/views/album.php:171
 #: app/themes/Peafowl/views/plugin.php:24
 msgid "copy"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:214
+#: app/themes/Peafowl/snippets/anywhere_upload.php:221
 msgid "insert"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:246
-#: app/themes/Peafowl/views/dashboard.php:1254
+#: app/themes/Peafowl/snippets/anywhere_upload.php:253
+#: app/themes/Peafowl/views/dashboard.php:1269
 msgid "Remove"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:252
-msgid "Edit image"
-msgstr ""
-
-#: app/themes/Peafowl/snippets/anywhere_upload.php:256
-#: app/themes/Peafowl/snippets/form_image.php:4
+#: app/themes/Peafowl/snippets/anywhere_upload.php:263
+#: app/themes/Peafowl/snippets/form_image.php:8
 #: app/themes/Peafowl/views/dashboard.php:896
 #: app/themes/Peafowl/views/dashboard.php:1090
-#: app/themes/Peafowl/views/dashboard.php:2156
+#: app/themes/Peafowl/views/dashboard.php:2176
 #: app/themes/Peafowl/views/settings.php:487
 msgid "Title"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:256
-#: app/themes/Peafowl/snippets/anywhere_upload.php:328
+#: app/themes/Peafowl/snippets/anywhere_upload.php:263
+#: app/themes/Peafowl/snippets/anywhere_upload.php:335
 #: app/themes/Peafowl/snippets/form_album.php:18
-#: app/themes/Peafowl/snippets/form_category_edit.php:12
-#: app/themes/Peafowl/snippets/form_image.php:4
-#: app/themes/Peafowl/snippets/form_image.php:31
+#: app/themes/Peafowl/snippets/form_category_edit.php:14
+#: app/themes/Peafowl/snippets/form_image.php:8
+#: app/themes/Peafowl/snippets/form_image.php:40
 #: app/themes/Peafowl/snippets/form_ip_ban_edit.php:16
 #: app/themes/Peafowl/snippets/form_ip_ban_edit.php:22
 #: app/themes/Peafowl/snippets/form_storage_edit.php:135
@@ -2418,112 +2469,110 @@ msgstr ""
 #: app/themes/Peafowl/views/dashboard.php:1060
 #: app/themes/Peafowl/views/dashboard.php:1067
 #: app/themes/Peafowl/views/dashboard.php:1074
-#: app/themes/Peafowl/views/dashboard.php:2133
-#: app/themes/Peafowl/views/dashboard.php:2144
+#: app/themes/Peafowl/views/dashboard.php:2153
+#: app/themes/Peafowl/views/dashboard.php:2164
 msgid "optional"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:282
+#: app/themes/Peafowl/snippets/anywhere_upload.php:289
 msgid "Resize image"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:285
-#: app/themes/Peafowl/views/dashboard.php:1235
-#: app/themes/Peafowl/views/dashboard.php:1319
-#: app/themes/Peafowl/views/dashboard.php:1333
-#: app/themes/Peafowl/views/dashboard.php:1400
+#: app/themes/Peafowl/snippets/anywhere_upload.php:292
+#: app/themes/Peafowl/views/dashboard.php:1250
+#: app/themes/Peafowl/views/dashboard.php:1334
+#: app/themes/Peafowl/views/dashboard.php:1348
+#: app/themes/Peafowl/views/dashboard.php:1415
 msgid "Width"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:288
-#: app/themes/Peafowl/views/dashboard.php:1238
-#: app/themes/Peafowl/views/dashboard.php:1322
-#: app/themes/Peafowl/views/dashboard.php:1333
-#: app/themes/Peafowl/views/dashboard.php:1403
+#: app/themes/Peafowl/snippets/anywhere_upload.php:295
+#: app/themes/Peafowl/views/dashboard.php:1253
+#: app/themes/Peafowl/views/dashboard.php:1337
+#: app/themes/Peafowl/views/dashboard.php:1348
+#: app/themes/Peafowl/views/dashboard.php:1418
 msgid "Height"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:291
+#: app/themes/Peafowl/snippets/anywhere_upload.php:298
 msgid "Note: Animated GIF images won't be resized."
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:296
+#: app/themes/Peafowl/snippets/anywhere_upload.php:303
 msgid "Auto delete image"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:310
+#: app/themes/Peafowl/snippets/anywhere_upload.php:317
 #: app/themes/Peafowl/snippets/quickty/top_left.php:24
 msgid "Sign up"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:310
+#: app/themes/Peafowl/snippets/anywhere_upload.php:317
 #, php-format
 msgid "%s to be able to customize or disable image auto delete."
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:319
-#: app/themes/Peafowl/snippets/form_image.php:28
+#: app/themes/Peafowl/snippets/anywhere_upload.php:326
 msgid "Mark this if the image is not family safe"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:321
-#: app/themes/Peafowl/snippets/form_image.php:28
+#: app/themes/Peafowl/snippets/anywhere_upload.php:328
 #: app/themes/Peafowl/snippets/listing_tools_editor.php:53
-#: app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:8
-#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:8
+#: app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:11
+#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:11
 msgid "Flag as unsafe"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:328
-#: app/themes/Peafowl/snippets/form_category_edit.php:12
-#: app/themes/Peafowl/snippets/form_image.php:31
-#: app/themes/Peafowl/views/dashboard.php:1485
+#: app/themes/Peafowl/snippets/anywhere_upload.php:335
+#: app/themes/Peafowl/snippets/form_category_edit.php:14
+#: app/themes/Peafowl/snippets/form_image.php:40
+#: app/themes/Peafowl/views/dashboard.php:1500
 msgid "Description"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:329
-#: app/themes/Peafowl/snippets/form_image.php:32
+#: app/themes/Peafowl/snippets/anywhere_upload.php:336
+#: app/themes/Peafowl/snippets/form_image.php:41
 msgid "Brief description of this image"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:334
+#: app/themes/Peafowl/snippets/anywhere_upload.php:341
 msgid "Add image URLs"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:336
+#: app/themes/Peafowl/snippets/anywhere_upload.php:343
 msgid "Add the image URLs here"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:350
+#: app/themes/Peafowl/snippets/anywhere_upload.php:357
 #: app/themes/Peafowl/snippets/listing_tools_editor.php:36
-#: app/themes/Peafowl/snippets/user_items_editor.php:31
+#: app/themes/Peafowl/snippets/user_items_editor.php:29
 msgid "Create album"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:352
+#: app/themes/Peafowl/snippets/anywhere_upload.php:359
 msgid "The uploaded content will be moved to this newly created album."
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:355
+#: app/themes/Peafowl/snippets/anywhere_upload.php:362
 msgid "existing album"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:355
+#: app/themes/Peafowl/snippets/anywhere_upload.php:362
 msgid "You can also move the content to an %a."
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:357
+#: app/themes/Peafowl/snippets/anywhere_upload.php:364
 msgid "You must %s or %l if you want to edit this album later on."
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:382
+#: app/themes/Peafowl/snippets/anywhere_upload.php:389
 #: app/themes/Peafowl/snippets/listing_tools_editor.php:37
-#: app/themes/Peafowl/snippets/user_items_editor.php:46
-#: app/themes/Peafowl/snippets/user_items_editor.php:70
+#: app/themes/Peafowl/snippets/user_items_editor.php:43
+#: app/themes/Peafowl/snippets/user_items_editor.php:65
 msgid "Move to album"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:383
+#: app/themes/Peafowl/snippets/anywhere_upload.php:390
 msgid ""
 "Select an existing album to move the uploaded content. You can also <a class="
 "\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and "
@@ -2533,67 +2582,68 @@ msgstr ""
 "\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and "
 "move the content there."
 
-#: app/themes/Peafowl/snippets/anywhere_upload.php:397
+#: app/themes/Peafowl/snippets/anywhere_upload.php:404
 msgid "Error report"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/embed.php:12
+#: app/themes/Peafowl/snippets/embed.php:11
+#: app/themes/Peafowl/snippets/embed.php:103
 msgid "Viewer links"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/embed.php:24
+#: app/themes/Peafowl/snippets/embed.php:23
 msgid "HTML Codes"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/embed.php:27
+#: app/themes/Peafowl/snippets/embed.php:26
 msgid "HTML image"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/embed.php:32
+#: app/themes/Peafowl/snippets/embed.php:31
 msgid "HTML full linked"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/embed.php:37
+#: app/themes/Peafowl/snippets/embed.php:36
 msgid "HTML medium linked"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/embed.php:42
+#: app/themes/Peafowl/snippets/embed.php:41
 msgid "HTML thumbnail linked"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/embed.php:49
+#: app/themes/Peafowl/snippets/embed.php:48
 msgid "BBCodes"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/embed.php:52
+#: app/themes/Peafowl/snippets/embed.php:51
 msgid "BBCode full"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/embed.php:57
+#: app/themes/Peafowl/snippets/embed.php:56
 msgid "BBCode full linked"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/embed.php:62
+#: app/themes/Peafowl/snippets/embed.php:61
 msgid "BBCode medium linked"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/embed.php:67
+#: app/themes/Peafowl/snippets/embed.php:66
 msgid "BBCode thumbnail linked"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/embed.php:77
+#: app/themes/Peafowl/snippets/embed.php:76
 msgid "Markdown full"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/embed.php:82
+#: app/themes/Peafowl/snippets/embed.php:81
 msgid "Markdown full linked"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/embed.php:87
+#: app/themes/Peafowl/snippets/embed.php:86
 msgid "Markdown medium linked"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/embed.php:92
+#: app/themes/Peafowl/snippets/embed.php:91
 msgid "Markdown thumbnail linked"
 msgstr ""
 
@@ -2673,40 +2723,48 @@ msgstr ""
 msgid "Album password"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/form_category_edit.php:4
+#: app/themes/Peafowl/snippets/form_category_edit.php:6
 #: app/themes/Peafowl/snippets/form_storage_edit.php:5
-#: app/themes/Peafowl/views/dashboard.php:1483
-#: app/themes/Peafowl/views/dashboard.php:2504
+#: app/themes/Peafowl/views/dashboard.php:1498
+#: app/themes/Peafowl/views/dashboard.php:2524
 #: app/themes/Peafowl/views/settings.php:413
 #: content/pages/default/contact.php:92
 msgid "Name"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/form_category_edit.php:5
+#: app/themes/Peafowl/snippets/form_category_edit.php:7
 msgid "Category name"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/form_category_edit.php:8
+#: app/themes/Peafowl/snippets/form_category_edit.php:10
 #: app/themes/Peafowl/views/dashboard.php:975
 #: app/themes/Peafowl/views/dashboard.php:1089
-#: app/themes/Peafowl/views/dashboard.php:1484
+#: app/themes/Peafowl/views/dashboard.php:1499
 msgid "URL key"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/form_category_edit.php:9
+#: app/themes/Peafowl/snippets/form_category_edit.php:11
 msgid "Category URL key"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/form_category_edit.php:9
+#: app/themes/Peafowl/snippets/form_category_edit.php:11
 msgid "Only letters, numbers, and hyphens"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/form_category_edit.php:13
+#: app/themes/Peafowl/snippets/form_category_edit.php:15
 msgid "Brief description of this category"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/form_image.php:5
+#: app/themes/Peafowl/snippets/form_image.php:9
 msgid "Untitled image"
+msgstr ""
+
+#: app/themes/Peafowl/snippets/form_image.php:32
+msgid "Mark this if the image is not safe for work"
+msgstr ""
+
+#: app/themes/Peafowl/snippets/form_image.php:38
+msgid "Flag not safe"
 msgstr ""
 
 #: app/themes/Peafowl/snippets/form_import_add.php:6
@@ -2779,7 +2837,7 @@ msgstr ""
 "expiration."
 
 #: app/themes/Peafowl/snippets/form_ip_ban_edit.php:22
-#: app/themes/Peafowl/views/dashboard.php:1533
+#: app/themes/Peafowl/views/dashboard.php:1548
 #: content/pages/default/contact.php:122
 msgid "Message"
 msgstr ""
@@ -2871,7 +2929,7 @@ msgstr ""
 #: app/themes/Peafowl/snippets/form_storage_edit.php:120
 #: app/themes/Peafowl/views/dashboard.php:473
 #: app/themes/Peafowl/views/dashboard.php:474
-#: app/themes/Peafowl/views/dashboard.php:2670
+#: app/themes/Peafowl/views/dashboard.php:2690
 #: app/themes/Peafowl/views/settings.php:160
 #: app/themes/Peafowl/views/settings.php:161
 #: app/themes/Peafowl/views/signup.php:28
@@ -2966,13 +3024,13 @@ msgstr ""
 msgid "The system will map the images of this storage to this URL."
 msgstr ""
 
-#: app/themes/Peafowl/snippets/image_album_slice.php:14
+#: app/themes/Peafowl/snippets/image_album_slice.php:19
 msgid "view more"
 msgstr ""
 
 #: app/themes/Peafowl/snippets/listing.php:108
-#: app/themes/Peafowl/snippets/templates_content_listing.php:6
-#: app/themes/Peafowl/snippets/templates_content_listing.php:9
+#: app/themes/Peafowl/snippets/templates_content_listing.php:8
+#: app/themes/Peafowl/snippets/templates_content_listing.php:11
 msgid "Load more"
 msgstr ""
 
@@ -2981,7 +3039,7 @@ msgid "Select all"
 msgstr ""
 
 #: app/themes/Peafowl/snippets/listing_tools_editor.php:20
-#: app/themes/Peafowl/snippets/listing_tools_editor.php:64
+#: app/themes/Peafowl/snippets/listing_tools_editor.php:67
 msgid "Clear selection"
 msgstr ""
 
@@ -2998,17 +3056,17 @@ msgid "Get embed codes"
 msgstr ""
 
 #: app/themes/Peafowl/snippets/listing_tools_editor.php:46
-#: app/themes/Peafowl/snippets/user_items_editor.php:85
+#: app/themes/Peafowl/snippets/user_items_editor.php:81
 msgid "Assign category"
 msgstr ""
 
 #: app/themes/Peafowl/snippets/listing_tools_editor.php:52
-#: app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:9
-#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:9
+#: app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
+#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
 msgid "Flag as safe"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/modal_create_album.php:4
+#: app/themes/Peafowl/snippets/modal_create_album.php:6
 #: app/themes/Peafowl/views/user.php:140
 msgid "Create new album"
 msgstr ""
@@ -3025,22 +3083,12 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/template_content_empty.php:5
+#: app/themes/Peafowl/snippets/template_content_empty.php:7
 #: app/themes/Peafowl/views/dashboard.php:1111
 msgid "There's nothing to show here."
 msgstr ""
 
-#: app/themes/Peafowl/snippets/user_items_editor.php:16
-#: app/themes/Peafowl/views/image.php:83 app/themes/Peafowl/views/image.php:359
-msgid "Edit image details"
-msgstr ""
-
-#: app/themes/Peafowl/snippets/user_items_editor.php:18
-#: app/themes/Peafowl/views/album.php:39 app/themes/Peafowl/views/album.php:203
-msgid "Edit album details"
-msgstr ""
-
-#: app/themes/Peafowl/snippets/user_items_editor.php:32
+#: app/themes/Peafowl/snippets/user_items_editor.php:30
 msgid ""
 "All the images will be moved to this newly created album. You can also move "
 "the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album"
@@ -3050,7 +3098,7 @@ msgstr ""
 "the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album"
 "\">existing album</a>."
 
-#: app/themes/Peafowl/snippets/user_items_editor.php:50
+#: app/themes/Peafowl/snippets/user_items_editor.php:47
 msgid ""
 "Select an existing album to move the image. You can also <a class=\"modal-"
 "switch\" data-switch=\"move-new-album\">create a new album</a> and move the "
@@ -3060,7 +3108,7 @@ msgstr ""
 "switch\" data-switch=\"move-new-album\">create a new album</a> and move the "
 "image there."
 
-#: app/themes/Peafowl/snippets/user_items_editor.php:52
+#: app/themes/Peafowl/snippets/user_items_editor.php:49
 msgid ""
 "Select an existing album to move the album contents. You can also <a class="
 "\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and "
@@ -3070,7 +3118,7 @@ msgstr ""
 "\"modal-switch\" data-switch=\"move-new-album\">create a new album</a> and "
 "move the album contents there."
 
-#: app/themes/Peafowl/snippets/user_items_editor.php:71
+#: app/themes/Peafowl/snippets/user_items_editor.php:66
 msgid ""
 "Select an existing album to move the images. You can also <a class=\"modal-"
 "switch\" data-switch=\"move-new-album\">create a new album</a> and move the "
@@ -3080,32 +3128,46 @@ msgstr ""
 "switch\" data-switch=\"move-new-album\">create a new album</a> and move the "
 "images there."
 
-#: app/themes/Peafowl/snippets/user_items_editor.php:87
+#: app/themes/Peafowl/snippets/user_items_editor.php:83
 msgid "All the selected images will be assigned to this category."
 msgstr ""
 
-#: app/themes/Peafowl/snippets/user_items_editor.php:92
+#: app/themes/Peafowl/snippets/user_items_editor.php:88
 msgid "There is no categories."
 msgstr ""
 
-#: app/themes/Peafowl/snippets/user_items_editor.php:97
+#: app/themes/Peafowl/snippets/user_items_editor.php:93
 msgid "Confirm flag content as safe"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/user_items_editor.php:98
+#: app/themes/Peafowl/snippets/user_items_editor.php:94
 msgid "Do you really want to flag this content as safe?"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/user_items_editor.php:101
+#: app/themes/Peafowl/snippets/user_items_editor.php:97
 msgid "Confirm flag content as unsafe"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/user_items_editor.php:102
+#: app/themes/Peafowl/snippets/user_items_editor.php:98
 msgid "Do you really want to flag this content as unsafe?"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/user_items_editor.php:106
+#: app/themes/Peafowl/snippets/user_items_editor.php:102
 #: app/themes/Peafowl/snippets/user_items_editor.php:110
+msgid "Confirm approval"
+msgstr ""
+
+#: app/themes/Peafowl/snippets/user_items_editor.php:103
+#, fuzzy
+#| msgid ""
+#| "Do you really want to remove all the selected content? This can't be "
+#| "undone."
+msgid "Do you really want to approve this content? This can't be undone."
+msgstr ""
+"Do you really want to remove all the selected content? This can't be undone."
+
+#: app/themes/Peafowl/snippets/user_items_editor.php:106
+#: app/themes/Peafowl/snippets/user_items_editor.php:114
 msgid "Confirm deletion"
 msgstr ""
 
@@ -3114,25 +3176,35 @@ msgid "Do you really want to remove this content? This can't be undone."
 msgstr ""
 
 #: app/themes/Peafowl/snippets/user_items_editor.php:111
+#, fuzzy
+#| msgid ""
+#| "Do you really want to remove all the selected content? This can't be "
+#| "undone."
+msgid ""
+"Do you really want to approve all the selected content? This can't be undone."
+msgstr ""
+"Do you really want to remove all the selected content? This can't be undone."
+
+#: app/themes/Peafowl/snippets/user_items_editor.php:115
 msgid ""
 "Do you really want to remove all the selected content? This can't be undone."
 msgstr ""
 "Do you really want to remove all the selected content? This can't be undone."
 
-#: app/themes/Peafowl/snippets/viewer_template.php:19
+#: app/themes/Peafowl/snippets/viewer_template.php:21
 msgid "Fullscreen"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/viewer_template.php:23
+#: app/themes/Peafowl/snippets/viewer_template.php:25
 msgid "Exit fullscreen"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/viewer_template.php:36
-#: app/themes/Peafowl/views/album.php:22 app/themes/Peafowl/views/image.php:69
+#: app/themes/Peafowl/snippets/viewer_template.php:38
+#: app/themes/Peafowl/views/album.php:22 app/themes/Peafowl/views/image.php:75
 msgid "Guest"
 msgstr ""
 
-#: app/themes/Peafowl/snippets/viewer_template.php:39
+#: app/themes/Peafowl/snippets/viewer_template.php:41
 msgid "Keyboard shortcuts"
 msgstr ""
 
@@ -3162,12 +3234,12 @@ msgstr ""
 msgid "by %u"
 msgstr ""
 
-#: app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:7
-#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:7
+#: app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:10
+#: app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:10
 msgid "Toggle unsafe flag"
 msgstr ""
 
-#: app/themes/Peafowl/views/404.php:8 app/web.php:556
+#: app/themes/Peafowl/views/404.php:8 app/web.php:575
 msgid "That page doesn't exist"
 msgstr ""
 
@@ -3316,7 +3388,7 @@ msgstr ""
 "An email to %s has been sent with instructions to activate your account. If "
 "you don't receive the instructions try checking your junk or spam filters."
 
-#: app/themes/Peafowl/views/album.php:31 app/themes/Peafowl/views/image.php:77
+#: app/themes/Peafowl/views/album.php:31 app/themes/Peafowl/views/image.php:83
 msgid "This content is private"
 msgstr ""
 
@@ -3328,11 +3400,7 @@ msgstr ""
 "Do you really want to delete this album and all of its images? This can't be "
 "undone."
 
-#: app/themes/Peafowl/views/album.php:45
-msgid "Delete album"
-msgstr ""
-
-#: app/themes/Peafowl/views/album.php:62 app/themes/Peafowl/views/image.php:108
+#: app/themes/Peafowl/views/album.php:62 app/themes/Peafowl/views/image.php:120
 msgid "You like this"
 msgstr ""
 
@@ -3393,7 +3461,7 @@ msgstr ""
 
 #: app/themes/Peafowl/views/dashboard.php:9
 #: app/themes/Peafowl/views/dashboard.php:91
-#: app/themes/Peafowl/views/dashboard.php:2366
+#: app/themes/Peafowl/views/dashboard.php:2386
 #: app/themes/Peafowl/views/plugin.php:82
 msgid "documentation"
 msgstr ""
@@ -3422,7 +3490,7 @@ msgid ""
 msgstr ""
 
 #: app/themes/Peafowl/views/dashboard.php:66
-#: app/themes/Peafowl/views/dashboard.php:2542
+#: app/themes/Peafowl/views/dashboard.php:2562
 msgid "Disk used"
 msgstr ""
 
@@ -3603,7 +3671,7 @@ msgstr ""
 
 #: app/themes/Peafowl/views/dashboard.php:556
 #: app/themes/Peafowl/views/dashboard.php:560
-#: app/themes/Peafowl/views/image.php:249
+#: app/themes/Peafowl/views/image.php:264
 #: app/themes/Peafowl/views/settings.php:71
 msgid "Add IP ban"
 msgstr ""
@@ -3685,7 +3753,7 @@ msgid "Enables to browse public uploaded images. It also enables categories."
 msgstr ""
 
 #: app/themes/Peafowl/views/dashboard.php:730
-#: app/themes/Peafowl/views/dashboard.php:1282
+#: app/themes/Peafowl/views/dashboard.php:1297
 msgid "guests"
 msgstr ""
 
@@ -3719,7 +3787,7 @@ msgid "User ID"
 msgstr ""
 
 #: app/themes/Peafowl/views/dashboard.php:795
-#: app/themes/Peafowl/views/dashboard.php:2231
+#: app/themes/Peafowl/views/dashboard.php:2251
 #, php-format
 msgid "Your user id is: %s"
 msgstr ""
@@ -3752,8 +3820,8 @@ msgid "Content privacy mode"
 msgstr ""
 
 #: app/themes/Peafowl/views/dashboard.php:831
-#: app/themes/Peafowl/views/dashboard.php:1919
-#: app/themes/Peafowl/views/dashboard.php:2179
+#: app/themes/Peafowl/views/dashboard.php:1938
+#: app/themes/Peafowl/views/dashboard.php:2199
 msgid "Default"
 msgstr ""
 
@@ -3969,109 +4037,123 @@ msgstr ""
 "administrators."
 
 #: app/themes/Peafowl/views/dashboard.php:1151
-msgid "Guest uploads"
-msgstr ""
-
-#: app/themes/Peafowl/views/dashboard.php:1158
-msgid "Enable this if you want to allow non registered users to upload."
-msgstr ""
-
-#: app/themes/Peafowl/views/dashboard.php:1163
 msgid "Upload user interface"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1166
+#: app/themes/Peafowl/views/dashboard.php:1154
 msgid "On-page container"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1166
+#: app/themes/Peafowl/views/dashboard.php:1154
 msgid "route"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1173
+#: app/themes/Peafowl/views/dashboard.php:1158
+msgid "Guest uploads"
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:1165
+msgid "Enable this if you want to allow non registered users to upload."
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:1172
+msgid "Moderate uploads"
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:1179
+msgid "Guests"
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:1183
+msgid ""
+"Enable this to moderate incoming uploads. Target content will require "
+"moderation for approval."
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:1188
 msgid "Enable embed codes (uploader)"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1178
+#: app/themes/Peafowl/views/dashboard.php:1193
 msgid "Enable this if you want to show embed codes when upload gets completed."
 msgstr ""
 "Enable this if you want to show embed codes when upload gets completed."
 
-#: app/themes/Peafowl/views/dashboard.php:1184
+#: app/themes/Peafowl/views/dashboard.php:1199
 msgid "Upload threads"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1187
+#: app/themes/Peafowl/views/dashboard.php:1202
 msgid "Number of simultaneous upload threads (parallel uploads)"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1191
+#: app/themes/Peafowl/views/dashboard.php:1206
 msgid "Redirect on single upload"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1196
+#: app/themes/Peafowl/views/dashboard.php:1211
 msgid "Enable this if you want to redirect to image page on single upload."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1200
+#: app/themes/Peafowl/views/dashboard.php:1215
 msgid "Enable duplicate uploads"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1205
+#: app/themes/Peafowl/views/dashboard.php:1220
 msgid ""
 "Enable this if you want to allow duplicate uploads from the same IP within "
 "24hrs. This setting doesn't affect administrators."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1211
+#: app/themes/Peafowl/views/dashboard.php:1226
 msgid "Enable expirable uploads"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1216
+#: app/themes/Peafowl/views/dashboard.php:1231
 msgid ""
 "Enable this if you want to allow uploads with an automatic delete option."
 msgstr ""
 "Enable this if you want to allow uploads with an automatic delete option."
 
-#: app/themes/Peafowl/views/dashboard.php:1220
+#: app/themes/Peafowl/views/dashboard.php:1235
 msgid "Auto delete guest uploads"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1226
+#: app/themes/Peafowl/views/dashboard.php:1241
 msgid ""
 "Enable this if you want to force guest uploads to be auto deleted after "
 "certain time."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1232
+#: app/themes/Peafowl/views/dashboard.php:1247
 msgid "Maximum image size"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1243
+#: app/themes/Peafowl/views/dashboard.php:1258
 msgid ""
 "Images greater than this size will get automatically downsized. Use zero (0) "
 "to don't set a limit."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1249
+#: app/themes/Peafowl/views/dashboard.php:1264
 #: app/themes/Peafowl/views/settings.php:213
 msgid "Image Exif data"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1253
+#: app/themes/Peafowl/views/dashboard.php:1268
 msgid "Keep"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1257
+#: app/themes/Peafowl/views/dashboard.php:1272
 #, php-format
 msgid "Select the default setting for image <a %s>Exif data</a> on upload."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1261
+#: app/themes/Peafowl/views/dashboard.php:1276
 msgid "Image Exif data (user setting)"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1269
+#: app/themes/Peafowl/views/dashboard.php:1284
 msgid ""
 "Enable this if you want to allow each user to configure how image Exif data "
 "will be handled."
@@ -4079,65 +4161,65 @@ msgstr ""
 "Enable this if you want to allow each user to configure how image Exif data "
 "will be handled."
 
-#: app/themes/Peafowl/views/dashboard.php:1275
-#: app/themes/Peafowl/views/dashboard.php:1282
-#: app/themes/Peafowl/views/dashboard.php:1285
+#: app/themes/Peafowl/views/dashboard.php:1290
+#: app/themes/Peafowl/views/dashboard.php:1297
+#: app/themes/Peafowl/views/dashboard.php:1300
 msgid "Maximum upload file size"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1278
+#: app/themes/Peafowl/views/dashboard.php:1293
 msgid ""
 "Maximum size allowed by server is %s. This limit is capped by %u and %p (%f "
 "values)."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1285
+#: app/themes/Peafowl/views/dashboard.php:1300
 #, php-format
 msgid "Same as \"%s\" but for guests."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1291
+#: app/themes/Peafowl/views/dashboard.php:1306
 msgid "Image path"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1292
+#: app/themes/Peafowl/views/dashboard.php:1307
 msgid "Relative to Chevereto root"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1294
+#: app/themes/Peafowl/views/dashboard.php:1309
 msgid "Where to store the images? Relative to Chevereto root."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1297
+#: app/themes/Peafowl/views/dashboard.php:1312
 msgid "Storage mode"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1300
+#: app/themes/Peafowl/views/dashboard.php:1315
 msgid "Datefolders"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1300
+#: app/themes/Peafowl/views/dashboard.php:1315
 msgid "Direct"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1302
+#: app/themes/Peafowl/views/dashboard.php:1317
 #, php-format
 msgid "Datefolders creates %s structure"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1305
+#: app/themes/Peafowl/views/dashboard.php:1320
 msgid "File naming method"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1308
+#: app/themes/Peafowl/views/dashboard.php:1323
 msgid "Original"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1308
+#: app/themes/Peafowl/views/dashboard.php:1323
 msgid "Mix original + random"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1310
+#: app/themes/Peafowl/views/dashboard.php:1325
 msgid ""
 "\"Original\" will try to keep the image source name while \"Random\" will "
 "generate a random name. \"ID\" will name the image just like the image ID."
@@ -4145,76 +4227,76 @@ msgstr ""
 "\"Original\" will try to keep the image source name while \"Random\" will "
 "generate a random name. \"ID\" will name the image just like the image ID."
 
-#: app/themes/Peafowl/views/dashboard.php:1316
+#: app/themes/Peafowl/views/dashboard.php:1331
 msgid "Thumb size"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1327
+#: app/themes/Peafowl/views/dashboard.php:1342
 msgid "Thumbnails will be fixed to this size."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1330
+#: app/themes/Peafowl/views/dashboard.php:1345
 msgid "Medium image fixed dimension"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1335
+#: app/themes/Peafowl/views/dashboard.php:1350
 msgid ""
 "Medium sized images will be fixed to this dimension. For example, if you "
 "select \"width\" that dimension will be fixed and image height will be "
 "automatically calculated."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1338
+#: app/themes/Peafowl/views/dashboard.php:1353
 msgid "Medium image fixed size"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1343
+#: app/themes/Peafowl/views/dashboard.php:1358
 msgid "Width or height will be automatically calculated."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1349
+#: app/themes/Peafowl/views/dashboard.php:1364
 msgid "Watermarks"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1355
+#: app/themes/Peafowl/views/dashboard.php:1370
 msgid "Enable this to put a logo or anything you want in image uploads."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1364
-#: app/themes/Peafowl/views/dashboard.php:1931
+#: app/themes/Peafowl/views/dashboard.php:1379
+#: app/themes/Peafowl/views/dashboard.php:1950
 #, php-format
 msgid "Warning: Can't write in %s"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1369
+#: app/themes/Peafowl/views/dashboard.php:1384
 msgid "Watermark user toggles"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1372
+#: app/themes/Peafowl/views/dashboard.php:1387
 msgid "Enable watermark on guest uploads"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1377
+#: app/themes/Peafowl/views/dashboard.php:1392
 msgid "Enable watermark on user uploads"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1382
+#: app/themes/Peafowl/views/dashboard.php:1397
 msgid "Enable watermark on admin uploads"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1388
+#: app/themes/Peafowl/views/dashboard.php:1403
 msgid "Watermark file toggles"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1391
+#: app/themes/Peafowl/views/dashboard.php:1406
 msgid "Enable watermark on GIF image uploads"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1397
+#: app/themes/Peafowl/views/dashboard.php:1412
 msgid "Minimum image size needed to apply watermark"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1408
+#: app/themes/Peafowl/views/dashboard.php:1423
 msgid ""
 "Images smaller than this won't be watermarked. Use zero (0) to don't set a "
 "minimum image size limit."
@@ -4222,11 +4304,11 @@ msgstr ""
 "Images smaller than this won't be watermarked. Use zero (0) to don't set a "
 "minimum image size limit."
 
-#: app/themes/Peafowl/views/dashboard.php:1412
+#: app/themes/Peafowl/views/dashboard.php:1427
 msgid "Watermark image"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1418
+#: app/themes/Peafowl/views/dashboard.php:1433
 msgid ""
 "You will get best results with plain logos with drop shadow. You can use a "
 "large image if the file size is not that big (recommended max. is 16KB). "
@@ -4236,47 +4318,47 @@ msgstr ""
 "large image if the file size is not that big (recommended max. is 16KB). "
 "Must be a PNG."
 
-#: app/themes/Peafowl/views/dashboard.php:1421
+#: app/themes/Peafowl/views/dashboard.php:1436
 msgid "Watermark position"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1425
+#: app/themes/Peafowl/views/dashboard.php:1440
 msgid "left top"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1426
+#: app/themes/Peafowl/views/dashboard.php:1441
 msgid "left center"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1427
+#: app/themes/Peafowl/views/dashboard.php:1442
 msgid "left bottom"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1428
+#: app/themes/Peafowl/views/dashboard.php:1443
 msgid "center top"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1429
+#: app/themes/Peafowl/views/dashboard.php:1444
 msgid "center center"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1430
+#: app/themes/Peafowl/views/dashboard.php:1445
 msgid "center bottom"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1431
+#: app/themes/Peafowl/views/dashboard.php:1446
 msgid "right top"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1432
+#: app/themes/Peafowl/views/dashboard.php:1447
 msgid "right center"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1433
+#: app/themes/Peafowl/views/dashboard.php:1448
 msgid "right bottom"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1437
+#: app/themes/Peafowl/views/dashboard.php:1452
 msgid ""
 "Relative position of the watermark image. First horizontal align then "
 "vertical align."
@@ -4284,51 +4366,51 @@ msgstr ""
 "Relative position of the watermark image. First horizontal align then "
 "vertical align."
 
-#: app/themes/Peafowl/views/dashboard.php:1440
+#: app/themes/Peafowl/views/dashboard.php:1455
 msgid "Watermark percentage"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1445
+#: app/themes/Peafowl/views/dashboard.php:1460
 msgid ""
 "Watermark percentual size relative to the target image area. Values 1 to 100."
 msgstr ""
 "Watermark percentual size relative to the target image area. Values 1 to 100."
 
-#: app/themes/Peafowl/views/dashboard.php:1448
+#: app/themes/Peafowl/views/dashboard.php:1463
 msgid "Watermark margin"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1453
+#: app/themes/Peafowl/views/dashboard.php:1468
 msgid "Margin from the border of the image to the watermark image."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1456
+#: app/themes/Peafowl/views/dashboard.php:1471
 msgid "Watermark opacity"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1461
+#: app/themes/Peafowl/views/dashboard.php:1476
 msgid ""
 "Opacity of the watermark in the final watermarked image. Values 0 to 100."
 msgstr ""
 "Opacity of the watermark in the final watermarked image. Values 0 to 100."
 
-#: app/themes/Peafowl/views/dashboard.php:1473
+#: app/themes/Peafowl/views/dashboard.php:1488
 msgid "Dashboard > Settings > Website"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1473
+#: app/themes/Peafowl/views/dashboard.php:1488
 #, php-format
 msgid ""
 "Categories won't work when the explorer feature is turned off. To revert "
 "this setting go to %s."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1492
+#: app/themes/Peafowl/views/dashboard.php:1507
 #, php-format
 msgid "Do you really want to delete the %s category? This can't be undone."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1507
+#: app/themes/Peafowl/views/dashboard.php:1522
 msgid ""
 "Note: Deleting a category doesn't delete the images that belongs to that "
 "category."
@@ -4336,95 +4418,95 @@ msgstr ""
 "Note: Deleting a category doesn't delete the images that belongs to that "
 "category."
 
-#: app/themes/Peafowl/views/dashboard.php:1509
+#: app/themes/Peafowl/views/dashboard.php:1524
 msgid "Edit category"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1532
+#: app/themes/Peafowl/views/dashboard.php:1547
 msgid "Expires"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1540
+#: app/themes/Peafowl/views/dashboard.php:1555
 #, php-format
 msgid ""
 "Do you really want to remove the ban to the IP %s? This can't be undone."
 msgstr ""
 "Do you really want to remove the ban to the IP %s? This can't be undone."
 
-#: app/themes/Peafowl/views/dashboard.php:1553
+#: app/themes/Peafowl/views/dashboard.php:1568
 msgid "Banned IP address will be forbidden to use the entire website."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1555
+#: app/themes/Peafowl/views/dashboard.php:1570
 msgid "Edit IP ban"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1567
+#: app/themes/Peafowl/views/dashboard.php:1582
 msgid "Enable signups"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1574
+#: app/themes/Peafowl/views/dashboard.php:1589
 msgid "Enable this if you want to allow users to signup."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1579
+#: app/themes/Peafowl/views/dashboard.php:1594
 msgid "Enable user content delete"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1584
+#: app/themes/Peafowl/views/dashboard.php:1599
 msgid ""
 "Enable this if you want to allow users to delete their own content. This "
 "setting doesn't affect administrators."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1589
+#: app/themes/Peafowl/views/dashboard.php:1604
 msgid "Minimum age required"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1592
-#: app/themes/Peafowl/views/dashboard.php:2231
-#: app/themes/Peafowl/views/dashboard.php:2999
+#: app/themes/Peafowl/views/dashboard.php:1607
+#: app/themes/Peafowl/views/dashboard.php:2251
+#: app/themes/Peafowl/views/dashboard.php:3058
 msgid "Empty"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1594
+#: app/themes/Peafowl/views/dashboard.php:1609
 msgid "Leave it empty to don't require a minimum age to use the website."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1601
+#: app/themes/Peafowl/views/dashboard.php:1616
 msgid "Notify on user signup"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1606
+#: app/themes/Peafowl/views/dashboard.php:1621
 msgid ""
 "Enable this if you want to get an email notification for each new user "
 "signup."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1611
+#: app/themes/Peafowl/views/dashboard.php:1626
 msgid "Username routing"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1618
+#: app/themes/Peafowl/views/dashboard.php:1633
 #, php-format
 msgid ""
 "Enable this if you want to use %s/username URLs instead of %s/user/username."
 msgstr ""
 "Enable this if you want to use %s/username URLs instead of %s/user/username."
 
-#: app/themes/Peafowl/views/dashboard.php:1625
+#: app/themes/Peafowl/views/dashboard.php:1640
 msgid "Require email confirmation"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1632
+#: app/themes/Peafowl/views/dashboard.php:1647
 msgid "Enable this if users must validate their email address on sign up."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1636
+#: app/themes/Peafowl/views/dashboard.php:1651
 msgid "Require email for social signup"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1643
+#: app/themes/Peafowl/views/dashboard.php:1658
 msgid ""
 "Enable this if users using social networks to register must provide an email "
 "address."
@@ -4432,22 +4514,22 @@ msgstr ""
 "Enable this if users using social networks to register must provide an email "
 "address."
 
-#: app/themes/Peafowl/views/dashboard.php:1650
+#: app/themes/Peafowl/views/dashboard.php:1665
 msgid "User avatar max. filesize"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1653
+#: app/themes/Peafowl/views/dashboard.php:1668
 #, php-format
 msgid ""
 "Max. allowed filesize for user avatar image. (Max allowed by server is %s)"
 msgstr ""
 "Max. allowed filesize for user avatar image. (Max allowed by server is %s)"
 
-#: app/themes/Peafowl/views/dashboard.php:1656
+#: app/themes/Peafowl/views/dashboard.php:1671
 msgid "User background max. filesize"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1659
+#: app/themes/Peafowl/views/dashboard.php:1674
 #, php-format
 msgid ""
 "Max. allowed filesize for user background image. (Max allowed by server is "
@@ -4456,21 +4538,21 @@ msgstr ""
 "Max. allowed filesize for user background image. (Max allowed by server is "
 "%s)"
 
-#: app/themes/Peafowl/views/dashboard.php:1667
+#: app/themes/Peafowl/views/dashboard.php:1682
 msgid ""
 "Shows a consent screen before accessing the website. Useful for adult "
 "content websites where minors shouldn't be allowed."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1669
+#: app/themes/Peafowl/views/dashboard.php:1684
 msgid "Enable consent screen"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1680
+#: app/themes/Peafowl/views/dashboard.php:1695
 msgid "Consent screen cover image"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1694
+#: app/themes/Peafowl/views/dashboard.php:1709
 msgid ""
 "Block image uploads by IP if the system notice a flood  behavior based on "
 "the number of uploads per time period. This setting doesn't affect "
@@ -4480,190 +4562,202 @@ msgstr ""
 "the number of uploads per time period. This setting doesn't affect "
 "administrators."
 
-#: app/themes/Peafowl/views/dashboard.php:1707
+#: app/themes/Peafowl/views/dashboard.php:1722
 msgid "Notify to email"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1712
+#: app/themes/Peafowl/views/dashboard.php:1727
 msgid "If enabled the system will send an email on flood incidents."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1715
+#: app/themes/Peafowl/views/dashboard.php:1730
 msgid "Minute limit"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1720
+#: app/themes/Peafowl/views/dashboard.php:1735
 msgid "Hourly limit"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1725
+#: app/themes/Peafowl/views/dashboard.php:1740
 msgid "Daily limit"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1730
+#: app/themes/Peafowl/views/dashboard.php:1745
 msgid "Weekly limit"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1735
+#: app/themes/Peafowl/views/dashboard.php:1750
 msgid "Monthly limit"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1747
-msgid "Show not safe content in listings"
-msgstr ""
-
-#: app/themes/Peafowl/views/dashboard.php:1752
-msgid ""
-"Enable this if you want to show not safe content in listings. This setting "
-"doesn't affect administrators and can be overridden by user own settings."
-msgstr ""
-"Enable this if you want to show not safe content in listings. This setting "
-"doesn't affect administrators and can be overridden by user own settings."
-
-#: app/themes/Peafowl/views/dashboard.php:1755
-msgid "Blur NSFW content in listings"
-msgstr ""
-
-#: app/themes/Peafowl/views/dashboard.php:1760
-msgid ""
-"Enable this if you want to apply a blur effect on the NSFW images in "
-"listings."
-msgstr ""
-"Enable this if you want to apply a blur effect on the NSFW images in "
-"listings."
-
-#: app/themes/Peafowl/views/dashboard.php:1763
-msgid "Show banners in not safe content"
-msgstr ""
-
-#: app/themes/Peafowl/views/dashboard.php:1768
-msgid "Enable this if you want to show banners in not safe content pages."
+#: app/themes/Peafowl/views/dashboard.php:1762
+#, php-format
+msgid "Lock %s editing"
 msgstr ""
 
 #: app/themes/Peafowl/views/dashboard.php:1772
-msgid "Show not safe content in random mode"
+msgid ""
+"Enable this to prevent users from changing the NSFW flag. When enabled, only "
+"admin and managers will have this permission."
 msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:1776
+msgid "Show not safe content in listings"
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:1781
+msgid ""
+"Enable this if you want to show not safe content in listings. This setting "
+"doesn't affect administrators and can be overridden by user own settings."
+msgstr ""
+"Enable this if you want to show not safe content in listings. This setting "
+"doesn't affect administrators and can be overridden by user own settings."
 
 #: app/themes/Peafowl/views/dashboard.php:1784
-msgid "List items per page"
+msgid "Blur NSFW content in listings"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1787
-msgid "How many items should be displayed per page listing."
+#: app/themes/Peafowl/views/dashboard.php:1789
+msgid ""
+"Enable this if you want to apply a blur effect on the NSFW images in "
+"listings."
 msgstr ""
+"Enable this if you want to apply a blur effect on the NSFW images in "
+"listings."
 
-#: app/themes/Peafowl/views/dashboard.php:1791
-msgid "List pagination mode"
-msgstr ""
-
-#: app/themes/Peafowl/views/dashboard.php:1794
-msgid "Endless scrolling"
-msgstr ""
-
-#: app/themes/Peafowl/views/dashboard.php:1794
-msgid "Classic pagination"
+#: app/themes/Peafowl/views/dashboard.php:1792
+msgid "Show banners in not safe content"
 msgstr ""
 
 #: app/themes/Peafowl/views/dashboard.php:1797
-msgid "What pagination method should be used."
+msgid "Enable this if you want to show banners in not safe content pages."
 msgstr ""
 
 #: app/themes/Peafowl/views/dashboard.php:1801
+msgid "Show not safe content in random mode"
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:1813
+msgid "List items per page"
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:1816
+msgid "How many items should be displayed per page listing."
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:1820
+msgid "List pagination mode"
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:1823
+msgid "Endless scrolling"
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:1823
+msgid "Classic pagination"
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:1826
+msgid "What pagination method should be used."
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:1830
 msgid "Listing viewer"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1807
+#: app/themes/Peafowl/views/dashboard.php:1836
 msgid "Enable this to use the listing viewer when clicking on an image."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1811
+#: app/themes/Peafowl/views/dashboard.php:1840
 msgid "Image listing size"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1814
+#: app/themes/Peafowl/views/dashboard.php:1843
 msgid "Fluid"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1814
+#: app/themes/Peafowl/views/dashboard.php:1843
 msgid "Fixed"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1817
+#: app/themes/Peafowl/views/dashboard.php:1846
 msgid "Both methods use a fixed width but fluid method uses automatic heights."
 msgstr ""
 "Both methods use a fixed width but fluid method uses automatic heights."
 
-#: app/themes/Peafowl/views/dashboard.php:1823
+#: app/themes/Peafowl/views/dashboard.php:1852
 msgid "Album listing images requirement"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1823
+#: app/themes/Peafowl/views/dashboard.php:1852
+#: app/themes/Peafowl/views/dashboard.php:2106
 msgid "explore"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1826
+#: app/themes/Peafowl/views/dashboard.php:1855
 msgid "Sets the minimum image count needed to show albums in explore."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1832
+#: app/themes/Peafowl/views/dashboard.php:1861
 msgid "Listing columns number"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1833
+#: app/themes/Peafowl/views/dashboard.php:1862
 msgid "Here you can set how many columns are used based on each target device."
 msgstr ""
 "Here you can set how many columns are used based on each target device."
 
-#: app/themes/Peafowl/views/dashboard.php:1835
+#: app/themes/Peafowl/views/dashboard.php:1864
 msgid "Phone"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1839
+#: app/themes/Peafowl/views/dashboard.php:1868
 msgid "Phablet"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1843
+#: app/themes/Peafowl/views/dashboard.php:1872
 msgid "Tablet"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1847
+#: app/themes/Peafowl/views/dashboard.php:1876
 msgid "Laptop"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1851
+#: app/themes/Peafowl/views/dashboard.php:1880
 msgid "Desktop"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1861
+#: app/themes/Peafowl/views/dashboard.php:1890
 msgid "theme editing"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1878
+#: app/themes/Peafowl/views/dashboard.php:1907
 #, php-format
 msgid "Put your themes in the %s folder"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1882
+#: app/themes/Peafowl/views/dashboard.php:1911
 msgid "Tone"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1885
+#: app/themes/Peafowl/views/dashboard.php:1914
 msgid "Light"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1885
+#: app/themes/Peafowl/views/dashboard.php:1914
 msgid "Dark"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1891
+#: app/themes/Peafowl/views/dashboard.php:1920
 msgid "Main color"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1892
+#: app/themes/Peafowl/views/dashboard.php:1921
 msgid "Hexadecimal color value"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1894
+#: app/themes/Peafowl/views/dashboard.php:1923
 #, php-format
 msgid ""
 "Use this to set the main theme color. Value must be in <a href=\"%s\" target="
@@ -4672,176 +4766,162 @@ msgstr ""
 "Use this to set the main theme color. Value must be in <a href=\"%s\" target="
 "\"_blank\">hex format</a>."
 
-#: app/themes/Peafowl/views/dashboard.php:1898
-msgid "Top bar color"
-msgstr ""
-
-#: app/themes/Peafowl/views/dashboard.php:1901
-#: app/themes/Peafowl/views/dashboard.php:1917
-#: app/themes/Peafowl/views/dashboard.php:2177
-msgid "Black"
-msgstr ""
-
-#: app/themes/Peafowl/views/dashboard.php:1901
-#: app/themes/Peafowl/views/dashboard.php:1918
-#: app/themes/Peafowl/views/dashboard.php:2178
-msgid "White"
-msgstr ""
-
-#: app/themes/Peafowl/views/dashboard.php:1904
-msgid ""
-"If you set this to \"white\" the top bar and all the black tones will be "
-"changed to white tones."
-msgstr ""
-"If you set this to \"white\" the top bar and all the black tones will be "
-"changed to white tones."
-
-#: app/themes/Peafowl/views/dashboard.php:1908
+#: app/themes/Peafowl/views/dashboard.php:1927
 msgid "Top bar button color"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1912
-#: app/themes/Peafowl/views/dashboard.php:2172
+#: app/themes/Peafowl/views/dashboard.php:1931
+#: app/themes/Peafowl/views/dashboard.php:2192
 msgid "Blue"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1913
-#: app/themes/Peafowl/views/dashboard.php:2173
+#: app/themes/Peafowl/views/dashboard.php:1932
+#: app/themes/Peafowl/views/dashboard.php:2193
 msgid "Green"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1914
-#: app/themes/Peafowl/views/dashboard.php:2174
+#: app/themes/Peafowl/views/dashboard.php:1933
+#: app/themes/Peafowl/views/dashboard.php:2194
 msgid "Orange"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1915
-#: app/themes/Peafowl/views/dashboard.php:2175
+#: app/themes/Peafowl/views/dashboard.php:1934
+#: app/themes/Peafowl/views/dashboard.php:2195
 msgid "Red"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1916
-#: app/themes/Peafowl/views/dashboard.php:2176
+#: app/themes/Peafowl/views/dashboard.php:1935
+#: app/themes/Peafowl/views/dashboard.php:2196
 msgid "Grey"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1923
-msgid "Color for the top bar buttons like the \"Create account\" button."
+#: app/themes/Peafowl/views/dashboard.php:1936
+#: app/themes/Peafowl/views/dashboard.php:2197
+msgid "Black"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1936
-msgid "Enable vector logo"
+#: app/themes/Peafowl/views/dashboard.php:1937
+#: app/themes/Peafowl/views/dashboard.php:2198
+msgid "White"
 msgstr ""
 
 #: app/themes/Peafowl/views/dashboard.php:1942
+msgid "Color for the top bar buttons like the \"Create account\" button."
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:1955
+msgid "Enable vector logo"
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:1961
 msgid ""
 "Enable vector logo for high quality logo in devices with high pixel density."
 msgstr ""
 "Enable vector logo for high quality logo in devices with high pixel density."
 
-#: app/themes/Peafowl/views/dashboard.php:1949
-#: app/themes/Peafowl/views/dashboard.php:2133
+#: app/themes/Peafowl/views/dashboard.php:1968
+#: app/themes/Peafowl/views/dashboard.php:2153
 msgid "Vector logo image"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1955
+#: app/themes/Peafowl/views/dashboard.php:1974
 msgid "Vector version or your website logo in SVG format."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1961
-#: app/themes/Peafowl/views/dashboard.php:2144
+#: app/themes/Peafowl/views/dashboard.php:1980
+#: app/themes/Peafowl/views/dashboard.php:2164
 msgid "Raster logo image"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1967
+#: app/themes/Peafowl/views/dashboard.php:1986
 msgid "Bitmap version or your website logo. PNG format is recommended."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1971
+#: app/themes/Peafowl/views/dashboard.php:1990
 msgid "Logo height"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1972
+#: app/themes/Peafowl/views/dashboard.php:1991
 msgid "No value"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1974
+#: app/themes/Peafowl/views/dashboard.php:1993
 msgid "Use this to set the logo height if needed."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1980
+#: app/themes/Peafowl/views/dashboard.php:1999
 msgid "Favicon image"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1986
+#: app/themes/Peafowl/views/dashboard.php:2005
 msgid "Favicon image. Image must have same width and height."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1992
+#: app/themes/Peafowl/views/dashboard.php:2011
 msgid "Image load max. filesize"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1995
+#: app/themes/Peafowl/views/dashboard.php:2014
 msgid ""
 "Images greater than this size will show a button to load full resolution "
 "image."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:1999
+#: app/themes/Peafowl/views/dashboard.php:2018
 msgid "Enable download button"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2004
+#: app/themes/Peafowl/views/dashboard.php:2023
 msgid "Enable this if you want to show the image download button."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2008
+#: app/themes/Peafowl/views/dashboard.php:2027
 msgid "Enable right click on image"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2013
+#: app/themes/Peafowl/views/dashboard.php:2032
 msgid "Enable this if you want to allow right click on image viewer page."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2019
+#: app/themes/Peafowl/views/dashboard.php:2038
 msgid "Enable show Exif data"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2024
+#: app/themes/Peafowl/views/dashboard.php:2043
 msgid "Enable this if you want to show image Exif data."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2030
+#: app/themes/Peafowl/views/dashboard.php:2049
 msgid "Enable social share"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2035
+#: app/themes/Peafowl/views/dashboard.php:2054
 msgid ""
 "Enable this if you want to show social network buttons to share content."
 msgstr ""
 "Enable this if you want to show social network buttons to share content."
 
-#: app/themes/Peafowl/views/dashboard.php:2039
+#: app/themes/Peafowl/views/dashboard.php:2058
 msgid "Enable embed codes (content)"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2043
+#: app/themes/Peafowl/views/dashboard.php:2062
 msgid "Everybody"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2044
+#: app/themes/Peafowl/views/dashboard.php:2063
 msgid "Users only"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2048
+#: app/themes/Peafowl/views/dashboard.php:2067
 msgid "Enable this if you want to show embed codes for the content."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2054
+#: app/themes/Peafowl/views/dashboard.php:2073
 msgid "Not safe content checkbox in uploader"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2059
+#: app/themes/Peafowl/views/dashboard.php:2078
 msgid ""
 "Enable this if you want to show a checkbox to indicate not safe content "
 "upload."
@@ -4849,11 +4929,11 @@ msgstr ""
 "Enable this if you want to show a checkbox to indicate not safe content "
 "upload."
 
-#: app/themes/Peafowl/views/dashboard.php:2065
+#: app/themes/Peafowl/views/dashboard.php:2084
 msgid "Custom CSS code"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2066
+#: app/themes/Peafowl/views/dashboard.php:2085
 msgid ""
 "Put your custom CSS code here. It will be placed as <style> just before the "
 "closing </head> tag."
@@ -4861,11 +4941,11 @@ msgstr ""
 "Put your custom CSS code here. It will be placed as <style> just before the "
 "closing </head> tag."
 
-#: app/themes/Peafowl/views/dashboard.php:2070
+#: app/themes/Peafowl/views/dashboard.php:2089
 msgid "Custom JS code"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2071
+#: app/themes/Peafowl/views/dashboard.php:2090
 msgid ""
 "Put your custom JS code here. It will be placed as <script> just before the "
 "closing </head> tag."
@@ -4873,30 +4953,36 @@ msgstr ""
 "Put your custom JS code here. It will be placed as <script> just before the "
 "closing </head> tag."
 
-#: app/themes/Peafowl/views/dashboard.php:2072
+#: app/themes/Peafowl/views/dashboard.php:2091
 #, php-format
 msgid ""
 "Do not use %s markup here. This is for plain JS code, not for HTML script "
 "tags. If you use script tags here you will break your website."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2081
+#: app/themes/Peafowl/views/dashboard.php:2100
 msgid "Style"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2085
+#: app/themes/Peafowl/views/dashboard.php:2104
 msgid "Landing page"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2086
+#: app/themes/Peafowl/views/dashboard.php:2105
 msgid "Split landing + images"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2087
-msgid "Route explore"
+#: app/themes/Peafowl/views/dashboard.php:2106
+#: app/themes/Peafowl/views/dashboard.php:2107
+#, php-format
+msgid "Route %s"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2091
+#: app/themes/Peafowl/views/dashboard.php:2107
+msgid "upload"
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:2111
 #, php-format
 msgid ""
 "Select the homepage style. To customize it further edit app/themes/%s/views/"
@@ -4905,29 +4991,28 @@ msgstr ""
 "Select the homepage style. To customize it further edit app/themes/%s/views/"
 "index.php"
 
-#: app/themes/Peafowl/views/dashboard.php:2102
+#: app/themes/Peafowl/views/dashboard.php:2122
 msgid "Cover image"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2108
-#: app/themes/Peafowl/views/image.php:89
+#: app/themes/Peafowl/views/dashboard.php:2128
+#: app/themes/Peafowl/views/image.php:101
 msgid "Do you really want to delete this image? This can't be undone."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2108
-#: app/themes/Peafowl/views/image.php:89
+#: app/themes/Peafowl/views/dashboard.php:2128
 msgid "Delete image"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2120
+#: app/themes/Peafowl/views/dashboard.php:2140
 msgid "Add new cover image"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2139
+#: app/themes/Peafowl/views/dashboard.php:2159
 msgid "Vector version or your website logo in SVG format (only for homepage)."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2150
+#: app/themes/Peafowl/views/dashboard.php:2170
 msgid ""
 "Bitmap version or your website logo (only for homepage). PNG format is "
 "recommended."
@@ -4935,8 +5020,8 @@ msgstr ""
 "Bitmap version or your website logo (only for homepage). PNG format is "
 "recommended."
 
-#: app/themes/Peafowl/views/dashboard.php:2157
-#: app/themes/Peafowl/views/dashboard.php:2162
+#: app/themes/Peafowl/views/dashboard.php:2177
+#: app/themes/Peafowl/views/dashboard.php:2182
 #, php-format
 msgid ""
 "This will be added inside the homepage %s tag. Leave it blank to use the "
@@ -4945,58 +5030,58 @@ msgstr ""
 "This will be added inside the homepage %s tag. Leave it blank to use the "
 "default contents."
 
-#: app/themes/Peafowl/views/dashboard.php:2161
+#: app/themes/Peafowl/views/dashboard.php:2181
 #: app/themes/Peafowl/views/settings.php:493
 msgid "Paragraph"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2168
+#: app/themes/Peafowl/views/dashboard.php:2188
 msgid "Call to action button color"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2183
+#: app/themes/Peafowl/views/dashboard.php:2203
 msgid "Color of the homepage call to action button."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2187
+#: app/themes/Peafowl/views/dashboard.php:2207
 msgid "Call to action outline style button"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2193
+#: app/themes/Peafowl/views/dashboard.php:2213
 msgid ""
 "Enable this to use outline style for the homepage call to action button."
 msgstr ""
 "Enable this to use outline style for the homepage call to action button."
 
-#: app/themes/Peafowl/views/dashboard.php:2197
+#: app/themes/Peafowl/views/dashboard.php:2217
 msgid "Call to action functionality"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2201
+#: app/themes/Peafowl/views/dashboard.php:2221
 msgid "Trigger uploader"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2202
+#: app/themes/Peafowl/views/dashboard.php:2222
 msgid "Open URL"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2212
+#: app/themes/Peafowl/views/dashboard.php:2232
 msgid "Call to action URL"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2213
+#: app/themes/Peafowl/views/dashboard.php:2233
 msgid "Enter an absolute or relative URL"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2215
+#: app/themes/Peafowl/views/dashboard.php:2235
 msgid "A relative URL like %r will be mapped to %l"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2221
+#: app/themes/Peafowl/views/dashboard.php:2241
 msgid "Call to action HTML"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2222
+#: app/themes/Peafowl/views/dashboard.php:2242
 msgid ""
 "This will be added inside the call to action <a> tag. Leave it blank to use "
 "the default contents."
@@ -5004,11 +5089,11 @@ msgstr ""
 "This will be added inside the call to action <a> tag. Leave it blank to use "
 "the default contents."
 
-#: app/themes/Peafowl/views/dashboard.php:2230
+#: app/themes/Peafowl/views/dashboard.php:2250
 msgid "User IDs"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2233
+#: app/themes/Peafowl/views/dashboard.php:2253
 #, fuzzy
 #| msgid ""
 #| "Comma-separated list of target user IDs to show images on homepage. Leave "
@@ -5020,33 +5105,33 @@ msgstr ""
 "Comma-separated list of target user IDs to show images on homepage. Leave it "
 "blank or zero to display all recent images."
 
-#: app/themes/Peafowl/views/dashboard.php:2243
+#: app/themes/Peafowl/views/dashboard.php:2263
 msgid "banners"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2279
+#: app/themes/Peafowl/views/dashboard.php:2299
 msgid "Automatic updates check"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2285
+#: app/themes/Peafowl/views/dashboard.php:2305
 msgid "When enabled the system will automatically check for new updates."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2288
+#: app/themes/Peafowl/views/dashboard.php:2308
 msgid "Display available updates notification"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2294
+#: app/themes/Peafowl/views/dashboard.php:2314
 msgid ""
 "Enable this to show a notice on top warning you about new available system "
 "updates."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2298
+#: app/themes/Peafowl/views/dashboard.php:2318
 msgid "Dump update query"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2304
+#: app/themes/Peafowl/views/dashboard.php:2324
 #, fuzzy
 #| msgid ""
 #| "Enable this if you want to automatically detect and set the right "
@@ -5056,29 +5141,29 @@ msgstr ""
 "Enable this if you want to automatically detect and set the right language "
 "for each user."
 
-#: app/themes/Peafowl/views/dashboard.php:2311
+#: app/themes/Peafowl/views/dashboard.php:2331
 #, php-format
 msgid "SEO %s URLs"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2316
+#: app/themes/Peafowl/views/dashboard.php:2336
 #, php-format
 msgid "Enable this if you want to use SEO %s URLs."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2322
+#: app/themes/Peafowl/views/dashboard.php:2342
 msgid "Minify code"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2327
+#: app/themes/Peafowl/views/dashboard.php:2347
 msgid "Enable this if you want to auto minify CSS and JS code."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2330
+#: app/themes/Peafowl/views/dashboard.php:2350
 msgid "Maintenance"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2335
+#: app/themes/Peafowl/views/dashboard.php:2355
 msgid ""
 "When enabled the website will show a maintenance message. This setting "
 "doesn't affect administrators."
@@ -5086,11 +5171,11 @@ msgstr ""
 "When enabled the website will show a maintenance message. This setting "
 "doesn't affect administrators."
 
-#: app/themes/Peafowl/views/dashboard.php:2339
+#: app/themes/Peafowl/views/dashboard.php:2359
 msgid "Crypt salt"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2341
+#: app/themes/Peafowl/views/dashboard.php:2361
 msgid ""
 "This is the salt used to convert numeric ID to alphanumeric. It was "
 "generated on install."
@@ -5098,11 +5183,11 @@ msgstr ""
 "This is the salt used to convert numeric ID to alphanumeric. It was "
 "generated on install."
 
-#: app/themes/Peafowl/views/dashboard.php:2345
+#: app/themes/Peafowl/views/dashboard.php:2365
 msgid "PHP error reporting"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2350
+#: app/themes/Peafowl/views/dashboard.php:2370
 #, php-format
 msgid ""
 "Enable this if you want to print errors generated by PHP <a "
@@ -5111,27 +5196,27 @@ msgstr ""
 "Enable this if you want to print errors generated by PHP <a "
 "%s>error_reporting()</a>. This should be disabled in production."
 
-#: app/themes/Peafowl/views/dashboard.php:2353
+#: app/themes/Peafowl/views/dashboard.php:2373
 msgid "Debug level"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2356
+#: app/themes/Peafowl/views/dashboard.php:2376
 msgid "None"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2356
+#: app/themes/Peafowl/views/dashboard.php:2376
 msgid "Error log"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2356
+#: app/themes/Peafowl/views/dashboard.php:2376
 msgid "Print errors without error log"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2356
+#: app/themes/Peafowl/views/dashboard.php:2376
 msgid "Print and log errors"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2358
+#: app/themes/Peafowl/views/dashboard.php:2378
 #, php-format
 msgid ""
 "To configure the debug level check the <a %s>debug documentation</a>. "
@@ -5140,7 +5225,7 @@ msgstr ""
 "To configure the debug level check the <a %s>debug documentation</a>. "
 "Default level is \"Error log\" (1)."
 
-#: app/themes/Peafowl/views/dashboard.php:2366
+#: app/themes/Peafowl/views/dashboard.php:2386
 #, php-format
 msgid ""
 "Routing allows you to customize default route binds on the fly. Only "
@@ -5148,75 +5233,75 @@ msgid ""
 "if you want to override or add new routes."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2368
+#: app/themes/Peafowl/views/dashboard.php:2388
 msgid "Image routing"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2373
-#: app/themes/Peafowl/views/dashboard.php:2381
+#: app/themes/Peafowl/views/dashboard.php:2393
+#: app/themes/Peafowl/views/dashboard.php:2401
 #, php-format
 msgid "Routing for %s"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2376
+#: app/themes/Peafowl/views/dashboard.php:2396
 msgid "Album routing"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2390
+#: app/themes/Peafowl/views/dashboard.php:2410
 msgid "Hostname"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2395
+#: app/themes/Peafowl/views/dashboard.php:2415
 msgid "Hostname on which sub-domain wildcards will be added."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2395
+#: app/themes/Peafowl/views/dashboard.php:2415
 #, php-format
 msgid "This setting may be overridden by %s."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2398
+#: app/themes/Peafowl/views/dashboard.php:2418
 msgid "Language subdomains"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2403
+#: app/themes/Peafowl/views/dashboard.php:2423
 msgid "languages"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2403
-#: app/themes/Peafowl/views/dashboard.php:2411
+#: app/themes/Peafowl/views/dashboard.php:2423
+#: app/themes/Peafowl/views/dashboard.php:2431
 msgid "Enable to use %s for %t."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2406
+#: app/themes/Peafowl/views/dashboard.php:2426
 msgid "Username subdomains"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2411
+#: app/themes/Peafowl/views/dashboard.php:2431
 msgid "user profiles"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2419
+#: app/themes/Peafowl/views/dashboard.php:2439
 msgid "Custom language strings"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2420
+#: app/themes/Peafowl/views/dashboard.php:2440
 msgid "language strings"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2423
+#: app/themes/Peafowl/views/dashboard.php:2443
 msgid "Default language"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2431
+#: app/themes/Peafowl/views/dashboard.php:2451
 msgid "Default base language to use."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2435
+#: app/themes/Peafowl/views/dashboard.php:2455
 msgid "Auto language"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2440
+#: app/themes/Peafowl/views/dashboard.php:2460
 msgid ""
 "Enable this if you want to automatically detect and set the right language "
 "for each user."
@@ -5224,112 +5309,112 @@ msgstr ""
 "Enable this if you want to automatically detect and set the right language "
 "for each user."
 
-#: app/themes/Peafowl/views/dashboard.php:2444
+#: app/themes/Peafowl/views/dashboard.php:2464
 msgid "Language chooser"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2449
+#: app/themes/Peafowl/views/dashboard.php:2469
 msgid "Enable this if you want to allow language selection."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2459
+#: app/themes/Peafowl/views/dashboard.php:2479
 msgid "Enabled languages"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2467
+#: app/themes/Peafowl/views/dashboard.php:2487
 msgid "Unchecked languages won't be used in your website."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2491
+#: app/themes/Peafowl/views/dashboard.php:2511
 msgid "Toggle this to enable or disable HTTPS"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2492
+#: app/themes/Peafowl/views/dashboard.php:2512
 msgid "Toggle this to enable or disable this storage"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2507
+#: app/themes/Peafowl/views/dashboard.php:2527
 msgid "Quota"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2509
+#: app/themes/Peafowl/views/dashboard.php:2529
 msgid "Active"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2541
+#: app/themes/Peafowl/views/dashboard.php:2561
 msgid "Storage method"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2556
+#: app/themes/Peafowl/views/dashboard.php:2576
 msgid "Local storage is used by default or when no external storage is active."
 msgstr ""
 "Local storage is used by default or when no external storage is active."
 
-#: app/themes/Peafowl/views/dashboard.php:2558
+#: app/themes/Peafowl/views/dashboard.php:2578
 #, php-format
 msgid "If you need help check the <a %s>storage documentation</a>."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2560
+#: app/themes/Peafowl/views/dashboard.php:2580
 msgid "Edit storage"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2572
+#: app/themes/Peafowl/views/dashboard.php:2592
 msgid "From name"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2575
+#: app/themes/Peafowl/views/dashboard.php:2595
 msgid "Sender name for emails sent to users."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2590
+#: app/themes/Peafowl/views/dashboard.php:2610
 msgid "Email mode"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2596
+#: app/themes/Peafowl/views/dashboard.php:2616
 msgid "How to send emails? SMTP recommended."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2607
+#: app/themes/Peafowl/views/dashboard.php:2627
 msgid "SMTP server and port"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2610
+#: app/themes/Peafowl/views/dashboard.php:2630
 msgid "SMTP server"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2622
+#: app/themes/Peafowl/views/dashboard.php:2642
 msgid "SMTP username"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2627
+#: app/themes/Peafowl/views/dashboard.php:2647
 msgid "SMTP password"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2632
+#: app/themes/Peafowl/views/dashboard.php:2652
 msgid "SMTP security"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2635
+#: app/themes/Peafowl/views/dashboard.php:2655
 msgid "Unsecured"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2647
-#: app/themes/Peafowl/views/dashboard.php:2649
+#: app/themes/Peafowl/views/dashboard.php:2667
+#: app/themes/Peafowl/views/dashboard.php:2669
 msgid "Decode ID"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2653
-#: app/themes/Peafowl/views/dashboard.php:2655
+#: app/themes/Peafowl/views/dashboard.php:2673
+#: app/themes/Peafowl/views/dashboard.php:2675
 msgid "Encode ID"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2660
-#: app/themes/Peafowl/views/dashboard.php:2662
+#: app/themes/Peafowl/views/dashboard.php:2680
+#: app/themes/Peafowl/views/dashboard.php:2682
 msgid "Send test email"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2664
+#: app/themes/Peafowl/views/dashboard.php:2684
 #, php-format
 msgid ""
 "Use this to test how your emails are being delivered. We recommend you to "
@@ -5338,66 +5423,66 @@ msgstr ""
 "Use this to test how your emails are being delivered. We recommend you to "
 "use %s."
 
-#: app/themes/Peafowl/views/dashboard.php:2668
+#: app/themes/Peafowl/views/dashboard.php:2688
 msgid "Export a user"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2670
+#: app/themes/Peafowl/views/dashboard.php:2690
 msgid "Export user"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2672
+#: app/themes/Peafowl/views/dashboard.php:2692
 msgid ""
 "This will allow you to download a user's standard personal information in "
 "JSON format."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2676
+#: app/themes/Peafowl/views/dashboard.php:2696
 msgid "Regenerate external storage stats"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2678
+#: app/themes/Peafowl/views/dashboard.php:2698
 msgid "Storage id"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2679
+#: app/themes/Peafowl/views/dashboard.php:2699
 msgid "Regenerate"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2681
+#: app/themes/Peafowl/views/dashboard.php:2701
 msgid ""
 "This will re-calculate the sum of all the image records associated to the "
 "target external storage."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2685
+#: app/themes/Peafowl/views/dashboard.php:2705
 msgid "Migrate image records from one external storage to another"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2687
+#: app/themes/Peafowl/views/dashboard.php:2707
 msgid "Source storage id"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2688
+#: app/themes/Peafowl/views/dashboard.php:2708
 msgid "Target storage id"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2691
+#: app/themes/Peafowl/views/dashboard.php:2711
 msgid "Migrate"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2694
+#: app/themes/Peafowl/views/dashboard.php:2714
 msgid ""
 "This only updates the database. You must transfer the actual files to target "
 "storage container on your own. URL rewriting is strongly recommended. Use "
 "zero (0) for local storage."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2701
+#: app/themes/Peafowl/views/dashboard.php:2721
 msgid "social networks"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2708
+#: app/themes/Peafowl/views/dashboard.php:2728
 msgid ""
 "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank"
 "\">Facebook app</a> for this."
@@ -5405,15 +5490,15 @@ msgstr ""
 "You need a <a href=\"https://developers.facebook.com/\" target=\"_blank"
 "\">Facebook app</a> for this."
 
-#: app/themes/Peafowl/views/dashboard.php:2715
+#: app/themes/Peafowl/views/dashboard.php:2735
 msgid "Facebook app id"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2720
+#: app/themes/Peafowl/views/dashboard.php:2740
 msgid "Facebook app secret"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2733
+#: app/themes/Peafowl/views/dashboard.php:2753
 msgid ""
 "You need a <a href=\"https://apps.twitter.com\" target=\"_blank\">Twitter "
 "app</a> for this."
@@ -5421,19 +5506,19 @@ msgstr ""
 "You need a <a href=\"https://apps.twitter.com\" target=\"_blank\">Twitter "
 "app</a> for this."
 
-#: app/themes/Peafowl/views/dashboard.php:2740
+#: app/themes/Peafowl/views/dashboard.php:2760
 msgid "Twitter API key"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2745
+#: app/themes/Peafowl/views/dashboard.php:2765
 msgid "Twitter API secret"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2752
+#: app/themes/Peafowl/views/dashboard.php:2772
 msgid "Twitter account"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2765
+#: app/themes/Peafowl/views/dashboard.php:2785
 msgid ""
 "You need a <a href=\"https://cloud.google.com/console\" target=\"_blank"
 "\">Google app</a> for this."
@@ -5441,15 +5526,15 @@ msgstr ""
 "You need a <a href=\"https://cloud.google.com/console\" target=\"_blank"
 "\">Google app</a> for this."
 
-#: app/themes/Peafowl/views/dashboard.php:2772
+#: app/themes/Peafowl/views/dashboard.php:2792
 msgid "Google client id"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2777
+#: app/themes/Peafowl/views/dashboard.php:2797
 msgid "Google client secret"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2790
+#: app/themes/Peafowl/views/dashboard.php:2810
 msgid ""
 "You need a <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> for "
 "this."
@@ -5457,66 +5542,66 @@ msgstr ""
 "You need a <a href=\"http://vk.com/dev\" target=\"_blank\">VK app</a> for "
 "this."
 
-#: app/themes/Peafowl/views/dashboard.php:2797
+#: app/themes/Peafowl/views/dashboard.php:2817
 msgid "VK client id"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2802
+#: app/themes/Peafowl/views/dashboard.php:2822
 msgid "VK client secret"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2815
-#: app/themes/Peafowl/views/dashboard.php:2838
+#: app/themes/Peafowl/views/dashboard.php:2835
+#: app/themes/Peafowl/views/dashboard.php:2858
 #, php-format
 msgid "%s spam protection"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2822
+#: app/themes/Peafowl/views/dashboard.php:2842
 msgid "user generated content"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2820
-#: app/themes/Peafowl/views/dashboard.php:2843
+#: app/themes/Peafowl/views/dashboard.php:2840
+#: app/themes/Peafowl/views/dashboard.php:2863
 msgid "Enable this to use %l to block spam on %c."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2830
+#: app/themes/Peafowl/views/dashboard.php:2850
 #, php-format
 msgid "%s API key"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2845
+#: app/themes/Peafowl/views/dashboard.php:2865
 msgid "user signup"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2876
+#: app/themes/Peafowl/views/dashboard.php:2896
 #, php-format
 msgid "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 msgstr ""
 "You need a <a href=\"%s\" target=\"_blank\">reCAPTCHA key</a> for this."
 
-#: app/themes/Peafowl/views/dashboard.php:2888
+#: app/themes/Peafowl/views/dashboard.php:2908
 msgid ""
 "Please note that each reCAPTCHA version require its own set of keys. Don't "
 "forget to update the keys if you change versions."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2892
+#: app/themes/Peafowl/views/dashboard.php:2912
 #, php-format
 msgid "%s site key"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2897
-#: app/themes/Peafowl/views/dashboard.php:2944
+#: app/themes/Peafowl/views/dashboard.php:2917
+#: app/themes/Peafowl/views/dashboard.php:2964
 #, php-format
 msgid "%s secret key"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2904
+#: app/themes/Peafowl/views/dashboard.php:2924
 msgid "reCAPTCHA threshold"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2909
+#: app/themes/Peafowl/views/dashboard.php:2929
 msgid ""
 "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to "
 "always show reCAPTCHA."
@@ -5524,71 +5609,102 @@ msgstr ""
 "How many failed attempts are needed to ask for reCAPTCHA? Use zero (0) to "
 "always show reCAPTCHA."
 
-#: app/themes/Peafowl/views/dashboard.php:2912
+#: app/themes/Peafowl/views/dashboard.php:2932
 #, php-format
 msgid "Force %s on contact page"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2917
+#: app/themes/Peafowl/views/dashboard.php:2937
 #, php-format
 msgid "Enable this to always show %s on contact page."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2923
+#: app/themes/Peafowl/views/dashboard.php:2943
 msgid "Comments API"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2931
+#: app/themes/Peafowl/views/dashboard.php:2951
 #, php-format
 msgid "Disqus API works with %s."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2939
+#: app/themes/Peafowl/views/dashboard.php:2959
 msgid "Disqus shortname"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2949
+#: app/themes/Peafowl/views/dashboard.php:2969
 #, php-format
 msgid "%s public key"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2959
+#: app/themes/Peafowl/views/dashboard.php:2979
 msgid "Comment code"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2960
+#: app/themes/Peafowl/views/dashboard.php:2980
 msgid "Disqus, Facebook or anything you want. It will be used in image view."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2966
+#: app/themes/Peafowl/views/dashboard.php:2991
+#, php-format
+msgid "Automatically moderate the content using the %s service."
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:3003
+msgid "Automatic approve"
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:3007
+msgid "Enable this to automatically approve content moderated by this service."
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:3010
+msgid "Block content"
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:3012
+#: app/themes/Peafowl/views/dashboard.php:3018
+msgid "Adult"
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:3012
+#: app/themes/Peafowl/views/dashboard.php:3018
+msgid "Teen and adult"
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:3016
+msgid "Flag NSFW"
+msgstr ""
+
+#: app/themes/Peafowl/views/dashboard.php:3025
 msgid "Analytics code"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2967
+#: app/themes/Peafowl/views/dashboard.php:3026
 msgid ""
 "Google Analytics or anything you want. It will be added to the theme footer."
 msgstr ""
 "Google Analytics or anything you want. It will be added to the theme footer."
 
-#: app/themes/Peafowl/views/dashboard.php:2974
+#: app/themes/Peafowl/views/dashboard.php:3033
 #, php-format
 msgid "For documentation about the API check the <a %s>API documentation</a>"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2976
+#: app/themes/Peafowl/views/dashboard.php:3035
 msgid "API v1 key"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2979
+#: app/themes/Peafowl/views/dashboard.php:3038
 #, php-format
 msgid "Use this key when using the <a %s>API v1</a>."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2987
+#: app/themes/Peafowl/views/dashboard.php:3046
 msgid "Plugin route"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:2992
+#: app/themes/Peafowl/views/dashboard.php:3051
 #, php-format
 msgid ""
 "Enable this to display plugin instructions at %u. A link to these "
@@ -5596,17 +5712,17 @@ msgid ""
 "administrators."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:3001
+#: app/themes/Peafowl/views/dashboard.php:3060
 msgid ""
 "Use this to set a custom URL for %p. Please note that you need to manually "
 "replicate %s in this URL."
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:3007
+#: app/themes/Peafowl/views/dashboard.php:3066
 msgid "Cookie law compliance"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:3012
+#: app/themes/Peafowl/views/dashboard.php:3071
 msgid ""
 "Enable this to display a message that complies with the EU Cookie law "
 "requirements. Note: You only need this if your website is hosted in the EU "
@@ -5616,62 +5732,73 @@ msgstr ""
 "requirements. Note: You only need this if your website is hosted in the EU "
 "and if you add tracking cookies."
 
-#: app/themes/Peafowl/views/dashboard.php:3023
+#: app/themes/Peafowl/views/dashboard.php:3082
 #: app/themes/Peafowl/views/settings.php:521 lib/Peafowl/peafowl.js:512
 #: lib/Peafowl/peafowl.min.js:1
 msgid "Save changes"
 msgstr ""
 
-#: app/themes/Peafowl/views/dashboard.php:3047
+#: app/themes/Peafowl/views/dashboard.php:3106
 msgid "Check the errors to proceed."
 msgstr ""
 
-#: app/themes/Peafowl/views/image.php:43
+#: app/themes/Peafowl/views/image.php:27
 msgid "Play GIF"
 msgstr ""
 
-#: app/themes/Peafowl/views/image.php:43
+#: app/themes/Peafowl/views/image.php:27
 msgid "Load full resolution"
 msgstr ""
 
-#: app/themes/Peafowl/views/image.php:167
+#: app/themes/Peafowl/views/image.php:94
+#, fuzzy
+#| msgid ""
+#| "Do you really want to remove all the selected content? This can't be "
+#| "undone."
+msgid ""
+"Do you really want to approve this image? The image will go public if you "
+"approve it."
+msgstr ""
+"Do you really want to remove all the selected content? This can't be undone."
+
+#: app/themes/Peafowl/views/image.php:182
 msgid "Added to %a and categorized in %c"
 msgstr ""
 
-#: app/themes/Peafowl/views/image.php:169
+#: app/themes/Peafowl/views/image.php:184
 #, php-format
 msgid "Added to %s"
 msgstr ""
 
-#: app/themes/Peafowl/views/image.php:174
+#: app/themes/Peafowl/views/image.php:189
 #, php-format
 msgid "Uploaded to %s"
 msgstr ""
 
-#: app/themes/Peafowl/views/image.php:176
+#: app/themes/Peafowl/views/image.php:191
 #, php-format
 msgid "Uploaded %s"
 msgstr ""
 
-#: app/themes/Peafowl/views/image.php:188
+#: app/themes/Peafowl/views/image.php:203
 msgid "Less Exif data"
 msgstr ""
 
-#: app/themes/Peafowl/views/image.php:188
+#: app/themes/Peafowl/views/image.php:203
 msgid "More Exif data"
 msgstr ""
 
-#: app/themes/Peafowl/views/image.php:212
-#: app/themes/Peafowl/views/image.php:271
+#: app/themes/Peafowl/views/image.php:227
+#: app/themes/Peafowl/views/image.php:288
 msgid "Share image"
 msgstr ""
 
-#: app/themes/Peafowl/views/image.php:229
-#: app/themes/Peafowl/views/image.php:235
+#: app/themes/Peafowl/views/image.php:244
+#: app/themes/Peafowl/views/image.php:250
 msgid "Album ID"
 msgstr ""
 
-#: app/themes/Peafowl/views/image.php:285
+#: app/themes/Peafowl/views/image.php:302
 msgid "In this album"
 msgstr ""
 
@@ -5860,7 +5987,6 @@ msgid "Do you really want to delete this user? This can't be undone."
 msgstr ""
 
 #: app/themes/Peafowl/views/settings.php:40
-#: app/themes/Peafowl/views/user.php:85
 msgid "Delete user"
 msgstr ""
 
@@ -6055,7 +6181,7 @@ msgstr ""
 msgid "Connect %s"
 msgstr ""
 
-#: app/themes/Peafowl/views/settings.php:494 app/web.php:338
+#: app/themes/Peafowl/views/settings.php:494 app/web.php:349
 msgid "Feel free to browse and discover all my shared images and albums."
 msgstr ""
 
@@ -6063,7 +6189,7 @@ msgstr ""
 msgid "Button"
 msgstr ""
 
-#: app/themes/Peafowl/views/settings.php:500 app/web.php:341
+#: app/themes/Peafowl/views/settings.php:500 app/web.php:352
 msgid "View all my images"
 msgstr ""
 
@@ -6130,10 +6256,6 @@ msgstr ""
 msgid "Delete background"
 msgstr ""
 
-#: app/themes/Peafowl/views/user.php:81
-msgid "Edit profile"
-msgstr ""
-
 #: app/themes/Peafowl/views/user.php:96
 msgid "Follower"
 msgid_plural "Followers"
@@ -6144,15 +6266,15 @@ msgstr[1] ""
 msgid "Follow"
 msgstr ""
 
-#: app/web.php:81
+#: app/web.php:93
 msgid "You have been forbidden to use this website."
 msgstr ""
 
-#: app/web.php:487
+#: app/web.php:506
 msgid "Plugin"
 msgstr ""
 
-#: app/web.php:560
+#: app/web.php:579
 #, php-format
 msgid "Page %s"
 msgstr ""
@@ -6229,6 +6351,13 @@ msgstr ""
 #: lib/Peafowl/peafowl.js:3305 lib/Peafowl/peafowl.min.js:2
 msgid "information"
 msgstr ""
+
+#~ msgid ""
+#~ "If you set this to \"white\" the top bar and all the black tones will be "
+#~ "changed to white tones."
+#~ msgstr ""
+#~ "If you set this to \"white\" the top bar and all the black tones will be "
+#~ "changed to white tones."
 
 #~ msgid ""
 #~ "Fill this section uploading pictures to %s account.<br>You can edit the "

@@ -148,7 +148,16 @@ class Upload
             }
         }
 
-        $this->uploaded_file = G\name_unique_file($this->destination, $this->options['filenaming'], $this->fixed_filename);
+        /*
+         * Set uploaded_file
+         * Local storage uploads will be allocated at the target destination
+         * External storage will be allocated to the temp directory
+         */
+        if ($this->storage_id) {
+            $this->uploaded_file = G\forward_slash(dirname($this->downstream)) . '/' . Storage::getStorageValidFilename($this->fixed_filename, $this->storage_id, $this->options['filenaming'], $this->destination);
+        } else {
+            $this->uploaded_file = G\name_unique_file($this->destination, $this->options['filenaming'], $this->fixed_filename);
+        }
 
         $this->source = [
             'filename' => $this->source_filename, // file.ext
@@ -252,12 +261,10 @@ class Upload
         if (!is_dir($this->destination)) { // Try to create the missing directory
             $base_dir = G\add_ending_slash(G_ROOT_PATH . explode('/', preg_replace('#' . G_ROOT_PATH . '#', '', $this->destination, 1))[0]);
             $base_perms = fileperms($base_dir);
-
             $old_umask = umask(0);
             $make_destination = mkdir($this->destination, $base_perms, true);
             chmod($this->destination, $base_perms);
             umask($old_umask);
-
             if (!$make_destination) {
                 throw new UploadException('$destination ' . $this->destination . ' is not a dir', 130);
             }
@@ -277,6 +284,19 @@ class Upload
         $this->destination = G\add_ending_slash($this->destination);
     }
 
+    public static function getTempNam($destination)
+    {
+        $tempNam = @tempnam(sys_get_temp_dir(), 'chvtemp');
+        if (!$tempNam || !@is_writable($tempNam)) {
+            $tempNam = @tempnam($destination, 'chvtemp');
+            if (!$tempNam) {
+                throw new UploadException("Can't get a tempnam", 200);
+            }
+        }
+
+        return $tempNam;
+    }
+
     /**
      * Fetch the $source file.
      *
@@ -284,16 +304,7 @@ class Upload
      */
     protected function fetchSource()
     {
-        // Set the downstream file
-        $this->downstream = @tempnam(sys_get_temp_dir(), 'chvtemp');
-
-        if (!$this->downstream || !@is_writable($this->downstream)) {
-            $this->downstream = @tempnam($this->destination, 'chvtemp');
-            if (!$this->downstream) {
-                throw new UploadException("Can't get a tempnam", 200);
-            }
-        }
-
+        $this->downstream = static::getTempNam($this->destination);
         if ($this->type == 'file') {
             if ($this->source['error'] !== UPLOAD_ERR_OK) {
                 switch ($this->source['error']) {
@@ -432,6 +443,16 @@ class Upload
         // WebP animated
         if ($this->source_image_fileinfo['extension'] == 'webp' && G\is_animated_webp($this->downstream)) {
             throw new UploadException('Animated WebP is not supported', 314);
+        }
+
+        if (Settings::get('moderatecontent') && (Settings::get('moderatecontent_block_rating') != '' || Settings::get('moderatecontent_flag_nsfw'))) {
+            $moderateContent = new ModerateContent($this->downstream, $this->source_image_fileinfo);
+            if ($moderateContent->isSuccess()) {
+                $this->moderation = $moderateContent->moderation();
+            } else {
+                throw new UploadException('Error processing content moderation: ' . $moderateContent->errorMessage());
+                error_log($moderateContent->errorMessage());
+            }
         }
     }
 

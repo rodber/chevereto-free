@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2018-12-19 20:57+0000\n"
-"PO-Revision-Date: 2018-12-19 20:57+0000\n"
+"POT-Creation-Date: 2020-09-02 17:16+0000\n"
+"PO-Revision-Date: 2020-09-02 17:16+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: vi\n"
@@ -84,6 +84,62 @@ msgstr "Cộng đồng"
 msgid "Personal"
 msgstr "Cá nhân"
 
+#: ../../../app/install/update/template/update.js:19
+#, javascript-format
+msgid "Installed version is v%s"
+msgstr "Phiên bản đã cài là v%s"
+
+#: ../../../app/install/update/template/update.js:26
+#: ../../../app/install/update/template/update.js:55
+#: ../../../app/install/update/template/update.js:78
+#, javascript-format
+msgid "Can't connect to %s"
+msgstr "Không thể kết nối tới %s\n"
+
+#: ../../../app/install/update/template/update.js:30
+#, javascript-format
+msgid "Last available release is v%s"
+msgstr "Phiên bản hiện tại v%s"
+
+#: ../../../app/install/update/template/update.js:33
+msgid "Update needed, proceeding to download"
+msgstr "Cập nhật cần thiết, tiến hành tải xuống\n"
+
+#: ../../../app/install/update/template/update.js:40
+msgid "No update needed"
+msgstr "Không có cập nhật\n"
+
+#: ../../../app/install/update/template/update.js:41
+msgid "System files already up to date"
+msgstr "Các file hệ thống đã cập nhật"
+
+#: ../../../app/install/update/template/update.js:49
+#, javascript-format
+msgid "Starting v%s download"
+msgstr "Bắt đầu tải xuống v%s "
+
+#: ../../../app/install/update/template/update.js:60
+#, javascript-format
+msgid "Downloaded v%s, proceeding to extraction"
+msgstr "Đã tải xuống v%s, đang tiến hành giải nén"
+
+#: ../../../app/install/update/template/update.js:72
+#, javascript-format
+msgid "Attempting to extract v%s"
+msgstr "Đang giải nén v%s\n"
+
+#: ../../../app/install/update/template/update.js:82
+msgid "Extraction completed"
+msgstr "Giải nén thành công"
+
+#: ../../../app/install/update/template/update.js:84
+msgid "Proceding to install the update"
+msgstr "Tiến hành cài đặt bản cập nhật"
+
+#: ../../../app/install/update/template/update.js:111
+msgid "Update failed"
+msgstr "Cập nhật thất bại"
+
 #: ../../../app/install/update/template/update.php:2
 msgid "Update in progress"
 msgstr "Đang tiến hành cập nhật"
@@ -103,7 +159,7 @@ msgstr "Mã key bản quyền không hợp lệ"
 
 #: ../../../app/install/update/updater.php:87
 msgid "Can't save file"
-msgstr "Không thể lưu file"
+msgstr "Không thể lưu tệp"
 
 #: ../../../app/install/update/updater.php:100
 #, php-format
@@ -122,6 +178,360 @@ msgstr "Không thể tạo thư mục %s - %e"
 #, php-format
 msgid "Can't update %s file - %e"
 msgstr "Không thể cập nhật file %s - %e"
+
+#: ../../../app/routes/route.account.php:508
+#: ../../../app/routes/route.signup.php:236
+#: ../../../content/pages/default/contact.php:132
+#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
+#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
+msgid "Check the errors in the form to continue."
+msgstr "Kiểm tra lỗi trong biểu mẫu để tiếp tục."
+
+#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
+#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
+#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
+#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
+#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
+#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
+msgid "You must enter the album name."
+msgstr "Bạn phải đặt tên album."
+
+#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
+#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
+#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
+#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
+msgid "Select existing album"
+msgstr "Chọn album sẵn có"
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "Có lỗi xảy ra, hãy quay lại sau."
+
+#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
+#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
+msgid "Please select a valid image file type."
+msgstr "Hãy chọn loại ảnh phù hợp"
+
+#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
+#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
+#, javascript-format
+msgid "Please select a picture of at most %s size."
+msgstr "Hãy chọn dung lượng ảnh tối đa %s"
+
+#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
+msgid "Profile image updated."
+msgstr "Hình đại diện đã cập nhật"
+
+#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
+msgid "Profile background image updated."
+msgstr "Hình nền cá nhân đã cập nhật."
+
+#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
+msgid "Profile background image deleted."
+msgstr "Hình nền cá nhân đã xóa."
+
+#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
+msgid "Error deleting profile background image."
+msgstr "Xóa hình nền bị lỗi."
+
+#: ../../../app/routes/route.account.php:360
+#: ../../../app/routes/route.settings.php:327
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
+#: ../../../app/themes/Peafowl/views/settings.php:313
+#: ../../../app/themes/Peafowl/views/settings.php:330
+#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
+msgid "Passwords don't match"
+msgstr "Mật khẩu không khớp"
+
+#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "Update available v%s"
+msgstr "Cập nhật có sẵn v%s"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
+msgstr "Có bản cập nhật mới cho hệ thống của bạn. Bạn có thể tự động tải xuống và cài đặt bản cập nhật này hoặc truy cập %s để tải file xuống"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "The release notes for this update are:"
+msgstr "Chú ý cho bản cập nhật này là:"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "Update now"
+msgstr "Cập nhật ngay"
+
+#: ../../../app/themes/Peafowl/header.php:285
+#: ../../../app/themes/Peafowl/header.php:332
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/form_album.php:9
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/login.php:22
+#: ../../../app/themes/Peafowl/views/login.php:62
+#: ../../../app/themes/Peafowl/views/settings.php:354
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../app/themes/Peafowl/views/signup.php:22
+#: ../../../app/themes/Peafowl/views/signup.php:73
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
+#: ../../../lib/Peafowl/peafowl.min.js:31
+#: ../../../lib/Peafowl/peafowl.min.js:140
+msgid "or"
+msgstr "hoặc"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "hủy"
+
+#, javascript-format
+msgid "This website is running latest %s version"
+msgstr "Website này đang chạy phiên bản %s mới nhất"
+
+#: ../../../app/themes/Peafowl/header.php:381
+#: ../../../app/themes/Peafowl/views/settings.php:348
+#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
+msgid "loading"
+msgstr "đang tải"
+
+msgid "Toggle select"
+msgstr "Chọn chuyển đổi"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Thích"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
+msgid "Edit"
+msgstr "Sửa"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "Albums"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:607
+#: ../../../app/themes/Peafowl/views/dashboard.php:884
+#: ../../../app/themes/Peafowl/views/dashboard.php:933
+msgid "Delete"
+msgstr "Xóa"
+
+#: ../../../app/themes/Peafowl/header.php:222
+msgid "Close"
+msgstr "Đóng"
+
+msgid "Previous"
+msgstr "Trước"
+
+msgid "Next"
+msgstr "Tiếp"
+
+#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
+msgid "Clipboard image"
+msgstr "Lưu tạm ảnh"
+
+#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
+msgid "File too big."
+msgstr "Hình quá lớn"
+
+msgid "Invalid or unsupported file format."
+msgstr "Định dạng tệp không hợp lệ hoặc không được hỗ trợ."
+
+#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
+#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
+msgid "Some files couldn't be added"
+msgstr "Một số tệp không thêm được."
+
+#: ../../../app/lib/classes/class.listing.php:296
+#: ../../../app/routes/route.album.php:177
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
+#: ../../../app/themes/Peafowl/views/album.php:34
+#: ../../../app/themes/Peafowl/views/user.php:98
+#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
+msgid "image"
+msgid_plural "images"
+msgstr[0] "ảnh"
+
+#: ../../../app/routes/route.user.php:89
+#: ../../../app/themes/Peafowl/header.php:56
+#, php-format, javascript-format
+msgid "%s's Albums"
+msgstr "Album của %s"
+
+#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
+msgid "Image edited successfully."
+msgstr "Sửa ảnh thành công."
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "riêng tư"
+
+#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
+msgid "Album edited successfully."
+msgstr "Sửa album thành công."
+
+#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
+msgid "Invalid URL key."
+msgstr "Khóa URL không hợp lệ."
+
+#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
+msgid "Category URL key already being used."
+msgstr "Khóa URL của danh mục đã được sử dụng."
+
+#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
+msgid "Category successfully deleted."
+msgstr "Danh mục đã xóa thành công "
+
+#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
+#, javascript-format
+msgid "Category %s added."
+msgstr "Danh mục %s đã thêm."
+
+#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
+msgid "Invalid expiration date."
+msgstr "Ngày hết hạn không hợp lệ.\n"
+
+#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
+#, javascript-format
+msgid "IP %s already banned."
+msgstr "IP %s đã bị cấm."
+
+#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
+#, javascript-format
+msgid "IP %s banned."
+msgstr "IP %s bị cấm."
+
+#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
+msgid "IP ban successfully deleted."
+msgstr "Bỏ cấm IP thành công."
+
+#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
+#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
+#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
+msgid "Please fill all the required fields."
+msgstr "Vui lòng điền vào tất cả các vùng bắt buộc."
+
+#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
+msgid "Invalid storage capacity value. Make sure to use a valid format."
+msgstr "Sức chứa dung lượng lưu trữ không hợp lệ. Hãy đảm bảo sử dụng định dạng hợp lệ.\n"
+
+#: ../../../app/lib/classes/class.storage.php:450
+#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
+#, php-format, javascript-format
+msgid "Storage capacity can't be lower than its current usage (%s)."
+msgstr "Dung lượng lưu trữ không thể thấp hơn hiện tại đang sử dụng (%s)"
+
+#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
+msgid "Invalid URL."
+msgstr "URL không hợp lệ."
+
+#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
+msgid "Storage successfully edited."
+msgstr "Đã chỉnh sửa kho lưu trữ thành công."
+
+#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
+msgid "User added successfully."
+msgstr "Thêm người dùng thành công."
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+#: ../../../app/themes/Peafowl/views/album.php:134
+#: ../../../app/themes/Peafowl/views/user.php:171
+#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
+msgid "The content has been deleted."
+msgstr "Nội dung đã bị xóa"
+
+#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
+#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
+#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
+#: ../../../app/lib/chevereto.min.js:205
+msgid "The content has been moved."
+msgstr "Nội dung đã được di chuyển."
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
+#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
+#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
+msgid "Select"
+msgstr "Chọn"
+
+#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
+msgid "Unselect"
+msgstr "Bỏ chọn"
+
+#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
+msgid "The content has been edited."
+msgstr "Nội dung đã được chỉnh sửa."
+
+msgid "Spam detected"
+msgstr "Phát hiện Spam"
+
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
+#: ../../../app/themes/Peafowl/views/user.php:99
+msgid "album"
+msgid_plural "albums"
+msgstr[0] "album"
+
+msgid "Flooding detected. You can only upload %limit% %content% per %time%"
+msgstr "Phát hiện spam. Bạn chỉ có thể tải lên %limit% %content% trong %time%"
 
 #: ../../../app/lib/classes/class.album.php:100
 msgid "Untitled"
@@ -143,7 +553,7 @@ msgstr "Lưu ý: Nội dung này được bảo vệ bằng mật khẩu. Hãy n
 #: ../../../app/themes/Peafowl/views/album.php:74
 #: ../../../app/themes/Peafowl/views/image.php:272
 msgid "Note: This content is private. Change privacy to \"public\" to share."
-msgstr "Nội dung này ở chế độ riêng tư. Đổi sang chế độ \"public\" để chia sẻ."
+msgstr "Nội dung này ở chế độ riêng tư. Đổi sang chế độ \"công khai\" để chia sẻ."
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:366
 msgid "Private"
@@ -236,16 +646,6 @@ msgid "like"
 msgid_plural "likes"
 msgstr[0] "thích"
 
-#: ../../../app/lib/classes/class.listing.php:296
-#: ../../../app/routes/route.album.php:177
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
-#: ../../../app/themes/Peafowl/views/album.php:34
-#: ../../../app/themes/Peafowl/views/user.php:98
-#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
-msgid "image"
-msgid_plural "images"
-msgstr[0] "ảnh"
-
 msgid "Recent"
 msgstr "Gần đây"
 
@@ -325,16 +725,6 @@ msgid "Image"
 msgid_plural "Images"
 msgstr[0] "Ảnh"
 
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
-#: ../../../app/themes/Peafowl/views/dashboard.php:28
-msgid "Album"
-msgid_plural "Albums"
-msgstr[0] "Albums"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:34
 #: ../../../app/themes/Peafowl/views/dashboard.php:90
 #: ../../../app/themes/Peafowl/views/settings.php:126
@@ -359,12 +749,6 @@ msgstr "Nội bộ"
 
 msgid "Can't insert storage."
 msgstr "Không thể chèn vào kho lưu trữ."
-
-#: ../../../app/lib/classes/class.storage.php:450
-#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
-#, php-format, javascript-format
-msgid "Storage capacity can't be lower than its current usage (%s)."
-msgstr "Dung lượng lưu trữ không thể thấp hơn hiện tại đang sử dụng (%s)"
 
 msgid "Can't update storage details."
 msgstr "Không thể cập nhật chi tiết kho lưu trữ."
@@ -429,10 +813,6 @@ msgstr "Bạn chưa thay đổi cài đặt email mặc định. Truy cập <a h
 msgid "There is an update available for your Chevereto based website."
 msgstr "Đã có sẵn bản cập nhật cho trang Chevereto của bạn."
 
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "The release notes for this update are:"
-msgstr "Chú ý cho bản cập nhật này là:"
-
 msgid "admin dashboard"
 msgstr "bảng điều khiển "
 
@@ -452,27 +832,6 @@ msgstr "Chúng tôi sử dụng cookie của mình và các bên thứ ba để 
 
 msgid "I understand"
 msgstr "Tôi hiểu"
-
-#: ../../../app/loader.php:180
-msgid "You have been forbidden to use this website."
-msgstr "Bạn bị bắt buộc dùng website này"
-
-#: ../../../app/loader.php:279
-#: ../../../app/themes/Peafowl/views/settings.php:441
-msgid "Feel free to browse and discover all my shared images and albums."
-msgstr "Cứ thoải mái khám phá tất cả ảnh và album tôi đã chia sẻ công khai."
-
-#: ../../../app/loader.php:282
-#: ../../../app/themes/Peafowl/views/settings.php:447
-msgid "View all my images"
-msgstr "Xem tất cả ảnh của tôi"
-
-msgid "Plugin"
-msgstr "Plugin\n"
-
-#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
-msgid "That page doesn't exist"
-msgstr "404: Trng này không tồn tại"
 
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
@@ -562,29 +921,12 @@ msgstr "Xác nhận yêu cầu lúc %s"
 msgid "Welcome to %s"
 msgstr "Chào mừng %s"
 
-#: ../../../app/routes/route.account.php:360
-#: ../../../app/routes/route.settings.php:327
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
-#: ../../../app/themes/Peafowl/views/settings.php:313
-#: ../../../app/themes/Peafowl/views/settings.php:330
-#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
-msgid "Passwords don't match"
-msgstr "Mật khẩu không khớp"
-
 #: ../../../app/routes/route.account.php:422
 #: ../../../app/routes/route.json.php:599
 #: ../../../app/routes/route.settings.php:243
 #: ../../../app/routes/route.signup.php:141
 msgid "Email already being used"
 msgstr "Email đã sử dụng"
-
-#: ../../../app/routes/route.account.php:508
-#: ../../../app/routes/route.signup.php:236
-#: ../../../content/pages/default/contact.php:132
-#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
-#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
-msgid "Check the errors in the form to continue."
-msgstr "Kiểm tra lỗi trong biểu mẫu để tiếp tục."
 
 msgid "Password required"
 msgstr "Yêu cầu mật khẩu"
@@ -810,9 +1152,6 @@ msgstr "Tài liệu"
 msgid "Changelog"
 msgstr "Nhật ký thay đổi"
 
-msgid "Request new features"
-msgstr "Yêu cầu thêm tính năng mới"
-
 msgid "Bug tracking"
 msgstr "Theo dõi lỗi"
 
@@ -998,11 +1337,6 @@ msgstr "Tranh hình ảnh"
 msgid "Inside viewer top (image page)"
 msgstr "Trong phần trên của trình duyệt ảnh (trang xem ảnh)"
 
-#: ../../../app/routes/route.dashboard.php:413
-#: ../../../app/routes/route.dashboard.php:417
-msgid "Expected banner size 728x90"
-msgstr "Size tốt nhất 728x90"
-
 #: ../../../app/routes/route.dashboard.php:416
 msgid "Inside viewer foot (image page)"
 msgstr "Trong phần chân của trình duyệt ảnh (trang xem ảnh)"
@@ -1088,10 +1422,6 @@ msgstr "sai tông màu"
 #: ../../../app/routes/route.dashboard.php:627
 msgid "Invalid theme main color"
 msgstr "sai màu chính"
-
-#: ../../../app/routes/route.dashboard.php:632
-msgid "Invalid theme top bar color"
-msgstr "sai màu của top bar"
 
 #: ../../../app/routes/route.dashboard.php:637
 msgid "Invalid theme top bar button color"
@@ -1380,11 +1710,6 @@ msgstr "Tên người dùng hoặc mật khẩu bị sai"
 msgid "Sign in"
 msgstr "Đăng nhập"
 
-#: ../../../app/routes/route.logout.php:29
-#: ../../../app/themes/Peafowl/views/logout.php:8
-msgid "Logged out"
-msgstr "Đã đăng xuất"
-
 msgid "Upload images"
 msgstr "Upload ảnh"
 
@@ -1492,12 +1817,6 @@ msgstr "Upload"
 msgid "%s's Images"
 msgstr "Ảnh của %s"
 
-#: ../../../app/routes/route.user.php:89
-#: ../../../app/themes/Peafowl/header.php:56
-#, php-format, javascript-format
-msgid "%s's Albums"
-msgstr "Album của %s"
-
 #: ../../../app/routes/route.user.php:99
 #: ../../../app/themes/Peafowl/views/search.php:8
 msgid "Results for"
@@ -1529,10 +1848,6 @@ msgid "Discovery"
 msgstr "Khám phá"
 
 #: ../../../app/themes/Peafowl/header.php:222
-msgid "Close"
-msgstr "Đóng"
-
-#: ../../../app/themes/Peafowl/header.php:222
 #: ../../../app/themes/Peafowl/header.php:226
 msgid "Advanced search"
 msgstr "Tìm kiếm nâng cao"
@@ -1551,12 +1866,6 @@ msgstr "Thông báo (%s)"
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
 msgstr "Thông báo"
-
-#: ../../../app/themes/Peafowl/header.php:381
-#: ../../../app/themes/Peafowl/views/settings.php:348
-#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
-msgid "loading"
-msgstr "đang tải"
 
 #: ../../../app/themes/Peafowl/header.php:384
 msgid "You don't have notifications"
@@ -1590,7 +1899,7 @@ msgstr "Hoặc bạn có thê copy đoạn URL sau và dán vào thanh địa ch
 #: ../../../app/themes/Peafowl/mails/account-confirm.php:10
 #: ../../../app/themes/Peafowl/mails/account-password-reset.php:10
 msgid "If you didn't intend this just ignore this message."
-msgstr "Nếu bạn không đăng ký hoặc bạn không hiểu nội dung email này nói về gì, hãy bỏ qua và xem như chưa biết gì hết Up Siêu Tốc ^^"
+msgstr "Nếu bạn không có ý định này, chỉ cần bỏ qua thông báo này."
 
 #: ../../../app/themes/Peafowl/mails/account-change-email.php:12
 #: ../../../app/themes/Peafowl/mails/account-confirm.php:12
@@ -1601,7 +1910,7 @@ msgstr "Yêu cầu này xuất phát từ IP: %s"
 
 #: ../../../app/themes/Peafowl/mails/account-confirm.php:4
 msgid "We received a request to register the %n account at %w."
-msgstr "Chúng tôi nhận được yêu cầu tạo tài khoản %n tại Up Siêu Tốc %w."
+msgstr "Chúng tôi nhận được yêu cầu tạo tài khoản %n tại %w."
 
 #: ../../../app/themes/Peafowl/mails/account-confirm.php:6
 #, php-format
@@ -1619,7 +1928,7 @@ msgstr "Để reset lại mật khẩu xin vui lòng <a href=\"%s\">click vào l
 
 #: ../../../app/themes/Peafowl/mails/account-welcome.php:4
 msgid "Hi %n, welcome to %w"
-msgstr "Xin chào %n, rất vui khi bạn đến với Up siêu tốc %w"
+msgstr "Xin chào %n, rất vui khi bạn đến với %w"
 
 #: ../../../app/themes/Peafowl/mails/account-welcome.php:6
 msgid "Now that your account is ready you can enjoy uploading your images, creating albums and setting the privacy of your content as well as many more cool things that you will discover."
@@ -1627,7 +1936,7 @@ msgstr "Tài khoản của bạn đã được kích hoạt thành công. Hãy b
 
 #: ../../../app/themes/Peafowl/mails/account-welcome.php:8
 msgid "By the way, here is you very own awesome profile page: <a href=\"%u\">%n</a>. Go ahead and customize it, its yours!."
-msgstr "Ngoài ra thì Up siêu tốc cũng tạo cho bạn 1 trang cá nhân rất ngầu tại địa chỉ <a href=\"%u\">%n</a>. Còn chờ gì nữa mà không truy cập thử và đổi ảnh đại diện, avatar... đi :D"
+msgstr "Nhân tiện, đây là trang cá nhân tuyệt vời của bạn: <a href=\"%u\">%n</a>. Hãy tiếp tục tùy chỉnh, nó là của bạn !."
 
 #: ../../../app/themes/Peafowl/mails/account-welcome.php:10
 msgid "Thank you for joining"
@@ -1733,46 +2042,6 @@ msgstr "Đây là hình ảnh nhạy cảm hoặc18+"
 msgid "Uploading"
 msgstr "Đang đăng"
 
-#: ../../../app/themes/Peafowl/header.php:285
-#: ../../../app/themes/Peafowl/header.php:332
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/form_album.php:9
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
-#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
-#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/login.php:22
-#: ../../../app/themes/Peafowl/views/login.php:62
-#: ../../../app/themes/Peafowl/views/settings.php:354
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../app/themes/Peafowl/views/signup.php:22
-#: ../../../app/themes/Peafowl/views/signup.php:73
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
-#: ../../../lib/Peafowl/peafowl.min.js:31
-#: ../../../lib/Peafowl/peafowl.min.js:140
-msgid "or"
-msgstr "hoặc"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
-msgid "cancel"
-msgstr "hủy"
-
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
 msgid "cancel remaining"
@@ -1802,17 +2071,6 @@ msgstr "sao chép"
 
 msgid "insert"
 msgstr "chèn"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
-msgid "Edit"
-msgstr "Sửa"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:154
-msgid "Edit image"
-msgstr "Sửa ảnh"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
 #: ../../../app/themes/Peafowl/snippets/form_image.php:4
@@ -1924,12 +2182,6 @@ msgstr "Chọn Album sẵn có để chuyển ảnh vào. Hoặc có thể <a cl
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:252
 msgid "Error report"
 msgstr "Thông báo lỗi"
-
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
-#: ../../../app/themes/Peafowl/views/user.php:99
-msgid "album"
-msgid_plural "albums"
-msgstr[0] "album"
 
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
@@ -2069,7 +2321,7 @@ msgstr "API"
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:48
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:96
 msgid "Region"
-msgstr "Region"
+msgstr "Khu vực"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
 msgid "Storage region"
@@ -2229,21 +2481,6 @@ msgstr "Tạo mã nhúng"
 msgid "Flag as safe"
 msgstr "Ảnh an toàn"
 
-#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
-#: ../../../app/themes/Peafowl/views/dashboard.php:607
-#: ../../../app/themes/Peafowl/views/dashboard.php:884
-#: ../../../app/themes/Peafowl/views/dashboard.php:933
-msgid "Delete"
-msgstr "Xóa"
-
 msgid "Create new album"
 msgstr "Tạo album mới"
 
@@ -2262,18 +2499,6 @@ msgstr "Đăng nhập với tài khoản khác"
 #: ../../../app/themes/Peafowl/views/index.php:63
 msgid "There's nothing to show here."
 msgstr "Không có gì để hiện."
-
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
-#: ../../../app/themes/Peafowl/views/image.php:69
-#: ../../../app/themes/Peafowl/views/image.php:457
-msgid "Edit image details"
-msgstr "Chỉnh thửa thông tin ảnh"
-
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
-#: ../../../app/themes/Peafowl/views/album.php:22
-#: ../../../app/themes/Peafowl/views/album.php:118
-msgid "Edit album details"
-msgstr "Sửa thông tin album"
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
 msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
@@ -2341,11 +2566,6 @@ msgstr "Khách"
 msgid "Keyboard shortcuts"
 msgstr "Phím tắt"
 
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "Thích"
-
 msgid "Uploaded by guest"
 msgstr "Upload by khách"
 
@@ -2362,25 +2582,14 @@ msgstr "Upload by ẩn danh"
 msgid "by %u"
 msgstr "bởi %u"
 
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
-#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
-#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
-msgid "Select"
-msgstr "Chọn"
-
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:7
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:7
 msgid "Toggle unsafe flag"
 msgstr "Bật kiểm tra nội dung không an toàn"
+
+#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
+msgid "That page doesn't exist"
+msgstr "404: Trng này không tồn tại"
 
 #: ../../../app/themes/Peafowl/views/404.php:7
 msgid "The requested page was not found."
@@ -2393,13 +2602,6 @@ msgstr "Tìm hình khác"
 #: ../../../app/themes/Peafowl/views/404.php:22
 msgid "The user has been deleted"
 msgstr "Người dùng đã bị xóa"
-
-#: ../../../app/themes/Peafowl/views/404.php:22
-#: ../../../app/themes/Peafowl/views/album.php:134
-#: ../../../app/themes/Peafowl/views/user.php:171
-#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
-msgid "The content has been deleted."
-msgstr "Nội dung đã bị xóa"
 
 #: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:7
 msgid "Your account is almost ready"
@@ -2506,10 +2708,6 @@ msgstr "Nội dung này được bảo mật"
 #: ../../../app/themes/Peafowl/views/album.php:25
 msgid "Do you really want to delete this album and all of its images? This can't be undone."
 msgstr "Bạn có muốn xoá tất cả hình ảnh album? Không phục hồi được nhé."
-
-#: ../../../app/themes/Peafowl/views/album.php:25
-msgid "Delete album"
-msgstr "Xóa album"
 
 #: ../../../app/themes/Peafowl/views/image.php:85
 msgid "You like this"
@@ -3143,6 +3341,11 @@ msgstr "Quản lý hình ảnh, tạo album riêng tư, tùy chỉnh trang hồ 
 msgid "Don't have an account? <a href='%s'>Sign up</a> now."
 msgstr "Chưa có tài khoản? <a href='%s'>Đăng ký </a> ngay!"
 
+#: ../../../app/routes/route.logout.php:29
+#: ../../../app/themes/Peafowl/views/logout.php:8
+msgid "Logged out"
+msgstr "Đã đăng xuất"
+
 #: ../../../app/themes/Peafowl/views/logout.php:12
 #, php-format
 msgid "You have been logged off %s. Hope to see you soon."
@@ -3276,10 +3479,6 @@ msgstr "Cho chúng tôi biết một chút về bạn"
 msgid "User has no connections."
 msgstr "Người dùng chưa có kết nối đến mạng xã hội"
 
-#: ../../../app/themes/Peafowl/views/settings.php:391
-msgid "Link your account to external services to be able to login and share content."
-msgstr "Kết nối đến tài khoản xã hội để có thể đăng nhập và chia sẻ nhanh."
-
 #: ../../../app/themes/Peafowl/views/settings.php:398
 #, php-format
 msgid "Do you really want to disconnect %s from this account?"
@@ -3314,9 +3513,19 @@ msgstr "ngắt kết nối"
 msgid "Connect %s"
 msgstr "Kết nối %s"
 
+#: ../../../app/loader.php:279
+#: ../../../app/themes/Peafowl/views/settings.php:441
+msgid "Feel free to browse and discover all my shared images and albums."
+msgstr "Cứ thoải mái khám phá tất cả ảnh và album tôi đã chia sẻ công khai."
+
 #: ../../../app/themes/Peafowl/views/settings.php:446
 msgid "Button"
 msgstr "Nút"
+
+#: ../../../app/loader.php:282
+#: ../../../app/themes/Peafowl/views/settings.php:447
+msgid "View all my images"
+msgstr "Xem tất cả ảnh của tôi"
 
 #: ../../../app/themes/Peafowl/views/signup.php:45
 msgid "resend account activation"
@@ -3351,10 +3560,6 @@ msgstr "ẢNh bìa hồ sơ sẽ bị xóa. Không thể hoàn tác thao tác n�
 msgid "Delete background"
 msgstr "Xóa hình nền"
 
-#: ../../../app/themes/Peafowl/views/user.php:61
-msgid "Edit profile"
-msgstr "Sửa hồ sơ cá nhân"
-
 #: ../../../app/themes/Peafowl/views/user.php:75
 msgid "Follower"
 msgid_plural "Followers"
@@ -3363,6 +3568,13 @@ msgstr[0] "Người theo dõi"
 #: ../../../app/themes/Peafowl/views/user.php:81
 msgid "Follow"
 msgstr "Theo dõi"
+
+#: ../../../app/loader.php:180
+msgid "You have been forbidden to use this website."
+msgstr "Bạn bị bắt buộc dùng website này"
+
+msgid "Plugin"
+msgstr "Plugin\n"
 
 #: ../../../app/routes/route.page.php:61
 #: ../../../content/pages/default/contact.php:7
@@ -3404,252 +3616,6 @@ msgstr "Tên bạn"
 
 msgid "Subject"
 msgstr "Chủ đề"
-
-#: ../../../app/install/update/template/update.js:19
-#, javascript-format
-msgid "Installed version is v%s"
-msgstr "Phiên bản đã cài là v%s"
-
-#: ../../../app/install/update/template/update.js:26
-#: ../../../app/install/update/template/update.js:55
-#: ../../../app/install/update/template/update.js:78
-#, javascript-format
-msgid "Can't connect to %s"
-msgstr "Không thể kết nối tới %s\n"
-
-#: ../../../app/install/update/template/update.js:30
-#, javascript-format
-msgid "Last available release is v%s"
-msgstr "Phiên bản hiện tại v%s"
-
-#: ../../../app/install/update/template/update.js:33
-msgid "Update needed, proceeding to download"
-msgstr "Cập nhật cần thiết, tiến hành tải xuống\n"
-
-#: ../../../app/install/update/template/update.js:40
-msgid "No update needed"
-msgstr "Không có cập nhật\n"
-
-#: ../../../app/install/update/template/update.js:41
-msgid "System files already up to date"
-msgstr "Các file hệ thống đã cập nhật"
-
-#: ../../../app/install/update/template/update.js:49
-#, javascript-format
-msgid "Starting v%s download"
-msgstr "Bắt đầu tải xuống v%s "
-
-#: ../../../app/install/update/template/update.js:60
-#, javascript-format
-msgid "Downloaded v%s, proceeding to extraction"
-msgstr "Đã tải xuống v%s, đang tiến hành giải nén"
-
-#: ../../../app/install/update/template/update.js:72
-#, javascript-format
-msgid "Attempting to extract v%s"
-msgstr "Đang giải nén v%s\n"
-
-#: ../../../app/install/update/template/update.js:82
-msgid "Extraction completed"
-msgstr "Giải nén thành công"
-
-#: ../../../app/install/update/template/update.js:84
-msgid "Proceding to install the update"
-msgstr "Tiến hành cài đặt bản cập nhật"
-
-#: ../../../app/install/update/template/update.js:111
-msgid "Update failed"
-msgstr "Cập nhật thất bại"
-
-#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
-#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
-#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
-#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
-#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
-#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
-msgid "You must enter the album name."
-msgstr "Bạn phải đặt tên album."
-
-#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
-#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
-#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
-#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
-msgid "Confirm"
-msgstr "Xác nhận"
-
-#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
-msgid "Select existing album"
-msgstr "Chọn album sẵn có"
-
-#: ../../../app/install/update/updater.php:62
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
-#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
-#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
-#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
-#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
-#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
-#: ../../../lib/Peafowl/peafowl.min.js:158
-#: ../../../lib/Peafowl/peafowl.min.js:195
-msgid "An error occurred. Please try again later."
-msgstr "Có lỗi xảy ra, hãy quay lại sau."
-
-#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
-#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
-msgid "Please select a valid image file type."
-msgstr "Hãy chọn loại ảnh phù hợp"
-
-#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
-#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
-#, javascript-format
-msgid "Please select a picture of at most %s size."
-msgstr "Hãy chọn dung lượng ảnh tối đa %s"
-
-#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
-msgid "Profile image updated."
-msgstr "Hình đại diện đã cập nhật"
-
-#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
-msgid "Profile background image updated."
-msgstr "Hình nền cá nhân đã cập nhật."
-
-#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
-msgid "Profile background image deleted."
-msgstr "Hình nền cá nhân đã xóa."
-
-#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
-msgid "Error deleting profile background image."
-msgstr "Xóa hình nền bị lỗi."
-
-#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
-#, javascript-format
-msgid "Update available v%s"
-msgstr "Cập nhật có sẵn v%s"
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#, javascript-format
-msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
-msgstr "Có bản update mới cho hệ thống của bạn. Bạn có thể tự động tải xuống và cài đặt bản update này hoặc truy cập %s để tải file xuống"
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "Update now"
-msgstr "Cập nhật ngay"
-
-#, javascript-format
-msgid "This website is running latest %s version"
-msgstr "Trang web này đang chạy phiên bản %s mới nhất"
-
-msgid "Toggle select"
-msgstr "Chọn chuyển đổi"
-
-msgid "Previous"
-msgstr "Trước"
-
-msgid "Next"
-msgstr "Tiếp"
-
-#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
-msgid "Clipboard image"
-msgstr "Lưu tạm ảnh"
-
-#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
-msgid "File too big."
-msgstr "Hình quá lớn"
-
-msgid "Invalid or unsupported file format."
-msgstr "Định dạng tệp không hợp lệ hoặc không được hỗ trợ."
-
-#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
-#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
-msgid "Some files couldn't be added"
-msgstr "Một số hình không thêm được."
-
-#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
-msgid "Image edited successfully."
-msgstr "Sửa ảnh thành công."
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
-#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
-#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
-msgid "private"
-msgstr "riêng tư"
-
-#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
-msgid "Album edited successfully."
-msgstr "Sửa album thành công."
-
-#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
-msgid "Invalid URL key."
-msgstr "Khóa URL không hợp lệ."
-
-#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
-msgid "Category URL key already being used."
-msgstr "Khóa URL của danh mục đã được sử dụng."
-
-#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
-msgid "Category successfully deleted."
-msgstr "Danh mục đã xóa thành công "
-
-#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
-#, javascript-format
-msgid "Category %s added."
-msgstr "Danh mục %s đã thêm."
-
-#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
-msgid "Invalid expiration date."
-msgstr "Ngày hết hạn không hợp lệ.\n"
-
-#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
-#, javascript-format
-msgid "IP %s already banned."
-msgstr "IP %s đã bị cấm."
-
-#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
-#, javascript-format
-msgid "IP %s banned."
-msgstr "IP %s bị cấm."
-
-#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
-msgid "IP ban successfully deleted."
-msgstr "Bỏ cấm IP thành công."
-
-#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
-#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
-#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
-msgid "Please fill all the required fields."
-msgstr "Vui lòng điền vào tất cả các vùng bắt buộc."
-
-#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
-msgid "Invalid storage capacity value. Make sure to use a valid format."
-msgstr "Sức chứa dung lượng lưu trữ không hợp lệ. Hãy đảm bảo sử dụng định dạng hợp lệ.\n"
-
-#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
-msgid "Invalid URL."
-msgstr "URL không hợp lệ."
-
-#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
-msgid "Storage successfully edited."
-msgstr "Đã chỉnh sửa kho lưu trữ thành công."
-
-#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
-msgid "User added successfully."
-msgstr "Thêm người dùng thành công."
-
-#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
-#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
-#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
-#: ../../../app/lib/chevereto.min.js:205
-msgid "The content has been moved."
-msgstr "Nội dung đã được di chuyển."
-
-#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
-msgid "Unselect"
-msgstr "Bỏ chọn"
-
-#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
-msgid "The content has been edited."
-msgstr "Nội dung đã được chỉnh sửa."
 
 #: ../../../lib/Peafowl/peafowl.js:25 ../../../lib/Peafowl/peafowl.js:492
 #: ../../../lib/Peafowl/peafowl.min.js:1 ../../../lib/Peafowl/peafowl.min.js:31

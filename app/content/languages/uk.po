@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2018-06-01 21:51+0000\n"
-"PO-Revision-Date: 2018-06-01 21:51+0000\n"
+"POT-Creation-Date: 2020-09-02 17:16+0000\n"
+"PO-Revision-Date: 2020-09-02 17:16+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -84,6 +84,62 @@ msgstr "Спільнота"
 msgid "Personal"
 msgstr "Особистий"
 
+#: ../../../app/install/update/template/update.js:19
+#, javascript-format
+msgid "Installed version is v%s"
+msgstr "Встановлена версія v%s"
+
+#: ../../../app/install/update/template/update.js:26
+#: ../../../app/install/update/template/update.js:55
+#: ../../../app/install/update/template/update.js:78
+#, javascript-format
+msgid "Can't connect to %s"
+msgstr "Неможливо приєднатись до %s"
+
+#: ../../../app/install/update/template/update.js:30
+#, javascript-format
+msgid "Last available release is v%s"
+msgstr "Останній доступний реліз v%s"
+
+#: ../../../app/install/update/template/update.js:33
+msgid "Update needed, proceeding to download"
+msgstr "Потрібне оновлення, почати завантаження"
+
+#: ../../../app/install/update/template/update.js:40
+msgid "No update needed"
+msgstr "Оновлення не потрібне"
+
+#: ../../../app/install/update/template/update.js:41
+msgid "System files already up to date"
+msgstr "Системні файли вже оновлені"
+
+#: ../../../app/install/update/template/update.js:49
+#, javascript-format
+msgid "Starting v%s download"
+msgstr "Почати завантаження v%s"
+
+#: ../../../app/install/update/template/update.js:60
+#, javascript-format
+msgid "Downloaded v%s, proceeding to extraction"
+msgstr "Завантажено v%s, почати роспакування"
+
+#: ../../../app/install/update/template/update.js:72
+#, javascript-format
+msgid "Attempting to extract v%s"
+msgstr "Спроба розпакувати v%s"
+
+#: ../../../app/install/update/template/update.js:82
+msgid "Extraction completed"
+msgstr "Розпакування завершено"
+
+#: ../../../app/install/update/template/update.js:84
+msgid "Proceding to install the update"
+msgstr "Почати інсталяцію оновлення"
+
+#: ../../../app/install/update/template/update.js:111
+msgid "Update failed"
+msgstr "Оновлення зірвано"
+
 #: ../../../app/install/update/template/update.php:2
 msgid "Update in progress"
 msgstr "Оновлення в процесі"
@@ -122,6 +178,356 @@ msgstr "Неможливо створити %s директорію - %e"
 #, php-format
 msgid "Can't update %s file - %e"
 msgstr "Неможливо оновити %s файл - %e"
+
+#: ../../../app/routes/route.account.php:508
+#: ../../../app/routes/route.signup.php:236
+#: ../../../content/pages/default/contact.php:132
+#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
+#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
+msgid "Check the errors in the form to continue."
+msgstr "Перед продовженням перевірте форму на наявність помилок"
+
+#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
+#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
+#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
+#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
+#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
+#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
+msgid "You must enter the album name."
+msgstr "Ви повинні ввести назву альбому."
+
+#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
+#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
+#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
+#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
+msgid "Confirm"
+msgstr "Підтвердити"
+
+#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
+msgid "Select existing album"
+msgstr "Виберіть існуючий альбом"
+
+#: ../../../app/install/update/updater.php:62
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
+#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
+#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
+#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
+#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
+#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
+#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
+#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
+#: ../../../lib/Peafowl/peafowl.min.js:158
+#: ../../../lib/Peafowl/peafowl.min.js:195
+msgid "An error occurred. Please try again later."
+msgstr "У процесі виконання сталася помилка. Будь ласка спробуйте пізніше."
+
+#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
+#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
+msgid "Please select a valid image file type."
+msgstr "Будь ласка виберіть правильний формат зображення."
+
+#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
+#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
+#, javascript-format
+msgid "Please select a picture of at most %s size."
+msgstr "Будь ласка, виберіть зображення не більше %s розміром."
+
+#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
+msgid "Profile image updated."
+msgstr "Зображення профілю оновлено."
+
+#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
+msgid "Profile background image updated."
+msgstr "Фон профілю оновлений."
+
+#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
+msgid "Profile background image deleted."
+msgstr "Фон профілю видалений."
+
+#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
+msgid "Error deleting profile background image."
+msgstr "При видаленні фону профілю виникла помилка."
+
+#: ../../../app/routes/route.account.php:360
+#: ../../../app/routes/route.settings.php:327
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
+#: ../../../app/themes/Peafowl/views/settings.php:313
+#: ../../../app/themes/Peafowl/views/settings.php:330
+#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
+msgid "Passwords don't match"
+msgstr "Паролі не збігаються"
+
+#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "Update available v%s"
+msgstr "Поновлення доступне v%s"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#, javascript-format
+msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
+msgstr "Є поновлення для вашої системи. Ви можете автоматично скачати і встановити його або піти до %s для того щоб скачати його вручну."
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "The release notes for this update are:"
+msgstr "Нотатки про випуск для цього оновлення:"
+
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+msgid "Update now"
+msgstr "Оновити зараз"
+
+#: ../../../app/themes/Peafowl/header.php:285
+#: ../../../app/themes/Peafowl/header.php:332
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/form_album.php:9
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/login.php:22
+#: ../../../app/themes/Peafowl/views/login.php:62
+#: ../../../app/themes/Peafowl/views/settings.php:354
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../app/themes/Peafowl/views/signup.php:22
+#: ../../../app/themes/Peafowl/views/signup.php:73
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
+#: ../../../lib/Peafowl/peafowl.min.js:31
+#: ../../../lib/Peafowl/peafowl.min.js:140
+msgid "or"
+msgstr "або"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
+#: ../../../app/themes/Peafowl/views/dashboard.php:2044
+#: ../../../app/themes/Peafowl/views/settings.php:463
+#: ../../../content/pages/default/contact.php:123
+#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
+#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
+msgid "cancel"
+msgstr "скасувати"
+
+#: ../../../app/themes/Peafowl/header.php:381
+#: ../../../app/themes/Peafowl/views/settings.php:348
+#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
+msgid "loading"
+msgstr "Завантаження"
+
+#: ../../../app/themes/Peafowl/views/image.php:85
+#: ../../../app/themes/Peafowl/views/image.php:86
+msgid "Like"
+msgstr "Сподобалось"
+
+#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
+msgid "Edit"
+msgstr "Редагувати"
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
+#: ../../../app/themes/Peafowl/views/dashboard.php:28
+msgid "Album"
+msgid_plural "Albums"
+msgstr[0] "Альбом"
+msgstr[1] "Альбоми"
+msgstr[2] "Альбомів"
+
+#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
+#: ../../../app/themes/Peafowl/views/dashboard.php:607
+#: ../../../app/themes/Peafowl/views/dashboard.php:884
+#: ../../../app/themes/Peafowl/views/dashboard.php:933
+msgid "Delete"
+msgstr "Видалити"
+
+#: ../../../app/themes/Peafowl/header.php:222
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Previous"
+msgstr "Попередня"
+
+msgid "Next"
+msgstr "Наступна"
+
+#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
+msgid "Clipboard image"
+msgstr "Зображення у буфері обміну"
+
+#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
+msgid "File too big."
+msgstr "Файл занадто великий."
+
+msgid "Invalid or unsupported file format."
+msgstr "Невірний або підтримуваний формат файлу."
+
+#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
+#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
+msgid "Some files couldn't be added"
+msgstr "Деякі файли не були додані."
+
+#: ../../../app/lib/classes/class.listing.php:296
+#: ../../../app/routes/route.album.php:177
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
+#: ../../../app/themes/Peafowl/views/album.php:34
+#: ../../../app/themes/Peafowl/views/user.php:98
+#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
+msgid "image"
+msgid_plural "images"
+msgstr[0] "зображення"
+msgstr[1] "зображень"
+msgstr[2] "зображень"
+
+#: ../../../app/routes/route.user.php:89
+#: ../../../app/themes/Peafowl/header.php:56
+#, php-format, javascript-format
+msgid "%s's Albums"
+msgstr "%s Альбомів"
+
+#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
+msgid "Image edited successfully."
+msgstr "Зображення успішно змінене."
+
+#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
+#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
+#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
+msgid "private"
+msgstr "приховане"
+
+#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
+msgid "Album edited successfully."
+msgstr "Альбом успішно відредагований."
+
+#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
+msgid "Invalid URL key."
+msgstr "Невірний URL ключ."
+
+#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
+msgid "Category URL key already being used."
+msgstr "Такий URL ключ вже використовується."
+
+#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
+msgid "Category successfully deleted."
+msgstr "Категорія вилучена."
+
+#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
+#, javascript-format
+msgid "Category %s added."
+msgstr "Категорія %s додана."
+
+#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
+msgid "Invalid expiration date."
+msgstr "Неправильна дата закінчення терміну дії."
+
+#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
+#, javascript-format
+msgid "IP %s already banned."
+msgstr "IP адреса %s вже заблокована"
+
+#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
+#, javascript-format
+msgid "IP %s banned."
+msgstr "IP %s вже заблокована."
+
+#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
+msgid "IP ban successfully deleted."
+msgstr "Блокування IP адреси успішно видалено."
+
+#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
+#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
+#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
+msgid "Please fill all the required fields."
+msgstr "Будь ласка заповніть всі необхідні поля."
+
+#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
+msgid "Invalid storage capacity value. Make sure to use a valid format."
+msgstr "Невірне значення доступного дискового простору. Переконайтеся, що ви використовуєте допустимий формат."
+
+#: ../../../app/lib/classes/class.storage.php:450
+#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
+#, php-format, javascript-format
+msgid "Storage capacity can't be lower than its current usage (%s)."
+msgstr "Ємність не може бути нижчою, ніж його поточне використання (%s)."
+
+#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
+msgid "Invalid URL."
+msgstr "Неправильна адреса."
+
+#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
+msgid "Storage successfully edited."
+msgstr "Сховище змінено."
+
+#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
+msgid "User added successfully."
+msgstr "Користувач доданий."
+
+#: ../../../app/themes/Peafowl/views/404.php:22
+#: ../../../app/themes/Peafowl/views/album.php:134
+#: ../../../app/themes/Peafowl/views/user.php:171
+#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
+msgid "The content has been deleted."
+msgstr "Вміст видалено."
+
+#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
+#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
+#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
+#: ../../../app/lib/chevereto.min.js:205
+msgid "The content has been moved."
+msgstr "Вміст переміщено."
+
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
+#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
+#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
+#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
+msgid "Select"
+msgstr "Виділити"
+
+#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
+msgid "Unselect"
+msgstr "Зняти виділення"
+
+#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
+msgid "The content has been edited."
+msgstr "Вміст змінено."
+
+msgid "Spam detected"
+msgstr "Виявлено спам"
+
+#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
+#: ../../../app/themes/Peafowl/views/user.php:99
+msgid "album"
+msgid_plural "albums"
+msgstr[0] "альбом"
+msgstr[1] "альбомів"
+msgstr[2] "альбомів"
 
 #: ../../../app/lib/classes/class.album.php:100
 msgid "Untitled"
@@ -252,18 +658,6 @@ msgstr[0] "Подобається"
 msgstr[1] ""
 msgstr[2] ""
 
-#: ../../../app/lib/classes/class.listing.php:296
-#: ../../../app/routes/route.album.php:177
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:25
-#: ../../../app/themes/Peafowl/views/album.php:34
-#: ../../../app/themes/Peafowl/views/user.php:98
-#: ../../../app/lib/chevereto.js:2412 ../../../app/lib/chevereto.min.js:126
-msgid "image"
-msgid_plural "images"
-msgstr[0] "зображення"
-msgstr[1] "зображень"
-msgstr[2] "зображень"
-
 msgid "Recent"
 msgstr "Недавні"
 
@@ -342,18 +736,6 @@ msgstr[0] "Зображення"
 msgstr[1] "Зображень"
 msgstr[2] "Зображень"
 
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:9
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:16
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:17
-#: ../../../app/themes/Peafowl/views/dashboard.php:28
-msgid "Album"
-msgid_plural "Albums"
-msgstr[0] "Альбом"
-msgstr[1] "Альбоми"
-msgstr[2] "Альбомів"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:34
 #: ../../../app/themes/Peafowl/views/dashboard.php:90
 #: ../../../app/themes/Peafowl/views/settings.php:126
@@ -380,12 +762,6 @@ msgstr "Внутрішній"
 
 msgid "Can't insert storage."
 msgstr "Неможливо додати сховище"
-
-#: ../../../app/lib/classes/class.storage.php:450
-#: ../../../app/lib/chevereto.js:3302 ../../../app/lib/chevereto.min.js:172
-#, php-format, javascript-format
-msgid "Storage capacity can't be lower than its current usage (%s)."
-msgstr "Ємність не може бути нижчою, ніж його поточне використання (%s)."
 
 msgid "Can't update storage details."
 msgstr "Неможливо оновити дані сховища"
@@ -452,10 +828,6 @@ msgstr "Ви не змінили налаштування електронної
 msgid "There is an update available for your Chevereto based website."
 msgstr "Існує оновлення для вашого веб-сайту на основі Chevereto."
 
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "The release notes for this update are:"
-msgstr "Нотатки про випуск для цього оновлення:"
-
 msgid "admin dashboard"
 msgstr "панель адміністратора"
 
@@ -466,26 +838,8 @@ msgstr "Ви можете застосувати це оновлення без�
 msgid "view on %s"
 msgstr "перегляд на %s"
 
-#: ../../../app/loader.php:180
-msgid "You have been forbidden to use this website."
-msgstr "Вам заборонено користуватися цим сайтом."
-
-#: ../../../app/loader.php:279
-#: ../../../app/themes/Peafowl/views/settings.php:441
-msgid "Feel free to browse and discover all my shared images and albums."
-msgstr "Не соромтеся, щоб переглянути всі мої завантажені зображення та альбоми."
-
-#: ../../../app/loader.php:282
-#: ../../../app/themes/Peafowl/views/settings.php:447
-msgid "View all my images"
-msgstr "Переглянути всі мої зображення"
-
-msgid "Plugin"
-msgstr "Плаґін"
-
-#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
-msgid "That page doesn't exist"
-msgstr "Такої сторінки не існує"
+msgid "I understand"
+msgstr "Я розумію"
 
 #: ../../../app/routes/route.account.php:72
 #: ../../../app/themes/Peafowl/header.php:295
@@ -515,13 +869,6 @@ msgstr "Додати адресу електронної пошти"
 #: ../../../app/themes/Peafowl/views/account/email-changed.php:7
 msgid "Email changed"
 msgstr "Адреса електронної пошти змінена"
-
-#: ../../../app/routes/route.account.php:95
-#: ../../../app/routes/route.login.php:71
-#: ../../../app/routes/route.settings.php:140
-#: ../../../app/routes/route.signup.php:73
-msgid "The reCAPTCHA wasn't entered correctly"
-msgstr "Ви ввели неправильну капчу"
 
 #: ../../../app/routes/route.account.php:119
 #: ../../../app/routes/route.account.php:164
@@ -578,29 +925,12 @@ msgstr "Підтвердження реєстрації на %s"
 msgid "Welcome to %s"
 msgstr "Ласкаво просимо на %s"
 
-#: ../../../app/routes/route.account.php:360
-#: ../../../app/routes/route.settings.php:327
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:36
-#: ../../../app/themes/Peafowl/views/settings.php:313
-#: ../../../app/themes/Peafowl/views/settings.php:330
-#: ../../../app/lib/chevereto.js:1516 ../../../app/lib/chevereto.min.js:69
-msgid "Passwords don't match"
-msgstr "Паролі не збігаються"
-
 #: ../../../app/routes/route.account.php:422
 #: ../../../app/routes/route.json.php:599
 #: ../../../app/routes/route.settings.php:243
 #: ../../../app/routes/route.signup.php:141
 msgid "Email already being used"
 msgstr "Адреса вже використовується"
-
-#: ../../../app/routes/route.account.php:508
-#: ../../../app/routes/route.signup.php:236
-#: ../../../content/pages/default/contact.php:132
-#: ../../../app/lib/chevereto.js:283 ../../../app/lib/chevereto.min.js:16
-#: ../../../lib/Peafowl/peafowl.js:196 ../../../lib/Peafowl/peafowl.min.js:10
-msgid "Check the errors in the form to continue."
-msgstr "Перед продовженням перевірте форму на наявність помилок"
 
 msgid "Password required"
 msgstr "Пароль обов'язковий"
@@ -815,6 +1145,9 @@ msgstr[2] "%d секунди"
 msgid "Memory limit"
 msgstr "Обмеження пам'яті"
 
+msgid "Not your IP?"
+msgstr "Не ваш IP?"
+
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:6
 msgid "Links"
 msgstr "Посилання"
@@ -825,14 +1158,8 @@ msgstr "Документація"
 msgid "Changelog"
 msgstr "Список змін"
 
-msgid "Request new features"
-msgstr "Запит нових функцій"
-
 msgid "Bug tracking"
 msgstr "Простежування помилок"
-
-msgid "Blog"
-msgstr "Блоґ"
 
 #: ../../../app/routes/route.dashboard.php:227
 #: ../../../app/themes/Peafowl/views/settings.php:370
@@ -1008,11 +1335,6 @@ msgstr "Сторінка зображення"
 msgid "Inside viewer top (image page)"
 msgstr "У заголовку переглядача (сторінка зображення)"
 
-#: ../../../app/routes/route.dashboard.php:413
-#: ../../../app/routes/route.dashboard.php:417
-msgid "Expected banner size 728x90"
-msgstr "Рекомендований розмір банера 728x90"
-
 #: ../../../app/routes/route.dashboard.php:416
 msgid "Inside viewer foot (image page)"
 msgstr "Внизу переглядача (сторінка зображення)"
@@ -1081,6 +1403,10 @@ msgstr "Неправильна мова"
 msgid "Invalid timezone"
 msgstr "Неправильний часовий пояс"
 
+#, php-format
+msgid "Invalid value: %s"
+msgstr "Некоректне значення: %s"
+
 #: ../../../app/routes/route.dashboard.php:577
 msgid "Invalid upload storage mode"
 msgstr "Неправильний спосіб зберігання файлів."
@@ -1126,10 +1452,6 @@ msgstr "Неправильний стиль теми"
 #: ../../../app/routes/route.dashboard.php:627
 msgid "Invalid theme main color"
 msgstr "Неправильний основний колір теми"
-
-#: ../../../app/routes/route.dashboard.php:632
-msgid "Invalid theme top bar color"
-msgstr "Неправильний колір верхньої панелі теми"
 
 #: ../../../app/routes/route.dashboard.php:637
 msgid "Invalid theme top bar button color"
@@ -1251,6 +1573,9 @@ msgstr "Неправильний SMTP сервер"
 #: ../../../app/routes/route.dashboard.php:861
 msgid "Invalid SMTP username"
 msgstr "Неправильне SMTP ім'я"
+
+msgid "Invalid key"
+msgstr "Неправильний ключ"
 
 #: ../../../app/routes/route.dashboard.php:960
 #, php-format
@@ -1437,11 +1762,6 @@ msgstr "Неправильне ім'я користувача або парол�
 msgid "Sign in"
 msgstr "Вхід"
 
-#: ../../../app/routes/route.logout.php:29
-#: ../../../app/themes/Peafowl/views/logout.php:8
-msgid "Logged out"
-msgstr "Вийти"
-
 msgid "Upload images"
 msgstr "Завантажити зображення"
 
@@ -1542,12 +1862,6 @@ msgstr "Завантаження"
 msgid "%s's Images"
 msgstr "%s Зображень"
 
-#: ../../../app/routes/route.user.php:89
-#: ../../../app/themes/Peafowl/header.php:56
-#, php-format, javascript-format
-msgid "%s's Albums"
-msgstr "%s Альбомів"
-
 #: ../../../app/routes/route.user.php:99
 #: ../../../app/themes/Peafowl/views/search.php:8
 msgid "Results for"
@@ -1576,10 +1890,6 @@ msgid "%n (%u) on %w"
 msgstr "%n (%u) в %w"
 
 #: ../../../app/themes/Peafowl/header.php:222
-msgid "Close"
-msgstr "Закрити"
-
-#: ../../../app/themes/Peafowl/header.php:222
 #: ../../../app/themes/Peafowl/header.php:226
 msgid "Advanced search"
 msgstr "Розширений пошук"
@@ -1595,102 +1905,9 @@ msgstr "Випадкове"
 msgid "Notices (%s)"
 msgstr "Повідомлення (%s)"
 
-#: ../../../app/themes/Peafowl/header.php:281
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
-#: ../../../app/themes/Peafowl/views/login.php:18
-#: ../../../app/themes/Peafowl/views/login.php:65
-#: ../../../app/themes/Peafowl/views/signup.php:18
-#: ../../../app/themes/Peafowl/views/signup.php:76
-msgid "Sign in with another account"
-msgstr "Увійти через"
-
-#: ../../../app/themes/Peafowl/header.php:285
-#: ../../../app/themes/Peafowl/header.php:332
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/form_album.php:9
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:15
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:13
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:38
-#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
-#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/login.php:22
-#: ../../../app/themes/Peafowl/views/login.php:62
-#: ../../../app/themes/Peafowl/views/settings.php:354
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../app/themes/Peafowl/views/signup.php:22
-#: ../../../app/themes/Peafowl/views/signup.php:73
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:492 ../../../lib/Peafowl/peafowl.js:2325
-#: ../../../lib/Peafowl/peafowl.min.js:31
-#: ../../../lib/Peafowl/peafowl.min.js:140
-msgid "or"
-msgstr "або"
-
-#: ../../../app/themes/Peafowl/header.php:291
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
-#: ../../../app/themes/Peafowl/views/login.php:34
-#: ../../../app/themes/Peafowl/views/login.php:35
-msgid "Username or Email address"
-msgstr "Ім'я користувача або Email"
-
-#: ../../../app/themes/Peafowl/header.php:294
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:23
-#: ../../../app/themes/Peafowl/views/login.php:53
-msgid "Keep me logged in"
-msgstr "Запам'ятати мене"
-
-#: ../../../app/themes/Peafowl/header.php:301
-#, php-format
-msgid "Don't have an account? <a href='%s'>Sign up</a> now."
-msgstr "У вас ще немає акаунта? <a href='%s'>Зареєструйтесь</a> зараз."
-
-#: ../../../app/themes/Peafowl/header.php:328
-msgid "Sign up with another account"
-msgstr "Зареєструватися через"
-
-#: ../../../app/themes/Peafowl/header.php:338
-#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
-#: ../../../app/themes/Peafowl/views/dashboard.php:100
-#: ../../../app/themes/Peafowl/views/settings.php:155
-#: ../../../app/themes/Peafowl/views/signup.php:34
-#: ../../../app/themes/Peafowl/views/signup.php:35
-#: ../../../content/pages/default/contact.php:92
-msgid "Email address"
-msgstr "Адреса електронної пошти"
-
-#: ../../../app/themes/Peafowl/header.php:339
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
-#: ../../../app/themes/Peafowl/views/dashboard.php:94
-#: ../../../app/themes/Peafowl/views/dashboard.php:95
-#: ../../../app/themes/Peafowl/views/settings.php:143
-#: ../../../app/themes/Peafowl/views/settings.php:144
-#: ../../../app/themes/Peafowl/views/signup.php:39
-#: ../../../app/themes/Peafowl/views/signup.php:40
-msgid "Username"
-msgstr "Ім'я користувача"
-
 #: ../../../app/themes/Peafowl/header.php:362
 msgid "Notifications"
 msgstr "Повідомлення"
-
-#: ../../../app/themes/Peafowl/header.php:381
-#: ../../../app/themes/Peafowl/views/settings.php:348
-#: ../../../lib/Peafowl/peafowl.js:3520 ../../../lib/Peafowl/peafowl.min.js:234
-msgid "loading"
-msgstr "Завантаження"
 
 #: ../../../app/themes/Peafowl/header.php:384
 msgid "You don't have notifications"
@@ -1821,17 +2038,6 @@ msgstr "Небезпечний вміст"
 msgid "Uploading"
 msgstr "Завантажується"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:76
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:92
-#: ../../../app/themes/Peafowl/views/dashboard.php:2044
-#: ../../../app/themes/Peafowl/views/settings.php:463
-#: ../../../content/pages/default/contact.php:123
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#: ../../../lib/Peafowl/peafowl.js:2326 ../../../lib/Peafowl/peafowl.min.js:140
-msgid "cancel"
-msgstr "скасувати"
-
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:80
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:93
 msgid "cancel remaining"
@@ -1849,25 +2055,23 @@ msgstr "детальніше"
 msgid "Check the <a data-modal=\"simple\" data-target=\"failed-upload-result\">error report</a> for more information."
 msgstr "Перевірте <a data-modal=\"simple\" data-target=\"failed-upload-result\">звіт про помилки</a> для отримання більш докладної інформації."
 
+msgid "reset"
+msgstr "скинути"
+
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:91
 msgid "close"
 msgstr "закрити"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:146
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:6
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:13
-msgid "Edit"
-msgstr "Редагувати"
+msgid "copy"
+msgstr "копіювати"
+
+msgid "insert"
+msgstr "вставити"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:148
 #: ../../../app/themes/Peafowl/views/dashboard.php:666
 msgid "Remove"
 msgstr "Видалити"
-
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:154
-msgid "Edit image"
-msgstr "Редагувати зображення"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:158
 #: ../../../app/themes/Peafowl/snippets/form_image.php:4
@@ -1962,9 +2166,8 @@ msgstr "Додайте сюди посилання на зображення"
 msgid "Create album"
 msgstr "створити альбом"
 
-#: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:224
-msgid "The uploaded content will be moved to this newly created album. You can also move the content to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
-msgstr "Завантажений вміст буде поміщено в новий альбом. Ви також можете перемістити вміст в <a class=\"modal-switch\" data-switch=\"move-existing-album\">існуючий альбом</a>."
+msgid "existing album"
+msgstr "існуючий альбом"
 
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:235
 #: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:28
@@ -1980,14 +2183,6 @@ msgstr "Виберіть існуючий альбом для переміщен
 #: ../../../app/themes/Peafowl/snippets/anywhere_upload.php:252
 msgid "Error report"
 msgstr "Звіт про помилки"
-
-#: ../../../app/themes/Peafowl/snippets/breadcrum_owner_card.php:26
-#: ../../../app/themes/Peafowl/views/user.php:99
-msgid "album"
-msgid_plural "albums"
-msgstr[0] "альбом"
-msgstr[1] "альбомів"
-msgstr[2] "альбомів"
 
 #: ../../../app/themes/Peafowl/snippets/embed_tpl.php:9
 msgid "Viewer links"
@@ -2098,6 +2293,9 @@ msgstr "Опис альбому"
 msgid "Brief description of this album"
 msgstr "Короткий опис цього альбому"
 
+msgid "Album privacy"
+msgstr "Видимість альбому"
+
 #: ../../../app/themes/Peafowl/snippets/form_album.php:19
 msgid "Who can view this content"
 msgstr "Хто може переглядати цей контент"
@@ -2109,6 +2307,9 @@ msgstr "Приховане (тільки я)"
 #: ../../../app/themes/Peafowl/snippets/form_album.php:22
 msgid "Private (anyone with the link)"
 msgstr "Приховане (тільки за посиланням)"
+
+msgid "Private (password protected)"
+msgstr "Приватний (виявлено пароль)"
 
 #: ../../../app/themes/Peafowl/snippets/form_category_edit.php:4
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:3
@@ -2145,6 +2346,10 @@ msgstr "Короткий опис цьої категорії"
 #: ../../../app/themes/Peafowl/snippets/form_image.php:5
 msgid "Untitled image"
 msgstr "Безіменне"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
+msgid "Path"
+msgstr "Шлях"
 
 #: ../../../app/themes/Peafowl/snippets/form_ip_ban_edit.php:9
 msgid "Expiration date"
@@ -2193,6 +2398,10 @@ msgstr "API"
 msgid "Region"
 msgstr "Регіон"
 
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
+msgid "Storage region"
+msgstr "Регіон сховища"
+
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:58
 msgid "Storage bucket"
 msgstr "Корзина сховища"
@@ -2213,19 +2422,6 @@ msgstr "Секретний ключ"
 msgid "Storage secret"
 msgstr "Секретний ключ сховища"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:73
-msgid "Client email"
-msgstr "Клієнт електронної пошти"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:74
-msgid "Google Cloud client email"
-msgstr "Google Cloud клієнт електронної пошти"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:75
-#, php-format
-msgid "You will need a <a %s>service account</a> for this."
-msgstr "Вам потрібно <a %s>обліковий запис служби</a> для цього"
-
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:78
 msgid "Private key"
 msgstr "Приватний ключ"
@@ -2233,6 +2429,11 @@ msgstr "Приватний ключ"
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:79
 msgid "Google Cloud JSON key"
 msgstr "Google Cloud JSON ключ"
+
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:75
+#, php-format
+msgid "You will need a <a %s>service account</a> for this."
+msgstr "Вам потрібно <a %s>обліковий запис служби</a> для цього"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:84
 msgid "Identity URL"
@@ -2246,9 +2447,18 @@ msgstr "Ідентична кінцева точка API"
 msgid "API endpoint for OpenStack identity"
 msgstr "Кінцева точка API для ідентифікації в OpenStack"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:97
-msgid "Storage region"
-msgstr "Регіон сховища"
+#: ../../../app/themes/Peafowl/header.php:339
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:88
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:89
+#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:122
+#: ../../../app/themes/Peafowl/views/dashboard.php:94
+#: ../../../app/themes/Peafowl/views/dashboard.php:95
+#: ../../../app/themes/Peafowl/views/settings.php:143
+#: ../../../app/themes/Peafowl/views/settings.php:144
+#: ../../../app/themes/Peafowl/views/signup.php:39
+#: ../../../app/themes/Peafowl/views/signup.php:40
+msgid "Username"
+msgstr "Ім'я користувача"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:100
 msgid "Container"
@@ -2278,21 +2488,9 @@ msgstr "Орендар ім'я (ім'я облікового запису)"
 msgid "Hostname or IP of the storage server"
 msgstr "Адреса або IP сервера"
 
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:118
-msgid "Path"
-msgstr "Шлях"
-
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
 msgid "Server path"
 msgstr "Шлях"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:119
-msgid "Server path where the files will be stored"
-msgstr "Шлях до місця зберігання зображень на віддаленому сервері"
-
-#: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:123
-msgid "Server username"
-msgstr "Ім'я користувача"
 
 #: ../../../app/themes/Peafowl/snippets/form_storage_edit.php:127
 msgid "Server password"
@@ -2360,43 +2558,21 @@ msgstr "Присвоїти категорію"
 msgid "Flag as safe"
 msgstr "Помітити як безпечне"
 
-#: ../../../app/themes/Peafowl/snippets/listing_tools_editor.php:54
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:7
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:8
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:13
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:12
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:13
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:20
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:21
-#: ../../../app/themes/Peafowl/views/dashboard.php:607
-#: ../../../app/themes/Peafowl/views/dashboard.php:884
-#: ../../../app/themes/Peafowl/views/dashboard.php:933
-msgid "Delete"
-msgstr "Видалити"
-
-#: ../../../app/themes/Peafowl/snippets/modal_login.php:5
-#, php-format
-msgid "To use all the features of this site you must be logged in. If you don't have an account you can <a href=\"%s\">sign up</a> right now."
-msgstr "Ви повинні увійти, щоб використовувати всі можливості цього сайту. Якщо у вас ще немає облікового запису, ви можете <a href=\"%s\">зареєструватися</a> просто зараз."
+#: ../../../app/themes/Peafowl/header.php:281
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:11
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:40
+#: ../../../app/themes/Peafowl/views/login.php:18
+#: ../../../app/themes/Peafowl/views/login.php:65
+#: ../../../app/themes/Peafowl/views/signup.php:18
+#: ../../../app/themes/Peafowl/views/signup.php:76
+msgid "Sign in with another account"
+msgstr "Увійти через"
 
 #: ../../../app/themes/Peafowl/snippets/template_content_empty.php:5
 #: ../../../app/themes/Peafowl/views/dashboard.php:618
 #: ../../../app/themes/Peafowl/views/index.php:63
 msgid "There's nothing to show here."
 msgstr "Немає елементів для відображення."
-
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:16
-#: ../../../app/themes/Peafowl/views/image.php:69
-#: ../../../app/themes/Peafowl/views/image.php:457
-msgid "Edit image details"
-msgstr "Редагувати зображення"
-
-#: ../../../app/themes/Peafowl/snippets/user_items_editor.php:18
-#: ../../../app/themes/Peafowl/views/album.php:22
-#: ../../../app/themes/Peafowl/views/album.php:118
-msgid "Edit album details"
-msgstr "Редагувати альбом"
 
 #: ../../../app/themes/Peafowl/snippets/user_items_editor.php:32
 msgid "All the images will be moved to this newly created album. You can also move the images to an <a class=\"modal-switch\" data-switch=\"move-existing-album\">existing album</a>."
@@ -2455,10 +2631,8 @@ msgstr "Ви дійсно хочете видалити всі виділені 
 msgid "Guest"
 msgstr "Гість"
 
-#: ../../../app/themes/Peafowl/views/image.php:85
-#: ../../../app/themes/Peafowl/views/image.php:86
-msgid "Like"
-msgstr "Сподобалось"
+msgid "Private album"
+msgstr "Приватний альбом"
 
 #: ../../../app/themes/Peafowl/tpl_list_item/image_description_owner.php:2
 #, php-format
@@ -2470,25 +2644,14 @@ msgstr "З альбому %s"
 msgid "by %u"
 msgstr "by %u"
 
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_admin_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_album_edit_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:4
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:3
-#: ../../../app/themes/Peafowl/tpl_list_item/item_image_public_tools.php:4
-#: ../../../app/lib/chevereto.js:3778 ../../../app/lib/chevereto.min.js:198
-#: ../../../lib/Peafowl/peafowl.js:639 ../../../lib/Peafowl/peafowl.min.js:38
-msgid "Select"
-msgstr "Виділити"
-
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_admin_tools.php:7
 #: ../../../app/themes/Peafowl/tpl_list_item/item_image_edit_tools.php:7
 msgid "Toggle unsafe flag"
 msgstr "Переключити в небезпечне"
+
+#: ../../../app/loader.php:396 ../../../app/themes/Peafowl/views/404.php:6
+msgid "That page doesn't exist"
+msgstr "Такої сторінки не існує"
 
 #: ../../../app/themes/Peafowl/views/404.php:7
 msgid "The requested page was not found."
@@ -2502,13 +2665,6 @@ msgstr "Знайти щось ще"
 msgid "The user has been deleted"
 msgstr "Користувач видалений"
 
-#: ../../../app/themes/Peafowl/views/404.php:22
-#: ../../../app/themes/Peafowl/views/album.php:134
-#: ../../../app/themes/Peafowl/views/user.php:171
-#: ../../../app/lib/chevereto.js:3756 ../../../app/lib/chevereto.min.js:196
-msgid "The content has been deleted."
-msgstr "Вміст видалено."
-
 #: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:7
 msgid "Your account is almost ready"
 msgstr "Ваш обліковий запис майже готовий"
@@ -2517,17 +2673,6 @@ msgstr "Ваш обліковий запис майже готовий"
 #, php-format
 msgid "An email to %s has been sent with instructions to activate your account. The activation link is only valid for 48 hours. If you don't receive the instructions try checking your junk or spam filters."
 msgstr "Інструкції з активації вашого аккаунта були відправлені на %s. Посилання для активації дійсне протягом 48 годин. Якщо ви не отримали повідомлення перевірте папку Спам."
-
-#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
-#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
-#: ../../../app/themes/Peafowl/views/logout.php:13
-#: ../../../app/themes/Peafowl/views/request-denied.php:13
-msgid "Go to homepage"
-msgstr "Головна"
 
 #: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
@@ -2553,41 +2698,6 @@ msgstr "На вашу адресу буде надіслане посиланн�
 msgid "Your email address"
 msgstr "Ваша адреса електронної пошти"
 
-#: ../../../app/themes/Peafowl/views/account/email-needed.php:26
-msgid "Add email"
-msgstr "Додати адресу електронної пошти"
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
-msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
-msgstr "Інструкції по скиданню паролю були надіслані на вашу адресу. Якщо ви їх не отримали, перевірте папку Спам."
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
-msgid "Resend instructions"
-msgstr "Повторити відправку інструкцій"
-
-#: ../../../app/install/update/updater.php:62
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:22
-#: ../../../app/lib/chevereto.js:1237 ../../../app/lib/chevereto.js:1313
-#: ../../../app/lib/chevereto.js:1391 ../../../app/lib/chevereto.js:1539
-#: ../../../app/lib/chevereto.js:1623 ../../../app/lib/chevereto.js:1668
-#: ../../../app/lib/chevereto.min.js:59 ../../../app/lib/chevereto.min.js:63
-#: ../../../app/lib/chevereto.min.js:67 ../../../app/lib/chevereto.min.js:70
-#: ../../../app/lib/chevereto.min.js:74 ../../../app/lib/chevereto.min.js:77
-#: ../../../lib/Peafowl/peafowl.js:2560 ../../../lib/Peafowl/peafowl.js:3096
-#: ../../../lib/Peafowl/peafowl.min.js:158
-#: ../../../lib/Peafowl/peafowl.min.js:195
-msgid "An error occurred. Please try again later."
-msgstr "У процесі виконання сталася помилка. Будь ласка спробуйте пізніше."
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
-msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
-msgstr "Вам вже було надіслано повідомлення з інструкціями щодо скидання пароля. Якщо ви не отримали повідомлення, перевірте папку Спам."
-
-#: ../../../app/themes/Peafowl/views/account/password-forgot.php:32
-msgid "Enter your username or the email address that you used to create your account."
-msgstr "Введіть ім'я користувача та адресу електронної пошти, використані при реєстрації."
-
 #: ../../../app/themes/Peafowl/views/account/password-forgot.php:52
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:47
 #: ../../../app/themes/Peafowl/views/account/resend-activation.php:37
@@ -2597,6 +2707,29 @@ msgstr "Введіть ім'я користувача та адресу елек
 msgid "Submit"
 msgstr "Надіслати"
 
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:15
+msgid "An email with instructions to reset your password has been sent to the registered email address. If you don't receive the instructions try checking your junk or spam filters."
+msgstr "Інструкції по скиданню паролю були надіслані на вашу адресу. Якщо ви їх не отримали, перевірте папку Спам."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:24
+msgid "A previous email has been sent with instructions to reset your password. If you did not receive the instructions try checking your junk or spam filters."
+msgstr "Вам вже було надіслано повідомлення з інструкціями щодо скидання пароля. Якщо ви не отримали повідомлення, перевірте папку Спам."
+
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+msgid "Resend instructions"
+msgstr "Повторити відправку інструкцій"
+
+#: ../../../app/themes/Peafowl/header.php:291
+#: ../../../app/themes/Peafowl/snippets/modal_login.php:20
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:38
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:39
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:23
+#: ../../../app/themes/Peafowl/views/login.php:34
+#: ../../../app/themes/Peafowl/views/login.php:35
+msgid "Username or Email address"
+msgstr "Ім'я користувача або Email"
+
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:15
 msgid "Your password has been changed. You can now try logging in using your new password."
 msgstr "Пароль успішно змінений. Ви можете увійти використовуючи ваш новий пароль."
@@ -2605,13 +2738,10 @@ msgstr "Пароль успішно змінений. Ви можете увій
 msgid "Login now"
 msgstr "Увійти зараз"
 
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:22
-msgid "Enter the new password that you want to use."
-msgstr "Введіть новий пароль"
-
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:28
-msgid "New Password"
-msgstr "Новий пароль"
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
+#: ../../../app/themes/Peafowl/views/settings.php:306
+msgid "Enter your new password"
+msgstr "Введіть ваш новий пароль"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:29
 #: ../../../app/themes/Peafowl/views/dashboard.php:105
@@ -2621,16 +2751,6 @@ msgstr "Новий пароль"
 #, php-format
 msgid "%d characters min"
 msgstr "мін. %d символів"
-
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:29
-#: ../../../app/themes/Peafowl/views/settings.php:306
-msgid "Enter your new password"
-msgstr "Введіть ваш новий пароль"
-
-#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
-#: ../../../app/themes/Peafowl/views/settings.php:328
-msgid "Confirm password"
-msgstr "Підтвердіть пароль"
 
 #: ../../../app/themes/Peafowl/views/account/password-reset.php:35
 #: ../../../app/themes/Peafowl/views/settings.php:312
@@ -2642,10 +2762,6 @@ msgstr "Підтвердіть новий пароль"
 msgid "An email to %s has been sent with instructions to activate your account. If you don't receive the instructions try checking your junk or spam filters."
 msgstr "Інструкції по активації облікового запису були відправлені на %s . Якщо ви не отримали повідомлення, перевірте папку Спам."
 
-#: ../../../app/themes/Peafowl/views/account/resend-activation.php:19
-msgid "Enter the username or email address that you used to create your account to continue."
-msgstr "Для продовження введіть ім'я користувача або електронну адресу пошти яку ви використовували для створення вашого аккаунту."
-
 #: ../../../app/themes/Peafowl/views/album.php:16
 #: ../../../app/themes/Peafowl/views/image.php:63
 msgid "This content is private"
@@ -2655,10 +2771,6 @@ msgstr "Цей контент приватний"
 msgid "Do you really want to delete this album and all of its images? This can't be undone."
 msgstr "Ви дійсно хочете видалити цей альбом з усіма зображеннями? Ця дія є незворотньою."
 
-#: ../../../app/themes/Peafowl/views/album.php:25
-msgid "Delete album"
-msgstr "Видалити альбом"
-
 #: ../../../app/themes/Peafowl/views/image.php:85
 msgid "You like this"
 msgstr "Вам подобається це"
@@ -2667,10 +2779,44 @@ msgstr "Вам подобається це"
 msgid "Album link"
 msgstr "Посилання на альбом"
 
+msgid "I Agree"
+msgstr "Я погоджуюся"
+
 #: ../../../app/themes/Peafowl/views/dashboard.php:40
 #: ../../../app/themes/Peafowl/views/dashboard.php:1732
 msgid "Disk used"
 msgstr "Використано місця на диску"
+
+msgid "Working"
+msgstr "Працює"
+
+msgid "Paused"
+msgstr "Призупинено"
+
+msgid "Canceled"
+msgstr "Скасовано"
+
+msgid "Completed"
+msgstr "Завершено"
+
+msgid "Actions"
+msgstr "Дії"
+
+msgid "Reset"
+msgstr "Скинути"
+
+msgid "Resume"
+msgstr "Відновити"
+
+msgid "Errors"
+msgstr "Помилки"
+
+#: ../../../app/themes/Peafowl/views/settings.php:105
+msgid "Status"
+msgstr "Статус"
+
+msgid "Cancel"
+msgstr "Скасувати"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:80
 #: ../../../app/themes/Peafowl/views/dashboard.php:84
@@ -2686,6 +2832,16 @@ msgstr "Роль"
 #: ../../../app/themes/Peafowl/views/settings.php:125
 msgid "Administrator"
 msgstr "Адміністратор"
+
+#: ../../../app/themes/Peafowl/header.php:338
+#: ../../../app/themes/Peafowl/views/account/email-needed.php:15
+#: ../../../app/themes/Peafowl/views/dashboard.php:100
+#: ../../../app/themes/Peafowl/views/settings.php:155
+#: ../../../app/themes/Peafowl/views/signup.php:34
+#: ../../../app/themes/Peafowl/views/signup.php:35
+#: ../../../content/pages/default/contact.php:92
+msgid "Email address"
+msgstr "Адреса електронної пошти"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:152
 #: ../../../app/themes/Peafowl/views/dashboard.php:156
@@ -2727,6 +2883,12 @@ msgstr "Часовий пояс  за замовчуванням"
 #: ../../../app/themes/Peafowl/views/settings.php:250
 msgid "Select region"
 msgstr "Оберіть регіон"
+
+msgid "guests"
+msgstr "гості"
+
+msgid "Likes"
+msgstr "Вподобання"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:344
 msgid "Personal mode target user"
@@ -3396,26 +3558,6 @@ msgstr "Шістнадцяткове значення кольору"
 msgid "Use this to set the main theme color. Value must be in <a href=\"%s\" target=\"_blank\">hex format</a>."
 msgstr "Використовуйте це, щоб встановити основну колірну тему. Значення має бути в <a href=\"%s\" target=\"_blank\">Hex форматі</a>."
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1203
-msgid "Top bar color"
-msgstr "Колір верхньої панелі"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1223
-#: ../../../app/themes/Peafowl/views/dashboard.php:1461
-msgid "Black"
-msgstr "Чорний"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1206
-#: ../../../app/themes/Peafowl/views/dashboard.php:1224
-#: ../../../app/themes/Peafowl/views/dashboard.php:1462
-msgid "White"
-msgstr "Білий"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1210
-msgid "If you set this to \"white\" the top bar and all the black tones will be changed to white tones."
-msgstr "Якщо ви встановите колір верхньої панелі на \"білий\" тоді всі темні тони будуть замінені на білі тони."
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1214
 msgid "Top bar button color"
 msgstr "Колір кнопки верхньої панелі"
@@ -3444,6 +3586,18 @@ msgstr "Червоний"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1460
 msgid "Grey"
 msgstr "Сірий"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1223
+#: ../../../app/themes/Peafowl/views/dashboard.php:1461
+msgid "Black"
+msgstr "Чорний"
+
+#: ../../../app/themes/Peafowl/views/dashboard.php:1206
+#: ../../../app/themes/Peafowl/views/dashboard.php:1224
+#: ../../../app/themes/Peafowl/views/dashboard.php:1462
+msgid "White"
+msgstr "Білий"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1230
 msgid "Color for the top bar buttons like the \"Create account\" button."
@@ -3571,10 +3725,6 @@ msgstr "Стартова сторінка"
 #: ../../../app/themes/Peafowl/views/dashboard.php:1395
 msgid "Split landing + images"
 msgstr "Стартова сторінка + зображення"
-
-#: ../../../app/themes/Peafowl/views/dashboard.php:1396
-msgid "Route explore"
-msgstr "Переадресація в Огляд"
 
 #: ../../../app/themes/Peafowl/views/dashboard.php:1401
 #, php-format
@@ -3832,10 +3982,6 @@ msgstr "Небезпечний"
 msgid "Send test email"
 msgstr "Надіслати тестове повідомлення"
 
-#: ../../../app/themes/Peafowl/views/dashboard.php:1825
-msgid "test@somedomain.com"
-msgstr "test@somedomain.com"
-
 #: ../../../app/themes/Peafowl/views/dashboard.php:1826
 #, php-format
 msgid "Use this to test how your emails are being delivered. We recommend you to use %s."
@@ -4009,11 +4155,6 @@ msgstr "Перетягніть зображення яке Ви хочете з�
 msgid "Start uploading"
 msgstr "Почати завантаження"
 
-#: ../../../app/themes/Peafowl/views/index.php:63
-#, php-format
-msgid "Fill this section uploading pictures to %s account.<br>You can edit the target user in your dashboard settings."
-msgstr "Заповніть цей розділ, завантажуючи зображення від імені %s.<br>Ви можете поміняти цього користувача в панелі управління."
-
 #: ../../../app/themes/Peafowl/views/index.php:79
 msgid "Sign up to unlock all the features"
 msgstr "Зареєструватися, щоб отримати більше можливостей."
@@ -4022,15 +4163,31 @@ msgstr "Зареєструватися, щоб отримати більше м�
 msgid "Manage your content, create private albums, customize your profile and more."
 msgstr "Керуйте аккаунтом, створюйте альбоми, змінюйте свій профіль і багато іншого."
 
-#: ../../../app/themes/Peafowl/views/login.php:40
-#: ../../../app/themes/Peafowl/views/settings.php:323
-msgid "Enter your password"
-msgstr "Введите ваш пароль"
+#: ../../../app/themes/Peafowl/header.php:301
+#, php-format
+msgid "Don't have an account? <a href='%s'>Sign up</a> now."
+msgstr "У вас ще немає акаунта? <a href='%s'>Зареєструйтесь</a> зараз."
+
+#: ../../../app/routes/route.logout.php:29
+#: ../../../app/themes/Peafowl/views/logout.php:8
+msgid "Logged out"
+msgstr "Вийти"
 
 #: ../../../app/themes/Peafowl/views/logout.php:12
 #, php-format
 msgid "You have been logged off %s. Hope to see you soon."
 msgstr "Успішний вихід з системи. До нових зустрічей на %s."
+
+#: ../../../app/themes/Peafowl/views/account/awaiting-confirmation.php:10
+#: ../../../app/themes/Peafowl/views/account/email-changed.php:11
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:16
+#: ../../../app/themes/Peafowl/views/account/password-forgot.php:26
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:16
+#: ../../../app/themes/Peafowl/views/account/resend-activation.php:13
+#: ../../../app/themes/Peafowl/views/logout.php:13
+#: ../../../app/themes/Peafowl/views/request-denied.php:13
+msgid "Go to homepage"
+msgstr "Головна"
 
 #: ../../../app/themes/Peafowl/views/maintenance.php:7
 msgid "Website under maintenance"
@@ -4064,10 +4221,6 @@ msgstr "Дата реєстрації"
 #: ../../../app/themes/Peafowl/views/settings.php:91
 msgid "Registration IP"
 msgstr "IP при реєстрації"
-
-#: ../../../app/themes/Peafowl/views/settings.php:105
-msgid "Status"
-msgstr "Статус"
 
 #: ../../../app/themes/Peafowl/views/settings.php:109
 msgid "Valid"
@@ -4152,6 +4305,16 @@ msgstr "Додайте пароль, щоб мати можливість вхо
 msgid "This user doesn't have a password. Add one using this form."
 msgstr "У цього користувача не встановлений пароль. Додайте його через дану форму."
 
+#: ../../../app/themes/Peafowl/views/login.php:40
+#: ../../../app/themes/Peafowl/views/settings.php:323
+msgid "Enter your password"
+msgstr "Введите ваш пароль"
+
+#: ../../../app/themes/Peafowl/views/account/password-reset.php:34
+#: ../../../app/themes/Peafowl/views/settings.php:328
+msgid "Confirm password"
+msgstr "Підтвердіть пароль"
+
 #: ../../../app/themes/Peafowl/views/settings.php:329
 msgid "Re-enter your password"
 msgstr "Повторіть пароль"
@@ -4184,10 +4347,6 @@ msgstr "Розкажіть нам трошки про себе"
 #: ../../../app/themes/Peafowl/views/settings.php:387
 msgid "User has no connections."
 msgstr "У користувача немає зв'язків з іншими акаунтами."
-
-#: ../../../app/themes/Peafowl/views/settings.php:391
-msgid "Link your account to external services to be able to login and share content."
-msgstr "Зв'яжіть ваш аккаунт з соціальними мережами і сторонніми сервісами, щоб мати можливість входити через них і ділиться зображеннями."
 
 #: ../../../app/themes/Peafowl/views/settings.php:398
 #, php-format
@@ -4223,18 +4382,23 @@ msgstr "відв'язати"
 msgid "Connect %s"
 msgstr "Пов'язати %s"
 
+#: ../../../app/loader.php:279
+#: ../../../app/themes/Peafowl/views/settings.php:441
+msgid "Feel free to browse and discover all my shared images and albums."
+msgstr "Не соромтеся, щоб переглянути всі мої завантажені зображення та альбоми."
+
 #: ../../../app/themes/Peafowl/views/settings.php:446
 msgid "Button"
 msgstr "Кнопка"
 
+#: ../../../app/loader.php:282
+#: ../../../app/themes/Peafowl/views/settings.php:447
+msgid "View all my images"
+msgstr "Переглянути всі мої зображення"
+
 #: ../../../app/themes/Peafowl/views/signup.php:45
 msgid "resend account activation"
 msgstr "Повторити відправку посилання для активації"
-
-#: ../../../app/themes/Peafowl/views/signup.php:45
-#, php-format
-msgid "If you have already signed up maybe you need to request to %s"
-msgstr "Якщо ви вже зареєструвалися, можливо, вам потрібно запросити %s"
 
 #: ../../../app/themes/Peafowl/views/user.php:15
 msgid "Upload profile background"
@@ -4252,10 +4416,6 @@ msgstr "Фон профілю буде видалений.  Ви дійсно х
 msgid "Delete background"
 msgstr "Видалити фон"
 
-#: ../../../app/themes/Peafowl/views/user.php:61
-msgid "Edit profile"
-msgstr "Редагувати профіль"
-
 #: ../../../app/themes/Peafowl/views/user.php:75
 msgid "Follower"
 msgid_plural "Followers"
@@ -4266,6 +4426,13 @@ msgstr[2] ""
 #: ../../../app/themes/Peafowl/views/user.php:81
 msgid "Follow"
 msgstr "Слідкувати"
+
+#: ../../../app/loader.php:180
+msgid "You have been forbidden to use this website."
+msgstr "Вам заборонено користуватися цим сайтом."
+
+msgid "Plugin"
+msgstr "Плаґін"
 
 #: ../../../app/routes/route.page.php:61
 #: ../../../content/pages/default/contact.php:7
@@ -4287,11 +4454,6 @@ msgstr "Неправильне повідомлення"
 msgid "Invalid subject"
 msgstr "Неправильна тема"
 
-#: ../../../app/routes/route.page.php:85
-#: ../../../content/pages/default/contact.php:33
-msgid "Invalid reCAPTCHA"
-msgstr "Неправильна reCAPTCHA"
-
 #: ../../../app/routes/route.page.php:122
 #: ../../../content/pages/default/contact.php:69
 msgid "Mail error"
@@ -4300,229 +4462,6 @@ msgstr "Помилка електронної пошти"
 #: ../../../app/routes/route.page.php:119
 msgid "Message sent. We will get in contact soon."
 msgstr "Повідомлення надіслано. Ми зв'яжемося найближчим часом."
-
-#: ../../../app/install/update/template/update.js:19
-#, javascript-format
-msgid "Installed version is v%s"
-msgstr "Встановлена версія v%s"
-
-#: ../../../app/install/update/template/update.js:26
-#: ../../../app/install/update/template/update.js:55
-#: ../../../app/install/update/template/update.js:78
-#, javascript-format
-msgid "Can't connect to %s"
-msgstr "Неможливо приєднатись до %s"
-
-#: ../../../app/install/update/template/update.js:30
-#, javascript-format
-msgid "Last available release is v%s"
-msgstr "Останній доступний реліз v%s"
-
-#: ../../../app/install/update/template/update.js:33
-msgid "Update needed, proceeding to download"
-msgstr "Потрібне оновлення, почати завантаження"
-
-#: ../../../app/install/update/template/update.js:40
-msgid "No update needed"
-msgstr "Оновлення не потрібне"
-
-#: ../../../app/install/update/template/update.js:41
-msgid "System files already up to date"
-msgstr "Системні файли вже оновлені"
-
-#: ../../../app/install/update/template/update.js:49
-#, javascript-format
-msgid "Starting v%s download"
-msgstr "Почати завантаження v%s"
-
-#: ../../../app/install/update/template/update.js:60
-#, javascript-format
-msgid "Downloaded v%s, proceeding to extraction"
-msgstr "Завантажено v%s, почати роспакування"
-
-#: ../../../app/install/update/template/update.js:72
-#, javascript-format
-msgid "Attempting to extract v%s"
-msgstr "Спроба розпакувати v%s"
-
-#: ../../../app/install/update/template/update.js:82
-msgid "Extraction completed"
-msgstr "Розпакування завершено"
-
-#: ../../../app/install/update/template/update.js:84
-msgid "Proceding to install the update"
-msgstr "Почати інсталяцію оновлення"
-
-#: ../../../app/install/update/template/update.js:111
-msgid "Update failed"
-msgstr "Оновлення зірвано"
-
-#: ../../../app/lib/chevereto.js:592 ../../../app/lib/chevereto.min.js:36
-msgid "Please provide a valid email address"
-msgstr "Будь ласка надайте правильну електронну адресу"
-
-#: ../../../app/lib/chevereto.js:732 ../../../app/lib/chevereto.js:809
-#: ../../../app/lib/chevereto.js:998 ../../../app/lib/chevereto.js:2732
-#: ../../../app/lib/chevereto.js:2785 ../../../app/lib/chevereto.js:2888
-#: ../../../app/lib/chevereto.min.js:39 ../../../app/lib/chevereto.min.js:43
-#: ../../../app/lib/chevereto.min.js:49 ../../../app/lib/chevereto.min.js:147
-#: ../../../app/lib/chevereto.min.js:150 ../../../app/lib/chevereto.min.js:154
-msgid "You must enter the album name."
-msgstr "Ви повинні ввести назву альбому."
-
-#: ../../../app/lib/chevereto.js:851 ../../../app/lib/chevereto.js:1044
-#: ../../../app/lib/chevereto.js:1140 ../../../app/lib/chevereto.min.js:46
-#: ../../../app/lib/chevereto.min.js:53 ../../../app/lib/chevereto.min.js:55
-#: ../../../lib/Peafowl/peafowl.js:2358 ../../../lib/Peafowl/peafowl.min.js:143
-msgid "Confirm"
-msgstr "Підтвердити"
-
-#: ../../../app/lib/chevereto.js:976 ../../../app/lib/chevereto.min.js:48
-msgid "Select existing album"
-msgstr "Виберіть існуючий альбом"
-
-#: ../../../app/lib/chevereto.js:1259 ../../../app/lib/chevereto.js:1339
-#: ../../../app/lib/chevereto.min.js:60 ../../../app/lib/chevereto.min.js:65
-msgid "Please select a valid image file type."
-msgstr "Будь ласка виберіть правильний формат зображення."
-
-#: ../../../app/lib/chevereto.js:1264 ../../../app/lib/chevereto.js:1344
-#: ../../../app/lib/chevereto.min.js:61 ../../../app/lib/chevereto.min.js:66
-#, javascript-format
-msgid "Please select a picture of at most %s size."
-msgstr "Будь ласка, виберіть зображення не більше %s розміром."
-
-#: ../../../app/lib/chevereto.js:1311 ../../../app/lib/chevereto.min.js:63
-msgid "Profile image updated."
-msgstr "Зображення профілю оновлено."
-
-#: ../../../app/lib/chevereto.js:1381 ../../../app/lib/chevereto.min.js:67
-msgid "Profile background image updated."
-msgstr "Фон профілю оновлений."
-
-#: ../../../app/lib/chevereto.js:1453 ../../../app/lib/chevereto.min.js:68
-msgid "Profile background image deleted."
-msgstr "Фон профілю видалений."
-
-#: ../../../app/lib/chevereto.js:1458 ../../../app/lib/chevereto.min.js:68
-msgid "Error deleting profile background image."
-msgstr "При видаленні фону профілю виникла помилка."
-
-#: ../../../app/lib/chevereto.js:1547 ../../../app/lib/chevereto.min.js:71
-#, javascript-format
-msgid "Update available v%s"
-msgstr "Поновлення доступне v%s"
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-#, javascript-format
-msgid "There is an update available for your system. You can automatic download and install this update or go to %s to proceed to download the file."
-msgstr "Є поновлення для вашої системи. Ви можете автоматично скачати і встановити його або піти до %s для того щоб скачати його вручну."
-
-#: ../../../app/lib/chevereto.js:1548 ../../../app/lib/chevereto.min.js:71
-msgid "Update now"
-msgstr "Оновити зараз"
-
-#: ../../../app/lib/chevereto.js:2112 ../../../app/lib/chevereto.min.js:101
-msgid "Clipboard image"
-msgstr "Зображення у буфері обміну"
-
-#: ../../../app/lib/chevereto.js:2194 ../../../app/lib/chevereto.min.js:106
-msgid "File too big."
-msgstr "Файл занадто великий."
-
-msgid "Invalid or unsupported file format."
-msgstr "Невірний або підтримуваний формат файлу."
-
-#: ../../../app/lib/chevereto.js:2212 ../../../app/lib/chevereto.js:2395
-#: ../../../app/lib/chevereto.min.js:109 ../../../app/lib/chevereto.min.js:125
-msgid "Some files couldn't be added"
-msgstr "Деякі файли не були додані."
-
-#: ../../../app/lib/chevereto.js:2860 ../../../app/lib/chevereto.min.js:154
-msgid "Image edited successfully."
-msgstr "Зображення успішно змінене."
-
-#: ../../../app/themes/Peafowl/snippets/form_move_existing_album.php:9
-#: ../../../app/lib/chevereto.js:2923 ../../../app/lib/chevereto.js:3863
-#: ../../../app/lib/chevereto.min.js:155 ../../../app/lib/chevereto.min.js:203
-msgid "private"
-msgstr "приховане"
-
-#: ../../../app/lib/chevereto.js:2928 ../../../app/lib/chevereto.min.js:155
-msgid "Album edited successfully."
-msgstr "Альбом успішно відредагований."
-
-#: ../../../app/lib/chevereto.js:2946 ../../../app/lib/chevereto.min.js:156
-msgid "Invalid URL key."
-msgstr "Невірний URL ключ."
-
-#: ../../../app/lib/chevereto.js:2961 ../../../app/lib/chevereto.min.js:158
-msgid "Category URL key already being used."
-msgstr "Такий URL ключ вже використовується."
-
-#: ../../../app/lib/chevereto.js:3039 ../../../app/lib/chevereto.min.js:160
-msgid "Category successfully deleted."
-msgstr "Категорія вилучена."
-
-#: ../../../app/lib/chevereto.js:3085 ../../../app/lib/chevereto.min.js:162
-#, javascript-format
-msgid "Category %s added."
-msgstr "Категорія %s додана."
-
-#: ../../../app/lib/chevereto.js:3106 ../../../app/lib/chevereto.min.js:163
-msgid "Invalid expiration date."
-msgstr "Неправильна дата закінчення терміну дії."
-
-#: ../../../app/lib/chevereto.js:3121 ../../../app/lib/chevereto.min.js:165
-#, javascript-format
-msgid "IP %s already banned."
-msgstr "IP адреса %s вже заблокована"
-
-#: ../../../app/lib/chevereto.js:3172 ../../../app/lib/chevereto.min.js:169
-#, javascript-format
-msgid "IP %s banned."
-msgstr "IP %s вже заблокована."
-
-#: ../../../app/lib/chevereto.js:3252 ../../../app/lib/chevereto.min.js:170
-msgid "IP ban successfully deleted."
-msgstr "Блокування IP адреси успішно видалено."
-
-#: ../../../app/lib/chevereto.js:3289 ../../../app/lib/chevereto.js:3539
-#: ../../../app/lib/chevereto.js:3568 ../../../app/lib/chevereto.min.js:171
-#: ../../../app/lib/chevereto.min.js:186 ../../../app/lib/chevereto.min.js:187
-msgid "Please fill all the required fields."
-msgstr "Будь ласка заповніть всі необхідні поля."
-
-#: ../../../app/lib/chevereto.js:3300 ../../../app/lib/chevereto.min.js:172
-msgid "Invalid storage capacity value. Make sure to use a valid format."
-msgstr "Невірне значення доступного дискового простору. Переконайтеся, що ви використовуєте допустимий формат."
-
-#: ../../../app/lib/chevereto.js:3312 ../../../app/lib/chevereto.min.js:174
-msgid "Invalid URL."
-msgstr "Неправильна адреса."
-
-#: ../../../app/lib/chevereto.js:3363 ../../../app/lib/chevereto.min.js:177
-msgid "Storage successfully edited."
-msgstr "Сховище змінено."
-
-#: ../../../app/lib/chevereto.js:3587 ../../../app/lib/chevereto.min.js:188
-msgid "User added successfully."
-msgstr "Користувач доданий."
-
-#: ../../../app/lib/chevereto.js:3764 ../../../app/lib/chevereto.js:3855
-#: ../../../app/lib/chevereto.js:3938 ../../../app/lib/chevereto.js:3947
-#: ../../../app/lib/chevereto.min.js:197 ../../../app/lib/chevereto.min.js:203
-#: ../../../app/lib/chevereto.min.js:205
-msgid "The content has been moved."
-msgstr "Вміст переміщено."
-
-#: ../../../app/lib/chevereto.js:3786 ../../../app/lib/chevereto.min.js:198
-msgid "Unselect"
-msgstr "Зняти виділення"
-
-#: ../../../app/lib/chevereto.js:3855 ../../../app/lib/chevereto.min.js:203
-msgid "The content has been edited."
-msgstr "Вміст змінено."
 
 #: ../../../lib/Peafowl/peafowl.js:25 ../../../lib/Peafowl/peafowl.js:492
 #: ../../../lib/Peafowl/peafowl.min.js:1 ../../../lib/Peafowl/peafowl.min.js:31

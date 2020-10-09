@@ -14,18 +14,39 @@
 
 namespace CHV;
 
+use BadMethodCallException;
 use G;
 use Exception;
 
 class Listing
 {
+    private $isApproved = 1;
     protected static $valid_types = ['images', 'albums', 'users'];
     protected static $valid_sort_types = ['date', 'size', 'views', 'id', 'image_count', 'name', 'title', 'username'];
 
-    // Set the type of list
-    public function setListing($listing)
+    public $output;
+
+    public $binds = [];
+
+    public function debugQuery()
     {
-        $this->listing = $listing;
+        if (!isset($this->query)) {
+            throw new BadMethodCallException;
+        }
+        $params = [];
+        foreach ($this->binds as $bind) {
+            $params[] = $bind['param'] . '=' . $bind['value'];
+        }
+        return '# Dumped listing query'
+            . "\n" . $this->query
+            . "\n\n# Dumped query params"
+            . "\n" . implode("\n", $params);
+    }
+
+    // Sets the `image_is_approved` flag
+    public function setApproved($bool)
+    {
+        $this->isApproved = $bool;
     }
 
     // Sets the type of resource being listed
@@ -39,12 +60,21 @@ class Listing
     {
         $this->offset = intval($offset);
     }
+
+    // Sets ID to seek next-to
     public function setSeek($seek)
     {
         if (strpos($seek, '.') !== false) {
             $explode = explode('.', $seek);
-            $explode[1] = decodeID($explode[1]);
-            $this->seek = $explode;
+            $copy = $explode;
+            end($explode);
+            $last = key($explode);
+            unset($copy[$last]);
+            $array = [
+                0 => implode('.', $copy),
+                1 => decodeID($explode[$last])
+            ];
+            $this->seek = $array;
             return;
         }
         $decodeID = decodeID($seek);
@@ -54,6 +84,7 @@ class Listing
         }
         $this->seek = $seek;
     }
+
     public function setReverse($bool)
     {
         $this->reverse = $bool;
@@ -132,27 +163,22 @@ class Listing
         );
     }
 
-    public function getTotals($bool)
-    {
-        $this->get_totals = (bool) $bool;
-    }
-
     /**
      * Do the thing
      * @Exeption 4xx
      */
-    public function exec($get_total_count = false)
+    public function exec()
     {
         $this->validateInput();
-
         $tables = DB::getTables();
-
         if (empty($this->requester)) {
             $this->requester = Login::getUser();
         } elseif (!is_array($this->requester)) {
             $this->requester = User::getSingle($this->requester, 'id');
         }
-
+        if ($this->type == 'images') {
+            $this->where = (empty($this->where) ? 'WHERE ' : ($this->where . ' AND ')) . 'image_is_approved = ' . (int) $this->isApproved;
+        }
         $joins = [
             // Get image + storage + parent album + user uploader
             'images' => [
@@ -174,15 +200,17 @@ class Listing
         // Params hidden handler. Introduced to avoid stupid route.json.php cloning
         // Same level content clauses (it won't help to filter joined tables)
         if (!is_null($this->params_hidden)) {
-
-            // hide_empty
             $emptyTypeClauses['users'][] = 'user_image_count > 0 OR user_avatar_filename IS NOT NULL OR user_background_filename IS NOT NULL';
             if ($this->sort_type == 'views') {
                 $emptyTypeClauses['albums'][] = 'album_views > 0';
                 $emptyTypeClauses['images'][] = 'image_views > 0';
                 $emptyTypeClauses['users'][] = 'user_content_views > 0';
             }
-            // Conditional album image count
+            if ($this->sort_type == 'likes') {
+                $emptyTypeClauses['albums'][] = 'album_likes > 0';
+                $emptyTypeClauses['images'][] = 'image_likes > 0';
+                $emptyTypeClauses['users'][] = 'user_likes > 0';
+            }
             if ($this->type == 'albums') {
                 if ($this->params_hidden['album_min_image_count'] > 0) {
                     $whereClauses[] = sprintf('album_image_count >= %d', $this->params_hidden['album_min_image_count']);
@@ -193,15 +221,12 @@ class Listing
             if (array_key_exists($this->type, $emptyTypeClauses) && $this->params_hidden['hide_empty'] == 1) {
                 $whereClauses[] = '(' . implode(') AND (', $emptyTypeClauses[$this->type]) . ')';
             }
-            // hide_banned
             if ($this->params_hidden['hide_banned'] == 1) {
                 $whereClauses[] = '(' . $tables['users'] . '.user_status IS NULL OR ' . $tables['users'] . '.user_status <> "banned"' . ')';
             }
-            // animated
             if ($this->type == 'images' && $this->params_hidden['is_animated'] == 1) {
                 $whereClauses[] = 'image_is_animated = 1';
             }
-            // We are getting clauser!.. got it? nvm...
             if (!empty($whereClauses)) {
                 $whereClauses = join(' AND ', $whereClauses);
                 $this->where = (empty($this->where) ? 'WHERE ' : ($this->where . ' AND ')) . $whereClauses;
@@ -231,6 +256,28 @@ class Listing
             }
             $this->where = 'WHERE ' . implode(' ', $where_arr);
         }
+
+        // Social stuff
+        if (version_compare(Settings::get('chevereto_version_installed'), '3.7.0', '>=')) {
+
+            // Dynamic since v3.9.0
+            $likes_join = 'LEFT JOIN ' . $tables['likes'] . ' ON ' . $tables['likes'] . '.like_content_type = "' . $type_singular . '" AND ' . $tables['likes'] . '.like_content_id = ' . $tables[$this->type] . '.' . $type_singular . '_id';
+
+            if (preg_match('/like_user_id/', $this->where)) {
+                $joins[$this->type]['likes'] = $likes_join;
+            } elseif ($this->requester && $this->type !== 'users') {
+                $joins[$this->type]['likes'] = $likes_join . ' AND ' . $tables['likes'] . '.like_user_id = ' . $this->requester['id'];
+            }
+
+            $follow_tpl_join = 'LEFT JOIN ' . $tables['follows'] . ' ON ' . $tables['follows'] . '.%FIELD = ' . $tables[$this->type] . '.' . ($this->type == 'users' ? 'user' : DB::getFieldPrefix($this->type) . '_user') . '_id';
+            if (preg_match('/follow_user_id/', $this->where)) {
+                $joins[$this->type]['follows'] = strtr($follow_tpl_join, ['%FIELD' => 'follow_followed_user_id']);
+            }
+            if (preg_match('/follow_followed_user_id/', $this->where)) {
+                $joins[$this->type]['follows'] = strtr($follow_tpl_join, ['%FIELD' => 'follow_user_id']);
+            }
+        }
+
         // Add ID reservation clause
         if ($this->type == 'images') {
             $res_id_where = 'image_size > 0';
@@ -316,21 +363,12 @@ class Listing
             $signo = $this->sort_order == 'desc' ? '<=' : '>=';
             if ($this->sort_type == 'id') {
                 $this->where .= $sort_field . ' ' . $signo . ' :seek';
-                $this->binds[] = [
-                    'param' => 'seek',
-                    'value' => $this->seek
-                ];
+                $this->bind(':seek', $this->seek);
             } else {
                 $signo = $this->sort_order == 'desc' ? '<' : '>';
                 $this->where .= '((' . $sort_field . ' ' . $signo . ' :seekSort) OR (' . $sort_field . ' = :seekSort AND ' . $key_field . ' ' . $signo . '= :seekKey))';
-                $this->binds[] = [
-                    'param' => 'seekSort',
-                    'value' => $this->seek[0],
-                ];
-                $this->binds[] = [
-                    'param' => 'seekKey',
-                    'value' => $this->seek[1],
-                ];
+                $this->bind(':seekSort', $this->seek[0]);
+                $this->bind(':seekKey', $this->seek[1]);
             }
         }
 
@@ -340,14 +378,22 @@ class Listing
 
         $sort_order = strtoupper($this->sort_order);
         $table_order = DB::getTableFromFieldPrefix($type_singular);
-        $order_by = "\n" . 'ORDER BY ' . $table_order . '.' . $sort_field . ' ' . $sort_order;
+        $order_by = "\n" . 'ORDER BY ';
 
+        if (in_array($this->sort_type, ['name', 'title', 'username'])) {
+            $order_by .= 'CAST('.$table_order.'.'.$sort_field.' as CHAR) '.$sort_order.', ';
+            $order_by .= 'LENGTH('.$table_order.'.'.$sort_field.') '.$sort_order.', ';
+        }
+
+        $order_by .= '' . $table_order . '.' . $sort_field . ' ' . $sort_order;
+        
         if ($this->sort_type != 'id') {
             $order_by .= ', ' . $table_order . '.' . $key_field . ' ' . $sort_order;
         }
-
-        // $limit = "\n" . 'LIMIT ' . $this->offset . ',' . ($this->limit + 1);
-        $limit = "\n" . 'LIMIT ' . ($this->limit + 1); // +1 allows to fetch "one extra" to detect prev/next pages
+        $limit = '';
+        if ($this->limit > 0) {
+            $limit = "\n" . 'LIMIT ' . ($this->limit + 1); // +1 allows to fetch "one extra" to detect prev/next pages
+        }
 
         $base_table = $tables[$this->type];
 
@@ -390,12 +436,10 @@ class Listing
 
         try {
             $db = DB::getInstance();
-            // G\debug($query);
-            $db->query($query);
-            if (is_array($this->binds)) {
-                foreach ($this->binds as $bind) {
-                    $db->bind($bind['param'], $bind['value'], $bind['type']);
-                }
+            $this->query = $query;
+            $db->query($this->query);
+            foreach ($this->binds as $bind) {
+                $db->bind($bind['param'], $bind['value'], $bind['type']);
             }
             $this->output = $db->fetchAll();
             $this->output_count = $db->rowCount();
@@ -441,7 +485,7 @@ class Listing
 
         // Get album slices and stuff
         if ($this->type == 'albums' and $this->output) {
-            $album_slice_qry_tpl = 'SELECT * FROM ' . $tables['images'] . ' LEFT JOIN ' . $tables['storages'] . ' ON ' . $tables['images'] . '.image_storage_id = ' . $tables['storages'] . '.storage_id WHERE ' . $tables['images'] . '.image_album_id=%ALBUM_ID% ORDER BY ' . $tables['images'] . '.image_id ASC LIMIT 0,5';
+            $album_slice_qry_tpl = 'SELECT * FROM ' . $tables['images'] . ' LEFT JOIN ' . $tables['storages'] . ' ON ' . $tables['images'] . '.image_storage_id = ' . $tables['storages'] . '.storage_id WHERE ' . $tables['images'] .  '.image_is_approved = ' . (int) $this->isApproved . ' AND ' . $tables['images'] . '.image_album_id=%ALBUM_ID% ORDER BY ' . $tables['images'] . '.image_id ASC LIMIT 0,5';
             $albums_slice_qry_arr = [];
             $albums_mapping = [];
             foreach ($this->output as $k => &$album) {
@@ -544,6 +588,7 @@ class Listing
             'sort'        => 'username_asc',
             'content'    => 'users',
         ];
+        // $criterias['user-az-asc'] = array_merge($criterias['album-az-asc'], ['content' => 'users']);
 
         $listings = [
             'explore'    => [
@@ -653,7 +698,7 @@ class Listing
                 'tools_available'    => $args['tools_available'],
                 'label'                => $v['label'],
                 'id'                    => $id,
-                'params'            => $http_build_query, // Es que como explicar la magia que tiene su manera de enamorar...
+                'params'            => $http_build_query,
                 'current'            => (bool) $current,
                 'type'                => $content,
                 'url'                    => $url
@@ -719,10 +764,6 @@ class Listing
             throw new ListingException('Invalid $type "' . $this->type . '"', 110);
         }
 
-        // Validate limits
-        if ($this->offset == 0 && $this->limit == 0) {
-            throw new ListingException('$offset and $limit are equal to 0 (zero)', 120);
-        }
         if ($this->offset < 0 || $this->limit < 0) {
             throw new ListingException('Limit integrity violation', 121);
         }

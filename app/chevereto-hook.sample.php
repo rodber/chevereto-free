@@ -5,10 +5,6 @@
 # NOTE: To use it in production you will need to rename this file to chevereto-hook.php
 
 namespace CHV;
+use G, Exception;
 
-use G;
-use Exception;
-
-if (!defined('access') or !access) {
-    die('This file cannot be directly accessed.');
-}
+if(!defined('access') or !access) die('This file cannot be directly accessed.');

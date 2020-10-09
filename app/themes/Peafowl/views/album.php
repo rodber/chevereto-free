@@ -34,13 +34,13 @@
                 if (is_owner() or is_content_manager()) {
                     ?>
 					<div class="breadcrum-item">
-						<a class="edit-link" data-modal="edit"><span class="icon-edit"></span><span><?php _se('Edit album details'); ?></span></a>
+						<a class="link link--edit" data-modal="edit"><span class="icon icon-edit"></span><span><?php _se('Edit'); ?></span></a>
 					</div>
 					<?php
                     if (is_allowed_to_delete_content()) {
                         ?>
 						<div class="breadcrum-item">
-							<a class="delete-link" data-confirm="<?php _se("Do you really want to delete this album and all of its images? This can't be undone."); ?>" data-submit-fn="CHV.fn.submit_resource_delete" data-ajax-deferred="CHV.fn.complete_resource_delete" data-ajax-url="<?php echo G\get_base_url("json"); ?>"><?php _se('Delete album'); ?></a>
+							<a class="link link--delete" data-confirm="<?php _se("Do you really want to delete this album and all of its images? This can't be undone."); ?>" data-submit-fn="CHV.fn.submit_resource_delete" data-ajax-deferred="CHV.fn.complete_resource_delete" data-ajax-url="<?php echo G\get_base_url("json"); ?>"><span class="icon icon-remove"></span><span><?php _se('Delete'); ?></span></a>
 						</div>
 					<?php
                     } ?>
@@ -196,7 +196,7 @@
 if (is_content_manager() or is_owner()) {
                 ?>
 	<div id="form-modal" class="hidden" data-before-fn="CHV.fn.before_album_edit" data-submit-fn="CHV.fn.submit_album_edit" data-ajax-deferred="CHV.fn.complete_album_edit" data-ajax-url="<?php echo G\get_base_url("json"); ?>">
-		<h1><?php _se('Edit album details'); ?></h1>
+		<h1><?php _se('Edit'); ?></h1>
 		<div class="modal-form">
 			<?php G\Render\include_theme_file('snippets/form_album'); ?>
 		</div>
