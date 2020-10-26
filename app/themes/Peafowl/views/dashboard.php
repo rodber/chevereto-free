@@ -4,7 +4,7 @@
 <?php G\Render\include_theme_header();
 function read_the_docs_settings($key, $subject)
 {
-    return _s('Learn about %s settings at our %d.', [
+    return '📖 '._s('Learn about %s settings at our %d.', [
         '%s' => $subject,
         '%d' => get_docs_link('settings/' . $key . '.html', _s('documentation')),
     ]);
@@ -16,7 +16,7 @@ function get_docs_link($key, $subject)
 }
 function free_version_warning($wrap=true)
 {
-    $message = _s("This functionality is not part of Chevereto Free. %s to obtain this feature.", ['%s' => '<a href="https://chevereto.com/pricing" target="_blank">' . _s('Upgrade to paid version') . '</a>']);
+    $message = _s("This functionality is not part of Chevereto Free. %s to obtain this feature.", ['%s' => '🚀<a data-action="upgrade">' . _s('Upgrade') . '</a>']);
     echo($wrap ? ('<div class="input-below">' . $message . '</div>') : $message);
 }
 ?>
