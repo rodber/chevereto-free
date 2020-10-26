@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '3caf6fed1e50d46f50f1389384ea7c709586b0cd',
+    'reference' => 'ecf6a7c2d21c3d75fe3aab960bfa00e0e508877f',
     'name' => 'chevereto/chevereto-free',
   ),
   'versions' => 
@@ -31,7 +31,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '3caf6fed1e50d46f50f1389384ea7c709586b0cd',
+      'reference' => 'ecf6a7c2d21c3d75fe3aab960bfa00e0e508877f',
     ),
     'jbroadway/urlify' => 
     array (
