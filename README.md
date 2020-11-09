@@ -1,7 +1,8 @@
 # Chevereto Free
 
-Chevereto Free is an image hosting software that allows you to create a beautiful and full-featured image hosting website on your own server. It's your hosting and your rules, so say goodbye to closures and restrictions.
+> 🔔 Subscribe to the [newsletter](https://newsletter.chevereto.com/subscription?f=PmL892XuTdfErVq763PCycJQrrnQgNmDybvvbXt7hbfEtgCJrjxKnBK4i9LmtXEOfM7MQBwP36vhsCGYOogbSIfBYw) to don't miss any update regarding Chevereto.
 
+Chevereto Free is an image hosting software that allows you to create a beautiful and full-featured image hosting website on your own server. It's your hosting and your rules, so say goodbye to closures and restrictions.
 ## It's a fork
 
 Chevereto Free is a fork of Chevereto V3 in which only the essential features are preserved and released as Open Source software. This fork  **doesn't include**:
@@ -15,9 +16,13 @@ The support response time is currently about ~1-2 weeks. Users helping each othe
 
 > 👍🏾 Consider [purchasing](https://chevereto.com/pricing) a license to get the entire pack of features, an extra layer of support, and to sustain the development of this software.
 
+## 🤯 Chevereto V4
+
+Chevereto is being modernized by updating its stack and turning towards Open Source licensing. Check the new repository at [chevereto/chevereto] for more information and to contribute to development.
+
 ## Community
 
-Join thousands of other Chevereto users in our [community](https://chevereto.com/community/) for sharing, supporting and contributing to Chevereto development.
+Join other Chevereto users in our [community](https://chevereto.com/community/) for sharing, supporting and contributing to Chevereto development.
 
 ## Documentation
 
@@ -34,12 +39,6 @@ Older releases (`1.2.0` and below) are missing the temp folder required for the 
 ```sh
 sudo -u www-data mkdir /var/www/html/app/install/update/temp/
 ```
-
-## 🤯 Next-gen in the works
-
-Chevereto is being modernized by updating its stack and turning towards Open Source. [Read all updates](https://chevereto.com/community/threads/building-the-next-gen-chevereto.11140/) and check the [Chevere Framework](https://chevere.org/).
-
-While is being modernized, V3 (commercial) still gets regular updates so if you want the full package (and to support my development which is highly appreciated) consider to [purchase a license](https://v3-docs.chevereto.com/licenses.html).
 
 ## Support
 
