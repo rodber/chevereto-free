@@ -669,6 +669,11 @@ class Import
                     }
                 }
                 try {
+                    // Add date handle options for importer
+                    if ($this->options["UseDate"])
+                    {
+                        $params["UseDate"]=$this->options["UseDate"];
+                    }                    
                     $insertId = Image::uploadToWebsite($parsed, $user_id, $params, false, '127.0.0.1');
                     $this->logProcess("Image ID $insertId inserted");
                     // Parse image date only after image insert

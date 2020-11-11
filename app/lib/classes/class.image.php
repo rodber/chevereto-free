@@ -651,20 +651,7 @@ class Image
             }
 
             $storage_mode = getSetting('upload_storage_mode');
-            switch ($storage_mode) {
-                case 'direct':
-                    $upload_path = CHV_PATH_IMAGES;
-                    break;
-                case 'datefolder':
-                    // Stock 'now' datetime
-                    $datefolder_stock = [
-                        'date' => G\datetime(),
-                        'date_gmt' => G\datetimegmt(),
-                    ];
-                    $datefolder = date('Y/m/d/', strtotime($datefolder_stock['date']));
-                    $upload_path = CHV_PATH_IMAGES . $datefolder;
-                    break;
-            }
+           
 
             $filenaming = getSetting('upload_filenaming');
 
@@ -714,6 +701,59 @@ class Image
                     // Fallback
                     $filenaming = 'original';
                 }
+            }
+
+            // Set Destination
+            switch ($storage_mode) {
+                case 'direct':
+                    $upload_path = CHV_PATH_IMAGES;
+                    break;
+                case 'datefolder':
+                    // Stock 'now' datetime
+                    $stockdate=G\datetime();
+                    $stockdategmt=G\datetimegmt();
+
+                    if ($params['UseDate'])
+                    {
+
+                        // format to respect 'Y-m-d H:i:s'
+                        if ($source['image_exif']['FileDateTime'])
+                        {
+                            // Time stored as "YYYY:MM:DD HH:MM:SS"
+                            $stockdate=date_create_from_format("T:m:d H:i:s",$source['image_exif']['FileDateTime']);
+                            if (!$stockdate)
+                            {
+                                // No exif info, try using the file date
+                                $fdate=filemtime($source['tmp_name']);
+                                if($fdate)
+                                {
+                                    $stockdate=date('Y-m-d H:i:s',$fdate);
+                                    $stockdategmt=$stockdate;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            // No exif info, try using the file date
+                            $fdate=filemtime($source['tmp_name']);
+                            if($fdate)
+                            {
+                                $stockdate=date('Y-m-d H:i:s',$fdate);
+                                $stockdategmt=$stockdate;
+                            }
+                        }
+
+                    }
+
+                    $datefolder_stock = [
+                        'date' => $stockdate,
+                        'date_gmt' => $stockdategmt,
+                    ];
+
+
+                    $datefolder = date('Y/m/d/', strtotime($datefolder_stock['date']));
+                    $upload_path = CHV_PATH_IMAGES . $datefolder;
+                    break;
             }
 
             // Filenaming
