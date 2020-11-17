@@ -31,7 +31,7 @@ $route = function ($handler) {
         }
 
         // Change CHV\getSetting('api_v1_key') to 'something' if you want to use 'something' as key
-        if (!G\timing_safe_compare(CHV\getSetting('api_v1_key'), $_REQUEST['key'])) {
+        if (!G\timing_safe_compare(CHV\getSetting('api_v1_key'), $_REQUEST['key'] ？ $_REQUEST['key'] ： $_POST['key'])) {
             throw new Exception("Invalid API v1 key.", 100);
         }
 
