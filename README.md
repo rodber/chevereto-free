@@ -1,34 +1,47 @@
-# Chevereto Free
+# Chevereto-Free
 
 > 🔔 Subscribe to the [newsletter](https://newsletter.chevereto.com/subscription?f=PmL892XuTdfErVq763PCycJQrrnQgNmDybvvbXt7hbfEtgCJrjxKnBK4i9LmtXEOfM7MQBwP36vhsCGYOogbSIfBYw) to don't miss any update regarding Chevereto.
 
-Chevereto Free is an image hosting software that allows you to create a beautiful and full-featured image hosting website on your own server. It's your hosting and your rules, so say goodbye to closures and restrictions.
+![Chevereto](content/images/system/default/logo.svg)
+
+[![Discord](https://img.shields.io/discord/759137550312407050?style=flat-square)](https://chv.to/discord)
+
+Chevereto-Free is an image hosting software that allows you to create a beautiful and full-featured image hosting website on your own server. It's your hosting and your rules, so say goodbye to closures and restrictions.
+
+In a nutshell, Chevereto-Free is:
+
+- 👨🏾‍💻 An indie developed [mature project](https://github.com/chevereto/chevereto#history)
+- ❤ A large [Community](https://chevereto.com/community/)
+- 🤯 Used everywhere, including at [high scale](https://github.com/chevereto/chevereto#-powered-by-chevereto)
+- ⚖ Open Source Software
+
+## 🤯 Viva la modernización!
+
+The Chevereto software **is being heavily modernized** by updating the technology stack. The new Chevereto is **extensible**, **progressive**, **headless** and is the most [_chévere_](https://chevere.org/get-started/#name-meaning) Chevereto ever made.
+
+It is also **evolving the business**, specially for [how users will monetize](https://rodolfo.is/2021/01/20/thoughts-on-monetize-chevereto-installations/) their instances.
+
+👍🏾 Check the all-new Chevereto at [chevereto/chevereto](https://github.com/chevereto/chevereto) for more information and to contribute to its development.
+
 ## It's a fork
 
-Chevereto Free is a fork of Chevereto V3 in which only the essential features are preserved and released as Open Source software. This fork  **doesn't include**:
+Chevereto-Free is a fork of Chevereto V3 (proprietary software) in which the essential features are preserved. This fork **removes**:
 
 - Social network login
-- External storage support
+- External Storage
 - Likes + Followers
-- Manage banners
+- Manage Banners
 
-The support response time is currently about ~1-2 weeks. Users helping each other is highly welcome.
-
-> 👍🏾 Consider [purchasing](https://chevereto.com/pricing) a license to get the entire pack of features, an extra layer of support, and to sustain the development of this software.
-
-## 🤯 Chevereto V4
-
-Chevereto is being modernized by updating its stack and turning towards Open Source licensing. Check the new repository at [chevereto/chevereto] for more information and to contribute to development.
-
-## Community
-
-Join other Chevereto users in our [community](https://chevereto.com/community/) for sharing, supporting and contributing to Chevereto development.
+This fork trends to be more stable than the proprietary software (way less frequent updates). If you really need the edge features consider to go with the paid edition.
 
 ## Documentation
 
 Chevereto documentation can be found at [v3-docs.chevereto.com](https://v3-docs.chevereto.com/)
 
-> 📝 Contributing for a better documentation is highly appreciated
+
+## Community
+
+Join other Chevereto users in our [community](https://chevereto.com/community/) for sharing, supporting and contributing to Chevereto development.
 
 ## Known issues
 
@@ -42,18 +55,12 @@ sudo -u www-data mkdir /var/www/html/app/install/update/temp/
 
 ## Support
 
-Use our [Bug Tracking](https://chevereto.com/bug-tracking) to report bugs and our [Community Support](https://chevereto.com/community-support) forums for any support-related concern.
+Users helping each other is highly welcome. Use our [Bug Tracking](https://chevereto.com/bug-tracking) to report bugs and our [Community Support](https://chevereto.com/community-support) forums for any support-related concern.
 
-Please **don't** open issues here unless is code related.
+👍🏾 Consider [purchasing](https://chevereto.com/pricing) a license to get the entire pack of features, an extra layer of support, and to sustain the development of this software.
+
+> Please **don't** open issues here unless is code related.
 
 ## License
 
 Copyright [Rodolfo Berríos Arce](http://rodolfoberrios.com) - Released under the [MIT License](LICENSE).
-
-## Author
-
-Chevereto is made by the guy at the license.
-
-## Warranty
-
-This software doesn't include support. It may contain bugs. Use it at your own risk. This software is offered on an “as-is” basis. No warranty, either expressed or implied, is given.
