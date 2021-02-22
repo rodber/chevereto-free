@@ -16,9 +16,9 @@ In a nutshell, Chevereto-Free is:
 
 ## 🤯 Viva la modernización!
 
-Chevereto is being modernized by **remaking** the software **completely**. The new Chevereto is extensible, progressive, headless and is the most [_chévere_](https://chevere.org/get-started/#name-meaning) Chevereto ever made!
+Chevereto is being modernized by **remaking** the software **completely**. The new Chevereto is extensible, progressive, headless and is the most [_chévere_](https://chevere.org) Chevereto ever made.
 
-It is also **changing the business**, towards Open Source and for [how users will monetize](https://rodolfo.is/2021/01/20/monetize-chevereto-installations/) their instances. It also changes [monetizing](https://rodolfo.is/2021/02/03/monetizing-chevereto/) for Chevereto itself.
+It is also **changing the business**, towards Open Source and for [monetize your Chevereto installation](https://rodolfo.is/2021/01/20/monetize-your-chevereto-installation/). It also changes [monetizing](https://rodolfo.is/2021/02/03/monetizing-chevereto/) for Chevereto itself.
 
 👻 Check the all-new Chevereto at [chevereto/chevereto](https://github.com/chevereto/chevereto), 😘 **gimme a star** will you?
 
