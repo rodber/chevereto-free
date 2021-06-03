@@ -67,9 +67,9 @@ try {
             'crypt_salt' => G\random_string(8),
             'default_language' => 'en',
             'default_timezone' => 'America/Santiago',
-            'email_from_email' => '', // no-reply@chevereto.com
+            'email_from_email' => '',
             'email_from_name' => 'Chevereto',
-            'email_incoming_email' => '', // inbox@chevereto.com
+            'email_incoming_email' => '',
             'email_mode' => 'mail',
             'email_smtp_server' => null,
             'email_smtp_server_password' => null,
