@@ -4,42 +4,48 @@
 
 ![Chevereto](content/images/system/default/logo.svg)
 
+[![Community](https://img.shields.io/badge/chv.to-community-blue?style=flat-square)](https://chv.to/community)
 [![Discord](https://img.shields.io/discord/759137550312407050?style=flat-square)](https://chv.to/discord)
+[![Twitter Follow](https://img.shields.io/twitter/follow/chevereto?style=social)](https://twitter.com/chevereto)
 
-Chevereto-Free allows you to create a full-featured image hosting website on your own server. It's your hosting and your rules, say goodbye to closures and restrictions.
+Chevereto allows you to create a full-featured image hosting website on your own server. It's your hosting and your rules, say goodbye to closures and restrictions.
+
+![Homepage](.github/screen/1.webp)
+
+![Uploader](.github/screen/2.webp)
+
+![Explorer](.github/screen/3.webp)
+
+![Dashboard](.github/screen/4.webp)
 
 In a nutshell, Chevereto is:
 
-- 👨🏾‍💻 An indie developed [mature project](https://github.com/chevereto/chevereto#history)
-- ❤ A large [Community](https://chevereto.com/community/) of users
+- 👨🏾‍💻 An indie developed project, started in 2007
+- ❤ A large [Community](https://chevereto.com/community/)
 - ⭐ Used everywhere, including at [high scale](https://chevereto.top/)
 
-## Open Source fork
+## 🎉 Future plans for Chevereto-Free
+
+By November 2021 this repo will be superseded and [Chevereto-Free will merge with Chevereto!](https://github.com/chevereto/Chevereto-Free/discussions/84)
+
+You can support us by starring us at [⭐chevereto/chevereto](https://github.com/chevereto/chevereto) and by [💖purchasing](https://chevereto.com/pricing) our software.
+
+## About this fork
 
 Chevereto-Free is a fork of [Chevereto V3](https://chevereto.com/features) in which only basic features are preserved. **This fork removes**:
 
-- ❌ Social network login
-- ❌ Support for external Storage servers
-- ❌ User content likes + user following system
-- ❌ Manage banners
-
-💸 If you need these features consider to [purchase a license](https://chevereto.com/pricing).
+- Social network login
+- Support for external Storage servers
+- User content likes + user following system
+- Manage banners
   
 ## Documentation
 
 Documentation can be found at [v3-docs.chevereto.com](https://v3-docs.chevereto.com/)
 
-## Community
-
-Join other Chevereto users in our [community](https://chevereto.com/community/) for sharing, supporting and contributing to Chevereto development.
-
-🤗 Share your knowledge (please do) and help other users just like you.
-
 ## Support
 
-Chevereto-Free **doesn't include** any support neither any supporting service is offered for this edition. However, you can rely in [community support](https://chevereto.com/community/forums/community-support.135/) if you encounter any issue.
-
-💸 Consider to [purchase a license](https://chevereto.com/pricing) to get the entire pack of features, **support**, and help to sustain the development of Chevereto.
+Chevereto-Free **doesn't include** any support neither any supporting service is offered for this edition. However, you can rely in [community help](https://chevereto.com/community/forums/community-hjelp.135/) if you encounter any issue.
 
 ## License
 
