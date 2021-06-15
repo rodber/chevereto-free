@@ -24,21 +24,16 @@ In a nutshell, Chevereto is:
 - ❤ A large [Community](https://chevereto.com/community/)
 - ⭐ Used everywhere, including at [high scale](https://chevereto.top/)
 
-## 🎉 Future plans for Chevereto-Free
-
-By November 2021 this repo will be superseded and [Chevereto-Free will merge with Chevereto!](https://github.com/chevereto/Chevereto-Free/discussions/84)
-
-You can support us by starring us at [⭐chevereto/chevereto](https://github.com/chevereto/chevereto) and by [💖purchasing](https://chevereto.com/pricing) our software.
-
 ## About this fork
 
-Chevereto-Free is a fork of [Chevereto V3](https://chevereto.com/features) in which only basic features are preserved. **This fork removes**:
+Chevereto-Free is a fork of [Chevereto V3.16](https://chevereto.com/releases#v3_16_0) in which only basic features are preserved. **This fork removes**:
 
 - Social network login
-- Support for external Storage servers
-- User content likes + user following system
-- Manage banners
-  
+- External Storage servers
+- User content likes
+- Following system
+- Banners
+
 ## Documentation
 
 Documentation can be found at [v3-docs.chevereto.com](https://v3-docs.chevereto.com/)
