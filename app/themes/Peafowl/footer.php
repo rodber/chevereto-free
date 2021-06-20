@@ -52,11 +52,9 @@ if (CHV\Login::isAdmin()) {
 </script>
 
 <div data-modal="form-upgrade" class="hidden" data-is-xhr data-submit-fn="CHV.fn.submit_upgradeToPaid" data-ajax-deferred="CHV.fn.complete_upgradeToPaid">
-	<span class="modal-box-title">🚀 Upgrade Chevereto</span>
-	<p>Upgrading to paid Chevereto enables more <a href="https://chevereto.com/features" target="_blank">features</a> like multiple external storage servers, manage banners, content likes, user followers, social login signup, and early access to all new stuff. Tech Support is included, of course.</p>
-	<p>Keep in mind that Chevereto is made <b>by a single developer</b>, your purchase helps to sustain ongoing development of this software.</p>
-	<p>You can upgrade now by pasting your <a href="https://chevereto.com/panel/license" target="_blank">license key</a>. If you don't have one you can <a href="https://chevereto.com/pricing" target="_blank">buy it now</a> with PayPal, AliPay, UnionPay and crypto.</p>
-	<div class="btn-container text-align-center"><button class="btn btn-input green" data-action="submit" type="submit">Upgrade now</button> <span class="btn-alt"><?php _se('or'); ?><a class="cancel" data-action="cancel">maybe later</a></span></div>
+	<span class="modal-box-title">Upgrade to paid edition</span>
+	<p>Upgrading to paid Chevereto enables access to all <a href="https://chevereto.com/features" target="_blank">features</a>. Tech Support included.</p>
+	<div class="btn-container text-align-center"><button class="btn btn-input green" data-action="submit" type="submit">Upgrade now</button></div>
 </div>
 <?php
 } ?>

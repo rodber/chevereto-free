@@ -18,15 +18,9 @@ Chevereto allows you to create a full-featured image hosting website on your own
 
 ![Dashboard](.github/screen/4.webp)
 
-In a nutshell, Chevereto is:
-
-- 👨🏾‍💻 An indie developed project, started in 2007
-- ❤ A large [Community](https://chevereto.com/community/)
-- ⭐ Used everywhere, including at [high scale](https://chevereto.top/)
-
 ## About this fork
 
-Chevereto-Free is a fork of [Chevereto V3.16](https://chevereto.com/releases#v3_16_0) in which only basic features are preserved. **This fork removes**:
+Chevereto-Free is a fork of [Chevereto V3.16](https://releases.chevereto.com/3.X/3.16/3.16.0.html) in which only basic features are preserved. **This fork removes**:
 
 - Social network login
 - External Storage servers
@@ -34,13 +28,13 @@ Chevereto-Free is a fork of [Chevereto V3.16](https://chevereto.com/releases#v3_
 - Following system
 - Banners
 
-## Documentation
-
-Documentation can be found at [v3-docs.chevereto.com](https://v3-docs.chevereto.com/)
+> Chevereto-Free **is not an accurate representation** of our most updated software. It is just a small sample of our software old as `2020-09-03`.
 
 ## Support
 
-Chevereto-Free **doesn't include** any support neither any supporting service is offered for this edition. However, you can rely in [community help](https://chevereto.com/community/forums/community-hjelp.135/) if you encounter any issue.
+Chevereto-Free doesn't include any support neither any supporting service is offered for this edition.
+
+This edition will be discontinued on **2021-12-31**.
 
 ## License
 
