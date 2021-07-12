@@ -73,7 +73,7 @@ $route = function ($handler) {
             );
         }
         $route_menu['upgrade'] = [
-            'label' => '🚀 Upgrade',
+            'label' => '<span class="btn-icon icon-star4 color-yellow"></span> <b>Upgrade</b>',
             'id' => 'upgrade'
         ];
         $handler::setVar('documentationBaseUrl', 'https://v3-docs.chevereto.com/');
@@ -91,9 +91,6 @@ $route = function ($handler) {
         if ($doing == '') {
             $doing = 'stats';
         }
-
-        // Old and new image size counter
-        $image_size_count_qry = 'SELECT (SUM(image_size) + SUM(image_thumb_size) + SUM(image_medium_size)) as count';
 
         switch ($doing) {
 
@@ -123,8 +120,11 @@ $route = function ($handler) {
 
                 $system_values = [
                     'chv_version'	=> [
-                        'label'		=> 'Chevereto (Free)',
-                        'content'	=>  (version_compare($chv_version['files'], $chv_version['db'], '<=') ? $chv_version['files'] : $chv_version['files'] . ' ('.$chv_version['db'].' DB) <a href="'.G\get_base_url('install').'">'._s('install update').'</a>') . ' – <a data-action="check-for-updates">' . _s("check for updates") . '</a>',
+                        'label'		=> 'Chevereto-Free',
+                        'content'	=>  (version_compare($chv_version['files'], $chv_version['db'], '<=')
+                            ? $chv_version['files']
+                            : $chv_version['files'] . ' ('.$chv_version['db'].' DB) <a href="'.G\get_base_url('install').'">'._s('install update').'</a>')
+                        . ' – <span class="icon icon-flow-branch"></span><a href="https://releases.chevereto.com/3.X/3.16/3.16.2.html" target="_blank">3.16.2</a> fork <a class="btn btn-capsule outline red" data-action="check-for-updates"><span class="icon icon-bolt"></span>' . _s("check for updates") . '</a>',
                     ],
                     'support'        => [
                         'label'        => 'Support',

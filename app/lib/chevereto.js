@@ -2226,12 +2226,23 @@ $(function () {
                     html: true,
                 });
             } else {
-                PF.fn.growl.call(
-                    PF.fn._s(
-                        "This website is running latest %s version",
-                        CHEVERETO.edition
-                    )
-                );
+                PF.fn.modal.call({
+                    type: "html",
+                    template: $("[data-modal=eol]").html(),
+                    buttons: false,
+                    button_submit: "Upgrade now",
+                    ajax: {
+                        data: {action: 'upgrade'},
+                        deferred: {
+                            success: function(XHR) {
+                                window.location.href = XHR.responseJSON.redir.url;
+                            },
+                            error: function(XHR) {
+                                PF.fn.growl.call(XHR.responseJSON.error.message);
+                            }
+                        }
+                    },
+                });
             }
         });
     });

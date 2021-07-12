@@ -16,7 +16,7 @@ function get_docs_link($key, $subject)
 }
 function free_version_warning($wrap=true)
 {
-    $message = _s("This functionality is not part of Chevereto Free. %s to obtain this feature.", ['%s' => '🚀<a data-action="upgrade">' . _s('Upgrade') . '</a>']);
+    $message = _s("This functionality is not part of Chevereto Free. %s to obtain this feature.", ['%s' => '<a data-action="upgrade"><span class="btn-icon icon-star4 color-yellow"></span> ' . _s('Upgrade') . '</a>']);
     echo($wrap ? ('<div class="input-below">' . $message . '</div>') : $message);
 }
 ?>

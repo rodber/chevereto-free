@@ -50,11 +50,19 @@ if (CHV\Login::isAdmin()) {
 		});
 	});
 </script>
+<div data-modal="eol" class="hidden">
+	<span class="modal-box-title">That's all folks!</span>
+	<p>We are deeply sorry to inform that we will stop maintaining Chevereto-Free on <b>2021-12-31</b> and we won't produce any more releases for it.</p>
+    <p>We are very sad for doing this, but kindly note that we are just a small 2-person team from Chile and we can't afford to gift this edition any longer. We are now focused exclusively in our paid edition, <b>thanks for your support</b>.</p>
+    <p>Many thanks for using our software! Hope you enjoyed the experience.</p>
+    <div class="btn-container"><button class="btn blue" data-action="submit" type="submit"><span class="btn-icon icon-next3"></span> Upgrade now</button> <a class="btn orange outline" href="https://chevereto.com/pricing" target="_blank"><span class="btn-icon icon-key3"></span> Purchase license</a></div>
+</div>
 
-<div data-modal="form-upgrade" class="hidden" data-is-xhr data-submit-fn="CHV.fn.submit_upgradeToPaid" data-ajax-deferred="CHV.fn.complete_upgradeToPaid">
+<div data-modal="form-upgrade" class="hidden">
 	<span class="modal-box-title">Upgrade to paid edition</span>
-	<p>Upgrading to paid Chevereto enables access to all <a href="https://chevereto.com/features" target="_blank">features</a>. Tech Support included.</p>
-	<div class="btn-container text-align-center"><button class="btn btn-input green" data-action="submit" type="submit">Upgrade now</button></div>
+	<p>Upgrading to paid Chevereto enables access to all features and latest updates. This process is automated, you only need to paste your license key.</p>
+    <p>All data will remain, and you can also count on support assistance.</p>
+	<div class="btn-container"><button class="btn blue" data-action="submit" type="submit"><span class="btn-icon icon-next3"></span> Upgrade now</button> <a class="btn orange outline" href="https://chevereto.com/pricing" target="_blank"><span class="btn-icon icon-key3"></span> Purchase license</a></div>
 </div>
 <?php
 } ?>
