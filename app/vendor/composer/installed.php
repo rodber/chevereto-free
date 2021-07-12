@@ -6,8 +6,9 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'ecf6a7c2d21c3d75fe3aab960bfa00e0e508877f',
+    'reference' => '97313065cf44842b1d7f0ae719c549d917749ae4',
     'name' => 'chevereto/chevereto-free',
+    'dev' => true,
   ),
   'versions' => 
   array (
@@ -18,7 +19,8 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'ecf6a7c2d21c3d75fe3aab960bfa00e0e508877f',
+      'reference' => '97313065cf44842b1d7f0ae719c549d917749ae4',
+      'dev-requirement' => false,
     ),
     'jbroadway/urlify' => 
     array (
@@ -28,24 +30,27 @@
       array (
       ),
       'reference' => '37fe4e7680a1c8cd68ac43a27dac7ef4be476300',
+      'dev-requirement' => false,
     ),
     'mobiledetect/mobiledetectlib' => 
     array (
-      'pretty_version' => '2.8.34',
-      'version' => '2.8.34.0',
+      'pretty_version' => '2.8.37',
+      'version' => '2.8.37.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6f8113f57a508494ca36acbcfa2dc2d923c7ed5b',
+      'reference' => '9841e3c46f5bd0739b53aed8ac677fa712943df7',
+      'dev-requirement' => false,
     ),
     'phpmailer/phpmailer' => 
     array (
-      'pretty_version' => 'v6.1.8',
-      'version' => '6.1.8.0',
+      'pretty_version' => 'v6.5.0',
+      'version' => '6.5.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '917ab212fa00dc6eacbb26e8bc387ebe40993bc1',
+      'reference' => 'a5b5c43e50b7fba655f793ad27303cd74c57363c',
+      'dev-requirement' => false,
     ),
     'tijsverkoyen/akismet' => 
     array (
@@ -55,6 +60,7 @@
       array (
       ),
       'reference' => '6f7987fe181fd0fddbc9832f2ddeaf088425c83f',
+      'dev-requirement' => false,
     ),
   ),
 );
