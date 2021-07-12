@@ -20,9 +20,9 @@
 
 ## Goodbye Chevereto-Free
 
-We are deeply sorry to inform that **we will stop maintaining Chevereto-Free on 2021-12-31** and we won't produce any more releases for it. We are very sad for doing this, but kindly note that we are just a small 2-person team from Chile and we can't afford to gift this edition any longer. We are now focused exclusively in our [paid edition](https://chevereto.com/pricing), thanks for your support.
+We are deeply sorry to inform that **we will stop maintaining Chevereto-Free on 2021-12-31** and we won't produce any more releases for it. We are very sad for doing this, but kindly note that we are just a small 2-person team from Chile and we can't afford to gift this edition any longer. We are now focused exclusively in our [paid edition](https://chevereto.com/pricing), **thanks for your support**.
 
-Four long years we tried to make this feasible and it just didn't worked for us. **Many thanks** for using our software! Hope you enjoyed the experience.
+Four long years we tried to make this feasible, it just didn't worked for us. Many thanks for using our software! Hope you enjoyed the experience.
 
 ## About this fork
 
