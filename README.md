@@ -42,6 +42,10 @@ Chevereto-Free **is not an accurate representation** of our most updated softwar
 - Support for ImageMagick
 - Installer support
 
+## Installation
+
+Get the target [release](https://github.com/chevereto/Chevereto-Free/releases) you want. Don't install this from any branch unless you want to use it for development purposes.
+
 ## Support
 
 Chevereto-Free doesn't include any support neither any supporting service is offered for this edition which will be discontinued on **2021-12-31**.
