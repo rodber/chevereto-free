@@ -46,10 +46,8 @@ Chevereto-Free **is not an accurate representation** of our most updated softwar
 
 Get the target [release](https://github.com/chevereto/Chevereto-Free/releases) you want. Don't install this from any branch unless you want to use it for development purposes.
 
-## Support
-
-Chevereto-Free doesn't include any support neither any supporting service is offered for this edition which will be discontinued on **2021-12-31**.
+If you want to use Docker check [tanmng/docker-chevereto](https://github.com/tanmng/docker-chevereto) and [linuxserver/docker-chevereto](https://github.com/linuxserver/docker-chevereto).
 
 ## License
 
-Copyright [Rodolfo Berríos Arce](http://rodolfoberrios.com) - Released under the [MIT License](LICENSE).
+Copyright [Rodolfo Berríos Arce](http://rodolfoberrios.com) - [AGPLv3](LICENSE).
