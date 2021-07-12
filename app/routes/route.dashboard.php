@@ -126,10 +126,6 @@ $route = function ($handler) {
                             : $chv_version['files'] . ' ('.$chv_version['db'].' DB) <a href="'.G\get_base_url('install').'">'._s('install update').'</a>')
                         . ' – <span class="icon icon-flow-branch"></span><a href="https://releases.chevereto.com/3.X/3.16/3.16.2.html" target="_blank">3.16.2</a> fork <a class="btn btn-capsule outline red" data-action="check-for-updates"><span class="icon icon-bolt"></span>' . _s("check for updates") . '</a>',
                     ],
-                    'support'        => [
-                        'label'        => 'Support',
-                        'content'    => _s('Need help? Go to %s and you will get help quickly.', ['%s' => '<a href="https://chevereto.com/support" target="_blank">' . _s('Support') . '</a>'])
-                    ],
                     'php_version' => [
                         'label'        => _s('PHP version'),
                         'content'    => PHP_VERSION . ' 🐘 ' . php_ini_loaded_file()
