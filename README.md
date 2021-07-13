@@ -28,7 +28,7 @@ Many thanks for using our software! Hope you enjoyed the experience.
 
 ## About this fork
 
-Chevereto-Free is a fork of [Chevereto V3.16](https://releases.chevereto.com/3.X/3.16/3.16.0.html) in which only basic features are preserved. 👉 **This fork removes**:
+Chevereto-Free is a fork of [Chevereto V3.16.2](https://releases.chevereto.com/3.X/3.16/3.16.2.html) in which only basic features are preserved. 👉 **This fork removes**:
 
 - Social network login
 - External Storage servers
