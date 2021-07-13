@@ -645,11 +645,11 @@ function free_version_warning($wrap=true)
 							<div class-="phablet-c1">
 								<div class="input-label">
 									<label for="enable_powered_by"><?php _se('Powered by'); ?> Chevereto</label>
-									<div class="c5 phablet-c1"><select type="text" name="enable_powered_by" id="enable_powered_by" class="text-input">
+									<div class="c5 phablet-c1"><select type="text" name="enable_powered_by" id="enable_powered_by" class="text-input" disabled>
 											<?php
-                                            echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('enable_powered_by')); ?>
+                                            echo CHV\Render\get_select_options_html([1 => _s('Enabled')], CHV\Settings::get('enable_powered_by')); ?>
 										</select></div>
-									<div class="input-below"><?php _se('Enable this if you want to show a "%s" link at the footer.', _s('Powered by') . ' Chevereto'); ?></div>
+                                    <?php free_version_warning(); ?>
 								</div>
 							</div>
 

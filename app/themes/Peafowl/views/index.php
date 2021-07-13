@@ -78,8 +78,6 @@
 <?php
             } ?>
 
-<?php if (CHV\getSetting('enable_powered_by')) { ?>
-<div class="footer"><?php _se('Powered by'); ?> <a href="https://chevereto.com" rel="generator" target="_blank">Chevereto</a></div>
-<?php } ?>
+<div class="footer"><?php _se('Powered by'); ?> <a href="https://chevereto.com" title="Chevereto Image Hosting Software" rel="generator" target="_blank">Chevereto</a></div>
 
 <?php G\Render\include_theme_footer(); ?>
