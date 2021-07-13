@@ -146,7 +146,7 @@
         foreach (['json', 'xml'] as $format) {
             echo '    <link rel="alternate" type="application/'.$format.'+oembed" href="'
             . G\get_base_url('oembed/?url='.urlencode(get_image()['url_viewer']).'&format='. $format)
-            . '" title="'.get_image()['title'].'">' . "\n";
+            . '" title="'.get_safe_html_doctitle()['title'].'">' . "\n";
         } ?>
     <link rel="image_src" href="<?php echo get_image()['url']; ?>">
             <?php
