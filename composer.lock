@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c327c453cbbc5ce5f47457d928e1f301",
+    "content-hash": "083cf2764c5fde80fcabf07db3c6e4fe",
     "packages": [
         {
             "name": "jbroadway/urlify",
@@ -257,7 +257,6 @@
     "prefer-lowest": false,
     "platform": {
         "php": "~7.4",
-        "ext-bcmath": "*",
         "ext-exif": "*",
         "ext-gd": "*",
         "ext-json": "*"

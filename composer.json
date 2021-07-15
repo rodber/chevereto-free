@@ -16,11 +16,10 @@
     ],
     "require": {
         "php": "~7.4",
-        "ext-bcmath": "*",
         "ext-exif": "*",
         "ext-gd": "*",
         "ext-json": "*",
-        "phpmailer/phpmailer": "~6.0",
+        "phpmailer/phpmailer": "~6.5",
         "jbroadway/urlify": "~1.1.2",
         "mobiledetect/mobiledetectlib": "^2.8",
         "tijsverkoyen/akismet": "~1.0"
