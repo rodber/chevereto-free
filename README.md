@@ -37,7 +37,7 @@ Chevereto-Free is a fork of [Chevereto V3.16.2](https://releases.chevereto.com/3
 
 Chevereto-Free **is not an accurate representation** of our most updated software. It is just a small sample of our software old as `2020-09-25 V3.16.2`. ⚠ **This fork misses**:
 
-- All security and bug patches since `2020-09-25`
+- All bug patches since `2020-09-25`
 - Native support for containers
 - User interface upgrade
 - CLI API
