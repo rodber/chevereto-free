@@ -14,23 +14,23 @@
 <form method="post" class="c9">
 	<div class="input-label">
 		<label for="db_host">Database host</label>
-		<input type="text" name="db_host" id="db_host" class="text-input" value="<?php echo isset($_POST['db_host']) ? $_POST['db_host'] : 'localhost'; ?>" placeholder="Usually localhost" title="Database server host (default: localhost)" rel="tooltip" data-tipTip="right" required>
+		<input type="text" name="db_host" id="db_host" class="text-input" value="<?php echo $safe_post['db_host'] ?? 'localhost'; ?>" placeholder="Usually localhost" title="Database server host (default: localhost)" rel="tooltip" data-tipTip="right" required>
 	</div>
 	<div class="input-label">
 		<label for="db_name">Database name</label>
-		<input type="text" name="db_name" id="db_name" class="text-input" value="<?php echo isset($_POST['db_name']) ? $_POST['db_name'] : ''; ?>" placeholder="Database name" title="Name of the database where you want to install Chevereto" rel="tooltip" data-tipTip="right" required>
+		<input type="text" name="db_name" id="db_name" class="text-input" value="<?php echo $safe_post['db_name'] ?? ''; ?>" placeholder="Database name" title="Name of the database where you want to install Chevereto" rel="tooltip" data-tipTip="right" required>
 	</div>
 	<div class="input-label">
 		<label for="db_user">Database user</label>
-		<input type="text" name="db_user" id="db_user" class="text-input" value="<?php echo isset($_POST['db_user']) ? $_POST['db_user'] : ''; ?>" placeholder="Database user" title="User with access to the above database" rel="tooltip" data-tipTip="right" required>
+		<input type="text" name="db_user" id="db_user" class="text-input" value="<?php echo $safe_post['db_user'] ?? ''; ?>" placeholder="Database user" title="User with access to the above database" rel="tooltip" data-tipTip="right" required>
 	</div>
 	<div class="input-label">
 		<label for="db_pass">Database user password</label>
-		<input type="text" name="db_pass" id="db_pass" class="text-input" value="<?php echo isset($_POST['db_pass']) ? $_POST['db_pass'] : ''; ?>" placeholder="Database user password" title="Password of the above user" rel="tooltip" data-tipTip="right">
+		<input type="text" name="db_pass" id="db_pass" class="text-input" value="<?php echo $safe_post['db_pass'] ?? ''; ?>" placeholder="Database user password" title="Password of the above user" rel="tooltip" data-tipTip="right">
 	</div>
 	<div class="input-label">
 		<label for="db_table_prefix">Database table prefix</label>
-		<input type="text" name="db_table_prefix" id="db_table_prefix" class="text-input" value="<?php echo isset($_POST['db_table_prefix']) ? $_POST['db_table_prefix'] : 'chv_'; ?>" placeholder="Usually chv_" title="Database table prefix. Use chv_ if you don't need this" rel="tooltip" data-tipTip="right">
+		<input type="text" name="db_table_prefix" id="db_table_prefix" class="text-input" value="<?php echo $safe_post['db_table_prefix'] ?? 'chv_'; ?>" placeholder="Usually chv_" title="Database table prefix. Use chv_ if you don't need this" rel="tooltip" data-tipTip="right">
 	</div>
 	<div class="btn-container margin-bottom-0">
 		<button class="btn btn-input default" type="submit">Continue</button>

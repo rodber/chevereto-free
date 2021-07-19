@@ -934,6 +934,7 @@ WHERE NOT EXISTS (SELECT * FROM `%table_prefix%imports` WHERE `import_path`='%ro
     }
 
     if (!$installed_version && $_POST) {
+        $safe_post = G\Handler::getVar('safe_post');
         if (isset($_POST['username']) and !in_array($doing, ['already', 'update'])) {
             $doing = 'ready';
         }

@@ -13,17 +13,17 @@
 	<div class="c9">
         <div class="input-label">
             <label for="username">Admin username</label>
-            <input type="text" name="username" id="username" class="text-input" value="<?php echo isset($_POST['username']) ? $_POST['username'] : null; ?>" placeholder="Admin username" rel="tooltip" data-tipTip="right" pattern="<?php echo CHV\getSetting('username_pattern'); ?>" rel="tooltip" title='<?php echo strtr('%i to %f characters<br>Letters, numbers and "_"', ['%i' => CHV\getSetting('username_min_length'), '%f' => CHV\getSetting('username_max_length')]); ?>' maxlength="<?php echo CHV\getSetting('username_max_length'); ?>" required>
+            <input type="text" name="username" id="username" class="text-input" value="<?php echo $safe_post['username'] ?? ''; ?>" placeholder="Admin username" rel="tooltip" data-tipTip="right" pattern="<?php echo CHV\getSetting('username_pattern'); ?>" rel="tooltip" title='<?php echo strtr('%i to %f characters<br>Letters, numbers and "_"', ['%i' => CHV\getSetting('username_min_length'), '%f' => CHV\getSetting('username_max_length')]); ?>' maxlength="<?php echo CHV\getSetting('username_max_length'); ?>" required>
             <span class="input-warning red-warning"><?php echo $input_errors['username']; ?></span>
         </div>
         <div class="input-label">
             <label for="email">Admin email</label>
-            <input type="email" name="email" id="email" class="text-input" value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>" placeholder="Admin email" title="Valid email address for your admin account" rel="tooltip" data-tipTip="right" required>
+            <input type="email" name="email" id="email" class="text-input" value="<?php echo $safe_post['email'] ?? ''; ?>" placeholder="Admin email" title="Valid email address for your admin account" rel="tooltip" data-tipTip="right" required>
             <span class="input-warning red-warning"><?php echo $input_errors['email']; ?></span>
         </div>
         <div class="input-label input-password">
             <label for="password">Admin password</label>
-            <input type="password" name="password" id="password" class="text-input" value="<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>" placeholder="Admin password" title="Password to login" pattern="<?php echo CHV\getSetting('user_password_pattern'); ?>" rel="tooltip" data-tipTip="right" required>
+            <input type="password" name="password" id="password" class="text-input" value="<?php echo $safe_post['password'] ?? ''; ?>" placeholder="Admin password" title="Password to login" pattern="<?php echo CHV\getSetting('user_password_pattern'); ?>" rel="tooltip" data-tipTip="right" required>
             <div class="input-password-strength"><span style="width: 0%" data-content="password-meter-bar"></span></div>
             <span class="input-warning red-warning" data-text="password-meter-message"><?php echo $input_errors['password']; ?></span>
         </div>
@@ -32,12 +32,12 @@
     <div class="c9">
         <div class="input-label">
             <label for="email_from_email"><?php _se('From email address'); ?></label>
-            <input type="email" name="email_from_email" id="email_from_email" class="text-input" value="<?php echo isset($_POST['email_from_email']) ? $_POST['email_from_email'] : ''; ?>" placeholder="no-reply@example.com" title="<?php _se('Sender email for emails sent to users.'); ?>" rel="tooltip" data-tipTip="right" required>
+            <input type="email" name="email_from_email" id="email_from_email" class="text-input" value="<?php echo $safe_post['email_from_email'] ?? ''; ?>" placeholder="no-reply@example.com" title="<?php _se('Sender email for emails sent to users.'); ?>" rel="tooltip" data-tipTip="right" required>
             <span class="input-warning red-warning"><?php echo $input_errors['email_from_email']; ?></span>
         </div>
         <div class="input-label">
             <label for="email_incoming_email"><?php _se('Incoming email address'); ?></label>
-            <input type="email" name="email_incoming_email" id="email_incoming_email" class="text-input" value="<?php echo isset($_POST['email_incoming_email']) ? $_POST['email_incoming_email'] : null; ?>" placeholder="inbox@example.com" title="<?php _se('Recipient for contact form and system alerts.'); ?>" rel="tooltip" data-tipTip="right" required>
+            <input type="email" name="email_incoming_email" id="email_incoming_email" class="text-input" value="<?php echo $safe_post['email_incoming_email'] ?? ''; ?>" placeholder="inbox@example.com" title="<?php _se('Recipient for contact form and system alerts.'); ?>" rel="tooltip" data-tipTip="right" required>
             <span class="input-warning red-warning"><?php echo $input_errors['email_incoming_email']; ?></span>
         </div>
     </div>
@@ -60,7 +60,7 @@
     <div class="c9">
         <div class="input-label">
             <label for="crypt_salt">__CHV_CRYPT_SALT__</label>
-            <input type="crypt_salt" name="crypt_salt" id="crypt_salt" class="text-input" value="<?php echo isset($_POST['crypt_salt']) ? $_POST['crypt_salt'] : ''; ?>" placeholder="Example: changeme" title="As defined in includes/definitions.php" rel="tooltip" data-tipTip="right" required>
+            <input type="crypt_salt" name="crypt_salt" id="crypt_salt" class="text-input" value="<?php echo $safe_post['crypt_salt'] ?? ''; ?>" placeholder="Example: changeme" title="As defined in includes/definitions.php" rel="tooltip" data-tipTip="right" required>
             <span class="input-below highlight">Value from define("__CHV_CRYPT_SALT__", "changeme");</span>
             <span class="input-warning red-warning"><?php echo $input_errors['crypt_salt']; ?></span>
         </div>
