@@ -4005,7 +4005,7 @@ CHV.fn.uploader = {
                             JSONresponse.error.message = "Database error";
                         }
                         JSONresponse.error.message =
-                            CHV.fn.uploader.files[id].name.truncate_middle() +
+                            PF.fn.htmlEncode(CHV.fn.uploader.files[id].name.truncate_middle()) +
                             " - " +
                             JSONresponse.error.message;
                     }
@@ -4038,7 +4038,7 @@ CHV.fn.uploader = {
                         status_code: err_handle.status,
                         error: {
                             message:
-                                CHV.fn.uploader.files[id].name.truncate_middle() +
+                                PF.fn.htmlEncode(CHV.fn.uploader.files[id].name.truncate_middle()) +
                                 " - Server error (" +
                                 err_handle.statusText +
                                 ")",
@@ -4309,12 +4309,12 @@ CHV.fn.fillEmbedCodes = function (elements, parent, fn) {
 
                     template = template.replace(
                         new RegExp("%" + i.toUpperCase() + "%", "g"),
-                        flatten_image[i]
+                        PF.fn.htmlEncode(PF.fn.htmlEncode(flatten_image[i]))
                     );
                 }
 
                 $embed[fn](
-                    $embed.val() +
+                    $embed.html() +
                     template +
                     ($embed.data("size") == "thumb" ? " " : "\n")
                 );

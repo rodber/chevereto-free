@@ -24,7 +24,7 @@ $embed_tpl = [
         'options' => [
             'html-embed' => [
                 'label' => _s('HTML image'),
-                'template' => '<img src="%URL%" alt="%TITLE%" border="0">',
+                'template' => '<img src="%URL%" alt="%FILENAME%" border="0">',
                 'size' => 'full',
             ],
             'html-embed-full' => [

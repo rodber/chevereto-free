@@ -142,12 +142,15 @@
         echo '<meta name="twitter:' . $k . '" content="' . $v . '">' . "\n";
     }
 
-    if (function_exists('get_image') and G\is_route('image')) {
+    if(G\Handler::getVar('oembed')) {
         foreach (['json', 'xml'] as $format) {
             echo '    <link rel="alternate" type="application/'.$format.'+oembed" href="'
-            . G\get_base_url('oembed/?url='.urlencode(get_image()['url_viewer']).'&format='. $format)
-            . '" title="'.get_safe_html_doctitle()['title'].'">' . "\n";
-        } ?>
+            . G\get_base_url('oembed/?url='.urlencode(G\Handler::getVar('oembed')['url']).'&format='. $format)
+            . '" title="'.G\Handler::getVar('oembed')['title'].'">' . "\n";
+        }
+    }
+
+    if (function_exists('get_image') and G\is_route('image')) { ?>
     <link rel="image_src" href="<?php echo get_image()['url']; ?>">
             <?php
     }

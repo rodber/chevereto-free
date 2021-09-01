@@ -15,6 +15,8 @@
 
   --------------------------------------------------------------------- */
 
+use function G\safe_html;
+
 $route = function ($handler) {
     try {
         if ($handler->isRequestLevel(2)) {
@@ -54,17 +56,17 @@ $route = function ($handler) {
         $data = [
             'version' => '1.0',
             'type' => 'photo',
-            'provider_name' => CHV\Settings::get('website_name'),
+            'provider_name' => safe_html(CHV\Settings::get('website_name')),
             'provider_url' => G\get_base_url(),
-            'title' => $image['title'],
-            
-            'url' => $image['url_viewer'],
+            'title' => safe_html($image['title']),
+            'url' => $image['display_url'],
+            'web_page' => $image['url_viewer'],
             'width' => $image['width'],
             'height' => $image['height'],
         ];
-        if ($image['user']) {
+        if (isset($image['user'])) {
             $data = array_merge($data, [
-                'author_name' => $image['user']['username'],
+                'author_name' => safe_html($image['user']['username']),
                 'author_url' => $image['user']['url'],
             ]);
         }

@@ -490,19 +490,34 @@ try {
             // Maintenance mode + Consent screen
             if ($handler::getCond('maintenance') || $handler::getCond('show_consent_screen')) {
                 $handler::setCond('private_gate', true);
-                $allowed_requests = ['login', 'account', 'connect', 'recaptcha-verify'];
+                $allowed_requests = ['login', 'account', 'connect', 'recaptcha-verify', 'oembed'];
                 if (!in_array($handler->request_array[0], $allowed_requests)) {
                     $handler->preventRoute($handler::getCond('show_consent_screen') ? 'consent-screen' : 'maintenance');
                 }
             }
-
+            if($handler->request_array[0] == getSetting('route_image')) {
+                $id = getIdFromURLComponent($handler->request[0]);
+                if ($id !== false) {
+                    $image = Image::getSingle($id, false, true, $handler::getVar('logged_user'));
+                    $userNotBanned = isset($image['user']['status'])
+                        ? $image['user']['status'] != 'banned'
+                        : true;
+                    if ($image && $image['is_approved'] && $userNotBanned && !in_array($image['album']['privacy'], array('private', 'custom'))) {
+                        $image_safe_html = G\safe_html($image);
+                        $handler::setVar('oembed', [
+                            'title' => ($image_safe_html['title'] ?? ($image_safe_html['name'] . '.' . $image['extension'])) . ' hosted at ' . getSetting('website_name'),
+                            'url' => $image['url_viewer']
+                        ]);
+                    }
+                }
+            }
             // Inject system notices
             $handler::setVar('system_notices', Login::isAdmin() ? getSystemNotices() : null);
 
             if (!in_array($handler->request_array[0], ['login', 'signup', 'account', 'connect', 'logout', 'json', 'api', 'recaptcha-verify'])) {
                 $_SESSION['last_url'] = G\get_current_url();
             }
-            if (!isset($_SESSION['is_mobile_device']) || 2 > 1) {
+            if (!isset($_SESSION['is_mobile_device'])) {
                 $_SESSION['is_mobile_device'] = false;
                 $detect = new Mobile_Detect();
                 $_SESSION['is_mobile_device'] = $detect->isMobile();
