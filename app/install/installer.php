@@ -287,6 +287,7 @@ try {
             'image_lock_nsfw_editing' => 0,
         ],
         '1.4.0' => null,
+        '1.4.1' => null,
     ];
     // Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
     $settings_rename = [];
