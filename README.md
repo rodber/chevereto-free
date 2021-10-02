@@ -32,24 +32,22 @@ Chevereto-Free is a mature fork of [Chevereto V3.16.2](https://releases.cheveret
 
 👉 **This fork misses**
 
-- Native support for containers (12FA)
+- 12FA Support
 - User interface upgrade (V3.20)
 - CLI API
-- Installer support
+- Installer tooling
 
 ## Installation
 
 - Get the target [release](https://github.com/chevereto/Chevereto-Free/releases) you want.
 - Provide the release in a web server with the following:
   - PHP 7.4
-  - MySQL 5 / 8
+  - MySQL 5.7 / 8 - MariaDB 10
   - Apache HTTP Web Server (or anything else)
 
 ## Future updates
 
-We're sorry, but we will stop maintaining Chevereto-Free on **2021-12-31** and we won't produce any more releases for it. We a small 2-person team and we can't afford to keep developing this edition any longer, at least without external help.
-
-Don't hesitate to contact us if you want to contribute to keep Chevereto-Free maintained. This is a good piece of software that helps many people.
+Starting on **2022-01** the [Chevereto](https://chevereto.com) organization won't be in charge of this project and the repo ownership will be transferred to [@rodber](https://github.com/rodber).
 
 ## License
 
