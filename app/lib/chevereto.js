@@ -4303,7 +4303,7 @@ CHV.fn.fillEmbedCodes = function (elements, parent, fn) {
                 }
 
                 $embed[fn](
-                    $embed.html() +
+                    $embed.val() +
                     template +
                     ($embed.data("size") == "thumb" ? " " : "\n")
                 );
