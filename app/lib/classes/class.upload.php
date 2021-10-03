@@ -84,7 +84,7 @@ class Upload
     /**
      * Do the thing.
      *
-     * @Exeption 4xx
+     * @Exception 4xx
      */
     public function exec()
     {
@@ -148,16 +148,9 @@ class Upload
             }
         }
 
-        /*
-         * Set uploaded_file
-         * Local storage uploads will be allocated at the target destination
-         * External storage will be allocated to the temp directory
-         */
-        if ($this->storage_id) {
-            $this->uploaded_file = G\forward_slash(dirname($this->downstream)) . '/' . Storage::getStorageValidFilename($this->fixed_filename, $this->storage_id, $this->options['filenaming'], $this->destination);
-        } else {
-            $this->uploaded_file = G\name_unique_file($this->destination, $this->options['filenaming'], $this->fixed_filename);
-        }
+        $this->uploaded_file = G\name_unique_file($this->destination, $this->options['filenaming'], $this->fixed_filename);
+
+        $this->panicExtension($this->uploaded_file);
 
         $this->source = [
             'filename' => $this->source_filename, // file.ext
@@ -297,6 +290,19 @@ class Upload
         return $tempNam;
     }
 
+    protected function panicExtension(string $filename) {
+        if(
+            G\ends_with('.php', $filename)
+            || G\ends_with('.htaccess', $filename))
+        {
+            throw new UploadException(sprintf('Unwanted extension for %s', $filename));
+        }
+        $extension = G\get_file_extension($filename);
+        if(!in_array($extension, self::getEnabledImageFormats())) {
+            throw new UploadException(sprintf('Unable to handle upload for %s', $filename));
+        }
+    }
+
     /**
      * Fetch the $source file.
      *
@@ -405,7 +411,7 @@ class Upload
             throw new UploadException("Can't get target upload source info", 310);
         }
 
-        // Valid image fileinto?
+        // Valid image fileinfo?
         if ($this->source_image_fileinfo['width'] == '' || $this->source_image_fileinfo['height'] == '') {
             throw new UploadException('Invalid image', 311);
         }
