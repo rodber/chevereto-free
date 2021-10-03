@@ -78,6 +78,6 @@
 <?php
             } ?>
 
-<div class="footer"><?php _se('Powered by'); ?> <a href="https://chevereto.com" title="Chevereto Image Hosting Software" rel="generator" target="_blank">Chevereto</a></div>
+<div class="footer"><?php _se('Powered by'); ?> <a href="<?php echo G_APP_GITHUB_REPO_URL; ?>" title="Chevereto Upload Image" rel="generator" target="_blank">Chevereto</a></div>
 
 <?php G\Render\include_theme_footer(); ?>
