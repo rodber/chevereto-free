@@ -50,13 +50,6 @@ if (CHV\Login::isAdmin()) {
 		});
 	});
 </script>
-<div data-modal="eol" class="hidden">
-	<span class="modal-box-title">That's all folks!</span>
-	<p>We are deeply sorry to inform that we will stop maintaining Chevereto-Free on <b>2021-12-31</b> and we won't produce any more releases for it.</p>
-    <p>We are very sad for doing this, but kindly note that we are just a small 2-person team and we can't afford to gift this edition any longer. We are now focused exclusively in our <a href="https://chevereto.com" target="_blank">paid edition</a>, <b>thanks for your support</b>.</p>
-    <p>Many thanks for using our software! Hope you enjoyed the experience.</p>
-    <div class="btn-container"><button class="btn blue" data-action="submit" type="submit"><span class="btn-icon icon-next3"></span> Upgrade now</button> <a class="btn orange outline" href="https://chevereto.com/pricing" target="_blank"><span class="btn-icon icon-key3"></span> Purchase license</a></div>
-</div>
 
 <div data-modal="form-upgrade" class="hidden">
 	<span class="modal-box-title">Upgrade to paid edition</span>

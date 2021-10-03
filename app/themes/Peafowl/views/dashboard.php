@@ -97,6 +97,12 @@ function free_version_warning($wrap=true)
                                 <a class="github-button" href="https://github.com/chevereto/chevereto-free/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch Cchevereto/chevereto-free on GitHub">Watch</a>
                                 <a class="github-button" href="https://github.com/chevereto/chevereto-free" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star chevereto/chevereto-free on GitHub">Star</a>
                             </span>
+                            <div class="highlight padding-5 margin-top-10 margin-bottom-10">Chevereto-Free project ownership will be <b>transferred</b> to <a href="https://github.com/rodber" target="_blank">rodber</a> on <b>2022-01</b>.
+                                <ul class="list-style-type-disc padding-left-20">
+                                    <li>The Chevereto organization won't be longer involved with the development of this project.</li>
+                                    <li>The project repository will be available at <a href="https://github.com/rodber/chevereto-free" target="_blank">rodber/chevereto-free</a>.</li>
+                                </ul>
+                            </div>
                         </li>
 						<?php
                         foreach (get_system_values() as $v) {
