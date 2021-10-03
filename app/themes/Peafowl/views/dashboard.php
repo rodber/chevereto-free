@@ -1930,7 +1930,7 @@ function free_version_warning($wrap=true)
 
 							<div class="input-label">
 								<label for="theme_main_color"><?php _se('Main color'); ?></label>
-								<div class="c4"><input type="text" name="theme_main_color" id="theme_main_color" class="text-input" value="<?php echo CHV\Settings::get('theme_main_color', true); ?>" placeholder="#00A7DA" pattern="#?([\da-fA-F]{2})([\da-fA-F]{2})([\da-fA-F]{2})" title="<?php _se('Hexadecimal color value'); ?>" rel="toolTip" data-tipTip="right"></div>
+								<div class="c4"><input type="text" name="theme_main_color" id="theme_main_color" class="text-input" value="<?php echo CHV\Settings::get('theme_main_color', true); ?>" placeholder="#ff1ab2" pattern="#?([\da-fA-F]{2})([\da-fA-F]{2})([\da-fA-F]{2})" title="<?php _se('Hexadecimal color value'); ?>" rel="toolTip" data-tipTip="right"></div>
 								<div class="input-below input-warning red-warning"><?php echo get_input_errors()['theme_main_color']; ?></div>
 								<div class="input-below"><?php _se('Use this to set the main theme color. Value must be in <a href="%s" target="_blank">hex format</a>.', 'http://www.color-hex.com/'); ?></div>
 							</div>

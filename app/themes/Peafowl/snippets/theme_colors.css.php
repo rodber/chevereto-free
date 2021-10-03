@@ -2,7 +2,7 @@
     die('This file cannot be directly accessed.');
 } ?>
 <?php
-    $default_color = '#00A7DA';
+    $default_color = '#ff1ab2';
     $color = CHV\getSetting('theme_main_color');
     
     if (!G\is_valid_hex_color($color)) {
