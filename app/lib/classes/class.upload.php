@@ -23,21 +23,60 @@ class Upload
     // file => /full/path/to/name.ext
     // name => name
 
+    const URL_SCHEMES = [
+        'http',
+        'https',
+        'ftp'
+    ];
+
     public $source;
     public $uploaded;
     public $detectFlood = true;
 
-    // Sets the type of resource being uploaded
-    public function setType($type)
+    public function checkValidUrl(string $url): void
     {
-        $this->type = $type;
+        $aux = strtolower($url);
+        $scheme = parse_url($aux, PHP_URL_SCHEME);
+        if(!in_array($scheme, self::URL_SCHEMES)) {
+            throw new UploadException(
+                strtr(
+                    "Unsupported URL scheme `%scheme%`", [
+                        '%scheme%' => $scheme
+                    ]
+                ),
+                400
+            );
+        }
+        $host = parse_url($aux, PHP_URL_HOST);
+        if(parse_url(G_HTTP_HOST, PHP_URL_HOST) === $host) {
+            throw new UploadException(
+                "Unsupported self host URL upload",
+                400
+            );
+        }
+        $ip = gethostbyname($host);
+        $typePub = \IPLib\Range\Type::getName(\IPLib\Range\Type::T_PUBLIC);
+        $address = \IPLib\Factory::parseAddressString($ip);
+        $type = $address->getRangeType();
+        $typeName = \IPLib\Range\Type::getName($type);
+        if($typeName !== $typePub) {
+            throw new UploadException(
+                "Unsupported non-public IP address for upload",
+                400
+            );
+        }
     }
 
     // Set source
     public function setSource($source)
     {
         $this->source = $source;
-        $this->type = (G\is_image_url($this->source) || G\is_url($this->source)) ? 'url' : 'file';
+        $this->type = (G\is_image_url($this->source) || G\is_url($this->source))
+            ? 'url'
+            : 'file';
+        if($this->type === 'url') {
+            $this->checkValidUrl($this->source);
+        }
     }
 
     // Set destination

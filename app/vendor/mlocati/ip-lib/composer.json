@@ -1,0 +1,60 @@
+{
+    "name": "mlocati/ip-lib",
+    "description": "Handle IPv4, IPv6 addresses and ranges",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/mlocati/ip-lib",
+    "authors": [
+        {
+            "name": "Michele Locati",
+            "homepage": "https://github.com/mlocati",
+            "email": "mlocati@gmail.com",
+            "role": "Author"
+        }
+    ],
+    "keywords": [
+        "ip",
+        "ipv4",
+        "ipv6",
+        "range",
+        "network",
+        "networking",
+        "address",
+        "addresses",
+        "subnet",
+        "matching",
+        "managing",
+        "manage"
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "IPLib\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "IPLib\\Test\\": "test/tests/",
+			"IPLib\\Test\\Helpers\\": "test/helpers/"
+        }
+    },
+    "require-dev": {
+        "ext-pdo_sqlite": "*",
+        "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5 || ^8.5 || ^9.5"
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/mlocati"
+        },
+        {
+            "type": "other",
+            "url": "https://paypal.me/mlocati"
+        }
+    ]
+}

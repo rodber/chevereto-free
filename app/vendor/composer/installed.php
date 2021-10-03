@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../../',
         'aliases' => array(),
-        'reference' => 'a4468798feb807c275da22f7e27791d86e157e2f',
+        'reference' => '4c577af004a6a2463d0dcfce078bcb2ff18457f4',
         'name' => 'chevereto/chevereto-free',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../../',
             'aliases' => array(),
-            'reference' => 'a4468798feb807c275da22f7e27791d86e157e2f',
+            'reference' => '4c577af004a6a2463d0dcfce078bcb2ff18457f4',
             'dev_requirement' => false,
         ),
         'jbroadway/urlify' => array(
@@ -26,6 +26,15 @@
             'install_path' => __DIR__ . '/../jbroadway/urlify',
             'aliases' => array(),
             'reference' => '37fe4e7680a1c8cd68ac43a27dac7ef4be476300',
+            'dev_requirement' => false,
+        ),
+        'mlocati/ip-lib' => array(
+            'pretty_version' => '1.17.0',
+            'version' => '1.17.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../mlocati/ip-lib',
+            'aliases' => array(),
+            'reference' => 'db9552c3460d5fa19a4c8183767fe89da7752a4e',
             'dev_requirement' => false,
         ),
         'mobiledetect/mobiledetectlib' => array(

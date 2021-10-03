@@ -11,12 +11,20 @@ class ComposerStaticInit5ebab6dc32ca006b1a67a63e20c04846
         array (
             'PHPMailer\\PHPMailer\\' => 20,
         ),
+        'I' => 
+        array (
+            'IPLib\\' => 6,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+        'IPLib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mlocati/ip-lib/src',
         ),
     );
 
@@ -40,6 +48,22 @@ class ComposerStaticInit5ebab6dc32ca006b1a67a63e20c04846
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Detection\\MobileDetect' => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/namespaced/Detection/MobileDetect.php',
+        'IPLib\\Address\\AddressInterface' => __DIR__ . '/..' . '/mlocati/ip-lib/src/Address/AddressInterface.php',
+        'IPLib\\Address\\AssignedRange' => __DIR__ . '/..' . '/mlocati/ip-lib/src/Address/AssignedRange.php',
+        'IPLib\\Address\\IPv4' => __DIR__ . '/..' . '/mlocati/ip-lib/src/Address/IPv4.php',
+        'IPLib\\Address\\IPv6' => __DIR__ . '/..' . '/mlocati/ip-lib/src/Address/IPv6.php',
+        'IPLib\\Address\\Type' => __DIR__ . '/..' . '/mlocati/ip-lib/src/Address/Type.php',
+        'IPLib\\Factory' => __DIR__ . '/..' . '/mlocati/ip-lib/src/Factory.php',
+        'IPLib\\ParseStringFlag' => __DIR__ . '/..' . '/mlocati/ip-lib/src/ParseStringFlag.php',
+        'IPLib\\Range\\AbstractRange' => __DIR__ . '/..' . '/mlocati/ip-lib/src/Range/AbstractRange.php',
+        'IPLib\\Range\\Pattern' => __DIR__ . '/..' . '/mlocati/ip-lib/src/Range/Pattern.php',
+        'IPLib\\Range\\RangeInterface' => __DIR__ . '/..' . '/mlocati/ip-lib/src/Range/RangeInterface.php',
+        'IPLib\\Range\\Single' => __DIR__ . '/..' . '/mlocati/ip-lib/src/Range/Single.php',
+        'IPLib\\Range\\Subnet' => __DIR__ . '/..' . '/mlocati/ip-lib/src/Range/Subnet.php',
+        'IPLib\\Range\\Type' => __DIR__ . '/..' . '/mlocati/ip-lib/src/Range/Type.php',
+        'IPLib\\Service\\BinaryMath' => __DIR__ . '/..' . '/mlocati/ip-lib/src/Service/BinaryMath.php',
+        'IPLib\\Service\\RangesFromBoundaryCalculator' => __DIR__ . '/..' . '/mlocati/ip-lib/src/Service/RangesFromBoundaryCalculator.php',
+        'IPLib\\Service\\UnsignedIntegerMath' => __DIR__ . '/..' . '/mlocati/ip-lib/src/Service/UnsignedIntegerMath.php',
         'Mobile_Detect' => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/Mobile_Detect.php',
         'PHPMailer\\PHPMailer\\Exception' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/Exception.php',
         'PHPMailer\\PHPMailer\\OAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/OAuth.php',

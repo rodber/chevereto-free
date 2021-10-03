@@ -22,7 +22,8 @@
         "phpmailer/phpmailer": "~6.5",
         "jbroadway/urlify": "~1.1.2",
         "mobiledetect/mobiledetectlib": "^2.8",
-        "tijsverkoyen/akismet": "~1.0"
+        "tijsverkoyen/akismet": "~1.0",
+        "mlocati/ip-lib": "^1.17"
     },
     "config": {
         "optimize-autoloader": true,
