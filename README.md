@@ -2,7 +2,7 @@
 
 > 🔔 Subscribe to the [newsletter](https://newsletter.chevereto.com/subscription?f=PmL892XuTdfErVq763PCycJQrrnQgNmDybvvbXt7hbfEtgCJrjxKnBK4i9LmtXEOfM7MQBwP36vhsCGYOogbSIfBYw) to don't miss any update regarding Chevereto.
 
-![Chevereto](content/images/system/default/logo.svg)
+<img src="content/images/system/default/logo.svg" width="100%">
 
 [![Community](https://img.shields.io/badge/chv.to-community-blue?style=flat-square)](https://chv.to/community)
 [![Discord](https://img.shields.io/discord/759137550312407050?style=flat-square)](https://chv.to/discord)
