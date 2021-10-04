@@ -1,9 +1,9 @@
 {
-    "license": "MIT",
+    "license": "AGPL-3.0",
     "type": "project",
     "name": "chevereto/chevereto-free",
-    "description": "Community/Personal Image Hosting powered by Chevereto (图床)",
-    "homepage": "https://chevereto.com/free",
+    "description": "Community/Personal Image Hosting",
+    "homepage": "https://github.com/chevereto/chevereto-free",
     "keywords": [
         "image-hosting",
         "gallery"
