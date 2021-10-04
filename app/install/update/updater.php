@@ -50,16 +50,14 @@ try {
         }
     } else {
         $CHEVERETO = Settings::getChevereto();
-
-        set_time_limit(300); // Allow up to five minutes...
-
+        set_time_limit(300);
         switch ($_REQUEST['action']) {
             case 'ask':
                 try {
                     $json_array = json_decode(G\fetch_url($CHEVERETO['api']['get']['info'], false, [
                         CURLOPT_REFERER => G\get_base_url()
                     ]), true);
-                    $json_array['success'] = ['message' => 'OK']; // "success" is a Chevereto internal thing
+                    $json_array['success'] = ['message' => 'OK'];
                 } catch (Exception $e) {
                     throw new Exception(sprintf('Fatal error: %s', $e->getMessage()), 400);
                 }
@@ -73,24 +71,19 @@ try {
                             'header' => "User-agent: " . G_APP_GITHUB_REPO . "\r\n"
                             ]
                         ]);
-                    $download = @file_get_contents('https://api.github.com/repos/' . G_APP_GITHUB_OWNER . '/' . G_APP_GITHUB_REPO . '/zipball/'.$version, false, $context);
+                    $artifactUrl = 'https://github.com/'.G_APP_GITHUB_OWNER.'/'.G_APP_GITHUB_REPO.'/releases/download/'.$version.'/'.$version.'.zip';
+                    $download = @file_get_contents($artifactUrl, false, $context);
                     if ($download === false) {
-                        throw new Exception(sprintf("Can't fetch " . G_APP_NAME . " v%s from GitHub", $version), 400);
+                        throw new Exception(
+                            sprintf("Can't fetch " . G_APP_NAME . " v%s from GitHub", $version),
+                            400
+                        );
                     }
                     $github_json = json_decode($download, true);
                     if (json_last_error() == JSON_ERROR_NONE) {
                         throw new Exception("Can't proceed with update procedure");
                     } else {
-                        // Get Content-Disposition header from GitHub
-                        foreach ($http_response_header as $header) {
-                            if (preg_match('/^Content-Disposition:.*filename=(.*)$/i', $header, $matches)) {
-                                $zip_local_filename = G\str_replace_last('.zip', '_' . G\random_string(24) . '.zip', $matches[1]);
-                                break;
-                            }
-                        }
-                        if (!isset($zip_local_filename)) {
-                            throw new Exception("Can't grab content-disposition header from GitHub");
-                        }
+                        $zip_local_filename = 'chevereto_' . $version . '_' . G\random_string(24) . '.zip';
                         if (file_put_contents($update_temp_dir . $zip_local_filename, $download) === false) {
                             throw new Exception(_s("Can't save file"));
                         }
@@ -105,19 +98,21 @@ try {
                         ];
                     }
                 } catch (Exception $e) {
-                    throw new Exception(_s("Can't download %s", $version == 'latest' ? 'Chevereto' : ('v' . $version)) . ' (' . $e->getMessage() . ')');
+                    throw new Exception(
+                        _s(
+                            "Can't download %s",
+                            $version == 'latest'
+                                ? 'Chevereto-Free'
+                                : ('v' . $version)
+                        ) . ' (' . $e->getMessage() . ')'
+                    );
                 }
 
             break;
             case 'extract':
                 $zip_file = $update_temp_dir . $_REQUEST['file'];
-                if (false === preg_match('/^(chevereto-chevereto-free)-([\d.]+)-\d+-g(.*)_.*$/i', $_REQUEST['file'], $matches)) {
-                    throw new Exception("Can't detect target zip file version");
-                }
-                $version = $matches[2];
-                $etag_short = $matches[3];
                 if (!is_readable($zip_file)) {
-                    throw new Exception('Missing '.$zip_file.' file', 400);
+                    throw new Exception('Missing ' . $zip_file . ' file', 400);
                 }
                 $zip = new \ZipArchive;
                 if ($zip->open($zip_file) === true) {
@@ -128,7 +123,6 @@ try {
                         }
                     } catch (Exception $e) {
                     }
-
                     $zip->extractTo($update_temp_dir);
                     $zip->close();
                     @unlink($zip_file);
@@ -136,7 +130,7 @@ try {
                     throw new Exception(_s("Can't extract %s", G\absolute_to_relative($zip_file)), 401);
                 }
                 // Recursive copy UPDATE -> CURRENT
-                $source = $update_temp_dir . $matches[1] . '-' . $etag_short . '/';
+                $source = $update_temp_dir . '/';
                 $dest = G_ROOT_PATH;
                 foreach ($iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($source, \RecursiveDirectoryIterator::SKIP_DOTS), \RecursiveIteratorIterator::SELF_FIRST) as $item) {
                     $target = $dest . $iterator->getSubPathName();
