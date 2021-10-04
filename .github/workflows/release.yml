@@ -57,7 +57,7 @@ jobs:
         with:
           type: "zip"
           filename: "${{ steps.get_version.outputs.VERSION }}.zip"
-          exclusions: "/*.git/* /*.github/*"
+          exclusions: "/*.git/* /*.github/* ${{ steps.get_version.outputs.VERSION }}-dev.zip"
 
       - name: Upload artifacts
         uses: ncipollo/release-action@v1
