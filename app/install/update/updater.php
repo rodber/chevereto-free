@@ -150,14 +150,12 @@ try {
                             ]), 402);
                         }
                     } else {
-                        if (!preg_match('/\.htaccess$/', $item)) {
-                            if (!@copy($item, $target)) {
-                                $error = error_get_last();
-                                throw new Exception(_s("Can't update %s file - %e", [
-                                    '%s' => $target_visible,
-                                    '%e' => $error['message']
-                                ]), 403);
-                            }
+                        if (!@copy($item, $target)) {
+                            $error = error_get_last();
+                            throw new Exception(_s("Can't update %s file - %e", [
+                                '%s' => $target_visible,
+                                '%e' => $error['message']
+                            ]), 403);
                         }
                         unlink($item);
                     }
