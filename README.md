@@ -9,6 +9,10 @@
 
 [Chevereto](https://chevereto.com) allows you to create a full-featured image hosting website on your own server. It's your hosting and your rules, say goodbye to closures and restrictions.
 
+## Project status
+
+Starting on **2022-01** the [Chevereto](https://chevereto.com) organization won't be in charge of this project and the repo ownership will be transferred to [@rodber](https://github.com/rodber).
+
 ## Screens
 
 ![Homepage](.github/screen/1.webp)
@@ -25,29 +29,55 @@ Chevereto-Free is a mature fork of [Chevereto V3.16.2](https://releases.cheveret
 
 👉 **This fork removes**
 
-- Social network login
-- External Storage servers
-- User likes and following
-- Manage banners
+* Social network login
+* External Storage servers
+* User likes and following
+* Manage banners
 
 👉 **This fork misses**
 
-- 12FA Support
-- User interface upgrade (V3.20)
-- CLI API
-- Installer tooling
+* 12FA Support
+* User interface upgrade (V3.20)
+* CLI API
+* Installer tooling
 
 ## Installation
 
-- Get the target [release](https://github.com/chevereto/Chevereto-Free/releases) you want.
-- Provide the release in a web server with the following:
-  - PHP 7.4
-  - MySQL 5.7 / 8 - MariaDB 10
-  - Apache HTTP Web Server (or anything else)
+### Requirements
 
-## Future updates
+* PHP 7.4
+* MySQL 5.7 / 8 - MariaDB 10
+* Apache HTTP Web Server
+  * mod_rewrite
 
-Starting on **2022-01** the [Chevereto](https://chevereto.com) organization won't be in charge of this project and the repo ownership will be transferred to [@rodber](https://github.com/rodber).
+## Composer-based installation
+
+* Requires [Composer](https://getcomposer.org)
+
+```sh
+composer create-project chevereto/chevereto-free . \
+    --repository="{\"url\": \"https://github.com/chevereto/chevereto-free.git\", \"type\": \"vcs\"}" \
+    --remove-vcs \
+    --ignore-platform-reqs
+```
+
+## Manual installation
+
+* Pick the [latest release](https://github.com/chevereto/chevereto-free/releases/latest)
+* Download the tagged `$TAG.zip` release artifact
+* Unzip the release in your target `public` web-server directory
+
+## Updating
+
+### HTTP self-update
+
+* Go to `/dashboard`
+* Click on "Check for updates"
+* Follow the on-screen process
+
+### Manual update
+
+See [Manual Installation](#manual-installation)
 
 ## License
 
