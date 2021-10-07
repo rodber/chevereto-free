@@ -2,7 +2,7 @@
 
 > 🔔 Subscribe to the [newsletter](https://newsletter.chevereto.com/subscription?f=PmL892XuTdfErVq763PCycJQrrnQgNmDybvvbXt7hbfEtgCJrjxKnBK4i9LmtXEOfM7MQBwP36vhsCGYOogbSIfBYw) to don't miss any update regarding Chevereto.
 
-<img src="content/images/system/default/logo.svg" width="100%">
+<img alt="Chevereto" src="content/images/system/default/logo.svg" width="100%">
 
 [![Community](https://img.shields.io/badge/chv.to-community-blue?style=flat-square)](https://chv.to/community)
 [![Discord](https://img.shields.io/discord/759137550312407050?style=flat-square)](https://chv.to/discord)
@@ -56,7 +56,7 @@ Chevereto-Free is a mature fork of [Chevereto V3.16.2](https://releases.cheveret
 
 ```sh
 composer create-project chevereto/chevereto-free . \
-    --repository="{\"url\": \"https://github.com/chevereto/chevereto-free.git\", \"type\": \"vcs\"}" \
+    --repository='{"url": "https://github.com/chevereto/chevereto-free.git", "type": "vcs"}' \
     --remove-vcs \
     --ignore-platform-reqs
 ```
