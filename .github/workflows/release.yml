@@ -46,7 +46,7 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:
           type: "zip"
-          filename: "${{ steps.get_version.outputs.VERSION }}-dev.zip"
+          filename: "${{ steps.get_version.outputs.VERSION }}-lite.zip"
           exclusions: "/*.git/* /*.github/*"
 
       - name: Install dependencies
@@ -57,12 +57,12 @@ jobs:
         with:
           type: "zip"
           filename: "${{ steps.get_version.outputs.VERSION }}.zip"
-          exclusions: "/*.git/* /*.github/* ${{ steps.get_version.outputs.VERSION }}-dev.zip"
+          exclusions: "/*.git/* /*.github/* ${{ steps.get_version.outputs.VERSION }}-lite.zip"
 
       - name: Upload artifacts
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
           removeArtifacts: true
-          artifacts: "${{ steps.get_version.outputs.VERSION }}.zip,${{ steps.get_version.outputs.VERSION }}-dev.zip"
+          artifacts: "${{ steps.get_version.outputs.VERSION }}.zip,${{ steps.get_version.outputs.VERSION }}-lite.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
