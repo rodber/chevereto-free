@@ -15,19 +15,17 @@ Starting on **2022-01** the [Chevereto](https://chevereto.com) organization won'
 
 ## Screens
 
-![Homepage](.github/screen/1.webp)
+![Homepage](.github/screen/1a.webp)
 
-![Uploader light](.github/screen/2.webp)
+![Uploader light](.github/screen/2a.webp)
 
-![Uploader dark](.github/screen/3.webp)
+![Uploader dark](.github/screen/3a.webp)
 
-![Upload complete](.github/screen/4.webp)
+![Upload complete](.github/screen/4a.webp)
 
-![Explorer](.github/screen/5.webp)
+![Explorer](.github/screen/5a.webp)
 
-![Dashboard](.github/screen/6.webp)
-
-🍿 [Video screen (mobile)](.github/screen/vid1.mp4)
+![Dashboard](.github/screen/6a.webp)
 
 ## About this fork
 
