@@ -17,11 +17,17 @@ Starting on **2022-01** the [Chevereto](https://chevereto.com) organization won'
 
 ![Homepage](.github/screen/1.webp)
 
-![Uploader](.github/screen/2.webp)
+![Uploader light](.github/screen/2.webp)
 
-![Explorer](.github/screen/3.webp)
+![Uploader dark](.github/screen/3.webp)
 
-![Dashboard](.github/screen/4.webp)
+![Upload complete](.github/screen/4.webp)
+
+![Explorer](.github/screen/5.webp)
+
+![Dashboard](.github/screen/6.webp)
+
+🍿 [Video screen (mobile)](.github/screen/vid1.mp4)
 
 ## About this fork
 
@@ -56,7 +62,10 @@ Chevereto-Free is a mature fork of [Chevereto V3.16.2](https://releases.cheveret
 
 ```sh
 composer create-project chevereto/chevereto-free . \
-    --repository='{"url": "https://github.com/chevereto/chevereto-free.git", "type": "vcs"}' \
+    --repository='{
+        "url": "https://github.com/chevereto/chevereto-free.git",
+        "type": "vcs"
+    }' \
     --remove-vcs \
     --ignore-platform-reqs
 ```
