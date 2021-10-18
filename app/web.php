@@ -148,6 +148,7 @@ if ($isGt3160) {
 try {
     if (!isset($hook_before)) {
         $hook_before = function ($handler) {
+            header("Content-Security-Policy: frame-ancestors 'none'");
             $failed_access_requests = Requestlog::getCounts(['login', 'signup'], 'fail');
             if (is_max_invalid_request($failed_access_requests['day'])) {
                 G\set_status_header(403);
