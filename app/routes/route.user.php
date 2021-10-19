@@ -349,11 +349,6 @@ $route = function ($handler) {
                 "type"			=> $user_views['albums']['current'] ? "albums": "images"
             ]);
         }
-
-        if (CHV\getSetting('user_subdomain_wildcard')) {
-            // TODO: Remove /username/ si aplica! // ??
-            $handler::setVar('canonical', CHV\get_current_url_wildcard($user['username']));
-        }
     } catch (Exception $e) {
         G\exception_to_error($e);
     }

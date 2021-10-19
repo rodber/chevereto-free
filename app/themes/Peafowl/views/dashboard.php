@@ -2383,11 +2383,6 @@ function free_version_warning($wrap=true)
 				<div class="input-below"><?php _se('Routing for %s', G\get_base_url('album/&lt;id&gt;')); ?></div>
 			</div>
 			<hr class="line-separator">
-			<div class="c24 phablet-c1 highlight text-content padding-10 margin-bottom-0">
-				<h3 class="margin-top-10 margin-bottom-10 font-weight-bold">Subdomain wildcards</h3>
-				<p>Both language and username subdomains are highly experimental features that require advanced server configurations. The alleged functionalities should be enabled only after setting up a subdomain wildcard pointing to your Chevereto installation. You also need to enable CORS for these subdomains. If you want to use HTTPS, you also need to bind the SSL certificate(s) for your subdomains.</p>
-				<p><b>Don't ask us how to make this work for your installation.</b> These are experimental features, and we don't have any guidance on how to fulfill the server requirements listed above as we are still collecting feedback from pro users. We will publish instructions (if any) in the future.</p>
-			</div>
 			<div class="input-label">
 				<label for="hostname"><?php _se('Hostname'); ?></label>
 				<div class="c9 phablet-c1">
@@ -2395,14 +2390,6 @@ function free_version_warning($wrap=true)
 				</div>
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['hostname']; ?></div>
 				<div class="input-below"><?php _se('Hostname on which sub-domain wildcards will be added.'); ?> <?php _se('This setting may be overridden by %s.', '<code>app/settings.php</code>'); ?></div>
-			</div>
-			<div class="input-label">
-				<label for="user_subdomain_wildcard"><?php _se('Username subdomains'); ?></label>
-				<div class="c5 phablet-c1"><select type="text" name="user_subdomain_wildcard" id="user_subdomain_wildcard" class="text-input">
-					<?php
-                            echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('user_subdomain_wildcard')); ?>
-				</select></div>
-				<div class="input-below"><?php _se('Enable to use %s for %t.', ['%t' => _s('user profiles'), '%s' => G\str_replace_first(CHV_HTTP_HOST, 'username' . '.' . CHV_HTTP_HOST, CHV_ROOT_URL)]); ?></div>
 			</div>
 			<?php
                         } ?>

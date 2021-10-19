@@ -144,11 +144,7 @@ class User
         if (is_array($handle) and getSetting('website_mode') == 'personal' and $id == getSetting('website_mode_personal_uid')) {
             $url = getSetting('website_mode_personal_routing') !== '/' ? getSetting('website_mode_personal_routing') : null;
         }
-        if (getSetting('user_subdomain_wildcard')) {
-            return get_base_url_wildcard(null, $username);
-        } else {
-            return G\get_base_url($url);
-        }
+        return G\get_base_url($url);
     }
 
     public static function getUrlAlbums($user_url)
