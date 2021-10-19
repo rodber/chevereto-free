@@ -1,9 +1,9 @@
 {
     "license": "AGPL-3.0",
     "type": "project",
-    "name": "chevereto/chevereto-free",
+    "name": "rodber/chevereto-free",
     "description": "Community/Personal Image Hosting",
-    "homepage": "https://github.com/chevereto/chevereto-free",
+    "homepage": "https://github.com/rodber/chevereto-free",
     "keywords": [
         "image-hosting",
         "upload-image",

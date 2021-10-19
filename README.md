@@ -1,11 +1,6 @@
 # Chevereto-Free
 
-> 🔔 Subscribe to the [newsletter](https://newsletter.chevereto.com/subscription?f=PmL892XuTdfErVq763PCycJQrrnQgNmDybvvbXt7hbfEtgCJrjxKnBK4i9LmtXEOfM7MQBwP36vhsCGYOogbSIfBYw) to don't miss any update regarding Chevereto.
-
 <img alt="Chevereto" src="content/images/system/default/logo.svg" width="100%">
-
-[![Community](https://img.shields.io/badge/chv.to-community-blue?style=flat-square)](https://chv.to/community)
-[![Discord](https://img.shields.io/discord/759137550312407050?style=flat-square)](https://chv.to/discord)
 
 Chevereto-Free allows you to create a full-featured image hosting website on your own server. It's your hosting and your rules, say goodbye to closures and restrictions.
 
@@ -29,7 +24,7 @@ Starting on **2021-10** the [Chevereto](https://chevereto.com) organization won'
 
 ## About this fork
 
-Chevereto-Free is a mature fork of [Chevereto V3.16.2](https://releases.chevereto.com/3.X/3.16/3.16.2.html) in which only basic features are preserved. This fork was created for personal usage and small communities.
+Chevereto-Free is forked from [Chevereto V3.16.2](https://releases.chevereto.com/3.X/3.16/3.16.2.html) in which only basic features are preserved. This fork was created for personal usage and small communities.
 
 👉 **This fork removes**
 
@@ -59,9 +54,9 @@ Chevereto-Free is a mature fork of [Chevereto V3.16.2](https://releases.cheveret
 * Requires [Composer](https://getcomposer.org)
 
 ```sh
-composer create-project chevereto/chevereto-free . \
+composer create-project rodber/chevereto-free . \
     --repository='{
-        "url": "https://github.com/chevereto/chevereto-free.git",
+        "url": "https://github.com/rodber/chevereto-free.git",
         "type": "vcs"
     }' \
     --remove-vcs \
@@ -70,7 +65,7 @@ composer create-project chevereto/chevereto-free . \
 
 ## Manual installation
 
-* Pick the [latest release](https://github.com/chevereto/chevereto-free/releases/latest)
+* Pick the [latest release](https://github.com/rodber/chevereto-free/releases/latest)
 * Download the tagged `$TAG.zip` release artifact
 * Unzip the release in your target `public` web-server directory
 

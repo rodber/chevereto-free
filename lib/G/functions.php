@@ -2360,7 +2360,7 @@ namespace G {
 
     // http://www.programmierer-forum.de/function-imagecreatefrombmp-welche-variante-laeuft-t143137.htm
     // Extra bits by https://github.com/djeman
-    // https://github.com/Chevereto/Chevereto-Free/pull/35
+    // https://github.com/rodber/chevereto-free/pull/35
     function imagecreatefrombmp($file)
     {
         // if (function_exists('imagecreatefrombmp')) {
