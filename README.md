@@ -11,7 +11,7 @@ Chevereto-Free allows you to create a full-featured image hosting website on you
 
 ## Project status
 
-Starting on **2022-01** the [Chevereto](https://chevereto.com) organization won't be in charge of this project and the repo ownership will be transferred to [@rodber](https://github.com/rodber).
+Starting on **2021-10** the [Chevereto](https://chevereto.com) organization won't be in charge of this project and the repo ownership will be transferred to [@rodber](https://github.com/rodber).
 
 ## Screens
 
