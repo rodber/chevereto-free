@@ -1178,21 +1178,6 @@ function free_version_warning($wrap=true)
 								<div class="input-below"><?php _se('Enable this if you want to allow non registered users to upload.'); ?></div>
 								<?php personal_mode_warning(); ?>
 							</div>
-                            <div class="input-label">
-								<label for="moderate_uploads"><?php _se('Moderate uploads'); ?></label>
-								<div class="c5 phablet-c1"><select type="text" name="moderate_uploads" id="moderate_uploads" class="text-input" <?php if (CHV\getSetting('website_mode') == 'personal') {
-                                            echo ' disabled';
-                                        } ?>>
-										<?php
-                                        echo CHV\Render\get_select_options_html([
-                                                '' => _s('Disabled'),
-                                                'guest' => _s('Guest'),
-                                                'all' => _s('All')
-                                            ], CHV\Settings::get('moderate_uploads')); ?>
-									</select></div>
-                                <div class="input-below"><?php _se('Enable this to moderate incoming uploads. Target content will require moderation for approval.'); ?></div>
-								<?php personal_mode_warning(); ?>
-							</div>
 
                             <hr class="line-separator">
 
@@ -2677,45 +2662,6 @@ function free_version_warning($wrap=true)
                 </div>
             </div>
             <hr class="line-separator"></hr>
-            <div class="input-label">
-                <label for="moderatecontent">ModerateContent</label>
-                <div class="c5 phablet-c1"><select type="text" name="moderatecontent" id="moderatecontent" class="text-input" data-combo="moderatecontent-combo">
-                    <?php
-                        echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], get_safe_post() ? get_safe_post()['moderatecontent'] : CHV\Settings::get('moderatecontent')); ?>
-                </select></div>
-                <div class="input-below"><?php _se('Automatically moderate the content using the %s service.', '<a href="https://www.moderatecontent.com/" target="_blank">ModerateContent</a>'); ?></div>
-            </div>
-            <div id="moderatecontent-combo" class="c12 phablet-c1">
-                <div data-combo-value="1" class="switch-combo<?php if ((get_safe_post() ? get_safe_post()['moderatecontent'] : CHV\Settings::get('moderatecontent')) == 0) {
-                            echo ' soft-hidden';
-                        } ?>">
-                    <div class="input-label">
-                        <label for="moderatecontent_key">ModerateContent API Key</label>
-                        <input type="text" name="moderatecontent_key" id="moderatecontent_key" class="text-input" value="<?php echo get_safe_post() ? get_safe_post()['moderatecontent_key'] : CHV\Settings::get('moderatecontent_key'); ?>" placeholder="">
-                        <div class="input-below input-warning red-warning"><?php echo get_input_errors()['moderatecontent_key']; ?></div>
-                    </div>
-                    <div class="input-label">
-                        <label for="moderatecontent_auto_approve"><?php _se('Automatic approve'); ?></label>
-                        <div class="c5 phablet-c1"><select type="text" name="moderatecontent_auto_approve" id="moderatecontent_auto_approve" class="text-input">
-                        <?php echo CHV\Render\get_select_options_html([0 => _s('Disabled'), 1 => _s('Enabled')], get_safe_post() ? get_safe_post()['moderatecontent_auto_approve'] : CHV\Settings::get('moderatecontent_auto_approve')); ?>
-                        </select></div>
-                        <div class="input-below"><?php _se('Enable this to automatically approve content moderated by this service.'); ?></div>
-                    </div>
-                    <div class="input-label">
-                        <label for="moderatecontent_block_rating"><?php _se('Block content'); ?></label>
-                        <div class="c5 phablet-c1"><select type="text" name="moderatecontent_block_rating" id="moderatecontent_block_rating" class="text-input">
-                        <?php echo CHV\Render\get_select_options_html(['' => _s('Disabled'), 'a' => _s('Adult'), 't' => _s('Teen and adult')], get_safe_post() ? get_safe_post()['moderatecontent_block_rating'] : CHV\Settings::get('moderatecontent_block_rating')); ?>
-                        </select></div>
-                    </div>
-                    <div class="input-label">
-                        <label for="moderatecontent_flag_nsfw"><?php _se('Flag NSFW'); ?></label>
-                        <div class="c5 phablet-c1"><select type="text" name="moderatecontent_flag_nsfw" id="moderatecontent_flag_nsfw" class="text-input">
-                        <?php echo CHV\Render\get_select_options_html([0 => _s('Disabled'), 'a' => _s('Adult'), 't' => _s('Teen and adult')], get_safe_post() ? get_safe_post()['moderatecontent_flag_nsfw'] : CHV\Settings::get('moderatecontent_flag_nsfw')); ?>
-                        </select></div>
-                    </div>                    
-                </div>
-            </div>
-            <hr class="line-separator">
             <div class="input-label">
                 <label for="analytics_code"><?php _se('Analytics code'); ?></label>
                 <div class="c12 phablet-c1"><textarea type="text" name="analytics_code" id="analytics_code" class="text-input r4" value="" placeholder="<?php _se('Google Analytics or anything you want. It will be added to the theme footer.'); ?>"><?php echo CHV\Settings::get('analytics_code', true); ?></textarea></div>

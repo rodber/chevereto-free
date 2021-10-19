@@ -120,14 +120,6 @@ if (is_maintenance() || is_show_consent_screen() || in_array($templateUsed, ['re
                             </li>
                         <?php
                                 } ?>
-                        <?php if (is_content_manager()) { ?>
-                        <li id="top-bar-moderate" data-nav="moderate" class="top-btn-el<?php if (in_array(G\get_route_name(), ['moderate'])) {
-                                    ?> current<?php
-                                } ?>"">
-                            <a href="<?php echo G\get_base_url('moderate'); ?>"><span class="top-btn-text"><span class="icon icon-download2"></span><span class="btn-text phone-hide phablet-hide"><?php _se('Moderate'); ?></span></span></a>
-                        </li>
-                        <?php } ?>
-
                         <?php if (is_search_enabled()) {
                                     ?>
                             <li data-action="top-bar-search" data-nav="search" class="phone-hide pop-btn">

@@ -190,17 +190,11 @@ if (CHV\Login::isLoggedUser()) {
                     ?>
 			<div data-group="upload-result" data-result="success" class="c16 center-box soft-hidden">
 				<div class="input-label margin-bottom-0 copy-hover-display">
-                    <?php
-                        if (is_moderate_uploads()) {
-                            ?>
-                    <div class="growl font-size-small static text-align-center margin-bottom-30 clear-both"><b><?php _se('Note'); ?>:</b> <?php _se('We must approve the uploaded content before being able to share.'); ?></div>
-                    <?php
-                        } ?>
 					<label for="uploaded-embed-toggle"><?php _se('Embed codes'); ?></label>
 					<div class="c7 margin-bottom-10">
 						<select name="uploaded-embed-toggle" id="uploaded-embed-toggle" class="text-input" data-combo="uploaded-embed-toggle-combo">
                             <?php
-                                $tpl = is_moderate_uploads() ? 'embed_unapproved_tpl' : 'embed_tpl';
+                                $tpl = 'embed_tpl';
                     foreach (G\get_global($tpl) as $key => $value) {
                         echo '<optgroup label="'.$value['label'].'">'."\n";
                         foreach ($value['options'] as $k => $v) {

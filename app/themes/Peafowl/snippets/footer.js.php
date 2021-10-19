@@ -73,7 +73,7 @@ if (is_captcha_show() && CHV\getSetting('recaptcha_version') == 3) {
 				redirect_single_upload: <?php echo json_encode(CHV\getSetting('enable_redirect_single_upload')); ?>,
 				threads: <?php echo json_encode(CHV\getSetting('upload_threads')); ?>,
                 image_types: <?php echo json_encode(CHV\Image::getEnabledImageFormats()); ?>,
-                moderation: <?php echo json_encode(is_moderate_uploads()); ?>,  
+                moderation: 0,  
 			},
 			user: {
 				avatar_max_filesize: "<?php echo CHV\getSetting('user_image_avatar_max_filesize_mb') . ' MB'; ?>",

@@ -489,16 +489,6 @@ class Upload
         if ($this->source_image_fileinfo['extension'] == 'webp' && G\is_animated_webp($this->downstream)) {
             throw new UploadException('Animated WebP is not supported', 314);
         }
-
-        if (Settings::get('moderatecontent') && (Settings::get('moderatecontent_block_rating') != '' || Settings::get('moderatecontent_flag_nsfw'))) {
-            $moderateContent = new ModerateContent($this->downstream, $this->source_image_fileinfo);
-            if ($moderateContent->isSuccess()) {
-                $this->moderation = $moderateContent->moderation();
-            } else {
-                throw new UploadException('Error processing content moderation: ' . $moderateContent->errorMessage());
-                error_log($moderateContent->errorMessage());
-            }
-        }
     }
 
     // Handle flood uploads

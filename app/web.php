@@ -325,17 +325,6 @@ try {
 
             $handler::setCond('search_enabled', $handler::getCond('content_manager') ?: getSetting('website_search'));
 
-            $moderate_uploads = false;
-            switch (getSetting('moderate_uploads')) {
-                case 'all':
-                    $moderate_uploads = true;
-                break;
-                case 'guest':
-                    $moderate_uploads = !Login::isLoggedUser();
-                break;
-            }
-            $handler::setCond('moderate_uploads', $moderate_uploads);
-
             $categories = [];
             if ($handler::getCond('explore_enabled') || $base == 'dashboard') {
                 try {

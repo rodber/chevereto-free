@@ -812,22 +812,6 @@ $route = function ($handler) {
                         }
                     }
 
-                    if ($_POST['moderatecontent'] == 1) {
-                        $moderateContentKey = CHV\getSetting('moderatecontent_key');
-                        if ($_POST['moderatecontent_key']) {
-                            $moderateContentKey = $_POST['moderatecontent_key'];
-                        }
-                        $sample = 'http://www.moderatecontent.com/img/sample_face_2.jpg';
-                        $json = G\fetch_url('https://api.moderatecontent.com/moderate/?key='.$moderateContentKey.'&url=' . $sample);
-                        $data = json_decode($json);
-                        if (isset($data->error)) {
-                            $validations['moderatecontent_key'] = [
-                                'validate'    => false,
-                                'error_msg' => $data->error
-                            ];
-                        }
-                    }
-
                     // Validate SMTP credentials
                     if ($_POST['email_mode'] == 'smtp') {
                         $email_smtp_validate = [

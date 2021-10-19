@@ -585,9 +585,6 @@ class Image
                 'uploaded' => $upload->uploaded,
                 'source' => $upload->source,
             ];
-            if (isset($upload->moderation)) {
-                $return['moderation'] = $upload->moderation;
-            }
 
             return $return;
         } catch (Exception $e) {
@@ -1027,18 +1024,6 @@ class Image
             $original_exifdata = $image_upload['source']['image_exif'] ? json_encode(G\array_utf8encode($image_upload['source']['image_exif'])) : null;
             
             $values['nsfw'] = in_array(strval($values['nsfw']), ['0', '1']) ? $values['nsfw'] : 0;
-            if (Settings::get('moderatecontent') && $values['nsfw'] == 0 && Settings::get('moderatecontent_flag_nsfw')) {
-                switch ($image_upload['moderation']->rating_letter) {
-                    case 'a':
-                        $values['nsfw'] = '1';
-                    break;
-                    case 't':
-                        if (Settings::get('moderatecontent_flag_nsfw') == 't') {
-                            $values['nsfw'] = 1;
-                        }
-                    break;
-                }
-            }
 
             $populate_values = [
                 'uploader_ip' => $values['uploader_ip'],
@@ -1070,18 +1055,6 @@ class Image
             }
 
             $values['is_approved'] = 1;
-            switch (Settings::get('moderate_uploads')) {
-                case 'all':
-                    $values['is_approved'] = 0;
-                break;
-                case 'guest':
-                    $values['is_approved'] = (int) isset($values['user_id']);
-                break;
-            }
-
-            if (Settings::get('moderatecontent_auto_approve') && isset($image_upload['moderation'])) {
-                $values['is_approved'] = 1;
-            }
 
             $insert = DB::insert('images', $values);
 
