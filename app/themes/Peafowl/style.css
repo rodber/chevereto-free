@@ -1651,10 +1651,6 @@ body#consent-screen {
     color: #444;
 }
 
-.js #powered-by.footer {
-    display: none;
-}
-
 body.landing .footer {
     color: #fff;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);

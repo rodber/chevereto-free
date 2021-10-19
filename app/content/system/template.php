@@ -56,7 +56,7 @@ if (!defined('access') or !access) {
     <div id="content">
       <?php echo $html; ?>
     </div>
-    <div id="powered">&copy; <a href="http://chevereto.com">Chevereto image hosting script</a></div>
+    <div id="powered"><?php _se('Powered by'); ?> <a href="<?php echo G_APP_GITHUB_REPO_URL; ?>" rel="generator" target="_blank"><?php echo G_APP_GITHUB_REPO; ?></a></div>
   </div>
 </body>
 

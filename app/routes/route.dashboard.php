@@ -179,13 +179,9 @@ $route = function ($handler) {
                 ];
 
                 $chevereto_urls = [
-                    'Chevereto'                => 'https://chevereto.com',
-                    _s('Community')                => 'https://chevereto.com/community/',
-                    _s('Support')                => 'https://chevereto.com/support',
-                    _s('Documentation')            => 'https://v3-docs.chevereto.com',
-                    _s('Changelog')                => 'https://chevereto.com/releases',
-                    _s('Bug tracking')            => 'https://chevereto.com/bug-tracking',
-                    'GitHub'                     => 'https://github.com/Chevereto',
+                    'GitHub'    => 'https://github.com/rodber/chevereto-free',
+                    'Community' => 'https://github.com/rodber/chevereto-free/discussions',
+                    'Releases'  => 'https://github.com/rodber/chevereto-free/releases',
                 ];
                 $chevereto_links = [];
                 foreach ($chevereto_urls as $k => $v) {

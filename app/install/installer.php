@@ -108,7 +108,7 @@ try {
             'upload_storage_mode' => 'datefolder',
             'upload_thumb_height' => '160',
             'upload_thumb_width' => '160',
-            'website_description' => 'A free image hosting service powered by Chevereto',
+            'website_description' => 'A free image hosting service powered by Chevereto-Free',
             'website_doctitle' => 'Chevereto image hosting',
             'website_name' => 'Chevereto',
             'website_explore_page' => 1,

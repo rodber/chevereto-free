@@ -302,19 +302,6 @@ function free_version_warning($wrap=true)
 
 							<hr class="line-separator">
 
-							<div class-="phablet-c1">
-								<div class="input-label">
-									<label for="enable_powered_by"><?php _se('Powered by'); ?> Chevereto</label>
-									<div class="c5 phablet-c1"><select type="text" name="enable_powered_by" id="enable_powered_by" class="text-input" disabled>
-											<?php
-                                            echo CHV\Render\get_select_options_html([1 => _s('Enabled')], CHV\Settings::get('enable_powered_by')); ?>
-										</select></div>
-                                    <?php free_version_warning(); ?>
-								</div>
-							</div>
-
-							<hr class="line-separator">
-
 							<div class="phablet-c1">
 								<div class="input-label">
 									<label for="website_https">HTTPS</label>
