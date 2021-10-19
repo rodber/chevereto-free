@@ -101,7 +101,6 @@ define('CHV_APP_PATH_LIB_VENDOR', G_APP_PATH . 'vendor/');
 require_once CHV_APP_PATH_LIB_VENDOR . 'autoload.php';
 
 define('CHV_APP_PATH_CONTENT_SYSTEM', CHV_APP_PATH_CONTENT . 'system/');
-define('CHV_APP_PATH_CONTENT_LANGUAGES', CHV_APP_PATH_CONTENT . 'languages/');
 define('CHV_APP_PATH_CONTENT_LOCKS', CHV_APP_PATH_CONTENT . 'locks/');
 
 // CHV paths
@@ -114,51 +113,10 @@ define('CHV_PATH_PEAFOWL', G_ROOT_LIB_PATH . 'Peafowl/');
 
 // subdomain wildcards here
 $hostnameSetting = G\get_app_setting('hostname') ?: Settings::get('hostname') ?: G\get_domain(G_HTTP_HOST);
-$isIP = filter_var(G_HTTP_HOST, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) || filter_var(G_HTTP_HOST, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6);
-$isWildcardEnabled = Settings::get('lang_subdomain_wildcard') || Settings::get('user_subdomain_wildcard');
 
-if ($isIP == false && $isWildcardEnabled && ($hostnameSetting != G_HTTP_HOST)) {
-    $hostExplode = explode('.', $hostnameSetting);
-    if ($hostWildcard = $hostExplode[2] ? $hostExplode[0] : null) {
-        define('CHV_HOST_WILDCARD', $hostWildcard);
-    }
-
-    array_shift($hostExplode);
-    $app_g_http_host = implode('.', $hostExplode);
-    $cookieDomain = '.' . (defined('CHV_HOST_WILDCARD') ? $app_g_http_host : G_HTTP_HOST);
-    // Destroy non wilcard domain cookies
-    // No way to avoid this structure
-    if (ini_get('session.cookie_domain') != $cookieDomain) {
-        ini_set('session.cookie_domain', $cookieDomain);
-        if (ini_get('session.cookie_domain') == $cookieDomain) {
-            $cookieWilcard = true;
-        }
-    }
-    $cookie_params = session_get_cookie_params();
-    if (defined('CHV_HOST_WILDCARD') && $cookieWilcard) {
-        define('APP_G_HTTP_HOST', $app_g_http_host);
-        // APP_G_ROOT_URL, APP_G_ROOT_LIB_URL, APP_G_APP_LIB_URL
-        foreach (['G_ROOT_URL', 'G_ROOT_LIB_URL', 'G_APP_LIB_URL'] as $v) {
-            define('APP_' . $v, G\str_replace_first(G_HTTP_HOST, APP_G_HTTP_HOST, constant($v)));
-        }
-        if (getSetting('lang_subdomain_wildcard') && array_key_exists(CHV_HOST_WILDCARD, get_enabled_languages())) {
-            $hostWildcardType = 'lang';
-            L10n::setCookieLang(CHV_HOST_WILDCARD);
-        } elseif (getSetting('user_subdomain_wildcard')) {
-            if ($user = User::getSingle(CHV_HOST_WILDCARD, 'username', false)) {
-                define('CHV_HOST_WILDCARD_USER_ID', $user['user_id']);
-                $hostWildcardType = 'user';
-            }
-        }
-    }
-    if ($hostWildcardType) {
-        define('CHV_HOST_WILDCARD_TYPE', $hostWildcardType);
-    }
-}
-
-define('CHV_ROOT_URL', defined('APP_G_ROOT_URL') ? APP_G_ROOT_URL : G_ROOT_URL);
-define('CHV_HTTP_HOST', defined('APP_G_HTTP_HOST') ? APP_G_HTTP_HOST : G_HTTP_HOST);
-define('CHV_ROOT_URL_STATIC', defined('CHV_ROOT_CDN_URL') ? CHV_ROOT_CDN_URL : (defined('APP_G_ROOT_URL') ? APP_G_ROOT_URL : G_ROOT_URL));
+define('CHV_ROOT_URL', G_ROOT_URL);
+define('CHV_HTTP_HOST', G_HTTP_HOST);
+define('CHV_ROOT_URL_STATIC', defined('CHV_ROOT_CDN_URL') ? CHV_ROOT_CDN_URL : G_ROOT_URL);
 
 // Define the app theme
 define('G_APP_PATH_THEMES', G_APP_PATH . 'themes/');

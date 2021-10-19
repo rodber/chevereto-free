@@ -176,14 +176,7 @@
             <?php
             }
             ?>
-
-            <link rel="alternate" hreflang="x-default" href="<?php echo CHV\get_current_url(true, ['lang']); ?>">
-            <?php
-            foreach (G\Handler::getVar('langLinks') as $k => $v) {
-                echo '<link rel="alternate" hreflang="' . $v['hreflang'] . '" href="' . $v['url'] . '">' . "\n";
-            }
-            G\Render\include_theme_file('custom_hooks/head'); ?>
-
+            <?php G\Render\include_theme_file('custom_hooks/head'); ?>
 </head>
 
 <?php G\Render\include_theme_file('custom_hooks/head_after'); ?>

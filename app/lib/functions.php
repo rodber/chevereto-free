@@ -366,31 +366,35 @@ if (!function_exists('bcdiv')) {
  */
 function get_translation_table()
 {
-    return L10n::getTranslation();
+    return [];
 }
 
 function get_language_used()
 {
-    return get_available_languages()[L10n::getStatic('locale')];
+    return 'en';
 }
 
 function get_available_languages()
 {
-    return L10n::getAvailableLanguages();
+    return [];
 }
 
 function get_enabled_languages()
 {
-    if (!getSetting('language_chooser_enable')) {
-        return [];
-    }
-
-    return L10n::getEnabledLanguages();
+    return [
+        'en' => [
+            'code' => 'en',
+            'dir' => 'ltr',
+            'name' => 'English',
+            'base' => 'en',
+            'short_name' => 'EN',
+          ],
+    ];
 }
 
 function get_disabled_languages()
 {
-    return L10n::getDisabledLanguages();
+    return [];
 }
 
 /**
@@ -811,24 +815,6 @@ function checkUpdates()
     } catch (Exception $e) {
         error_log($e);
     } // Silence
-}
-
-function getJsModLangL10n()
-{
-    foreach (new DirectoryIterator(CHV_APP_PATH_CONTENT_LANGUAGES . 'cache/') as $fileInfo) {
-        if ($fileInfo->isDot() || $fileInfo->isDir()) {
-            continue;
-        }
-        $lang_code = str_replace('.po.cache.php', null, $fileInfo->getFilename());
-        include $fileInfo->getPathname();
-        if (!$translation_table['Upload images']) {
-            continue;
-        }
-        $l10n[$lang_code] = $translation_table['Upload images'][0];
-    }
-    unset($translation_table);
-
-    return json_encode($l10n);
 }
 
 function obfuscate($string)

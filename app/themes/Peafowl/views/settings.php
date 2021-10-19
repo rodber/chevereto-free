@@ -240,25 +240,6 @@
 
                     <hr class="line-separator">
                     </hr>
-
-                    <?php if (CHV\getSetting('language_chooser_enable')) {
-                                ?>
-                        <div class="c5 phablet-c1">
-                            <div class="input-label">
-                                <label for="language"><?php _se('Language'); ?></label>
-                                <select name="language" id="language" class="text-input">
-                                    <?php
-                                            $enabled_languages = CHV\get_enabled_languages();
-                                foreach ($enabled_languages as $k => $v) {
-                                    $selected_lang = $k == get_user()['language'] ? " selected" : "";
-                                    echo '<option value="' . $k . '"' . $selected_lang . '>' . $v["name"] . '</option>' . "\n";
-                                } ?>
-                                </select>
-                            </div>
-                        </div>
-                    <?php
-                            } ?>
-
                     <?php
 
                         $zones = timezone_identifiers_list();

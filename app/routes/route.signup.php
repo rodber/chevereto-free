@@ -163,7 +163,7 @@ $route = function ($handler) {
                         'username'    => $_POST['username'],
                         'email'        => $_POST['email'],
                         'timezone'    => CHV\getSetting('default_timezone'),
-                        'language'    => CHV\L10n::getLocale(),
+                        'language'    => 'en',
                         'status'    => CHV\getSetting('require_user_email_confirmation') ? 'awaiting-confirmation' : 'valid'
                     ];
 

@@ -226,7 +226,6 @@ $route = function ($handler) {
                     'banners'                => _s('Banners'),
                     'system'                => _s('System'),
                     'routing'                => _s('Routing'),
-                    'languages'                => _s('Languages'),
                     'external-storage'        => _s('External storage'),
                     'email'                    => _s('Email'),
                     'social-networks'        => _s('Social networks'),
@@ -446,11 +445,6 @@ $route = function ($handler) {
                         [
                             'validate'    => $_POST['website_name'] ? true : false,
                             'error_msg'    => _s('Invalid website name')
-                        ],
-                        'default_language'    =>
-                        [
-                            'validate'    => CHV\get_available_languages()[$_POST['default_language']] ? true : false,
-                            'error_msg'    => _s('Invalid language')
                         ],
                         'default_timezone'    =>
                         [
@@ -783,33 +777,6 @@ $route = function ($handler) {
                             }
                         }
                         $_POST['upload_enabled_image_formats'] = implode(',', $image_format_enable);
-                    }
-
-                    // Handle disabled languages
-                    if ($_POST['languages_enable'] && is_array($_POST['languages_enable'])) {
-
-                        // Push default language
-                        if (!in_array($_POST['default_language'], $_POST['languages_enable'])) {
-                            $_POST['languages_enable'][] = $_POST['default_language'];
-                        }
-
-                        $enabled_languages = [];
-                        $disabled_languages = CHV\get_available_languages();
-                        $_POST['languages_disable'] = [];
-                        foreach ($_POST['languages_enable'] as $k) {
-                            if (!array_key_exists($k, CHV\get_available_languages())) {
-                                continue;
-                            }
-                            $enabled_languages[$k] = CHV\get_available_languages()[$k];
-                            unset($disabled_languages[$k]);
-                        }
-                        CHV\l10n::setStatic('disabled_languages', $disabled_languages);
-                        CHV\l10n::setStatic('enabled_languages', $enabled_languages);
-                        unset($_POST['languages_enable']);
-                        foreach ($disabled_languages as $k => $v) {
-                            $_POST['languages_disable'][] = $k;
-                        }
-                        $_POST['languages_disable'] = implode(',', $_POST['languages_disable']);
                     }
 
                     // Handle personal mode change

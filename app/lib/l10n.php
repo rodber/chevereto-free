@@ -21,7 +21,6 @@ if (!defined('access') or !access) {
 // Gettext with parsed arguments
 function _s($msg, $args=null)
 {
-    $msg = CHV\L10n::gettext($msg);
     if ($msg && !is_null($args)) {
         $fn = is_array($args) ? 'strtr' : 'sprintf';
         $msg = $fn($msg, $args);
@@ -37,7 +36,10 @@ function _se($msg, $args=null)
 // Plural version of _s
 function _n($msg, $msg_plural, $count)
 {
-    return CHV\L10n::ngettext($msg, $msg_plural, $count);
+    if($count == 1) {
+        return $msg;
+    }
+    return $msg_plural;
 }
 // Same as _n but with echo
 function _ne($msg, $msg_plural, $count)

@@ -2415,67 +2415,6 @@ function free_version_warning($wrap=true)
 			<?php
                         } ?>
 
-			<?php if (get_settings()['key'] == 'languages') {
-                            ?>
-            <p><?php echo read_the_docs_settings('languages', _s('languages')); ?></p>
-            <div class="input-label">
-				<label><?php _se('Custom language strings'); ?></label>
-			</div>
-			<div class="input-label">
-				<label for="default_language"><?php _se('Default language'); ?></label>
-				<div class="c5 phablet-c1"><select type="text" name="default_language" id="default_language" class="text-input">
-					<?php
-                            foreach (CHV\get_available_languages() as $k => $v) {
-                                $selected_lang = $k == CHV\Settings::get('default_language') ? ' selected' : '';
-                                echo '<option value="' . $k . '"' . $selected_lang . '>' . $v['name'] . '</option>' . "\n";
-                            } ?>
-				</select></div>
-				<div class="input-below"><?php _se('Default base language to use.'); ?></div>
-			</div>
-
-			<div class="input-label">
-				<label for="auto_language"><?php _se('Auto language'); ?></label>
-				<div class="c5 phablet-c1"><select type="text" name="auto_language" id="auto_language" class="text-input">
-					<?php
-                            echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('auto_language')); ?>
-				</select></div>
-				<div class="input-below"><?php _se('Enable this if you want to automatically detect and set the right language for each user.'); ?></div>
-			</div>
-
-			<div class="input-label">
-				<label for="language_chooser_enable"><?php _se('Language chooser'); ?></label>
-				<div class="c5 phablet-c1"><select type="text" name="language_chooser_enable" id="language_chooser_enable" class="text-input" data-combo="language-enable-combo">
-					<?php
-                            echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('language_chooser_enable')); ?>
-				</select></div>
-				<div class="input-below"><?php _se('Enable this if you want to allow language selection.'); ?></div>
-			</div>
-
-			<?php if (count(CHV\get_available_languages()) > 0) {
-                                ?>
-			<div id="language-enable-combo">
-				<div data-combo-value="1" class="switch-combo<?php if ((get_safe_post() ? get_safe_post()['language_chooser_enable'] == 0 : !CHV\Settings::get('language_chooser_enable'))) {
-                                    echo ' soft-hidden';
-                                } ?>">
-					<div class="checkbox-label">
-						<h4 class="input-label-label"><?php _se('Enabled languages'); ?></h4>
-						<ul class="c20 phablet-c1">
-							<?php
-                                foreach (CHV\get_available_languages() as $k => $v) {
-                                    $lang_flag = array_key_exists($k, CHV\get_enabled_languages()) ? ' checked' : null;
-                                    echo '<li class="c5 phone-c1 display-inline-block"><label class="display-block" for="languages_enable[' . $k . ']"> <input type="checkbox" name="languages_enable[]" id="languages_enable[' . $k . ']" value="' . $k . '"' . $lang_flag . '>' . $v['name'] . '</label></li>';
-                                } ?>
-						</ul>
-						<p class="margin-top-20"><?php _se("Unchecked languages won't be used in your website."); ?></p>
-					</div>
-				</div>
-			</div>
-			<?php
-                            } ?>
-
-			<?php
-                        } ?>
-
             <?php if (get_settings()['key'] == 'external-storage') {
                             free_version_warning();
                         } ?>

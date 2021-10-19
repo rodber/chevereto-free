@@ -38,7 +38,7 @@ $route = function ($handler) {
         }
 
         // Editable values
-        $allowed_to_edit = ['name', 'username', 'email', 'avatar_filename', 'website', 'background_filename', 'timezone', 'language', 'status', 'is_admin', 'is_manager', 'image_keep_exif', 'image_expiration', 'newsletter_subscribe', 'bio', 'show_nsfw_listings', 'is_private'];
+        $allowed_to_edit = ['name', 'username', 'email', 'avatar_filename', 'website', 'background_filename', 'timezone', 'status', 'is_admin', 'is_manager', 'image_keep_exif', 'image_expiration', 'newsletter_subscribe', 'bio', 'show_nsfw_listings', 'is_private'];
 
         if (CHV\getSetting('enable_expirable_uploads')) {
             unset($allowed_to_edit['image_expiration']);
@@ -51,11 +51,6 @@ $route = function ($handler) {
         // Only admins can touch other admins and managers
         if ($is_dashboard_user && $user['is_content_manager'] && CHV\Login::isAdmin() == false) {
             $handler->issue404();
-        }
-
-        // Update the lang displayed on change
-        if (in_array('language', $allowed_to_edit) and isset($_POST['language']) and $logged_user['language'] !== $_POST['language'] and $logged_user['id'] == $user['id'] and array_key_exists($_POST['language'], CHV\L10n::getEnabledLanguages())) {
-            CHV\L10n::processTranslation($_POST['language']);
         }
 
         // Settings routes
@@ -191,14 +186,9 @@ $route = function ($handler) {
                             $input_errors['image_expiration'] = _s('Invalid image expiration: %s', $_POST['image_expiration']);
                         }
                     }
-
-                    if (!array_key_exists($_POST['language'], CHV\get_available_languages())) {
-                        $_POST['language'] = CHV\getSetting('default_language');
-                    }
                     if (!in_array($_POST['timezone'], timezone_identifiers_list())) {
                         $_POST['timezone'] = date_default_timezone_get();
                     }
-
                     if (is_array($input_errors) && count($input_errors) > 0) {
                         $is_error = true;
                     }
