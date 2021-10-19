@@ -2382,15 +2382,6 @@ function free_version_warning($wrap=true)
 				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['route_album']; ?></div>
 				<div class="input-below"><?php _se('Routing for %s', G\get_base_url('album/&lt;id&gt;')); ?></div>
 			</div>
-			<hr class="line-separator">
-			<div class="input-label">
-				<label for="hostname"><?php _se('Hostname'); ?></label>
-				<div class="c9 phablet-c1">
-					<input type="text" name="hostname" id="hostname" class="text-input" value="<?php echo CHV\Settings::get('hostname', true); ?>" pattern="^(?!:\/\/)([a-zA-Z0-9-_]+\.)*[a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11}?$" placeholder="<?php echo G\get_domain(G_HTTP_HOST); ?>">
-				</div>
-				<div class="input-below input-warning red-warning"><?php echo get_input_errors()['hostname']; ?></div>
-				<div class="input-below"><?php _se('Hostname on which sub-domain wildcards will be added.'); ?> <?php _se('This setting may be overridden by %s.', '<code>app/settings.php</code>'); ?></div>
-			</div>
 			<?php
                         } ?>
 

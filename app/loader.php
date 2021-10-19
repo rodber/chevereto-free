@@ -110,10 +110,6 @@ define('CHV_PATH_CONTENT_IMAGES_SYSTEM', CHV_PATH_CONTENT . 'images/system/');
 define('CHV_PATH_CONTENT_IMAGES_USERS', CHV_PATH_CONTENT . 'images/users/');
 define('CHV_PATH_CONTENT_PAGES', CHV_PATH_CONTENT . 'pages/');
 define('CHV_PATH_PEAFOWL', G_ROOT_LIB_PATH . 'Peafowl/');
-
-// subdomain wildcards here
-$hostnameSetting = G\get_app_setting('hostname') ?: Settings::get('hostname') ?: G\get_domain(G_HTTP_HOST);
-
 define('CHV_ROOT_URL', G_ROOT_URL);
 define('CHV_HTTP_HOST', G_HTTP_HOST);
 define('CHV_ROOT_URL_STATIC', defined('CHV_ROOT_CDN_URL') ? CHV_ROOT_CDN_URL : G_ROOT_URL);
