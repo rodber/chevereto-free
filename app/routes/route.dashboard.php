@@ -123,7 +123,7 @@ $route = function ($handler) {
                         'content'	=>  (version_compare($chv_version['files'], $chv_version['db'], '<=')
                             ? $chv_version['files']
                             : $chv_version['files'] . ' ('.$chv_version['db'].' DB) <a href="'.G\get_base_url('install').'">'._s('install update').'</a>')
-                        . ' – <span class="icon icon-flow-branch"></span><a href="https://releases.chevereto.com/3.X/3.16/3.16.2.html" target="_blank">3.16.2</a> fork <a class="btn btn-capsule outline red" data-action="check-for-updates"><span class="icon icon-bolt"></span>' . _s("check for updates") . '</a>',
+                        . ' – <span class="icon icon-flow-branch"></span><a href="https://releases.chevereto.com/3.X/3.16/3.16.2.html" target="_blank">3.16.2</a> fork <a class="btn btn-capsule outline red" data-action="check-for-updates"><span class="icon icon-connection"></span> ' . _s("check for updates") . '</a>',
                     ],
                     'php_version' => [
                         'label'        => _s('PHP version'),
