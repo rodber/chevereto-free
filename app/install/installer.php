@@ -181,7 +181,7 @@ try {
             'homepage_cta_html'			=> null,
             'homepage_cta_fn'			=> null,
             'homepage_cta_fn_extra'		=> null,
-            'language_chooser_enable'	=> 1,
+            'language_chooser_enable'	=> 0,
             'languages_disable'			=> null,
             'website_mode'					=> 'community',
             'website_mode_personal_routing'	=> null, //'single_user_mode_routing'
@@ -214,7 +214,7 @@ try {
         '1.0.1' => null,
         '1.0.2' => null,
         '1.0.3' => [
-            'upload_enabled_image_formats'	=> 'jpg,png,bmp,gif',
+            'upload_enabled_image_formats'	=> 'jpg,png,bmp,gif,webp',
             'upload_threads'				=> '2',
             'enable_automatic_updates_check'=> 1,
         ],
@@ -289,6 +289,7 @@ try {
         '1.4.0' => null,
         '1.4.1' => null,
         '1.4.2' => null,
+        '1.5.0' => null,
     ];
     // Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
     $settings_rename = [];
