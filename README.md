@@ -28,17 +28,25 @@ Chevereto-Free is forked from [Chevereto V3.16.2](https://releases.chevereto.com
 
 👉 **This fork removes**
 
-* Social network login
-* External Storage servers
-* User likes and following
-* Manage banners
+* Social Network Login
+* External Storage Servers
+* Likes and Followers
+* Manage Banners
+* Multi-language Support
+* Moderation
+* Bulk Content Importing
 
 👉 **This fork misses**
 
-* 12FA Support
-* User interface upgrade (V3.20)
-* CLI API
-* Installer tooling
+* [Installer](https://github.com/chevereto/installer) tooling
+* All non-security updates added in [V3.17](https://releases.chevereto.com/3.X/3.17/3.17.2.html), [V3.18](https://releases.chevereto.com/3.X/3.18/3.18.3.html) and [V3.20](https://releases.chevereto.com/3.X/3.20/3.20.12.html) including:
+  * 360 images
+  * Nested albums
+  * ImageMagick support
+  * Improved sharing options
+  * User interface upgrade
+  * 12FA Support
+  * CLI API
 
 ## Installation
 
