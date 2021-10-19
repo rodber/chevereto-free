@@ -161,7 +161,6 @@ class User
             if (!is_array($values)) {
                 throw new DBException('Expecting array values, ' . gettype($values) . ' given in ' . __METHOD__, 100);
             }
-            // TODO: Role handler (for importer)
             if (!$values['date']) {
                 $values['date'] = G\datetime();
             }

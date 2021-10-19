@@ -46,7 +46,6 @@ $route = function ($handler) {
             'albums'    => _s('Albums'),
             'users'        => _s('Users'),
             'settings'    => _s('Settings'),
-            'bulk'    => _s('Bulk importer'),
         ];
 
         $default_route = 'stats';
