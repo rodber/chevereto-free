@@ -2397,14 +2397,6 @@ function free_version_warning($wrap=true)
 				<div class="input-below"><?php _se('Hostname on which sub-domain wildcards will be added.'); ?> <?php _se('This setting may be overridden by %s.', '<code>app/settings.php</code>'); ?></div>
 			</div>
 			<div class="input-label">
-				<label for="lang_subdomain_wildcard"><?php _se('Language subdomains'); ?></label>
-				<div class="c5 phablet-c1"><select type="text" name="lang_subdomain_wildcard" id="lang_subdomain_wildcard" class="text-input">
-					<?php
-                            echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('lang_subdomain_wildcard')); ?>
-				</select></div>
-				<div class="input-below"><?php _se('Enable to use %s for %t.', ['%t' => _s('languages'), '%s' => G\str_replace_first(CHV_HTTP_HOST, 'es' . '.' . CHV_HTTP_HOST, CHV_ROOT_URL)]); ?></div>
-			</div>
-			<div class="input-label">
 				<label for="user_subdomain_wildcard"><?php _se('Username subdomains'); ?></label>
 				<div class="c5 phablet-c1"><select type="text" name="user_subdomain_wildcard" id="user_subdomain_wildcard" class="text-input">
 					<?php
