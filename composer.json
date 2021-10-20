@@ -1,5 +1,5 @@
 {
-    "license": "AGPL-3.0",
+    "license": "AGPL-3.0-only",
     "type": "project",
     "name": "rodber/chevereto-free",
     "description": "Community/Personal Image Hosting",
