@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84ae94a4b9fecc0a8b0b5b0e22719be7",
+    "content-hash": "02c88da425ef4e127747234dafda7c62",
     "packages": [
         {
             "name": "jbroadway/urlify",
