@@ -31,7 +31,12 @@ Options -MultiViews
 	#RewriteRule images/.+\.(gif|jpe?g|a?png|bmp|webp) content/images/system/default/404.gif [NC,L]
 	RewriteRule images/.+\.(gif|jpe?g|png|bmp|webp) - [NC,L,R=404]
 
+	# PHP front controller
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteRule . index.php [L]
+
+    # Single PHP-entrypoint (disables direct access to .php files)
+    RewriteCond %{THE_REQUEST} ^.+?\ [^?]+\.php[?\ ] [NC]
+    RewriteRule \.php$ - [NC,L,F,R=404]
 </IfModule>

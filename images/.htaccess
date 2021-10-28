@@ -1,12 +1,3 @@
-<LimitExcept GET>
-    <IfModule !mod_authz_core.c>
-		Order Allow,Deny
-		Deny from all
-	</IfModule>
-	<IfModule mod_authz_core.c>
-		Require all denied
-	</IfModule>
-</LimitExcept>
 <FilesMatch "\.(?:[Pp][Hh][Pp][345]?|[Pp][Hh][Tt][Mm][Ll])|(po|sql|html?)$">
 	<IfModule !mod_authz_core.c>
 		Order Allow,Deny

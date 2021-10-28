@@ -1,13 +1,18 @@
-<Files .*>
-	# Apache 2.2
+<FilesMatch "\.(?:[Pp][Hh][Pp][345]?|[Pp][Hh][Tt][Mm][Ll])|(po|sql|html?)$">
 	<IfModule !mod_authz_core.c>
 		Order Allow,Deny
 		Deny from all
 	</IfModule>
-	# Apache 2.4
 	<IfModule mod_authz_core.c>
 		Require all denied
-	</IfModule> 
-</Files>
-
-SetHandler default-handler
+	</IfModule>
+</FilesMatch>
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<FilesMatch ".+\.*$">
+    SetHandler !
+</FilesMatch>
+<IfModule mod_rewrite.c>
+    RewriteRule ^.*\.php$ - [F,L]
+</IfModule>
