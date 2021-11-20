@@ -42,12 +42,15 @@ jobs:
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
 
+      - name: Packaging
+        run: |
+          rm -rf .git .github .dockerignore docs app/settings.php docker-bake.hcl httpd-php-dev.yml httpd-php.Dockerfile httpd-php.yml sync.sh
+
       - name: Archive dev
         uses: thedoctor0/zip-release@master
         with:
           type: "zip"
           filename: "${{ steps.get_version.outputs.VERSION }}-lite.zip"
-          exclusions: "/*.git/* /*.github/*"
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --classmap-authoritative --ignore-platform-reqs
@@ -57,12 +60,13 @@ jobs:
         with:
           type: "zip"
           filename: "${{ steps.get_version.outputs.VERSION }}.zip"
-          exclusions: "/*.git/* /*.github/* ${{ steps.get_version.outputs.VERSION }}-lite.zip"
+          exclusions: "${{ steps.get_version.outputs.VERSION }}-lite.zip"
 
       - name: Upload artifacts
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
           removeArtifacts: true
+          omitBodyDuringUpdate: true
           artifacts: "${{ steps.get_version.outputs.VERSION }}.zip,${{ steps.get_version.outputs.VERSION }}-lite.zip"
           token: ${{ secrets.GITHUB_TOKEN }}

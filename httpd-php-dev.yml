@@ -1,0 +1,47 @@
+version: "3.2"
+
+services:
+  database:
+    container_name: chevereto-free-dev_database
+    image: mariadb:focal
+    networks:
+      - chevereto
+    volumes:
+      - database:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: chevereto
+      MYSQL_USER: chevereto
+      MYSQL_PASSWORD: user_database_password
+
+  app:
+    container_name: chevereto-free-dev_app
+    image: ghcr.io/rodber/chevereto-free-httpd-php:1.6
+    networks:
+      - chevereto
+    volumes:
+      - storage:/var/www/html/images/
+      - app:/var/www/html/
+      - type: bind
+        source: ${SOURCE}
+        target: /var/www/chevereto
+    ports:
+      - 8910:80
+    restart: always
+    environment:
+      CHEVERETO_TAG: dev
+      CHEVERETO_DB_HOST: database
+      CHEVERETO_DB_USER: chevereto
+      CHEVERETO_DB_PASS: user_database_password
+      CHEVERETO_DB_PORT: 3306
+      CHEVERETO_DB_NAME: chevereto
+      CHEVERETO_HTTPS: 0
+
+volumes:
+  database:
+  storage:
+  app:
+
+networks:
+  chevereto:

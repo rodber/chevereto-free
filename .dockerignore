@@ -1,0 +1,10 @@
+.dockerignore
+.git
+.github
+**/*.DS_Store
+docker-bake.hcl
+docs
+httpd-php-dev.yml
+httpd-php.Dockerfile
+httpd-php.yml
+README.md
