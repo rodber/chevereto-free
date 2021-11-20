@@ -25,14 +25,18 @@ if (!defined('access') or !access) {
 }
 
 // settings.php workaround
-if (!is_readable(dirname(__FILE__) . '/settings.php')) {
-    if (!@fopen(dirname(__FILE__) . '/settings.php', 'w')) {
+if (!is_readable(__DIR__ . '/settings.php')) {
+    if (!@fopen(__DIR__ . '/settings.php', 'w')) {
         die("Chevereto can't create the app/settings.php file. You must manually create this file.");
     }
 }
-
+if(getenv('CHEVERETO_SERVICING') == 'docker') {
+    require_once __DIR__ . '/settings-env.php';
+}
 // G thing
-(file_exists(dirname(dirname(__FILE__)) . '/lib/G/G.php')) ? require_once(dirname(dirname(__FILE__)) . '/lib/G/G.php') : die("Can't find lib/G/G.php");
+(file_exists(dirname(__FILE__, 2) . '/lib/G/G.php'))
+    ? require_once dirname(__FILE__, 2) . '/lib/G/G.php'
+    : die("Can't find lib/G/G.php");
 
 // Require at least X memory to do the thing
 $min_memory = '256M';
