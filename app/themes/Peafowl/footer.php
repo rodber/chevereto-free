@@ -24,41 +24,5 @@ if (is_upload_allowed() && (CHV\getSetting('upload_gui') == 'js' || G\is_route('
 
 <?php echo CHV\getSetting('analytics_code'); ?>
 
-<?php
-if (CHV\Login::isAdmin()) {
-    ?>
-
-<script>
-	$(document).ready(function() {
-		$(document).on("click", "[data-action=upgrade]", function() {
-			PF.fn.modal.call({
-				template: $("[data-modal=form-upgrade]").html(),
-				buttons: false,
-				button_submit: "Upgrade now",
-				ajax: {
-					data: {action: 'upgrade'},
-					deferred: {
-						success: function(XHR) {
-							window.location.href = XHR.responseJSON.redir.url;
-						},
-						error: function(XHR) {
-							PF.fn.growl.call(XHR.responseJSON.error.message);
-						}
-					}
-				},
-			});
-		});
-	});
-</script>
-
-<div data-modal="form-upgrade" class="hidden">
-	<span class="modal-box-title">Upgrade</span>
-	<p>Upgrading to paid Chevereto enables access to all features and latest updates. This process is automated, you will only need to paste your license key.</p>
-    <p>All data will remain, and you can count on support assistance.</p>
-	<div class="btn-container"><button class="btn blue" data-action="submit" type="submit"><span class="btn-icon icon-next3"></span> Upgrade now</button> <a class="btn orange outline" href="https://chevereto.com/pricing" target="_blank"><span class="btn-icon icon-key3"></span> Purchase license</a></div>
-</div>
-<?php
-} ?>
-
 </body>
 </html>

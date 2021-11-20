@@ -16,7 +16,7 @@ function get_docs_link($key, $subject)
 }
 function free_version_warning($wrap=true)
 {
-    $message = _s("This functionality is not part of Chevereto Free. %s to obtain this feature.", ['%s' => '<a data-action="upgrade"><span class="btn-icon icon-star4 color-yellow"></span> ' . _s('Upgrade') . '</a>']);
+    $message = _s("This functionality is not part of Chevereto Free. %s to obtain this feature.", ['%s' => '<a href="https://github.com/rodber/chevereto-free/blob/master/UPGRADING.md"><span class="btn-icon icon-star4 color-yellow"></span> ' . _s('Upgrade to paid') . '</a>']);
     echo($wrap ? ('<div class="input-below">' . $message . '</div>') : $message);
 }
 ?>
@@ -29,19 +29,6 @@ function free_version_warning($wrap=true)
 			<h1><?php _se('Dashboard'); ?></h1>
 			<?php G\Render\include_theme_file('snippets/tabs'); ?>
 		</div>
-
-		<script>
-			$(document).ready(function(e) {
-				$("#upgrade-link").attr("data-action", "upgrade").removeAttr("href");
-				var $currentTab = $("li.current", ".content-tabs");
-				$(document).on("click", "#upgrade-link", function(e) {
-					$("#upgrade-link").closest("li").removeClass("current");
-					var $tab_menu = $("[data-action=tab-menu]");
-					$tab_menu.find("[data-content=current-tab-label]").text($currentTab.text());
-				});
-			});
-		</script>
-
 		<?php
         switch (get_dashboard()) {
             case 'stats':

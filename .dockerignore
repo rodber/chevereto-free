@@ -8,3 +8,4 @@ httpd-php-dev.yml
 httpd-php.Dockerfile
 httpd-php.yml
 README.md
+UPGRADING.md
