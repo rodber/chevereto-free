@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        php-versions: ["8.0"]
+        php-versions: ["7.4"]
     name: Build on PHP ${{ matrix.php-versions }} ${{ matrix.operating-system }}
     steps:
       - name: Checkout
