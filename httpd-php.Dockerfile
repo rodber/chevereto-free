@@ -71,7 +71,6 @@ RUN set -eux; \
 
 VOLUME /var/www/html
 VOLUME /var/www/html/images
-VOLUME /var/www/source
 
 COPY . /var/www/html
 RUN rm /var/www/html/sync.sh 

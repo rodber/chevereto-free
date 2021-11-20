@@ -25,7 +25,7 @@ services:
       - app:/var/www/html/
       - type: bind
         source: ${SOURCE}
-        target: /var/www/chevereto
+        target: /var/www/chevereto-free
     ports:
       - 8910:80
     restart: always

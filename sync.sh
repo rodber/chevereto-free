@@ -1,22 +1,18 @@
 #!/usr/bin/env bash
 set -e
-SOURCE=/var/www/source/
-INSTALLER=/var/www/installer/
+SOURCE=/var/www/chevereto-free/
 TARGET=/var/www/html/
 EXCLUDE="\.git|\.DS_Store|\/docs"
-mkdir -p $INSTALLER
-cp "${SOURCE}".gitignore "${INSTALLER}".gitignore
+cp "${SOURCE}".gitignore "${TARGET}".gitignore
 function sync() {
     rsync -r -I -og \
         --chown=www-data:www-data \
         --info=progress2 \
         --filter=':- .gitignore' \
-        --exclude '.git' \
+        --filter=':- .dockerignore' \
+        --exclude '.git sync.sh' \
         --delete \
-        $SOURCE $INSTALLER
-    # php "${INSTALLER}"src/build.php
-    # cp "${INSTALLER}"build/installer.php "${TARGET}"installer.php
-    # chown www-data: $TARGET -R
+        $SOURCE $TARGET
 }
 sync
 inotifywait \
