@@ -6,7 +6,7 @@
 
 ## Docker build
 
-* **Tip:** Tag `ghcr.io/rodber/chevereto-free-httpd-php:1.6` to override the [ghcr package](https://github.com/orgs/rodber/packages?repo_name=chevereto-free) with local
+* **Tip:** Tag `ghcr.io/rodber/chevereto-free-httpd-php:1.6` to override the [ghcr package](https://github.com/rodber/chevereto-free/pkgs/container/chevereto-free-httpd-php) with local
 
 ```sh
 docker build -t ghcr.io/rodber/chevereto-free-httpd-php:1.6 . \
