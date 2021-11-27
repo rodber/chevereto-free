@@ -4,7 +4,7 @@ To keep the software updated you have to simply keep the application files updat
 
 * Using the built-in updater at `/dashboard` > Click **check for updates**
 * Downloading a [Release](https://github.com/rodber/chevereto-free/releases) and **Extract to** the application filesystem
-* (Docker) Re-creating the container based in our [updated image](https://github.com/rodber/chevereto-free/pkgs/container/chevereto-free-httpd-php)
+* (Docker) Re-creating the container based in our [updated image](https://github.com/rodber/chevereto-free/pkgs/container/chevereto-free)
 
 ## Upgrade to Paid
 

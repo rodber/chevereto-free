@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  GHCR_SLUG: ghcr.io/rodber/chevereto-free-httpd-php
+  GHCR_SLUG: ghcr.io/rodber/chevereto-free
 
 jobs:
   buildx:

@@ -17,7 +17,7 @@ services:
 
   app:
     container_name: chevereto-free-dev_app
-    image: ghcr.io/rodber/chevereto-free-httpd-php:1.6
+    image: ghcr.io/rodber/chevereto-free:1.6
     networks:
       - chevereto
     volumes:
