@@ -10,7 +10,8 @@ function sync() {
         --info=progress2 \
         --filter=':- .gitignore' \
         --filter=':- .dockerignore' \
-        --exclude '.git sync.sh' \
+        --exclude '.git' \
+        --exclude 'sync.sh' \
         --delete \
         $SOURCE $TARGET
 }

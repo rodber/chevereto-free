@@ -70,6 +70,7 @@ RUN set -eux; \
     } > $PHP_INI_DIR/conf.d/php.ini
 
 VOLUME /var/www/html
+VOLUME /var/www/html/content
 VOLUME /var/www/html/images
 
 COPY . /var/www/html
