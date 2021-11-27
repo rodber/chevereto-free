@@ -15,7 +15,7 @@ services:
       MYSQL_USER: chevereto
       MYSQL_PASSWORD: user_database_password
 
-  app:
+  chevereto:
     container_name: chevereto-free_app
     image: ghcr.io/rodber/chevereto-free:1.6
     networks:
@@ -33,13 +33,14 @@ services:
       CHEVERETO_DB_PASS: user_database_password
       CHEVERETO_DB_PORT: 3306
       CHEVERETO_DB_NAME: chevereto
+      CHEVERETO_DISABLE_UPDATE_HTTP: 1
+      CHEVERETO_DISABLE_UPDATE_CLI: 1
       CHEVERETO_HTTPS: 0
 
 volumes:
   database:
   content:
   storage:
-  app:
 
 networks:
   chevereto:

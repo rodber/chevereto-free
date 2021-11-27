@@ -37,6 +37,8 @@ services:
       CHEVERETO_DB_PASS: user_database_password
       CHEVERETO_DB_PORT: 3306
       CHEVERETO_DB_NAME: chevereto
+      CHEVERETO_DISABLE_UPDATE_HTTP: 1
+      CHEVERETO_DISABLE_UPDATE_CLI: 1
       CHEVERETO_HTTPS: 0
 
 volumes:
