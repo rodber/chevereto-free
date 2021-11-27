@@ -52,6 +52,17 @@ Chevereto-Free is forked from [Chevereto V3.16.2](https://releases.chevereto.com
 
 ## Installation
 
+### Docker
+
+To install using Docker:
+
+* [COMPOSE](docs/COMPOSE.md)
+* [DEVELOPMENT](docs/DEVELOPMENT.md)
+
+To build Docker tagged images:
+
+* [BUILDING](docs/BUILDING.md)
+
 ### cPanel
 
 * Check the [Chevereto cPanel setup](https://v3-docs.chevereto.com/setup/server/cpanel.html).

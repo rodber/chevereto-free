@@ -1,9 +1,5 @@
 # Building
 
-## Composer
-
-`todo`
-
 ## Docker build
 
 * **Tip:** Tag `ghcr.io/rodber/chevereto-free:1.6` to override the [ghcr package](https://github.com/rodber/chevereto-free/pkgs/container/chevereto-free) with local
