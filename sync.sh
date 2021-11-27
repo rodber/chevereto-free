@@ -5,13 +5,19 @@ TARGET=/var/www/html/
 EXCLUDE="\.git|\.DS_Store|\/docs"
 cp "${SOURCE}".gitignore "${TARGET}".gitignore
 function sync() {
+    cp "${SOURCE}"sync.sh /var/www/sync.sh
     rsync -r -I -og \
         --chown=www-data:www-data \
         --info=progress2 \
+        --exclude '.git' \
+        --include 'content/images/system/default/*' \
+        --include 'content/pages/default/*' \
+        --exclude 'sync.sh' \
+        --exclude 'content/images/system/*' \
+        --exclude 'content/images/users/*' \
+        --exclude 'content/pages/*' \
         --filter=':- .gitignore' \
         --filter=':- .dockerignore' \
-        --exclude '.git' \
-        --exclude 'sync.sh' \
         --delete \
         $SOURCE $TARGET
 }
