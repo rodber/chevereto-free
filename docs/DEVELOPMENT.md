@@ -45,6 +45,18 @@ docker-compose \
     stop
 ```
 
+## Start
+
+Run this command to start Chevereto if stopped.
+
+```sh
+SOURCE=~/git/rodber/chevereto-free \
+docker-compose \
+    -p chevereto-free-dev \
+    -f httpd-php-dev.yml \
+    start
+```
+
 ## Down (uninstall)
 
 Run this command to down Chevereto (stop containers, remove networks and volumes created by it).
