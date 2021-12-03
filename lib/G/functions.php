@@ -598,7 +598,7 @@ namespace G {
             2 => 'debug @ print',
             3 => 'debug @ print,`error_log`',
         ];
-        $internal_error .= ' [' . $table[$debug_level] . '] - https://v3-docs.chevereto.com/setup/debug.html';
+        $internal_error .= ' [' . $table[$debug_level] . '] - https://chevereto-free.github.io/manual/troubleshooting/debug.html';
         set_status_header($internal_code);
         if (!in_array($debug_level, [0, 1, 2, 3])) {
             $debug_level = 1;
@@ -606,7 +606,7 @@ namespace G {
         if (in_array($debug_level, [1, 3])) {
             error_log($e);
         }
-        if (!in_array($debug_level, [2, 3])) { // No print here
+        if (!in_array($debug_level, [2, 3])) {
             die($internal_error);
         }
         $message = [$internal_error];

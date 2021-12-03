@@ -76,7 +76,7 @@ $route = function ($handler) {
             'id' => 'upgrade',
             'url' => 'https://github.com/rodber/chevereto-free/blob/master/UPGRADING.md',
         ];
-        $handler::setVar('documentationBaseUrl', 'https://v3-docs.chevereto.com/');
+        $handler::setVar('documentationBaseUrl', 'https://chevereto-free.github.io/');
         $handler::setVar($route_prefix . '_menu', $route_menu);
         $handler::setVar('tabs', $route_menu);
 

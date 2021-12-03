@@ -65,7 +65,7 @@ To build Docker tagged images:
 
 ### cPanel
 
-* Check the [Chevereto cPanel setup](https://v3-docs.chevereto.com/setup/server/cpanel.html).
+* Check the [Chevereto cPanel setup](https://chevereto-free.github.io/setup/server/cpanel.html).
 
 ### Composer-based installation
 
@@ -86,10 +86,6 @@ composer create-project rodber/chevereto-free . \
 * Pick the [latest release](https://github.com/rodber/chevereto-free/releases/latest)
 * Download the tagged `$TAG.zip` release artifact
 * Unzip the release in your target `public` web-server directory
-
-## Upgrading
-
-* Check [UPGRADING](UPGRADING.md)
 
 ## License
 

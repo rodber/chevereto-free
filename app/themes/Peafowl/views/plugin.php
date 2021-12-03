@@ -81,7 +81,7 @@
 				</div>
 				<div class="clear-both">
 					<h3><?php _se('Advanced options'); ?></h3>
-					<p><?php _se('The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options.', ['%d' => '<a href="https://v3-docs.chevereto.com/features/PUP.html" target="_blank">' . _s('documentation') . '</a>']); ?></p>
+					<p><?php _se('The plugin has a large set of additional options that allow full customization. You can use custom HTML, CSS, own color palette, set observers and more. Check the %d and the plugin source to get a better idea of these advanced options.', ['%d' => '<a href="https://chevereto-free.github.io/features/PUP.html" target="_blank">' . _s('documentation') . '</a>']); ?></p>
 				</div>
 			</div>
 		</div>

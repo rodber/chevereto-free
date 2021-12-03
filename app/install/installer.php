@@ -900,7 +900,7 @@ WHERE NOT EXISTS (SELECT * FROM `%table_prefix%imports` WHERE `import_path`='%ro
             }
 
             if ($isDumpUpdate) {
-                G\debug('# Dumped update query. https://v3-docs.chevereto.com/setup/update-guide.html#manual-procedure');
+                G\debug('# Dumped update query. https://chevereto-free.github.io/setup/update-guide.html#manual-procedure');
                 G\debug($sql_update);
                 die();
             }
