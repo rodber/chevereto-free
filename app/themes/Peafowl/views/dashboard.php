@@ -16,7 +16,7 @@ function get_docs_link($key, $subject)
 }
 function free_version_warning($wrap=true)
 {
-    $message = _s("This functionality is not part of Chevereto Free. %s to obtain this feature.", ['%s' => '<a href="https://github.com/rodber/chevereto-free/blob/master/UPGRADING.md"><span class="btn-icon icon-star4 color-yellow"></span> ' . _s('Upgrade to paid') . '</a>']);
+    $message = _s("This functionality is not part of Chevereto Free. %s to obtain this feature.", ['%s' => '<a href="https://github.com/rodber/chevereto-free/blob/master/UPGRADING.md"><span class="btn-icon icon-star4 color-yellow margin-right-5"></span>' . _s('Upgrade') . '</a>']);
     echo($wrap ? ('<div class="input-below">' . $message . '</div>') : $message);
 }
 ?>
