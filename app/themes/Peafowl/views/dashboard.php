@@ -14,11 +14,6 @@ function get_docs_link($key, $subject)
 {
     return '<a href="' . get_documentationBaseUrl() . $key . '" target="_blank">' . $subject . '</a>';
 }
-function free_version_warning($wrap=true)
-{
-    $message = _s("This functionality is not part of Chevereto Free. %s to obtain this feature.", ['%s' => '<a href="https://github.com/rodber/chevereto-free/blob/master/UPGRADING.md"><span class="btn-icon icon-star4 color-yellow margin-right-5"></span>' . _s('Upgrade') . '</a>']);
-    echo($wrap ? ('<div class="input-below">' . $message . '</div>') : $message);
-}
 ?>
 
 <div class="content-width">
@@ -390,26 +385,6 @@ function free_version_warning($wrap=true)
 									</select></div>
 								<div class="input-below"><?php _se('Enables to browse images randomly.'); ?></div>
 							</div>
-
-							<div class="input-label">
-								<label for="enable_likes"><?php _se('Likes'); ?></label>
-				<div class="c5 phablet-c1"><select type="text" class="text-input" disabled>
-					<?php
-                        echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('enable_likes')); ?>
-				</select></div>
-				<?php free_version_warning(); ?>
-				<?php personal_mode_warning(); ?>
-			</div>
-
-			<div class="input-label">
-				<label for="enable_followers"><?php _se('Followers'); ?></label>
-				<div class="c5 phablet-c1"><select type="text" class="text-input" disabled>
-					<?php
-                        echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('enable_followers')); ?>
-				</select></div>
-				<?php free_version_warning(); ?>
-				<?php personal_mode_warning(); ?>
-			</div>
 
 							<hr class="line-separator">
 
@@ -1414,14 +1389,6 @@ function free_version_warning($wrap=true)
 									</select></div>
 								<div class="input-below"><?php _se('Enable this if you want to apply a blur effect on the NSFW images in listings.'); ?></div>
 							</div>
-							<div class="input-label">
-				<label><?php _se('Show banners in not safe content'); ?></label>
-				<div class="c5 phablet-c1"><select type="text" class="text-input" disabled>
-					<?php
-                        echo CHV\Render\get_select_options_html([1 => _s('Enabled'), 0 => _s('Disabled')], CHV\Settings::get('show_banners_in_nsfw')); ?>
-				</select></div>
-				<?php free_version_warning(); ?>
-			</div>
 
 							<div class="input-label">
 								<label for="show_nsfw_in_random_mode"><?php _se('Show not safe content in random mode'); ?></label>
@@ -1883,10 +1850,6 @@ function free_version_warning($wrap=true)
 
 						<?php
                         } ?>
-
-            <?php if (get_settings()['key'] == 'banners') {
-                            free_version_warning();
-                        } ?>
 			<?php if (get_settings()['key'] == 'system') {
                             ?>
             <p><?php echo read_the_docs_settings('system', _s('system')); ?></p>
@@ -1996,10 +1959,6 @@ function free_version_warning($wrap=true)
 				<div class="input-below"><?php _se('Routing for %s', G\get_base_url('album/&lt;id&gt;')); ?></div>
 			</div>
 			<?php
-                        } ?>
-
-            <?php if (get_settings()['key'] == 'external-storage') {
-                            free_version_warning();
                         } ?>
 			<?php if (get_settings()['key'] == 'email') {
                             ?>
@@ -2131,10 +2090,6 @@ function free_version_warning($wrap=true)
 			<div class="input-below"><?php _se('This only updates the database. You must transfer the actual files to target storage container on your own. URL rewriting is strongly recommended. Use zero (0) for local storage.'); ?></div>
 		</div>
       <?php
-                        } ?>
-
-			<?php if (get_settings()['key'] == 'social-networks') {
-                            free_version_warning();
                         } ?>
 
 			<?php if (get_settings()['key'] == 'external-services') {
