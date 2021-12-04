@@ -74,7 +74,7 @@ $route = function ($handler) {
         $route_menu['upgrade'] = [
             'label' => '<span class="btn-icon icon-star4 color-yellow"></span> <b>Upgrade</b>',
             'id' => 'upgrade',
-            'url' => 'https://github.com/rodber/chevereto-free/blob/master/UPGRADING.md',
+            'url' => 'https://chevereto-free.github.io/get-started/upgrading.html',
         ];
         $handler::setVar('documentationBaseUrl', 'https://chevereto-free.github.io/');
         $handler::setVar($route_prefix . '_menu', $route_menu);
