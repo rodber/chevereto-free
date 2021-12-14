@@ -291,6 +291,7 @@ try {
         '1.4.2' => null,
         '1.5.0' => null,
         '1.5.1' => null,
+        '1.6.0' => null,
     ];
     // Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
     $settings_rename = [];
