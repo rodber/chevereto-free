@@ -292,13 +292,12 @@ try {
         '1.5.0' => null,
         '1.5.1' => null,
         '1.6.0' => null,
+        '1.6.1' => [
+            'chevereto_news' => 'a:0:{}',
+        ],
     ];
-    // Settings that must be renamed from NAME to NEW NAME and DELETE old NAME
     $settings_rename = [];
-
-    // Settings that must be renamed from NAME to NEW NAME and doesn't delete old NAME
     $settings_switch = [];
-
     $chv_initial_settings = [];
     foreach ($settings_updates as $k => $v) {
         if (is_null($v)) {
@@ -306,14 +305,11 @@ try {
         }
         $chv_initial_settings += $v;
     }
-
-    // Detect 2.X
     try {
         $is_2X = DB::get('info', ['key' => 'version']) ? true : false;
     } catch (Exception $e) {
         $is_2X = false;
     }
-
     /* Stats query from 3.7.0 up to 3.8.13 */
     $stats_query_legacy = 'TRUNCATE TABLE `%table_prefix%stats`;
 

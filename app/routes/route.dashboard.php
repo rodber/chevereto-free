@@ -112,6 +112,12 @@ $route = function ($handler) {
                 }
 
                 $db = CHV\DB::getInstance();
+                
+                $chevereto_news = unserialize(CHV\Settings::get('chevereto_news'));
+                if(!is_array($chevereto_news) || $chevereto_news === []) {
+                    $chevereto_news = CHV\updateCheveretoNews();
+                }
+                $handler::setVar('chevereto_news', $chevereto_news);
 
                 $chv_version = [
                     'files'    => G\get_app_version(),

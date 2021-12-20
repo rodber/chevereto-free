@@ -171,6 +171,8 @@ class Settings
                 'moderatecontent_block_rating' => 'a',
                 'moderatecontent_flag_nsfw' => 'a',
                 'moderate_uploads' => '', // ,
+                // 3.20.13
+                'chevereto_news' => 'a:0:{}',
             ];
 
             $device_to_columns = [

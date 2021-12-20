@@ -2391,3 +2391,76 @@ body.full--wh {
 body#index.landing [data-action=top-bar-tone] {
     display: none;
 }
+
+.card-wrapper {
+    height: 175px;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.card-slider {
+    width: calc(310px * 8);
+}
+
+.card-container {
+    width: 300px;
+    height: 200px;
+    display: block;
+    float: left;
+    margin: 0 5px;
+}
+
+.card-container:first-child {
+    margin-left: 0;
+}
+
+.card-container:last-child {
+    margin-right: 0;
+}
+
+.card {
+    width: 100%;
+    position: relative;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card-header-image {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 1em;
+    display: block;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-header-image-mask {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.card-header-image:hover .card-header-image-mask {
+    background-color: rgba(35, 168, 224, .8);
+}
+
+.card-text {
+    color: #FFF;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .35);
+}
+
+.card-text h3 {
+    font-weight: bold;
+    font-size: 1.6em;
+    margin-bottom: 5px;
+}

@@ -39,7 +39,7 @@ function get_docs_link($key, $subject)
 					<p><?php _se("Make sure that you address this issue as the system relies on accurate IP detections to provide basic functionalities and to protect against spam, flooding, and brute force attacks."); ?></p>
 				</div>
 				<div class="dashboard-group">
-					<div class="overflow-auto text-align-center margin-top-20">
+					<div class="overflow-auto text-align-center margin-top-20 margin-bottom-40">
 						<a href="<?php echo G\get_base_url('dashboard/images'); ?>" class="stats-block c6 fluid-column display-inline-block" <?php if (get_totals()['images'] > 999999) {
                                 echo ' rel="tooltip" data-tipTip="top" title="' . number_format(get_totals()['images']) . '"';
                             } ?>>
@@ -72,6 +72,33 @@ function get_docs_link($key, $subject)
 						</div>
 					</div>
 
+                    <div class="header header-tabs no-select">
+                        <h2><i class="icon icon-rss"></i> <?php _se('%s News', 'Chevereto'); ?></h2>
+                    </div>
+
+                    <div class="card-wrapper margin-bottom-40">
+                        <div class="card-slider">
+                            <?php foreach(array_slice(get_chevereto_news(), 0, 8) as $k => $v) {
+                                echo strtr('<article class="card-container">
+                                <div class="card">
+                                    <a class="card-header-image" href="%url%" target="_blank" style="background-image: url(%image%);">
+                                        <span class="animate card-header-image-mask"></span>  
+                                        <span class="card-text">
+                                            <h3>%title%</h3>
+                                            <span>%summary%</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </article>' . "\n", [
+                                    '%url%' => $v->url,
+                                    '%image%' => $v->image,
+                                    '%title%' => $v->title,
+                                    '%summary%' => $v->summary,
+                                ]);
+                            } ?>
+                        </div>
+                    </div>
+
 					<ul class="tabbed-content-list table-li margin-top-20">
                         <li>
                             <span class="c6 display-table-cell padding-right-10">GitHub<span style="opacity: 0;">:</span></span>
@@ -79,12 +106,6 @@ function get_docs_link($key, $subject)
                                 <a class="github-button" href="https://github.com/rodber/chevereto-free/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch rodber/chevereto-free on GitHub">Watch</a>
                                 <a class="github-button" href="https://github.com/rodber/chevereto-free" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star rodber/chevereto-free on GitHub">Star</a>
                             </span>
-                            <div class="highlight padding-5 margin-top-10 margin-bottom-10">Chevereto-Free project ownership will be <b>transferred</b> to <a href="https://github.com/rodber" target="_blank">rodber</a> on <b>2021-10</b>.
-                                <ul class="list-style-type-disc padding-left-20">
-                                    <li>The Chevereto organization won't be longer involved with the development of this project.</li>
-                                    <li>The project repository will be available at <a href="https://github.com/rodber/chevereto-free" target="_blank">rodber/chevereto-free</a>.</li>
-                                </ul>
-                            </div>
                         </li>
 						<?php
                         foreach (get_system_values() as $v) {

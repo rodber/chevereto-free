@@ -17,6 +17,7 @@ namespace CHV;
 use G;
 use DirectoryIterator;
 use Exception;
+use Throwable;
 
 if (!defined('access') or !access) {
     die('This file cannot be directly accessed.');
@@ -815,6 +816,17 @@ function checkUpdates()
     } catch (Exception $e) {
         error_log($e);
     } // Silence
+}
+
+function updateCheveretoNews() {
+    try {
+        $chevereto_news = G\fetch_url('https://blog.chevereto.com/feed.json');
+        $chevereto_news = json_decode($chevereto_news)->items;
+        Settings::update(['chevereto_news' => serialize($chevereto_news)]);
+    } catch(Throwable $e) {
+        $chevereto_news = [];
+    }
+    return $chevereto_news;
 }
 
 function obfuscate($string)
