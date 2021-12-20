@@ -2131,6 +2131,7 @@ html:not(.phone) .pop-box-menu a:hover,
     right: 0;
     z-index: 400;
     width: 100%;
+    border-bottom: none;
     -webkit-transition: transform 250ms ease, border 400ms ease;
     -webkit-transition: border 400ms ease, -webkit-transform 250ms ease;
     transition: border 400ms ease, -webkit-transform 250ms ease;
@@ -2156,15 +2157,6 @@ html:not(.phone) .pop-box-menu a:hover,
 }
 
 .top-bar.white,
-.follow-scroll-wrapper.position-fixed {
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
-}
-
-.top-bar.white.transparent {
-    border-bottom-color: transparent;
-}
-
-.top-bar.white,
 .follow-scroll-wrapper.position-fixed,
 .top-bar-box-shadow-none .top-bar.white {
     background-color: #FFF;
@@ -2174,11 +2166,6 @@ html:not(.phone) .pop-box-menu a:hover,
 .follow-scroll-wrapper.position-fixed {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-}
-
-.tone-dark.top-bar-black .follow-scroll-wrapper.position-fixed {
-    border-bottom: 1px solid #212121;
-    border-bottom: 1px solid rgba(255, 255, 255, .09);
 }
 
 .ie9 .top-bar.white {
@@ -2809,7 +2796,6 @@ html:not(.phone) .pop-box-menu a:hover,
  * ---------------------------------------------
  */
 .header {
-    border-bottom: 1px solid #E5E5E5;
     height: 50px;
     position: relative;
     overflow: visible;
