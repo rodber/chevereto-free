@@ -18,8 +18,6 @@ if (is_upload_allowed() && (CHV\getSetting('upload_gui') == 'js' || G\is_route('
 
 <?php CHV\Render\show_theme_inline_code('snippets/footer.js'); ?>
 
-<?php CHV\Render\showQueuePixel(); ?>
-
 <?php CHV\Render\showPingPixel(); ?>
 
 <?php echo CHV\getSetting('analytics_code'); ?>

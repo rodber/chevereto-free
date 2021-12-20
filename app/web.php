@@ -52,6 +52,7 @@ if (
             $lock = new Lock('check-updates');
             if ($lock->create()) {
                 checkUpdates();
+                updateCheveretoNews();
                 $lock->destroy();
             }
         } catch (Exception $e) {
