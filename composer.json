@@ -31,8 +31,5 @@
         "vendor-dir": "app/vendor"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require-dev": {
-        "chevere/xr": "dev-main"
-    }
+    "prefer-stable": true
 }
