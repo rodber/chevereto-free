@@ -295,6 +295,7 @@ try {
         '1.6.1' => [
             'chevereto_news' => 'a:0:{}',
         ],
+        '1.6.2' => null,
     ];
     $settings_rename = [];
     $settings_switch = [];
