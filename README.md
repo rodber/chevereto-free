@@ -4,6 +4,8 @@
 
 Chevereto-Free allows you to create a full-featured image hosting website on your own server. It's your hosting and your rules, say goodbye to closures and restrictions.
 
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://marketplace.digitalocean.com/apps/chevereto-free)
+
 ## ✨ Screens
 
 ![Homepage](.github/screen/1a.webp)
