@@ -4,7 +4,13 @@
 
 Chevereto-Free allows you to create a full-featured image hosting website on your own server. It's your hosting and your rules, say goodbye to closures and restrictions.
 
-[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://marketplace.digitalocean.com/apps/chevereto-free)
+👉 Purchase a [Chevereto license](https://chevereto.com/pricing) to discover the full experience.
+
+## 🦄 XR
+
+XR is a new **open source** remote debugger [from the same creator](https://rodolfo.is/2022/01/06/hello-xr/) of Chevereto.
+
+[<img src="https://repository-images.githubusercontent.com/442894283/f1450c67-4592-4f13-8a91-db5bbec8d9d7" width="75%" />](https://github.com/chevere/xr)
 
 ## ✨ Screens
 
