@@ -10,7 +10,7 @@ Chevereto-Free allows you to create a full-featured image hosting website on you
 
 👏 XR is a new open source remote debugger for PHP [from the same creator](https://rodolfo.is/2022/01/06/hello-xr/) of Chevereto.
 
-[<img src="https://repository-images.githubusercontent.com/442894283/f1450c67-4592-4f13-8a91-db5bbec8d9d7" />](https://github.com/chevere/xr)
+[<img src="https://repository-images.githubusercontent.com/442894283/f1450c67-4592-4f13-8a91-db5bbec8d9d7" />](https://xr-docs.chevere.org)
 
 ## ✨ Screens
 
