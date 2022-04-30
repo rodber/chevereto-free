@@ -1,14 +1,14 @@
 # Chevereto-Free
 
-Chevereto-Free allows you to create a full-featured image hosting website on your own server. It's your hosting and your rules, say goodbye to closures and restrictions.
+Chevereto-Free allows you to create an image hosting website on your own server. It's your hosting and your rules, say goodbye to closures and restrictions.
 
-> This project is on **maintenance-only** mode until November 2022. After that date, this repository will be archived and no further maintenance will be provided. I strongly suggest to fork this repository.
+> The Chevereto-Free project is on **maintenance-only** mode until November 2022. After that date, this repository will be archived and no further maintenance will be provided. I strongly suggest to purchase the paid edition of this software.
 
-## 🤑 Purchase
+## 🤩 Chevereto V4
 
-👉 Purchase a [Chevereto license](https://chevereto.com/pricing) to unlock the full experience.
+👉 Purchase a [Chevereto license](https://chevereto.com/pricing) to unlock the full experience. Watch the [1-minute video](https://www.youtube.com/watch?v=C-AZVuMEFMg) for a quick preview.
 
-[![Chevereto](.github/banner/social-chevereto-blue.jpg)](https://chevereto.com)
+[![Chevereto](.github/banner/social-chevereto-blue.jpg)](https://www.youtube.com/watch?v=C-AZVuMEFMg)
 
 ## ✨ Screens
 
