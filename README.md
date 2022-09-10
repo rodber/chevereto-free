@@ -46,13 +46,18 @@ All updates added in [Chevereto V4](https://releases.chevereto.com/4.X/), includ
 * Text-based logo
 * Web Share API
 * Two-factor auth
+* Secrets encryption
+* 30 different third-party login providers 
+* Tinkerwell support
+* Native lazy loading
+* Project Arachnid Support (CSAM)
+* Improved SEO
 
-All updates (non-security) added in [V3.17](https://releases.chevereto.com/3.X/3.17/3.17.2.html), [V3.18](https://releases.chevereto.com/3.X/3.18/3.18.3.html) and [V3.20](https://releases.chevereto.com/3.X/3.20/3.20.15.html):
+All updates added in [V3.17](https://releases.chevereto.com/3.X/3.17/3.17.2.html), [V3.18](https://releases.chevereto.com/3.X/3.18/3.18.3.html) and [V3.20](https://releases.chevereto.com/3.X/3.20/3.20.15.html):
 
 * 360 images
 * Nested albums
 * ImageMagick support
-* Improved sharing options
 * 12FA Support
 * CLI API
 
