@@ -1,6 +1,6 @@
 # Chevereto-Free
 
-## This project is **archived**, superseed by [chevereto/chevereto](https://github.com/chevereto/chevereto). Go to [chevereto.com](https://chevereto.com) to learn more and support my indie work 👏.
+## This project is **archived** and superseed by [chevereto/chevereto](https://github.com/chevereto/chevereto). Go to [chevereto.com](https://chevereto.com) to learn more and support my indie work 👏.
 
 [![Chevereto](.github/banner/social-chevereto-blue.jpg)](https://chevereto.com)
 
