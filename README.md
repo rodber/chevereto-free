@@ -6,7 +6,7 @@
 [![Demo](https://img.shields.io/badge/demo-hotpink?style=flat-square)](https://demo.chevereto.com)
 [![Editions](https://img.shields.io/badge/editions-goldenrod?style=flat-square)](https://docs.chevereto.com/introduction/editions/compare.html)
 [![Chevereto Cloud](https://img.shields.io/badge/cloud-deepskyblue?style=flat-square)](https://cloud.chevereto.com)
-[![Youtube](https://img.shields.io/badge/YouTube-red?style=flat-square)](https://www.youtube.com/@cheveretocms)
+[![Youtube](https://img.shields.io/badge/YouTube-red?style=flat-square)](https://chevereto.com/go/youtube)
 [![Awesome F/OSS](https://img.shields.io/badge/Awesome_F%2FOSS-Certified-black?colorA=&colorB=874efe&style=flat-square)](https://awsmfoss.com/chevereto/)
 
 > 🔔 [Stay updated](https://chevereto.com/go/newsletter) with the latest news from Chevereto.
